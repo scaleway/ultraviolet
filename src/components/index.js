@@ -1,5 +1,6 @@
 export * from './ActivityIndicator'
 export * from './Badge'
+export * from './BorderedBox'
 export * from './Boxer'
 export * from './Command'
 export * from './Description'
