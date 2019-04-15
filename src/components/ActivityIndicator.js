@@ -18,7 +18,11 @@ const spinnerStyle = css`
   animation: ${spinAnimation} 0.75s linear infinite;
 `
 
-const Spinner = ({ children }) => <div css={spinnerStyle}>{children}</div>
+const Spinner = ({ children, style }) => (
+  <div css={spinnerStyle} style={style}>
+    {children}
+  </div>
+)
 
 const Circle = ({ style }) => (
   <circle cx="16" cy="16" fill="none" r="14" strokeWidth="4" style={style} />
@@ -50,6 +54,5 @@ export function ActivityIndicator({ size = 20, color = 'primary', ...props }) {
 }
 
 ActivityIndicator.propTypes = {
-  color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }

@@ -1,5 +1,8 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
+import { ThemeProvider } from 'emotion-theming'
+// eslint-disable-next-line import/no-unresolved
+import { theme } from 'scaleway-ui'
 
 // eslint-disable-next-line
 const doczGlobalStyles = css`
@@ -10,9 +13,11 @@ const doczGlobalStyles = css`
 
 export default function Wrapper({ children }) {
   return (
-    <>
-      <Global styles={doczGlobalStyles} />
-      {children}
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Global styles={doczGlobalStyles} />
+        {children}
+      </>
+    </ThemeProvider>
   )
 }

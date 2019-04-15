@@ -1,3 +1,6 @@
 export * from './ActivityIndicator'
 export * from './Badge'
 export * from './Boxer'
+export * from './Command'
+export * from './Description'
+export * from './Dot'

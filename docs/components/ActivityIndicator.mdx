@@ -3,17 +3,27 @@ name: ActivityIndicator
 menu: Components
 ---
 
-import { Playground, Props } from 'docz'
+import { Playground } from 'docz'
 import { ActivityIndicator, Boxer } from 'scaleway-ui'
 
 # ActivityIndicator
+
+## Basic
+
+<Playground>
+  <ActivityIndicator />
+</Playground>
 
 ## Size
 
 Set size using `size` property.
 
 <Playground>
-  <ActivityIndicator size={200} />
+  <Boxer mr={2} display="inline-block">
+    <ActivityIndicator size={40} />
+    <ActivityIndicator size={50} />
+    <ActivityIndicator size={60} />
+  </Boxer>
 </Playground>
 
 ## Color
@@ -21,5 +31,9 @@ Set size using `size` property.
 Set color using `color` property.
 
 <Playground>
-  <ActivityIndicator color="black" />
+  <Boxer mr={2} display="inline-block">
+    <ActivityIndicator color="primary" />
+    <ActivityIndicator color="success" />
+    <ActivityIndicator color="warning" />
+  </Boxer>
 </Playground>
