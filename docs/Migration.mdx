@@ -1,0 +1,102 @@
+---
+name: Migration
+---
+
+# Migration
+
+## colors
+
+Some colors have been renamed:
+
+```js
+export const white = '#ffffff' // white
+export const lightWhite = '#fafafb' // gray50
+export const light = '#f6f5f7' // gray100
+export const lightPrimary = '#eeeeff' // gray200
+export const lightGrey = '#dce1eb' // gray300
+export const grey = '#d4dae7' // gray350
+export const darkGrey = '#b2b6c3' // gray550
+export const black = '#4a4f62' // gray700
+export const darkBlack = '#151a2d' // gray950
+
+export const neutralGrey = '#dbdbdf' // nGray300
+```
+
+## ActivityIndicator
+
+No breaking change.
+
+## Badge
+
+### Variants
+
+- `new` variant has been renamed into `success`
+- `neutral` is the new default (was `beta` before)
+
+### Sizes
+
+Sizes have been renamed:
+
+- `medium` becomes `md`
+- `small` becomes `sm`
+- `verySmall` becomes `xs`
+- `tiny` becomes `xxs`
+
+### Positions
+
+Positions are no longer accepted, they are not part of the system.
+
+## BlockList
+
+This component is deprecated and it is not part of Scaleway UI.
+
+## BorderedBox
+
+- `variant` is no longer accepted, this component is graphical and should not handle margin of their children. Use `Boxer` for that.
+
+## Boxer
+
+It is a new component to wrap all children in a `Box` and specify props on each of these `Boxes`.
+
+## Command
+
+- `Command` component has been droped, use `<Typography variant="command" />` instead
+- `borderRadius` is now `4px` instead of `5px`, it uses the theme variable `borderRadius`
+- Default tag is now `code` instead of `span`
+
+## Description
+
+- `userSelect` is now `selectable`
+- In inline mode, `float` is used to display the `dt`
+- You can now specify several `Term` and `Desc` into a `Description`
+
+## Dot
+
+No breaking change.
+
+## IconMessage
+
+- Component has been renamed into `Alert`
+- `flex: 1` has been removed
+- `role="alert"` has been added
+
+## MaterialIcon
+
+- Component has been renamed into `Icon`
+- A icon not found throws an error instead of displaying the `lock` icon.
+
+## Notice
+
+- The display is not `flex`.
+- Add `role="alert"`
+
+## Tooltip
+
+- Tooltip now uses [Smooth UI Tooltip](https://smooth-ui.smooth-code.com/docs-components-tooltip) under the hood
+- `place` is now `placement`
+- To use a tooltip, put the component inside the container
+
+## Typography
+
+- `samplecode` variant now has a border radius
+- `tooltipMaxWidth` has been removed, use `tooltipProps={{ maxWidth: '...' }}` instead

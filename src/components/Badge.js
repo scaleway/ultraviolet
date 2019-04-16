@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import { cx, sp } from 'utils'
 import {
   white,
@@ -12,6 +11,7 @@ import {
   gray350,
   borderRadius,
 } from 'theming'
+import { Box } from './Box'
 
 const variants = {
   success: p => css`

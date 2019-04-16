@@ -1,0 +1,41 @@
+---
+name: Tooltip
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Box, Tooltip } from 'scaleway-ui'
+
+# Tooltip
+
+Displays a tooltip on mouse over.
+
+## Basic
+
+<Playground>
+  <Box as="span">
+    <Tooltip>Tooltip</Tooltip>
+    Hover to see tooltip
+  </Box>
+</Playground>
+
+## Placement
+
+Set placement using `placement` prop. See [Popper documentation about placements](https://popper.js.org/popper-documentation.html#Popper.placements).
+
+<Playground>
+  <Box my={5} mx="auto" width={300} height={180} backgroundColor="primary">
+    <Tooltip placement="top-start">top-start</Tooltip>
+    <Tooltip placement="top">top</Tooltip>
+    <Tooltip placement="top-end">top-end</Tooltip>
+    <Tooltip placement="right-start">Tooltip</Tooltip>
+    <Tooltip placement="right">right</Tooltip>
+    <Tooltip placement="right-end">right-end</Tooltip>
+    <Tooltip placement="bottom-start">bottom-start</Tooltip>
+    <Tooltip placement="bottom">bottom</Tooltip>
+    <Tooltip placement="bottom-end">bottom-end</Tooltip>
+    <Tooltip placement="left-start">left-start</Tooltip>
+    <Tooltip placement="left">left</Tooltip>
+    <Tooltip placement="left-end">left-end</Tooltip>
+  </Box>
+</Playground>

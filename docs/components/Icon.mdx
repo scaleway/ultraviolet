@@ -1,0 +1,45 @@
+---
+name: Icon
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Boxer, Icon, icons } from 'scaleway-ui'
+
+# Icon
+
+Set desired icon using `name` property.
+
+<Playground>
+  <Boxer my={1}>
+    {icons.map(name => (
+      <div style={{ fontSize: '1.3em' }}>
+        <Icon name={name} /> {name}
+      </div>
+    ))}
+  </Boxer>
+</Playground>
+
+## Size
+
+Set size using `size` property.
+
+<Playground>
+  <Boxer mr={2} display="inline-block">
+    <Icon name="eye" size={40} />
+    <Icon name="eye" size={50} />
+    <Icon name="eye" size={60} />
+  </Boxer>
+</Playground>
+
+## Color
+
+Set color using `color` property.
+
+<Playground>
+  <Boxer mr={2} display="inline-block">
+    <Icon name="eye" color="primary" />
+    <Icon name="eye" color="success" />
+    <Icon name="eye" color="warning" />
+  </Boxer>
+</Playground>

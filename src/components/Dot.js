@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box } from '@smooth-ui/core-em'
 import { css } from '@emotion/core'
-import { cx } from 'utils'
-import { colors } from 'theming'
+import { cx, thColor } from 'utils'
+import { Box } from './Box'
 
 const style = ({ color }) => p => {
-  const colorsValue = colors(p)
   return css`
     display: inline-block;
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: ${colorsValue[color](p)};
+    background-color: ${thColor(color)(p)};
   `
 }
 

@@ -18,16 +18,38 @@ export const violet = thd('violet', '#4f0599')
 export const green = thd('green', '#45d6b5')
 export const red = thd('red', '#ef5774')
 export const orange = thd('orange', '#ff8c69')
+export const blue = thd('blue', '#3f6ed8')
 
 // System colors
 export const primary = violet
 export const beta = orange
 export const success = green
 export const warning = red
+export const info = blue
 
 export const colors = thd('colors', {
+  white,
+  gray50,
+  gray100,
+  gray200,
+  gray300,
+  gray350,
+  gray550,
+  gray700,
+  gray950,
+  black,
+
+  ngray300,
+
+  violet,
+  green,
+  red,
+  orange,
+  blue,
+
   primary,
   beta,
   success,
   warning,
+  info,
 })

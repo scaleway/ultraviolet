@@ -1,8 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import { cx, sp } from 'utils'
 import { gray950, gray700, gray200, primary } from 'theming'
+import { Box } from './Box'
 
 const styles = {
   default: p => css`

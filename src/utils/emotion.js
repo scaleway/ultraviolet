@@ -1,3 +1,5 @@
+import flatten from 'flatten'
+
 export function cx(styles) {
   return theme => {
     const p = { theme }
@@ -11,7 +13,7 @@ export function cx(styles) {
     }
 
     if (Array.isArray(styles)) {
-      return styles.map(parseStyle)
+      return flatten(styles).map(parseStyle)
     }
 
     return parseStyle(styles)

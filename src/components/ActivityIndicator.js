@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { keyframes, css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
+import { Box } from './Box'
 
 const spinAnimation = keyframes`
   from {
