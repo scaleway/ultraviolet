@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { cx, sp, thColor } from 'utils'
 import { Typography } from './Typography'
-import { Icon } from './Icon'
+import { Icon, icons } from './Icon'
 
 const style = ({ variant }) => p => css`
   display: flex;
@@ -18,6 +18,8 @@ const variantIcons = {
   info: 'information-outline',
   success: 'check',
 }
+
+export const alertVariants = Object.keys(variantIcons)
 
 export function Alert({ variant = 'warning', icon, children, ...props }) {
   return (
@@ -34,7 +36,7 @@ export function Alert({ variant = 'warning', icon, children, ...props }) {
 }
 
 Alert.propTypes = {
-  variant: PropTypes.string.isRequired,
-  icon: PropTypes.string,
+  variant: PropTypes.oneOf(alertVariants),
+  icon: PropTypes.oneOf(icons),
   children: PropTypes.node,
 }

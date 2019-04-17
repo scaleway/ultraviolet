@@ -1,0 +1,57 @@
+---
+name: Separator
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Box, Separator } from 'scaleway-ui'
+
+# Separator
+
+A horizontal or vertical separator.
+
+## Basic
+
+<Playground>
+  <Separator />
+</Playground>
+
+## Thickness
+
+Set thickness using `thickness` prop.
+
+<Playground>
+  <Separator thickness={3} />
+</Playground>
+
+## Direction
+
+Set direction using `direction` prop.
+
+<Playground>
+  <Box display="inline-flex">
+    <Box>left part</Box>
+    <Separator direction="vertical" mx={1} />
+    <Box>right part</Box>
+  </Box>
+</Playground>
+
+## Color
+
+Set color using `color` prop.
+
+<Playground>
+  <Separator color="primary" />
+</Playground>
+
+## Icon
+
+Set icon using `icon` prop.
+
+<Playground>
+  <Box>
+    <Box>top part</Box>
+    <Separator my={1} icon="ray-top-arrow" />
+    <Box>bottom part</Box>
+  </Box>
+</Playground>

@@ -29,7 +29,7 @@ export default {
   title: 'Scaleway UI',
   description: 'Scaleway UI library',
   ordering: 'ascending',
-  menu: ['Home', 'Components'],
+  menu: ['Home', 'Migration', 'Components'],
   modifyBundlerConfig,
   modifyBabelRc,
   wrapper: 'docs/config/Wrapper',

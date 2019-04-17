@@ -58,6 +58,11 @@ This component is deprecated and it is not part of Scaleway UI.
 
 It is a new component to wrap all children in a `Box` and specify props on each of these `Boxes`.
 
+## Breadcrumbs
+
+- Breadcrumbs is now accessible (nav, ol > li, )
+- Last one is automatically marked as "active"
+
 ## Command
 
 - `Command` component has been droped, use `<Typography variant="command" />` instead
@@ -80,6 +85,11 @@ No breaking change.
 - `flex: 1` has been removed
 - `role="alert"` has been added
 
+## Link
+
+- Link now automatically use `a` and `href` if an absolute url is passed to `to`
+- Link is now a `a` by default, you can specify a `linkComponent` in the theme
+
 ## MaterialIcon
 
 - Component has been renamed into `Icon`
@@ -87,8 +97,12 @@ No breaking change.
 
 ## Notice
 
-- The display is not `flex`.
-- Add `role="alert"`
+No breaking change.
+
+## Separator
+
+- The tag is now a `hr`
+- `iconName` prop is now `icon` prop
 
 ## Tooltip
 

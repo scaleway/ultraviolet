@@ -1,0 +1,25 @@
+---
+name: Link
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Box, Boxer, Link, linkVariants } from 'scaleway-ui'
+
+# Link
+
+## Variants
+
+Set variant using `variant` property.
+
+<Playground>
+  <Box p={2} backgroundColor="gray200">
+    <Boxer my={1}>
+      {linkVariants.map(variant => (
+        <Link key={variant} href="#" variant={variant}>
+          {variant}
+        </Link>
+      ))}
+    </Boxer>
+  </Box>
+</Playground>
