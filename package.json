@@ -1,7 +1,28 @@
 {
   "private": true,
   "name": "scaleway-ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "format": "prettier --write '**/*.{js,json,md,mdx}'",
+    "lint": "eslint .",
+    "prebuild": "shx rm -rf dist",
+    "prepublishOnly": "yarn build",
+    "release": "standard-version"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
+    "@smooth-ui/core-em": "^4.0.0",
+    "emotion-theming": "^10.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
@@ -10,11 +31,16 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@smooth-ui/core-em": "^10.0.7",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-annotate-pure-calls": "^0.4.0",
     "babel-plugin-emotion": "^10.0.9",
     "babel-plugin-module-resolver": "^3.2.0",
     "docz": "^1.0.3",
     "docz-theme-default": "^1.0.3",
+    "emotion-theming": "^10.0.10",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -24,25 +50,22 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.10.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.2",
+    "shx": "^0.3.2",
+    "standard-version": "^5.0.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.3",
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
-    "@smooth-ui/core-em": "^10.0.7",
-    "emotion-theming": "^10.0.10",
     "flatten": "^1.0.2",
     "polished": "^3.2.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "react-flatten-children": "^1.0.0"
-  },
-  "scripts": {
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "format": "prettier --write '**/*.{js,json,md,mdx}'",
-    "lint": "eslint ."
   }
 }
