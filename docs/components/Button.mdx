@@ -1,0 +1,104 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Button, Icon, Boxer, buttonVariants, buttonSizes } from 'scaleway-ui'
+
+# Button
+
+## Variants
+
+Set variant using `variant` property.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonVariants.map(variant => (
+      <Button key={variant} variant={variant}>
+        {variant}
+      </Button>
+    ))}
+  </Boxer>
+</Playground>
+
+## Sizes
+
+Set size using `size` property.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonSizes.map(size => (
+      <Button key={size} size={size}>
+        {size}
+      </Button>
+    ))}
+  </Boxer>
+</Playground>
+
+## Disabled
+
+Set disabled using `disabled` property.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonVariants.map(variant => (
+      <Button key={variant} variant={variant} disabled>
+        {variant} disabled
+      </Button>
+    ))}
+  </Boxer>
+</Playground>
+
+## Progress
+
+Add `ActivityIndicator` by setting `progress` property to `left` or `right`.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonSizes.map(size => (
+      <Button key={size} size={size} progress="left">
+        {size} left progress
+      </Button>
+    ))}
+    {buttonSizes.map(size => (
+      <Button key={size} size={size} progress="right">
+        {size} right progress
+      </Button>
+    ))}
+    {buttonSizes.map(size => (
+      <Button key={size} size={size} progress />
+    ))}
+  </Boxer>
+</Playground>
+
+## Icons
+
+Add icon using `icon`. You can specify the name of the icon or the icon itself.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonSizes.map(size => (
+      <React.Fragment key={size}>
+        <Button size={size} icon="lock">
+          Icon + Text
+        </Button>
+        <Button size={size} icon="lock" />
+      </React.Fragment>
+    ))}
+  </Boxer>
+</Playground>
+
+## Extend
+
+Make button extensible using `extend` prop. It requires a `icon`.
+
+<Playground>
+  <Boxer my={1}>
+    {buttonSizes.map(size => (
+      <Button key={size} extend size={size} icon="plus">
+        {size} extend
+      </Button>
+    ))}
+  </Boxer>
+</Playground>

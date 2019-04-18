@@ -218,7 +218,13 @@ const style = ({ verticalAlign, size, color }) => p => {
   `
 }
 
-export function Icon({ color, name, size, verticalAlign, ...props }) {
+export function Icon({
+  name,
+  color = 'currentColor',
+  size = '1em',
+  verticalAlign = 'middle',
+  ...props
+}) {
   const renderIcon = ICONS[name]
   if (!renderIcon) {
     throw new Error(`Icon "${name}" not found.`)
@@ -226,6 +232,7 @@ export function Icon({ color, name, size, verticalAlign, ...props }) {
 
   return (
     <Box
+      className="sc-ui-icon"
       css={cx(style({ color, size, verticalAlign }))}
       {...props}
       viewBox="0 0 24 24"
@@ -234,12 +241,6 @@ export function Icon({ color, name, size, verticalAlign, ...props }) {
       {renderIcon()}
     </Box>
   )
-}
-
-Icon.defaultProps = {
-  size: '1em',
-  color: 'currentColor',
-  verticalAlign: 'middle',
 }
 
 Icon.propTypes = {

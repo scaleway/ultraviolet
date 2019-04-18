@@ -22,6 +22,10 @@ export const darkBlack = '#151a2d' // gray950
 export const neutralGrey = '#dbdbdf' // nGray300
 ```
 
+## Action
+
+Component has been removed, use `<Button size="sm" icon="..." />` instead.
+
 ## ActivityIndicator
 
 No breaking change.
@@ -45,6 +49,27 @@ Sizes have been renamed:
 ### Positions
 
 Positions are no longer accepted, they are not part of the system.
+
+## Button
+
+- `tooltip` is gone, insert a `<Tooltip>` in the button instead
+- `progressOnly` is gone, just use `progress`
+- `leftIcon` is gone, use `icon` instead, it also accepts strings (the name of the icon) now
+- Margins have been modified to support icons correctly
+
+### Sizes
+
+- `small` becomes `xs`
+- A new one `sm` that replaces the `Action` component
+- `medium` becomes `md`
+- `large` becomes `lg`
+
+### Variants
+
+- `delete-*` becomes `warning-*`
+- `action` becomes `primary-soft-bordered`
+- `simpleBlack` becomes `transparent`
+- `primary`, `success` and `warning` are declined with `-bordered` and `-soft-bordered`
 
 ## BlockList
 
