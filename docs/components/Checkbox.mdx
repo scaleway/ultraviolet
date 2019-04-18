@@ -1,0 +1,75 @@
+---
+name: Checkbox
+menu: Components
+---
+
+import { useState, useCallback } from 'react'
+import { Playground, Props } from 'docz'
+import { Checkbox, Boxer, typographyVariants } from 'scaleway-ui'
+
+# Checkbox
+
+Checkbox control, it acts like a real checkbox.
+
+## Basic
+
+<Playground>
+  {() => {
+    const [checked, setChecked] = useState(false)
+    const handleChange = useCallback(
+      event => setChecked(event.target.checked),
+      [],
+    )
+    return (
+      <Checkbox checked={checked} onChange={handleChange}>
+        Basic checkbox
+      </Checkbox>
+    )
+  }}
+</Playground>
+
+## Validation
+
+Set validation using `valid` property.
+
+<Playground>
+  <Boxer my={1}>
+    <Checkbox valid={false}>Invalid checkbox</Checkbox>
+    <Checkbox valid={true}>Valid checkbox</Checkbox>
+  </Boxer>
+</Playground>
+
+## Size
+
+Set size using `size` property.
+
+<Playground>
+  <Boxer my={1}>
+    <Checkbox size={10}>Small checkbox</Checkbox>
+    <Checkbox size={30}>Big checkbox</Checkbox>
+  </Boxer>
+</Playground>
+
+## Progress
+
+Set progress using `progress` property.
+
+<Playground>
+  <Boxer my={1}>
+    <Checkbox progress>Progress checkbox</Checkbox>
+  </Boxer>
+</Playground>
+
+## Variant
+
+Set `Typography` variant using `variant` property.
+
+<Playground>
+  <Boxer my={1}>
+    {typographyVariants.map(variant => (
+      <Checkbox key={variant} variant={variant}>
+        {variant}
+      </Checkbox>
+    ))}
+  </Boxer>
+</Playground>

@@ -89,6 +89,13 @@ It is a new component to wrap all children in a `Box` and specify props on each 
 - Breadcrumbs is now accessible (nav, ol > li, )
 - Last one is automatically marked as "active"
 
+## Checkbox
+
+- `error` becomes `valid={false}`, `valid={true}` is now supported
+- `loading` becomes `progress`
+- `a11yId` becomes `id`
+- `typoVariant` becomes `variant`
+
 ## Command
 
 - `Command` component has been droped, use `<Typography variant="command" />` instead
@@ -102,6 +109,10 @@ It is a new component to wrap all children in a `Box` and specify props on each 
 - You can now specify several `Term` and `Desc` into a `Description`
 
 ## Dot
+
+No breaking change.
+
+## Grid
 
 No breaking change.
 
@@ -130,11 +141,20 @@ No breaking change.
 - The tag is now a `hr`
 - `iconName` prop is now `icon` prop
 
+## Stepper
+
+No breaking change.
+
 ## Tooltip
 
 - Tooltip now uses [Smooth UI Tooltip](https://smooth-ui.smooth-code.com/docs-components-tooltip) under the hood
 - `place` is now `placement`
 - To use a tooltip, put the component inside the container
+
+## Touchable
+
+- `activeOpacity` is gone
+- `hasFocus` is gone, use `tabIndex` instead
 
 ## Typography
 

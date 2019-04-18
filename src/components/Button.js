@@ -167,7 +167,7 @@ const styles = {
   icon: css`
     display: flex;
   `,
-  ':disabled': p => css`
+  disabled: p => css`
     cursor: default;
     pointer-events: none;
     background-color: ${thColor('gray50')(p)};
@@ -175,7 +175,7 @@ const styles = {
     border-color: ${thColor('gray50')(p)};
     box-shadow: none;
   `,
-  ':extend': ({ icon }) => css`
+  extend: ({ icon }) => css`
     & .sc-ui-btn-content {
       transition: max-width 450ms ease, padding-left 450ms ease,
         padding-right 450ms ease;
@@ -222,15 +222,15 @@ export function Button({
   if (!sizeStyle) {
     throw new Error(`Unknwown Button size "${size}"`)
   }
-  const hasChildren = React.Children.toArray(children).length > 0
+  const hasChildren = Boolean(children)
   return (
     <Box
       css={cx([
         styles.button,
         variantStyle,
         sizeStyle,
-        disabled && styles[':disabled'],
-        extend && styles[':extend']({ icon }),
+        disabled && styles.disabled,
+        extend && styles.extend({ icon }),
       ])}
       type={type}
       as={as}
