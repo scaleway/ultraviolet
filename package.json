@@ -5,6 +5,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "sideEffects": false,
+  "main": "dist/scaleway-ui.cjs.js",
+  "module": "dist/scaleway-ui.es.js",
+  "jsnext:main": "dist/scaleway-ui.es.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "docz dev",
