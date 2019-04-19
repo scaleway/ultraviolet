@@ -1,0 +1,48 @@
+---
+name: StateBar
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { StateBar, Boxer } from 'scaleway-ui'
+
+# StateBar
+
+A description of a progress bar.
+
+## Basic
+
+<Playground>
+  <Boxer my={2}>
+    <StateBar>
+      <StateBar.State label="Label">your value</StateBar.State>
+      <StateBar.Bar value={50} />
+    </StateBar>
+    <StateBar>
+      <StateBar.State label="Value >= 90" />
+      <StateBar.Bar value={90} />
+    </StateBar>
+  </Boxer>
+</Playground>
+
+## Unlimited
+
+Set unlimited using `unlimited` prop on `StateBar.Bar`.
+
+<Playground>
+  <StateBar>
+    <StateBar.State label="Unlimited" />
+    <StateBar.Bar unlimited />
+  </StateBar>
+</Playground>
+
+## Progress
+
+Set progress using `progress` prop on `StateBar.Bar`.
+
+<Playground>
+  <StateBar>
+    <StateBar.State label="Progress" />
+    <StateBar.Bar progress />
+  </StateBar>
+</Playground>

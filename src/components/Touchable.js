@@ -1,18 +1,29 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { transparentize } from 'polished'
 import { cx } from 'utils'
+import { primary } from 'theming'
 import { Box } from './Box'
 
 const styles = {
-  touchable: css`
+  touchable: p => css`
     border: 0;
-    transition: opacity 150ms;
+    transition: opacity 200ms, box-shadow 200ms;
     user-select: none;
     background-color: transparent;
     padding: 0;
     margin: 0;
     cursor: pointer;
-    appearance: none;
+
+    &[type='button'] {
+      appearance: none;
+    }
+
+    &:focus,
+    &:focus-within {
+      outline: none;
+      box-shadow: 0 0 3px ${transparentize(0.7, primary(p))};
+    }
   `,
   disabled: css`
     cursor: default;

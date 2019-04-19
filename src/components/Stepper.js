@@ -1,4 +1,5 @@
 import React, { useRef, useCallback, useState } from 'react'
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
 import { white, gray100, gray350, gray550, gray700 } from 'theming'
@@ -84,65 +85,75 @@ const styles = {
 }
 
 export function Stepper({
-  text = '',
+  unit = '',
   disabled,
-  minValue,
-  maxValue,
+  minValue = 0,
+  maxValue = 100,
   name,
   step = 1,
   value,
   onChange,
   onFocus,
   onBlur,
-  minusDisabled,
-  plusDisabled,
   ...props
 }) {
-  const inputRef = useRef()
+  const instance = useRef({})
   const [inputValue, setInputValue] = useState(String(value))
-  const handleEditClick = useCallback(() => inputRef.current.focus(), [])
+  Object.assign(instance.current, {
+    minValue,
+    maxValue,
+    step,
+    value,
+    onChange,
+    onBlur,
+    inputValue,
+  })
+  const inputRef = useRef()
+  const handleEdit = useCallback(() => inputRef.current.focus(), [])
   const handleInputChange = useCallback(
     event => setInputValue(event.target.value),
     [],
   )
-  const handleInputBlur = useCallback(
-    event => {
-      const boundedValue = bounded(
-        parseIntOr(inputValue, 0),
-        minValue,
-        maxValue,
-      )
-      const validValue = Math.round(boundedValue / step) * step
-      setInputValue(String(validValue))
+  const handleInputBlur = useCallback(event => {
+    const {
+      value,
+      minValue,
+      maxValue,
+      step,
+      inputValue,
+      onChange,
+      onBlur,
+    } = instance.current
+    const boundedValue = bounded(parseIntOr(inputValue, 0), minValue, maxValue)
+    const validValue = Math.round(boundedValue / step) * step
+    setInputValue(String(validValue))
 
-      if (value !== validValue) {
-        onChange(validValue)
-      }
+    if (value !== validValue) {
+      onChange(validValue)
+    }
 
-      if (onBlur) {
-        onBlur(event)
-      }
-    },
-    [step, minValue, maxValue, onChange, value, inputValue, onBlur],
-  )
+    if (onBlur) {
+      onBlur(event)
+    }
+  }, [])
 
-  const changeValue = useCallback(
-    value => {
-      onChange(value)
-      setInputValue(String(value))
-    },
-    [onChange],
-  )
+  const changeValue = useCallback(value => {
+    const { onChange } = instance.current
+    onChange(value)
+    setInputValue(String(value))
+  }, [])
 
   const decrement = useCallback(() => {
+    const { value, step } = instance.current
     const newValue = value - step
     changeValue(newValue)
-  }, [value, step, changeValue])
+  }, [changeValue])
 
   const increment = useCallback(() => {
+    const { value, step } = instance.current
     const newValue = value + step
     changeValue(newValue)
-  }, [value, step, changeValue])
+  }, [changeValue])
 
   return (
     <Box {...props} css={cx(styles.container)}>
@@ -153,23 +164,20 @@ export function Stepper({
           disabled && styles.disabled,
         ])}
         onClick={decrement}
-        disabled={value <= minValue || disabled || minusDisabled}
+        disabled={value <= minValue || disabled}
         aria-label="minus"
       >
         <Icon
           name="minus"
           size={28}
-          color={
-            value <= minValue || disabled || minusDisabled
-              ? 'gray550'
-              : 'primary'
-          }
+          color={value <= minValue || disabled ? 'gray550' : 'primary'}
         />
       </Touchable>
 
       <Touchable
         css={cx([styles.center, disabled && styles.disabled])}
-        onClick={handleEditClick}
+        onClick={handleEdit}
+        onFocus={handleEdit}
       >
         <input
           ref={inputRef}
@@ -185,7 +193,7 @@ export function Stepper({
         />
 
         <span css={cx([styles.input, disabled && styles.disabled])}>
-          {text}
+          {unit}
         </span>
       </Touchable>
 
@@ -196,19 +204,25 @@ export function Stepper({
           disabled && styles.disabled,
         ])}
         onClick={increment}
-        disabled={value >= maxValue || disabled || plusDisabled}
+        disabled={value >= maxValue || disabled}
         aria-label="plus"
       >
         <Icon
           name="plus"
           size={28}
-          color={
-            value >= maxValue || disabled || plusDisabled
-              ? 'gray550'
-              : 'primary'
-          }
+          color={value >= maxValue || disabled ? 'gray550' : 'primary'}
         />
       </Touchable>
     </Box>
   )
+}
+
+Stepper.propTypes = {
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+  minValue: PropTypes.number,
+  maxValue: PropTypes.number,
+  unit: PropTypes.node,
+  disabled: PropTypes.bool,
+  step: PropTypes.number,
 }

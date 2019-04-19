@@ -1,0 +1,62 @@
+---
+name: ProgressBar
+menu: Components
+---
+
+import { useState, useEffect } from 'react'
+import { Playground, Props } from 'docz'
+import { Boxer, ProgressBar, progressBarVariants } from 'scaleway-ui'
+
+# ProgressBar
+
+An horizontal progress bar.
+
+## Basic
+
+<Playground>
+  {() => {
+    const [value, setValue] = useState(0)
+    useEffect(() => {
+      setInterval(() => {
+        setValue(value => (value === 0 ? Math.round(Math.random() * 100) : 0))
+      }, 800)
+    }, [])
+    return <ProgressBar value={value} />
+  }}
+</Playground>
+
+## Variants
+
+Set variant using `variant` prop.
+
+<Playground>
+  {() => {
+    function UncontrolledProgressBar(props) {
+      const [value, setValue] = useState(0)
+      useEffect(() => {
+        setInterval(() => {
+          setValue(value => (value === 0 ? Math.round(Math.random() * 100) : 0))
+        }, Math.random() * 400 + 800)
+      }, [])
+      return <ProgressBar value={value} {...props} />
+    }
+
+    return (
+      <Boxer my={1}>
+        {progressBarVariants.map(variant => (
+          <UncontrolledProgressBar key={variant} variant={variant} />
+        ))}
+      </Boxer>
+    )
+
+}}
+
+</Playground>
+
+## Progress
+
+Set progress using `progress` prop.
+
+<Playground>
+  <ProgressBar progress />
+</Playground>
