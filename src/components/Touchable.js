@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { transparentize } from 'polished'
 import { cx } from 'utils'
@@ -41,4 +42,8 @@ export function Touchable({ disabled, as = 'button', type, ...props }) {
       {...props}
     />
   )
+}
+
+Touchable.propTypes = {
+  disabled: PropTypes.bool,
 }
