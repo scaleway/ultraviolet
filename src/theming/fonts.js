@@ -11,3 +11,5 @@ export const fonts = thd('fonts', {
   sansSerif,
   monospace,
 })
+
+export const fontFamily = thd('fontFamily', sansSerif)

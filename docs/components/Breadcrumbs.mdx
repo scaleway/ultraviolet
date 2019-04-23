@@ -4,18 +4,52 @@ menu: Components
 ---
 
 import { Playground } from 'docz'
-import { Breadcrumbs } from 'scaleway-ui'
+import { Breadcrumbs, Boxer, breadcrumbsVariants } from 'scaleway-ui'
 
 # Breadcrumbs
 
 Creates a breadcrumbs of hierarchical pages.
 
-## Basic
+## Links
+
+Link are automatically supported with `to` prop.
 
 <Playground>
-  <Breadcrumbs>
-    <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
-    <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>
-    <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-  </Breadcrumbs>
+  <Boxer my={1}>
+    <Breadcrumbs>
+      <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+  </Boxer>
+</Playground>
+
+## Variants
+
+Set variant using `variant` prop.
+
+<Playground>
+  <Boxer my={2}>
+    {breadcrumbsVariants.map(variant => (
+      <Breadcrumbs key={variant} activeIndex={1} variant={variant}>
+        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+      </Breadcrumbs>
+    ))}
+  </Boxer>
+</Playground>
+
+## Active index
+
+Active index is automatically determined as the last element. One can be specified using `activeIndex` prop.
+
+<Playground>
+  <Boxer my={2}>
+    <Breadcrumbs activeIndex={0} variant="bubble">
+      <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+  </Boxer>
 </Playground>

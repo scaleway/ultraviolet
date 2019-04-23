@@ -1,9 +1,11 @@
 import React, { cloneElement } from 'react'
 import PropTypes from 'prop-types'
+import { transparentize } from 'polished'
 import flattenChildren from 'react-flatten-children'
 import { css } from '@emotion/core'
+import { primary, white, gray350, gray550, success } from 'theming'
+import { cx, sp } from 'utils'
 import { Link } from './Link'
-import { Typography } from './Typography'
 import { Box } from './Box'
 
 const styles = {
@@ -11,15 +13,95 @@ const styles = {
     list-style: none;
     margin: 0;
     padding: 0;
+
+    /* bubble */
+    display: flex;
   `,
-  li: css`
+}
+
+function reverseZIndexes() {
+  const count = 10
+  return Array.from(
+    { length: count },
+    (_, index) => css`
+      &:nth-child(${index + 1}) {
+        z-index: ${count - index};
+      }
+    `,
+  )
+}
+
+const variants = {
+  link: p => css`
     display: inline;
+
+    &[aria-current='page'] {
+      color: ${gray550(p)};
+    }
 
     &:not(:last-child)::after {
       content: '›';
       margin: 0 8px;
     }
   `,
+  bubble: p => {
+    const space = sp(3)(p)
+    const doubleSpace = sp(6)(p)
+    return css`
+      display: flex;
+      flex: 1;
+      font-weight: 500;
+      line-height: 24px;
+      border-radius: 24px;
+      border-style: solid;
+      border-width: 1px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: ${doubleSpace};
+      padding-right: ${space};
+      margin-left: -${space};
+      margin-right: -${space};
+
+      background-color: ${success(p)};
+      color: ${white(p)};
+      border-color: ${white(p)};
+
+      &:first-child {
+        padding-left: ${space};
+        margin-left: 0;
+        margin-right: -${space};
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &[aria-current='page'] {
+        background-color: ${primary(p)};
+        color: ${white(p)};
+        border-color: ${white(p)};
+
+        &:focus {
+          box-shadow: 0 0 0 2px ${transparentize(0.75, primary(p))};
+        }
+      }
+
+      &[aria-current='page'] ~ & {
+        background-color: ${white(p)};
+        color: ${gray550(p)};
+        border-color: ${gray350(p)};
+
+        &:focus {
+          box-shadow: 0 0 0 2px ${transparentize(0.75, gray550(p))};
+        }
+      }
+
+      ${reverseZIndexes()}
+    `
+  },
 }
 
 function contractString(str) {
@@ -29,9 +111,17 @@ function contractString(str) {
   return str
 }
 
-export function Breadcrumbs({ children, ...props }) {
+export const breadcrumbsVariants = Object.keys(variants)
+
+export function Breadcrumbs({
+  children,
+  variant = 'link',
+  activeIndex: activeIndexProp,
+  ...props
+}) {
   const flatChildren = flattenChildren(children)
-  const lastIndex = flatChildren.length - 1
+  const activeIndex =
+    activeIndexProp !== undefined ? activeIndexProp : flatChildren.length - 1
 
   return (
     <Box as="nav" aria-label="Breadcrumb" {...props}>
@@ -39,11 +129,12 @@ export function Breadcrumbs({ children, ...props }) {
         {flatChildren.map((child, index) => {
           if (!child) return null
 
-          const active = lastIndex === index
+          const active = activeIndex === index
           return (
             <React.Fragment key={child.key}>
               {cloneElement(child, {
                 'aria-current': active ? 'page' : undefined,
+                variant,
               })}
             </React.Fragment>
           )
@@ -56,19 +147,18 @@ export function Breadcrumbs({ children, ...props }) {
 Breadcrumbs.propTypes = {
   children: PropTypes.node,
   as: PropTypes.string,
+  variant: PropTypes.oneOf(breadcrumbsVariants),
 }
 
-Breadcrumbs.Item = function Item({ to, children, ...props }) {
+Breadcrumbs.Item = function Item({ to, children, variant, ...props }) {
   return (
-    <Box css={styles.li} as="li" {...props}>
+    <Box css={cx(variants[variant])} as="li" {...props}>
       {to ? (
         <Link variant="primary" to={to}>
           {contractString(children)}
         </Link>
       ) : (
-        <Typography as="span" color="gray550">
-          {contractString(children)}
-        </Typography>
+        contractString(children)
       )}
     </Box>
   )
