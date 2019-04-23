@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.1.0-alpha.1](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0-alpha.0...v0.1.0-alpha.1) (2019-04-23)
+
+
+### Features
+
+* Stepper, StateBar, ProgressBar ([1578e16](https://github.com/smooth-code/scaleway-ui/commit/1578e16))
+* Touchable, Checkbox, Stepper, Grid ([1e369df](https://github.com/smooth-code/scaleway-ui/commit/1e369df))
+
+
+
 # 0.1.0-alpha.0 (2019-04-18)
 
 
