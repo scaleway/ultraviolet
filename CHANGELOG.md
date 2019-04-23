@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.1.0](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0-alpha.1...v0.1.0) (2019-04-23)
+
+
+### Features
+
+* add Breadcrumbs variant ([995e72c](https://github.com/smooth-code/scaleway-ui/commit/995e72c))
+* add Table ([2d82746](https://github.com/smooth-code/scaleway-ui/commit/2d82746))
+
+
+
 # [0.1.0-alpha.1](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0-alpha.0...v0.1.0-alpha.1) (2019-04-23)
 
 
