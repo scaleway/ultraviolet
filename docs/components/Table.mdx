@@ -1,0 +1,90 @@
+---
+name: Table
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Table, Button } from 'scaleway-ui'
+
+# Table
+
+A simple table component.
+
+## Basic
+
+<Playground>
+  <Table>
+    <Table.Thead>
+      <Table.Tr>
+        <Table.Th>ID</Table.Th>
+        <Table.Th>Status</Table.Th>
+        <Table.Th>Date</Table.Th>
+      </Table.Tr>
+    </Table.Thead>
+    <Table.Tbody>
+      <Table.Tr>
+        <Table.Td>165</Table.Td>
+        <Table.Td>Ongoing</Table.Td>
+        <Table.Td>Yesterday</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+        <Table.Td>56</Table.Td>
+        <Table.Td>Resolved</Table.Td>
+        <Table.Td>1 hour ago</Table.Td>
+      </Table.Tr>
+    </Table.Tbody>
+  </Table>
+</Playground>
+
+## Hoverable row
+
+`Table.Tr` are hoverable and can make things appear when hovered. Add `data-visibility="hover"` on the component to make it only visible on hover.
+
+<Playground>
+  <Table>
+    <Table.Thead>
+      <Table.Tr>
+        <Table.Th>ID</Table.Th>
+        <Table.Th>Date</Table.Th>
+        <Table.Th>Action</Table.Th>
+      </Table.Tr>
+    </Table.Thead>
+    <Table.Tbody>
+      <Table.Tr>
+        <Table.Td>999</Table.Td>
+        <Table.Td>Just now</Table.Td>
+        <Table.Td>
+          <Button size="sm" icon="eye" data-visibility="hover" />
+        </Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+        <Table.Td>165</Table.Td>
+        <Table.Td>Yesterday</Table.Td>
+        <Table.Td>
+          <Button size="sm" icon="eye" data-visibility="hover" />
+        </Table.Td>
+      </Table.Tr>
+    </Table.Tbody>
+  </Table>
+</Playground>
+
+## Loader
+
+Set `progress` on `Table.Tbody` to display a loader. You also have to specify `colSpan`.
+
+<Playground>
+  <Table>
+    <Table.Thead>
+      <Table.Tr>
+        <Table.Th>ID</Table.Th>
+        <Table.Th>Date</Table.Th>
+      </Table.Tr>
+    </Table.Thead>
+    <Table.Tbody progress colSpan={2}>
+      <Table.Tr>
+        <Table.Td>999</Table.Td>
+        <Table.Td>Just now</Table.Td>
+      </Table.Tr>
+    </Table.Tbody>
+  </Table>
+</Playground>
