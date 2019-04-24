@@ -1,0 +1,21 @@
+---
+name: Toggler
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Toggler, Button } from 'scaleway-ui'
+
+# Toggler
+
+Toggler, see [Smooth UI Toggler](https://smooth-ui.smooth-code.com/docs-utilities-toggler).
+
+## Basic
+
+<Playground>
+  <Toggler>
+    {([toggled, toggle]) => (
+      <Button onClick={() => toggle()}>{toggled ? 'ON' : 'OFF'}</Button>
+    )}
+  </Toggler>
+</Playground>

@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import { cx, sp } from 'utils'
 import { gray50, gray350, gray550, gray700, primary } from 'theming'
 import { ActivityIndicator } from './ActivityIndicator'
+import { Box } from './Box'
 
 const styles = {
   cell: p => css`
@@ -94,6 +95,11 @@ Table.Tbody = function Tbody({ progress, colSpan, children, ...props }) {
       )}
     </Box>
   )
+}
+
+Table.Tbody.propTypes = {
+  colSpan: PropTypes.number,
+  progress: PropTypes.bool,
 }
 
 Table.Tr = function Tr(props) {
