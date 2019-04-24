@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.2.0](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0...v0.2.0) (2019-04-24)
+
+
+### Features
+
+* add Expandable & Toggler ([ac5ebd0](https://github.com/smooth-code/scaleway-ui/commit/ac5ebd0))
+
+
+
 # [0.1.0](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0-alpha.1...v0.1.0) (2019-04-23)
 
 
