@@ -8,6 +8,7 @@ import { Box } from './Box'
 const style = p => css`
   color: ${gray550(p)};
   font-size: 12px;
+  line-height: 20px;
 `
 
 export function Notice({ children, ...props }) {
