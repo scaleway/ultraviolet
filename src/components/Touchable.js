@@ -15,6 +15,7 @@ const styles = {
     padding: 0;
     margin: 0;
     cursor: pointer;
+    color: currentColor;
 
     &[type='button'] {
       appearance: none;
