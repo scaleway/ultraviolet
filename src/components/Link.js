@@ -8,9 +8,11 @@ import { Icon } from './Icon'
 import { Box } from './Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
-function isAbsolute(url) {
+function needNativeLink(url) {
   if (!url) return false
-  return ABSOLUTE_LINK_REGEXP.test(url)
+  const isAbsolute = ABSOLUTE_LINK_REGEXP.test(url)
+  const isAnchor = url[0] === '#'
+  return isAbsolute || isAnchor
 }
 
 const variant = color => {
@@ -61,7 +63,7 @@ export function Link({ variant, children, ...props }) {
   const isBlank = props.target === '_blank'
   const rel = props.rel || (isBlank ? 'noopener noreferrer' : undefined)
   const href = props.to || props.href
-  const as = props.as || (isAbsolute(props.to) ? 'a' : linkComponent)
+  const as = props.as || (needNativeLink(props.to) ? 'a' : linkComponent)
   return (
     <Box
       css={cx([styles.link, variants[variant]])}
