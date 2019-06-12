@@ -269,7 +269,10 @@ export function Button({
 }
 
 Button.propTypes = {
-  progress: PropTypes.oneOf(['left', 'right']),
+  progress: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['left', 'right']),
+  ]),
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(buttonVariants),
   size: PropTypes.oneOf(buttonSizes),
