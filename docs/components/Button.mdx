@@ -57,12 +57,12 @@ Add `ActivityIndicator` by setting `progress` property to `left` or `right`.
 <Playground>
   <Boxer my={1}>
     {buttonSizes.map(size => (
-      <Button key={size} size={size} progress="left">
+      <Button key={`left-${size}`} size={size} progress="left">
         {size} left progress
       </Button>
     ))}
     {buttonSizes.map(size => (
-      <Button key={size} size={size} progress="right">
+      <Button key={`right-${size}`} size={size} progress="right">
         {size} right progress
       </Button>
     ))}
