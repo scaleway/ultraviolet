@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.4.0](https://github.com/chambo-e/scw-ui/compare/v0.3.1...v0.4.0) (2019-06-14)
+
+
+### Bug Fixes
+
+* button proptypes ([e2537b2](https://github.com/chambo-e/scw-ui/commit/e2537b2))
+
+
+### Features
+
+* UniversalLink for link logic delegation ([a63a594](https://github.com/chambo-e/scw-ui/commit/a63a594))
+* use native link for anchors ([b86eb01](https://github.com/chambo-e/scw-ui/commit/b86eb01))
+
+
+
 ## [0.3.1](https://github.com/chambo-e/scw-ui/compare/v0.3.0...v0.3.1) (2019-04-29)
 
 
