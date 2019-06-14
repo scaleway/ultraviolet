@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { darken, transparentize } from 'polished'
-import { cx, thColor, useTheme } from 'utils'
+import { cx, thColor } from 'utils'
 import { borderRadius } from 'theming'
 import { Box } from './Box'
 import { Icon } from './Icon'
+import { UniversalLink } from './UniversalLink'
 import { ActivityIndicator } from './ActivityIndicator'
 
 const plainVariant = (bgColor, textColor) => p => {
@@ -206,9 +207,8 @@ export function Button({
   type: typeProp = 'button',
   ...props
 }) {
-  const { linkComponent = 'a' } = useTheme()
   const as = props.to
-    ? linkComponent
+    ? UniversalLink
     : props.href || props.download
     ? 'a'
     : asProp
