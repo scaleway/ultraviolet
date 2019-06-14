@@ -102,3 +102,15 @@ Make button extensible using `extend` prop. It requires a `icon`.
     ))}
   </Boxer>
 </Playground>
+
+## Link delegation
+
+Using the `to` props, link behavior is delegated to [Link Component](docs-components-link).
+
+<Playground>
+  <Boxer my={1}>
+    <Button to="https://scaleway.com" target="_blank">
+      Scaleway
+    </Button>
+  </Boxer>
+</Playground>

@@ -2,18 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { darken } from 'polished'
-import { cx, useTheme } from 'utils'
+import { cx } from 'utils'
 import { blue, gray550, primary, white } from 'theming'
 import { Icon } from './Icon'
-import { Box } from './Box'
-
-const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
-function needNativeLink(url) {
-  if (!url) return false
-  const isAbsolute = ABSOLUTE_LINK_REGEXP.test(url)
-  const isAnchor = url[0] === '#'
-  return isAbsolute || isAnchor
-}
+import { UniversalLink } from './UniversalLink'
 
 const variant = color => {
   return css`
@@ -59,19 +51,9 @@ const styles = {
 }
 
 export function Link({ variant, children, ...props }) {
-  const { linkComponent = 'a' } = useTheme()
   const isBlank = props.target === '_blank'
-  const rel = props.rel || (isBlank ? 'noopener noreferrer' : undefined)
-  const href = props.to || props.href
-  const as = props.as || (needNativeLink(props.to) ? 'a' : linkComponent)
   return (
-    <Box
-      css={cx([styles.link, variants[variant]])}
-      {...props}
-      as={as}
-      href={href}
-      rel={rel}
-    >
+    <UniversalLink css={cx([styles.link, variants[variant]])} {...props}>
       {children}
       {isBlank && (
         <Icon
@@ -80,7 +62,7 @@ export function Link({ variant, children, ...props }) {
           verticalAlign="top"
         />
       )}
-    </Box>
+    </UniversalLink>
   )
 }
 
