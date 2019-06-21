@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.5.0](https://github.com/chambo-e/scw-ui/compare/v0.4.0...v0.5.0) (2019-06-21)
+
+
+### Bug Fixes
+
+* use front-ci-cd ansible_user ([e22d96b](https://github.com/chambo-e/scw-ui/commit/e22d96b))
+
+
+### Features
+
+* ci-cd publish npm registry ([c8116cf](https://github.com/chambo-e/scw-ui/commit/c8116cf))
+* GlobalStyle component ([f9dc3d4](https://github.com/chambo-e/scw-ui/commit/f9dc3d4))
+* Select component ([70e2592](https://github.com/chambo-e/scw-ui/commit/70e2592))
+* useCopyToClipboard ([2c79b00](https://github.com/chambo-e/scw-ui/commit/2c79b00))
+
+
+
 # [0.4.0](https://github.com/chambo-e/scw-ui/compare/v0.3.1...v0.4.0) (2019-06-14)
 
 
