@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.1](https://github.com/chambo-e/scw-ui/compare/v0.5.0...v0.5.1) (2019-06-21)
+
+
+### Bug Fixes
+
+* add front tag to deploy:npm ci job ([c36addf](https://github.com/chambo-e/scw-ui/commit/c36addf))
+
+
+
 # [0.5.0](https://github.com/chambo-e/scw-ui/compare/v0.4.0...v0.5.0) (2019-06-21)
 
 
