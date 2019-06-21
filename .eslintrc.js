@@ -9,4 +9,7 @@ module.exports = {
     'emotion/import-from-emotion': 'error',
     'emotion/syntax-preference': ['error', 'string'],
   },
+  env: {
+    browser: true,
+  },
 }
