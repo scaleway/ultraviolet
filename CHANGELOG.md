@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.5](https://github.com/chambo-e/scw-ui/compare/v0.5.4...v0.5.5) (2019-06-24)
+
+
+### Bug Fixes
+
+* ci-cd registry ([ee0e650](https://github.com/chambo-e/scw-ui/commit/ee0e650))
+
+
+
 ## [0.5.4](https://github.com/chambo-e/scw-ui/compare/v0.5.3...v0.5.4) (2019-06-21)
 
 
