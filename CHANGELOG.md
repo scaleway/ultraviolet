@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.2](https://github.com/chambo-e/scw-ui/compare/v0.5.1...v0.5.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* yarn install before publish ([cd606b3](https://github.com/chambo-e/scw-ui/commit/cd606b3))
+
+
+
 ## [0.5.1](https://github.com/chambo-e/scw-ui/compare/v0.5.0...v0.5.1) (2019-06-25)
 
 
