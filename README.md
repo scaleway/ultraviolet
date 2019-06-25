@@ -6,10 +6,8 @@ Scaleway official UI library.
 
 Start docz using `yarn dev`.
 
-## Release
+## Create a new release
 
-Deploy a new release using `yarn release`.
-
-## Publish
-
-Use this registry: `https://nexus-registry.infra.online.net/repository/npm-registry/`
+1. Prepare the new release: `yarn release`. (You can check changes made with `git diff HEAD^1`)
+1. Push the release: `git push --follow-tags origin master`.
+1. :warning: **do not publish yourself**, the pipeline will do it for you with the `front-ci-cd` user.
