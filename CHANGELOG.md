@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.3](https://github.com/chambo-e/scw-ui/compare/v0.5.2...v0.5.3) (2019-06-26)
+
+
+### Bug Fixes
+
+* GlobalStyle prop types ([c1d2887](https://github.com/chambo-e/scw-ui/commit/c1d2887))
+* select chevron centering ([2eae9d2](https://github.com/chambo-e/scw-ui/commit/2eae9d2))
+
+
+
 ## [0.5.2](https://github.com/chambo-e/scw-ui/compare/v0.5.1...v0.5.2) (2019-06-25)
 
 
