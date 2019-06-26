@@ -40,7 +40,7 @@ const styles = {
     position: relative;
     width: 100%;
     padding-left: ${sp(1)(p)};
-    padding-right: ${sp(3)(p)};
+    padding-right: ${sp(4)(p)};
     font-weight: 500;
     font-size: 16px;
     line-height: ${sp(3)(p)};
@@ -83,9 +83,11 @@ const styles = {
     right: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: ${sp(1)(p)};
     pointer-events: none;
+    padding: ${sp(1)(p)};
   `,
 }
 
@@ -140,7 +142,6 @@ export function Select({
         <Icon
           name="chevron-down"
           size={11}
-          mt={1}
           color={
             arrowColor || (error ? 'warning' : disabled ? 'grey' : 'darkGrey')
           }
