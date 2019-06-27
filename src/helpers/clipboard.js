@@ -1,12 +1,20 @@
-const supportedFn = document.queryCommandSupported
+import { isBrowser } from 'utils'
 
 // isClipbordAvailable returns true if the copy command is supported by the browser.
 export function isClipbordAvailable() {
+  if (!isBrowser) {
+    return false
+  }
+  const supportedFn = document.queryCommandSupported
   return typeof (supportedFn === 'function' && supportedFn('copy'))
 }
 
 // copy copies a text to the user clipboard.
 export function copy(text) {
+  if (!isBrowser) {
+    return false
+  }
+
   let success = false
   const { body } = document
 
