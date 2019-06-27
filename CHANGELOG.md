@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.6.0](https://github.com/chambo-e/scw-ui/compare/v0.5.3...v0.6.0) (2019-06-27)
+
+
+### Features
+
+* make clipboard util SSR compilant ([34afefd](https://github.com/chambo-e/scw-ui/commit/34afefd))
+
+
+
 ## [0.5.3](https://github.com/chambo-e/scw-ui/compare/v0.5.2...v0.5.3) (2019-06-26)
 
 
