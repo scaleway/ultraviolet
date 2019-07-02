@@ -34,33 +34,8 @@ const globalStyles = p => css`
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
   }
 
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url('/fonts/asap/Asap-Regular.woff2') format('woff2'),
-      url('/fonts/asap/Asap-Regular.woff') format('woff'),
-      url('/fonts/asap/Asap-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url('/fonts/asap/Asap-Medium.woff2') format('woff2'),
-      url('/fonts/asap/Asap-Medium.woff') format('woff'),
-      url('/fonts/asap/Asap-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url('/fonts/asap/Asap-Bold.woff2') format('woff2'),
-      url('/fonts/asap/Asap-Bold.woff') format('woff'),
-      url('/fonts/asap/Asap-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
-  }
+  /* TODO: Replace me by the Scaleway SDN */
+  @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
 
   html {
     box-sizing: border-box;
