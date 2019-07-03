@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.7.0](https://github.com/chambo-e/scw-ui/compare/v0.6.0...v0.7.0) (2019-07-03)
+
+
+### Bug Fixes
+
+* upgrade minor dependancies ([182a0a6](https://github.com/chambo-e/scw-ui/commit/182a0a6))
+* use google fonts for asap ([1421e1f](https://github.com/chambo-e/scw-ui/commit/1421e1f))
+
+
+### Features
+
+* introduce fontsRoot in GlobalStyle ([8552ca7](https://github.com/chambo-e/scw-ui/commit/8552ca7))
+
+
+
 # [0.6.0](https://github.com/chambo-e/scw-ui/compare/v0.5.3...v0.6.0) (2019-06-27)
 
 
