@@ -34,9 +34,6 @@ const globalStyles = p => css`
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
   }
 
-  /* TODO: Replace me by the Scaleway SDN */
-  @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
-
   html {
     box-sizing: border-box;
     line-height: 1.5;
@@ -111,12 +108,49 @@ const globalStyles = p => css`
     variant: textfield;
   }
 `
+const asapFontStyle = p => {
+  const { fontsRoot } = p.theme
+
+  if (!fontsRoot) {
+    return css`
+      /* TODO: Replace me by the Scaleway SDN */
+      @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+    `
+  }
+
+  return css`
+    @font-face {
+      font-family: 'Asap';
+      font-style: normal;
+      src: url("${fontsRoot}/Asap-Regular.woff2") format('woff2'),
+        url("${fontsRoot}/Asap-Regular.woff") format('woff');
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Asap';
+      font-style: normal;
+      src: url("${fontsRoot}/Asap-Medium.woff2") format('woff2'),
+        url("${fontsRoot}/Asap-Medium.woff") format('woff');
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Asap';
+      font-style: normal;
+      src: url("${fontsRoot}/Asap-Bold.woff2") format('woff2'),
+        url("${fontsRoot}/Asap-Bold.woff") format('woff');
+      font-weight: 700;
+      font-display: swap;
+    }
+  `
+}
 
 export function GlobalStyle({ additionalStyles = [] }) {
   return (
     <>
       <Normalize />
-      <Global styles={cx([globalStyles, ...additionalStyles])} />
+      <Global styles={cx([globalStyles, ...additionalStyles, asapFontStyle])} />
     </>
   )
 }

@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import { GlobalStyle } from 'scaleway-ui'
+import { ThemeProvider } from '@smooth-ui/core-em'
 
 # GlobalStyle
 
@@ -16,3 +17,15 @@ import { GlobalStyle } from 'scaleway-ui'
   <GlobalStyle />
   Global Style is initialized.
 </Playground>
+
+## Fonts
+
+The GlobalStyle use these font `'Asap', 'System', sans-serif`. By default, it import `Asap` font with [Google fonts](https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap), if you want to use local font files you can fill the theme entry `fontsRoot`.
+The `fontsRoot` directory must contains these file:
+
+- `Asap-Regular.woff2`
+- `Asap-Regular.woff`
+- `Asap-Medium.woff2`
+- `Asap-Medium.woff`
+- `Asap-Blod.woff2`
+- `Asap-Blod.woff`
