@@ -6,6 +6,7 @@ menu: Components
 import { useState, useCallback } from 'react'
 import { Playground, Props } from 'docz'
 import { Checkbox, Boxer, typographyVariants } from 'scaleway-ui'
+import { ErrorTransition } from './ErrorTransition'
 
 # Checkbox
 
@@ -28,6 +29,14 @@ Checkbox control, it acts like a real checkbox.
   }}
 </Playground>
 
+## Disabled
+
+<Playground>
+  <Checkbox disabled>
+    Disabled checkbox
+  </Checkbox>
+</Playground>
+
 ## Validation
 
 Set validation using `valid` property.
@@ -36,6 +45,16 @@ Set validation using `valid` property.
   <Boxer my={1}>
     <Checkbox valid={false}>Invalid checkbox</Checkbox>
     <Checkbox valid={true}>Valid checkbox</Checkbox>
+  </Boxer>
+</Playground>
+
+## Error
+
+Set validation with error message using `error` property.
+
+<Playground>
+  <Boxer my={1}>
+    <ErrorTransition error="An Error" Component={Checkbox}>Checkbox on Error</ErrorTransition>
   </Boxer>
 </Playground>
 
