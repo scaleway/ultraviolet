@@ -25,6 +25,7 @@ import { useUUID, randomName, cx } from 'utils'
 import { Box } from './Box'
 import { Icon } from './Icon'
 import { Touchable } from './Touchable'
+import { Expandable } from './Expandable'
 import { Separator } from './Separator'
 import { Notice } from './Notice'
 import { Typography } from './Typography'
@@ -377,19 +378,7 @@ function TextBox(
             id={labelId}
             aria-live="assertive"
           >
-            {!error ? (
-              label
-            ) : ['delete', 'deactivated'].includes(name) ? (
-              error
-            ) : !label ? (
-              error
-            ) : (
-              <>
-                &laquo;
-                {label}
-                &raquo; {error}
-              </>
-            )}
+            {label}
           </label>
         )}
 
@@ -448,7 +437,9 @@ function TextBox(
           </div>
         ) : null}
       </Box>
-
+      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+        <Box fontSize={12} color="warning" pt="2px">{error}</Box>
+      </Expandable>
       {notice && <Notice mt={1}>{notice}</Notice>}
     </Box>
   )

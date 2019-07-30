@@ -6,6 +6,7 @@ menu: Components
 import { Playground } from 'docz'
 import { Boxer, textBoxSizes } from 'scaleway-ui'
 import { UncontrolledTextBox } from './UncontrolledTextBox'
+import { ErrorTransition } from './ErrorTransition'
 
 # TextBox
 
@@ -207,29 +208,32 @@ Fill `TextBox` error using `error` property.
 <Playground>
   <Boxer my={1}>
     {textBoxSizes.map(size => (
-      <UncontrolledTextBox
+      <ErrorTransition
         key={size}
         size={size}
         error="An error"
         placeholder="Placeholder"
+        Component={UncontrolledTextBox}
       />
     ))}
     {textBoxSizes.map(size => (
-      <UncontrolledTextBox
+      <ErrorTransition
         key={size}
         size={size}
         error="An error"
         placeholder="Placeholder"
         label="Label"
+        Component={UncontrolledTextBox}
       />
     ))}
     {textBoxSizes.map(size => (
-      <UncontrolledTextBox
+      <ErrorTransition
         key={size}
         size={size}
         error="An error"
         defaultValue="Default value"
         label="Label"
+        Component={UncontrolledTextBox}
       />
     ))}
   </Boxer>
