@@ -1,6 +1,22 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.8.0](https://***REMOVED***///compare/v0.7.0...v0.8.0) (2019-08-01)
+
+
+### Bug Fixes
+
+* clipboard SSR compilance ([c0ef0c1](https://***REMOVED***///commit/c0ef0c1))
+* upgrade major dependancies ([54b6553](https://***REMOVED***///commit/54b6553))
+* upgrade minor dependancies ([f6dbb72](https://***REMOVED***///commit/f6dbb72))
+* upgrade smooth-ui peer dependency to ^10.0.0 ([5fac54d](https://***REMOVED***///commit/5fac54d))
+
+
+### Features
+
+* checkbox new errors display ([1bdc006](https://***REMOVED***///commit/1bdc006))
+* textbox new errors display ([ca8bce6](https://***REMOVED***///commit/ca8bce6))
 
 # [0.7.0](https://github.com/chambo-e/scw-ui/compare/v0.6.0...v0.7.0) (2019-07-03)
 
