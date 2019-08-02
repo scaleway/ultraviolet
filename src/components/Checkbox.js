@@ -66,8 +66,8 @@ export function Checkbox({
       onBlur={onBlur}
     >
       {({ checked, input }) => (
-        <>
-          <Typography css={cx([styles.container, !disabled && styles.hover])} {...props}>
+        <Box {...props}>
+          <Typography css={cx([styles.container, !disabled && styles.hover])}>
             {progress ? (
               <ActivityIndicator mr={hasChildren ? 1 : 0} />
             ) : (
@@ -95,10 +95,10 @@ export function Checkbox({
             {hasChildren ? <span>{children}</span> : null}
             <input css={cx(!disabled && styles.input)} type="checkbox" {...input} id={id} disabled={disabled} />
           </Typography>
-          <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
-            <Box fontSize={12} color="warning" mt="-6px" px="4px">{error}</Box>
+          <Expandable height={56} overflow="hidden" mt="-6px" opened={Boolean(error)}>
+            <Box fontSize={12} color="warning" px="4px">{error}</Box>
           </Expandable>
-        </>
+        </Box>
       )}
     </SwitchState>
   )
