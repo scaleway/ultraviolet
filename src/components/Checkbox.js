@@ -26,7 +26,6 @@ const styles = {
           background-color: ${!p.disabled && gray100(p)};
         }
       }
-    }
   `,
   icon: css`
     box-sizing: content-box;
