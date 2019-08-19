@@ -26,7 +26,7 @@ const styles = {
   select: p => css`
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
     appearance: none;
-    background-color: ${white(p)}
+    background-color: ${white(p)};
     background-image: none;
     border-width: 1px;
     border-color: ${gray350(p)};
@@ -45,7 +45,7 @@ const styles = {
     font-size: 16px;
     line-height: ${sp(3)(p)};
 
-    &:focus: {
+    &:focus {
       box-shadow: 0 0 0 2px ${transparentize(0.75, primary(p))};
       border-color: ${primary(p)};
     }
