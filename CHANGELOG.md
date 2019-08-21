@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://***REMOVED***///compare/v0.8.2...v0.9.0) (2019-08-21)
+
+
+### Bug Fixes
+
+* **checkbox:** cursor when it is disabled ([ddc1e5b](https://***REMOVED***///commit/ddc1e5b))
+* **select:** fix css ([20fcc3f](https://***REMOVED***///commit/20fcc3f))
+
+
+### Features
+
+* rich select ([a723425](https://***REMOVED***///commit/a723425))
+* **icon:** add new icons ([b4a45c3](https://***REMOVED***///commit/b4a45c3))
+* **link:** add primary variant ([0d26fb2](https://***REMOVED***///commit/0d26fb2))
+
 ### [0.8.2](https://***REMOVED***///compare/v0.8.1...v0.8.2) (2019-08-08)
 
 
