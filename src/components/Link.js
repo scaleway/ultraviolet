@@ -7,21 +7,25 @@ import { blue, gray550, primary, white } from 'theming'
 import { Icon } from './Icon'
 import { UniversalLink } from './UniversalLink'
 
-const variant = color => {
-  return css`
-    color: ${color};
-    &:hover,
-    &:focus {
-      color: ${darken(0.2, color)};
-    }
-  `
-}
+const variant = color => css`
+  color: ${color};
+  &:hover,
+  &:focus {
+    color: ${darken(0.2, color)};
+  }
+`
 
 const variants = {
   blue: p => variant(blue(p)),
   grey: p => variant(gray550(p)),
-  primary: p => variant(primary(p)),
   white: p => variant(white(p)),
+  primary: p => css`
+    color: ${primary(p)};
+    &:hover,
+    &:focus {
+      color: ${primary(p)};
+    }
+  `,
   inherit: css`
     color: inherit;
     &:hover,
