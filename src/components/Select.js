@@ -152,7 +152,6 @@ export function Select({
 }
 
 Select.Option = 'option'
-
 Select.OptGroup = 'optgroup'
 
 Select.propTypes = {
@@ -160,7 +159,6 @@ Select.propTypes = {
   id: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   disabled: PropTypes.bool,
-
   required: PropTypes.bool,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,

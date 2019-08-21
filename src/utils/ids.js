@@ -10,6 +10,10 @@ function uuid() {
   return Array.from({ length: 8 }, () => chr4()).join('')
 }
 
+export function getUUID(prefix = '') {
+  return `${prefix}-${uuid()}`
+}
+
 export function useUUID(prefix = '') {
-  return useMemo(() => `${prefix}-${uuid()}`, [prefix])
+  return useMemo(() => getUUID(prefix), [prefix])
 }
