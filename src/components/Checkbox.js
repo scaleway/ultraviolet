@@ -30,9 +30,12 @@ const styles = {
   icon: css`
     box-sizing: content-box;
   `,
-  input: css`
+  enabled: css`
     cursor: pointer;
   `,
+  disabled: css`
+    cursor: not-allowed;
+  `
 }
 
 export function Checkbox({
@@ -92,7 +95,7 @@ export function Checkbox({
               />
             )}
             {hasChildren ? <span>{children}</span> : null}
-            <input css={cx(!disabled && styles.input)} type="checkbox" {...input} id={id} disabled={disabled} />
+            <input css={cx(!disabled ? styles.enabled : styles.disabled)} type="checkbox" {...input} id={id} disabled={disabled} />
           </Typography>
           <Expandable height={56} overflow="hidden" mt="-6px" opened={Boolean(error)}>
             <Box fontSize={12} color="warning" px="4px">{error}</Box>
