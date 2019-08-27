@@ -9,6 +9,7 @@ import {
   warning,
   gray700,
   gray350,
+  bigBorderRadius,
   borderRadius,
 } from 'theming'
 import { Box } from './Box'
@@ -30,6 +31,18 @@ const variants = {
 }
 
 const sizes = {
+  rounded: p => {
+    const height = sp(2)(p)
+    const paddingVertical = sp(0.25)(p)
+    const paddingHorizontal = sp(0.75)(p)
+    return css`
+      border-radius: ${bigBorderRadius(p)};
+      font-size: 10px;
+      height: ${height};
+      padding: ${paddingVertical} ${paddingHorizontal};
+      text-transform: uppercase;
+    `
+  },
   md: p => {
     const height = sp(4)(p)
     return css`
