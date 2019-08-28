@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://***REMOVED***///compare/v0.9.0...v0.10.0) (2019-08-28)
+
+
+### Features
+
+* add colors list ([cd5c16c](https://***REMOVED***///commit/cd5c16c))
+* add IconMessage component ([96f5711](https://***REMOVED***///commit/96f5711))
+* add Information component ([d43d2aa](https://***REMOVED***///commit/d43d2aa))
+* add size variant to Badge component ([7991e51](https://***REMOVED***///commit/7991e51))
+
 ## [0.9.0](https://***REMOVED***///compare/v0.8.2...v0.9.0) (2019-08-21)
 
 
