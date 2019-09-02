@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.1](https://***REMOVED***///compare/v0.10.0...v0.10.1) (2019-09-02)
+
+
+### Bug Fixes
+
+* **link:** needNativeLink on to & href now ([d8e756f](https://***REMOVED***///commit/d8e756f))
+
 ## [0.10.0](https://***REMOVED***///compare/v0.9.0...v0.10.0) (2019-08-28)
 
 
