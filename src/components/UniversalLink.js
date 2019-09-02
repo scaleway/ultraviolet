@@ -15,7 +15,7 @@ export function UniversalLink({ variant, children, ...props }) {
   const isBlank = props.target === '_blank'
   const rel = props.rel || (isBlank ? 'noopener noreferrer' : undefined)
   const href = props.to || props.href
-  const as = props.as || (needNativeLink(props.to) ? 'a' : linkComponent)
+  const as = props.as || (needNativeLink(href) ? 'a' : linkComponent)
   return (
     <Box {...props} as={as} href={href} rel={rel}>
       {children}
