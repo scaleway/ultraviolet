@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.2](https://***REMOVED***///compare/v0.10.1...v0.10.2) (2019-09-04)
+
+
+### Bug Fixes
+
+* **ui:** fix checkbox hover regression CNS-2160 ([9b0897a](https://***REMOVED***///commit/9b0897a))
+
 ### [0.10.1](https://***REMOVED***///compare/v0.10.0...v0.10.1) (2019-09-02)
 
 
