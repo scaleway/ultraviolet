@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { SwitchState } from '@smooth-ui/core-em'
 import { cx } from 'utils'
-import {
-  borderRadius,
-  gray100,
-} from 'theming'
+import { borderRadius, gray100, primary } from 'theming'
 import { ActivityIndicator } from './ActivityIndicator'
 import { Icon } from './Icon'
 import { Typography } from './Typography'
@@ -22,10 +19,12 @@ const styles = {
   hover: p => css`
     &:hover {
       svg {
-          border-radius: ${borderRadius(p)};
-          background-color: ${!p.disabled && gray100(p)};
-        }
+        border-radius: ${borderRadius(p)};
+        background-color: ${!p.disabled && gray100(p)};
+        fill: ${primary(p)};
+        transition: fill 300ms;
       }
+    }
   `,
   icon: css`
     box-sizing: content-box;
@@ -35,7 +34,7 @@ const styles = {
   `,
   disabled: css`
     cursor: not-allowed;
-  `
+  `,
 }
 
 export function Checkbox({
@@ -95,10 +94,23 @@ export function Checkbox({
               />
             )}
             {hasChildren ? <span>{children}</span> : null}
-            <input css={cx(!disabled ? styles.enabled : styles.disabled)} type="checkbox" {...input} id={id} disabled={disabled} />
+            <input
+              css={cx(!disabled ? styles.enabled : styles.disabled)}
+              type="checkbox"
+              {...input}
+              id={id}
+              disabled={disabled}
+            />
           </Typography>
-          <Expandable height={56} overflow="hidden" mt="-6px" opened={Boolean(error)}>
-            <Box fontSize={12} color="warning" px="4px">{error}</Box>
+          <Expandable
+            height={56}
+            overflow="hidden"
+            mt="-6px"
+            opened={Boolean(error)}
+          >
+            <Box fontSize={12} color="warning" px="4px">
+              {error}
+            </Box>
           </Expandable>
         </Box>
       )}
