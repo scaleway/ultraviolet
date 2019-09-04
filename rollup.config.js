@@ -24,7 +24,7 @@ function getConfig() {
     ],
   }
 
-  const esConfig = Object.assign({}, baseConfig, {
+  const esConfig = {...baseConfig, ...{
     output: {
       file: `${DIST_DIR}/${buildName}.es.js`,
       format: 'es',
@@ -34,14 +34,14 @@ function getConfig() {
       ...Object.keys(pkg.dependencies || {}),
     ],
     plugins: [...baseConfig.plugins, resolve()],
-  })
+  }}
 
-  const cjsConfig = Object.assign({}, esConfig, {
+  const cjsConfig = {...esConfig, ...{
     output: {
       file: `${DIST_DIR}/${buildName}.cjs.js`,
       format: 'cjs',
     },
-  })
+  }}
 
   const globals = {
     polished: 'polished',
@@ -52,7 +52,7 @@ function getConfig() {
     'react-dom': 'ReactDom',
   }
 
-  const umdConfig = Object.assign({}, baseConfig, {
+  const umdConfig = {...baseConfig, ...{
     output: {
       name,
       file: `${DIST_DIR}/${buildName}.js`,
@@ -63,9 +63,9 @@ function getConfig() {
     },
     external: Object.keys(globals),
     plugins: [...baseConfig.plugins, resolve({ browser: true }), commonjs()],
-  })
+  }}
 
-  const minConfig = Object.assign({}, umdConfig, {
+  const minConfig = {...umdConfig, ...{
     output: {
       ...umdConfig.output,
       file: `${DIST_DIR}/${buildName}.min.js`,
@@ -82,7 +82,7 @@ function getConfig() {
         },
       }),
     ],
-  })
+  }}
 
   if (process.env.WATCH_MODE) {
     return [esConfig, cjsConfig]
