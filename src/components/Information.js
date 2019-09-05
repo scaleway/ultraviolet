@@ -14,6 +14,7 @@ const style = ({ backgroundColor }) => p => {
 }
 
 export const Information = ({
+  children,
   backgroundColor,
   color,
   icon,
@@ -47,6 +48,7 @@ export const Information = ({
         {text}
       </Typography>
     </Box>
+    {children}
   </Box>
 )
 
