@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.3](https://***REMOVED***///compare/v0.10.2...v0.10.3) (2019-09-06)
+
+
+### Bug Fixes
+
+* update information component with children ([dba7930](https://***REMOVED***///commit/dba7930))
+
 ### [0.10.2](https://***REMOVED***///compare/v0.10.1...v0.10.2) (2019-09-04)
 
 
