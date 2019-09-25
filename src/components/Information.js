@@ -61,7 +61,7 @@ Information.defaultProps = {
 
 Information.propTypes = {
   backgroundColor: PropTypes.string,
-  color: PropTypes.oneOf(['primary', 'alert']),
+  color: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.number,
   iconColor: PropTypes.string,
