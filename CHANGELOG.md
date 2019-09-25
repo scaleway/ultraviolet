@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.4](https://***REMOVED***///compare/v0.10.2...v0.10.4) (2019-09-25)
+
+
+### Bug Fixes
+
+* **information:** just string prop type for color ([61123df](https://***REMOVED***///commit/61123df))
+* update information component with children ([dba7930](https://***REMOVED***///commit/dba7930))
+
 ### [0.10.3](https://***REMOVED***///compare/v0.10.2...v0.10.3) (2019-09-06)
 
 
