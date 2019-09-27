@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.5](https://***REMOVED***///compare/v0.10.4...v0.10.5) (2019-09-27)
+
+
+### Features
+
+* **icon:** add detach icon ([b1fcebd](https://***REMOVED***///commit/b1fcebd))
+
 ### [0.10.4](https://***REMOVED***///compare/v0.10.2...v0.10.4) (2019-09-25)
 
 
