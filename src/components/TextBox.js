@@ -209,6 +209,7 @@ function TextBox(
   {
     autoComplete = 'on',
     autoFocus,
+    tabIndex,
     cols,
     defaultValue,
     disabled,
@@ -361,6 +362,7 @@ function TextBox(
           rows={rows}
           cols={cols}
           autoFocus={autoFocus}
+          tabIndex={tabIndex}
           autoComplete={autoComplete}
           name={name}
           style={{ height }}

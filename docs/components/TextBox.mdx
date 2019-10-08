@@ -486,3 +486,17 @@ Disable resize in multiline mode using `resizable` prop.
     ))}
   </Boxer>
 </Playground>
+
+
+## Tabindex
+
+Can disable tabulation on field with `tabIndex="-1"`
+
+<Playground>
+  <Boxer my={1}>
+    <UncontrolledTextBox label="First Name" defaultValue="Tabulation is ok here" />
+    <UncontrolledTextBox label="No name" tabIndex="-1" defaultValue="No tabulation in this field" />
+    <UncontrolledTextBox label="Last Name" defaultValue="Tabulation is ok here" />
+  </Boxer>
+</Playground>
+
