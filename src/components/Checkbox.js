@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { SwitchState } from '@smooth-ui/core-em'
 import { cx } from 'utils'
-import { borderRadius, gray100, primary } from 'theming'
+import { borderRadius, gray100, gray550, primary } from 'theming'
 import { ActivityIndicator } from './ActivityIndicator'
 import { Icon } from './Icon'
 import { Typography } from './Typography'
@@ -24,6 +24,11 @@ const styles = {
         fill: ${primary(p)};
         transition: fill 300ms;
       }
+    }
+  `,
+  input: p => css`
+    &:focus + svg {
+      outline: 1px ${gray550(p)} dotted;
     }
   `,
   icon: css`
@@ -69,6 +74,16 @@ export function Checkbox({
       {({ checked, input }) => (
         <Box {...props}>
           <Typography css={cx([styles.container, !disabled && styles.hover])}>
+            <input
+              css={cx([
+                styles.input,
+                !disabled ? styles.enabled : styles.disabled,
+              ])}
+              type="checkbox"
+              {...input}
+              id={id}
+              disabled={disabled}
+            />
             {progress ? (
               <ActivityIndicator mr={hasChildren ? 1 : 0} />
             ) : (
@@ -94,13 +109,6 @@ export function Checkbox({
               />
             )}
             {hasChildren ? <span>{children}</span> : null}
-            <input
-              css={cx(!disabled ? styles.enabled : styles.disabled)}
-              type="checkbox"
-              {...input}
-              id={id}
-              disabled={disabled}
-            />
           </Typography>
           <Expandable
             height={56}
