@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.6](https://***REMOVED***///compare/v0.10.5...v0.10.6) (2019-10-09)
+
+
+### Bug Fixes
+
+* **checkbox:** add outline CNS-2327 ([f267f71](https://***REMOVED***///commit/f267f71))
+
+
+### Features
+
+* **TextBox:** Add tabindex attr CNS-2327 ([0601c64](https://***REMOVED***///commit/0601c64))
+
 ### [0.10.5](https://***REMOVED***///compare/v0.10.4...v0.10.5) (2019-09-27)
 
 
