@@ -239,16 +239,13 @@ const style = ({ verticalAlign, size, color }) => p => {
 }
 
 export function Icon({
-  name,
+  name = 'circle',
   color = 'currentColor',
   size = '1em',
   verticalAlign = 'middle',
   ...props
 }) {
-  const renderIcon = ICONS[name]
-  if (!renderIcon) {
-    throw new Error(`Icon "${name}" not found.`)
-  }
+  const render = ICONS[name] || ICONS.circle
 
   return (
     <Box
@@ -258,14 +255,14 @@ export function Icon({
       viewBox="0 0 24 24"
       as="svg"
     >
-      {renderIcon()}
+      {render()}
     </Box>
   )
 }
 
 Icon.propTypes = {
   color: PropTypes.string,
-  name: PropTypes.oneOf(icons),
+  name: PropTypes.oneOf(icons).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.string,
 }

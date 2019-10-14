@@ -13,7 +13,7 @@ Set desired icon using `name` property.
 <Playground>
   <Boxer my={1}>
     {icons.map(name => (
-      <div style={{ fontSize: '1.3em' }}>
+      <div key={name} style={{ fontSize: '1.3em' }}>
         <Icon name={name} /> {name}
       </div>
     ))}
@@ -41,5 +41,16 @@ Set color using `color` property.
     <Icon name="eye" color="primary" />
     <Icon name="eye" color="success" />
     <Icon name="eye" color="warning" />
+  </Boxer>
+</Playground>
+
+## Unknown or `undefined` name case
+
+If name is `undefined` or not found warning is sent and default circle icon is displayed.
+
+<Playground>
+  <Boxer mr={2} display="inline-block">
+    <Icon name={undefined} color="red" />
+    <Icon name="unknown" color="orange" />
   </Boxer>
 </Playground>
