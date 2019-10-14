@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.7](https://***REMOVED***///compare/v0.10.5...v0.10.7) (2019-10-14)
+
+
+### Bug Fixes
+
+* **checkbox:** add outline CNS-2327 ([f267f71](https://***REMOVED***///commit/f267f71))
+* **icon:** no error thrown if name is undefined ([63fdf90](https://***REMOVED***///commit/63fdf90))
+
+
+### Features
+
+* **TextBox:** Add tabindex attr CNS-2327 ([0601c64](https://***REMOVED***///commit/0601c64))
+
 ### [0.10.6](https://***REMOVED***///compare/v0.10.5...v0.10.6) (2019-10-09)
 
 
