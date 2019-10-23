@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.8](https://***REMOVED***///compare/v0.10.7...v0.10.8) (2019-10-23)
+
+
+### Features
+
+* filter icon ([0e1fe88](https://***REMOVED***///commit/0e1fe88))
+* icon dots vertical ([3a5a64f](https://***REMOVED***///commit/3a5a64f))
+
 ### [0.10.7](https://***REMOVED***///compare/v0.10.5...v0.10.7) (2019-10-14)
 
 
