@@ -5,6 +5,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=12.12.0",
+    "yarn": ">=1.19.1"
+  },
   "sideEffects": false,
   "main": "dist/scaleway-ui.cjs.js",
   "module": "dist/scaleway-ui.es.js",
