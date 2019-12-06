@@ -20,6 +20,11 @@ export const red = thd('red', '#ef5774')
 export const orange = thd('orange', '#ff8c69')
 export const blue = thd('blue', '#3f6ed8')
 
+export const zumthor = thd('zumthor', '#e4edff')
+export const foam = thd('foam', '#cdfcf1')
+export const serenade = thd('serenade', '#ffefe6')
+export const pippin = thd('pippin', '#ffe1e7')
+
 // System colors
 export const primary = violet
 export const beta = orange
@@ -46,6 +51,11 @@ export const colors = thd('colors', {
   red,
   orange,
   blue,
+
+  zumthor,
+  foam,
+  serenade,
+  pippin,
 
   primary,
   beta,
