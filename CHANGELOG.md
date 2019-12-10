@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.10](https://***REMOVED***///compare/v0.10.9...v0.10.10) (2019-12-10)
+
 ### [0.10.9](https://***REMOVED***///compare/v0.10.8...v0.10.9) (2019-12-10)
 
 
