@@ -1784,6 +1784,13 @@
   dependencies:
     "@emotion/memoize" "0.7.1"
 
+"@emotion/is-prop-valid@^0.8.2":
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.6.tgz#4757646f0a58e9dec614c47c838e7147d88c263c"
+  integrity sha512-mnZMho3Sq8BfzkYYRVc8ilQTnc8U02Ytp6J1AwM6taQStZ3AhsEJBX2LzhA/LJirNCwM2VtHL3VFIZ+sNJUgUQ==
+  dependencies:
+    "@emotion/memoize" "0.7.4"
+
 "@emotion/memoize@0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.1.tgz#e93c13942592cf5ef01aa8297444dc192beee52f"
@@ -1798,6 +1805,11 @@
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.3.tgz#5b6b1c11d6a6dddf1f2fc996f74cf3b219644d78"
   integrity sha512-2Md9mH6mvo+ygq1trTeVp2uzAKwE2P7In0cRpD/M9Q70aH8L+rxMLbb3JCN2JoSWsV2O+DdFjfbbXoMoLBczow==
+
+"@emotion/memoize@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
+  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
 
 "@emotion/serialize@^0.11.12", "@emotion/serialize@^0.11.14":
   version "0.11.14"
@@ -1945,12 +1957,12 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@popmotion/easing@^1.0.1":
+"@popmotion/easing@^1.0.1", "@popmotion/easing@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.2.tgz#17d925c45b4bf44189e5a38038d149df42d8c0b4"
   integrity sha512-IkdW0TNmRnWTeWI7aGQIVDbKXPWHVEYdGgd5ZR4SH/Ty/61p63jCjrPxX1XrR7IGkl08bjhJROStD7j+RKgoIw==
 
-"@popmotion/popcorn@^0.4.4":
+"@popmotion/popcorn@^0.4.2", "@popmotion/popcorn@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@popmotion/popcorn/-/popcorn-0.4.4.tgz#a5f906fccdff84526e3fcb892712d7d8a98d6adc"
   integrity sha512-jYO/8319fKoNLMlY4ZJPiPu8Ea8occYwRZhxpaNn/kZsK4QG2E7XFlXZMJBsTWDw7I1i0uaqyC4zn1nwEezLzg==
@@ -5504,12 +5516,36 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+framer-motion@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.7.0.tgz#36d038874c8e2c45ad6e4824df8a61508bacbda0"
+  integrity sha512-bE1aWkX0AKgmxMjFnAcXZ1d47TcuKugLn3D5cHvZcQwBiDPJuKD1WzwdTaDb7EHc+vbiWfBgMbECWxQFb9di5g==
+  dependencies:
+    "@popmotion/easing" "^1.0.2"
+    "@popmotion/popcorn" "^0.4.2"
+    framesync "^4.0.4"
+    hey-listen "^1.0.8"
+    popmotion "9.0.0-beta-8"
+    style-value-types "^3.1.6"
+    stylefire "^7.0.0"
+    tslib "^1.10.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
+
 framesync@^4.0.0, framesync@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-4.0.2.tgz#b03b62852f12b0d80086b60834b089718f03cda5"
   integrity sha512-hQLD5NURHmzB4Symo6JJ5HDw2TWwhr6T3gw9aChNMsZvkxcD8U8Gcz/hllAOOMGE+HO3ScpRPahpXDQRgF19JQ==
   dependencies:
     hey-listen "^1.0.5"
+
+framesync@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-4.0.4.tgz#79c42c0118f26821c078570db0ff81fb863516a2"
+  integrity sha512-mdP0WvVHe0/qA62KG2LFUAOiWLng5GLpscRlwzBxu2VXOp6B8hNs5C5XlFigsMgrfDrr2YbqTsgdWZTc4RXRMQ==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "^1.10.0"
 
 fresh@0.5.2:
   version "0.5.2"
@@ -8342,6 +8378,18 @@ popmotion-pose@^3.4.10:
     ts-essentials "^1.0.3"
     tslib "^1.10.0"
 
+popmotion@9.0.0-beta-8:
+  version "9.0.0-beta-8"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-9.0.0-beta-8.tgz#f5a709f11737734e84f2a6b73f9bcf25ee30c388"
+  integrity sha512-6eQzqursPvnP7ePvdfPeY4wFHmS3OLzNP8rJRvmfFfEIfpFqrQgLsM50Gd9AOvGKJtYJOFknNG+dsnzCpgIdAA==
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    "@popmotion/popcorn" "^0.4.2"
+    framesync "^4.0.4"
+    hey-listen "^1.0.8"
+    style-value-types "^3.1.6"
+    tslib "^1.10.0"
+
 popmotion@^8.7.1:
   version "8.7.1"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.7.1.tgz#81cb02540f5eed5307209b0a917fc6406661554e"
@@ -10178,7 +10226,7 @@ style-value-types@^3.0.6:
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.0.tgz#07e06090e7581adff4c7955d544c1029d0663795"
   integrity sha512-7eaMZ8RKWIQUKHPQK7qv3zLYmvZNb2pCmO4WguXdVFymd2Qj9xqSUoo7LQ8Wd8eiLuoSd+uqzsvcodyvD8nn6Q==
 
-style-value-types@^3.1.7:
+style-value-types@^3.1.6, style-value-types@^3.1.7:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.7.tgz#3d7d3cf9cb9f9ee86c00e19ba65d6a181a0db33a"
   integrity sha512-jPaG5HcAPs3vetSwOJozrBXxuHo9tjZVnbRyBjxqb00c2saIoeuBJc1/2MtvB8eRZy41u/BBDH0CpfzWixftKg==
@@ -10203,7 +10251,7 @@ styled-components@^4.2.0:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-stylefire@^7.0.1:
+stylefire@^7.0.0, stylefire@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.1.tgz#69777dc9ffc48248284ea5c0a3fe03ba5c468339"
   integrity sha512-xp7hGiK5xyX7xINQI7qWagcLMyS6aLLbP2kMA3DTS4X31uPI3M7IyOm9TPmXwaMKG9fJ2Cgo4F2okcNB6nzxKQ==
@@ -11361,3 +11409,8 @@ zwitch@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.3.tgz#159fae4b3f737db1e42bf321d3423e4c96688a18"
   integrity sha512-aynRpmJDw7JIq6X4NDWJoiK1yVSiG57ArWSg4HLC1SFupX5/bo0Cf4jpX0ifwuzBfxpYBuNSyvMlWNNRuy3cVA==
+
+zxcvbn@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/zxcvbn/-/zxcvbn-4.4.2.tgz#28ec17cf09743edcab056ddd8b1b06262cc73c30"
+  integrity sha1-KOwXzwl0PtyrBW3dixsGJizHPDA=
