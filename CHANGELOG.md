@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.11](https://***REMOVED***///compare/v0.10.10...v0.10.11) (2020-01-09)
+
+
+### Features
+
+* **migration:** add password strength meter CNS-2094 ([145d4ea](https://***REMOVED***///commit/145d4ea5c33e5472ac0b8d9b6f3ca62b17efbb3d))
+
 ### [0.10.10](https://***REMOVED***///compare/v0.10.9...v0.10.10) (2019-12-10)
 
 ### [0.10.9](https://***REMOVED***///compare/v0.10.8...v0.10.9) (2019-12-10)
