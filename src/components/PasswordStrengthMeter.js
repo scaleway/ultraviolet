@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
-import zxcvbn from 'zxcvbn'
 import { css } from '@emotion/core'
 import { Box } from 'components/Box'
 import { Typography } from 'components/Typography'
@@ -35,6 +34,7 @@ export function PasswordStrengthMeter({
   onChange = () => null,
   strength,
   title,
+  estimate = () => ({ score: 0 }),
   ...props
 }) {
   const [score, setScore] = useState(0)
@@ -42,25 +42,19 @@ export function PasswordStrengthMeter({
   const [width, setWidth] = useState(0)
 
   const getScore = useCallback(
-    password => zxcvbn(password || '').score || 0,
-    [],
+    password => estimate(password || '').score || 0,
+    [estimate],
   )
 
   const handleChange = useCallback(
-    e => {
-      if (onChange && zxcvbn) {
-        onChange(e)
-      }
-    },
+    e => onChange(e),
     [onChange],
   )
 
   useEffect(() => {
     setBackgroundColor(strength[score].color)
-    if (zxcvbn) {
-      handleChange(score)
-      setScore(getScore(password))
-    }
+    handleChange(score)
+    setScore(getScore(password))
 
     const toValue = ((score + 1) / strength.length) * 100
     setWidth(`${toValue}%`)
