@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.13](https://***REMOVED***///compare/v0.10.12...v0.10.13) (2020-02-05)
+
+
+### Features
+
+* **dns:** change dns ([8bbff89](https://***REMOVED***///commit/8bbff894341a07f01dbe4f55566f07e9f04f92f2))
+* **icon:** add bullhorn ([79ecb77](https://***REMOVED***///commit/79ecb77e14e651f12844359bc7001793ef58cdcc))
+
 ### [0.10.12](https://***REMOVED***///compare/v0.10.11...v0.10.12) (2020-01-14)
 
 ### [0.10.11](https://***REMOVED***///compare/v0.10.10...v0.10.11) (2020-01-09)
