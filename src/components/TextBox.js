@@ -236,6 +236,7 @@ function TextBox(
     value,
     height,
     unit,
+    wrap,
     ...props
   },
   ref,
@@ -366,6 +367,7 @@ function TextBox(
           autoComplete={autoComplete}
           name={name}
           style={{ height }}
+          wrap={wrap}
         />
         {hasLabel && (
           <label
@@ -461,6 +463,7 @@ TextBox.propTypes = {
   edit: PropTypes.bool,
   fillAvailable: PropTypes.bool,
   required: PropTypes.bool,
+  wrap: PropTypes.string,
 }
 
 export { TextBox }
