@@ -5807,10 +5807,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.7.0.tgz#36d038874c8e2c45ad6e4824df8a61508bacbda0"
-  integrity sha512-bE1aWkX0AKgmxMjFnAcXZ1d47TcuKugLn3D5cHvZcQwBiDPJuKD1WzwdTaDb7EHc+vbiWfBgMbECWxQFb9di5g==
+framer-motion@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.9.0.tgz#a4bdb984c19cb76da173ebe35fc901002b966ae1"
+  integrity sha512-d+udix896H9/Sp2PzjsPnbQTnnHu7mQ1DDYY2UjTTzaQsnJGzkuNkrVJuxXdTSvm6xoNOt2trjb6F9vauOZ7Ew==
   dependencies:
     "@popmotion/easing" "^1.0.2"
     "@popmotion/popcorn" "^0.4.2"
@@ -5818,7 +5818,7 @@ framer-motion@^1.7.0:
     hey-listen "^1.0.8"
     popmotion "9.0.0-beta-8"
     style-value-types "^3.1.6"
-    stylefire "^7.0.0"
+    stylefire "^7.0.2"
     tslib "^1.10.0"
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
@@ -10728,10 +10728,21 @@ styled-components@^4.2.0:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-stylefire@^7.0.0, stylefire@^7.0.1:
+stylefire@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.1.tgz#69777dc9ffc48248284ea5c0a3fe03ba5c468339"
   integrity sha512-xp7hGiK5xyX7xINQI7qWagcLMyS6aLLbP2kMA3DTS4X31uPI3M7IyOm9TPmXwaMKG9fJ2Cgo4F2okcNB6nzxKQ==
+  dependencies:
+    "@popmotion/popcorn" "^0.4.4"
+    framesync "^4.0.0"
+    hey-listen "^1.0.8"
+    style-value-types "^3.1.7"
+    tslib "^1.10.0"
+
+stylefire@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.2.tgz#874a82dd2bcada39c13e75e0c67b70009e06f556"
+  integrity sha512-LFIBP6fIA+EMqLSvM4V6zLa+O/iAcHoNJVuXkkZ5G8+T+Pd3KaQLqgxrpkeo1bwWQHqzgab8U3V3gudO231fZA==
   dependencies:
     "@popmotion/popcorn" "^0.4.4"
     framesync "^4.0.0"
