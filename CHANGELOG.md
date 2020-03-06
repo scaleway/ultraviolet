@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.15](https://***REMOVED***///compare/v0.10.14...v0.10.15) (2020-03-06)
+
+
+### Bug Fixes
+
+* update dependency framer-motion to ^1.9.0 ([ca32c0c](https://***REMOVED***///commit/ca32c0cdd5bc29910a6e066f8df75ea5b1789c1c))
+* update dependency polished to ^3.4.4 ([94a6e65](https://***REMOVED***///commit/94a6e65e47d3da6a3acfc34980f445152de2ab32))
+
 ### [0.10.14](https://***REMOVED***///compare/v0.10.13...v0.10.14) (2020-02-24)
 
 ### [0.10.13](https://***REMOVED***///compare/v0.10.12...v0.10.13) (2020-02-05)
