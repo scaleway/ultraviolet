@@ -1,0 +1,27 @@
+---
+name: DotSteps
+menu: Components
+---
+
+import { useState } from 'react'
+import { Playground } from 'docz'
+import { DotSteps } from 'scaleway-ui'
+
+# DotSteps
+
+Dot Steps control, to switch between pages/steps.
+
+## Basic
+
+<Playground>
+  {() => {
+    const [step, setStep] = useState(1)
+    return (
+      <>
+        {step === 1 && 'Content of 1st step'}
+        {step === 2 && 'Content of the 2nd step'}
+        <DotSteps {...{ step, setStep }} />
+      </>
+    )
+  }}
+</Playground>
