@@ -236,6 +236,7 @@ function TextBox(
     value,
     height,
     unit,
+    unitAlignment = 'flex-end',
     wrap,
     ...props
   },
@@ -424,9 +425,9 @@ function TextBox(
                   direction="vertical"
                 />
                 <Typography
-                  variant="tiny"
+                  variant="bodyB"
                   display="flex"
-                  alignSelf="flex-end"
+                  alignSelf={unitAlignment}
                   py={1}
                 >
                   {unit}
@@ -442,7 +443,9 @@ function TextBox(
         ) : null}
       </Box>
       <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
-        <Box fontSize={12} color="warning" pt="2px">{error}</Box>
+        <Box fontSize={12} color="warning" pt="2px">
+          {error}
+        </Box>
       </Expandable>
       {notice && <Notice mt={1}>{notice}</Notice>}
     </Box>
@@ -463,6 +466,7 @@ TextBox.propTypes = {
   edit: PropTypes.bool,
   fillAvailable: PropTypes.bool,
   required: PropTypes.bool,
+  unitAlignment: PropTypes.oneOf('center', 'flex-end', 'flex-start'),
   wrap: PropTypes.string,
 }
 
