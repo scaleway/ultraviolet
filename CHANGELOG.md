@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.16](https://***REMOVED***///compare/v0.10.15...v0.10.16) (2020-03-20)
+
+
+### Features
+
+* dotsteps component ([1b89a83](https://***REMOVED***///commit/1b89a830658fbd5c29ff292a2994a0510ed0dc3a))
+* **textbox units:** make unit font size bigger and allow to center it CNS-2728 ([f3c74d1](https://***REMOVED***///commit/f3c74d12692ccebbbd11d7a423178085014dc6a4))
+
+
+### Bug Fixes
+
+* update dependency framer-motion to ^1.9.1 ([584c36c](https://***REMOVED***///commit/584c36ccbd0907a1a017b1599d4fec1a5aa5c917))
+
 ### [0.10.15](https://***REMOVED***///compare/v0.10.14...v0.10.15) (2020-03-06)
 
 
