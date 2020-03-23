@@ -3,30 +3,11 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { darken, transparentize } from 'polished'
 import { cx, thColor } from 'utils'
-import { borderRadius } from 'theming'
+import { borderRadius, white, gray50, gray350, gray550, gray700 } from 'theming'
+import { ActivityIndicator } from './ActivityIndicator'
 import { Box } from './Box'
 import { Icon } from './Icon'
 import { UniversalLink } from './UniversalLink'
-import { ActivityIndicator } from './ActivityIndicator'
-
-const plainVariant = (bgColor, textColor) => p => {
-  const bgColorValue = thColor(bgColor)(p)
-  const textColorValue = thColor(textColor)(p)
-  return css`
-    background-color: ${bgColorValue};
-    color: ${textColorValue};
-
-    &:hover,
-    &:focus {
-      color: ${textColorValue};
-      background-color: ${darken(0.05, bgColorValue)};
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, bgColorValue)};
-    }
-  `
-}
 
 const borderedVariant = (color, bgColor, hoverColor) => p => {
   const colorValue = thColor(color)(p)
@@ -58,21 +39,78 @@ const borderedVariant = (color, bgColor, hoverColor) => p => {
   `
 }
 
+const plainVariant = (bgColor, textColor) => p => {
+  const bgColorValue = thColor(bgColor)(p)
+  const textColorValue = thColor(textColor)(p)
+  return css`
+    background-color: ${bgColorValue};
+    color: ${textColorValue};
+
+    &:hover,
+    &:focus {
+      color: ${textColorValue};
+      background-color: ${darken(0.05, bgColorValue)};
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, bgColorValue)};
+    }
+  `
+}
+
+const simpleTransparent = color => p => {
+  const colorValue = thColor(color)(p)
+  return css`
+    background-color: 'transparent';
+    color: ${colorValue};
+  `
+}
+
+const transparentVariant = bgColor => p => {
+  const bgColorValue = thColor(bgColor)(p)
+  return css`
+    background-color: 'transparent';
+    color: ${gray550(p)};
+    box-shadow: inset 0 0 0 1px ${gray350(p)};
+
+    &:hover,
+    &:focus {
+      background-color: ${bgColorValue};
+      color: ${white(p)};
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, bgColorValue)};
+    }
+  `
+}
+
 const variants = {
   primary: plainVariant('primary', 'white'),
   'primary-bordered': borderedVariant('primary', 'white', 'primary'),
   'primary-soft-bordered': borderedVariant('gray350', 'white', 'primary'),
+  secondary: plainVariant('gray100', 'gray700'),
+  'secondary-bordered': borderedVariant('gray550', 'white', 'primary'),
   success: plainVariant('success', 'white'),
   'success-bordered': borderedVariant('success', 'white', 'success'),
   'success-soft-bordered': borderedVariant('gray350', 'white', 'success'),
   warning: plainVariant('warning', 'white'),
   'warning-bordered': borderedVariant('warning', 'white', 'warning'),
   'warning-soft-bordered': borderedVariant('gray350', 'white', 'warning'),
+  action: transparentVariant('primary'),
+  'action-delete': transparentVariant('warning'),
+  simpleBlack: simpleTransparent('gray700'),
+  delete: plainVariant('warning', 'white'),
+  'delete-bordered': borderedVariant('warning', 'white', 'warning'),
+  'delete-soft-bordered': borderedVariant('gray550', 'white', 'warning'),
   link: p => {
     const blueValue = thColor('blue')(p)
     return css`
-      background-color: ${thColor('white')(p)};
+      background-color: ${white(p)};
       color: ${blueValue};
+      vertical-align: baseline;
+      font-weight: 400;
 
       &:hover,
       &:focus {
@@ -81,56 +119,38 @@ const variants = {
       }
     `
   },
-  secondary: plainVariant('gray100', 'gray700'),
   transparent: p => css`
     background-color: transparent;
-    color: ${thColor('gray700')(p)};
+    color: ${gray700(p)};
   `,
 }
 
 export const buttonVariants = Object.keys(variants)
 
 const sizes = {
-  lg: css`
+  large: css`
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
-    padding: 8px 12px;
-    min-height: 48px;
-
-    > .sc-btn-icon {
-      font-size: 24px;
-    }
+    padding: 8px 16px;
   `,
-  md: css`
+  medium: css`
     font-size: 16px;
     line-height: 24px;
-    padding: 8px 10px;
-    min-height: 40px;
-
-    > .sc-btn-icon {
-      font-size: 20px;
-    }
+    padding: 8px 16px;
   `,
-  sm: css`
+  'small-medium': css`
     font-size: 16px;
-    line-height: 20px;
-    padding: 6px 8px;
-    min-height: 32px;
-
-    > .sc-btn-icon {
-      font-size: 20px;
-    }
-  `,
-  xs: css`
-    font-size: 14px;
     line-height: 16px;
+    padding: 8px 16px;
+  `,
+  small: css`
+    font-size: 14px;
+    line-height: 20px;
     padding: 8px;
-    min-height: 32px;
-
-    > .sc-btn-icon {
-      font-size: 16px;
-    }
+  `,
+  tiny: css`
+    font-size: 12px;
   `,
 }
 
@@ -151,6 +171,7 @@ const styles = {
     vertical-align: middle;
     white-space: nowrap;
     font-weight: 500;
+
     transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
       border-color 150ms ease-in-out;
 
@@ -165,117 +186,126 @@ const styles = {
     align-items: center;
     justify-content: center;
   `,
-  icon: css`
-    display: flex;
-  `,
-  disabled: p => css`
+  icon: (margin, position) =>
+    position === 'left'
+      ? css`
+          margin-right: ${margin}px;
+        `
+      : css`
+          margin-left: ${margin}px;
+        `,
+  disabled: ({ variant }) => p => css`
     cursor: default;
     pointer-events: none;
-    background-color: ${thColor('gray50')(p)};
-    color: ${thColor('gray350')(p)};
-    border-color: ${thColor('gray50')(p)};
-    box-shadow: none;
+    color: ${gray350(p)};
+
+    ${variant !== 'link' &&
+      css`
+        background-color: ${gray50(p)};
+        border-color: ${gray50(p)};
+        box-shadow: none;
+      `}
   `,
-  extend: ({ icon }) => css`
-    & .sc-ui-btn-content {
-      transition: max-width 450ms ease, padding-left 450ms ease,
-        padding-right 450ms ease;
+  extend: icon => css`
+    & .content {
+      transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
       max-width: 0;
+      margin-right: 0;
+      ${icon ? 'padding-right: 0;' : 'padding-left: 0;'};
       overflow: hidden;
-      padding-left: 0;
-      padding-right: 0;
     }
 
-    &:focus .sc-ui-btn-content,
-    &:hover .sc-ui-btn-content {
-      max-width: 200px;
-      ${icon ? 'padding-left: 8px;' : null};
+    &:focus .content,
+    &:hover .content {
+      max-width: 275px;
+      margin-right: 8px;
+      ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
     }
   `,
 }
 
 export function Button({
   progress,
-  as: asProp = 'button',
-  disabled: disabledProp,
+  disabled,
   variant = 'primary',
-  size = 'lg',
+  size = 'large',
   icon,
+  iconPosition = 'left',
   children,
   extend,
   displayProgressOnly,
-  type: typeProp = 'button',
+  tooltip,
+  elementType = 'button',
   ...props
 }) {
   const as = props.to
     ? UniversalLink
     : props.href || props.download
     ? 'a'
-    : asProp
-  const type = as === 'button' ? typeProp : null
-  const disabled = Boolean(disabledProp || progress)
-  const variantStyle = variants[variant]
-  if (!variantStyle) {
-    throw new Error(`Unknwown Button variant "${variant}"`)
-  }
-  const sizeStyle = sizes[size]
-  if (!sizeStyle) {
-    throw new Error(`Unknwown Button size "${size}"`)
-  }
-  const hasChildren = Boolean(children)
+    : 'button'
+  const type = as === 'button' ? elementType : null
+  const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
+  const SmartIcon = () =>
+    icon && typeof icon === 'string' ? <Icon name={icon} /> : icon
+
   return (
     <Box
-      css={cx([
-        styles.button,
-        variantStyle,
-        sizeStyle,
-        disabled && styles.disabled,
-        extend && styles.extend({ icon }),
-      ])}
+      {...props}
       type={type}
       as={as}
-      disabled={as === 'button' ? disabled : undefined}
-      {...props}
+      disabled={Boolean(disabled || progress)}
+      css={cx([
+        styles.button,
+        variants[variant],
+        sizes[size],
+        disabled && styles.disabled(variant),
+        extend && styles.extend(icon),
+      ])}
     >
-      {progress === true || progress === 'left' || icon ? (
-        <div className="sc-btn-icon" css={cx(styles.icon)}>
+      {progress === true ||
+      progress === 'left' ||
+      (icon && iconPosition === 'left') ? (
+        <Box display="flex" css={styles.icon(iconMargin, 'left')}>
           {progress ? (
             <ActivityIndicator color="currentColor" size="1em" />
-          ) : typeof icon === 'string' ? (
-            <Icon name={icon} />
           ) : (
-            icon
+            <SmartIcon />
           )}
-        </div>
+        </Box>
       ) : null}
 
-      {progress !== true && hasChildren && (
-        <div
-          css={cx(styles.content)}
-          style={
-            !extend
-              ? {
-                  paddingLeft: progress === 'left' || icon ? 8 : 0,
-                }
-              : undefined
-          }
-          className="sc-ui-btn-content"
-        >
-          {children}
+      {(!progress || !displayProgressOnly) && (children || icon) && (
+        <div css={styles.content} className="content">
+          {children || <SmartIcon />}
         </div>
       )}
+
+      {progress === 'right' || (icon && iconPosition === 'right') ? (
+        <Box display="flex" css={styles.icon(iconMargin, 'right')}>
+          {progress ? (
+            <ActivityIndicator color="currentColor" size="1em" />
+          ) : (
+            <SmartIcon />
+          )}
+        </Box>
+      ) : null}
     </Box>
   )
 }
 
 Button.propTypes = {
+  as: PropTypes.node,
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  displayProgressOnly: PropTypes.bool,
+  extend: PropTypes.bool,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  iconPosition: PropTypes.oneOf(['left', 'right']),
   progress: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(['left', 'right']),
   ]),
-  disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(buttonVariants),
   size: PropTypes.oneOf(buttonSizes),
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  children: PropTypes.node,
+  tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  variant: PropTypes.oneOf(buttonVariants),
 }
