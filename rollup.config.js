@@ -4,6 +4,7 @@ import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import replace from 'rollup-plugin-replace'
 import commonjs from 'rollup-plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 import { uglify } from 'rollup-plugin-uglify'
 import pkg from './package.json'
 
@@ -21,6 +22,9 @@ function getConfig() {
         exclude: 'node_modules/**',
         configFile: path.join(__dirname, 'babel.config.js'),
       }),
+      postcss({
+        plugins: []
+      })
     ],
   }
 
