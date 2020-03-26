@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.20](https://***REMOVED***///compare/v0.10.19...v0.10.20) (2020-03-26)
+
+
+### Features
+
+* **migration:** dashboard slider ([41f55cc](https://***REMOVED***///commit/41f55cc290ac1fd2d71547bf75b59f9720cde5d5))
+
 ### [0.10.19](https://***REMOVED***///compare/v0.10.18...v0.10.19) (2020-03-26)
 
 ### [0.10.18](https://***REMOVED***///compare/v0.10.17...v0.10.18) (2020-03-26)
