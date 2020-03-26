@@ -1,5 +1,12 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    ":combinePatchMinorReleases",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":separateMultipleMajorReleases",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor"
+  ],
   "automerge": false,
   "assignees": ["aphilibeaux", "ysay", "vaudebert", "vcluzeau", "vripoche"],
   "assigneesSampleSize": 1,
@@ -15,7 +22,6 @@
   "semanticCommits": true,
   "semanticCommitType": "chore",
   "semanticCommitScope": null,
-  "separateMajorMinor": true,
   "separateMinorPatch": false,
   "rangeStrategy": "bump",
   "rebaseStalePrs": true,
