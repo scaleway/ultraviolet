@@ -191,7 +191,8 @@ const styles = {
       ? css`
           margin-right: ${margin}px;
         `
-      : css`
+      : position === 'right' &&
+        css`
           margin-left: ${margin}px;
         `,
   disabled: ({ variant }) => p => css`
@@ -265,7 +266,10 @@ export function Button({
       {progress === true ||
       progress === 'left' ||
       (icon && iconPosition === 'left') ? (
-        <Box display="flex" css={styles.icon(iconMargin, 'left')}>
+        <Box
+          display="flex"
+          css={styles.icon(iconMargin, children ? 'left' : '')}
+        >
           {progress ? (
             <ActivityIndicator color="currentColor" size="1em" />
           ) : (
@@ -274,9 +278,9 @@ export function Button({
         </Box>
       ) : null}
 
-      {(!progress || !displayProgressOnly) && (children || icon) && (
+      {(!progress || !displayProgressOnly) && children && (
         <div css={styles.content} className="content">
-          {children || <SmartIcon />}
+          {children}
         </div>
       )}
 
