@@ -6,7 +6,6 @@
   "reviewers": ["aphilibeaux", "ysay", "vaudebert", "vcluzeau", "vripoche"],
   "reviewersSampleSize": 2,
   "branchPrefix": "renovate/",
-  "statusCheckVerify": true,
   "updateNotScheduled": true,
   "lockFileMaintenance": { "enabled": false },
   "docker": { "enabled": false },
@@ -20,13 +19,27 @@
   "separateMinorPatch": false,
   "rangeStrategy": "bump",
   "rebaseStalePrs": true,
+  "rebaseWhen": "behind-base-branch",
   "stabilityDays": 20,
   "labels": ["upgrade"],
+  "hostRules": [
+    {
+      "domainName": "github.com",
+      "token": "5dcef816e2c915c94bd691faf0633cfdaa2d2d70"
+    }
+  ],
   "packageRules": [
     {
+      "updateTypes": ["major"],
+      "labels": ["UPDATE-MAJOR"]
+    },
+    {
+      "updateTypes": ["minor"],
+      "labels": ["UPDATE-MINOR"]
+    },
+    {
       "updateTypes": ["patch"],
-      "automerge": true,
-      "automergeType": "pr"
+      "labels": ["UPDATE-PATCH"]
     }
   ]
 }
