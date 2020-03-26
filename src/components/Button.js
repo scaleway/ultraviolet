@@ -235,7 +235,7 @@ export function Button({
   extend,
   displayProgressOnly,
   tooltip,
-  elementType = 'button',
+  type: elementType = 'button',
   ...props
 }) {
   const as = props.to
