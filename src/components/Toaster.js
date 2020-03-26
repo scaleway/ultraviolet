@@ -3,7 +3,7 @@ import {
   ToastContainer as BaseToastContainer,
   toast as baseToast,
 } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.min.css'
+import toastStyle from 'react-toastify/dist/ReactToastify.min.css'
 import { css, ClassNames } from '@emotion/core'
 import { foam, info, pippin, success, warning, zumthor } from 'theming'
 import { Icon } from './Icon'
@@ -105,7 +105,7 @@ function ToastContainer(props) {
       {({ css }) => (
         <BaseToastContainer
           closeButton={<CloseButton />}
-          toastClassName={css(styles.toast(props))}
+          toastClassName={css([styles.toast(props), toastStyle])}
           {...props}
         />
       )}
