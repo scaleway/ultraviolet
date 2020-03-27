@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:13.10.1-stretch as builder
+FROM node:13.11-stretch as builder
 WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
