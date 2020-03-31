@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.21](https://***REMOVED***///compare/v0.10.20...v0.10.21) (2020-03-31)
+
+
+### Bug Fixes
+
+* remove double icon ([6337689](https://***REMOVED***///commit/6337689118a8c53558828858bdceca53f6f349ad))
+* update dependency framer-motion to ^1.10.2 ([adbc8d1](https://***REMOVED***///commit/adbc8d161c57b452c730352e97d57a39da1bafa4))
+* update dependency polished to ^3.5.1 ([7a0c50d](https://***REMOVED***///commit/7a0c50dca7665cebf0f2665fa113009f7c397d38))
+* update dependency react-select to ^3.1.0 ([f13b0eb](https://***REMOVED***///commit/f13b0eb498f01c64f8e57007bd25a2b7995f2d61))
+
 ### [0.10.20](https://***REMOVED***///compare/v0.10.19...v0.10.20) (2020-03-26)
 
 
