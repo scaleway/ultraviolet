@@ -1,89 +1,77 @@
 import React from 'react'
-import { transparentize } from 'polished'
+import ReactTooltip from 'react-tooltip'
+import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { cx, sp } from 'utils'
-import { gray950 } from 'theming'
-import { Tooltip as SuiTooltip } from '@smooth-ui/core-em'
+import { uniqueID } from 'helpers/uniqueID'
+import { Box } from './Box'
 
-const style = p => {
-  const bgColor = transparentize(0.1, gray950(p))
-  return css`
-    position: relative;
+const styles = {
+  tooltip: css`
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    font-size: 13px;
     line-height: 16px;
-    padding: ${sp(1)(p)};
+    padding: 8px;
     text-align: center;
-    background-color: ${bgColor};
-    max-width: 400px;
-
-    &::after {
-      content: '';
-      position: absolute;
-    }
-
-    &[x-placement*='top'] {
-      margin-bottom: 8px;
-      &::after {
-        border-top-color: ${bgColor};
-        border-top-style: solid;
-        border-top-width: 6px;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-      }
-    }
-
-    &[x-placement*='bottom'] {
-      margin-top: 8px;
-
-      &::after {
-        border-bottom-color: ${bgColor};
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-      }
-    }
-
-    &[x-placement*='left'] {
-      margin-right: 8px;
-
-      &::after {
-        border-left-color: ${bgColor};
-        border-left-style: solid;
-        border-left-width: 6px;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -8px;
-      }
-    }
-
-    &[x-placement*='right'] {
-      margin-left: 8px;
-
-      &::after {
-        border-right-color: ${bgColor};
-        border-right-style: solid;
-        border-right-width: 6px;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -8px;
-      }
-    }
-  `
+  `,
 }
 
-export function Tooltip(props) {
-  return <SuiTooltip css={cx(style)} {...props} />
+export const Tooltip = ({
+  children,
+  effect = 'solid',
+  maxWidth = 400,
+  place = 'top',
+  textAlign = 'center',
+  tooltip,
+  tooltipWrapperClass,
+  type = 'dark',
+  ...props
+}) => {
+  const id = uniqueID()
+
+  const tooltipProps = {
+    'data-tip': true,
+    'data-for': id,
+  }
+
+  return (
+    <>
+      {typeof children === 'function' ? (
+        children(tooltipProps)
+      ) : (
+        <Box
+          as="span"
+          width="fit-content"
+          {...(tooltip && {
+            css: tooltipWrapperClass,
+            ...tooltipProps,
+          })}
+          {...props}
+        >
+          {children}
+        </Box>
+      )}
+      {tooltip && (
+        <Box
+          css={styles.tooltip}
+          as={ReactTooltip}
+          id={id}
+          maxWidth={maxWidth}
+          effect={effect}
+          type={type}
+          place={place}
+          textAlign={textAlign}
+        >
+          {tooltip}
+        </Box>
+      )}
+    </>
+  )
 }
+
+Tooltip.propTypes = {
+  place: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  tooltip: PropTypes.string,
+  type: PropTypes.oneOf(['dark', 'success', 'warning', 'error', 'info', 'light']),
+}
+
+export default Tooltip
