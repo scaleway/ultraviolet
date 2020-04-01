@@ -46,6 +46,40 @@
     {
       "updateTypes": ["patch"],
       "labels": ["UPDATE-PATCH"]
+    },
+    {
+      "packagePatterns": [
+        "husky",
+        "lint-staged",
+        "webpack",
+        "eslint",
+        "babel",
+        "svgo",
+        "commitlint",
+        "prettier"
+      ],
+      "updateTypes": ["minor", "patch"],
+      "automergeType": "branch",
+      "automerge": true
+    },
+    {
+      "packagePatterns": [
+        "qrcode.react",
+        "intl",
+        "docker-names",
+        "emotion",
+        "full-icu",
+        "intersection-observer",
+        "polished",
+        "brace",
+        "docker-names",
+        "jsdom",
+        "rollup"
+      ],
+      "updateTypes": ["patch"],
+      "automergeType": "branch",
+      "automerge": true
     }
+  ]
   ]
 }
