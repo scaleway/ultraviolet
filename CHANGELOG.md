@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.22](https://***REMOVED***///compare/v0.10.21...v0.10.22) (2020-04-01)
+
+
+### Features
+
+* **countup:** add counter component CNS-2809 ([f75581d](https://***REMOVED***///commit/f75581d8031da5ced10690729134a93102a14103))
+
 ### [0.10.21](https://***REMOVED***///compare/v0.10.20...v0.10.21) (2020-03-31)
 
 

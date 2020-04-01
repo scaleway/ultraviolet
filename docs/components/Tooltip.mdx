@@ -10,32 +10,50 @@ import { Box, Tooltip } from 'scaleway-ui'
 
 Displays a tooltip on mouse over.
 
-## Basic
+## Default
 
 <Playground>
-  <Box as="span">
-    <Tooltip>Tooltip</Tooltip>
-    Hover to see tooltip
+  <Box display="flex" justifyContent="space-evenly">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip tooltip="tooltip">Tooltip around the text</Tooltip>
+    </Box>
+    <Tooltip tooltip="tooltip">
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        Tooltip around the box
+      </Box>
+    </Tooltip>
   </Box>
 </Playground>
 
-## Placement
+## Place
 
-Set placement using `placement` prop. See [Popper documentation about placements](https://popper.js.org/popper-documentation.html#Popper.placements).
+Set place using `place` prop. 
 
 <Playground>
-  <Box my={5} mx="auto" width={300} height={180} backgroundColor="primary">
-    <Tooltip placement="top-start">top-start</Tooltip>
-    <Tooltip placement="top">top</Tooltip>
-    <Tooltip placement="top-end">top-end</Tooltip>
-    <Tooltip placement="right-start">Tooltip</Tooltip>
-    <Tooltip placement="right">right</Tooltip>
-    <Tooltip placement="right-end">right-end</Tooltip>
-    <Tooltip placement="bottom-start">bottom-start</Tooltip>
-    <Tooltip placement="bottom">bottom</Tooltip>
-    <Tooltip placement="bottom-end">bottom-end</Tooltip>
-    <Tooltip placement="left-start">left-start</Tooltip>
-    <Tooltip placement="left">left</Tooltip>
-    <Tooltip placement="left-end">left-end</Tooltip>
+  <Box display="flex" justifyContent="space-evenly">
+    {['left', 'top', 'bottom', 'right'].map(place => 
+      <Box key={place} p={2}>
+        <Tooltip tooltip="tooltip" place={place}>{place}</Tooltip>
+      </Box>
+    )}
   </Box>
 </Playground>
+
+## Type
+
+Set type using `type` prop. 
+
+<Playground>
+  <Box display="flex" justifyContent="space-between">
+    {['dark', 'success', 'warning', 'error', 'info', 'light'].map(type => 
+      <Box key={type} p={2}>
+        <Tooltip tooltip="tooltip" type={type}>Type {type}</Tooltip>
+      </Box>
+    )}
+  </Box>
+</Playground>
+
+## API
+
+See list of props [here](https://github.com/wwayne/react-tooltip)
+
