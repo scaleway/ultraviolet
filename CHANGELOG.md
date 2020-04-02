@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.23](https://***REMOVED***///compare/v0.10.22...v0.10.23) (2020-04-02)
+
+
+### Features
+
+* new tooltip icon component CNS-2117 ([31407f9](https://***REMOVED***///commit/31407f924f8193797f27714715d4c93d713d6f84))
+
+
+### Bug Fixes
+
+* import in richselect component ([5bba5bb](https://***REMOVED***///commit/5bba5bbaebce7377f77fb047c8dfc4a4c1149d54))
+* update dependency framer-motion to ^1.10.3 ([acb9d61](https://***REMOVED***///commit/acb9d610436b189b55d445450671e77a3858a1e6))
+
 ### [0.10.22](https://***REMOVED***///compare/v0.10.21...v0.10.22) (2020-04-01)
 
 
