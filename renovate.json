@@ -56,11 +56,14 @@
         "babel",
         "svgo",
         "commitlint",
-        "prettier"
+        "prettier",
+        "standard-version",
+        "emotion"
       ],
       "updateTypes": ["minor", "patch"],
       "automergeType": "branch",
-      "automerge": true
+      "automerge": true,
+      "stabilityDays": 2
     },
     {
       "packagePatterns": [
@@ -78,7 +81,8 @@
       ],
       "updateTypes": ["patch"],
       "automergeType": "branch",
-      "automerge": true
+      "automerge": true,
+      "stabilityDays": 2
     }
   ]
 }
