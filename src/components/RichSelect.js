@@ -124,15 +124,11 @@ const getSelectStyles = (error, customStyle) => ({
 
     ':active': {
       color: state.isDisabled ? theme.gray300 : theme.gray700,
-      backgroundColor: state.isDisabled
-        ? theme.gray50
-        : theme.gray200,
+      backgroundColor: state.isDisabled ? theme.gray50 : theme.gray200,
     },
     ':hover': {
       color: state.isDisabled ? theme.gray300 : theme.gray700,
-      backgroundColor: state.isDisabled
-        ? theme.gray50
-        : theme.gray200,
+      backgroundColor: state.isDisabled ? theme.gray50 : theme.gray200,
     },
     ...((customStyle(state) || {}).option || {}),
   }),
@@ -172,7 +168,7 @@ const SelectContainer = props => {
   } = props
   return (
     <Box
-      data-test="rich-select"
+      data-test={`rich-select-${props.selectProps.name}`}
       css={[
         css(getStyles('container', props)),
         isDisabled && styles.pointerEvents,
@@ -199,7 +195,9 @@ const SelectContainer = props => {
     >
       {children}
       <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
-        <Box fontSize={12} color="warning" pt="2px">{error}</Box>
+        <Box fontSize={12} color="warning" pt="2px">
+          {error}
+        </Box>
       </Expandable>
     </Box>
   )
@@ -240,6 +238,12 @@ const Input = ({ inputId, labelId }) => props => (
   />
 )
 
+const Option = props => (
+  <div data-test={`option-${props.selectProps.name}-${props.value}`}>
+    <components.Option {...props} />
+  </div>
+)
+
 const DropdownIndicator = ({ error }) => ({
   isDisabled,
   selectProps: { checked, time, required },
@@ -249,12 +253,18 @@ const DropdownIndicator = ({ error }) => ({
     <Icon
       name={time ? 'clock-outline' : 'chevron-down'}
       size={time ? 24 : 11}
-      color={isDisabled ? 'gray300' : checked ? 'primary' : error ? 'warning' : 'gray350'}
+      color={
+        isDisabled
+          ? 'gray300'
+          : checked
+          ? 'primary'
+          : error
+          ? 'warning'
+          : 'gray350'
+      }
       mr={required ? 2 : 0}
     />
-    {required ? (
-      <Icon name="asterisk" size={8} color="warning" />
-    ) : null}
+    {required ? <Icon name="asterisk" size={8} color="warning" /> : null}
   </components.DropdownIndicator>
 )
 
@@ -286,6 +296,7 @@ export function RichSelect({
           labelId,
           inputId,
         }),
+        Option,
         Input: Input({ inputId, labelId }),
         DropdownIndicator: DropdownIndicator({ error }),
       }}
@@ -294,7 +305,15 @@ export function RichSelect({
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => option.disabled}
       styles={getSelectStyles(error, customStyle)}
-      options={options || flattenChildren(children).map(({ props: { children, ...props }} = {}) => ({...props, label: children}))}
+      options={
+        options ||
+        flattenChildren(children).map(
+          ({ props: { children, ...props } } = {}) => ({
+            ...props,
+            label: children,
+          }),
+        )
+      }
       menuPortalTarget={menuPortalTarget || document.getElementById(inputId)}
       isSearchable
       onChange={onChange}
