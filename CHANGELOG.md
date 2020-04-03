@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.24](https://***REMOVED***///compare/v0.10.23...v0.10.24) (2020-04-03)
+
+
+### Features
+
+* **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
+
+
+### Bug Fixes
+
+* button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
+
 ### [0.10.23](https://***REMOVED***///compare/v0.10.22...v0.10.23) (2020-04-02)
 
 
