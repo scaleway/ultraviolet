@@ -181,7 +181,6 @@ const styles = {
     }
   `,
   content: css`
-    height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
