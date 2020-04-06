@@ -71,7 +71,14 @@ export const Tooltip = ({
 Tooltip.propTypes = {
   place: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   tooltip: PropTypes.string,
-  type: PropTypes.oneOf(['dark', 'success', 'warning', 'error', 'info', 'light']),
+  type: PropTypes.oneOf([
+    'dark',
+    'success',
+    'warning',
+    'error',
+    'info',
+    'light',
+  ]),
 }
 
 export default Tooltip

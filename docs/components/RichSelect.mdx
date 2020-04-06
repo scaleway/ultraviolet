@@ -28,10 +28,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 <Playground>
   {() => {
     const [value, setValue] = useState({ value: 'a', label: 'Option A' })
-    const handleChange = useCallback(
-      value => setValue(value),
-      [],
-    )
+    const handleChange = useCallback(value => setValue(value), [])
     return (
       <RichSelect value={value} onChange={handleChange}>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -99,8 +96,5 @@ Mark `RichSelect` as errored using `error` property.
 Mark `RichSelect` as errored using `error` property with a message.
 
 <Playground>
-  <ErrorTransition
-      error="An error"
-      Component={RichSelect}
-  />
+  <ErrorTransition error="An error" Component={RichSelect} />
 </Playground>

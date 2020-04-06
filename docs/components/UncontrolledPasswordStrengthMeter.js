@@ -7,10 +7,7 @@ export function UncontrolledPasswordStrengthMeter(props) {
   return (
     <>
       <TextBox label="Password" value={value} onChange={setValue} mb={2} />
-      <PasswordStrengthMeter
-        password={value}
-        {...props}
-      />
+      <PasswordStrengthMeter password={value} {...props} />
     </>
   )
 }

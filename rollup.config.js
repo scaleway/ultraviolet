@@ -23,29 +23,35 @@ function getConfig() {
         configFile: path.join(__dirname, 'babel.config.js'),
       }),
       postcss({
-        plugins: []
-      })
+        plugins: [],
+      }),
     ],
   }
 
-  const esConfig = {...baseConfig, ...{
-    output: {
-      file: `${DIST_DIR}/${buildName}.es.js`,
-      format: 'es',
+  const esConfig = {
+    ...baseConfig,
+    ...{
+      output: {
+        file: `${DIST_DIR}/${buildName}.es.js`,
+        format: 'es',
+      },
+      external: [
+        ...Object.keys(pkg.peerDependencies || {}),
+        ...Object.keys(pkg.dependencies || {}),
+      ],
+      plugins: [...baseConfig.plugins, resolve()],
     },
-    external: [
-      ...Object.keys(pkg.peerDependencies || {}),
-      ...Object.keys(pkg.dependencies || {}),
-    ],
-    plugins: [...baseConfig.plugins, resolve()],
-  }}
+  }
 
-  const cjsConfig = {...esConfig, ...{
-    output: {
-      file: `${DIST_DIR}/${buildName}.cjs.js`,
-      format: 'cjs',
+  const cjsConfig = {
+    ...esConfig,
+    ...{
+      output: {
+        file: `${DIST_DIR}/${buildName}.cjs.js`,
+        format: 'cjs',
+      },
     },
-  }}
+  }
 
   const globals = {
     polished: 'polished',
@@ -56,37 +62,43 @@ function getConfig() {
     'react-dom': 'ReactDom',
   }
 
-  const umdConfig = {...baseConfig, ...{
-    output: {
-      name,
-      file: `${DIST_DIR}/${buildName}.js`,
-      format: 'umd',
-      globals,
-      exports: 'named',
-      sourcemap: false,
+  const umdConfig = {
+    ...baseConfig,
+    ...{
+      output: {
+        name,
+        file: `${DIST_DIR}/${buildName}.js`,
+        format: 'umd',
+        globals,
+        exports: 'named',
+        sourcemap: false,
+      },
+      external: Object.keys(globals),
+      plugins: [...baseConfig.plugins, resolve({ browser: true }), commonjs()],
     },
-    external: Object.keys(globals),
-    plugins: [...baseConfig.plugins, resolve({ browser: true }), commonjs()],
-  }}
+  }
 
-  const minConfig = {...umdConfig, ...{
-    output: {
-      ...umdConfig.output,
-      file: `${DIST_DIR}/${buildName}.min.js`,
+  const minConfig = {
+    ...umdConfig,
+    ...{
+      output: {
+        ...umdConfig.output,
+        file: `${DIST_DIR}/${buildName}.min.js`,
+      },
+      plugins: [
+        ...umdConfig.plugins,
+        replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
+        uglify({
+          compress: {
+            pure_getters: true,
+            unsafe: true,
+            unsafe_comps: true,
+            warnings: false,
+          },
+        }),
+      ],
     },
-    plugins: [
-      ...umdConfig.plugins,
-      replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
-      uglify({
-        compress: {
-          pure_getters: true,
-          unsafe: true,
-          unsafe_comps: true,
-          warnings: false,
-        },
-      }),
-    ],
-  }}
+  }
 
   if (process.env.WATCH_MODE) {
     return [esConfig, cjsConfig]

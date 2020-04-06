@@ -46,10 +46,7 @@ export function PasswordStrengthMeter({
     [estimate],
   )
 
-  const handleChange = useCallback(
-    e => onChange(e),
-    [onChange],
-  )
+  const handleChange = useCallback(e => onChange(e), [onChange])
 
   useEffect(() => {
     setBackgroundColor(strength[score].color)

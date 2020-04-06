@@ -27,33 +27,36 @@ Displays a tooltip on mouse over.
 
 ## Place
 
-Set place using `place` prop. 
+Set place using `place` prop.
 
 <Playground>
   <Box display="flex" justifyContent="space-evenly">
-    {['left', 'top', 'bottom', 'right'].map(place => 
+    {['left', 'top', 'bottom', 'right'].map(place => (
       <Box key={place} p={2}>
-        <Tooltip tooltip="tooltip" place={place}>{place}</Tooltip>
+        <Tooltip tooltip="tooltip" place={place}>
+          {place}
+        </Tooltip>
       </Box>
-    )}
+    ))}
   </Box>
 </Playground>
 
 ## Type
 
-Set type using `type` prop. 
+Set type using `type` prop.
 
 <Playground>
   <Box display="flex" justifyContent="space-between">
-    {['dark', 'success', 'warning', 'error', 'info', 'light'].map(type => 
+    {['dark', 'success', 'warning', 'error', 'info', 'light'].map(type => (
       <Box key={type} p={2}>
-        <Tooltip tooltip="tooltip" type={type}>Type {type}</Tooltip>
+        <Tooltip tooltip="tooltip" type={type}>
+          Type {type}
+        </Tooltip>
       </Box>
-    )}
+    ))}
   </Box>
 </Playground>
 
 ## API
 
 See list of props [here](https://github.com/wwayne/react-tooltip)
-
