@@ -32,9 +32,7 @@ Checkbox control, it acts like a real checkbox.
 ## Disabled
 
 <Playground>
-  <Checkbox disabled>
-    Disabled checkbox
-  </Checkbox>
+  <Checkbox disabled>Disabled checkbox</Checkbox>
 </Playground>
 
 ## Validation
@@ -54,7 +52,9 @@ Set validation with error message using `error` property.
 
 <Playground>
   <Boxer my={1}>
-    <ErrorTransition error="An Error" Component={Checkbox}>Checkbox on Error</ErrorTransition>
+    <ErrorTransition error="An Error" Component={Checkbox}>
+      Checkbox on Error
+    </ErrorTransition>
   </Boxer>
 </Playground>
 

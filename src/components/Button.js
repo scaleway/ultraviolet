@@ -200,11 +200,11 @@ const styles = {
     color: ${gray350(p)};
 
     ${variant !== 'link' &&
-      css`
-        background-color: ${gray50(p)};
-        border-color: ${gray50(p)};
-        box-shadow: none;
-      `}
+    css`
+      background-color: ${gray50(p)};
+      border-color: ${gray50(p)};
+      box-shadow: none;
+    `}
   `,
   extend: icon => css`
     & .content {
