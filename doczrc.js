@@ -9,6 +9,7 @@ function modifyBundlerConfig(config) {
   config.resolve.alias = {
     ...config.resolve.alias,
     'scaleway-ui': path.join(__dirname, 'src'),
+    'theming/colors': path.join(__dirname, 'src/theming'),
   }
 
   return config
