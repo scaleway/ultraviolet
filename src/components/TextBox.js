@@ -466,7 +466,7 @@ TextBox.propTypes = {
   edit: PropTypes.bool,
   fillAvailable: PropTypes.bool,
   required: PropTypes.bool,
-  unitAlignment: PropTypes.oneOf('center', 'flex-end', 'flex-start'),
+  unitAlignment: PropTypes.oneOf(['center', 'flex-end', 'flex-start']),
   wrap: PropTypes.string,
 }
 
