@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.25](https://***REMOVED***///compare/v0.10.24...v0.10.25) (2020-04-09)
+
+
+### Bug Fixes
+
+* array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
+* update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
+
 ### [0.10.24](https://***REMOVED***///compare/v0.10.23...v0.10.24) (2020-04-03)
 
 
