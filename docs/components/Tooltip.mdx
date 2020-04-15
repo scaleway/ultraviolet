@@ -15,9 +15,9 @@ Displays a tooltip on mouse over.
 <Playground>
   <Box display="flex" justifyContent="space-evenly">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip tooltip="tooltip">Tooltip around the text</Tooltip>
+      <Tooltip text="tooltip">Tooltip around the text</Tooltip>
     </Box>
-    <Tooltip tooltip="tooltip">
+    <Tooltip text="tooltip">
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
         Tooltip around the box
       </Box>
@@ -25,32 +25,16 @@ Displays a tooltip on mouse over.
   </Box>
 </Playground>
 
-## Place
+## Reakit tooltip Placement
 
-Set place using `place` prop.
+Set placement using `placement` prop.
 
 <Playground>
   <Box display="flex" justifyContent="space-evenly">
-    {['left', 'top', 'bottom', 'right'].map(place => (
-      <Box key={place} p={2}>
-        <Tooltip tooltip="tooltip" place={place}>
-          {place}
-        </Tooltip>
-      </Box>
-    ))}
-  </Box>
-</Playground>
-
-## Type
-
-Set type using `type` prop.
-
-<Playground>
-  <Box display="flex" justifyContent="space-between">
-    {['dark', 'success', 'warning', 'error', 'info', 'light'].map(type => (
-      <Box key={type} p={2}>
-        <Tooltip tooltip="tooltip" type={type}>
-          Type {type}
+    {['left', 'top', 'bottom', 'right'].map(placement => (
+      <Box key={placement} p={2}>
+        <Tooltip text="tooltip" placement={placement}>
+          {placement}
         </Tooltip>
       </Box>
     ))}
@@ -59,4 +43,4 @@ Set type using `type` prop.
 
 ## API
 
-See list of props [here](https://github.com/wwayne/react-tooltip)
+See list of props [here] https://reakit.io/docs/tooltip/)

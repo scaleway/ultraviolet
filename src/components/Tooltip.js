@@ -1,84 +1,52 @@
 import React from 'react'
-import ReactTooltip from 'react-tooltip'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { uniqueID } from 'helpers/uniqueID'
+import { borderRadius, black, white } from 'theming'
+
+import {
+  useTooltipState,
+  Tooltip as ReakitTooltip,
+  TooltipArrow,
+  TooltipReference,
+} from "reakit/Tooltip";
+
 import { Box } from './Box'
 
-const styles = {
-  tooltip: css`
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    line-height: 16px;
-    padding: 8px;
-    text-align: center;
-  `,
-}
+const styles = p => css`
+  border-radius: ${borderRadius(p)};
+  background-color: ${black(p)};
+  color: ${white(p)};
+  opacity: .8;
+  font-size: .8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+`
 
 export const Tooltip = ({
   children,
-  effect = 'solid',
-  maxWidth = 400,
-  place = 'top',
-  textAlign = 'center',
-  tooltip,
-  tooltipWrapperClass,
-  type = 'dark',
+  placement = 'top',
+  text,
   ...props
 }) => {
-  const id = uniqueID()
-
-  const tooltipProps = {
-    'data-tip': true,
-    'data-for': id,
-  }
+  const tooltip = useTooltipState({ placement })
 
   return (
     <>
-      {typeof children === 'function' ? (
-        children(tooltipProps)
-      ) : (
-        <Box
-          as="span"
-          width="fit-content"
-          {...(tooltip && {
-            css: tooltipWrapperClass,
-            ...tooltipProps,
-          })}
-          {...props}
-        >
-          {children}
-        </Box>
-      )}
-      {tooltip && (
-        <Box
-          css={styles.tooltip}
-          as={ReactTooltip}
-          id={id}
-          maxWidth={maxWidth}
-          effect={effect}
-          type={type}
-          place={place}
-          textAlign={textAlign}
-        >
-          {tooltip}
-        </Box>
-      )}
+      <TooltipReference {...tooltip} as={Box} width="max-content" {...props}>
+        {children}
+      </TooltipReference>
+      <ReakitTooltip {...tooltip} css={styles}>
+        <TooltipArrow {...tooltip} />
+        {text}
+      </ReakitTooltip>
     </>
   )
 }
 
 Tooltip.propTypes = {
-  place: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  placement: PropTypes.string,
   tooltip: PropTypes.string,
-  type: PropTypes.oneOf([
-    'dark',
-    'success',
-    'warning',
-    'error',
-    'info',
-    'light',
-  ]),
 }
-
-export default Tooltip
