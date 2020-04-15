@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1](https://***REMOVED***///compare/v0.10.25...v0.11.1) (2020-04-15)
+
+
+### Features
+
+* reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
+
 ### [0.10.25](https://***REMOVED***///compare/v0.10.24...v0.10.25) (2020-04-09)
 
 
