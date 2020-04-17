@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { darken, transparentize } from 'polished'
 import { cx, thColor } from 'utils'
-import { borderRadius, white, gray50, gray350, gray550, gray700 } from 'theming'
+import { borderRadius, white, gray50, gray350, gray700 } from 'theming'
 import { ActivityIndicator } from './ActivityIndicator'
 import { Box } from './Box'
 import { Icon } from './Icon'
@@ -58,34 +58,6 @@ const plainVariant = (bgColor, textColor) => p => {
   `
 }
 
-const simpleTransparent = color => p => {
-  const colorValue = thColor(color)(p)
-  return css`
-    background-color: 'transparent';
-    color: ${colorValue};
-  `
-}
-
-const transparentVariant = bgColor => p => {
-  const bgColorValue = thColor(bgColor)(p)
-  return css`
-    background-color: 'transparent';
-    color: ${gray550(p)};
-    box-shadow: inset 0 0 0 1px ${gray350(p)};
-
-    &:hover,
-    &:focus {
-      background-color: ${bgColorValue};
-      color: ${white(p)};
-      box-shadow: none;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, bgColorValue)};
-    }
-  `
-}
-
 const variants = {
   primary: plainVariant('primary', 'white'),
   'primary-bordered': borderedVariant('primary', 'white', 'primary'),
@@ -97,13 +69,7 @@ const variants = {
   'success-soft-bordered': borderedVariant('gray350', 'white', 'success'),
   warning: plainVariant('warning', 'white'),
   'warning-bordered': borderedVariant('warning', 'white', 'warning'),
-  'warning-soft-bordered': borderedVariant('gray350', 'white', 'warning'),
-  action: transparentVariant('primary'),
-  'action-delete': transparentVariant('warning'),
-  simpleBlack: simpleTransparent('gray700'),
-  delete: plainVariant('warning', 'white'),
-  'delete-bordered': borderedVariant('warning', 'white', 'warning'),
-  'delete-soft-bordered': borderedVariant('gray550', 'white', 'warning'),
+  'warning-soft-bordered': borderedVariant('gray550', 'white', 'warning'),
   link: p => {
     const blueValue = thColor('blue')(p)
     return css`
@@ -128,28 +94,28 @@ const variants = {
 export const buttonVariants = Object.keys(variants)
 
 const sizes = {
-  large: css`
+  lg: css`
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
     padding: 8px 16px;
   `,
-  medium: css`
+  md: css`
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
   `,
-  'small-medium': css`
+  sm: css`
     font-size: 16px;
     line-height: 16px;
     padding: 8px 16px;
   `,
-  small: css`
+  xs: css`
     font-size: 14px;
     line-height: 20px;
     padding: 8px;
   `,
-  tiny: css`
+  xxs: css`
     font-size: 12px;
   `,
 }
@@ -228,7 +194,7 @@ export function Button({
   progress,
   disabled,
   variant = 'primary',
-  size = 'large',
+  size = 'lg',
   icon,
   iconPosition = 'left',
   children,
