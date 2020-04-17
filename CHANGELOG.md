@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://***REMOVED***///compare/v0.11.1...v0.12.0) (2020-04-17)
+
+
+### Bug Fixes
+
+* **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
+
 ### [0.11.1](https://***REMOVED***///compare/v0.10.25...v0.11.1) (2020-04-15)
 
 
