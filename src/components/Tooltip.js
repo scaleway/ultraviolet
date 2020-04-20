@@ -30,7 +30,7 @@ export const Tooltip = ({ children, placement = 'top', text, ...props }) => {
 
   return (
     <>
-      <TooltipReference {...tooltip} as={Box} width="max-content" {...props}>
+      <TooltipReference {...tooltip} as={Box} {...props}>
         {children}
       </TooltipReference>
       {text && (
