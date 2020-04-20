@@ -8,7 +8,7 @@ import {
   Tooltip as ReakitTooltip,
   TooltipArrow,
   TooltipReference,
-} from "reakit/Tooltip";
+} from 'reakit/Tooltip'
 
 import { Box } from './Box'
 
@@ -16,8 +16,8 @@ const styles = p => css`
   border-radius: ${borderRadius(p)};
   background-color: ${black(p)};
   color: ${white(p)};
-  opacity: .8;
-  font-size: .8rem;
+  opacity: 0.8;
+  font-size: 0.8rem;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   line-height: 16px;
@@ -25,12 +25,7 @@ const styles = p => css`
   text-align: center;
 `
 
-export const Tooltip = ({
-  children,
-  placement = 'top',
-  text,
-  ...props
-}) => {
+export const Tooltip = ({ children, placement = 'top', text, ...props }) => {
   const tooltip = useTooltipState({ placement })
 
   return (
@@ -38,10 +33,12 @@ export const Tooltip = ({
       <TooltipReference {...tooltip} as={Box} width="max-content" {...props}>
         {children}
       </TooltipReference>
-      <ReakitTooltip {...tooltip} css={styles}>
-        <TooltipArrow {...tooltip} />
-        {text}
-      </ReakitTooltip>
+      {text && (
+        <ReakitTooltip {...tooltip} css={styles}>
+          <TooltipArrow {...tooltip} />
+          {text}
+        </ReakitTooltip>
+      )}
     </>
   )
 }
