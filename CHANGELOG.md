@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.1](https://***REMOVED***///compare/v0.12.0...v0.12.1) (2020-04-21)
+
+
+### Bug Fixes
+
+* **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
+* **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
+
 ## [0.12.0](https://***REMOVED***///compare/v0.11.1...v0.12.0) (2020-04-17)
 
 
