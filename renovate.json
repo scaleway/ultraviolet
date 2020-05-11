@@ -1,33 +1,30 @@
 {
   "extends": [
     ":combinePatchMinorReleases",
-    ":semanticPrefixFixDepsChoreOthers",
     ":separateMultipleMajorReleases",
     "group:monorepos",
     "group:recommended",
     "helpers:disableTypesNodeMajor"
   ],
-  "automerge": false,
-  "assignees": ["aphilibeaux", "ysay", "vaudebert", "vcluzeau", "vripoche"],
+  "assignees": ["aphilibeaux", "ysay", "vaudebert", "thuart","vcluzeau"],
   "assigneesSampleSize": 1,
-  "reviewers": ["aphilibeaux", "ysay", "vaudebert", "vcluzeau", "vripoche"],
+  "reviewers": ["aphilibeaux", "ysay", "vaudebert", "thuart","vcluzeau"],
   "reviewersSampleSize": 2,
   "branchPrefix": "renovate/",
   "updateNotScheduled": true,
   "lockFileMaintenance": { "enabled": false },
   "docker": { "enabled": false },
   "meteor": { "enabled": false },
-  "prConcurrentLimit": 50,
-  "prCreation": "immediate",
+  "prCreation": "not-pending",
+  "prConcurrentLimit": 10,
+  "automerge": false,
   "semanticCommits": true,
   "semanticCommitType": "chore",
-  "semanticCommitScope": null,
-  "separateMinorPatch": false,
+  "semanticCommitScope": "deps",
   "rangeStrategy": "bump",
   "rebaseStalePrs": true,
   "rebaseWhen": "behind-base-branch",
-  "stabilityDays": 20,
-  "labels": ["upgrade"],
+  "masterIssue": true,
   "hostRules": [
     {
       "domainName": "github.com",
@@ -37,15 +34,18 @@
   "packageRules": [
     {
       "updateTypes": ["major"],
-      "labels": ["UPDATE-MAJOR"]
+      "labels": ["UPDATE-MAJOR"],
+      "stabilityDays": 14
     },
     {
       "updateTypes": ["minor"],
-      "labels": ["UPDATE-MINOR"]
+      "labels": ["UPDATE-MINOR"],
+      "stabilityDays": 5
     },
     {
       "updateTypes": ["patch"],
-      "labels": ["UPDATE-PATCH"]
+      "labels": ["UPDATE-PATCH"],
+      "stabilityDays": 1
     },
     {
       "packagePatterns": [
@@ -60,13 +60,24 @@
         "standard-version",
         "emotion"
       ],
-      "updateTypes": ["minor", "patch"],
+      "updateTypes": ["patch"],
       "automergeType": "branch",
-      "automerge": true,
-      "stabilityDays": 2
+      "semanticCommits": true,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "patch-deps"
     },
     {
       "packagePatterns": [
+        "husky",
+        "lint-staged",
+        "webpack",
+        "eslint",
+        "babel",
+        "svgo",
+        "commitlint",
+        "prettier",
+        "standard-version",
+        "emotion",
         "qrcode.react",
         "intl",
         "docker-names",
@@ -79,10 +90,12 @@
         "jsdom",
         "rollup"
       ],
-      "updateTypes": ["patch"],
+      "updateTypes": ["minor"],
       "automergeType": "branch",
-      "automerge": true,
-      "stabilityDays": 2
+      "stabilityDays": 1,
+      "semanticCommits": true,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "minor-deps"
     }
   ]
 }
