@@ -79,6 +79,10 @@ const getSelectStyles = (error, customStyle) => ({
     ...provided,
     ...((customStyle(state) || {}).valueContainer || {}),
   }),
+  menu: (provided, state) => ({
+    ...provided,
+    ...((customStyle(state) || {}).menu || {}),
+  }),
   menuList: (provided, state) => ({
     ...provided,
     maxHeight: '225px',
