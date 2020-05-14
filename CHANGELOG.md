@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.2](https://***REMOVED***///compare/v0.10.21...v0.12.2) (2020-05-14)
+
+
+### Features
+
+* reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
+* **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
+* new tooltip icon component CNS-2117 ([31407f9](https://***REMOVED***///commit/31407f924f8193797f27714715d4c93d713d6f84))
+* **countup:** add counter component CNS-2809 ([f75581d](https://***REMOVED***///commit/f75581d8031da5ced10690729134a93102a14103))
+
+
+### Bug Fixes
+
+* add menu key to custom style richselect ([f330b65](https://***REMOVED***///commit/f330b6546fed6bb43688c756f8933bda57e669d1))
+* update dependency polished to ^3.5.2 ([c3dfafe](https://***REMOVED***///commit/c3dfafef8c5849274a906fbace0ded888f34311d))
+* **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
+* **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
+* **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
+* array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
+* button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
+* import in richselect component ([5bba5bb](https://***REMOVED***///commit/5bba5bbaebce7377f77fb047c8dfc4a4c1149d54))
+* update dependency framer-motion to ^1.10.3 ([acb9d61](https://***REMOVED***///commit/acb9d610436b189b55d445450671e77a3858a1e6))
+* update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
+
 ### [0.12.1](https://***REMOVED***///compare/v0.12.0...v0.12.1) (2020-04-21)
 
 
