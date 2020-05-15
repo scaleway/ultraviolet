@@ -4,7 +4,7 @@ import { Icon } from 'components/Icon'
 import { Tooltip } from 'components/Tooltip'
 
 export const TooltipIcon = ({ color, name, size, tooltip }) => (
-  <Tooltip tooltip={tooltip}>
+  <Tooltip text={tooltip} width="max-content">
     <Icon color={color} name={name} size={size} />
   </Tooltip>
 )
