@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.3](https://***REMOVED***///compare/v0.12.2...v0.12.3) (2020-05-18)
+
+
+### Bug Fixes
+
+* **tooltipicon:** update props name and width CNS-2931 ([7e43581](https://***REMOVED***///commit/7e43581aabb3c06312ad874f54795197080661a0))
+
 ### [0.12.2](https://***REMOVED***///compare/v0.10.21...v0.12.2) (2020-05-14)
 
 
