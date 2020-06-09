@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:13.11-stretch as builder
+FROM node:14.4.0-stretch as builder
 WORKDIR /usr/src/app
 
 
