@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.4](https://***REMOVED***///compare/v0.12.3...v0.12.4) (2020-06-09)
+
+
+### Bug Fixes
+
+* button|tooltip - rework ([fe64d43](https://***REMOVED***///commit/fe64d4359fb14c1ff937d654967b13cd1da8bca1))
+
 ### [0.12.3](https://***REMOVED***///compare/v0.12.2...v0.12.3) (2020-05-18)
 
 
