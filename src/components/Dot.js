@@ -14,12 +14,17 @@ const style = ({ color }) => p => {
   `
 }
 
-export function Dot({ color = 'primary', ...props }) {
-  return <Box css={cx(style({ color }))} {...props} />
+function FwdDot({ color = 'primary', innerRef, ...props }) {
+  return <Box css={cx(style({ color }))} ref={innerRef} {...props} />
 }
 
-Dot.propTypes = {
+FwdDot.propTypes = {
   color: PropTypes.string,
 }
 
-export default Dot
+function forwardRef(props, ref) {
+  return <FwdDot {...props} innerRef={ref} />
+}
+
+export const Dot = React.forwardRef(forwardRef)
+Dot.displayName = 'fwd(Dot)'
