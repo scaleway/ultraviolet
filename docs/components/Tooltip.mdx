@@ -13,15 +13,85 @@ Displays a tooltip on mouse over.
 ## Default
 
 <Playground>
-  <Box display="flex" justifyContent="space-evenly">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip text="tooltip">Tooltip around the text</Tooltip>
-    </Box>
-    <Tooltip text="tooltip">
+  <Box display="flex" flexDirection="column">
+    <Box display="flex" justifyContent="space-evenly">
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-        Tooltip around the box
+        <Tooltip text="tooltip">Tooltip around the text</Tooltip>
       </Box>
-    </Tooltip>
+      <Tooltip text="tooltip">
+        <Box
+          borderRadius={20}
+          border="2px solid #333"
+          p={4}
+          width="max-content"
+        >
+          Tooltip around the box
+        </Box>
+      </Tooltip>
+    </Box>
+
+    <Box mt={2} display="flex" justifyContent="space-evenly">
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip">
+          {referenceProps => <div {...referenceProps}>I'm a function</div>}
+        </Tooltip>
+      </Box>
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip">
+          <button onClick={() => console.log('fire!')}>
+            I'm a button. My click should be fired on Click AND Enter key
+          </button>
+        </Tooltip>
+      </Box>
+    </Box>
+
+    <Box mt={2} display="flex" justifyContent="space-evenly">
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip">
+          <Box>
+            <div>I'm a nested element</div>
+          </Box>
+        </Tooltip>
+      </Box>
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip">
+          {referenceProps => (
+            <Box {...referenceProps}>
+              I'm a nested function, with naked string children
+            </Box>
+          )}
+        </Tooltip>
+      </Box>
+    </Box>
+
+    <Box mt={2} display="flex" justifyContent="space-evenly">
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip" backgroundColor="red">
+          <div>I'm a customized tooltip</div>
+        </Tooltip>
+      </Box>
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip width="150px" text="I have a veryyyyyyyyyyy veryyyyyyyyyyy veryy  very  very  very  very  very  very  very  very  very  very  very long tooOOOOOoooooltip man !!">
+          <div>I'm a long tooltipp</div>
+        </Tooltip>
+      </Box>
+    </Box>
+
+    <Box mt={2} display="flex" justifyContent="space-evenly">
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="empty div">
+          <div style={{ width: 10, height: 10, backgroundColor: 'red' }} />
+        </Tooltip>
+      </Box>
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+        <Tooltip text="tooltip" backgroundColor="red">
+          <div>I'm the first children</div>
+          <div>I'm the second children</div>
+          <div>We are an array children. We can't have a tooltip. Check the error in console</div>
+        </Tooltip>
+      </Box>
+    </Box>
+
   </Box>
 </Playground>
 

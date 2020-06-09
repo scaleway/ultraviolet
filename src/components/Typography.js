@@ -169,8 +169,12 @@ export function Typography({
       ])}
       {...props}
     >
-      {tooltip && <Tooltip {...tooltipProps}>{children}</Tooltip>}
-      {children}
+      {tooltip && (
+        <Tooltip {...tooltipProps} text={children}>
+          {children}
+        </Tooltip>
+      )}
+      {!tooltip && children}
     </Box>
   )
 }

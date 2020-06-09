@@ -95,7 +95,7 @@ const styles = {
   `,
   inputMultiline: ({ resizable, fillAvailable }) => css`
     padding-top: 20px;
-    height: ${fillAvailable ? 'fill-available' : 'initial'};
+    height: ${fillAvailable ? '100%' : 'initial'};
     resize: ${resizable === false ? 'none' : 'vertical'};
   `,
   inputMultilineFull: css`
@@ -336,7 +336,7 @@ function TextBox(
 
   return (
     <Box {...props}>
-      <Box position="relative">
+      <Box position="relative" height={1}>
         <ControlComponent
           ref={controlRef}
           type={getType()}

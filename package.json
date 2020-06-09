@@ -21,7 +21,8 @@
     "lint": "eslint .",
     "prebuild": "shx rm -rf dist",
     "prepublishOnly": "yarn build",
-    "release": "standard-version"
+    "release": "standard-version",
+    "transfer": "yarn build && cp -f ./dist/* ../shire/node_modules/@scaleway/ui/dist"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.28",

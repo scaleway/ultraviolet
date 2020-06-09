@@ -151,15 +151,17 @@ const styles = {
     align-items: center;
     justify-content: center;
   `,
-  icon: (margin, position) =>
-    position === 'left'
+  icon: (margin, position) => css`
+    ${position === 'left'
       ? css`
           margin-right: ${margin}px;
         `
       : position === 'right' &&
         css`
           margin-left: ${margin}px;
-        `,
+        `}
+    pointer-events: none;
+  `,
   disabled: ({ variant }) => p => css`
     cursor: default;
     pointer-events: none;
@@ -190,7 +192,7 @@ const styles = {
   `,
 }
 
-export function Button({
+function FwdButton({
   progress,
   disabled,
   variant = 'primary',
@@ -200,8 +202,8 @@ export function Button({
   children,
   extend,
   displayProgressOnly,
-  tooltip,
   type: elementType = 'button',
+  innerRef,
   ...props
 }) {
   const as = props.to
@@ -217,9 +219,9 @@ export function Button({
   return (
     <Box
       {...props}
+      ref={innerRef}
       type={type}
       as={as}
-      disabled={Boolean(disabled || progress)}
       css={cx([
         styles.button,
         variants[variant],
@@ -242,13 +244,11 @@ export function Button({
           )}
         </Box>
       ) : null}
-
       {(!progress || !displayProgressOnly) && children && (
         <div css={styles.content} className="content">
           {children}
         </div>
       )}
-
       {progress === 'right' || (icon && iconPosition === 'right') ? (
         <Box display="flex" css={styles.icon(iconMargin, 'right')}>
           {progress ? (
@@ -262,7 +262,7 @@ export function Button({
   )
 }
 
-Button.propTypes = {
+FwdButton.propTypes = {
   as: PropTypes.node,
   children: PropTypes.node,
   disabled: PropTypes.bool,
@@ -278,3 +278,10 @@ Button.propTypes = {
   tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   variant: PropTypes.oneOf(buttonVariants),
 }
+
+function forwardRef(props, ref) {
+  return <FwdButton {...props} innerRef={ref} />
+}
+
+export const Button = React.forwardRef(forwardRef)
+Button.displayName = 'fwd(Button)'
