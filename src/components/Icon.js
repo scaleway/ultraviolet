@@ -252,17 +252,21 @@ const style = ({ verticalAlign, size, color }) => p => {
   `
 }
 
-export function Icon({
-  name = 'circle',
-  color = 'currentColor',
-  size = '1em',
-  verticalAlign = 'middle',
-  ...props
-}) {
+function Icon(
+  {
+    name = 'circle',
+    color = 'currentColor',
+    size = '1em',
+    verticalAlign = 'middle',
+    ...props
+  },
+  ref,
+) {
   const render = ICONS[name] || ICONS.circle
 
   return (
     <Box
+      ref={ref}
       className="sc-ui-icon"
       css={cx(style({ color, size, verticalAlign }))}
       {...props}
@@ -274,9 +278,14 @@ export function Icon({
   )
 }
 
+// eslint-disable-next-line no-func-assign
+Icon = React.forwardRef(Icon)
+
 Icon.propTypes = {
   color: PropTypes.string,
   name: PropTypes.oneOf(icons).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.string,
 }
+
+export { Icon }
