@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.5](https://***REMOVED***///compare/v0.12.4...v0.12.5) (2020-06-10)
+
+
+### Bug Fixes
+
+* add ref forwarding on icon ([cb8c5f8](https://***REMOVED***///commit/cb8c5f8ff6be6a391077b2792ea57011b1146993))
+
 ### [0.12.4](https://***REMOVED***///compare/v0.12.3...v0.12.4) (2020-06-09)
 
 
