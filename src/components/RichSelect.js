@@ -172,7 +172,7 @@ const SelectContainer = props => {
   } = props
   return (
     <Box
-      data-test={`rich-select-${props.selectProps.name}`}
+      data-testid={`rich-select-${props.selectProps.name}`}
       css={[
         css(getStyles('container', props)),
         isDisabled && styles.pointerEvents,
@@ -243,7 +243,7 @@ const Input = ({ inputId, labelId }) => props => (
 )
 
 const Option = props => (
-  <div data-test={`option-${props.selectProps.name}-${props.value}`}>
+  <div data-testid={`option-${props.selectProps.name}-${props.value}`}>
     <components.Option {...props} />
   </div>
 )
