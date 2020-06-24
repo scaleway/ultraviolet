@@ -1478,7 +1478,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.10.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
   integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
@@ -9618,17 +9618,16 @@ react-style-singleton@^1.1.0:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
-react-toastify@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-5.5.0.tgz#f55de44f6b5e3ce3b13b69e5bb4427f2c9404822"
-  integrity sha512-jsVme7jALIFGRyQsri/g4YTsRuaaGI70T6/ikjwZMB4mwTZaCWqj5NqxhGrRStKlJc5npXKKvKeqTiRGQl78LQ==
+react-toastify@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-6.0.6.tgz#7409ef8e89d12492308a8e561317031b5d90615e"
+  integrity sha512-NdHiMhj76Z877kZlXuelVfJONslvpmDTL95FVAoBy2kkU75hiqR5+pu1GdJZfRWPhen9ecdb58d3HmefaJ06Yw==
   dependencies:
-    "@babel/runtime" "^7.4.2"
     classnames "^2.2.6"
     prop-types "^15.7.2"
-    react-transition-group "^4"
+    react-transition-group "^4.4.1"
 
-react-transition-group@^4, react-transition-group@^4.0.0, react-transition-group@^4.3.0:
+react-transition-group@^4.0.0, react-transition-group@^4.3.0, react-transition-group@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.1.tgz#63868f9325a38ea5ee9535d828327f85773345c9"
   integrity sha512-Djqr7OQ2aPUiYurhPalTrVy9ddmFCCzwhqQmtN+J3+3DzLO209Fdr70QrN8Z3DsglWql6iY1lDWAfpFiBtuKGw==
