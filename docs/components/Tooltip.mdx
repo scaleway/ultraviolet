@@ -38,14 +38,14 @@ Displays a tooltip on mouse over.
       </Box>
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
         <Tooltip text="tooltip">
-          <Button onClick={() => alert('fired!')}>
-            I'm a button. My click should be fired on Click AND Enter key
+          <Button width={220} onClick={() => alert('fired!')}>
+            Should be fired on click
           </Button>
         </Tooltip>
         <Box mt={2}>
           <Tooltip text="tooltip">
-            <Button disabled onClick={() => alert('fired!')}>
-              I'm a button. My click should be fired on Click AND Enter key
+            <Button width={220} disabled onClick={() => alert('fired!')}>
+              Should not be fired on click
             </Button>
           </Tooltip>
         </Box>
@@ -78,7 +78,7 @@ Displays a tooltip on mouse over.
         </Tooltip>
       </Box>
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-        <Tooltip width="150px" text="I have a veryyyyyyyyyyy veryyyyyyyyyyy veryy  very  very  very  very  very  very  very  very  very  very  very long tooOOOOOoooooltip man !!">
+        <Tooltip width={150} text="I have a very very very very very very very very very very very very very very long text">
           <div>I'm a long tooltipp</div>
         </Tooltip>
       </Box>
@@ -92,9 +92,11 @@ Displays a tooltip on mouse over.
       </Box>
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
         <Tooltip text="tooltip" backgroundColor="red">
-          <div>I'm the first children</div>
-          <div>I'm the second children</div>
-          <div>We are an array children. We can't have a tooltip. Check the error in console</div>
+          <>
+            <div>I'm the first children</div>
+            <div>I'm the second children</div>
+            <div>Tooltip can only have one children, not an array of children. Do not forget to wrap it with fragment</div>
+          </>
         </Tooltip>
       </Box>
     </Box>
