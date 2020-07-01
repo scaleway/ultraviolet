@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://***REMOVED***///compare/v0.12.5...v0.13.0) (2020-07-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **richselect:** it should break tests based on data-test
+
+### Bug Fixes
+
+* **button:** disabled ([0ee6783](https://***REMOVED***///commit/0ee678310a248b223e2fb055f8e93e423ca78b9f))
+* **richselect:** change data-test to data-testid ([3c651f6](https://***REMOVED***///commit/3c651f6dfb41ff05a9c3fdd1876d277696071261))
+* **tooltip:** do not push volontary errors in console ([a00a1d5](https://***REMOVED***///commit/a00a1d569171fcf73c10655269d34d6afe9d37a4))
+
 ### [0.12.5](https://***REMOVED***///compare/v0.12.4...v0.12.5) (2020-06-10)
 
 
