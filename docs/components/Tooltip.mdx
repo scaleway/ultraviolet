@@ -4,7 +4,7 @@ menu: Components
 ---
 
 import { Playground } from 'docz'
-import { Box, Tooltip } from 'scaleway-ui'
+import { Box, Button, Tooltip } from 'scaleway-ui'
 
 # Tooltip
 
@@ -38,10 +38,17 @@ Displays a tooltip on mouse over.
       </Box>
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
         <Tooltip text="tooltip">
-          <button onClick={() => console.log('fire!')}>
+          <Button onClick={() => alert('fired!')}>
             I'm a button. My click should be fired on Click AND Enter key
-          </button>
+          </Button>
         </Tooltip>
+        <Box mt={2}>
+          <Tooltip text="tooltip">
+            <Button disabled onClick={() => alert('fired!')}>
+              I'm a button. My click should be fired on Click AND Enter key
+            </Button>
+          </Tooltip>
+        </Box>
       </Box>
     </Box>
 
