@@ -222,6 +222,8 @@ function FwdButton({
       ref={innerRef}
       type={type}
       as={as}
+      disabled={as === 'button' && disabled}
+      aria-disabled={disabled}
       css={cx([
         styles.button,
         variants[variant],
