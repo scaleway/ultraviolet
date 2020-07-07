@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1](https://***REMOVED***///compare/v0.13.0...v0.13.1) (2020-07-07)
+
+
+### Bug Fixes
+
+* tooltip portal zindex ([b643592](https://***REMOVED***///commit/b643592ffb80e060dd0791f60771f9261e651ad4))
+
 ## [0.13.0](https://***REMOVED***///compare/v0.12.5...v0.13.0) (2020-07-01)
 
 
