@@ -70,6 +70,8 @@ const variants = {
   warning: plainVariant('warning', 'white'),
   'warning-bordered': borderedVariant('warning', 'white', 'warning'),
   'warning-soft-bordered': borderedVariant('gray550', 'white', 'warning'),
+  info: plainVariant('zumthor', 'blue'),
+  'info-bordered': borderedVariant('blue', 'white', 'blue'),
   link: p => {
     const blueValue = thColor('blue')(p)
     return css`
