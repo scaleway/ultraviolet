@@ -11,7 +11,7 @@ export function DotSteps({ steps = 2, step, setStep }) {
         <Dot
           key={`dot-step-${i + 1}`}
           color={step === i + 1 ? 'primary' : 'grey'}
-          mr={1}
+          mr={i + 1 < steps ? 1 : 0}
           onClick={() => setStep(i + 1)}
           css={css`
             cursor: pointer;
