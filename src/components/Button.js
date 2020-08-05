@@ -69,7 +69,7 @@ const variants = {
   'success-soft-bordered': borderedVariant('gray350', 'white', 'success'),
   warning: plainVariant('warning', 'white'),
   'warning-bordered': borderedVariant('warning', 'white', 'warning'),
-  'warning-soft-bordered': borderedVariant('gray550', 'white', 'warning'),
+  'warning-soft-bordered': borderedVariant('gray350', 'white', 'warning'),
   info: plainVariant('zumthor', 'blue'),
   'info-bordered': borderedVariant('blue', 'white', 'blue'),
   link: p => {
