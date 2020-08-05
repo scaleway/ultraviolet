@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.2](https://***REMOVED***///compare/v0.13.1...v0.13.2) (2020-08-05)
+
+
+### Features
+
+* **button:** add blue button ([4708259](https://***REMOVED***///commit/470825944ec844a7845b29f00eee4f71e4af6a1a))
+
+
+### Bug Fixes
+
+* dot steps last dot margin right ([4c94519](https://***REMOVED***///commit/4c9451994d63ee9d1d69601021a5fde843647cfc))
+* fixed soft bordered warning button ([ca526ec](https://***REMOVED***///commit/ca526ec4d6515c80038ff0b69113cc0e49a3437a))
+
 ### [0.13.1](https://***REMOVED***///compare/v0.13.0...v0.13.1) (2020-07-07)
 
 
