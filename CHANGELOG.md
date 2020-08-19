@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.3](https://***REMOVED***///compare/v0.13.2...v0.13.3) (2020-08-19)
+
+
+### Bug Fixes
+
+* **test:** updated RichSelect data-testid ([a000ef3](https://***REMOVED***///commit/a000ef3f30c4dea164339567966f19298e59df6b))
+
 ### [0.13.2](https://***REMOVED***///compare/v0.13.1...v0.13.2) (2020-08-05)
 
 
