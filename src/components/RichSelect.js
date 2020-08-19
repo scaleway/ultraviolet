@@ -9,6 +9,7 @@ import { theme } from '../theme'
 import { Icon } from './Icon'
 import { Box } from './Box'
 import { Expandable } from './Expandable'
+import { isJsonString } from '../helpers/isJson'
 
 const styles = {
   select: css`
@@ -242,11 +243,14 @@ const Input = ({ inputId, labelId }) => props => (
   />
 )
 
-const Option = props => (
-  <div data-testid={`option-${props.selectProps.name}-${props.label}`}>
+const Option = props => {
+  console.log('SCALEWAY UI:', props)
+
+  return (
+  <div data-testid={`option-${props.selectProps.name}-${isJsonString(props.value) ? props.label : props.value}`}>
     <components.Option {...props} />
   </div>
-)
+)}
 
 const DropdownIndicator = ({ error }) => ({
   isDisabled,
