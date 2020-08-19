@@ -336,7 +336,7 @@ function TextBox(
 
   return (
     <Box {...props}>
-      <Box position="relative" height={1}>
+      <Box position="relative">
         <ControlComponent
           ref={controlRef}
           type={getType()}
