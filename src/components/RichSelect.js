@@ -243,7 +243,7 @@ const Input = ({ inputId, labelId }) => props => (
 )
 
 const Option = props => (
-  <div data-testid={`option-${props.selectProps.name}-${props.value}`}>
+  <div data-testid={`option-${props.selectProps.name}-${props.label}`}>
     <components.Option {...props} />
   </div>
 )
