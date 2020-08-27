@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.5](https://***REMOVED***///compare/v0.13.4...v0.13.5) (2020-08-27)
+
+
+### Bug Fixes
+
+* **rich select:** useless console log ([cf42086](https://***REMOVED***///commit/cf42086d8d0a5369fc4c87053013ad2a4ad84c96))
+* **ui:** updated TextBoxField ([f1658b1](https://***REMOVED***///commit/f1658b1eb3950c9b66995ed15fbb5041ce299f7a))
+
 ### [0.13.4](https://***REMOVED***///compare/v0.13.3...v0.13.4) (2020-08-19)
 
 
