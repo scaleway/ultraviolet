@@ -244,8 +244,6 @@ const Input = ({ inputId, labelId }) => props => (
 )
 
 const Option = props => {
-  console.log('SCALEWAY UI:', props)
-
   return (
   <div data-testid={`option-${props.selectProps.name}-${isJsonString(props.value) ? props.label : props.value}`}>
     <components.Option {...props} />
