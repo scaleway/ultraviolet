@@ -119,17 +119,20 @@ const getSelectStyles = (error, customStyle) => ({
   multiValueLabel: (provided, state) => ({
     ...provided,
     color: state.isDisabled ? theme.gray300 : theme.gray700,
+    fontSize: '14px',
+    lineHeight: '20px',
+    fontWeight: 'normal',
     ...((customStyle(state) || {}).multiValueLabel || {}),
   }),
   multiValueRemove: (provided, state) => ({
     ...provided,
-    ...(state.isDisabled
-      ? {
-          pointerEvents: 'none',
-          cursor: 'none',
-          color: theme.gray300,
-        }
-      : {}),
+    ...state.isDisabled ? {
+      pointerEvents: 'none',
+      cursor: 'none',
+      color: theme.gray300,
+    } : {
+      color: theme.gray550
+    },
     ':hover': {
       pointerEvents: state.isDisabled ? 'none' : 'fill',
       cursor: state.isDisabled ? 'none' : 'pointer',
@@ -176,6 +179,7 @@ const getSelectStyles = (error, customStyle) => ({
     // display: 'inline-flex',
     // alignSelf:'flex-end',
     // alignItems: 'center',
+    maxHeight: '48px'
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
@@ -356,7 +360,7 @@ const MultiValueLabel = props => <components.MultiValueLabel {...props} />
 
 const MultiValueRemove = props => (
   <components.MultiValueRemove {...props}>
-    <Icon name="close" size={14} />
+    <Icon name="close" size={16} />
   </components.MultiValueRemove>
 )
 
