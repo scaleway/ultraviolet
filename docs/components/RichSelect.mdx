@@ -51,16 +51,14 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 <Playground>
   {() => {
-    const [value, setValue] = useState([
+    const defaultValue = [
       { value: 'a', label: 'Option A' },
       { value: 'b', label: 'Option B' },
       { value: 'c', label: 'Option C' },
       { value: 'd', label: 'Option D' },
-    ])
-    console.log(value)
-    const handleChange = useCallback(value => setValue(value), [])
+    ]
     return (
-      <RichSelect value={value} onChange={handleChange} isMulti required>
+      <RichSelect defaultValue={defaultValue} isMulti required>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
         <RichSelect.Option value="c">Option C</RichSelect.Option>

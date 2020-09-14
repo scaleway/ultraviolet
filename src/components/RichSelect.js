@@ -281,10 +281,12 @@ const ValueContainer = ({ noTopLabel, labelId, inputId, error }) => props => (
   </components.ValueContainer>
 )
 
-const Input = ({ inputId, labelId }) => props => (
+const Input = ({ inputId, labelId, isMulti }) => props => (
   <components.Input
     {...props}
-    style={{ caretColor: 'transparent' }}
+    style={{
+      caretColor: !isMulti && 'transparent',
+    }}
     id={inputId}
     aria-controls={labelId}
   />
@@ -394,7 +396,7 @@ export function RichSelect({
           inputId,
         }),
         Option,
-        Input: Input({ inputId, labelId }),
+        Input: Input({ inputId, labelId, isMulti }),
         DropdownIndicator: DropdownIndicator({ error }),
         ClearIndicator: ClearIndicator({ error }),
         MultiValueContainer,
