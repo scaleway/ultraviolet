@@ -78,7 +78,7 @@ export const Tooltip = ({
 
   return (
     <Box zIndex={1}>
-      <TooltipReference {...tooltip}>{finalChildren}</TooltipReference>
+      <TooltipReference {...tooltip} ref={children.ref}>{finalChildren}</TooltipReference>
       <ReakitTooltip style={{ zIndex: 9999 }} {...tooltip}>
         <Box css={style.tooltip} {...props}>
           <TooltipArrow {...tooltip} />
