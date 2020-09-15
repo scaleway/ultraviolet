@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.6](https://***REMOVED***///compare/v0.13.5...v0.13.6) (2020-09-15)
+
+
+### Features
+
+* **gitlab:** deploy multi-pr ([9e311dd](https://***REMOVED***///commit/9e311dd613f6da7dd5f0d57937e0cd0b5626f166))
+* **rich-select:** add multi props ([39d127f](https://***REMOVED***///commit/39d127f4055fb33f4fd12e6d73fb5c33a8315ed7))
+
 ### [0.13.5](https://***REMOVED***///compare/v0.13.4...v0.13.5) (2020-08-27)
 
 
