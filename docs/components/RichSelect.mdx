@@ -27,12 +27,79 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 <Playground>
   {() => {
-    const [value, setValue] = useState({ value: 'a', label: 'Option A' })
+    const [value, setValue] = useState(
+      { value: 'a', label: 'Option A' }
+
+
+    )
     const handleChange = useCallback(value => setValue(value), [])
     return (
       <RichSelect value={value} onChange={handleChange}>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    )
+
+}}
+
+</Playground>
+
+
+## Multi
+
+Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).
+
+<Playground>
+  {() => {
+    const defaultValue = [
+      { value: 'a', label: 'Option A' },
+      { value: 'b', label: 'Option B' },
+      { value: 'c', label: 'Option C' },
+      { value: 'd', label: 'Option D' },
+    ]
+    return (
+      <RichSelect defaultValue={defaultValue} isMulti required>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+        <RichSelect.Option value="c">Option C</RichSelect.Option>
+        <RichSelect.Option value="d">Option D</RichSelect.Option>
+        <RichSelect.Option value="e">Option E</RichSelect.Option>
+        <RichSelect.Option value="f">Option FFFFFFFFFFFFFFF</RichSelect.Option>
+        <RichSelect.Option value="g">Option G</RichSelect.Option>
+        <RichSelect.Option value="h">Option H</RichSelect.Option>
+        <RichSelect.Option value="i">Option I</RichSelect.Option>
+        <RichSelect.Option value="j">Option J</RichSelect.Option>
+        <RichSelect.Option value="k">Option K</RichSelect.Option>
+        <RichSelect.Option value="l">Option L</RichSelect.Option>
+        <RichSelect.Option value="m">Option M</RichSelect.Option>
+        <RichSelect.Option value="n">Option N</RichSelect.Option>
+        <RichSelect.Option value="o">Option O</RichSelect.Option>
+        <RichSelect.Option value="p">Option P</RichSelect.Option>
+      </RichSelect>
+    )
+  }}
+</Playground>
+
+## Multi disabled
+
+Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).
+
+<Playground>
+  {() => {
+    const [value, setValue] = useState({ value: 'a', label: 'Option A' })
+    const handleChange = useCallback(value => setValue(value), [])
+    return (
+      <RichSelect
+        value={value}
+        onChange={handleChange}
+        isMulti
+        required
+        disabled
+      >
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+        <RichSelect.Option value="c">Option C</RichSelect.Option>
+        <RichSelect.Option value="d">Option D</RichSelect.Option>
       </RichSelect>
     )
   }}
