@@ -60,7 +60,7 @@ const getSelectStyles = (error, customStyle) => ({
       : error
       ? theme.warning
       : theme.gray700,
-    height: '48px',
+    minHeight: '48px',
     fontWeight: 500,
     fontSize: '16px',
     lineHeight: '24px',
@@ -103,6 +103,43 @@ const getSelectStyles = (error, customStyle) => ({
     color: state.isDisabled ? theme.gray550 : theme.gray700,
     ...((customStyle(state) || {}).singleValue || {}),
   }),
+  multiValue: (provided, state) => ({
+    ...provided,
+    color: theme.gray700,
+    backgroundColor: theme.gray100,
+    fontWeight: 500,
+    fontSize: '14px',
+    borderRadius: '4px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textOverflow: 'ellipsis',
+    height: '24px',
+    ...((customStyle(state) || {}).multiValue || {}),
+  }),
+  multiValueLabel: (provided, state) => ({
+    ...provided,
+    color: state.isDisabled ? theme.gray300 : theme.gray700,
+    fontSize: '14px',
+    lineHeight: '20px',
+    fontWeight: 'normal',
+    ...((customStyle(state) || {}).multiValueLabel || {}),
+  }),
+  multiValueRemove: (provided, state) => ({
+    ...provided,
+    ...state.isDisabled ? {
+      pointerEvents: 'none',
+      cursor: 'none',
+      color: theme.gray300,
+    } : {
+      color: theme.gray550
+    },
+    ':hover': {
+      pointerEvents: state.isDisabled ? 'none' : 'fill',
+      cursor: state.isDisabled ? 'none' : 'pointer',
+      color: state.isDisabled ? theme.gray300 : theme.primary,
+    },
+    ...((customStyle(state) || {}).multiValueRemove || {}),
+  }),
   placeholder: (provided, state) => ({
     ...provided,
     color: state.isDisabled
@@ -136,6 +173,13 @@ const getSelectStyles = (error, customStyle) => ({
       backgroundColor: state.isDisabled ? theme.gray50 : theme.gray200,
     },
     ...((customStyle(state) || {}).option || {}),
+  }),
+  indicatorsContainer: (provided) => ({
+    ...provided,
+    // display: 'inline-flex',
+    // alignSelf:'flex-end',
+    // alignItems: 'center',
+    maxHeight: '48px'
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
@@ -214,41 +258,49 @@ const ValueContainer = ({ noTopLabel, labelId, inputId, error }) => props => (
     css={props.isDisabled && styles.disabledCursor}
   >
     <>
-      {!props.isDisabled && props.selectProps.placeholder && !noTopLabel && (
-        <Box
-          as="label"
-          id={labelId}
-          htmlFor={inputId}
-          aria-live="assertive"
-          css={cx([
-            styles.placeholder,
-            error && styles.error,
-            props.hasValue && styles.scaled,
-          ])}
-        >
-          {props.selectProps.placeholder}
-        </Box>
-      )}
+      {!props.isDisabled &&
+        props.selectProps.placeholder &&
+        !noTopLabel &&
+        !props.isMulti && (
+          <Box
+            as="label"
+            id={labelId}
+            htmlFor={inputId}
+            aria-live="assertive"
+            css={cx([
+              styles.placeholder,
+              error && styles.error,
+              props.hasValue && !props.isMulti && styles.scaled,
+            ])}
+          >
+            {props.selectProps.placeholder}
+          </Box>
+        )}
       {props.children}
     </>
   </components.ValueContainer>
 )
 
-const Input = ({ inputId, labelId }) => props => (
+const Input = ({ inputId, labelId, isMulti }) => props => (
   <components.Input
     {...props}
-    style={{ caretColor: 'transparent' }}
+    style={{
+      caretColor: !isMulti && 'transparent',
+    }}
     id={inputId}
     aria-controls={labelId}
   />
 )
 
-const Option = props => {
-  return (
-  <div data-testid={`option-${props.selectProps.name}-${isJsonString(props.value) ? props.label : props.value}`}>
+const Option = props => (
+  <div
+    data-testid={`option-${props.selectProps.name}-${
+      isJsonString(props.value) ? props.label : props.value
+    }`}
+  >
     <components.Option {...props} />
   </div>
-)}
+)
 
 const DropdownIndicator = ({ error }) => ({
   isDisabled,
@@ -274,24 +326,65 @@ const DropdownIndicator = ({ error }) => ({
   </components.DropdownIndicator>
 )
 
+const ClearIndicator = ({ error }) => ({
+  isDisabled,
+  selectProps: { checked },
+  ...props
+}) => {
+  const {
+    innerProps: { ref, ...restInnerProps },
+  } = props
+  return (
+    <components.ClearIndicator {...props}>
+      <Icon
+        {...restInnerProps}
+        name="close"
+        size={20}
+        cursor={isDisabled ? 'none' : 'pointer'}
+        color={
+          isDisabled
+            ? 'gray300'
+            : checked
+            ? 'primary'
+            : error
+            ? 'warning'
+            : 'gray350'
+        }
+      />
+    </components.ClearIndicator>
+  )
+}
+
+const MultiValueContainer = props => (
+  <components.MultiValueContainer {...props} />
+)
+const MultiValueLabel = props => <components.MultiValueLabel {...props} />
+
+const MultiValueRemove = props => (
+  <components.MultiValueRemove {...props}>
+    <Icon name="close" size={16} />
+  </components.MultiValueRemove>
+)
+
 export function RichSelect({
-  onChange,
-  value,
   children,
   className,
-  error,
   disabled,
-  readOnly,
-  placeholder,
-  options,
+  error,
+  isMulti = false,
+  isSearchable = true,
   menuPortalTarget,
   noTopLabel,
+  onChange,
+  options,
+  placeholder,
+  readOnly,
+  value,
   customStyle = () => true,
   ...props
 }) {
   const labelId = getUUID('label')
   const inputId = getUUID('input')
-
   return (
     <Select
       css={styles.select}
@@ -303,8 +396,12 @@ export function RichSelect({
           inputId,
         }),
         Option,
-        Input: Input({ inputId, labelId }),
+        Input: Input({ inputId, labelId, isMulti }),
         DropdownIndicator: DropdownIndicator({ error }),
+        ClearIndicator: ClearIndicator({ error }),
+        MultiValueContainer,
+        MultiValueLabel,
+        MultiValueRemove,
       }}
       placeholder={placeholder}
       className={className}
@@ -321,7 +418,8 @@ export function RichSelect({
         )
       }
       menuPortalTarget={menuPortalTarget || document.getElementById(inputId)}
-      isSearchable
+      isSearchable={isSearchable}
+      isMulti={isMulti}
       onChange={onChange}
       value={value}
       maxMenuHeight={250}
