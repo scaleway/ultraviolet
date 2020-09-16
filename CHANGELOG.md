@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.7](https://***REMOVED***///compare/v0.13.6...v0.13.7) (2020-09-16)
+
+
+### Bug Fixes
+
+* **Tooltip:** conserve children reference before cloning ([c08b271](https://***REMOVED***///commit/c08b2717c1f08c0cffddeb491db5b54c5d7c2184))
+
 ### [0.13.6](https://***REMOVED***///compare/v0.13.5...v0.13.6) (2020-09-15)
 
 
