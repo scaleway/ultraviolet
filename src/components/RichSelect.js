@@ -46,6 +46,12 @@ const styles = {
   disabledCursor: css`
     cursor: not-allowed;
   `,
+  input: css`
+    input {
+      position: absolute;
+      top: 50%;
+    }
+  `,
 }
 
 const getSelectStyles = (error, customStyle) => ({
@@ -287,6 +293,7 @@ const Input = ({ inputId, labelId, isMulti }) => props => (
     style={{
       caretColor: !isMulti && 'transparent',
     }}
+    css={styles.input}
     id={inputId}
     aria-controls={labelId}
   />
