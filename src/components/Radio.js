@@ -1,11 +1,12 @@
 import { css } from '@emotion/core'
-import { SwitchState, Box } from '@smooth-ui/core-em'
+import { SwitchState } from '@smooth-ui/core-em'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { gray300, primary } from 'theming'
 import { cx } from 'utils'
 import { Icon } from './Icon'
+import { Box } from './Box'
 
 const style = (disabled) => p => css`
   position: relative;
@@ -32,7 +33,7 @@ const style = (disabled) => p => css`
   }
 `
 
-const Radio = ({
+export const Radio = ({
   checked,
   defaultChecked,
   onChange,
@@ -100,5 +101,3 @@ Radio.propTypes = {
 }
 
 Radio.defaultProps = { size: 24 }
-
-export default Radio
