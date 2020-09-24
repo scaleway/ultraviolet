@@ -25,6 +25,7 @@ function getConfig() {
       postcss({
         plugins: [],
       }),
+      commonjs({ include: 'node_modules/**'}),
     ],
   }
 
@@ -74,7 +75,7 @@ function getConfig() {
         sourcemap: false,
       },
       external: Object.keys(globals),
-      plugins: [...baseConfig.plugins, resolve({ browser: true }), commonjs()],
+      plugins: [...baseConfig.plugins, resolve({ browser: true })],
     },
   }
 
