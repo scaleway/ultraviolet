@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.8](https://***REMOVED***///compare/v0.13.7...v0.13.8) (2020-09-24)
+
+
+### Bug Fixes
+
+* **rich-select:** fixed riche select input position ([bab2f4a](https://***REMOVED***///commit/bab2f4a9684c3757f280c042aa7088e3631060ee))
+
 ### [0.13.7](https://***REMOVED***///compare/v0.13.6...v0.13.7) (2020-09-16)
 
 
