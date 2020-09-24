@@ -4,24 +4,24 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Tooltip } from './Tooltip'
 import { Box } from './Box'
-import { gray700, gray550, gray100, ngray300, primary, foam, success } from '../theming'
+import { theme } from '../theme'
 
 const variants = {
-  inactiveLabelColor: gray700,
-  inactiveBigBallColor: gray700,
-  inactiveBgColor: gray550,
-  smallBallColor: gray100,
-  disabled: ngray300,
+  inactiveLabelColor: theme.gray700,
+  inactiveBigBallColor: theme.gray700,
+  inactiveBgColor: theme.gray550,
+  smallBallColor: theme.gray100,
+  disabled: theme.ngray300,
 
   primary: {
-    bgColor: primary,
-    activeLabelColor: gray100,
-    activeBigBallColor: gray100,
+    bgColor: theme.primary,
+    activeLabelColor: theme.gray100,
+    activeBigBallColor: theme.gray100,
   },
   success: {
-    bgColor: foam,
-    activeLabelColor: success,
-    activeBigBallColor: success,
+    bgColor: theme.foam,
+    activeLabelColor: theme.success,
+    activeBigBallColor: theme.success,
   },
 }
 
