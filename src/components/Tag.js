@@ -1,9 +1,11 @@
 import { css } from '@emotion/core'
-import { ActivityIndicator, Icon, Touchable} from './'
 import { Box } from '@smooth-ui/core-em'
 import React from 'react'
 import { gray100, gray200, gray350, gray550, gray700 } from 'theming'
 import { cx } from 'utils'
+import { ActivityIndicator } from './ActivityIndicator'
+import { Icon } from './Icon'
+import { Touchable } from './Touchable'
 
 export const styles = {
   container: css`
