@@ -112,7 +112,7 @@ export const SwitchButton = (
 SwitchButton.defaultProps = { size: 24 }
 
 SwitchButton.propTypes = {
-  checked: PropTypes.bool,
+  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.isRequired]),
   disabled: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   onChange: PropTypes.func,
