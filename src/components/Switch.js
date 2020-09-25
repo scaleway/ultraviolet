@@ -109,7 +109,7 @@ const StyledSwitch = styled(BaseSwitch)`
 `
 
 StyledSwitch.propTypes = {
-  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.isRequired]),
+  checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   variant: PropTypes.oneOf(['success', 'primary']),
 }
