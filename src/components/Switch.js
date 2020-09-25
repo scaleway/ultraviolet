@@ -45,40 +45,40 @@ const SIZES = {
 }
 
 const StyledSwitch = styled(BaseSwitch)`
-  width: ${p => p.width || SIZES[p.size].width}px;
-  height: ${p => SIZES[p.size].height}px;
+  width: ${({width, size}) => width || SIZES[size].width}px;
+  height: ${({size}) => SIZES[size].height}px;
   display: inline-flex;
 
   .sui-switch-wrapper {
     border: none;
-    width: ${p => p.width || SIZES[p.size].width}px;
-    height: ${p => SIZES[p.size].height}px;
-    background-color: ${p =>
-  (p.disabled && variants.disabled) || variants.inactiveBgColor};
+    width: ${({width, size}) => width || SIZES[size].width}px;
+    height: ${({size}) => SIZES[size].height}px;
+    background-color: ${({disabled}) =>
+  (disabled && variants.disabled) || variants.inactiveBgColor};
   }
 
   .sui-switch-content {
-    height: ${p => SIZES[p.size].height}px;
+    height: ${({size}) => SIZES[size].height}px;
     transform: translateX(
-      ${p => (p.width ? 36 - p.width : SIZES[p.size].off)}px
+      ${({width, size}) => (width ? 36 - width : SIZES[size].off)}px
     );
   }
 
   .sui-switch-ball {
-    background-color: ${p =>
-  p.size === 'small'
+    background-color: ${({size}) =>
+  size === 'small'
     ? variants.smallBallColor
     : variants.inactiveBigBallColor};
-    width: ${p => SIZES[p.size].ball}px;
-    height: ${p => SIZES[p.size].ball}px;
+    width: ${({size}) => SIZES[size].ball}px;
+    height: ${({size}) => SIZES[size].ball}px;
   }
 
   .sui-switch-label {
-    width: ${p => (p.width ? p.width - 30 : SIZES[p.size].label)}px;
+    width: ${({width, size}) => (width ? width - 30 : SIZES[size].label)}px;
     font-size: 16px;
 
     &.sui-switch-label-on {
-      color: ${p => variants[p.variant].activeLabelColor};
+      color: ${({variant}) => variants[variant].activeLabelColor};
     }
 
     &.sui-switch-label-off {
@@ -87,16 +87,16 @@ const StyledSwitch = styled(BaseSwitch)`
   }
 
   input:checked + .sui-switch-wrapper {
-    background-color: ${p => variants[p.variant].bgColor};
+    background-color: ${({variant}) => variants[variant].bgColor};
     .sui-switch-content {
-      transform: translateX(${p => SIZES[p.size].on}px);
+      transform: translateX(${({size}) => SIZES[size].on}px);
     }
 
     .sui-switch-ball {
-      background-color: ${p =>
-  p.size === 'small'
+      background-color: ${({size, variant}) =>
+  size === 'small'
     ? variants.smallBallColor
-    : variants[p.variant].activeBigBallColor};
+    : variants[variant].activeBigBallColor};
     }
   }
 
@@ -109,7 +109,7 @@ const StyledSwitch = styled(BaseSwitch)`
 `
 
 StyledSwitch.propTypes = {
-  checked: PropTypes.bool,
+  checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.isRequired]),
   onChange: PropTypes.func,
   variant: PropTypes.oneOf(['success', 'primary']),
 }
