@@ -1,109 +1,75 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import path from 'path'
-import resolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
-import commonjs from 'rollup-plugin-commonjs'
+import readPkg from 'read-pkg'
+import babel from '@rollup/plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import builtins from 'builtin-modules'
 import postcss from 'rollup-plugin-postcss'
-import { uglify } from 'rollup-plugin-uglify'
-import pkg from './package.json'
+import analyze from 'rollup-plugin-analyzer'
 
-function getConfig() {
-  const name = 'scalewayUi'
-  const buildName = 'scaleway-ui'
+const PROFILE = !!process.env.PROFILE
 
-  const SOURCE_DIR = path.resolve(__dirname, 'src')
-  const DIST_DIR = path.resolve(__dirname, 'dist')
+export default async () => {
+  const pkg = await readPkg()
 
-  const baseConfig = {
-    input: `${SOURCE_DIR}/index.js`,
+  const targets = pkg.browser
+    ? `
+    > 1%,
+    last 2 versions
+    `
+    : { node: '14' }
+
+  const external = id =>
+    [
+      ...Object.keys(pkg.dependencies || {}),
+      ...Object.keys(pkg.peerDependencies || {}),
+      ...(pkg.browser ? [] : builtins),
+    ].find(dep => new RegExp(dep).test(id))
+
+  return {
+    input: './src/index.js',
     plugins: [
       babel({
+        babelHelpers: 'runtime',
+        babelrc: false,
         exclude: 'node_modules/**',
-        configFile: path.join(__dirname, 'babel.config.js'),
+        presets: [
+          ['@babel/env', { modules: false, targets, loose: true }],
+          '@babel/preset-react',
+          [
+            '@emotion/babel-preset-css-prop',
+            { autoLabel: true, labelFormat: '[filename]--[local]' },
+          ],
+        ],
+        plugins: [
+          'babel-plugin-emotion',
+          'babel-plugin-annotate-pure-calls',
+          ['@babel/plugin-proposal-class-properties', { loose: true }],
+          ['babel-plugin-module-resolver', { root: ['./src'] }],
+          '@babel/plugin-transform-runtime',
+        ],
       }),
       postcss({
         plugins: [],
       }),
+      resolve({
+        preferBuiltins: true,
+      }),
+      commonjs({
+        include: '**/node_modules/**',
+      }),
+      PROFILE && analyze({ summaryOnly: true }),
+    ].filter(Boolean),
+    external,
+    output: [
+      {
+        format: 'umd',
+        name: pkg.name,
+        file: 'dist/index.js',
+      },
+      {
+        format: 'es',
+        file: 'dist/module.js',
+      },
     ],
   }
-
-  const esConfig = {
-    ...baseConfig,
-    ...{
-      output: {
-        file: `${DIST_DIR}/${buildName}.es.js`,
-        format: 'es',
-      },
-      external: [
-        ...Object.keys(pkg.peerDependencies || {}),
-        ...Object.keys(pkg.dependencies || {}),
-      ],
-      plugins: [...baseConfig.plugins, resolve()],
-    },
-  }
-
-  const cjsConfig = {
-    ...esConfig,
-    ...{
-      output: {
-        file: `${DIST_DIR}/${buildName}.cjs.js`,
-        format: 'cjs',
-      },
-    },
-  }
-
-  const globals = {
-    polished: 'polished',
-    'prop-types': 'PropTypes',
-    'emotion-theming': 'emotionTheming',
-    '@emotion/core': 'emotion',
-    react: 'React',
-    'react-dom': 'ReactDom',
-  }
-
-  const umdConfig = {
-    ...baseConfig,
-    ...{
-      output: {
-        name,
-        file: `${DIST_DIR}/${buildName}.js`,
-        format: 'umd',
-        globals,
-        exports: 'named',
-        sourcemap: false,
-      },
-      external: Object.keys(globals),
-      plugins: [...baseConfig.plugins, resolve({ browser: true }), commonjs()],
-    },
-  }
-
-  const minConfig = {
-    ...umdConfig,
-    ...{
-      output: {
-        ...umdConfig.output,
-        file: `${DIST_DIR}/${buildName}.min.js`,
-      },
-      plugins: [
-        ...umdConfig.plugins,
-        replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
-        uglify({
-          compress: {
-            pure_getters: true,
-            unsafe: true,
-            unsafe_comps: true,
-          },
-        }),
-      ],
-    },
-  }
-
-  if (process.env.WATCH_MODE) {
-    return [esConfig, cjsConfig]
-  }
-
-  return [esConfig, cjsConfig, umdConfig, minConfig]
 }
-
-export default getConfig()
