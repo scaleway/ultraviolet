@@ -45,7 +45,7 @@ const Touchable = ({
     as={as}
     type={as === 'button' ? 'button' : type}
     disabled={disabled}
-    tabIndex={hasFocus ? 0 : null}
+    tabIndex={hasFocus && 0}
   />
 )
 
