@@ -16,7 +16,10 @@
   "jsnext:main": "dist/module.js",
   "scripts": {
     "build": "rollup -c",
-    "build:profile": "cross-env PROFILE=true rollup -c",
+    "build:profile": "cross-env PROFILE=true yarn run build",
+    "test": "jest",
+    "test:watch": "yarn run test --watch",
+    "test:coverage": "yarn run test --coverage",
     "dev": "docz dev",
     "docz:build": "docz build",
     "format": "prettier --write '**/*.{js,json,md,mdx}'",
@@ -43,6 +46,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"]
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.28",
@@ -89,10 +95,13 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "jest-emotion": "^10.0.32",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "read-pkg": "^5.2.0",
     "rollup": "^2.26.5",
     "rollup-plugin-analyzer": "^3.3.0",
