@@ -1,8 +1,7 @@
 import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
 import React from 'react'
-import { gray100, gray200, gray350, gray550, gray700 } from 'theming'
-import { cx } from 'utils'
+import { theme } from '../theme'
 import { ActivityIndicator } from './ActivityIndicator'
 import { Icon } from './Icon'
 import { Touchable } from './Touchable'
@@ -13,8 +12,8 @@ export const styles = {
     justify-content: center;
     display: flex;
   `,
-  text: p => css`
-    color: ${gray700(p)};
+  text: css`
+    color: ${theme.gray700};
     font-size: 14px;
     align-self: center;
     max-width: 350px;
@@ -25,15 +24,15 @@ export const styles = {
   disabled: css`
     opacity: 0.5;
   `,
-  icon: p => css`
+  icon: css`
     margin-left: 16px;
     &:hover {
-      background-color: ${gray200(p)};
+      background-color: ${theme.gray200};
     }
   `,
-  bordered: p => css`
+  bordered: css`
     border-radius: 4px;
-    border: 1px solid ${gray550(p)};
+    border: 1px solid ${theme.gray550};
     padding: 4px;
     width: 32px;
     height: 32px;
@@ -41,15 +40,15 @@ export const styles = {
 }
 
 export const variantsContainer = {
-  base: p => css`
-    background-color: ${gray100(p)};
+  base: css`
+    background-color: ${theme.gray100};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
   `,
-  bordered: p => css`
+  bordered: css`
     padding: 8px;
-    border: 1px solid ${gray350(p)};
+    border: 1px solid ${theme.gray350};
   `,
 }
 
@@ -64,20 +63,20 @@ export const Tag = ({
 }) => (
   <Box
     {...props}
-    css={cx([
+    css={[
       disabled && styles.disabled,
       styles.container,
       variantsContainer[variant],
-    ])}
+    ]}
   >
-    <span css={cx([disabled && styles.disabled, styles.text, textStyle])}>
+    <span css={[disabled && styles.disabled, styles.text, textStyle]}>
       {children}
     </span>
 
     {onClose && (
       <Touchable
         onClick={!isLoading && onClose}
-        css={cx([styles.icon, variant === 'bordered' && styles.bordered])}
+        css={[styles.icon, variant === 'bordered' && styles.bordered]}
         disabled={disabled}
       >
         {isLoading ? (
