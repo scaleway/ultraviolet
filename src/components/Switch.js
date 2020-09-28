@@ -112,6 +112,7 @@ StyledSwitch.propTypes = {
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   variant: PropTypes.oneOf(['success', 'primary']),
+  size: PropTypes.string
 }
 
 StyledSwitch.defaultProps = {

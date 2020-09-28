@@ -109,17 +109,23 @@ export const SwitchButton = (
   </SwitchState>
 )
 
-SwitchButton.defaultProps = { size: 24 }
+SwitchButton.defaultProps = {
+  size: 24,
+  disabled: false,
+  defaultChecked: false,
+  onFocus: () => {},
+  onBlur: () => {},
+}
 
 SwitchButton.propTypes = {
   checked: PropTypes.bool.isRequired,
   disabled: PropTypes.bool,
   defaultChecked: PropTypes.bool,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  name: PropTypes.string,
-  value: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   size: PropTypes.number,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 }
