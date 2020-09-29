@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.11](https://***REMOVED***///compare/v0.13.10...v0.13.11) (2020-09-29)
+
+
+### Bug Fixes
+
+* **tag:** correct onClick handler ([5973fca](https://***REMOVED***///commit/5973fcaecfe45a8119e2e65962bd758ecfa43712))
+* correct deploy docz domain ([b7db9b8](https://***REMOVED***///commit/b7db9b8dfdb11a8e0d4d404312cb6e18c5f5c92c))
+
 ### [0.13.10](https://***REMOVED***///compare/v0.13.9...v0.13.10) (2020-09-29)
 
 
