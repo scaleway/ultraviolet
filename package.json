@@ -1,6 +1,6 @@
 {
   "name": "@scaleway/ui",
-  "version": "0.13.8",
+  "version": "0.13.9",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -48,7 +48,9 @@
     }
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"]
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.35",
