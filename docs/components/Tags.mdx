@@ -1,0 +1,37 @@
+---
+name: Tags
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Tags } from 'scaleway-ui'
+
+# Tags
+
+<Playground>
+  <Tags onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+</Playground>
+
+# Bordered
+
+<Playground>
+  <Tags variant="bordered" onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+</Playground>
+
+# Custom placeholder
+
+<Playground>
+  <Tags placeholder="Please type your tags" onChange={tags => alert(tags)} />
+</Playground>
+
+# Disabled
+
+<Playground>
+  <Tags disabled onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+</Playground>
+
+# With a custom error handler
+
+<Playground>
+  <Tags onChangeError={(error) => { alert(error) }} onChange={tags => { throw new Error("") }} tags={['Smooth', 'code']} />
+</Playground>
