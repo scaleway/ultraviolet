@@ -75,7 +75,7 @@ export const Tag = ({
 
     {onClose && (
       <Touchable
-        onClick={!isLoading && onClose}
+        onClick={!isLoading ? onClose : undefined}
         css={[styles.icon, variant === 'bordered' && styles.bordered]}
         disabled={disabled}
       >
