@@ -1,0 +1,37 @@
+---
+name: Tag
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Tag } from 'scaleway-ui'
+
+# Tag
+
+<Playground>
+  <Tag>Basic</Tag>
+</Playground>
+
+# Variant Bordered
+
+<Playground>
+  <Tag variant="bordered">Smoth</Tag>
+</Playground>
+
+# With onClose
+
+<Playground>
+  <Tag onClose={() => alert('closed')}>Close Me</Tag>
+</Playground>
+
+# With onClose and isLoading
+
+<Playground>
+  <Tag onClose={() => alert('closed')} isLoading={true}>You can't close me</Tag>
+</Playground>
+
+# Disabled
+
+<Playground>
+  <Tag disabled>Can't touch this</Tag>
+</Playground>
