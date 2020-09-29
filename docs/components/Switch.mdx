@@ -1,0 +1,163 @@
+---
+name: Switch
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Switch } from 'scaleway-ui'
+import BlockList from 'docs/utils/BlockList'
+import ControlValue from 'docs/utils/ControlValue'
+
+# Switch
+
+## Basic
+
+`Switch` uses a `input` of type "checkbox" and they can only be used as controlled input.
+
+<Playground>
+  <ControlValue value={false}>
+    {({ value, onChange }) => (
+      <Switch
+        checked={value}
+        onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+      />
+    )}
+  </ControlValue>
+</Playground>
+
+## Variants
+
+Set variant using `variant` prop. Available variants: `primary`, `success`
+
+<Playground>
+  <BlockList>
+    <ControlValue value={true}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+    <ControlValue value={true}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="success"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>
+
+## Disabled
+
+Set disabled using `disabled` prop.
+
+<Playground>
+  <BlockList>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          checked={value}
+          disabled
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+
+    <ControlValue value={true}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          checked={value}
+          disabled
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>
+
+## Size
+
+`Switch` has two sizes, modifying slightly his design. Use the prop `size` with `small` or `medium`. You can also customize its on/off labels using the `onLabel`, `offLabel` props and the `width` prop to adjust it with the text.
+
+<Playground>
+  <BlockList>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          size="small"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          size="small"
+          width={65}
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          size="medium"
+          width={120}
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          variant="primary"
+          size="medium"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>
+
+## Labeled
+
+<Playground>
+  <BlockList>
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          labeled
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+    <ControlValue value={true}>
+      {({ value, onChange }) => (
+        <Switch
+          labeled
+          onLabel={'YES'}
+          offLabel={'NO'}
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>

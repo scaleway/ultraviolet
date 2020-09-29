@@ -1,0 +1,86 @@
+---
+name: SwitchButton
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Grid, Col, Row, SwitchButton } from 'scaleway-ui'
+import ControlValue from 'docs/utils/ControlValue'
+
+
+# SwitchButton
+
+## Basic
+
+`SwitchButton` uses a `input` of type "radio" and they can only be used as controlled input.
+
+<Playground>
+  <ControlValue value="a">
+    {({ value, onChange }) => (
+      <Grid>
+        <Row>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="a"
+              checked={value === 'a'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is A
+            </SwitchButton>
+          </Col>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="b"
+              checked={value === 'b'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is B
+            </SwitchButton>
+          </Col>
+        </Row>
+      </Grid>
+    )}
+  </ControlValue>
+</Playground>
+
+## Disabled
+
+Use `disabled` prop to disable one or both `SwitchButton`.
+
+<Playground>
+  <ControlValue value="a">
+    {({ value, onChange }) => (
+      <Grid>
+        <Row>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="a"
+              checked={value === 'a'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is A
+            </SwitchButton>
+          </Col>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="b"
+              disabled
+              checked={value === 'b'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is B
+            </SwitchButton>
+          </Col>
+        </Row>
+      </Grid>
+    )}
+  </ControlValue>
+</Playground>
