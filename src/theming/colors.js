@@ -32,6 +32,8 @@ export const success = green
 export const warning = red
 export const info = blue
 
+export const transparent = 'transparent'
+
 export const colors = thd('colors', {
   white,
   gray50,

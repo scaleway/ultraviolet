@@ -4,7 +4,7 @@ menu: Components
 ---
 
 import { Playground } from 'docz'
-import { Grid, Col, Row, SwitchButton } from 'scaleway-ui'
+import { Grid, Col, Row, SwitchButton, BorderedBox } from 'scaleway-ui'
 import ControlValue from 'docs/utils/ControlValue'
 
 
@@ -40,6 +40,86 @@ import ControlValue from 'docs/utils/ControlValue'
             >
               This is B
             </SwitchButton>
+          </Col>
+        </Row>
+      </Grid>
+    )}
+  </ControlValue>
+</Playground>
+
+## Variant
+
+Use `variant` prop to change style. Available variants: `default`, `segment`.
+
+Check code example to reproduce exactly `segment` variant.
+
+<Playground>
+  <ControlValue value="a">
+    {({ value, onChange }) => (
+      <Grid>
+        <Row>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="a"
+              variant="default"
+              checked={value === 'a'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is A
+            </SwitchButton>
+          </Col>
+          <Col xs={3}>
+            <SwitchButton
+              width={1}
+              name="switch"
+              value="b"
+              variant="default"
+              checked={value === 'b'}
+              onChange={e => onChange(e.currentTarget.value)}
+            >
+              This is B
+            </SwitchButton>
+          </Col>
+        </Row>
+      </Grid>
+    )}
+  </ControlValue>
+  <br/>
+  <ControlValue value="a">
+    {({ value, onChange }) => (
+      <Grid>
+        <Row width={320}>
+          <Col pr={0}>
+            <BorderedBox p="4px">
+              <Row>
+                <Col xs={6} pr={0}>
+                  <SwitchButton
+                    width={1}
+                    name="switch"
+                    value="a"
+                    variant='segment'
+                    checked={value === 'a'}
+                    onChange={e => onChange(e.currentTarget.value)}
+                  >
+                    This is A
+                  </SwitchButton>
+                </Col>
+                <Col xs={6} pl={0}>
+                  <SwitchButton
+                    width={1}
+                    name="switch"
+                    value="b"
+                    variant='segment'
+                    checked={value === 'b'}
+                    onChange={e => onChange(e.currentTarget.value)}
+                  >
+                    This is B
+                  </SwitchButton>
+                </Col>
+              </Row>
+            </BorderedBox>
           </Col>
         </Row>
       </Grid>
