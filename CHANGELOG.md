@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.13](https://***REMOVED***///compare/v0.13.12...v0.13.13) (2020-09-30)
+
+
+### Bug Fixes
+
+* **switch-button:** added new variant for SwitchButton ([59f7159](https://***REMOVED***///commit/59f71598850665f522ae32989b9d0e2d423bc9d7))
+
 ### [0.13.12](https://***REMOVED***///compare/v0.13.11...v0.13.12) (2020-09-30)
 
 ### [0.13.11](https://***REMOVED***///compare/v0.13.10...v0.13.11) (2020-09-29)
