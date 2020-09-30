@@ -58,33 +58,33 @@ const styles = {
 const variants = {
   segment: {
     switchButton: css`
-    font-size: 14;
-    height: 40px;
-    transition: none;
-    :hover,:focus {
+      font-size: 14;
+      height: 40px;
+      transition: none;
+      :hover,:focus {
+        box-shadow: none;
+        border: none;
+        color: ${theme.gray700}
+      }
+      border-radius: 4px;
       box-shadow: none;
-      border: none;
-      color: ${theme.gray700}
-    }
-    border-radius: 4px;
-    box-shadow: none;
   `,
     checked: css`
-    background-color: ${theme.primary};
-    color: ${theme.white};
-    :hover {
+      background-color: ${theme.primary};
       color: ${theme.white};
-    }
+      :hover {
+        color: ${theme.white};
+      }
   `,
     notChecked: css`
-    background-color: white;
-    color: ${theme.gray700};
-    border-color: ${theme.transparent};
-    :hover,:focus {
+      background-color: white;
       color: ${theme.gray700};
-      border: none;
-      box-shadow: none;
-    }
+      border-color: ${theme.transparent};
+      :hover,:focus {
+        color: ${theme.gray700};
+        border: none;
+        box-shadow: none;
+      }
   `,
   },
 }
