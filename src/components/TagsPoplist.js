@@ -89,7 +89,7 @@ const TagsPoplist = ({
                 />
                 <Box
                   boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
-                  px="8px"
+                  px={1}
                   py="4px"
                   display="flex"
                   alignItems="center"
