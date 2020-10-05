@@ -33,14 +33,6 @@ $ yarn run build:profile
 
 ----
 
-## Create a new release
-
-1. Prepare the new release: `yarn release`. (You can check changes made with `git diff HEAD^1`)
-2. Push the release: `git push --follow-tags origin master`.
-3. :warning: **do not publish yourself**, the pipeline will do it for you with the `front-ci-cd` user.
-
-----
-
 ## Use local changes on shire
 ### NPM link
 
@@ -60,3 +52,10 @@ $ yarn unlink @scaleway/ui && yarn install --force
 ```sh
 $ yarn run transfer
 ```
+----
+
+# Versioning
+
+We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
+
+Only the `feat`, `fix` and `perf` types will generate a new package on the `master` branch
