@@ -54,7 +54,7 @@ $ yarn run transfer
 ```
 ----
 
-# Versioning
+## Versioning
 
 We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
 
