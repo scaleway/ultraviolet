@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { Box } from 'components/Box'
@@ -26,6 +25,11 @@ const styles = {
     float: right;
     vertical-align: top;
     font-weight: 500;
+  `,
+  meter: css`
+    border-radius: 5px;
+    height: 100%;
+    transition: all 0.5s;
   `,
 }
 
@@ -72,18 +76,13 @@ export function PasswordStrengthMeter({
       </Typography>
 
       <Box css={styles.wrapper} mt={1} mb={2}>
-        {motion && (
-          <motion.div
-            initial={{
-              backgroundColor,
-              borderRadius: '5px',
-              height: '100%',
-              width,
-            }}
-            animate={{ backgroundColor, width }}
-            transition={{ duration: 0.5 }}
-          />
-        )}
+        <div
+          css={styles.meter}
+          style={{
+            backgroundColor,
+            width,
+          }}
+        />
       </Box>
     </Box>
   )
