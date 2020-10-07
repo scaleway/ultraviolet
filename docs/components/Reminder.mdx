@@ -1,0 +1,27 @@
+---
+name: Reminder
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Reminder } from 'scaleway-ui'
+
+# Reminder
+
+## Controlled
+
+Radio only work as [controlled component](https://reactjs.org/docs/forms.html).
+
+<Playground>
+  <Reminder to="/" mb={1} variant="error" text="Your credit card [has expired]"/>
+  <Reminder to="/" mb={1} variant="warning" text="You have [1 locked instance]"/>
+  <Reminder to="/" mb={1} variant="info" text="[2FA] is deactivated"/>
+  <Reminder to="/" mb={1} text="No [phone number] registered"/>
+</Playground>
+
+<Playground>
+  <Reminder to="/" mb={1} bordered variant="error" text="Your credit card [has expired]"/>
+  <Reminder to="/" mb={1} bordered variant="warning" text="You have [1 locked instance]"/>
+  <Reminder to="/" mb={1} bordered variant="info" text="[2FA] is deactivated"/>
+  <Reminder to="/" mb={1} bordered text="No [phone number] registered"/>
+</Playground>
