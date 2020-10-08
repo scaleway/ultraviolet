@@ -53,7 +53,7 @@ const Notification = styled(Typography, {
 export const Reminder = ({ text, variant, bordered, ...props }) => (
   <UniversalLink style={{ display: 'flex', textDecoration: 'none' }} {...props}>
     <Notification
-      fontSize="12px"
+      fontSize={12}
       px={1}
       py={1}
       bordered={bordered}
