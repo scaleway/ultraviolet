@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css, keyframes } from '@emotion/core'
-import posed from 'react-pose'
 import { gray300 } from 'theming'
 import { cx, thColor } from 'utils'
 import { Box } from './Box'
@@ -25,13 +24,15 @@ const styles = {
     border-radius: 2px;
     background-color: ${gray300(p)};
   `,
-  filled: ({ variant }) => p => css`
+  filled: ({ variant, value }) => p => css`
     border-radius: 2px;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     background-color: ${thColor(variant)(p)};
+    transition: 0.3s width;
+    width: ${value}%;
   `,
   progress: css`
     position: absolute;
@@ -54,17 +55,6 @@ const styles = {
 
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
-const Bar = posed.div({
-  progress: {
-    width: p => `${p.width}%`,
-    transition: p => ({
-      width: {
-        to: `${p.width}%`,
-      },
-    }),
-  },
-})
-
 export function ProgressBar({
   variant = 'primary',
   value = 0,
@@ -83,12 +73,7 @@ export function ProgressBar({
       {progress ? (
         <div css={cx(styles.progress)} />
       ) : (
-        <Bar
-          css={cx(styles.filled({ variant }), styles.progress)}
-          pose="progress"
-          poseKey={value}
-          width={Math.max(0, Math.min(100, value))}
-        />
+        <div css={cx(styles.filled({ variant, value }), styles.progress)} />
       )}
     </Box>
   )
