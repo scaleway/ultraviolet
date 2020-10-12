@@ -1,3 +1,10 @@
+## [0.14.0](https://github.com/chambo-e/scw-ui/compare/v0.13.14...v0.14.0) (2020-10-12)
+
+
+### Features
+
+* add Reminder component [CNS-3354] ([64e87e7](https://github.com/chambo-e/scw-ui/commit/64e87e7941aadee77694f5ba665511e44ae9cd7a))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
