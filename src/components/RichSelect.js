@@ -132,13 +132,15 @@ const getSelectStyles = (error, customStyle) => ({
   }),
   multiValueRemove: (provided, state) => ({
     ...provided,
-    ...state.isDisabled ? {
-      pointerEvents: 'none',
-      cursor: 'none',
-      color: theme.gray300,
-    } : {
-      color: theme.gray550
-    },
+    ...(state.isDisabled
+      ? {
+          pointerEvents: 'none',
+          cursor: 'none',
+          color: theme.gray300,
+        }
+      : {
+          color: theme.gray550,
+        }),
     ':hover': {
       pointerEvents: state.isDisabled ? 'none' : 'fill',
       cursor: state.isDisabled ? 'none' : 'pointer',
@@ -180,12 +182,12 @@ const getSelectStyles = (error, customStyle) => ({
     },
     ...((customStyle(state) || {}).option || {}),
   }),
-  indicatorsContainer: (provided) => ({
+  indicatorsContainer: provided => ({
     ...provided,
     // display: 'inline-flex',
     // alignSelf:'flex-end',
     // alignItems: 'center',
-    maxHeight: '48px'
+    maxHeight: '48px',
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
@@ -373,7 +375,7 @@ const MultiValueRemove = props => (
   </components.MultiValueRemove>
 )
 
-export function RichSelect({
+function RichSelect({
   children,
   className,
   disabled,
@@ -388,12 +390,14 @@ export function RichSelect({
   readOnly,
   value,
   customStyle = () => true,
+  innerRef,
   ...props
 }) {
   const labelId = getUUID('label')
   const inputId = getUUID('input')
   return (
     <Select
+      ref={innerRef}
       css={styles.select}
       components={{
         SelectContainer,
@@ -436,9 +440,13 @@ export function RichSelect({
   )
 }
 
-RichSelect.Option = () => null
+const RichSelectWithRef = React.forwardRef((props, ref) => (
+  <RichSelect innerRef={ref} {...props} />
+))
 
-RichSelect.propTypes = {
+RichSelectWithRef.Option = () => null
+
+RichSelectWithRef.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   id: PropTypes.string,
@@ -452,3 +460,5 @@ RichSelect.propTypes = {
   className: PropTypes.string,
   customStyle: PropTypes.func,
 }
+
+export { RichSelectWithRef as RichSelect }
