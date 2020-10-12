@@ -1,3 +1,10 @@
+### [0.14.1](https://github.com/chambo-e/scw-ui/compare/v0.14.0...v0.14.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* **ci:** correct deploy ([9b4b806](https://github.com/chambo-e/scw-ui/commit/9b4b806b5aead19f500acdec05a463442888198e))
+
 ## [0.14.0](https://github.com/chambo-e/scw-ui/compare/v0.13.14...v0.14.0) (2020-10-12)
 
 
