@@ -27,7 +27,6 @@
     "lint": "eslint --cache .",
     "lint:fix": "yarn run lint --fix",
     "prebuild": "shx rm -rf dist",
-    "prepublishOnly": "yarn build",
     "transfer": "yarn build && cp -f ./dist/* ../shire/node_modules/@scaleway/ui/dist"
   },
   "husky": {
