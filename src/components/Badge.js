@@ -89,6 +89,7 @@ const style = p => css`
   white-space: nowrap;
   border-radius: ${sp(2)(p)};
   padding: 0 ${sp(2)(p)};
+  width: fit-content;
 `
 
 export function Badge({ variant = 'neutral', size = 'md', ...props }) {
