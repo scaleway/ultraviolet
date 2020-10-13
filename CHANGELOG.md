@@ -1,3 +1,10 @@
+## [0.15.0](https://github.com/chambo-e/scw-ui/compare/v0.14.2...v0.15.0) (2020-10-13)
+
+
+### Features
+
+* adds sphere component ([897b216](https://github.com/chambo-e/scw-ui/commit/897b2165909dc14f7f3f7b5f9055bc759b240702))
+
 ### [0.14.2](https://github.com/chambo-e/scw-ui/compare/v0.14.1...v0.14.2) (2020-10-13)
 
 
