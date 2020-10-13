@@ -1,3 +1,10 @@
+### [0.14.2](https://github.com/chambo-e/scw-ui/compare/v0.14.1...v0.14.2) (2020-10-13)
+
+
+### Bug Fixes
+
+* **richselect:** adds forward ref ([2a3e7ab](https://github.com/chambo-e/scw-ui/commit/2a3e7ab6afbe79ba24d130bb5507b6aa514a9b20))
+
 ### [0.14.1](https://github.com/chambo-e/scw-ui/compare/v0.14.0...v0.14.1) (2020-10-12)
 
 
