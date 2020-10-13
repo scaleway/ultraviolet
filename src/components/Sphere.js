@@ -54,7 +54,7 @@ export const Sphere = ({
 
 Sphere.defaultProps = {
   size: 32,
-  bgColors: [violet({})],
+  bgColors: [theme.violet],
   text: undefined,
   isHalved: false,
 }
