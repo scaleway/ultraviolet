@@ -1,3 +1,10 @@
+### [0.15.2](https://github.com/chambo-e/scw-ui/compare/v0.15.1...v0.15.2) (2020-10-16)
+
+
+### Bug Fixes
+
+* **icon:** add key icon ([7d3e5cf](https://github.com/chambo-e/scw-ui/commit/7d3e5cf9114dd071310315498b7bc4e98ea82e98))
+
 ### [0.15.1](https://github.com/chambo-e/scw-ui/compare/v0.15.0...v0.15.1) (2020-10-14)
 
 
