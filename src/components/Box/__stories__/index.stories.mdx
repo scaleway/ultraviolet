@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Box } from '..'
+
+<Meta title="Components/Box" component={Box} />
+
+# Box
+
+<Description>
+  System based Box, see [Smooth UI System](https://smooth-ui-v10.smooth-code.com/docs-components-box).
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    <Box
+      backgroundColor="primary"
+      height={100}
+      mx="auto"
+      p={2}
+    />
+  </Story>
+</Canvas>
