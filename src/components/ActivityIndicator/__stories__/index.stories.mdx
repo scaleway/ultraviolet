@@ -1,0 +1,89 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ActivityIndicator } from '..'
+
+<Meta
+  title="Components/ActivityIndicator"
+  component={ActivityIndicator}
+  argTypes={{
+    color: {
+      control: {
+        type: 'string',
+      },
+    },
+    size: {
+      control: {
+        type: 'number',
+      },
+    },
+  }}
+/>
+
+# ActivityIndicator
+
+<Description>
+  Indicates that an action is pending.
+</Description>
+
+<Canvas>
+  <Story name="default" args={{}}>
+    {args => <ActivityIndicator {...args}/>}
+  </Story>
+</Canvas>
+
+## `size`
+
+<Canvas>
+  <Story
+    name="40"
+    args={{
+      size: 40,
+    }}
+  >
+    {args => <ActivityIndicator {...args}/>}
+  </Story>
+  <Story
+    name="50"
+    args={{
+      size: 50,
+    }}
+  >
+    {args => <ActivityIndicator {...args}/>}
+  </Story>
+  <Story
+    name="60"
+    args={{
+      size: 60,
+    }}
+  >
+    {args => <ActivityIndicator {...args}/>}
+  </Story>
+</Canvas>
+
+## `color`
+
+<Canvas>
+  <Story
+    name="primary"
+    args={{
+      color: 'primary',
+    }}
+  >
+    {(args) => <ActivityIndicator {...args}/>}
+  </Story>
+  <Story
+    name="success"
+    args={{
+      color: 'success',
+    }}
+  >
+    {(args) => <ActivityIndicator {...args}/>}
+  </Story>
+  <Story
+    name="warning"
+    args={{
+      color: 'warning',
+    }}
+  >
+    {(args) => <ActivityIndicator {...args}/>}
+  </Story>
+</Canvas>
