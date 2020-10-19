@@ -1,0 +1,91 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import { Alert } from '..'
+
+<Meta
+  title="Components/Alert"
+  component={Alert}
+  argTypes={{
+    variant: {
+      control: {
+        type: 'select',
+        options: ['warning', 'info', 'success'],
+      },
+    },
+    icon: {
+      control: {
+        type: 'string',
+      },
+    },
+  }}
+/>
+
+# Alert
+
+## `variant`
+
+<Canvas>
+  <Story
+    name="success"
+    args={{
+      variant: 'success',
+    }}
+  >
+    {args => (
+      <Alert {...args}>
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Alert>
+    )}
+  </Story>
+  <Story
+    name="warning"
+    args={{
+      variant: 'warning',
+    }}
+  >
+    {args => (
+      <Alert {...args}>
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Alert>
+    )}
+  </Story>
+  <Story
+    name="info"
+    args={{
+      variant: 'info',
+    }}
+  >
+    {args => (
+      <Alert {...args}>
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Alert>
+    )}
+  </Story>
+</Canvas>
+
+## `icon`
+
+For basic variants, icon is automatically added. A specific one can be set using `icon` prop. All [icons](/docs-components-icon) are supported.
+
+<Canvas>
+  <Story
+    name="success-icon"
+    args={{
+      variant: 'success',
+      icon: 'lock',
+    }}
+  >
+    {args => (
+      <Alert {...args}>
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Alert>
+    )}
+  </Story>
+</Canvas>

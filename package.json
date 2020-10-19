@@ -17,10 +17,10 @@
   "scripts": {
     "build:profile": "cross-env PROFILE=true yarn run build",
     "build": "rollup -c",
+    "build:storybook": "build-storybook --docs",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
-    "dev": "yarn run docz:start",
-    "docz:build": "docz build",
-    "docz:start": "docz dev",
+    "dev": "yarn run start:storybook",
+    "start:storybook": "start-storybook -p 6006 --docs",
     "format": "prettier --write '**/*.{js,json,md,mdx}'",
     "lint:fix": "yarn run lint --fix",
     "lint": "eslint --cache .",
@@ -51,7 +51,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.35",
@@ -85,7 +88,15 @@
     "@semantic-release/npm": "^7.0.6",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@smooth-ui/core-em": "^10.1.0",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-docs": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
+    "@storybook/react": "^6.0.26",
+    "@storybook/theming": "^6.0.26",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
     "babel-plugin-emotion": "^10.0.33",
     "babel-plugin-module-resolver": "^4.0.0",
@@ -104,12 +115,14 @@
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.5.3",
     "jest-emotion": "^10.0.32",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "read-pkg": "^5.2.0",
     "rollup": "^2.32.0",
@@ -132,9 +145,7 @@
     "reakit": "^1.2.5"
   },
   "resolutions": {
-    "docz/react": "^16.13.1",
-    "docz/react-dom": "^16.13.1",
-    "docz/docz-theme-default/react": "^16.13.1",
-    "docz/docz-theme-default/react-dom": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
