@@ -1,0 +1,62 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as colorsReference from '../colors'
+import { Box, Boxer, Typography } from '../../'
+
+<Meta title="Theme/Colors" />
+
+# Colors
+
+<Story name="colors">
+  {Object.keys(colorsReference).map((color, i) => {
+    return (
+      color !== 'colors' && (
+        <Box display="flex" justifyContent="center" key={color}>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor="black"
+          >
+            <Typography color={color}>
+              {color}
+            </Typography>
+          </Box>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor="white"
+          >
+            <Typography color={color}>
+              {color}
+            </Typography>
+          </Box>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor={color}
+          >
+            <Typography color="white">
+              {color}
+            </Typography>
+          </Box>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor={color}
+          >
+            <Typography color="black">
+              {color}
+            </Typography>
+          </Box>
+        </Box>
+      )
+    )
+  })}
+</Story>
