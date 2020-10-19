@@ -1,3 +1,10 @@
+### [0.15.3](https://github.com/chambo-e/scw-ui/compare/v0.15.2...v0.15.3) (2020-10-19)
+
+
+### Bug Fixes
+
+* **config:** harmonise renovate config with shire one and enable renovate on docker too ([03f35d0](https://github.com/chambo-e/scw-ui/commit/03f35d0d69334cccd1be408e42628c3acacb9dbf))
+
 ### [0.15.2](https://github.com/chambo-e/scw-ui/compare/v0.15.1...v0.15.2) (2020-10-16)
 
 
