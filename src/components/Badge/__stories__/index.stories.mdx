@@ -1,0 +1,113 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Badge } from '..'
+
+<Meta
+  title="Components/Badge"
+  component={Badge}
+  argTypes={{
+    variant: {
+      control: {
+        type: 'select',
+        options: ['success', 'beta', 'warning', 'neutral'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['rounded', 'md', 'sm', 'xs', 'xxs'],
+      },
+    },
+  }}
+/>
+
+# Badge
+
+<Description>Highlights informations.</Description>
+
+<Canvas>
+  <Story name="default" args={{}}>
+    {args => <Badge {...args}>A Badge</Badge>}
+  </Story>
+</Canvas>
+
+## `variant`
+
+<Canvas>
+  <Story
+    name="neutral"
+    args={{
+      variant: 'neutral',
+    }}
+  >
+    {args => <Badge {...args}>{args.variant}</Badge>}
+  </Story>
+  <Story
+    name="success"
+    args={{
+      variant: 'success',
+    }}
+  >
+    {args => <Badge {...args}>{args.variant}</Badge>}
+  </Story>
+  <Story
+    name="beta"
+    args={{
+      variant: 'beta',
+    }}
+  >
+    {args => <Badge {...args}>{args.variant}</Badge>}
+  </Story>
+  <Story
+    name="warning"
+    args={{
+      variant: 'warning',
+    }}
+  >
+    {args => <Badge {...args}>{args.variant}</Badge>}
+  </Story>
+</Canvas>
+
+## `size`
+
+<Canvas>
+  <Story
+    name="md"
+    args={{
+      size: 'md',
+    }}
+  >
+    {args => <Badge {...args}>{args.size}</Badge>}
+  </Story>
+  <Story
+    name="sm"
+    args={{
+      size: 'sm',
+    }}
+  >
+    {args => <Badge {...args}>{args.size}</Badge>}
+  </Story>
+  <Story
+    name="xs"
+    args={{
+      size: 'xs',
+    }}
+  >
+    {args => <Badge {...args}>{args.size}</Badge>}
+  </Story>
+  <Story
+    name="xxs"
+    args={{
+      size: 'xxs',
+    }}
+  >
+    {args => <Badge {...args}>{args.size}</Badge>}
+  </Story>
+  <Story
+    name="rounded"
+    args={{
+      size: 'rounded',
+    }}
+  >
+    {args => <Badge {...args}>{args.size}</Badge>}
+  </Story>
+</Canvas>
