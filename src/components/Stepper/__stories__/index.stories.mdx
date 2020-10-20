@@ -1,0 +1,31 @@
+import { useState } from 'react'
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { Stepper } from '..'
+
+<Meta title="Components/Stepper" component={Stepper} />
+
+# Stepper
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    {() => {
+      const [value, setValue] = useState(0)
+      return (
+        <Stepper
+          minValue={0}
+          maxValue={100}
+          text="unit"
+          onChange={setValue}
+          value={value}
+        />
+      )
+    }}
+  </Story>
+</Canvas>
