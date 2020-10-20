@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { DotSteps } from '..'
+import { useState } from 'react'
+
+<Meta
+  title="Components/DotSteps"
+  component={DotSteps}
+  argTypes={{
+    steps: {
+      control: {
+        type: 'number',
+      },
+    },
+  }}
+/>
+
+# DotSteps
+
+<Description>
+  Dot Steps control, to switch between pages/steps.
+</Description>
+
+<Canvas>
+  <Story name="default" args={{ steps: 2 }}>
+    {() => {
+      const [step, setStep] = useState(1)
+      return (
+        <>
+          {step === 1 && 'Content of 1st step'}
+          {step === 2 && 'Content of the 2nd step'}
+          <DotSteps {...{ step, setStep }} />
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
