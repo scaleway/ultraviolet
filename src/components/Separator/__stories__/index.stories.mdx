@@ -1,0 +1,80 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { Separator } from '..'
+import { Box } from 'components'
+
+<Meta title="Components/Separator" component={Separator} />
+
+# Separator
+
+<Description>
+  A horizontal or vertical separator.
+</Description>
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Separator />
+  </Story>
+</Canvas>
+
+## Thickness
+
+<Description>
+  Set thickness using `thickness` prop.
+</Description>
+
+<Canvas>
+  <Story name="thickness">
+    <Separator thickness={3} />
+  </Story>
+</Canvas>
+
+## Direction
+
+<Description>
+  Set direction using `direction` prop.
+</Description>
+
+<Canvas>
+  <Story name="direction">
+    <Box display="inline-flex">
+      <Box>left part</Box>
+      <Separator direction="vertical" mx={1} />
+      <Box>right part</Box>
+    </Box>
+  </Story>
+</Canvas>
+
+## Color
+
+<Description>
+  Set color using `color` prop.
+</Description>
+
+<Canvas>
+  <Story name="color">
+    <Separator color="primary" />
+  </Story>
+</Canvas>
+
+## Icon
+
+<Description>
+  Set icon using `icon` prop.
+</Description>
+
+<Canvas>
+  <Story name="with-icon">
+    <Box>
+      <Box>top part</Box>
+      <Separator my={1} icon="ray-top-arrow" />
+      <Box>bottom part</Box>
+    </Box>
+  </Story>
+</Canvas>
