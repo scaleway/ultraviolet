@@ -1,0 +1,196 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Button, buttonSizes, buttonVariants } from '..'
+
+<Meta title="Components/Button" component={Button} />
+
+<style>{`
+  .row {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    height: 120px;
+    padding: 20px 0;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 8px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .legend {
+    font-size: 12px;
+  }
+`}</style>
+
+# Button
+
+## Variants and Sizes Table
+
+<Description>
+  Set variant and size using `variant` and `size` property.
+</Description>
+
+<Canvas>
+  <Story name="button">
+    {buttonVariants.map(variant => (
+      <div key={variant} className="row">
+        {buttonSizes.map(size => (
+          <div key={size} className="button">
+            <Button size={size} variant={variant}>
+              BUTTON
+            </Button>
+            <span className="legend">
+              {size} {variant}
+            </span>
+          </div>
+        ))}
+      </div>
+    ))}
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>Set variant using `variant` property.</Description>
+
+<Canvas>
+  <Story name="btn-variants">
+    {buttonVariants.map(variant => (
+      <Button key={variant} variant={variant} m={2}>
+        {variant}
+      </Button>
+    ))}
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Description>Set size using `size` property.</Description>
+
+<Canvas>
+  <Story name="btn-sizes">
+    {buttonSizes.map(size => (
+      <Button key={size} size={size} m={2}>
+        {size}
+      </Button>
+    ))}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Description>Set disabled using `disabled` property.</Description>
+
+<Canvas>
+  <Story name="btn-disabled">
+    {buttonVariants.map(variant => (
+      <Button key={variant} variant={variant} disabled m={2}>
+        {variant} disabled
+      </Button>
+    ))}
+  </Story>
+</Canvas>
+
+## Progress
+
+<Description>
+  Add `ActivityIndicator` by setting `progress` property to `left` or `right`.
+</Description>
+
+<Canvas>
+  <Story name="btn-progress">
+    <div>
+      {buttonSizes.map(size => (
+        <Button key={`left-${size}`} size={size} progress="left" m={2}>
+          {size} left progress
+        </Button>
+      ))}
+    </div>
+    <div>
+      {buttonSizes.map(size => (
+        <Button key={`right-${size}`} size={size} progress="right" m={2}>
+          {size} right progress
+        </Button>
+      ))}
+    </div>
+    <div>
+      {buttonSizes.map(size => (
+        <Button key={size} size={size} progress m={2} />
+      ))}
+    </div>
+  </Story>
+</Canvas>
+
+## Icons
+
+<Description>
+  Add icon using `icon`. You can specify the name of the icon or the icon
+  itself.
+</Description>
+
+<Canvas>
+  <Story name="btn-icons">
+    {buttonSizes.map(size => (
+      <React.Fragment key={size}>
+        <Button size={size} icon="lock" m={2}>
+          Icon + Text
+        </Button>
+        <Button size={size} icon="lock" m={2} />
+      </React.Fragment>
+    ))}
+  </Story>
+</Canvas>
+
+## Icons Positions
+
+<Description>
+  Add a position icon using `iconPosition`. You can specify whether you want it
+  to the left or to the right of your text. It requires an `icon`.
+</Description>
+
+<Canvas>
+  <Story name="btn-icons-position">
+    {['left', 'right'].map(position => (
+      <Button iconPosition={position} icon="lock" m={2}>
+        {position}
+      </Button>
+    ))}
+  </Story>
+</Canvas>
+
+## Extend
+
+<Description>
+  Make button extensible using `extend` prop. It requires a `icon`.
+</Description>
+
+<Canvas>
+  <Story name="btn-extend">
+    {buttonSizes.map(size => (
+      <Button key={size} extend size={size} icon="plus" m={2}>
+        {size} extend
+      </Button>
+    ))}
+  </Story>
+</Canvas>
+
+## Link delegation
+
+<Description>
+  Using the `to` props, link behavior is delegated to [Link
+  Component](docs-components-link).
+</Description>
+
+<Canvas>
+  <Story name="btn-link">
+    <Button to="https://scaleway.com" target="_blank">
+      Scaleway
+    </Button>
+  </Story>
+</Canvas>
