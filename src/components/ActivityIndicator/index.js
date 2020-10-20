@@ -15,7 +15,7 @@ const spinAnimation = keyframes`
 
 const spinnerStyle = css`
   display: flex;
-  /* animation: ${spinAnimation} 0.75s linear infinite; */
+  animation: ${spinAnimation} 0.75s linear infinite;
 `
 
 const Spinner = ({ children, style }) => (

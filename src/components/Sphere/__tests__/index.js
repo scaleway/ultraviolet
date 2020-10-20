@@ -3,8 +3,6 @@ import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
 
 import { Sphere } from '..'
 
-console.log(Sphere)
-
 test('Sphere renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(<Sphere />)
 })

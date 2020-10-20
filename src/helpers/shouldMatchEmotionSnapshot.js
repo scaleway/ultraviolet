@@ -5,6 +5,5 @@ import renderer from 'react-test-renderer'
 expect.addSnapshotSerializer(serializer)
 
 export default component => {
-  console.log(component)
   expect(renderer.create(component).toJSON()).toMatchSnapshot()
 }
