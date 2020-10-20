@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Boxer } from '..'
+
+<Meta title="Components/Boxer" component={Boxer} />
+
+# Boxer
+
+<Description>
+  Wraps in a `Box` all children. All `Box` props are supported.
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    <Boxer mx={5} display="inline-block">
+      <div>A</div>
+      <div>B</div>
+    </Boxer>
+  </Story>
+</Canvas>
