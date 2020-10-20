@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from 'theme'
+import { Box } from 'components/Box'
 
 const styles = {
   sphere: ({ size, bgColors }) => {
@@ -69,5 +69,3 @@ Sphere.propTypes = {
   textColor: PropTypes.string,
   textSize: PropTypes.number,
 }
-
-export default Sphere
