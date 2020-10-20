@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Counter } from '..'
+
+<Meta
+  title="Components/Counter"
+  component={Counter}
+  argTypes={{
+    end: {
+      control: {
+        type: 'number',
+      },
+    },
+  }}
+/>
+
+# Counter
+
+<Description>A simple counter to 20.</Description>
+
+<Canvas>
+  <Story
+    name="basic"
+    args={{
+      end: 20,
+    }}
+  >
+    {args => (
+      <Counter {...args} />
+    )}
+  </Story>
+</Canvas>
