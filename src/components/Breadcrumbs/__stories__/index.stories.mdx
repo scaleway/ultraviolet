@@ -1,0 +1,97 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Breadcrumbs, breadcrumbsVariants } from '..'
+
+<Meta
+  title="Components/Breadcrumbs"
+  component={Breadcrumbs}
+  argTypes={{
+    variant: {
+      control: {
+        type: 'select',
+        options: breadcrumbsVariants,
+      },
+    },
+    activeIndex: {
+      control: {
+        type: 'number',
+      },
+    },
+  }}
+/>
+
+# Breadcrumbs
+
+<Description>Creates a Breadcrumbs of hierarchical pages.</Description>
+
+<Description>
+  Link are automatically supported with `to` prop.
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    <Breadcrumbs>
+      <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+  </Story>
+</Canvas>
+
+## `variant`
+
+<Canvas>
+  <Story
+    name="Breadcrumbs-bubble"
+    args={{
+      variant: 'bubble',
+      activeIndex: 1,
+    }}
+  >
+    {args => (
+      <Breadcrumbs {...args}>
+        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+      </Breadcrumbs>
+    )}
+  </Story>
+  <Story
+    name="Breadcrumbs-link"
+    args={{
+      variant: 'link',
+      activeIndex: 1,
+    }}
+  >
+    {args => (
+      <Breadcrumbs {...args}>
+        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+      </Breadcrumbs>
+    )}
+  </Story>
+</Canvas>
+
+## Active index
+
+<Description>
+  Active index is automatically determined as the last element. One can be specified using `activeIndex` prop.
+</Description>
+
+<Canvas>
+  <Story
+    name="Breadcrumbs-active"
+    args={{
+      activeIndex: 0,
+      variant: 'bubble'
+    }}
+  >
+    {args => (
+      <Breadcrumbs {...args}>
+        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+      </Breadcrumbs>
+    )}
+  </Story>
+</Canvas>
