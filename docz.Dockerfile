@@ -15,6 +15,6 @@ RUN yarn run docz:build
 ######################################################################
 # This stage download a simple http server and serve the application #
 ######################################################################
-FROM nginx:1.15-alpine
+FROM nginx:1.19-alpine
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/src/app/.docz/dist /var/www/html
