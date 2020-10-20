@@ -1,0 +1,60 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { Information } from '..'
+import { Box } from 'components'
+
+<Meta title="Components/Information" component={Information} />
+
+# Information
+
+## Usage
+
+<Canvas isColumn>
+  <Story name="primary">
+    <Information
+      backgroundColor="#f8f3ff"
+      color="primary"
+      heading="An awesome title"
+      text="Text information"
+    />
+  </Story>
+  <Story name="warning">
+    <Information
+      color="warning"
+      icon="alert"
+      heading="An awesome title"
+      text="Text information"
+    />
+  </Story>
+  <Story name="warning-full">
+    <Information
+      backgroundColor="warning"
+      color="white"
+      icon="alert"
+      heading="An awesome title"
+      text="Text information"
+    />
+  </Story>
+  <Story name="info">
+    <Information
+      color="info"
+      icon="alert"
+      heading="An awesome title"
+      text="Text information"
+    />
+  </Story>
+</Canvas>
+
+## Usage with children
+
+<Canvas isColumn>
+  <Story name="with-children">
+    <Information icon="alert" backgroundColor="#f8f3ff" color="primary">
+      <Box color="primary">Hello, I am a children. I can be anything!</Box>
+    </Information>
+  </Story>
+</Canvas>
