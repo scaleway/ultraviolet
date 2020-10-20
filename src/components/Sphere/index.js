@@ -69,3 +69,5 @@ Sphere.propTypes = {
   textColor: PropTypes.string,
   textSize: PropTypes.number,
 }
+
+export default Sphere
