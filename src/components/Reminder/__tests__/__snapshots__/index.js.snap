@@ -1,11 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Reminder renders correctly when bordered 1`] = `
+.emotion-0 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .emotion-0.emotion-0 {
   margin-left: 4px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,7 +35,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -31,17 +43,17 @@ exports[`Reminder renders correctly when bordered 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   box-shadow: 0px 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-2 b {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-2"
+  className="sui-box emotion-3"
   style={
     Object {
       "display": "flex",
@@ -51,8 +63,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
 >
   <div
     bordered={true}
-    className="sui-box emotion-1"
-    css={[Function]}
+    className="sui-box emotion-1 emotion-2"
   >
     <div
       dangerouslySetInnerHTML={
@@ -63,7 +74,6 @@ exports[`Reminder renders correctly when bordered 1`] = `
     />
     <svg
       className="sui-box sc-ui-icon emotion-0"
-      css={[Function]}
       viewBox="0 0 24 24"
     >
       <path
@@ -75,11 +85,23 @@ exports[`Reminder renders correctly when bordered 1`] = `
 `;
 
 exports[`Reminder renders correctly with bold 1`] = `
+.emotion-0 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .emotion-0.emotion-0 {
   margin-left: 4px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -97,7 +119,7 @@ exports[`Reminder renders correctly with bold 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -105,17 +127,17 @@ exports[`Reminder renders correctly with bold 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   box-shadow: 0px 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-2 b {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-2"
+  className="sui-box emotion-3"
   style={
     Object {
       "display": "flex",
@@ -125,8 +147,7 @@ exports[`Reminder renders correctly with bold 1`] = `
 >
   <div
     bordered={true}
-    className="sui-box emotion-1"
-    css={[Function]}
+    className="sui-box emotion-1 emotion-2"
   >
     <div
       dangerouslySetInnerHTML={
@@ -137,7 +158,6 @@ exports[`Reminder renders correctly with bold 1`] = `
     />
     <svg
       className="sui-box sc-ui-icon emotion-0"
-      css={[Function]}
       viewBox="0 0 24 24"
     >
       <path
@@ -149,7 +169,10 @@ exports[`Reminder renders correctly with bold 1`] = `
 `;
 
 exports[`Reminder renders correctly with default values 1`] = `
-.emotion-1 {
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -167,7 +190,7 @@ exports[`Reminder renders correctly with default values 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -175,13 +198,22 @@ exports[`Reminder renders correctly with default values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   box-shadow: 0px 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-2 b {
   color: #3f6ed8;
+}
+
+.emotion-0 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .emotion-0.emotion-0 {
@@ -189,7 +221,7 @@ exports[`Reminder renders correctly with default values 1`] = `
 }
 
 <a
-  className="sui-box emotion-2"
+  className="sui-box emotion-3"
   style={
     Object {
       "display": "flex",
@@ -199,8 +231,7 @@ exports[`Reminder renders correctly with default values 1`] = `
 >
   <div
     bordered={false}
-    className="sui-box emotion-1"
-    css={[Function]}
+    className="sui-box emotion-1 emotion-2"
   >
     <div
       dangerouslySetInnerHTML={
@@ -211,7 +242,6 @@ exports[`Reminder renders correctly with default values 1`] = `
     />
     <svg
       className="sui-box sc-ui-icon emotion-0"
-      css={[Function]}
       viewBox="0 0 24 24"
     >
       <path
@@ -223,11 +253,23 @@ exports[`Reminder renders correctly with default values 1`] = `
 `;
 
 exports[`Reminder renders correctly with variant 1`] = `
+.emotion-0 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .emotion-0.emotion-0 {
   margin-left: 4px;
 }
 
-.emotion-1 {
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -245,7 +287,7 @@ exports[`Reminder renders correctly with variant 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -253,17 +295,17 @@ exports[`Reminder renders correctly with variant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   box-shadow: 0px 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-2 b {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-2"
+  className="sui-box emotion-3"
   style={
     Object {
       "display": "flex",
@@ -273,8 +315,7 @@ exports[`Reminder renders correctly with variant 1`] = `
 >
   <div
     bordered={true}
-    className="sui-box emotion-1"
-    css={[Function]}
+    className="sui-box emotion-1 emotion-2"
   >
     <div
       dangerouslySetInnerHTML={
@@ -285,7 +326,6 @@ exports[`Reminder renders correctly with variant 1`] = `
     />
     <svg
       className="sui-box sc-ui-icon emotion-0"
-      css={[Function]}
       viewBox="0 0 24 24"
     >
       <path
