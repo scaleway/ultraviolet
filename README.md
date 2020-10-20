@@ -6,7 +6,7 @@ Scaleway official UI library.
 
 ## Develop
 
-Start docz using `yarn dev`.
+Start storybook using `yarn dev`.
 
 ### Test
 
