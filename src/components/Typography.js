@@ -95,6 +95,14 @@ const variants = {
       line-height: 22px;
     `,
   },
+  bodyD: {
+    tag: 'p',
+    style: p => css`
+      color: ${gray700(p)};
+      font-size: 14px;
+      line-height: 20px;
+    `,
+  },
   tiny: {
     tag: 'small',
     style: p => css`
