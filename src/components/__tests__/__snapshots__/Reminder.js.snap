@@ -49,12 +49,11 @@ exports[`Reminder renders correctly when bordered 1`] = `
     }
   }
 >
-  <div
-    bordered={true}
+  <span
     className="sui-box emotion-1"
     css={[Function]}
   >
-    <div
+    <p
       dangerouslySetInnerHTML={
         Object {
           "__html": "This is a sample Test",
@@ -70,7 +69,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
         d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
       />
     </svg>
-  </div>
+  </span>
 </a>
 `;
 
@@ -123,12 +122,11 @@ exports[`Reminder renders correctly with bold 1`] = `
     }
   }
 >
-  <div
-    bordered={true}
+  <span
     className="sui-box emotion-1"
     css={[Function]}
   >
-    <div
+    <p
       dangerouslySetInnerHTML={
         Object {
           "__html": "This is a <b>bold</b> Test",
@@ -144,7 +142,7 @@ exports[`Reminder renders correctly with bold 1`] = `
         d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
       />
     </svg>
-  </div>
+  </span>
 </a>
 `;
 
@@ -197,12 +195,11 @@ exports[`Reminder renders correctly with default values 1`] = `
     }
   }
 >
-  <div
-    bordered={false}
+  <span
     className="sui-box emotion-1"
     css={[Function]}
   >
-    <div
+    <p
       dangerouslySetInnerHTML={
         Object {
           "__html": "This is a sample Test",
@@ -218,7 +215,7 @@ exports[`Reminder renders correctly with default values 1`] = `
         d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
       />
     </svg>
-  </div>
+  </span>
 </a>
 `;
 
@@ -271,12 +268,11 @@ exports[`Reminder renders correctly with variant 1`] = `
     }
   }
 >
-  <div
-    bordered={true}
+  <span
     className="sui-box emotion-1"
     css={[Function]}
   >
-    <div
+    <p
       dangerouslySetInnerHTML={
         Object {
           "__html": "This is a sample Test",
@@ -292,6 +288,6 @@ exports[`Reminder renders correctly with variant 1`] = `
         d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
       />
     </svg>
-  </div>
+  </span>
 </a>
 `;
