@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { SwitchState } from '@smooth-ui/core-em'
-import { cx } from 'utils'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { borderRadius, gray100, gray550, primary } from 'theming'
+import { cx } from 'utils'
 import { ActivityIndicator } from './ActivityIndicator'
-import { Icon } from './Icon'
-import { Typography } from './Typography'
 import { Box } from './Box'
 import { Expandable } from './Expandable'
+import { Icon } from './Icon'
+import { Typography } from './Typography'
 
 const styles = {
   container: css`

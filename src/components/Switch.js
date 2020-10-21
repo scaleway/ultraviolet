@@ -2,9 +2,9 @@ import styled from '@emotion/styled'
 import { Switch as BaseSwitch } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Tooltip } from './Tooltip'
-import { Box } from './Box'
 import { theme } from '../theme'
+import { Box } from './Box'
+import { Tooltip } from './Tooltip'
 
 const variants = {
   inactiveLabelColor: theme.gray700,
@@ -45,40 +45,40 @@ const SIZES = {
 }
 
 const StyledSwitch = styled(BaseSwitch)`
-  width: ${({width, size}) => width || SIZES[size].width}px;
-  height: ${({size}) => SIZES[size].height}px;
+  width: ${({ width, size }) => width || SIZES[size].width}px;
+  height: ${({ size }) => SIZES[size].height}px;
   display: inline-flex;
 
   .sui-switch-wrapper {
     border: none;
-    width: ${({width, size}) => width || SIZES[size].width}px;
-    height: ${({size}) => SIZES[size].height}px;
-    background-color: ${({disabled}) =>
-  (disabled && variants.disabled) || variants.inactiveBgColor};
+    width: ${({ width, size }) => width || SIZES[size].width}px;
+    height: ${({ size }) => SIZES[size].height}px;
+    background-color: ${({ disabled }) =>
+      (disabled && variants.disabled) || variants.inactiveBgColor};
   }
 
   .sui-switch-content {
-    height: ${({size}) => SIZES[size].height}px;
+    height: ${({ size }) => SIZES[size].height}px;
     transform: translateX(
-      ${({width, size}) => (width ? 36 - width : SIZES[size].off)}px
+      ${({ width, size }) => (width ? 36 - width : SIZES[size].off)}px
     );
   }
 
   .sui-switch-ball {
-    background-color: ${({size}) =>
-  size === 'small'
-    ? variants.smallBallColor
-    : variants.inactiveBigBallColor};
-    width: ${({size}) => SIZES[size].ball}px;
-    height: ${({size}) => SIZES[size].ball}px;
+    background-color: ${({ size }) =>
+      size === 'small'
+        ? variants.smallBallColor
+        : variants.inactiveBigBallColor};
+    width: ${({ size }) => SIZES[size].ball}px;
+    height: ${({ size }) => SIZES[size].ball}px;
   }
 
   .sui-switch-label {
-    width: ${({width, size}) => (width ? width - 30 : SIZES[size].label)}px;
+    width: ${({ width, size }) => (width ? width - 30 : SIZES[size].label)}px;
     font-size: 16px;
 
     &.sui-switch-label-on {
-      color: ${({variant}) => variants[variant].activeLabelColor};
+      color: ${({ variant }) => variants[variant].activeLabelColor};
     }
 
     &.sui-switch-label-off {
@@ -87,16 +87,16 @@ const StyledSwitch = styled(BaseSwitch)`
   }
 
   input:checked + .sui-switch-wrapper {
-    background-color: ${({variant}) => variants[variant].bgColor};
+    background-color: ${({ variant }) => variants[variant].bgColor};
     .sui-switch-content {
-      transform: translateX(${({size}) => SIZES[size].on}px);
+      transform: translateX(${({ size }) => SIZES[size].on}px);
     }
 
     .sui-switch-ball {
-      background-color: ${({size, variant}) =>
-  size === 'small'
-    ? variants.smallBallColor
-    : variants[variant].activeBigBallColor};
+      background-color: ${({ size, variant }) =>
+        size === 'small'
+          ? variants.smallBallColor
+          : variants[variant].activeBigBallColor};
     }
   }
 
@@ -112,7 +112,7 @@ StyledSwitch.propTypes = {
   checked: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   variant: PropTypes.oneOf(['success', 'primary']),
-  size: PropTypes.string
+  size: PropTypes.string,
 }
 
 StyledSwitch.defaultProps = {

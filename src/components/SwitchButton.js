@@ -2,8 +2,8 @@ import { css } from '@emotion/core'
 import { SwitchState, Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Tooltip } from './Tooltip'
 import { theme } from '../theme'
+import { Tooltip } from './Tooltip'
 
 const styles = {
   container: ({ checked, disabled }) =>
@@ -61,50 +61,51 @@ const variants = {
       font-size: 14;
       height: 40px;
       transition: none;
-      :hover,:focus {
+      :hover,
+      :focus {
         box-shadow: none;
         border: none;
-        color: ${theme.gray700}
+        color: ${theme.gray700};
       }
       border-radius: 4px;
       box-shadow: none;
-  `,
+    `,
     checked: css`
       background-color: ${theme.primary};
       color: ${theme.white};
       :hover {
         color: ${theme.white};
       }
-  `,
+    `,
     notChecked: css`
       background-color: white;
       color: ${theme.gray700};
       border-color: ${theme.transparent};
-      :hover,:focus {
+      :hover,
+      :focus {
         color: ${theme.gray700};
         border: none;
         box-shadow: none;
       }
-  `,
+    `,
   },
 }
 
-export const SwitchButton = (
-  {
-    checked,
-    disabled,
-    defaultChecked,
-    onChange,
-    onFocus,
-    onBlur,
-    name,
-    value,
-    size,
-    children,
-    tooltip,
-    variant,
-    ...props
-  }) => (
+export const SwitchButton = ({
+  checked,
+  disabled,
+  defaultChecked,
+  onChange,
+  onFocus,
+  onBlur,
+  name,
+  value,
+  size,
+  children,
+  tooltip,
+  variant,
+  ...props
+}) => (
   <SwitchState
     name={name}
     value={value}
@@ -127,7 +128,9 @@ export const SwitchButton = (
             checked && styles.checked,
             disabled && styles.disabled,
             variant && variants[variant]?.switchButton,
-            checked ? variants[variant]?.checked : variants[variant]?.notChecked,
+            checked
+              ? variants[variant]?.checked
+              : variants[variant]?.notChecked,
           ]}
           {...props}
         >
@@ -151,10 +154,8 @@ SwitchButton.defaultProps = {
   disabled: false,
   defaultChecked: false,
   variant: 'default',
-  onFocus: () => {
-  },
-  onBlur: () => {
-  },
+  onFocus: () => {},
+  onBlur: () => {},
 }
 
 SwitchButton.propTypes = {
@@ -168,5 +169,8 @@ SwitchButton.propTypes = {
   value: PropTypes.string.isRequired,
   size: PropTypes.number,
   variant: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }

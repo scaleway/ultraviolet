@@ -1,10 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { cx, sp } from 'utils'
 import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
-import flattenChildren from 'react-flatten-children'
 import { transparentize } from 'polished'
+import PropTypes from 'prop-types'
+import React from 'react'
+import flattenChildren from 'react-flatten-children'
 import {
   gray50,
   gray100,
@@ -15,6 +14,7 @@ import {
   warning,
   borderRadius,
 } from 'theming'
+import { cx, sp } from 'utils'
 import { Icon } from './Icon'
 
 const styles = {

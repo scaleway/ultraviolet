@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { darken } from 'polished'
-import { cx } from 'utils'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { blue, gray550, primary, white } from 'theming'
+import { cx } from 'utils'
 import { Icon } from './Icon'
 import { UniversalLink } from './UniversalLink'
 

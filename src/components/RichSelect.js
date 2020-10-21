@@ -1,15 +1,15 @@
-import React from 'react'
+import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
+import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
-import { css } from '@emotion/core'
-import { getUUID, cx } from 'utils'
 import { gray550, warning } from 'theming'
+import { getUUID, cx } from 'utils'
+import { isJsonString } from '../helpers/isJson'
 import { theme } from '../theme'
-import { Icon } from './Icon'
 import { Box } from './Box'
 import { Expandable } from './Expandable'
-import { isJsonString } from '../helpers/isJson'
+import { Icon } from './Icon'
 
 const styles = {
   select: css`

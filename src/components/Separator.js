@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { cx, thColor, px } from 'utils'
-import { Icon, icons } from './Icon'
 import { Box } from './Box'
+import { Icon, icons } from './Icon'
 
 const styles = {
   hr: ({ direction, color, thickness, icon }) => p => {

@@ -1,7 +1,7 @@
-import React from 'react'
 import { Global, css } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
 import { Normalize } from '@smooth-ui/core-em'
+import { ThemeProvider } from 'emotion-theming'
+import React from 'react'
 // eslint-disable-next-line import/no-unresolved
 import { theme } from 'scaleway-ui'
 
