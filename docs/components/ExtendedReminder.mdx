@@ -1,0 +1,41 @@
+---
+name: Extended Reminder
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { ExtendedReminder } from 'scaleway-ui'
+
+# Extended Reminder
+
+<Playground>
+  <ExtendedReminder
+    variant="warning"
+    icon="alert"
+    badgeText="10 days remaining"
+    to="/"
+    mb={4}
+    title="Verify your credit card"
+    text="Enter the code we send to your bank account to validate your payment method."
+    linkText="Verify my credit card"
+  />
+  <ExtendedReminder
+    variant="error"
+    icon="lock"
+    badgeText="10 days remaining"
+    to="/"
+    mb={4}
+    title="Verify your credit card"
+    text="Enter the code we send to your bank account to validate your payment method."
+    linkText="Verify my credit card"
+  />
+  <ExtendedReminder
+    variant="info"
+    icon="check"
+    badgeText="10 days remaining"
+    to="/"
+    title="Verify your credit card"
+    text="Enter the code we send to your bank account to validate your payment method."
+    linkText="Verify my credit card"
+  />
+</Playground>
