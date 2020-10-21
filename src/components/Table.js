@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { cx, sp } from 'utils'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { gray50, gray350, gray550, gray700, primary } from 'theming'
+import { cx, sp } from 'utils'
 import { ActivityIndicator } from './ActivityIndicator'
 import { Box } from './Box'
 

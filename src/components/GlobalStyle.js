@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { Global, css } from '@emotion/core'
 import { Normalize } from '@smooth-ui/core-em'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { white, blue } from 'theming'
 import { cx } from 'utils'
 
@@ -122,24 +122,24 @@ const asapFontStyle = p => {
     @font-face {
       font-family: 'Asap';
       font-style: normal;
-      src: url("${fontsRoot}/Asap-Regular.woff2") format('woff2'),
-        url("${fontsRoot}/Asap-Regular.woff") format('woff');
+      src: url('${fontsRoot}/Asap-Regular.woff2') format('woff2'),
+        url('${fontsRoot}/Asap-Regular.woff') format('woff');
       font-weight: 400;
       font-display: swap;
     }
     @font-face {
       font-family: 'Asap';
       font-style: normal;
-      src: url("${fontsRoot}/Asap-Medium.woff2") format('woff2'),
-        url("${fontsRoot}/Asap-Medium.woff") format('woff');
+      src: url('${fontsRoot}/Asap-Medium.woff2') format('woff2'),
+        url('${fontsRoot}/Asap-Medium.woff') format('woff');
       font-weight: 500;
       font-display: swap;
     }
     @font-face {
       font-family: 'Asap';
       font-style: normal;
-      src: url("${fontsRoot}/Asap-Bold.woff2") format('woff2'),
-        url("${fontsRoot}/Asap-Bold.woff") format('woff');
+      src: url('${fontsRoot}/Asap-Bold.woff2') format('woff2'),
+        url('${fontsRoot}/Asap-Bold.woff') format('woff');
       font-weight: 700;
       font-display: swap;
     }

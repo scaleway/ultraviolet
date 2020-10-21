@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
 import { css } from '@emotion/core'
+import React, { useEffect, useRef, useState } from 'react'
 import { white, primary, gray200, gray350 } from 'theming'
 import { Box } from './Box'
 
