@@ -1,0 +1,60 @@
+import { useState, useEffect } from 'react'
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { ProgressBar, progressBarVariants} from '..'
+import UncontrolledProgressBar from './UncontrolledProgressBar'
+import { Boxer } from 'components'
+
+<Meta title="Components/ProgressBar" component={ProgressBar} />
+
+# ProgressBar
+
+<Description>
+  An horizontal progress bar.
+</Description>
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    {() => {
+      const [value, setValue] = useState(0)
+      useEffect(() => {
+        setInterval(() => {
+          setValue(value => (value === 0 ? Math.round(Math.random() * 100) : 0))
+        }, 800)
+      }, [])
+      return <ProgressBar value={value} />
+    }}
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>
+  Set variant using `variant` prop.
+</Description>
+
+<Canvas>
+  <Story name="variants">
+    {() => (
+      <Boxer my={1}>
+        {progressBarVariants.map(variant => (
+          <UncontrolledProgressBar key={variant} variant={variant} />
+        ))}
+      </Boxer>
+    )}
+  </Story>
+</Canvas>
+
+## Progress
+
+<Canvas>
+  <Story name="progress">
+    <ProgressBar progress />
+  </Story>
+</Canvas>

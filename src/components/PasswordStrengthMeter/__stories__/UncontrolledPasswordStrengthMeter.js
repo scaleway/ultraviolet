@@ -1,8 +1,8 @@
-/* eslint-disable import/no-unresolved */
 import React, { useState } from 'react'
-import { PasswordStrengthMeter, TextBox } from 'scaleway-ui'
+import { TextBox } from 'components'
+import { PasswordStrengthMeter } from '..'
 
-export function UncontrolledPasswordStrengthMeter(props) {
+const UncontrolledPasswordStrengthMeter = props => {
   const [value, setValue] = useState('')
   return (
     <>
@@ -11,3 +11,5 @@ export function UncontrolledPasswordStrengthMeter(props) {
     </>
   )
 }
+
+export default UncontrolledPasswordStrengthMeter
