@@ -60,7 +60,7 @@ export const Reminder = ({ text, variant, bordered, ...props }) => (
       bordered={bordered}
       variant={variant}
     >
-      <p
+      <span
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: text.replace(/\[(.*)\]/, '<b>$1</b>'),
