@@ -1,0 +1,66 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { NotificationBar } from '..'
+import { Button } from 'components'
+
+<Meta title="Components/NotificationBar" component={NotificationBar} />
+
+# NotificationBar
+
+<Description>
+  Displays a notice with an icon.
+</Description>
+
+## Basic
+
+<Canvas isColumn>
+  <Story name="basic">
+    <NotificationBar>
+      This is a notification bar with its default props.
+    </NotificationBar>
+  </Story>
+  <Story name="security">
+    <NotificationBar variant="security">
+      This is a notification bar with the security variant.
+    </NotificationBar>
+  </Story>
+  <Story name="info">
+    <NotificationBar variant="info">
+      This is a notification bar with the info variant.
+    </NotificationBar>
+  </Story>
+  <Story name="success">
+    <NotificationBar variant="success">
+      This is a notification bar with the success variant.
+    </NotificationBar>
+  </Story>
+  <Story name="warning">
+    <NotificationBar variant="warning">
+      This is a notification bar with the warning variant.
+    </NotificationBar>
+  </Story>
+  <Story name="warning-blue">
+    <NotificationBar variant="warning-blue">
+      This is a notification bar with the warning-blue variant.
+    </NotificationBar>
+  </Story>
+  <Story name="warning-orange">
+    <NotificationBar variant="warning-orange">
+      This is a notification bar with the warning-orange variant.
+    </NotificationBar>
+  </Story>
+  <Story name="alert-orange">
+    <NotificationBar variant="alert-orange">
+      This is a notification bar with the alert-orange variant.
+    </NotificationBar>
+  </Story>
+  <Story name="alert-red">
+    <NotificationBar variant="alert-red">
+      This is a notification bar with the alert-red variant.
+    </NotificationBar>
+  </Story>
+</Canvas>
