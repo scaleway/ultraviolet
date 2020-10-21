@@ -22,7 +22,7 @@ const variants = {
 }
 
 const Notification = styled(Typography, {
-  shouldForwardProp: prop => prop !== 'variant',
+  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop),
 })`
   height: 28px;
   display: flex;
@@ -53,13 +53,15 @@ const Notification = styled(Typography, {
 export const Reminder = ({ text, variant, bordered, ...props }) => (
   <UniversalLink style={{ display: 'flex', textDecoration: 'none' }} {...props}>
     <Notification
+      as="span"
       fontSize={12}
       px={1}
       py={1}
       bordered={bordered}
       variant={variant}
     >
-      <div
+      <p
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: text.replace(/\[(.*)\]/, '<b>$1</b>'),
         }}
