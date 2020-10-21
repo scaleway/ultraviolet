@@ -5,6 +5,8 @@ import {
   white,
   success,
   beta,
+  info,
+  red,
   warning,
   gray700,
   gray350,
@@ -23,6 +25,12 @@ const variants = {
   `,
   warning: p => css`
     background-color: ${warning(p)};
+  `,
+  error: p => css`
+    background-color: ${red(p)};
+  `,
+  info: p => css`
+    background-color: ${info(p)};
   `,
   neutral: p => css`
     color: ${gray700(p)};
