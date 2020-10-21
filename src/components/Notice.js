@@ -1,9 +1,9 @@
-import React from 'react'
 import { css } from '@emotion/core'
-import { cx } from 'utils'
+import React from 'react'
 import { gray550 } from 'theming'
-import { Icon } from './Icon'
+import { cx } from 'utils'
 import { Box } from './Box'
+import { Icon } from './Icon'
 
 const style = p => css`
   color: ${gray550(p)};

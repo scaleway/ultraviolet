@@ -1,10 +1,10 @@
+import { css, ClassNames } from '@emotion/core'
 import React from 'react'
 import {
   ToastContainer as BaseToastContainer,
   toast as baseToast,
 } from 'react-toastify'
 import toastStyle from 'react-toastify/dist/ReactToastify.min.css'
-import { css, ClassNames } from '@emotion/core'
 import { foam, info, pippin, success, warning, zumthor } from 'theming'
 import { Icon } from './Icon'
 import { NotificationBar } from './NotificationBar'

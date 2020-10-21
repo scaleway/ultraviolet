@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { theme } from 'theme'
-import { UniversalLink } from './UniversalLink'
-import { Typography } from './Typography'
 import { Icon } from './Icon'
+import { Typography } from './Typography'
+import { UniversalLink } from './UniversalLink'
 
 const variants = {
   error: {

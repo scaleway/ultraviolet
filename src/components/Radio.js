@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { gray300, primary } from 'theming'
 import { cx } from 'utils'
-import { Icon } from './Icon'
 import { Box } from './Box'
+import { Icon } from './Icon'
 
-const style = (disabled) => p => css`
+const style = disabled => p => css`
   position: relative;
   display: flex;
   align-items: center;

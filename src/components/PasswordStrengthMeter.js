@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Box } from 'components/Box'
 import { Typography } from 'components/Typography'
 import { gray100 } from 'theming'

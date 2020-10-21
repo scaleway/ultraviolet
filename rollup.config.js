@@ -1,10 +1,10 @@
-import readPkg from 'read-pkg'
 import babel from '@rollup/plugin-babel'
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
 import builtins from 'builtin-modules'
-import postcss from 'rollup-plugin-postcss'
+import readPkg from 'read-pkg'
 import analyze from 'rollup-plugin-analyzer'
+import postcss from 'rollup-plugin-postcss'
 
 const PROFILE = !!process.env.PROFILE
 

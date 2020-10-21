@@ -1,17 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { Icon } from 'components/Icon'
 import { Typography } from 'components/Typography'
 import { cx, thColor } from 'utils'
 
-const style = ({ backgroundColor }) => p => {
-  return css`
-    background-color: ${thColor(backgroundColor)(p) || backgroundColor};
-    border-radius: 4px;
-  `
-}
+const style = ({ backgroundColor }) => p => css`
+  background-color: ${thColor(backgroundColor)(p) || backgroundColor};
+  border-radius: 4px;
+`
 
 export const Information = ({
   children,

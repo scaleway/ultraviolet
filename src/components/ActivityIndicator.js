@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { keyframes, css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { Box } from './Box'
 
 const spinAnimation = keyframes`

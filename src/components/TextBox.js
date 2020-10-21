@@ -1,4 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-for */
+import { css } from '@emotion/core'
+import { transparentize } from 'polished'
+import PropTypes from 'prop-types'
 import React, {
   useRef,
   useEffect,
@@ -6,9 +9,6 @@ import React, {
   useImperativeHandle,
   useState,
 } from 'react'
-import PropTypes from 'prop-types'
-import { transparentize } from 'polished'
-import { css } from '@emotion/core'
 import {
   borderRadius,
   white,
@@ -23,11 +23,11 @@ import {
 } from 'theming'
 import { useUUID, randomName, cx } from 'utils'
 import { Box } from './Box'
-import { Icon } from './Icon'
-import { Touchable } from './Touchable'
 import { Expandable } from './Expandable'
-import { Separator } from './Separator'
+import { Icon } from './Icon'
 import { Notice } from './Notice'
+import { Separator } from './Separator'
+import { Touchable } from './Touchable'
 import { Typography } from './Typography'
 
 const inputSizes = {

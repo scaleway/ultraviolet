@@ -1,7 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { cx, sp } from 'utils'
+import PropTypes from 'prop-types'
+import React, { useRef, useState, useEffect } from 'react'
 import {
   borderRadius,
   monospace,
@@ -10,6 +9,7 @@ import {
   gray700,
   gray950,
 } from 'theming'
+import { cx, sp } from 'utils'
 import { Box } from './Box'
 import { Tooltip } from './Tooltip'
 

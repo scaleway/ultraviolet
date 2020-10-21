@@ -1,13 +1,13 @@
-import React from 'react'
+import { css } from '@emotion/core'
+import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
+import React from 'react'
 import {
   useTooltipState,
   Tooltip as ReakitTooltip,
   TooltipArrow,
   TooltipReference,
 } from 'reakit/Tooltip'
-import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import { borderRadius, black, white } from 'theming'
 
 const style = {
@@ -78,7 +78,9 @@ export const Tooltip = ({
 
   return (
     <Box zIndex={1}>
-      <TooltipReference {...tooltip} ref={children.ref}>{finalChildren}</TooltipReference>
+      <TooltipReference {...tooltip} ref={children.ref}>
+        {finalChildren}
+      </TooltipReference>
       <ReakitTooltip style={{ zIndex: 9999 }} {...tooltip}>
         <Box css={style.tooltip} {...props}>
           <TooltipArrow {...tooltip} />

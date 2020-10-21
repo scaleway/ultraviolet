@@ -1,5 +1,5 @@
-import { useContext } from 'react'
 import { ThemeContext } from '@emotion/core'
+import { useContext } from 'react'
 import flatten from './flatten'
 
 export function cx(styles) {
