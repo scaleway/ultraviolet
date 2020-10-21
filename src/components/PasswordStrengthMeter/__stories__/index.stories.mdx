@@ -1,0 +1,32 @@
+import { useState, useEffect } from 'react'
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import zxcvbn from 'zxcvbn'
+import { PasswordStrengthMeter } from '..'
+import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
+
+<Meta title="Components/PasswordStrengthMeter" component={PasswordStrengthMeter} />
+
+# PasswordStrengthMeter
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <UncontrolledPasswordStrengthMeter
+      estimate={zxcvbn}
+      strength={[
+        { color: 'red', t: 'veryWeak' },
+        { color: 'orange', t: 'weak' },
+        { color: 'yellow', t: 'medium' },
+        { color: 'green', t: 'strong' },
+        { color: 'green', t: 'veryStrong' },
+      ]}
+      title="MyTitle"
+    />
+  </Story>
+</Canvas>
