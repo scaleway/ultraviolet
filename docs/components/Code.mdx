@@ -1,0 +1,18 @@
+---
+name: Code input
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Code } from 'scaleway-ui'
+
+# Code
+
+<Playground>
+  <Code
+    inputId="code-input"
+    className="custom-class"
+    onChange={() => console.log('change')}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
