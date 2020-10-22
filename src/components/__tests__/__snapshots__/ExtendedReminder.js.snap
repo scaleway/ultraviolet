@@ -5,11 +5,11 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   margin-right: 4px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-4.emotion-4 {
   margin-bottom: 8px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   margin-left: 4px;
   margin-right: 8px;
 }
@@ -31,7 +31,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     }
   }
 >
-  <span
+  <div
     className="sui-box emotion-1"
     css={
       Object {
@@ -49,18 +49,23 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
       }
     }
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
+    <span
+      className="sui-box emotion-1"
       css={[Function]}
-      viewBox="0 0 24 24"
     >
-      <path
-        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-      />
-    </svg>
-     
-    10 days remaining
-  </span>
+      <svg
+        className="sui-box sc-ui-icon emotion-0"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+       
+      10 days remaining
+    </span>
+  </div>
   <p
     className="sui-box emotion-1"
     css={
@@ -80,7 +85,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     Verify your credit card
   </p>
   <p
-    className="sui-box emotion-3"
+    className="sui-box emotion-4"
     css={[Function]}
   >
     Enter the code we send to your bank account to validate your payment method.
@@ -106,7 +111,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     to="/"
   >
     <svg
-      className="sui-box sc-ui-icon emotion-4"
+      className="sui-box sc-ui-icon emotion-5"
       css={[Function]}
       viewBox="0 0 24 24"
     >
@@ -124,11 +129,11 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   margin-right: 4px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-4.emotion-4 {
   margin-bottom: 8px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   margin-left: 4px;
   margin-right: 8px;
 }
@@ -150,7 +155,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
     }
   }
 >
-  <span
+  <div
     className="sui-box emotion-1"
     css={
       Object {
@@ -168,18 +173,23 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
       }
     }
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
+    <span
+      className="sui-box emotion-1"
       css={[Function]}
-      viewBox="0 0 24 24"
     >
-      <path
-        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-      />
-    </svg>
-     
-    10 days remaining
-  </span>
+      <svg
+        className="sui-box sc-ui-icon emotion-0"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+       
+      10 days remaining
+    </span>
+  </div>
   <p
     className="sui-box emotion-1"
     css={
@@ -199,7 +209,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
     Verify your credit card
   </p>
   <p
-    className="sui-box emotion-3"
+    className="sui-box emotion-4"
     css={[Function]}
   >
     Enter the code we send to your bank account to validate your payment method.
@@ -225,7 +235,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
     to="/"
   >
     <svg
-      className="sui-box sc-ui-icon emotion-4"
+      className="sui-box sc-ui-icon emotion-5"
       css={[Function]}
       viewBox="0 0 24 24"
     >
