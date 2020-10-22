@@ -10,9 +10,21 @@ import { Code } from 'scaleway-ui'
 
 <Playground>
   <Code
+    initialValue="1337"
+    mb={2}
     inputId="code-input"
-    className="custom-class"
+    onChange={() => console.log('change')}
+    onComplete={val => console.log('complete', val)}
+  />
+
+
+  <Code
+    initialValue=""
+    placeholder="0000"
+    inputId="code-input-2"
+    color="red"
     onChange={() => console.log('change')}
     onComplete={val => console.log('complete', val)}
   />
 </Playground>
+
