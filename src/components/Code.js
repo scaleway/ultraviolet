@@ -49,9 +49,7 @@ export const Code = ({
   ...props
 }) => {
   const valuesArray = []
-  for (let i = 0; i < fields; i += 1) {
-    valuesArray.push(initialValue?.[i] ?? '')
-  }
+  const valuesArray = Object.assign(new Array(fields).fill(''), initialValue.substring(0, fields).split(''))
   const [values, setValues] = useState(valuesArray)
   const [handleKeys, setHandleKeys] = useState({})
 
