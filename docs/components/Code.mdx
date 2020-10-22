@@ -8,10 +8,37 @@ import { Code } from 'scaleway-ui'
 
 # Code
 
+## With initial value
+
 <Playground>
   <Code
+    initialValue="1337"
+    mb={2}
     inputId="code-input"
-    className="custom-class"
+    onChange={() => console.log('change')}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
+
+## With no initial value and placeholder
+
+<Playground>
+  <Code
+    placeholder="0000"
+    mb={2}
+    inputId="code-input-no-value"
+    onChange={() => console.log('change')}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
+
+## With incomplete initial value
+
+<Playground>
+  <Code
+    initialValue="13"
+    mb={2}
+    inputId="code-input-incomplete"
     onChange={() => console.log('change')}
     onComplete={val => console.log('complete', val)}
   />
