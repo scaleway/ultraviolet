@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { theme } from 'theme'
 import { Badge } from './Badge'
 import { Box } from './Box'
-import { UniversalLink } from './UniversalLink'
-import { Typography } from './Typography'
 import { Icon } from './Icon'
+import { Typography } from './Typography'
+import { UniversalLink } from './UniversalLink'
 
 const variants = {
   error: {
@@ -69,9 +69,12 @@ export const ExtendedReminder = ({
 
   return (
     <Box css={styles.container(variant)} {...props}>
-      <Badge size="sm" variant={badgeVariant[variant]} css={styles.badge}>
-        <Icon mr="4px" color={theme.white} name={icon} size={16} /> {badgeText}
-      </Badge>
+      <Box css={styles.badge}>
+        <Badge size="sm" variant={badgeVariant[variant]}>
+          <Icon mr="4px" color={theme.white} name={icon} size={16} />{' '}
+          {badgeText}
+        </Badge>
+      </Box>
       <Typography variant="bodyC" css={styles.title(variant)}>
         {title}
       </Typography>
