@@ -1,15 +1,10 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { gray50, gray350, gray550, gray700, primary } from 'theming'
-<<<<<<< HEAD:src/components/Table.js
-import { cx, sp } from 'utils'
-import { ActivityIndicator } from './ActivityIndicator'
-import { Box } from './Box'
-=======
 import { ActivityIndicator } from 'components/ActivityIndicator'
 import { Box } from 'components/Box'
->>>>>>> feat: migrate to storybook:src/components/Table/index.js
+import { gray50, gray350, gray550, gray700, primary } from 'theming'
+import { cx, sp } from 'utils'
 
 const styles = {
   cell: p => css`
