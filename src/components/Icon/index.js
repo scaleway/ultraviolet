@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { px, cx, thColor } from 'utils'
 import { Box } from 'components/Box'
+import { px, cx, thColor } from 'utils'
 
 const ICONS = {
   calculator: () => (

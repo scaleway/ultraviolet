@@ -2,10 +2,10 @@ import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React, { useRef, useCallback, useState } from 'react'
-import { white, gray100, gray350, gray550, gray700 } from 'theming'
-import { cx } from 'utils'
 import { Icon } from 'components/Icon'
 import { Touchable } from 'components/Touchable'
+import { white, gray100, gray350, gray550, gray700 } from 'theming'
+import { cx } from 'utils'
 
 function bounded(value, min, max) {
   return value > max ? max : value < min ? min : value

@@ -1,6 +1,5 @@
 import React from 'react'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-
 import { Sphere } from '..'
 
 test('Sphere renders correctly with default values', () => {

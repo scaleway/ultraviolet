@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from 'theme'
 import { Box } from 'components/Box'
+import { theme } from 'theme'
 
 const styles = {
   sphere: ({ size, bgColors }) => {

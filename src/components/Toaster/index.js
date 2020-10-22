@@ -5,9 +5,9 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import toastStyle from 'react-toastify/dist/ReactToastify.min.css'
-import { foam, info, pippin, success, warning, zumthor } from 'theming'
 import { Icon } from 'components/Icon'
 import { NotificationBar } from 'components/NotificationBar'
+import { foam, info, pippin, success, warning, zumthor } from 'theming'
 
 const PREFIX = '.Toastify'
 
