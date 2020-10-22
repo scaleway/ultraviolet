@@ -1,19 +1,19 @@
 ---
-name: Code input
+name: VerificationCode
 menu: Components
 ---
 
 import { Playground, Props } from 'docz'
-import { Code } from 'scaleway-ui'
+import { VerificationCode } from 'scaleway-ui'
 
-# Code
+# VerificationCode
 
 ## With initial value
 
 <Playground>
-  <Code
+  <VerificationCode
     initialValue="1337"
-    inputId="code-input"
+    inputId="verification-code-input"
     onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
@@ -22,9 +22,9 @@ import { Code } from 'scaleway-ui'
 ## With no initial value and placeholder
 
 <Playground>
-  <Code
+  <VerificationCode
     placeholder="0000"
-    inputId="code-input-no-value"
+    inputId="verification-code-input-no-value"
     onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
@@ -33,11 +33,11 @@ import { Code } from 'scaleway-ui'
 ## With incomplete initial value and placeholder
 
 <Playground>
-  <Code
+  <VerificationCode
     fields={6}
     initialValue="13"
     placeholder="0037"
-    inputId="code-input-incomplete"
+    inputId="verification-code-input-incomplete"
     onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
@@ -46,5 +46,5 @@ import { Code } from 'scaleway-ui'
 ## Error state
 
 <Playground>
-  <Code initialValue="13" error />
+  <VerificationCode initialValue="13" error />
 </Playground>

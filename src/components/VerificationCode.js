@@ -33,19 +33,18 @@ const KEY_CODE = {
   down: 40,
 }
 
-export const Code = ({
-  inputId,
+export const VerificationCode = ({
+  disabled,
+  error,
   fields,
   initialValue,
+  inputId,
+  inputStyle,
   onChange,
   onComplete,
-  type,
-  error,
-  autoFocus,
-  disabled,
-  required,
   placeholder,
-  inputStyle,
+  required,
+  type,
   ...props
 }) => {
   const valuesArray = []
@@ -179,22 +178,30 @@ export const Code = ({
   )
 }
 
-Code.propTypes = {
+VerificationCode.propTypes = {
+  disabled: PropTypes.bool,
+  error: PropTypes.bool,
   fields: PropTypes.number,
-  type: PropTypes.oneOf(['text', 'number']),
+  initialValue: PropTypes.string,
+  inputId: PropTypes.string,
+  inputStyle: PropTypes.string,
   onChange: PropTypes.func,
   onComplete: PropTypes.func,
-  inputId: PropTypes.string,
-  initialValue: PropTypes.string,
-  disabled: PropTypes.bool,
-  required: PropTypes.bool,
   placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  type: PropTypes.oneOf(['text', 'number']),
 }
 
-Code.defaultProps = {
-  type: 'number',
-  fields: 4,
+VerificationCode.defaultProps = {
   disabled: false,
-  required: false,
   error: false,
+  fields: 4,
+  initialValue: '',
+  inputId: 'verification-code',
+  inputStyle: '',
+  onChange: () => {},
+  onComplete: () => {},
+  placeholder: '',
+  required: false,
+  type: 'number',
 }
