@@ -10,7 +10,7 @@ RUN yarn --pure-lockfile
 
 COPY . .
 
-RUN yarn run storybook:build
+RUN yarn run build:storybook
 
 ######################################################################
 # This stage download a simple http server and serve the application #
