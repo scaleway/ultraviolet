@@ -2,12 +2,12 @@ import { css } from '@emotion/core'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { borderRadius, white, gray50, gray350, gray700 } from 'theming'
-import { cx, thColor } from 'utils'
 import { ActivityIndicator } from 'components/ActivityIndicator'
 import { Box } from 'components/Box'
 import { Icon } from 'components/Icon'
 import { UniversalLink } from 'components/UniversalLink'
+import { borderRadius, white, gray50, gray350, gray700 } from 'theming'
+import { cx, thColor } from 'utils'
 
 const borderedVariant = (color, bgColor, hoverColor) => p => {
   const colorValue = thColor(color)(p)

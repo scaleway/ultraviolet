@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
-import { gray550, warning } from 'theming'
-import { getUUID, cx } from 'utils'
-import { theme } from 'theme'
-import { Icon } from 'components/Icon'
 import { Box } from 'components/Box'
 import { Expandable } from 'components/Expandable'
+import { Icon } from 'components/Icon'
 import { isJsonString } from 'helpers/isJson'
+import { theme } from 'theme'
+import { gray550, warning } from 'theming'
+import { getUUID, cx } from 'utils'
 
 const styles = {
   select: css`

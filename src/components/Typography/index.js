@@ -1,6 +1,8 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useRef, useState, useEffect } from 'react'
+import { Box } from 'components/Box'
+import { Tooltip } from 'components/Tooltip'
 import {
   borderRadius,
   monospace,
@@ -10,8 +12,6 @@ import {
   gray950,
 } from 'theming'
 import { cx, sp } from 'utils'
-import { Box } from 'components/Box'
-import { Tooltip } from 'components/Tooltip'
 
 const styles = {
   default: p => css`

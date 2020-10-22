@@ -2,10 +2,10 @@ import { css } from '@emotion/core'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { blue, gray550, primary, white } from 'theming'
-import { cx } from 'utils'
 import { Icon } from 'components/Icon'
 import { UniversalLink } from 'components/UniversalLink'
+import { blue, gray550, primary, white } from 'theming'
+import { cx } from 'utils'
 
 const variant = color => css`
   color: ${color};

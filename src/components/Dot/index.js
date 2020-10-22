@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, thColor } from 'utils'
 import { Box } from 'components/Box'
+import { cx, thColor } from 'utils'
 
 const style = ({ color }) => p => css`
   display: inline-block;
