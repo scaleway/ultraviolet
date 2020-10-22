@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Tags } from '..'
+
+<Meta
+  title="Components/Tags"
+  component={Tags}
+/>
+
+# Tags
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Tags onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+  </Story>
+</Canvas>
+
+## Variant Bordered
+
+<Canvas>
+  <Story name="bordered">
+    <Tags variant="bordered" onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+  </Story>
+</Canvas>
+
+## Custom placeholder
+
+<Canvas>
+  <Story name="placeholder">
+    <Tags placeholder="Please type your tags" onChange={tags => alert(tags)} />
+  </Story>
+</Canvas>
+
+## With a custom error handler
+
+<Canvas>
+  <Story name="error-handler">
+    <Tags onChangeError={(error) => { alert(error) }} onChange={tags => { throw new Error("") }} tags={['Smooth', 'code']} />
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="disabled">
+    <Tags disabled onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+  </Story>
+</Canvas>
