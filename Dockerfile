@@ -24,7 +24,7 @@ RUN if [ "$LINT_TIME" = "true" ]; \
 ######################################################################
 # This stage download a simple http server and serve the application #
 ######################################################################
-FROM nginx:1.15-alpine
+FROM nginx:1.19-alpine
 COPY ./nginx-mime.types /etc/nginx/mime.types
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /usr/src/app/build /var/www/html
