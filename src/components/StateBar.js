@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { ProgressBar } from './ProgressBar'
 import { Typography } from './Typography'
 

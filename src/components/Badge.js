@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
-import { cx, sp } from 'utils'
+import PropTypes from 'prop-types'
+import React from 'react'
 import {
   white,
   success,
@@ -14,6 +13,7 @@ import {
   bigBorderRadius,
   borderRadius,
 } from 'theming'
+import { cx, sp } from 'utils'
 import { Box } from './Box'
 
 const variants = {

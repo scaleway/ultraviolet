@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { cx, sp, thColor } from 'utils'
-import { Typography } from './Typography'
 import { Icon, icons } from './Icon'
+import { Typography } from './Typography'
 
 const style = ({ variant }) => p => css`
   display: flex;

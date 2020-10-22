@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
+import React from 'react'
 import { px, cx, thColor } from 'utils'
 import { Box } from './Box'
 
