@@ -36,7 +36,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
@@ -109,7 +109,7 @@ exports[`Reminder renders correctly with bold 1`] = `
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
@@ -129,7 +129,7 @@ exports[`Reminder renders correctly with bold 1`] = `
     <span
       dangerouslySetInnerHTML={
         Object {
-          "__html": "This is a <b>bold</b> Test",
+          "__html": "This is a <strong>bold</strong> Test",
         }
       }
     />
@@ -178,7 +178,7 @@ exports[`Reminder renders correctly with default values 1`] = `
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
@@ -255,7 +255,7 @@ exports[`Reminder renders correctly with variant 1`] = `
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
