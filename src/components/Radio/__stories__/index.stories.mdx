@@ -1,0 +1,57 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { Radio } from '..'
+import BlockList from '__stories__/components/BlockList'
+import ControlValue from '__stories__/components/ControlValue'
+
+<Meta title="Components/Radio" component={Radio} />
+
+# Radio
+
+<Description>
+  Radio only work as [controlled component](https://reactjs.org/docs/forms.html).
+</Description>
+
+## Controlled
+
+<Canvas>
+  <Story name="basic">
+    <BlockList>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <>
+            <Radio checked={value === "choice-1"} value="choice-1" onChange={e => onChange(e.currentTarget.value)}>Choice 1</Radio>
+            <Radio checked={value === "choice-2"} value="choice-2" onChange={e => onChange(e.currentTarget.value)}>Choice 2</Radio>
+          </>
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+## Size
+
+Set size using `size` property.
+
+<Canvas>
+  <Story name="size">
+    <BlockList>
+      <Radio name="radio-size" size={10}>Small radio</Radio>
+      <Radio name="radio-size" size={40}>Big radio</Radio>
+    </BlockList>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="disabled">
+    <BlockList>
+      <Radio name="radio-size" disabled>Disabled radio</Radio>
+    </BlockList>
+  </Story>
+</Canvas>
