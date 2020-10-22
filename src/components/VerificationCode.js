@@ -47,8 +47,10 @@ export const VerificationCode = ({
   type,
   ...props
 }) => {
-  const valuesArray = []
-  const valuesArray = Object.assign(new Array(fields).fill(''), initialValue.substring(0, fields).split(''))
+  const valuesArray = Object.assign(
+    new Array(fields).fill(''),
+    initialValue.substring(0, fields).split(''),
+  )
   const [values, setValues] = useState(valuesArray)
   const [handleKeys, setHandleKeys] = useState({})
 
