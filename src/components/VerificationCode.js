@@ -75,15 +75,18 @@ export const VerificationCode = ({
       e.target.value = e.target.value.replace(/[^\d]/gi, '')
     }
     setHandleKeys({ ...handleKeys, [index]: false })
+    const newValues = [...values]
+
     if (
       e.target.value === '' ||
       (type === 'number' && !e.target.validity.valid)
     ) {
+      newValues[index] = ''
+      setValues(newValues)
       return
     }
 
     const { value } = e.target
-    const newValues = [...values]
     const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
     newValues[index] = sanitizedValue
     setValues(newValues)
