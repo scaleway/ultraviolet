@@ -3,10 +3,10 @@ import { SwitchState } from '@smooth-ui/core-em'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Box } from 'components/Box'
+import { Icon } from 'components/Icon'
 import { gray300, primary } from 'theming'
 import { cx } from 'utils'
-import { Icon } from 'components/Icon'
-import { Box } from 'components/Box'
 
 const style = disabled => p => css`
   position: relative;

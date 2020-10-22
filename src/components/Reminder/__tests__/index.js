@@ -1,6 +1,5 @@
 import React from 'react'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-
 import { Reminder } from '..'
 
 test('Reminder renders correctly with default values', () => {
