@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Tag } from '..'
+
+<Meta
+  title="Components/Tag"
+  component={Tag}
+/>
+
+# Tag
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Tag>Basic</Tag>
+  </Story>
+</Canvas>
+
+## Variant Bordered
+
+<Canvas>
+  <Story name="bordered">
+    <Tag variant="bordered">Smoth</Tag>
+  </Story>
+</Canvas>
+
+## With onClose
+
+<Canvas>
+  <Story name="on-close">
+    <Tag onClose={() => alert('closed')}>Close Me</Tag>
+  </Story>
+</Canvas>
+
+## With onClose and isLoading
+
+<Canvas>
+  <Story name="on-close-is-loading">
+    <Tag onClose={() => alert('closed')} isLoading={true}>You can't close me</Tag>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="disabled">
+    <Tag disabled>Can't touch this</Tag>
+  </Story>
+</Canvas>
