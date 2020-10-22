@@ -43,7 +43,7 @@ const Notification = styled(Typography, {
     }
   `}
 
-  & b {
+  & strong {
     ${({ variant }) => `
       color: ${variants[variant].main};
     `}
@@ -63,7 +63,7 @@ export const Reminder = ({ text, variant, bordered, ...props }) => (
       <span
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: text.replace(/\[(.*)\]/, '<b>$1</b>'),
+          __html: text.replace(/\[(.*)\]/, '<strong>$1</strong>'),
         }}
       />
       <Icon ml="4px" color={variants[variant].main} name="east" size={20} />
