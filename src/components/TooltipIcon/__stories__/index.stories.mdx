@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { TooltipIcon } from '..'
+
+<Meta
+  title="Components/TooltipIcon"
+  component={TooltipIcon}
+/>
+
+# TooltipIcon
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <TooltipIcon tooltip="Saloute" />
+  </Story>
+</Canvas>
+
+## Colors
+
+<Canvas>
+  <Story name="colors">
+    <TooltipIcon color="primary" tooltip="Scaleway is great" />
+    <TooltipIcon color="red" tooltip="Pay attention" />
+    <TooltipIcon color="green" tooltip="Go ahead" />
+  </Story>
+</Canvas>
+
+## Size
+
+<Canvas>
+  <Story name="size">
+    <TooltipIcon size={10} tooltip="I'm Joe" />
+    <TooltipIcon size={30} tooltip="I'm Jack" />
+    <TooltipIcon size={40} tooltip="I'm Averell" />
+  </Story>
+</Canvas>
+
+## Name
+
+<Canvas>
+  <Story name="name">
+    <TooltipIcon name="calculator" tooltip="1 + 1" />
+    <TooltipIcon name="eye" tooltip="I see you" />
+    <TooltipIcon name="delete" tooltip="Nooo don't remove me" />
+  </Story>
+</Canvas>
