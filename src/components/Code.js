@@ -1,58 +1,23 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { theme } from 'theme'
 import { Box } from './Box'
 
 const styles = {
-  inputContainer: css`
-    position: relative;
-  `,
-
   input: css`
-    > input {
-      border: solid 1px #a8adb7;
-      border-right: none;
-      font-family: 'Lato';
-      font-size: 20px;
-      color: #525461;
-      text-align: center;
-      box-sizing: border-box;
-      border-radius: 0;
-      -webkit-appearance: initial;
+    border: solid 1px ${theme.gray300};
+    font-size: 24px;
+    color: ${theme.gray700};
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 56px;
+    height: 64px;
 
-      &:last-child {
-        border-right: solid 1px #a8adb7;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-      }
-
-      &:first-child {
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px;
-      }
-
-      :focus + input {
-        border-left: none;
-      }
+    &:last-child {
+      margin-right: 0;
     }
-  `,
-
-  blur: css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    opacity: 0.5;
-    filter: blur(0.5px);
-    transition: opacity 0.3s;
-  `,
-
-  title: css`
-    margin: 0;
-    height: 20px;
-    padding-bottom: 10px;
   `,
 }
 
@@ -67,7 +32,7 @@ const KEY_CODE = {
 export const Code = ({
   inputId,
   fields,
-  values: initialValues,
+  initialValue,
   onChange,
   onComplete,
   type,
@@ -77,13 +42,14 @@ export const Code = ({
   disabled,
   required,
   placeholder,
+  inputStyle,
   ...props
 }) => {
   let vals
-  if (initialValues && initialValues.length) {
+  if (initialValue && initialValue.length) {
     vals = []
     for (let i = 0; i < fields; i += 1) {
-      vals.push(initialValues[i] || '')
+      vals.push(initialValue[i] || '')
     }
   } else {
     vals = Array(fields).fill('')
@@ -91,18 +57,18 @@ export const Code = ({
   const [values, setValues] = useState(vals)
   const [handleKeys, setHandleKeys] = useState({})
 
-  const iRefs = []
+  const inputRefs = []
   for (let i = 0; i < fields; i += 1) {
-    iRefs.push(React.createRef())
+    inputRefs.push(React.createRef())
   }
 
-  const triggerChange = (values = values) => {
-    const val = values.join('')
+  const triggerChange = inputValues => {
+    const stringValue = inputValues.join('')
     if (onChange) {
-      onChange(val)
+      onChange(stringValue)
     }
-    if (onComplete && val.length >= fields) {
-      onComplete(val)
+    if (onComplete && stringValue.length >= fields) {
+      onComplete(stringValue)
     }
   }
 
@@ -126,7 +92,7 @@ export const Code = ({
       if (nextIndex >= fields) {
         nextIndex = fields - 1
       }
-      next = iRefs[nextIndex]
+      next = inputRefs[nextIndex]
       const split = value.split('')
       split.forEach((item, i) => {
         const cursor = index + i
@@ -136,14 +102,13 @@ export const Code = ({
       })
       setValues(newValues)
     } else {
-      next = iRefs[index + 1]
+      next = inputRefs[index + 1]
       newValues[index] = value
       setValues(newValues)
     }
 
     if (next) {
       next.current.focus()
-      next.current.select()
     }
 
     triggerChange(newValues)
@@ -153,8 +118,8 @@ export const Code = ({
     const index = parseInt(e.target.dataset.id, 10)
     const prevIndex = index - 1
     const nextIndex = index + 1
-    const prev = iRefs[prevIndex]
-    const next = iRefs[nextIndex]
+    const prev = inputRefs[prevIndex]
+    const next = inputRefs[nextIndex]
     const vals = [...values]
     switch (e.keyCode) {
       case KEY_CODE.backspace:
@@ -196,7 +161,7 @@ export const Code = ({
     const index = parseInt(e.target.dataset.id, 10)
     if (handleKeys[index]) {
       setHandleKeys({ ...handleKeys, [index]: false })
-      const next = iRefs[index + 1]
+      const next = inputRefs[index + 1]
       if (next) {
         next.current.focus()
       }
@@ -207,35 +172,27 @@ export const Code = ({
     e.target.select(e)
   }
 
-  const INPUT_STYLE = {
-    width: fieldWidth,
-    height: fieldHeight,
-  }
-
   return (
-    <Box css={styles.inputContainer} {...props}>
-      <Box css={styles.input}>
-        {values.map((value, index) => (
-          <input
-            type={type === 'number' ? 'tel' : type}
-            pattern={type === 'number' ? '[0-9]*' : null}
-            // autoFocus={autoFocus && index === 0}
-            style={INPUT_STYLE}
-            key={`${inputId}-${index}`}
-            data-id={index}
-            value={value}
-            id={inputId ? `${inputId}-${index}` : null}
-            ref={iRefs[index]}
-            onChange={inputOnChange}
-            onKeyDown={inputOnKeyDown}
-            onKeyUp={inputOnKeyUp}
-            onFocus={inputOnFocus}
-            disabled={disabled}
-            required={required}
-            placeholder={placeholder[index]}
-          />
-        ))}
-      </Box>
+    <Box {...props}>
+      {values.map((value, index) => (
+        <input
+          css={[styles.input, inputStyle]}
+          type={type === 'number' ? 'tel' : type}
+          pattern={type === 'number' ? '[0-9]*' : null}
+          key={`${inputId}-${index}`}
+          data-id={index}
+          value={value}
+          id={inputId ? `${inputId}-${index}` : null}
+          ref={inputRefs[index]}
+          onChange={inputOnChange}
+          onKeyDown={inputOnKeyDown}
+          onKeyUp={inputOnKeyUp}
+          onFocus={inputOnFocus}
+          disabled={disabled}
+          required={required}
+          placeholder={placeholder[index]}
+        />
+      ))}
     </Box>
   )
 }
@@ -245,24 +202,17 @@ Code.propTypes = {
   onChange: PropTypes.func,
   onComplete: PropTypes.func,
   fields: PropTypes.number,
-  fieldWidth: PropTypes.number,
-  id: PropTypes.string,
-  fieldHeight: PropTypes.number,
-  autoFocus: PropTypes.bool,
-  className: PropTypes.string,
-  values: PropTypes.arrayOf(PropTypes.string),
+  inputId: PropTypes.string,
+  initialValue: PropTypes.string,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  placeholder: PropTypes.arrayOf(PropTypes.string),
+  placeholder: PropTypes.string,
 }
 
 Code.defaultProps = {
   type: 'number',
-  fields: 6,
-  fieldWidth: 58,
-  fieldHeight: 54,
-  autoFocus: true,
+  fields: 4,
   disabled: false,
   required: false,
-  placeholder: [],
+  placeholder: '0000',
 }
