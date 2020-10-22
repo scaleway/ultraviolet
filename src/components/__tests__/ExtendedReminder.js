@@ -1,6 +1,5 @@
 import React from 'react'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-
 import { ExtendedReminder } from '../ExtendedReminder'
 
 test('ExtendedReminder renders correctly with default values', () => {
