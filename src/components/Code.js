@@ -5,10 +5,10 @@ import { theme } from 'theme'
 import { Box } from './Box'
 
 const styles = {
-  input: css`
-    border: solid 1px ${theme.gray300};
+  input: error => css`
+    border: solid 1px ${error ? theme.red : theme.gray300};
     font-size: 24px;
-    color: ${theme.gray700};
+    color: ${error ? theme.red : theme.gray700};
     text-align: center;
     border-radius: 4px;
     margin-right: 8px;
@@ -40,8 +40,7 @@ export const Code = ({
   onChange,
   onComplete,
   type,
-  fieldHeight,
-  fieldWidth,
+  error,
   autoFocus,
   disabled,
   required,
@@ -161,7 +160,7 @@ export const Code = ({
     <Box {...props}>
       {values.map((value, index) => (
         <input
-          css={[styles.input, inputStyle]}
+          css={[styles.input(error), inputStyle]}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : null}
           key={`${inputId}-${index}`}
@@ -199,4 +198,5 @@ Code.defaultProps = {
   fields: 4,
   disabled: false,
   required: false,
+  error: false,
 }
