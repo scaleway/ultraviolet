@@ -13,9 +13,8 @@ import { Code } from 'scaleway-ui'
 <Playground>
   <Code
     initialValue="1337"
-    mb={2}
     inputId="code-input"
-    onChange={() => console.log('change')}
+    onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
 </Playground>
@@ -25,21 +24,21 @@ import { Code } from 'scaleway-ui'
 <Playground>
   <Code
     placeholder="0000"
-    mb={2}
     inputId="code-input-no-value"
-    onChange={() => console.log('change')}
+    onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
 </Playground>
 
-## With incomplete initial value
+## With incomplete initial value and placeholder
 
 <Playground>
   <Code
+    fields={6}
     initialValue="13"
-    mb={2}
+    placeholder="0037"
     inputId="code-input-incomplete"
-    onChange={() => console.log('change')}
+    onChange={val => console.log('change', val)}
     onComplete={val => console.log('complete', val)}
   />
 </Playground>

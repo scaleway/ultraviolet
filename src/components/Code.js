@@ -189,7 +189,7 @@ export const Code = ({
           onFocus={inputOnFocus}
           disabled={disabled}
           required={required}
-          placeholder={placeholder && placeholder[index]}
+          placeholder={placeholder?.[index] ?? ''}
         />
       ))}
     </Box>
