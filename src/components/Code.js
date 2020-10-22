@@ -83,28 +83,14 @@ export const Code = ({
     ) {
       return
     }
-    let next
+
     const { value } = e.target
     const newValues = [...values]
-    if (newValues.length > 1) {
-      let nextIndex = index + 1
-      if (nextIndex >= fields) {
-        nextIndex = fields - 1
-      }
-      next = inputRefs[nextIndex]
-      const split = value.split('')
-      split.forEach((item, i) => {
-        const cursor = index + i
-        if (cursor < fields) {
-          newValues[cursor] = item
-        }
-      })
-      setValues(newValues)
-    } else {
-      next = inputRefs[index + 1]
-      newValues[index] = value
-      setValues(newValues)
-    }
+    const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
+    newValues[index] = sanitizedValue
+    setValues(newValues)
+    const nextIndex = Math.min(index + 1, fields - 1)
+    const next = inputRefs[nextIndex]
 
     if (next) {
       next.current.focus()
