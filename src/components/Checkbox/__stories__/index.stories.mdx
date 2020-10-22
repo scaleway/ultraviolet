@@ -1,0 +1,95 @@
+import { useState, useCallback } from 'react'
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Checkbox } from '..'
+import { Boxer, typographyVariants } from 'components'
+import ErrorTransition from '__stories__/components/ErrorTransition'
+
+<Meta
+  title="Components/Checkbox"
+  component={Checkbox}
+/>
+
+# Checkbox
+
+<Description>
+  Checkbox control, it acts like a real checkbox.
+</Description>
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    {() => {
+      const [checked, setChecked] = useState(false)
+      const handleChange = useCallback(
+        event => setChecked(event.target.checked),
+        [],
+      )
+      return (
+        <Checkbox checked={checked} onChange={handleChange}>
+          Basic checkbox
+        </Checkbox>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Validation
+
+<Description>
+  Set validation using `valid` property.
+</Description>
+
+<Canvas>
+  <Story name="validation">
+    <Boxer my={1}>
+      <Checkbox valid={false}>Invalid checkbox</Checkbox>
+      <Checkbox valid={true}>Valid checkbox</Checkbox>
+    </Boxer>
+  </Story>
+</Canvas>
+
+## Error
+
+<Description>
+  Set validation with error message using `error` property.
+</Description>
+
+<Canvas>
+  <Story name="error">
+  <Boxer my={1}>
+    <ErrorTransition error="An Error" Component={Checkbox}>
+      Checkbox on Error
+    </ErrorTransition>
+  </Boxer>
+  </Story>
+</Canvas>
+
+## Size
+
+<Description>
+  Set size using `size` property.
+</Description>
+
+<Canvas>
+  <Story name="size">
+  <Boxer my={1}>
+    <Checkbox size={10}>Small checkbox</Checkbox>
+    <Checkbox size={30}>Big checkbox</Checkbox>
+  </Boxer>
+  </Story>
+</Canvas>
+
+## Progress
+
+<Description>
+  Set progress using `progress` property.
+</Description>
+
+<Canvas>
+  <Story name="progress">
+  <Boxer my={1}>
+    <Checkbox progress>Progress checkbox</Checkbox>
+  </Boxer>
+  </Story>
+</Canvas>

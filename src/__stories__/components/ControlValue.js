@@ -1,10 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 
-class ControlValue extends React.Component {
-  state = { value: this.props.value }
+const ControlValue = ({ value, children }) => {
+  const [state, setState] = useState({ value })
 
-  onChange = valueOrEvent => {
-    this.setState({
+  const onChange = valueOrEvent =>
+    setState({
       value:
         valueOrEvent && valueOrEvent.currentTarget
           ? valueOrEvent.currentTarget.type === 'checkbox' ||
@@ -13,14 +13,11 @@ class ControlValue extends React.Component {
             : valueOrEvent.currentTarget.value
           : valueOrEvent,
     })
-  }
 
-  render() {
-    return this.props.children({
-      value: this.state.value,
-      onChange: this.onChange,
-    })
-  }
+  return children({
+    value: state.value,
+    onChange,
+  })
 }
 
 export default ControlValue
