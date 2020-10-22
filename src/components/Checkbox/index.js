@@ -2,13 +2,13 @@ import { css } from '@emotion/core'
 import { SwitchState } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { borderRadius, gray100, gray550, primary } from 'theming'
-import { cx } from 'utils'
 import { ActivityIndicator } from 'components/ActivityIndicator'
-import { Icon } from 'components/Icon'
-import { Typography } from 'components/Typography'
 import { Box } from 'components/Box'
 import { Expandable } from 'components/Expandable'
+import { Icon } from 'components/Icon'
+import { Typography } from 'components/Typography'
+import { borderRadius, gray100, gray550, primary } from 'theming'
+import { cx } from 'utils'
 
 const styles = {
   container: css`

@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import React, { useEffect, useRef, useState } from 'react'
-import { Tag } from 'components/Tag'
 import { Box } from 'components/Box'
+import { Tag } from 'components/Tag'
 import { theme } from 'theme'
 
 const container = {
