@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react'
 
-export function ErrorTransition({ error, Component, ...props }) {
+const ErrorTransition = ({ error, Component, ...props }) => {
   const [err, setErr] = useState()
   useLayoutEffect(() => {
     const timer = setTimeout(() => setErr(error), 2000)
@@ -8,3 +8,5 @@ export function ErrorTransition({ error, Component, ...props }) {
   }, [error])
   return <Component error={err} {...props} />
 }
+
+export default ErrorTransition

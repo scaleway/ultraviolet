@@ -1,0 +1,132 @@
+import { useState, useCallback } from 'react'
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Tooltip } from '..'
+import { Box, Button, Typography } from 'components'
+
+<Meta
+  title="Components/Tooltip"
+  component={Tooltip}
+/>
+
+# Tooltip
+
+<Description>
+  Displays a tooltip on mouse over.
+</Description>
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip">Tooltip around the text</Tooltip>
+    </Box>
+  </Story>
+  <Story name="wrap">
+    <Tooltip text="tooltip">
+      <Box
+        borderRadius={20}
+        border="2px solid #333"
+        p={4}
+        width="max-content"
+      >
+        Tooltip around the box
+      </Box>
+    </Tooltip>
+  </Story>
+  <Story name="function">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip">
+        {referenceProps => <Box {...referenceProps}>I'm a function</Box>}
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="on-click">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip">
+        <Button width={220} onClick={() => alert('fired!')}>
+          Should be fired on click
+        </Button>
+      </Tooltip>
+      <Box mt={2}>
+        <Tooltip text="tooltip">
+          <Button width={220} disabled onClick={() => alert('fired!')}>
+            Should not be fired on click
+          </Button>
+        </Tooltip>
+      </Box>
+    </Box>
+  </Story>
+  <Story name="nested">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip">
+        <Box>
+          <div>I'm a nested element</div>
+        </Box>
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="nested-function">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip">
+        {referenceProps => (
+          <Box {...referenceProps}>
+            I'm a nested function, with naked string children
+          </Box>
+        )}
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="customized">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip" backgroundColor="red">
+        <Box>I'm a customized tooltip</Box>
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="long">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip width={150} text="I have a very very very very very very very very very very very very very very long text">
+        <Box>I'm a long tooltip</Box>
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="empty-div">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="empty div">
+        <Box style={{ width: 10, height: 10, backgroundColor: 'red' }} />
+      </Tooltip>
+    </Box>
+  </Story>
+  <Story name="multiple-children">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip text="tooltip" backgroundColor="red">
+        <>
+          <Box>I'm the first children</Box>
+          <Box>I'm the second children</Box>
+          <Box>Tooltip can only have one children, not an array of children. Do not forget to wrap it with fragment</Box>
+        </>
+      </Tooltip>
+    </Box>
+  </Story>
+</Canvas>
+
+## Reakit tooltip Placement
+
+<Description>
+  Set placement using `placement` prop.
+</Description>
+
+<Canvas>
+  <Story name="placement">
+    <Box display="flex" justifyContent="space-evenly">
+      {['left', 'top', 'bottom', 'right'].map(placement => (
+        <Box key={placement} p={2}>
+          <Tooltip text="tooltip" placement={placement}>
+            {placement}
+          </Tooltip>
+        </Box>
+      ))}
+    </Box>
+  </Story>
+</Canvas>
