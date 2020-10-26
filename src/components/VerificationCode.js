@@ -52,9 +52,8 @@ export const VerificationCode = ({
     initialValue.substring(0, fields).split(''),
   )
   const [values, setValues] = useState(valuesArray)
-  const [handleKeys, setHandleKeys] = useState({})
 
-  const inputRefs = Array.from(Array(3), React.createRef) 
+  const inputRefs = Array.from(Array(fields), React.createRef)
 
   const triggerChange = inputValues => {
     const stringValue = inputValues.join('')
@@ -71,7 +70,6 @@ export const VerificationCode = ({
     if (type === 'number') {
       e.target.value = e.target.value.replace(/[^\d]/gi, '')
     }
-    setHandleKeys({ ...handleKeys, [index]: false })
     const newValues = [...values]
 
     if (
@@ -101,6 +99,8 @@ export const VerificationCode = ({
     const index = parseInt(e.target.dataset.id, 10)
     const prevIndex = index - 1
     const nextIndex = index + 1
+    const first = inputRefs[0]
+    const last = inputRefs[inputRefs.length - 1]
     const prev = inputRefs[prevIndex]
     const next = inputRefs[nextIndex]
     const vals = [...values]
@@ -131,23 +131,19 @@ export const VerificationCode = ({
         }
         break
       case KEY_CODE.up:
+        e.preventDefault()
+        if (first) {
+          first.current.focus()
+        }
+        break
       case KEY_CODE.down:
         e.preventDefault()
+        if (last) {
+          last.current.focus()
+        }
         break
       default:
-        setHandleKeys({ ...handleKeys, [index]: true })
         break
-    }
-  }
-
-  const inputOnKeyUp = e => {
-    const index = parseInt(e.target.dataset.id, 10)
-    if (handleKeys[index]) {
-      setHandleKeys({ ...handleKeys, [index]: false })
-      const next = inputRefs[index + 1]
-      if (next) {
-        next.current.focus()
-      }
     }
   }
 
@@ -169,7 +165,6 @@ export const VerificationCode = ({
           ref={inputRefs[index]}
           onChange={inputOnChange}
           onKeyDown={inputOnKeyDown}
-          onKeyUp={inputOnKeyUp}
           onFocus={inputOnFocus}
           disabled={disabled}
           required={required}
