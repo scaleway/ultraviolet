@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Box } from 'components/Box'
 import { Icon } from 'components/Icon'
-import { Typography } from 'components/Typography'
 import { UniversalLink } from 'components/UniversalLink'
 import { theme } from 'theme'
 
@@ -21,29 +21,32 @@ const variants = {
   },
 }
 
-const Notification = styled(Typography, {
-  shouldForwardProp: prop => prop !== 'variant',
+const Notification = styled(Box, {
+  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop),
 })`
   height: 28px;
   display: flex;
   align-items: center;
   cursor: pointer;
   border-radius: 14px;
+  text-decoration: none;
+  color: ${theme.gray700};
+  font-weight: 400;
 
   ${({ variant, bordered }) => `
     background-color: ${
       bordered ? theme.transparent : variants[variant].background
     };
     border: 1px solid ${bordered ? theme.gray300 : theme.transparent};
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0px 3px 6px ${variants[variant].background};
+      box-shadow: 0 3px 6px ${variants[variant].background};
       border: 1px solid ${variants[variant].main};
     }
   `}
 
-  & b {
+  & strong {
     ${({ variant }) => `
       color: ${variants[variant].main};
     `}
@@ -51,22 +54,25 @@ const Notification = styled(Typography, {
 `
 
 export const Reminder = ({ text, variant, bordered, ...props }) => (
-  <UniversalLink style={{ display: 'flex', textDecoration: 'none' }} {...props}>
-    <Notification
-      fontSize={12}
-      px={1}
-      py={1}
-      bordered={bordered}
-      variant={variant}
-    >
-      <div
-        dangerouslySetInnerHTML={{
-          __html: text.replace(/\[(.*)\]/, '<b>$1</b>'),
-        }}
-      />
-      <Icon ml="4px" color={variants[variant].main} name="east" size={20} />
-    </Notification>
-  </UniversalLink>
+  <Notification
+    as={props.to ? UniversalLink : 'a'}
+    type={props.to ? null : 'button'}
+    icon="east"
+    style={{}}
+    fontSize={12}
+    px={1}
+    py={1}
+    bordered={bordered}
+    variant={variant}
+    {...props}
+  >
+    <span
+      dangerouslySetInnerHTML={{
+        __html: text.replace(/\[(.*)\]/, '<strong>$1</strong>'),
+      }}
+    />
+    <Icon ml="4px" color={variants[variant].main} name="east" size={20} />
+  </Notification>
 )
 
 Reminder.propTypes = {
