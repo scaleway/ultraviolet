@@ -1,0 +1,6 @@
+{
+  "presets": [["@babel/preset-env", { "shippedProposals": true }], "@babel/preset-react", "@emotion/babel-preset-css-prop"],
+  "plugins": [
+    ["babel-plugin-module-resolver", { "root": ["./src"] }]
+  ]
+}

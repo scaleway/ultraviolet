@@ -1,0 +1,55 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Dot } from '..'
+
+<Meta
+  title="Components/Dot"
+  component={Dot}
+  argTypes={{
+    color: {
+      control: {
+        type: 'string',
+      },
+    },
+  }}
+/>
+
+# Dot
+
+<Description>
+  A simple dot.
+</Description>
+
+<Canvas>
+  <Story name="default" args={{}}>
+    {args => <Dot {...args}/>}
+  </Story>
+</Canvas>
+
+## `color`
+
+<Canvas>
+  <Story
+    name="primary"
+    args={{
+      color: 'primary',
+    }}
+  >
+    {(args) => <Dot {...args}/>}
+  </Story>
+  <Story
+    name="success"
+    args={{
+      color: 'success',
+    }}
+  >
+    {(args) => <Dot {...args}/>}
+  </Story>
+  <Story
+    name="warning"
+    args={{
+      color: 'warning',
+    }}
+  >
+    {(args) => <Dot {...args}/>}
+  </Story>
+</Canvas>
