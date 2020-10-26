@@ -1,3 +1,10 @@
+## [0.16.0](https://github.com/chambo-e/scw-ui/compare/v0.15.3...v0.16.0) (2020-10-26)
+
+
+### Features
+
+* **extendedreminder:** new component extended reminder ([39e71e1](https://github.com/chambo-e/scw-ui/commit/39e71e14d4e0ccf59ae76255421d72144556dc9f))
+
 ### [0.15.3](https://github.com/chambo-e/scw-ui/compare/v0.15.2...v0.15.3) (2020-10-19)
 
 
