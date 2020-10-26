@@ -85,8 +85,7 @@ export const ExtendedReminder = ({
       <Typography mb={3} variant="bodyD">
         {text}
       </Typography>
-      <Button variant="link" to={to} css={styles.link}>
-        <Icon ml="4px" color={theme.blue} name="east" size={20} mr={1} />
+      <Button variant="link" to={to} icon="east" css={styles.link}>
         {linkText}
       </Button>
     </Box>
