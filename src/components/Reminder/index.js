@@ -33,6 +33,10 @@ const Notification = styled(Box, {
   color: ${theme.gray700};
   font-weight: 400;
 
+  &:hover {
+    text-decoration: none;
+  }
+
   ${({ variant, bordered }) => `
     background-color: ${
       bordered ? theme.transparent : variants[variant].background
