@@ -2,7 +2,7 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { theme } from 'theme'
-import { Box } from './Box'
+import { Box } from '../Box'
 
 const styles = {
   input: error => css`

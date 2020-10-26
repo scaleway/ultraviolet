@@ -1,0 +1,66 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { VerificationCode } from '../'
+
+<Meta
+  title="Components/VerificationCode"
+  component={VerificationCode}
+/>
+
+# VerificationCode
+
+## With initial value
+
+<Canvas>
+  <Story name="initial">
+    <VerificationCode
+      initialValue="1337"
+      inputId="verification-code-input"
+      onChange={val => console.log('change', val)}
+      onComplete={val => console.log('complete', val)}
+    />
+  </Story>
+</Canvas>
+
+## With no initial value and placeholder
+
+<Canvas>
+  <Story name="no-initial">
+    <VerificationCode
+      placeholder="0000"
+      inputId="verification-code-input-no-value"
+      onChange={val => console.log('change', val)}
+      onComplete={val => console.log('complete', val)}
+    />
+  </Story>
+</Canvas>
+
+## With incomplete initial value and placeholder
+
+<Canvas>
+  <Story name="incomplete">
+    <VerificationCode
+      fields={6}
+      initialValue="13"
+      placeholder="0037"
+      inputId="verification-code-input-incomplete"
+      onChange={val => console.log('change', val)}
+      onComplete={val => console.log('complete', val)}
+    />
+  </Story>
+</Canvas>
+
+## Error state
+
+<Canvas>
+  <Story name="error">
+    <VerificationCode inputId="error" initialValue="13" error />
+  </Story>
+</Canvas>
+
+## Type text
+
+<Canvas>
+  <Story name="type-text">
+    <VerificationCode type="text" initialValue="13" />
+  </Story>
+</Canvas>
