@@ -1,0 +1,56 @@
+---
+name: VerificationCode
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { VerificationCode } from 'scaleway-ui'
+
+# VerificationCode
+
+## With initial value
+
+<Playground>
+  <VerificationCode
+    initialValue="1337"
+    inputId="verification-code-input"
+    onChange={val => console.log('change', val)}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
+
+## With no initial value and placeholder
+
+<Playground>
+  <VerificationCode
+    placeholder="0000"
+    inputId="verification-code-input-no-value"
+    onChange={val => console.log('change', val)}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
+
+## With incomplete initial value and placeholder
+
+<Playground>
+  <VerificationCode
+    fields={6}
+    initialValue="13"
+    placeholder="0037"
+    inputId="verification-code-input-incomplete"
+    onChange={val => console.log('change', val)}
+    onComplete={val => console.log('complete', val)}
+  />
+</Playground>
+
+## Error state
+
+<Playground>
+  <VerificationCode initialValue="13" error />
+</Playground>
+
+## Type text
+
+<Playground>
+  <VerificationCode type="text" initialValue="13" />
+</Playground>
