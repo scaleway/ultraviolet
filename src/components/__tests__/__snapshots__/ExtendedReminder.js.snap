@@ -6,7 +6,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 }
 
 .emotion-4.emotion-4 {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .emotion-5.emotion-5 {
@@ -91,35 +91,40 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     Enter the code we send to your bank account to validate your payment method.
   </p>
   <a
-    className="sui-box emotion-1"
-    css={
-      Object {
-        "map": undefined,
-        "name": "lf1y0s",
-        "next": undefined,
-        "styles": "
-    color: #3f6ed8;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-  ",
-        "toString": [Function],
-      }
-    }
+    className="sui-box sui-box emotion-6"
+    css={[Function]}
+    disabled={false}
     href="/"
     to="/"
+    type={null}
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-5"
-      css={[Function]}
-      viewBox="0 0 24 24"
+    <div
+      className="content"
+      css={
+        Object {
+          "map": undefined,
+          "name": "168f964",
+          "next": undefined,
+          "styles": "
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ",
+          "toString": [Function],
+        }
+      }
     >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-    Verify my credit card
+      <svg
+        className="sui-box sc-ui-icon emotion-5"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+      Verify my credit card
+    </div>
   </a>
 </div>
 `;
@@ -130,7 +135,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
 }
 
 .emotion-4.emotion-4 {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .emotion-5.emotion-5 {
@@ -215,35 +220,40 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
     Enter the code we send to your bank account to validate your payment method.
   </p>
   <a
-    className="sui-box emotion-1"
-    css={
-      Object {
-        "map": undefined,
-        "name": "lf1y0s",
-        "next": undefined,
-        "styles": "
-    color: #3f6ed8;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-  ",
-        "toString": [Function],
-      }
-    }
+    className="sui-box sui-box emotion-6"
+    css={[Function]}
+    disabled={false}
     href="/"
     to="/"
+    type={null}
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-5"
-      css={[Function]}
-      viewBox="0 0 24 24"
+    <div
+      className="content"
+      css={
+        Object {
+          "map": undefined,
+          "name": "168f964",
+          "next": undefined,
+          "styles": "
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ",
+          "toString": [Function],
+        }
+      }
     >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-    Verify my credit card
+      <svg
+        className="sui-box sc-ui-icon emotion-5"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+      Verify my credit card
+    </div>
   </a>
 </div>
 `;

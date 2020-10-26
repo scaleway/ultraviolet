@@ -4,9 +4,9 @@ import React from 'react'
 import { theme } from 'theme'
 import { Badge } from './Badge'
 import { Box } from './Box'
+import { Button } from './Button'
 import { Icon } from './Icon'
 import { Typography } from './Typography'
-import { UniversalLink } from './UniversalLink'
 
 const variants = {
   error: {
@@ -44,8 +44,12 @@ const styles = {
   `,
   link: css`
     color: ${theme.blue};
+    background-color: ${theme.transparent};
+    padding: 0;
+    width: transparent;
     display: flex;
     align-items: center;
+    justify-content: left;
     text-decoration: none;
     font-size: 14px;
   `,
@@ -78,13 +82,13 @@ export const ExtendedReminder = ({
       <Typography variant="bodyC" css={styles.title(variant)}>
         {title}
       </Typography>
-      <Typography mb={1} variant="bodyD">
+      <Typography mb={3} variant="bodyD">
         {text}
       </Typography>
-      <UniversalLink to={to} css={styles.link}>
+      <Button variant="link" to={to} css={styles.link}>
         <Icon ml="4px" color={theme.blue} name="east" size={20} mr={1} />
         {linkText}
-      </UniversalLink>
+      </Button>
     </Box>
   )
 }
