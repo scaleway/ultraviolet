@@ -1,3 +1,10 @@
+## [0.17.0](https://github.com/chambo-e/scw-ui/compare/v0.16.0...v0.17.0) (2020-10-26)
+
+
+### Features
+
+* **code:** code component CNS-3413 ([8be5b65](https://github.com/chambo-e/scw-ui/commit/8be5b6582dbda16561217f295fc14b956952ff68))
+
 ## [0.16.0](https://github.com/chambo-e/scw-ui/compare/v0.15.3...v0.16.0) (2020-10-26)
 
 
