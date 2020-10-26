@@ -2,11 +2,11 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from 'theme'
-import { Badge } from './Badge'
-import { Box } from './Box'
-import { Button } from './Button'
-import { Icon } from './Icon'
-import { Typography } from './Typography'
+import { Badge } from '../Badge'
+import { Box } from '../Box'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
+import { Typography } from '../Typography'
 
 const variants = {
   error: {
@@ -55,7 +55,7 @@ const styles = {
   `,
 }
 
-export const ExtendedReminder = ({
+const ExtendedReminder = ({
   icon,
   badgeText,
   title,
@@ -105,3 +105,5 @@ ExtendedReminder.propTypes = {
 ExtendedReminder.defaultProps = {
   variant: 'info',
 }
+
+export { ExtendedReminder }
