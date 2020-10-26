@@ -1,0 +1,181 @@
+import { useState, useCallback } from 'react'
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Switch } from '..'
+import ControlValue from '__stories__/components/ControlValue'
+import BlockList from '__stories__/components/BlockList'
+
+<Meta
+  title="Components/Switch"
+  component={Switch}
+/>
+
+# Switch
+
+## Basic
+
+<Description>
+  `Switch` uses a `input` of type "checkbox" and they can only be used as controlled input.
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          checked={value}
+          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+        />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>
+  Set variant using `variant` prop. Available variants: `primary`, `success`
+</Description>
+
+<Canvas>
+  <Story name="variants">
+    <BlockList>
+      <ControlValue value={true}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={true}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="success"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Description>
+  Set disabled using `disabled` prop.
+</Description>
+
+<Canvas>
+  <Story name="disabled">
+    <BlockList>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            checked={value}
+            disabled
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={true}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            checked={value}
+            disabled
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+## Size
+
+<Description>
+  `Switch` has two sizes, modifying slightly his design. Use the prop `size` with `small` or `medium`. You can also customize its on/off labels using the `onLabel`, `offLabel` props and the `width` prop to adjust it with the text.
+</Description>
+
+<Canvas>
+  <Story name="size">
+    <BlockList>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            size="small"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            size="small"
+            width={65}
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            size="medium"
+            width={120}
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            variant="primary"
+            size="medium"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+## Labeled
+
+<Canvas>
+  <Story name="labeled">
+    <BlockList>
+      <ControlValue value={false}>
+        {({ value, onChange }) => (
+          <Switch
+            labeled
+            variant="primary"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value={true}>
+        {({ value, onChange }) => (
+          <Switch
+            labeled
+            onLabel={'YES'}
+            offLabel={'NO'}
+            variant="primary"
+            checked={value}
+            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>

@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sphere renders correctly when halved 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-left: 16px solid #333;
+  border-top: 16px solid #333;
+  border-right: 16px solid #666;
+  border-bottom: 16px solid #666;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-0.emotion-0 {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+<div
+  className="sui-box emotion-0"
+/>
+`;
+
+exports[`Sphere renders correctly with default values 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-left: 16px solid #4f0599;
+  border-top: 16px solid #4f0599;
+  border-right: 16px solid #4f0599;
+  border-bottom: 16px solid #4f0599;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-0.emotion-0 {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+<div
+  className="sui-box emotion-0"
+/>
+`;
+
+exports[`Sphere renders correctly with one char and smaller 1`] = `
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-left: 10px solid #000;
+  border-top: 10px solid #000;
+  border-right: 10px solid #000;
+  border-bottom: 10px solid #000;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-1.emotion-1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.emotion-0 {
+  color: #fff;
+  font-size: 10px;
+}
+
+<div
+  className="sui-box emotion-1"
+>
+  <div
+    className="emotion-0"
+  >
+    ★
+  </div>
+</div>
+`;

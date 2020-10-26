@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks'
+import { Touchable } from '..'
+
+<Meta title="Components/Touchable" component={Touchable} />
+
+# Touchable
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Touchable>Basic touchable</Touchable>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Description>
+  Disable using `disabled` prop.
+</Description>
+
+<Canvas>
+  <Story name="disabled">
+    <Touchable disabled>Touchable</Touchable>
+  </Story>
+</Canvas>

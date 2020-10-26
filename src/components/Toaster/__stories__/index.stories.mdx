@@ -1,0 +1,33 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+} from '@storybook/addon-docs/blocks'
+import { toast, ToastContainer } from '..'
+import { Boxer, Button } from 'components'
+
+<Meta title="Components/Toaster" />
+
+# Toaster
+
+## Basic
+
+<Canvas>
+  <Story name="default">
+    <ToastContainer />
+    <Boxer>
+      <Button mb={1} onClick={() => toast.success('This is success')}>
+        Success
+      </Button>
+      <Button mb={1} onClick={() => toast.info('This is info')}>
+        Info
+      </Button>
+      <Button mb={1} onClick={() => toast.warn('This is warn')}>
+        Warn
+      </Button>
+      <Button mb={1} onClick={() => toast.error('This is error')}>
+        Error
+      </Button>
+    </Boxer>
+  </Story>
+</Canvas>
