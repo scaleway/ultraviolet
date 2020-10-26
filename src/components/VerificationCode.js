@@ -54,10 +54,7 @@ export const VerificationCode = ({
   const [values, setValues] = useState(valuesArray)
   const [handleKeys, setHandleKeys] = useState({})
 
-  const inputRefs = []
-  for (let i = 0; i < fields; i += 1) {
-    inputRefs.push(React.createRef())
-  }
+  const inputRefs = Array.from(Array(3), React.createRef) 
 
   const triggerChange = inputValues => {
     const stringValue = inputValues.join('')
