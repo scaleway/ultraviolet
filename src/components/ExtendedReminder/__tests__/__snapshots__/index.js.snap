@@ -1,0 +1,493 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExtendedReminder renders correctly with default values 1`] = `
+.emotion-9 {
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: #e4edff;
+}
+
+.emotion-2 {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #3f6ed8;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+}
+
+.emotion-0 {
+  fill: #fff;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-0.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #3f6ed8;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.emotion-4.emotion-4 {
+  margin-bottom: 24px;
+}
+
+.emotion-8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #fff;
+  color: #3f6ed8;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: #3f6ed8;
+  background-color: transparent;
+  padding: 0;
+  width: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  color: #1e4293;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6 {
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+.emotion-6.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  fill: currentColor;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="sui-box emotion-9"
+>
+  <div
+    className="sui-box emotion-2"
+  >
+    <span
+      className="sui-box emotion-1"
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+       
+      10 days remaining
+    </span>
+  </div>
+  <p
+    className="sui-box emotion-3"
+  >
+    Verify your credit card
+  </p>
+  <p
+    className="sui-box emotion-4"
+  >
+    Enter the code we send to your bank account to validate your payment method.
+  </p>
+  <a
+    className="sui-box sui-box emotion-8"
+    disabled={false}
+    href="/"
+    to="/"
+    type={null}
+  >
+    <div
+      className="sui-box emotion-6"
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-5"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content emotion-7"
+    >
+      Verify my credit card
+    </div>
+  </a>
+</div>
+`;
+
+exports[`ExtendedReminder renders correctly with variant 1`] = `
+.emotion-2 {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.emotion-0 {
+  fill: #fff;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-0.emotion-0 {
+  margin-right: 4px;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.emotion-4.emotion-4 {
+  margin-bottom: 24px;
+}
+
+.emotion-8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #fff;
+  color: #3f6ed8;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: #3f6ed8;
+  background-color: transparent;
+  padding: 0;
+  width: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  color: #1e4293;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6 {
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+.emotion-6.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  fill: currentColor;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: #ffefe6;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ff8c69;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+}
+
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ff8c69;
+}
+
+<div
+  className="sui-box emotion-9"
+>
+  <div
+    className="sui-box emotion-2"
+  >
+    <span
+      className="sui-box emotion-1"
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+       
+      10 days remaining
+    </span>
+  </div>
+  <p
+    className="sui-box emotion-3"
+  >
+    Verify your credit card
+  </p>
+  <p
+    className="sui-box emotion-4"
+  >
+    Enter the code we send to your bank account to validate your payment method.
+  </p>
+  <a
+    className="sui-box sui-box emotion-8"
+    disabled={false}
+    href="/"
+    to="/"
+    type={null}
+  >
+    <div
+      className="sui-box emotion-6"
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-5"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+    </div>
+    <div
+      className="content emotion-7"
+    >
+      Verify my credit card
+    </div>
+  </a>
+</div>
+`;
