@@ -9,9 +9,11 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   margin-bottom: 24px;
 }
 
-.emotion-5.emotion-5 {
-  margin-left: 4px;
-  margin-right: 8px;
+.emotion-6.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -91,13 +93,40 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     Enter the code we send to your bank account to validate your payment method.
   </p>
   <a
-    className="sui-box sui-box emotion-6"
+    className="sui-box sui-box emotion-7"
     css={[Function]}
     disabled={false}
     href="/"
     to="/"
     type={null}
   >
+    <div
+      className="sui-box emotion-6"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1d0pebr",
+          "next": undefined,
+          "styles": "
+    
+          margin-right: 8px;
+        ;
+    pointer-events: none;
+  ",
+          "toString": [Function],
+        }
+      }
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-1"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+    </div>
     <div
       className="content"
       css={
@@ -114,15 +143,6 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
         }
       }
     >
-      <svg
-        className="sui-box sc-ui-icon emotion-5"
-        css={[Function]}
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-        />
-      </svg>
       Verify my credit card
     </div>
   </a>
@@ -138,9 +158,11 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   margin-bottom: 24px;
 }
 
-.emotion-5.emotion-5 {
-  margin-left: 4px;
-  margin-right: 8px;
+.emotion-6.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -220,13 +242,40 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
     Enter the code we send to your bank account to validate your payment method.
   </p>
   <a
-    className="sui-box sui-box emotion-6"
+    className="sui-box sui-box emotion-7"
     css={[Function]}
     disabled={false}
     href="/"
     to="/"
     type={null}
   >
+    <div
+      className="sui-box emotion-6"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1d0pebr",
+          "next": undefined,
+          "styles": "
+    
+          margin-right: 8px;
+        ;
+    pointer-events: none;
+  ",
+          "toString": [Function],
+        }
+      }
+    >
+      <svg
+        className="sui-box sc-ui-icon emotion-1"
+        css={[Function]}
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+        />
+      </svg>
+    </div>
     <div
       className="content"
       css={
@@ -243,15 +292,6 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
         }
       }
     >
-      <svg
-        className="sui-box sc-ui-icon emotion-5"
-        css={[Function]}
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-        />
-      </svg>
       Verify my credit card
     </div>
   </a>
