@@ -1,7 +1,6 @@
 import React from 'react'
+import { VerificationCode } from 'components'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-// eslint-disable-next-line import/no-useless-path-segments
-import { VerificationCode } from '../'
 
 test('VerificationCode renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(<VerificationCode />)

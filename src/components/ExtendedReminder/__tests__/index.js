@@ -1,7 +1,6 @@
 import React from 'react'
+import { ExtendedReminder } from 'components'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-// eslint-disable-next-line import/no-useless-path-segments
-import { ExtendedReminder } from '../'
 
 test('ExtendedReminder renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(

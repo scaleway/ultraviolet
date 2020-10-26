@@ -1,6 +1,6 @@
 import React from 'react'
+import { Sphere } from 'components'
 import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
-import { Sphere } from '..'
 
 test('Sphere renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(<Sphere />)
