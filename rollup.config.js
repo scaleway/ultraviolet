@@ -44,7 +44,6 @@ export default async () => {
           'babel-plugin-emotion',
           'babel-plugin-annotate-pure-calls',
           ['@babel/plugin-proposal-class-properties', { loose: true }],
-          ['babel-plugin-module-resolver', { root: ['./src'] }],
           '@babel/plugin-transform-runtime',
         ],
       }),

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ExtendedReminder } from 'components'
-import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
+import { ExtendedReminder } from '..'
+import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 test('ExtendedReminder renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(

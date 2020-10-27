@@ -1,8 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from 'components/Box'
-import { Icon } from 'components/Icon'
 import {
   borderRadius,
   white,
@@ -16,8 +14,10 @@ import {
   foam,
   serenade,
   pippin,
-} from 'theming'
-import { cx } from 'utils'
+} from '../../theming'
+import { cx } from '../../utils'
+import { Box } from '../Box'
+import { Icon } from '../Icon'
 
 export const colors = {
   info: 'info',

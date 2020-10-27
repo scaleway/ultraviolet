@@ -1,10 +1,10 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ActivityIndicator } from 'components/ActivityIndicator'
-import { Box } from 'components/Box'
-import { gray50, gray350, gray550, gray700, primary } from 'theming'
-import { cx, sp } from 'utils'
+import { gray50, gray350, gray550, gray700, primary } from '../../theming'
+import { cx, sp } from '../../utils'
+import { ActivityIndicator } from '../ActivityIndicator'
+import { Box } from '../Box'
 
 const styles = {
   cell: p => css`

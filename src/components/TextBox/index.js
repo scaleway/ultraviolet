@@ -9,13 +9,6 @@ import React, {
   useImperativeHandle,
   useState,
 } from 'react'
-import { Box } from 'components/Box'
-import { Expandable } from 'components/Expandable'
-import { Icon } from 'components/Icon'
-import { Notice } from 'components/Notice'
-import { Separator } from 'components/Separator'
-import { Touchable } from 'components/Touchable'
-import { Typography } from 'components/Typography'
 import {
   borderRadius,
   white,
@@ -27,8 +20,15 @@ import {
   ngray300,
   primary,
   warning,
-} from 'theming'
-import { useUUID, randomName, cx } from 'utils'
+} from '../../theming'
+import { useUUID, randomName, cx } from '../../utils'
+import { Box } from '../Box'
+import { Expandable } from '../Expandable'
+import { Icon } from '../Icon'
+import { Notice } from '../Notice'
+import { Separator } from '../Separator'
+import { Touchable } from '../Touchable'
+import { Typography } from '../Typography'
 
 const inputSizes = {
   sm: {

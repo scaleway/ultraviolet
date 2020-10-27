@@ -1,6 +1,6 @@
 import React from 'react'
-import { Reminder } from 'components'
-import shouldMatchEmotionSnapshot from 'helpers/shouldMatchEmotionSnapshot'
+import { Reminder } from '..'
+import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 test('Reminder renders correctly with default values', () => {
   shouldMatchEmotionSnapshot(<Reminder text="This is a sample Test" />)

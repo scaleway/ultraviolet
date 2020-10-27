@@ -8,8 +8,8 @@ import {
   TooltipArrow,
   TooltipReference,
 } from 'reakit/Tooltip'
-import { Tag } from 'components/Tag'
-import { theme } from 'theme'
+import { theme } from '../../theme'
+import { Tag } from '../Tag'
 
 const textStyle = maxTagWidth => css`
   overflow: hidden;

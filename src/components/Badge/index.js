@@ -12,8 +12,8 @@ import {
   gray350,
   bigBorderRadius,
   borderRadius,
-} from 'theming'
-import { cx, sp } from 'utils'
+} from '../../theming'
+import { cx, sp } from '../../utils'
 import { Box } from '../Box'
 
 const variants = {
