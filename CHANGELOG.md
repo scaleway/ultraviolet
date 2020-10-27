@@ -1,72 +1,62 @@
 ## [0.18.0](https://github.com/chambo-e/scw-ui/compare/v0.17.0...v0.18.0) (2020-10-27)
 
-
 ### Features
 
-* refactor Reminder to add ability to act as a Button ([5567ced](https://github.com/chambo-e/scw-ui/commit/5567ced94efce893fc1a8f19f1d5627f737f6205))
+- refactor Reminder to add ability to act as a Button ([5567ced](https://github.com/chambo-e/scw-ui/commit/5567ced94efce893fc1a8f19f1d5627f737f6205))
 
 ## [0.17.0](https://github.com/chambo-e/scw-ui/compare/v0.16.0...v0.17.0) (2020-10-26)
 
-
 ### Features
 
-* **code:** code component CNS-3413 ([8be5b65](https://github.com/chambo-e/scw-ui/commit/8be5b6582dbda16561217f295fc14b956952ff68))
+- **code:** code component CNS-3413 ([8be5b65](https://github.com/chambo-e/scw-ui/commit/8be5b6582dbda16561217f295fc14b956952ff68))
 
 ## [0.16.0](https://github.com/chambo-e/scw-ui/compare/v0.15.3...v0.16.0) (2020-10-26)
 
-
 ### Features
 
-* **extendedreminder:** new component extended reminder ([39e71e1](https://github.com/chambo-e/scw-ui/commit/39e71e14d4e0ccf59ae76255421d72144556dc9f))
+- **extendedreminder:** new component extended reminder ([39e71e1](https://github.com/chambo-e/scw-ui/commit/39e71e14d4e0ccf59ae76255421d72144556dc9f))
 
 ### [0.15.3](https://github.com/chambo-e/scw-ui/compare/v0.15.2...v0.15.3) (2020-10-19)
 
-
 ### Bug Fixes
 
-* **config:** harmonise renovate config with shire one and enable renovate on docker too ([03f35d0](https://github.com/chambo-e/scw-ui/commit/03f35d0d69334cccd1be408e42628c3acacb9dbf))
+- **config:** harmonise renovate config with shire one and enable renovate on docker too ([03f35d0](https://github.com/chambo-e/scw-ui/commit/03f35d0d69334cccd1be408e42628c3acacb9dbf))
 
 ### [0.15.2](https://github.com/chambo-e/scw-ui/compare/v0.15.1...v0.15.2) (2020-10-16)
 
-
 ### Bug Fixes
 
-* **icon:** add key icon ([7d3e5cf](https://github.com/chambo-e/scw-ui/commit/7d3e5cf9114dd071310315498b7bc4e98ea82e98))
+- **icon:** add key icon ([7d3e5cf](https://github.com/chambo-e/scw-ui/commit/7d3e5cf9114dd071310315498b7bc4e98ea82e98))
 
 ### [0.15.1](https://github.com/chambo-e/scw-ui/compare/v0.15.0...v0.15.1) (2020-10-14)
 
-
 ### Bug Fixes
 
-* **badge:** width to fit-content ([4449128](https://github.com/chambo-e/scw-ui/commit/44491284dd7f41d29d50e704ce54ba6654cdb8a5))
+- **badge:** width to fit-content ([4449128](https://github.com/chambo-e/scw-ui/commit/44491284dd7f41d29d50e704ce54ba6654cdb8a5))
 
 ## [0.15.0](https://github.com/chambo-e/scw-ui/compare/v0.14.2...v0.15.0) (2020-10-13)
 
-
 ### Features
 
-* adds sphere component ([897b216](https://github.com/chambo-e/scw-ui/commit/897b2165909dc14f7f3f7b5f9055bc759b240702))
+- adds sphere component ([897b216](https://github.com/chambo-e/scw-ui/commit/897b2165909dc14f7f3f7b5f9055bc759b240702))
 
 ### [0.14.2](https://github.com/chambo-e/scw-ui/compare/v0.14.1...v0.14.2) (2020-10-13)
 
-
 ### Bug Fixes
 
-* **richselect:** adds forward ref ([2a3e7ab](https://github.com/chambo-e/scw-ui/commit/2a3e7ab6afbe79ba24d130bb5507b6aa514a9b20))
+- **richselect:** adds forward ref ([2a3e7ab](https://github.com/chambo-e/scw-ui/commit/2a3e7ab6afbe79ba24d130bb5507b6aa514a9b20))
 
 ### [0.14.1](https://github.com/chambo-e/scw-ui/compare/v0.14.0...v0.14.1) (2020-10-12)
 
-
 ### Bug Fixes
 
-* **ci:** correct deploy ([9b4b806](https://github.com/chambo-e/scw-ui/commit/9b4b806b5aead19f500acdec05a463442888198e))
+- **ci:** correct deploy ([9b4b806](https://github.com/chambo-e/scw-ui/commit/9b4b806b5aead19f500acdec05a463442888198e))
 
 ## [0.14.0](https://github.com/chambo-e/scw-ui/compare/v0.13.14...v0.14.0) (2020-10-12)
 
-
 ### Features
 
-* add Reminder component [CNS-3354] ([64e87e7](https://github.com/chambo-e/scw-ui/commit/64e87e7941aadee77694f5ba665511e44ae9cd7a))
+- add Reminder component [CNS-3354] ([64e87e7](https://github.com/chambo-e/scw-ui/commit/64e87e7941aadee77694f5ba665511e44ae9cd7a))
 
 # Changelog
 
@@ -76,204 +66,178 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.13.13](https://***REMOVED***///compare/v0.13.12...v0.13.13) (2020-09-30)
 
-
 ### Bug Fixes
 
-* **switch-button:** added new variant for SwitchButton ([59f7159](https://***REMOVED***///commit/59f71598850665f522ae32989b9d0e2d423bc9d7))
+- **switch-button:** added new variant for SwitchButton ([59f7159](https://***REMOVED***///commit/59f71598850665f522ae32989b9d0e2d423bc9d7))
 
 ### [0.13.12](https://***REMOVED***///compare/v0.13.11...v0.13.12) (2020-09-30)
 
 ### [0.13.11](https://***REMOVED***///compare/v0.13.10...v0.13.11) (2020-09-29)
 
-
 ### Bug Fixes
 
-* **tag:** correct onClick handler ([5973fca](https://***REMOVED***///commit/5973fcaecfe45a8119e2e65962bd758ecfa43712))
-* correct deploy docz domain ([b7db9b8](https://***REMOVED***///commit/b7db9b8dfdb11a8e0d4d404312cb6e18c5f5c92c))
+- **tag:** correct onClick handler ([5973fca](https://***REMOVED***///commit/5973fcaecfe45a8119e2e65962bd758ecfa43712))
+- correct deploy docz domain ([b7db9b8](https://***REMOVED***///commit/b7db9b8dfdb11a8e0d4d404312cb6e18c5f5c92c))
 
 ### [0.13.10](https://***REMOVED***///compare/v0.13.9...v0.13.10) (2020-09-29)
 
-
 ### Features
 
-* **switch:** added Switch and SwitchButton components ([26704ba](https://***REMOVED***///commit/26704baf84de5d6b8f47b12324897ab4d407b664))
+- **switch:** added Switch and SwitchButton components ([26704ba](https://***REMOVED***///commit/26704baf84de5d6b8f47b12324897ab4d407b664))
 
 ### [0.13.9](https://***REMOVED***///compare/v0.13.8...v0.13.9) (2020-09-29)
 
-
 ### Features
 
-* **rollup:** simpler rollup config ([b05fc4b](https://***REMOVED***///commit/b05fc4bf3fa07063119f52e537744a531e063bea))
-
+- **rollup:** simpler rollup config ([b05fc4b](https://***REMOVED***///commit/b05fc4bf3fa07063119f52e537744a531e063bea))
 
 ### Bug Fixes
 
-* **ci:** correctly remove pr-staging docker container ([d947273](https://***REMOVED***///commit/d947273ead505b26b78154e448a426b0c99a23d4))
-* correct Radio import in doc ([4638ac6](https://***REMOVED***///commit/4638ac6b7d86e4b01e1ec2cdeb39a7170da5477d))
+- **ci:** correctly remove pr-staging docker container ([d947273](https://***REMOVED***///commit/d947273ead505b26b78154e448a426b0c99a23d4))
+- correct Radio import in doc ([4638ac6](https://***REMOVED***///commit/4638ac6b7d86e4b01e1ec2cdeb39a7170da5477d))
 
 ### [0.13.8](https://***REMOVED***///compare/v0.13.7...v0.13.8) (2020-09-24)
 
-
 ### Bug Fixes
 
-* **rich-select:** fixed riche select input position ([bab2f4a](https://***REMOVED***///commit/bab2f4a9684c3757f280c042aa7088e3631060ee))
+- **rich-select:** fixed riche select input position ([bab2f4a](https://***REMOVED***///commit/bab2f4a9684c3757f280c042aa7088e3631060ee))
 
 ### [0.13.7](https://***REMOVED***///compare/v0.13.6...v0.13.7) (2020-09-16)
 
-
 ### Bug Fixes
 
-* **Tooltip:** conserve children reference before cloning ([c08b271](https://***REMOVED***///commit/c08b2717c1f08c0cffddeb491db5b54c5d7c2184))
+- **Tooltip:** conserve children reference before cloning ([c08b271](https://***REMOVED***///commit/c08b2717c1f08c0cffddeb491db5b54c5d7c2184))
 
 ### [0.13.6](https://***REMOVED***///compare/v0.13.5...v0.13.6) (2020-09-15)
 
-
 ### Features
 
-* **gitlab:** deploy multi-pr ([9e311dd](https://***REMOVED***///commit/9e311dd613f6da7dd5f0d57937e0cd0b5626f166))
-* **rich-select:** add multi props ([39d127f](https://***REMOVED***///commit/39d127f4055fb33f4fd12e6d73fb5c33a8315ed7))
+- **gitlab:** deploy multi-pr ([9e311dd](https://***REMOVED***///commit/9e311dd613f6da7dd5f0d57937e0cd0b5626f166))
+- **rich-select:** add multi props ([39d127f](https://***REMOVED***///commit/39d127f4055fb33f4fd12e6d73fb5c33a8315ed7))
 
 ### [0.13.5](https://***REMOVED***///compare/v0.13.4...v0.13.5) (2020-08-27)
 
-
 ### Bug Fixes
 
-* **rich select:** useless console log ([cf42086](https://***REMOVED***///commit/cf42086d8d0a5369fc4c87053013ad2a4ad84c96))
-* **ui:** updated TextBoxField ([f1658b1](https://***REMOVED***///commit/f1658b1eb3950c9b66995ed15fbb5041ce299f7a))
+- **rich select:** useless console log ([cf42086](https://***REMOVED***///commit/cf42086d8d0a5369fc4c87053013ad2a4ad84c96))
+- **ui:** updated TextBoxField ([f1658b1](https://***REMOVED***///commit/f1658b1eb3950c9b66995ed15fbb5041ce299f7a))
 
 ### [0.13.4](https://***REMOVED***///compare/v0.13.3...v0.13.4) (2020-08-19)
 
-
 ### Bug Fixes
 
-* **snapshots:** updated RichSelect data-testid value  ([23c39f9](https://***REMOVED***///commit/23c39f9aa48ab37a143c73e2482b0bae12e01e2f))
+- **snapshots:** updated RichSelect data-testid value ([23c39f9](https://***REMOVED***///commit/23c39f9aa48ab37a143c73e2482b0bae12e01e2f))
 
 ### [0.13.3](https://***REMOVED***///compare/v0.13.2...v0.13.3) (2020-08-19)
 
-
 ### Bug Fixes
 
-* **test:** updated RichSelect data-testid ([a000ef3](https://***REMOVED***///commit/a000ef3f30c4dea164339567966f19298e59df6b))
+- **test:** updated RichSelect data-testid ([a000ef3](https://***REMOVED***///commit/a000ef3f30c4dea164339567966f19298e59df6b))
 
 ### [0.13.2](https://***REMOVED***///compare/v0.13.1...v0.13.2) (2020-08-05)
 
-
 ### Features
 
-* **button:** add blue button ([4708259](https://***REMOVED***///commit/470825944ec844a7845b29f00eee4f71e4af6a1a))
-
+- **button:** add blue button ([4708259](https://***REMOVED***///commit/470825944ec844a7845b29f00eee4f71e4af6a1a))
 
 ### Bug Fixes
 
-* dot steps last dot margin right ([4c94519](https://***REMOVED***///commit/4c9451994d63ee9d1d69601021a5fde843647cfc))
-* fixed soft bordered warning button ([ca526ec](https://***REMOVED***///commit/ca526ec4d6515c80038ff0b69113cc0e49a3437a))
+- dot steps last dot margin right ([4c94519](https://***REMOVED***///commit/4c9451994d63ee9d1d69601021a5fde843647cfc))
+- fixed soft bordered warning button ([ca526ec](https://***REMOVED***///commit/ca526ec4d6515c80038ff0b69113cc0e49a3437a))
 
 ### [0.13.1](https://***REMOVED***///compare/v0.13.0...v0.13.1) (2020-07-07)
 
-
 ### Bug Fixes
 
-* tooltip portal zindex ([b643592](https://***REMOVED***///commit/b643592ffb80e060dd0791f60771f9261e651ad4))
+- tooltip portal zindex ([b643592](https://***REMOVED***///commit/b643592ffb80e060dd0791f60771f9261e651ad4))
 
 ## [0.13.0](https://***REMOVED***///compare/v0.12.5...v0.13.0) (2020-07-01)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **richselect:** it should break tests based on data-test
+- **richselect:** it should break tests based on data-test
 
 ### Bug Fixes
 
-* **button:** disabled ([0ee6783](https://***REMOVED***///commit/0ee678310a248b223e2fb055f8e93e423ca78b9f))
-* **richselect:** change data-test to data-testid ([3c651f6](https://***REMOVED***///commit/3c651f6dfb41ff05a9c3fdd1876d277696071261))
-* **tooltip:** do not push volontary errors in console ([a00a1d5](https://***REMOVED***///commit/a00a1d569171fcf73c10655269d34d6afe9d37a4))
+- **button:** disabled ([0ee6783](https://***REMOVED***///commit/0ee678310a248b223e2fb055f8e93e423ca78b9f))
+- **richselect:** change data-test to data-testid ([3c651f6](https://***REMOVED***///commit/3c651f6dfb41ff05a9c3fdd1876d277696071261))
+- **tooltip:** do not push volontary errors in console ([a00a1d5](https://***REMOVED***///commit/a00a1d569171fcf73c10655269d34d6afe9d37a4))
 
 ### [0.12.5](https://***REMOVED***///compare/v0.12.4...v0.12.5) (2020-06-10)
 
-
 ### Bug Fixes
 
-* add ref forwarding on icon ([cb8c5f8](https://***REMOVED***///commit/cb8c5f8ff6be6a391077b2792ea57011b1146993))
+- add ref forwarding on icon ([cb8c5f8](https://***REMOVED***///commit/cb8c5f8ff6be6a391077b2792ea57011b1146993))
 
 ### [0.12.4](https://***REMOVED***///compare/v0.12.3...v0.12.4) (2020-06-09)
 
-
 ### Bug Fixes
 
-* button|tooltip - rework ([fe64d43](https://***REMOVED***///commit/fe64d4359fb14c1ff937d654967b13cd1da8bca1))
+- button|tooltip - rework ([fe64d43](https://***REMOVED***///commit/fe64d4359fb14c1ff937d654967b13cd1da8bca1))
 
 ### [0.12.3](https://***REMOVED***///compare/v0.12.2...v0.12.3) (2020-05-18)
 
-
 ### Bug Fixes
 
-* **tooltipicon:** update props name and width CNS-2931 ([7e43581](https://***REMOVED***///commit/7e43581aabb3c06312ad874f54795197080661a0))
+- **tooltipicon:** update props name and width CNS-2931 ([7e43581](https://***REMOVED***///commit/7e43581aabb3c06312ad874f54795197080661a0))
 
 ### [0.12.2](https://***REMOVED***///compare/v0.10.21...v0.12.2) (2020-05-14)
 
-
 ### Features
 
-* reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
-* **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
-* new tooltip icon component CNS-2117 ([31407f9](https://***REMOVED***///commit/31407f924f8193797f27714715d4c93d713d6f84))
-* **countup:** add counter component CNS-2809 ([f75581d](https://***REMOVED***///commit/f75581d8031da5ced10690729134a93102a14103))
-
+- reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
+- **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
+- new tooltip icon component CNS-2117 ([31407f9](https://***REMOVED***///commit/31407f924f8193797f27714715d4c93d713d6f84))
+- **countup:** add counter component CNS-2809 ([f75581d](https://***REMOVED***///commit/f75581d8031da5ced10690729134a93102a14103))
 
 ### Bug Fixes
 
-* add menu key to custom style richselect ([f330b65](https://***REMOVED***///commit/f330b6546fed6bb43688c756f8933bda57e669d1))
-* update dependency polished to ^3.5.2 ([c3dfafe](https://***REMOVED***///commit/c3dfafef8c5849274a906fbace0ded888f34311d))
-* **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
-* **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
-* **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
-* array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
-* button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
-* import in richselect component ([5bba5bb](https://***REMOVED***///commit/5bba5bbaebce7377f77fb047c8dfc4a4c1149d54))
-* update dependency framer-motion to ^1.10.3 ([acb9d61](https://***REMOVED***///commit/acb9d610436b189b55d445450671e77a3858a1e6))
-* update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
+- add menu key to custom style richselect ([f330b65](https://***REMOVED***///commit/f330b6546fed6bb43688c756f8933bda57e669d1))
+- update dependency polished to ^3.5.2 ([c3dfafe](https://***REMOVED***///commit/c3dfafef8c5849274a906fbace0ded888f34311d))
+- **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
+- **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
+- **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
+- array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
+- button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
+- import in richselect component ([5bba5bb](https://***REMOVED***///commit/5bba5bbaebce7377f77fb047c8dfc4a4c1149d54))
+- update dependency framer-motion to ^1.10.3 ([acb9d61](https://***REMOVED***///commit/acb9d610436b189b55d445450671e77a3858a1e6))
+- update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
 
 ### [0.12.1](https://***REMOVED***///compare/v0.12.0...v0.12.1) (2020-04-21)
 
-
 ### Bug Fixes
 
-* **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
-* **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
+- **tooltip:** check tooltip exists before rendering its wrapper ([46d7414](https://***REMOVED***///commit/46d74148d1caa13e1c8571923e2eebe4388bb177))
+- **tooltip:** remove tooltip width ([07bd8ea](https://***REMOVED***///commit/07bd8ea89b9f68f9f07bd840a1bfa3e5d6205a0b))
 
 ## [0.12.0](https://***REMOVED***///compare/v0.11.1...v0.12.0) (2020-04-17)
 
-
 ### Bug Fixes
 
-* **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
+- **button:** update size names for consistency CNS-2860 BREAKING CHANGE ([1438e92](https://***REMOVED***///commit/1438e92253b43529e60a41ea6bc5eb9f8efd2d36))
 
 ### [0.11.1](https://***REMOVED***///compare/v0.10.25...v0.11.1) (2020-04-15)
 
-
 ### Features
 
-* reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
+- reakit for tooltip BREAKING CHANGES ([ff3938f](https://***REMOVED***///commit/ff3938f4cd344ec46ef4d24dae7c0eba17750c0b))
 
 ### [0.10.25](https://***REMOVED***///compare/v0.10.24...v0.10.25) (2020-04-09)
 
-
 ### Bug Fixes
 
-* array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
-* update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
+- array in one of props type ([3d7682b](https://***REMOVED***///commit/3d7682bc7d5f14116d984fd071fe2c37d74549a3))
+- update dependency react-tooltip to ^4.1.5 ([9a3c1ed](https://***REMOVED***///commit/9a3c1ed1b2819497c3c86af43a9377c1dcab254b))
 
 ### [0.10.24](https://***REMOVED***///compare/v0.10.23...v0.10.24) (2020-04-03)
 
-
 ### Features
 
-* **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
-
+- **rich-select:** add possibility tu use with integration test ([c3cc5ae](https://***REMOVED***///commit/c3cc5aea6ba7c29c37aff75cadbb5e5793c1586b))
 
 ### Bug Fixes
 
-* button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
+- button height style CNS-2836 ([0e87a39](https://***REMOVED***///commit/0e87a39c1216e5c25d34cad4a51f7ac7b7bdb6a6))
 
 ### [0.10.23](https://***REMOVED***///compare/v0.10.22...v0.10.23) (2020-04-02)
 

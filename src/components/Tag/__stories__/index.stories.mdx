@@ -1,10 +1,7 @@
 import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Tag } from '..'
 
-<Meta
-  title="Components/Tag"
-  component={Tag}
-/>
+<Meta title="Components/Tag" component={Tag} />
 
 # Tag
 
@@ -36,7 +33,9 @@ import { Tag } from '..'
 
 <Canvas>
   <Story name="on-close-is-loading">
-    <Tag onClose={() => alert('closed')} isLoading={true}>You can't close me</Tag>
+    <Tag onClose={() => alert('closed')} isLoading={true}>
+      You can't close me
+    </Tag>
   </Story>
 </Canvas>
 

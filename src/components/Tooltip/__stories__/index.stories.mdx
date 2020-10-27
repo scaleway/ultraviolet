@@ -3,16 +3,11 @@ import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Tooltip } from '..'
 import { Box, Button, Typography } from '../../'
 
-<Meta
-  title="Components/Tooltip"
-  component={Tooltip}
-/>
+<Meta title="Components/Tooltip" component={Tooltip} />
 
 # Tooltip
 
-<Description>
-  Displays a tooltip on mouse over.
-</Description>
+<Description>Displays a tooltip on mouse over.</Description>
 
 ## Basic
 
@@ -24,12 +19,7 @@ import { Box, Button, Typography } from '../../'
   </Story>
   <Story name="wrap">
     <Tooltip text="tooltip">
-      <Box
-        borderRadius={20}
-        border="2px solid #333"
-        p={4}
-        width="max-content"
-      >
+      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
         Tooltip around the box
       </Box>
     </Tooltip>
@@ -86,7 +76,10 @@ import { Box, Button, Typography } from '../../'
   </Story>
   <Story name="long">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip width={150} text="I have a very very very very very very very very very very very very very very long text">
+      <Tooltip
+        width={150}
+        text="I have a very very very very very very very very very very very very very very long text"
+      >
         <Box>I'm a long tooltip</Box>
       </Tooltip>
     </Box>
@@ -104,7 +97,10 @@ import { Box, Button, Typography } from '../../'
         <>
           <Box>I'm the first children</Box>
           <Box>I'm the second children</Box>
-          <Box>Tooltip can only have one children, not an array of children. Do not forget to wrap it with fragment</Box>
+          <Box>
+            Tooltip can only have one children, not an array of children. Do not
+            forget to wrap it with fragment
+          </Box>
         </>
       </Tooltip>
     </Box>
@@ -113,9 +109,7 @@ import { Box, Button, Typography } from '../../'
 
 ## Reakit tooltip Placement
 
-<Description>
-  Set placement using `placement` prop.
-</Description>
+<Description>Set placement using `placement` prop.</Description>
 
 <Canvas>
   <Story name="placement">

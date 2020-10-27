@@ -1,10 +1,7 @@
 import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Tags } from '..'
 
-<Meta
-  title="Components/Tags"
-  component={Tags}
-/>
+<Meta title="Components/Tags" component={Tags} />
 
 # Tags
 
@@ -20,7 +17,11 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="bordered">
-    <Tags variant="bordered" onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+    <Tags
+      variant="bordered"
+      onChange={tags => alert(tags)}
+      tags={['Smooth', 'code']}
+    />
   </Story>
 </Canvas>
 
@@ -36,7 +37,15 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="error-handler">
-    <Tags onChangeError={(error) => { alert(error) }} onChange={tags => { throw new Error("") }} tags={['Smooth', 'code']} />
+    <Tags
+      onChangeError={error => {
+        alert(error)
+      }}
+      onChange={tags => {
+        throw new Error('')
+      }}
+      tags={['Smooth', 'code']}
+    />
   </Story>
 </Canvas>
 
