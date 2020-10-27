@@ -2,8 +2,8 @@ import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ProgressBar } from 'components/ProgressBar'
-import { Typography } from 'components/Typography'
+import { ProgressBar } from '../ProgressBar'
+import { Typography } from '../Typography'
 
 const line = css`
   flex: 1;

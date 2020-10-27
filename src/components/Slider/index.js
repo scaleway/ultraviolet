@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import React, { useEffect, useRef, useState } from 'react'
-import { Box } from 'components/Box'
-import { white, primary, gray200, gray350 } from 'theming'
+import { white, primary, gray200, gray350 } from '../../theming'
+import { Box } from '../Box'
 
 const blankImg = new Image()
 blankImg.src =

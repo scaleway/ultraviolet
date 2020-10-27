@@ -1,8 +1,8 @@
 import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Icon } from 'components/Icon'
-import { Typography } from 'components/Typography'
+import { Icon } from '../Icon'
+import { Typography } from '../Typography'
 
 export function IconMessage({
   variant = 'warning',

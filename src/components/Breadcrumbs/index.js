@@ -3,10 +3,10 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { cloneElement } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { Box } from 'components/Box'
-import { Link } from 'components/Link'
-import { primary, white, gray350, gray550, success } from 'theming'
-import { cx, sp } from 'utils'
+import { primary, white, gray350, gray550, success } from '../../theming'
+import { cx, sp } from '../../utils'
+import { Box } from '../Box'
+import { Link } from '../Link'
 
 const styles = {
   ol: css`

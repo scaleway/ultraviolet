@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
 import React, { useEffect, useRef, useState } from 'react'
-import { Box } from 'components/Box'
-import { Tag } from 'components/Tag'
-import { theme } from 'theme'
+import { theme } from '../../theme'
+import { Box } from '../Box'
+import { Tag } from '../Tag'
 
 const container = {
   base: status => css`

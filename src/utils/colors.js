@@ -1,4 +1,4 @@
-import { colors } from 'theming'
+import { colors } from '../theming'
 
 export function thColor(value) {
   return p => {
