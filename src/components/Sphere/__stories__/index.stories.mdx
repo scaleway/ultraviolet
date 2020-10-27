@@ -1,9 +1,4 @@
-import {
-  Meta,
-  Story,
-  Canvas,
-  Description,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Sphere } from '..'
 
 <Meta title="Components/Sphere" component={Sphere} />
@@ -22,7 +17,7 @@ import { Sphere } from '..'
 
 <Canvas>
   <Story name="halved">
-    <Sphere bgColors={["#333", "#666"]} />
+    <Sphere bgColors={['#333', '#666']} />
   </Story>
 </Canvas>
 
@@ -30,6 +25,12 @@ import { Sphere } from '..'
 
 <Canvas>
   <Story name="with-char">
-    <Sphere text="★" bgColors={["#000"]} textColor="#fff" size={20} textSize={10} />
+    <Sphere
+      text="★"
+      bgColors={['#000']}
+      textColor="#fff"
+      size={20}
+      textSize={10}
+    />
   </Story>
 </Canvas>

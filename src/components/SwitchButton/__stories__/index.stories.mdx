@@ -4,17 +4,15 @@ import { SwitchButton } from '..'
 import ControlValue from '__stories__/components/ControlValue'
 import { Grid, Row, Col, BorderedBox } from 'components'
 
-<Meta
-  title="Components/SwitchButton"
-  component={SwitchButton}
-/>
+<Meta title="Components/SwitchButton" component={SwitchButton} />
 
 # SwitchButton
 
 ## Basic
 
 <Description>
-  `SwitchButton` uses a `input` of type "radio" and they can only be used as controlled input.
+  `SwitchButton` uses a `input` of type "radio" and they can only be used as
+  controlled input.
 </Description>
 
 <Canvas>
@@ -107,7 +105,7 @@ import { Grid, Row, Col, BorderedBox } from 'components'
                       width={1}
                       name="switch"
                       value="a"
-                      variant='segment'
+                      variant="segment"
                       checked={value === 'a'}
                       onChange={e => onChange(e.currentTarget.value)}
                     >
@@ -119,7 +117,7 @@ import { Grid, Row, Col, BorderedBox } from 'components'
                       width={1}
                       name="switch"
                       value="b"
-                      variant='segment'
+                      variant="segment"
                       checked={value === 'b'}
                       onChange={e => onChange(e.currentTarget.value)}
                     >

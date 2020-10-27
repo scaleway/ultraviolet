@@ -5,16 +5,11 @@ import { Boxer } from 'components'
 import ErrorTransition from '__stories__/components/ErrorTransition'
 import UncontrolledTextBox from './UncontrolledTextBox'
 
-<Meta
-  title="Components/TextBox"
-  component={TextBox}
-/>
+<Meta title="Components/TextBox" component={TextBox} />
 
 # TextBox
 
-<Description>
-  An enhanced text box.
-</Description>
+<Description>An enhanced text box.</Description>
 
 ## Basic
 
@@ -30,7 +25,9 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 ## Placeholder
 
 <Description>
-  Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).
+  Set a placeholder using `placeholder` property. It is only visibled if the
+  `TextBox` has been visited (an input is considered as visited after the first
+  focus).
 </Description>
 
 <Canvas>
@@ -41,9 +38,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Size
 
-<Description>
-  Set size using `size` property.
-</Description>
+<Description>Set size using `size` property.</Description>
 
 <Canvas>
   <Story name="size">
@@ -77,40 +72,38 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Disabled
 
-<Description>
-  Mark `TextBox` as disabled using `disabled` property.
-</Description>
+<Description>Mark `TextBox` as disabled using `disabled` property.</Description>
 
 <Canvas>
   <Story name="disabled">
-  <Boxer my={1}>
-    {textBoxSizes.map(size => (
-      <UncontrolledTextBox
-        key={size}
-        size={size}
-        disabled
-        placeholder="Placeholder"
-      />
-    ))}
-    {textBoxSizes.map(size => (
-      <UncontrolledTextBox
-        key={size}
-        size={size}
-        disabled
-        placeholder="Placeholder"
-        label="Label"
-      />
-    ))}
-    {textBoxSizes.map(size => (
-      <UncontrolledTextBox
-        key={size}
-        size={size}
-        disabled
-        defaultValue="Default value"
-        label="Label"
-      />
-    ))}
-  </Boxer>
+    <Boxer my={1}>
+      {textBoxSizes.map(size => (
+        <UncontrolledTextBox
+          key={size}
+          size={size}
+          disabled
+          placeholder="Placeholder"
+        />
+      ))}
+      {textBoxSizes.map(size => (
+        <UncontrolledTextBox
+          key={size}
+          size={size}
+          disabled
+          placeholder="Placeholder"
+          label="Label"
+        />
+      ))}
+      {textBoxSizes.map(size => (
+        <UncontrolledTextBox
+          key={size}
+          size={size}
+          disabled
+          defaultValue="Default value"
+          label="Label"
+        />
+      ))}
+    </Boxer>
   </Story>
 </Canvas>
 
@@ -155,9 +148,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Required
 
-<Description>
-  Add a required mark using `required` property.
-</Description>
+<Description>Add a required mark using `required` property.</Description>
 
 <Canvas>
   <Story name="required">
@@ -194,9 +185,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Valid
 
-<Description>
-  Add a check mark using `valid` property.
-</Description>
+<Description>Add a check mark using `valid` property.</Description>
 
 <Canvas>
   <Story name="valid">
@@ -233,9 +222,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Error
 
-<Description>
-  Fill `TextBox` error using `error` property.
-</Description>
+<Description>Fill `TextBox` error using `error` property.</Description>
 
 <Canvas>
   <Story name="error">
@@ -315,7 +302,9 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 ## Toggleable password
 
 <Description>
-  Set type to `toggleable-password` adds a eye toggle to display typed password. **This behaviour is dangerous, use it only when the user fills a new password.**
+  Set type to `toggleable-password` adds a eye toggle to display typed password.
+  **This behaviour is dangerous, use it only when the user fills a new
+  password.**
 </Description>
 
 <Canvas>
@@ -353,9 +342,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Unit
 
-<Description>
-  Specify a unit using `unit` prop.
-</Description>
+<Description>Specify a unit using `unit` prop.</Description>
 
 <Canvas>
   <Story name="unit">
@@ -392,9 +379,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Randomize
 
-<Description>
-  Set `random` prop adds a randomize button.
-</Description>
+<Description>Set `random` prop adds a randomize button.</Description>
 
 <Canvas>
   <Story name="randomize">
@@ -432,7 +417,8 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 ## Force edit mode
 
 <Description>
-  It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.
+  It is possible to force edit mode (label at the top) using `edit` property.
+  The principal use-case is to be compatible with browser autocomplete.
 </Description>
 
 <Canvas>
@@ -470,9 +456,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Multiline
 
-<Description>
-  Enable multiline mode using `multiline` property.
-</Description>
+<Description>Enable multiline mode using `multiline` property.</Description>
 
 <Canvas>
   <Story name="multiline">
@@ -551,9 +535,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 
 ## Tabindex
 
-<Description>
-  Can disable tabulation on field with `tabIndex="-1"`
-</Description>
+<Description>Can disable tabulation on field with `tabIndex="-1"`</Description>
 
 <Canvas>
   <Story name="tabindex">

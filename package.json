@@ -19,6 +19,7 @@
     "build:profile": "cross-env PROFILE=true yarn run build",
     "build:storybook": "build-storybook --docs",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
+    "commit": "npx git-cz -a",
     "dev": "yarn run start:storybook",
     "start:storybook": "start-storybook -p 6006 --docs",
     "format": "prettier --write '**/*.{js,json,md,mdx}'",

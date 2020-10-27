@@ -1,8 +1,4 @@
-import {
-  Meta,
-  Story,
-  Canvas,
-} from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { Reminder } from '..'
 
 <Meta title="Components/Reminder" component={Reminder} />
@@ -13,16 +9,26 @@ import { Reminder } from '..'
 
 <Canvas>
   <Story name="error">
-    <Reminder to="/" mb={1} variant="error" text="Your credit card [has expired]"/>
+    <Reminder
+      to="/"
+      mb={1}
+      variant="error"
+      text="Your credit card [has expired]"
+    />
   </Story>
   <Story name="warning">
-    <Reminder to="/" mb={1} variant="warning" text="You have [1 locked instance]"/>
+    <Reminder
+      to="/"
+      mb={1}
+      variant="warning"
+      text="You have [1 locked instance]"
+    />
   </Story>
   <Story name="info">
-    <Reminder to="/" mb={1} variant="info" text="[2FA] is deactivated"/>
+    <Reminder to="/" mb={1} variant="info" text="[2FA] is deactivated" />
   </Story>
   <Story name="default">
-    <Reminder to="/" mb={1} text="No [phone number] registered"/>
+    <Reminder to="/" mb={1} text="No [phone number] registered" />
   </Story>
 </Canvas>
 
@@ -30,15 +36,33 @@ import { Reminder } from '..'
 
 <Canvas>
   <Story name="bordered-error">
-    <Reminder to="/" mb={1} bordered variant="error" text="Your credit card [has expired]"/>
+    <Reminder
+      to="/"
+      mb={1}
+      bordered
+      variant="error"
+      text="Your credit card [has expired]"
+    />
   </Story>
   <Story name="bordered-warning">
-    <Reminder to="/" mb={1} bordered variant="warning" text="You have [1 locked instance]"/>
+    <Reminder
+      to="/"
+      mb={1}
+      bordered
+      variant="warning"
+      text="You have [1 locked instance]"
+    />
   </Story>
   <Story name="bordered-info">
-    <Reminder to="/" mb={1} bordered variant="info" text="[2FA] is deactivated"/>
+    <Reminder
+      to="/"
+      mb={1}
+      bordered
+      variant="info"
+      text="[2FA] is deactivated"
+    />
   </Story>
   <Story name="bordered-default">
-    <Reminder to="/" mb={1} bordered text="No [phone number] registered"/>
+    <Reminder to="/" mb={1} bordered text="No [phone number] registered" />
   </Story>
 </Canvas>
