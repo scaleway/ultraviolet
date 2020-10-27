@@ -1,10 +1,7 @@
 import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { TagsPoplist } from '..'
 
-<Meta
-  title="Components/TagsPoplist"
-  component={TagsPoplist}
-/>
+<Meta title="Components/TagsPoplist" component={TagsPoplist} />
 
 # TagsPoplist
 
@@ -21,7 +18,16 @@ import { TagsPoplist } from '..'
 <Canvas>
   <Story name="popped">
     <div style={{ width: 250 }}>
-      <TagsPoplist tags={['smooth', 'code', 'lamaison_paris', 'scaleway', 'paris', 'cloud']} />
+      <TagsPoplist
+        tags={[
+          'smooth',
+          'code',
+          'lamaison_paris',
+          'scaleway',
+          'paris',
+          'cloud',
+        ]}
+      />
     </div>
   </Story>
 </Canvas>

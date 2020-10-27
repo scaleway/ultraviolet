@@ -2,7 +2,7 @@
 
 Scaleway official UI library.
 
-----
+---
 
 ## Develop
 
@@ -31,9 +31,10 @@ $ yarn run build
 $ yarn run build:profile
 ```
 
-----
+---
 
 ## Use local changes on shire
+
 ### NPM link
 
 ```sh
@@ -52,7 +53,8 @@ $ yarn unlink @scaleway/ui && yarn install --force
 ```sh
 $ yarn run transfer
 ```
-----
+
+---
 
 ## Versioning
 
