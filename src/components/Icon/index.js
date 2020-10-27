@@ -242,6 +242,9 @@ const ICONS = {
   bullhorn: () => (
     <path d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M15,15.6L13,14H4V10H13L15,8.4V15.6M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z" />
   ),
+  'shield-account': () => (
+    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4m0 4a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3m5.13 12A9.69 9.69 0 0112 20.92 9.69 9.69 0 016.87 17c-.34-.5-.63-1-.87-1.53 0-1.65 2.71-3 6-3s6 1.32 6 3c-.24.53-.53 1.03-.87 1.53z" />
+  ),
 }
 
 export const icons = Object.keys(ICONS)
@@ -258,16 +261,7 @@ const style = ({ verticalAlign, size, color }) => p => {
   `
 }
 
-function Icon(
-  {
-    name = 'circle',
-    color = 'currentColor',
-    size = '1em',
-    verticalAlign = 'middle',
-    ...props
-  },
-  ref,
-) {
+function Icon({ name, color, size, verticalAlign, ...props }, ref) {
   const render = ICONS[name] || ICONS.circle
 
   return (
@@ -289,9 +283,16 @@ Icon = React.forwardRef(Icon)
 
 Icon.propTypes = {
   color: PropTypes.string,
-  name: PropTypes.oneOf(icons).isRequired,
+  name: PropTypes.oneOf(icons),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.string,
+}
+
+Icon.defaultProps = {
+  name: 'circle',
+  color: 'currentColor',
+  size: '1em',
+  verticalAlign: 'middle',
 }
 
 export { Icon }
