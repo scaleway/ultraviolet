@@ -14,10 +14,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
   margin-left: 4px;
 }
 
-.emotion-2 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin: 0;
+.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,13 +26,17 @@ exports[`Reminder renders correctly when bordered 1`] = `
   align-items: center;
   cursor: pointer;
   border-radius: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #4a4f62;
+  font-weight: 400;
   background-color: transparent;
   border: 1px solid #dce1eb;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -43,44 +44,41 @@ exports[`Reminder renders correctly when bordered 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-2:hover {
-  box-shadow: 0px 3px 6px #e4edff;
+.emotion-1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:hover {
+  box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-2 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-3"
-  style={
-    Object {
-      "display": "flex",
-      "textDecoration": "none",
-    }
-  }
+  className="sui-box emotion-1 emotion-2"
+  icon="east"
+  style={Object {}}
+  type="button"
 >
-  <div
-    bordered={true}
-    className="sui-box emotion-1 emotion-2"
-  >
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "This is a sample Test",
-        }
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "This is a sample Test",
       }
+    }
+  />
+  <svg
+    className="sui-box sc-ui-icon emotion-0"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
     />
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-  </div>
+  </svg>
 </a>
 `;
 
@@ -98,10 +96,7 @@ exports[`Reminder renders correctly with bold 1`] = `
   margin-left: 4px;
 }
 
-.emotion-2 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin: 0;
+.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,13 +108,17 @@ exports[`Reminder renders correctly with bold 1`] = `
   align-items: center;
   cursor: pointer;
   border-radius: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #4a4f62;
+  font-weight: 400;
   background-color: transparent;
   border: 1px solid #dce1eb;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -127,52 +126,46 @@ exports[`Reminder renders correctly with bold 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-2:hover {
-  box-shadow: 0px 3px 6px #e4edff;
+.emotion-1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:hover {
+  box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-2 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-3"
-  style={
-    Object {
-      "display": "flex",
-      "textDecoration": "none",
-    }
-  }
+  className="sui-box emotion-1 emotion-2"
+  icon="east"
+  style={Object {}}
+  type="button"
 >
-  <div
-    bordered={true}
-    className="sui-box emotion-1 emotion-2"
-  >
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "This is a <b>bold</b> Test",
-        }
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "This is a <strong>bold</strong> Test",
       }
+    }
+  />
+  <svg
+    className="sui-box sc-ui-icon emotion-0"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
     />
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-  </div>
+  </svg>
 </a>
 `;
 
 exports[`Reminder renders correctly with default values 1`] = `
-.emotion-2 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin: 0;
+.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,13 +177,17 @@ exports[`Reminder renders correctly with default values 1`] = `
   align-items: center;
   cursor: pointer;
   border-radius: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #4a4f62;
+  font-weight: 400;
   background-color: #e4edff;
   border: 1px solid transparent;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -198,12 +195,17 @@ exports[`Reminder renders correctly with default values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-2:hover {
-  box-shadow: 0px 3px 6px #e4edff;
+.emotion-1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:hover {
+  box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-2 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
@@ -221,34 +223,26 @@ exports[`Reminder renders correctly with default values 1`] = `
 }
 
 <a
-  className="sui-box emotion-3"
-  style={
-    Object {
-      "display": "flex",
-      "textDecoration": "none",
-    }
-  }
+  className="sui-box emotion-1 emotion-2"
+  icon="east"
+  style={Object {}}
+  type="button"
 >
-  <div
-    bordered={false}
-    className="sui-box emotion-1 emotion-2"
-  >
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "This is a sample Test",
-        }
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "This is a sample Test",
       }
+    }
+  />
+  <svg
+    className="sui-box sc-ui-icon emotion-0"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
     />
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-  </div>
+  </svg>
 </a>
 `;
 
@@ -266,10 +260,7 @@ exports[`Reminder renders correctly with variant 1`] = `
   margin-left: 4px;
 }
 
-.emotion-2 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin: 0;
+.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -281,13 +272,17 @@ exports[`Reminder renders correctly with variant 1`] = `
   align-items: center;
   cursor: pointer;
   border-radius: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #4a4f62;
+  font-weight: 400;
   background-color: transparent;
   border: 1px solid #dce1eb;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -295,43 +290,40 @@ exports[`Reminder renders correctly with variant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-2:hover {
-  box-shadow: 0px 3px 6px #e4edff;
+.emotion-1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1:hover {
+  box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-2 b {
+.emotion-1 strong {
   color: #3f6ed8;
 }
 
 <a
-  className="sui-box emotion-3"
-  style={
-    Object {
-      "display": "flex",
-      "textDecoration": "none",
-    }
-  }
+  className="sui-box emotion-1 emotion-2"
+  icon="east"
+  style={Object {}}
+  type="button"
 >
-  <div
-    bordered={true}
-    className="sui-box emotion-1 emotion-2"
-  >
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "This is a sample Test",
-        }
+  <span
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "This is a sample Test",
       }
+    }
+  />
+  <svg
+    className="sui-box sc-ui-icon emotion-0"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
     />
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-      />
-    </svg>
-  </div>
+  </svg>
 </a>
 `;
