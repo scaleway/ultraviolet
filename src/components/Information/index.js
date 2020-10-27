@@ -2,9 +2,9 @@ import { css } from '@emotion/core'
 import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Icon } from 'components/Icon'
-import { Typography } from 'components/Typography'
-import { cx, thColor } from 'utils'
+import { cx, thColor } from '../../utils'
+import { Icon } from '../Icon'
+import { Typography } from '../Typography'
 
 const style = ({ backgroundColor }) => p => css`
   background-color: ${thColor(backgroundColor)(p) || backgroundColor};

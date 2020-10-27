@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { copy } from 'helpers/clipboard'
+import { copy } from '../../helpers/clipboard'
 
 export const useCopyToClipboard = (resetStateAfter = 5000) => {
   const [isCopied, setIsCopied] = useState(false)

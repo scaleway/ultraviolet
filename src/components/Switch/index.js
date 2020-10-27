@@ -2,9 +2,9 @@ import styled from '@emotion/styled'
 import { Switch as BaseSwitch } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from 'components/Box'
-import { Tooltip } from 'components/Tooltip'
-import { theme } from 'theme'
+import { theme } from '../../theme'
+import { Box } from '../Box'
+import { Tooltip } from '../Tooltip'
 
 const variants = {
   inactiveLabelColor: theme.gray700,

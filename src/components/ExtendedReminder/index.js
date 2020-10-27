@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from 'theme'
+import { theme } from '../../theme'
 import { Badge } from '../Badge'
 import { Box } from '../Box'
 import { Button } from '../Button'

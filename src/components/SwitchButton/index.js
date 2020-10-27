@@ -2,8 +2,8 @@ import { css } from '@emotion/core'
 import { SwitchState, Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Tooltip } from 'components/Tooltip'
-import { theme } from 'theme'
+import { theme } from '../../theme'
+import { Tooltip } from '../Tooltip'
 
 const styles = {
   container: ({ checked, disabled }) =>

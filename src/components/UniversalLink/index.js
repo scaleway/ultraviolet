@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box } from 'components/Box'
-import { useTheme } from 'utils'
+import { useTheme } from '../../utils'
+import { Box } from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
 function needNativeLink(url) {

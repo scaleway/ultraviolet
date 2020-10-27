@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, sp, thColor } from 'utils'
+import { cx, sp, thColor } from '../../utils'
 import { Icon, icons } from '../Icon'
 import { Typography } from '../Typography'
 
