@@ -1,3 +1,10 @@
+## [0.18.0](https://github.com/chambo-e/scw-ui/compare/v0.17.0...v0.18.0) (2020-10-27)
+
+
+### Features
+
+* refactor Reminder to add ability to act as a Button ([5567ced](https://github.com/chambo-e/scw-ui/commit/5567ced94efce893fc1a8f19f1d5627f737f6205))
+
 ## [0.17.0](https://github.com/chambo-e/scw-ui/compare/v0.16.0...v0.17.0) (2020-10-26)
 
 
