@@ -17,15 +17,7 @@ const action = rounded => css`
     : ''}
 `
 
-const Action = ({
-  key,
-  name,
-  size = 20,
-  children,
-  tooltip,
-  rounded,
-  ...props
-}) => {
+const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
   if (!name && !children) {
     throw new Error(
       'Action component need to have either children (as string) or a name prop',
@@ -44,16 +36,25 @@ const Action = ({
 
 Action.propTypes = {
   children: PropTypes.node,
+  size: (props, propName, componentName) => {
+    if (typeof props[propName] !== 'number' || props[propName] > 32) {
+      return new Error(
+        `Invalid prop ${propName} supplied to ${componentName}. Must be a "number" and inferior or equal to 32`,
+      )
+    }
+    return null
+  },
   key: PropTypes.string,
   name: PropTypes.string,
-  size: PropTypes.number,
+  rounded: PropTypes.bool,
   tooltip: PropTypes.string,
   variant: PropTypes.string,
-  rounded: PropTypes.bool,
 }
 
 Action.defaultProps = {
+  size: 16,
   rounded: false,
+  variant: 'primary',
 }
 
 export { Action }
