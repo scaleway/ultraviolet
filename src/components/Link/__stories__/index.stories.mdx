@@ -2,22 +2,15 @@ import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Link, linkVariants } from '..'
 import { Box, Boxer } from '../../'
 
-<Meta
-  title="Components/Link"
-  component={Link}
-/>
+<Meta title="Components/Link" component={Link} />
 
 # Link
 
-<Description>
-  Creates a styled link.
-</Description>
+<Description>Creates a styled link.</Description>
 
 # Variants
 
-<Description>
-  Set variant using `variant` property.
-</Description>
+<Description>Set variant using `variant` property.</Description>
 
 <Canvas>
   <Story name="basic">
@@ -36,13 +29,16 @@ import { Box, Boxer } from '../../'
 ## Link Component
 
 <Description>
-  By default link is a `a`. You can specify a custom component (like React Router Link) by changing the theme entry `linkComponent`.
+  By default link is a `a`. You can specify a custom component (like React
+  Router Link) by changing the theme entry `linkComponent`.
 </Description>
 
 ## Absolute URLs
 
 Absolute URLs (starting by `http` or `https`) are automatically detected in `to`. If detected, a
+
 ```jsx
 <a href="..." />
 ```
+
 is used instead of the default `linkComponent` specified in the theme.

@@ -15,13 +15,11 @@ import { Dot } from '..'
 
 # Dot
 
-<Description>
-  A simple dot.
-</Description>
+<Description>A simple dot.</Description>
 
 <Canvas>
   <Story name="default" args={{}}>
-    {args => <Dot {...args}/>}
+    {args => <Dot {...args} />}
   </Story>
 </Canvas>
 
@@ -34,7 +32,7 @@ import { Dot } from '..'
       color: 'primary',
     }}
   >
-    {(args) => <Dot {...args}/>}
+    {args => <Dot {...args} />}
   </Story>
   <Story
     name="success"
@@ -42,7 +40,7 @@ import { Dot } from '..'
       color: 'success',
     }}
   >
-    {(args) => <Dot {...args}/>}
+    {args => <Dot {...args} />}
   </Story>
   <Story
     name="warning"
@@ -50,6 +48,6 @@ import { Dot } from '..'
       color: 'warning',
     }}
   >
-    {(args) => <Dot {...args}/>}
+    {args => <Dot {...args} />}
   </Story>
 </Canvas>

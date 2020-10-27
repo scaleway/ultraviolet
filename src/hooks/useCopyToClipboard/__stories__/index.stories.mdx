@@ -8,17 +8,15 @@ import { Input } from '@smooth-ui/core-em'
 
 # useCopyToClipboard
 
-<Description>
-  A React hook to copy text into clipboard.
-</Description>
+<Description>A React hook to copy text into clipboard.</Description>
 
 ## Basic
 
 <Canvas>
   <Story name="basic">
     {() => {
-      const [ text, setText ] = useState('')
-      const [ copied, copy, reset ] = useCopyToClipboard(0)
+      const [text, setText] = useState('')
+      const [copied, copy, reset] = useCopyToClipboard(0)
       return (
         <>
           <Box mb={2} display="flex">
@@ -36,10 +34,10 @@ import { Input } from '@smooth-ui/core-em'
               onClick={() => copy(text)}
               icon={copied ? 'check' : 'copy-content'}
             >
-              {copied ? 'Copied' : 'Copy' }
+              {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <Input placeholder="Test copied text here"/>
+          <Input placeholder="Test copied text here" />
         </>
       )
     }}
@@ -49,17 +47,17 @@ import { Input } from '@smooth-ui/core-em'
 ## With Reset
 
 <Description>
-  You can specify a timeout after which the `copied` will be reset. The default timeout is `5000 ms`.
-  Set a timeout inferior or equal to 0 to disable it.
-  This hook also provide a `reset` function if you need to reset manualy.
+  You can specify a timeout after which the `copied` will be reset. The default
+  timeout is `5000 ms`. Set a timeout inferior or equal to 0 to disable it. This
+  hook also provide a `reset` function if you need to reset manualy.
 </Description>
 
 <Canvas>
   <Story name="reset">
     {() => {
-      const [ timeout, setTimeout ] = useState(5000)
-      const [ text, setText ] = useState('')
-      const [ copied, copy, reset ] = useCopyToClipboard(timeout)
+      const [timeout, setTimeout] = useState(5000)
+      const [text, setText] = useState('')
+      const [copied, copy, reset] = useCopyToClipboard(timeout)
       return (
         <>
           <Box mb={2} display="flex">
@@ -85,10 +83,10 @@ import { Input } from '@smooth-ui/core-em'
               onClick={() => copy(text)}
               icon={copied ? 'check' : 'copy-content'}
             >
-              {copied ? 'Copied' : 'Copy' }
+              {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <Input placeholder="Test copied text here"/>
+          <Input placeholder="Test copied text here" />
         </>
       )
     }}

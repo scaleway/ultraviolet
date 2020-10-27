@@ -4,16 +4,11 @@ import { Checkbox } from '..'
 import { Boxer, typographyVariants } from '../../'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
-<Meta
-  title="Components/Checkbox"
-  component={Checkbox}
-/>
+<Meta title="Components/Checkbox" component={Checkbox} />
 
 # Checkbox
 
-<Description>
-  Checkbox control, it acts like a real checkbox.
-</Description>
+<Description>Checkbox control, it acts like a real checkbox.</Description>
 
 ## Basic
 
@@ -36,9 +31,7 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 ## Validation
 
-<Description>
-  Set validation using `valid` property.
-</Description>
+<Description>Set validation using `valid` property.</Description>
 
 <Canvas>
   <Story name="validation">
@@ -57,39 +50,35 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 <Canvas>
   <Story name="error">
-  <Boxer my={1}>
-    <ErrorTransition error="An Error" Component={Checkbox}>
-      Checkbox on Error
-    </ErrorTransition>
-  </Boxer>
+    <Boxer my={1}>
+      <ErrorTransition error="An Error" Component={Checkbox}>
+        Checkbox on Error
+      </ErrorTransition>
+    </Boxer>
   </Story>
 </Canvas>
 
 ## Size
 
-<Description>
-  Set size using `size` property.
-</Description>
+<Description>Set size using `size` property.</Description>
 
 <Canvas>
   <Story name="size">
-  <Boxer my={1}>
-    <Checkbox size={10}>Small checkbox</Checkbox>
-    <Checkbox size={30}>Big checkbox</Checkbox>
-  </Boxer>
+    <Boxer my={1}>
+      <Checkbox size={10}>Small checkbox</Checkbox>
+      <Checkbox size={30}>Big checkbox</Checkbox>
+    </Boxer>
   </Story>
 </Canvas>
 
 ## Progress
 
-<Description>
-  Set progress using `progress` property.
-</Description>
+<Description>Set progress using `progress` property.</Description>
 
 <Canvas>
   <Story name="progress">
-  <Boxer my={1}>
-    <Checkbox progress>Progress checkbox</Checkbox>
-  </Boxer>
+    <Boxer my={1}>
+      <Checkbox progress>Progress checkbox</Checkbox>
+    </Boxer>
   </Story>
 </Canvas>
