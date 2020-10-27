@@ -1,3 +1,10 @@
+## [0.19.0](https://github.com/chambo-e/scw-ui/compare/v0.18.0...v0.19.0) (2020-10-27)
+
+
+### Features
+
+* add shielded-account icon (also Icon tests) ([2257e40](https://github.com/chambo-e/scw-ui/commit/2257e406e35508aca9ba79c6792d7baddb2f149e))
+
 ## [0.18.0](https://github.com/chambo-e/scw-ui/compare/v0.17.0...v0.18.0) (2020-10-27)
 
 ### Features
