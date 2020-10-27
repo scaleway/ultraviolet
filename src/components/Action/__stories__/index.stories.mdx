@@ -13,15 +13,14 @@ import { Action } from '..'
   <Story name="variant" args={{}}>
     <Action name="lock" variant="link" m={1} />
     <Action name="lock" variant="primary" m={1} />
-    <Action name="lock" variant="action" m={1} />
     <Action name="lock" variant="secondary" m={1} />
     <Action name="lock" variant="secondary-bordered" m={1} />
     <Action name="lock" variant="success" m={1} />
     <Action name="lock" variant="success-bordered" m={1} />
     <Action name="lock" variant="success-soft-bordered" m={1} />
-    <Action name="lock" variant="delete" m={1} />
-    <Action name="lock" variant="delete-bordered" m={1} />
-    <Action name="lock" variant="delete-soft-bordered" m={1} />
+    <Action name="lock" variant="warning" m={1} />
+    <Action name="lock" variant="warning-bordered" m={1} />
+    <Action name="lock" variant="warning-soft-bordered" m={1} />
   </Story>
 </Canvas>
 
@@ -30,7 +29,6 @@ import { Action } from '..'
 <Canvas>
   <Story name="rounded" args={{}}>
     <Action name="lock" variant="primary" m={1} rounded={true} />
-    <Action name="lock" variant="action" m={1} rounded={true} />
     <Action name="lock" variant="secondary" m={1} rounded={true} />
     <Action name="lock" variant="secondary-bordered" m={1} rounded={true} />
   </Story>
@@ -39,11 +37,13 @@ import { Action } from '..'
 ## Size
 
 <Description>Set size using `size` property.</Description>
-
+<Description>size will throw an error if size > 32 </Description>
 <Canvas>
   <Story name="size" args={{}}>
-    <Action name="lock" size={25} variant="link" m={1} />
     <Action name="lock" size={10} variant="primary" m={1} />
+    <Action name="lock" size={25} variant="warning" m={1} />
+    <Action name="lock" size={40} variant="secondary" m={1} />
+    <Action name="lock" size={60} variant="secondary" m={1} />
   </Story>
 </Canvas>
 
@@ -53,7 +53,7 @@ import { Action } from '..'
 
 <Canvas>
   <Story name="tooltip" args={{}}>
-    <Action name="lock" variant="link" m={1} tooltip="I am locked" />
+    <Action name="lock" variant="primary" m={1} tooltip="I am locked" />
   </Story>
 </Canvas>
 
@@ -64,7 +64,7 @@ import { Action } from '..'
 <Canvas>
   <Story name="icon" args={{}}>
     <Action name="eye" variant="secondary-bordered" m={1} />
-    <Action name="cancel" variant="delete-soft-bordered" m={1} />{' '}
+    <Action name="cancel" variant="warning-soft-bordered" m={1} />
   </Story>
 </Canvas>
 
