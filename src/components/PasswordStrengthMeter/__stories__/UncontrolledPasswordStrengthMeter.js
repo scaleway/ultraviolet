@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { TextBox } from 'components'
 import { PasswordStrengthMeter } from '..'
+import { TextBox } from '../..'
 
 const UncontrolledPasswordStrengthMeter = props => {
   const [value, setValue] = useState('')

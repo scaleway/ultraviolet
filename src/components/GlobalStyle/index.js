@@ -2,8 +2,8 @@ import { Global, css } from '@emotion/core'
 import { Normalize } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { white, blue } from 'theming'
-import { cx } from 'utils'
+import { white, blue } from '../../theming'
+import { cx } from '../../utils'
 
 const globalStyles = p => css`
   /* Fallback system fonts */

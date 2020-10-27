@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import React from 'react'
-import { borderRadius, gray350 } from 'theming'
-import { cx, sp } from 'utils'
+import { borderRadius, gray350 } from '../../theming'
+import { cx, sp } from '../../utils'
 import { Box } from '../Box'
 
 const style = p => css`

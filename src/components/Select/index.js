@@ -4,7 +4,6 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
-import { Icon } from 'components/Icon'
 import {
   gray50,
   gray100,
@@ -14,8 +13,9 @@ import {
   primary,
   warning,
   borderRadius,
-} from 'theming'
-import { cx, sp } from 'utils'
+} from '../../theming'
+import { cx, sp } from '../../utils'
+import { Icon } from '../Icon'
 
 const styles = {
   container: css`

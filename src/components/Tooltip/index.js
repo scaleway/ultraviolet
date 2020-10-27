@@ -8,7 +8,7 @@ import {
   TooltipArrow,
   TooltipReference,
 } from 'reakit/Tooltip'
-import { borderRadius, black, white } from 'theming'
+import { borderRadius, black, white } from '../../theming'
 
 const style = {
   tooltip: p => css`

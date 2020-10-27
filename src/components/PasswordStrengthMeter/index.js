@@ -1,9 +1,9 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
-import { Box } from 'components/Box'
-import { Typography } from 'components/Typography'
-import { gray100 } from 'theming'
+import { gray100 } from '../../theming'
+import { Box } from '../Box'
+import { Typography } from '../Typography'
 
 const styles = {
   wrapper: p => css`
