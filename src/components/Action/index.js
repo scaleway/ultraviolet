@@ -46,14 +46,16 @@ Action.propTypes = {
   children: PropTypes.node,
   key: PropTypes.string,
   name: PropTypes.string,
+  rounded: PropTypes.bool,
   size: PropTypes.number,
   tooltip: PropTypes.string,
   variant: PropTypes.string,
-  rounded: PropTypes.bool,
 }
 
 Action.defaultProps = {
   rounded: false,
+  size: 16,
+  variant: 'primary',
 }
 
 export { Action }

@@ -78,10 +78,10 @@ exports[`Action renders correctly with  name lock and primary variant 1`] = `
 .emotion-0 {
   fill: currentColor;
   vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <button
@@ -99,6 +99,215 @@ exports[`Action renders correctly with  name lock and primary variant 1`] = `
         d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
       />
     </svg>
+  </div>
+</button>
+`;
+
+exports[`Action renders with children  1`] = `
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-2:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  fill: currentColor;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<button
+  className="sui-box emotion-2"
+  type="button"
+>
+  <div
+    className="content emotion-1"
+  >
+    <svg
+      className="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+      />
+    </svg>
+    Test
+  </div>
+</button>
+`;
+
+exports[`Action renders with rounded and tooltip 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  fill: currentColor;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-2:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+<button
+  className="sui-box emotion-2"
+  type="button"
+>
+  <div
+    className="content emotion-1"
+  >
+    <svg
+      className="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+      />
+    </svg>
+    Test
   </div>
 </button>
 `;
