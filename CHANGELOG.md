@@ -1,3 +1,10 @@
+### [0.19.1](https://github.com/chambo-e/scw-ui/compare/v0.19.0...v0.19.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* **engine:** lax engine version ([ef65e47](https://github.com/chambo-e/scw-ui/commit/ef65e479b59d969bacb752e9ebfbb891a09bb00a))
+
 ## [0.19.0](https://github.com/chambo-e/scw-ui/compare/v0.18.0...v0.19.0) (2020-10-27)
 
 
