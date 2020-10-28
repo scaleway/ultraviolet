@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import { css } from '@emotion/core'
+import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
@@ -21,7 +22,7 @@ import {
   primary,
   warning,
 } from '../../theming'
-import { useUUID, randomName, cx } from '../../utils'
+import { useUUID, cx } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
