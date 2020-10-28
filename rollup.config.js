@@ -1,7 +1,6 @@
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
-import builtins from 'builtin-modules'
 import readPkg from 'read-pkg'
 import analyze from 'rollup-plugin-analyzer'
 import postcss from 'rollup-plugin-postcss'
@@ -11,18 +10,18 @@ const PROFILE = !!process.env.PROFILE
 export default async () => {
   const pkg = await readPkg()
 
-  const targets = pkg.browser
-    ? `
+  const targets = `
     > 1%,
-    last 2 versions
-    `
-    : { node: '14' }
+    last 2 versions,
+    not IE > 0,
+    not IE_Mob > 0
+  `
 
   const external = id =>
     [
+      '@emotion',
       ...Object.keys(pkg.dependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
-      ...(pkg.browser ? [] : builtins),
     ].find(dep => new RegExp(dep).test(id))
 
   return {
@@ -35,15 +34,10 @@ export default async () => {
         presets: [
           ['@babel/env', { modules: false, targets, loose: true }],
           '@babel/preset-react',
-          [
-            '@emotion/babel-preset-css-prop',
-            { autoLabel: true, labelFormat: '[filename]--[local]' },
-          ],
+          ['@emotion/babel-preset-css-prop', { sourceMap: false }],
         ],
         plugins: [
-          'babel-plugin-emotion',
           'babel-plugin-annotate-pure-calls',
-          ['@babel/plugin-proposal-class-properties', { loose: true }],
           '@babel/plugin-transform-runtime',
         ],
       }),
