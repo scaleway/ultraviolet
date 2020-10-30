@@ -4,7 +4,7 @@ import React from 'react'
 import { Box } from '../Box'
 
 const spinAnimation = keyframes`
-  from {
+  from  {
     transform: rotate(0deg);
   }
 
