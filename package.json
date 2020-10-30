@@ -58,7 +58,13 @@
     ],
     "reporters": [
       "default",
-      [ "jest-junit", { "outputDirectory": ".reports", "outputName": "tests.xml" } ]
+      [
+        "jest-junit",
+        {
+          "outputDirectory": ".reports",
+          "outputName": "tests.xml"
+        }
+      ]
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
@@ -105,6 +111,7 @@
     "cross-env": "^7.0.2",
     "emotion-theming": "^10.0.27",
     "eslint": "^7.12.1",
+    "eslint-formatter-gitlab": "^2.0.0",
     "eslint-plugin-emotion": "^10.0.27",
     "husky": "^4.3.0",
     "identity-obj-proxy": "^3.0.0",
