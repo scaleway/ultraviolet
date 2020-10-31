@@ -18,6 +18,7 @@ export default async () => {
   `
 
   const external = id =>
+    !id.endsWith('.css') &&
     [
       '@emotion',
       ...Object.keys(pkg.dependencies || {}),
