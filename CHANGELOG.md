@@ -1,3 +1,10 @@
+### [0.20.2](https://github.com/chambo-e/scw-ui/compare/v0.20.1...v0.20.2) (2020-11-02)
+
+
+### Bug Fixes
+
+* support react 16 and 17 ([c581458](https://github.com/chambo-e/scw-ui/commit/c5814588ead06f07dac0965d66345e6b58418f2f))
+
 ### [0.20.1](https://github.com/chambo-e/scw-ui/compare/v0.20.0...v0.20.1) (2020-11-02)
 
 
