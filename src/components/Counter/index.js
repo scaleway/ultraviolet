@@ -33,7 +33,7 @@ export function Counter({ end }) {
 }
 
 Counter.propTypes = {
-  end: PropTypes.number,
+  end: PropTypes.number.isRequired,
 }
 
 export default Counter

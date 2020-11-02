@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Dot } from '../Dot'
 
-export function DotSteps({ steps = 2, step, setStep }) {
+export function DotSteps({ steps, step, setStep }) {
   return (
     <Box display="flex" justifyContent="center">
       {Array.from({ length: steps }, (_, i) => (
@@ -24,8 +24,13 @@ export function DotSteps({ steps = 2, step, setStep }) {
 
 DotSteps.propTypes = {
   steps: PropTypes.number,
-  step: PropTypes.number.isRequired,
+  step: PropTypes.number,
   setStep: PropTypes.func.isRequired,
+}
+
+DotSteps.defaultProps = {
+  step: 1,
+  steps: 2,
 }
 
 export default DotSteps

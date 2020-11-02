@@ -173,4 +173,5 @@ SwitchButton.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  tooltip: PropTypes.string.isRequired,
 }
