@@ -83,9 +83,11 @@ Reminder.propTypes = {
   variant: PropTypes.oneOf(['error', 'warning', 'info']),
   bordered: PropTypes.bool,
   text: PropTypes.string.isRequired,
+  to: PropTypes.string,
 }
 
 Reminder.defaultProps = {
   variant: 'info',
   bordered: false,
+  to: null,
 }
