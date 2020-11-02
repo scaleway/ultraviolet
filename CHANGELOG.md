@@ -1,3 +1,10 @@
+## [0.20.0](https://github.com/chambo-e/scw-ui/compare/v0.19.1...v0.20.0) (2020-11-02)
+
+
+### Features
+
+* migrate ProgressionButton from shire ([80f7cb6](https://github.com/chambo-e/scw-ui/commit/80f7cb65c0244d1b335293ce2ee105efe12377e0))
+
 ### [0.19.1](https://github.com/chambo-e/scw-ui/compare/v0.19.0...v0.19.1) (2020-10-28)
 
 
