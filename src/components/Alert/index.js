@@ -21,22 +21,27 @@ const variantIcons = {
 
 export const alertVariants = Object.keys(variantIcons)
 
-export function Alert({ variant = 'warning', icon, children, ...props }) {
-  return (
-    <Typography css={cx(style({ variant }))} role="alert" {...props}>
-      <Icon
-        mr={2}
-        name={icon || variantIcons[variant]}
-        size={40}
-        color={variant}
-      />
-      <span>{children}</span>
-    </Typography>
-  )
-}
+const Alert = ({ variant = 'warning', icon, children, ...props }) => (
+  <Typography css={cx(style({ variant }))} role="alert" {...props}>
+    <Icon
+      mr={2}
+      name={icon || variantIcons[variant]}
+      size={40}
+      color={variant}
+    />
+    <span>{children}</span>
+  </Typography>
+)
 
 Alert.propTypes = {
   variant: PropTypes.oneOf(alertVariants),
   icon: PropTypes.oneOf(icons),
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 }
+
+Alert.defaultProps = {
+  variant: 'warning',
+  icon: null,
+}
+
+export { Alert }
