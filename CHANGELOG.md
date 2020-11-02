@@ -1,3 +1,10 @@
+### [0.20.1](https://github.com/chambo-e/scw-ui/compare/v0.20.0...v0.20.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* **build:** ensure css files are bundled ([19996ba](https://github.com/chambo-e/scw-ui/commit/19996baf9441a740b65570602322d112ea471f34))
+
 ## [0.20.0](https://github.com/chambo-e/scw-ui/compare/v0.19.1...v0.20.0) (2020-11-02)
 
 
