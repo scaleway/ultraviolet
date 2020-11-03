@@ -1,3 +1,10 @@
+## [0.21.0](https://github.com/chambo-e/scw-ui/compare/v0.20.2...v0.21.0) (2020-11-03)
+
+
+### Features
+
+* **component:** action ([85a48dd](https://github.com/chambo-e/scw-ui/commit/85a48dd032669ddee3898a334df4a45315f16a27))
+
 ### [0.20.2](https://github.com/chambo-e/scw-ui/compare/v0.20.1...v0.20.2) (2020-11-02)
 
 
