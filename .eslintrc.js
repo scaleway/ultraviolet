@@ -15,6 +15,7 @@ module.exports = {
           '**/*.stories.js',
           '**/*.test.js',
           '**/*.spec.js',
+          '**/__tests__/*',
           'rollup.config.js',
         ],
       },
