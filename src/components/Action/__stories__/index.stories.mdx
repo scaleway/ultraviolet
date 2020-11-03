@@ -1,0 +1,83 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Action } from '..'
+
+<Meta title="Components/Action" component={Action} />
+
+# Action
+
+<Description>Set variant using `variant` property.</Description>
+
+## Variant
+
+<Canvas>
+  <Story name="variant" args={{}}>
+    <Action name="lock" variant="link" m={1} />
+    <Action name="lock" variant="primary" m={1} />
+    <Action name="lock" variant="secondary" m={1} />
+    <Action name="lock" variant="secondary-bordered" m={1} />
+    <Action name="lock" variant="success" m={1} />
+    <Action name="lock" variant="success-bordered" m={1} />
+    <Action name="lock" variant="success-soft-bordered" m={1} />
+    <Action name="lock" variant="warning" m={1} />
+    <Action name="lock" variant="warning-bordered" m={1} />
+    <Action name="lock" variant="warning-soft-bordered" m={1} />
+  </Story>
+</Canvas>
+
+## Rounded
+
+<Canvas>
+  <Story name="rounded" args={{}}>
+    <Action name="lock" variant="primary" m={1} rounded={true} />
+    <Action name="lock" variant="secondary" m={1} rounded={true} />
+    <Action name="lock" variant="secondary-bordered" m={1} rounded={true} />
+  </Story>
+</Canvas>
+
+## Size
+
+<Description>Set size using `size` property.</Description>
+<Description>size will throw an error if size > 32 </Description>
+<Canvas>
+  <Story name="size" args={{}}>
+    <Action name="lock" size={10} variant="primary" m={1} />
+    <Action name="lock" size={25} variant="warning" m={1} />
+    <Action name="lock" size={40} variant="secondary" m={1} />
+    <Action name="lock" size={60} variant="secondary" m={1} />
+  </Story>
+</Canvas>
+
+## Tooltip
+
+<Description>Set tooltip using `tooltip` property.</Description>
+
+<Canvas>
+  <Story name="tooltip" args={{}}>
+    <Action name="lock" variant="primary" m={1} tooltip="I am locked" />
+  </Story>
+</Canvas>
+
+## Icon
+
+<Description>Set an icon using `name` property</Description>
+
+<Canvas>
+  <Story name="icon" args={{}}>
+    <Action name="eye" variant="secondary-bordered" m={1} />
+    <Action name="cancel" variant="warning-soft-bordered" m={1} />
+  </Story>
+</Canvas>
+
+## String
+
+<Description>
+  You can use a string as `children`. Don't forget to adjust width
+</Description>
+
+<Canvas>
+  <Story name="string" args={{}}>
+    <Action variant="secondary-bordered" width={72} m={1}>
+      hello
+    </Action>
+  </Story>
+</Canvas>
