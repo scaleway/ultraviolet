@@ -174,3 +174,5 @@ Breadcrumbs.Item.propTypes = {
 Breadcrumbs.Item.defaultProps = {
   to: null,
 }
+
+export { Breadcrumbs }
