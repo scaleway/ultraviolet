@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders correctly end=0 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  visibility: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 0;
+}
+
+<div
+  className="emotion-2"
+>
+  <div
+    className="emotion-0"
+  >
+    0
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <span />
+  </div>
+</div>
+`;
+
+exports[`Counter renders correctly end=100 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  visibility: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 0;
+}
+
+<div
+  className="emotion-2"
+>
+  <div
+    className="emotion-0"
+  >
+    100
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <span />
+  </div>
+</div>
+`;
+
+exports[`Counter renders correctly end=10000 1`] = `
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-0 {
+  visibility: hidden;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 0;
+}
+
+<div
+  className="emotion-2"
+>
+  <div
+    className="emotion-0"
+  >
+    100
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <span />
+  </div>
+</div>
+`;
