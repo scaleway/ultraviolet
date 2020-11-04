@@ -1,0 +1,18 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Progress } from '..'
+
+<Meta title="Components/Progress" component={Progress} />
+
+# Progress
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Progress selected={1}>
+      <Progress.Step title="Step 1" />
+      <Progress.Step title="Step 2" />
+      <Progress.Step title="Step 3" />
+    </Progress>
+  </Story>
+</Canvas>
