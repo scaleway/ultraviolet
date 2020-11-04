@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 import { Typography, typographyVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
+jest.mock('../../Tooltip', () => ({
+  Tooltip: ({ children, ...props }) => children(props),
+}))
+
 describe('Typography', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     ReactDOM.createPortal = jest.fn(element => {
       return element
     })
