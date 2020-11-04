@@ -4,11 +4,11 @@ import { Action } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Action', () => {
-  test('Action renders correctly with  name lock and primary variant', () => {
+  test('renders correctly with  name lock and primary variant', () => {
     shouldMatchEmotionSnapshot(<Action name="lock" variant="primary" />)
   })
 
-  test('Action renders with children ', () => {
+  test('renders with children ', () => {
     shouldMatchEmotionSnapshot(
       <Action name="lock" variant="primary">
         Test
@@ -16,7 +16,7 @@ describe('Action', () => {
     )
   })
 
-  test('Action renders with rounded and tooltip', () => {
+  test('renders with rounded and tooltip', () => {
     shouldMatchEmotionSnapshot(
       <Action name="lock" variant="primary" rounded>
         Test
@@ -24,7 +24,7 @@ describe('Action', () => {
     )
   })
 
-  test('Throw an error on Action without name of children props', () => {
+  test('throw an error without name of children props', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
     try {
       create(<Action />)
