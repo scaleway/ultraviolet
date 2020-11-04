@@ -100,20 +100,18 @@ const style = p => css`
   width: fit-content;
 `
 
-export function Badge({ variant = 'neutral', size = 'md', ...props }) {
-  return (
-    <Box
-      as="span"
-      css={cx([style, variants[variant], sizes[size]])}
-      {...props}
-    />
-  )
-}
+const Badge = ({ variant = 'neutral', size = 'md', ...props }) => (
+  <Box as="span" css={cx([style, variants[variant], sizes[size]])} {...props} />
+)
 
 Badge.propTypes = {
-  /**
-   * Description of prop "foo".
-   */
   variant: PropTypes.oneOf(Object.keys(variants)),
   size: PropTypes.oneOf(Object.keys(sizes)),
 }
+
+Badge.defaultProps = {
+  variant: 'neutral',
+  size: 'md',
+}
+
+export { Badge }

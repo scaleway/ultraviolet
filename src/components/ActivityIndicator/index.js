@@ -24,11 +24,20 @@ const Spinner = ({ children, style }) => (
   </div>
 )
 
+Spinner.propTypes = {
+  style: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
+
 const Circle = ({ style }) => (
   <circle cx="16" cy="16" fill="none" r="14" strokeWidth="4" style={style} />
 )
 
-export function ActivityIndicator({ size = 20, color = 'primary', ...props }) {
+Circle.propTypes = {
+  style: PropTypes.string.isRequired,
+}
+
+const ActivityIndicator = ({ size, color, ...props }) => {
   return (
     <Box
       role="progressbar"
@@ -55,4 +64,12 @@ export function ActivityIndicator({ size = 20, color = 'primary', ...props }) {
 
 ActivityIndicator.propTypes = {
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  color: PropTypes.string,
 }
+
+ActivityIndicator.defaultProps = {
+  size: 10,
+  color: 'primary',
+}
+
+export { ActivityIndicator }
