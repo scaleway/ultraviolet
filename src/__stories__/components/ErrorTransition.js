@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React, { useState, useLayoutEffect } from 'react'
 
 const ErrorTransition = ({ error, Component, ...props }) => {
@@ -7,6 +8,11 @@ const ErrorTransition = ({ error, Component, ...props }) => {
     return () => timer && clearTimeout(timer)
   }, [error])
   return <Component error={err} {...props} />
+}
+
+ErrorTransition.propTypes = {
+  error: PropTypes.string.isRequired,
+  Component: PropTypes.node.isRequired,
 }
 
 export default ErrorTransition

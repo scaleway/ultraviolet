@@ -158,3 +158,7 @@ export function GlobalStyle({ additionalStyles = [] }) {
 GlobalStyle.propTypes = {
   additionalStyles: PropTypes.arrayOf(PropTypes.object),
 }
+
+GlobalStyle.defaultProps = {
+  additionalStyles: [],
+}
