@@ -1,3 +1,10 @@
+### [0.21.3](https://github.com/chambo-e/scw-ui/compare/v0.21.2...v0.21.3) (2020-11-04)
+
+
+### Bug Fixes
+
+* correct Breadcrumbs export ([464dc34](https://github.com/chambo-e/scw-ui/commit/464dc3447b5630e195010dc742966a2724acf546))
+
 ### [0.21.2](https://github.com/chambo-e/scw-ui/compare/v0.21.1...v0.21.2) (2020-11-04)
 
 
