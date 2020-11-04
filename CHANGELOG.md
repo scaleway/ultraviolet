@@ -1,3 +1,10 @@
+### [0.21.1](https://github.com/chambo-e/scw-ui/compare/v0.21.0...v0.21.1) (2020-11-04)
+
+
+### Bug Fixes
+
+* adds glacier icons ([60ff63b](https://github.com/chambo-e/scw-ui/commit/60ff63bf4dd2664b066b3efe40dc5a0549188b68))
+
 ## [0.21.0](https://github.com/chambo-e/scw-ui/compare/v0.20.2...v0.21.0) (2020-11-03)
 
 
