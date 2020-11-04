@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description Description renders correctly 1`] = `
+.emotion-4 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.emotion-4 > dt {
+  font-weight: 500;
+  color: #151a2d;
+}
+
+.emotion-4 > dt:after {
+  content: ':';
+}
+
+.emotion-4 > dd {
+  color: #4a4f62;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.emotion-4 dd + dt {
+  margin-top: 16px;
+}
+
+<dl
+  className="sui-box emotion-4"
+>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Name
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    Big instance
+  </dd>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Size
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    125 GB
+  </dd>
+</dl>
+`;
+
+exports[`Description Description renders correctly inline 1`] = `
+.emotion-4 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.emotion-4 > dt {
+  font-weight: 500;
+  color: #151a2d;
+}
+
+.emotion-4 > dt:after {
+  content: ':';
+}
+
+.emotion-4 > dd {
+  color: #4a4f62;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.emotion-4 dd + dt {
+  margin-top: 16px;
+}
+
+.emotion-4 > dt {
+  float: left;
+  clear: left;
+  margin-right: 8px;
+}
+
+.emotion-4 > dd {
+  margin-top: 0;
+}
+
+.emotion-4 dd + dt + dd {
+  margin-top: 16px;
+}
+
+<dl
+  className="sui-box emotion-4"
+>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Name
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    Big instance
+  </dd>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Size
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    125 GB
+  </dd>
+</dl>
+`;
+
+exports[`Description Description renders correctly seletable 1`] = `
+.emotion-4 {
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.emotion-4 > dt {
+  font-weight: 500;
+  color: #151a2d;
+}
+
+.emotion-4 > dt:after {
+  content: ':';
+}
+
+.emotion-4 > dd {
+  color: #4a4f62;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.emotion-4 dd + dt {
+  margin-top: 16px;
+}
+
+.emotion-4 > dt {
+  float: left;
+  clear: left;
+  margin-right: 8px;
+}
+
+.emotion-4 > dd {
+  margin-top: 0;
+}
+
+.emotion-4 dd + dt + dd {
+  margin-top: 16px;
+}
+
+.emotion-4 > dd {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.emotion-4 > dd::selection {
+  color: #eeeeff;
+  background: #4f0599;
+}
+
+<dl
+  className="sui-box emotion-4"
+>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Name
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    Big instance
+  </dd>
+  <dt
+    className="sui-box emotion-0"
+  >
+    Size
+  </dt>
+  <dd
+    className="sui-box emotion-0"
+  >
+    125 GB
+  </dd>
+</dl>
+`;
