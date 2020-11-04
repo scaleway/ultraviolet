@@ -1,3 +1,10 @@
+### [0.21.2](https://github.com/chambo-e/scw-ui/compare/v0.21.1...v0.21.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* some PropTypes ([f04db3c](https://github.com/chambo-e/scw-ui/commit/f04db3cef0504c53e9328ecbd8bb81e1d241f879))
+
 ### [0.21.1](https://github.com/chambo-e/scw-ui/compare/v0.21.0...v0.21.1) (2020-11-04)
 
 
