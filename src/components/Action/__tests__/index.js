@@ -24,7 +24,7 @@ describe('Action', () => {
     )
   })
 
-  test('Throw an error on Action without name of children props', () => {
+  test('throw an error without name of children props', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
     try {
       create(<Action />)
