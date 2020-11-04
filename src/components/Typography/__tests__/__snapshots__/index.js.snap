@@ -1,0 +1,2046 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography variant "bodyA" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  bodyA
+</p>
+`;
+
+exports[`Typography variant "bodyA" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <p
+    aria-describedby="id-4hj0tg"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <div
+    hidden={true}
+    id="id-4hj0tg"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "bodyB" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  bodyB
+</p>
+`;
+
+exports[`Typography variant "bodyB" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <p
+    aria-describedby="id-2qlgpq"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <div
+    hidden={true}
+    id="id-2qlgpq"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "bodyC" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  bodyC
+</p>
+`;
+
+exports[`Typography variant "bodyC" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <p
+    aria-describedby="id-o0b8vp"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <div
+    hidden={true}
+    id="id-o0b8vp"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "bodyD" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  bodyD
+</p>
+`;
+
+exports[`Typography variant "bodyD" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <p
+    aria-describedby="id-hku6pd"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <div
+    hidden={true}
+    id="id-hku6pd"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "command" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Lucida Console',Monaco,'Courier New',Courier,monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
+  padding: 3px 5px;
+}
+
+<code
+  className="sui-box emotion-0"
+>
+  command
+</code>
+`;
+
+exports[`Typography variant "command" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Lucida Console',Monaco,'Courier New',Courier,monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
+  padding: 3px 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <code
+    aria-describedby="id-r2n68v"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </code>
+  <div
+    hidden={true}
+    id="id-r2n68v"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "description" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  description
+</p>
+`;
+
+exports[`Typography variant "description" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <p
+    aria-describedby="id-b9ggmv"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  <div
+    hidden={true}
+    id="id-b9ggmv"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "hero" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 35px;
+  line-height: 41px;
+  margin-bottom: 72px;
+}
+
+<h1
+  className="sui-box emotion-0"
+>
+  hero
+</h1>
+`;
+
+exports[`Typography variant "hero" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 35px;
+  line-height: 41px;
+  margin-bottom: 72px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <h1
+    aria-describedby="id-ci63mp"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </h1>
+  <div
+    hidden={true}
+    id="id-ci63mp"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "lead" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+
+<h2
+  className="sui-box emotion-0"
+>
+  lead
+</h2>
+`;
+
+exports[`Typography variant "lead" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <h2
+    aria-describedby="id-ud9hft"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </h2>
+  <div
+    hidden={true}
+    id="id-ud9hft"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "lead-block" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 16px;
+  margin-top: 48px;
+}
+
+<h2
+  className="sui-box emotion-0"
+>
+  lead-block
+</h2>
+`;
+
+exports[`Typography variant "lead-block" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 16px;
+  margin-top: 48px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <h2
+    aria-describedby="id-lu0b1p"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </h2>
+  <div
+    hidden={true}
+    id="id-lu0b1p"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "lead-text" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 24px;
+}
+
+<h2
+  className="sui-box emotion-0"
+>
+  lead-text
+</h2>
+`;
+
+exports[`Typography variant "lead-text" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <h2
+    aria-describedby="id-edkb4n"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </h2>
+  <div
+    hidden={true}
+    id="id-edkb4n"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "link" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #3f6ed8;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="sui-box emotion-0"
+>
+  link
+</div>
+`;
+
+exports[`Typography variant "link" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #3f6ed8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <div
+    aria-describedby="id-l8l7gk"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+  <div
+    hidden={true}
+    id="id-l8l7gk"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "samplecode" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px;
+}
+
+<code
+  className="sui-box emotion-0"
+>
+  samplecode
+</code>
+`;
+
+exports[`Typography variant "samplecode" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <code
+    aria-describedby="id-7ifa1l"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </code>
+  <div
+    hidden={true}
+    id="id-7ifa1l"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "tiny" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+<small
+  className="sui-box emotion-0"
+>
+  tiny
+</small>
+`;
+
+exports[`Typography variant "tiny" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <small
+    aria-describedby="id-r9qi2b"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </small>
+  <div
+    hidden={true}
+    id="id-r9qi2b"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography variant "title" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 21px;
+  line-height: 24px;
+}
+
+<h3
+  className="sui-box emotion-0"
+>
+  title
+</h3>
+`;
+
+exports[`Typography variant "title" with tooltip renders correctly 1`] = `
+.emotion-2.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translate3d(0,-4px,0);
+  -ms-transform: translate3d(0,-4px,0);
+  transform: translate3d(0,-4px,0);
+}
+
+.emotion-1.emotion-1 {
+  max-width: 650px;
+}
+
+[data-enter] .emotion-1 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 21px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-2"
+>
+  <h3
+    aria-describedby="id-rtsi01"
+    className="sui-box emotion-0"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    tabIndex={0}
+  >
+    This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </h3>
+  <div
+    hidden={true}
+    id="id-rtsi01"
+    onAnimationEnd={[Function]}
+    onTransitionEnd={[Function]}
+    role="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "pointerEvents": "none",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="sui-box emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 16,
+            "height": "1em",
+            "pointerEvents": "none",
+            "top": "100%",
+            "width": "1em",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "transform": "rotateZ(180deg)",
+            }
+          }
+          viewBox="0 0 30 30"
+        >
+          <path
+            className="stroke"
+            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+          />
+          <path
+            className="fill"
+            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+          />
+        </svg>
+      </div>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography with maxLines renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+<p
+  className="sui-box emotion-0"
+>
+  Hello
+</p>
+`;
+
+exports[`Typography with multiple nested chidldren renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 21px;
+  line-height: 24px;
+}
+
+.emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+<p
+  className="sui-box emotion-1"
+>
+  Lorem
+  <div>
+    Ipsum
+  </div>
+  <h3
+    className="sui-box emotion-0"
+  >
+    <span>
+      Dolor
+    </span>
+  </h3>
+  Sit
+</p>
+`;
