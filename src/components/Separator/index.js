@@ -25,13 +25,7 @@ const styles = {
   `,
 }
 
-export function Separator({
-  direction = 'horizontal',
-  thickness = 1,
-  color = 'gray200',
-  icon,
-  ...props
-}) {
+export function Separator({ direction, thickness, color, icon, ...props }) {
   if (icon) {
     return (
       <Box css={cx(styles.icon({ direction }))} {...props}>
@@ -62,9 +56,12 @@ Separator.propTypes = {
   direction: PropTypes.oneOf(['horizontal', 'vertical']),
   thickness: PropTypes.number,
   icon: PropTypes.oneOf(icons),
+  color: PropTypes.string,
 }
 
 Separator.defaultProps = {
   direction: 'horizontal',
   thickness: 1,
+  icon: null,
+  color: 'gray200',
 }

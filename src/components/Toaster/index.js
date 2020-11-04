@@ -1,4 +1,5 @@
 import { css, ClassNames } from '@emotion/core'
+import PropTypes from 'prop-types'
 import React from 'react'
 import {
   ToastContainer as BaseToastContainer,
@@ -64,9 +65,23 @@ const CloseButton = ({ closeToast }) => (
   <Icon name="close" size={18} ml={1} onClick={closeToast} />
 )
 
+CloseButton.propTypes = {
+  closeToast: PropTypes.func.isRequired,
+}
+
 const SanitizedNotificationBar = ({ closeToast, children, ...props }) => (
   <NotificationBar {...props}>{children}</NotificationBar>
 )
+
+SanitizedNotificationBar.propTypes = {
+  closeToast: PropTypes.func,
+  children: PropTypes.node,
+}
+
+SanitizedNotificationBar.defaultProps = {
+  closeToast: null,
+  children: null,
+}
 
 const toast = {
   success: (children, options) =>
@@ -99,18 +114,16 @@ const toast = {
     ),
 }
 
-function ToastContainer(props) {
-  return (
-    <ClassNames>
-      {({ css }) => (
-        <BaseToastContainer
-          closeButton={<CloseButton />}
-          toastClassName={css([styles.toast(props), toastStyle])}
-          {...props}
-        />
-      )}
-    </ClassNames>
-  )
-}
+const ToastContainer = props => (
+  <ClassNames>
+    {({ css }) => (
+      <BaseToastContainer
+        closeButton={<CloseButton />}
+        toastClassName={css([styles.toast(props), toastStyle])}
+        {...props}
+      />
+    )}
+  </ClassNames>
+)
 
 export { toast, ToastContainer }

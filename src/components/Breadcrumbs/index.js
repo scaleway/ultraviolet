@@ -113,12 +113,12 @@ function contractString(str) {
 
 export const breadcrumbsVariants = Object.keys(variants)
 
-export function Breadcrumbs({
+const Breadcrumbs = ({
   children,
-  variant = 'link',
+  variant,
   activeIndex: activeIndexProp,
   ...props
-}) {
+}) => {
   const flatChildren = flattenChildren(children)
   const activeIndex =
     activeIndexProp !== undefined ? activeIndexProp : flatChildren.length - 1
@@ -145,25 +145,32 @@ export function Breadcrumbs({
 }
 
 Breadcrumbs.propTypes = {
-  children: PropTypes.node,
-  as: PropTypes.string,
+  children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(breadcrumbsVariants),
+  activeIndex: PropTypes.number,
 }
 
-Breadcrumbs.Item = function Item({ to, children, variant, ...props }) {
-  return (
-    <Box css={cx(variants[variant])} as="li" {...props}>
-      {to ? (
-        <Link variant="primary" to={to}>
-          {contractString(children)}
-        </Link>
-      ) : (
-        contractString(children)
-      )}
-    </Box>
-  )
+Breadcrumbs.defaultProps = {
+  variant: 'link',
+  activeIndex: undefined,
 }
+
+Breadcrumbs.Item = ({ to, children, variant, ...props }) => (
+  <Box css={cx(variants[variant])} as="li" {...props}>
+    {to ? (
+      <Link variant="primary" to={to}>
+        {contractString(children)}
+      </Link>
+    ) : (
+      contractString(children)
+    )}
+  </Box>
+)
 
 Breadcrumbs.Item.propTypes = {
   to: PropTypes.string,
+}
+
+Breadcrumbs.Item.defaultProps = {
+  to: null,
 }

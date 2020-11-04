@@ -120,7 +120,7 @@ StyledSwitch.defaultProps = {
   size: 'medium',
 }
 
-export const Switch = ({ tooltip, ...props }) => (
+const Switch = ({ tooltip, ...props }) => (
   <Tooltip text={tooltip}>
     <Box style={{ lineHeight: 1 }}>
       <StyledSwitch
@@ -130,3 +130,14 @@ export const Switch = ({ tooltip, ...props }) => (
     </Box>
   </Tooltip>
 )
+
+Switch.propTypes = {
+  tooltip: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+}
+
+Switch.defaultProps = {
+  disabled: false,
+}
+
+export { Switch }
