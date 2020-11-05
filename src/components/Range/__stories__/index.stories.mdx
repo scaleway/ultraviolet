@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Range } from '../'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
+
+<Meta title="Components/Range" component={Range} />
+
+# Range
+
+## Controlled
+
+Range only work as [controlled component](https://reactjs.org/docs/forms.html).
+
+## Default
+
+<Playground>
+  <BlockList>
+    <ControlValue value={[]}>{({ value, onChange }) => <Range />}</ControlValue>
+  </BlockList>
+</Playground>
+
+## Single value
+
+<Playground>
+  <BlockList>
+    <ControlValue value={[3]}>
+      {({ value, onChange }) => (
+        <Range value={value} min={0} max={10} onChange={onChange} />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>
+
+## Two values
+
+For now, Range component will work with max two values.
+
+<Playground>
+  <BlockList>
+    <ControlValue value={[3, 8]}>
+      {({ value, onChange }) => (
+        <Range value={value} min={0} max={15} onChange={onChange} />
+      )}
+    </ControlValue>
+  </BlockList>
+</Playground>
