@@ -1,3 +1,10 @@
+## [0.22.0](https://github.com/chambo-e/scw-ui/compare/v0.21.3...v0.22.0) (2020-11-05)
+
+
+### Features
+
+* **component:** migration Command component ([0f80ae2](https://github.com/chambo-e/scw-ui/commit/0f80ae2c6965b719179c69b8921288e5f0588931))
+
 ### [0.21.3](https://github.com/chambo-e/scw-ui/compare/v0.21.2...v0.21.3) (2020-11-04)
 
 
