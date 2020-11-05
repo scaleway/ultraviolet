@@ -35,7 +35,7 @@ UniversalLink.propTypes = {
 }
 
 UniversalLink.defaultProps = {
-  target: null,
+  target: undefined,
   rel: undefined,
   to: null,
   href: null,
