@@ -1,14 +1,19 @@
 import { css } from '@emotion/core'
+import { transparentize } from 'polished'
 import React, { useEffect, useRef, useState } from 'react'
 import { theme } from '../../theme'
 import { Box } from '../Box'
 import { Tag } from '../Tag'
 
 const container = {
-  base: status => css`
+  base: css`
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid ${status === 'active' ? theme.primary : theme.gray350};
+    border: 1px solid ${theme.gray350};
+    &:focus-within {
+      border: 1px solid ${theme.primary};
+      box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.primary)};
+    }
 
     & > * {
       margin: 6px;
@@ -17,14 +22,23 @@ const container = {
   bordered: css`
     margin-top: 0;
     padding: 8px 0;
+
+    > input:focus {
+      box-shadow: 0 0 1px 2px ${transparentize(0.6, theme.primary)};
+    }
+
     > * {
       margin-bottom: 6px;
       &:not(:last-child) {
         margin-right: 6px;
       }
-    }
+    },
   `,
   noBorder: css`
+    &:focus-within {
+      box-shadow: 0 0 2px 4px ${transparentize(0.75, theme.primary)};
+    }
+
     > * {
       margin-right: 6px;
       margin-bottom: 6px;
@@ -39,7 +53,6 @@ const styles = {
     border: none;
     outline: none;
     background-color: ${theme.white};
-
     &::placeholder {
       color: ${theme.gray550};
     }
@@ -161,6 +174,7 @@ export const Tags = ({
         {!disabled && manualInput ? (
           <input
             name={name}
+            type="text"
             placeholder={!tagsState.length ? placeholder : ''}
             value={input}
             css={styles.input}

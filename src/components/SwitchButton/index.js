@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 import { SwitchState, Box } from '@smooth-ui/core-em'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from '../../theme'
@@ -39,7 +40,7 @@ const styles = {
         },
     }),
   focused: css({
-    boxShadow: `0 0 8px 2px ${theme.gray200}`,
+    boxShadow: `0 0 1px 2px ${transparentize(0.75, theme.primary)}`,
   }),
   checked: css({
     cursor: 'auto',
