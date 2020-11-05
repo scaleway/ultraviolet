@@ -29,12 +29,14 @@ export const styles = {
     display: flex;
     align-items: center;
     justify-content: center;
-    &:hover {
-      background-color: ${theme.gray200};
-    }
+    &:hover,
     &:focus {
       background-color: ${theme.gray200};
+      svg {
+          fill: ${theme.primary};
+        },
     }
+
   `,
   bordered: css`
     border-radius: 4px;
