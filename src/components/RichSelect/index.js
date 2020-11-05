@@ -74,22 +74,24 @@ const getSelectStyles = (error, customStyle) => ({
     borderRadius: '4px',
     boxShadow: 'none',
     borderColor: error ? theme.warning : theme.gray300,
-    ':hover': {
-      borderColor: error ? theme.warning : theme.primary,
-      svg: {
-        fill: error ? theme.warning : theme.primary,
+    ...(!state.disabled && {
+      ':hover': {
+        borderColor: error ? theme.warning : theme.primary,
+        svg: {
+          fill: error ? theme.warning : theme.primary,
+        },
       },
-    },
-    ':focus-within': {
-      borderColor: error ? theme.warning : theme.primary,
-      boxShadow: error
-        ? ''
-        : `0 0 2px 2px ${transparentize(0.75, theme.primary)}`,
-      svg: {
-        fill: error ? theme.warning : theme.primary,
+      ':focus-within': {
+        borderColor: error ? theme.warning : theme.primary,
+        boxShadow: `0 0 2px 2px ${transparentize(
+          0.75,
+          error ? theme.warning : theme.primary,
+        )}`,
+        svg: {
+          fill: error ? theme.warning : theme.primary,
+        },
       },
-    },
-
+    }),
     ...((customStyle(state) || {}).control || {}),
   }),
   valueContainer: (provided, state) => ({
