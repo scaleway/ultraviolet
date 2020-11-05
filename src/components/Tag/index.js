@@ -26,9 +26,13 @@ export const styles = {
   `,
   icon: css`
     margin-left: 16px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
     &:hover {
       background-color: ${theme.gray200};
     }
+    &:focus {$}
   `,
   bordered: css`
     border-radius: 4px;

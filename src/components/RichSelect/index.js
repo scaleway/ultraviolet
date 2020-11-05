@@ -74,12 +74,15 @@ const getSelectStyles = (error, customStyle) => ({
     boxShadow: 'none',
     borderColor: error ? theme.warning : theme.gray300,
     ':hover': {
-      borderColor: error
-        ? theme.warning
-        : state.isFocused
-        ? theme.primary
-        : theme.gray550,
+      borderColor: error ? theme.warning : theme.primary,
     },
+    ':focus-within': {
+      borderColor: error ? theme.warning : theme.primary,
+      svg: {
+        fill: error ? theme.warning : theme.primary,
+      },
+    },
+
     ...((customStyle(state) || {}).control || {}),
   }),
   valueContainer: (provided, state) => ({
@@ -184,9 +187,6 @@ const getSelectStyles = (error, customStyle) => ({
   }),
   indicatorsContainer: provided => ({
     ...provided,
-    // display: 'inline-flex',
-    // alignSelf:'flex-end',
-    // alignItems: 'center',
     maxHeight: '48px',
   }),
   indicatorSeparator: (provided, state) => ({
@@ -382,6 +382,7 @@ function RichSelect({
   error,
   isMulti = false,
   isSearchable = true,
+  isClearable = false,
   menuPortalTarget,
   noTopLabel,
   onChange,
@@ -430,6 +431,7 @@ function RichSelect({
       }
       menuPortalTarget={menuPortalTarget || document.getElementById(inputId)}
       isSearchable={isSearchable}
+      isClearable={isClearable}
       isMulti={isMulti}
       onChange={onChange}
       value={value}

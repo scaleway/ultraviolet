@@ -9,19 +9,17 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="basic">
-    <Tags onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+    <Tags
+    tags={['Smooth', 'code']} />
   </Story>
 </Canvas>
+
 
 ## Variant Bordered
 
 <Canvas>
   <Story name="bordered">
-    <Tags
-      variant="bordered"
-      onChange={tags => alert(tags)}
-      tags={['Smooth', 'code']}
-    />
+    <Tags variant="bordered" tags={['Smooth', 'code']} />
   </Story>
 </Canvas>
 
@@ -29,7 +27,7 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="placeholder">
-    <Tags placeholder="Please type your tags" onChange={tags => alert(tags)} />
+    <Tags placeholder="Please type your tags" />
   </Story>
 </Canvas>
 
@@ -53,6 +51,6 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="disabled">
-    <Tags disabled onChange={tags => alert(tags)} tags={['Smooth', 'code']} />
+    <Tags disabled tags={['Smooth', 'code']} />
   </Story>
 </Canvas>
