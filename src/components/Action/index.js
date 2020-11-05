@@ -52,7 +52,7 @@ Action.propTypes = {
 }
 
 Action.defaultProps = {
-  size: 16,
+  size: 20,
   rounded: false,
   variant: 'primary',
 }
