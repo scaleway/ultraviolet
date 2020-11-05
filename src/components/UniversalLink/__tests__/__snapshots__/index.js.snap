@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UniversalLink renders correctly with a taregt blank 1`] = `
+<a
+  className="sui-box css-8qkufk"
+  href="/"
+  rel="noopener noreferrer"
+  target="_blank"
+  to="/"
+>
+  This is a link
+</a>
+`;
+
+exports[`UniversalLink renders correctly with an absolute utl 1`] = `
+<a
+  className="sui-box css-8qkufk"
+  href="https://google.com"
+  rel="noopener noreferrer"
+  target="_blank"
+  to="https://google.com"
+>
+  This is a link
+</a>
+`;
+
+exports[`UniversalLink renders correctly with defaults 1`] = `
+<a
+  className="sui-box css-8qkufk"
+  href={null}
+  target={null}
+  to={null}
+>
+  This is a link
+</a>
+`;
+
+exports[`UniversalLink renders correctly with href 1`] = `
+<a
+  className="sui-box css-8qkufk"
+  href="/"
+  target={null}
+  to={null}
+>
+  This is a link
+</a>
+`;
+
+exports[`UniversalLink renders correctly with to prop 1`] = `
+<a
+  className="sui-box css-8qkufk"
+  href="/"
+  target={null}
+  to="/"
+>
+  This is a link
+</a>
+`;
