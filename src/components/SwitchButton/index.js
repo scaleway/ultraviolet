@@ -39,7 +39,7 @@ const styles = {
         },
     }),
   focused: css({
-    boxShadow: `0 0 8px 2px ${theme.gray200}`,
+    boxShadow: `0 0 1px 2px ${theme.primary}`,
   }),
   checked: css({
     cursor: 'auto',
