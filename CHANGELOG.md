@@ -1,3 +1,10 @@
+### [0.23.1](https://github.com/chambo-e/scw-ui/compare/v0.23.0...v0.23.1) (2020-11-05)
+
+
+### Bug Fixes
+
+* correct Action default size ([ea6ae5b](https://github.com/chambo-e/scw-ui/commit/ea6ae5b472f0ee0e0046d92307cc1e31d38b48c3))
+
 ## [0.23.0](https://github.com/chambo-e/scw-ui/compare/v0.22.0...v0.23.0) (2020-11-05)
 
 
