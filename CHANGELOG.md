@@ -1,3 +1,10 @@
+## [0.23.0](https://github.com/chambo-e/scw-ui/compare/v0.22.0...v0.23.0) (2020-11-05)
+
+
+### Features
+
+* add Progress component [CNS-2098] ([c43fce2](https://github.com/chambo-e/scw-ui/commit/c43fce2a4915efc193a93295784a99c729a30b11))
+
 ## [0.22.0](https://github.com/chambo-e/scw-ui/compare/v0.21.3...v0.22.0) (2020-11-05)
 
 
