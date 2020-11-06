@@ -1,3 +1,10 @@
+### [0.23.2](https://github.com/chambo-e/scw-ui/compare/v0.23.1...v0.23.2) (2020-11-06)
+
+
+### Bug Fixes
+
+* correct storybook build ([f5f3efe](https://github.com/chambo-e/scw-ui/commit/f5f3efe245890d4acf5e28e8449ca46176ce326f))
+
 ### [0.23.1](https://github.com/chambo-e/scw-ui/compare/v0.23.0...v0.23.1) (2020-11-05)
 
 
