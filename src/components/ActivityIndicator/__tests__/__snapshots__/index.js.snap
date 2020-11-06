@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActivityIndicator Action renders with width=40px height=40px  1`] = `
+exports[`ActivityIndicator renders correctly  1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -38,8 +38,8 @@ exports[`ActivityIndicator Action renders with width=40px height=40px  1`] = `
     className="emotion-0"
     style={
       Object {
-        "height": 40,
-        "width": 40,
+        "height": 10,
+        "width": 10,
       }
     }
   >
@@ -80,7 +80,7 @@ exports[`ActivityIndicator Action renders with width=40px height=40px  1`] = `
 </div>
 `;
 
-exports[`ActivityIndicator ActivityIndicator renders correctly  1`] = `
+exports[`ActivityIndicator renders with width=40px height=40px  1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -118,8 +118,8 @@ exports[`ActivityIndicator ActivityIndicator renders correctly  1`] = `
     className="emotion-0"
     style={
       Object {
-        "height": 10,
-        "width": 10,
+        "height": 40,
+        "width": 40,
       }
     }
   >

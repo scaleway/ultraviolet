@@ -7,7 +7,7 @@ describe('ActivityIndicator', () => {
     shouldMatchEmotionSnapshot(<ActivityIndicator />)
   })
 
-  test('Action renders with width=40px height=40px ', () => {
+  test('renders with width=40px height=40px ', () => {
     shouldMatchEmotionSnapshot(<ActivityIndicator size={40} />)
   })
 })
