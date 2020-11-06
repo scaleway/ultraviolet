@@ -2,12 +2,14 @@ import React from 'react'
 import { VerificationCode } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
-test('VerificationCode renders correctly with default values', () => {
-  shouldMatchEmotionSnapshot(<VerificationCode />)
-})
+describe('VerificationCode', () => {
+  test('renders correctly with default values', () => {
+    shouldMatchEmotionSnapshot(<VerificationCode />)
+  })
 
-test('VerificationCode renders correctly with initial value and placeholder and 6 fields', () => {
-  shouldMatchEmotionSnapshot(
-    <VerificationCode fields={6} initialValue="13" placeholder="0037" />,
-  )
+  test('renders correctly with initial value and placeholder and 6 fields', () => {
+    shouldMatchEmotionSnapshot(
+      <VerificationCode fields={6} initialValue="13" placeholder="0037" />,
+    )
+  })
 })

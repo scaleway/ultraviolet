@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivityIndicator renders correctly  1`] = `
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-1.emotion-1 {
+  color: #bd4932;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<div
+  aria-valuemax={1}
+  aria-valuemin={0}
+  className="sui-box emotion-1"
+  role="progressbar"
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "height": 10,
+        "width": 10,
+      }
+    }
+  >
+    <svg
+      height="100%"
+      viewBox="0 0 32 32"
+      width="100%"
+    >
+      <circle
+        cx="16"
+        cy="16"
+        fill="none"
+        r="14"
+        strokeWidth="4"
+        style={
+          Object {
+            "opacity": 0.2,
+            "stroke": "currentColor",
+          }
+        }
+      />
+      <circle
+        cx="16"
+        cy="16"
+        fill="none"
+        r="14"
+        strokeWidth="4"
+        style={
+          Object {
+            "stroke": "currentColor",
+            "strokeDasharray": 80,
+            "strokeDashoffset": 60,
+          }
+        }
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`ActivityIndicator renders with width=40px height=40px  1`] = `
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-1.emotion-1 {
+  color: #bd4932;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<div
+  aria-valuemax={1}
+  aria-valuemin={0}
+  className="sui-box emotion-1"
+  role="progressbar"
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "height": 40,
+        "width": 40,
+      }
+    }
+  >
+    <svg
+      height="100%"
+      viewBox="0 0 32 32"
+      width="100%"
+    >
+      <circle
+        cx="16"
+        cy="16"
+        fill="none"
+        r="14"
+        strokeWidth="4"
+        style={
+          Object {
+            "opacity": 0.2,
+            "stroke": "currentColor",
+          }
+        }
+      />
+      <circle
+        cx="16"
+        cy="16"
+        fill="none"
+        r="14"
+        strokeWidth="4"
+        style={
+          Object {
+            "stroke": "currentColor",
+            "strokeDasharray": 80,
+            "strokeDashoffset": 60,
+          }
+        }
+      />
+    </svg>
+  </div>
+</div>
+`;
