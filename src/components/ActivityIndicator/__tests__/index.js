@@ -3,7 +3,7 @@ import { ActivityIndicator } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ActivityIndicator', () => {
-  test('ActivityIndicator renders correctly ', () => {
+  test('renders correctly ', () => {
     shouldMatchEmotionSnapshot(<ActivityIndicator />)
   })
 
