@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Boxer renders correctly with 3 childs 1`] = `
+Array [
+  <div
+    className="sui-box css-8qkufk"
+  >
+    <h1>
+      Header 1
+    </h1>
+  </div>,
+  <div
+    className="sui-box css-8qkufk"
+  >
+    <h2>
+      Header 2
+    </h2>
+  </div>,
+  <div
+    className="sui-box css-8qkufk"
+  >
+    <p>
+      paragraph
+    </p>
+  </div>,
+]
+`;
+
+exports[`Boxer renders correctly with one child 1`] = `
+<div
+  className="sui-box css-8qkufk"
+>
+  Test
+</div>
+`;
