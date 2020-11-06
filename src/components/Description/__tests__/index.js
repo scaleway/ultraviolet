@@ -3,7 +3,7 @@ import { Description } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Description', () => {
-  test('Description renders correctly', () => {
+  test('renders correctly', () => {
     shouldMatchEmotionSnapshot(
       <Description>
         <Description.Term>Name</Description.Term>
@@ -14,7 +14,7 @@ describe('Description', () => {
     )
   })
 
-  test('Description renders correctly inline', () => {
+  test('renders correctly inline', () => {
     shouldMatchEmotionSnapshot(
       <Description inline>
         <Description.Term>Name</Description.Term>
@@ -25,7 +25,7 @@ describe('Description', () => {
     )
   })
 
-  test('Description renders correctly seletable', () => {
+  test('renders correctly seletable', () => {
     shouldMatchEmotionSnapshot(
       <Description inline selectable>
         <Description.Term>Name</Description.Term>

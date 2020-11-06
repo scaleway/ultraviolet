@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alert Alert renders correctly  1`] = `
+exports[`Alert renders correctly  1`] = `
 .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
@@ -43,11 +43,13 @@ exports[`Alert Alert renders correctly  1`] = `
       d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
     />
   </svg>
-  <span />
+  <span>
+     This text is quite long. 
+  </span>
 </div>
 `;
 
-exports[`Alert Alert renders with variant info 1`] = `
+exports[`Alert renders with variant info 1`] = `
 .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
@@ -90,11 +92,13 @@ exports[`Alert Alert renders with variant info 1`] = `
       d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
     />
   </svg>
-  <span />
+  <span>
+     This text is quite long.
+  </span>
 </div>
 `;
 
-exports[`Alert Alert renders with variant success & icon lock 1`] = `
+exports[`Alert renders with variant success & icon lock 1`] = `
 .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
@@ -137,11 +141,13 @@ exports[`Alert Alert renders with variant success & icon lock 1`] = `
       d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
     />
   </svg>
-  <span />
+  <span>
+    This text is quite long.
+  </span>
 </div>
 `;
 
-exports[`Alert Alert renders with variant success 1`] = `
+exports[`Alert renders with variant success 1`] = `
 .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
@@ -184,11 +190,13 @@ exports[`Alert Alert renders with variant success 1`] = `
       d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
     />
   </svg>
-  <span />
+  <span>
+     This text is quite long.
+  </span>
 </div>
 `;
 
-exports[`Alert Alert renders with variant warning 1`] = `
+exports[`Alert renders with variant warning 1`] = `
 .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
@@ -231,6 +239,8 @@ exports[`Alert Alert renders with variant warning 1`] = `
       d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
     />
   </svg>
-  <span />
+  <span>
+     This text is quite long.
+  </span>
 </div>
 `;
