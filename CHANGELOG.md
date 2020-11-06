@@ -1,3 +1,10 @@
+### [0.23.3](https://github.com/chambo-e/scw-ui/compare/v0.23.2...v0.23.3) (2020-11-06)
+
+
+### Bug Fixes
+
+* **deps:** yarn lock ([1d2ea35](https://github.com/chambo-e/scw-ui/commit/1d2ea35848f0b69c53e3cfbbfbb2351ab32d7dd9))
+
 ### [0.23.2](https://github.com/chambo-e/scw-ui/compare/v0.23.1...v0.23.2) (2020-11-06)
 
 
