@@ -44,3 +44,43 @@ import { ExtendedReminder } from '../'
     />
   </Story>
 </Canvas>
+
+# With onClick
+
+<Canvas isColumn>
+  <Story name="on-click-warning">
+    <ExtendedReminder
+      variant="warning"
+      icon="alert"
+      badgeText="10 days remaining"
+      onClick={() => console.log('clicked')}
+      mb={4}
+      title="Verify your credit card"
+      text="Enter the code we send to your bank account to validate your payment method."
+      linkText="Verify my credit card"
+    />
+  </Story>
+  <Story name="on-click-error">
+    <ExtendedReminder
+      variant="error"
+      icon="lock"
+      badgeText="10 days remaining"
+      onClick={() => console.log('clicked')}
+      mb={4}
+      title="Verify your credit card"
+      text="Enter the code we send to your bank account to validate your payment method."
+      linkText="Verify my credit card"
+    />
+  </Story>
+  <Story name="on-click-info">
+    <ExtendedReminder
+      variant="info"
+      icon="check"
+      badgeText="10 days remaining"
+      onClick={() => console.log('clicked')}
+      title="Verify your credit card"
+      text="Enter the code we send to your bank account to validate your payment method."
+      linkText="Verify my credit card"
+    />
+  </Story>
+</Canvas>
