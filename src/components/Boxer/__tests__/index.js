@@ -4,15 +4,19 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('Boxer', () => {
   test('renders correctly with one child', () => {
-    shouldMatchEmotionSnapshot(<Boxer>Test</Boxer>)
+    shouldMatchEmotionSnapshot(
+      <Boxer>
+        <p key="text">Test</p>
+      </Boxer>,
+    )
   })
 
   test('renders correctly with 3 childs', () => {
     shouldMatchEmotionSnapshot(
       <Boxer>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <p>paragraph</p>
+        <h1 key="a">Header 1</h1>
+        <h2 key="b">Header 2</h2>
+        <p key="c">paragraph</p>
       </Boxer>,
     )
   })
