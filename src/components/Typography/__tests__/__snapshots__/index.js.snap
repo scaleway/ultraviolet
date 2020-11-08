@@ -243,6 +243,47 @@ exports[`Typography variant "command" with tooltip renders correctly 1`] = `
 </code>
 `;
 
+exports[`Typography variant "default" renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+<div
+  className="sui-box emotion-0"
+>
+  default
+</div>
+`;
+
+exports[`Typography variant "default" with tooltip renders correctly 1`] = `
+.emotion-0 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0.emotion-0 {
+  max-width: 650px;
+  width: 100px;
+}
+
+<div
+  className="sui-box emotion-0"
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  text="This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+>
+  This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+`;
+
 exports[`Typography variant "description" renders correctly 1`] = `
 .emotion-0 {
   color: #4a4f62;
