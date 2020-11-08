@@ -13,25 +13,25 @@ import { Button } from '../../'
 <Canvas>
   <Story name="basic">
     <Table>
-      <Table.Thead>
-        <Table.Tr>
-          <Table.Th>ID</Table.Th>
-          <Table.Th>Status</Table.Th>
-          <Table.Th>Date</Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <Table.Tr>
-          <Table.Td>165</Table.Td>
-          <Table.Td>Ongoing</Table.Td>
-          <Table.Td>Yesterday</Table.Td>
-        </Table.Tr>
-        <Table.Tr>
-          <Table.Td>56</Table.Td>
-          <Table.Td>Resolved</Table.Td>
-          <Table.Td>1 hour ago</Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
+      <Table.Head>
+        <Table.Row>
+          <Table.HeadCell>ID</Table.HeadCell>
+          <Table.HeadCell>Status</Table.HeadCell>
+          <Table.HeadCell>Date</Table.HeadCell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
+        <Table.Row>
+          <Table.BodyCell>165</Table.BodyCell>
+          <Table.BodyCell>Ongoing</Table.BodyCell>
+          <Table.BodyCell>Yesterday</Table.BodyCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.BodyCell>56</Table.BodyCell>
+          <Table.BodyCell>Resolved</Table.BodyCell>
+          <Table.BodyCell>1 hour ago</Table.BodyCell>
+        </Table.Row>
+      </Table.Body>
     </Table>
   </Story>
 </Canvas>
@@ -46,29 +46,29 @@ import { Button } from '../../'
 <Canvas>
   <Story name="hoverable">
     <Table>
-      <Table.Thead>
-        <Table.Tr>
-          <Table.Th>ID</Table.Th>
-          <Table.Th>Date</Table.Th>
-          <Table.Th>Action</Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody>
-        <Table.Tr>
-          <Table.Td>999</Table.Td>
-          <Table.Td>Just now</Table.Td>
-          <Table.Td>
+      <Table.Head>
+        <Table.Row>
+          <Table.HeadCell>ID</Table.HeadCell>
+          <Table.HeadCell>Date</Table.HeadCell>
+          <Table.HeadCell>Action</Table.HeadCell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
+        <Table.Row>
+          <Table.BodyCell>999</Table.BodyCell>
+          <Table.BodyCell>Just now</Table.BodyCell>
+          <Table.BodyCell>
             <Button size="sm" icon="eye" data-visibility="hover" />
-          </Table.Td>
-        </Table.Tr>
-        <Table.Tr>
-          <Table.Td>165</Table.Td>
-          <Table.Td>Yesterday</Table.Td>
-          <Table.Td>
+          </Table.BodyCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.BodyCell>165</Table.BodyCell>
+          <Table.BodyCell>Yesterday</Table.BodyCell>
+          <Table.BodyCell>
             <Button size="sm" icon="eye" data-visibility="hover" />
-          </Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
+          </Table.BodyCell>
+        </Table.Row>
+      </Table.Body>
     </Table>
   </Story>
 </Canvas>
@@ -83,18 +83,18 @@ import { Button } from '../../'
 <Canvas>
   <Story name="loader">
     <Table>
-      <Table.Thead>
-        <Table.Tr>
-          <Table.Th>ID</Table.Th>
-          <Table.Th>Date</Table.Th>
-        </Table.Tr>
-      </Table.Thead>
-      <Table.Tbody progress colSpan={2}>
-        <Table.Tr>
-          <Table.Td>999</Table.Td>
-          <Table.Td>Just now</Table.Td>
-        </Table.Tr>
-      </Table.Tbody>
+      <Table.Head>
+        <Table.Row>
+          <Table.HeadCell>ID</Table.HeadCell>
+          <Table.HeadCell>Date</Table.HeadCell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body loading colSpan={2}>
+        <Table.Row>
+          <Table.BodyCell>999</Table.BodyCell>
+          <Table.BodyCell>Just now</Table.BodyCell>
+        </Table.Row>
+      </Table.Body>
     </Table>
   </Story>
 </Canvas>
