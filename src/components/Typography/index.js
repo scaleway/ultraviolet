@@ -115,6 +115,7 @@ const styles = {
 }
 
 const variantTags = {
+  default: 'div',
   hero: 'h1',
   lead: 'h2',
   'lead-block': 'h2',
