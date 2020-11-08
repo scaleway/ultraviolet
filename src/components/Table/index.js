@@ -1,119 +1,120 @@
 import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { gray50, gray350, gray550, gray700, primary } from '../../theming'
-import { cx, sp } from '../../utils'
+import { theme } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 
-const styles = {
-  cell: p => css`
-    padding: ${sp(1.5)(p)} ${sp(2)(p)};
-    font-size: 14px;
-    line-height: 24px;
-  `,
-  th: p => css`
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: 400;
-    color: ${gray550(p)};
-    text-align: left;
-  `,
-  td: css`
-    overflow: hidden;
-    white-space: nowrap;
-  `,
-  table: css`
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-  `,
-  thead: p => css`
-    border: 0;
-    border-bottom-width: 1px;
-    border-color: ${gray350(p)};
-    border-style: solid;
-  `,
-  tr: p => css`
-    color: ${gray700(p)};
+const Table = styled.table`
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+`
 
-    a {
-      color: inherit;
-    }
+const Head = styled.thead`
+  border: 0;
+  border-bottom-width: 1px;
+  border-color: ${theme.gray350};
+  border-style: solid;
+`
 
-    &:nth-of-type(even) {
-      background-color: ${gray50(p)};
-    }
+const Row = styled.tr`
+  color: ${theme.gray700};
 
+  a {
+    color: inherit;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: ${theme.gray50};
+  }
+
+  ${({ highlight }) =>
+    highlight &&
+    `
     &:hover {
-      color: ${primary(p)};
+      color: ${theme.primary};
 
       td:first-of-type {
         font-weight: 500;
         text-decoration: underline;
       }
-    }
+    }`}
 
-    [data-visibility='hover'] {
-      transition: opacity 150ms;
-      opacity: 0;
-      pointer-events: none;
-    }
+  [data-visibility='hover'] {
+    transition: opacity 150ms;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  &:hover [data-visibility='hover'] {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+`
 
-    &:hover [data-visibility='hover'] {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  `,
-  activityIndicator: p => css`
-    position: absolute;
-    top: ${sp(1)(p)};
-    left: calc(50% - 20px);
-  `,
+Row.propTypes = {
+  highlight: PropTypes.bool,
 }
 
-export function Table(props) {
-  return <Box as="table" css={cx(styles.table)} {...props} />
+Row.defaultProps = {
+  highlight: true,
 }
 
-Table.Thead = function Thead(props) {
-  return <Box as="thead" css={cx(styles.head)} {...props} />
-}
+const cellStyle = css`
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 24px;
+`
 
-Table.Tbody = function Tbody({ progress, colSpan, children, ...props }) {
-  return (
-    <Box as="tbody" {...props}>
-      {progress ? (
-        <Table.Tr>
-          <Table.Td position="relative" height={80} colSpan={colSpan}>
-            <ActivityIndicator css={cx(styles.activityIndicator)} size={40} />
-          </Table.Td>
-        </Table.Tr>
-      ) : (
-        children
-      )}
-    </Box>
-  )
-}
+const HeadCell = styled.th`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  color: ${theme.gray550};
+  text-align: left;
+  ${cellStyle};
+`
 
-Table.Tbody.propTypes = {
+const BodyCell = styled.td`
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  ${cellStyle};
+`
+
+const TBody = Box.withComponent('tbody')
+
+const BodyLoader = props => (
+  <TBody>
+    <Row>
+      <BodyCell height={80} {...props}>
+        <ActivityIndicator position="absolute" top={16} left="50%" size={40} />
+      </BodyCell>
+    </Row>
+  </TBody>
+)
+
+const Body = ({ loading, colSpan, ...props }) =>
+  loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />
+
+Body.propTypes = {
+  loading: PropTypes.bool,
   colSpan: PropTypes.number,
-  progress: PropTypes.bool,
 }
 
-Table.Tr = function Tr(props) {
-  return <Box as="tr" css={cx(styles.tr)} {...props} />
+Body.defaultProps = {
+  loading: false,
+  colSpan: 1,
 }
 
-Table.Th = function Th({ children, ...props }) {
-  return (
-    <Box as="th" css={cx([styles.cell, styles.th])} {...props}>
-      {children}
-    </Box>
-  )
-}
+Table.Head = Head
+Table.Body = Body
+Table.Row = Row
+Table.HeadCell = HeadCell
+Table.BodyCell = BodyCell
 
-Table.Td = function Td(props) {
-  return <Box as="td" css={cx([styles.cell, styles.td])} {...props} />
-}
+export { Table }
