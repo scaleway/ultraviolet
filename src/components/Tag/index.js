@@ -26,9 +26,17 @@ export const styles = {
   `,
   icon: css`
     margin-left: 16px;
-    &:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover,
+    &:focus {
       background-color: ${theme.gray200};
+      svg {
+          fill: ${theme.primary};
+        },
     }
+
   `,
   bordered: css`
     border-radius: 4px;
