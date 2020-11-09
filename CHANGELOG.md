@@ -1,3 +1,10 @@
+### [0.26.1](https://github.com/chambo-e/scw-ui/compare/v0.26.0...v0.26.1) (2020-11-09)
+
+
+### Bug Fixes
+
+* **components:** add focus style ([d206ad6](https://github.com/chambo-e/scw-ui/commit/d206ad6ef662d2dd3f47d734a143a46d9d0272e6))
+
 ## [0.26.0](https://github.com/chambo-e/scw-ui/compare/v0.25.0...v0.26.0) (2020-11-09)
 
 
