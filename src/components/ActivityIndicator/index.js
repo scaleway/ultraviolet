@@ -25,7 +25,7 @@ const Spinner = ({ children, style }) => (
 )
 
 Spinner.propTypes = {
-  style: PropTypes.string.isRequired,
+  style: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
 }
 
@@ -34,7 +34,7 @@ const Circle = ({ style }) => (
 )
 
 Circle.propTypes = {
-  style: PropTypes.string.isRequired,
+  style: PropTypes.shape({}).isRequired,
 }
 
 const ActivityIndicator = ({ size, color, ...props }) => {

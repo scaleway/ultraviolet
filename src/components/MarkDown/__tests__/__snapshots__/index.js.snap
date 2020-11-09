@@ -1,0 +1,386 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkDown render html without escaing it 1`] = `
+<div
+  className="sui-box emotion-0"
+>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      Hello
+    </span>
+    <br />
+    <span
+      className="sui-box emotion-0"
+    >
+      World
+    </span>
+  </p>
+</div>
+`;
+
+exports[`MarkDown render paragraph inline 1`] = `
+.emotion-4 > p {
+  display: inline;
+}
+
+<span
+  className="sui-box emotion-4"
+>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a paragraph.
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      And a second one
+    </span>
+  </p>
+</span>
+`;
+
+exports[`MarkDown render simple string 1`] = `
+.emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 16px;
+  margin-top: 48px;
+}
+
+.emotion-1.emotion-1 {
+  margin-top: 0;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #3f6ed8;
+}
+
+.emotion-11:hover,
+.emotion-11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-11:hover,
+.emotion-11:focus {
+  color: #1e4293;
+}
+
+.emotion-17 {
+  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.emotion-17.emotion-17 {
+  padding: 8px;
+}
+
+<div
+  className="sui-box emotion-0"
+>
+  <h2
+    className="sui-box emotion-1"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a Markdown H1
+    </span>
+  </h2>
+  <h2>
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a Markdown H2
+    </span>
+  </h2>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a simple markdown with 
+    </span>
+    <strong>
+      <span
+        className="sui-box emotion-0"
+      >
+        strong
+      </span>
+    </strong>
+    <span
+      className="sui-box emotion-0"
+    >
+       
+    </span>
+    <em>
+      <span
+        className="sui-box emotion-0"
+      >
+        italic
+      </span>
+    </em>
+    <span
+      className="sui-box emotion-0"
+    >
+       content
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      You can find the complete reference 
+    </span>
+    <a
+      className="sui-box emotion-11"
+      href="https://commonmark.org/help/"
+      target={null}
+      to="https://commonmark.org/help/"
+    >
+      <span
+        className="sui-box emotion-0"
+      >
+        here
+      </span>
+    </a>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      Invalid 
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I can also render code
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-17"
+    >
+      const example = 1 // Inline code
+    </span>
+  </p>
+  <pre>
+    <code>
+        const example = 2
+    </code>
+  </pre>
+</div>
+`;
+
+exports[`MarkDown render simple string with target blank 1`] = `
+.emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #151a2d;
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 0;
+  margin-bottom: 16px;
+  margin-top: 48px;
+}
+
+.emotion-1.emotion-1 {
+  margin-top: 0;
+}
+
+.emotion-12 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #3f6ed8;
+}
+
+.emotion-12:hover,
+.emotion-12:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12:hover,
+.emotion-12:focus {
+  color: #1e4293;
+}
+
+.emotion-18 {
+  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.emotion-18.emotion-18 {
+  padding: 8px;
+}
+
+.emotion-11 {
+  fill: currentColor;
+  vertical-align: top;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  padding-left: 2px;
+  opacity: 0.5;
+}
+
+<div
+  className="sui-box emotion-0"
+>
+  <h2
+    className="sui-box emotion-1"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a Markdown H1
+    </span>
+  </h2>
+  <h2>
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a Markdown H2
+    </span>
+  </h2>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I am a simple markdown with 
+    </span>
+    <strong>
+      <span
+        className="sui-box emotion-0"
+      >
+        strong
+      </span>
+    </strong>
+    <span
+      className="sui-box emotion-0"
+    >
+       
+    </span>
+    <em>
+      <span
+        className="sui-box emotion-0"
+      >
+        italic
+      </span>
+    </em>
+    <span
+      className="sui-box emotion-0"
+    >
+       content
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      You can find the complete reference 
+    </span>
+    <a
+      className="sui-box emotion-12"
+      href="https://commonmark.org/help/"
+      rel="noopener noreferrer"
+      target="_blank"
+      to="https://commonmark.org/help/"
+    >
+      <span
+        className="sui-box emotion-0"
+      >
+        here
+      </span>
+      <svg
+        className="sui-box emotion-11"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+        />
+      </svg>
+    </a>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      Invalid 
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-0"
+    >
+      I can also render code
+    </span>
+  </p>
+  <p
+    className="sui-box emotion-0"
+  >
+    <span
+      className="sui-box emotion-18"
+    >
+      const example = 1 // Inline code
+    </span>
+  </p>
+  <pre>
+    <code>
+        const example = 2
+    </code>
+  </pre>
+</div>
+`;
