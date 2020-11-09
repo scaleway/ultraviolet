@@ -48,3 +48,43 @@ import { Box, Boxer } from '../../'
     </Box>
   </Story>
 </Canvas>
+
+## Max Lines
+
+<Description>
+  Force the text to not be more than n lines with the `maxLines` prop
+</Description>
+
+<Canvas>
+  <Story name="maxlines">
+    <Typography width={300} maxLines={2}>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Typography>
+  </Story>
+</Canvas>
+
+## Align
+
+<Description>
+  Set the textAlign css with `align` props
+</Description>
+
+<Canvas isColumn>
+  <Story name="align-left">
+    <Typography align="left">
+      Lorem ipsum dolor sit amet, consectetu adipisicing elit
+    </Typography>
+  </Story>
+  <Story name="align-center">
+    <Typography align="center">
+      Lorem ipsum dolor sit amet, consectetu adipisicing elit
+    </Typography>
+  </Story>
+  <Story name="align-right">
+    <Typography align="right">
+      Lorem ipsum dolor sit amet, consectetu adipisicing elit
+    </Typography>
+  </Story>
+</Canvas>
