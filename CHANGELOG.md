@@ -1,3 +1,10 @@
+## [0.25.0](https://github.com/chambo-e/scw-ui/compare/v0.24.1...v0.25.0) (2020-11-09)
+
+
+### Features
+
+* port Table component from shire ([77a651d](https://github.com/chambo-e/scw-ui/commit/77a651d4af2bb4c1b873a1ac248489156cc52a24))
+
 ### [0.24.1](https://github.com/chambo-e/scw-ui/compare/v0.24.0...v0.24.1) (2020-11-09)
 
 
