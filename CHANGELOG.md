@@ -1,3 +1,10 @@
+### [0.26.2](https://github.com/chambo-e/scw-ui/compare/v0.26.1...v0.26.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* correct Typography const instance to allow forwarding ref ([a6b958e](https://github.com/chambo-e/scw-ui/commit/a6b958ecde03a095225f6f8825c73823ce376e0d))
+
 ### [0.26.1](https://github.com/chambo-e/scw-ui/compare/v0.26.0...v0.26.1) (2020-11-09)
 
 
