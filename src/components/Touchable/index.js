@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Box } from '../Box'
 
@@ -26,7 +27,7 @@ const Touchable = ({
   disabled,
   activeOpacity,
   hasFocus,
-  as = 'button',
+  as,
   type,
   ...props
 }) => (
@@ -48,6 +49,27 @@ const Touchable = ({
     tabIndex={hasFocus && 0}
   />
 )
+
+Touchable.propTypes = {
+  innerRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.elementType }),
+  ]),
+  disabled: PropTypes.bool,
+  activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hasFocus: PropTypes.bool,
+  as: PropTypes.string,
+  type: PropTypes.string,
+}
+
+Touchable.defaultProps = {
+  innerRef: null,
+  disabled: false,
+  activeOpacity: null,
+  hasFocus: false,
+  as: 'button',
+  type: null,
+}
 
 const forwardRef = (props, ref) => <Touchable {...props} innerRef={ref} />
 const ForwardRef = React.forwardRef(forwardRef)
