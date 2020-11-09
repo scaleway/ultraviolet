@@ -1,3 +1,10 @@
+## [0.26.0](https://github.com/chambo-e/scw-ui/compare/v0.25.0...v0.26.0) (2020-11-09)
+
+
+### Features
+
+* port Typography component from shire [CNS-2106] ([5576c7e](https://github.com/chambo-e/scw-ui/commit/5576c7e137f3800135a039a1323ad27150b5d60a))
+
 ## [0.25.0](https://github.com/chambo-e/scw-ui/compare/v0.24.1...v0.25.0) (2020-11-09)
 
 
