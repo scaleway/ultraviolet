@@ -150,98 +150,96 @@ const textColors = {
   lightPrimary: theme.gray200,
 }
 
-const Typography = forwardRef(
-  (
-    {
-      variant,
-      children,
-      as,
-      color,
-      align,
-      lineHeight,
-      maxLines = 0,
-      ellipsis,
-      fontWeight,
-      ...props
-    },
-    ref,
-  ) => {
-    const variantStyles = ['lead-block', 'lead-text'].includes(variant)
-      ? [styles.lead, styles[variant]]
-      : [styles[variant]]
+const Text = ({
+  onMouseEnter = undefined,
+  onFocus = undefined,
+  tooltipProps = {},
+  variant,
+  children,
+  as,
+  color,
+  align,
+  lineHeight,
+  maxLines = 0,
+  ellipsis,
+  fontWeight,
+  ref,
+  ...props
+}) => {
+  const variantStyles = ['lead-block', 'lead-text'].includes(variant)
+    ? [styles.lead, styles[variant]]
+    : [styles[variant]]
 
-    const finalStringChildren = recursivelyGetChildrenString(children)
+  return (
+    <Box
+      ref={ref}
+      onMouseEnter={onMouseEnter}
+      onFocus={onFocus}
+      {...tooltipProps}
+      {...props}
+      as={as || variantTags[variant]}
+      css={[
+        styles.main,
+        ...variantStyles,
+        color && css({ color: textColors[color] }),
+        align && css({ textAlign: align }),
+        ellipsis && styles.ellipsis,
+        lineHeight && css({ lineHeight }),
+        fontWeight && css({ fontWeight }),
+        maxLines && maxLines > 0 && styles.clamp(maxLines),
+      ]}
+    >
+      {children}
+    </Box>
+  )
+}
 
-    function Text({
-      onMouseEnter = undefined,
-      onFocus = undefined,
-      tooltipProps = {},
-    }) {
-      return (
-        <Box
-          ref={ref}
-          onMouseEnter={onMouseEnter}
-          onFocus={onFocus}
-          {...tooltipProps}
+const TextWithTooltip = props => {
+  const isTruncated = useCallback((target = {}) => {
+    // If the text is really truncated
+    const { offsetWidth, scrollWidth } = target
+    return offsetWidth < scrollWidth
+  }, [])
+
+  const finalStringChildren = recursivelyGetChildrenString(props.children)
+
+  return (
+    <Tooltip text={finalStringChildren} maxWidth={650}>
+      {({
+        width,
+        onMouseEnter = () => {},
+        onFocus = () => {},
+        ...tooltipProps
+      }) => (
+        <Text
+          onMouseEnter={ev => {
+            if (isTruncated(ev.currentTarget)) {
+              onMouseEnter(ev)
+            }
+          }}
+          onFocus={ev => {
+            if (isTruncated(ev.currentTarget)) {
+              onFocus(ev)
+            }
+          }}
+          tooltipProps={tooltipProps}
           {...props}
-          as={as || variantTags[variant]}
-          css={[
-            styles.main,
-            ...variantStyles,
-            color && css({ color: textColors[color] }),
-            align && css({ textAlign: align }),
-            ellipsis && styles.ellipsis,
-            lineHeight && css({ lineHeight }),
-            fontWeight && css({ fontWeight }),
-            maxLines && maxLines > 0 && styles.clamp(maxLines),
-          ]}
-        >
-          {children}
-        </Box>
-      )
-    }
+        />
+      )}
+    </Tooltip>
+  )
+}
 
-    function TextWithTooltip() {
-      const isTruncated = useCallback((target = {}) => {
-        // If the text is really truncated
-        const { offsetWidth, scrollWidth } = target
-        return offsetWidth < scrollWidth
-      }, [])
-
-      return (
-        <Tooltip text={finalStringChildren} maxWidth={650}>
-          {({
-            width,
-            onMouseEnter = () => {},
-            onFocus = () => {},
-            ...tooltipProps
-          }) => (
-            <Text
-              onMouseEnter={ev => {
-                if (isTruncated(ev.currentTarget)) {
-                  onMouseEnter(ev)
-                }
-              }}
-              onFocus={ev => {
-                if (isTruncated(ev.currentTarget)) {
-                  onFocus(ev)
-                }
-              }}
-              tooltipProps={tooltipProps}
-            />
-          )}
-        </Tooltip>
-      )
-    }
-    return ellipsis ? <TextWithTooltip /> : <Text />
-  },
-)
+const Typography = forwardRef((props, ref) => {
+  const Component = props.ellipsis ? TextWithTooltip : Text
+  return <Component ref={ref} {...props} />
+})
 
 const typographyVariants = Object.keys(variantTags)
 
 Typography.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(typographyVariants).isRequired,
+  variant: PropTypes.oneOf(typographyVariants),
   as: PropTypes.string,
   color: PropTypes.oneOf(Object.keys(textColors)),
   align: PropTypes.string,
@@ -259,6 +257,7 @@ Typography.defaultProps = {
   maxLines: 0,
   lineHeight: null,
   fontWeight: null,
+  variant: 'default',
 }
 
 const MemoizedTypography = memo(Typography)
