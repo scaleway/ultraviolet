@@ -1,3 +1,10 @@
+### [0.24.1](https://github.com/chambo-e/scw-ui/compare/v0.24.0...v0.24.1) (2020-11-09)
+
+
+### Bug Fixes
+
+* coherent style ([824f405](https://github.com/chambo-e/scw-ui/commit/824f405bfe8ab817099636ba7e191c15ebb605fe))
+
 ## [0.24.0](https://github.com/chambo-e/scw-ui/compare/v0.23.3...v0.24.0) (2020-11-09)
 
 
