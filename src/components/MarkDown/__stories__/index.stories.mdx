@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { MarkDown } from '..'
+import { simple, withMultipleParagraphs } from './markdown_example'
+
+<Meta title="Components/MarkDown" component={MarkDown} />
+
+# MarkDown
+
+<Description>
+  A wrapper for [react-markdown](https://github.com/remarkjs/react-markdown)
+</Description>
+
+## Basic Usage
+
+<Canvas isColumn>
+  <Story name="basic">
+    <MarkDown source={simple} linkTarget="_blank" />
+  </Story>
+</Canvas>
+
+## Inline
+
+<Description>
+  You can make the paragraphs inside the source render inline by settting the `inline prop`
+</Description>
+
+<Canvas isColumn>
+  <Story name="with-paragraphs">
+    <MarkDown source={withMultipleParagraphs} />
+  </Story>
+  <Story name="with-paragraphs-inline">
+    <MarkDown source={withMultipleParagraphs} inline />
+  </Story>
+</Canvas>
