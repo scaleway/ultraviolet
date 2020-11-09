@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Touchable renders correctly disabled 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  opacity: 0.5;
+}
+
+<button
+  className="sui-box emotion-0"
+  disabled={true}
+  tabIndex={false}
+  type="button"
+>
+  Basic Touchable
+</button>
+`;
+
+exports[`Touchable renders correctly on focus 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.emotion-0:active {
+  opacity: 0.7;
+}
+
+<button
+  className="sui-box emotion-0"
+  disabled={false}
+  tabIndex={0}
+  type="button"
+>
+  Basic Touchable
+</button>
+`;
+
+exports[`Touchable renders correctly with a non default as and type 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+<div
+  className="sui-box emotion-0"
+  disabled={false}
+  tabIndex={false}
+  type="button"
+>
+  Button Touchable
+</div>
+`;
+
+exports[`Touchable renders correctly with defaults 1`] = `
+.emotion-0 {
+  border: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+<button
+  className="sui-box emotion-0"
+  disabled={false}
+  tabIndex={false}
+  type="button"
+>
+  Basic Touchable
+</button>
+`;
