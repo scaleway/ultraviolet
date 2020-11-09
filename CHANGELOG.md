@@ -1,3 +1,10 @@
+## [0.24.0](https://github.com/chambo-e/scw-ui/compare/v0.23.3...v0.24.0) (2020-11-09)
+
+
+### Features
+
+* **range:** adds range component ([fe1cad1](https://github.com/chambo-e/scw-ui/commit/fe1cad120985a8cca616bbc1cf2421ad94755e9b))
+
 ### [0.23.3](https://github.com/chambo-e/scw-ui/compare/v0.23.2...v0.23.3) (2020-11-06)
 
 
