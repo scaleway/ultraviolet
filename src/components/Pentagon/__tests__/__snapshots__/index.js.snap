@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pentagon renders with children 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  width: 48px;
+  height: 48px;
+  background: #ffe1e7;
+}
+
+<div
+  className="emotion-0 emotion-1"
+  color="#ffe1e7"
+  size="48px"
+>
+  X
+</div>
+`;
+
+exports[`Pentagon renders with custom color 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  width: 48px;
+  height: 48px;
+  background: yellow;
+}
+
+<div
+  className="emotion-0 emotion-1"
+  color="yellow"
+  size="48px"
+>
+  X
+</div>
+`;
+
+exports[`Pentagon renders with custom size 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  width: 200px;
+  height: 200px;
+  background: #ffe1e7;
+}
+
+<div
+  className="emotion-0 emotion-1"
+  color="#ffe1e7"
+  size="200px"
+>
+  X
+</div>
+`;
+
+exports[`Pentagon renders with default props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);
+  width: 48px;
+  height: 48px;
+  background: #ffe1e7;
+}
+
+<div
+  className="emotion-0 emotion-1"
+  color="#ffe1e7"
+  size="48px"
+/>
+`;
