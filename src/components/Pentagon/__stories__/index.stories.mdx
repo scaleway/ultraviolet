@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Pentagon } from '..'
+import { theme } from '../../../theme'
+
+<Meta title="Components/Pentagon" component={Pentagon} />
+
+# Pentagon
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Pentagon />
+  </Story>
+  <Story name="children">
+    <Pentagon>X</Pentagon>
+  </Story>
+  <Story name="color">
+    <Pentagon color={theme.zumthor}>X</Pentagon>
+  </Story>
+  <Story name="size">
+    <Pentagon color={theme.serenade} size="200px">X</Pentagon>
+  </Story>
+</Canvas>
