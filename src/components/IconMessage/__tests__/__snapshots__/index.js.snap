@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconMessage renders correctly 1`] = `
+.emotion-4.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.emotion-1.emotion-1 {
+  margin-right: 16px;
+}
+
+.emotion-0 {
+  fill: #ef5774;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #ef5774;
+  font-weight: 700;
+}
+
+<div
+  className="sui-box emotion-4"
+>
+  <div
+    className="sui-box emotion-1"
+  >
+    <svg
+      className="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sui-box emotion-3"
+  >
+    <div
+      className="sui-box emotion-2"
+    >
+      This is default.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconMessage renders correctly with variant and icon 1`] = `
+.emotion-4.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.emotion-1.emotion-1 {
+  margin-right: 16px;
+}
+
+.emotion-0 {
+  fill: #4f0599;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4f0599;
+  font-weight: 700;
+}
+
+<div
+  className="sui-box emotion-4"
+>
+  <div
+    className="sui-box emotion-1"
+  >
+    <svg
+      className="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sui-box emotion-3"
+  >
+    <div
+      className="sui-box emotion-2"
+    >
+      This is variant
+    </div>
+  </div>
+</div>
+`;
