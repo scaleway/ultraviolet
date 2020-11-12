@@ -1,3 +1,10 @@
+## [0.27.0](https://github.com/chambo-e/scw-ui/compare/v0.26.2...v0.27.0) (2020-11-12)
+
+
+### Features
+
+* add Pentagon component ([8a91a19](https://github.com/chambo-e/scw-ui/commit/8a91a19ef0952881cc169c1993fea5edc5c4d29e))
+
 ### [0.26.2](https://github.com/chambo-e/scw-ui/compare/v0.26.1...v0.26.2) (2020-11-09)
 
 
