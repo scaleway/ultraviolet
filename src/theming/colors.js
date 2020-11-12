@@ -15,6 +15,8 @@ export const black = thd('black', '#000')
 export const ngray300 = thd('ngray300', '#dbdbdf')
 
 export const violet = thd('violet', '#4f0599')
+export const lightViolet = thd('lightViolet', '#a365f6')
+
 export const green = thd('green', '#45d6b5')
 export const red = thd('red', '#ef5774')
 export const orange = thd('orange', '#ff8c69')
