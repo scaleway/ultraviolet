@@ -67,6 +67,7 @@
       ]
     ],
     "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.jest/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     }
   },
@@ -92,6 +93,7 @@
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-url": "^5.0.1",
     "@scaleway/eslint-config-react": "^1.1.5",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
@@ -106,6 +108,7 @@
     "@storybook/addons": "^6.0.28",
     "@storybook/react": "^6.0.28",
     "@storybook/theming": "^6.0.28",
+    "@svgr/rollup": "^5.4.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
     "cross-env": "^7.0.2",
