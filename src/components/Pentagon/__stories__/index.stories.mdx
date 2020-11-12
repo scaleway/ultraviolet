@@ -1,6 +1,7 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
 import { Pentagon } from '..'
 import { theme } from '../../../theme'
+import { Box } from '../../Box'
 
 <Meta title="Components/Pentagon" component={Pentagon} />
 
@@ -9,7 +10,7 @@ import { theme } from '../../../theme'
 ## Basic
 
 <Canvas>
-  <Story name="basic">
+  <Story name="basic" parameters={{ layout: 'centered' }}>
     <Pentagon />
   </Story>
   <Story name="children">
