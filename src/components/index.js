@@ -1,6 +1,7 @@
 export * from './Action'
 export * from './ActivityIndicator'
 export * from './Alert'
+export * from './Avatar'
 export * from './Badge'
 export * from './BorderedBox'
 export * from './Box'
