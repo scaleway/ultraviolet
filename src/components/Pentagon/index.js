@@ -11,7 +11,7 @@ const Pentagon = styled.div`
   ${({ size, color }) => `
     width: ${size};
     height: ${size};
-    background: ${color};
+    background-color: ${color};
   `}
 `
 
