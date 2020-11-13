@@ -43,9 +43,14 @@ const Row = styled.tr`
     }`}
 
   [data-visibility='hover'] {
+    transition: opacity 150ms;
+    opacity: 0;
+    pointer-events: none;
     visibility: hidden;
   }
   &:hover [data-visibility='hover'] {
+    opacity: 1;
+    pointer-events: auto;
     visibility: visible;
   }
 `
