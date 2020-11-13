@@ -1,3 +1,10 @@
+## [0.30.0](https://github.com/chambo-e/scw-ui/compare/v0.29.0...v0.30.0) (2020-11-13)
+
+
+### Features
+
+* migrate Avatar from shire ([202aba9](https://github.com/chambo-e/scw-ui/commit/202aba98f8c4cbf44bb6ace5c7bc61d486499be2))
+
 ## [0.29.0](https://github.com/chambo-e/scw-ui/compare/v0.28.0...v0.29.0) (2020-11-13)
 
 
