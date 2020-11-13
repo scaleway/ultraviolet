@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { StatusIndicator } from '..'
+import { Box } from '../../'
+
+<Meta title="Components/StatusIndicator" component={StatusIndicator} />
+
+# StatusIndicator
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <StatusIndicator status="available" />
+  </Story>
+  <Story name="unavailable">
+    <StatusIndicator status="unavailable" />
+  </Story>
+  <Story name="with-tooltip">
+    <StatusIndicator status="available" tooltip="Available" />
+  </Story>
+  <Story name="loading">
+    <StatusIndicator status="starting" tooltip="Starting" />
+  </Story>
+  <Story name="stopped_in_place">
+    <StatusIndicator status="stopped_in_place" tooltip="Stopped in place" />
+  </Story>
+</Canvas>
