@@ -1,3 +1,10 @@
+### [0.27.1](https://github.com/chambo-e/scw-ui/compare/v0.27.0...v0.27.1) (2020-11-13)
+
+
+### Bug Fixes
+
+* correct popper position on Table BodyCell ([e0ee00c](https://github.com/chambo-e/scw-ui/commit/e0ee00caa74551569c54157a073cc83d58f2bd07))
+
 ## [0.27.0](https://github.com/chambo-e/scw-ui/compare/v0.26.2...v0.27.0) (2020-11-12)
 
 
