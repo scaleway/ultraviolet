@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['@scaleway/react'],
-  plugins: ['emotion'],
+  plugins: ['@emotion'],
   rules: {
     'no-nested-ternary': 'off',
     'no-param-reassign': 'off',
@@ -30,9 +30,9 @@ module.exports = {
     'react/require-default-props': 'off',
 
     // emotion
-    'emotion/styled-import': 'error',
-    'emotion/no-vanilla': 'error',
-    'emotion/import-from-emotion': 'error',
-    'emotion/syntax-preference': ['error', 'string'],
+    '@emotion/styled-import': 'error',
+    '@emotion/no-vanilla': 'error',
+    '@emotion/import-from-emotion': 'error',
+    '@emotion/syntax-preference': ['error', 'string'],
   },
 }
