@@ -24,3 +24,55 @@ import { Stepper } from '..'
     }}
   </Story>
 </Canvas>
+
+## Different stepping
+
+<Canvas>
+  <Story name="step">
+    {() => {
+      const [value, setValue] = useState(0)
+      return (
+        <Stepper
+          minValue={0}
+          maxValue={100}
+          step={10}
+          text="unit (try to write 64)"
+          onChange={setValue}
+          value={value}
+        />
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas isColumn>
+  <Story name="disabled">
+    <Stepper
+      minValue={0}
+      maxValue={100}
+      text="unit"
+      value={10}
+      disabled
+    />
+  </Story>
+</Canvas>
+
+## Events
+
+<Canvas isColumn>
+  <Story name="events">
+    <Stepper
+      minValue={50}
+      maxValue={100}
+      text="unit"
+      value={50}
+      onChange={() => console.log('onChange')}
+      onFocus={() => console.log('onFocus')}
+      onBlur={() => console.log('onBlur')}
+      onMinCrossed={() => console.log('onMinCrossed')}
+      onMaxCrossed={() => console.log('onMaxCrossed')}
+    />
+  </Story>
+</Canvas>
