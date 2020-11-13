@@ -1,3 +1,10 @@
+## [0.29.0](https://github.com/chambo-e/scw-ui/compare/v0.28.0...v0.29.0) (2020-11-13)
+
+
+### Features
+
+* migrate Label, ScrollView, StatusIndicator and Unselectable from shire ([e0be446](https://github.com/chambo-e/scw-ui/commit/e0be446a6de90fd7cd4dd3e0913962e5bdba849c))
+
 ## [0.28.0](https://github.com/chambo-e/scw-ui/compare/v0.27.1...v0.28.0) (2020-11-13)
 
 
