@@ -1,3 +1,10 @@
+## [0.28.0](https://github.com/chambo-e/scw-ui/compare/v0.27.1...v0.28.0) (2020-11-13)
+
+
+### Features
+
+* add backgroundColor on ProgressBar + tests ([a4b8562](https://github.com/chambo-e/scw-ui/commit/a4b85628f747c4fedc09f72b0d919c42a7037bb8))
+
 ### [0.27.1](https://github.com/chambo-e/scw-ui/compare/v0.27.0...v0.27.1) (2020-11-13)
 
 
