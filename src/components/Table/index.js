@@ -80,7 +80,6 @@ const HeadCell = styled.th`
 `
 
 const BodyCell = styled.td`
-  position: relative;
   overflow: hidden;
   white-space: nowrap;
   ${cellStyle};
