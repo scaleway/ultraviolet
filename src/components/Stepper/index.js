@@ -1,22 +1,19 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
-import React, { useRef, useCallback, useState } from 'react'
-import { white, gray100, gray350, gray550, gray700 } from '../../theming'
-import { cx } from '../../utils'
+import React, { useRef, useState, useEffect } from 'react'
+import { theme } from '../../theme'
+import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
 
-function bounded(value, min, max) {
-  return value > max ? max : value < min ? min : value
-}
+const bounded = (value, min, max) => Math.max(min, Math.min(value, max))
 
-function parseIntOr(str, fallback) {
+const parseIntOr = (str, fallback) => {
   const value = Number.parseInt(str, 10)
   return !Number.isNaN(value) ? value : fallback
 }
 
-function preventNonDigitsKey(event) {
+const preventNonDigitsKey = event => {
   // `event.which` and `event.keyCode` are deprecated
   // see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
   const keyCode = event.key.charCodeAt(0)
@@ -25,45 +22,60 @@ function preventNonDigitsKey(event) {
   }
 }
 
+const roundStep = (value, step) => Math.ceil(value / step) * step
+
 const styles = {
-  container: p => css`
-    height: 48px;
-    background-color: ${white(p)};
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: 500;
-  `,
-  center: p => css`
+  container: css({
+    height: 48,
+    backgroundColor: theme.white,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    fontWeight: 500,
+  }),
+  center: css`
     flex: 1;
     flex-direction: row;
     height: 100%;
-    border-width: 1px;
     align-items: center;
+    outline: none;
     justify-content: center;
-    border-color: ${gray350(p)};
-    border-style: solid;
+    border: 1px solid ${theme.gray350};
+
+    border-left-width: 0;
+    border-right-width: 0;
   `,
-  input: p => css`
+  input: css`
     pointer-events: none;
-    color: ${gray700(p)};
-    background-color: ${white(p)};
-    border: 0;
-    font-size: 16px;
-    font-weight: 500;
+    color: ${theme.gray700};
+    background-color: ${theme.white};
+    font-size: 16;
+    border: none;
     text-align: right;
     outline: none;
     position: relative;
-    margin-right: 4px;
+    margin-right: 4;
     max-width: 100%;
+    font-weight: 500;
+    text-align: center;
   `,
-  button: p => css`
-    border: 1px solid ${gray350(p)};
+  button: isDisabled => css`
+    border: 1px solid ${theme.gray350};
+
     justify-content: center;
     align-items: center;
     height: 100%;
     padding-right: 16px;
     padding-left: 16px;
+    position: relative;
+
+    :hover,
+    :focus {
+      > svg {
+        fill: ${!isDisabled && theme.primary};
+      }
+    }
   `,
   leftButton: css`
     border-right-width: 0;
@@ -75,154 +87,194 @@ const styles = {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   `,
-  disabled: p => css`
-    background-color: ${gray100(p)};
-    cursor: default;
-    border: 0;
-    color: ${gray550(p)};
+  disabled: css`
+    background-color: ${theme.gray100};
+    border: none;
+    color: ${theme.gray550};
     opacity: 1;
+    cursor: not-allowed;
+  `,
+  separator: css`
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    font-weight: 500;
+    color: ${theme.gray350};
   `,
 }
 
-export function Stepper({
-  unit = '',
+const Stepper = ({
+  text,
   disabled,
-  minValue = 0,
-  maxValue = 100,
+  minValue,
+  maxValue,
   name,
-  step = 1,
+  step,
   value,
   onChange,
   onFocus,
   onBlur,
+  onMinCrossed,
+  onMaxCrossed,
   ...props
-}) {
-  const instance = useRef({})
-  const [inputValue, setInputValue] = useState(String(value))
-  Object.assign(instance.current, {
-    minValue,
-    maxValue,
-    step,
-    value,
-    onChange,
-    onBlur,
-    inputValue,
-  })
+}) => {
   const inputRef = useRef()
-  const handleEdit = useCallback(() => inputRef.current.focus(), [])
-  const handleInputChange = useCallback(
-    event => setInputValue(event.target.value),
-    [],
-  )
-  const handleInputBlur = useCallback(event => {
-    const {
-      value,
-      minValue,
-      maxValue,
-      step,
-      inputValue,
-      onChange,
-      onBlur,
-    } = instance.current
-    const boundedValue = bounded(parseIntOr(inputValue, 0), minValue, maxValue)
-    const validValue = Math.round(boundedValue / step) * step
-    setInputValue(String(validValue))
+  const [inputValue, setInputValue] = useState(parseIntOr(value, minValue))
 
-    if (value !== validValue) {
-      onChange(validValue)
+  useEffect(() => {
+    if (onChange) {
+      onChange(inputValue)
     }
+  }, [inputValue])
 
-    if (onBlur) {
-      onBlur(event)
-    }
-  }, [])
+  const offsetFn = direction => () => {
+    setInputValue(currentValue => {
+      const newValue = currentValue + step * direction
+      const boundedValue = bounded(
+        newValue,
+        parseInt(minValue, 10),
+        parseInt(maxValue, 10),
+      )
+      return boundedValue
+    })
+  }
 
-  const changeValue = useCallback(value => {
-    const { onChange } = instance.current
-    onChange(value)
-    setInputValue(String(value))
-  }, [])
+  const handleChange = event => {
+    event.stopPropagation()
+    setInputValue(parseIntOr(event.currentTarget.value, 0))
+  }
 
-  const decrement = useCallback(() => {
-    const { value, step } = instance.current
-    const newValue = value - step
-    changeValue(newValue)
-  }, [changeValue])
+  const handleOnFocus = event => {
+    if (onFocus) onFocus(event)
+  }
 
-  const increment = useCallback(() => {
-    const { value, step } = instance.current
-    const newValue = value + step
-    changeValue(newValue)
-  }, [changeValue])
+  const handleOnBlur = event => {
+    setInputValue(currentValue => {
+      const properVal = roundStep(currentValue, step)
+      if (properVal < minValue) {
+        if (onMinCrossed) onMinCrossed()
+        return minValue
+      }
+
+      if (inputValue > maxValue) {
+        if (onMaxCrossed) onMaxCrossed()
+        return maxValue
+      }
+
+      return properVal
+    })
+
+    if (onBlur) onBlur(event)
+  }
+
+  const isMinusDisabled = inputValue <= minValue || disabled
+  const isPlusDisabled = inputValue >= maxValue || disabled
 
   return (
-    <Box {...props} css={cx(styles.container)}>
+    <Box {...props} css={styles.container}>
       <Touchable
-        css={cx([
-          styles.button,
+        css={[
+          styles.button(isMinusDisabled),
           styles.leftButton,
           disabled && styles.disabled,
-        ])}
-        onClick={decrement}
-        disabled={value <= minValue || disabled}
-        aria-label="minus"
+        ]}
+        onClick={offsetFn(-1)}
+        disabled={isMinusDisabled}
+        aria-label="Minus"
       >
-        <Icon
-          name="minus"
-          size={28}
-          color={value <= minValue || disabled ? 'gray550' : 'primary'}
-        />
-      </Touchable>
+        <Icon name="minus" size={28} color="lightGrey" />
 
-      <Touchable
-        css={cx([styles.center, disabled && styles.disabled])}
-        onClick={handleEdit}
-        onFocus={handleEdit}
-      >
-        <input
-          ref={inputRef}
-          css={cx([styles.input, disabled && styles.disabled])}
-          name={name}
-          onChange={handleInputChange}
-          onFocus={onFocus}
-          onKeyPress={preventNonDigitsKey}
-          onBlur={handleInputBlur}
-          value={inputValue} // A dom element can only have string attributes.
-          disabled={disabled}
-          style={{ width: inputValue.length * 10 + 15 }}
-        />
-
-        <span css={cx([styles.input, disabled && styles.disabled])}>
-          {unit}
+        <span
+          css={[
+            styles.separator,
+            css`
+              right: 0;
+            `,
+          ]}
+        >
+          |
         </span>
       </Touchable>
 
       <Touchable
-        css={cx([
-          styles.button,
+        css={[styles.center, disabled && styles.disabled]}
+        activeOpacity={0.5}
+        onClick={() => {
+          if (inputRef?.current) {
+            inputRef.current.focus()
+          }
+        }}
+      >
+        <input
+          ref={inputRef}
+          css={[styles.input, disabled && styles.disabled]}
+          name={name}
+          onChange={handleChange}
+          onFocus={handleOnFocus}
+          onKeyPress={preventNonDigitsKey}
+          onBlur={handleOnBlur}
+          value={inputValue.toString()} // A dom element can only have string attributes.
+          disabled={disabled}
+          style={{ width: inputValue.toString().length * 10 + 15 }}
+        />
+
+        <span css={[styles.input, disabled && styles.disabled]}>{text}</span>
+      </Touchable>
+
+      <Touchable
+        css={[
+          styles.button(isPlusDisabled),
           styles.rightButton,
           disabled && styles.disabled,
-        ])}
-        onClick={increment}
-        disabled={value >= maxValue || disabled}
-        aria-label="plus"
+        ]}
+        onClick={offsetFn(1)}
+        disabled={isPlusDisabled}
+        aria-label="Plus"
       >
-        <Icon
-          name="plus"
-          size={28}
-          color={value >= maxValue || disabled ? 'gray550' : 'primary'}
-        />
+        <span
+          css={[
+            styles.separator,
+            css`
+              left: 0;
+            `,
+          ]}
+        >
+          |
+        </span>
+        <Icon name="plus" size={28} color="lightGrey" />
       </Touchable>
     </Box>
   )
 }
 
 Stepper.propTypes = {
-  value: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  disabled: PropTypes.bool,
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
-  unit: PropTypes.node,
-  disabled: PropTypes.bool,
+  name: PropTypes.string,
   step: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  onMinCrossed: PropTypes.func,
+  onMaxCrossed: PropTypes.func,
 }
+
+Stepper.defaultProps = {
+  minValue: 0,
+  maxValue: 100,
+  name: 'stepper',
+  text: '',
+  value: null,
+  step: 1,
+  disabled: false,
+  onChange: null,
+  onFocus: null,
+  onBlur: null,
+  onMinCrossed: null,
+  onMaxCrossed: null,
+}
+
+export { Stepper }
