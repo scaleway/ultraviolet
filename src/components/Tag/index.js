@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import React from 'react'
 import { theme } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
+import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
 

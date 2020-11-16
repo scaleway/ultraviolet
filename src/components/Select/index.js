@@ -1,5 +1,4 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -15,6 +14,7 @@ import {
   borderRadius,
 } from '../../theming'
 import { cx, sp } from '../../utils'
+import { Box } from '../Box'
 import { Icon } from '../Icon'
 
 const styles = {
