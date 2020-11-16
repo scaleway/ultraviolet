@@ -1,3 +1,10 @@
+### [0.30.1](https://github.com/chambo-e/scw-ui/compare/v0.30.0...v0.30.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* avoid false on Touchable tabIndex ([055e7e3](https://github.com/chambo-e/scw-ui/commit/055e7e3ed9cb562853c3b558f387189c34a2e3b0))
+
 ## [0.30.0](https://github.com/chambo-e/scw-ui/compare/v0.29.0...v0.30.0) (2020-11-13)
 
 
