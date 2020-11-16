@@ -66,7 +66,11 @@ const CloseButton = ({ closeToast }) => (
 )
 
 CloseButton.propTypes = {
-  closeToast: PropTypes.func.isRequired,
+  closeToast: PropTypes.func,
+}
+
+CloseButton.defaultProps = {
+  closeToast: () => {},
 }
 
 const SanitizedNotificationBar = ({ closeToast, children, ...props }) => (
