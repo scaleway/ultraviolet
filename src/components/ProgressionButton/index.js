@@ -1,10 +1,10 @@
 import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
-import { Box } from '@smooth-ui/core-em'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from '../../theme'
+import { Box } from '../Box'
 
 const progressionAnimation = keyframes`
   from {

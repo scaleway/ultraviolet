@@ -1,5 +1,4 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -9,6 +8,7 @@ import {
   TooltipReference,
 } from 'reakit/Tooltip'
 import { theme } from '../../theme'
+import { Box } from '../Box'
 import { Tag } from '../Tag'
 
 const textStyle = maxTagWidth => css`

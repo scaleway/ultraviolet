@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Box } from '../Box'
 import { Dot } from '../Dot'
 
 export function DotSteps({ steps, step, setStep }) {

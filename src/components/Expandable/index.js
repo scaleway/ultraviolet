@@ -1,8 +1,8 @@
 import { css } from '@emotion/core'
-import { Box } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { cx } from '../../utils'
+import { Box } from '../Box'
 
 const styles = {
   container: css`
