@@ -1,3 +1,10 @@
+## [0.31.0](https://github.com/chambo-e/scw-ui/compare/v0.30.1...v0.31.0) (2020-11-16)
+
+
+### Features
+
+* port Stepper from shire [CNS-2109] ([71d43ac](https://github.com/chambo-e/scw-ui/commit/71d43ac728ff509b4bb14a01aab137e691a729fe))
+
 ### [0.30.1](https://github.com/chambo-e/scw-ui/compare/v0.30.0...v0.30.1) (2020-11-16)
 
 
