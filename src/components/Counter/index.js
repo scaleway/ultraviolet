@@ -16,7 +16,7 @@ const styles = {
   `,
 }
 
-export function Counter({ end }) {
+export function Counter({ end, onEnd }) {
   const start = useRef(0)
   useEffect(() => {
     start.current = end
@@ -26,7 +26,7 @@ export function Counter({ end }) {
     <div css={styles.container}>
       <div css={styles.space}>{end}</div>
       <div css={styles.counter}>
-        <CountUp start={start.current} end={end} duration={1.5} />
+        <CountUp start={start.current} end={end} onEnd={onEnd} duration={1.5} />
       </div>
     </div>
   )
@@ -34,6 +34,11 @@ export function Counter({ end }) {
 
 Counter.propTypes = {
   end: PropTypes.number.isRequired,
+  onEnd: PropTypes.func,
+}
+
+Counter.defaultProps = {
+  onEnd: () => {},
 }
 
 export default Counter
