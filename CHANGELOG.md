@@ -1,3 +1,10 @@
+### [0.31.1](https://github.com/chambo-e/scw-ui/compare/v0.31.0...v0.31.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* **counter:** propagate onend api func ([66b19a6](https://github.com/chambo-e/scw-ui/commit/66b19a6097b7e2d401b419fd2409fd33a3d21104))
+
 ## [0.31.0](https://github.com/chambo-e/scw-ui/compare/v0.30.1...v0.31.0) (2020-11-16)
 
 
