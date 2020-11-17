@@ -1,3 +1,10 @@
+### [0.31.2](https://github.com/chambo-e/scw-ui/compare/v0.31.1...v0.31.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* correct Toaster propTypes ([52a2c45](https://github.com/chambo-e/scw-ui/commit/52a2c45104048cb17816615079090e96879e853a))
+
 ### [0.31.1](https://github.com/chambo-e/scw-ui/compare/v0.31.0...v0.31.1) (2020-11-17)
 
 
