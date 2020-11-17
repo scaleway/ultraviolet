@@ -12,8 +12,8 @@ import { Icon } from '../../Icon'
 
 ## Basic
 
-<Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="basic" parameters={{ layout: 'centered' }} >
+<Canvas>
+  <Story name="basic" parameters={{ layout: 'centered' }}>
     <Box>
       <Popper
         aria-label="Custom popover"
@@ -29,38 +29,160 @@ import { Icon } from '../../Icon'
           </Button>
         )}
       >
+        {({ placement }) => <Box p={2}> placement:{placement}</Box>}
+      </Popper>
+    </Box>
+  </Story>
+</Canvas>
+
+## Complex children
+
+<Canvas>
+  <Story name="complexe children" parameters={{ layout: 'centered' }}>
+    <Box>
+      <Popper
+        variant="black"
+        aria-label="Custom popover"
+        disclosure={({ placement, visible }) => (
+          <Button>Popper {placement}:</Button>
+        )}
+      >
         {({ placement }) => (
-          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
+          <Box display="flex" flexDirection="column">
+            {new Array(15).fill(0).map((arr, index) => (
+              <Box width={30} height={30} m={2}>
+                {index}
+              </Box>
+            ))}
+          </Box>
         )}
       </Popper>
     </Box>
   </Story>
 </Canvas>
 
-## with Button inside position auto
+## Placement
 
-<Canvas style={{ backgroundColor: 'black' }}>
-  <Story
-    name="with button inside"
-    parameters={{ layout: 'centered' }}
-  >
-    <Popper
-      aria-label="Custom popover with buttom"
-      disclosure={() => <Button>Test</Button>}
-      placement="auto"
-    >
-      {({ placement }) => <Button> {placement}</Button>}
-    </Popper>
+<Description>Set placement using `placement` prop.</Description>
+
+<Canvas>
+  <Story height="100px" name="placement" parameters={{ layout: 'centered' }}>
+    <Box>
+      <Box display="flex" flexDirection="column">
+        <Popper
+          placement="left-start"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="left"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="left-end"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+      </Box>
+      <Box>
+        <Popper
+          placement="top-start"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          ml={2}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="top"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          ml={2}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="top-end"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          ml={2}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+      </Box>
+      <Box display="flex" flexDirection="column">
+        <Popper
+          placement="right-start"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="right"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="right-end"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+      </Box>
+      <Box>
+        <Popper
+          placement="bottom-start"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="bottom"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+        <Popper
+          placement="bottom-end"
+          variant="black"
+          aria-label="Custom popover with buttom"
+          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+        >
+          {({ placement }) => <Box p={1}> {placement}</Box>}
+        </Popper>
+      </Box>
+    </Box>
   </Story>
 </Canvas>
 
-## No portal
+## Without portal
 
 <Canvas style={{ backgroundColor: 'black' }}>
-  <Story
-    name="without modal/portal"
-    parameters={{ layout: 'centered' }}
-  >
+  <Story name="without modal/portal" parameters={{ layout: 'centered' }}>
     <Popper
       aria-label="Custom popover with buttom"
       disclosure={() => <Button>Test</Button>}
