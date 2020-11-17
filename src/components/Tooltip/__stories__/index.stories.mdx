@@ -124,3 +124,25 @@ import { Box, Button, Typography } from '../../'
     </Box>
   </Story>
 </Canvas>
+
+## variant
+
+<Description>Set variant </Description>
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="with button inside"
+    parameters={{ layout: 'centered' }}
+    height="100px"
+  >
+  <Box display="flex" justifyContent="space-evenly">
+      {['left', 'top', 'bottom', 'right'].map(placement => (
+        <Box key={placement} p={2} color="white">
+          <Tooltip text="tooltip" variant="white" placement={placement}>
+            {placement}
+          </Tooltip>
+        </Box>
+      ))}
+    </Box>
+  </Story>
+</Canvas>
