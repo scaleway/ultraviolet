@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -17,11 +18,13 @@ const variants = {
     background-color: ${theme.white};
     color: ${theme.black};
     fill: ${theme.white};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.gray400)};
   `,
   black: css`
     background-color: ${theme.black};
     color: ${theme.white};
     fill: ${theme.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.gray950)};
   `,
 }
 
