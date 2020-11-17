@@ -26,6 +26,7 @@ export const zumthor = thd('zumthor', '#e4edff')
 export const foam = thd('foam', '#cdfcf1')
 export const serenade = thd('serenade', '#ffefe6')
 export const pippin = thd('pippin', '#ffe1e7')
+export const shadow = thd('shadow', '#a5a5cd')
 
 // System colors
 export const primary = violet
@@ -60,6 +61,7 @@ export const colors = thd('colors', {
   foam,
   serenade,
   pippin,
+  shadow,
 
   primary,
   beta,

@@ -1,3 +1,5 @@
+import { css } from '@emotion/core'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo, useEffect, useRef } from 'react'
 import {
@@ -7,6 +9,21 @@ import {
   PopoverArrow,
 } from 'reakit/Popover'
 import { theme } from '../../theme'
+
+const variants = {
+  white: css`
+    background-color: ${theme.white};
+    color: ${theme.black};
+    fill: ${theme.white};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+  `,
+  black: css`
+    background-color: ${theme.black};
+    color: ${theme.white};
+    fill: ${theme.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+  `,
+}
 
 const Disclosure = memo(({ disclosure, popover }) => {
   const innerRef = useRef(disclosure(popover))
@@ -33,6 +50,7 @@ const Popper = memo(
     placement,
     preventBodyScroll,
     visible,
+    variant,
     ...props
   }) => {
     const popover = usePopoverState({
@@ -49,7 +67,7 @@ const Popper = memo(
       <>
         {disclosure && <Disclosure popover={popover} disclosure={disclosure} />}
         <Popover
-          style={{ backgroudColor }}
+          css={variants[variant]}
           hideOnClickOutside={hideOnClickOutside}
           preventBodyScroll={preventBodyScroll}
           {...popover}
@@ -92,16 +110,17 @@ Popper.propTypes = {
   ]),
   preventBodyScroll: PropTypes.bool,
   visible: PropTypes.bool,
+  variant: PropTypes.oneOf(Object.keys(variants)),
 }
 
 Popper.defaultProps = {
   animated: 100,
-  backgroudColor: theme.white,
+  variant: 'white',
   baseId: '',
   hasArrow: true,
   hideOnClickOutside: true,
   modal: true,
-  placement: 'bottom',
+  placement: 'auto',
   preventBodyScroll: false,
   visible: false,
 }

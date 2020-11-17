@@ -17,6 +17,11 @@ import { Box, Button, Typography } from '../../'
       <Tooltip text="tooltip">Tooltip around the text</Tooltip>
     </Box>
   </Story>
+  <Story name="visible">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip visible text="tooltip">Tooltip around the text</Tooltip>
+    </Box>
+  </Story>
   <Story name="wrap">
     <Tooltip text="tooltip">
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
@@ -146,3 +151,4 @@ import { Box, Button, Typography } from '../../'
     </Box>
   </Story>
 </Canvas>
+
