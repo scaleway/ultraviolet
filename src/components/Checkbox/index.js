@@ -15,7 +15,6 @@ const styles = {
     position: relative;
     display: inline-flex;
     align-items: flex-start;
-    padding-top: 2px;
   `,
   hover: p => css`
     &:hover {
@@ -41,8 +40,8 @@ const styles = {
   disabled: css`
     cursor: not-allowed;
   `,
-  children: css`
-    padding-top: 2px;
+  children: size => css`
+    padding-top: ${size > 27 ? '4px' : '2px'};
   `,
 }
 
@@ -89,7 +88,7 @@ export function Checkbox({
               disabled={disabled}
             />
             {progress ? (
-              <ActivityIndicator mr={hasChildren ? 1 : 0} />
+              <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
             ) : (
               <Icon
                 mr={hasChildren ? '10px' : 0}
@@ -112,9 +111,9 @@ export function Checkbox({
                 size={size}
               />
             )}
-            {hasChildren ? (
-              <div css={cx(styles.children)}>{children}</div>
-            ) : null}
+            {hasChildren && (
+              <div css={cx(styles.children(size))}>{children}</div>
+            )}
           </Typography>
           <Expandable
             height={56}
