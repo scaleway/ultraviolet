@@ -1,0 +1,75 @@
+import { useState } from 'react'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Popper } from '..'
+import { Button } from '../../Button'
+import { theme } from '../../../theme'
+import { Box } from '../../Box'
+
+<Meta title="Components/Popper" component={Popper} />
+
+# Popper
+
+## Basic
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story name="basic" parameters={{ layout: 'centered' }} height="300px">
+    <Box>
+      <Popper aria-label="Custom popover" disclosure={<Button>Test</Button>}>
+        {({ placement }) => (
+          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
+        )}
+      </Popper>
+      <Popper aria-label="Custom popover" disclosure={<Button>Test</Button>}>
+        {({ placement }) => (
+          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
+        )}
+      </Popper>
+    </Box>
+  </Story>
+</Canvas>
+
+## with Button inside position auto
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="with button inside"
+    parameters={{ layout: 'centered' }}
+    height="100px"
+  >
+    <Popper
+      aria-label="Custom popover with buttom"
+      disclosure={<Button>Test</Button>}
+      placement="auto"
+    >
+      {({ placement }) => <Button> {placement}</Button>}
+    </Popper>
+  </Story>
+</Canvas>
+
+## controlled on mouse
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="controlled on mouse"
+    parameters={{ layout: 'centered' }}
+    height="300px"
+  >
+    {() => {
+      const [toggled, onToggle] = useState(true)
+      console.log('Story',toggled)
+      return (
+        <Box>
+          <Button
+            onMouseEnter={() => onToggle(true)}
+            onMouseLeave={() => onToggle(false)}
+          >
+            Put your fucking mouse here
+          </Button>
+          <Popper visible={toggled} placement="auto">
+            {({ placement }) => <Button>{placement}</Button>}
+          </Popper>
+        </Box>
+      )
+    }}
+  </Story>
+</Canvas>
