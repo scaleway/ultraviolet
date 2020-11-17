@@ -7,14 +7,27 @@ import {
   TooltipArrow,
   TooltipReference,
 } from 'reakit/Tooltip'
-import { borderRadius, black, white } from '../../theming'
+import { theme } from '../../theme'
+import { borderRadius } from '../../theming'
+import { cx } from '../../utils'
 import { Box } from '../Box'
+
+const variants = {
+  white: css`
+    background-color: ${theme.white};
+    color: ${theme.black};
+    fill: ${theme.white};
+  `,
+  black: css`
+    background-color: ${theme.black};
+    color: ${theme.white};
+    fill: ${theme.black};
+  `,
+}
 
 const style = {
   tooltip: p => css`
     border-radius: ${borderRadius(p)};
-    background-color: ${black(p)};
-    color: ${white(p)};
     opacity: 0;
     font-size: 0.8rem;
     white-space: pre-wrap;
@@ -38,7 +51,8 @@ export const Tooltip = ({
   children,
   text = '',
   customStyle,
-  placement = 'top',
+  placement,
+  variant,
   ...props
 }) => {
   const tooltip = useTooltipState({ animated: 150, placement })
@@ -82,7 +96,7 @@ export const Tooltip = ({
         {finalChildren}
       </TooltipReference>
       <ReakitTooltip style={{ zIndex: 9999 }} {...tooltip}>
-        <Box css={style.tooltip} {...props}>
+        <Box css={cx([style.tooltip, variants[variant]])} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
         </Box>
@@ -93,4 +107,12 @@ export const Tooltip = ({
 
 Tooltip.propTypes = {
   placement: PropTypes.string,
+  variant: PropTypes.string,
+  text: PropTypes.node,
+}
+
+Tooltip.defaultProps = {
+  placement: 'top',
+  variant: 'black',
+  text: '',
 }
