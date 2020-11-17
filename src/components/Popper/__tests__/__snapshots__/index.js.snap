@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popper renders with disclosure 1`] = `
+Array [
+  <button
+    aria-controls="popover-test-2"
+    aria-expanded={false}
+    aria-haspopup="dialog"
+    onClick={[Function]}
+    onClickCapture={[Function]}
+    onKeyDown={[Function]}
+    onKeyPressCapture={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    type="button"
+  >
+    Test
+  </button>,
+  <div
+    aria-label="Custom popover with buttom"
+    data-dialog={true}
+    hidden={true}
+    id="popover-test-2"
+    onAnimationEnd={[Function]}
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    onTransitionEnd={[Function]}
+    role="dialog"
+    style={
+      Object {
+        "backgroudColor": "#fff",
+        "display": "none",
+      }
+    }
+    tabIndex={-1}
+  >
+    <div
+      style={
+        Object {
+          "auto": "100%",
+          "fill": "#fff",
+          "fontSize": 30,
+          "height": "1em",
+          "pointerEvents": "none",
+          "width": "1em",
+        }
+      }
+    >
+      <svg
+        style={
+          Object {
+            "transform": undefined,
+          }
+        }
+        viewBox="0 0 30 30"
+      >
+        <path
+          className="stroke"
+          d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+        />
+        <path
+          className="fill"
+          d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+        />
+      </svg>
+    </div>
+    <div>
+       
+      auto
+    </div>
+  </div>,
+]
+`;
+
+exports[`Popper renders with modal=false 1`] = `
+<div
+  aria-label="test"
+  data-dialog={true}
+  hidden={true}
+  id="popover-test-1"
+  onAnimationEnd={[Function]}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onTransitionEnd={[Function]}
+  role="dialog"
+  style={
+    Object {
+      "backgroudColor": "#fff",
+      "display": "none",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    style={
+      Object {
+        "bottom": "100%",
+        "fill": "#fff",
+        "fontSize": 30,
+        "height": "1em",
+        "pointerEvents": "none",
+        "width": "1em",
+      }
+    }
+  >
+    <svg
+      style={
+        Object {
+          "transform": "rotateZ(360deg)",
+        }
+      }
+      viewBox="0 0 30 30"
+    >
+      <path
+        className="stroke"
+        d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
+      />
+      <path
+        className="fill"
+        d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
+      />
+    </svg>
+  </div>
+  <div>
+    test
+  </div>
+</div>
+`;
