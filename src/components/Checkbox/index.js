@@ -14,7 +14,8 @@ const styles = {
   container: css`
     position: relative;
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 2px;
   `,
   hover: p => css`
     &:hover {
@@ -39,6 +40,9 @@ const styles = {
   `,
   disabled: css`
     cursor: not-allowed;
+  `,
+  children: css`
+    padding-top: 2px;
   `,
 }
 
@@ -108,7 +112,9 @@ export function Checkbox({
                 size={size}
               />
             )}
-            {hasChildren ? <span>{children}</span> : null}
+            {hasChildren ? (
+              <div css={cx(styles.children)}>{children}</div>
+            ) : null}
           </Typography>
           <Expandable
             height={56}
