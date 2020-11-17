@@ -13,7 +13,7 @@ import { Icon } from '../../Icon'
 ## Basic
 
 <Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="basic" parameters={{ layout: 'centered' }} height="300px">
+  <Story name="basic" parameters={{ layout: 'centered' }} >
     <Box>
       <Popper
         aria-label="Custom popover"
@@ -33,14 +33,6 @@ import { Icon } from '../../Icon'
           <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
         )}
       </Popper>
-      <Popper
-        aria-label="Custom popover"
-        disclosure={() => <Button>Test</Button>}
-      >
-        {({ placement }) => (
-          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
-        )}
-      </Popper>
     </Box>
   </Story>
 </Canvas>
@@ -51,7 +43,6 @@ import { Icon } from '../../Icon'
   <Story
     name="with button inside"
     parameters={{ layout: 'centered' }}
-    height="100px"
   >
     <Popper
       aria-label="Custom popover with buttom"
@@ -69,7 +60,6 @@ import { Icon } from '../../Icon'
   <Story
     name="without modal/portal"
     parameters={{ layout: 'centered' }}
-    height="100px"
   >
     <Popper
       aria-label="Custom popover with buttom"
