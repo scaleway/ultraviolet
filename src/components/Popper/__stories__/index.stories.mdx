@@ -1,0 +1,83 @@
+import { useState } from 'react'
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Popper } from '..'
+import { Button } from '../../Button'
+import { theme } from '../../../theme'
+import { Box } from '../../Box'
+import { Icon } from '../../Icon'
+
+<Meta title="Components/Popper" component={Popper} />
+
+# Popper
+
+## Basic
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story name="basic" parameters={{ layout: 'centered' }} height="300px">
+    <Box>
+      <Popper
+        aria-label="Custom popover"
+        disclosure={({ placement, visible }) => (
+          <Button>
+            test {placement}:
+            <Icon
+              ml={2}
+              name={visible ? 'chevron-up' : 'chevron-down'}
+              color="white"
+              size={11}
+            />
+          </Button>
+        )}
+      >
+        {({ placement }) => (
+          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
+        )}
+      </Popper>
+      <Popper aria-label="Custom popover" disclosure={() => <Button>Test</Button>}>
+        {({ placement }) => (
+          <div style={{ backgroundColor: 'white' }}> placement:{placement}</div>
+        )}
+      </Popper>
+    </Box>
+  </Story>
+</Canvas>
+
+## with Button inside position auto
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="with button inside"
+    parameters={{ layout: 'centered' }}
+    height="100px"
+  >
+    <Popper
+      aria-label="Custom popover with buttom"
+      disclosure={() =><Button>Test</Button>}
+      placement="auto"
+    >
+      {({ placement }) => <Button> {placement}</Button>}
+    </Popper>
+  </Story>
+</Canvas>
+
+
+## No portal
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="with button inside"
+    parameters={{ layout: 'centered' }}
+    height="100px"
+  >
+    <Popper
+      aria-label="Custom popover with buttom"
+      disclosure={() =><Button>Test</Button>}
+      placement="auto"
+      modal={false}
+    >
+      {({ placement }) => <Button> {placement}</Button>}
+    </Popper>
+  </Story>
+</Canvas>
+
+
