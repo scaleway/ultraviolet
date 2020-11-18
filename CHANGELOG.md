@@ -1,3 +1,10 @@
+### [0.31.3](https://github.com/chambo-e/scw-ui/compare/v0.31.2...v0.31.3) (2020-11-18)
+
+
+### Bug Fixes
+
+* **checkbox:** design feedback and fix html syntax CNS-3131 ([6ddc38e](https://github.com/chambo-e/scw-ui/commit/6ddc38e49798cdf502bd144f37597c762af194fb))
+
 ### [0.31.2](https://github.com/chambo-e/scw-ui/compare/v0.31.1...v0.31.2) (2020-11-17)
 
 
