@@ -1,3 +1,10 @@
+### [0.31.4](https://github.com/chambo-e/scw-ui/compare/v0.31.3...v0.31.4) (2020-11-19)
+
+
+### Bug Fixes
+
+* **link:** support tel links ([e814bf5](https://github.com/chambo-e/scw-ui/commit/e814bf5e7a2e8819a7a343ef741f84860f687fcb))
+
 ### [0.31.3](https://github.com/chambo-e/scw-ui/compare/v0.31.2...v0.31.3) (2020-11-18)
 
 
