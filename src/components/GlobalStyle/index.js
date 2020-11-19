@@ -2,10 +2,9 @@ import { Global, css } from '@emotion/core'
 import { Normalize } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { white, blue } from '../../theming'
-import { cx } from '../../utils'
+import { theme } from '../../theme'
 
-const globalStyles = p => css`
+const globalStyles = css`
   /* Fallback system fonts */
   @font-face {
     font-family: 'System';
@@ -44,7 +43,7 @@ const globalStyles = p => css`
   }
 
   body {
-    background-color: ${white(p)};
+    background-color: ${theme.white};
     /* TODO: Add me in theme; ps: I am hard coded in shire. */
     color: #5c6275;
     /* important is for docz */
@@ -82,7 +81,7 @@ const globalStyles = p => css`
   }
 
   a {
-    color: ${blue(p)};
+    color: ${theme.blue};
     text-decoration: none;
   }
 
@@ -108,49 +107,11 @@ const globalStyles = p => css`
     variant: textfield;
   }
 `
-const asapFontStyle = p => {
-  const { fontsRoot } = p.theme
-
-  if (!fontsRoot) {
-    return css`
-      /* TODO: Replace me by the Scaleway SDN */
-      @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
-    `
-  }
-
-  return css`
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url('${fontsRoot}/Asap-Regular.woff2') format('woff2'),
-        url('${fontsRoot}/Asap-Regular.woff') format('woff');
-      font-weight: 400;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url('${fontsRoot}/Asap-Medium.woff2') format('woff2'),
-        url('${fontsRoot}/Asap-Medium.woff') format('woff');
-      font-weight: 500;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url('${fontsRoot}/Asap-Bold.woff2') format('woff2'),
-        url('${fontsRoot}/Asap-Bold.woff') format('woff');
-      font-weight: 700;
-      font-display: swap;
-    }
-  `
-}
-
-export function GlobalStyle({ additionalStyles = [] }) {
+export function GlobalStyle({ additionalStyles }) {
   return (
     <>
       <Normalize />
-      <Global styles={cx([globalStyles, ...additionalStyles, asapFontStyle])} />
+      <Global styles={[globalStyles, ...additionalStyles]} />
     </>
   )
 }
