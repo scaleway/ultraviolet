@@ -4,12 +4,14 @@ import { useTheme } from '../../utils'
 import { Box } from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
+const TEL_LINK_REGEXP = /^tel:/
 
 const needNativeLink = url => {
   if (!url) return false
   const isAbsolute = ABSOLUTE_LINK_REGEXP.test(url)
+  const isTelLink = TEL_LINK_REGEXP.test(url)
   const isAnchor = url[0] === '#'
-  return isAbsolute || isAnchor
+  return isAbsolute || isTelLink || isAnchor
 }
 
 const UniversalLink = ({ children, ...props }) => {
