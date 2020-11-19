@@ -28,13 +28,7 @@ const text = css`
   text-overflow: ellipsis;
 `
 
-const TagsPoplist = ({
-  tags = [],
-  threshold = 1,
-  maxLength = 600,
-  maxTagWidth = 115,
-  ...props
-}) => {
+const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
   if (
     tags.length &&
     tags.slice(0, threshold).reduce((_, tag) => _ + tag).length > maxLength
@@ -94,6 +88,8 @@ const TagsPoplist = ({
                   alignItems="center"
                   backgroundColor={theme.white}
                   borderRadius="4px"
+                  maxWidth="80vw"
+                  flexWrap="wrap"
                 >
                   {tags.slice(visibleTagsCount).map((tag, index) => (
                     <Tag m="4px" key={`${tag}-${index}`}>
