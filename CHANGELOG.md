@@ -1,3 +1,10 @@
+### [0.32.2](https://github.com/chambo-e/scw-ui/compare/v0.32.1...v0.32.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* avoid direct font reference in GlobalStyle ([9e2d1bb](https://github.com/chambo-e/scw-ui/commit/9e2d1bb0ebc1d489c32c3fdc414c163808963144))
+
 ### [0.32.1](https://github.com/chambo-e/scw-ui/compare/v0.32.0...v0.32.1) (2020-11-20)
 
 
