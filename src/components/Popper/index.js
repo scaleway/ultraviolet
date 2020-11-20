@@ -24,6 +24,9 @@ const variants = {
     box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
   `,
 }
+const popoverStyle = css`
+  border-radius: 4px;
+`
 
 const Disclosure = memo(({ disclosure, popover }) => {
   const innerRef = useRef(disclosure(popover))
@@ -67,7 +70,7 @@ const Popper = memo(
       <>
         {disclosure && <Disclosure popover={popover} disclosure={disclosure} />}
         <Popover
-          css={variants[variant]}
+          css={[popoverStyle, variants[variant]]}
           hideOnClickOutside={hideOnClickOutside}
           preventBodyScroll={preventBodyScroll}
           {...popover}
