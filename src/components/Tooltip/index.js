@@ -61,6 +61,7 @@ export const Tooltip = ({
   ...props
 }) => {
   const tooltip = useTooltipState({ animated, placement, visible })
+  useEffect(() => tooltip.setVisible(visible), [visible])
 
   if (!children) return null
   if (Array.isArray(children)) {
@@ -94,7 +95,6 @@ export const Tooltip = ({
       ...childProps,
     })
   }
-  useEffect(() => tooltip.setVisible(visible), [visible])
 
   return (
     <Box zIndex={1}>
