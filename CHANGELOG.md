@@ -1,3 +1,10 @@
+### [0.32.1](https://github.com/chambo-e/scw-ui/compare/v0.32.0...v0.32.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* wrap when large list of tags [CNS-3466] ([19610af](https://github.com/chambo-e/scw-ui/commit/19610afd3126a3bcddf8146d40a9a715cefabbf2))
+
 ## [0.32.0](https://github.com/chambo-e/scw-ui/compare/v0.31.4...v0.32.0) (2020-11-20)
 
 
