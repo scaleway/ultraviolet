@@ -1,3 +1,10 @@
+### [0.32.3](https://github.com/chambo-e/scw-ui/compare/v0.32.2...v0.32.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* **popper:** add border-radius ([d7b7ad4](https://github.com/chambo-e/scw-ui/commit/d7b7ad4f23e628439bab98f0a812b179ae965236))
+
 ### [0.32.2](https://github.com/chambo-e/scw-ui/compare/v0.32.1...v0.32.2) (2020-11-20)
 
 
