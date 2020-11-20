@@ -17,6 +17,11 @@ import { Box, Button, Typography } from '../../'
       <Tooltip text="tooltip">Tooltip around the text</Tooltip>
     </Box>
   </Story>
+  <Story name="visible">
+    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Tooltip visible text="tooltip">Tooltip around the text</Tooltip>
+    </Box>
+  </Story>
   <Story name="wrap">
     <Tooltip text="tooltip">
       <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
@@ -124,3 +129,26 @@ import { Box, Button, Typography } from '../../'
     </Box>
   </Story>
 </Canvas>
+
+## variant
+
+<Description>Set variant </Description>
+
+<Canvas style={{ backgroundColor: 'black' }}>
+  <Story
+    name="with button inside"
+    parameters={{ layout: 'centered' }}
+    height="100px"
+  >
+  <Box display="flex" justifyContent="space-evenly">
+      {['left', 'top', 'bottom', 'right'].map(placement => (
+        <Box key={placement} p={2} color="white">
+          <Tooltip text="tooltip" variant="white" placement={placement}>
+            {placement}
+          </Tooltip>
+        </Box>
+      ))}
+    </Box>
+  </Story>
+</Canvas>
+

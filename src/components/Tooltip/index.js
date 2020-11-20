@@ -1,20 +1,36 @@
 import { css } from '@emotion/core'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   useTooltipState,
   Tooltip as ReakitTooltip,
   TooltipArrow,
   TooltipReference,
 } from 'reakit/Tooltip'
-import { borderRadius, black, white } from '../../theming'
+import { theme } from '../../theme'
+import { borderRadius } from '../../theming'
+import { cx } from '../../utils'
 import { Box } from '../Box'
+
+const variants = {
+  white: css`
+    background-color: ${theme.white};
+    color: ${theme.black};
+    fill: ${theme.white};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+  `,
+  black: css`
+    background-color: ${theme.black};
+    color: ${theme.white};
+    fill: ${theme.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+  `,
+}
 
 const style = {
   tooltip: p => css`
     border-radius: ${borderRadius(p)};
-    background-color: ${black(p)};
-    color: ${white(p)};
     opacity: 0;
     font-size: 0.8rem;
     white-space: pre-wrap;
@@ -35,13 +51,16 @@ const style = {
 }
 
 export const Tooltip = ({
+  animated,
   children,
   text = '',
   customStyle,
-  placement = 'top',
+  placement,
+  visible,
+  variant,
   ...props
 }) => {
-  const tooltip = useTooltipState({ animated: 150, placement })
+  const tooltip = useTooltipState({ animated, placement, visible })
 
   if (!children) return null
   if (Array.isArray(children)) {
@@ -75,6 +94,7 @@ export const Tooltip = ({
       ...childProps,
     })
   }
+  useEffect(() => tooltip.setVisible(visible), [visible])
 
   return (
     <Box zIndex={1}>
@@ -82,7 +102,7 @@ export const Tooltip = ({
         {finalChildren}
       </TooltipReference>
       <ReakitTooltip style={{ zIndex: 9999 }} {...tooltip}>
-        <Box css={style.tooltip} {...props}>
+        <Box css={cx([style.tooltip, variants[variant]])} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
         </Box>
@@ -92,5 +112,17 @@ export const Tooltip = ({
 }
 
 Tooltip.propTypes = {
+  animated: PropTypes.number,
   placement: PropTypes.string,
+  variant: PropTypes.string,
+  visible: PropTypes.bool,
+  text: PropTypes.node,
+}
+
+Tooltip.defaultProps = {
+  animated: 150,
+  placement: 'top',
+  variant: 'black',
+  visible: false,
+  text: '',
 }
