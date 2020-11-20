@@ -1,3 +1,10 @@
+## [0.32.0](https://github.com/chambo-e/scw-ui/compare/v0.31.4...v0.32.0) (2020-11-20)
+
+
+### Features
+
+* **component:** add Popper ([8afce23](https://github.com/chambo-e/scw-ui/commit/8afce236ea86de85d9ea7db03de2a0f8ca563113))
+
 ### [0.31.4](https://github.com/chambo-e/scw-ui/compare/v0.31.3...v0.31.4) (2020-11-19)
 
 
