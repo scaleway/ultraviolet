@@ -1,3 +1,10 @@
+### [0.32.4](https://github.com/chambo-e/scw-ui/compare/v0.32.3...v0.32.4) (2020-11-20)
+
+
+### Bug Fixes
+
+* **tooltips:** use effect first ([f4135e0](https://github.com/chambo-e/scw-ui/commit/f4135e03e89ae39d3c01d9e3bd49535561d95088))
+
 ### [0.32.3](https://github.com/chambo-e/scw-ui/compare/v0.32.2...v0.32.3) (2020-11-20)
 
 
