@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:14.15.1-alpine as builder
+FROM node:14.15-alpine as builder
 WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
@@ -15,7 +15,7 @@ RUN yarn run build:storybook
 ######################################################################
 # This stage download a simple http server and serve the application #
 ######################################################################
-FROM node:14.15.1-alpine
+FROM node:14.15-alpine
 
 WORKDIR /workspace
 
