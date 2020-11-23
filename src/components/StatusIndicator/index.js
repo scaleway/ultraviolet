@@ -7,12 +7,14 @@ import { Tooltip } from '../Tooltip'
 
 const defaultStatuses = {
   ready: theme.green,
+  success: theme.green,
   available: theme.green,
   running: theme.green,
   error: theme.red,
   unavailable: theme.red,
   locked: theme.red,
   disf_full: theme.red,
+  info: theme.gray550,
   starting: theme.blue,
   stopping: theme.blue,
   snapshotting: theme.blue,
