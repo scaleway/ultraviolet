@@ -12,7 +12,7 @@ const defaultStatuses = {
   error: theme.red,
   unavailable: theme.red,
   locked: theme.red,
-  disf_full: theme.red,
+  disk_full: theme.red,
   starting: theme.blue,
   stopping: theme.blue,
   snapshotting: theme.blue,
@@ -69,7 +69,21 @@ StatusIndicator.defaultProps = {
 }
 
 StatusIndicator.propTypes = {
-  status: PropTypes.oneOf(statuses),
+  status: (props, propName, componentName) => {
+    const availableStatuses = [
+      ...statuses,
+      ...(props.statuses ? Object.keys(props.statuses) : []),
+    ]
+
+    if (!availableStatuses.includes(props[propName])) {
+      return new Error(
+        `Invalid prop \`${propName}\` supplied to \`'${componentName}\`. Must be one of \`${JSON.stringify(
+          availableStatuses,
+        )}\` Validation failed.`,
+      )
+    }
+    return null
+  },
   tooltip: PropTypes.string,
   statuses: PropTypes.objectOf(PropTypes.string),
 }
