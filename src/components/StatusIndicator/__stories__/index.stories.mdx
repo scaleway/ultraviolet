@@ -25,3 +25,16 @@ import { Box } from '../../'
     <StatusIndicator status="stopped_in_place" tooltip="Stopped in place" />
   </Story>
 </Canvas>
+
+## With custom status
+
+<Canvas>
+  <Story name="custom-basic">
+    {() => {
+      const statuses = {
+        fake_status: 'yellow',
+      }
+      return <StatusIndicator status="fake_status" statuses={statuses} />
+    }}
+  </Story>
+</Canvas>
