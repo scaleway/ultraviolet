@@ -1,3 +1,10 @@
+### [0.32.5](https://github.com/chambo-e/scw-ui/compare/v0.32.4...v0.32.5) (2020-11-23)
+
+
+### Bug Fixes
+
+* **status:** add few missing status ([251f51e](https://github.com/chambo-e/scw-ui/commit/251f51ebde37942c66b497a6065471cb13713d38))
+
 ### [0.32.4](https://github.com/chambo-e/scw-ui/compare/v0.32.3...v0.32.4) (2020-11-20)
 
 
