@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import React from 'react'
 import { borderRadius, gray350 } from '../../theming'
 import { cx, sp } from '../../utils'

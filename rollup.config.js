@@ -37,7 +37,10 @@ export default async () => {
         presets: [
           ['@babel/env', { modules: false, targets, loose: true }],
           '@babel/preset-react',
-          ['@emotion/babel-preset-css-prop', { sourceMap: false }],
+          [
+            '@emotion/babel-preset-css-prop',
+            { sourceMap: false, autoLabel: 'dev-only' },
+          ],
         ],
         plugins: [
           'babel-plugin-annotate-pure-calls',

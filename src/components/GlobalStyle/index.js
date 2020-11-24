@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import { Normalize } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'

@@ -744,6 +744,7 @@ exports[`Typography with maxLines renders correctly 1`] = `
   line-height: 18px;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  -webkit-display: -webkit-box;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -761,9 +762,14 @@ exports[`Typography with multiple nested chidldren renders correctly 1`] = `
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #151a2d;
-  font-size: 21px;
-  line-height: 24px;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-display: -webkit-box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .emotion-1 {
@@ -771,24 +777,20 @@ exports[`Typography with multiple nested chidldren renders correctly 1`] = `
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #b2b6c3;
-  font-size: 14px;
-  line-height: 18px;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+  color: #151a2d;
+  font-size: 21px;
+  line-height: 24px;
 }
 
 <p
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   Lorem
   <div>
     Ipsum
   </div>
   <h3
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     <span>
       Dolor

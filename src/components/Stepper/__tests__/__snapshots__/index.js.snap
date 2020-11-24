@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stepper renders correctly 1`] = `
-.emotion-9 {
+.emotion-0 {
   height: 48px;
   background-color: #fff;
   display: -webkit-box;
@@ -21,11 +21,9 @@ exports[`Stepper renders correctly 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -38,8 +36,8 @@ exports[`Stepper renders correctly 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -54,12 +52,12 @@ exports[`Stepper renders correctly 1`] = `
   border-bottom-left-radius: 4px;
 }
 
-.emotion-2:hover > svg,
-.emotion-2:focus > svg {
+.emotion-1:hover>svg,
+.emotion-1:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: lightGrey;
   vertical-align: middle;
   height: 28px;
@@ -68,7 +66,7 @@ exports[`Stepper renders correctly 1`] = `
   min-height: 28px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: absolute;
   font-size: 30px;
   top: 5px;
@@ -77,11 +75,9 @@ exports[`Stepper renders correctly 1`] = `
   right: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -105,19 +101,19 @@ exports[`Stepper renders correctly 1`] = `
   align-items: center;
   outline: none;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border: 1px solid #d4dae7;
   border-left-width: 0;
   border-right-width: 0;
 }
 
-.emotion-5:active {
+.emotion-4:active {
   opacity: 0.5;
 }
 
-.emotion-3 {
+.emotion-5 {
   pointer-events: none;
   color: #4a4f62;
   background-color: #fff;
@@ -132,11 +128,9 @@ exports[`Stepper renders correctly 1`] = `
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -149,8 +143,8 @@ exports[`Stepper renders correctly 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -165,12 +159,12 @@ exports[`Stepper renders correctly 1`] = `
   border-bottom-right-radius: 4px;
 }
 
-.emotion-8:hover > svg,
-.emotion-8:focus > svg {
+.emotion-7:hover>svg,
+.emotion-7:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   font-size: 30px;
   top: 5px;
@@ -180,17 +174,17 @@ exports[`Stepper renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-9"
+  className="sui-box emotion-0"
 >
   <button
     aria-label="Minus"
-    className="sui-box emotion-2"
+    className="sui-box emotion-1"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="sui-box sc-ui-icon emotion-0"
+      className="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -198,19 +192,19 @@ exports[`Stepper renders correctly 1`] = `
       />
     </svg>
     <span
-      className="emotion-1"
+      className="emotion-3"
     >
       |
     </span>
   </button>
   <button
-    className="sui-box emotion-5"
+    className="sui-box emotion-4"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <input
-      className="emotion-3"
+      className="emotion-5"
       disabled={false}
       name="stepper"
       onBlur={[Function]}
@@ -225,25 +219,25 @@ exports[`Stepper renders correctly 1`] = `
       value="10"
     />
     <span
-      className="emotion-3"
+      className="emotion-5"
     >
       unit
     </span>
   </button>
   <button
     aria-label="Plus"
-    className="sui-box emotion-8"
+    className="sui-box emotion-7"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <span
-      className="emotion-6"
+      className="emotion-8"
     >
       |
     </span>
     <svg
-      className="sui-box sc-ui-icon emotion-0"
+      className="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -255,7 +249,7 @@ exports[`Stepper renders correctly 1`] = `
 `;
 
 exports[`Stepper renders correctly disabled 1`] = `
-.emotion-9 {
+.emotion-0 {
   height: 48px;
   background-color: #fff;
   display: -webkit-box;
@@ -275,38 +269,9 @@ exports[`Stepper renders correctly disabled 1`] = `
   font-weight: 500;
 }
 
-.emotion-0 {
-  fill: lightGrey;
-  vertical-align: middle;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
 .emotion-1 {
-  position: absolute;
-  font-size: 30px;
-  top: 5px;
-  font-weight: 500;
-  color: #d4dae7;
-  right: 0;
-}
-
-.emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 5px;
-  font-weight: 500;
-  color: #d4dae7;
-  left: 0;
-}
-
-.emotion-2 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -318,8 +283,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   opacity: 0.5;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -339,11 +304,32 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5 {
+.emotion-1:hover>svg,
+.emotion-1:focus>svg {
+  fill: ;
+}
+
+.emotion-2 {
+  fill: lightGrey;
+  vertical-align: middle;
+  height: 28px;
+  width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 30px;
+  top: 5px;
+  font-weight: 500;
+  color: #d4dae7;
+  right: 0;
+}
+
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -367,8 +353,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   align-items: center;
   outline: none;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border: 1px solid #d4dae7;
   border-left-width: 0;
@@ -380,11 +366,11 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5:active {
+.emotion-4:active {
   opacity: 0.5;
 }
 
-.emotion-3 {
+.emotion-5 {
   pointer-events: none;
   color: #4a4f62;
   background-color: #fff;
@@ -404,11 +390,9 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -420,8 +404,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   opacity: 0.5;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -441,18 +425,32 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-7:hover>svg,
+.emotion-7:focus>svg {
+  fill: ;
+}
+
+.emotion-8 {
+  position: absolute;
+  font-size: 30px;
+  top: 5px;
+  font-weight: 500;
+  color: #d4dae7;
+  left: 0;
+}
+
 <div
-  className="sui-box emotion-9"
+  className="sui-box emotion-0"
 >
   <button
     aria-label="Minus"
-    className="sui-box emotion-2"
+    className="sui-box emotion-1"
     disabled={true}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="sui-box sc-ui-icon emotion-0"
+      className="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -460,19 +458,19 @@ exports[`Stepper renders correctly disabled 1`] = `
       />
     </svg>
     <span
-      className="emotion-1"
+      className="emotion-3"
     >
       |
     </span>
   </button>
   <button
-    className="sui-box emotion-5"
+    className="sui-box emotion-4"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <input
-      className="emotion-3"
+      className="emotion-5"
       disabled={true}
       name="stepper"
       onBlur={[Function]}
@@ -487,25 +485,25 @@ exports[`Stepper renders correctly disabled 1`] = `
       value="10"
     />
     <span
-      className="emotion-3"
+      className="emotion-5"
     >
       unit
     </span>
   </button>
   <button
     aria-label="Plus"
-    className="sui-box emotion-8"
+    className="sui-box emotion-7"
     disabled={true}
     onClick={[Function]}
     type="button"
   >
     <span
-      className="emotion-6"
+      className="emotion-8"
     >
       |
     </span>
     <svg
-      className="sui-box sc-ui-icon emotion-0"
+      className="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
