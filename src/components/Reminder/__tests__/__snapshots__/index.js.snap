@@ -2,19 +2,6 @@
 
 exports[`Reminder renders correctly when bordered 1`] = `
 .emotion-0 {
-  fill: #3f6ed8;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-0.emotion-0 {
-  margin-left: 4px;
-}
-
-.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,7 +23,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
   transition: all .3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -44,22 +31,35 @@ exports[`Reminder renders correctly when bordered 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 strong {
+.emotion-0 strong {
   color: #3f6ed8;
 }
 
+.emotion-2 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-2.emotion-2 {
+  margin-left: 4px;
+}
+
 <a
-  className="sui-box emotion-1 emotion-2"
+  className="sui-box emotion-0 emotion-1"
   icon="east"
   style={Object {}}
   type="button"
@@ -72,7 +72,7 @@ exports[`Reminder renders correctly when bordered 1`] = `
     }
   />
   <svg
-    className="sui-box sc-ui-icon emotion-0"
+    className="sui-box sc-ui-icon emotion-2"
     viewBox="0 0 24 24"
   >
     <path
@@ -84,19 +84,6 @@ exports[`Reminder renders correctly when bordered 1`] = `
 
 exports[`Reminder renders correctly with bold 1`] = `
 .emotion-0 {
-  fill: #3f6ed8;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-0.emotion-0 {
-  margin-left: 4px;
-}
-
-.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,7 +105,7 @@ exports[`Reminder renders correctly with bold 1`] = `
   transition: all .3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -126,22 +113,35 @@ exports[`Reminder renders correctly with bold 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 strong {
+.emotion-0 strong {
   color: #3f6ed8;
 }
 
+.emotion-2 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-2.emotion-2 {
+  margin-left: 4px;
+}
+
 <a
-  className="sui-box emotion-1 emotion-2"
+  className="sui-box emotion-0 emotion-1"
   icon="east"
   style={Object {}}
   type="button"
@@ -154,7 +154,7 @@ exports[`Reminder renders correctly with bold 1`] = `
     }
   />
   <svg
-    className="sui-box sc-ui-icon emotion-0"
+    className="sui-box sc-ui-icon emotion-2"
     viewBox="0 0 24 24"
   >
     <path
@@ -165,7 +165,7 @@ exports[`Reminder renders correctly with bold 1`] = `
 `;
 
 exports[`Reminder renders correctly with default values 1`] = `
-.emotion-1 {
+.emotion-0 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -187,7 +187,7 @@ exports[`Reminder renders correctly with default values 1`] = `
   transition: all .3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -195,21 +195,21 @@ exports[`Reminder renders correctly with default values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 strong {
+.emotion-0 strong {
   color: #3f6ed8;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: #3f6ed8;
   vertical-align: middle;
   height: 20px;
@@ -218,12 +218,12 @@ exports[`Reminder renders correctly with default values 1`] = `
   min-height: 20px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-2.emotion-2 {
   margin-left: 4px;
 }
 
 <a
-  className="sui-box emotion-1 emotion-2"
+  className="sui-box emotion-0 emotion-1"
   icon="east"
   style={Object {}}
   type="button"
@@ -236,7 +236,7 @@ exports[`Reminder renders correctly with default values 1`] = `
     }
   />
   <svg
-    className="sui-box sc-ui-icon emotion-0"
+    className="sui-box sc-ui-icon emotion-2"
     viewBox="0 0 24 24"
   >
     <path
@@ -248,19 +248,6 @@ exports[`Reminder renders correctly with default values 1`] = `
 
 exports[`Reminder renders correctly with variant 1`] = `
 .emotion-0 {
-  fill: #3f6ed8;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-0.emotion-0 {
-  margin-left: 4px;
-}
-
-.emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -282,7 +269,7 @@ exports[`Reminder renders correctly with variant 1`] = `
   transition: all .3s ease-in-out;
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   font-size: 12px;
   padding-right: 8px;
   padding-left: 8px;
@@ -290,22 +277,35 @@ exports[`Reminder renders correctly with variant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-1:hover {
+.emotion-0:hover {
   box-shadow: 0 3px 6px #e4edff;
   border: 1px solid #3f6ed8;
 }
 
-.emotion-1 strong {
+.emotion-0 strong {
   color: #3f6ed8;
 }
 
+.emotion-2 {
+  fill: #3f6ed8;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-2.emotion-2 {
+  margin-left: 4px;
+}
+
 <a
-  className="sui-box emotion-1 emotion-2"
+  className="sui-box emotion-0 emotion-1"
   icon="east"
   style={Object {}}
   type="button"
@@ -318,7 +318,7 @@ exports[`Reminder renders correctly with variant 1`] = `
     }
   />
   <svg
-    className="sui-box sc-ui-icon emotion-0"
+    className="sui-box sc-ui-icon emotion-2"
     viewBox="0 0 24 24"
   >
     <path

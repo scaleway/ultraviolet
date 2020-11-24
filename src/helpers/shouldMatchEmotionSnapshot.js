@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import serializer from 'jest-emotion'
+import { createSerializer } from '@emotion/jest'
 import renderer from 'react-test-renderer'
 
-expect.addSnapshotSerializer(serializer)
+expect.addSnapshotSerializer(createSerializer())
 
 export default component => {
   expect(renderer.create(component).toJSON()).toMatchSnapshot()

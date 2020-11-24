@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import React from 'react'
 import { gray950, gray700, gray200, primary } from '../../theming'
 import { cx, sp } from '../../utils'

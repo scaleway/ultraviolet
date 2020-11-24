@@ -1,5 +1,3 @@
-import { ThemeContext } from '@emotion/core'
-import { useContext } from 'react'
 import flatten from './flatten'
 
 export function cx(styles) {
@@ -20,8 +18,4 @@ export function cx(styles) {
 
     return parseStyle(styles)
   }
-}
-
-export function useTheme() {
-  return useContext(ThemeContext)
 }

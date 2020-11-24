@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Progress renders correctly 1`] = `
-.emotion-3 {
+.emotion-0 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,38 +11,6 @@ exports[`Progress renders correctly 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   height: 48px;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 3;
-  padding-right: 24px;
-  padding-left: 24px;
-  margin-right: -24px;
-  background-color: #45d6b5;
-  color: #fff;
-  border-color: #fff;
 }
 
 .emotion-1 {
@@ -62,8 +30,40 @@ exports[`Progress renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  z-index: 3;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: -24px;
+  background-color: #45d6b5;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   text-align: center;
   touch-action: manipulation;
@@ -78,11 +78,11 @@ exports[`Progress renders correctly 1`] = `
   border-color: #fff;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,8 +99,8 @@ exports[`Progress renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   text-align: center;
   touch-action: manipulation;
@@ -114,25 +114,25 @@ exports[`Progress renders correctly 1`] = `
   border-color: #d4dae7;
 }
 
-.emotion-2:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 2px rgba(178,182,195,0.25);
 }
 
 <div
-  className="sui-box emotion-3"
+  className="sui-box emotion-0"
 >
   <div
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     Step 1
   </div>
   <div
-    className="sui-box emotion-1"
+    className="sui-box emotion-2"
   >
     Step 2
   </div>
   <div
-    className="sui-box emotion-2"
+    className="sui-box emotion-3"
   >
     Step 3
   </div>
@@ -140,7 +140,7 @@ exports[`Progress renders correctly 1`] = `
 `;
 
 exports[`Progress renders correctly when one children is clickable 1`] = `
-.emotion-3 {
+.emotion-0 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -152,7 +152,7 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   height: 48px;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,44 +169,8 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 1;
-  padding-right: 24px;
-  padding-left: 48px;
-  margin-left: -24px;
-  background-color: #4f0599;
-  color: #fff;
-  border-color: #fff;
-}
-
-.emotion-2:focus {
-  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   touch-action: manipulation;
@@ -221,11 +185,11 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   border-color: #fff;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,8 +206,8 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   text-align: center;
   touch-action: manipulation;
@@ -258,42 +222,7 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   border-color: #fff;
 }
 
-<div
-  className="sui-box emotion-3"
->
-  <button
-    className="sui-box emotion-0"
-    onClick={[Function]}
-  >
-    Step 1
-  </button>
-  <div
-    className="sui-box emotion-1"
-  >
-    Step 2
-  </div>
-  <div
-    className="sui-box emotion-2"
-  >
-    Step 3
-  </div>
-</div>
-`;
-
-exports[`Progress renders correctly when one children is empty 1`] = `
-.emotion-2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 48px;
-}
-
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -310,40 +239,8 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 2;
-  padding-right: 24px;
-  padding-left: 24px;
-  margin-right: -24px;
-  background-color: #45d6b5;
-  color: #fff;
-  border-color: #fff;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   touch-action: manipulation;
@@ -357,20 +254,123 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   border-color: #fff;
 }
 
-.emotion-1:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
 <div
-  className="sui-box emotion-2"
+  className="sui-box emotion-0"
+>
+  <button
+    className="sui-box emotion-1"
+    onClick={[Function]}
+  >
+    Step 1
+  </button>
+  <div
+    className="sui-box emotion-2"
+  >
+    Step 2
+  </div>
+  <div
+    className="sui-box emotion-3"
+  >
+    Step 3
+  </div>
+</div>
+`;
+
+exports[`Progress renders correctly when one children is empty 1`] = `
+.emotion-0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  z-index: 2;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: -24px;
+  background-color: #45d6b5;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  z-index: 1;
+  padding-right: 24px;
+  padding-left: 48px;
+  margin-left: -24px;
+  background-color: #4f0599;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-2:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+<div
+  className="sui-box emotion-0"
 >
   <div
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     Step 1
   </div>
   <div
-    className="sui-box emotion-1"
+    className="sui-box emotion-2"
   >
     Step 3
   </div>

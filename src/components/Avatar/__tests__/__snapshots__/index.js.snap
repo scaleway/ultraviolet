@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders correctly with default props 1`] = `
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   height: 100%;
   width: 100%;
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <img
     alt=""
-    className="emotion-0"
+    className="emotion-1"
     src="test-file-stub"
   />
 </div>
 `;
 
 exports[`Avatar renders correctly with lock 1`] = `
-.emotion-2.emotion-2 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -45,13 +45,13 @@ exports[`Avatar renders correctly with lock 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: darkGrey;
   vertical-align: middle;
   height: 1em;
@@ -61,13 +61,13 @@ exports[`Avatar renders correctly with lock 1`] = `
 }
 
 <div
-  className="sui-box emotion-2"
+  className="sui-box emotion-0"
 >
   <div
     className="emotion-1"
   >
     <svg
-      className="sui-box sc-ui-icon emotion-0"
+      className="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -79,13 +79,13 @@ exports[`Avatar renders correctly with lock 1`] = `
 `;
 
 exports[`Avatar renders correctly with sentence 1`] = `
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -100,17 +100,17 @@ exports[`Avatar renders correctly with sentence 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     HW
   </div>
@@ -118,13 +118,13 @@ exports[`Avatar renders correctly with sentence 1`] = `
 `;
 
 exports[`Avatar renders correctly with small text 1`] = `
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -139,17 +139,17 @@ exports[`Avatar renders correctly with small text 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     HW
   </div>
@@ -157,13 +157,13 @@ exports[`Avatar renders correctly with small text 1`] = `
 `;
 
 exports[`Avatar renders correctly with text 1`] = `
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -178,17 +178,17 @@ exports[`Avatar renders correctly with text 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     HE
   </div>
@@ -196,13 +196,13 @@ exports[`Avatar renders correctly with text 1`] = `
 `;
 
 exports[`Avatar renders correctly with text and custom style 1`] = `
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -217,17 +217,17 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     HW
   </div>

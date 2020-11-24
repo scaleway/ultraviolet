@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { SwitchState } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'

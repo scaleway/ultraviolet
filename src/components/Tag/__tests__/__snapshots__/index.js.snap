@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag renders correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -17,7 +17,7 @@ exports[`Tag renders correctly 1`] = `
   padding-right: 8px;
 }
 
-.emotion-0 {
+.emotion-1 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -30,10 +30,10 @@ exports[`Tag renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <span
-    className="emotion-0"
+    className="emotion-1"
   >
     test
   </span>
@@ -42,22 +42,10 @@ exports[`Tag renders correctly 1`] = `
 
 exports[`Tag renders correctly bordered 1`] = `
 .emotion-0 {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-}
-
-.emotion-1 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -67,11 +55,23 @@ exports[`Tag renders correctly bordered 1`] = `
   border: 1px solid #d4dae7;
 }
 
+.emotion-1 {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <span
-    className="emotion-0"
+    className="emotion-1"
   >
     test
   </span>
@@ -79,12 +79,12 @@ exports[`Tag renders correctly bordered 1`] = `
 `;
 
 exports[`Tag renders correctly disabled 1`] = `
-.emotion-1 {
+.emotion-0 {
   opacity: 0.5;
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,7 +96,7 @@ exports[`Tag renders correctly disabled 1`] = `
   padding-right: 8px;
 }
 
-.emotion-0 {
+.emotion-1 {
   opacity: 0.5;
   color: #4a4f62;
   font-size: 14px;
@@ -110,10 +110,10 @@ exports[`Tag renders correctly disabled 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
+  className="sui-box emotion-0"
 >
   <span
-    className="emotion-0"
+    className="emotion-1"
   >
     test
   </span>

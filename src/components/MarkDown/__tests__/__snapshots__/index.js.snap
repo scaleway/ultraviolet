@@ -5,16 +5,16 @@ exports[`MarkDown render html without escaing it 1`] = `
   className="sui-box emotion-0"
 >
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-1"
     >
       Hello
     </span>
     <br />
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-1"
     >
       World
     </span>
@@ -23,27 +23,27 @@ exports[`MarkDown render html without escaing it 1`] = `
 `;
 
 exports[`MarkDown render paragraph inline 1`] = `
-.emotion-4 > p {
+.emotion-0>p {
   display: inline;
 }
 
 <span
-  className="sui-box emotion-4"
+  className="sui-box emotion-0"
 >
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-1"
     >
       I am a paragraph.
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-1"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-1"
     >
       And a second one
     </span>
@@ -69,7 +69,7 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -78,25 +78,25 @@ exports[`MarkDown render simple string 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
+.emotion-12:hover,
+.emotion-12:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
+.emotion-12:hover,
+.emotion-12:focus {
   color: #1e4293;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
   padding: 8px;
 }
 
@@ -107,95 +107,95 @@ exports[`MarkDown render simple string 1`] = `
     className="sui-box emotion-1"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a Markdown H1
     </span>
   </h2>
   <h2>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a Markdown H2
     </span>
   </h2>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a simple markdown with 
     </span>
     <strong>
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         strong
       </span>
     </strong>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
        
     </span>
     <em>
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         italic
       </span>
     </em>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
        content
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       You can find the complete reference 
     </span>
     <a
-      className="sui-box emotion-11"
+      className="sui-box emotion-12"
       href="https://commonmark.org/help/"
       target={null}
       to="https://commonmark.org/help/"
     >
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         here
       </span>
     </a>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       Invalid 
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I can also render code
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-17"
+      className="sui-box emotion-19"
     >
       const example = 1 // Inline code
     </span>
@@ -246,18 +246,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
   color: #1e4293;
 }
 
-.emotion-18 {
-  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 5px;
-}
-
-.emotion-18.emotion-18 {
-  padding: 8px;
-}
-
-.emotion-11 {
+.emotion-14 {
   fill: currentColor;
   vertical-align: top;
   height: 1em;
@@ -268,6 +257,17 @@ exports[`MarkDown render simple string with target blank 1`] = `
   opacity: 0.5;
 }
 
+.emotion-20 {
+  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.emotion-20.emotion-20 {
+  padding: 8px;
+}
+
 <div
   className="sui-box emotion-0"
 >
@@ -275,56 +275,56 @@ exports[`MarkDown render simple string with target blank 1`] = `
     className="sui-box emotion-1"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a Markdown H1
     </span>
   </h2>
   <h2>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a Markdown H2
     </span>
   </h2>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I am a simple markdown with 
     </span>
     <strong>
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         strong
       </span>
     </strong>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
        
     </span>
     <em>
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         italic
       </span>
     </em>
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
        content
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       You can find the complete reference 
     </span>
@@ -336,12 +336,12 @@ exports[`MarkDown render simple string with target blank 1`] = `
       to="https://commonmark.org/help/"
     >
       <span
-        className="sui-box emotion-0"
+        className="sui-box emotion-2"
       >
         here
       </span>
       <svg
-        className="sui-box emotion-11"
+        className="sui-box emotion-14"
         viewBox="0 0 24 24"
       >
         <path
@@ -351,28 +351,28 @@ exports[`MarkDown render simple string with target blank 1`] = `
     </a>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       Invalid 
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-0"
+      className="sui-box emotion-2"
     >
       I can also render code
     </span>
   </p>
   <p
-    className="sui-box emotion-0"
+    className="sui-box emotion-2"
   >
     <span
-      className="sui-box emotion-18"
+      className="sui-box emotion-20"
     >
       const example = 1 // Inline code
     </span>

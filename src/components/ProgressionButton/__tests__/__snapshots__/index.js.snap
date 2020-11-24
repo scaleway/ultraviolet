@@ -31,25 +31,31 @@ exports[`ProgressionButton renders correctly with a duration exceeding its creat
   }
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
   text-align: center;
   color: white;
   font-weight: 500;
   z-index: 0;
-  background: repeating-linear-gradient( 45deg,#b2b6c3,#b2b6c3 10px,rgba(178,182,195,0.75) 10px,rgba(178,182,195,0.75) 30px );
+  background: repeating-linear-gradient(
+      45deg,
+      #b2b6c3,
+      #b2b6c3 10px,
+      rgba(178,182,195,0.75) 10px,
+      rgba(178,182,195,0.75) 30px
+    );
   overflow: hidden;
   border-radius: 4px;
 }
 
-.emotion-2:before {
+.emotion-0:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.emotion-0 {
+.emotion-2 {
   background-color: #45d6b5;
   position: absolute;
   z-index: -1;
@@ -61,11 +67,11 @@ exports[`ProgressionButton renders correctly with a duration exceeding its creat
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
+  className="sui-box emotion-0 emotion-1"
   role="progressbar"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     color="green"
   />
   Progression
@@ -93,25 +99,31 @@ exports[`ProgressionButton renders correctly with a duration subceeding its crea
   }
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
   text-align: center;
   color: white;
   font-weight: 500;
   z-index: 0;
-  background: repeating-linear-gradient( 45deg,#b2b6c3,#b2b6c3 10px,rgba(178,182,195,0.75) 10px,rgba(178,182,195,0.75) 30px );
+  background: repeating-linear-gradient(
+      45deg,
+      #b2b6c3,
+      #b2b6c3 10px,
+      rgba(178,182,195,0.75) 10px,
+      rgba(178,182,195,0.75) 30px
+    );
   overflow: hidden;
   border-radius: 4px;
 }
 
-.emotion-2:before {
+.emotion-0:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.emotion-0 {
+.emotion-2 {
   background-color: #45d6b5;
   position: absolute;
   z-index: -1;
@@ -123,11 +135,11 @@ exports[`ProgressionButton renders correctly with a duration subceeding its crea
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
+  className="sui-box emotion-0 emotion-1"
   role="progressbar"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     color="green"
   />
   Progression
@@ -145,25 +157,31 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
   }
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
   text-align: center;
   color: white;
   font-weight: 500;
   z-index: 0;
-  background: repeating-linear-gradient( 45deg,#b2b6c3,#b2b6c3 10px,rgba(178,182,195,0.75) 10px,rgba(178,182,195,0.75) 30px );
+  background: repeating-linear-gradient(
+      45deg,
+      #b2b6c3,
+      #b2b6c3 10px,
+      rgba(178,182,195,0.75) 10px,
+      rgba(178,182,195,0.75) 30px
+    );
   overflow: hidden;
   border-radius: 4px;
 }
 
-.emotion-2:before {
+.emotion-0:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.emotion-0 {
+.emotion-2 {
   background-color: #45d6b5;
   position: absolute;
   z-index: -1;
@@ -175,11 +193,11 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
+  className="sui-box emotion-0 emotion-1"
   role="progressbar"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     color="green"
   />
   Progression
@@ -197,25 +215,31 @@ exports[`ProgressionButton renders correctly with default values 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
   text-align: center;
   color: white;
   font-weight: 500;
   z-index: 0;
-  background: repeating-linear-gradient( 45deg,#b2b6c3,#b2b6c3 10px,rgba(178,182,195,0.75) 10px,rgba(178,182,195,0.75) 30px );
+  background: repeating-linear-gradient(
+      45deg,
+      #b2b6c3,
+      #b2b6c3 10px,
+      rgba(178,182,195,0.75) 10px,
+      rgba(178,182,195,0.75) 30px
+    );
   overflow: hidden;
   border-radius: 4px;
 }
 
-.emotion-2:before {
+.emotion-0:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.emotion-0 {
+.emotion-2 {
   background-color: #45d6b5;
   position: absolute;
   z-index: -1;
@@ -227,11 +251,11 @@ exports[`ProgressionButton renders correctly with default values 1`] = `
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
+  className="sui-box emotion-0 emotion-1"
   role="progressbar"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     color="green"
   />
   Progression
