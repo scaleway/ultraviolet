@@ -6,20 +6,20 @@ import { theme } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 
-const Table = styled.table`
+const Table = styled(Box.withComponent('table'))`
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 `
 
-const Head = styled.thead`
+const Head = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
   border-color: ${theme.gray350};
   border-style: solid;
 `
 
-const Row = styled.tr`
+const Row = styled(Box.withComponent('tr'))`
   color: ${theme.gray700};
 
   a {
@@ -69,7 +69,7 @@ const cellStyle = css`
   line-height: 24px;
 `
 
-const HeadCell = styled.th`
+const HeadCell = styled(Box.withComponent('th'))`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -79,7 +79,7 @@ const HeadCell = styled.th`
   ${cellStyle};
 `
 
-const BodyCell = styled.td`
+const BodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
   white-space: nowrap;
   ${cellStyle};
