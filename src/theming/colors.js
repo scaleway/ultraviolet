@@ -27,6 +27,7 @@ export const foam = thd('foam', '#cdfcf1')
 export const serenade = thd('serenade', '#ffefe6')
 export const pippin = thd('pippin', '#ffe1e7')
 export const shadow = thd('shadow', '#a5a5cd')
+export const gold = thd('gold', '#FFD536')
 
 // System colors
 export const primary = violet
