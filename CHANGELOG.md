@@ -1,3 +1,10 @@
+### [0.32.6](https://github.com/chambo-e/scw-ui/compare/v0.32.5...v0.32.6) (2020-11-26)
+
+
+### Bug Fixes
+
+* correctly pass style system to Table [CNS-3468] ([3d57e3d](https://github.com/chambo-e/scw-ui/commit/3d57e3d351c005aa514b1ccd1fce1eed3edf31ea))
+
 ### [0.32.5](https://github.com/chambo-e/scw-ui/compare/v0.32.4...v0.32.5) (2020-11-23)
 
 
