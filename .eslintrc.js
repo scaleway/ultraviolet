@@ -3,9 +3,9 @@ module.exports = {
   extends: ['@scaleway/react'],
   plugins: ['@emotion'],
   rules: {
-    'no-nested-ternary': 'off',
-    'no-param-reassign': 'off',
-    'no-shadow': 'off',
+    'no-nested-ternary': 'warn',
+    'no-param-reassign': 'warn',
+    'no-shadow': 'warn',
 
     // Import
     'import/no-extraneous-dependencies': [
@@ -26,8 +26,8 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',
-    'react/prop-types': 'off',
-    'react/require-default-props': 'off',
+    'react/prop-types': 'warn',
+    'react/require-default-props': 'warn',
 
     // emotion
     '@emotion/styled-import': 'error',
