@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Touchable renders correctly disabled 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -18,16 +19,18 @@ exports[`Touchable renders correctly disabled 1`] = `
 }
 
 <button
-  className="sui-box emotion-0"
-  disabled={true}
-  type="button"
->
-  Basic Touchable
-</button>
+    class="sui-box emotion-0"
+    disabled=""
+    type="button"
+  >
+    Basic Touchable
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Touchable renders correctly on focus 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -49,17 +52,18 @@ exports[`Touchable renders correctly on focus 1`] = `
 }
 
 <button
-  className="sui-box emotion-0"
-  disabled={false}
-  tabIndex={0}
-  type="button"
->
-  Basic Touchable
-</button>
+    class="sui-box emotion-0"
+    tabindex="0"
+    type="button"
+  >
+    Basic Touchable
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Touchable renders correctly with a non default as and type 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -77,16 +81,17 @@ exports[`Touchable renders correctly with a non default as and type 1`] = `
 }
 
 <div
-  className="sui-box emotion-0"
-  disabled={false}
-  type="button"
->
-  Button Touchable
-</div>
+    class="sui-box emotion-0"
+    type="button"
+  >
+    Button Touchable
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Touchable renders correctly with defaults 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: 0;
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -104,10 +109,10 @@ exports[`Touchable renders correctly with defaults 1`] = `
 }
 
 <button
-  className="sui-box emotion-0"
-  disabled={false}
-  type="button"
->
-  Basic Touchable
-</button>
+    class="sui-box emotion-0"
+    type="button"
+  >
+    Basic Touchable
+  </button>
+</DocumentFragment>
 `;

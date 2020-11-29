@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stepper renders correctly 1`] = `
-.emotion-9 {
+<DocumentFragment>
+  .emotion-9 {
   height: 48px;
   background-color: #fff;
   display: -webkit-box;
@@ -180,82 +181,69 @@ exports[`Stepper renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-9"
->
-  <button
-    aria-label="Minus"
-    className="sui-box emotion-2"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
+    class="sui-box emotion-9"
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
+    <button
+      aria-label="Minus"
+      class="sui-box emotion-2"
+      type="button"
     >
-      <path
-        d="M19,13H5V11H19V13Z"
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+      <span
+        class="emotion-1"
+      >
+        |
+      </span>
+    </button>
+    <button
+      class="sui-box emotion-5"
+      type="button"
+    >
+      <input
+        class="emotion-3"
+        name="stepper"
+        style="width: 35px;"
+        value="10"
       />
-    </svg>
-    <span
-      className="emotion-1"
+      <span
+        class="emotion-3"
+      >
+        unit
+      </span>
+    </button>
+    <button
+      aria-label="Plus"
+      class="sui-box emotion-8"
+      type="button"
     >
-      |
-    </span>
-  </button>
-  <button
-    className="sui-box emotion-5"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <input
-      className="emotion-3"
-      disabled={false}
-      name="stepper"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyPress={[Function]}
-      style={
-        Object {
-          "width": 35,
-        }
-      }
-      value="10"
-    />
-    <span
-      className="emotion-3"
-    >
-      unit
-    </span>
-  </button>
-  <button
-    aria-label="Plus"
-    className="sui-box emotion-8"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="emotion-6"
-    >
-      |
-    </span>
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-      />
-    </svg>
-  </button>
-</div>
+      <span
+        class="emotion-6"
+      >
+        |
+      </span>
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Stepper renders correctly disabled 1`] = `
-.emotion-9 {
+<DocumentFragment>
+  .emotion-9 {
   height: 48px;
   background-color: #fff;
   display: -webkit-box;
@@ -442,76 +430,65 @@ exports[`Stepper renders correctly disabled 1`] = `
 }
 
 <div
-  className="sui-box emotion-9"
->
-  <button
-    aria-label="Minus"
-    className="sui-box emotion-2"
-    disabled={true}
-    onClick={[Function]}
-    type="button"
+    class="sui-box emotion-9"
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
+    <button
+      aria-label="Minus"
+      class="sui-box emotion-2"
+      disabled=""
+      type="button"
     >
-      <path
-        d="M19,13H5V11H19V13Z"
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+      <span
+        class="emotion-1"
+      >
+        |
+      </span>
+    </button>
+    <button
+      class="sui-box emotion-5"
+      type="button"
+    >
+      <input
+        class="emotion-3"
+        disabled=""
+        name="stepper"
+        style="width: 35px;"
+        value="10"
       />
-    </svg>
-    <span
-      className="emotion-1"
+      <span
+        class="emotion-3"
+      >
+        unit
+      </span>
+    </button>
+    <button
+      aria-label="Plus"
+      class="sui-box emotion-8"
+      disabled=""
+      type="button"
     >
-      |
-    </span>
-  </button>
-  <button
-    className="sui-box emotion-5"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <input
-      className="emotion-3"
-      disabled={true}
-      name="stepper"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onKeyPress={[Function]}
-      style={
-        Object {
-          "width": 35,
-        }
-      }
-      value="10"
-    />
-    <span
-      className="emotion-3"
-    >
-      unit
-    </span>
-  </button>
-  <button
-    aria-label="Plus"
-    className="sui-box emotion-8"
-    disabled={true}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="emotion-6"
-    >
-      |
-    </span>
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-      />
-    </svg>
-  </button>
-</div>
+      <span
+        class="emotion-6"
+      >
+        |
+      </span>
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label renders correctly 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   color: #151a2d;
   font-size: 16px;
   line-height: 24px;
@@ -10,8 +11,9 @@ exports[`Label renders correctly 1`] = `
 }
 
 <label
-  className="sui-box emotion-0 emotion-1"
->
-  I'm a Label
-</label>
+    class="sui-box emotion-0 emotion-1"
+  >
+    I'm a Label
+  </label>
+</DocumentFragment>
 `;

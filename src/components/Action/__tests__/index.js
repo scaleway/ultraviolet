@@ -1,5 +1,5 @@
+import { render } from '@testing-library/react'
 import React from 'react'
-import { create } from 'react-test-renderer'
 import { Action } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
@@ -27,14 +27,14 @@ describe('Action', () => {
   test('throw an error without name of children props', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
     try {
-      create(<Action />)
+      render(<Action />)
     } catch (e) {
       expect(e).toEqual(
         new Error(
           'Action component need to have either children (as string) or a name prop',
         ),
       )
-      expect(console.error).toHaveBeenCalledTimes(1)
+      expect(console.error).toHaveBeenCalledTimes(2)
     }
     spy.mockRestore()
   })

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders correctly 1`] = `
-.emotion-28 {
+<DocumentFragment>
+  .emotion-28 {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
@@ -71,78 +72,80 @@ exports[`Table renders correctly 1`] = `
 }
 
 <table
-  className="emotion-28 emotion-29"
->
-  <thead
-    className="emotion-8 emotion-9"
+    class="emotion-28 emotion-29"
   >
-    <tr
-      className="emotion-6 emotion-7"
+    <thead
+      class="emotion-8 emotion-9"
     >
-      <th
-        className="emotion-0 emotion-1"
+      <tr
+        class="emotion-6 emotion-7"
       >
-        ID
-      </th>
-      <th
-        className="emotion-0 emotion-1"
-      >
-        Status
-      </th>
-      <th
-        className="emotion-0 emotion-1"
-      >
-        Date
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    className="emotion-26 emotion-27"
-  >
-    <tr
-      className="emotion-6 emotion-7"
+        <th
+          class="emotion-0 emotion-1"
+        >
+          ID
+        </th>
+        <th
+          class="emotion-0 emotion-1"
+        >
+          Status
+        </th>
+        <th
+          class="emotion-0 emotion-1"
+        >
+          Date
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-26 emotion-27"
     >
-      <td
-        className="emotion-10 emotion-11"
+      <tr
+        class="emotion-6 emotion-7"
       >
-        165
-      </td>
-      <td
-        className="emotion-10 emotion-11"
+        <td
+          class="emotion-10 emotion-11"
+        >
+          165
+        </td>
+        <td
+          class="emotion-10 emotion-11"
+        >
+          Ongoing
+        </td>
+        <td
+          class="emotion-10 emotion-11"
+        >
+          Yesterday
+        </td>
+      </tr>
+      <tr
+        class="emotion-6 emotion-7"
       >
-        Ongoing
-      </td>
-      <td
-        className="emotion-10 emotion-11"
-      >
-        Yesterday
-      </td>
-    </tr>
-    <tr
-      className="emotion-6 emotion-7"
-    >
-      <td
-        className="emotion-10 emotion-11"
-      >
-        56
-      </td>
-      <td
-        className="emotion-10 emotion-11"
-      >
-        Resolved
-      </td>
-      <td
-        className="emotion-10 emotion-11"
-      >
-        1 hour ago
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td
+          class="emotion-10 emotion-11"
+        >
+          56
+        </td>
+        <td
+          class="emotion-10 emotion-11"
+        >
+          Resolved
+        </td>
+        <td
+          class="emotion-10 emotion-11"
+        >
+          1 hour ago
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
 `;
 
 exports[`Table renders correctly while loading 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -242,89 +245,74 @@ exports[`Table renders correctly while loading 1`] = `
 }
 
 <table
-  className="emotion-16 emotion-17"
->
-  <thead
-    className="emotion-6 emotion-7"
+    class="emotion-16 emotion-17"
   >
-    <tr
-      className="emotion-4 emotion-5"
+    <thead
+      class="emotion-6 emotion-7"
     >
-      <th
-        className="emotion-0 emotion-1"
+      <tr
+        class="emotion-4 emotion-5"
       >
-        ID
-      </th>
-      <th
-        className="emotion-0 emotion-1"
-      >
-        Date
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    className="emotion-14 emotion-15"
-  >
-    <tr
-      className="emotion-4 emotion-5"
+        <th
+          class="emotion-0 emotion-1"
+        >
+          ID
+        </th>
+        <th
+          class="emotion-0 emotion-1"
+        >
+          Date
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-14 emotion-15"
     >
-      <td
-        className="emotion-10 emotion-11"
-        colSpan={2}
-        height={80}
+      <tr
+        class="emotion-4 emotion-5"
       >
-        <div
-          aria-valuemax={1}
-          aria-valuemin={0}
-          className="sui-box emotion-9"
-          role="progressbar"
+        <td
+          class="emotion-10 emotion-11"
+          colspan="2"
+          height="80"
         >
           <div
-            className="emotion-8"
-            style={
-              Object {
-                "height": 40,
-                "width": 40,
-              }
-            }
+            aria-valuemax="1"
+            aria-valuemin="0"
+            class="sui-box emotion-9"
+            role="progressbar"
           >
-            <svg
-              height="100%"
-              viewBox="0 0 32 32"
-              width="100%"
+            <div
+              class="emotion-8"
+              style="height: 40px; width: 40px;"
             >
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                strokeWidth="4"
-                style={
-                  Object {
-                    "opacity": 0.2,
-                    "stroke": "currentColor",
-                  }
-                }
-              />
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                strokeWidth="4"
-                style={
-                  Object {
-                    "stroke": "currentColor",
-                    "strokeDasharray": 80,
-                    "strokeDashoffset": 60,
-                  }
-                }
-              />
-            </svg>
+              <svg
+                height="100%"
+                viewBox="0 0 32 32"
+                width="100%"
+              >
+                <circle
+                  cx="16"
+                  cy="16"
+                  fill="none"
+                  r="14"
+                  stroke-width="4"
+                  style="stroke: currentColor; opacity: 0.2;"
+                />
+                <circle
+                  cx="16"
+                  cy="16"
+                  fill="none"
+                  r="14"
+                  stroke-width="4"
+                  style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
 `;

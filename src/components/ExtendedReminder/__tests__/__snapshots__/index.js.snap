@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ExtendedReminder renders correctly with default values 1`] = `
-.emotion-9 {
+<DocumentFragment>
+  .emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,67 +202,65 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 }
 
 <div
-  className="sui-box emotion-9"
->
-  <div
-    className="sui-box emotion-2"
+    class="sui-box emotion-9"
   >
-    <span
-      className="sui-box emotion-1"
+    <div
+      class="sui-box emotion-2"
     >
-      <svg
-        className="sui-box sc-ui-icon emotion-0"
-        viewBox="0 0 24 24"
+      <span
+        class="sui-box emotion-1"
       >
-        <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-        />
-      </svg>
-       
-      10 days remaining
-    </span>
+        <svg
+          class="sui-box sc-ui-icon emotion-0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          />
+        </svg>
+         10 days remaining
+      </span>
+    </div>
+    <p
+      class="sui-box emotion-3"
+    >
+      Verify your credit card
+    </p>
+    <p
+      class="sui-box emotion-4"
+    >
+      Enter the code we send to your bank account to validate your payment method.
+    </p>
+    <a
+      class="sui-box sui-box emotion-8"
+      href="/"
+      to="/"
+    >
+      <div
+        class="sui-box emotion-6"
+      >
+        <svg
+          class="sui-box sc-ui-icon emotion-5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+          />
+        </svg>
+      </div>
+      <div
+        class="content emotion-7"
+      >
+        Verify my credit card
+      </div>
+    </a>
   </div>
-  <p
-    className="sui-box emotion-3"
-  >
-    Verify your credit card
-  </p>
-  <p
-    className="sui-box emotion-4"
-  >
-    Enter the code we send to your bank account to validate your payment method.
-  </p>
-  <a
-    className="sui-box sui-box emotion-8"
-    disabled={false}
-    href="/"
-    onClick={null}
-    to="/"
-    type={null}
-  >
-    <div
-      className="sui-box emotion-6"
-    >
-      <svg
-        className="sui-box sc-ui-icon emotion-5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-        />
-      </svg>
-    </div>
-    <div
-      className="content emotion-7"
-    >
-      Verify my credit card
-    </div>
-  </a>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ExtendedReminder renders correctly with variant 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   position: absolute;
   top: -12px;
   left: 16px;
@@ -461,61 +460,58 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
 }
 
 <div
-  className="sui-box emotion-9"
->
-  <div
-    className="sui-box emotion-2"
+    class="sui-box emotion-9"
   >
-    <span
-      className="sui-box emotion-1"
+    <div
+      class="sui-box emotion-2"
     >
-      <svg
-        className="sui-box sc-ui-icon emotion-0"
-        viewBox="0 0 24 24"
+      <span
+        class="sui-box emotion-1"
       >
-        <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-        />
-      </svg>
-       
-      10 days remaining
-    </span>
+        <svg
+          class="sui-box sc-ui-icon emotion-0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          />
+        </svg>
+         10 days remaining
+      </span>
+    </div>
+    <p
+      class="sui-box emotion-3"
+    >
+      Verify your credit card
+    </p>
+    <p
+      class="sui-box emotion-4"
+    >
+      Enter the code we send to your bank account to validate your payment method.
+    </p>
+    <a
+      class="sui-box sui-box emotion-8"
+      href="/"
+      to="/"
+    >
+      <div
+        class="sui-box emotion-6"
+      >
+        <svg
+          class="sui-box sc-ui-icon emotion-5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+          />
+        </svg>
+      </div>
+      <div
+        class="content emotion-7"
+      >
+        Verify my credit card
+      </div>
+    </a>
   </div>
-  <p
-    className="sui-box emotion-3"
-  >
-    Verify your credit card
-  </p>
-  <p
-    className="sui-box emotion-4"
-  >
-    Enter the code we send to your bank account to validate your payment method.
-  </p>
-  <a
-    className="sui-box sui-box emotion-8"
-    disabled={false}
-    href="/"
-    onClick={null}
-    to="/"
-    type={null}
-  >
-    <div
-      className="sui-box emotion-6"
-    >
-      <svg
-        className="sui-box sc-ui-icon emotion-5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-        />
-      </svg>
-    </div>
-    <div
-      className="content emotion-7"
-    >
-      Verify my credit card
-    </div>
-  </a>
-</div>
+</DocumentFragment>
 `;

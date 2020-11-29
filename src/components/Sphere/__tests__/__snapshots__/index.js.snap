@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sphere renders correctly when halved 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -30,12 +31,14 @@ exports[`Sphere renders correctly when halved 1`] = `
 }
 
 <div
-  className="sui-box emotion-0"
-/>
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with default values 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -64,12 +67,14 @@ exports[`Sphere renders correctly with default values 1`] = `
 }
 
 <div
-  className="sui-box emotion-0"
-/>
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with one char and smaller 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -103,12 +108,13 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <div
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    ★
+    <div
+      class="emotion-0"
+    >
+      ★
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

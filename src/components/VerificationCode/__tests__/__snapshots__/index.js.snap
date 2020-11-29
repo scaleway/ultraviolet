@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VerificationCode renders correctly with default values 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -33,69 +34,51 @@ exports[`VerificationCode renders correctly with default values 1`] = `
 }
 
 <div
-  className="sui-box emotion-4"
->
-  <input
-    className="emotion-0"
-    data-id={0}
-    disabled={false}
-    id="verification-code-0"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={1}
-    disabled={false}
-    id="verification-code-1"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={2}
-    disabled={false}
-    id="verification-code-2"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={3}
-    disabled={false}
-    id="verification-code-3"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-</div>
+    class="sui-box emotion-4"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`VerificationCode renders correctly with initial value and placeholder and 6 fields 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -127,91 +110,62 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
 }
 
 <div
-  className="sui-box emotion-6"
->
-  <input
-    className="emotion-0"
-    data-id={0}
-    disabled={false}
-    id="verification-code-0"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder="0"
-    required={false}
-    type="tel"
-    value="1"
-  />
-  <input
-    className="emotion-0"
-    data-id={1}
-    disabled={false}
-    id="verification-code-1"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder="0"
-    required={false}
-    type="tel"
-    value="3"
-  />
-  <input
-    className="emotion-0"
-    data-id={2}
-    disabled={false}
-    id="verification-code-2"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder="3"
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={3}
-    disabled={false}
-    id="verification-code-3"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder="7"
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={4}
-    disabled={false}
-    id="verification-code-4"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-  <input
-    className="emotion-0"
-    data-id={5}
-    disabled={false}
-    id="verification-code-5"
-    onChange={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    pattern="[0-9]*"
-    placeholder=""
-    required={false}
-    type="tel"
-    value=""
-  />
-</div>
+    class="sui-box emotion-6"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder="0"
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder="0"
+      type="tel"
+      value="3"
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder="3"
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder="7"
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="4"
+      id="verification-code-4"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="5"
+      id="verification-code-5"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+  </div>
+</DocumentFragment>
 `;

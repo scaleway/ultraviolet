@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box Box renders correctly  1`] = `
-<div
-  className="sui-box css-8qkufk"
-/>
+<DocumentFragment>
+  <div
+    class="sui-box css-8qkufk"
+  />
+</DocumentFragment>
 `;
 
 exports[`Box Box renders with system 1`] = `
-.emotion-0.emotion-0 {
+<DocumentFragment>
+  .emotion-0.emotion-0 {
   background-color: #bd4932;
   height: 100px;
   margin-right: auto;
@@ -16,6 +19,7 @@ exports[`Box Box renders with system 1`] = `
 }
 
 <div
-  className="sui-box emotion-0"
-/>
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
 `;
