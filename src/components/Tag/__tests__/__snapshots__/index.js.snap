@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag renders correctly 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -30,18 +31,20 @@ exports[`Tag renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <span
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    test
-  </span>
-</div>
+    <span
+      class="emotion-0"
+    >
+      test
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Tag renders correctly bordered 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -68,18 +71,20 @@ exports[`Tag renders correctly bordered 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <span
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    test
-  </span>
-</div>
+    <span
+      class="emotion-0"
+    >
+      test
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Tag renders correctly disabled 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   opacity: 0.5;
   border-radius: 4px;
   -webkit-box-pack: center;
@@ -110,12 +115,13 @@ exports[`Tag renders correctly disabled 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <span
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    test
-  </span>
-</div>
+    <span
+      class="emotion-0"
+    >
+      test
+    </span>
+  </div>
+</DocumentFragment>
 `;

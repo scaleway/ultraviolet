@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Commands renders correctly 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
@@ -13,8 +14,9 @@ exports[`Commands renders correctly 1`] = `
 }
 
 <span
-  className="sui-box emotion-0"
->
-  halt
-</span>
+    class="sui-box emotion-0"
+  >
+    halt
+  </span>
+</DocumentFragment>
 `;

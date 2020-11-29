@@ -50,7 +50,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx}",
+      "!src/**/__stories__/**/*.{js,mdx}"
     ],
     "coverageReporters": [
       "text",
@@ -110,6 +111,7 @@
     "@storybook/react": "^6.1.5",
     "@storybook/theming": "^6.1.5",
     "@svgr/rollup": "^5.5.0",
+    "@testing-library/react": "^11.2.2",
     "babel-loader": "^8.2.1",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
     "cross-env": "^7.0.2",
@@ -127,7 +129,6 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
-    "react-test-renderer": "^17.0.1",
     "read-pkg": "^5.2.0",
     "rollup": "^2.33.3",
     "rollup-plugin-analyzer": "^3.3.0",

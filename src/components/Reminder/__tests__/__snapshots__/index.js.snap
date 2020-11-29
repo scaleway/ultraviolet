@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Reminder renders correctly when bordered 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   fill: #3f6ed8;
   vertical-align: middle;
   height: 20px;
@@ -59,31 +60,28 @@ exports[`Reminder renders correctly when bordered 1`] = `
 }
 
 <a
-  className="sui-box emotion-1 emotion-2"
-  icon="east"
-  style={Object {}}
-  type="button"
->
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This is a sample Test",
-      }
-    }
-  />
-  <svg
-    className="sui-box sc-ui-icon emotion-0"
-    viewBox="0 0 24 24"
+    class="sui-box emotion-1 emotion-2"
+    icon="east"
+    type="button"
   >
-    <path
-      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-    />
-  </svg>
-</a>
+    <span>
+      This is a sample Test
+    </span>
+    <svg
+      class="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
 `;
 
 exports[`Reminder renders correctly with bold 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   fill: #3f6ed8;
   vertical-align: middle;
   height: 20px;
@@ -141,31 +139,32 @@ exports[`Reminder renders correctly with bold 1`] = `
 }
 
 <a
-  className="sui-box emotion-1 emotion-2"
-  icon="east"
-  style={Object {}}
-  type="button"
->
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This is a <strong>bold</strong> Test",
-      }
-    }
-  />
-  <svg
-    className="sui-box sc-ui-icon emotion-0"
-    viewBox="0 0 24 24"
+    class="sui-box emotion-1 emotion-2"
+    icon="east"
+    type="button"
   >
-    <path
-      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-    />
-  </svg>
-</a>
+    <span>
+      This is a 
+      <strong>
+        bold
+      </strong>
+       Test
+    </span>
+    <svg
+      class="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
 `;
 
 exports[`Reminder renders correctly with default values 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   height: 28px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,31 +222,28 @@ exports[`Reminder renders correctly with default values 1`] = `
 }
 
 <a
-  className="sui-box emotion-1 emotion-2"
-  icon="east"
-  style={Object {}}
-  type="button"
->
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This is a sample Test",
-      }
-    }
-  />
-  <svg
-    className="sui-box sc-ui-icon emotion-0"
-    viewBox="0 0 24 24"
+    class="sui-box emotion-1 emotion-2"
+    icon="east"
+    type="button"
   >
-    <path
-      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-    />
-  </svg>
-</a>
+    <span>
+      This is a sample Test
+    </span>
+    <svg
+      class="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
 `;
 
 exports[`Reminder renders correctly with variant 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   fill: #3f6ed8;
   vertical-align: middle;
   height: 20px;
@@ -305,25 +301,21 @@ exports[`Reminder renders correctly with variant 1`] = `
 }
 
 <a
-  className="sui-box emotion-1 emotion-2"
-  icon="east"
-  style={Object {}}
-  type="button"
->
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This is a sample Test",
-      }
-    }
-  />
-  <svg
-    className="sui-box sc-ui-icon emotion-0"
-    viewBox="0 0 24 24"
+    class="sui-box emotion-1 emotion-2"
+    icon="east"
+    type="button"
   >
-    <path
-      d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
-    />
-  </svg>
-</a>
+    <span>
+      This is a sample Test
+    </span>
+    <svg
+      class="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
 `;

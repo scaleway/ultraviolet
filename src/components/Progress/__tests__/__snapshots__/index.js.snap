@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Progress renders correctly 1`] = `
-.emotion-3 {
+<DocumentFragment>
+  .emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -119,28 +120,30 @@ exports[`Progress renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-3"
->
-  <div
-    className="sui-box emotion-0"
+    class="sui-box emotion-3"
   >
-    Step 1
+    <div
+      class="sui-box emotion-0"
+    >
+      Step 1
+    </div>
+    <div
+      class="sui-box emotion-1"
+    >
+      Step 2
+    </div>
+    <div
+      class="sui-box emotion-2"
+    >
+      Step 3
+    </div>
   </div>
-  <div
-    className="sui-box emotion-1"
-  >
-    Step 2
-  </div>
-  <div
-    className="sui-box emotion-2"
-  >
-    Step 3
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Progress renders correctly when one children is clickable 1`] = `
-.emotion-3 {
+<DocumentFragment>
+  .emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -259,29 +262,30 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
 }
 
 <div
-  className="sui-box emotion-3"
->
-  <button
-    className="sui-box emotion-0"
-    onClick={[Function]}
+    class="sui-box emotion-3"
   >
-    Step 1
-  </button>
-  <div
-    className="sui-box emotion-1"
-  >
-    Step 2
+    <button
+      class="sui-box emotion-0"
+    >
+      Step 1
+    </button>
+    <div
+      class="sui-box emotion-1"
+    >
+      Step 2
+    </div>
+    <div
+      class="sui-box emotion-2"
+    >
+      Step 3
+    </div>
   </div>
-  <div
-    className="sui-box emotion-2"
-  >
-    Step 3
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Progress renders correctly when one children is empty 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -362,17 +366,18 @@ exports[`Progress renders correctly when one children is empty 1`] = `
 }
 
 <div
-  className="sui-box emotion-2"
->
-  <div
-    className="sui-box emotion-0"
+    class="sui-box emotion-2"
   >
-    Step 1
+    <div
+      class="sui-box emotion-0"
+    >
+      Step 1
+    </div>
+    <div
+      class="sui-box emotion-1"
+    >
+      Step 3
+    </div>
   </div>
-  <div
-    className="sui-box emotion-1"
-  >
-    Step 3
-  </div>
-</div>
+</DocumentFragment>
 `;

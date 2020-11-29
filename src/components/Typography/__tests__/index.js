@@ -50,8 +50,8 @@ describe('Typography', () => {
     shouldMatchEmotionSnapshot(
       <Typography variant="bodyB" maxLines={2}>
         Lorem
-        <div>Ipsum</div>
-        <Typography variant="title">
+        <span>Ipsum</span>
+        <Typography variant="title" as="span">
           <span>Dolor</span>
         </Typography>
         Sit
