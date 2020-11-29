@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TagsPoplist renders correctly 1`] = `
-.emotion-6.emotion-6 {
+<DocumentFragment>
+  .emotion-6.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,44 +112,45 @@ exports[`TagsPoplist renders correctly 1`] = `
 }
 
 <div>
-  <div
-    className="sui-box emotion-6"
-  >
     <div
-      className="sui-box emotion-2"
+      class="sui-box emotion-6"
     >
       <div
-        className="sui-box emotion-1"
+        class="sui-box emotion-2"
       >
-        <span
-          className="emotion-0"
+        <div
+          class="sui-box emotion-1"
         >
-          scaleway
-        </span>
+          <span
+            class="emotion-0"
+          >
+            scaleway
+          </span>
+        </div>
       </div>
-    </div>
-    +
-    1
-    <div
-      className="sui-box emotion-5"
-    >
+      +1
       <div
-        className="sui-box emotion-4"
+        class="sui-box emotion-5"
       >
-        <span
-          className="emotion-3"
+        <div
+          class="sui-box emotion-4"
         >
-          cloud
-        </span>
+          <span
+            class="emotion-3"
+          >
+            cloud
+          </span>
+        </div>
       </div>
     </div>
+     
   </div>
-   
-</div>
+</DocumentFragment>
 `;
 
 exports[`TagsPoplist renders correctly with custom threshold 1`] = `
-.emotion-5.emotion-5 {
+<DocumentFragment>
+  .emotion-5.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,37 +226,39 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
 }
 
 <div>
-  <div
-    className="sui-box emotion-5"
-  >
     <div
-      className="sui-box emotion-4"
+      class="sui-box emotion-5"
     >
       <div
-        className="sui-box emotion-1"
+        class="sui-box emotion-4"
       >
-        <span
-          className="emotion-0"
+        <div
+          class="sui-box emotion-1"
         >
-          scaleway
-        </span>
-      </div>
-      <div
-        className="sui-box emotion-3"
-      >
-        <span
-          className="emotion-0"
+          <span
+            class="emotion-0"
+          >
+            scaleway
+          </span>
+        </div>
+        <div
+          class="sui-box emotion-3"
         >
-          cloud
-        </span>
+          <span
+            class="emotion-0"
+          >
+            cloud
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] = `
-.emotion-8.emotion-8 {
+<DocumentFragment>
+  .emotion-8.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -384,52 +388,53 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
 }
 
 <div>
-  <div
-    className="sui-box emotion-8"
-  >
     <div
-      className="sui-box emotion-4"
+      class="sui-box emotion-8"
     >
       <div
-        className="sui-box emotion-1"
+        class="sui-box emotion-4"
       >
-        <span
-          className="emotion-0"
+        <div
+          class="sui-box emotion-1"
         >
-          scaleway
-        </span>
+          <span
+            class="emotion-0"
+          >
+            scaleway
+          </span>
+        </div>
+        <div
+          class="sui-box emotion-3"
+        >
+          <span
+            class="emotion-0"
+          >
+            cloud
+          </span>
+        </div>
       </div>
+      +1
       <div
-        className="sui-box emotion-3"
+        class="sui-box emotion-7"
       >
-        <span
-          className="emotion-0"
+        <div
+          class="sui-box emotion-6"
         >
-          cloud
-        </span>
-      </div>
-    </div>
-    +
-    1
-    <div
-      className="sui-box emotion-7"
-    >
-      <div
-        className="sui-box emotion-6"
-      >
-        <span
-          className="emotion-5"
-        >
-          provider
-        </span>
+          <span
+            class="emotion-5"
+          >
+            provider
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`TagsPoplist renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags 1`] = `
-.emotion-8.emotion-8 {
+<DocumentFragment>
+  .emotion-8.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -539,48 +544,52 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
 }
 
 <div>
-  <div
-    className="sui-box emotion-8"
-  >
     <div
-      className="sui-box emotion-2"
+      class="sui-box emotion-8"
     >
       <div
-        className="sui-box emotion-1"
+        class="sui-box emotion-2"
       >
-        <span
-          className="emotion-0"
+        <div
+          class="sui-box emotion-1"
         >
-          scaleway
-        </span>
+          <span
+            class="emotion-0"
+          >
+            scaleway
+          </span>
+        </div>
       </div>
-    </div>
-    +
-    2
-    <div
-      className="sui-box emotion-7"
-    >
+      +2
       <div
-        className="sui-box emotion-4"
+        class="sui-box emotion-7"
       >
-        <span
-          className="emotion-3"
+        <div
+          class="sui-box emotion-4"
         >
-          cloud
-        </span>
-      </div>
-      <div
-        className="sui-box emotion-4"
-      >
-        <span
-          className="emotion-3"
+          <span
+            class="emotion-3"
+          >
+            cloud
+          </span>
+        </div>
+        <div
+          class="sui-box emotion-4"
         >
-          provider
-        </span>
+          <span
+            class="emotion-3"
+          >
+            provider
+          </span>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
-exports[`TagsPoplist renders correctly with not tags 1`] = `<div />`;
+exports[`TagsPoplist renders correctly with not tags 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;

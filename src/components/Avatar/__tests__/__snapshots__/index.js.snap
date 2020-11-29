@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar renders correctly with default props 1`] = `
-.emotion-1.emotion-1 {
+<DocumentFragment>
+  .emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -13,18 +14,20 @@ exports[`Avatar renders correctly with default props 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <img
-    alt=""
-    className="emotion-0"
-    src="test-file-stub"
-  />
-</div>
+    class="sui-box emotion-1"
+  >
+    <img
+      alt=""
+      class="emotion-0"
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with lock 1`] = `
-.emotion-2.emotion-2 {
+<DocumentFragment>
+  .emotion-2.emotion-2 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -61,25 +64,27 @@ exports[`Avatar renders correctly with lock 1`] = `
 }
 
 <div
-  className="sui-box emotion-2"
->
-  <div
-    className="emotion-1"
+    class="sui-box emotion-2"
   >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
+    <div
+      class="emotion-1"
     >
-      <path
-        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
-      />
-    </svg>
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+        />
+      </svg>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with sentence 1`] = `
-.emotion-1.emotion-1 {
+<DocumentFragment>
+  .emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -107,18 +112,20 @@ exports[`Avatar renders correctly with sentence 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <div
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    HW
+    <div
+      class="emotion-0"
+    >
+      HW
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with small text 1`] = `
-.emotion-1.emotion-1 {
+<DocumentFragment>
+  .emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -146,18 +153,20 @@ exports[`Avatar renders correctly with small text 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <div
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    HW
+    <div
+      class="emotion-0"
+    >
+      HW
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with text 1`] = `
-.emotion-1.emotion-1 {
+<DocumentFragment>
+  .emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -185,18 +194,20 @@ exports[`Avatar renders correctly with text 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <div
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    HE
+    <div
+      class="emotion-0"
+    >
+      HE
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Avatar renders correctly with text and custom style 1`] = `
-.emotion-1.emotion-1 {
+<DocumentFragment>
+  .emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
@@ -224,12 +235,13 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
 }
 
 <div
-  className="sui-box emotion-1"
->
-  <div
-    className="emotion-0"
+    class="sui-box emotion-1"
   >
-    HW
+    <div
+      class="emotion-0"
+    >
+      HW
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

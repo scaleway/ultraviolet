@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressionButton renders correctly with a duration exceeding its creation date 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     width: 0%;
   }
@@ -61,19 +62,21 @@ exports[`ProgressionButton renders correctly with a duration exceeding its creat
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
-  role="progressbar"
->
-  <div
-    className="emotion-0 emotion-1"
-    color="green"
-  />
-  Progression
-</div>
+    class="sui-box emotion-2 emotion-3"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      color="green"
+    />
+    Progression
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressionButton renders correctly with a duration subceeding its creation date 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     width: 0%;
   }
@@ -123,19 +126,21 @@ exports[`ProgressionButton renders correctly with a duration subceeding its crea
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
-  role="progressbar"
->
-  <div
-    className="emotion-0 emotion-1"
-    color="green"
-  />
-  Progression
-</div>
+    class="sui-box emotion-2 emotion-3"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      color="green"
+    />
+    Progression
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressionButton renders correctly with a string as creation date 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     width: 0%;
   }
@@ -175,19 +180,21 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
-  role="progressbar"
->
-  <div
-    className="emotion-0 emotion-1"
-    color="green"
-  />
-  Progression
-</div>
+    class="sui-box emotion-2 emotion-3"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      color="green"
+    />
+    Progression
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressionButton renders correctly with default values 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     width: 0%;
   }
@@ -227,13 +234,14 @@ exports[`ProgressionButton renders correctly with default values 1`] = `
 }
 
 <div
-  className="sui-box emotion-2 emotion-3"
-  role="progressbar"
->
-  <div
-    className="emotion-0 emotion-1"
-    color="green"
-  />
-  Progression
-</div>
+    class="sui-box emotion-2 emotion-3"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      color="green"
+    />
+    Progression
+  </div>
+</DocumentFragment>
 `;

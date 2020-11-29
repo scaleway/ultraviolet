@@ -1,9 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import { render } from '@testing-library/react'
 import serializer from 'jest-emotion'
-import renderer from 'react-test-renderer'
 
 expect.addSnapshotSerializer(serializer)
 
 export default component => {
-  expect(renderer.create(component).toJSON()).toMatchSnapshot()
+  const { asFragment } = render(component)
+  expect(asFragment()).toMatchSnapshot()
 }
