@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IconMessage renders correctly 1`] = `
-.emotion-4.emotion-4 {
+<DocumentFragment>
+  .emotion-4.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,34 +43,36 @@ exports[`IconMessage renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-4"
->
-  <div
-    className="sui-box emotion-1"
-  >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-      />
-    </svg>
-  </div>
-  <div
-    className="sui-box emotion-3"
+    class="sui-box emotion-4"
   >
     <div
-      className="sui-box emotion-2"
+      class="sui-box emotion-1"
     >
-      This is default.
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+    </div>
+    <div
+      class="sui-box emotion-3"
+    >
+      <div
+        class="sui-box emotion-2"
+      >
+        This is default.
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`IconMessage renders correctly with variant and icon 1`] = `
-.emotion-4.emotion-4 {
+<DocumentFragment>
+  .emotion-4.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,28 +113,29 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
 }
 
 <div
-  className="sui-box emotion-4"
->
-  <div
-    className="sui-box emotion-1"
-  >
-    <svg
-      className="sui-box sc-ui-icon emotion-0"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
-      />
-    </svg>
-  </div>
-  <div
-    className="sui-box emotion-3"
+    class="sui-box emotion-4"
   >
     <div
-      className="sui-box emotion-2"
+      class="sui-box emotion-1"
     >
-      This is variant
+      <svg
+        class="sui-box sc-ui-icon emotion-0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+        />
+      </svg>
+    </div>
+    <div
+      class="sui-box emotion-3"
+    >
+      <div
+        class="sui-box emotion-2"
+      >
+        This is variant
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

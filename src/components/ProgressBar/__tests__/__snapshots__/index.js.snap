@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressBar renders info 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -23,20 +24,22 @@ exports[`ProgressBar renders info 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={40}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders primary 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -58,20 +61,22 @@ exports[`ProgressBar renders primary 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={40}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders progression 1`] = `
-@keyframes animation-0 {
+<DocumentFragment>
+  @keyframes animation-0 {
   from {
     left: -25%;
   }
@@ -103,20 +108,22 @@ exports[`ProgressBar renders progression 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={0}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="0"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders success 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -138,20 +145,22 @@ exports[`ProgressBar renders success 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={40}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders warning 1`] = `
-.emotion-1 {
+<DocumentFragment>
+  .emotion-1 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -173,20 +182,22 @@ exports[`ProgressBar renders warning 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={40}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`ProgressBar renders with different background 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -208,14 +219,15 @@ exports[`ProgressBar renders with different background 1`] = `
 }
 
 <div
-  aria-valuemax="100"
-  aria-valuemin="0"
-  aria-valuenow={40}
-  className="sui-box emotion-1"
-  role="progressbar"
->
-  <div
-    className="emotion-0"
-  />
-</div>
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
 `;

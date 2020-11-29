@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders correctly 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -10,8 +11,9 @@ exports[`Button renders correctly 1`] = `
 }
 
 <div
-  className="sui-box emotion-0"
->
-  This is hotpink.
-</div>
+    class="sui-box emotion-0"
+  >
+    This is hotpink.
+  </div>
+</DocumentFragment>
 `;

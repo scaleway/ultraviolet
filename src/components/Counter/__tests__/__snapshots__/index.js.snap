@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Counter renders correctly end=0 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   position: relative;
 }
 
@@ -15,23 +16,27 @@ exports[`Counter renders correctly end=0 1`] = `
 }
 
 <div
-  className="emotion-2"
->
-  <div
-    className="emotion-0"
+    class="emotion-2"
   >
-    0
+    <div
+      class="emotion-0"
+    >
+      0
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <span>
+        0
+      </span>
+    </div>
   </div>
-  <div
-    className="emotion-1"
-  >
-    <span />
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Counter renders correctly end=100 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   position: relative;
 }
 
@@ -45,23 +50,27 @@ exports[`Counter renders correctly end=100 1`] = `
 }
 
 <div
-  className="emotion-2"
->
-  <div
-    className="emotion-0"
+    class="emotion-2"
   >
-    100
+    <div
+      class="emotion-0"
+    >
+      100
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <span>
+        0
+      </span>
+    </div>
   </div>
-  <div
-    className="emotion-1"
-  >
-    <span />
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Counter renders correctly end=10000 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   position: relative;
 }
 
@@ -75,17 +84,20 @@ exports[`Counter renders correctly end=10000 1`] = `
 }
 
 <div
-  className="emotion-2"
->
-  <div
-    className="emotion-0"
+    class="emotion-2"
   >
-    100
+    <div
+      class="emotion-0"
+    >
+      100
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <span>
+        0
+      </span>
+    </div>
   </div>
-  <div
-    className="emotion-1"
-  >
-    <span />
-  </div>
-</div>
+</DocumentFragment>
 `;

@@ -21,7 +21,7 @@ const variantIcons = {
 
 export const alertVariants = Object.keys(variantIcons)
 
-const Alert = ({ variant = 'warning', icon, children, ...props }) => (
+const Alert = ({ variant, icon, children, ...props }) => (
   <Typography
     variant="default"
     css={cx(style({ variant }))}

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pentagon renders with children 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,16 +23,17 @@ exports[`Pentagon renders with children 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  color="#ffe1e7"
-  size="48px"
->
-  X
-</div>
+    class="emotion-0 emotion-1"
+    color="#ffe1e7"
+  >
+    X
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pentagon renders with custom color 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,16 +54,17 @@ exports[`Pentagon renders with custom color 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  color="yellow"
-  size="48px"
->
-  X
-</div>
+    class="emotion-0 emotion-1"
+    color="yellow"
+  >
+    X
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pentagon renders with custom size 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,16 +85,17 @@ exports[`Pentagon renders with custom size 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  color="#ffe1e7"
-  size="200px"
->
-  X
-</div>
+    class="emotion-0 emotion-1"
+    color="#ffe1e7"
+  >
+    X
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Pentagon renders with default props 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,8 +116,8 @@ exports[`Pentagon renders with default props 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  color="#ffe1e7"
-  size="48px"
-/>
+    class="emotion-0 emotion-1"
+    color="#ffe1e7"
+  />
+</DocumentFragment>
 `;
