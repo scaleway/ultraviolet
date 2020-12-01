@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { CategoryIcon, availableIcons } from '..'
+
+<Meta
+  title="Components/CategoryIcon"
+  component={CategoryIcon}
+/>
+
+# CategoryIcon
+
+<Canvas>
+  <Story
+    name="basic"
+  >
+    {availableIcons.map(name => (
+      <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
+        <CategoryIcon name={name} /> {name}
+      </Box>
+    ))}
+  </Story>
+</Canvas>
+
+## Custom size
+
+<Canvas>
+  <Story
+    name="custom-size"
+  >
+    {availableIcons.map(name => (
+      <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
+        <CategoryIcon size={64} name={name} /> {name}
+      </Box>
+    ))}
+  </Story>
+</Canvas>
