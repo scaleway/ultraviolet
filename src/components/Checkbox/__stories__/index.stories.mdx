@@ -21,9 +21,17 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
         [],
       )
       return (
-        <Checkbox checked={checked} onChange={handleChange}>
-          Basic checkbox
-        </Checkbox>
+        <Boxer my={1}>
+          <Checkbox checked={checked} onChange={handleChange}>
+            Basic checkbox
+          </Checkbox>
+          <Checkbox checked disabled>
+            Basic checkbox
+          </Checkbox>
+          <Checkbox checked={false} disabled>
+            Basic checkbox
+          </Checkbox>
+        </Boxer>
       )
     }}
   </Story>
