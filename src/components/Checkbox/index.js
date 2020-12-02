@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
-import { SwitchState } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { useCheckboxState, Checkbox as ReakitCheckbox } from 'reakit/Checkbox'
 import { borderRadius, gray100, gray550, primary } from '../../theming'
 import { cx } from '../../utils'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -27,6 +27,7 @@ const styles = {
     }
   `,
   input: p => css`
+    opacity: 0;
     &:focus + svg {
       outline: 1px ${gray550(p)} dotted;
     }
@@ -64,68 +65,63 @@ export function Checkbox({
   ...props
 }) {
   const hasChildren = Boolean(children)
+  const checkbox = useCheckboxState()
+  console.log(checkbox)
   return (
-    <SwitchState
-      name={name}
-      value={value}
-      checked={checked}
-      defaultChecked={defaultChecked}
-      onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
-    >
-      {({ checked, input }) => (
-        <Box {...props}>
-          <Typography css={cx([styles.container, !disabled && styles.hover])}>
-            <input
-              css={cx([
-                styles.input,
-                !disabled ? styles.enabled : styles.disabled,
-              ])}
-              type="checkbox"
-              {...input}
-              id={id}
-              disabled={disabled}
-            />
-            {progress ? (
-              <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
-            ) : (
-              <Icon
-                mr={hasChildren ? '10px' : 0}
-                p="2px"
-                css={styles.icon}
-                name={
-                  checked ? 'checkbox-marked-outline' : 'checkbox-blank-outline'
-                }
-                color={
-                  disabled
-                    ? 'gray100'
-                    : valid === false || Boolean(error)
-                    ? 'warning'
-                    : valid === true
-                    ? 'success'
-                    : checked
-                    ? 'primary'
-                    : 'gray300'
-                }
-                size={size}
-              />
-            )}
-            {hasChildren && <div css={styles.children(size)}>{children}</div>}
-          </Typography>
-          <Expandable
-            height={56}
-            overflow="hidden"
-            mt="-6px"
-            opened={Boolean(error)}
-          >
-            <Box fontSize={12} color="warning" px="4px">
-              {error}
-            </Box>
-          </Expandable>
+    <Box {...props}>
+      <Typography
+        as="label"
+        css={cx([styles.container, !disabled && styles.hover])}
+      >
+        <ReakitCheckbox
+          {...checkbox}
+          css={cx([styles.input, !disabled ? styles.enabled : styles.disabled])}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          checked={checked}
+          disabled={disabled}
+          value={value}
+        />
+        {progress ? (
+          <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
+        ) : (
+          <Icon
+            mr={hasChildren ? '10px' : 0}
+            p="2px"
+            css={styles.icon}
+            name={
+              checkbox?.state
+                ? 'checkbox-marked-outline'
+                : 'checkbox-blank-outline'
+            }
+            color={
+              disabled
+                ? 'gray100'
+                : valid === false || Boolean(error)
+                ? 'warning'
+                : valid === true
+                ? 'success'
+                : checked
+                ? 'primary'
+                : 'gray300'
+            }
+            size={size}
+          />
+        )}
+        {hasChildren && <div css={styles.children(size)}>{children}</div>}
+      </Typography>
+      <Expandable
+        height={56}
+        overflow="hidden"
+        mt="-6px"
+        opened={Boolean(error)}
+      >
+        <Box fontSize={12} color="warning" px="4px">
+          {error}
         </Box>
-      )}
-    </SwitchState>
+      </Expandable>
+    </Box>
   )
 }
 
