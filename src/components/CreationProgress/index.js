@@ -5,6 +5,7 @@ import flattenChildren from 'react-flatten-children'
 import { theme } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
+import { Typography } from '../Typography'
 
 const loadingAnimation = keyframes`
   from {
@@ -81,6 +82,8 @@ const styles = {
     top: 0;
     left: 0;
     bottom: 0;
+  `,
+  complete: css`
     width: 100%;
   `,
   animated: css`
@@ -88,17 +91,21 @@ const styles = {
   `,
 }
 
-const Step = () => null
-
-const CreationProgress = ({ children, selected, ...props }) => {
+const CreationProgress = ({
+  children,
+  selected,
+  animated,
+  isStepsNumber,
+  ...props
+}) => {
   const lastStep = children.length - 1
 
   return (
     <Box css={styles.container} {...props}>
       {flattenChildren(children).map((child, index) => {
-        if (!child) {
-          return null
-        }
+        // if (!child) {
+        //   return null
+        // }
 
         const isCurrent = selected === index
         const isPast = selected > index
@@ -109,11 +116,26 @@ const CreationProgress = ({ children, selected, ...props }) => {
             <Box css={styles.stepContainer}>
               {isPast || isCurrent ? (
                 <Box css={[styles.step, styles.past]}>
-                  <Icon name="check" color="white" size={20} />
+                  {isStepsNumber ? (
+                    <Typography color="white" fontWeight={500}>
+                      {index + 1}
+                    </Typography>
+                  ) : (
+                    <Icon name="check" color="white" size={20} />
+                  )}
                 </Box>
               ) : (
                 <Box css={[styles.step, styles.future]}>
-                  <Box css={styles.futureInternalDot} />
+                  {isStepsNumber ? (
+                    <Typography
+                      style={{ color: theme.gray300 }}
+                      fontWeight={500}
+                    >
+                      {index + 1}
+                    </Typography>
+                  ) : (
+                    <Box css={styles.futureInternalDot} />
+                  )}
                 </Box>
               )}
 
@@ -123,7 +145,13 @@ const CreationProgress = ({ children, selected, ...props }) => {
             {isNotLast && (
               <Box css={styles.line}>
                 {(isPast || isCurrent) && (
-                  <div css={[styles.progress, isCurrent && styles.animated]} />
+                  <div
+                    css={[
+                      styles.progress,
+                      isPast && styles.complete,
+                      isCurrent && animated && styles.animated,
+                    ]}
+                  />
                 )}
               </Box>
             )}
@@ -134,15 +162,20 @@ const CreationProgress = ({ children, selected, ...props }) => {
   )
 }
 
+const Step = () => null
 CreationProgress.Step = Step
 
 CreationProgress.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   selected: PropTypes.number,
+  animated: PropTypes.bool,
+  isStepsNumber: PropTypes.bool,
 }
 
 CreationProgress.defaultProps = {
   selected: 0,
+  animated: true,
+  isStepsNumber: false,
 }
 
 export { CreationProgress }
