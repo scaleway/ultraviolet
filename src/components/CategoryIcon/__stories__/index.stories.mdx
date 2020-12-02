@@ -1,5 +1,6 @@
 import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { CategoryIcon, availableIcons } from '..'
+import { Box } from '../../Box'
 
 <Meta
   title="Components/CategoryIcon"
@@ -13,8 +14,8 @@ import { CategoryIcon, availableIcons } from '..'
     name="basic"
   >
     {availableIcons.map(name => (
-      <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
-        <CategoryIcon name={name} /> {name}
+      <Box display="flex" alignItems="center" my={1} key={name} style={{ fontSize: '1.3em' }}>
+        <CategoryIcon name={name} />&nbsp;&nbsp;&nbsp;{name}
       </Box>
     ))}
   </Story>
@@ -27,8 +28,8 @@ import { CategoryIcon, availableIcons } from '..'
     name="custom-size"
   >
     {availableIcons.map(name => (
-      <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
-        <CategoryIcon size={64} name={name} /> {name}
+      <Box display="flex" alignItems="center" my={1} key={name} style={{ fontSize: '1.3em' }}>
+        <CategoryIcon size={64} name={name} />&nbsp;&nbsp;&nbsp;{name}
       </Box>
     ))}
   </Story>
