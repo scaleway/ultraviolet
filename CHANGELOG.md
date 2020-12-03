@@ -1,3 +1,10 @@
+## [0.34.0](https://github.com/chambo-e/scw-ui/compare/v0.33.0...v0.34.0) (2020-12-03)
+
+
+### Features
+
+* **checkbox:** use reakit ([97b09d6](https://github.com/chambo-e/scw-ui/commit/97b09d6b35280e6448d48bb9d56314f9cec5d2c6))
+
 ## [0.33.0](https://github.com/chambo-e/scw-ui/compare/v0.32.6...v0.33.0) (2020-12-03)
 
 
