@@ -38,9 +38,21 @@ import { ExtendedReminder } from '../'
       icon="check"
       badgeText="10 days remaining"
       to="/"
+      mb={4}
       title="Verify your credit card"
       text="Enter the code we send to your bank account to validate your payment method."
       linkText="Verify my credit card"
+    />
+  </Story>
+  <Story name="success">
+    <ExtendedReminder
+      variant="success"
+      icon="checkbox-marked-circle-outline"
+      badgeText="SUCCESS"
+      to="/"
+      title="Your ID have been verified"
+      text="You now have a Build level account. The Build level allows you to order any type of resources and scale your project as it grows."
+      linkText="Learn more about Build Level"
     />
   </Story>
 </Canvas>
@@ -75,6 +87,18 @@ import { ExtendedReminder } from '../'
   <Story name="on-click-info">
     <ExtendedReminder
       variant="info"
+      icon="check"
+      badgeText="10 days remaining"
+      onClick={() => console.log('clicked')}
+      mb={4}
+      title="Verify your credit card"
+      text="Enter the code we send to your bank account to validate your payment method."
+      linkText="Verify my credit card"
+    />
+  </Story>
+  <Story name="on-click-success">
+    <ExtendedReminder
+      variant="success"
       icon="check"
       badgeText="10 days remaining"
       onClick={() => console.log('clicked')}
