@@ -4,30 +4,50 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('Checkbox', () => {
   test('renders correctly', () => {
-    shouldMatchEmotionSnapshot(<Checkbox>Checkbox Label</Checkbox>)
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}}>Checkbox Label</Checkbox>,
+    )
   })
   test('renders correctly disabled', () => {
-    shouldMatchEmotionSnapshot(<Checkbox disabled>Checkbox Label</Checkbox>)
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} disabled>
+        Checkbox Label
+      </Checkbox>,
+    )
   })
   test('renders correctly checked', () => {
-    shouldMatchEmotionSnapshot(<Checkbox checked>Checkbox Label</Checkbox>)
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} checked>
+        Checkbox Label
+      </Checkbox>,
+    )
   })
   test('renders correctly checked and disabled', () => {
     shouldMatchEmotionSnapshot(
-      <Checkbox checked disabled>
+      <Checkbox onChange={() => {}} checked disabled>
         Checkbox Label
       </Checkbox>,
     )
   })
   test('renders correctly with an error', () => {
     shouldMatchEmotionSnapshot(
-      <Checkbox error="test error">Checkbox Label</Checkbox>,
+      <Checkbox onChange={() => {}} error="test error">
+        Checkbox Label
+      </Checkbox>,
     )
   })
   test('renders correctly with valid', () => {
-    shouldMatchEmotionSnapshot(<Checkbox valid>Checkbox Label</Checkbox>)
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} valid>
+        Checkbox Label
+      </Checkbox>,
+    )
   })
   test('renders correctly with a value', () => {
-    shouldMatchEmotionSnapshot(<Checkbox value="test">Checkbox Label</Checkbox>)
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
   })
 })

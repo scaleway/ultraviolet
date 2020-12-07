@@ -66,7 +66,7 @@ export function Checkbox({
   }, [checked])
 
   return (
-    <Box {...props}>
+    <Box {...props} onClick={e => e.stopPropagation()}>
       <Typography
         as="label"
         variant={typographyVariant}
@@ -75,7 +75,6 @@ export function Checkbox({
         <ReakitCheckbox
           {...checkbox}
           css={styles.input}
-          onClick={e => e.stopPropagation()}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
