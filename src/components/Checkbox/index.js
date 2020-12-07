@@ -75,6 +75,7 @@ export function Checkbox({
         <ReakitCheckbox
           {...checkbox}
           css={styles.input}
+          onClick={e => e.stopPropagation()}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
@@ -124,6 +125,7 @@ Checkbox.defaultProps = {
   checked: false,
   disabled: false,
   onBlur: () => {},
+  onFocus: () => {},
   progress: false,
   name: 'checkbox',
   typographyVariant: 'default',
@@ -135,7 +137,7 @@ Checkbox.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   progress: PropTypes.bool,
