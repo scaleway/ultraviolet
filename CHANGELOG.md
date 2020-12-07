@@ -1,3 +1,10 @@
+### [0.34.1](https://github.com/chambo-e/scw-ui/compare/v0.34.0...v0.34.1) (2020-12-07)
+
+
+### Bug Fixes
+
+* stop propagation on checkbox ([1f27113](https://github.com/chambo-e/scw-ui/commit/1f27113f98d213677bddf9fe68d0dec741f712df))
+
 ## [0.34.0](https://github.com/chambo-e/scw-ui/compare/v0.33.0...v0.34.0) (2020-12-03)
 
 
