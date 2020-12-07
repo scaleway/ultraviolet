@@ -7,4 +7,5 @@ export default create({
   brandTitle: 'Scaleway UI',
   brandUrl: 'https://github.com/chambo-e/scw-ui',
   brandImage,
+  colorSecondary: '#4f0599',
 })
