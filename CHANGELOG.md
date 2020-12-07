@@ -1,3 +1,10 @@
+### [0.34.2](https://github.com/chambo-e/scw-ui/compare/v0.34.1...v0.34.2) (2020-12-07)
+
+
+### Bug Fixes
+
+* correct checkbox onClick handler ([e11efe1](https://github.com/chambo-e/scw-ui/commit/e11efe1e8237b59e90302c227acd8c53949a7924))
+
 ### [0.34.1](https://github.com/chambo-e/scw-ui/compare/v0.34.0...v0.34.1) (2020-12-07)
 
 
