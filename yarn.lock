@@ -2085,14 +2085,14 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@scaleway/eslint-config-react@^1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@scaleway/eslint-config-react/-/eslint-config-react-1.1.10.tgz#b0c9d2d210bff0670288a58672b2b985c7b671be"
-  integrity sha512-ePaNf7xmI4L9nciJIjp3YivnCx7cMxjy6MkhBxHqAUaBSDX9NaOo8cZ4iWmPRp19C8WuTGBfFPPGS6/aNSb2BA==
+"@scaleway/eslint-config-react@^1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@scaleway/eslint-config-react/-/eslint-config-react-1.1.11.tgz#0cae53a5e55f110535fda64ecc0aedf2c86b6154"
+  integrity sha512-QgLbzJOYTYjwK46gUNT5cu/+MMdVTYDTWBPcXB7SmTvemGM1qopH6ruA2rNBSVo2EKUVHIJBcZNlxIT0sPw/JA==
   dependencies:
     "@babel/eslint-parser" "^7.12.1"
     eslint-config-airbnb "^18.2.1"
-    eslint-config-prettier "^6.15.0"
+    eslint-config-prettier "^7.0.0"
     eslint-plugin-import "^2.22.1"
     eslint-plugin-jsx-a11y "^6.4.1"
     eslint-plugin-react "^7.21.5"
@@ -6958,12 +6958,10 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^6.15.0:
-  version "6.15.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
-  integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
-  dependencies:
-    get-stdin "^6.0.0"
+eslint-config-prettier@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.0.0.tgz#c1ae4106f74e6c0357f44adb076771d032ac0e97"
+  integrity sha512-8Y8lGLVPPZdaNA7JXqnvETVC7IiVRgAP6afQu9gOQRn90YY3otMNh+x7Vr2vMePQntF+5erdSUBqSzCmU/AxaQ==
 
 eslint-formatter-gitlab@^2.0.0:
   version "2.0.0"
@@ -7972,11 +7970,6 @@ get-stdin@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-8.0.0.tgz#cbad6a73feb75f6eeb22ba9e01f89aa28aa97a53"
   integrity sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==
-
-get-stdin@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
-  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@^3.0.0:
   version "3.0.0"
