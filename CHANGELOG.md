@@ -1,3 +1,10 @@
+## [0.35.0](https://github.com/chambo-e/scw-ui/compare/v0.34.2...v0.35.0) (2020-12-08)
+
+
+### Features
+
+* **badge:** added lighter variants for badge ([c0c7dd1](https://github.com/chambo-e/scw-ui/commit/c0c7dd1dc9b2ca6bb7bb1c73804eaad795ab4baa))
+
 ### [0.34.2](https://github.com/chambo-e/scw-ui/compare/v0.34.1...v0.34.2) (2020-12-07)
 
 
