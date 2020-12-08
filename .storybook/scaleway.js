@@ -1,10 +1,11 @@
 import { create } from '@storybook/theming/create'
+import brandImage from './assets/scaleway-text.png'
 
 export default create({
   base: 'light',
 
   brandTitle: 'Scaleway UI',
   brandUrl: 'https://github.com/chambo-e/scw-ui',
-  brandImage:
-    'https://console.scaleway.com/static/medias/scaleway-text.90d001b0.svg',
+  brandImage,
+  colorSecondary: '#4f0599',
 })
