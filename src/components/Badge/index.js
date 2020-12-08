@@ -4,14 +4,20 @@ import React from 'react'
 import {
   white,
   success,
+  foam,
   beta,
+  serenade,
   info,
   red,
+  pippin,
   warning,
   gray700,
   gray350,
   bigBorderRadius,
   borderRadius,
+  zumthor,
+  gray550,
+  gray100,
 } from '../../theming'
 import { cx, sp } from '../../utils'
 import { Box } from '../Box'
@@ -20,17 +26,37 @@ const variants = {
   success: p => css`
     background-color: ${success(p)};
   `,
+  'light-success': p => css`
+    color: ${success(p)};
+    background-color: ${foam(p)};
+  `,
   beta: p => css`
     background-color: ${beta(p)};
   `,
+  'light-beta': p => css`
+    color: ${beta(p)};
+    background-color: ${serenade(p)};
+  `,
   warning: p => css`
     background-color: ${warning(p)};
+  `,
+  'light-error': p => css`
+    color: ${red(p)};
+    background-color: ${pippin(p)};
   `,
   error: p => css`
     background-color: ${red(p)};
   `,
   info: p => css`
     background-color: ${info(p)};
+  `,
+  'light-info': p => css`
+    color: ${info(p)};
+    background-color: ${zumthor(p)};
+  `,
+  'light-neutral': p => css`
+    color: ${gray550(p)};
+    background-color: ${gray100(p)};
   `,
   neutral: p => css`
     color: ${gray700(p)};

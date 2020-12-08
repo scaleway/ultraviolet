@@ -22,7 +22,7 @@ import { Badge } from '..'
 
 # Badge
 
-<Description>Highlights informations.</Description>
+<Description>Highlights information.</Description>
 
 <Canvas>
   <Story name="default" args={{}}>
@@ -32,54 +32,39 @@ import { Badge } from '..'
 
 ## `variant`
 
+#### `neutral`
 <Canvas>
   <Story
     name="neutral"
     args={{
-      variant: 'neutral',
+      variants: [
+        'success',
+        'beta',
+        'error',
+        'info',
+        'neutral',
+      ],
     }}
   >
-    {args => <Badge {...args}>{args.variant}</Badge>}
+    {args => args.variants.map(variant => <Badge variant={variant} mx={1}>{variant}</Badge>)}
   </Story>
+</Canvas>
+
+#### `lighter`
+<Canvas>
   <Story
-    name="success"
+    name="light"
     args={{
-      variant: 'success',
+      variants: [
+        'light-success',
+        'light-beta',
+        'light-error',
+        'light-info',
+        'light-neutral',
+      ],
     }}
   >
-    {args => <Badge {...args}>{args.variant}</Badge>}
-  </Story>
-  <Story
-    name="beta"
-    args={{
-      variant: 'beta',
-    }}
-  >
-    {args => <Badge {...args}>{args.variant}</Badge>}
-  </Story>
-  <Story
-    name="warning"
-    args={{
-      variant: 'warning',
-    }}
-  >
-    {args => <Badge {...args}>{args.variant}</Badge>}
-  </Story>
-  <Story
-    name="error"
-    args={{
-      variant: 'error',
-    }}
-  >
-    {args => <Badge {...args}>{args.variant}</Badge>}
-  </Story>
-  <Story
-    name="info"
-    args={{
-      variant: 'info',
-    }}
-  >
-    {args => <Badge {...args}>{args.variant}</Badge>}
+    {args => args.variants.map(variant => <Badge variant={variant} mx={1}>{variant}</Badge>)}
   </Story>
 </Canvas>
 
@@ -89,41 +74,15 @@ import { Badge } from '..'
   <Story
     name="md"
     args={{
-      size: 'md',
+      sizes: [
+        'md',
+        'sm',
+        'xs',
+        'xxs',
+        'rounded'
+      ]
     }}
   >
-    {args => <Badge {...args}>{args.size}</Badge>}
-  </Story>
-  <Story
-    name="sm"
-    args={{
-      size: 'sm',
-    }}
-  >
-    {args => <Badge {...args}>{args.size}</Badge>}
-  </Story>
-  <Story
-    name="xs"
-    args={{
-      size: 'xs',
-    }}
-  >
-    {args => <Badge {...args}>{args.size}</Badge>}
-  </Story>
-  <Story
-    name="xxs"
-    args={{
-      size: 'xxs',
-    }}
-  >
-    {args => <Badge {...args}>{args.size}</Badge>}
-  </Story>
-  <Story
-    name="rounded"
-    args={{
-      size: 'rounded',
-    }}
-  >
-    {args => <Badge {...args}>{args.size}</Badge>}
+    {args => args.sizes.map(size => <Badge size={size} mx={1}>{size}</Badge>)}
   </Story>
 </Canvas>
