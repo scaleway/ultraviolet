@@ -1,3 +1,10 @@
+## [0.36.0](https://github.com/chambo-e/scw-ui/compare/v0.35.0...v0.36.0) (2020-12-09)
+
+
+### Features
+
+* port CategoryIcon from shire ([c40269d](https://github.com/chambo-e/scw-ui/commit/c40269dc60202370e4cb7ea85d1d99dc3200b225))
+
 ## [0.35.0](https://github.com/chambo-e/scw-ui/compare/v0.34.2...v0.35.0) (2020-12-08)
 
 
