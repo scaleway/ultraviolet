@@ -169,10 +169,13 @@ Breadcrumbs.Item = ({ to, children, variant, ...props }) => (
 
 Breadcrumbs.Item.propTypes = {
   to: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  variant: PropTypes.string,
 }
 
 Breadcrumbs.Item.defaultProps = {
   to: null,
+  variant: 'link',
 }
 
 export { Breadcrumbs }

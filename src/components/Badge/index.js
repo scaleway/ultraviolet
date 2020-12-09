@@ -126,13 +126,16 @@ const style = p => css`
   width: fit-content;
 `
 
-const Badge = ({ variant = 'neutral', size = 'md', ...props }) => (
+const Badge = ({ variant, size, ...props }) => (
   <Box as="span" css={cx([style, variants[variant], sizes[size]])} {...props} />
 )
 
+export const badgeVariants = Object.keys(variants)
+export const badgeSizes = Object.keys(sizes)
+
 Badge.propTypes = {
-  variant: PropTypes.oneOf(Object.keys(variants)),
-  size: PropTypes.oneOf(Object.keys(sizes)),
+  variant: PropTypes.oneOf(badgeVariants),
+  size: PropTypes.oneOf(badgeSizes),
 }
 
 Badge.defaultProps = {

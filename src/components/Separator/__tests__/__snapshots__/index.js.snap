@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Separator renders correctly vertically 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+<hr
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Separator renders correctly with custom color 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #4f0599;
+}
+
+<hr
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Separator renders correctly with custom icon 1`] = `
+<DocumentFragment>
+  .emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-0.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-1 {
+  fill: #d4dae7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-1.emotion-1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+<div
+    class="sui-box emotion-3"
+  >
+    <hr
+      class="sui-box emotion-0"
+    />
+    <svg
+      class="sui-box sc-ui-icon emotion-1"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M1,12L5,16V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9C18.69,9 17.58,9.83 17.17,11H5V8L1,12Z"
+        style="transform: rotate(-90deg); transform-origin: 50% 50%;"
+      />
+    </svg>
+    <hr
+      class="sui-box emotion-0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Separator renders correctly with custom icon vertically 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  fill: #d4dae7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-1.emotion-1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-0.emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="sui-box emotion-3"
+  >
+    <hr
+      class="sui-box emotion-0"
+    />
+    <svg
+      class="sui-box sc-ui-icon emotion-1"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M1,12L5,16V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9C18.69,9 17.58,9.83 17.17,11H5V8L1,12Z"
+        style="transform: rotate(-90deg); transform-origin: 50% 50%;"
+      />
+    </svg>
+    <hr
+      class="sui-box emotion-0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Separator renders correctly with custom thickness 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 3px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+<hr
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Separator renders correctly with default props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+<hr
+    class="sui-box emotion-0"
+  />
+</DocumentFragment>
+`;

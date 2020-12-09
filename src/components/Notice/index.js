@@ -1,4 +1,5 @@
 import { css } from '@emotion/core'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { gray550 } from '../../theming'
 import { cx } from '../../utils'
@@ -11,11 +12,15 @@ const style = p => css`
   line-height: 20px;
 `
 
-export function Notice({ children, ...props }) {
-  return (
-    <Box css={cx(style)} role="alert" {...props}>
-      <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
-      {children}
-    </Box>
-  )
+const Notice = ({ children, ...props }) => (
+  <Box css={cx(style)} role="alert" {...props}>
+    <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
+    {children}
+  </Box>
+)
+
+Notice.propTypes = {
+  children: PropTypes.node.isRequired,
 }
+
+export { Notice }
