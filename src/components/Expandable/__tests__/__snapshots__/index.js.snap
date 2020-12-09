@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expandable renders correctly opened 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  max-height: 5000px;
+  opacity: 1;
+  overflow: visible;
+}
+
+<div
+    class="sui-box emotion-0"
+  >
+    Sample Expandable
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Expandable renders correctly with default values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+<div
+    class="sui-box emotion-0"
+  >
+    Sample Expandable
+  </div>
+</DocumentFragment>
+`;

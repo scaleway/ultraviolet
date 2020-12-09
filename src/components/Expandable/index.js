@@ -15,27 +15,28 @@ const styles = {
   `,
 }
 
-export function Expandable({ opened, height = 5000, children, ...props }) {
+const openedStyle = height => css`
+  transition: max-height 300ms ease-in, opacity 300ms ease-in;
+  max-height: ${height}px;
+  opacity: 1;
+  overflow: visible;
+`
+
+export function Expandable({ opened, height, children, ...props }) {
   return (
-    <Box
-      css={cx([
-        styles.container,
-        opened &&
-          css`
-            transition: max-height 300ms ease-in, opacity 300ms ease-in;
-            max-height: ${height}px;
-            opacity: 1;
-            overflow: visible;
-          `,
-      ])}
-      {...props}
-    >
+    <Box css={cx([styles.container, opened && openedStyle(height)])} {...props}>
       {children}
     </Box>
   )
 }
 
 Expandable.propTypes = {
+  children: PropTypes.node.isRequired,
   opened: PropTypes.bool,
   height: PropTypes.number,
+}
+
+Expandable.defaultProps = {
+  opened: false,
+  height: 5000,
 }

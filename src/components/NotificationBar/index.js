@@ -56,6 +56,9 @@ const styles = {
     padding-left: 16px;
     width: 100%;
   `,
+}
+
+const variants = {
   info: p => css`
     background-color: ${zumthor(p)};
     color: ${info(p)};
@@ -90,30 +93,24 @@ const styles = {
   `,
 }
 
-export function NotificationBar({ variant, children, iconSize, ...props }) {
-  return (
-    <Box css={cx([styles.container, styles[variant]])} {...props}>
-      <Icon color={colors[variant]} name={icons[variant]} size={iconSize} />
-      <p css={styles.text}>{children}</p>
-    </Box>
-  )
-}
+const NotificationBar = ({ variant, children, iconSize, ...props }) => (
+  <Box css={cx([styles.container, variants[variant]])} {...props}>
+    <Icon color={colors[variant]} name={icons[variant]} size={iconSize} />
+    <p css={styles.text}>{children}</p>
+  </Box>
+)
 
 NotificationBar.defaultProps = {
   iconSize: 24,
   variant: 'warning',
 }
 
+export const notificationVariants = Object.keys(variants)
+
 NotificationBar.propTypes = {
+  children: PropTypes.node.isRequired,
   iconSize: PropTypes.number,
-  variant: PropTypes.oneOf([
-    'info',
-    'success',
-    'security',
-    'warning',
-    'warning-blue',
-    'warning-orange',
-    'alert-orange',
-    'alert-red',
-  ]),
+  variant: PropTypes.oneOf(notificationVariants),
 }
+
+export { NotificationBar }
