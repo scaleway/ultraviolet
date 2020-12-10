@@ -37,30 +37,28 @@ Circle.propTypes = {
   style: PropTypes.shape({}).isRequired,
 }
 
-const ActivityIndicator = ({ size, color, ...props }) => {
-  return (
-    <Box
-      role="progressbar"
-      aria-valuemax={1}
-      aria-valuemin={0}
-      color={color}
-      {...props}
-    >
-      <Spinner style={{ height: size, width: size }}>
-        <svg viewBox="0 0 32 32" height="100%" width="100%">
-          <Circle style={{ stroke: 'currentColor', opacity: 0.2 }} />
-          <Circle
-            style={{
-              stroke: 'currentColor',
-              strokeDashoffset: 60,
-              strokeDasharray: 80,
-            }}
-          />
-        </svg>
-      </Spinner>
-    </Box>
-  )
-}
+const ActivityIndicator = ({ size, color, ...props }) => (
+  <Box
+    role="progressbar"
+    aria-valuemax={1}
+    aria-valuemin={0}
+    color={color}
+    {...props}
+  >
+    <Spinner style={{ height: size, width: size }}>
+      <svg viewBox="0 0 32 32" height="100%" width="100%">
+        <Circle style={{ stroke: 'currentColor', opacity: 0.2 }} />
+        <Circle
+          style={{
+            stroke: 'currentColor',
+            strokeDashoffset: 60,
+            strokeDasharray: 80,
+          }}
+        />
+      </svg>
+    </Spinner>
+  </Box>
+)
 
 ActivityIndicator.propTypes = {
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
