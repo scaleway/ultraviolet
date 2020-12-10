@@ -57,8 +57,8 @@ const Popper = memo(
     ...props
   }) => {
     const popover = usePopoverState({
-      baseId,
       animated,
+      baseId,
       modal,
       placement,
       visible,
