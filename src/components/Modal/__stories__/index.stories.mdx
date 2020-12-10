@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Modal, Button } from '../..'
+import { useState } from 'react'
+
+<Meta title="Components/Modal" component={Modal} />
+
+# Modal
+
+## Basic Usage
+
+<Canvas>
+  <Story name="basic">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>Open Modal</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)}>
+            Content
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+<!-- ## with disclosure
+
+<Canvas>
+  <Story name="disclosure">
+    <Modal
+      opened={true}
+      onClose={() => {}}
+      disclosure={({ visible }) => <Button> open : {visible} </Button>}
+    >
+      Content
+    </Modal>
+  </Story>
+</Canvas> -->
