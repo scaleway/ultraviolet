@@ -57,8 +57,8 @@ const Popper = memo(
     ...props
   }) => {
     const popover = usePopoverState({
-      baseId,
       animated,
+      baseId,
       modal,
       placement,
       visible,
@@ -90,6 +90,7 @@ Popper.propTypes = {
   animated: PropTypes.number,
   backgroudColor: PropTypes.string,
   baseId: PropTypes.string,
+  children: PropTypes.node.isRequired,
   disclosure: PropTypes.func,
   hasArrow: PropTypes.bool,
   hideOnClickOutside: PropTypes.bool,

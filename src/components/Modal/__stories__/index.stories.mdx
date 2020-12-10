@@ -1,0 +1,578 @@
+import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { Modal, Button, Box } from '../..'
+import { useState } from 'react'
+
+<Meta title="Components/Modal" component={Modal} />
+
+# Modal
+
+## Basic Usage
+
+<Description>
+  Documentation is here https://reakit.io/docs/dialog/#props By default now our
+  modal is a portal. If you want to change this you can disabled modal props but
+  be aware of https://reakit.io/docs/dialog/#non-modal-dialogs
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      console.log(opened)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>Open Modal</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## with Back Content
+
+<Canvas>
+  <Story name="back">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>Open Modal</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            back={() => setOpened(false)}
+            backContent="test to back content"
+          >
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Width
+
+<Description>we accept a size props xxsmall, xsmall, small, medium, large</Description>
+
+<Canvas>
+    <Story name="Width xssmall">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>xxsmall</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="xxsmall"
+          >
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="Width xsmall">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>xsmall</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="xsmall"
+          >
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="Width small">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>small</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)} width="small">
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="Width medium">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>medium</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="medium"
+          >
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="Width large">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>large</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)} width="large">
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Placement
+
+<Description>placement center, top, top-right, right, bottom-right,bottom ,bottom-left, leftright, center, top, bottom</Description>
+
+<Canvas>
+  <Story name="center">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>center</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="center"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be center</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+    <Story name="top-left">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>top-left</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="top-left"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on top-left</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="top">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>top</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="top"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be top</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="top-right">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>top-right</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="top-right"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on top-right</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="right">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>right</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="right"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on right</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="bottom-right">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>bottom-right</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="bottom-right"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on bottom-right</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="bottom">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>bottom</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="bottom"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on bottom</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="bottom-left">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>bottom-left</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="bottom-left"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on bottom-left</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="left">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>left</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            placement="left"
+            width="xsmall"
+          >
+            <Box p={4}>This modal should be place on left</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## height
+
+<Canvas>
+  <Story name="height right xsmall">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            height right xsmall
+          </Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="xsmall"
+            height="100%"
+            placement="right"
+          >
+            <Box p={4}>
+              Hello there this a modal with a full height on the right
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="height left xsmall">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>height left xsmall</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="xsmall"
+            height="100%"
+            placement="left"
+          >
+            <Box p={4}>
+              Hello there this a modal with a full height on the left
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="height right small">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>height right small</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="small"
+            height="100%"
+            placement="right"
+          >
+            <Box p={4}>
+              Hello there this a modal with a full height on the right
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="height right medium">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            height right medium
+          </Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="medium"
+            height="100%"
+            placement="right"
+          >
+            <Box p={4}>
+              Hello there this a modal with a full height on the right
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="height right large">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>height right large</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="large"
+            height="100%"
+            placement="right"
+          >
+            <Box p={4}>
+              Hello there this a modal with a full height on the right
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## props
+
+<Canvas>
+  <Story name="preventBodyScroll">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>preventBodyScroll</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="xsmall"
+            preventBodyScroll={true}
+          >
+            <Box p={4}>
+              Try to scroll on body ( outside of the Modal ) preventBodyScroll
+              is available only when modal props is enabled
+              https://reakit.io/docs/dialog/#props
+            </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="hideOnClickOutside">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>hideOnClickOutside</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="small"
+            hideOnClickOutside={false}
+          >
+            <Box p={4}>Try to click outside of the Modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="hideOnEsc">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>hideOnEsc</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="medium"
+            hideOnEsc={false}
+          >
+            <Box p={4}>try to ESCAPE</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="modal">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>modal</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            width="medium"
+            modal={false}
+          >
+            <Box p={4}>Our modal is juste below our Button in the DOM </Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## isClosable
+
+<Canvas>
+  <Story name="isClosable">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>modal</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            isClosable={false}
+          >
+            <p>You don't have a close Icon</p>
+            <Button onClick={() => setOpened(!opened)}>Close</Button>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+
+## Bordered
+
+<Canvas>
+  <Story name="bordered">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>modal</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            bordered={false}
+          >
+            <p>Your Modal is not bordered</p>
+            <Button onClick={() => setOpened(!opened)}>Close</Button>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## with disclosure
+
+<Canvas>
+  <Story name="disclosure">
+    <Modal disclosure={({ baseId }) => <Button> open {baseId} </Button>}>
+      Content
+    </Modal>
+  </Story>
+</Canvas>
+
+## with function children
+
+<Canvas>
+  <Story name="children function">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>modal</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)}>
+            {props => <p>Content {props.baseId} </p>}
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
