@@ -9,9 +9,7 @@ jest.mock('../../Tooltip', () => ({
 
 describe('Typography', () => {
   beforeEach(() => {
-    ReactDOM.createPortal = jest.fn(element => {
-      return element
-    })
+    ReactDOM.createPortal = jest.fn(element => element)
   })
 
   afterEach(() => {
