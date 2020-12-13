@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
 
 const styles = {

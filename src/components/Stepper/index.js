@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { theme } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'

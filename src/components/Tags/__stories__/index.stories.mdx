@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Tags } from '..'
 
 <Meta title="Components/Tags" component={Tags} />
@@ -45,7 +45,7 @@ import { Tags } from '..'
       onChangeError={error => {
         console.log(error)
       }}
-      onChange={tags => {
+      onChange={() => {
         throw new Error('')
       }}
       tags={['Smooth', 'code']}
@@ -60,3 +60,5 @@ import { Tags } from '..'
     <Tags disabled onChange={tags => console.log(tags)} tags={['Smooth', 'code']} />
   </Story>
 </Canvas>
+
+<ArgsTable of={Tags} />

@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { SwitchState, Box } from '@smooth-ui/core-em'
+import { Box, SwitchState } from '@smooth-ui/core-em'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'

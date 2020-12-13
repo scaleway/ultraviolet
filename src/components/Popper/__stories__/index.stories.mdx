@@ -1,9 +1,13 @@
-import { useState } from 'react'
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Popper } from '..'
-import { Button } from '../../Button'
-import { theme } from '../../../theme'
 import { Box } from '../../Box'
+import { Button } from '../../Button'
 import { Icon } from '../../Icon'
 
 <Meta title="Components/Popper" component={Popper} />
@@ -11,6 +15,8 @@ import { Icon } from '../../Icon'
 # Popper
 
 ## Basic
+
+<Description>Popper //:TODO</Description>
 
 <Canvas>
   <Story name="basic" parameters={{ layout: 'centered' }}>
@@ -43,11 +49,9 @@ import { Icon } from '../../Icon'
       <Popper
         variant="black"
         aria-label="Custom popover"
-        disclosure={({ placement, visible }) => (
-          <Button>Popper {placement}:</Button>
-        )}
+        disclosure={({ placement }) => <Button>Popper {placement}:</Button>}
       >
-        {({ placement }) => (
+        {() => (
           <Box display="flex" flexDirection="column">
             {new Array(15).fill(0).map((arr, index) => (
               <Box width={30} height={30} m={2}>
@@ -193,3 +197,5 @@ import { Icon } from '../../Icon'
     </Popper>
   </Story>
 </Canvas>
+
+<ArgsTable of={Popper} />

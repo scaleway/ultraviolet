@@ -2,10 +2,10 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
-  useTooltipState,
   Tooltip,
   TooltipArrow,
   TooltipReference,
+  useTooltipState,
 } from 'reakit/Tooltip'
 import { theme } from '../../theme'
 import { Box } from '../Box'
