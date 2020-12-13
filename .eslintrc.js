@@ -1,18 +1,29 @@
 module.exports = {
   root: true,
-  extends: ['@scaleway/react'],
+  extends: ['@scaleway/react', 'plugin:mdx/recommended'],
   plugins: ['@emotion'],
   rules: {
     'no-nested-ternary': 'warn',
     'no-param-reassign': 'warn',
     'no-shadow': 'warn',
 
+    // Sort
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none'],
+        allowSeparatedGroups: false,
+      },
+    ],
     // Import
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: [
-          '**/*.stories.js',
+          '**/*.stories.*',
           '**/*.test.js',
           '**/*.spec.js',
           '**/__tests__/*',
@@ -23,6 +34,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
 
     // React
+    'react/jsx-filename-extension': 'off',
     'react/destructuring-assignment': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',

@@ -1,5 +1,11 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
-import { Range } from '../'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import { Range } from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -11,36 +17,42 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
-## Default
-
-<Playground>
-  <BlockList>
-    <ControlValue value={[]}>{({ value, onChange }) => <Range />}</ControlValue>
-  </BlockList>
-</Playground>
+<Canvas>
+  <Story name="default controlled" height="150px">
+    <BlockList>
+      <ControlValue value={[]}>{() => <Range />}</ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
 
 ## Single value
 
-<Playground>
-  <BlockList>
-    <ControlValue value={[3]}>
-      {({ value, onChange }) => (
-        <Range value={value} min={0} max={10} onChange={onChange} />
-      )}
-    </ControlValue>
-  </BlockList>
-</Playground>
+<Canvas>
+  <Story name="single controlled" height="150px">
+    <BlockList>
+      <ControlValue value={[3]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={10} onChange={onChange} />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
 
 ## Two values
 
 For now, Range component will work with max two values.
 
-<Playground>
-  <BlockList>
-    <ControlValue value={[3, 8]}>
-      {({ value, onChange }) => (
-        <Range value={value} min={0} max={15} onChange={onChange} />
-      )}
-    </ControlValue>
-  </BlockList>
-</Playground>
+<Canvas>
+  <Story name="two value controlled" height="150px">
+    <BlockList>
+      <ControlValue value={[3, 8]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={15} onChange={onChange} />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+<ArgsTable of={Range} />

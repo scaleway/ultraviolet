@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Badge } from '..'
 
 <Meta
@@ -86,3 +92,5 @@ import { Badge } from '..'
     {args => args.sizes.map(size => <Badge size={size} mx={1}>{size}</Badge>)}
   </Story>
 </Canvas>
+
+<ArgsTable of={Badge} />

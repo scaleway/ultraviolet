@@ -1,12 +1,19 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { StatusIndicator } from '..'
-import { Box } from '../../'
 
 <Meta title="Components/StatusIndicator" component={StatusIndicator} />
 
 # StatusIndicator
 
 ## Basic
+
+<Description>StatusIndicator //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -38,3 +45,5 @@ import { Box } from '../../'
     }}
   </Story>
 </Canvas>
+
+<ArgsTable of={StatusIndicator} />
