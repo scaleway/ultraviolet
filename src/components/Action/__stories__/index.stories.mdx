@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Action } from '..'
 
 <Meta title="Components/Action" component={Action} />
@@ -28,9 +34,9 @@ import { Action } from '..'
 
 <Canvas>
   <Story name="rounded" args={{}}>
-    <Action name="lock" variant="primary" m={1} rounded={true} />
-    <Action name="lock" variant="secondary" m={1} rounded={true} />
-    <Action name="lock" variant="secondary-bordered" m={1} rounded={true} />
+    <Action name="lock" variant="primary" m={1} rounded />
+    <Action name="lock" variant="secondary" m={1} rounded />
+    <Action name="lock" variant="secondary-bordered" m={1} rounded />
   </Story>
 </Canvas>
 
@@ -82,3 +88,5 @@ import { Action } from '..'
     </Action>
   </Story>
 </Canvas>
+
+<ArgsTable of={Action} />

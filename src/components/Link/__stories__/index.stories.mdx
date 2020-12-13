@@ -1,6 +1,6 @@
 import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Link, linkVariants } from '..'
-import { Box, Boxer } from '../../'
+import { Box, Boxer } from "../.."
 
 <Meta title="Components/Link" component={Link} />
 
@@ -17,7 +17,7 @@ import { Box, Boxer } from '../../'
     <Box p={2} backgroundColor="gray200">
       <Boxer my={1}>
         {linkVariants.map(variant => (
-          <Link key={variant} href="#" variant={variant}>
+          <Link key={variant} href="localhost:6006" variant={variant}>
             {variant}
           </Link>
         ))}

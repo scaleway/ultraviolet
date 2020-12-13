@@ -1,18 +1,19 @@
 module.exports = {
   root: true,
-  extends: ['@scaleway/react'],
+  extends: ['@scaleway/react', 'plugin:mdx/recommended'],
   plugins: ['@emotion'],
+  // parser: "babel-eslint",
   rules: {
     'no-nested-ternary': 'warn',
     'no-param-reassign': 'warn',
     'no-shadow': 'warn',
-
+    'react/jsx-filename-extension': 'off',
     // Import
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: [
-          '**/*.stories.js',
+          '**/*.stories.*',
           '**/*.test.js',
           '**/*.spec.js',
           '**/__tests__/*',

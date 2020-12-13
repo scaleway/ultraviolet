@@ -1,7 +1,13 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { useState, useCallback } from 'react'
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Checkbox } from '..'
-import { Boxer, typographyVariants } from '../../'
+import { Boxer } from "../.."
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 <Meta title="Components/Checkbox" component={Checkbox} />
@@ -47,7 +53,7 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
       <Checkbox valid={false} onChange={() => {}}>
         Invalid checkbox
       </Checkbox>
-      <Checkbox valid={true} onChange={() => {}}>
+      <Checkbox valid onChange={() => {}}>
         Valid checkbox
       </Checkbox>
     </Boxer>
@@ -127,3 +133,5 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
     </Boxer>
   </Story>
 </Canvas>
+
+<ArgsTable of={Checkbox} />
