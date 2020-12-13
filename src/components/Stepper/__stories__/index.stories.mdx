@@ -1,5 +1,11 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
 import { Stepper } from '..'
 
 <Meta title="Components/Stepper" component={Stepper} />
@@ -7,6 +13,8 @@ import { Stepper } from '..'
 # Stepper
 
 ## Basic
+
+<Description>Stepper //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -49,13 +57,7 @@ import { Stepper } from '..'
 
 <Canvas isColumn>
   <Story name="disabled">
-    <Stepper
-      minValue={0}
-      maxValue={100}
-      text="unit"
-      value={10}
-      disabled
-    />
+    <Stepper minValue={0} maxValue={100} text="unit" value={10} disabled />
   </Story>
 </Canvas>
 
@@ -76,3 +78,5 @@ import { Stepper } from '..'
     />
   </Story>
 </Canvas>
+
+<ArgsTable of={Stepper} />

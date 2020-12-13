@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Avatar } from '..'
 import support from './support.svg'
 
@@ -7,6 +13,8 @@ import support from './support.svg'
 # Avatar
 
 ## Basic
+
+<Description>Avatar //:TODO</Description>
 
 <Canvas>
   <Story name="success">
@@ -21,16 +29,16 @@ import support from './support.svg'
 
 <Canvas>
   <Story name="text">
-    <Avatar text="Hello You"/>
+    <Avatar text="Hello You" />
   </Story>
   <Story name="text-size">
-    <Avatar text="Hello You" size="48px"/>
+    <Avatar text="Hello You" size="48px" />
   </Story>
   <Story name="text-lock">
-    <Avatar lock text="Hello You"/>
+    <Avatar lock text="Hello You" />
   </Story>
   <Story name="text-lock-size">
-    <Avatar lock text="Hello You" size="48px"/>
+    <Avatar lock text="Hello You" size="48px" />
   </Story>
 </Canvas>
 
@@ -41,6 +49,8 @@ import support from './support.svg'
     <Avatar image={support} />
   </Story>
   <Story name="image-size">
-    <Avatar image={support}  size="48px"/>
+    <Avatar image={support} size="48px" />
   </Story>
 </Canvas>
+
+<ArgsTable of={Avatar} />

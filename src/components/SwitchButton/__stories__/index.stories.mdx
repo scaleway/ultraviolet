@@ -1,8 +1,7 @@
-import { useState, useCallback } from 'react'
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { SwitchButton } from '..'
+import { BorderedBox, Col, Grid, Row } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import { Grid, Row, Col, BorderedBox } from '../../'
 
 <Meta title="Components/SwitchButton" component={SwitchButton} />
 
@@ -175,3 +174,6 @@ import { Grid, Row, Col, BorderedBox } from '../../'
     </ControlValue>
   </Story>
 </Canvas>
+
+
+<ArgsTable of={SwitchButton} />

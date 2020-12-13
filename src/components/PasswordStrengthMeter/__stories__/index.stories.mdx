@@ -1,5 +1,10 @@
-import { useState, useEffect } from 'react'
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import zxcvbn from 'zxcvbn'
 import { PasswordStrengthMeter } from '..'
 import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
@@ -12,6 +17,8 @@ import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMet
 # PasswordStrengthMeter
 
 ## Basic
+
+<Description>PasswordStrengthMeter //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -28,3 +35,5 @@ import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMet
     />
   </Story>
 </Canvas>
+
+<ArgsTable of={PasswordStrengthMeter} />
