@@ -1,6 +1,5 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable,Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Select } from '..'
-import { useState, useCallback } from 'react'
 
 <Meta title="Components/Select" component={Select} />
 
@@ -51,3 +50,7 @@ import { useState, useCallback } from 'react'
     </Select>
   </Story>
 </Canvas>
+
+<ArgsTable of={Select} />
+
+<ArgsTable of={Select.Option} />

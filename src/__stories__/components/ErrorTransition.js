@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 
 const ErrorTransition = ({ error, Component, ...props }) => {
   const [err, setErr] = useState()

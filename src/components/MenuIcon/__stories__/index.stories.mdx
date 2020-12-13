@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { MenuIcon, availableIcons } from '..'
 import { Box } from '../../Box'
 
@@ -8,15 +14,17 @@ import { Box } from '../../Box'
 
 ## Basic Usage
 
+<Description>MenuIcon //:TODO</Description>
+
 <Canvas isColumn>
   <Story name="basic">
-      {availableIcons.map(icon => (
-        <Box display="flex">
-          <MenuIcon
-            name={icon}
-          />
-          {icon}
-        </Box>
-      ))}
+    {availableIcons.map(icon => (
+      <Box display="flex">
+        <MenuIcon name={icon} />
+        {icon}
+      </Box>
+    ))}
   </Story>
 </Canvas>
+
+<ArgsTable of={MenuIcon} />

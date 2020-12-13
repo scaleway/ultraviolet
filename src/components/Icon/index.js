@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { px, cx, thColor } from '../../utils'
+import { cx, px, thColor } from '../../utils'
 import { Box } from '../Box'
 
 // Non Material Design icons: 'send',

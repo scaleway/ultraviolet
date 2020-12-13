@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Breadcrumbs, breadcrumbsVariants } from '..'
 
 <Meta
@@ -94,3 +100,7 @@ import { Breadcrumbs, breadcrumbsVariants } from '..'
     )}
   </Story>
 </Canvas>
+
+<ArgsTable of={Breadcrumbs} />
+
+<ArgsTable of={Breadcrumbs.Item} />

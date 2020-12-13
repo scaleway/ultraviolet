@@ -3,10 +3,10 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 import {
-  useTooltipState,
   Tooltip as ReakitTooltip,
   TooltipArrow,
   TooltipReference,
+  useTooltipState,
 } from 'reakit/Tooltip'
 import { theme } from '../../theme'
 import { borderRadius } from '../../theming'
