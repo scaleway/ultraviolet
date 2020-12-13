@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import {
   borderRadius,
-  white,
+  foam,
   gray100,
   gray550,
   info,
   orange,
+  pippin,
+  serenade,
   success,
   warning,
+  white,
   zumthor,
-  foam,
-  serenade,
-  pippin,
 } from '../../theming'
 import { cx } from '../../utils'
 import { Box } from '../Box'

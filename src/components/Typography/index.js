@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
-import React, { memo, useCallback, forwardRef } from 'react'
+import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { theme } from '../../theme'
 import { Box } from '../Box'

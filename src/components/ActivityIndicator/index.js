@@ -1,4 +1,4 @@
-import { keyframes, css } from '@emotion/core'
+import { css, keyframes } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box } from '../Box'

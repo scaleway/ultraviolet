@@ -2,8 +2,8 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, {
   useCallback,
-  useLayoutEffect,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
 } from 'react'
