@@ -1,5 +1,11 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
-import { CategoryIcon, availableIcons } from '..'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import { availableIcons, CategoryIcon } from '..'
 import { Box } from '../../Box'
 
 <Meta
@@ -8,6 +14,10 @@ import { Box } from '../../Box'
 />
 
 # CategoryIcon
+
+<Description>
+  CategoryIcon
+</Description>
 
 <Canvas>
   <Story
@@ -33,4 +43,6 @@ import { Box } from '../../Box'
       </Box>
     ))}
   </Story>
-</Canvas>
+</Canvas>`
+
+<ArgsTable of={CategoryIcon} />

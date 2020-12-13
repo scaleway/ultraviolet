@@ -1,6 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Unselectable } from '..'
-import { Box } from '../../'
 
 <Meta title="Components/Unselectable" component={Unselectable} />
 
@@ -13,3 +12,5 @@ import { Box } from '../../'
     <Unselectable>I'm not selectable (try to double click me)</Unselectable>
   </Story>
 </Canvas>
+
+<ArgsTable of={Unselectable} />

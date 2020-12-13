@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Slider } from '..'
 
 <Meta title="Components/Slider" component={Slider} />
@@ -6,6 +6,8 @@ import { Slider } from '..'
 # Slider
 
 ## Usage
+
+<Description>Slider //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -19,3 +21,8 @@ import { Slider } from '..'
     </Slider>
   </Story>
 </Canvas>
+
+
+<ArgsTable of={Slider} />
+
+<ArgsTable of={Slider.Item} />

@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Progress } from '..'
 
 <Meta title="Components/Progress" component={Progress} />
@@ -6,6 +12,8 @@ import { Progress } from '..'
 # Progress
 
 ## Basic
+
+<Description>Progress //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -16,3 +24,6 @@ import { Progress } from '..'
     </Progress>
   </Story>
 </Canvas>
+
+<ArgsTable of={Progress} />
+<ArgsTable of={Progress.Step} />
