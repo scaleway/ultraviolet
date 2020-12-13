@@ -1,14 +1,13 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+import { Box, Typography } from '../..'
 import * as colorsReference from '../colors'
-import { Box, Boxer, Typography } from '../../'
 
 <Meta title="Theme/Colors" />
 
 # Colors
 
 <Story name="colors">
-  {Object.keys(colorsReference).map((color, i) => {
-    return (
+  {Object.keys(colorsReference).map((color) => (
       color !== 'colors' && (
         <Box display="flex" justifyContent="center" key={color}>
           <Box
@@ -49,6 +48,5 @@ import { Box, Boxer, Typography } from '../../'
           </Box>
         </Box>
       )
-    )
-  })}
+    ))}
 </Story>

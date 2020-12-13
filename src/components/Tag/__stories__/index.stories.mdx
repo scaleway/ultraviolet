@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Tag } from '..'
 
 <Meta title="Components/Tag" component={Tag} />
@@ -6,6 +6,10 @@ import { Tag } from '..'
 # Tag
 
 ## Basic
+
+<Description>
+  Tag //:TODO
+</Description>
 
 <Canvas>
   <Story name="basic">
@@ -33,7 +37,7 @@ import { Tag } from '..'
 
 <Canvas>
   <Story name="on-close-is-loading">
-    <Tag onClose={() => alert('closed')} isLoading={true}>
+    <Tag onClose={() => alert('closed')} isLoading>
       You can't close me
     </Tag>
   </Story>
@@ -46,3 +50,5 @@ import { Tag } from '..'
     <Tag disabled>Can't touch this</Tag>
   </Story>
 </Canvas>
+
+<ArgsTable of={Tag} />

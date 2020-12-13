@@ -4,25 +4,25 @@ import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
-  useRef,
-  useEffect,
   useCallback,
+  useEffect,
   useImperativeHandle,
+  useRef,
   useState,
 } from 'react'
 import {
   borderRadius,
-  white,
-  gray50,
   gray100,
   gray350,
+  gray50,
   gray550,
   gray700,
   ngray300,
   primary,
   warning,
+  white,
 } from '../../theming'
-import { useUUID, cx } from '../../utils'
+import { cx, useUUID } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
