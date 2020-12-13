@@ -2,22 +2,22 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
-  white,
-  success,
-  foam,
   beta,
-  serenade,
-  info,
-  red,
-  pippin,
-  warning,
-  gray700,
-  gray350,
   bigBorderRadius,
   borderRadius,
-  zumthor,
-  gray550,
+  foam,
   gray100,
+  gray350,
+  gray550,
+  gray700,
+  info,
+  pippin,
+  red,
+  serenade,
+  success,
+  warning,
+  white,
+  zumthor,
 } from '../../theming'
 import { cx, sp } from '../../utils'
 import { Box } from '../Box'

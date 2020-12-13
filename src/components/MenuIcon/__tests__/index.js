@@ -1,5 +1,5 @@
 import React from 'react'
-import { MenuIcon, availableIcons } from '..'
+import { availableIcons, MenuIcon } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('MenuIcon', () => {

@@ -1,9 +1,9 @@
-import { css, ClassNames } from '@emotion/core'
+import { ClassNames, css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
-  ToastContainer as BaseToastContainer,
   toast as baseToast,
+  ToastContainer as BaseToastContainer,
 } from 'react-toastify'
 import toastStyle from 'react-toastify/dist/ReactToastify.min.css'
 import { foam, info, pippin, success, warning, zumthor } from '../../theming'

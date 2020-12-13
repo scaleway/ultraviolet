@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Notice } from '..'
 
 <Meta title="Components/Notice" component={Notice} />
@@ -7,8 +13,12 @@ import { Notice } from '..'
 
 ## Usage
 
+<Description>Notice //:TODO</Description>
+
 <Canvas>
   <Story name="basic">
     <Notice>This is a notice</Notice>
   </Story>
 </Canvas>
+
+<ArgsTable of={Notice} />

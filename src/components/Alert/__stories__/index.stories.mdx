@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Alert } from '..'
 
 <Meta
@@ -22,6 +28,10 @@ import { Alert } from '..'
 # Alert
 
 ## `variant`
+
+<Description>
+  Alert //:TODO
+</Description>
 
 <Canvas>
   <Story
@@ -89,3 +99,5 @@ For basic variants, icon is automatically added. A specific one can be set using
     )}
   </Story>
 </Canvas>
+
+<ArgsTable of={Alert}

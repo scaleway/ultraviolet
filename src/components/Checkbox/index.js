@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
-import { useCheckboxState, Checkbox as ReakitCheckbox } from 'reakit/Checkbox'
+import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
 import { borderRadius, gray100, gray550, primary } from '../../theming'
 import { cx } from '../../utils'
 import { ActivityIndicator } from '../ActivityIndicator'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, badgeVariants, badgeSizes } from '..'
+import { Badge, badgeSizes, badgeVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Badge', () => {
