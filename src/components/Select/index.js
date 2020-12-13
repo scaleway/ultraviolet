@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import {
-  gray50,
+  black,
+  borderRadius,
   gray100,
   gray350,
-  white,
-  black,
+  gray50,
   primary,
   warning,
-  borderRadius,
+  white,
 } from '../../theming'
 import { cx, sp } from '../../utils'
 import { Box } from '../Box'

@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Sphere } from '..'
 
 <Meta title="Components/Sphere" component={Sphere} />
@@ -6,6 +12,8 @@ import { Sphere } from '..'
 # Sphere
 
 ## Basic
+
+<Description>Sphere //:TODO</Description>
 
 <Canvas>
   <Story name="basic">
@@ -34,3 +42,5 @@ import { Sphere } from '..'
     />
   </Story>
 </Canvas>
+
+<ArgsTable of={Sphere} />

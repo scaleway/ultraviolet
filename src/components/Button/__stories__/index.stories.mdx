@@ -1,4 +1,10 @@
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { Button, buttonSizes, buttonVariants } from '..'
 
 <Meta title="Components/Button" component={Button} />
@@ -194,3 +200,5 @@ import { Button, buttonSizes, buttonVariants } from '..'
     </Button>
   </Story>
 </Canvas>
+
+<ArgsTable of={Button} />

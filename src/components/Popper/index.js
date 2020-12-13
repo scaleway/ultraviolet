@@ -3,10 +3,10 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo, useEffect, useRef } from 'react'
 import {
-  usePopoverState,
   Popover,
-  PopoverDisclosure,
   PopoverArrow,
+  PopoverDisclosure,
+  usePopoverState,
 } from 'reakit/Popover'
 import { theme } from '../../theme'
 

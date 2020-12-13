@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import React from 'react'
-import { gray950, gray700, gray200, primary } from '../../theming'
+import { gray200, gray700, gray950, primary } from '../../theming'
 import { cx, sp } from '../../utils'
 import { Box } from '../Box'
 

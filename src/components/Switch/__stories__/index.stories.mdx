@@ -1,8 +1,7 @@
-import { useState, useCallback } from 'react'
-import { Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Switch } from '..'
-import ControlValue from '../../../__stories__/components/ControlValue'
 import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/Switch" component={Switch} />
 
@@ -37,7 +36,7 @@ import BlockList from '../../../__stories__/components/BlockList'
 <Canvas>
   <Story name="variants">
     <BlockList>
-      <ControlValue value={true}>
+      <ControlValue value>
         {({ value, onChange }) => (
           <Switch
             variant="primary"
@@ -46,7 +45,7 @@ import BlockList from '../../../__stories__/components/BlockList'
           />
         )}
       </ControlValue>
-      <ControlValue value={true}>
+      <ControlValue value>
         {({ value, onChange }) => (
           <Switch
             variant="success"
@@ -76,7 +75,7 @@ import BlockList from '../../../__stories__/components/BlockList'
           />
         )}
       </ControlValue>
-      <ControlValue value={true}>
+      <ControlValue value>
         {({ value, onChange }) => (
           <Switch
             variant="primary"
@@ -162,12 +161,12 @@ import BlockList from '../../../__stories__/components/BlockList'
           />
         )}
       </ControlValue>
-      <ControlValue value={true}>
+      <ControlValue value>
         {({ value, onChange }) => (
           <Switch
             labeled
-            onLabel={'YES'}
-            offLabel={'NO'}
+            onLabel="YES"
+            offLabel="NO"
             variant="primary"
             checked={value}
             onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
@@ -177,3 +176,5 @@ import BlockList from '../../../__stories__/components/BlockList'
     </BlockList>
   </Story>
 </Canvas>
+
+<ArgsTable of={Switch} />
