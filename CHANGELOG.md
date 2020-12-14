@@ -1,3 +1,10 @@
+## [0.37.0](https://github.com/chambo-e/scw-ui/compare/v0.36.0...v0.37.0) (2020-12-14)
+
+
+### Features
+
+* **modal:** migration reakit ([b9706d1](https://github.com/chambo-e/scw-ui/commit/b9706d1b4552710778bb60edd30444765f2a53ce))
+
 ## [0.36.0](https://github.com/chambo-e/scw-ui/compare/v0.35.0...v0.36.0) (2020-12-09)
 
 
