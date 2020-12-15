@@ -31,14 +31,8 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   -moz-perspective: 800px;
   -ms-perspective: 800px;
   perspective: 800px;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
-  opacity: 0;
-  background-color: rgba(74,79,98,0.2);
-}
-
-.emotion-4[data-enter] {
   opacity: 1;
+  background-color: rgba(74,79,98,0.2);
 }
 
 .emotion-3 {
@@ -57,13 +51,6 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   width: 616px;
   min-height: initial;
   box-shadow: 0 0 12px 18px rgba(165,165,205,0.2);
-  -webkit-transition: opacity 250ms ease-in-out,-webkit-transform 250ms ease-in-out;
-  -webkit-transition: opacity 250ms ease-in-out,transform 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out,transform 250ms ease-in-out;
-  opacity: 0;
-}
-
-.emotion-3[data-enter] {
   opacity: 1;
 }
 
@@ -129,7 +116,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
     style="display: none;"
   >
     <div
-      aria-label="modal"
+      aria-label="modal-test"
       class="emotion-3"
       data-dialog="true"
       hidden=""

@@ -82,7 +82,15 @@ const MODAL_PLACEMENT = {
   `,
 }
 
-const backdropStyles = css`
+const animatedStyle = css`
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, transform 300ms ease-in-out;
+  &[data-enter] {
+    opacity: 1;
+  }
+`
+
+const backdropStyles = ({ animated }) => css`
   position: fixed;
   overflow: auto;
   top: 0;
@@ -91,15 +99,12 @@ const backdropStyles = css`
   left: 0;
   z-index: 999;
   perspective: 800px;
-  transition: opacity 250ms ease-in-out;
-  opacity: 0;
+  opacity: 1;
   background-color: ${transparentize(0.8, theme.gray700)};
-  &[data-enter] {
-    opacity: 1;
-  }
+  ${animated && animatedStyle}
 `
 
-const dialogStyles = ({ width, height, placement, bordered }) => css`
+const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
   background-color: ${theme.white};
   position: fixed;
   border-radius: ${bordered ? 4 : 0}px;
@@ -109,11 +114,8 @@ const dialogStyles = ({ width, height, placement, bordered }) => css`
   width: ${MODAL_WIDTH[width]}px;
   min-height: ${height};
   box-shadow: 0 0 12px 18px ${transparentize(0.8, theme.shadow)};
-  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  opacity: 0;
-  &[data-enter] {
-    opacity: 1;
-  }
+  opacity: 1;
+  ${animated && animatedStyle}
 `
 
 const containerStyles = css`
@@ -141,7 +143,7 @@ const Disclosure = memo(({ disclosure, dialog }) => {
 const Modal = memo(
   ({
     animated,
-    arialabel,
+    ariaLabel,
     back,
     backContent,
     bordered,
@@ -167,15 +169,20 @@ const Modal = memo(
     })
 
     useEffect(() => dialog.setVisible(opened), [opened])
-
     return (
       <>
         {disclosure && <Disclosure dialog={dialog} disclosure={disclosure} />}
-        <DialogBackdrop {...dialog} css={backdropStyles}>
+        <DialogBackdrop {...dialog} css={backdropStyles({ animated })}>
           <Dialog
-            aria-label={arialabel}
+            aria-label={ariaLabel}
             role="dialog"
-            css={dialogStyles({ width, height, placement, bordered })}
+            css={dialogStyles({
+              animated,
+              bordered,
+              height,
+              placement,
+              width,
+            })}
             hideOnClickOutside={hideOnClickOutside}
             hideOnEsc={hideOnEsc}
             preventBodyScroll={preventBodyScroll}
@@ -204,7 +211,7 @@ const Modal = memo(
               )}
               {isClosable && (
                 <Touchable
-                  onClick={onClose || dialog.togle}
+                  onClick={onClose || dialog.toggle}
                   alignSelf="center"
                   title="close"
                   mb={0}
@@ -213,9 +220,7 @@ const Modal = memo(
                 </Touchable>
               )}
             </div>
-            {dialog.visible && typeof children === 'function'
-              ? children(dialog)
-              : children}
+            {typeof children === 'function' ? children(dialog) : children}
           </Dialog>
         </DialogBackdrop>
       </>
@@ -224,8 +229,8 @@ const Modal = memo(
 )
 
 Modal.propTypes = {
-  animated: PropTypes.bool,
-  arialabel: PropTypes.string,
+  animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  ariaLabel: PropTypes.string,
   back: PropTypes.func,
   backContent: PropTypes.node,
   bordered: PropTypes.bool,
@@ -245,8 +250,8 @@ Modal.propTypes = {
 }
 
 Modal.defaultProps = {
-  animated: true,
-  arialabel: 'modal',
+  animated: false,
+  ariaLabel: 'modal',
   backContent: 'Back',
   bordered: true,
   baseId: 'modal',
