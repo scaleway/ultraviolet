@@ -24,12 +24,29 @@ import { Box, Button, Modal } from '../..'
   <Story name="basic">
     {() => {
       const [opened, setOpened] = useState(false)
-      console.log(opened)
       return (
         <>
           <Button onClick={() => setOpened(!opened)}>Open Modal</Button>
           <Modal opened={opened} onClose={() => setOpened(false)}>
             <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Animated
+
+<Canvas>
+  <Story name="animated">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>Open Animated Modal</Button>
+          <Modal animated opened={opened} onClose={() => setOpened(false)} >
+            <Box p={4}>Modal should be animated</Box>
           </Modal>
         </>
       )
