@@ -1,3 +1,4 @@
+import { css } from '@emotion/core'
 import {
   ArgsTable,
   Canvas,
@@ -24,12 +25,31 @@ import { Box, Button, Modal } from '../..'
   <Story name="basic">
     {() => {
       const [opened, setOpened] = useState(false)
-      console.log(opened)
       return (
         <>
           <Button onClick={() => setOpened(!opened)}>Open Modal</Button>
           <Modal opened={opened} onClose={() => setOpened(false)}>
             <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Animated
+
+<Canvas>
+  <Story name="animated">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            Open Animated Modal
+          </Button>
+          <Modal animated opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated</Box>
           </Modal>
         </>
       )
@@ -552,6 +572,42 @@ import { Box, Button, Modal } from '../..'
           >
             <p>Your Modal is not bordered</p>
             <Button onClick={() => setOpened(!opened)}>Close</Button>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Custom Styles
+
+<Canvas>
+  <Story name="custom style">
+     {() => {
+      const [opened, setOpened] = useState(false)
+      const customDialogBackdropStyles = css`
+      background-color: aliceblue;
+      `
+      const customDialogStyles = css`
+      background: radial-gradient(
+        circle,
+        #8b2fe6 0%,
+        #4f0599 50%,
+        #30015a 100%
+      );
+      `
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>modal</Button>
+          <Modal
+            opened={opened}
+            onClose={() => setOpened(false)}
+            bordered={false}
+            customDialogBackdropStyles={customDialogBackdropStyles}
+            customDialogStyles={customDialogStyles}
+          >
+            <p>Your Modal is not bordered</p>
+            <Button variant="secondary" onClick={() => setOpened(!opened)}>Close</Button>
           </Modal>
         </>
       )
