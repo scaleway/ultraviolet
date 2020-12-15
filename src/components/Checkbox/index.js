@@ -66,7 +66,7 @@ export function Checkbox({
   }, [checked])
 
   return (
-    <Box {...props} onClick={e => e.stopPropagation()}>
+    <Box {...props}>
       <Typography
         as="label"
         variant={typographyVariant}
