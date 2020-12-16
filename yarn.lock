@@ -7557,12 +7557,12 @@ eslint-config-prettier@^7.0.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.0.0.tgz#c1ae4106f74e6c0357f44adb076771d032ac0e97"
   integrity sha512-8Y8lGLVPPZdaNA7JXqnvETVC7IiVRgAP6afQu9gOQRn90YY3otMNh+x7Vr2vMePQntF+5erdSUBqSzCmU/AxaQ==
 
-eslint-formatter-gitlab@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-formatter-gitlab/-/eslint-formatter-gitlab-2.0.0.tgz#ab722c6ab82bc6758a3963c35765c205b5df29ba"
-  integrity sha512-GUCzfOHF6g6+bSIA48MHap74hqfHujYqk3toS44t53ds+sETtKsZa6mgVH7mS86Oy+tM65J4wWz0/H+1tD2WJQ==
+eslint-formatter-gitlab@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-formatter-gitlab/-/eslint-formatter-gitlab-2.1.0.tgz#360554b40a650a2c62137c2dcc9ca5f2aefed073"
+  integrity sha512-3SnGBqrHcyTXh+73QVqEqwq8X+/o3Z/9x/zSIMKvysRR5j7dkvosaJwIq/Iv6C0RhEPllpImnTTortB7xS6Vgg==
   dependencies:
-    js-yaml "^3.13.1"
+    js-yaml "^3.14.0"
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
@@ -10713,6 +10713,14 @@ js-yaml@^3.13.1:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
+js-yaml@^3.14.0:
+  version "3.14.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
+  integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
