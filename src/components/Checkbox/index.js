@@ -28,8 +28,13 @@ const styles = {
     }
   `,
   input: p => css`
-    opacity: 0;
-    width: 0;
+    opacity: 0.01;
+    width: ${p.size}px;
+    height: ${p.size}px;
+    position: absolute;
+    cursor: pointer;
+    margin-right: ${p.hasChildren ? '10px' : 0};
+    padding: 2px;
     &:focus + svg {
       outline: 1px ${gray550(p)} dotted;
     }
@@ -74,7 +79,7 @@ export function Checkbox({
       >
         <ReakitCheckbox
           {...checkbox}
-          css={styles.input}
+          css={styles.input({ size, hasChildren })}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
