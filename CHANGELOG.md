@@ -1,3 +1,10 @@
+### [0.37.2](https://github.com/chambo-e/scw-ui/compare/v0.37.1...v0.37.2) (2020-12-17)
+
+
+### Bug Fixes
+
+* **checkbox:** propagation event without visibile input ([9de0736](https://github.com/chambo-e/scw-ui/commit/9de073626357fabd2bd9ee0fb7eca8bd6680ffb5))
+
 ### [0.37.1](https://github.com/chambo-e/scw-ui/compare/v0.37.0...v0.37.1) (2020-12-15)
 
 
