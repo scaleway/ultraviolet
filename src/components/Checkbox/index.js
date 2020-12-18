@@ -10,10 +10,11 @@ import { Icon } from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 
 const styles = {
-  container: css`
+  container: p => css`
     position: relative;
     display: inline-flex;
     align-items: flex-start;
+    cursor: ${p.disabled ? 'not-allowed' : 'pointer'};
   `,
   input: p => css`
     opacity: 0.01;
@@ -69,7 +70,11 @@ export function Checkbox({
 
   return (
     <Box {...props}>
-      <Typography as="label" variant={typographyVariant} css={styles.container}>
+      <Typography
+        as="label"
+        variant={typographyVariant}
+        css={styles.container({ disabled })}
+      >
         <ReakitCheckbox
           {...checkbox}
           css={styles.input({ disabled, hasChildren, size })}

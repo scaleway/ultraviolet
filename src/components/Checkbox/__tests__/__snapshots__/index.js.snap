@@ -16,6 +16,7 @@ exports[`Checkbox renders correctly 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -134,6 +135,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -239,23 +241,7 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 exports[`Checkbox renders correctly checked and disabled 1`] = `
 <DocumentFragment>
-  .emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.emotion-2 {
+  .emotion-2 {
   padding-top: 2px;
 }
 
@@ -278,6 +264,23 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: not-allowed;
 }
 
 .emotion-0 {
@@ -359,23 +362,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 exports[`Checkbox renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.emotion-2 {
+  .emotion-2 {
   padding-top: 2px;
 }
 
@@ -398,6 +385,23 @@ exports[`Checkbox renders correctly disabled 1`] = `
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
+}
+
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: not-allowed;
 }
 
 .emotion-0 {
@@ -492,6 +496,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -611,6 +616,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -736,6 +742,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .emotion-0 {
