@@ -61,6 +61,10 @@ exports[`Action renders correctly with  name lock and primary variant 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
+.emotion-2 > svg {
+  pointer-events: none;
+}
+
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -164,6 +168,10 @@ exports[`Action renders with children  1`] = `
 
 .emotion-2:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-2 > svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -295,6 +303,10 @@ exports[`Action renders with rounded and tooltip 1`] = `
 
 .emotion-2:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-2 > svg {
+  pointer-events: none;
 }
 
 <button

@@ -20,6 +20,8 @@ const borderedVariant = (color, bgColor, hoverColor) => p => {
 
     svg {
       fill: ${colorValue};
+      // safari issue prevent event propgation
+      pointer-events: none;
     }
 
     &:hover,
