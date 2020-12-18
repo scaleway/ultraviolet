@@ -1,3 +1,10 @@
+### [0.37.5](https://github.com/chambo-e/scw-ui/compare/v0.37.4...v0.37.5) (2020-12-18)
+
+
+### Bug Fixes
+
+* **checkbox:** cursor pointer on label ([559817c](https://github.com/chambo-e/scw-ui/commit/559817cbe371e184c2bbfef06369156c9781856b))
+
 ### [0.37.4](https://github.com/chambo-e/scw-ui/compare/v0.37.3...v0.37.4) (2020-12-18)
 
 
