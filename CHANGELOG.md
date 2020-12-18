@@ -1,3 +1,10 @@
+### [0.37.3](https://github.com/chambo-e/scw-ui/compare/v0.37.2...v0.37.3) (2020-12-18)
+
+
+### Bug Fixes
+
+* **events:** safari event propagation on svg ([e2ec70b](https://github.com/chambo-e/scw-ui/commit/e2ec70bf7d238ace6568c88f36944fbc060f2b5f))
+
 ### [0.37.2](https://github.com/chambo-e/scw-ui/compare/v0.37.1...v0.37.2) (2020-12-17)
 
 
