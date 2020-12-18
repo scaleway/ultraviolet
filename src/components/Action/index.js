@@ -10,6 +10,10 @@ const action = rounded => css`
   height: 32px;
   padding: 0;
   flex-shrink: 0;
+  > svg {
+    // safari issue prevent event propgation
+    pointer-events: none;
+  }
   ${rounded
     ? `
     border-radius: 16px;

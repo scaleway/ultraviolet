@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
 import { borderRadius, gray100, gray550, primary } from '../../theming'
-import { cx } from '../../utils'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -16,17 +15,6 @@ const styles = {
     display: inline-flex;
     align-items: flex-start;
   `,
-  hover: p => css`
-    cursor: ${p.disabled ? 'not-allowed' : 'pointer'};
-    &:hover {
-      svg {
-        border-radius: ${borderRadius(p)};
-        background-color: ${!p.disabled && gray100(p)};
-        fill: ${!p.disabled && primary(p)};
-        transition: fill 300ms;
-      }
-    }
-  `,
   input: p => css`
     opacity: 0.01;
     width: ${p.size}px;
@@ -35,6 +23,15 @@ const styles = {
     cursor: pointer;
     margin-right: ${p.hasChildren ? '10px' : 0};
     padding: 2px;
+    pointer-events: auto;
+    &:hover {
+      svg {
+        border-radius: ${borderRadius(p)};
+        background-color: ${!p.disabled && gray100(p)};
+        fill: ${!p.disabled && primary(p)};
+        transition: fill 300ms;
+      }
+    }
     &:focus + svg {
       outline: 1px ${gray550(p)} dotted;
     }
@@ -72,14 +69,10 @@ export function Checkbox({
 
   return (
     <Box {...props}>
-      <Typography
-        as="label"
-        variant={typographyVariant}
-        css={cx([styles.container, styles.hover({ disabled })])}
-      >
+      <Typography as="label" variant={typographyVariant} css={styles.container}>
         <ReakitCheckbox
           {...checkbox}
-          css={styles.input({ size, hasChildren })}
+          css={styles.input({ disabled, hasChildren, size })}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
