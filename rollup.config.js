@@ -4,8 +4,8 @@ import resolve from '@rollup/plugin-node-resolve'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
 import readPkg from 'read-pkg'
-import analyze from 'rollup-plugin-analyzer'
 import postcss from 'rollup-plugin-postcss'
+import visualizer from 'rollup-plugin-visualizer'
 
 const PROFILE = !!process.env.PROFILE
 
@@ -55,7 +55,13 @@ export default async () => {
       }),
       url(),
       svgr({ memo: true }),
-      PROFILE && analyze({ summaryOnly: true }),
+      PROFILE &&
+        visualizer({
+          gzipSize: true,
+          brotliSize: true,
+          open: true,
+          filename: '.reports/report.html',
+        }),
     ].filter(Boolean),
     external,
     output: [
