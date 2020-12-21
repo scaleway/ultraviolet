@@ -93,14 +93,19 @@ const variants = {
   `,
 }
 
-const NotificationBar = ({ variant, children, iconSize, ...props }) => (
+const NotificationBar = ({ variant, children, iconSize, icon, ...props }) => (
   <Box css={cx([styles.container, variants[variant]])} {...props}>
-    <Icon color={colors[variant]} name={icons[variant]} size={iconSize} />
+    <Icon
+      color={colors[variant]}
+      name={icon !== '' ? icon : icons[variant]}
+      size={iconSize}
+    />
     <p css={styles.text}>{children}</p>
   </Box>
 )
 
 NotificationBar.defaultProps = {
+  icon: '',
   iconSize: 24,
   variant: 'warning',
 }
@@ -109,6 +114,7 @@ export const notificationVariants = Object.keys(variants)
 
 NotificationBar.propTypes = {
   children: PropTypes.node.isRequired,
+  icon: PropTypes.string,
   iconSize: PropTypes.number,
   variant: PropTypes.oneOf(notificationVariants),
 }
