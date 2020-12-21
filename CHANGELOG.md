@@ -1,3 +1,10 @@
+### [0.37.6](https://github.com/chambo-e/scw-ui/compare/v0.37.5...v0.37.6) (2020-12-21)
+
+
+### Bug Fixes
+
+* **notificationbar:** adds possibility to have custom icon ([52fa884](https://github.com/chambo-e/scw-ui/commit/52fa884a048607487e0c5e8ce5c6971e89b8e8e3))
+
 ### [0.37.5](https://github.com/chambo-e/scw-ui/compare/v0.37.4...v0.37.5) (2020-12-18)
 
 
