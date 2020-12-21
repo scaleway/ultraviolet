@@ -1,3 +1,10 @@
+### [0.37.7](https://github.com/chambo-e/scw-ui/compare/v0.37.6...v0.37.7) (2020-12-21)
+
+
+### Bug Fixes
+
+* **modal:** add animated props ([3253079](https://github.com/chambo-e/scw-ui/commit/3253079ad1ddc347d0a392abe6ad2e0314538d48))
+
 ### [0.37.6](https://github.com/chambo-e/scw-ui/compare/v0.37.5...v0.37.6) (2020-12-21)
 
 
