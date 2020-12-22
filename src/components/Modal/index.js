@@ -171,66 +171,69 @@ const Modal = memo(
     })
 
     useEffect(() => dialog.setVisible(opened), [opened])
+
     return (
       <>
         {disclosure && <Disclosure dialog={dialog} disclosure={disclosure} />}
-        <DialogBackdrop
-          {...dialog}
-          css={[backdropStyles({ animated }), customDialogBackdropStyles]}
-        >
-          <Dialog
-            aria-label={ariaLabel}
-            role="dialog"
-            css={[
-              dialogStyles({
-                animated,
-                bordered,
-                height,
-                placement,
-                width,
-              }),
-              customDialogStyles,
-            ]}
-            hideOnClickOutside={hideOnClickOutside}
-            hideOnEsc={hideOnEsc}
-            preventBodyScroll={preventBodyScroll}
+        {dialog.visible && (
+          <DialogBackdrop
             {...dialog}
-            hide={onClose || dialog.toggle}
+            css={[backdropStyles({ animated }), customDialogBackdropStyles]}
           >
-            <div css={containerStyles}>
-              {back && backContent && (
-                <Button
-                  icon={
-                    <Icon
-                      name="chevron-left"
-                      size={12}
-                      color="primary"
-                      mr={1}
-                    />
-                  }
-                  variant="link"
-                  color="primary"
-                  onClick={back}
-                  mr="auto"
-                  p={0}
-                >
-                  {backContent}
-                </Button>
-              )}
-              {isClosable && (
-                <Touchable
-                  onClick={onClose || dialog.toggle}
-                  alignSelf="center"
-                  title="close"
-                  mb={0}
-                >
-                  <Icon name="close" size={20} color="darkGrey" />
-                </Touchable>
-              )}
-            </div>
-            {typeof children === 'function' ? children(dialog) : children}
-          </Dialog>
-        </DialogBackdrop>
+            <Dialog
+              aria-label={ariaLabel}
+              role="dialog"
+              css={[
+                dialogStyles({
+                  animated,
+                  bordered,
+                  height,
+                  placement,
+                  width,
+                }),
+                customDialogStyles,
+              ]}
+              hideOnClickOutside={hideOnClickOutside}
+              hideOnEsc={hideOnEsc}
+              preventBodyScroll={preventBodyScroll}
+              {...dialog}
+              hide={onClose || dialog.toggle}
+            >
+              <div css={containerStyles}>
+                {back && backContent && (
+                  <Button
+                    icon={
+                      <Icon
+                        name="chevron-left"
+                        size={12}
+                        color="primary"
+                        mr={1}
+                      />
+                    }
+                    variant="link"
+                    color="primary"
+                    onClick={back}
+                    mr="auto"
+                    p={0}
+                  >
+                    {backContent}
+                  </Button>
+                )}
+                {isClosable && (
+                  <Touchable
+                    onClick={onClose || dialog.toggle}
+                    alignSelf="center"
+                    title="close"
+                    mb={0}
+                  >
+                    <Icon name="close" size={20} color="darkGrey" />
+                  </Touchable>
+                )}
+              </div>
+              {typeof children === 'function' ? children(dialog) : children}
+            </Dialog>
+          </DialogBackdrop>
+        )}
       </>
     )
   },
