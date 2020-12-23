@@ -1,3 +1,10 @@
+### [0.37.8](https://github.com/chambo-e/scw-ui/compare/v0.37.7...v0.37.8) (2020-12-23)
+
+
+### Bug Fixes
+
+* **modal:** render content only when modal is open ([e7a9252](https://github.com/chambo-e/scw-ui/commit/e7a925200e428d8ee2280d2fb93fb5c0abc4bdc1))
+
 ### [0.37.7](https://github.com/chambo-e/scw-ui/compare/v0.37.6...v0.37.7) (2020-12-21)
 
 
