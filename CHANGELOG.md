@@ -1,3 +1,10 @@
+### [0.37.9](https://github.com/chambo-e/scw-ui/compare/v0.37.8...v0.37.9) (2020-12-23)
+
+
+### Bug Fixes
+
+* **modal:** dom backdrop element ([0f40ba0](https://github.com/chambo-e/scw-ui/commit/0f40ba03dd35e0b5cc2dd1d7063349dc0d10dc8b))
+
 ### [0.37.8](https://github.com/chambo-e/scw-ui/compare/v0.37.7...v0.37.8) (2020-12-23)
 
 
