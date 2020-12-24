@@ -37,6 +37,34 @@ import { Box, Button, Modal } from '../..'
   </Story>
 </Canvas>
 
+<Canvas>
+  <Story name="basic-with-much-content">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>Open Modal with lot of content</Button>
+          <Modal opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+            <Box p={4}>Content should be present in center of the modal</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
 ## Animated
 
 <Canvas>
@@ -583,18 +611,18 @@ import { Box, Button, Modal } from '../..'
 
 <Canvas>
   <Story name="custom style">
-     {() => {
+    {() => {
       const [opened, setOpened] = useState(false)
       const customDialogBackdropStyles = css`
-      background-color: aliceblue;
+        background-color: aliceblue;
       `
       const customDialogStyles = css`
-      background: radial-gradient(
-        circle,
-        #8b2fe6 0%,
-        #4f0599 50%,
-        #30015a 100%
-      );
+        background: radial-gradient(
+          circle,
+          #8b2fe6 0%,
+          #4f0599 50%,
+          #30015a 100%
+        );
       `
       return (
         <>
@@ -607,7 +635,9 @@ import { Box, Button, Modal } from '../..'
             customDialogStyles={customDialogStyles}
           >
             <p>Your Modal is not bordered</p>
-            <Button variant="secondary" onClick={() => setOpened(!opened)}>Close</Button>
+            <Button variant="secondary" onClick={() => setOpened(!opened)}>
+              Close
+            </Button>
           </Modal>
         </>
       )
