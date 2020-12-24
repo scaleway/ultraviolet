@@ -44,7 +44,7 @@ import { Box, Button, Modal } from '../..'
       return (
         <>
           <Button onClick={() => setOpened(!opened)}>Open Modal with lot of content</Button>
-          <Modal opened={opened} onClose={() => setOpened(false)}>
+          <Modal animated animation="scaleUp" opened={opened} onClose={() => setOpened(false)}>
             <Box p={4}>Content should be present in center of the modal</Box>
             <Box p={4}>Content should be present in center of the modal</Box>
             <Box p={4}>Content should be present in center of the modal</Box>
@@ -68,16 +68,91 @@ import { Box, Button, Modal } from '../..'
 ## Animated
 
 <Canvas>
-  <Story name="animated">
+  <Story name="animated fold">
     {() => {
       const [opened, setOpened] = useState(false)
       return (
         <>
           <Button onClick={() => setOpened(!opened)}>
-            Open Animated Modal
+            fold Modal
           </Button>
-          <Modal animated opened={opened} onClose={() => setOpened(false)}>
+          <Modal animated animation="slide" opened={opened} onClose={() => setOpened(false)}>
             <Box p={4}>Modal should be animated</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+   <Story name="animated zoom">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            zoom Modal
+          </Button>
+          <Modal animated animation="zoom" opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+   <Story name="animated scaleUp">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            scaleUp Modal
+          </Button>
+          <Modal animated animation="scaleUp" opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+    <Story name="animated scaleBack">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            scaleBack Modal
+          </Button>
+          <Modal animated animation="scaleBack" opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+    <Story name="animated sketch">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            sketch Modal
+          </Button>
+          <Modal animated animation="sketch" opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated</Box>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+  <Story name="animated slide">
+    {() => {
+      const [opened, setOpened] = useState(false)
+      return (
+        <>
+          <Button onClick={() => setOpened(!opened)}>
+            slide Modal
+          </Button>
+          <Modal animated animation="slide" opened={opened} onClose={() => setOpened(false)}>
+            <Box p={4}>Modal should be animated with slide animation</Box>
           </Modal>
         </>
       )
