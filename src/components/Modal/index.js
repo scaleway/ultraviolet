@@ -23,74 +23,72 @@ const MODAL_WIDTH = {
 
 const MODAL_PLACEMENT = {
   center: css`
-    top: 50%;
-    left: 50%;
-    bottom: auto;
-    right: auto;
-    transform: translate3d(-50%, -50%, 0);
+    margin: auto;
   `,
   'top-left': css`
-    left: 0;
-    bottom: auto;
-    right: auto;
+    margin: auto;
+    margin-left: 0;
+    margin-top: 0;
   `,
   top: css`
-    top: 0;
-    left: 45%;
-    bottom: auto;
-    right: auto;
-    transform: translate3d(-45%, 0, 0);
+    margin: auto;
+    margin-top: 0px;
   `,
   'top-right': css`
-    top: 0;
-    left: auto;
-    bottom: auto;
-    right: 0;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 0;
   `,
   right: css`
-    top: 45%;
-    left: auto;
-    bottom: auto;
-    right: 0;
-    transform: translate3d(0, -45%, 0);
+    margin: auto;
+    margin-right: 0;
   `,
   'bottom-right': css`
-    top: auto;
-    left: auto;
-    bottom: 0;
-    right: 0;
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 0;
   `,
   bottom: css`
-    top: auto;
-    left: 45%;
-    right: auto;
-    bottom: 0;
-    transform: translate3d(-45%, 0, 0);
+    margin: auto;
+    margin-bottom: 0;
   `,
   'bottom-left': css`
-    top: auto;
-    right: auto;
-    bottom: 0;
-    left: 0;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
   `,
   left: css`
-    top: 45%;
-    bottom: auto;
-    right: auto;
-    left: 0;
-    transform: translate3d(0, -45%, 0);
+    margin: auto;
+    margin-left: 0;
   `,
 }
 
-const animatedStyle = css`
+const backdropAnimatedStyle = css`
   opacity: 0;
-  transition: opacity 250ms ease-in-out, transform 300ms ease-in-out;
   &[data-enter] {
     opacity: 1;
+    transition: opacity 100ms ease-in-out;
+  }
+  &[data-leave] {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+`
+
+const dialogAnimatedStyle = css`
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, transform 250ms ease-in-out;
+  &[data-enter] {
+    opacity: 1;
+  }
+  &[data-leave] {
+    opacity: 0;
+    transform: translateY(-500px);
   }
 `
 
 const backdropStyles = ({ animated }) => css`
+  display: flex;
   position: fixed;
   overflow: auto;
   top: 0;
@@ -98,15 +96,14 @@ const backdropStyles = ({ animated }) => css`
   right: 0;
   left: 0;
   z-index: 999;
-  perspective: 800px;
   opacity: 1;
   background-color: ${transparentize(0.8, theme.gray700)};
-  ${animated && animatedStyle}
+  ${animated && backdropAnimatedStyle}
 `
 
 const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
   background-color: ${theme.white};
-  position: fixed;
+  position: relative;
   border-radius: ${bordered ? 4 : 0}px;
   border: 0;
   padding: 32px;
@@ -115,7 +112,12 @@ const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
   min-height: ${height};
   box-shadow: 0 0 12px 18px ${transparentize(0.8, theme.shadow)};
   opacity: 1;
-  ${animated && animatedStyle}
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+  ${animated && dialogAnimatedStyle}
 `
 
 const containerStyles = css`
