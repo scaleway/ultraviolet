@@ -9,6 +9,7 @@ import {
   useDialogState,
 } from 'reakit/Dialog'
 import { theme } from '../../theme'
+import * as animations from '../../utils'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
@@ -63,27 +64,59 @@ const MODAL_PLACEMENT = {
   `,
 }
 
+const MODAL_ANNIMATION = {
+  fold: {
+    enter: animations.unfoldIn,
+    leave: animations.unfoldOut,
+  },
+  zoom: {
+    enter: animations.zoomIn,
+    leave: animations.zoomOut,
+  },
+  scaleUp: {
+    enter: animations.scaleUp,
+    leave: animations.scaleDown,
+  },
+  scaleBack: {
+    enter: animations.scaleForward,
+    leave: animations.scaleBack,
+  },
+  sketch: {
+    enter: animations.sketchIn,
+    leave: animations.sketchOut,
+  },
+  slide: {
+    enter: animations.slideUpLarge,
+    leave: animations.slideDownLarge,
+  },
+}
+
 const backdropAnimatedStyle = css`
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  &[data-enter] {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+  }
+  &[data-leave] {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+`
+
+const dialogAnimatedStyle = ({ animation }) => css`
   opacity: 0;
   &[data-enter] {
     opacity: 1;
-    transition: opacity 100ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+    animation: ${MODAL_ANNIMATION[animation].enter} 500ms
+      cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
   &[data-leave] {
     opacity: 0;
     transition: opacity 500ms ease-in-out;
-  }
-`
-
-const dialogAnimatedStyle = css`
-  opacity: 0;
-  transition: opacity 300ms ease-in-out, transform 250ms ease-in-out;
-  &[data-enter] {
-    opacity: 1;
-  }
-  &[data-leave] {
-    opacity: 0;
-    transform: translateY(-500px);
+    animation: ${MODAL_ANNIMATION[animation].leave} 500ms
+      cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 `
 
@@ -101,7 +134,14 @@ const backdropStyles = ({ animated }) => css`
   ${animated && backdropAnimatedStyle}
 `
 
-const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
+const dialogStyles = ({
+  animated,
+  animation,
+  width,
+  height,
+  placement,
+  bordered,
+}) => css`
   background-color: ${theme.white};
   position: relative;
   border-radius: ${bordered ? 4 : 0}px;
@@ -117,7 +157,7 @@ const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
     height: 100%;
     width: 100%;
   }
-  ${animated && dialogAnimatedStyle}
+  ${animated && dialogAnimatedStyle({ animation })}
 `
 
 const containerStyles = css`
@@ -145,6 +185,7 @@ const Disclosure = memo(({ disclosure, dialog }) => {
 const Modal = memo(
   ({
     animated,
+    animation,
     ariaLabel,
     back,
     backContent,
@@ -187,6 +228,7 @@ const Modal = memo(
             css={[
               dialogStyles({
                 animated,
+                animation,
                 bordered,
                 height,
                 placement,
@@ -245,6 +287,7 @@ const Modal = memo(
 
 Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  animation: PropTypes.oneOf(Object.keys(MODAL_ANNIMATION)),
   ariaLabel: PropTypes.string,
   back: PropTypes.func,
   backContent: PropTypes.node,
@@ -266,6 +309,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   animated: false,
+  animation: 'zoom',
   ariaLabel: 'modal',
   backContent: 'Back',
   bordered: true,
