@@ -143,7 +143,7 @@ export function Select({
           name="chevron-down"
           size={11}
           color={
-            arrowColor || (error ? 'warning' : disabled ? 'grey' : 'darkGrey')
+            arrowColor || (error ? 'warning' : disabled ? 'gray' : 'gray550')
           }
         />
       </Box>

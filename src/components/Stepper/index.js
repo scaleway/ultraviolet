@@ -182,7 +182,7 @@ const Stepper = ({
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={28} color="lightGrey" />
+        <Icon name="minus" size={28} color="gray300" />
 
         <span
           css={[
@@ -241,7 +241,7 @@ const Stepper = ({
         >
           |
         </span>
-        <Icon name="plus" size={28} color="lightGrey" />
+        <Icon name="plus" size={28} color="gray300" />
       </Touchable>
     </Box>
   )

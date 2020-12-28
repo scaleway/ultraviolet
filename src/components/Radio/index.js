@@ -69,7 +69,7 @@ export const Radio = ({
         >
           <Icon
             name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-            color={disabled ? 'gray300' : checked ? 'primary' : 'lightGrey'}
+            color={checked ? 'primary' : 'gray300'}
             size={size}
           />
         </Box>
