@@ -10,7 +10,7 @@ export const TooltipIcon = ({ color, name, size, tooltip }) => (
 )
 
 TooltipIcon.defaultProps = {
-  color: 'darkGrey',
+  color: 'gray550',
   name: 'help-circle-outline',
   size: 20,
 }

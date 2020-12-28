@@ -90,7 +90,7 @@ export const Tag = ({
         {isLoading ? (
           <ActivityIndicator size={16} />
         ) : (
-          <Icon name="close" size={16} color="darkGrey" />
+          <Icon name="close" size={16} color="gray550" />
         )}
       </Touchable>
     )}

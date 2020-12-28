@@ -227,7 +227,7 @@ const Modal = memo(
                       title="close"
                       mb={0}
                     >
-                      <Icon name="close" size={20} color="darkGrey" />
+                      <Icon name="close" size={20} color="gray550" />
                     </Touchable>
                   )}
                 </div>
