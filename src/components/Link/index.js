@@ -17,7 +17,8 @@ const variant = color => css`
 
 const variants = {
   blue: p => variant(blue(p)),
-  grey: p => variant(gray550(p)),
+  grey: p => variant(gray550(p)), // TODO: deprecated, to be removed soon
+  gray: p => variant(gray550(p)),
   white: p => variant(white(p)),
   primary: p => css`
     color: ${primary(p)};
