@@ -138,9 +138,9 @@ const textColors = {
   white: theme.white,
   darkBlack: theme.gray950,
   lightBlack: theme.gray700,
-  darkGrey: theme.gray550,
+  darkGrey: theme.gray550, // TODO: deprecated, to be removed soon
   grey: theme.gray350, // TODO: deprecated, to be removed soon
-  darkGray: theme.gray550, // TODO: deprecated, to be removed soon
+  darkGray: theme.gray550,
   gray: theme.gray350,
   light: theme.gray100,
   green: theme.green,
