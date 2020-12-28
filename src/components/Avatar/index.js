@@ -56,11 +56,7 @@ const Avatar = ({
           textSize,
         })}
       >
-        {lock ? (
-          <Icon name="lock" color="darkGrey" />
-        ) : (
-          formatTextToAvatar(text)
-        )}
+        {lock ? <Icon name="lock" color="gray550" /> : formatTextToAvatar(text)}
       </div>
     ) : (
       <img css={styles.imgAvatar} src={image} alt="" />
