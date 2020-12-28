@@ -1,3 +1,10 @@
+### [0.37.10](https://github.com/chambo-e/scw-ui/compare/v0.37.9...v0.37.10) (2020-12-28)
+
+
+### Bug Fixes
+
+* replace or deprecate grey with gray and update tests CNS-3523 ([aff72cf](https://github.com/chambo-e/scw-ui/commit/aff72cf57c642bde99d5a3c69660b6ac876a96fd))
+
 ### [0.37.9](https://github.com/chambo-e/scw-ui/compare/v0.37.8...v0.37.9) (2020-12-23)
 
 
