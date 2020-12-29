@@ -58,6 +58,7 @@ export function Checkbox({
   children,
   progress,
   disabled,
+  autoFocus,
   typographyVariant,
   ...props
 }) {
@@ -85,6 +86,7 @@ export function Checkbox({
           disabled={disabled}
           value={value}
           name={name}
+          autoFocus={autoFocus}
         />
         {progress ? (
           <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
