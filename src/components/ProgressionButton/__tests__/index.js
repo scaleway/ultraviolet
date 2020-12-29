@@ -3,10 +3,12 @@ import { ProgressionButton } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ProgressionButton', () => {
-  it('renders correctly with default values', () => {
-    shouldMatchEmotionSnapshot(
-      <ProgressionButton>Progression</ProgressionButton>,
-    )
+  beforeAll(() => {
+    jest.useFakeTimers('modern').setSystemTime(new Date('2020-12-20T12:00:00z'))
+  })
+
+  afterAll(() => {
+    jest.useRealTimers()
   })
 
   it('renders correctly with a string as creation date', () => {
