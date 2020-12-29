@@ -98,28 +98,28 @@ const variants = {
 export const buttonVariants = Object.keys(variants)
 
 const sizes = {
-  lg: css`
+  large: css`
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
     padding: 8px 16px;
   `,
-  md: css`
+  medium: css`
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
   `,
-  sm: css`
+  small: css`
     font-size: 16px;
     line-height: 16px;
     padding: 8px 16px;
   `,
-  xs: css`
+  xsmall: css`
     font-size: 14px;
     line-height: 20px;
     padding: 8px;
   `,
-  xxs: css`
+  xxsmall: css`
     font-size: 12px;
   `,
 }
@@ -201,7 +201,7 @@ function FwdButton({
   progress,
   disabled,
   variant = 'primary',
-  size = 'lg',
+  size = 'large',
   icon,
   iconPosition = 'left',
   children,

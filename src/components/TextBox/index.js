@@ -32,7 +32,7 @@ import { Touchable } from '../Touchable'
 import { Typography } from '../Typography'
 
 const inputSizes = {
-  sm: {
+  small: {
     default: css`
       height: 30px;
       padding-left: 8px;
@@ -44,7 +44,7 @@ const inputSizes = {
       padding: 4px 8px;
     `,
   },
-  md: {
+  medium: {
     default: css`
       height: 48px;
       padding-left: 8px;
@@ -231,7 +231,7 @@ function TextBox(
     required,
     resizable,
     rows,
-    size = 'md',
+    size = 'medium',
     type = 'text',
     valid,
     value,
@@ -318,7 +318,7 @@ function TextBox(
 
   const ControlComponent = multiline ? 'textarea' : 'input'
   const isPassToggleable = type === 'toggleable-password'
-  const hasLabel = Boolean((error || label) && size === 'md')
+  const hasLabel = Boolean((error || label) && size === 'medium')
   const edit = Boolean(
     hasLabel && (forceEdit || visited || value || error || generated),
   )
