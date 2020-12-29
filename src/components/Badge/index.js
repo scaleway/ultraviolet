@@ -77,7 +77,7 @@ const sizes = {
       text-transform: uppercase;
     `
   },
-  md: p => {
+  medium: p => {
     const height = sp(4)(p)
     return css`
       font-size: 14px;
@@ -85,7 +85,7 @@ const sizes = {
       height: ${height};
     `
   },
-  sm: p => {
+  small: p => {
     const height = sp(3)(p)
     return css`
       font-size: 12px;
@@ -93,7 +93,7 @@ const sizes = {
       height: ${height};
     `
   },
-  xs: p => {
+  xsmall: p => {
     const height = sp(2.25)(p)
     return css`
       border-radius: ${borderRadius(p)};
@@ -102,7 +102,7 @@ const sizes = {
       height: ${height};
     `
   },
-  xxs: p => {
+  xxsmall: p => {
     const height = sp(2)(p)
     const padding = sp(0.75)(p)
     return css`
@@ -140,7 +140,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   variant: 'neutral',
-  size: 'md',
+  size: 'medium',
 }
 
 export { Badge }

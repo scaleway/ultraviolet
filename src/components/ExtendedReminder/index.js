@@ -78,7 +78,7 @@ const ExtendedReminder = ({
   return (
     <Box css={styles.container(variant)} {...props}>
       <Box css={styles.badge}>
-        <Badge size="sm" variant={badgeVariant[variant]}>
+        <Badge size="small" variant={badgeVariant[variant]}>
           <Icon mr="4px" color={theme.white} name={icon} size={16} />{' '}
           {badgeText}
         </Badge>
@@ -93,7 +93,7 @@ const ExtendedReminder = ({
         variant="link"
         to={to}
         onClick={onClick}
-        size="xs"
+        size="xsmall"
         icon="east"
         css={styles.link}
       >
