@@ -1,3 +1,10 @@
+### [0.37.11](https://github.com/chambo-e/scw-ui/compare/v0.37.10...v0.37.11) (2020-12-30)
+
+
+### Bug Fixes
+
+* **checkbox:** added autofocus parameter ([6b515fb](https://github.com/chambo-e/scw-ui/commit/6b515fb043efdde50dfc82026097512dfafb9902))
+
 ### [0.37.10](https://github.com/chambo-e/scw-ui/compare/v0.37.9...v0.37.10) (2020-12-28)
 
 
