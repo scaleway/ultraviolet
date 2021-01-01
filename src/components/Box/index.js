@@ -1,1 +1,1 @@
-export { Box } from '@smooth-ui/core-em'
+export { Box } from '@xstyled/emotion'
