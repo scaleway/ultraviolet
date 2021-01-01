@@ -54,7 +54,6 @@ export const Tooltip = ({
   animated,
   children,
   text = '',
-  customStyle,
   placement,
   visible,
   variant,
@@ -114,15 +113,15 @@ export const Tooltip = ({
 Tooltip.propTypes = {
   animated: PropTypes.number,
   placement: PropTypes.string,
+  text: PropTypes.node,
   variant: PropTypes.string,
   visible: PropTypes.bool,
-  text: PropTypes.node,
 }
 
 Tooltip.defaultProps = {
   animated: 150,
   placement: 'top',
+  text: '',
   variant: 'black',
   visible: false,
-  text: '',
 }
