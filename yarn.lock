@@ -3707,6 +3707,39 @@
     text-table "^0.2.0"
     webpack-log "^1.1.2"
 
+"@xstyled/core@^1.19.1":
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-1.19.1.tgz#f343f21786f1ce3be180eb88cb3f2b2fc907fc87"
+  integrity sha512-pfQcNU3FH4aDprvl1OwCkSCjr5ydL+1sHTdU3ymVKJd1rR0hZmoJT8mQV41qxsaIVqB8oXW5BvuEwc0avxARPw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@xstyled/system" "^1.19.1"
+
+"@xstyled/emotion@^1.19.1":
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/emotion/-/emotion-1.19.1.tgz#52eb37fee7102552060ce4bed41d38ce5849961e"
+  integrity sha512-TQ9Is96Pc2U96j+W+vDoll/qrARrlECscjFiBbAIVTLK5+Bvlwy1ZmdoqZciJRK31tpcajn8N28kyjLwJEF9VQ==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@xstyled/core" "^1.19.1"
+    "@xstyled/system" "^1.19.1"
+    "@xstyled/util" "^1.19.0"
+
+"@xstyled/system@^1.19.1":
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-1.19.1.tgz#4de05072db33db66baeffd53973cf62abccf938f"
+  integrity sha512-bt/DrzsoIM1U3bfvN7MtRpCxoow+uLsVNJ0Du97KlS44eFnnGEojUutjC75ZgRHSkOJYLIK6AnTqYvuf8cPTLw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@xstyled/util" "^1.19.0"
+
+"@xstyled/util@^1.19.0":
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/@xstyled/util/-/util-1.19.0.tgz#e378e717ed8af1c8ce43cf8d1228a43de6b5e650"
+  integrity sha512-65ytqg6iqTPtL1lLY9pGxhR7uKhuriBhuNssQVIJk/qdmo8I3QeYE9jZphozDSAWvgkTCjI9W/ytQYuoDML28Q==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
