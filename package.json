@@ -1,6 +1,8 @@
 {
   "name": "@scaleway/ui",
   "version": "0.37.12",
+  "description": "Scaleway UI",
+  "keywords": ["react","reactjs","ui"],
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -9,6 +11,10 @@
     "node": ">=14.x",
     "yarn": ">=1.22.x"
   },
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/module.js",
@@ -157,5 +163,27 @@
   "resolutions": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Alexandre Philibeaux",
+      "email": "aphilibeaux@scaleway.com",
+      "url": "https://***REMOVED***/aphilibeaux"
+    },
+    {
+      "name": "Vincent Audebert",
+      "email": "vaudebert@scaleway.com",
+      "url": "https://***REMOVED***/vaudebert"
+    },
+    {
+      "name": "Matthias Prost",
+      "email": "mprost@scaleway.com",
+      "url": "https://***REMOVED***/mprost"
+    },
+    {
+      "name": "Emmanuel Chambon",
+      "email": "echambon@scaleway.com",
+      "url": "https://***REMOVED***/echambon"
+    }
+  ]
 }
