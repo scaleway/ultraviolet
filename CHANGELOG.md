@@ -1,3 +1,10 @@
+### [0.37.12](https://github.com/chambo-e/scw-ui/compare/v0.37.11...v0.37.12) (2021-01-04)
+
+
+### Bug Fixes
+
+* **modal:** overflow on modal with lot of content inside ([e72d006](https://github.com/chambo-e/scw-ui/commit/e72d00615d9c0bf034cc9725c68591f082ef7562))
+
 ### [0.37.11](https://github.com/chambo-e/scw-ui/compare/v0.37.10...v0.37.11) (2020-12-30)
 
 
