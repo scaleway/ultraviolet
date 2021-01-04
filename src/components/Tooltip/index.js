@@ -97,7 +97,7 @@ export const Tooltip = ({
   }
 
   return (
-    <Box zIndex={1}>
+    <Box>
       <TooltipReference {...tooltip} ref={children.ref}>
         {finalChildren}
       </TooltipReference>
