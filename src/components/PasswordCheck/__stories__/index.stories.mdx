@@ -1,0 +1,60 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import PasswordCheck from '..'
+
+<Meta
+  title="Components/PasswordCheck"
+  component={PasswordCheck}
+/>
+
+# PasswordCheck
+
+<Description>Password checker shows what's missing into password to validate requirements.</Description>
+
+## Usage
+
+<Canvas>
+  <Story name="basic">
+    <PasswordCheck
+      rules={[
+        {
+          name: 'hasOneUppercase',
+          valid: true,
+          text: 'Password must have at least one uppercase character',
+        },
+        {
+          name: 'hasOneLowercase',
+          valid: true,
+          text: 'Password must have at least one lowercase character'
+        },
+        {
+          name: 'hasOneSpecial',
+          valid: true,
+          text: 'Password must have at least one special character'
+        },
+        {
+          name: 'hasOneNumber',
+          valid: true,
+          text: 'Password must have at least one number'
+        },
+        {
+          name: 'isLongEnough',
+          valid: false,
+          text: 'Password must have a minimum of 8 characters'
+        },
+        {
+          name: 'score',
+          valid: false,
+          text: 'Password strength score'
+        },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+<ArgsTable of={PasswordCheck}/>
