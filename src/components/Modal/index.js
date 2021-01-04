@@ -124,6 +124,7 @@ const backdropStyles = ({ animated }) => css`
   display: flex;
   position: fixed;
   overflow: auto;
+  padding: 16px;
   top: 0;
   bottom: 0;
   right: 0;
