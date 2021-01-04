@@ -145,17 +145,85 @@ export const sketchOut = keyframes`
 
 export const slideDownLarge = keyframes`
     0% {
-        transform:translateY(-100%);
+      transform:translateY(-100%);
     }
     100% {
-        transform:translateY(0%);
+      transform:translateY(0%);
     }
   `
 export const slideUpLarge = keyframes`
     0% {
-    transform:translateY(0%);
+      transform:translateY(0%);
     }
     100% {
-        transform:translateY(-100%);
+      transform:translateY(-100%);
+    }
+  `
+export const slideFromBottom = keyframes`
+    0% {
+      transform:translateY(+100%);
+    }
+    100% {
+      transform:translateY(0%);
+    }
+  `
+export const slideFromTop = keyframes`
+    0% {
+      transform:translateY(-100%);
+    }
+    100% {
+      transform:translateY(0%);
+    }
+  `
+
+export const slideFromRight = keyframes`
+    0% {
+      transform:translateX(+100%);
+    }
+    100% {
+      transform:translateX(0%);
+    }
+  `
+export const slideFromLeft = keyframes`
+    0% {
+      transform:translateX(-100%);
+    }
+    100% {
+      transform:translateX(0%);
+    }
+  `
+
+export const slideToBottom = keyframes`
+    0% {
+      transform:translateY(0%);
+    }
+    100% {
+      transform:translateY(+100%);
+    }
+  `
+export const slideToTop = keyframes`
+    0% {
+      transform:translateY(0%);
+    }
+    100% {
+      transform:translateY(-100%);
+    }
+  `
+
+export const slideToRight = keyframes`
+    0% {
+      transform:translateX(0%);
+    }
+    100% {
+      transform:translateX(+100%);
+    }
+  `
+
+export const slideToLeft = keyframes`
+    0% {
+      transform:translateX(0%);
+    }
+    100% {
+      transform:translateX(-100%);
     }
   `
