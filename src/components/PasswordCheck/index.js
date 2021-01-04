@@ -44,22 +44,22 @@ PasswordCheck.defaultProps = {
   rules: [
     {
       name: 'hasOneUppercase',
-      valid: true,
+      valid: false,
       text: 'Password must have at least one uppercase character',
     },
     {
       name: 'hasOneLowercase',
-      valid: true,
+      valid: false,
       text: 'Password must have at least one lowercase character',
     },
     {
       name: 'hasOneSpecial',
-      valid: true,
+      valid: false,
       text: 'Password must have at least one special character',
     },
     {
       name: 'hasOneNumber',
-      valid: true,
+      valid: false,
       text: 'Password must have at least one number',
     },
     {
@@ -78,9 +78,9 @@ PasswordCheck.defaultProps = {
 PasswordCheck.propTypes = {
   rules: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-      valid: PropTypes.bool,
-      text: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      valid: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired,
     }),
   ),
 }
