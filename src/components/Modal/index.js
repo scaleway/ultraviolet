@@ -9,6 +9,7 @@ import {
   useDialogState,
 } from 'reakit/Dialog'
 import { theme } from '../../theme'
+import * as animations from '../../utils'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
@@ -23,74 +24,104 @@ const MODAL_WIDTH = {
 
 const MODAL_PLACEMENT = {
   center: css`
-    top: 50%;
-    left: 50%;
-    bottom: auto;
-    right: auto;
-    transform: translate3d(-50%, -50%, 0);
+    margin: auto;
   `,
   'top-left': css`
-    left: 0;
-    bottom: auto;
-    right: auto;
+    margin: auto;
+    margin-left: 0;
+    margin-top: 0;
   `,
   top: css`
-    top: 0;
-    left: 45%;
-    bottom: auto;
-    right: auto;
-    transform: translate3d(-45%, 0, 0);
+    margin: auto;
+    margin-top: 0px;
   `,
   'top-right': css`
-    top: 0;
-    left: auto;
-    bottom: auto;
-    right: 0;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 0;
   `,
   right: css`
-    top: 45%;
-    left: auto;
-    bottom: auto;
-    right: 0;
-    transform: translate3d(0, -45%, 0);
+    margin: auto;
+    margin-right: 0;
   `,
   'bottom-right': css`
-    top: auto;
-    left: auto;
-    bottom: 0;
-    right: 0;
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 0;
   `,
   bottom: css`
-    top: auto;
-    left: 45%;
-    right: auto;
-    bottom: 0;
-    transform: translate3d(-45%, 0, 0);
+    margin: auto;
+    margin-bottom: 0;
   `,
   'bottom-left': css`
-    top: auto;
-    right: auto;
-    bottom: 0;
-    left: 0;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
   `,
   left: css`
-    top: 45%;
-    bottom: auto;
-    right: auto;
-    left: 0;
-    transform: translate3d(0, -45%, 0);
+    margin: auto;
+    margin-left: 0;
   `,
 }
 
-const animatedStyle = css`
+const MODAL_ANNIMATION = {
+  fold: {
+    enter: animations.unfoldIn,
+    leave: animations.unfoldOut,
+  },
+  zoom: {
+    enter: animations.zoomIn,
+    leave: animations.zoomOut,
+  },
+  scaleUp: {
+    enter: animations.scaleUp,
+    leave: animations.scaleDown,
+  },
+  scaleBack: {
+    enter: animations.scaleForward,
+    leave: animations.scaleBack,
+  },
+  sketch: {
+    enter: animations.sketchIn,
+    leave: animations.sketchOut,
+  },
+  slide: {
+    enter: animations.slideUpLarge,
+    leave: animations.slideDownLarge,
+  },
+}
+
+const backdropAnimatedStyle = css`
   opacity: 0;
-  transition: opacity 250ms ease-in-out, transform 300ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   &[data-enter] {
     opacity: 1;
+    transition: opacity 250ms ease-in-out;
+  }
+  &[data-leave] {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+`
+
+const dialogAnimatedStyle = ({ animation }) => css`
+  opacity: 0;
+  &[data-enter] {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    animation: ${MODAL_ANNIMATION[animation].enter} 500ms
+      cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  &[data-leave] {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    animation: ${MODAL_ANNIMATION[animation].leave} 500ms
+      cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 `
 
 const backdropStyles = ({ animated }) => css`
+  display: flex;
   position: fixed;
   overflow: auto;
   top: 0;
@@ -98,15 +129,21 @@ const backdropStyles = ({ animated }) => css`
   right: 0;
   left: 0;
   z-index: 999;
-  perspective: 800px;
   opacity: 1;
   background-color: ${transparentize(0.8, theme.gray700)};
-  ${animated && animatedStyle}
+  ${animated && backdropAnimatedStyle}
 `
 
-const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
+const dialogStyles = ({
+  animated,
+  animation,
+  width,
+  height,
+  placement,
+  bordered,
+}) => css`
   background-color: ${theme.white};
-  position: fixed;
+  position: relative;
   border-radius: ${bordered ? 4 : 0}px;
   border: 0;
   padding: 32px;
@@ -115,7 +152,12 @@ const dialogStyles = ({ animated, width, height, placement, bordered }) => css`
   min-height: ${height};
   box-shadow: 0 0 12px 18px ${transparentize(0.8, theme.shadow)};
   opacity: 1;
-  ${animated && animatedStyle}
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+  ${animated && dialogAnimatedStyle({ animation })}
 `
 
 const containerStyles = css`
@@ -143,6 +185,7 @@ const Disclosure = memo(({ disclosure, dialog }) => {
 const Modal = memo(
   ({
     animated,
+    animation,
     ariaLabel,
     back,
     backContent,
@@ -185,6 +228,7 @@ const Modal = memo(
             css={[
               dialogStyles({
                 animated,
+                animation,
                 bordered,
                 height,
                 placement,
@@ -198,42 +242,42 @@ const Modal = memo(
             {...dialog}
             hide={onClose || dialog.toggle}
           >
-            {dialog.visible && (
-              <>
-                <div css={containerStyles}>
-                  {back && backContent && (
-                    <Button
-                      icon={
-                        <Icon
-                          name="chevron-left"
-                          size={12}
-                          color="primary"
-                          mr={1}
-                        />
-                      }
-                      variant="link"
-                      color="primary"
-                      onClick={back}
-                      mr="auto"
-                      p={0}
-                    >
-                      {backContent}
-                    </Button>
-                  )}
-                  {isClosable && (
-                    <Touchable
-                      onClick={onClose || dialog.toggle}
-                      alignSelf="center"
-                      title="close"
-                      mb={0}
-                    >
-                      <Icon name="close" size={20} color="gray550" />
-                    </Touchable>
-                  )}
-                </div>
-                {typeof children === 'function' ? children(dialog) : children}
-              </>
-            )}
+            <>
+              <div css={containerStyles}>
+                {back && backContent && (
+                  <Button
+                    icon={
+                      <Icon
+                        name="chevron-left"
+                        size={12}
+                        color="primary"
+                        mr={1}
+                      />
+                    }
+                    variant="link"
+                    color="primary"
+                    onClick={back}
+                    mr="auto"
+                    p={0}
+                  >
+                    {backContent}
+                  </Button>
+                )}
+                {isClosable && (
+                  <Touchable
+                    onClick={onClose || dialog.toggle}
+                    alignSelf="center"
+                    title="close"
+                    mb={0}
+                  >
+                    <Icon name="close" size={20} color="gray550" />
+                  </Touchable>
+                )}
+              </div>
+              {dialog.visible && typeof children === 'function'
+                ? children(dialog)
+                : children}
+            </>
           </Dialog>
         </DialogBackdrop>
       </>
@@ -243,6 +287,7 @@ const Modal = memo(
 
 Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  animation: PropTypes.oneOf(Object.keys(MODAL_ANNIMATION)),
   ariaLabel: PropTypes.string,
   back: PropTypes.func,
   backContent: PropTypes.node,
@@ -264,6 +309,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   animated: false,
+  animation: 'zoom',
   ariaLabel: 'modal',
   backContent: 'Back',
   bordered: true,
