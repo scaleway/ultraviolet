@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
-import React, { memo } from 'react'
+import React from 'react'
 import { Col, Grid, Row } from '../Grid'
 import { Icon } from '../Icon'
 
@@ -86,4 +86,4 @@ PasswordCheck.propTypes = {
   ),
 }
 
-export default memo(PasswordCheck)
+export { PasswordCheck }
