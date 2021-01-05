@@ -41,41 +41,6 @@ function PasswordCheck({ rules }) {
   )
 }
 
-PasswordCheck.defaultProps = {
-  rules: [
-    {
-      name: 'hasOneUppercase',
-      valid: false,
-      text: 'Password must have at least one uppercase character',
-    },
-    {
-      name: 'hasOneLowercase',
-      valid: false,
-      text: 'Password must have at least one lowercase character',
-    },
-    {
-      name: 'hasOneSpecial',
-      valid: false,
-      text: 'Password must have at least one special character',
-    },
-    {
-      name: 'hasOneNumber',
-      valid: false,
-      text: 'Password must have at least one number',
-    },
-    {
-      name: 'isLongEnough',
-      valid: false,
-      text: 'Password must have a minimum of 8 characters',
-    },
-    {
-      name: 'score',
-      valid: false,
-      text: 'Password strength score',
-    },
-  ],
-}
-
 PasswordCheck.propTypes = {
   rules: PropTypes.arrayOf(
     PropTypes.shape({
@@ -83,7 +48,7 @@ PasswordCheck.propTypes = {
       valid: PropTypes.bool.isRequired,
       text: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 }
 
 export { PasswordCheck }
