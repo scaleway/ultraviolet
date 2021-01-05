@@ -3,9 +3,6 @@ import { PasswordCheck } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PasswordCheck', () => {
-  test('render with default values', () => {
-    shouldMatchEmotionSnapshot(<PasswordCheck />)
-  })
   test('render with custom values', () => {
     shouldMatchEmotionSnapshot(
       <PasswordCheck
