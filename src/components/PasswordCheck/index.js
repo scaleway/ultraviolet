@@ -1,13 +1,14 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
-import { Col, Grid, Icon, Row } from '../..'
+import { Col, Grid, Row } from '../Grid'
+import { Icon } from '../Icon'
 
 const styles = {
   condition: css`
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin: 0 0 8px 0;
     font-size: 14px;
   `,
   icon: css`
