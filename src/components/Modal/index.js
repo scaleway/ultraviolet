@@ -85,9 +85,21 @@ const MODAL_ANNIMATION = {
     enter: animations.sketchIn,
     leave: animations.sketchOut,
   },
-  slide: {
-    enter: animations.slideUpLarge,
-    leave: animations.slideDownLarge,
+  slideTop: {
+    enter: animations.slideFromTop,
+    leave: animations.slideToTop,
+  },
+  slideBottom: {
+    enter: animations.slideFromBottom,
+    leave: animations.slideToBottom,
+  },
+  slideRight: {
+    enter: animations.slideFromRight,
+    leave: animations.slideToRight,
+  },
+  slideLeft: {
+    enter: animations.slideFromLeft,
+    leave: animations.slideToLeft,
   },
 }
 
@@ -124,6 +136,7 @@ const backdropStyles = ({ animated }) => css`
   display: flex;
   position: fixed;
   overflow: auto;
+  padding: 16px;
   top: 0;
   bottom: 0;
   right: 0;

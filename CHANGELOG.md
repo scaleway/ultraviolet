@@ -1,3 +1,10 @@
+## [0.38.0](https://github.com/chambo-e/scw-ui/compare/v0.37.12...v0.38.0) (2021-01-04)
+
+
+### Features
+
+* **modal:** add slide animations ([0352898](https://github.com/chambo-e/scw-ui/commit/0352898303c6139ace84a896231403134b5b1675))
+
 ### [0.37.12](https://github.com/chambo-e/scw-ui/compare/v0.37.11...v0.37.12) (2021-01-04)
 
 
