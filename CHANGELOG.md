@@ -1,3 +1,10 @@
+### [0.38.1](https://github.com/chambo-e/scw-ui/compare/v0.38.0...v0.38.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* **tooltip:** z-index ([987dde9](https://github.com/chambo-e/scw-ui/commit/987dde99d35652c87d5e7d94a3b384f01aa904bb))
+
 ## [0.38.0](https://github.com/chambo-e/scw-ui/compare/v0.37.12...v0.38.0) (2021-01-04)
 
 
