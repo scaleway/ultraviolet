@@ -22,7 +22,7 @@ const variants = {
     background: theme.zumthor,
   },
   success: {
-    main: theme.green,
+    main: theme.gray700,
     background: theme.foam,
   },
 }
