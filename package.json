@@ -80,7 +80,10 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.jest/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
-    }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/.jest/setupEnv.js"
+    ]
   },
   "peerDependencies": {
     "@emotion/core": "^10.1.1",
@@ -123,6 +126,7 @@
     "@storybook/react": "^6.1.11",
     "@storybook/theming": "^6.1.11",
     "@svgr/rollup": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
@@ -145,6 +149,7 @@
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "read-pkg": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
     "rollup": "^2.35.1",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-visualizer": "^4.2.0",

@@ -1,4 +1,4 @@
-import { ClassNames, css } from '@emotion/core'
+import { ClassNames, Global, css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -6,14 +6,14 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import toastStyle from 'react-toastify/dist/ReactToastify.min.css'
-import { foam, info, pippin, success, warning, zumthor } from '../../theming'
+import { theme } from '../../theme'
 import { Icon } from '../Icon'
 import { NotificationBar } from '../NotificationBar'
 
 const PREFIX = '.Toastify'
 
 const styles = {
-  toast: p => css`
+  toast: css`
     border-radius: 4px;
     box-shadow: none;
     min-height: 0;
@@ -24,38 +24,38 @@ const styles = {
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${foam(p)};
-      color: ${success(p)};
+      background-color: ${theme.foam};
+      color: ${theme.success};
 
       ${PREFIX}__progress-bar {
-        background-color: ${success(p)};
+        background-color: ${theme.success};
       }
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${zumthor(p)};
-      color: ${info(p)};
+      background-color: ${theme.zumthor};
+      color: ${theme.info};
 
       ${PREFIX}__progress-bar {
-        background-color: ${info(p)};
+        background-color: ${theme.info};
       }
     }
 
     &${PREFIX}__toast--warning {
-      background-color: ${pippin(p)};
-      color: ${warning(p)};
+      background-color: ${theme.pippin};
+      color: ${theme.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${warning(p)};
+        background-color: ${theme.warning};
       }
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${pippin(p)};
-      color: ${warning(p)};
+      background-color: ${theme.pippin};
+      color: ${theme.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${warning(p)};
+        background-color: ${theme.warning};
       }
     }
   `,
@@ -73,17 +73,22 @@ CloseButton.defaultProps = {
   closeToast: () => {},
 }
 
-const SanitizedNotificationBar = ({ closeToast, children, ...props }) => (
-  <NotificationBar {...props}>{children}</NotificationBar>
-)
+const SanitizedNotificationBar = ({
+  closeToast,
+  toastProps,
+  children,
+  ...props
+}) => <NotificationBar {...props}>{children}</NotificationBar>
 
 SanitizedNotificationBar.propTypes = {
   closeToast: PropTypes.func,
+  toastProps: PropTypes.shape({}),
   children: PropTypes.node,
 }
 
 SanitizedNotificationBar.defaultProps = {
-  closeToast: null,
+  closeToast: undefined,
+  toastProps: undefined,
   children: null,
 }
 
@@ -119,15 +124,22 @@ const toast = {
 }
 
 const ToastContainer = props => (
-  <ClassNames>
-    {({ css }) => (
-      <BaseToastContainer
-        closeButton={<CloseButton />}
-        toastClassName={css([styles.toast(props), toastStyle])}
-        {...props}
-      />
-    )}
-  </ClassNames>
+  <>
+    <Global
+      styles={css`
+        ${toastStyle}
+      `}
+    />
+    <ClassNames>
+      {({ css: localCss }) => (
+        <BaseToastContainer
+          closeButton={<CloseButton />}
+          toastClassName={localCss(styles.toast)}
+          {...props}
+        />
+      )}
+    </ClassNames>
+  </>
 )
 
 export { toast, ToastContainer }
