@@ -1,3 +1,10 @@
+## [0.39.0](https://github.com/chambo-e/scw-ui/compare/v0.38.2...v0.39.0) (2021-01-08)
+
+
+### Features
+
+* **PasswordCheck:** migration of PasswordCheck CNS-2093 ([9aa110b](https://github.com/chambo-e/scw-ui/commit/9aa110b0fbf258042ad2aa5c11e954a9e6043ead))
+
 ### [0.38.2](https://github.com/chambo-e/scw-ui/compare/v0.38.1...v0.38.2) (2021-01-07)
 
 
