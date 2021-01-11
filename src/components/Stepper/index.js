@@ -24,16 +24,76 @@ const preventNonDigitsKey = event => {
 
 const roundStep = (value, step) => Math.ceil(value / step) * step
 
+const sizes = {
+  large: {
+    container: css`
+      height: 48px;
+      background-color: ${theme.white};
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: stretch;
+      font-weight: 500;
+    `,
+
+    leftButton: css`
+      border-right-width: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 0 16px;
+    `,
+    rightButton: css`
+      border-left-width: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 0 16px;
+    `,
+
+    separator: css`
+      position: absolute;
+      font-size: 30px;
+      top: 5px;
+      font-weight: 500;
+      color: ${theme.gray350};
+    `,
+
+    iconSize: 28,
+  },
+  small: {
+    container: css`
+      height: 32px;
+      background-color: ${theme.white};
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: stretch;
+      font-weight: 500;
+    `,
+
+    leftButton: css`
+      border-right-width: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 0 4px;
+      border-right: 1px solid ${theme.gray350};
+    `,
+    rightButton: css`
+      border-left-width: 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 0 4px;
+      border-left: 1px solid ${theme.gray350};
+    `,
+
+    separator: css`
+      display: none;
+    `,
+
+    iconSize: 18,
+  },
+}
+
 const styles = {
-  container: css({
-    height: 48,
-    backgroundColor: theme.white,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'stretch',
-    fontWeight: 500,
-  }),
   center: css`
     flex: 1;
     flex-direction: row;
@@ -77,16 +137,6 @@ const styles = {
       }
     }
   `,
-  leftButton: css`
-    border-right-width: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  `,
-  rightButton: css`
-    border-left-width: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  `,
   disabled: css`
     background-color: ${theme.gray100};
     border: none;
@@ -94,17 +144,11 @@ const styles = {
     opacity: 1;
     cursor: not-allowed;
   `,
-  separator: css`
-    position: absolute;
-    font-size: 30px;
-    top: 5px;
-    font-weight: 500;
-    color: ${theme.gray350};
-  `,
 }
 
 const Stepper = ({
   text,
+  size,
   disabled,
   minValue,
   maxValue,
@@ -171,22 +215,22 @@ const Stepper = ({
   const isPlusDisabled = inputValue >= maxValue || disabled
 
   return (
-    <Box {...props} css={styles.container}>
+    <Box {...props} css={sizes[size].container}>
       <Touchable
         css={[
           styles.button(isMinusDisabled),
-          styles.leftButton,
+          sizes[size].leftButton,
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(-1)}
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={28} color="gray300" />
+        <Icon name="minus" size={sizes[size].iconSize} color="gray300" />
 
         <span
           css={[
-            styles.separator,
+            sizes[size].separator,
             css`
               right: 0;
             `,
@@ -224,7 +268,7 @@ const Stepper = ({
       <Touchable
         css={[
           styles.button(isPlusDisabled),
-          styles.rightButton,
+          sizes[size].rightButton,
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(1)}
@@ -233,7 +277,7 @@ const Stepper = ({
       >
         <span
           css={[
-            styles.separator,
+            sizes[size].separator,
             css`
               left: 0;
             `,
@@ -241,7 +285,7 @@ const Stepper = ({
         >
           |
         </span>
-        <Icon name="plus" size={28} color="gray300" />
+        <Icon name="plus" size={sizes[size].iconSize} color="gray300" />
       </Touchable>
     </Box>
   )
@@ -253,6 +297,7 @@ Stepper.propTypes = {
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
   name: PropTypes.string,
+  size: PropTypes.string,
   step: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
@@ -266,6 +311,7 @@ Stepper.defaultProps = {
   minValue: 0,
   maxValue: 100,
   name: 'stepper',
+  size: 'large',
   text: '',
   value: null,
   step: 1,

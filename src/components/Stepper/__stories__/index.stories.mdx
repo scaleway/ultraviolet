@@ -7,6 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import { Stepper } from '..'
+import { Box } from '../../Box'
 
 <Meta title="Components/Stepper" component={Stepper} />
 
@@ -76,6 +77,37 @@ import { Stepper } from '..'
       onMinCrossed={() => console.log('onMinCrossed')}
       onMaxCrossed={() => console.log('onMaxCrossed')}
     />
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story name="size"
+         args={{
+           sizes: [
+             'small',
+             'large',
+           ]
+         }}
+  >
+    {args => args.sizes.map(size => {
+      const [value, setValue] = useState(10)
+      return (
+        <Box my={2}>
+          {size}
+          <Stepper
+            minValue={0}
+            maxValue={100}
+            size={size}
+            onChange={setValue}
+            value={value}
+            mt={1}
+          />
+        </Box>
+      )
+    })
+    }}
   </Story>
 </Canvas>
 
