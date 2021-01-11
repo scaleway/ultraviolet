@@ -248,6 +248,7 @@ const Stepper = ({
             inputRef.current.focus()
           }
         }}
+        px={1}
       >
         <input
           ref={inputRef}
