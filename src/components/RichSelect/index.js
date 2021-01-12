@@ -320,29 +320,32 @@ const Option = props => (
   </div>
 )
 
-const DropdownIndicator = ({ error }) => ({
+const DropdownIndicator = ({ error, hideIndicator }) => ({
   isDisabled,
   selectProps: { checked, time, required },
   ...props
-}) => (
-  <components.DropdownIndicator {...props}>
-    <Icon
-      name={time ? 'clock-outline' : 'chevron-down'}
-      size={time ? 24 : 11}
-      color={
-        isDisabled
-          ? 'gray300'
-          : checked
-          ? 'primary'
-          : error
-          ? 'warning'
-          : 'gray350'
-      }
-      mr={required ? 2 : 0}
-    />
-    {required ? <Icon name="asterisk" size={8} color="warning" /> : null}
-  </components.DropdownIndicator>
-)
+}) =>
+  !hideIndicator ? (
+    <components.DropdownIndicator {...props}>
+      <Icon
+        name={time ? 'clock-outline' : 'chevron-down'}
+        size={time ? 24 : 11}
+        color={
+          isDisabled
+            ? 'gray300'
+            : checked
+            ? 'primary'
+            : error
+            ? 'warning'
+            : 'gray350'
+        }
+        mr={required ? 2 : 0}
+      />
+      {required ? <Icon name="asterisk" size={8} color="warning" /> : null}
+    </components.DropdownIndicator>
+  ) : (
+    <></>
+  )
 
 const ClearIndicator = ({ error }) => ({
   isDisabled,
@@ -401,6 +404,7 @@ function RichSelect({
   value,
   customStyle = () => true,
   innerRef,
+  hideIndicator = false,
   ...props
 }) {
   const labelId = getUUID('label')
@@ -418,7 +422,7 @@ function RichSelect({
         }),
         Option,
         Input: Input({ inputId, labelId, isMulti }),
-        DropdownIndicator: DropdownIndicator({ error }),
+        DropdownIndicator: DropdownIndicator({ error, hideIndicator }),
         ClearIndicator: ClearIndicator({ error }),
         MultiValueContainer,
         MultiValueLabel,
