@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import React from 'react'
 import { Modal } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -12,7 +12,7 @@ const customDialogStyles = css`
 
 describe('Modal', () => {
   test(`renders with default Props`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Modal>
         <div>test</div>
       </Modal>,
@@ -20,7 +20,7 @@ describe('Modal', () => {
   })
 
   test(`renders with opened={true}`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Modal opened>
         <div>test</div>
       </Modal>,
@@ -28,7 +28,7 @@ describe('Modal', () => {
   })
 
   test(`renders with customStyle`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Modal
         opened
         customDialogBackdropStyles={customDialogBackdropStyles}
@@ -40,7 +40,7 @@ describe('Modal', () => {
   })
 
   test(`renders with disclosure`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
         baseId="modal-test"
@@ -51,7 +51,7 @@ describe('Modal', () => {
     )
   })
   test(`renders with portal node (modal=false)`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Modal ariaLabel="modal-test" baseId="modal-test" modal={false}>
         <div> test </div>
       </Modal>,
