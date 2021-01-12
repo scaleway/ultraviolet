@@ -1,3 +1,10 @@
+## [0.40.0](https://github.com/chambo-e/scw-ui/compare/v0.39.0...v0.40.0) (2021-01-12)
+
+
+### Features
+
+* add ExtendedReminder success variant ([9513a3a](https://github.com/chambo-e/scw-ui/commit/9513a3a34122b26e7fa5f8402240078d494d7054))
+
 ## [0.39.0](https://github.com/chambo-e/scw-ui/compare/v0.38.2...v0.39.0) (2021-01-08)
 
 
