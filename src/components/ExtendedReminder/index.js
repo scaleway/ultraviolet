@@ -21,6 +21,10 @@ const variants = {
     main: theme.blue,
     background: theme.zumthor,
   },
+  success: {
+    main: theme.gray700,
+    background: theme.foam,
+  },
 }
 
 const styles = {
@@ -73,6 +77,7 @@ const ExtendedReminder = ({
     warning: 'beta',
     error: 'error',
     info: 'info',
+    success: 'success',
   }
 
   return (
