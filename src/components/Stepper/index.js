@@ -40,12 +40,12 @@ const sizes = {
       border-right-width: 0;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
+      border-radius: 4px 0 0 4px;
       padding: 0 16px;
     `,
     rightButton: css`
       border-left-width: 0;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-radius: 0 4px 4px 0;
       padding: 0 16px;
     `,
 
@@ -72,15 +72,13 @@ const sizes = {
 
     leftButton: css`
       border-right-width: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 4px 0 0 4px;
       padding: 0 4px;
       border-right: 1px solid ${theme.gray350};
     `,
     rightButton: css`
       border-left-width: 0;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-radius: 0 4px 4px 0;
       padding: 0 4px;
       border-left: 1px solid ${theme.gray350};
     `,
