@@ -58,9 +58,10 @@ export const Tooltip = ({
   placement,
   visible,
   variant,
+  baseId,
   ...props
 }) => {
-  const tooltip = useTooltipState({ animated, placement, visible })
+  const tooltip = useTooltipState({ animated, placement, visible, baseId })
   useEffect(() => tooltip.setVisible(visible), [visible])
 
   if (!children) return null
