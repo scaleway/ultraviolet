@@ -118,6 +118,7 @@ Tooltip.propTypes = {
   variant: PropTypes.string,
   visible: PropTypes.bool,
   text: PropTypes.node,
+  baseId: PropTypes.string,
 }
 
 Tooltip.defaultProps = {
@@ -126,4 +127,5 @@ Tooltip.defaultProps = {
   variant: 'black',
   visible: false,
   text: '',
+  baseId: undefined,
 }
