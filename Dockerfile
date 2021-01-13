@@ -21,6 +21,6 @@ WORKDIR /workspace
 
 COPY --from=builder /usr/src/app/storybook-static .
 
-RUN yarn global add serve
+RUN yarn global add http-server
 
-CMD serve -l 80
+CMD http-server -g -b -p 80
