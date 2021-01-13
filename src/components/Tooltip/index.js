@@ -58,9 +58,10 @@ export const Tooltip = ({
   placement,
   visible,
   variant,
+  baseId,
   ...props
 }) => {
-  const tooltip = useTooltipState({ animated, placement, visible })
+  const tooltip = useTooltipState({ animated, placement, visible, baseId })
   useEffect(() => tooltip.setVisible(visible), [visible])
 
   if (!children) return null
@@ -117,6 +118,7 @@ Tooltip.propTypes = {
   variant: PropTypes.string,
   visible: PropTypes.bool,
   text: PropTypes.node,
+  baseId: PropTypes.string,
 }
 
 Tooltip.defaultProps = {
@@ -125,4 +127,5 @@ Tooltip.defaultProps = {
   variant: 'black',
   visible: false,
   text: '',
+  baseId: undefined,
 }
