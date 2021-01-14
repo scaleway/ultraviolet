@@ -151,6 +151,24 @@ export const VerificationCode = ({
     e.target.select(e)
   }
 
+  const inputOnPaste = e => {
+    e.preventDefault()
+    const index = parseInt(e.target.dataset.id, 10)
+    const pastedValue = [...e.clipboardData.getData('Text')].map(c =>
+      type === 'number' ? c.replace(/[^\d]/gi, '') : c,
+    )
+    const toReplace =
+      fields - index < pastedValue.length ? fields - index : pastedValue.length
+    pastedValue.length =
+      toReplace > pastedValue.length ? pastedValue.length : toReplace
+
+    setValues(vals => {
+      const newArray = vals.slice()
+      newArray.splice(index, toReplace, ...pastedValue)
+      return newArray
+    })
+  }
+
   return (
     <Box {...props}>
       {values.map((value, index) => (
@@ -165,6 +183,7 @@ export const VerificationCode = ({
           ref={inputRefs[index]}
           onChange={inputOnChange}
           onKeyDown={inputOnKeyDown}
+          onPaste={inputOnPaste}
           onFocus={inputOnFocus}
           disabled={disabled}
           required={required}
