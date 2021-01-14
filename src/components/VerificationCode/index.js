@@ -153,18 +153,22 @@ export const VerificationCode = ({
 
   const inputOnPaste = e => {
     e.preventDefault()
-    const index = parseInt(e.target.dataset.id, 10)
+    const currentIndex = parseInt(e.target.dataset.id, 10)
     const pastedValue = [...e.clipboardData.getData('Text')].map(c =>
+      // Replace non number char with empty char when type is number
       type === 'number' ? c.replace(/[^\d]/gi, '') : c,
     )
-    const toReplace =
-      fields - index < pastedValue.length ? fields - index : pastedValue.length
-    pastedValue.length =
-      toReplace > pastedValue.length ? pastedValue.length : toReplace
+
+    // Trim array to avoid array overflow
+    pastedValue.splice(
+      fields - currentIndex < pastedValue.length
+        ? fields - currentIndex
+        : pastedValue.length,
+    )
 
     setValues(vals => {
       const newArray = vals.slice()
-      newArray.splice(index, toReplace, ...pastedValue)
+      newArray.splice(currentIndex, pastedValue.length, ...pastedValue)
       return newArray
     })
   }
