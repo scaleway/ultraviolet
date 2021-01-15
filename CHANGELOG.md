@@ -1,3 +1,10 @@
+## [0.41.0](https://github.com/chambo-e/scw-ui/compare/v0.40.0...v0.41.0) (2021-01-15)
+
+
+### Features
+
+* add paste ability to VerificationCode ([db5bf4d](https://github.com/chambo-e/scw-ui/commit/db5bf4daea659f93c71d13ae844e2f83cd42c5bc))
+
 ## [0.40.0](https://github.com/chambo-e/scw-ui/compare/v0.39.0...v0.40.0) (2021-01-12)
 
 
