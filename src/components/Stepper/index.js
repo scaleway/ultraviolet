@@ -24,74 +24,44 @@ const preventNonDigitsKey = event => {
 
 const roundStep = (value, step) => Math.ceil(value / step) * step
 
-const sizes = {
-  large: {
-    container: css`
-      height: 48px;
-      background-color: ${theme.white};
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      align-self: stretch;
-      font-weight: 500;
-    `,
-
-    leftButton: css`
-      border-right-width: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      border-radius: 4px 0 0 4px;
-      padding: 0 16px;
-    `,
-    rightButton: css`
-      border-left-width: 0;
-      border-radius: 0 4px 4px 0;
-      padding: 0 16px;
-    `,
-
-    separator: css`
-      position: absolute;
-      font-size: 30px;
-      top: 5px;
-      font-weight: 500;
-      color: ${theme.gray350};
-    `,
-
-    iconSize: 28,
-  },
-  small: {
-    container: css`
-      height: 32px;
-      background-color: ${theme.white};
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      align-self: stretch;
-      font-weight: 500;
-    `,
-
-    leftButton: css`
-      border-right-width: 0;
-      border-radius: 4px 0 0 4px;
-      padding: 0 4px;
-      border-right: 1px solid ${theme.gray350};
-    `,
-    rightButton: css`
-      border-left-width: 0;
-      border-radius: 0 4px 4px 0;
-      padding: 0 4px;
-      border-left: 1px solid ${theme.gray350};
-    `,
-
-    separator: css`
-      display: none;
-    `,
-
-    iconSize: 18,
-  },
-}
-
 const styles = {
+  container: size => css`
+    background-color: ${theme.white};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    font-weight: 500;
+    height: ${size === 'large' ? '48px' : '32px'};
+  `,
+
+  leftButton: size => css`
+    border-right-width: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-radius: 4px 0 0 4px;
+    padding: 0 ${size === 'large' ? '16px' : '4px'};
+    border-right: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+  `,
+
+  rightButton: size => css`
+    border-left-width: 0;
+    border-radius: 0 4px 4px 0;
+    padding: 0 ${size === 'large' ? '16px' : '4px'};
+    border-left: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+  `,
+
+  separator: size => css`
+    position: absolute;
+    font-size: 30px;
+    top: 5px;
+    font-weight: 500;
+    color: ${theme.gray350};
+    display: ${size === 'small' && 'none'};
+  `,
+
+  iconSize: size => (size === 'large' ? 28 : 18),
+
   center: css`
     flex: 1;
     flex-direction: row;
@@ -213,22 +183,22 @@ const Stepper = ({
   const isPlusDisabled = inputValue >= maxValue || disabled
 
   return (
-    <Box {...props} css={sizes[size].container}>
+    <Box {...props} css={styles.container(size)}>
       <Touchable
         css={[
           styles.button(isMinusDisabled),
-          sizes[size].leftButton,
+          styles.leftButton(size),
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(-1)}
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={sizes[size].iconSize} color="gray300" />
+        <Icon name="minus" size={styles.iconSize(size)} color="gray300" />
 
         <span
           css={[
-            sizes[size].separator,
+            styles.separator(size),
             css`
               right: 0;
             `,
@@ -267,7 +237,7 @@ const Stepper = ({
       <Touchable
         css={[
           styles.button(isPlusDisabled),
-          sizes[size].rightButton,
+          styles.rightButton(size),
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(1)}
@@ -276,7 +246,7 @@ const Stepper = ({
       >
         <span
           css={[
-            sizes[size].separator,
+            styles.separator(size),
             css`
               left: 0;
             `,
@@ -284,7 +254,7 @@ const Stepper = ({
         >
           |
         </span>
-        <Icon name="plus" size={sizes[size].iconSize} color="gray300" />
+        <Icon name="plus" size={styles.iconSize()} color="gray300" />
       </Touchable>
     </Box>
   )
