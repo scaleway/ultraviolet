@@ -3,15 +3,12 @@ import { VerificationCode } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 const pasteEventWithValue = value => {
-  // `ClipboardEvent` extends `Event`. Start with creating a new `Event`
-  // with 'paste' as the`typearg`
   const clipboardEvent = new Event('paste', {
     bubbles: true,
     cancelable: true,
     composed: true,
   })
 
-  // set `clipboardData` and `getData` properties. Set your mocked properties here
   clipboardEvent.clipboardData = {
     getData: () => value,
   }
