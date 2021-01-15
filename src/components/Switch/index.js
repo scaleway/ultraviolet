@@ -1,18 +1,22 @@
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import { Switch as BaseSwitch } from '@smooth-ui/core-em'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Checkbox } from 'reakit'
 import { theme } from '../../theme'
-import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 
-const variants = {
+const PADDING = 6
+
+const styles = {
   inactiveLabelColor: theme.gray700,
   inactiveBigBallColor: theme.gray700,
   inactiveBgColor: theme.gray550,
   smallBallColor: theme.gray100,
-  disabled: theme.ngray300,
+  disabled: theme.gray300,
+}
 
+const variants = {
   primary: {
     bgColor: theme.primary,
     activeLabelColor: theme.gray100,
@@ -29,115 +33,139 @@ const SIZES = {
   small: {
     width: 40,
     height: 24,
-    off: -4,
-    on: 12,
     ball: 12,
-    label: 10,
   },
   medium: {
     width: 72,
     height: 32,
-    off: -36,
-    on: 5,
     ball: 20,
-    label: 42,
   },
 }
 
-const StyledSwitch = styled(BaseSwitch)`
+const SwitchBall = styled.span`
+  display: block;
+  position: relative;
+  border-radius: 34px;
+  pointer-events: none;
+  transition: all 250ms;
+
+  width: ${({ size }) => SIZES[size].ball}px;
+  height: ${({ size }) => SIZES[size].ball}px;
+
+  background-color: ${({ size }) =>
+    size === 'small' ? styles.smallBallColor : styles.inactiveBigBallColor};
+`
+
+const label = ({ size, width }) => css`
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  line-height: ${SIZES[size].ball}px;
+  width: ${(width || SIZES[size].width) - 2 * PADDING - SIZES[size].ball}px;
+`
+
+const StyledSwitch = styled('label', {
+  shouldForwardProp: prop =>
+    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop),
+})`
+  overflow: hidden;
+  outline: none;
   width: ${({ width, size }) => width || SIZES[size].width}px;
   height: ${({ size }) => SIZES[size].height}px;
   display: inline-flex;
+  align-items: center;
+  background-color: ${({ disabled }) =>
+    (disabled && styles.disabled) || styles.inactiveBgColor};
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  transition: all 250ms;
+  padding: 0 ${PADDING}px;
 
-  .sui-switch-wrapper {
-    border: none;
-    width: ${({ width, size }) => width || SIZES[size].width}px;
-    height: ${({ size }) => SIZES[size].height}px;
-    background-color: ${({ disabled }) =>
-      (disabled && variants.disabled) || variants.inactiveBgColor};
-  }
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
-  .sui-switch-content {
-    height: ${({ size }) => SIZES[size].height}px;
-    transform: translateX(
-      ${({ width, size }) => (width ? 36 - width : SIZES[size].off)}px
-    );
-  }
-
-  .sui-switch-ball {
-    background-color: ${({ size }) =>
-      size === 'small'
-        ? variants.smallBallColor
-        : variants.inactiveBigBallColor};
-    width: ${({ size }) => SIZES[size].ball}px;
-    height: ${({ size }) => SIZES[size].ball}px;
-  }
-
-  .sui-switch-label {
-    width: ${({ width, size }) => (width ? width - 30 : SIZES[size].label)}px;
-    font-size: 16px;
-
-    &.sui-switch-label-on {
-      color: ${({ variant }) => variants[variant].activeLabelColor};
-    }
-
-    &.sui-switch-label-off {
-      color: ${variants.inactiveLabelColor};
-    }
-  }
-
-  input:checked + .sui-switch-wrapper {
+  &[aria-checked='true'] {
     background-color: ${({ variant }) => variants[variant].bgColor};
-    .sui-switch-content {
-      transform: translateX(${({ size }) => SIZES[size].on}px);
-    }
+  }
 
-    .sui-switch-ball {
-      background-color: ${({ size, variant }) =>
-        size === 'small'
-          ? variants.smallBallColor
-          : variants[variant].activeBigBallColor};
+  &[aria-checked='true'] > ${SwitchBall} {
+    transform: translateX(
+        ${({ width, size }) => (width || SIZES[size].width) - 2 * PADDING}px
+      )
+      translateX(-100%);
+    background-color: ${({ size, variant }) =>
+      size === 'small'
+        ? styles.smallBallColor
+        : variants[variant].activeBigBallColor};
+  }
+
+  &[aria-checked='false'] > ${SwitchBall} {
+    &:after {
+      ${label}
+      content: ${({ labeled, offLabel }) => `"${labeled ? offLabel : ''}"`};
+      color: ${styles.inactiveLabelColor};
+      left: ${({ size }) => SIZES[size].ball}px;
     }
   }
 
-  &:hover,
-  &:focus {
-    input {
-      cursor: pointer;
+  &[aria-checked='true'] > ${SwitchBall} {
+    &:before {
+      ${label}
+      content: ${({ labeled, onLabel }) => `"${labeled ? onLabel : ''}"`};
+      color: ${({ variant }) => variants[variant].activeLabelColor};
+      right: ${({ size }) => SIZES[size].ball}px;
     }
   }
 `
 
-StyledSwitch.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func,
-  variant: PropTypes.oneOf(['success', 'primary']),
-  size: PropTypes.string,
-}
+const StyledCheckbox = styled(Checkbox)`
+  position: absolute;
+  opacity: 0.01;
+`
 
-StyledSwitch.defaultProps = {
-  variant: 'primary',
-  size: 'medium',
-}
-
-const Switch = ({ tooltip, ...props }) => (
+const Switch = ({ tooltip, size, checked, onChange, disabled, ...props }) => (
   <Tooltip text={tooltip}>
-    <Box style={{ lineHeight: 1 }}>
-      <StyledSwitch
-        {...props}
-        style={{ pointerEvents: props.disabled ? 'none' : 'auto' }}
+    <StyledSwitch
+      size={size}
+      aria-checked={checked}
+      disabled={disabled}
+      {...props}
+    >
+      <StyledCheckbox
+        disabled={disabled}
+        checked={checked}
+        onChange={onChange}
       />
-    </Box>
+      <SwitchBall size={size} />
+    </StyledSwitch>
   </Tooltip>
 )
 
 Switch.propTypes = {
-  tooltip: PropTypes.string.isRequired,
+  tooltip: PropTypes.string,
+  size: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   disabled: PropTypes.bool,
+  variant: PropTypes.oneOf(Object.keys(variants)),
+  checked: PropTypes.bool,
+  labeled: PropTypes.bool,
+  onLabel: PropTypes.string,
+  offLabel: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 }
 
 Switch.defaultProps = {
+  tooltip: null,
+  size: 'medium',
+  width: null,
   disabled: false,
+  variant: 'primary',
+  checked: false,
+  labeled: false,
+  onLabel: 'ON',
+  offLabel: 'OFF',
 }
 
 export { Switch }
