@@ -20,7 +20,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
       {({ value, onChange }) => (
         <Switch
           checked={value}
-          onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+          onChange={e => { onChange(e.target.checked) }}
         />
       )}
     </ControlValue>
@@ -41,7 +41,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
           <Switch
             variant="primary"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -50,7 +50,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
           <Switch
             variant="success"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -71,7 +71,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             variant="primary"
             checked={value}
             disabled
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -81,7 +81,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             variant="primary"
             checked={value}
             disabled
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -106,7 +106,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             variant="primary"
             size="small"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -117,7 +117,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             size="small"
             width={65}
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -128,7 +128,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             size="medium"
             width={120}
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -138,7 +138,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             variant="primary"
             size="medium"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -157,7 +157,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             labeled
             variant="primary"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
@@ -169,7 +169,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             offLabel="NO"
             variant="primary"
             checked={value}
-            onChange={e => onChange(Boolean(e.currentTarget.value) !== value)}
+            onChange={e => onChange(e.target.checked)}
           />
         )}
       </ControlValue>
