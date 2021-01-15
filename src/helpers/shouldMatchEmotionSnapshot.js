@@ -10,9 +10,11 @@ expect.addSnapshotSerializer(serializer)
 const emotionCache = createCache()
 emotionCache.compat = true
 
-export default component => {
-  const { asFragment } = render(
+export default (component, { transform } = {}) => {
+  const node = render(
     <CacheProvider value={emotionCache}>{component}</CacheProvider>,
   )
-  expect(asFragment()).toMatchSnapshot()
+  if (transform) transform(node)
+
+  expect(node.asFragment()).toMatchSnapshot()
 }
