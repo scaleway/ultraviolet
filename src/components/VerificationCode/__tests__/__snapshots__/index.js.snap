@@ -169,3 +169,395 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
   </div>
 </DocumentFragment>
 `;
+
+exports[`VerificationCode should handle and replace non number with "" when type is number 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: solid 1px #dce1eb;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::placeholder {
+  color: #dce1eb;
+}
+
+<div
+    class="sui-box emotion-4"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="3"
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode should handle paste when type is not number 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: solid 1px #dce1eb;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::placeholder {
+  color: #dce1eb;
+}
+
+<div
+    class="sui-box emotion-6"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      placeholder=""
+      type="text"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      placeholder=""
+      type="text"
+      value="h"
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      placeholder=""
+      type="text"
+      value="2"
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      placeholder=""
+      type="text"
+      value="3"
+    />
+    <input
+      class="emotion-0"
+      data-id="4"
+      id="verification-code-4"
+      placeholder=""
+      type="text"
+      value="a"
+    />
+    <input
+      class="emotion-0"
+      data-id="5"
+      id="verification-code-5"
+      placeholder=""
+      type="text"
+      value="*"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode should handle paste with no overflowing values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: solid 1px #dce1eb;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::placeholder {
+  color: #dce1eb;
+}
+
+<div
+    class="sui-box emotion-4"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="2"
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="3"
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode should handle paste with overflowing values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: solid 1px #dce1eb;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::placeholder {
+  color: #dce1eb;
+}
+
+<div
+    class="sui-box emotion-4"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="2"
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="3"
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode should handle paste with overflowing values at different index than 0 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: solid 1px #dce1eb;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #dce1eb;
+}
+
+.emotion-0::placeholder {
+  color: #dce1eb;
+}
+
+<div
+    class="sui-box emotion-4"
+  >
+    <input
+      class="emotion-0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      class="emotion-0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="2"
+    />
+    <input
+      class="emotion-0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="3"
+    />
+  </div>
+</DocumentFragment>
+`;
