@@ -122,7 +122,6 @@ export const SwitchButton = ({
   <Tooltip text={tooltip}>
     <StyledSwitch
       as="label"
-      htmlFor={`${name}-${value}`}
       disabled={disabled}
       variant={variant}
       checked={checked}
@@ -133,7 +132,6 @@ export const SwitchButton = ({
         ? children({ checked, disabled })
         : children}
       <StyledRadio
-        id={`${name}-${value}`}
         type="radio"
         checked={checked}
         onChange={onChange}
