@@ -189,15 +189,6 @@ exports[`Stepper render correctly 1`] = `
   left: 0;
 }
 
-.emotion-7 {
-  fill: #dce1eb;
-  vertical-align: middle;
-  height: 18px;
-  width: 18px;
-  min-width: 18px;
-  min-height: 18px;
-}
-
 <div
     class="sui-box emotion-9"
   >
@@ -247,7 +238,7 @@ exports[`Stepper render correctly 1`] = `
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-7"
+        class="sui-box sc-ui-icon emotion-0"
         viewBox="0 0 24 24"
       >
         <path
@@ -306,15 +297,6 @@ exports[`Stepper render correctly disabled 1`] = `
   font-weight: 500;
   color: #d4dae7;
   left: 0;
-}
-
-.emotion-7 {
-  fill: #dce1eb;
-  vertical-align: middle;
-  height: 18px;
-  width: 18px;
-  min-width: 18px;
-  min-height: 18px;
 }
 
 .emotion-2 {
@@ -517,7 +499,7 @@ exports[`Stepper render correctly disabled 1`] = `
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-7"
+        class="sui-box sc-ui-icon emotion-0"
         viewBox="0 0 24 24"
       >
         <path
@@ -718,15 +700,6 @@ exports[`Stepper render large size 1`] = `
   left: 0;
 }
 
-.emotion-7 {
-  fill: #dce1eb;
-  vertical-align: middle;
-  height: 18px;
-  width: 18px;
-  min-width: 18px;
-  min-height: 18px;
-}
-
 <div
     class="sui-box emotion-9"
   >
@@ -774,7 +747,7 @@ exports[`Stepper render large size 1`] = `
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-7"
+        class="sui-box sc-ui-icon emotion-0"
         viewBox="0 0 24 24"
       >
         <path
@@ -848,15 +821,6 @@ exports[`Stepper render small size 1`] = `
   text-align: center;
 }
 
-.emotion-0 {
-  fill: #dce1eb;
-  vertical-align: middle;
-  height: 18px;
-  width: 18px;
-  min-width: 18px;
-  min-height: 18px;
-}
-
 .emotion-9 {
   background-color: #fff;
   display: -webkit-box;
@@ -916,6 +880,15 @@ exports[`Stepper render small size 1`] = `
 .emotion-2:hover > svg,
 .emotion-2:focus > svg {
   fill: #4f0599;
+}
+
+.emotion-0 {
+  fill: #dce1eb;
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .emotion-1 {
