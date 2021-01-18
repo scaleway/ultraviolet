@@ -37,7 +37,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
                 name="switch-1"
                 value="b"
                 checked={value === 'b'}
-                onChange={e => { console.log(e.currentTarget.value); onChange(e.currentTarget.value) }}
+                onChange={e => onChange(e.currentTarget.value)}
               >
                 This is B
               </SwitchButton>
