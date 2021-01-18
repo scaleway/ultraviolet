@@ -138,6 +138,7 @@ export const SwitchButton = ({
         onFocus={onFocus}
         onBlur={onBlur}
         value={value}
+        name={name}
       />
     </StyledSwitch>
   </Tooltip>
