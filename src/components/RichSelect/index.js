@@ -1,7 +1,7 @@
-import { css } from '@emotion/core'
+import { css, keyframes } from '@emotion/core'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJsonString } from '../../helpers/isJson'
@@ -11,6 +11,21 @@ import { cx, getUUID } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
+
+const fadeIn = keyframes`
+   0% {
+     opacity: 0;
+     transform: scale(1);
+   }
+   50% {
+     opacity: 1;
+     transform: scale(1.15);
+   }
+   100% {
+     opacity: 1;
+     transform: scale(1);
+   }
+`
 
 const styles = {
   select: css`
@@ -55,7 +70,7 @@ const styles = {
   `,
 }
 
-const getSelectStyles = (error, customStyle) => ({
+const getSelectStyles = (error, customStyle, isAnimated) => ({
   control: (provided, state) => ({
     ...provided,
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
@@ -93,6 +108,7 @@ const getSelectStyles = (error, customStyle) => ({
       },
     }),
     ...((customStyle(state) || {}).control || {}),
+    animation: isAnimated ? `1s ${fadeIn}` : 'none',
   }),
   valueContainer: (provided, state) => ({
     ...provided,
@@ -401,10 +417,23 @@ function RichSelect({
   value,
   customStyle = () => true,
   innerRef,
+  animationOnChange = false,
   ...props
 }) {
   const labelId = getUUID('label')
   const inputId = getUUID('input')
+
+  const [isAnimated, setIsAnimated] = useState(false)
+
+  if (animationOnChange) {
+    const deepValue = value?.value
+
+    useEffect(() => {
+      setIsAnimated(true)
+      setTimeout(() => setIsAnimated(false), 1000)
+    }, [setIsAnimated, animationOnChange, deepValue])
+  }
+
   return (
     <Select
       ref={innerRef}
@@ -428,7 +457,7 @@ function RichSelect({
       className={className}
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => option.disabled}
-      styles={getSelectStyles(error, customStyle)}
+      styles={getSelectStyles(error, customStyle, isAnimated)}
       options={
         options ||
         flattenChildren(children).map(
@@ -470,6 +499,7 @@ RichSelectWithRef.propTypes = {
   value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.string,
   customStyle: PropTypes.func,
+  animationOnChange: PropTypes.bool,
 }
 
 export { RichSelectWithRef as RichSelect }
