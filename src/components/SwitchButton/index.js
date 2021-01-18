@@ -132,6 +132,7 @@ export const SwitchButton = ({
         ? children({ checked, disabled })
         : children}
       <StyledRadio
+        id={`${name}-${value}`}
         type="radio"
         checked={checked}
         onChange={onChange}
