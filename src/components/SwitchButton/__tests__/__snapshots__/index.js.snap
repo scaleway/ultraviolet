@@ -66,14 +66,14 @@ exports[`SwitchButton renders correctly 1`] = `
 <label
     aria-checked="false"
     class="sui-box emotion-2 emotion-3"
-    for="radio-choice"
     variant="default"
   >
     Choice
     <input
       aria-checked="false"
       class="emotion-0 emotion-1"
-      id="radio-choice"
+      id="id-ghb0f4"
+      name="radio"
       tabindex="0"
       type="radio"
       value="choice"
@@ -140,14 +140,14 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
     aria-checked="false"
     class="sui-box emotion-2 emotion-3"
     disabled=""
-    for="radio-choice"
     variant="default"
   >
     Choice
     <input
       aria-checked="false"
       class="emotion-0 emotion-1"
-      id="radio-choice"
+      id="id-8k25oj"
+      name="radio"
       tabindex="0"
       type="radio"
       value="choice"
@@ -214,7 +214,6 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
     aria-checked="true"
     class="sui-box emotion-2 emotion-3"
     disabled=""
-    for="radio-choice"
     variant="default"
   >
     true true
@@ -222,7 +221,8 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
       aria-checked="true"
       checked=""
       class="emotion-0 emotion-1"
-      id="radio-choice"
+      id="id-5033j3"
+      name="radio"
       tabindex="0"
       type="radio"
       value="choice"
@@ -332,14 +332,14 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
 <label
     aria-checked="false"
     class="sui-box emotion-2 emotion-3"
-    for="radio-choice"
     variant="segment"
   >
     Choice
     <input
       aria-checked="false"
       class="emotion-0 emotion-1"
-      id="radio-choice"
+      id="id-ec26sr"
+      name="radio"
       tabindex="0"
       type="radio"
       value="choice"
