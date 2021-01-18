@@ -254,7 +254,7 @@ const Stepper = ({
         >
           |
         </span>
-        <Icon name="plus" size={styles.iconSize()} color="gray300" />
+        <Icon name="plus" size={styles.iconSize(size)} color="gray300" />
       </Touchable>
     </Box>
   )
