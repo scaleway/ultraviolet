@@ -108,7 +108,6 @@ const StyledRadio = styled(Radio)`
 export const SwitchButton = ({
   checked,
   disabled,
-  defaultChecked,
   onChange,
   onFocus,
   onBlur,
@@ -149,26 +148,27 @@ export const SwitchButton = ({
 SwitchButton.defaultProps = {
   size: 24,
   disabled: false,
-  defaultChecked: false,
+  checked: false,
   variant: 'default',
-  onFocus: () => {},
-  onBlur: () => {},
+  onFocus: null,
+  onBlur: null,
+  tooltip: null,
 }
 
 SwitchButton.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  disabled: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  size: PropTypes.number,
-  variant: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.func,
   ]).isRequired,
-  tooltip: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  size: PropTypes.number,
+  variant: PropTypes.string,
+  tooltip: PropTypes.string,
 }
