@@ -1,84 +1,37 @@
 import { css } from '@emotion/core'
-import { Box, SwitchState } from '@smooth-ui/core-em'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Radio } from 'reakit'
 import { theme } from '../../theme'
+import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 
-const styles = {
-  container: ({ checked, disabled }) =>
-    css({
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      borderRadius: 4,
-      alignItems: 'center',
-      borderStyle: 'solid',
-      borderColor: theme.gray350,
-      borderWidth: 1,
-      padding: 16,
-      transition: 'color 0.2s, border-color 0.2s, box-shadow 0.2s',
-      userSelect: 'none',
-      touchAction: 'manipulation',
-      color: theme.gray550,
-      fontSize: 16,
-      lineHeight: '22px',
-      position: 'relative',
-      fontWeight: 500,
-      input: {
-        cursor: disabled ? 'not-allowed' : 'pointer',
-      },
-      ':hover,:focus': !checked &&
-        !disabled && {
-          color: theme.gray550,
-          borderColor: theme.primary,
-          boxShadow: `0 0 8px 2px ${theme.gray200}`,
-          select: {
-            color: theme.gray550,
-          },
-        },
-    }),
-  focused: css({
-    boxShadow: `0 0 1px 2px ${transparentize(0.75, theme.primary)}`,
-  }),
-  checked: css({
-    cursor: 'auto',
-    color: theme.primary,
-    borderColor: theme.primary,
-  }),
-  disabled: css({
-    cursor: 'not-allowed',
-    color: theme.gray350,
-    backgroundColor: theme.gray50,
-    borderColor: theme.gray350,
-    pointerEvents: 'none',
-  }),
-}
-
 const variants = {
-  segment: {
-    switchButton: css`
-      font-size: 14;
-      height: 40px;
-      transition: none;
-      :hover,
-      :focus {
-        box-shadow: none;
-        border: none;
-        color: ${theme.gray700};
-      }
-      border-radius: 4px;
+  segment: () => css`
+    font-size: 14;
+    height: 40px;
+    transition: none;
+    border-radius: 4px;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
       box-shadow: none;
-    `,
-    checked: css`
+      border: none;
+      color: ${theme.gray700};
+    }
+
+    &[aria-checked='true'] {
       background-color: ${theme.primary};
       color: ${theme.white};
       :hover {
         color: ${theme.white};
       }
-    `,
-    notChecked: css`
+    }
+
+    &[aria-checked='false'] {
       background-color: white;
       color: ${theme.gray700};
       border-color: ${theme.transparent};
@@ -88,9 +41,69 @@ const variants = {
         border: none;
         box-shadow: none;
       }
-    `,
-  },
+    }
+  `,
 }
+
+const active = () => css`
+  &:hover,
+  &:focus {
+    color: ${theme.gray550};
+    border-color: ${theme.primary};
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px 2px ${theme.gray200};
+  }
+
+  &:focus {
+    box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.primary)};
+  }
+`
+
+const disabledClass = () => css`
+  cursor: not-allowed;
+  color: ${theme.gray350};
+  background-color: ${theme.gray50};
+  border-color: ${theme.gray350};
+  pointer-events: none;
+`
+
+const StyledSwitch = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 4px;
+  align-items: center;
+  border-style: solid;
+  border-color: ${theme.gray350};
+  border-width: 1px;
+  padding: 16px;
+  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  user-select: none;
+  touch-action: manipulation;
+  color: ${theme.gray550};
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+
+  &[aria-checked='true'] {
+    cursor: auto;
+    color: ${theme.primary};
+    border-color: ${theme.primary};
+  }
+
+  ${({ checked, disabled }) => !checked && !disabled && active}
+  ${({ disabled }) => disabled && disabledClass}
+  ${({ variant }) => variant && variants[variant]}
+`
+
+const StyledRadio = styled(Radio)`
+  position: absolute;
+  opacity: 0.01;
+`
 
 export const SwitchButton = ({
   checked,
@@ -107,47 +120,30 @@ export const SwitchButton = ({
   variant,
   ...props
 }) => (
-  <SwitchState
-    name={name}
-    value={value}
-    checked={checked}
-    defaultChecked={defaultChecked}
-    onChange={onChange}
-    onFocus={onFocus}
-    onBlur={onBlur}
-    disabled={disabled}
-  >
-    {({ focused, checked, disabled, input }) => (
-      <Tooltip text={tooltip}>
-        <Box
-          as="label"
-          htmlFor={`${name}-${value}`}
-          disabled={disabled}
-          css={[
-            styles.container({ checked, disabled }),
-            focused && styles.focused,
-            checked && styles.checked,
-            disabled && styles.disabled,
-            variant && variants[variant]?.switchButton,
-            checked
-              ? variants[variant]?.checked
-              : variants[variant]?.notChecked,
-          ]}
-          {...props}
-        >
-          {typeof children === 'function'
-            ? children({ focused, checked, disabled })
-            : children}
-          <input
-            id={`${name}-${value}`}
-            type="radio"
-            {...input}
-            style={{ ...input.style, ...(checked ? { zIndex: -1 } : null) }}
-          />
-        </Box>
-      </Tooltip>
-    )}
-  </SwitchState>
+  <Tooltip text={tooltip}>
+    <StyledSwitch
+      as="label"
+      htmlFor={`${name}-${value}`}
+      disabled={disabled}
+      variant={variant}
+      checked={checked}
+      aria-checked={checked}
+      {...props}
+    >
+      {typeof children === 'function'
+        ? children({ checked, disabled })
+        : children}
+      <StyledRadio
+        id={`${name}-${value}`}
+        type="radio"
+        checked={checked}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        value={value}
+      />
+    </StyledSwitch>
+  </Tooltip>
 )
 
 SwitchButton.defaultProps = {
