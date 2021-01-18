@@ -145,7 +145,7 @@ const Switch = ({ tooltip, size, checked, onChange, disabled, ...props }) => (
 
 Switch.propTypes = {
   tooltip: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(Object.keys(SIZES)),
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(Object.keys(variants)),
