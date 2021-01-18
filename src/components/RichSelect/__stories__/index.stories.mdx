@@ -110,5 +110,22 @@ import { RichSelect } from '..'
   </Story>
 </Canvas>
 
+## Animated
+
+<Canvas>
+  <Story name="Animated" height="150px">
+    <RichSelect
+      animationOnChange
+      options={[
+        { value: 'a', label: 'Option A'},
+        { value: 'b', label: 'Option B'}
+      ]}
+      value={
+        { value: 'a', label: 'Option A' }
+      }
+    />
+  </Story>
+</Canvas>
+
 <ArgsTable of={RichSelect} />
 <ArgsTable of={RichSelect.Option} />
