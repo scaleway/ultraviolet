@@ -16,7 +16,7 @@ const styles = {
     width: 100%;
   `,
   cursor: css`
-    background-color: ${theme.lightBlack};
+    background-color: ${theme.gray950};
     position: absolute;
     height: 15px;
     width: 3px;
@@ -47,7 +47,7 @@ const styles = {
   `,
   value: hasError => css`
     font-weight: 800;
-    color: ${hasError ? theme.orange : theme.lightBlack};
+    color: ${hasError ? theme.orange : theme.gray950};
   `,
   volume: (percentUsed, hasError) => css`
     background-color: ${hasError ? theme.orange : theme.green};
@@ -64,7 +64,7 @@ const styles = {
     transition: width 1000ms ease;
   `,
   volumeContainer: css`
-    background-color: ${theme.lightPrimary};
+    background-color: ${theme.gray200};
     border-radius: 3px;
     position: relative;
 
