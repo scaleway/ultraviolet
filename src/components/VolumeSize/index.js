@@ -1,35 +1,56 @@
-import { css } from '@emotion/core'
+import { css, keyframes } from '@emotion/core'
 import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { theme } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
 
+const sizes = {
+  xs: 0.5,
+  sm: 0.7,
+  md: 1,
+  lg: 1.3,
+  xl: 1.5,
+}
+
+const widthGrow = keyframes`
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+`
+
 const styles = {
-  container: css`
+  container: size => css`
     display: flex;
     align-items: center;
     position: relative;
 
-    height: 15px;
+    height: ${(sizes[size] || 1) * 15}px;
     width: 100%;
   `,
-  cursor: css`
+  cursor: size => css`
     background-color: ${theme.gray950};
     position: absolute;
-    height: 15px;
-    width: 3px;
+    height: ${(sizes[size] || 1) * 15}px;
+    width: ${(sizes[size] || 1) * 3}px;
   `,
   label: type => css`
     text-align: ${type === 'min' ? 'left' : 'right'};
   `,
-  labelContainer: type => css`
+  labelContainer: (type, size) => css`
     display: flex;
     flex-direction: column;
     white-space: nowrap;
     font-weight: 500;
-    line-height: 8px;
+    line-height: ${(sizes[size] || 1) * 8}px;
 
     position: absolute;
     top: 32px;
@@ -52,38 +73,38 @@ const styles = {
   volume: (percentUsed, hasError) => css`
     background-color: ${hasError ? theme.orange : theme.green};
     border-radius: ${percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
-
     position: absolute;
     left: 0;
-
     height: 100%;
     width: ${percentUsed}%;
     min-width: 0;
     max-width: 100%;
-
     transition: width 1000ms ease;
+    animation-iteration-count: 1;
+    animation: ${widthGrow} 1.2s ease backwards;
   `,
-  volumeContainer: css`
+  volumeContainer: size => css`
     background-color: ${theme.gray200};
     border-radius: 3px;
     position: relative;
 
-    height: 6px;
+    height: ${(sizes[size] || 1) * 6}px;
     width: 100%;
   `,
 }
 
 const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
+  const validMinSize = minSize === 0 ? 1 : minSize
   if (!maxSize) {
-    return parseInt((value / minSize) * 50, 10)
+    return parseInt((value / validMinSize) * 50, 10)
   }
 
   if (isTooSmall) {
-    return parseInt((value / minSize) * 10, 10)
+    return parseInt((value / validMinSize) * 10, 10)
   }
 
   if (isTooBig) {
-    return parseInt(90 + ((value - maxSize) / minSize) * 10, 10)
+    return parseInt(90 + ((value - maxSize) / validMinSize) * 10, 10)
   }
 
   if (value === minSize) {
@@ -94,7 +115,10 @@ const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
     return 90
   }
 
-  return parseInt(10 + ((value - minSize) / (maxSize - minSize)) * 80, 10)
+  return parseInt(
+    10 + ((value - validMinSize) / (maxSize - validMinSize)) * 80,
+    10,
+  )
 }
 
 const VolumeSize = ({
@@ -103,18 +127,13 @@ const VolumeSize = ({
   minLabel,
   minSize,
   requiredLabel,
+  size,
   title,
-  unit,
-  value,
   tooBigMessage,
   tooSmallMessage,
+  unit,
+  value,
 }) => {
-  const [started, setStart] = useState(false)
-
-  useEffect(() => {
-    setStart(true)
-  }, [])
-
   const isTooBig = maxSize ? value > maxSize : value > minSize
   const isTooSmall = value < minSize
   const hasError = isTooBig || isTooSmall
@@ -139,25 +158,25 @@ const VolumeSize = ({
           </Typography>
         )}
       </Box>
-      <div css={styles.container}>
-        <div css={styles.volumeContainer}>
+      <div css={styles.container(size)}>
+        <div css={styles.volumeContainer(size)}>
           <span
             css={styles.volume(
-              started
-                ? getPercentUsed({
-                    minSize,
-                    maxSize,
-                    value,
-                    isTooBig,
-                    isTooSmall,
-                  })
-                : 0,
+              getPercentUsed({
+                minSize,
+                maxSize,
+                value,
+                isTooBig,
+                isTooSmall,
+              }),
               hasError,
             )}
           />
         </div>
-        <div css={[styles.cursor, styles.minSizeCursor(Boolean(maxSize))]}>
-          <div css={styles.labelContainer('min')}>
+        <div
+          css={[styles.cursor(size), styles.minSizeCursor(Boolean(maxSize))]}
+        >
+          <div css={styles.labelContainer('min', size)}>
             <div css={styles.label('min')}>
               {minSize} {unit}
             </div>
@@ -167,8 +186,8 @@ const VolumeSize = ({
           </div>
         </div>
         {maxSize && (
-          <div css={[styles.cursor, styles.maxSizeCursor]}>
-            <div css={styles.labelContainer('max')}>
+          <div css={[styles.cursor(size), styles.maxSizeCursor]}>
+            <div css={styles.labelContainer('max', size)}>
               <div css={styles.label('max')}>
                 {maxSize} {unit}
               </div>
@@ -187,6 +206,7 @@ VolumeSize.propTypes = {
   minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
   requiredLabel: PropTypes.string,
+  size: PropTypes.string,
   title: PropTypes.string,
   unit: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
@@ -199,6 +219,7 @@ VolumeSize.defaultProps = {
   maxLabel: 'maximum',
   minLabel: 'minimum',
   requiredLabel: 'required',
+  size: 'md',
   title: undefined,
   tooBigMessage: 'Volume capacity exceeded',
   tooSmallMessage: 'Not enough volume allocated',
