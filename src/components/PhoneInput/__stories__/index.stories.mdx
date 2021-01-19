@@ -1,0 +1,32 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
+import { PhoneInput } from '..'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
+
+<Meta title="Components/PhoneInput" />
+
+# PhoneInput
+
+## Controlled
+
+<Canvas>
+  <Story name="Controlled">
+    <BlockList>
+      <ControlValue value="">
+        {({ value, onChange }) => (
+          <PhoneInput value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+      <ControlValue value="+33">
+        {({ value, onChange }) => (
+          <PhoneInput value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+      <ControlValue value="+33607080910">
+        {({ value, onChange }) => (
+          <PhoneInput value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>

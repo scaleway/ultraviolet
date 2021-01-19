@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneInput renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 > label {
+  color: #b2b6c3;
+  display: block;
+  font-size: 16;
+  height: 48;
+  left: 0;
+  overflow: hidden;
+  padding-left: 48px;
+  padding-right: 8;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: translate(0,12px) scale(1);
+  -ms-transform: translate(0,12px) scale(1);
+  transform: translate(0,12px) scale(1);
+  -webkit-transition: -webkit-transform 0.15s;
+  -webkit-transition: transform 0.15s;
+  transition: transform 0.15s;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.emotion-0 > label.visited {
+  padding-left: 56px;
+  -webkit-transform: translate(-9.6%,-3px) scale(0.8);
+  -ms-transform: translate(-9.6%,-3px) scale(0.8);
+  transform: translate(-9.6%,-3px) scale(0.8);
+}
+
+.emotion-0 .react-tel-input > .flag-dropdown,
+.emotion-0 .react-tel-input > .flag-dropdown .selected-flag {
+  background: none;
+  border: none;
+}
+
+.emotion-0 .react-tel-input .country-list {
+  max-height: 300px;
+}
+
+.emotion-0 .react-tel-input .country-list .search-emoji {
+  display: none;
+}
+
+.emotion-0 .react-tel-input > input.form-control[type='tel'] {
+  background-color: #fff;
+  background-image: none;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 100%;
+  outline: none;
+  padding-right: 8px;
+  padding-top: 14px;
+  position: relative;
+  -webkit-transition: border 0.1s;
+  transition: border 0.1s;
+  width: 100%;
+  height: 48px;
+}
+
+.emotion-0 .react-tel-input > input.form-control[type='tel']:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class=" react-tel-input"
+    >
+      <div
+        class="special-label"
+      >
+        Phone
+      </div>
+      <input
+        class=" form-control"
+        placeholder=""
+        type="tel"
+        value="+1"
+      />
+      <div
+        class=" flag-dropdown"
+      >
+        <div
+          aria-haspopup="listbox"
+          class="selected-flag"
+          role="button"
+          tabindex="0"
+          title="United States: + 1"
+        >
+          <div
+            class="flag us"
+          >
+            <div
+              class="arrow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
