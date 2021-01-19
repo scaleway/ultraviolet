@@ -18,7 +18,9 @@ import { Box, Button } from '../..'
   </Story>
   <Story name="visible">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip visible text="tooltip">Tooltip around the text</Tooltip>
+      <Tooltip visible text="tooltip">
+        Tooltip around the text
+      </Tooltip>
     </Box>
   </Story>
   <Story name="wrap">
@@ -139,7 +141,7 @@ import { Box, Button } from '../..'
     parameters={{ layout: 'centered' }}
     height="100px"
   >
-  <Box display="flex" justifyContent="space-evenly">
+    <Box display="flex" justifyContent="space-evenly">
       {['left', 'top', 'bottom', 'right'].map(placement => (
         <Box key={placement} p={2} color="white">
           <Tooltip text="tooltip" variant="white" placement={placement}>
@@ -150,4 +152,3 @@ import { Box, Button } from '../..'
     </Box>
   </Story>
 </Canvas>
-

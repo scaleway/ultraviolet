@@ -51,6 +51,10 @@
     "*.js": [
       "prettier --write",
       "eslint --fix --ext js,ts,md,mdx"
+    ],
+    "*.mdx": [
+      "prettier --write",
+      "eslint --fix --ext mdx"
     ]
   },
   "config": {
