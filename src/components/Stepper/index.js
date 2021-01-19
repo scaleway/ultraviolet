@@ -25,15 +25,57 @@ const preventNonDigitsKey = event => {
 const roundStep = (value, step) => Math.ceil(value / step) * step
 
 const styles = {
-  container: css({
-    height: 48,
-    backgroundColor: theme.white,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'stretch',
-    fontWeight: 500,
-  }),
+  container: size => css`
+    background-color: ${theme.white};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    font-weight: 500;
+    height: ${{
+      large: '48px',
+      medium: '40px',
+      small: '32px',
+    }[size]};
+  `,
+
+  leftButton: size => css`
+    border-right-width: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-radius: 4px 0 0 4px;
+    padding: 0
+      ${{
+        large: '16px',
+        medium: '10px',
+        small: '4px',
+      }[size]};
+    border-right: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+  `,
+
+  rightButton: size => css`
+    border-left-width: 0;
+    border-radius: 0 4px 4px 0;
+    padding: 0
+      ${{
+        large: '16px',
+        medium: '10px',
+        small: '4px',
+      }[size]};
+    border-left: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+  `,
+
+  separator: size => css`
+    position: absolute;
+    font-size: 30px;
+    top: 7px;
+    font-weight: 500;
+    color: ${theme.gray350};
+    ${size !== 'large' ? 'display: none' : ''};
+  `,
+
+  iconSize: size => (size === 'large' ? 28 : 18),
+
   center: css`
     flex: 1;
     flex-direction: row;
@@ -77,16 +119,6 @@ const styles = {
       }
     }
   `,
-  leftButton: css`
-    border-right-width: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  `,
-  rightButton: css`
-    border-left-width: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  `,
   disabled: css`
     background-color: ${theme.gray100};
     border: none;
@@ -94,17 +126,11 @@ const styles = {
     opacity: 1;
     cursor: not-allowed;
   `,
-  separator: css`
-    position: absolute;
-    font-size: 30px;
-    top: 5px;
-    font-weight: 500;
-    color: ${theme.gray350};
-  `,
 }
 
 const Stepper = ({
   text,
+  size,
   disabled,
   minValue,
   maxValue,
@@ -171,22 +197,22 @@ const Stepper = ({
   const isPlusDisabled = inputValue >= maxValue || disabled
 
   return (
-    <Box {...props} css={styles.container}>
+    <Box {...props} css={styles.container(size)}>
       <Touchable
         css={[
           styles.button(isMinusDisabled),
-          styles.leftButton,
+          styles.leftButton(size),
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(-1)}
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={28} color="gray300" />
+        <Icon name="minus" size={styles.iconSize(size)} color="gray300" />
 
         <span
           css={[
-            styles.separator,
+            styles.separator(size),
             css`
               right: 0;
             `,
@@ -204,6 +230,7 @@ const Stepper = ({
             inputRef.current.focus()
           }
         }}
+        px={1}
       >
         <input
           ref={inputRef}
@@ -224,7 +251,7 @@ const Stepper = ({
       <Touchable
         css={[
           styles.button(isPlusDisabled),
-          styles.rightButton,
+          styles.rightButton(size),
           disabled && styles.disabled,
         ]}
         onClick={offsetFn(1)}
@@ -233,7 +260,7 @@ const Stepper = ({
       >
         <span
           css={[
-            styles.separator,
+            styles.separator(size),
             css`
               left: 0;
             `,
@@ -241,7 +268,7 @@ const Stepper = ({
         >
           |
         </span>
-        <Icon name="plus" size={28} color="gray300" />
+        <Icon name="plus" size={styles.iconSize(size)} color="gray300" />
       </Touchable>
     </Box>
   )
@@ -253,6 +280,7 @@ Stepper.propTypes = {
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
   name: PropTypes.string,
+  size: PropTypes.string,
   step: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
@@ -266,6 +294,7 @@ Stepper.defaultProps = {
   minValue: 0,
   maxValue: 100,
   name: 'stepper',
+  size: 'large',
   text: '',
   value: null,
   step: 1,
