@@ -1,3 +1,10 @@
+## [0.43.0](https://github.com/chambo-e/scw-ui/compare/v0.42.0...v0.43.0) (2021-01-19)
+
+
+### Features
+
+* migrate SwitchButton to reakit ([b231b90](https://github.com/chambo-e/scw-ui/commit/b231b9026f1b553cd7588b507c649c886a433269))
+
 ## [0.42.0](https://github.com/chambo-e/scw-ui/compare/v0.41.0...v0.42.0) (2021-01-19)
 
 
