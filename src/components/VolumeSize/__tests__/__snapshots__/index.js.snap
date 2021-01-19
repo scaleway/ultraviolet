@@ -2,630 +2,6 @@
 
 exports[`VolumeSize renders correctly with all props 1`] = `
 <DocumentFragment>
-  .emotion-15.emotion-15 {
-  margin-bottom: 40px;
-}
-
-.emotion-3.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.emotion-1 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 16px;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  height: 15px;
-  width: 100%;
-}
-
-.emotion-5 {
-  border-radius: 3px;
-  position: relative;
-  height: 6px;
-  width: 100%;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  white-space: nowrap;
-  font-weight: 500;
-  line-height: 8px;
-  position: absolute;
-  top: 32px;
-  left: 0;
-}
-
-.emotion-6 {
-  text-align: left;
-}
-
-.emotion-7 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.emotion-0 {
-  font-weight: 800;
-}
-
-.emotion-2 {
-  fill: #45d6b5;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.emotion-2.emotion-2 {
-  margin-right: 8px;
-}
-
-.emotion-9 {
-  position: absolute;
-  height: 15px;
-  width: 3px;
-  left: 10%;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.emotion-13 {
-  position: absolute;
-  height: 15px;
-  width: 3px;
-  right: 10%;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  white-space: nowrap;
-  font-weight: 500;
-  line-height: 8px;
-  position: absolute;
-  top: 32px;
-  right: 0;
-}
-
-.emotion-10 {
-  text-align: right;
-}
-
-.emotion-4 {
-  background-color: #45d6b5;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 70%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
-}
-
-<div
-    class="sui-box emotion-15"
-  >
-    <div
-      class="sui-box emotion-3"
-    >
-      <p
-        class="sui-box emotion-1"
-      >
-        Test
-        <span
-          class="emotion-0"
-        >
-          15 GB
-        </span>
-      </p>
-      <svg
-        class="sui-box sc-ui-icon emotion-2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="emotion-14"
-    >
-      <div
-        class="emotion-5"
-      >
-        <span
-          class="emotion-4"
-        />
-      </div>
-      <div
-        class="emotion-9"
-      >
-        <div
-          class="emotion-8"
-        >
-          <div
-            class="emotion-6"
-          >
-            0 GB
-          </div>
-          <p
-            class="sui-box emotion-7"
-          >
-            minimum
-          </p>
-        </div>
-      </div>
-      <div
-        class="emotion-13"
-      >
-        <div
-          class="emotion-12"
-        >
-          <div
-            class="emotion-10"
-          >
-            20 GB
-          </div>
-          <p
-            class="sui-box emotion-7"
-          >
-            maximum
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`VolumeSize renders correctly with minimal props 1`] = `
-<DocumentFragment>
-  .emotion-12.emotion-12 {
-  margin-bottom: 40px;
-}
-
-.emotion-4.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.emotion-1 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 16px;
-}
-
-.emotion-0 {
-  font-weight: 800;
-  color: #ff8c69;
-}
-
-.emotion-2 {
-  fill: #ff8c69;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.emotion-2.emotion-2 {
-  margin-right: 8px;
-}
-
-.emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ff8c69;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  height: 15px;
-  width: 100%;
-}
-
-.emotion-6 {
-  border-radius: 3px;
-  position: relative;
-  height: 6px;
-  width: 100%;
-}
-
-.emotion-10 {
-  position: absolute;
-  height: 15px;
-  width: 3px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  white-space: nowrap;
-  font-weight: 500;
-  line-height: 8px;
-  position: absolute;
-  top: 32px;
-  left: 0;
-}
-
-.emotion-7 {
-  text-align: left;
-}
-
-.emotion-8 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.emotion-5 {
-  background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: NaN%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
-}
-
-<div
-    class="sui-box emotion-12"
-  >
-    <div
-      class="sui-box emotion-4"
-    >
-      <p
-        class="sui-box emotion-1"
-      >
-        <span
-          class="emotion-0"
-        >
-          5 GB
-        </span>
-      </p>
-      <svg
-        class="sui-box sc-ui-icon emotion-2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-        />
-      </svg>
-      <p
-        class="sui-box emotion-3"
-      >
-        Volume capacity exceeded
-      </p>
-    </div>
-    <div
-      class="emotion-11"
-    >
-      <div
-        class="emotion-6"
-      >
-        <span
-          class="emotion-5"
-        />
-      </div>
-      <div
-        class="emotion-10"
-      >
-        <div
-          class="emotion-9"
-        >
-          <div
-            class="emotion-7"
-          >
-            0 GB
-          </div>
-          <p
-            class="sui-box emotion-8"
-          >
-            required
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`VolumeSize renders correctly without maxSize 1`] = `
-<DocumentFragment>
-  .emotion-12.emotion-12 {
-  margin-bottom: 40px;
-}
-
-.emotion-4.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.emotion-1 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 16px;
-}
-
-.emotion-0 {
-  font-weight: 800;
-  color: #ff8c69;
-}
-
-.emotion-2 {
-  fill: #ff8c69;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.emotion-2.emotion-2 {
-  margin-right: 8px;
-}
-
-.emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ff8c69;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  height: 15px;
-  width: 100%;
-}
-
-.emotion-6 {
-  border-radius: 3px;
-  position: relative;
-  height: 6px;
-  width: 100%;
-}
-
-.emotion-10 {
-  position: absolute;
-  height: 15px;
-  width: 3px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  white-space: nowrap;
-  font-weight: 500;
-  line-height: 8px;
-  position: absolute;
-  top: 32px;
-  left: 0;
-}
-
-.emotion-7 {
-  text-align: left;
-}
-
-.emotion-8 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.emotion-5 {
-  background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: NaN%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
-}
-
-<div
-    class="sui-box emotion-12"
-  >
-    <div
-      class="sui-box emotion-4"
-    >
-      <p
-        class="sui-box emotion-1"
-      >
-        Test
-        <span
-          class="emotion-0"
-        >
-          15 GB
-        </span>
-      </p>
-      <svg
-        class="sui-box sc-ui-icon emotion-2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-        />
-      </svg>
-      <p
-        class="sui-box emotion-3"
-      >
-        Test too big
-      </p>
-    </div>
-    <div
-      class="emotion-11"
-    >
-      <div
-        class="emotion-6"
-      >
-        <span
-          class="emotion-5"
-        />
-      </div>
-      <div
-        class="emotion-10"
-      >
-        <div
-          class="emotion-9"
-        >
-          <div
-            class="emotion-7"
-          >
-            0 GB
-          </div>
-          <p
-            class="sui-box emotion-8"
-          >
-            required
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`VolumeSize should display too big error 1`] = `
-<DocumentFragment>
   .emotion-16.emotion-16 {
   margin-bottom: 40px;
 }
@@ -642,7 +18,7 @@ exports[`VolumeSize should display too big error 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -653,37 +29,12 @@ exports[`VolumeSize should display too big error 1`] = `
   font-weight: 500;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 16px;
 }
 
 .emotion-0 {
-  font-weight: 800;
-  color: #ff8c69;
-}
-
-.emotion-2 {
-  fill: #ff8c69;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.emotion-2.emotion-2 {
-  margin-right: 8px;
-}
-
-.emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ff8c69;
+  margin-right: 5px;
 }
 
 .emotion-15 {
@@ -737,17 +88,21 @@ exports[`VolumeSize should display too big error 1`] = `
   line-height: 22px;
 }
 
-.emotion-5 {
-  background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: NaN%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
+.emotion-1 {
+  font-weight: 800;
+}
+
+.emotion-3 {
+  fill: #45d6b5;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 8px;
 }
 
 .emotion-10 {
@@ -787,6 +142,19 @@ exports[`VolumeSize should display too big error 1`] = `
   text-align: right;
 }
 
+.emotion-5 {
+  background-color: #45d6b5;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 70%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+}
+
 <div
     class="sui-box emotion-16"
   >
@@ -794,28 +162,27 @@ exports[`VolumeSize should display too big error 1`] = `
       class="sui-box emotion-4"
     >
       <p
-        class="sui-box emotion-1"
+        class="sui-box emotion-2"
       >
-        Test
         <span
           class="emotion-0"
         >
-          25 GB
+          Test
+        </span>
+        <span
+          class="emotion-1"
+        >
+          15 GB
         </span>
       </p>
       <svg
-        class="sui-box sc-ui-icon emotion-2"
+        class="sui-box sc-ui-icon emotion-3"
         viewBox="0 0 24 24"
       >
         <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
         />
       </svg>
-      <p
-        class="sui-box emotion-3"
-      >
-        Test too big
-      </p>
     </div>
     <div
       class="emotion-15"
@@ -868,13 +235,13 @@ exports[`VolumeSize should display too big error 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VolumeSize should display too small error 1`] = `
+exports[`VolumeSize renders correctly with minimal props 1`] = `
 <DocumentFragment>
-  .emotion-12.emotion-12 {
+  .emotion-13.emotion-13 {
   margin-bottom: 40px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -886,7 +253,7 @@ exports[`VolumeSize should display too small error 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -897,16 +264,20 @@ exports[`VolumeSize should display too small error 1`] = `
   font-weight: 500;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 16px;
 }
 
 .emotion-0 {
+  margin-right: 5px;
+}
+
+.emotion-1 {
   font-weight: 800;
   color: #ff8c69;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: #ff8c69;
   vertical-align: middle;
   height: 1em;
@@ -915,11 +286,11 @@ exports[`VolumeSize should display too small error 1`] = `
   min-height: 1em;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   margin-right: 8px;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -930,7 +301,7 @@ exports[`VolumeSize should display too small error 1`] = `
   color: #ff8c69;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -944,14 +315,14 @@ exports[`VolumeSize should display too small error 1`] = `
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   border-radius: 3px;
   position: relative;
   height: 6px;
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: absolute;
   height: 15px;
   width: 3px;
@@ -961,7 +332,7 @@ exports[`VolumeSize should display too small error 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -977,11 +348,11 @@ exports[`VolumeSize should display too small error 1`] = `
   left: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   text-align: left;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -991,7 +362,671 @@ exports[`VolumeSize should display too small error 1`] = `
   line-height: 22px;
 }
 
-.emotion-5 {
+.emotion-6 {
+  background-color: #ff8c69;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: NaN%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+}
+
+<div
+    class="sui-box emotion-13"
+  >
+    <div
+      class="sui-box emotion-5"
+    >
+      <p
+        class="sui-box emotion-2"
+      >
+        <span
+          class="emotion-0"
+        />
+        <span
+          class="emotion-1"
+        >
+          5 GB
+        </span>
+      </p>
+      <svg
+        class="sui-box sc-ui-icon emotion-3"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+      <p
+        class="sui-box emotion-4"
+      >
+        Volume capacity exceeded
+      </p>
+    </div>
+    <div
+      class="emotion-12"
+    >
+      <div
+        class="emotion-7"
+      >
+        <span
+          class="emotion-6"
+        />
+      </div>
+      <div
+        class="emotion-11"
+      >
+        <div
+          class="emotion-10"
+        >
+          <div
+            class="emotion-8"
+          >
+            0 GB
+          </div>
+          <p
+            class="sui-box emotion-9"
+          >
+            required
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VolumeSize renders correctly without maxSize 1`] = `
+<DocumentFragment>
+  .emotion-13.emotion-13 {
+  margin-bottom: 40px;
+}
+
+.emotion-5.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.emotion-2.emotion-2 {
+  margin-right: 16px;
+}
+
+.emotion-0 {
+  margin-right: 5px;
+}
+
+.emotion-1 {
+  font-weight: 800;
+  color: #ff8c69;
+}
+
+.emotion-3 {
+  fill: #ff8c69;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 8px;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff8c69;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 15px;
+  width: 100%;
+}
+
+.emotion-7 {
+  border-radius: 3px;
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+.emotion-11 {
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.emotion-8 {
+  text-align: left;
+}
+
+.emotion-9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.emotion-6 {
+  background-color: #ff8c69;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: NaN%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+}
+
+<div
+    class="sui-box emotion-13"
+  >
+    <div
+      class="sui-box emotion-5"
+    >
+      <p
+        class="sui-box emotion-2"
+      >
+        <span
+          class="emotion-0"
+        >
+          Test
+        </span>
+        <span
+          class="emotion-1"
+        >
+          15 GB
+        </span>
+      </p>
+      <svg
+        class="sui-box sc-ui-icon emotion-3"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+      <p
+        class="sui-box emotion-4"
+      >
+        Test too big
+      </p>
+    </div>
+    <div
+      class="emotion-12"
+    >
+      <div
+        class="emotion-7"
+      >
+        <span
+          class="emotion-6"
+        />
+      </div>
+      <div
+        class="emotion-11"
+      >
+        <div
+          class="emotion-10"
+        >
+          <div
+            class="emotion-8"
+          >
+            0 GB
+          </div>
+          <p
+            class="sui-box emotion-9"
+          >
+            required
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VolumeSize should display too big error 1`] = `
+<DocumentFragment>
+  .emotion-17.emotion-17 {
+  margin-bottom: 40px;
+}
+
+.emotion-5.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.emotion-2.emotion-2 {
+  margin-right: 16px;
+}
+
+.emotion-0 {
+  margin-right: 5px;
+}
+
+.emotion-1 {
+  font-weight: 800;
+  color: #ff8c69;
+}
+
+.emotion-3 {
+  fill: #ff8c69;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 8px;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff8c69;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 15px;
+  width: 100%;
+}
+
+.emotion-7 {
+  border-radius: 3px;
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.emotion-8 {
+  text-align: left;
+}
+
+.emotion-9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.emotion-6 {
+  background-color: #ff8c69;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: NaN%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+}
+
+.emotion-11 {
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  left: 10%;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.emotion-15 {
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  right: 10%;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  right: 0;
+}
+
+.emotion-12 {
+  text-align: right;
+}
+
+<div
+    class="sui-box emotion-17"
+  >
+    <div
+      class="sui-box emotion-5"
+    >
+      <p
+        class="sui-box emotion-2"
+      >
+        <span
+          class="emotion-0"
+        >
+          Test
+        </span>
+        <span
+          class="emotion-1"
+        >
+          25 GB
+        </span>
+      </p>
+      <svg
+        class="sui-box sc-ui-icon emotion-3"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+      <p
+        class="sui-box emotion-4"
+      >
+        Test too big
+      </p>
+    </div>
+    <div
+      class="emotion-16"
+    >
+      <div
+        class="emotion-7"
+      >
+        <span
+          class="emotion-6"
+        />
+      </div>
+      <div
+        class="emotion-11"
+      >
+        <div
+          class="emotion-10"
+        >
+          <div
+            class="emotion-8"
+          >
+            0 GB
+          </div>
+          <p
+            class="sui-box emotion-9"
+          >
+            minimum
+          </p>
+        </div>
+      </div>
+      <div
+        class="emotion-15"
+      >
+        <div
+          class="emotion-14"
+        >
+          <div
+            class="emotion-12"
+          >
+            20 GB
+          </div>
+          <p
+            class="sui-box emotion-9"
+          >
+            maximum
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VolumeSize should display too small error 1`] = `
+<DocumentFragment>
+  .emotion-13.emotion-13 {
+  margin-bottom: 40px;
+}
+
+.emotion-5.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.emotion-2.emotion-2 {
+  margin-right: 16px;
+}
+
+.emotion-0 {
+  margin-right: 5px;
+}
+
+.emotion-1 {
+  font-weight: 800;
+  color: #ff8c69;
+}
+
+.emotion-3 {
+  fill: #ff8c69;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 8px;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff8c69;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 15px;
+  width: 100%;
+}
+
+.emotion-7 {
+  border-radius: 3px;
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+.emotion-11 {
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.emotion-8 {
+  text-align: left;
+}
+
+.emotion-9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.emotion-6 {
   background-color: #ff8c69;
   border-radius: 3px 0 0 3px;
   position: absolute;
@@ -1005,23 +1040,27 @@ exports[`VolumeSize should display too small error 1`] = `
 }
 
 <div
-    class="sui-box emotion-12"
+    class="sui-box emotion-13"
   >
     <div
-      class="sui-box emotion-4"
+      class="sui-box emotion-5"
     >
       <p
-        class="sui-box emotion-1"
+        class="sui-box emotion-2"
       >
-        Test
         <span
           class="emotion-0"
+        >
+          Test
+        </span>
+        <span
+          class="emotion-1"
         >
           15 GB
         </span>
       </p>
       <svg
-        class="sui-box sc-ui-icon emotion-2"
+        class="sui-box sc-ui-icon emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -1029,34 +1068,34 @@ exports[`VolumeSize should display too small error 1`] = `
         />
       </svg>
       <p
-        class="sui-box emotion-3"
+        class="sui-box emotion-4"
       >
         Test too small
       </p>
     </div>
     <div
-      class="emotion-11"
+      class="emotion-12"
     >
       <div
-        class="emotion-6"
+        class="emotion-7"
       >
         <span
-          class="emotion-5"
+          class="emotion-6"
         />
       </div>
       <div
-        class="emotion-10"
+        class="emotion-11"
       >
         <div
-          class="emotion-9"
+          class="emotion-10"
         >
           <div
-            class="emotion-7"
+            class="emotion-8"
           >
             20 GB
           </div>
           <p
-            class="sui-box emotion-8"
+            class="sui-box emotion-9"
           >
             required
           </p>
