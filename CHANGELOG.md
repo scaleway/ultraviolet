@@ -1,3 +1,10 @@
+### [0.43.1](https://github.com/chambo-e/scw-ui/compare/v0.43.0...v0.43.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* **stepper:** added sizes to stepper ([a071877](https://github.com/chambo-e/scw-ui/commit/a07187743cdded19eea8245dfa2a6ef7edf82551))
+
 ## [0.43.0](https://github.com/chambo-e/scw-ui/compare/v0.42.0...v0.43.0) (2021-01-19)
 
 
