@@ -1,125 +1,180 @@
 import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import { useState } from 'react'
 import { RichSelect } from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import { Box } from '../../Box'
+import * as animations from '../../../utils/animations'
+import { Button } from '../../Button'
 
 <Meta title="Components/RichSelect" component={RichSelect} />
 
 # RichSelect
 
-<Description>A Rich Select</Description>
+<Description>
+  RichSelect is a component used to select a value between different options.
+</Description>
 
-## Uncontrolled
+## Basic
+
+### Uncontrolled
 
 <Canvas>
-  <Story name="Uncontrolled" height="150px">
-    <RichSelect>
-      <RichSelect.Option value="a">Option A</RichSelect.Option>
-      <RichSelect.Option value="b">Option B</RichSelect.Option>
-    </RichSelect>
+  <Story name="Uncontrolled" height="175px">
+    <Box m={2}>
+      <RichSelect>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
   </Story>
 </Canvas>
 
-## Controlled
+### Controlled
 
 <Canvas>
-  <Story name="Controlled" height="150px">
-    <RichSelect>
-      <RichSelect.Option value="a">Option A</RichSelect.Option>
-      <RichSelect.Option value="b">Option B</RichSelect.Option>
-    </RichSelect>
+  <Story name="Controlled" height="175px">
+    <Box m={2}>
+      <ControlValue value>
+        {({ value, onChange }) => (
+          <RichSelect value={value} onChange={onChange}>
+            <RichSelect.Option value="a">Option A</RichSelect.Option>
+            <RichSelect.Option value="b">Option B</RichSelect.Option>
+          </RichSelect>
+        )}
+      </ControlValue>
+    </Box>
   </Story>
 </Canvas>
 
-## Disabled
+### Disabled
 
 <Canvas>
-  <Story name="Disabled" height="150px">
-    <RichSelect disabled>
-      <RichSelect.Option value="a">Option A</RichSelect.Option>
-      <RichSelect.Option value="b">Option B</RichSelect.Option>
-    </RichSelect>
+  <Story name="Disabled" height="100px">
+    <Box m={2}>
+      <RichSelect disabled>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story name="Required" height="175px">
+    <Box m={2}>
+      <RichSelect required>
+        <RichSelect.Option value="11">11:00</RichSelect.Option>
+        <RichSelect.Option value="12">12:00</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
+### Animated
+
+#### Description
+
+You can easily add an animation to your RichSelect using `animationOnChange`, `animation` and `animationDuration` properties.<br/>
+The animation will be played when the value changes. Animation start when you select new value but also if you change the value
+of RichSelect with an external way (check example with button).
+
+#### Available animations
+
+<ControlValue>
+  {() => (
+    <Box>
+      {Object.keys(animations).map(animation => <code>{animation}</code>)}
+    </Box>
+  )}
+</ControlValue>
+
+<Canvas>
+  <Story name="Animated" height="230px">
+    <Box mx={8} my={2}>
+      <ControlValue value>
+        {({ value, onChange }) => (
+          <>
+            <Button onClick={() => onChange({ value: 'a', label: 'Option A' })} mb={2}>
+              Select Option A
+            </Button>
+            <RichSelect animationOnChange animation="pulse" animationDuration={1000} value={value}
+                        onChange={onChange}>
+              <RichSelect.Option value="a">Option A</RichSelect.Option>
+              <RichSelect.Option value="b">Option B</RichSelect.Option>
+            </RichSelect>
+          </>
+        )}
+      </ControlValue>
+    </Box>
   </Story>
 </Canvas>
 
 ## Multi
 
+### Normal
+
 <Canvas>
-  <Story name="Multi" height="200px">
-    <RichSelect isMulti required>
-      <RichSelect.Option value="a">Option A</RichSelect.Option>
-      <RichSelect.Option value="b">Option B</RichSelect.Option>
-      <RichSelect.Option value="c">Option C</RichSelect.Option>
-      <RichSelect.Option value="d">Option D</RichSelect.Option>
-      <RichSelect.Option value="e">Option E</RichSelect.Option>
-      <RichSelect.Option value="f">Option F</RichSelect.Option>
-    </RichSelect>
+  <Story name="Multi" height="300px">
+    <Box m={2}>
+      <RichSelect isMulti>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+        <RichSelect.Option value="c">Option C</RichSelect.Option>
+        <RichSelect.Option value="d">Option D</RichSelect.Option>
+        <RichSelect.Option value="e">Option E</RichSelect.Option>
+        <RichSelect.Option value="f">Option F</RichSelect.Option>
+      </RichSelect>
+    </Box>
   </Story>
 </Canvas>
 
-## Multi Disabled
+### Disabled
 
 <Canvas>
   <Story name="Multi Disabled" height="100px">
-    <RichSelect
-      value={{ value: 'a', label: 'Option A' }}
-      isMulti
-      disabled
-      required
-    >
-      <RichSelect.Option value="a">Option A</RichSelect.Option>
-      <RichSelect.Option value="b">Option B</RichSelect.Option>
-    </RichSelect>
+    <Box m={2}>
+      <RichSelect
+        value={{ value: 'a', label: 'Option A' }}
+        isMulti
+        disabled
+      >
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
   </Story>
 </Canvas>
 
 ## Time
 
+### Normal
+
 <Canvas>
-  <Story name="Time" height="100px">
-    <RichSelect time>
-      <RichSelect.Option value="11">11:00</RichSelect.Option>
-      <RichSelect.Option value="12">12:00</RichSelect.Option>
-    </RichSelect>
+  <Story name="Time" height="175px">
+    <Box m={2}>
+      <RichSelect time>
+        <RichSelect.Option value="11">11:00</RichSelect.Option>
+        <RichSelect.Option value="12">12:00</RichSelect.Option>
+      </RichSelect>
+    </Box>
   </Story>
 </Canvas>
 
-## Time Error
+### Error
 
 <Canvas>
-  <Story name="Time Error" height="100px">
-    <RichSelect time error>
-      <RichSelect.Option value="11">11:00</RichSelect.Option>
-      <RichSelect.Option value="12">12:00</RichSelect.Option>
-    </RichSelect>
+  <Story name="Time Error" height="175px">
+    <Box m={2}>
+      <RichSelect time error>
+        <RichSelect.Option value="11">11:00</RichSelect.Option>
+        <RichSelect.Option value="12">12:00</RichSelect.Option>
+      </RichSelect>
+    </Box>
   </Story>
 </Canvas>
 
-## Required
-
-<Canvas>
-  <Story name="Required" height="100px">
-    <RichSelect required>
-      <RichSelect.Option value="11">11:00</RichSelect.Option>
-      <RichSelect.Option value="12">12:00</RichSelect.Option>
-    </RichSelect>
-  </Story>
-</Canvas>
-
-## Animated
-
-<Canvas>
-  <Story name="Animated" height="150px">
-    <RichSelect
-      animationOnChange
-      options={[
-        { value: 'a', label: 'Option A'},
-        { value: 'b', label: 'Option B'}
-      ]}
-      value={
-        { value: 'a', label: 'Option A' }
-      }
-    />
-  </Story>
-</Canvas>
+## Properties
 
 <ArgsTable of={RichSelect} />
-<ArgsTable of={RichSelect.Option} />
