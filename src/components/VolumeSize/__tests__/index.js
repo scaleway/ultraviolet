@@ -10,8 +10,11 @@ describe('VolumeSize', () => {
   test('renders correctly with all props', () => {
     shouldMatchEmotionSnapshot(
       <VolumeSize
+        maxLabel="max"
         maxSize={20}
+        minLabel="min"
         minSize={0}
+        requiredLabel="req"
         title="Test"
         unit="GB"
         tooBigMessage="Test too big"
