@@ -57,7 +57,7 @@ const styles = {
     top: 5px;
     font-weight: 500;
     color: ${theme.gray350};
-    display: ${size === 'small' && 'none'};
+    ${size === 'small' ? 'display: none' : ''};
   `,
 
   iconSize: size => (size === 'large' ? 28 : 18),
