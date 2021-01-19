@@ -8,24 +8,24 @@ import {
 import { CategoryIcon, availableIcons } from '..'
 import { Box } from '../../Box'
 
-<Meta
-  title="Components/CategoryIcon"
-  component={CategoryIcon}
-/>
+<Meta title="Components/CategoryIcon" component={CategoryIcon} />
 
 # CategoryIcon
 
-<Description>
-  CategoryIcon
-</Description>
+<Description>CategoryIcon</Description>
 
 <Canvas>
-  <Story
-    name="basic"
-  >
+  <Story name="basic">
     {availableIcons.map(name => (
-      <Box display="flex" alignItems="center" my={1} key={name} style={{ fontSize: '1.3em' }}>
-        <CategoryIcon name={name} />&nbsp;&nbsp;&nbsp;{name}
+      <Box
+        display="flex"
+        alignItems="center"
+        my={1}
+        key={name}
+        style={{ fontSize: '1.3em' }}
+      >
+        <CategoryIcon name={name} />
+        &nbsp;&nbsp;&nbsp;{name}
       </Box>
     ))}
   </Story>
@@ -34,12 +34,17 @@ import { Box } from '../../Box'
 ## Custom size
 
 <Canvas>
-  <Story
-    name="custom-size"
-  >
+  <Story name="custom-size">
     {availableIcons.map(name => (
-      <Box display="flex" alignItems="center" my={1} key={name} style={{ fontSize: '1.3em' }}>
-        <CategoryIcon size={64} name={name} />&nbsp;&nbsp;&nbsp;{name}
+      <Box
+        display="flex"
+        alignItems="center"
+        my={1}
+        key={name}
+        style={{ fontSize: '1.3em' }}
+      >
+        <CategoryIcon size={64} name={name} />
+        &nbsp;&nbsp;&nbsp;{name}
       </Box>
     ))}
   </Story>

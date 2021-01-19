@@ -39,24 +39,26 @@ import { Badge } from '..'
 ## `variant`
 
 #### `neutral`
+
 <Canvas>
   <Story
     name="neutral"
     args={{
-      variants: [
-        'success',
-        'beta',
-        'error',
-        'info',
-        'neutral',
-      ],
+      variants: ['success', 'beta', 'error', 'info', 'neutral'],
     }}
   >
-    {args => args.variants.map(variant => <Badge variant={variant} mx={1}>{variant}</Badge>)}
+    {args =>
+      args.variants.map(variant => (
+        <Badge variant={variant} mx={1}>
+          {variant}
+        </Badge>
+      ))
+    }
   </Story>
 </Canvas>
 
 #### `lighter`
+
 <Canvas>
   <Story
     name="light"
@@ -70,7 +72,13 @@ import { Badge } from '..'
       ],
     }}
   >
-    {args => args.variants.map(variant => <Badge variant={variant} mx={1}>{variant}</Badge>)}
+    {args =>
+      args.variants.map(variant => (
+        <Badge variant={variant} mx={1}>
+          {variant}
+        </Badge>
+      ))
+    }
   </Story>
 </Canvas>
 
@@ -80,16 +88,16 @@ import { Badge } from '..'
   <Story
     name="medium"
     args={{
-      sizes: [
-        'medium',
-        'small',
-        'xsmall',
-        'xxsmall',
-        'rounded'
-      ]
+      sizes: ['medium', 'small', 'xsmall', 'xxsmall', 'rounded'],
     }}
   >
-    {args => args.sizes.map(size => <Badge size={size} mx={1}>{size}</Badge>)}
+    {args =>
+      args.sizes.map(size => (
+        <Badge size={size} mx={1}>
+          {size}
+        </Badge>
+      ))
+    }
   </Story>
 </Canvas>
 

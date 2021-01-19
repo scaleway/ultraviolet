@@ -1,67 +1,38 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { CreationProgress } from '..'
 
-<Meta
-  title="Components/CreationProgress"
-  component={CreationProgress}
-/>
+<Meta title="Components/CreationProgress" component={CreationProgress} />
 
 # CreationProgress
 
-<Description>
-  CreationProgress //TODO:
-</Description>
+<Description>CreationProgress //TODO:</Description>
 
 <Canvas>
-  <Story
-    name="basic"
-  >
+  <Story name="basic">
     <CreationProgress selected={0}>
-      <CreationProgress.Step>
-        Step 1
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 2
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 3
-      </CreationProgress.Step>
+      <CreationProgress.Step>Step 1</CreationProgress.Step>
+      <CreationProgress.Step>Step 2</CreationProgress.Step>
+      <CreationProgress.Step>Step 3</CreationProgress.Step>
     </CreationProgress>
   </Story>
 </Canvas>
 
 <Canvas>
-  <Story
-    name="selected-1"
-  >
+  <Story name="selected-1">
     <CreationProgress selected={1}>
-      <CreationProgress.Step>
-        Step 1
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 2
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 3
-      </CreationProgress.Step>
+      <CreationProgress.Step>Step 1</CreationProgress.Step>
+      <CreationProgress.Step>Step 2</CreationProgress.Step>
+      <CreationProgress.Step>Step 3</CreationProgress.Step>
     </CreationProgress>
   </Story>
 </Canvas>
 
 <Canvas>
-  <Story
-    name="selected-all"
-  >
+  <Story name="selected-all">
     <CreationProgress selected={2}>
-      <CreationProgress.Step>
-        Step 1
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 2
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 3
-      </CreationProgress.Step>
+      <CreationProgress.Step>Step 1</CreationProgress.Step>
+      <CreationProgress.Step>Step 2</CreationProgress.Step>
+      <CreationProgress.Step>Step 3</CreationProgress.Step>
     </CreationProgress>
   </Story>
 </Canvas>
@@ -69,19 +40,11 @@ import { CreationProgress } from '..'
 # Without animation
 
 <Canvas>
-  <Story
-    name="no-animation"
-  >
+  <Story name="no-animation">
     <CreationProgress selected={1} animated={false}>
-      <CreationProgress.Step>
-        Step 1
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 2
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 3
-      </CreationProgress.Step>
+      <CreationProgress.Step>Step 1</CreationProgress.Step>
+      <CreationProgress.Step>Step 2</CreationProgress.Step>
+      <CreationProgress.Step>Step 3</CreationProgress.Step>
     </CreationProgress>
   </Story>
 </Canvas>
@@ -89,19 +52,11 @@ import { CreationProgress } from '..'
 # With steps number
 
 <Canvas>
-  <Story
-    name="isStepsNumber"
-  >
+  <Story name="isStepsNumber">
     <CreationProgress selected={1} isStepsNumber>
-      <CreationProgress.Step>
-        Step 1
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 2
-      </CreationProgress.Step>
-      <CreationProgress.Step>
-        Step 3
-      </CreationProgress.Step>
+      <CreationProgress.Step>Step 1</CreationProgress.Step>
+      <CreationProgress.Step>Step 2</CreationProgress.Step>
+      <CreationProgress.Step>Step 3</CreationProgress.Step>
     </CreationProgress>
   </Story>
 </Canvas>

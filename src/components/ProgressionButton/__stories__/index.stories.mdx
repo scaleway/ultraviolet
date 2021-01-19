@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { ProgressionButton } from '..'
 
 <Meta title="Components/ProgressionButton" component={ProgressionButton} />
@@ -11,19 +17,19 @@ import { ProgressionButton } from '..'
 
 <Canvas>
   <Story name="basic">
-    <ProgressionButton height={40}>
-      Progressing…
-    </ProgressionButton>
+    <ProgressionButton height={40}>Progressing…</ProgressionButton>
   </Story>
 </Canvas>
 
 ## Custom component
 
 <Description>
-  The `creation` props indicates the starting time of the progression, by default it's the time of when the object is mounted.
+  The `creation` props indicates the starting time of the progression, by
+  default it's the time of when the object is mounted.
 </Description>
 <Description>
-  The `duration` props indicates an approximation of the progression duration in seconds, by default it's `120`
+  The `duration` props indicates an approximation of the progression duration in
+  seconds, by default it's `120`
 </Description>
 <Description>
   You can chose the color of the Progression using the `color` props
@@ -47,7 +53,8 @@ import { ProgressionButton } from '..'
       color="primary"
       height={40}
     >
-      I was supposed to start one minute ago and take 90 seconds (meaning I only have 30s left and start at 66%)
+      I was supposed to start one minute ago and take 90 seconds (meaning I only
+      have 30s left and start at 66%)
     </ProgressionButton>
   </Story>
   <Story name="custom-already-done">
@@ -57,7 +64,8 @@ import { ProgressionButton } from '..'
       color="info"
       height={40}
     >
-      I was supposed to start 90 seconds ago and take 90 seconds (meaning I'm already done)
+      I was supposed to start 90 seconds ago and take 90 seconds (meaning I'm
+      already done)
     </ProgressionButton>
   </Story>
 </Canvas>
