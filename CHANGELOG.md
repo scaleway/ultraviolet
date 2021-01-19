@@ -1,3 +1,10 @@
+## [0.42.0](https://github.com/chambo-e/scw-ui/compare/v0.41.0...v0.42.0) (2021-01-19)
+
+
+### Features
+
+* migrate Switch to reakit ([d6e785d](https://github.com/chambo-e/scw-ui/commit/d6e785d74310054864e16e53fd2d5b48a88e4332))
+
 ## [0.41.0](https://github.com/chambo-e/scw-ui/compare/v0.40.0...v0.41.0) (2021-01-15)
 
 
