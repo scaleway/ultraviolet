@@ -1,0 +1,62 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
+import { VolumeSize } from '..'
+
+<Meta title="Components/VolumeSize" />
+
+# VolumeSize
+
+## With a max size
+
+### In the range
+
+<Canvas>
+  <Story name="In the range">
+    <VolumeSize minSize={30} maxSize={70} unit="KB" value={40} />
+  </Story>
+</Canvas>
+
+### Value too small
+
+<Canvas>
+  <Story name="With max size - Value too small">
+    <VolumeSize minSize={30} maxSize={70} unit="KB" value={20} />
+  </Story>
+</Canvas>
+
+### Value too big
+
+<Canvas>
+  <Story name="With max size - Value too big">
+    <VolumeSize minSize={30} maxSize={70} unit="KB" value={80} />
+  </Story>
+</Canvas>
+
+## With no max size
+
+### Required value
+
+<Canvas>
+  <Story name="Without max size - Required">
+    <VolumeSize minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Value too small
+
+<Canvas>
+  <Story name="Without max size - Value too small">
+    <VolumeSize minSize={30} unit="KB" value={20} />
+  </Story>
+</Canvas>
+
+### Value too big
+
+<Canvas>
+  <Story name="Without max size - Value too big">
+    <VolumeSize minSize={30} unit="KB" value={40} />
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={VolumeSize} />
