@@ -5,6 +5,23 @@ import { VolumeSize } from '..'
 
 # VolumeSize
 
+## Demo with full Props
+
+<Canvas>
+  <Story name="Demo">
+    <VolumeSize
+      maxLabel="max"
+      maxSize={40}
+      minLabel="min"
+      minSize={0}
+      requiredLabel="required"
+      title="Demo"
+      unit="GB"
+      value={20}
+    />
+  </Story>
+</Canvas>
+
 ## With a max size
 
 ### In the range
@@ -12,11 +29,11 @@ import { VolumeSize } from '..'
 <Canvas>
   <Story name="In the range">
     <VolumeSize
-      minSize={30}
       maxSize={70}
+      minSize={30}
+      title="In the range"
       unit="KB"
       value={40}
-      title="In the range"
     />
   </Story>
 </Canvas>

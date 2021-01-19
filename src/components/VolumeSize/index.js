@@ -98,11 +98,14 @@ const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
 }
 
 const VolumeSize = ({
-  title,
-  minSize,
+  maxLabel,
   maxSize,
-  value,
+  minLabel,
+  minSize,
+  requiredLabel,
+  title,
   unit,
+  value,
   tooBigMessage,
   tooSmallMessage,
 }) => {
@@ -159,7 +162,7 @@ const VolumeSize = ({
               {minSize} {unit}
             </div>
             <Typography variant="bodyC">
-              {maxSize ? 'minimum' : 'required'}
+              {maxSize ? minLabel : requiredLabel}
             </Typography>
           </div>
         </div>
@@ -169,7 +172,7 @@ const VolumeSize = ({
               <div css={styles.label('max')}>
                 {maxSize} {unit}
               </div>
-              <Typography variant="bodyC">maximum</Typography>
+              <Typography variant="bodyC">{maxLabel}</Typography>
             </div>
           </div>
         )}
@@ -179,17 +182,23 @@ const VolumeSize = ({
 }
 
 VolumeSize.propTypes = {
+  maxLabel: PropTypes.string,
   maxSize: PropTypes.number,
+  minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-  unit: PropTypes.string.isRequired,
+  requiredLabel: PropTypes.string,
   title: PropTypes.string,
+  unit: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
   tooBigMessage: PropTypes.string,
   tooSmallMessage: PropTypes.string,
 }
 
 VolumeSize.defaultProps = {
   maxSize: undefined,
+  maxLabel: 'maximum',
+  minLabel: 'minimum',
+  requiredLabel: 'required',
   title: undefined,
   tooBigMessage: 'Volume capacity exceeded',
   tooSmallMessage: 'Not enough volume allocated',
