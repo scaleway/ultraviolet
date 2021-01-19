@@ -17,7 +17,7 @@ import { VolumeSize } from '..'
       requiredLabel="required"
       title="Demo"
       unit="GB"
-      value={20}
+      value={0}
     />
   </Story>
 </Canvas>
@@ -77,6 +77,48 @@ import { VolumeSize } from '..'
 <Canvas>
   <Story name="Without max size - Value too big">
     <VolumeSize minSize={30} unit="KB" value={40} />
+  </Story>
+</Canvas>
+
+## Sizes
+
+### Extra small (xs)
+
+<Canvas>
+  <Story name="Extra small size">
+    <VolumeSize size="xs" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Small (sm)
+
+<Canvas>
+  <Story name="Small size">
+    <VolumeSize size="sm" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Medium (md)
+
+<Canvas>
+  <Story name="Medium size">
+    <VolumeSize size="md" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Large (lg)
+
+<Canvas>
+  <Story name="Large">
+    <VolumeSize size="lg" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Extra large (xl)
+
+<Canvas>
+  <Story name="Extra large">
+    <VolumeSize size="xl" minSize={30} unit="KB" value={30} />
   </Story>
 </Canvas>
 

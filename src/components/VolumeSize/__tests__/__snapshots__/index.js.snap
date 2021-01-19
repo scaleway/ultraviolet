@@ -2,7 +2,35 @@
 
 exports[`VolumeSize renders correctly with all props 1`] = `
 <DocumentFragment>
-  .emotion-16.emotion-16 {
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-16.emotion-16 {
   margin-bottom: 40px;
 }
 
@@ -107,6 +135,23 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   margin-right: 8px;
 }
 
+.emotion-5 {
+  background-color: #45d6b5;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 68%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
+}
+
 .emotion-10 {
   background-color: #151a2d;
   position: absolute;
@@ -144,19 +189,6 @@ exports[`VolumeSize renders correctly with all props 1`] = `
 
 .emotion-11 {
   text-align: right;
-}
-
-.emotion-5 {
-  background-color: #45d6b5;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 70%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
 }
 
 <div
@@ -241,7 +273,21 @@ exports[`VolumeSize renders correctly with all props 1`] = `
 
 exports[`VolumeSize renders correctly with minimal props 1`] = `
 <DocumentFragment>
-  .emotion-13.emotion-13 {
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-13.emotion-13 {
   margin-bottom: 40px;
 }
 
@@ -327,6 +373,23 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   width: 100%;
 }
 
+.emotion-6 {
+  background-color: #ff8c69;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 250%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
+}
+
 .emotion-11 {
   background-color: #151a2d;
   position: absolute;
@@ -366,19 +429,6 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   color: #4a4f62;
   font-size: 14px;
   line-height: 22px;
-}
-
-.emotion-6 {
-  background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: NaN%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
 }
 
 <div
@@ -448,7 +498,49 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
 
 exports[`VolumeSize renders correctly without maxSize 1`] = `
 <DocumentFragment>
-  .emotion-13.emotion-13 {
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-13.emotion-13 {
   margin-bottom: 40px;
 }
 
@@ -577,15 +669,19 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
 
 .emotion-6 {
   background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px;
   position: absolute;
   left: 0;
   height: 100%;
-  width: NaN%;
+  width: 750%;
   min-width: 0;
   max-width: 100%;
   -webkit-transition: width 1000ms ease;
   transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
 }
 
 <div
@@ -657,7 +753,77 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
 
 exports[`VolumeSize should display too big error 1`] = `
 <DocumentFragment>
-  .emotion-17.emotion-17 {
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-17.emotion-17 {
   margin-bottom: 40px;
 }
 
@@ -773,19 +939,6 @@ exports[`VolumeSize should display too big error 1`] = `
   line-height: 22px;
 }
 
-.emotion-6 {
-  background-color: #ff8c69;
-  border-radius: 3px 0 0 3px;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: NaN%;
-  min-width: 0;
-  max-width: 100%;
-  -webkit-transition: width 1000ms ease;
-  transition: width 1000ms ease;
-}
-
 .emotion-11 {
   background-color: #151a2d;
   position: absolute;
@@ -823,6 +976,23 @@ exports[`VolumeSize should display too big error 1`] = `
 
 .emotion-12 {
   text-align: right;
+}
+
+.emotion-6 {
+  background-color: #ff8c69;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 140%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
 }
 
 <div
@@ -912,7 +1082,63 @@ exports[`VolumeSize should display too big error 1`] = `
 
 exports[`VolumeSize should display too small error 1`] = `
 <DocumentFragment>
-  .emotion-13.emotion-13 {
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-13.emotion-13 {
   margin-bottom: 40px;
 }
 
@@ -1050,6 +1276,10 @@ exports[`VolumeSize should display too small error 1`] = `
   max-width: 100%;
   -webkit-transition: width 1000ms ease;
   transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
 }
 
 <div
