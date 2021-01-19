@@ -32,7 +32,11 @@ const styles = {
     align-items: center;
     align-self: stretch;
     font-weight: 500;
-    height: ${size === 'large' ? '48px' : '32px'};
+    height: ${{
+      large: '48px',
+      medium: '40px',
+      small: '32px',
+    }[size]};
   `,
 
   leftButton: size => css`
@@ -40,24 +44,34 @@ const styles = {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border-radius: 4px 0 0 4px;
-    padding: 0 ${size === 'large' ? '16px' : '4px'};
+    padding: 0
+      ${{
+        large: '16px',
+        medium: '10px',
+        small: '4px',
+      }[size]};
     border-right: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
   `,
 
   rightButton: size => css`
     border-left-width: 0;
     border-radius: 0 4px 4px 0;
-    padding: 0 ${size === 'large' ? '16px' : '4px'};
+    padding: 0
+      ${{
+        large: '16px',
+        medium: '10px',
+        small: '4px',
+      }[size]};
     border-left: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
   `,
 
   separator: size => css`
     position: absolute;
     font-size: 30px;
-    top: 5px;
+    top: 7px;
     font-weight: 500;
     color: ${theme.gray350};
-    ${size === 'small' ? 'display: none' : ''};
+    ${size !== 'large' ? 'display: none' : ''};
   `,
 
   iconSize: size => (size === 'large' ? 28 : 18),
