@@ -79,7 +79,12 @@ Set size using `size` property.
 <Canvas>
   <Story name="disabled">
     <BlockList>
-      <Radio value="disabled" name="radio-size" disabled             onChange={e => onChange(e.currentTarget.value)}>
+      <Radio
+        value="disabled"
+        name="radio-size"
+        disabled
+        onChange={() => {}}
+      >
         Disabled radio
       </Radio>
     </BlockList>
