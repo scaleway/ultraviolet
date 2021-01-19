@@ -42,6 +42,9 @@ const styles = {
   maxSizeCursor: css`
     right: 10%;
   `,
+  title: css`
+    margin-right: 5px;
+  `,
   value: hasError => css`
     font-weight: 800;
     color: ${hasError ? theme.orange : theme.lightBlack};
@@ -117,7 +120,7 @@ const VolumeSize = ({
     <Box mb={5}>
       <Box display="flex" alignItems="center" mb={1}>
         <Typography variant="bodyA" mr={2} fontWeight={500}>
-          {title}
+          <span css={styles.title}>{title}</span>
           <span css={styles.value(hasError)}>
             {value} {unit}
           </span>
