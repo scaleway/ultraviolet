@@ -122,6 +122,7 @@ export const SwitchButton = ({
   <Tooltip text={tooltip}>
     <StyledSwitch
       as="label"
+      htmlFor={`${name}-${value}`}
       disabled={disabled}
       variant={variant}
       checked={checked}
