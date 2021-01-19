@@ -33,4 +33,31 @@ describe('VolumeSize', () => {
       />,
     )
   })
+
+  test('should display too small error', () => {
+    shouldMatchEmotionSnapshot(
+      <VolumeSize
+        minSize={20}
+        title="Test"
+        unit="GB"
+        tooBigMessage="Test too big"
+        tooSmallMessage="Test too small"
+        value={15}
+      />,
+    )
+  })
+
+  test('should display too big error', () => {
+    shouldMatchEmotionSnapshot(
+      <VolumeSize
+        minSize={0}
+        maxSize={20}
+        title="Test"
+        unit="GB"
+        tooBigMessage="Test too big"
+        tooSmallMessage="Test too small"
+        value={25}
+      />,
+    )
+  })
 })
