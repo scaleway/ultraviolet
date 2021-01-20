@@ -16,4 +16,10 @@ describe('StatusIndicator', () => {
     expect(console.error).toHaveBeenCalledTimes(1)
     spy.mockRestore()
   })
+
+  test(`render animated`, () => {
+    shouldMatchEmotionSnapshot(
+      <StatusIndicator status={statuses[0]} animated />,
+    )
+  })
 })
