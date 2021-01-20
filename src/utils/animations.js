@@ -17,6 +17,19 @@ export const bounce = keyframes`
       transform: translate3d(0,-4px,0);
     }
 `
+
+export const flash = keyframes`
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+`
+
 export const zoomIn = keyframes`
     0% {
       transform:scale(0);
