@@ -1,3 +1,10 @@
+## [0.45.0](https://github.com/chambo-e/scw-ui/compare/v0.44.0...v0.45.0) (2021-01-20)
+
+
+### Features
+
+* **richselect:** added animation on RichSelect CNS-3553 ([dbe64d7](https://github.com/chambo-e/scw-ui/commit/dbe64d7d6e83e2cb12097d4754a6af25b688e63c))
+
 ## [0.44.0](https://github.com/chambo-e/scw-ui/compare/v0.43.1...v0.44.0) (2021-01-20)
 
 
