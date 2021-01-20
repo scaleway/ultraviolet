@@ -40,6 +40,10 @@ const StyleWrapper = styled.div`
     > .flag-dropdown .selected-flag {
       background: none;
       border: none;
+      cursor: ${({ disabled, disableDropdown }) =>
+        disabled || disableDropdown ? 'not-allowed' : 'inherit'};
+      pointer-events: ${({ disabled, disableDropdown }) =>
+        disabled || disableDropdown ? 'none' : 'inherit'};
     }
     .country-list {
       max-height: 300px;
@@ -75,7 +79,13 @@ const StyleWrapper = styled.div`
     }
   }
 `
-const PhoneInput = ({ onChange, value }) => {
+const PhoneInput = ({
+  disabled,
+  disableDropdown,
+  inputProps,
+  onChange,
+  value,
+}) => {
   const [visited, setVisited] = useState(false)
 
   useEffect(() => {
@@ -87,8 +97,15 @@ const PhoneInput = ({ onChange, value }) => {
   }
 
   return (
-    <StyleWrapper visited={visited}>
+    <StyleWrapper
+      visited={visited}
+      disabled={disabled}
+      disableDropdown={disableDropdown}
+    >
       <ReactPhoneInput
+        disabled={disabled}
+        disableDropdown={disableDropdown}
+        inputProps={inputProps}
         value={value}
         onChange={onChange}
         enableSearchField
@@ -102,13 +119,19 @@ const PhoneInput = ({ onChange, value }) => {
 }
 
 PhoneInput.propTypes = {
-  value: PropTypes.string,
+  disabled: PropTypes.bool,
+  disableDropdown: PropTypes.bool,
+  inputProps: PropTypes.objectOf(PropTypes.bool),
   onChange: PropTypes.func,
+  value: PropTypes.string,
 }
 
 PhoneInput.defaultProps = {
-  value: '',
+  disabled: false,
+  disableDropdown: false,
+  inputProps: {},
   onChange: () => {},
+  value: '',
 }
 
 export { PhoneInput }

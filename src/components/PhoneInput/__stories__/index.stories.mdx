@@ -1,4 +1,4 @@
-import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { PhoneInput } from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
@@ -25,6 +25,18 @@ import ControlValue from '../../../__stories__/components/ControlValue'
       <ControlValue value="+33607080910">
         {({ value, onChange }) => (
           <PhoneInput value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+      Disable
+      <ControlValue value="+33607080910">
+        {({ value, onChange }) => (
+          <PhoneInput value={value} onChange={onChange} disabled />
+        )}
+      </ControlValue>
+      Disable Dropdown only
+      <ControlValue value="+33607080910">
+        {({ value, onChange }) => (
+          <PhoneInput value={value} onChange={onChange} disableDropdown />
         )}
       </ControlValue>
     </BlockList>
