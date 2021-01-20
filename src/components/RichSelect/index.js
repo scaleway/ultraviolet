@@ -1,13 +1,14 @@
 import { css } from '@emotion/core'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJsonString } from '../../helpers/isJson'
 import { theme } from '../../theme'
 import { gray550, warning } from '../../theming'
 import { cx, getUUID } from '../../utils'
+import * as animations from '../../utils/animations'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
@@ -55,7 +56,7 @@ const styles = {
   `,
 }
 
-const getSelectStyles = (error, customStyle) => ({
+const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
   control: (provided, state) => ({
     ...provided,
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
@@ -93,6 +94,9 @@ const getSelectStyles = (error, customStyle) => ({
       },
     }),
     ...((customStyle(state) || {}).control || {}),
+    animation: animation
+      ? `${animationDuration}ms ${animations[animation]} infinite`
+      : 'none',
   }),
   valueContainer: (provided, state) => ({
     ...provided,
@@ -389,9 +393,9 @@ function RichSelect({
   className,
   disabled,
   error,
-  isMulti = false,
-  isSearchable = true,
-  isClearable = false,
+  isMulti,
+  isSearchable,
+  isClearable,
   menuPortalTarget,
   noTopLabel,
   onChange,
@@ -399,12 +403,27 @@ function RichSelect({
   placeholder,
   readOnly,
   value,
-  customStyle = () => true,
+  customStyle,
   innerRef,
+  animationOnChange,
+  animation,
+  animationDuration,
   ...props
 }) {
   const labelId = getUUID('label')
   const inputId = getUUID('input')
+
+  const [isAnimated, setIsAnimated] = useState(false)
+
+  if (animationOnChange) {
+    const deepValue = value?.value
+
+    useEffect(() => {
+      setIsAnimated(true)
+      setTimeout(() => setIsAnimated(false), 1000)
+    }, [setIsAnimated, animationOnChange, deepValue])
+  }
+
   return (
     <Select
       ref={innerRef}
@@ -428,7 +447,12 @@ function RichSelect({
       className={className}
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => option.disabled}
-      styles={getSelectStyles(error, customStyle)}
+      styles={getSelectStyles(
+        error,
+        customStyle,
+        isAnimated && animation,
+        animationDuration,
+      )}
       options={
         options ||
         flattenChildren(children).map(
@@ -457,10 +481,29 @@ const RichSelectWithRef = React.forwardRef((props, ref) => (
 
 RichSelectWithRef.Option = () => null
 
+RichSelectWithRef.defaultProps = {
+  children: null,
+  className: undefined,
+  disabled: false,
+  error: false,
+  isMulti: false,
+  isSearchable: true,
+  isClearable: false,
+  noTopLabel: false,
+  onChange: null,
+  placeholder: undefined,
+  readOnly: false,
+  customStyle: () => true,
+  animationOnChange: false,
+  animation: 'pulse',
+  animationDuration: 1000,
+  required: false,
+  value: undefined,
+}
+
 RichSelectWithRef.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  id: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   disabled: PropTypes.bool,
   required: PropTypes.bool,
@@ -470,6 +513,16 @@ RichSelectWithRef.propTypes = {
   value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.string,
   customStyle: PropTypes.func,
+  animation: PropTypes.oneOf(Object.keys(animations)),
+  animationOnChange: PropTypes.bool,
+  animationDuration: PropTypes.number,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  isMulti: PropTypes.bool,
+  isSearchable: PropTypes.bool,
+  isClearable: PropTypes.bool,
 }
 
 export { RichSelectWithRef as RichSelect }
