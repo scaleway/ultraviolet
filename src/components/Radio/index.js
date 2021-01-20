@@ -1,41 +1,65 @@
 import { css } from '@emotion/core'
-import { SwitchState } from '@smooth-ui/core-em'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { gray300, primary } from '../../theming'
-import { cx } from '../../utils'
+import { Radio as ReakitRadio } from 'reakit'
+import { theme } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
-const style = disabled => p => css`
+const StyledIcon = styled(Icon)``
+
+const IconContainer = styled(Box)`
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+`
+
+const disabledClass = () => css`
+  color: ${theme.gray300};
+  cursor: not-allowed;
+`
+
+const activeFocusClass = () => css`
+  :hover,
+  :focus {
+    ${IconContainer} {
+      background-color: ${transparentize(0.75, theme.gray300)};
+      border-radius: 50%;
+
+      > ${StyledIcon} {
+        fill: ${theme.primary};
+      }
+    }
+  }
+`
+
+const StyledBox = styled(Box)`
   position: relative;
   display: flex;
   align-items: center;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+  height: 32px;
+  cursor: pointer;
 
-  ${disabled && `color: ${gray300(p)};`}
+  ${({ disabled }) => disabled && disabledClass}
+  ${({ disabled }) => !disabled && activeFocusClass}
+`
 
-  :hover,
-  :focus {
-    ${!disabled &&
-    `.radio-container {
-      background-color: ${transparentize(0.75, gray300(p))};
-      border-radius: 50%;
-
-      > svg {
-        fill: ${primary(p)};
-      }
-    }
-    `}
-  }
+const StyledRadio = styled(ReakitRadio)`
+  position: absolute;
+  opacity: 0.01;
 `
 
 export const Radio = ({
   checked,
-  defaultChecked,
   onChange,
   onFocus,
   onBlur,
@@ -46,58 +70,50 @@ export const Radio = ({
   children,
   ...props
 }) => (
-  <SwitchState
-    name={name}
-    value={value}
-    checked={checked}
-    defaultChecked={defaultChecked}
-    onChange={onChange}
-    onFocus={onFocus}
-    onBlur={onBlur}
+  <StyledBox
+    as="label"
+    htmlFor={`${name}-${value}`}
+    disabled={disabled}
+    {...props}
   >
-    {({ checked, input }) => (
-      <Box css={cx(style(disabled))} {...props}>
-        <Box
-          mr={1}
-          minWidth={32}
-          width={32}
-          height={32}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          className="radio-container"
-        >
-          <Icon
-            name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-            color={checked ? 'primary' : 'gray300'}
-            size={size}
-          />
-        </Box>
-        {children}
-        <input
-          type="radio"
-          disabled={disabled}
-          css={css`
-            cursor: ${disabled ? 'not-allowed' : 'pointer'};
-          `}
-          {...input}
-        />
-      </Box>
-    )}
-  </SwitchState>
+    <IconContainer>
+      <StyledIcon
+        name={checked ? 'radiobox-marked' : 'radiobox-blank'}
+        color={checked ? 'primary' : 'gray300'}
+        size={size}
+      />
+    </IconContainer>
+    {children}
+    <StyledRadio
+      type="radio"
+      id={`${name}-${value}`}
+      checked={checked}
+      onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      value={value}
+      disabled={disabled}
+      name={name}
+    />
+  </StyledBox>
 )
 
 Radio.propTypes = {
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   checked: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  name: PropTypes.string,
-  value: PropTypes.string,
   size: PropTypes.number,
-  children: PropTypes.node,
 }
 
-Radio.defaultProps = { size: 24 }
+Radio.defaultProps = {
+  size: 24,
+  disabled: false,
+  checked: false,
+  onFocus: null,
+  onBlur: null,
+}
