@@ -26,34 +26,26 @@ const defaultStatuses = {
   deployed: theme.green,
 }
 
-const getAnimatedStatuses = statuses =>
-  Object.keys(statuses).filter(
-    status =>
-      statuses[status] === theme.blue && !['not_configured'].includes(status),
-  )
-
-const getAnimation = (statuses, status) =>
-  getAnimatedStatuses(statuses).includes(status) &&
-  css`
-    @keyframes flash {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.1;
-      }
-      100% {
-        opacity: 1;
-      }
+const cssAnimation = css`
+  @keyframes flash {
+    0% {
+      opacity: 1;
     }
-    animation: flash linear 1s infinite;
-  `
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: flash linear 1s infinite;
+`
 
-const StatusIndicator = ({ tooltip, status, statuses, ...props }) => (
+const StatusIndicator = ({ tooltip, status, statuses, animated, ...props }) => (
   <Tooltip text={tooltip}>
     <Dot
       color={{ ...defaultStatuses, ...statuses }[status] || theme.blue}
-      css={getAnimation({ ...defaultStatuses, ...statuses }, status)}
+      css={animated && cssAnimation}
       status={status}
       {...props}
     />
@@ -63,12 +55,14 @@ const StatusIndicator = ({ tooltip, status, statuses, ...props }) => (
 export const statuses = Object.keys(defaultStatuses)
 
 StatusIndicator.defaultProps = {
+  animated: false,
   status: 'unavailable',
   statuses: {},
   tooltip: null,
 }
 
 StatusIndicator.propTypes = {
+  animated: PropTypes.bool,
   status: (props, propName, componentName) => {
     const availableStatuses = [
       ...statuses,
