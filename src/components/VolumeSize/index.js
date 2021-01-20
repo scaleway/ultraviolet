@@ -7,11 +7,11 @@ import { Icon } from '../Icon'
 import { Typography } from '../Typography'
 
 const sizes = {
-  xs: 0.5,
-  sm: 0.7,
-  md: 1,
-  lg: 1.3,
-  xl: 1.5,
+  xsmall: 0.5,
+  small: 0.7,
+  medium: 1,
+  large: 1.3,
+  xlarge: 1.5,
 }
 
 const widthGrow = keyframes`
@@ -206,7 +206,7 @@ VolumeSize.propTypes = {
   minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
   requiredLabel: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
   title: PropTypes.string,
   unit: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
@@ -219,7 +219,7 @@ VolumeSize.defaultProps = {
   maxLabel: 'maximum',
   minLabel: 'minimum',
   requiredLabel: 'required',
-  size: 'md',
+  size: 'medium',
   title: undefined,
   tooBigMessage: 'Volume capacity exceeded',
   tooSmallMessage: 'Not enough volume allocated',
