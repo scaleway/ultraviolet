@@ -1,3 +1,10 @@
+## [0.44.0](https://github.com/chambo-e/scw-ui/compare/v0.43.1...v0.44.0) (2021-01-20)
+
+
+### Features
+
+* migration of volumesize - CNS-2118 ([dd02e0c](https://github.com/chambo-e/scw-ui/commit/dd02e0c6e26c60d05c2ef939781ec40253e7fc61))
+
 ### [0.43.1](https://github.com/chambo-e/scw-ui/compare/v0.43.0...v0.43.1) (2021-01-19)
 
 
