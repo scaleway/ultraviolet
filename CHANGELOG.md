@@ -1,3 +1,10 @@
+### [0.47.1](https://github.com/chambo-e/scw-ui/compare/v0.47.0...v0.47.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* **statusindicator:** move animated as a prop ([8f2685f](https://github.com/chambo-e/scw-ui/commit/8f2685f07823e30dce684fcd0512d867239c4c42))
+
 ## [0.47.0](https://github.com/chambo-e/scw-ui/compare/v0.46.0...v0.47.0) (2021-01-20)
 
 
