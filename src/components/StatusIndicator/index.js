@@ -2,6 +2,7 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from '../../theme'
+import { flash } from '../../utils/animations'
 import { Dot } from '../Dot'
 import { Tooltip } from '../Tooltip'
 
@@ -27,18 +28,7 @@ const defaultStatuses = {
 }
 
 const cssAnimation = css`
-  @keyframes flash {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  animation: flash linear 1s infinite;
+  animation: ${flash} linear 1s infinite;
 `
 
 const StatusIndicator = ({ tooltip, status, statuses, animated, ...props }) => (
