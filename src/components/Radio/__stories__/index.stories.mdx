@@ -16,28 +16,28 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Canvas>
   <Story name="basic">
-    <BlockList>
-      <ControlValue value={false}>
-        {({ value, onChange }) => (
-          <>
-            <Radio
-              checked={value === 'choice-1'}
-              value="choice-1"
-              onChange={e => onChange(e.currentTarget.value)}
-            >
-              Choice 1
-            </Radio>
-            <Radio
-              checked={value === 'choice-2'}
-              value="choice-2"
-              onChange={e => onChange(e.currentTarget.value)}
-            >
-              Choice 2
-            </Radio>
-          </>
-        )}
-      </ControlValue>
-    </BlockList>
+    <ControlValue value="choice-1">
+      {({ value, onChange }) => (
+        <>
+          <Radio
+            name="choice-1"
+            checked={value === 'choice-1'}
+            value="choice-1"
+            onChange={e => onChange(e.currentTarget.value)}
+          >
+            Choice 1
+          </Radio>
+          <Radio
+            name="choice-2"
+            checked={value === 'choice-2'}
+            value="choice-2"
+            onChange={e => onChange(e.currentTarget.value)}
+          >
+            Choice 2
+          </Radio>
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
@@ -47,14 +47,30 @@ Set size using `size` property.
 
 <Canvas>
   <Story name="size">
-    <BlockList>
-      <Radio name="radio-size" size={10}>
-        Small radio
-      </Radio>
-      <Radio name="radio-size" size={40}>
-        Big radio
-      </Radio>
-    </BlockList>
+    <ControlValue value="big">
+      {({ value, onChange }) => (
+        <>
+          <Radio
+            name="radio-small"
+            value="small"
+            size={10}
+            checked={value === 'small'}
+            onChange={e => onChange(e.currentTarget.value)}
+          >
+            Small radio
+          </Radio>
+          <Radio
+            name="radio-big"
+            value="big"
+            size={40}
+            checked={value === 'big'}
+            onChange={e => onChange(e.currentTarget.value)}
+          >
+            Big radio
+          </Radio>
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
@@ -63,7 +79,12 @@ Set size using `size` property.
 <Canvas>
   <Story name="disabled">
     <BlockList>
-      <Radio name="radio-size" disabled>
+      <Radio
+        value="disabled"
+        name="radio-size"
+        disabled
+        onChange={() => {}}
+      >
         Disabled radio
       </Radio>
     </BlockList>

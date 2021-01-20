@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 32px;
+  cursor: pointer;
+}
+
+.emotion-6:hover .emotion-3,
+.emotion-6:focus .emotion-3 {
+  background-color: rgba(220,225,235,0.25);
+  border-radius: 50%;
+}
+
+.emotion-6:hover .emotion-3 > .emotion-0,
+.emotion-6:focus .emotion-3 > .emotion-0 {
+  fill: #4f0599;
+}
+
+.emotion-2 {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  fill: #dce1eb;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+<label
+    class="sui-box emotion-6 emotion-7"
+    for="radio-choice"
+  >
+    <div
+      class="sui-box emotion-2 emotion-3"
+    >
+      <svg
+        class="sui-box emotion-0 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+        />
+      </svg>
+    </div>
+    Choice
+    <input
+      aria-checked="false"
+      class="emotion-4 emotion-5"
+      id="radio-choice"
+      name="radio"
+      tabindex="0"
+      type="radio"
+      value="choice"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Radio renders correctly when checked 1`] = `
+<DocumentFragment>
+  .emotion-6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 32px;
+  cursor: pointer;
+}
+
+.emotion-6:hover .emotion-3,
+.emotion-6:focus .emotion-3 {
+  background-color: rgba(220,225,235,0.25);
+  border-radius: 50%;
+}
+
+.emotion-6:hover .emotion-3 > .emotion-0,
+.emotion-6:focus .emotion-3 > .emotion-0 {
+  fill: #4f0599;
+}
+
+.emotion-2 {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-1 {
+  fill: #4f0599;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+<label
+    class="sui-box emotion-6 emotion-7"
+    for="radio-choice"
+  >
+    <div
+      class="sui-box emotion-2 emotion-3"
+    >
+      <svg
+        class="sui-box emotion-0 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z"
+        />
+      </svg>
+    </div>
+    Choice
+    <input
+      aria-checked="true"
+      checked=""
+      class="emotion-4 emotion-5"
+      id="radio-choice"
+      name="radio"
+      tabindex="0"
+      type="radio"
+      value="choice"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Radio renders correctly when disabled 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  fill: #dce1eb;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 32px;
+  cursor: pointer;
+  color: #dce1eb;
+  cursor: not-allowed;
+}
+
+<label
+    class="sui-box emotion-6 emotion-7"
+    disabled=""
+    for="radio-choice"
+  >
+    <div
+      class="sui-box emotion-2 emotion-3"
+    >
+      <svg
+        class="sui-box emotion-0 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+        />
+      </svg>
+    </div>
+    Choice
+    <input
+      aria-checked="false"
+      aria-disabled="true"
+      class="emotion-4 emotion-5"
+      disabled=""
+      id="radio-choice"
+      name="radio"
+      style="pointer-events: none;"
+      type="radio"
+      value="choice"
+    />
+  </label>
+</DocumentFragment>
+`;
