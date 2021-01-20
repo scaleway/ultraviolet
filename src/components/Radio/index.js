@@ -101,11 +101,8 @@ export const Radio = ({
 Radio.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  value: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   onFocus: PropTypes.func,
