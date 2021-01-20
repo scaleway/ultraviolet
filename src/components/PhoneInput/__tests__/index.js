@@ -6,4 +6,7 @@ describe('PhoneInput', () => {
   test('renders correctly', () => {
     shouldMatchEmotionSnapshot(<PhoneInput />)
   })
+  test('renders correctly disabled', () => {
+    shouldMatchEmotionSnapshot(<PhoneInput disabled />)
+  })
 })
