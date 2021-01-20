@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { PhoneInput } from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
@@ -7,38 +7,64 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 # PhoneInput
 
-## Controlled
+## Basic
 
 <Canvas>
   <Story name="Basic">
-    <BlockList>
-      <ControlValue value="">
-        {({ value, onChange }) => (
-          <PhoneInput value={value} onChange={onChange} />
-        )}
-      </ControlValue>
-      <ControlValue value="+33">
-        {({ value, onChange }) => (
-          <PhoneInput value={value} onChange={onChange} />
-        )}
-      </ControlValue>
-      <ControlValue value="+33607080910">
-        {({ value, onChange }) => (
-          <PhoneInput value={value} onChange={onChange} />
-        )}
-      </ControlValue>
-      Disable
-      <ControlValue value="+33607080910">
-        {({ value, onChange }) => (
-          <PhoneInput value={value} onChange={onChange} disabled />
-        )}
-      </ControlValue>
-      Disable Dropdown only
-      <ControlValue value="+33607080910">
-        {({ value, onChange }) => (
-          <PhoneInput value={value} onChange={onChange} disableDropdown />
-        )}
-      </ControlValue>
-    </BlockList>
+    <ControlValue value="">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} />
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
+
+## Prefilled indicator
+
+<Canvas>
+  <Story name="Prefilled indicator">
+    <ControlValue value="+33">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Prefilled number
+
+<Canvas>
+  <Story name="Prefilled number">
+    <ControlValue value="+33607080910">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled">
+    <ControlValue value="+33607080910">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} disabled />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Dropdown Disabled
+
+<Canvas>
+  <Story name="Dropdown disabled">
+    <ControlValue value="+33607080910">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} disableDropdown />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+<ArgsTable of={PhoneInput} />
