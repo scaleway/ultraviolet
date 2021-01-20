@@ -206,7 +206,7 @@ VolumeSize.propTypes = {
   minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
   requiredLabel: PropTypes.string,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
+  size: PropTypes.oneOf(Object.keys(sizes)),
   title: PropTypes.string,
   unit: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
