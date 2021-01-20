@@ -2,14 +2,28 @@
 
 exports[`StatusIndicator render animated 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  @keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.emotion-0 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #45d6b5;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
+  -webkit-animation: animation-0 linear 1s infinite;
+  animation: animation-0 linear 1s infinite;
 }
 
 <div
