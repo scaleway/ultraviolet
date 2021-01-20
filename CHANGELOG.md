@@ -1,3 +1,10 @@
+### [0.45.1](https://github.com/chambo-e/scw-ui/compare/v0.45.0...v0.45.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* correct SwitchButton label id ([587defc](https://github.com/chambo-e/scw-ui/commit/587defcbd87b65e6e6321a371987253e93cca278))
+
 ## [0.45.0](https://github.com/chambo-e/scw-ui/compare/v0.44.0...v0.45.0) (2021-01-20)
 
 
