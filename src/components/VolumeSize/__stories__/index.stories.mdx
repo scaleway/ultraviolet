@@ -1,0 +1,127 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { VolumeSize } from '..'
+
+<Meta title="Components/VolumeSize" />
+
+# VolumeSize
+
+## Demo with full Props
+
+<Canvas>
+  <Story name="Demo">
+    <VolumeSize
+      maxLabel="max"
+      maxSize={40}
+      minLabel="min"
+      minSize={0}
+      requiredLabel="required"
+      title="Demo"
+      unit="GB"
+      value={0}
+    />
+  </Story>
+</Canvas>
+
+## With a max size
+
+### In the range
+
+<Canvas>
+  <Story name="In the range">
+    <VolumeSize
+      maxSize={70}
+      minSize={30}
+      title="In the range"
+      unit="KB"
+      value={40}
+    />
+  </Story>
+</Canvas>
+
+### Value too small
+
+<Canvas>
+  <Story name="With max size - Value too small">
+    <VolumeSize minSize={30} maxSize={70} unit="KB" value={20} />
+  </Story>
+</Canvas>
+
+### Value too big
+
+<Canvas>
+  <Story name="With max size - Value too big">
+    <VolumeSize minSize={30} maxSize={70} unit="KB" value={80} />
+  </Story>
+</Canvas>
+
+## With no max size
+
+### Required value
+
+<Canvas>
+  <Story name="Without max size - Required">
+    <VolumeSize minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Value too small
+
+<Canvas>
+  <Story name="Without max size - Value too small">
+    <VolumeSize minSize={30} unit="KB" value={20} />
+  </Story>
+</Canvas>
+
+### Value too big
+
+<Canvas>
+  <Story name="Without max size - Value too big">
+    <VolumeSize minSize={30} unit="KB" value={40} />
+  </Story>
+</Canvas>
+
+## Sizes
+
+### Extra small (xs)
+
+<Canvas>
+  <Story name="Extra small size">
+    <VolumeSize size="xsmall" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Small (sm)
+
+<Canvas>
+  <Story name="Small size">
+    <VolumeSize size="small" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Medium (md)
+
+<Canvas>
+  <Story name="Medium size">
+    <VolumeSize size="medium" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Large (lg)
+
+<Canvas>
+  <Story name="Large">
+    <VolumeSize size="large" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+### Extra large (xl)
+
+<Canvas>
+  <Story name="Extra large">
+    <VolumeSize size="xlarge" minSize={30} unit="KB" value={30} />
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={VolumeSize} />
