@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breakpoint renders correctly down prop 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: none;
+}
+
+@media (max-width:768px) {
+  .emotion-0 {
+    display: block;
+  }
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Breakpoint renders correctly up prop 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    display: block;
+  }
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;
