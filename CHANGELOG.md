@@ -1,3 +1,10 @@
+## [0.46.0](https://github.com/chambo-e/scw-ui/compare/v0.45.1...v0.46.0) (2021-01-20)
+
+
+### Features
+
+* migrate Radio to reakit ([7e73eb1](https://github.com/chambo-e/scw-ui/commit/7e73eb188e21eb8c4bc2448cbf7536826cfed8ed))
+
 ### [0.45.1](https://github.com/chambo-e/scw-ui/compare/v0.45.0...v0.45.1) (2021-01-20)
 
 
