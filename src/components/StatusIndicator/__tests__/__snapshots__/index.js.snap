@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`StatusIndicator render animated 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #45d6b5;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+
+<div
+    class="sui-box emotion-0"
+    status="ready"
+  />
+</DocumentFragment>
+`;
+
 exports[`StatusIndicator render available 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -25,8 +44,6 @@ exports[`StatusIndicator render creating 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -44,8 +61,6 @@ exports[`StatusIndicator render deleting 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -131,8 +146,6 @@ exports[`StatusIndicator render pending 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -184,8 +197,6 @@ exports[`StatusIndicator render snapshotting 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -203,8 +214,6 @@ exports[`StatusIndicator render starting 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -256,8 +265,6 @@ exports[`StatusIndicator render stopping 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -309,8 +316,6 @@ exports[`StatusIndicator render updating 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
@@ -328,8 +333,6 @@ exports[`StatusIndicator render warning 1`] = `
   width: 10px;
   height: 10px;
   background-color: #3f6ed8;
-  -webkit-animation: flash linear 1s infinite;
-  animation: flash linear 1s infinite;
 }
 
 <div
