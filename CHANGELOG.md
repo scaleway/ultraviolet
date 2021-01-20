@@ -1,3 +1,10 @@
+## [0.47.0](https://github.com/chambo-e/scw-ui/compare/v0.46.0...v0.47.0) (2021-01-20)
+
+
+### Features
+
+* **phoneinput:** migrate phone input CNS-2095 ([fce0708](https://github.com/chambo-e/scw-ui/commit/fce070857672010ad0527547259ac6b1d5092bc2))
+
 ## [0.46.0](https://github.com/chambo-e/scw-ui/compare/v0.45.1...v0.46.0) (2021-01-20)
 
 
