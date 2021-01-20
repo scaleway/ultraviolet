@@ -227,3 +227,18 @@ export const slideToLeft = keyframes`
       transform:translateX(-100%);
     }
   `
+
+export const pulse = keyframes`
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+`
