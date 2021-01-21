@@ -1,3 +1,10 @@
+## [0.48.0](https://github.com/chambo-e/scw-ui/compare/v0.47.1...v0.48.0) (2021-01-21)
+
+
+### Features
+
+* add up, down and Breakpoint to replace smooth-ui's ([1a11404](https://github.com/chambo-e/scw-ui/commit/1a114040c97a5a55b9a7ef0b5e21838a54579e97))
+
 ### [0.47.1](https://github.com/chambo-e/scw-ui/compare/v0.47.0...v0.47.1) (2021-01-20)
 
 
