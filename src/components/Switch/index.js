@@ -125,7 +125,15 @@ const StyledCheckbox = styled(Checkbox)`
   opacity: 0.01;
 `
 
-const Switch = ({ tooltip, size, checked, onChange, disabled, ...props }) => (
+const Switch = ({
+  checked,
+  disabled,
+  name,
+  onChange,
+  size,
+  tooltip,
+  ...props
+}) => (
   <Tooltip text={tooltip}>
     <StyledSwitch
       size={size}
@@ -134,8 +142,9 @@ const Switch = ({ tooltip, size, checked, onChange, disabled, ...props }) => (
       {...props}
     >
       <StyledCheckbox
-        disabled={disabled}
         checked={checked}
+        disabled={disabled}
+        name={name}
         onChange={onChange}
       />
       <SwitchBall size={size} />
@@ -154,6 +163,7 @@ Switch.propTypes = {
   onLabel: PropTypes.string,
   offLabel: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 Switch.defaultProps = {
