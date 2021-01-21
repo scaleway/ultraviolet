@@ -147,10 +147,12 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
     Choice
     <input
       aria-checked="false"
+      aria-disabled="true"
       class="emotion-0 emotion-1"
+      disabled=""
       id="radio-choice"
       name="radio"
-      tabindex="0"
+      style="pointer-events: none;"
       type="radio"
       value="choice"
     />
@@ -222,11 +224,13 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
     true true
     <input
       aria-checked="true"
+      aria-disabled="true"
       checked=""
       class="emotion-0 emotion-1"
+      disabled=""
       id="radio-choice"
       name="radio"
-      tabindex="0"
+      style="pointer-events: none;"
       type="radio"
       value="choice"
     />
