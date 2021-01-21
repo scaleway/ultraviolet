@@ -167,7 +167,7 @@ Switch.propTypes = {
 }
 
 Switch.defaultProps = {
-  name: null,
+  name: undefined,
   tooltip: null,
   size: 'medium',
   width: null,
