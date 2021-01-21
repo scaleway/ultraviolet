@@ -126,12 +126,12 @@ const StyledCheckbox = styled(Checkbox)`
 `
 
 const Switch = ({
-  tooltip,
-  size,
   checked,
-  onChange,
   disabled,
   name,
+  onChange,
+  size,
+  tooltip,
   ...props
 }) => (
   <Tooltip text={tooltip}>
