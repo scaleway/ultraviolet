@@ -163,11 +163,10 @@ Switch.propTypes = {
   onLabel: PropTypes.string,
   offLabel: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 }
 
 Switch.defaultProps = {
-  name: undefined,
   tooltip: null,
   size: 'medium',
   width: null,
