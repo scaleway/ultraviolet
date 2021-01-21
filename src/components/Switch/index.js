@@ -142,10 +142,10 @@ const Switch = ({
       {...props}
     >
       <StyledCheckbox
-        disabled={disabled}
         checked={checked}
-        onChange={onChange}
+        disabled={disabled}
         name={name}
+        onChange={onChange}
       />
       <SwitchBall size={size} />
     </StyledSwitch>
