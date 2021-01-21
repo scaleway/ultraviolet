@@ -133,14 +133,15 @@ export const SwitchButton = ({
         ? children({ checked, disabled })
         : children}
       <StyledRadio
-        id={`${name}-${value}`}
-        type="radio"
         checked={checked}
+        disabled={disabled}
+        id={`${name}-${value}`}
+        name={name}
+        onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
-        onBlur={onBlur}
+        type="radio"
         value={value}
-        name={name}
       />
     </StyledSwitch>
   </Tooltip>
