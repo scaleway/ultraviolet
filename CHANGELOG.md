@@ -1,3 +1,10 @@
+### [0.48.1](https://github.com/chambo-e/scw-ui/compare/v0.48.0...v0.48.1) (2021-01-21)
+
+
+### Bug Fixes
+
+* correct some missing props on Switch and SwitchButton ([bd7ce3e](https://github.com/chambo-e/scw-ui/commit/bd7ce3e6da50342ad8de904be26048a427a671db))
+
 ## [0.48.0](https://github.com/chambo-e/scw-ui/compare/v0.47.1...v0.48.0) (2021-01-21)
 
 
