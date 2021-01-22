@@ -420,7 +420,7 @@ function RichSelect({
 
     useEffect(() => {
       setIsAnimated(true)
-      setTimeout(() => setIsAnimated(false), 1000)
+      setTimeout(() => setIsAnimated(false), animationDuration)
     }, [setIsAnimated, animationOnChange, deepValue])
   }
 
