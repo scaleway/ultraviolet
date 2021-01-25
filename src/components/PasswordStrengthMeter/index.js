@@ -34,11 +34,12 @@ const styles = {
 }
 
 export function PasswordStrengthMeter({
-  password = '',
-  onChange = () => null,
+  password,
+  onChange,
   strength,
   title,
-  estimate = () => ({ score: 0 }),
+  estimate,
+  userInputs,
   ...props
 }) {
   const [score, setScore] = useState(0)
@@ -46,7 +47,7 @@ export function PasswordStrengthMeter({
   const [width, setWidth] = useState(0)
 
   const getScore = useCallback(
-    password => estimate(password || '').score || 0,
+    password => estimate(password || '', userInputs).score || 0,
     [estimate],
   )
 
@@ -91,6 +92,8 @@ export function PasswordStrengthMeter({
 PasswordStrengthMeter.propTypes = {
   onChange: PropTypes.func,
   password: PropTypes.string,
+  estimate: PropTypes.func,
+  userInputs: PropTypes.arrayOf(PropTypes.string),
   strength: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string,
@@ -98,4 +101,11 @@ PasswordStrengthMeter.propTypes = {
     }),
   ).isRequired,
   title: PropTypes.string.isRequired,
+}
+
+PasswordStrengthMeter.defaultProps = {
+  onChange: () => null,
+  estimate: () => ({ score: 0 }),
+  password: '',
+  userInputs: [],
 }
