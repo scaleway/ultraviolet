@@ -1,3 +1,10 @@
+### [0.48.2](https://github.com/chambo-e/scw-ui/compare/v0.48.1...v0.48.2) (2021-01-25)
+
+
+### Bug Fixes
+
+* **richselect:** fixed animation timeout depending on animationDuration ([2d9e376](https://github.com/chambo-e/scw-ui/commit/2d9e376c5ea4e6d28450438b56302e78f3f3178f))
+
 ### [0.48.1](https://github.com/chambo-e/scw-ui/compare/v0.48.0...v0.48.1) (2021-01-21)
 
 
