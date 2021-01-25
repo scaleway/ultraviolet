@@ -1,7 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, px, thColor } from '../../utils'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 
 // Non Material Design icons: 'send',
@@ -257,10 +257,11 @@ const ICONS = {
 
 export const icons = Object.keys(ICONS)
 
-const style = ({ verticalAlign, size, color }) => p => {
-  const pxSize = px(size)
+const style = ({ verticalAlign, size, color }) => {
+  const pxSize =
+    typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
   return css`
-    fill: ${thColor(color)(p)};
+    fill: ${colors[color] ?? color};
     vertical-align: ${verticalAlign};
     height: ${pxSize};
     width: ${pxSize};
@@ -276,7 +277,7 @@ function Icon({ name, color, size, verticalAlign, ...props }, ref) {
     <Box
       ref={ref}
       className="sc-ui-icon"
-      css={cx(style({ color, size, verticalAlign }))}
+      css={style({ color, size, verticalAlign })}
       {...props}
       viewBox="0 0 24 24"
       as="svg"

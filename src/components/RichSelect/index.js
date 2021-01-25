@@ -5,9 +5,8 @@ import React, { useEffect, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJsonString } from '../../helpers/isJson'
-import { theme } from '../../theme'
-import { gray550, warning } from '../../theming'
-import { cx, getUUID } from '../../utils'
+import { colors } from '../../new_theme'
+import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -25,22 +24,22 @@ const styles = {
     top: 0;
     opacity: 1;
   `,
-  placeholder: p => css`
+  placeholder: css`
     position: absolute;
     left: 0;
     top: 6px;
     font-weight: 400;
     pointer-events: none;
-    color: ${gray550(p)};
-    theme.white-space: nowrap;
+    color: ${colors.gray550};
+    white-space: nowrap;
     width: 100%;
     height: 48px;
     font-size: 16px;
     transition: transform 250ms ease;
     opacity: 0;
   `,
-  error: p => css`
-    color: ${warning(p)};
+  error: css`
+    color: ${colors.warning};
   `,
   pointerEvents: css`
     pointer-events: initial;
@@ -62,34 +61,34 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
     borderStyle: state.isDisabled ? 'none' : 'solid',
     borderWidth: state.isDisabled ? 0 : '1px',
-    backgroundColor: state.isDisabled ? theme.gray50 : theme.white,
+    backgroundColor: state.isDisabled ? colors.gray50 : colors.white,
     color: state.isDisabled
-      ? theme.gray300
+      ? colors.gray300
       : error
-      ? theme.warning
-      : theme.gray700,
+      ? colors.warning
+      : colors.gray700,
     minHeight: '48px',
     fontWeight: 500,
     fontSize: '16px',
     lineHeight: '24px',
     borderRadius: '4px',
     boxShadow: 'none',
-    borderColor: error ? theme.warning : theme.gray300,
+    borderColor: error ? colors.warning : colors.gray300,
     ...(!state.isDisabled && {
       ':hover': {
-        borderColor: error ? theme.warning : theme.primary,
+        borderColor: error ? colors.warning : colors.primary,
         svg: {
-          fill: error ? theme.warning : theme.primary,
+          fill: error ? colors.warning : colors.primary,
         },
       },
       ':focus-within': {
-        borderColor: error ? theme.warning : theme.primary,
+        borderColor: error ? colors.warning : colors.primary,
         boxShadow: `0 0 2px 2px ${transparentize(
           0.75,
-          error ? theme.warning : theme.primary,
+          error ? colors.warning : colors.primary,
         )}`,
         svg: {
-          fill: error ? theme.warning : theme.primary,
+          fill: error ? colors.warning : colors.primary,
         },
       },
     }),
@@ -122,13 +121,13 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
     marginLeft: state.hasValue && 0,
     marginRight: state.hasValue && 0,
     paddingLeft: state.hasValue && 0,
-    color: state.isDisabled ? theme.gray550 : theme.gray700,
+    color: state.isDisabled ? colors.gray550 : colors.gray700,
     ...((customStyle(state) || {}).singleValue || {}),
   }),
   multiValue: (provided, state) => ({
     ...provided,
-    color: theme.gray700,
-    backgroundColor: theme.gray100,
+    color: colors.gray700,
+    backgroundColor: colors.gray100,
     fontWeight: 500,
     fontSize: '14px',
     borderRadius: '4px',
@@ -140,7 +139,7 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
-    color: state.isDisabled ? theme.gray300 : theme.gray700,
+    color: state.isDisabled ? colors.gray300 : colors.gray700,
     fontSize: '14px',
     lineHeight: '20px',
     fontWeight: 'normal',
@@ -152,49 +151,49 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
       ? {
           pointerEvents: 'none',
           cursor: 'none',
-          color: theme.gray300,
+          color: colors.gray300,
         }
       : {
-          color: theme.gray550,
+          color: colors.gray550,
         }),
     ':hover': {
       pointerEvents: state.isDisabled ? 'none' : 'fill',
       cursor: state.isDisabled ? 'none' : 'pointer',
-      color: state.isDisabled ? theme.gray300 : theme.primary,
+      color: state.isDisabled ? colors.gray300 : colors.primary,
     },
     ...((customStyle(state) || {}).multiValueRemove || {}),
   }),
   placeholder: (provided, state) => ({
     ...provided,
     color: state.isDisabled
-      ? theme.gray300
+      ? colors.gray300
       : error
-      ? theme.warning
-      : theme.gray550,
+      ? colors.warning
+      : colors.gray550,
     ...((customStyle(state) || {}).placeholder || {}),
   }),
   option: (provided, state) => ({
     ...provided,
     backgroundColor: state.isDisabled
-      ? theme.gray50
+      ? colors.gray50
       : state.isSelected
-      ? theme.primary
+      ? colors.primary
       : state.isFocused
-      ? theme.gray200
-      : theme.white,
+      ? colors.gray200
+      : colors.white,
     color: state.isDisabled
-      ? theme.gray300
+      ? colors.gray300
       : state.isSelected
-      ? theme.white
-      : theme.gray700,
+      ? colors.white
+      : colors.gray700,
 
     ':active': {
-      color: state.isDisabled ? theme.gray300 : theme.gray700,
-      backgroundColor: state.isDisabled ? theme.gray50 : theme.gray200,
+      color: state.isDisabled ? colors.gray300 : colors.gray700,
+      backgroundColor: state.isDisabled ? colors.gray50 : colors.gray200,
     },
     ':hover': {
-      color: state.isDisabled ? theme.gray300 : theme.gray700,
-      backgroundColor: state.isDisabled ? theme.gray50 : theme.gray200,
+      color: state.isDisabled ? colors.gray300 : colors.gray700,
+      backgroundColor: state.isDisabled ? colors.gray50 : colors.gray200,
     },
     ...((customStyle(state) || {}).option || {}),
   }),
@@ -204,7 +203,7 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.gray200,
+    backgroundColor: colors.gray200,
     display: state.selectProps.time ? 'flex' : 'none',
     ...((customStyle(state) || {}).indicatorSeparator || {}),
   }),
@@ -288,11 +287,11 @@ const ValueContainer = ({ noTopLabel, labelId, inputId, error }) => props => (
             id={labelId}
             htmlFor={inputId}
             aria-live="assertive"
-            css={cx([
+            css={[
               styles.placeholder,
               error && styles.error,
               props.hasValue && !props.isMulti && styles.scaled,
-            ])}
+            ]}
           >
             {props.selectProps.placeholder}
           </Box>

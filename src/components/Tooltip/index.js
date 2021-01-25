@@ -10,7 +10,6 @@ import {
 } from 'reakit/Tooltip'
 import { theme } from '../../theme'
 import { borderRadius } from '../../theming'
-import { cx } from '../../utils'
 import { Box } from '../Box'
 
 const variants = {
@@ -29,8 +28,8 @@ const variants = {
 }
 
 const style = {
-  tooltip: p => css`
-    border-radius: ${borderRadius(p)};
+  tooltip: css`
+    border-radius: ${borderRadius({})};
     opacity: 0;
     font-size: 0.8rem;
     white-space: pre-wrap;
@@ -103,7 +102,7 @@ export const Tooltip = ({
         {finalChildren}
       </TooltipReference>
       <ReakitTooltip {...tooltip}>
-        <Box css={cx([style.tooltip, variants[variant]])} {...props}>
+        <Box css={[style.tooltip, variants[variant]]} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
         </Box>

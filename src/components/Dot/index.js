@@ -1,19 +1,19 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, thColor } from '../../utils'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 
-const style = ({ color }) => p => css`
+const style = ({ color }) => css`
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: ${thColor(color)(p)};
+  background-color: ${colors[color] ?? color};
 `
 
 function FwdDot({ color = 'primary', innerRef, ...props }) {
-  return <Box css={cx(style({ color }))} ref={innerRef} {...props} />
+  return <Box css={style({ color })} ref={innerRef} {...props} />
 }
 
 FwdDot.propTypes = {

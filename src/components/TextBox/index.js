@@ -10,19 +10,8 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import {
-  borderRadius,
-  gray100,
-  gray350,
-  gray50,
-  gray550,
-  gray700,
-  ngray300,
-  primary,
-  warning,
-  white,
-} from '../../theming'
-import { cx, useUUID } from '../../utils'
+import { colors, radii } from '../../new_theme'
+import { useUUID } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
@@ -60,14 +49,14 @@ const inputSizes = {
 export const textBoxSizes = Object.keys(inputSizes)
 
 const styles = {
-  input: p => css`
+  input: css`
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     appearance: none;
-    background-color: ${white(p)};
+    background-color: ${colors.white};
     background-image: none;
-    border: 1px solid ${gray350(p)};
-    border-radius: ${borderRadius(p)};
-    color: ${gray700(p)};
+    border: 1px solid ${colors.gray350};
+    border-radius: ${radii.default};
+    color: ${colors.gray700};
     display: block;
     max-width: 100%;
     outline: none;
@@ -80,18 +69,18 @@ const styles = {
     line-height: 24px;
 
     &::placeholder {
-      color: ${gray550(p)};
+      color: ${colors.gray550};
       opacity: 0;
     }
 
     &:hover,
     &:focus {
-      border-color: ${ngray300(p)};
+      border-color: ${colors.ngray300};
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, primary(p))};
-      border-color: ${primary(p)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
+      border-color: ${colors.primary};
     }
   `,
   inputMultiline: ({ resizable, fillAvailable }) => css`
@@ -107,35 +96,35 @@ const styles = {
       opacity: 1;
     }
   `,
-  inputDisabled: p => css`
+  inputDisabled: css`
     cursor: default;
     pointer-events: none;
-    background-color: ${gray50(p)};
-    border-color: ${gray50(p)};
-    color: ${gray350(p)};
+    background-color: ${colors.gray50};
+    border-color: ${colors.gray50};
+    color: ${colors.gray350};
   `,
-  inputReadOnly: p => css`
-    background-color: ${gray100(p)};
-    border-color: ${gray100(p)};
-    color: ${gray700(p)};
+  inputReadOnly: css`
+    background-color: ${colors.gray100};
+    border-color: ${colors.gray100};
+    color: ${colors.gray700};
   `,
   inputWithRightElement: css`
     padding-right: 32px;
   `,
-  inputError: p => css`
-    border-color: ${warning(p)};
+  inputError: css`
+    border-color: ${colors.warning};
 
     &:hover,
     &:focus {
-      border-color: ${warning(p)};
+      border-color: ${colors.warning};
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, warning(p))};
-      border-color: ${warning(p)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.warning)};
+      border-color: ${colors.warning};
     }
   `,
-  label: p => css`
+  label: css`
     display: block;
     position: absolute;
     left: 0;
@@ -143,7 +132,7 @@ const styles = {
     padding-left: 8px;
     padding-right: 8px;
     pointer-events: none;
-    color: ${gray550(p)};
+    color: ${colors.gray550};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -156,16 +145,16 @@ const styles = {
   labelEdit: css`
     transform: translate(-9.6%, -3px) scale(0.8);
   `,
-  labelDisabled: p => css`
-    color: ${gray350(p)};
+  labelDisabled: css`
+    color: ${colors.gray350};
   `,
-  labelReadOnly: p => css`
-    color: ${gray550(p)};
+  labelReadOnly: css`
+    color: ${colors.gray550};
   `,
-  labelError: p => css`
-    color: ${warning(p)};
+  labelError: css`
+    color: ${colors.warning};
   `,
-  rightElement: p => css`
+  rightElement: css`
     pointer-events: none;
     position: absolute;
     right: 0;
@@ -175,11 +164,11 @@ const styles = {
     display: flex;
     align-items: center;
     transition: transform 150ms, color 150ms;
-    color: ${gray550(p)};
+    color: ${colors.gray550};
 
     &:hover,
     &:focus-within {
-      color: ${gray700(p)};
+      color: ${colors.gray700};
     }
   `,
   rightElementEdit: css`
@@ -198,11 +187,11 @@ const styles = {
     transform: none;
     align-items: flex-start;
   `,
-  verticalSeparator: p => css`
+  verticalSeparator: css`
     margin-right: 8px;
     margin-top: 1px;
     height: calc(100% - 2px);
-    background-color: ${gray350(p)};
+    background-color: ${colors.gray350};
   `,
 }
 
@@ -348,7 +337,7 @@ function TextBox(
           onFocus={handleFocus}
           onBlur={onBlur}
           onChange={handleChange}
-          css={cx([
+          css={[
             styles.input,
             isPlaceholderVisible && styles.inputWithPlaceholder,
             disabled && styles.inputDisabled,
@@ -359,7 +348,7 @@ function TextBox(
             size && !hasLabel && inputSizes[size].full,
             multiline && styles.inputMultiline({ resizable, fillAvailable }),
             multiline && !hasLabel && styles.inputMultilineFull,
-          ])}
+          ]}
           disabled={disabled}
           readOnly={readOnly}
           rows={rows}
@@ -373,13 +362,13 @@ function TextBox(
         />
         {hasLabel && (
           <label
-            css={cx([
+            css={[
               styles.label,
               edit && styles.labelEdit,
               disabled && styles.labelDisabled,
               readOnly && styles.labelReadOnly,
               error && styles.labelError,
-            ])}
+            ]}
             htmlFor={controlId}
             id={labelId}
             aria-live="assertive"
@@ -390,12 +379,12 @@ function TextBox(
 
         {hasRightElement ? (
           <div
-            css={cx([
+            css={[
               styles.rightElement,
               edit && styles.rightElementEdit,
               (isPassToggleable || random) && styles.rightElementTouchable,
               unit && styles.unit,
-            ])}
+            ]}
           >
             {isPassToggleable && !generated ? (
               <Touchable
@@ -422,7 +411,7 @@ function TextBox(
             ) : unit ? (
               <>
                 <Separator
-                  css={cx(styles.verticalSeparator)}
+                  css={styles.verticalSeparator}
                   direction="vertical"
                 />
                 <Typography
