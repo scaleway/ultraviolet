@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { breakpoints, down, up } from './utilities'
+import { breakpoints } from '../../new_theme'
+import { down, up } from './utilities'
 
 const Breakpoint = styled.div`
   display: none;

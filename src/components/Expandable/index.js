@@ -1,7 +1,6 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx } from '../../utils'
 import { Box } from '../Box'
 
 const styles = {
@@ -24,7 +23,7 @@ const openedStyle = height => css`
 
 export function Expandable({ opened, height, children, ...props }) {
   return (
-    <Box css={cx([styles.container, opened && openedStyle(height)])} {...props}>
+    <Box css={[styles.container, opened && openedStyle(height)]} {...props}>
       {children}
     </Box>
   )
