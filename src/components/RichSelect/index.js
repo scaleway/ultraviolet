@@ -95,7 +95,7 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
     }),
     ...((customStyle(state) || {}).control || {}),
     animation: animation
-      ? `${animationDuration}ms ${animations[animation]} infinite`
+      ? `${animationDuration}ms ${animations[animation]}`
       : 'none',
   }),
   valueContainer: (provided, state) => ({
@@ -420,7 +420,7 @@ function RichSelect({
 
     useEffect(() => {
       setIsAnimated(true)
-      setTimeout(() => setIsAnimated(false), 1000)
+      setTimeout(() => setIsAnimated(false), animationDuration)
     }, [setIsAnimated, animationOnChange, deepValue])
   }
 

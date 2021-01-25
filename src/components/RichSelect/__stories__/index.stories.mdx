@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { RichSelect } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
@@ -84,24 +90,37 @@ of RichSelect with an external way (check example with button).
 <ControlValue>
   {() => (
     <Box>
-      {Object.keys(animations).map(animation => <code>{animation}</code>)}
+      {Object.keys(animations).map(animation => (
+        <code>{animation}</code>
+      ))}
     </Box>
   )}
 </ControlValue>
 
 <Canvas>
-  <Story name="Animated" height="230px">
+  <Story name="Animated" height="400px">
     <Box mx={8} my={2}>
       <ControlValue value>
         {({ value, onChange }) => (
           <>
-            <Button onClick={() => onChange({ value: 'a', label: 'Option A' })} mb={2}>
-              Select Option A
+            <Button
+              onClick={() => onChange({ value: 'pulse', label: 'pulse' })}
+              mb={4}
+            >
+              Select pulse animation
             </Button>
-            <RichSelect animationOnChange animation="pulse" animationDuration={1000} value={value}
-                        onChange={onChange}>
-              <RichSelect.Option value="a">Option A</RichSelect.Option>
-              <RichSelect.Option value="b">Option B</RichSelect.Option>
+            <RichSelect
+              animationOnChange
+              animation={value.value}
+              animationDuration={1000}
+              value={value}
+              onChange={onChange}
+            >
+              {Object.keys(animations).map(animation => (
+                <RichSelect.Option value={animation}>
+                  {animation}
+                </RichSelect.Option>
+              ))}
             </RichSelect>
           </>
         )}
@@ -134,11 +153,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Multi Disabled" height="100px">
     <Box m={2}>
-      <RichSelect
-        value={{ value: 'a', label: 'Option A' }}
-        isMulti
-        disabled
-      >
+      <RichSelect value={{ value: 'a', label: 'Option A' }} isMulti disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
