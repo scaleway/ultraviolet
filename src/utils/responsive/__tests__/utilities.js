@@ -1,4 +1,5 @@
-import { breakpoints, down, up } from '../utilities'
+import { breakpoints } from '../../../new_theme'
+import { down, up } from '../utilities'
 
 describe('Responsive utilities', () => {
   describe('up', () => {
