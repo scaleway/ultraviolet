@@ -1,13 +1,13 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, thColor } from '../../utils'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
 
-const style = ({ backgroundColor }) => p => css`
-  background-color: ${thColor(backgroundColor)(p) || backgroundColor};
+const style = ({ backgroundColor }) => css`
+  background-color: ${colors[backgroundColor] ?? backgroundColor};
   border-radius: 4px;
 `
 
@@ -29,7 +29,7 @@ export const Information = ({
     py={2}
     px={3}
     alignItems="center"
-    css={cx(style({ backgroundColor }))}
+    css={style({ backgroundColor })}
     {...props}
   >
     {icon && (

@@ -2,17 +2,16 @@ import { css } from '@emotion/core'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { borderRadius, gray350, gray50, gray700, white } from '../../theming'
-import { cx, thColor } from '../../utils'
+import { colors, radii } from '../../new_theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
-const borderedVariant = (color, bgColor, hoverColor) => p => {
-  const colorValue = thColor(color)(p)
-  const bgColorValue = thColor(bgColor)(p)
-  const hoverColorValue = thColor(hoverColor)(p)
+const borderedVariant = (color, bgColor, hoverColor) => {
+  const colorValue = colors[color]
+  const bgColorValue = colors[bgColor]
+  const hoverColorValue = colors[hoverColor]
   return css`
     border: 1px solid ${colorValue};
     background-color: ${bgColorValue};
@@ -41,9 +40,9 @@ const borderedVariant = (color, bgColor, hoverColor) => p => {
   `
 }
 
-const plainVariant = (bgColor, textColor) => p => {
-  const bgColorValue = thColor(bgColor)(p)
-  const textColorValue = thColor(textColor)(p)
+const plainVariant = (bgColor, textColor) => {
+  const bgColorValue = colors[bgColor]
+  const textColorValue = colors[textColor]
   return css`
     background-color: ${bgColorValue};
     color: ${textColorValue};
@@ -74,24 +73,21 @@ const variants = {
   'warning-soft-bordered': borderedVariant('gray350', 'white', 'warning'),
   info: plainVariant('zumthor', 'blue'),
   'info-bordered': borderedVariant('blue', 'white', 'blue'),
-  link: p => {
-    const blueValue = thColor('blue')(p)
-    return css`
-      background-color: ${white(p)};
-      color: ${blueValue};
-      vertical-align: baseline;
-      font-weight: 400;
+  link: css`
+    background-color: ${colors.white};
+    color: ${colors.blue};
+    vertical-align: baseline;
+    font-weight: 400;
 
-      &:hover,
-      &:focus {
-        color: ${darken(0.2, blueValue)};
-        text-decoration: underline;
-      }
-    `
-  },
-  transparent: p => css`
+    &:hover,
+    &:focus {
+      color: ${darken(0.2, colors.blue)};
+      text-decoration: underline;
+    }
+  `,
+  transparent: css`
     background-color: transparent;
-    color: ${gray700(p)};
+    color: ${colors.gray700};
   `,
 }
 
@@ -127,9 +123,9 @@ const sizes = {
 export const buttonSizes = Object.keys(sizes)
 
 const styles = {
-  button: p => css`
+  button: css`
     display: inline-flex;
-    border-radius: ${borderRadius(p)};
+    border-radius: ${radii.default};
     border-width: 0;
     cursor: pointer;
     justify-content: center;
@@ -167,15 +163,15 @@ const styles = {
         `}
     pointer-events: none;
   `,
-  disabled: ({ variant }) => p => css`
+  disabled: ({ variant }) => css`
     cursor: default;
     pointer-events: none;
-    color: ${gray350(p)};
+    color: ${colors.gray350};
 
     ${variant !== 'link' &&
     css`
-      background-color: ${gray50(p)};
-      border-color: ${gray50(p)};
+      background-color: ${colors.gray50};
+      border-color: ${colors.gray50};
       box-shadow: none;
     `}
   `,
@@ -229,13 +225,13 @@ function FwdButton({
       as={as}
       disabled={as === 'button' && disabled}
       aria-disabled={disabled}
-      css={cx([
+      css={[
         styles.button,
         variants[variant],
         sizes[size],
         disabled && styles.disabled(variant),
         extend && styles.extend(icon),
-      ])}
+      ]}
     >
       {progress === true ||
       progress === 'left' ||
