@@ -1,13 +1,13 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
-import { gray100 } from '../../theming'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 import { Typography } from '../Typography'
 
 const styles = {
-  wrapper: p => css`
-    background-color: ${gray100(p)};
+  wrapper: css`
+    background-color: ${colors.gray100};
     border-radius: 5px;
     height: 8px;
   `,
