@@ -1,15 +1,14 @@
 import { css } from '@emotion/core'
 import React from 'react'
-import { borderRadius, gray350 } from '../../theming'
-import { cx, sp } from '../../utils'
+import { colors, radii, space } from '../../new_theme'
 import { Box } from '../Box'
 
-const style = p => css`
-  padding: ${sp(1)(p)} ${sp(2)(p)};
-  border-radius: ${borderRadius(p)};
-  border: 1px solid ${gray350(p)};
+const style = css`
+  padding: ${space['1']} ${space['2']};
+  border-radius: ${radii.default};
+  border: 1px solid ${colors.gray350};
 `
 
 export function BorderedBox(props) {
-  return <Box css={cx(style)} {...props} />
+  return <Box css={style} {...props} />
 }
