@@ -2,7 +2,7 @@ import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
-import { borderRadius, gray100, gray550, primary } from '../../theming'
+import { colors, radii } from '../../new_theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -10,31 +10,31 @@ import { Icon } from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 
 const styles = {
-  container: p => css`
+  container: ({ disabled }) => css`
     position: relative;
     display: inline-flex;
     align-items: flex-start;
-    cursor: ${p.disabled ? 'not-allowed' : 'pointer'};
+    cursor: ${disabled ? 'not-allowed' : 'pointer'};
   `,
-  input: p => css`
+  input: ({ size, hasChildren, disabled }) => css`
     opacity: 0.01;
-    width: ${p.size}px;
-    height: ${p.size}px;
+    width: ${size}px;
+    height: ${size}px;
     position: absolute;
     cursor: pointer;
-    margin-right: ${p.hasChildren ? '10px' : 0};
+    margin-right: ${hasChildren ? '10px' : 0};
     padding: 2px;
     pointer-events: auto;
     &:hover {
       svg {
-        border-radius: ${borderRadius(p)};
-        background-color: ${!p.disabled && gray100(p)};
-        fill: ${!p.disabled && primary(p)};
+        border-radius: ${radii.default};
+        background-color: ${!disabled && colors.gray100};
+        fill: ${!disabled && colors.primary};
         transition: fill 300ms;
       }
     }
     &:focus + svg {
-      outline: 1px ${gray550(p)} dotted;
+      outline: 1px ${colors.gray550} dotted;
     }
   `,
   icon: css`
