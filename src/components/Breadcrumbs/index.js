@@ -3,8 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { cloneElement } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { gray350, gray550, primary, success, white } from '../../theming'
-import { cx, sp } from '../../utils'
+import { colors, space } from '../../new_theme'
 import { Box } from '../Box'
 import { Link } from '../Link'
 
@@ -32,11 +31,11 @@ function reverseZIndexes() {
 }
 
 const variants = {
-  link: p => css`
+  link: css`
     display: inline;
 
     &[aria-current='page'] {
-      color: ${gray550(p)};
+      color: ${colors.gray550};
     }
 
     &:not(:last-child)::after {
@@ -44,64 +43,60 @@ const variants = {
       margin: 0 8px;
     }
   `,
-  bubble: p => {
-    const space = sp(3)(p)
-    const doubleSpace = sp(6)(p)
-    return css`
-      display: flex;
-      flex: 1;
-      font-weight: 500;
-      line-height: 24px;
-      border-radius: 24px;
-      border-style: solid;
-      border-width: 1px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      padding-left: ${doubleSpace};
-      padding-right: ${space};
-      margin-left: -${space};
-      margin-right: -${space};
+  bubble: css`
+    display: flex;
+    flex: 1;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 24px;
+    border-style: solid;
+    border-width: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: ${space['6']};
+    padding-right: ${space['3']};
+    margin-left: -${space['3']};
+    margin-right: -${space['3']};
 
-      background-color: ${success(p)};
-      color: ${white(p)};
-      border-color: ${white(p)};
+    background-color: ${colors.success};
+    color: ${colors.white};
+    border-color: ${colors.white};
 
-      &:first-child {
-        padding-left: ${space};
-        margin-left: 0;
-        margin-right: -${space};
+    &:first-child {
+      padding-left: ${space['3']};
+      margin-left: 0;
+      margin-right: -${space['3']};
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[aria-current='page'] {
+      background-color: ${colors.primary};
+      color: ${colors.white};
+      border-color: ${colors.white};
+
+      &:focus {
+        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
       }
+    }
 
-      &:last-child {
-        margin-right: 0;
+    &[aria-current='page'] ~ & {
+      background-color: ${colors.white};
+      color: ${colors.gray550};
+      border-color: ${colors.gray350};
+
+      &:focus {
+        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.gray550)};
       }
+    }
 
-      &[aria-current='page'] {
-        background-color: ${primary(p)};
-        color: ${white(p)};
-        border-color: ${white(p)};
-
-        &:focus {
-          box-shadow: 0 0 0 2px ${transparentize(0.75, primary(p))};
-        }
-      }
-
-      &[aria-current='page'] ~ & {
-        background-color: ${white(p)};
-        color: ${gray550(p)};
-        border-color: ${gray350(p)};
-
-        &:focus {
-          box-shadow: 0 0 0 2px ${transparentize(0.75, gray550(p))};
-        }
-      }
-
-      ${reverseZIndexes()}
-    `
-  },
+    ${reverseZIndexes()}
+  `,
 }
 
 function contractString(str) {
@@ -156,7 +151,7 @@ Breadcrumbs.defaultProps = {
 }
 
 Breadcrumbs.Item = ({ to, children, variant, ...props }) => (
-  <Box css={cx(variants[variant])} as="li" {...props}>
+  <Box css={variants[variant]} as="li" {...props}>
     {to ? (
       <Link variant="primary" to={to}>
         {contractString(children)}

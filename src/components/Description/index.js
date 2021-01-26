@@ -1,38 +1,37 @@
 import { css } from '@emotion/core'
 import React from 'react'
-import { gray200, gray700, gray950, primary } from '../../theming'
-import { cx, sp } from '../../utils'
+import { colors, space } from '../../new_theme'
 import { Box } from '../Box'
 
 const styles = {
-  default: p => css`
+  default: css`
     font-size: 16px;
     line-height: 16px;
     margin: 0;
 
     > dt {
       font-weight: 500;
-      color: ${gray950(p)};
+      color: ${colors.gray950};
       &:after {
         content: ':';
       }
     }
 
     > dd {
-      color: ${gray700(p)};
+      color: ${colors.gray700};
       margin: 0;
-      margin-top: ${sp(1)(p)};
+      margin-top: ${space['1']};
     }
 
     dd + dt {
-      margin-top: ${sp(2)(p)};
+      margin-top: ${space['2']};
     }
   `,
-  inline: p => css`
+  inline: css`
     > dt {
       float: left;
       clear: left;
-      margin-right: ${sp(1)(p)};
+      margin-right: ${space['1']};
     }
 
     > dd {
@@ -40,16 +39,16 @@ const styles = {
     }
 
     dd + dt + dd {
-      margin-top: ${sp(2)(p)};
+      margin-top: ${space['2']};
     }
   `,
-  selectable: p => css`
+  selectable: css`
     > dd {
       user-select: all;
 
       &::selection {
-        color: ${gray200(p)};
-        background: ${primary(p)};
+        color: ${colors.gray200};
+        background: ${colors.primary};
       }
     }
   `,
@@ -59,11 +58,11 @@ export function Description({ inline, selectable, ...props }) {
   return (
     <Box
       as="dl"
-      css={cx([
+      css={[
         styles.default,
         inline && styles.inline,
         selectable && styles.selectable,
-      ])}
+      ]}
       {...props}
     />
   )
