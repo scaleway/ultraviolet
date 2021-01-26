@@ -1,3 +1,10 @@
+## [0.50.0](https://github.com/chambo-e/scw-ui/compare/v0.49.1...v0.50.0) (2021-01-26)
+
+
+### Features
+
+* add ability to not display a link in ExtendedReminder ([0da1b70](https://github.com/chambo-e/scw-ui/commit/0da1b709257a66b773524474c2782019f1c882ed))
+
 ### [0.49.1](https://github.com/chambo-e/scw-ui/compare/v0.49.0...v0.49.1) (2021-01-26)
 
 
