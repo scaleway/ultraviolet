@@ -1,3 +1,10 @@
+## [0.49.0](https://github.com/chambo-e/scw-ui/compare/v0.48.2...v0.49.0) (2021-01-26)
+
+
+### Features
+
+* port Grid system from smooth-ui ([1b10e30](https://github.com/chambo-e/scw-ui/commit/1b10e30e7230bdaf4c9e9a67ba8e49986a60ec05))
+
 ### [0.48.2](https://github.com/chambo-e/scw-ui/compare/v0.48.1...v0.48.2) (2021-01-25)
 
 
