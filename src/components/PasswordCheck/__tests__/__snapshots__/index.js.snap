@@ -2,15 +2,15 @@
 
 exports[`PasswordCheck render with custom values 1`] = `
 <DocumentFragment>
-  .emotion-7 {
+  .emotion-10 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
-.emotion-6 {
+.emotion-8 {
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -37,11 +37,11 @@ exports[`PasswordCheck render with custom values 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
   position: relative;
   width: 100%;
   min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 @media (min-width:992px) {
@@ -79,7 +79,7 @@ exports[`PasswordCheck render with custom values 1`] = `
   align-self: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: #45d6b5;
   vertical-align: middle;
   height: 20px;
@@ -93,13 +93,13 @@ exports[`PasswordCheck render with custom values 1`] = `
 }
 
 <div
-    class="sui-grid emotion-7"
+    class="sui-box emotion-10 emotion-11"
   >
     <div
-      class="sui-row emotion-6"
+      class="sui-box emotion-8 emotion-9"
     >
       <div
-        class="sui-col emotion-2"
+        class="sui-box emotion-2 emotion-3"
       >
         <p
           class="emotion-1"
@@ -116,13 +116,13 @@ exports[`PasswordCheck render with custom values 1`] = `
         </p>
       </div>
       <div
-        class="sui-col emotion-2"
+        class="sui-box emotion-2 emotion-3"
       >
         <p
           class="emotion-1"
         >
           <svg
-            class="sui-box emotion-3"
+            class="sui-box emotion-4"
             viewBox="0 0 24 24"
           >
             <path

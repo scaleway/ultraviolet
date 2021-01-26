@@ -90,7 +90,7 @@ Popper.propTypes = {
   animated: PropTypes.number,
   backgroudColor: PropTypes.string,
   baseId: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   disclosure: PropTypes.func,
   hasArrow: PropTypes.bool,
   hideOnClickOutside: PropTypes.bool,
