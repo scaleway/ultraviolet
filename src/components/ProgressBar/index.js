@@ -31,7 +31,7 @@ const styles = {
     bottom: 0;
     background-color: ${colors[variant]};
     transition: 0.3s width;
-    width: ${value}%;
+    width: ${Math.max(0, Math.min(100, value))}%;
   `,
   progress: css`
     position: absolute;

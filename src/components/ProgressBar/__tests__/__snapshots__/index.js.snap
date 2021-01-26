@@ -1,5 +1,227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ProgressBar renders correctly when value < 0 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.emotion-1 {
+  position: relative;
+  height: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 2px;
+  background-color: #dce1eb;
+}
+
+.emotion-0 {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #4f0599;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+<div
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="-250"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar renders correctly when value > 100 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.emotion-1 {
+  position: relative;
+  height: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 2px;
+  background-color: #dce1eb;
+}
+
+.emotion-0 {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #4f0599;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+<div
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="250"
+    class="sui-box emotion-1"
+    role="progressbar"
+  >
+    <div
+      class="emotion-0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ProgressBar renders info 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
