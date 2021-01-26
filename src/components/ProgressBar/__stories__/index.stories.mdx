@@ -62,3 +62,19 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
     <ProgressBar value={60} backgroundColor="green" />
   </Story>
 </Canvas>
+
+## 100% cap
+
+<Description>
+  Value will be capped out above 0 and below 100, so you're safe to pass an even
+  greater/lower value
+</Description>
+
+<Canvas>
+  <Story name="cap">
+    <Boxer my={1}>
+      <ProgressBar value={600} />
+      <ProgressBar value={-600} />
+    </Boxer>
+  </Story>
+</Canvas>
