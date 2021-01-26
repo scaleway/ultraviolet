@@ -94,16 +94,18 @@ const ExtendedReminder = ({
       <Typography mb={1} variant="bodyD">
         {text}
       </Typography>
-      <Button
-        variant="link"
-        to={to}
-        onClick={onClick}
-        size="xsmall"
-        icon="east"
-        css={styles.link}
-      >
-        {linkText}
-      </Button>
+      {linkText && (
+        <Button
+          variant="link"
+          to={to}
+          onClick={onClick}
+          size="xsmall"
+          icon="east"
+          css={styles.link}
+        >
+          {linkText}
+        </Button>
+      )}
     </Box>
   )
 }
@@ -114,7 +116,7 @@ ExtendedReminder.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
+  linkText: PropTypes.string,
   to: PropTypes.string,
   onClick: PropTypes.func,
 }
@@ -123,6 +125,7 @@ ExtendedReminder.defaultProps = {
   variant: 'info',
   to: null,
   onClick: null,
+  linkText: null,
 }
 
 export { ExtendedReminder }
