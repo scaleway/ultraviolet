@@ -2,8 +2,7 @@ import { css } from '@emotion/core'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { blue, gray550, primary, white } from '../../theming'
-import { cx } from '../../utils'
+import { colors } from '../../new_theme'
 import { Icon } from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
@@ -16,15 +15,15 @@ const variant = color => css`
 `
 
 const variants = {
-  blue: p => variant(blue(p)),
-  grey: p => variant(gray550(p)), // TODO: deprecated, to be removed soon
-  gray: p => variant(gray550(p)),
-  white: p => variant(white(p)),
-  primary: p => css`
-    color: ${primary(p)};
+  blue: variant(colors.blue),
+  grey: variant(colors.gray550), // TODO: deprecated, to be removed soon
+  gray: variant(colors.gray550),
+  white: variant(colors.white),
+  primary: css`
+    color: ${colors.primary};
     &:hover,
     &:focus {
-      color: ${primary(p)};
+      color: ${colors.primary};
     }
   `,
   inherit: css`
@@ -58,14 +57,10 @@ const styles = {
 export function Link({ variant, children, ...props }) {
   const isBlank = props.target === '_blank'
   return (
-    <UniversalLink css={cx([styles.link, variants[variant]])} {...props}>
+    <UniversalLink css={[styles.link, variants[variant]]} {...props}>
       {children}
       {isBlank && (
-        <Icon
-          name="open-in-new"
-          css={cx(styles.openInNew)}
-          verticalAlign="top"
-        />
+        <Icon name="open-in-new" css={styles.openInNew} verticalAlign="top" />
       )}
     </UniversalLink>
   )

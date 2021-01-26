@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import React, { useEffect, useRef, useState } from 'react'
-import { gray200, gray350, primary, white } from '../../theming'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 
 const blankImg = new Image()
@@ -12,16 +12,16 @@ const wrapper = css`
   margin-left: -100px;
   margin-right: -100px;
 `
-const beforeScroll = p => css`
+const beforeScroll = css`
   position: absolute;
   width: 100px;
   height: 100%;
   content: '';
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), ${white(p)});
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), ${colors.white});
   cursor: w-resize;
   z-index: auto;
 `
-const afterScroll = p => css`
+const afterScroll = css`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -30,7 +30,7 @@ const afterScroll = p => css`
   content: '';
   cursor: e-resize;
   z-index: auto;
-  background: linear-gradient(-90deg, ${white(p)}, rgba(255, 255, 255, 0));
+  background: linear-gradient(-90deg, ${colors.white}, rgba(255, 255, 255, 0));
 `
 
 const scrollableWrapper = css`
@@ -46,10 +46,10 @@ const scrollableWrapper = css`
   }
 `
 
-const borderWrapper = p => css`
+const borderWrapper = css`
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid ${gray350(p)};
+  border: 1px solid ${colors.gray350};
   height: 261px;
   width: 248px;
   max-width: 240px;
@@ -60,9 +60,9 @@ const borderWrapper = p => css`
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid ${primary(p)};
+    border: 1px solid ${colors.primary};
     transition: box-shadow 0.2s ease;
-    box-shadow: 2px 2px 14px 8px ${gray200(p)};
+    box-shadow: 2px 2px 14px 8px ${colors.gray200};
   }
 
   img {

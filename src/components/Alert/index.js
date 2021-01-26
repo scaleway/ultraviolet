@@ -1,15 +1,15 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { cx, sp, thColor } from '../../utils'
+import { colors, space } from '../../new_theme'
 import { Icon, icons } from '../Icon'
 import { Typography } from '../Typography'
 
-const style = ({ variant }) => p => css`
+const style = ({ variant }) => css`
   display: flex;
   align-items: center;
-  margin-bottom: ${sp(2)(p)};
-  color: ${thColor(variant)(p)};
+  margin-bottom: ${space['2']};
+  color: ${colors[variant]};
   font-weight: 700;
 `
 
@@ -24,7 +24,7 @@ export const alertVariants = Object.keys(variantIcons)
 const Alert = ({ variant, icon, children, ...props }) => (
   <Typography
     variant="default"
-    css={cx(style({ variant }))}
+    css={style({ variant })}
     role="alert"
     {...props}
   >

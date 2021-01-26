@@ -3,17 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
-import {
-  black,
-  borderRadius,
-  gray100,
-  gray350,
-  gray50,
-  primary,
-  warning,
-  white,
-} from '../../theming'
-import { cx, sp } from '../../utils'
+import { colors, radii, space } from '../../new_theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
@@ -23,61 +13,61 @@ const styles = {
     display: flex;
     justify-content: center;
   `,
-  select: p => css`
+  select: css`
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
     appearance: none;
-    background-color: ${white(p)};
+    background-color: ${colors.white};
     background-image: none;
     border-width: 1px;
-    border-color: ${gray350(p)};
+    border-color: ${colors.gray350};
     border-style: solid;
-    border-radius: ${borderRadius(p)};
-    color: ${black(p)};
+    border-radius: ${radii.default};
+    color: ${colors.black};
     display: block;
-    height: ${sp(6)(p)};
+    height: ${space['6']};
     max-width: 100%;
     outline: none;
     position: relative;
     width: 100%;
-    padding-left: ${sp(1)(p)};
-    padding-right: ${sp(4)(p)};
+    padding-left: ${space['1']};
+    padding-right: ${space['4']};
     font-weight: 500;
     font-size: 16px;
-    line-height: ${sp(3)(p)};
+    line-height: ${space['3']};
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, primary(p))};
-      border-color: ${primary(p)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
+      border-color: ${colors.primary};
     }
   `,
-  label: p => css`
+  label: css`
     position: absolute;
-    padding-left: ${sp(1)(p)};
-    padding-right: ${sp(1)(p)};
+    padding-left: ${space['1']};
+    padding-right: ${space['1']};
     pointer-events: none;
-    color: ${black(p)};
+    color: ${colors.black};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
   `,
-  error: p => css`
-    border-color: ${warning(p)};
-    color: ${warning(p)};
+  error: css`
+    border-color: ${colors.warning};
+    color: ${colors.warning};
   `,
-  disabled: p => css`
+  disabled: css`
     cursor: default;
     pointer-events: none;
-    background: ${gray50(p)};
-    color: ${gray350(p)};
-    border-color: ${gray350(p)};
+    background: ${colors.gray50};
+    color: ${colors.gray350};
+    border-color: ${colors.gray350};
   `,
-  readOnly: p => css`
-    background: ${gray100(p)};
-    border-color: ${gray100(p)};
-    color: ${black(p)};
+  readOnly: css`
+    background: ${colors.gray100};
+    border-color: ${colors.gray100};
+    color: ${colors.black};
   `,
-  chevron: p => css`
+  chevron: css`
     background-color: transparent;
     position: absolute;
     right: 0;
@@ -87,7 +77,7 @@ const styles = {
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    padding: ${sp(1)(p)};
+    padding: ${space[1]};
   `,
 }
 
@@ -118,15 +108,15 @@ export function Select({
     )
 
   return (
-    <Box css={cx([styles.container, ...mainStyles])} {...props}>
+    <Box css={[styles.container, ...mainStyles]} {...props}>
       <select
-        css={cx([
+        css={[
           styles.select,
           disabled && styles.disabled,
           readOnly && styles.readOnly,
           error && styles.error,
           ...selectStyles,
-        ])}
+        ]}
         id={id}
         name={name}
         required={required}
@@ -138,7 +128,7 @@ export function Select({
         {readOnly ? disabledChildren() : children}
       </select>
 
-      <Box css={cx([styles.chevron, ...chevronStyles])}>
+      <Box css={[styles.chevron, ...chevronStyles]}>
         <Icon
           name="chevron-down"
           size={11}
