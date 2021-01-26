@@ -22,7 +22,7 @@ function PasswordCheck({ rules }) {
     <Grid fluid gutter={0}>
       <Row>
         {rules.map(rule => (
-          <Col lg={6} key={rule.name}>
+          <Col large={6} key={rule.name}>
             <p css={styles.condition}>
               <Icon
                 name={
