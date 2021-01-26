@@ -110,3 +110,23 @@ import { ExtendedReminder } from '..'
     />
   </Story>
 </Canvas>
+
+# Without link
+
+<Description>
+  If you don't pass a `linkText` props there will be no link at the end of the
+  block
+</Description>
+
+<Canvas isColumn>
+  <Story name="without link">
+    <ExtendedReminder
+      variant="warning"
+      icon="alert"
+      badgeText="10 days remaining"
+      mb={4}
+      title="Verify your credit card"
+      text="Enter the code we send to your bank account to validate your payment method."
+    />
+  </Story>
+</Canvas>
