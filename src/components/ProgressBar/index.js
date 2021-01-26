@@ -1,8 +1,7 @@
 import { css, keyframes } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
-import { cx, thColor } from '../../utils'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 
 const shineAnimation = keyframes`
@@ -24,13 +23,13 @@ const styles = {
     border-radius: 2px;
     background-color: ${backgroundColor};
   `,
-  filled: ({ variant, value }) => p => css`
+  filled: ({ variant, value }) => css`
     border-radius: 2px;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: ${thColor(variant)(p)};
+    background-color: ${colors[variant]};
     transition: 0.3s width;
     width: ${value}%;
   `,
@@ -72,9 +71,9 @@ export function ProgressBar({
       {...props}
     >
       {progress ? (
-        <div css={cx(styles.progress)} />
+        <div css={styles.progress} />
       ) : (
-        <div css={cx(styles.filled({ variant, value }), styles.progress)} />
+        <div css={[styles.filled({ variant, value }), styles.progress]} />
       )}
     </Box>
   )
@@ -89,7 +88,7 @@ ProgressBar.propTypes = {
 
 ProgressBar.defaultProps = {
   variant: 'primary',
-  backgroundColor: theme.gray300,
+  backgroundColor: colors.gray300,
   value: 0,
   progress: false,
 }

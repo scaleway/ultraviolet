@@ -1,19 +1,18 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { gray550 } from '../../theming'
-import { cx } from '../../utils'
+import { colors } from '../../new_theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
-const style = p => css`
-  color: ${gray550(p)};
+const style = css`
+  color: ${colors.gray550};
   font-size: 12px;
   line-height: 20px;
 `
 
 const Notice = ({ children, ...props }) => (
-  <Box css={cx(style)} role="alert" {...props}>
+  <Box css={style} role="alert" {...props}>
     <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
     {children}
   </Box>

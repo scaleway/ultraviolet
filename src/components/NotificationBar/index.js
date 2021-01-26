@@ -1,21 +1,7 @@
 import { css } from '@emotion/core'
 import PropTypes from 'prop-types'
 import React from 'react'
-import {
-  borderRadius,
-  foam,
-  gray100,
-  gray550,
-  info,
-  orange,
-  pippin,
-  serenade,
-  success,
-  warning,
-  white,
-  zumthor,
-} from '../../theming'
-import { cx } from '../../utils'
+import { radii, colors as themeColors } from '../../new_theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
@@ -42,12 +28,12 @@ const icons = {
 }
 
 const styles = {
-  container: p => css`
+  container: css`
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: ${borderRadius(p)};
-    color: ${white(p)};
+    border-radius: ${radii.default};
+    color: ${themeColors.white};
     padding: 12px;
   `,
   text: css`
@@ -59,42 +45,42 @@ const styles = {
 }
 
 const variants = {
-  info: p => css`
-    background-color: ${zumthor(p)};
-    color: ${info(p)};
+  info: css`
+    background-color: ${themeColors.zumthor};
+    color: ${themeColors.info};
   `,
-  success: p => css`
-    background-color: ${foam(p)};
-    color: ${success(p)};
+  success: css`
+    background-color: ${themeColors.foam};
+    color: ${themeColors.success};
   `,
-  security: p => css`
-    background-color: ${gray100(p)};
-    color: ${gray550(p)};
+  security: css`
+    background-color: ${themeColors.gray100};
+    color: ${themeColors.gray550};
   `,
-  warning: p => css`
-    background-color: ${pippin(p)};
-    color: ${warning(p)};
+  warning: css`
+    background-color: ${themeColors.pippin};
+    color: ${themeColors.warning};
   `,
-  'warning-blue': p => css`
-    background-color: ${zumthor(p)};
-    color: ${info(p)};
+  'warning-blue': css`
+    background-color: ${themeColors.zumthor};
+    color: ${themeColors.info};
   `,
-  'warning-orange': p => css`
-    background-color: ${serenade(p)};
-    color: ${orange(p)};
+  'warning-orange': css`
+    background-color: ${themeColors.serenade};
+    color: ${themeColors.orange};
   `,
-  'alert-orange': p => css`
-    background-color: ${white(p)};
-    color: ${orange(p)};
+  'alert-orange': css`
+    background-color: ${themeColors.white};
+    color: ${themeColors.orange};
   `,
-  'alert-red': p => css`
-    background-color: ${white(p)};
-    color: ${warning(p)};
+  'alert-red': css`
+    background-color: ${themeColors.white};
+    color: ${themeColors.warning};
   `,
 }
 
 const NotificationBar = ({ variant, children, iconSize, icon, ...props }) => (
-  <Box css={cx([styles.container, variants[variant]])} {...props}>
+  <Box css={[styles.container, variants[variant]]} {...props}>
     <Icon
       color={colors[variant]}
       name={icon !== '' ? icon : icons[variant]}
