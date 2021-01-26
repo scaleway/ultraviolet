@@ -5,21 +5,101 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Grid } from '..'
+import Col from '../Col'
+import Grid from '../Grid'
+import Row from '../Row'
+import ColWithBackground from './ColWithBackground'
 
 <Meta title="Components/Grid" component={Grid} />
 
 # Grid
 
 <Description>
-  `Grid`, `Row` and `Col` are exported from Smooth UI. See [Smooth UI grid
-  documentation](https://smooth-ui.smooth-code.com/docs-basics-grid).
+  `Grid`, `Row` and `Col` behaves the same as the one from Smooth UI. [original
+  ref](https://smooth-ui-v10.smooth-code.com/docs-basics-grid)
+</Description>
+
+<Description>Resize the window to see the responsive properties</Description>
+
+## Simple usage
+
+<Canvas>
+  <Story name="simple">
+    <Grid>
+      <Row>
+        <ColWithBackground>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+    </Grid>
+  </Story>
+</Canvas>
+
+## fixed vs fluid width
+
+<Description>
+  If you pass the `fluid` prop the grid will take the full width of its
+  container
 </Description>
 
 <Canvas>
-  <Story name="default">
-    <Grid />
+  <Story name="fixed width">
+    <Grid>
+      <Row>
+        <ColWithBackground>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+    </Grid>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="fluid width">
+    <Grid fluid>
+      <Row>
+        <ColWithBackground>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+    </Grid>
+  </Story>
+</Canvas>
+
+## Complex responsive example
+
+<Canvas>
+  <Story name="complex responsive">
+    <Grid>
+      <Row>
+        <ColWithBackground
+          xsmall={12}
+          medium={8}
+        >{`xsmall={12} medium={8}`}</ColWithBackground>
+        <ColWithBackground
+          xsmall={6}
+          medium={4}
+        >{`xsmall={6} medium={4}`}</ColWithBackground>
+      </Row>
+      <Row>
+        <ColWithBackground xsmall={6} medium={4}>
+          {`xsmall={6} medium={4}`}
+        </ColWithBackground>
+        <ColWithBackground xsmall={6} medium={4}>
+          {`xsmall={6} medium={4}`}
+        </ColWithBackground>
+        <ColWithBackground xsmall={6} medium={4}>
+          {`xsmall={6} medium={4}`}
+        </ColWithBackground>
+      </Row>
+      <Row>
+        <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
+        <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
+      </Row>
+    </Grid>
   </Story>
 </Canvas>
 
 <ArgsTable of={Grid} />
+<ArgsTable of={Col} />
+<ArgsTable of={Row} />
