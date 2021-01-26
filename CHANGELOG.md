@@ -1,3 +1,10 @@
+### [0.49.1](https://github.com/chambo-e/scw-ui/compare/v0.49.0...v0.49.1) (2021-01-26)
+
+
+### Bug Fixes
+
+* correct overflowing ProgressBar ([0e474ea](https://github.com/chambo-e/scw-ui/commit/0e474eac85fc42d22f554d68e3927ccc28e3666c))
+
 ## [0.49.0](https://github.com/chambo-e/scw-ui/compare/v0.48.2...v0.49.0) (2021-01-26)
 
 
