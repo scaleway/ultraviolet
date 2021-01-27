@@ -1,3 +1,10 @@
+### [0.50.1](https://github.com/chambo-e/scw-ui/compare/v0.50.0...v0.50.1) (2021-01-27)
+
+
+### Bug Fixes
+
+* **passwordstrengthmeter:** added new properties - userInputs - to ban specific words in password ([62ff565](https://github.com/chambo-e/scw-ui/commit/62ff565bb5a9b61e53fa7d62982b786d7192c8e9))
+
 ## [0.50.0](https://github.com/chambo-e/scw-ui/compare/v0.49.1...v0.50.0) (2021-01-26)
 
 
