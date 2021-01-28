@@ -21,7 +21,7 @@ const variantIcons = {
 
 export const alertVariants = Object.keys(variantIcons)
 
-const Alert = ({ variant, icon, children, ...props }) => (
+const Alert = ({ variant, icon, children, iconSize, ...props }) => (
   <Typography
     variant="default"
     css={style({ variant })}
@@ -31,7 +31,7 @@ const Alert = ({ variant, icon, children, ...props }) => (
     <Icon
       mr={2}
       name={icon || variantIcons[variant]}
-      size={40}
+      size={iconSize}
       color={variant}
     />
     <span>{children}</span>
@@ -41,12 +41,14 @@ const Alert = ({ variant, icon, children, ...props }) => (
 Alert.propTypes = {
   variant: PropTypes.oneOf(alertVariants),
   icon: PropTypes.oneOf(icons),
+  iconSize: PropTypes.number,
   children: PropTypes.node.isRequired,
 }
 
 Alert.defaultProps = {
   variant: 'warning',
   icon: null,
+  iconSize: 40,
 }
 
 export { Alert }

@@ -25,6 +25,12 @@ describe('Alert', () => {
     )
   })
 
+  test('renders with different icon size', () => {
+    shouldMatchEmotionSnapshot(
+      <Alert iconSize={32}> This text is quite long.</Alert>,
+    )
+  })
+
   test('renders with variant success & icon lock', () => {
     shouldMatchEmotionSnapshot(
       <Alert variant="info" icon="lock">
