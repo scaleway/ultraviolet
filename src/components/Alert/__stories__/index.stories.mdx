@@ -98,4 +98,25 @@ For basic variants, icon is automatically added. A specific one can be set using
   </Story>
 </Canvas>
 
+## `iconSize`
+
+You can set a different icon size which will override the default size.
+
+<Canvas>
+  <Story
+    name="icon-size"
+    args={{
+      iconSize: 20,
+    }}
+  >
+    {args => (
+      <Alert {...args}>
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Alert>
+    )}
+  </Story>
+</Canvas>
+
 <ArgsTable of={Alert} />
