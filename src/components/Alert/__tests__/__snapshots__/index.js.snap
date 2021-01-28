@@ -52,6 +52,58 @@ exports[`Alert renders correctly  1`] = `
 </DocumentFragment>
 `;
 
+exports[`Alert renders with different icon size 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #ef5774;
+  font-weight: 700;
+}
+
+.emotion-0 {
+  fill: #ef5774;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.emotion-0.emotion-0 {
+  margin-right: 16px;
+}
+
+<div
+    class="sui-box emotion-1"
+    role="alert"
+  >
+    <svg
+      class="sui-box sc-ui-icon emotion-0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <span>
+       This text is quite long.
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Alert renders with variant info 1`] = `
 <DocumentFragment>
   .emotion-1 {
