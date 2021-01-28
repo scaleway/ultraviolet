@@ -1,3 +1,10 @@
+## [0.51.0](https://github.com/chambo-e/scw-ui/compare/v0.50.1...v0.51.0) (2021-01-28)
+
+
+### Features
+
+* add icon size on alert ([c7826ff](https://github.com/chambo-e/scw-ui/commit/c7826ffaa5c7a81fe847d79c901cea57302163f5))
+
 ### [0.50.1](https://github.com/chambo-e/scw-ui/compare/v0.50.0...v0.50.1) (2021-01-27)
 
 
