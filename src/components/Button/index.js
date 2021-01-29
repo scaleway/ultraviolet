@@ -196,14 +196,14 @@ const styles = {
 function FwdButton({
   progress,
   disabled,
-  variant = 'primary',
-  size = 'large',
+  variant,
+  size,
   icon,
-  iconPosition = 'left',
+  iconPosition,
   children,
   extend,
   displayProgressOnly,
-  type: elementType = 'button',
+  type: elementType,
   innerRef,
   ...props
 }) {
@@ -265,7 +265,20 @@ function FwdButton({
   )
 }
 
-FwdButton.propTypes = {
+const defaultProps = {
+  progress: undefined,
+  disabled: false,
+  variant: 'primary',
+  size: 'large',
+  icon: undefined,
+  iconPosition: 'left',
+  children: () => null,
+  extend: undefined,
+  displayProgressOnly: false,
+  type: 'button',
+}
+
+const propTypes = {
   as: PropTypes.node,
   children: PropTypes.node,
   disabled: PropTypes.bool,
@@ -280,11 +293,20 @@ FwdButton.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   variant: PropTypes.oneOf(buttonVariants),
+  type: PropTypes.string,
 }
+
+FwdButton.defaultProps = defaultProps
+
+FwdButton.propTypes = propTypes
 
 function forwardRef(props, ref) {
   return <FwdButton {...props} innerRef={ref} />
 }
 
 export const Button = React.forwardRef(forwardRef)
+
+Button.defaultProps = defaultProps
+Button.propTypes = propTypes
+
 Button.displayName = 'fwd(Button)'
