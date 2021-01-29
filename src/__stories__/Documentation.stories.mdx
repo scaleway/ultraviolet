@@ -1,0 +1,98 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import { Button } from '../components'
+
+<Meta title="Documentation Guidelines" />
+
+# Documentation Guidelines
+
+<Description>
+  This page explains what are the guidelines for writing documentation for
+  components.
+</Description>
+
+## How to
+
+To explain how to make this documentation we will use component `<Button>` as example.
+Below you will find an example on how the documentation should be written and ordered, with title, descriptions,
+sub-titles, etc. You will also find a file `example.mdx` that you can use as a base when adding a new component.
+
+It's important to **define PropTypes and DefaultProps of a component** so StoryBook will show them in API using `<ArgsTable>` component.
+
+Pattern should be:
+
+- Title
+  - Description
+    - Option title
+      - Description (optional)
+      - Example
+    - Option title
+      - Description (optional)
+      - Example
+    - API
+
+**Note: Please always add a disabled option of your component in the documentation**
+
+## Example
+
+# Button
+
+<Description of={Button}>
+  This is a beautiful description of my component.
+</Description>
+
+## Basic
+
+<Description>
+  If needed you can re-write another description for this specific variable, but
+  it is optional.
+</Description>
+
+<Canvas>
+  <Story name="basic">
+    <Button>Button</Button>
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>
+  If needed you can re-write another description for this specific variable, but
+  it is optional.
+</Description>
+
+<Canvas>
+  <Story name="variant">
+    <Button variant="primary" mr={2}>
+      Button
+    </Button>
+    <Button variant="success" mr={2}>
+      Button
+    </Button>
+    <Button variant="warning" mr={2}>
+      Button
+    </Button>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Description>
+  If needed you can re-write another description for this specific variable, but
+  it is optional.
+</Description>
+
+<Canvas>
+  <Story name="disabled">
+    <Button disabled>Button</Button>
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={Button} />
