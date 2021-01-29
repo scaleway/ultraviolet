@@ -8,6 +8,11 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   viewMode: 'docs',
   previewTabs: { canvas: { hidden: true } },
+  options: {
+    storySort: {
+      order: ['Home', 'Migration'],
+    },
+  },
 }
 
 export const decorators = [
