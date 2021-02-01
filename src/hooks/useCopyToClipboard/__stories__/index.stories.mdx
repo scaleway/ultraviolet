@@ -1,4 +1,3 @@
-import { Input } from '@smooth-ui/core-em'
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import { useCopyToClipboard } from '..'
@@ -20,7 +19,7 @@ import { Box, Button } from '../../../components'
       return (
         <>
           <Box mb={2} display="flex">
-            <Input
+            <input
               placeholder="Text to copy"
               onChange={e => {
                 setText(e.currentTarget.value)
@@ -37,7 +36,7 @@ import { Box, Button } from '../../../components'
               {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <Input placeholder="Test copied text here" />
+          <input placeholder="Test copied text here" />
         </>
       )
     }}
@@ -61,7 +60,7 @@ import { Box, Button } from '../../../components'
       return (
         <>
           <Box mb={2} display="flex">
-            <Input
+            <input
               type="number"
               placeholder="Timeout"
               onChange={e => setTimeout(e.currentTarget.value)}
@@ -69,7 +68,7 @@ import { Box, Button } from '../../../components'
               width="80px"
               mr={1}
             />
-            <Input
+            <input
               placeholder="Text to copy"
               onChange={e => {
                 setText(e.currentTarget.value)
@@ -86,7 +85,7 @@ import { Box, Button } from '../../../components'
               {copied ? 'Copied' : 'Copy'}
             </Button>
           </Box>
-          <Input placeholder="Test copied text here" />
+          <input placeholder="Test copied text here" />
         </>
       )
     }}

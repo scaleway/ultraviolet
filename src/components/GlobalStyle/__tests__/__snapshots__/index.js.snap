@@ -6,6 +6,24 @@ exports[`GlobalStyle renders correctly with default values 1`] = `
     data-emotion=\\"css-global\\"
   >
     
+    @font-face{font-family:'System';font-style:normal;font-weight:400;src:local('.SFNSText-Regular'),local('.HelveticaNeueDeskInterface-Regular'),local('.LucidaGrandeUI'),local('Segoe UI'),local('Ubuntu'),local('Roboto-Regular'),local('DroidSans'),local('Tahoma');}
+  </style>
+  <style
+    data-emotion=\\"css-global\\"
+  >
+    
+    @font-face{font-family:'System';font-style:normal;font-weight:500;src:local('.SFNSText-Medium'),local('.HelveticaNeueDeskInterface-MediumP4'),local('.LucidaGrandeUI'),local('Segoe UI Semibold'),local('Ubuntu Medium'),local('Roboto-Medium'),local('DroidSans-Bold'),local('Tahoma Bold');}
+  </style>
+  <style
+    data-emotion=\\"css-global\\"
+  >
+    
+    @font-face{font-family:'System';font-style:normal;font-weight:700;src:local('.SFNSText-Bold'),local('.HelveticaNeueDeskInterface-Bold'),local('.LucidaGrandeUI'),local('Segoe UI Bold'),local('Ubuntu Bold'),local('Roboto-Bold'),local('DroidSans-Bold'),local('Tahoma Bold');}
+  </style>
+  <style
+    data-emotion=\\"css-global\\"
+  >
+    
     html{line-height:1.15;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   </style>
   <style
@@ -216,31 +234,7 @@ exports[`GlobalStyle renders correctly with default values 1`] = `
     data-emotion=\\"css-global\\"
   >
     
-    html,body{font-family:-apple-system,system-ui,BlinkMacSystemFont,\\"Segoe UI\\",Roboto,\\"Helvetica Neue\\",Arial,sans-serif;font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased;}
-  </style>
-  <style
-    data-emotion=\\"css-global\\"
-  >
-    
     *{box-sizing:border-box;}
-  </style>
-  <style
-    data-emotion=\\"css-global\\"
-  >
-    
-    @font-face{font-family:'System';font-style:normal;font-weight:400;src:local('.SFNSText-Regular'),local('.HelveticaNeueDeskInterface-Regular'),local('.LucidaGrandeUI'),local('Segoe UI'),local('Ubuntu'),local('Roboto-Regular'),local('DroidSans'),local('Tahoma');}
-  </style>
-  <style
-    data-emotion=\\"css-global\\"
-  >
-    
-    @font-face{font-family:'System';font-style:normal;font-weight:500;src:local('.SFNSText-Medium'),local('.HelveticaNeueDeskInterface-MediumP4'),local('.LucidaGrandeUI'),local('Segoe UI Semibold'),local('Ubuntu Medium'),local('Roboto-Medium'),local('DroidSans-Bold'),local('Tahoma Bold');}
-  </style>
-  <style
-    data-emotion=\\"css-global\\"
-  >
-    
-    @font-face{font-family:'System';font-style:normal;font-weight:700;src:local('.SFNSText-Bold'),local('.HelveticaNeueDeskInterface-Bold'),local('.LucidaGrandeUI'),local('Segoe UI Bold'),local('Ubuntu Bold'),local('Roboto-Bold'),local('DroidSans-Bold'),local('Tahoma Bold');}
   </style>
   <style
     data-emotion=\\"css-global\\"

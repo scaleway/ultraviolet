@@ -1,10 +1,12 @@
 import { Global, css } from '@emotion/core'
-import { Normalize } from '@smooth-ui/core-em'
+import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { theme } from '../../theme'
 
 const globalStyles = css`
+  ${normalize()}
+
   /* Fallback system fonts */
   @font-face {
     font-family: 'System';
@@ -31,6 +33,10 @@ const globalStyles = css`
     src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'),
       local('.LucidaGrandeUI'), local('Segoe UI Bold'), local('Ubuntu Bold'),
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   html {
@@ -107,14 +113,9 @@ const globalStyles = css`
     variant: textfield;
   }
 `
-export function GlobalStyle({ additionalStyles }) {
-  return (
-    <>
-      <Normalize />
-      <Global styles={[globalStyles, ...additionalStyles]} />
-    </>
-  )
-}
+export const GlobalStyle = ({ additionalStyles }) => (
+  <Global styles={[globalStyles, ...additionalStyles]} />
+)
 
 GlobalStyle.propTypes = {
   additionalStyles: PropTypes.arrayOf(PropTypes.object),
