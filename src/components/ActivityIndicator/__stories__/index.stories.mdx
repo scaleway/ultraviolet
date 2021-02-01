@@ -26,15 +26,19 @@ import { ActivityIndicator } from '..'
 
 # ActivityIndicator
 
-<Description>Indicates that an action is pending.</Description>
+<Description of={ActivityIndicator}>
+  Component that indicate a loading period.
+</Description>
+
+## Basic
 
 <Canvas>
-  <Story name="default" args={{}}>
-    {args => <ActivityIndicator {...args} />}
+  <Story name="default">
+    <ActivityIndicator size={24} />
   </Story>
 </Canvas>
 
-## `size`
+## Size
 
 <Canvas>
   <Story
@@ -63,13 +67,14 @@ import { ActivityIndicator } from '..'
   </Story>
 </Canvas>
 
-## `color`
+## Color
 
 <Canvas>
   <Story
     name="primary"
     args={{
       color: 'primary',
+      size: 24,
     }}
   >
     {args => <ActivityIndicator {...args} />}
@@ -78,6 +83,7 @@ import { ActivityIndicator } from '..'
     name="success"
     args={{
       color: 'success',
+      size: 24,
     }}
   >
     {args => <ActivityIndicator {...args} />}
@@ -86,6 +92,7 @@ import { ActivityIndicator } from '..'
     name="warning"
     args={{
       color: 'warning',
+      size: 24,
     }}
   >
     {args => <ActivityIndicator {...args} />}
