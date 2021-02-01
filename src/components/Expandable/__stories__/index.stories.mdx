@@ -1,6 +1,7 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import { useState } from 'react'
 import { Expandable } from '..'
-import { Icon, Toggler, Touchable, Typography } from '../..'
+import { Icon, Touchable, Typography } from '../..'
 
 <Meta title="Components/Expandable" component={Expandable} />
 
@@ -17,10 +18,12 @@ import { Icon, Toggler, Touchable, Typography } from '../..'
 
 <Canvas>
   <Story name="basic">
-    <Toggler>
-      {([toggled, toggle]) => (
+    {() => {
+      const [toggled, onToggle] = useState(false)
+      const toggle = () => onToggle(state => !state)
+      return (
         <>
-          <Touchable onClick={() => toggle()}>
+          <Touchable onClick={toggle}>
             <Typography variant="lead-block" my={0}>
               Add Some Advanced Options?
               <Icon name={toggled ? 'minus-box-outline' : 'plus-box-outline'} />
@@ -30,7 +33,7 @@ import { Icon, Toggler, Touchable, Typography } from '../..'
             Advanced options
           </Expandable>
         </>
-      )}
-    </Toggler>
+      )
+    }}
   </Story>
 </Canvas>
