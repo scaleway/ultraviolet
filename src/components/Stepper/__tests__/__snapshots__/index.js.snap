@@ -2,7 +2,7 @@
 
 exports[`Stepper renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-9 {
+  .emotion-0 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,11 +22,9 @@ exports[`Stepper renders correctly 1`] = `
   height: 48px;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -39,8 +37,8 @@ exports[`Stepper renders correctly 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -58,12 +56,12 @@ exports[`Stepper renders correctly 1`] = `
   border-right: 0 solid #d4dae7;
 }
 
-.emotion-2:hover > svg,
-.emotion-2:focus > svg {
+.emotion-1:hover>svg,
+.emotion-1:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: #dce1eb;
   vertical-align: middle;
   height: 28px;
@@ -72,7 +70,7 @@ exports[`Stepper renders correctly 1`] = `
   min-height: 28px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -81,11 +79,9 @@ exports[`Stepper renders correctly 1`] = `
   right: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -109,24 +105,24 @@ exports[`Stepper renders correctly 1`] = `
   align-items: center;
   outline: none;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border: 1px solid #d4dae7;
   border-left-width: 0;
   border-right-width: 0;
 }
 
-.emotion-5.emotion-5 {
+.emotion-4.emotion-4 {
   padding-right: 8px;
   padding-left: 8px;
 }
 
-.emotion-5:active {
+.emotion-4:active {
   opacity: 0.5;
 }
 
-.emotion-3 {
+.emotion-5 {
   pointer-events: none;
   color: #4a4f62;
   background-color: #fff;
@@ -141,11 +137,9 @@ exports[`Stepper renders correctly 1`] = `
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -158,8 +152,8 @@ exports[`Stepper renders correctly 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -175,12 +169,12 @@ exports[`Stepper renders correctly 1`] = `
   border-left: 0 solid #d4dae7;
 }
 
-.emotion-8:hover > svg,
-.emotion-8:focus > svg {
+.emotion-7:hover>svg,
+.emotion-7:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -190,15 +184,15 @@ exports[`Stepper renders correctly 1`] = `
 }
 
 <div
-    class="sui-box emotion-9"
+    class="sui-box emotion-0"
   >
     <button
       aria-label="Minus"
-      class="sui-box emotion-2"
+      class="sui-box emotion-1"
       type="button"
     >
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -206,39 +200,39 @@ exports[`Stepper renders correctly 1`] = `
         />
       </svg>
       <span
-        class="emotion-1"
+        class="emotion-3"
       >
         |
       </span>
     </button>
     <button
-      class="sui-box emotion-5"
+      class="sui-box emotion-4"
       type="button"
     >
       <input
-        class="emotion-3"
+        class="emotion-5"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-3"
+        class="emotion-5"
       >
         unit
       </span>
     </button>
     <button
       aria-label="Plus"
-      class="sui-box emotion-8"
+      class="sui-box emotion-7"
       type="button"
     >
       <span
-        class="emotion-6"
+        class="emotion-8"
       >
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -252,7 +246,7 @@ exports[`Stepper renders correctly 1`] = `
 
 exports[`Stepper renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-9 {
+  .emotion-0 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -272,38 +266,9 @@ exports[`Stepper renders correctly disabled 1`] = `
   height: 48px;
 }
 
-.emotion-0 {
-  fill: #dce1eb;
-  vertical-align: middle;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
 .emotion-1 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
-  right: 0;
-}
-
-.emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
-  left: 0;
-}
-
-.emotion-2 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -315,8 +280,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   opacity: 0.5;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -339,11 +304,27 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5 {
+.emotion-2 {
+  fill: #dce1eb;
+  vertical-align: middle;
+  height: 28px;
+  width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 30px;
+  top: 7px;
+  font-weight: 500;
+  color: #d4dae7;
+  right: 0;
+}
+
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -367,8 +348,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   align-items: center;
   outline: none;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border: 1px solid #d4dae7;
   border-left-width: 0;
@@ -380,16 +361,16 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5.emotion-5 {
+.emotion-4.emotion-4 {
   padding-right: 8px;
   padding-left: 8px;
 }
 
-.emotion-5:active {
+.emotion-4:active {
   opacity: 0.5;
 }
 
-.emotion-3 {
+.emotion-5 {
   pointer-events: none;
   color: #4a4f62;
   background-color: #fff;
@@ -409,11 +390,9 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -425,8 +404,8 @@ exports[`Stepper renders correctly disabled 1`] = `
   opacity: 0.5;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -447,17 +426,26 @@ exports[`Stepper renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-8 {
+  position: absolute;
+  font-size: 30px;
+  top: 7px;
+  font-weight: 500;
+  color: #d4dae7;
+  left: 0;
+}
+
 <div
-    class="sui-box emotion-9"
+    class="sui-box emotion-0"
   >
     <button
       aria-label="Minus"
-      class="sui-box emotion-2"
+      class="sui-box emotion-1"
       disabled=""
       type="button"
     >
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -465,41 +453,41 @@ exports[`Stepper renders correctly disabled 1`] = `
         />
       </svg>
       <span
-        class="emotion-1"
+        class="emotion-3"
       >
         |
       </span>
     </button>
     <button
-      class="sui-box emotion-5"
+      class="sui-box emotion-4"
       type="button"
     >
       <input
-        class="emotion-3"
+        class="emotion-5"
         disabled=""
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-3"
+        class="emotion-5"
       >
         unit
       </span>
     </button>
     <button
       aria-label="Plus"
-      class="sui-box emotion-8"
+      class="sui-box emotion-7"
       disabled=""
       type="button"
     >
       <span
-        class="emotion-6"
+        class="emotion-8"
       >
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -513,7 +501,7 @@ exports[`Stepper renders correctly disabled 1`] = `
 
 exports[`Stepper renders large size 1`] = `
 <DocumentFragment>
-  .emotion-9 {
+  .emotion-0 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -533,11 +521,9 @@ exports[`Stepper renders large size 1`] = `
   height: 48px;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -550,8 +536,8 @@ exports[`Stepper renders large size 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -569,12 +555,12 @@ exports[`Stepper renders large size 1`] = `
   border-right: 0 solid #d4dae7;
 }
 
-.emotion-2:hover > svg,
-.emotion-2:focus > svg {
+.emotion-1:hover>svg,
+.emotion-1:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: #dce1eb;
   vertical-align: middle;
   height: 28px;
@@ -583,7 +569,7 @@ exports[`Stepper renders large size 1`] = `
   min-height: 28px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -592,11 +578,9 @@ exports[`Stepper renders large size 1`] = `
   right: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -620,24 +604,24 @@ exports[`Stepper renders large size 1`] = `
   align-items: center;
   outline: none;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border: 1px solid #d4dae7;
   border-left-width: 0;
   border-right-width: 0;
 }
 
-.emotion-5.emotion-5 {
+.emotion-4.emotion-4 {
   padding-right: 8px;
   padding-left: 8px;
 }
 
-.emotion-5:active {
+.emotion-4:active {
   opacity: 0.5;
 }
 
-.emotion-3 {
+.emotion-5 {
   pointer-events: none;
   color: #4a4f62;
   background-color: #fff;
@@ -652,11 +636,9 @@ exports[`Stepper renders large size 1`] = `
   text-align: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -669,8 +651,8 @@ exports[`Stepper renders large size 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -686,12 +668,12 @@ exports[`Stepper renders large size 1`] = `
   border-left: 0 solid #d4dae7;
 }
 
-.emotion-8:hover > svg,
-.emotion-8:focus > svg {
+.emotion-7:hover>svg,
+.emotion-7:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -701,15 +683,15 @@ exports[`Stepper renders large size 1`] = `
 }
 
 <div
-    class="sui-box emotion-9"
+    class="sui-box emotion-0"
   >
     <button
       aria-label="Minus"
-      class="sui-box emotion-2"
+      class="sui-box emotion-1"
       type="button"
     >
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -717,37 +699,37 @@ exports[`Stepper renders large size 1`] = `
         />
       </svg>
       <span
-        class="emotion-1"
+        class="emotion-3"
       >
         |
       </span>
     </button>
     <button
-      class="sui-box emotion-5"
+      class="sui-box emotion-4"
       type="button"
     >
       <input
-        class="emotion-3"
+        class="emotion-5"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-3"
+        class="emotion-5"
       />
     </button>
     <button
       aria-label="Plus"
-      class="sui-box emotion-8"
+      class="sui-box emotion-7"
       type="button"
     >
       <span
-        class="emotion-6"
+        class="emotion-8"
       >
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -761,67 +743,7 @@ exports[`Stepper renders large size 1`] = `
 
 exports[`Stepper renders small size 1`] = `
 <DocumentFragment>
-  .emotion-5 {
-  border: 0;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
-}
-
-.emotion-5.emotion-5 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-5:active {
-  opacity: 0.5;
-}
-
-.emotion-3 {
-  pointer-events: none;
-  color: #4a4f62;
-  background-color: #fff;
-  font-size: 16;
-  border: none;
-  text-align: right;
-  outline: none;
-  position: relative;
-  margin-right: 4;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-}
-
-.emotion-9 {
+  .emotion-0 {
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -841,11 +763,9 @@ exports[`Stepper renders small size 1`] = `
   height: 32px;
 }
 
-.emotion-2 {
+.emotion-1 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -858,8 +778,8 @@ exports[`Stepper renders small size 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -877,12 +797,12 @@ exports[`Stepper renders small size 1`] = `
   border-right: 1px solid #d4dae7;
 }
 
-.emotion-2:hover > svg,
-.emotion-2:focus > svg {
+.emotion-1:hover>svg,
+.emotion-1:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-0 {
+.emotion-2 {
   fill: #dce1eb;
   vertical-align: middle;
   height: 18px;
@@ -891,7 +811,7 @@ exports[`Stepper renders small size 1`] = `
   min-height: 18px;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -901,11 +821,67 @@ exports[`Stepper renders small size 1`] = `
   right: 0;
 }
 
-.emotion-8 {
+.emotion-4 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 1px solid #d4dae7;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.emotion-4.emotion-4 {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.emotion-4:active {
+  opacity: 0.5;
+}
+
+.emotion-5 {
+  pointer-events: none;
+  color: #4a4f62;
+  background-color: #fff;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.emotion-7 {
+  border: 0;
+  transition-property: opacity;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -918,8 +894,8 @@ exports[`Stepper renders small size 1`] = `
   touch-action: manipulation;
   border: 1px solid #d4dae7;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -935,12 +911,12 @@ exports[`Stepper renders small size 1`] = `
   border-left: 1px solid #d4dae7;
 }
 
-.emotion-8:hover > svg,
-.emotion-8:focus > svg {
+.emotion-7:hover>svg,
+.emotion-7:focus>svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   font-size: 30px;
   top: 7px;
@@ -951,15 +927,15 @@ exports[`Stepper renders small size 1`] = `
 }
 
 <div
-    class="sui-box emotion-9"
+    class="sui-box emotion-0"
   >
     <button
       aria-label="Minus"
-      class="sui-box emotion-2"
+      class="sui-box emotion-1"
       type="button"
     >
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -967,37 +943,37 @@ exports[`Stepper renders small size 1`] = `
         />
       </svg>
       <span
-        class="emotion-1"
+        class="emotion-3"
       >
         |
       </span>
     </button>
     <button
-      class="sui-box emotion-5"
+      class="sui-box emotion-4"
       type="button"
     >
       <input
-        class="emotion-3"
+        class="emotion-5"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-3"
+        class="emotion-5"
       />
     </button>
     <button
       aria-label="Plus"
-      class="sui-box emotion-8"
+      class="sui-box emotion-7"
       type="button"
     >
       <span
-        class="emotion-6"
+        class="emotion-8"
       >
         |
       </span>
       <svg
-        class="sui-box sc-ui-icon emotion-0"
+        class="sui-box sc-ui-icon emotion-2"
         viewBox="0 0 24 24"
       >
         <path

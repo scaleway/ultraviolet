@@ -2,13 +2,13 @@
 
 exports[`Notice renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   color: #b2b6c3;
   font-size: 12px;
   line-height: 20px;
 }
 
-.emotion-0 {
+.emotion-1 {
   fill: currentColor;
   vertical-align: top;
   height: 20px;
@@ -17,16 +17,16 @@ exports[`Notice renders correctly with default props 1`] = `
   min-height: 20px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   margin-right: 8px;
 }
 
 <div
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="alert"
   >
     <svg
-      class="sui-box sc-ui-icon emotion-0"
+      class="sui-box sc-ui-icon emotion-1"
       viewBox="0 0 24 24"
     >
       <path

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import React from 'react'
 import { colors, radii, space } from '../../new_theme'
 import { Box } from '../Box'
