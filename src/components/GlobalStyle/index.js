@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'

@@ -2,7 +2,7 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -19,7 +19,7 @@ exports[`Checkbox renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-2 {
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -30,7 +30,7 @@ exports[`Checkbox renders correctly 1`] = `
   pointer-events: auto;
 }
 
-.emotion-0:hover svg {
+.emotion-2:hover svg {
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -38,11 +38,11 @@ exports[`Checkbox renders correctly 1`] = `
   transition: fill 300ms;
 }
 
-.emotion-0:focus + svg {
+.emotion-2:focus+svg {
   outline: 1px #b2b6c3 dotted;
 }
 
-.emotion-1 {
+.emotion-3 {
   fill: #dce1eb;
   vertical-align: middle;
   height: 24px;
@@ -52,12 +52,12 @@ exports[`Checkbox renders correctly 1`] = `
   box-sizing: content-box;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   margin-right: 10px;
   padding: 2px;
 }
 
-.emotion-2 {
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -75,7 +75,7 @@ exports[`Checkbox renders correctly 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
@@ -83,19 +83,19 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="false"
-        class="emotion-0"
+        class="emotion-2"
         name="checkbox"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -103,7 +103,7 @@ exports[`Checkbox renders correctly 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -112,7 +112,7 @@ exports[`Checkbox renders correctly 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>
@@ -121,7 +121,7 @@ exports[`Checkbox renders correctly 1`] = `
 
 exports[`Checkbox renders correctly checked 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -138,7 +138,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-2 {
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -149,7 +149,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   pointer-events: auto;
 }
 
-.emotion-0:hover svg {
+.emotion-2:hover svg {
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -157,11 +157,26 @@ exports[`Checkbox renders correctly checked 1`] = `
   transition: fill 300ms;
 }
 
-.emotion-0:focus + svg {
+.emotion-2:focus+svg {
   outline: 1px #b2b6c3 dotted;
 }
 
-.emotion-2 {
+.emotion-3 {
+  fill: #4f0599;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -179,43 +194,28 @@ exports[`Checkbox renders correctly checked 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
 }
 
-.emotion-1 {
-  fill: #4f0599;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  box-sizing: content-box;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 10px;
-  padding: 2px;
-}
-
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="true"
         checked=""
-        class="emotion-0"
+        class="emotion-2"
         name="checkbox"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -223,7 +223,7 @@ exports[`Checkbox renders correctly checked 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -232,7 +232,7 @@ exports[`Checkbox renders correctly checked 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>
@@ -241,7 +241,60 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 exports[`Checkbox renders correctly checked and disabled 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-2:hover svg {
+  border-radius: 4px;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-2:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-3 {
+  fill: #f6f5f7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -259,84 +312,31 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
 }
 
-.emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  cursor: not-allowed;
-}
-
-.emotion-0 {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
-}
-
-.emotion-0:hover svg {
-  border-radius: 4px;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.emotion-0:focus + svg {
-  outline: 1px #b2b6c3 dotted;
-}
-
-.emotion-1 {
-  fill: #f6f5f7;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  box-sizing: content-box;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 10px;
-  padding: 2px;
-}
-
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="true"
         aria-disabled="true"
         checked=""
-        class="emotion-0"
+        class="emotion-2"
         disabled=""
         name="checkbox"
         style="pointer-events: none;"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -344,7 +344,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -353,7 +353,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>
@@ -362,7 +362,60 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 exports[`Checkbox renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-1 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-2:hover svg {
+  border-radius: 4px;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-2:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-3 {
+  fill: #f6f5f7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -380,83 +433,30 @@ exports[`Checkbox renders correctly disabled 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
 }
 
-.emotion-3 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  cursor: not-allowed;
-}
-
-.emotion-0 {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
-}
-
-.emotion-0:hover svg {
-  border-radius: 4px;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.emotion-0:focus + svg {
-  outline: 1px #b2b6c3 dotted;
-}
-
-.emotion-1 {
-  fill: #f6f5f7;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  box-sizing: content-box;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 10px;
-  padding: 2px;
-}
-
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="false"
         aria-disabled="true"
-        class="emotion-0"
+        class="emotion-2"
         disabled=""
         name="checkbox"
         style="pointer-events: none;"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -464,7 +464,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -473,7 +473,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>
@@ -482,7 +482,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 exports[`Checkbox renders correctly with a value 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -499,7 +499,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-2 {
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -510,7 +510,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   pointer-events: auto;
 }
 
-.emotion-0:hover svg {
+.emotion-2:hover svg {
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -518,11 +518,11 @@ exports[`Checkbox renders correctly with a value 1`] = `
   transition: fill 300ms;
 }
 
-.emotion-0:focus + svg {
+.emotion-2:focus+svg {
   outline: 1px #b2b6c3 dotted;
 }
 
-.emotion-1 {
+.emotion-3 {
   fill: #dce1eb;
   vertical-align: middle;
   height: 24px;
@@ -532,12 +532,12 @@ exports[`Checkbox renders correctly with a value 1`] = `
   box-sizing: content-box;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   margin-right: 10px;
   padding: 2px;
 }
 
-.emotion-2 {
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -555,7 +555,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
@@ -563,20 +563,20 @@ exports[`Checkbox renders correctly with a value 1`] = `
 }
 
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="false"
-        class="emotion-0"
+        class="emotion-2"
         name="checkbox"
         type="checkbox"
         value="test"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -584,7 +584,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -593,7 +593,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>
@@ -602,7 +602,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 exports[`Checkbox renders correctly with an error 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -619,7 +619,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-2 {
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -630,7 +630,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
   pointer-events: auto;
 }
 
-.emotion-0:hover svg {
+.emotion-2:hover svg {
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -638,22 +638,11 @@ exports[`Checkbox renders correctly with an error 1`] = `
   transition: fill 300ms;
 }
 
-.emotion-0:focus + svg {
+.emotion-2:focus+svg {
   outline: 1px #b2b6c3 dotted;
 }
 
-.emotion-2 {
-  padding-top: 2px;
-}
-
-.emotion-4.emotion-4 {
-  font-size: 12px;
-  color: #ffc107;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-.emotion-1 {
+.emotion-3 {
   fill: #ef5774;
   vertical-align: middle;
   height: 24px;
@@ -663,9 +652,13 @@ exports[`Checkbox renders correctly with an error 1`] = `
   box-sizing: content-box;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   margin-right: 10px;
   padding: 2px;
+}
+
+.emotion-4 {
+  padding-top: 2px;
 }
 
 .emotion-5 {
@@ -687,20 +680,27 @@ exports[`Checkbox renders correctly with an error 1`] = `
   overflow: hidden;
 }
 
+.emotion-6.emotion-6 {
+  font-size: 12px;
+  color: #ffc107;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="false"
-        class="emotion-0"
+        class="emotion-2"
         name="checkbox"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -708,7 +708,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -717,7 +717,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       >
         test error
       </div>
@@ -728,7 +728,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 exports[`Checkbox renders correctly with valid 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -745,7 +745,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
   cursor: pointer;
 }
 
-.emotion-0 {
+.emotion-2 {
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -756,7 +756,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
   pointer-events: auto;
 }
 
-.emotion-0:hover svg {
+.emotion-2:hover svg {
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -764,11 +764,26 @@ exports[`Checkbox renders correctly with valid 1`] = `
   transition: fill 300ms;
 }
 
-.emotion-0:focus + svg {
+.emotion-2:focus+svg {
   outline: 1px #b2b6c3 dotted;
 }
 
-.emotion-2 {
+.emotion-3 {
+  fill: #45d6b5;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-4 {
   padding-top: 2px;
 }
 
@@ -786,42 +801,27 @@ exports[`Checkbox renders correctly with valid 1`] = `
   overflow: hidden;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   font-size: 12px;
   color: #ffc107;
   padding-right: 4px;
   padding-left: 4px;
 }
 
-.emotion-1 {
-  fill: #45d6b5;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  box-sizing: content-box;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 10px;
-  padding: 2px;
-}
-
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <label
-      class="sui-box emotion-3"
+      class="sui-box emotion-1"
     >
       <input
         aria-checked="false"
-        class="emotion-0"
+        class="emotion-2"
         name="checkbox"
         type="checkbox"
       />
       <svg
-        class="sui-box emotion-1"
+        class="sui-box emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -829,7 +829,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
         />
       </svg>
       <div
-        class="emotion-2"
+        class="emotion-4"
       >
         Checkbox Label
       </div>
@@ -838,7 +838,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
       class="sui-box emotion-5"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-6"
       />
     </div>
   </div>

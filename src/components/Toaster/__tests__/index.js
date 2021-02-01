@@ -1,9 +1,9 @@
+import { createSerializer } from '@emotion/jest'
 import { act, render, screen } from '@testing-library/react'
-import serializer from 'jest-emotion'
 import React from 'react'
 import { ToastContainer, toast } from '..'
 
-expect.addSnapshotSerializer(serializer)
+expect.addSnapshotSerializer(createSerializer())
 
 describe('Toaster', () => {
   beforeEach(() => {

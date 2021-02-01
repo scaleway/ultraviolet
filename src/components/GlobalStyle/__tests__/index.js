@@ -1,5 +1,5 @@
+import serializer from '@emotion/jest'
 import { prettyDOM, render, waitFor } from '@testing-library/react'
-import serializer from 'jest-emotion'
 import React from 'react'
 import { GlobalStyle } from '..'
 

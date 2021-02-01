@@ -5,22 +5,24 @@ exports[`ActivityIndicator renders correctly  1`] = `
   @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   color: #bd4932;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,11 +34,11 @@ exports[`ActivityIndicator renders correctly  1`] = `
 <div
     aria-valuemax="1"
     aria-valuemin="0"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
       style="height: 10px; width: 10px;"
     >
       <svg
@@ -71,22 +73,24 @@ exports[`ActivityIndicator renders with width=40px height=40px  1`] = `
   @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   color: #bd4932;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,11 +102,11 @@ exports[`ActivityIndicator renders with width=40px height=40px  1`] = `
 <div
     aria-valuemax="1"
     aria-valuemin="0"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
       style="height: 40px; width: 40px;"
     >
       <svg

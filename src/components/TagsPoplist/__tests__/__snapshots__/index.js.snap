@@ -2,14 +2,14 @@
 
 exports[`TagsPoplist renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-6.emotion-6 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,11 +21,11 @@ exports[`TagsPoplist renders correctly 1`] = `
   color: #4a4f62;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -37,11 +37,11 @@ exports[`TagsPoplist renders correctly 1`] = `
   padding-right: 8px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 0;
 }
 
-.emotion-0 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -57,7 +57,7 @@ exports[`TagsPoplist renders correctly 1`] = `
   white-space: nowrap;
 }
 
-.emotion-5.emotion-5 {
+.emotion-4.emotion-4 {
   box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
   padding-right: 8px;
   padding-left: 8px;
@@ -74,16 +74,17 @@ exports[`TagsPoplist renders correctly 1`] = `
   background-color: #fff;
   border-radius: 4px;
   max-width: 80vw;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.emotion-4 {
+.emotion-5 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -95,11 +96,11 @@ exports[`TagsPoplist renders correctly 1`] = `
   padding-right: 8px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   margin: 4px;
 }
 
-.emotion-3 {
+.emotion-6 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -113,16 +114,16 @@ exports[`TagsPoplist renders correctly 1`] = `
 
 <div>
     <div
-      class="sui-box emotion-6"
+      class="sui-box emotion-0"
     >
       <div
-        class="sui-box emotion-2"
+        class="sui-box emotion-1"
       >
         <div
-          class="sui-box emotion-1"
+          class="sui-box emotion-2"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             scaleway
           </span>
@@ -130,13 +131,13 @@ exports[`TagsPoplist renders correctly 1`] = `
       </div>
       +1
       <div
-        class="sui-box emotion-5"
+        class="sui-box emotion-4"
       >
         <div
-          class="sui-box emotion-4"
+          class="sui-box emotion-5"
         >
           <span
-            class="emotion-3"
+            class="emotion-6"
           >
             cloud
           </span>
@@ -150,14 +151,14 @@ exports[`TagsPoplist renders correctly 1`] = `
 
 exports[`TagsPoplist renders correctly with custom threshold 1`] = `
 <DocumentFragment>
-  .emotion-5.emotion-5 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-4.emotion-4 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,11 +170,11 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   color: #4a4f62;
 }
 
-.emotion-3 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,11 +186,11 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   padding-right: 8px;
 }
 
-.emotion-3.emotion-3 {
-  margin-right: 0;
+.emotion-2.emotion-2 {
+  margin-right: 8px;
 }
 
-.emotion-0 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -205,11 +206,11 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1 {
+.emotion-4 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -221,31 +222,31 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   padding-right: 8px;
 }
 
-.emotion-1.emotion-1 {
-  margin-right: 8px;
+.emotion-4.emotion-4 {
+  margin-right: 0;
 }
 
 <div>
     <div
-      class="sui-box emotion-5"
+      class="sui-box emotion-0"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-1"
       >
         <div
-          class="sui-box emotion-1"
+          class="sui-box emotion-2"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             scaleway
           </span>
         </div>
         <div
-          class="sui-box emotion-3"
+          class="sui-box emotion-4"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             cloud
           </span>
@@ -258,14 +259,14 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
 
 exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] = `
 <DocumentFragment>
-  .emotion-8.emotion-8 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-4.emotion-4 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -277,11 +278,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   color: #4a4f62;
 }
 
-.emotion-3 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -293,11 +294,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   padding-right: 8px;
 }
 
-.emotion-3.emotion-3 {
-  margin-right: 0;
+.emotion-2.emotion-2 {
+  margin-right: 8px;
 }
 
-.emotion-0 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -313,7 +314,27 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   white-space: nowrap;
 }
 
-.emotion-7.emotion-7 {
+.emotion-4 {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-4.emotion-4 {
+  margin-right: 0;
+}
+
+.emotion-6.emotion-6 {
   box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
   padding-right: 8px;
   padding-left: 8px;
@@ -330,16 +351,17 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   background-color: #fff;
   border-radius: 4px;
   max-width: 80vw;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.emotion-6 {
+.emotion-7 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -351,11 +373,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   padding-right: 8px;
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   margin: 4px;
 }
 
-.emotion-5 {
+.emotion-8 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -367,47 +389,27 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   text-overflow: ellipsis;
 }
 
-.emotion-1 {
-  border-radius: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f5f7;
-  height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-1.emotion-1 {
-  margin-right: 8px;
-}
-
 <div>
     <div
-      class="sui-box emotion-8"
+      class="sui-box emotion-0"
     >
       <div
-        class="sui-box emotion-4"
+        class="sui-box emotion-1"
       >
         <div
-          class="sui-box emotion-1"
+          class="sui-box emotion-2"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             scaleway
           </span>
         </div>
         <div
-          class="sui-box emotion-3"
+          class="sui-box emotion-4"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             cloud
           </span>
@@ -415,13 +417,13 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
       </div>
       +1
       <div
-        class="sui-box emotion-7"
+        class="sui-box emotion-6"
       >
         <div
-          class="sui-box emotion-6"
+          class="sui-box emotion-7"
         >
           <span
-            class="emotion-5"
+            class="emotion-8"
           >
             provider
           </span>
@@ -434,14 +436,14 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
 
 exports[`TagsPoplist renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags 1`] = `
 <DocumentFragment>
-  .emotion-8.emotion-8 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -453,11 +455,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   color: #4a4f62;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -469,11 +471,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   padding-right: 8px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 0;
 }
 
-.emotion-0 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -489,7 +491,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   white-space: nowrap;
 }
 
-.emotion-7.emotion-7 {
+.emotion-4.emotion-4 {
   box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
   padding-right: 8px;
   padding-left: 8px;
@@ -506,16 +508,17 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   background-color: #fff;
   border-radius: 4px;
   max-width: 80vw;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.emotion-4 {
+.emotion-5 {
   border-radius: 4px;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   display: -webkit-box;
   display: -webkit-flex;
@@ -527,11 +530,11 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   padding-right: 8px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   margin: 4px;
 }
 
-.emotion-3 {
+.emotion-6 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -545,16 +548,16 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
 
 <div>
     <div
-      class="sui-box emotion-8"
+      class="sui-box emotion-0"
     >
       <div
-        class="sui-box emotion-2"
+        class="sui-box emotion-1"
       >
         <div
-          class="sui-box emotion-1"
+          class="sui-box emotion-2"
         >
           <span
-            class="emotion-0"
+            class="emotion-3"
           >
             scaleway
           </span>
@@ -562,22 +565,22 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
       </div>
       +2
       <div
-        class="sui-box emotion-7"
+        class="sui-box emotion-4"
       >
         <div
-          class="sui-box emotion-4"
+          class="sui-box emotion-5"
         >
           <span
-            class="emotion-3"
+            class="emotion-6"
           >
             cloud
           </span>
         </div>
         <div
-          class="sui-box emotion-4"
+          class="sui-box emotion-5"
         >
           <span
-            class="emotion-3"
+            class="emotion-6"
           >
             provider
           </span>

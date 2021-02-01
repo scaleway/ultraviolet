@@ -2,18 +2,18 @@
 
 exports[`DotSteps renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-2.emotion-2 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -22,11 +22,11 @@ exports[`DotSteps renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   margin-right: 8px;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -35,18 +35,18 @@ exports[`DotSteps renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 0;
 }
 
 <div
-    class="sui-box emotion-2"
+    class="sui-box emotion-0"
   >
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-1"
+      class="sui-box emotion-2"
     />
   </div>
 </DocumentFragment>
@@ -54,14 +54,14 @@ exports[`DotSteps renders correctly 1`] = `
 
 exports[`DotSteps renders correctly useState function 1`] = `
 <DocumentFragment>
-  .emotion-10.emotion-10 {
+  .emotion-0.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -70,7 +70,7 @@ exports[`DotSteps renders correctly useState function 1`] = `
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: #4f0599;
+  background-color: gray;
   cursor: pointer;
 }
 
@@ -78,83 +78,7 @@ exports[`DotSteps renders correctly useState function 1`] = `
   margin-right: 8px;
 }
 
-.emotion-9 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
-}
-
-.emotion-9.emotion-9 {
-  margin-right: 0;
-}
-
-.emotion-0 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
-}
-
-.emotion-0.emotion-0 {
-  margin-right: 8px;
-}
-
-<div
-    class="sui-box emotion-10"
-  >
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-1"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-0"
-    />
-    <div
-      class="sui-box emotion-9"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
-<DocumentFragment>
-  .emotion-10.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-3 {
+.emotion-2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -163,11 +87,11 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-3.emotion-3 {
+.emotion-2.emotion-2 {
   margin-right: 8px;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -176,11 +100,61 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   margin-right: 0;
 }
 
-.emotion-0 {
+<div
+    class="sui-box emotion-0"
+  >
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-2"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-1"
+    />
+    <div
+      class="sui-box emotion-10"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
+<DocumentFragment>
+  .emotion-0.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-1 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -189,42 +163,68 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   margin-right: 8px;
 }
 
+.emotion-4 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #4f0599;
+  cursor: pointer;
+}
+
+.emotion-4.emotion-4 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.emotion-10.emotion-10 {
+  margin-right: 0;
+}
+
 <div
-    class="sui-box emotion-10"
+    class="sui-box emotion-0"
   >
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-3"
+      class="sui-box emotion-4"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <div
-      class="sui-box emotion-9"
+      class="sui-box emotion-10"
     />
   </div>
 </DocumentFragment>
