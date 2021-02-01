@@ -59,6 +59,10 @@ Action.defaultProps = {
   size: 20,
   rounded: false,
   variant: 'primary',
+  tooltip: undefined,
+  children: () => null,
+  key: undefined,
+  name: undefined,
 }
 
 export { Action }

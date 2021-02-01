@@ -6,37 +6,28 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import { Action } from '..'
+import { buttonVariants } from '../../Button'
+import { icons } from '../../Icon'
 
 <Meta title="Components/Action" component={Action} />
 
 # Action
 
-<Description>Set variant using `variant` property.</Description>
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Action name="lock" />
+  </Story>
+</Canvas>
 
 ## Variant
 
 <Canvas>
-  <Story name="variant" args={{}}>
-    <Action name="lock" variant="link" m={1} />
-    <Action name="lock" variant="primary" m={1} />
-    <Action name="lock" variant="secondary" m={1} />
-    <Action name="lock" variant="secondary-bordered" m={1} />
-    <Action name="lock" variant="success" m={1} />
-    <Action name="lock" variant="success-bordered" m={1} />
-    <Action name="lock" variant="success-soft-bordered" m={1} />
-    <Action name="lock" variant="warning" m={1} />
-    <Action name="lock" variant="warning-bordered" m={1} />
-    <Action name="lock" variant="warning-soft-bordered" m={1} />
-  </Story>
-</Canvas>
-
-## Rounded
-
-<Canvas>
-  <Story name="rounded" args={{}}>
-    <Action name="lock" variant="primary" m={1} rounded />
-    <Action name="lock" variant="secondary" m={1} rounded />
-    <Action name="lock" variant="secondary-bordered" m={1} rounded />
+  <Story name="variant">
+    {buttonVariants.map(variant => (
+      <Action name="lock" variant={variant} mr={2} />
+    ))}
   </Story>
 </Canvas>
 
@@ -46,11 +37,38 @@ import { Action } from '..'
 <Description>size will throw an error if size > 32 </Description>
 
 <Canvas>
-  <Story name="size" args={{}}>
-    <Action name="lock" size={10} variant="primary" m={1} />
-    <Action name="lock" size={25} variant="warning" m={1} />
-    <Action name="lock" size={40} variant="secondary" m={1} />
-    <Action name="lock" size={60} variant="secondary" m={1} />
+  <Story name="size">
+    {[10, 25, 40, 60].map(size => (
+      <Action name="lock" variant="secondary" size={size} mr={2} />
+    ))}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="disabled">
+    <Action name="lock" variant="lock" mr={2} disabled />
+  </Story>
+</Canvas>
+
+## Icon
+
+<Description>You can change the icon by setting `name` prop.</Description>
+
+<Canvas>
+  <Story name="icon">
+    {icons.map(icon => (
+      <Action name={icon} mr={2} mb={2} />
+    ))}
+  </Story>
+</Canvas>
+
+## Rounded
+
+<Canvas>
+  <Story name="rounded">
+    <Action name="lock" rounded />
   </Story>
 </Canvas>
 
@@ -59,31 +77,21 @@ import { Action } from '..'
 <Description>Set tooltip using `tooltip` property.</Description>
 
 <Canvas>
-  <Story name="tooltip" args={{}}>
-    <Action name="lock" variant="primary" m={1} tooltip="I am locked" />
-  </Story>
-</Canvas>
-
-## Icon
-
-<Description>Set an icon using `name` property</Description>
-
-<Canvas>
-  <Story name="icon" args={{}}>
-    <Action name="eye" variant="secondary-bordered" m={1} />
-    <Action name="cancel" variant="warning-soft-bordered" m={1} />
+  <Story name="tooltip">
+    <Action name="lock" variant="primary" tooltip="I am locked" />
   </Story>
 </Canvas>
 
 ## String
 
 <Description>
-  You can use a string as `children`. Don't forget to adjust width
+  You can fill action button with text by adding it in `children`. You will also
+  need to adjust width value.
 </Description>
 
 <Canvas>
-  <Story name="string" args={{}}>
-    <Action variant="secondary-bordered" width={72} m={1}>
+  <Story name="string">
+    <Action variant="secondary-bordered" width={72}>
       hello
     </Action>
   </Story>
