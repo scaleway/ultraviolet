@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11,8 +11,8 @@ exports[`SwitchButton renders correctly 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -38,41 +38,41 @@ exports[`SwitchButton renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   color: #b2b6c3;
   border-color: #4f0599;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   box-shadow: 0 0 8px 2px #eeeeff;
 }
 
-.emotion-2:focus {
+.emotion-0:focus {
   box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-0 {
+.emotion-2 {
   position: absolute;
   opacity: 0.01;
 }
 
 <label
     aria-checked="false"
-    class="sui-box emotion-2 emotion-3"
+    class="sui-box emotion-0 emotion-1"
     for="radio-choice"
     variant="default"
   >
     Choice
     <input
       aria-checked="false"
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -86,11 +86,6 @@ exports[`SwitchButton renders correctly 1`] = `
 exports[`SwitchButton renders correctly when disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: absolute;
-  opacity: 0.01;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,8 +94,8 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -131,20 +126,25 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   pointer-events: none;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   color: #d4dae7;
   border-color: #d4dae7;
 }
 
+.emotion-2 {
+  position: absolute;
+  opacity: 0.01;
+}
+
 <label
     aria-checked="false"
-    class="sui-box emotion-2 emotion-3"
+    class="sui-box emotion-0 emotion-1"
     disabled=""
     for="radio-choice"
     variant="default"
@@ -153,7 +153,7 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
     <input
       aria-checked="false"
       aria-disabled="true"
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -168,11 +168,6 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 exports[`SwitchButton renders correctly with complex child 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: absolute;
-  opacity: 0.01;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,8 +176,8 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -213,20 +208,25 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   pointer-events: none;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   color: #d4dae7;
   border-color: #d4dae7;
 }
 
+.emotion-2 {
+  position: absolute;
+  opacity: 0.01;
+}
+
 <label
     aria-checked="true"
-    class="sui-box emotion-2 emotion-3"
+    class="sui-box emotion-0 emotion-1"
     disabled=""
     for="radio-choice"
     variant="default"
@@ -236,7 +236,7 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
       aria-checked="true"
       aria-disabled="true"
       checked=""
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -251,11 +251,6 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 exports[`SwitchButton renders correctly with variant segment 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  position: absolute;
-  opacity: 0.01;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -264,8 +259,8 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
   -webkit-align-items: center;
@@ -297,65 +292,70 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   box-shadow: none;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   color: #b2b6c3;
   border-color: #4f0599;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   box-shadow: 0 0 8px 2px #eeeeff;
 }
 
-.emotion-2:focus {
+.emotion-0:focus {
   box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   box-shadow: none;
   border: none;
   color: #4a4f62;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-0[aria-checked='true'] {
   background-color: #4f0599;
   color: #fff;
 }
 
-.emotion-2[aria-checked='true']:hover {
+.emotion-0[aria-checked='true']:hover {
   color: #fff;
 }
 
-.emotion-2[aria-checked='false'] {
+.emotion-0[aria-checked='false'] {
   background-color: white;
   color: #4a4f62;
   border-color: transparent;
 }
 
-.emotion-2[aria-checked='false']:hover,
-.emotion-2[aria-checked='false']:focus {
+.emotion-0[aria-checked='false']:hover,
+.emotion-0[aria-checked='false']:focus {
   color: #4a4f62;
   border: none;
   box-shadow: none;
 }
 
+.emotion-2 {
+  position: absolute;
+  opacity: 0.01;
+}
+
 <label
     aria-checked="false"
-    class="sui-box emotion-2 emotion-3"
+    class="sui-box emotion-0 emotion-1"
     for="radio-choice"
     variant="segment"
   >
     Choice
     <input
       aria-checked="false"
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="radio-choice"
       name="radio"
       tabindex="0"
