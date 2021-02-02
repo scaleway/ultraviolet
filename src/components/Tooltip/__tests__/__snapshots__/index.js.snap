@@ -23,14 +23,12 @@ exports[`Tooltip renders with visible=false 1`] = `
   padding: 8px;
   text-align: center;
   -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
-  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
   transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
   transform-origin: top center;
-  -webkit-transform: translate3d(0,-4px,0);
-  -ms-transform: translate3d(0,-4px,0);
-  transform: translate3d(0,-4px,0);
+  -webkit-transform: translate3d(0, -4px, 0);
+  -moz-transform: translate3d(0, -4px, 0);
+  -ms-transform: translate3d(0, -4px, 0);
+  transform: translate3d(0, -4px, 0);
   background-color: #000;
   color: #fff;
   fill: #000;
@@ -39,9 +37,10 @@ exports[`Tooltip renders with visible=false 1`] = `
 
 [data-enter] .emotion-0 {
   opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 <div
@@ -103,14 +102,12 @@ exports[`Tooltip renders with visible=true 1`] = `
   padding: 8px;
   text-align: center;
   -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
-  -webkit-transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
   transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
   transform-origin: top center;
-  -webkit-transform: translate3d(0,-4px,0);
-  -ms-transform: translate3d(0,-4px,0);
-  transform: translate3d(0,-4px,0);
+  -webkit-transform: translate3d(0, -4px, 0);
+  -moz-transform: translate3d(0, -4px, 0);
+  -ms-transform: translate3d(0, -4px, 0);
+  transform: translate3d(0, -4px, 0);
   background-color: #000;
   color: #fff;
   fill: #000;
@@ -119,9 +116,10 @@ exports[`Tooltip renders with visible=true 1`] = `
 
 [data-enter] .emotion-0 {
   opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 <div

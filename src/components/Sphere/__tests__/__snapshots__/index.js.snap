@@ -18,8 +18,8 @@ exports[`Sphere renders correctly when halved 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
@@ -54,8 +54,8 @@ exports[`Sphere renders correctly with default values 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
@@ -74,7 +74,7 @@ exports[`Sphere renders correctly with default values 1`] = `
 
 exports[`Sphere renders correctly with one char and smaller 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -90,28 +90,28 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
 }
 
-.emotion-1.emotion-1 {
+.emotion-0.emotion-0 {
   width: 20px;
   height: 20px;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   color: #fff;
   font-size: 10px;
 }
 
 <div
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     >
       ★
     </div>

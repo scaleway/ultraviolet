@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { colors, space } from '../../new_theme'

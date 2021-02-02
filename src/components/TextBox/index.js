@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-for */
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'

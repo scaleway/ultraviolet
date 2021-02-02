@@ -2,51 +2,51 @@
 
 exports[`Description renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-0 {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
 }
 
-.emotion-4 > dt {
+.emotion-0>dt {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-4 > dt:after {
+.emotion-0>dt:after {
   content: ':';
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-4 dd + dt {
+.emotion-0 dd+dt {
   margin-top: 16px;
 }
 
 <dl
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Name
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Big instance
     </dd>
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Size
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       125 GB
     </dd>
@@ -56,65 +56,65 @@ exports[`Description renders correctly 1`] = `
 
 exports[`Description renders correctly inline 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-0 {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
 }
 
-.emotion-4 > dt {
+.emotion-0>dt {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-4 > dt:after {
+.emotion-0>dt:after {
   content: ':';
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-4 dd + dt {
+.emotion-0 dd+dt {
   margin-top: 16px;
 }
 
-.emotion-4 > dt {
+.emotion-0>dt {
   float: left;
   clear: left;
   margin-right: 8px;
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   margin-top: 0;
 }
 
-.emotion-4 dd + dt + dd {
+.emotion-0 dd+dt+dd {
   margin-top: 16px;
 }
 
 <dl
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Name
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Big instance
     </dd>
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Size
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       125 GB
     </dd>
@@ -124,77 +124,77 @@ exports[`Description renders correctly inline 1`] = `
 
 exports[`Description renders correctly seletable 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-0 {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
 }
 
-.emotion-4 > dt {
+.emotion-0>dt {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-4 > dt:after {
+.emotion-0>dt:after {
   content: ':';
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-4 dd + dt {
+.emotion-0 dd+dt {
   margin-top: 16px;
 }
 
-.emotion-4 > dt {
+.emotion-0>dt {
   float: left;
   clear: left;
   margin-right: 8px;
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   margin-top: 0;
 }
 
-.emotion-4 dd + dt + dd {
+.emotion-0 dd+dt+dd {
   margin-top: 16px;
 }
 
-.emotion-4 > dd {
+.emotion-0>dd {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
 }
 
-.emotion-4 > dd::selection {
+.emotion-0>dd::selection {
   color: #eeeeff;
   background: #4f0599;
 }
 
 <dl
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Name
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Big instance
     </dd>
     <dt
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       Size
     </dt>
     <dd
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     >
       125 GB
     </dd>

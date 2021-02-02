@@ -9,7 +9,7 @@ exports[`PhoneInput renders correctly 1`] = `
   flex: 1;
 }
 
-.emotion-0 > label {
+.emotion-0>label {
   color: #b2b6c3;
   display: block;
   font-size: 16;
@@ -22,25 +22,26 @@ exports[`PhoneInput renders correctly 1`] = `
   position: absolute;
   text-overflow: ellipsis;
   top: 0;
-  -webkit-transform: translate(0,12px) scale(1);
-  -ms-transform: translate(0,12px) scale(1);
-  transform: translate(0,12px) scale(1);
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
   -webkit-transition: -webkit-transform 0.15s;
-  -webkit-transition: transform 0.15s;
   transition: transform 0.15s;
   white-space: nowrap;
   width: 100%;
 }
 
-.emotion-0 > label.visited {
+.emotion-0>label.visited {
   padding-left: 56px;
-  -webkit-transform: translate(-9.6%,-3px) scale(0.8);
-  -ms-transform: translate(-9.6%,-3px) scale(0.8);
-  transform: translate(-9.6%,-3px) scale(0.8);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.emotion-0 .react-tel-input > .flag-dropdown,
-.emotion-0 .react-tel-input > .flag-dropdown .selected-flag {
+.emotion-0 .react-tel-input>.flag-dropdown,
+.emotion-0 .react-tel-input>.flag-dropdown .selected-flag {
   background: none;
   border: none;
   cursor: inherit;
@@ -55,7 +56,7 @@ exports[`PhoneInput renders correctly 1`] = `
   display: none;
 }
 
-.emotion-0 .react-tel-input > input.form-control[type='tel'] {
+.emotion-0 .react-tel-input>input.form-control[type='tel'] {
   background-color: #fff;
   background-image: none;
   border-color: #d4dae7;
@@ -77,7 +78,7 @@ exports[`PhoneInput renders correctly 1`] = `
   height: 48px;
 }
 
-.emotion-0 .react-tel-input > input.form-control[type='tel']:focus {
+.emotion-0 .react-tel-input>input.form-control[type='tel']:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
@@ -132,7 +133,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   flex: 1;
 }
 
-.emotion-0 > label {
+.emotion-0>label {
   color: #b2b6c3;
   display: block;
   font-size: 16;
@@ -145,25 +146,26 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   position: absolute;
   text-overflow: ellipsis;
   top: 0;
-  -webkit-transform: translate(0,12px) scale(1);
-  -ms-transform: translate(0,12px) scale(1);
-  transform: translate(0,12px) scale(1);
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
   -webkit-transition: -webkit-transform 0.15s;
-  -webkit-transition: transform 0.15s;
   transition: transform 0.15s;
   white-space: nowrap;
   width: 100%;
 }
 
-.emotion-0 > label.visited {
+.emotion-0>label.visited {
   padding-left: 56px;
-  -webkit-transform: translate(-9.6%,-3px) scale(0.8);
-  -ms-transform: translate(-9.6%,-3px) scale(0.8);
-  transform: translate(-9.6%,-3px) scale(0.8);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.emotion-0 .react-tel-input > .flag-dropdown,
-.emotion-0 .react-tel-input > .flag-dropdown .selected-flag {
+.emotion-0 .react-tel-input>.flag-dropdown,
+.emotion-0 .react-tel-input>.flag-dropdown .selected-flag {
   background: none;
   border: none;
   cursor: not-allowed;
@@ -178,7 +180,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   display: none;
 }
 
-.emotion-0 .react-tel-input > input.form-control[type='tel'] {
+.emotion-0 .react-tel-input>input.form-control[type='tel'] {
   background-color: #fff;
   background-image: none;
   border-color: #d4dae7;
@@ -200,7 +202,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   height: 48px;
 }
 
-.emotion-0 .react-tel-input > input.form-control[type='tel']:focus {
+.emotion-0 .react-tel-input>input.form-control[type='tel']:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }

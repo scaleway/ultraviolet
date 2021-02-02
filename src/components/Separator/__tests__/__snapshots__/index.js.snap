@@ -40,7 +40,7 @@ exports[`Separator renders correctly with custom color 1`] = `
 
 exports[`Separator renders correctly with custom icon 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
   align-items: center;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   border: 0;
   width: auto;
@@ -65,13 +65,13 @@ exports[`Separator renders correctly with custom icon 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #d4dae7;
   vertical-align: middle;
   height: 24px;
@@ -80,19 +80,19 @@ exports[`Separator renders correctly with custom icon 1`] = `
   min-height: 24px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
 <div
-    class="sui-box emotion-3"
+    class="sui-box emotion-0"
   >
     <hr
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <svg
-      class="sui-box sc-ui-icon emotion-1"
+      class="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -101,7 +101,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
       />
     </svg>
     <hr
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -109,21 +109,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
 
 exports[`Separator renders correctly with custom icon vertically 1`] = `
 <DocumentFragment>
-  .emotion-1 {
-  fill: #d4dae7;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.emotion-1.emotion-1 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.emotion-3 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,7 +123,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   align-items: center;
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -148,20 +134,34 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
+.emotion-2 {
+  fill: #d4dae7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-2.emotion-2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 <div
-    class="sui-box emotion-3"
+    class="sui-box emotion-0"
   >
     <hr
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
     <svg
-      class="sui-box sc-ui-icon emotion-1"
+      class="sui-box sc-ui-icon emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -170,7 +170,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
       />
     </svg>
     <hr
-      class="sui-box emotion-0"
+      class="sui-box emotion-1"
     />
   </div>
 </DocumentFragment>
