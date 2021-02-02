@@ -1,3 +1,10 @@
+## [0.52.0](https://github.com/chambo-e/scw-ui/compare/v0.51.0...v0.52.0) (2021-02-02)
+
+
+### Features
+
+* upgrade to emotion@11 :tada: ([79af477](https://github.com/chambo-e/scw-ui/commit/79af477370ced8edde4b8f375e4c51160f6c7796))
+
 ## [0.51.0](https://github.com/chambo-e/scw-ui/compare/v0.50.1...v0.51.0) (2021-01-28)
 
 
