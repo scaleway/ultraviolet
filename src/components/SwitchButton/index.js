@@ -67,6 +67,11 @@ const disabledClass = () => css`
   background-color: ${theme.gray50};
   border-color: ${theme.gray350};
   pointer-events: none;
+
+  &[aria-checked='true'] {
+    color: ${theme.gray350};
+    border-color: ${theme.gray350};
+  }
 `
 
 const StyledSwitch = styled(Box)`
