@@ -8,62 +8,7 @@ exports[`Modal renders with customStyle 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
-}
-
-.emotion-1 {
-  border: 0;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-
-.emotion-1.emotion-1 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-bottom: 0;
-}
-
-.emotion-0 {
-  fill: #b2b6c3;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-4 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,7 +26,7 @@ exports[`Modal renders with customStyle 1`] = `
   background-color: aliceblue;
 }
 
-.emotion-3 {
+.emotion-1 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -92,26 +37,80 @@ exports[`Modal renders with customStyle 1`] = `
   min-height: initial;
   box-shadow: 0 0 12px 18px rgba(165,165,205,0.2);
   opacity: 1;
-  background: radial-gradient(circle,#8b2fe6 0%,#4f0599 50%,#30015a 100%);
+  background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 }
 
-.emotion-3::before {
+.emotion-1::before {
   content: '';
   height: 100%;
   width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+}
+
+.emotion-3 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.emotion-3.emotion-3 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.emotion-4 {
+  fill: #b2b6c3;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 <div
     class="__reakit-portal"
   >
     <div
-      class="emotion-4"
+      class="emotion-0"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-3"
+        class="emotion-1"
         data-dialog="true"
         id="modal"
         role="dialog"
@@ -121,12 +120,12 @@ exports[`Modal renders with customStyle 1`] = `
           class="emotion-2"
         >
           <button
-            class="sui-box emotion-1"
+            class="sui-box emotion-3"
             title="close"
             type="button"
           >
             <svg
-              class="sui-box sc-ui-icon emotion-0"
+              class="sui-box sc-ui-icon emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -152,7 +151,7 @@ exports[`Modal renders with customStyle 1`] = `
 
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +168,7 @@ exports[`Modal renders with default Props 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-3 {
+.emotion-1 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -182,7 +181,7 @@ exports[`Modal renders with default Props 1`] = `
   opacity: 1;
 }
 
-.emotion-3::before {
+.emotion-1::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -197,12 +196,13 @@ exports[`Modal renders with default Props 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   position: absolute;
   top: 16px;
@@ -210,11 +210,9 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.emotion-1 {
+.emotion-3 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -227,14 +225,14 @@ exports[`Modal renders with default Props 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: #b2b6c3;
   vertical-align: middle;
   height: 20px;
@@ -247,7 +245,7 @@ exports[`Modal renders with default Props 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-4"
+      class="emotion-0"
       data-dialog-ref="modal"
       hidden=""
       style="display: none;"
@@ -255,7 +253,7 @@ exports[`Modal renders with default Props 1`] = `
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-3"
+        class="emotion-1"
         data-dialog="true"
         hidden=""
         id="modal"
@@ -267,12 +265,12 @@ exports[`Modal renders with default Props 1`] = `
           class="emotion-2"
         >
           <button
-            class="sui-box emotion-1"
+            class="sui-box emotion-3"
             title="close"
             type="button"
           >
             <svg
-              class="sui-box sc-ui-icon emotion-0"
+              class="sui-box sc-ui-icon emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -300,7 +298,7 @@ exports[`Modal renders with disclosure 1`] = `
   >
     Test
   </button>
-  .emotion-4 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -317,7 +315,7 @@ exports[`Modal renders with disclosure 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-3 {
+.emotion-1 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -330,7 +328,7 @@ exports[`Modal renders with disclosure 1`] = `
   opacity: 1;
 }
 
-.emotion-3::before {
+.emotion-1::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -345,12 +343,13 @@ exports[`Modal renders with disclosure 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   position: absolute;
   top: 16px;
@@ -358,11 +357,9 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.emotion-1 {
+.emotion-3 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -375,14 +372,14 @@ exports[`Modal renders with disclosure 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: #b2b6c3;
   vertical-align: middle;
   height: 20px;
@@ -395,7 +392,7 @@ exports[`Modal renders with disclosure 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-4"
+      class="emotion-0"
       data-dialog-ref="modal-test"
       hidden=""
       style="display: none;"
@@ -403,7 +400,7 @@ exports[`Modal renders with disclosure 1`] = `
       <div
         aria-label="modal-test"
         aria-modal="true"
-        class="emotion-3"
+        class="emotion-1"
         data-dialog="true"
         hidden=""
         id="modal-test"
@@ -415,12 +412,12 @@ exports[`Modal renders with disclosure 1`] = `
           class="emotion-2"
         >
           <button
-            class="sui-box emotion-1"
+            class="sui-box emotion-3"
             title="close"
             type="button"
           >
             <svg
-              class="sui-box sc-ui-icon emotion-0"
+              class="sui-box sc-ui-icon emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -446,7 +443,7 @@ exports[`Modal renders with opened={true} 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .emotion-4 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -463,7 +460,7 @@ exports[`Modal renders with opened={true} 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-3 {
+.emotion-1 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -476,7 +473,7 @@ exports[`Modal renders with opened={true} 1`] = `
   opacity: 1;
 }
 
-.emotion-3::before {
+.emotion-1::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -491,12 +488,13 @@ exports[`Modal renders with opened={true} 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   position: absolute;
   top: 16px;
@@ -504,11 +502,9 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.emotion-1 {
+.emotion-3 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -521,14 +517,14 @@ exports[`Modal renders with opened={true} 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: #b2b6c3;
   vertical-align: middle;
   height: 20px;
@@ -541,13 +537,13 @@ exports[`Modal renders with opened={true} 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-4"
+      class="emotion-0"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-3"
+        class="emotion-1"
         data-dialog="true"
         id="modal"
         role="dialog"
@@ -557,12 +553,12 @@ exports[`Modal renders with opened={true} 1`] = `
           class="emotion-2"
         >
           <button
-            class="sui-box emotion-1"
+            class="sui-box emotion-3"
             title="close"
             type="button"
           >
             <svg
-              class="sui-box sc-ui-icon emotion-0"
+              class="sui-box sc-ui-icon emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -588,7 +584,7 @@ exports[`Modal renders with opened={true} 1`] = `
 
 exports[`Modal renders with portal node (modal=false) 1`] = `
 <DocumentFragment>
-  .emotion-4 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -605,7 +601,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-3 {
+.emotion-1 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -618,7 +614,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   opacity: 1;
 }
 
-.emotion-3::before {
+.emotion-1::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -633,12 +629,13 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   position: absolute;
   top: 16px;
@@ -646,11 +643,9 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.emotion-1 {
+.emotion-3 {
   border: 0;
-  -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -663,14 +658,14 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3.emotion-3 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: #b2b6c3;
   vertical-align: middle;
   height: 20px;
@@ -680,14 +675,14 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
 }
 
 <div
-    class="emotion-4"
+    class="emotion-0"
     data-dialog-ref="modal-test"
     hidden=""
     style="display: none;"
   >
     <div
       aria-label="modal-test"
-      class="emotion-3"
+      class="emotion-1"
       data-dialog="true"
       hidden=""
       id="modal-test"
@@ -699,12 +694,12 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
         class="emotion-2"
       >
         <button
-          class="sui-box emotion-1"
+          class="sui-box emotion-3"
           title="close"
           type="button"
         >
           <svg
-            class="sui-box sc-ui-icon emotion-0"
+            class="sui-box sc-ui-icon emotion-4"
             viewBox="0 0 24 24"
           >
             <path

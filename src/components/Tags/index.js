@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import React, { useEffect, useRef, useState } from 'react'
 import { theme } from '../../theme'

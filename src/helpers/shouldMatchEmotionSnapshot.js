@@ -1,13 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/core'
+import { createSerializer } from '@emotion/jest'
+import { CacheProvider } from '@emotion/react'
 import { render } from '@testing-library/react'
-import serializer from 'jest-emotion'
 import React from 'react'
 
-expect.addSnapshotSerializer(serializer)
+expect.addSnapshotSerializer(createSerializer())
 
-const emotionCache = createCache()
+const emotionCache = createCache({
+  key: 'cache',
+})
 emotionCache.compat = true
 
 export default (component, { transform } = {}) => {

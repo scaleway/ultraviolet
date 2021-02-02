@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'

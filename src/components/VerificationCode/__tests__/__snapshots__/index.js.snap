@@ -2,7 +2,7 @@
 
 exports[`VerificationCode renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -13,31 +13,31 @@ exports[`VerificationCode renders correctly with default values 1`] = `
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -46,7 +46,7 @@ exports[`VerificationCode renders correctly with default values 1`] = `
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -55,7 +55,7 @@ exports[`VerificationCode renders correctly with default values 1`] = `
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -64,7 +64,7 @@ exports[`VerificationCode renders correctly with default values 1`] = `
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
@@ -78,7 +78,7 @@ exports[`VerificationCode renders correctly with default values 1`] = `
 
 exports[`VerificationCode renders correctly with initial value and placeholder and 6 fields 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -89,31 +89,31 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -122,7 +122,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -131,7 +131,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
       value="3"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -140,7 +140,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
@@ -149,7 +149,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="4"
       id="verification-code-4"
       pattern="[0-9]*"
@@ -158,7 +158,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="5"
       id="verification-code-5"
       pattern="[0-9]*"
@@ -172,7 +172,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
 
 exports[`VerificationCode should handle and replace non number with "" when type is number 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -183,31 +183,31 @@ exports[`VerificationCode should handle and replace non number with "" when type
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -216,7 +216,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -225,7 +225,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
       value=""
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -234,7 +234,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
       value="3"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
@@ -248,7 +248,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
 
 exports[`VerificationCode should handle paste when type is not number 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -259,31 +259,31 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-6"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       placeholder=""
@@ -291,7 +291,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       placeholder=""
@@ -299,7 +299,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       value="h"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       placeholder=""
@@ -307,7 +307,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       value="2"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       placeholder=""
@@ -315,7 +315,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       value="3"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="4"
       id="verification-code-4"
       placeholder=""
@@ -323,7 +323,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       value="a"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="5"
       id="verification-code-5"
       placeholder=""
@@ -336,7 +336,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
 
 exports[`VerificationCode should handle paste with no overflowing values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -347,31 +347,31 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -380,7 +380,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -389,7 +389,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       value="2"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -398,7 +398,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       value="3"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
@@ -412,7 +412,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
 
 exports[`VerificationCode should handle paste with overflowing values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -423,31 +423,31 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -456,7 +456,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -465,7 +465,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
       value="2"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -474,7 +474,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
       value="3"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
@@ -488,7 +488,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
 
 exports[`VerificationCode should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   border: solid 1px #dce1eb;
   font-size: 24px;
   color: #4a4f62;
@@ -499,31 +499,31 @@ exports[`VerificationCode should handle paste with overflowing values at differe
   height: 64px;
 }
 
-.emotion-0:last-child {
+.emotion-1:last-child {
   margin-right: 0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #dce1eb;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #dce1eb;
 }
 
 <div
-    class="sui-box emotion-4"
+    class="sui-box emotion-0"
   >
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="0"
       id="verification-code-0"
       pattern="[0-9]*"
@@ -532,7 +532,7 @@ exports[`VerificationCode should handle paste with overflowing values at differe
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="1"
       id="verification-code-1"
       pattern="[0-9]*"
@@ -541,7 +541,7 @@ exports[`VerificationCode should handle paste with overflowing values at differe
       value="1"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="2"
       id="verification-code-2"
       pattern="[0-9]*"
@@ -550,7 +550,7 @@ exports[`VerificationCode should handle paste with overflowing values at differe
       value="2"
     />
     <input
-      class="emotion-0"
+      class="emotion-1"
       data-id="3"
       id="verification-code-3"
       pattern="[0-9]*"
