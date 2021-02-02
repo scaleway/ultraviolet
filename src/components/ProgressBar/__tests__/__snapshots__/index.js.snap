@@ -72,7 +72,7 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -81,7 +81,7 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -97,7 +97,14 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -106,11 +113,11 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="-250"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -178,7 +185,7 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -187,7 +194,7 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -203,7 +210,14 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -212,11 +226,11 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="250"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -264,7 +278,7 @@ exports[`ProgressBar renders info 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -273,7 +287,7 @@ exports[`ProgressBar renders info 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -289,7 +303,14 @@ exports[`ProgressBar renders info 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -298,11 +319,11 @@ exports[`ProgressBar renders info 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -320,7 +341,7 @@ exports[`ProgressBar renders primary 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -329,7 +350,7 @@ exports[`ProgressBar renders primary 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -345,7 +366,14 @@ exports[`ProgressBar renders primary 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -354,11 +382,11 @@ exports[`ProgressBar renders primary 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -416,7 +444,7 @@ exports[`ProgressBar renders progression 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -425,14 +453,21 @@ exports[`ProgressBar renders progression 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -441,11 +476,11 @@ exports[`ProgressBar renders progression 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="0"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -473,7 +508,7 @@ exports[`ProgressBar renders success 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -482,7 +517,7 @@ exports[`ProgressBar renders success 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -498,7 +533,14 @@ exports[`ProgressBar renders success 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -507,11 +549,11 @@ exports[`ProgressBar renders success 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -549,7 +591,7 @@ exports[`ProgressBar renders warning 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -558,7 +600,7 @@ exports[`ProgressBar renders warning 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-0 {
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -574,7 +616,14 @@ exports[`ProgressBar renders warning 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
@@ -583,11 +632,11 @@ exports[`ProgressBar renders warning 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>
@@ -636,6 +685,15 @@ exports[`ProgressBar renders with different background 1`] = `
 }
 
 .emotion-0 {
+  position: relative;
+  height: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 2px;
+  background-color: yellow;
+}
+
+.emotion-1 {
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -651,29 +709,27 @@ exports[`ProgressBar renders with different background 1`] = `
   bottom: 0;
   width: 25%;
   opacity: 0.8;
-  background: linear-gradient( 90deg,rgba(255,255,255,0),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0) );
+  background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
-}
-
-.emotion-1 {
-  position: relative;
-  height: 4px;
-  margin-left: 0;
-  margin-right: 0;
-  border-radius: 2px;
-  background-color: yellow;
 }
 
 <div
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="sui-box emotion-1"
+    class="sui-box emotion-0"
     role="progressbar"
   >
     <div
-      class="emotion-0"
+      class="emotion-1"
     />
   </div>
 </DocumentFragment>

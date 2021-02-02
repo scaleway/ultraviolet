@@ -26,7 +26,7 @@ const Grid = styled(Box, {
       ? ''
       : Object.keys(breakpoints).reduce(
           (style, brk) =>
-            `${style} ${query(brk, `max-width: ${gridMaxWidths[brk]}`)}`,
+            `${style} ${query(brk, `max-width: ${gridMaxWidths[brk]};`)}`,
           '',
         )}
 `
