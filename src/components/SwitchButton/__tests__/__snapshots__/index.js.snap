@@ -132,6 +132,11 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   border-color: #4f0599;
 }
 
+.emotion-0[aria-checked='true'] {
+  color: #d4dae7;
+  border-color: #d4dae7;
+}
+
 .emotion-2 {
   position: absolute;
   opacity: 0.01;
@@ -207,6 +212,11 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
+}
+
+.emotion-0[aria-checked='true'] {
+  color: #d4dae7;
+  border-color: #d4dae7;
 }
 
 .emotion-2 {
