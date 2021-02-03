@@ -1,3 +1,10 @@
+### [0.52.1](https://github.com/chambo-e/scw-ui/compare/v0.52.0...v0.52.1) (2021-02-03)
+
+
+### Bug Fixes
+
+* updated documentation ([165653a](https://github.com/chambo-e/scw-ui/commit/165653a53d59ea8dba325232a81ca888ab233017))
+
 ## [0.52.0](https://github.com/chambo-e/scw-ui/compare/v0.51.0...v0.52.0) (2021-02-02)
 
 
