@@ -1,0 +1,73 @@
+name: CI
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-modules-
+    - name: Use Node.js
+      uses: actions/setup-node@v2.1.4
+      with:
+        node-version: 14
+    - run: yarn
+    - run: yarn run lint
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-modules-
+    - name: Use Node.js
+      uses: actions/setup-node@v2.1.4
+      with:
+        node-version: 14
+    - run: yarn
+    - run: yarn run test:coverage
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+  build:
+    runs-on: ubuntu-20.04
+    needs: [lint, test]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2.1.4
+      with:
+        node-version: 14
+    - run: yarn --pure-lockfile
+    - run: yarn run build
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: [build]
+    if: github.ref == 'refs/heads/master'
+    env:
+      GIT_AUTHOR_NAME: Scaleway Bot
+      GIT_AUTHOR_EMAIL: github@scaleway.com
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: "0"
+    - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - name: Use Node.js
+      uses: actions/setup-node@v2.1.4
+      with:
+        node-version: 14
+    - run: yarn --pure-lockfile
+    - run: yarn run build
+    - run: yarn run semantic-release
+      env:
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
