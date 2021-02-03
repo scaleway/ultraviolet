@@ -27,7 +27,7 @@ import { Alert } from '..'
 
 # Alert
 
-## `variant`
+## Variant
 
 <Description>Alert //:TODO</Description>
 
@@ -76,9 +76,11 @@ import { Alert } from '..'
   </Story>
 </Canvas>
 
-## `icon`
+## Icon
 
 For basic variants, icon is automatically added. A specific one can be set using `icon` prop. All [icons](/docs-components-icon) are supported.
+
+You can also change icon size using `iconSize` prop.
 
 <Canvas>
   <Story
@@ -86,27 +88,6 @@ For basic variants, icon is automatically added. A specific one can be set using
     args={{
       variant: 'success',
       icon: 'lock',
-    }}
-  >
-    {args => (
-      <Alert {...args}>
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Alert>
-    )}
-  </Story>
-</Canvas>
-
-## `iconSize`
-
-You can set a different icon size which will override the default size.
-
-<Canvas>
-  <Story
-    name="icon-size"
-    args={{
-      iconSize: 20,
     }}
   >
     {args => (
