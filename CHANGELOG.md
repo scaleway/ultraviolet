@@ -1,3 +1,10 @@
+### [0.52.2](https://github.com/chambo-e/scw-ui/compare/v0.52.1...v0.52.2) (2021-02-03)
+
+
+### Bug Fixes
+
+* **switchbutton:** fixed SwitchButton border when disabled ([7eb1c0e](https://github.com/chambo-e/scw-ui/commit/7eb1c0e54353d2f0d7fb7c891d0c6984af1b46c0))
+
 ### [0.52.1](https://github.com/chambo-e/scw-ui/compare/v0.52.0...v0.52.1) (2021-02-03)
 
 
