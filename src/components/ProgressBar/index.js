@@ -73,7 +73,7 @@ export function ProgressBar({
       {progress ? (
         <div css={styles.progress} />
       ) : (
-        <div css={[styles.filled({ variant, value }), styles.progress]} />
+        <div css={styles.filled({ variant, value })} />
       )}
     </Box>
   )

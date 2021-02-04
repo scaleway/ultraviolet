@@ -272,7 +272,7 @@ const defaultProps = {
   size: 'large',
   icon: undefined,
   iconPosition: 'left',
-  children: () => null,
+  children: null,
   extend: undefined,
   displayProgressOnly: false,
   type: 'button',
@@ -280,11 +280,15 @@ const defaultProps = {
 
 const propTypes = {
   as: PropTypes.node,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.func,
+  ]),
   disabled: PropTypes.bool,
   displayProgressOnly: PropTypes.bool,
   extend: PropTypes.bool,
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   progress: PropTypes.oneOfType([
     PropTypes.bool,
