@@ -1,3 +1,10 @@
+## [0.53.0](https://github.com/scaleway/scaleway-ui/compare/v0.52.2...v0.53.0) (2021-02-04)
+
+
+### Features
+
+* migrate to github ([#1](https://github.com/scaleway/scaleway-ui/issues/1)) ([fcb97eb](https://github.com/scaleway/scaleway-ui/commit/fcb97eb4f7ef6824b32bcde498207ef66951dd58))
+
 ### [0.52.2](https://github.com/chambo-e/scw-ui/compare/v0.52.1...v0.52.2) (2021-02-03)
 
 
