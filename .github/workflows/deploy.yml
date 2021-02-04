@@ -65,6 +65,8 @@ jobs:
           context_name: 'remote'
           ssh_cert: ${{ secrets.SSH_CERT }}
           ssh_key: ${{ secrets.SSH_KEY }}
+      - name: Reinstall docker-compose
+        run: pip install docker-compose
       - name: Deploy docker
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
