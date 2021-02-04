@@ -37,8 +37,7 @@
     "prebuild": "shx rm -rf dist",
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
-    "test": "jest",
-    "transfer": "yarn build && cp -f ./dist/* ../shire/node_modules/@scaleway/ui/dist"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -117,7 +116,7 @@
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/gitlab": "^6.0.9",
+    "@semantic-release/github": "^7.2.0",
     "@semantic-release/npm": "^7.0.10",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@smooth-ui/core-em": "^10.1.0",
@@ -137,7 +136,6 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.19.0",
-    "eslint-formatter-gitlab": "^2.2.0",
     "eslint-plugin-mdx": "^1.8.2",
     "husky": "^4.3.7",
     "identity-obj-proxy": "^3.0.0",

@@ -1,0 +1,39 @@
+name: Teardown Pull Request
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  teardown:
+    runs-on: ubuntu-20.04
+    env:
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
+      REMOTE_SSH_SERVER: ssh://root@scw.company
+    steps:
+      - uses: actions/checkout@v2
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v3.x
+      - name: Export custom variables
+        run: |
+          ([[ $REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          ([[ $REF == 'refs/heads/master' ]] && echo "ENV_URL=https://scw.company" || echo "ENV_URL=https://$GITHUB_HEAD_REF_SLUG_URL.scw.company") >> $GITHUB_ENV
+
+      - name: Set Docker context
+        uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
+        with:
+          docker_host: ${{ env.REMOTE_SSH_SERVER }}
+          context_name: 'remote'
+          ssh_cert: ${{ secrets.SSH_CERT }}
+          ssh_key: ${{ secrets.SSH_KEY }}
+      - name: Remove deployment
+        env:
+          VERSION: ${{ env.BRANCH_SLUG }}
+        run: docker-compose -p ${VERSION} --context remote down --rmi all
+
+      - name: Update deployment status
+        uses: bobheadxi/deployments@v0.4.3
+        with:
+          step: deactivate-env
+          token: ${{ secrets.GITHUB_TOKEN }}
+          env: ${{ env.BRANCH_SLUG }}

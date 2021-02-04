@@ -33,7 +33,7 @@ $ yarn run build:profile
 
 ---
 
-## Use local changes on shire
+## Usage
 
 ### NPM link
 
@@ -44,14 +44,6 @@ $ # In the project where you want to use it
 $ yarn link @scaleway/ui
 $ # When you are done, to restore the original package
 $ yarn unlink @scaleway/ui && yarn install --force
-```
-
-### Manual way
-
-> Only valid when used with `shire` and both project are located in the same folder
-
-```sh
-$ yarn run transfer
 ```
 
 ---
