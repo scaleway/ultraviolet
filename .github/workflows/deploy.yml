@@ -70,7 +70,7 @@ jobs:
       - name: Deploy docker
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
-        run: PATH=$PATH:/home/user/.local/bin; which docker-compose; docker-compose pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
+        run: PATH=$PATH:/home/$USER/.local/bin; which docker-compose; docker-compose pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.4.3
