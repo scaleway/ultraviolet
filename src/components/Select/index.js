@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import { colors, radii, space } from '../../new_theme'
+import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
@@ -96,6 +97,7 @@ export function Select({
   arrowColor,
   children,
   id,
+  isLoading,
   ...props
 }) {
   const disabledChildren = () =>
@@ -120,7 +122,7 @@ export function Select({
         id={id}
         name={name}
         required={required}
-        disabled={disabled}
+        disabled={disabled || isLoading}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
@@ -129,13 +131,17 @@ export function Select({
       </select>
 
       <Box css={[styles.chevron, ...chevronStyles]}>
-        <Icon
-          name="chevron-down"
-          size={11}
-          color={
-            arrowColor || (error ? 'warning' : disabled ? 'gray' : 'gray550')
-          }
-        />
+        {isLoading ? (
+          <ActivityIndicator size={20} />
+        ) : (
+          <Icon
+            name="chevron-down"
+            size={11}
+            color={
+              arrowColor || (error ? 'warning' : disabled ? 'gray' : 'gray550')
+            }
+          />
+        )}
       </Box>
     </Box>
   )
@@ -144,14 +150,28 @@ export function Select({
 Select.Option = 'option'
 Select.OptGroup = 'optgroup'
 
+Select.defaultProps = {
+  arrowColor: undefined,
+  disabled: false,
+  error: undefined,
+  id: undefined,
+  isLoading: false,
+  name: undefined,
+  onBlur: undefined,
+  onChange: () => {},
+  required: false,
+  value: undefined,
+}
+
 Select.propTypes = {
-  name: PropTypes.string,
-  id: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  disabled: PropTypes.bool,
-  required: PropTypes.bool,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  value: PropTypes.string,
   arrowColor: PropTypes.string,
+  disabled: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  id: PropTypes.string,
+  isLoading: PropTypes.bool,
+  name: PropTypes.string,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  required: PropTypes.bool,
+  value: PropTypes.string,
 }

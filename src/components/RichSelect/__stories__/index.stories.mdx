@@ -5,11 +5,11 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
+import { useEffect, useState } from 'react'
 import { RichSelect } from '..'
+import { ActivityIndicator, Box, Button } from "../.."
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
-import { Box } from '../../Box'
-import { Button } from '../../Button'
 
 <Meta title="Components/RichSelect" component={RichSelect} />
 
@@ -186,6 +186,56 @@ of RichSelect with an external way (check example with button).
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>
     </Box>
+  </Story>
+</Canvas>
+
+## Loading
+
+### Demo
+
+<Canvas>
+  <Story name="Demo Loading" height="175px">
+    <Box>
+      <RichSelect isLoading>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
+### Exemple
+
+<Canvas>
+  <Story name="Exemple with custom LoadingIndicator" height="175px">
+    {() => {
+      const [isLoading, setIsLoading] = useState(true)
+      useEffect(() => {
+        let timeout
+        if (isLoading) {
+          timeout = setTimeout(() => {
+            setIsLoading(false)
+          }, 3000)
+        }
+        return () => clearTimeout(timeout)
+      }, [isLoading])
+      return (
+        <Box>
+          <Button size="small" mb={2} onClick={() => setIsLoading(true)}>
+            Load data
+          </Button>
+          <RichSelect
+            isLoading={isLoading}
+            components={{
+              LoadingIndicator: () => <ActivityIndicator size={24} />,
+            }}
+          >
+            <RichSelect.Option value="a">Option A</RichSelect.Option>
+            <RichSelect.Option value="b">Option B</RichSelect.Option>
+          </RichSelect>
+        </Box>
+      )
+    }}
   </Story>
 </Canvas>
 

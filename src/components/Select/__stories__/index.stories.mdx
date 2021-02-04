@@ -5,7 +5,9 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
+import { useEffect, useState } from 'react'
 import { Select } from '..'
+import { Button } from '../..'
 
 <Meta title="Components/Select" component={Select} />
 
@@ -46,7 +48,7 @@ import { Select } from '..'
   </Story>
 </Canvas>
 
-## Disabled
+## Error
 
 <Canvas>
   <Story name="Error" height="100px">
@@ -54,6 +56,49 @@ import { Select } from '..'
       <Select.Option value="a">Option A</Select.Option>
       <Select.Option value="b">Option B</Select.Option>
     </Select>
+  </Story>
+</Canvas>
+
+## Loading
+
+### Demo
+
+<Canvas>
+  <Story name="Demo Loading" height="100px">
+    <Select isLoading>
+      <Select.Option value="a">Option A</Select.Option>
+      <Select.Option value="b">Option B</Select.Option>
+    </Select>
+  </Story>
+</Canvas>
+
+### Exemple
+
+<Canvas>
+  <Story name="Exemple Loading" height="100px">
+    {() => {
+      const [isLoading, setIsLoading] = useState(true)
+      useEffect(() => {
+        let timeout
+        if (isLoading) {
+          timeout = setTimeout(() => {
+            setIsLoading(false)
+          }, 3000)
+        }
+        return () => clearTimeout(timeout)
+      }, [isLoading])
+      return (
+        <>
+          <Button size="small" mb={2} onClick={() => setIsLoading(true)}>
+            Load data
+          </Button>
+          <Select isLoading={isLoading}>
+            <Select.Option value="a">Option A</Select.Option>
+            <Select.Option value="b">Option B</Select.Option>
+          </Select>
+        </>
+      )
+    }}
   </Story>
 </Canvas>
 
