@@ -69,9 +69,8 @@ jobs:
         run: pip install docker-compose
       - name: Deploy docker
         env:
-          PATH: $PATH:/home/user/.local/bin
           VERSION: ${{ env.BRANCH_SLUG }}
-        run: docker-compose pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
+        run: $PATH:/home/user/.local/bin; docker-compose pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.4.3
