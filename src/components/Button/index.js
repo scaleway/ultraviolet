@@ -279,7 +279,6 @@ const defaultProps = {
 }
 
 const propTypes = {
-  as: PropTypes.node,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
@@ -296,7 +295,6 @@ const propTypes = {
     PropTypes.oneOf(['left', 'right']),
   ]),
   size: PropTypes.oneOf(buttonSizes),
-  tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   variant: PropTypes.oneOf(buttonVariants),
   type: PropTypes.string,
 }

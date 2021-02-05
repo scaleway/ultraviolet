@@ -57,11 +57,11 @@ Information.defaultProps = {
   color: 'primary',
   iconSize: 32,
   imgSize: 57,
-  icon: null,
-  iconColor: null,
-  img: null,
-  heading: null,
-  text: null,
+  icon: undefined,
+  iconColor: undefined,
+  img: undefined,
+  heading: undefined,
+  text: undefined,
 }
 
 Information.propTypes = {
