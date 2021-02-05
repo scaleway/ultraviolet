@@ -284,6 +284,7 @@ const propTypes = {
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
+    PropTypes.arrayOf(PropTypes.node),
   ]),
   disabled: PropTypes.bool,
   displayProgressOnly: PropTypes.bool,
