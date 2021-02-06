@@ -3,7 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const styles = {
@@ -43,33 +43,33 @@ const styles = {
     marginLeft: -24,
   }),
   past: css({
-    backgroundColor: theme.success,
-    color: theme.white,
-    borderColor: theme.white,
+    backgroundColor: colors.success,
+    color: colors.white,
+    borderColor: colors.white,
   }),
   clickable: css({
     cursor: 'pointer',
 
     ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, theme.success)}`,
+      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.success)}`,
     },
   }),
   current: css({
-    backgroundColor: theme.primary,
-    color: theme.white,
-    borderColor: theme.white,
+    backgroundColor: colors.primary,
+    color: colors.white,
+    borderColor: colors.white,
 
     ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, theme.primary)}`,
+      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.primary)}`,
     },
   }),
   future: css({
-    backgroundColor: theme.white,
-    color: theme.gray550,
-    borderColor: theme.gray350,
+    backgroundColor: colors.white,
+    color: colors.gray550,
+    borderColor: colors.gray350,
 
     ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, theme.gray550)}`,
+      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.gray550)}`,
     },
   }),
 }

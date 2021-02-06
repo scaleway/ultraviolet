@@ -1,14 +1,14 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const styles = {
   input: error => css`
-    border: solid 1px ${error ? theme.red : theme.gray300};
+    border: solid 1px ${error ? colors.red : colors.gray300};
     font-size: 24px;
-    color: ${error ? theme.red : theme.gray700};
+    color: ${error ? colors.red : colors.gray700};
     text-align: center;
     border-radius: 4px;
     margin-right: 8px;
@@ -20,7 +20,7 @@ const styles = {
     }
 
     &::placeholder {
-      color: ${theme.gray300};
+      color: ${colors.gray300};
     }
   `,
 }

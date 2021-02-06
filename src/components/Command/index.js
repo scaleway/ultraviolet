@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const style = css`
@@ -31,8 +31,8 @@ Command.propTypes = {
 }
 
 Command.defaultProps = {
-  color: theme.lightBlack,
-  backgroundColor: theme.light,
+  color: colors.lightBlack,
+  backgroundColor: colors.light,
 }
 
 export { Command }

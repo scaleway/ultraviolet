@@ -8,7 +8,7 @@ import {
   DialogDisclosure,
   useDialogState,
 } from 'reakit/Dialog'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import * as animations from '../../utils'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
@@ -143,7 +143,7 @@ const backdropStyles = ({ animated }) => css`
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: ${transparentize(0.8, theme.gray700)};
+  background-color: ${transparentize(0.8, colors.gray700)};
   ${animated && backdropAnimatedStyle}
 `
 
@@ -155,7 +155,7 @@ const dialogStyles = ({
   placement,
   bordered,
 }) => css`
-  background-color: ${theme.white};
+  background-color: ${colors.white};
   position: relative;
   border-radius: ${bordered ? 4 : 0}px;
   border: 0;
@@ -163,7 +163,7 @@ const dialogStyles = ({
   ${MODAL_PLACEMENT[placement]}
   width: ${MODAL_WIDTH[width]}px;
   min-height: ${height};
-  box-shadow: 0 0 12px 18px ${transparentize(0.8, theme.shadow)};
+  box-shadow: 0 0 12px 18px ${transparentize(0.8, colors.shadow)};
   opacity: 1;
   &::before {
     content: '';

@@ -17,7 +17,7 @@ import { ProgressionButton } from '..'
 
 <Canvas>
   <Story name="basic">
-    <ProgressionButton height={40}>Progressing…</ProgressionButton>
+    <ProgressionButton h={40}>Progressing…</ProgressionButton>
   </Story>
 </Canvas>
 
@@ -41,7 +41,7 @@ import { ProgressionButton } from '..'
       creation={new Date(new Date().setSeconds(new Date().getSeconds() + 10))}
       duration={20}
       color="beta"
-      height={40}
+      h={40}
     >
       I'm going to start in 10 seconds and take 20 seconds to complete
     </ProgressionButton>
@@ -51,7 +51,7 @@ import { ProgressionButton } from '..'
       creation={new Date(new Date().setSeconds(new Date().getSeconds() - 60))}
       duration={90}
       color="primary"
-      height={40}
+      h={40}
     >
       I was supposed to start one minute ago and take 90 seconds (meaning I only
       have 30s left and start at 66%)
@@ -62,7 +62,7 @@ import { ProgressionButton } from '..'
       creation={new Date(new Date().setSeconds(new Date().getSeconds() - 90))}
       duration={90}
       color="info"
-      height={40}
+      h={40}
     >
       I was supposed to start 90 seconds ago and take 90 seconds (meaning I'm
       already done)

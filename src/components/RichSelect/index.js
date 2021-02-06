@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJsonString } from '../../helpers/isJson'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import { Box } from '../Box'
@@ -263,7 +263,7 @@ const SelectContainer = props => {
       }}
     >
       {children}
-      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
         <Box fontSize={12} color="warning" pt="2px">
           {error}
         </Box>

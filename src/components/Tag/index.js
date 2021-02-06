@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
@@ -13,7 +13,7 @@ export const styles = {
     display: flex;
   `,
   text: css`
-    color: ${theme.gray700};
+    color: ${colors.gray700};
     font-size: 14px;
     align-self: center;
     max-width: 350px;
@@ -31,16 +31,15 @@ export const styles = {
     justify-content: center;
     &:hover,
     &:focus {
-      background-color: ${theme.gray200};
+      background-color: ${colors.gray200};
       svg {
-          fill: ${theme.primary};
-        },
+        fill: ${colors.primary};
+      }
     }
-
   `,
   bordered: css`
     border-radius: 4px;
-    border: 1px solid ${theme.gray550};
+    border: 1px solid ${colors.gray550};
     padding: 4px;
     width: 32px;
     height: 32px;
@@ -49,14 +48,14 @@ export const styles = {
 
 export const variantsContainer = {
   base: css`
-    background-color: ${theme.gray100};
+    background-color: ${colors.gray100};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
   `,
   bordered: css`
     padding: 8px;
-    border: 1px solid ${theme.gray350};
+    border: 1px solid ${colors.gray350};
   `,
 }
 

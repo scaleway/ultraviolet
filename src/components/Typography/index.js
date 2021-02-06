@@ -2,13 +2,13 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { theme } from '../../theme'
+import { colors, fonts, radii } from '../../theme'
 import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 
 const styles = {
   main: css({
-    color: theme.gray700,
+    color: colors.gray700,
     fontWeight: 400,
     marginBottom: 0,
     marginTop: 0,
@@ -19,13 +19,13 @@ const styles = {
     overflow: 'hidden',
   }),
   hero: css({
-    color: theme.gray950,
+    color: colors.gray950,
     fontSize: 35,
     lineHeight: '41px',
     marginBottom: 72,
   }),
   lead: css({
-    color: theme.gray950,
+    color: colors.gray950,
     fontSize: 25,
     lineHeight: '25px',
     marginBottom: 0,
@@ -38,51 +38,51 @@ const styles = {
     marginBottom: 24,
   }),
   title: css({
-    color: theme.gray950,
+    color: colors.gray950,
     fontSize: 21,
     lineHeight: '24px',
   }),
   bodyA: css({
-    color: theme.gray700,
+    color: colors.gray700,
     fontSize: 16,
     lineHeight: '24px',
   }),
   bodyB: css({
-    color: theme.gray550,
+    color: colors.gray550,
     fontSize: 14,
     lineHeight: '18px',
   }),
   bodyC: css({
-    color: theme.gray700,
+    color: colors.gray700,
     fontSize: 14,
     lineHeight: '22px',
   }),
   bodyD: css({
-    color: theme.gray700,
+    color: colors.gray700,
     fontSize: 14,
     lineHeight: '20px',
   }),
   tiny: css({
-    color: theme.gray550,
+    color: colors.gray550,
     fontSize: 12,
     lineHeight: '16px',
   }),
   description: css({
-    color: theme.gray950,
+    color: colors.gray950,
     fontSize: 16,
     lineHeight: '24px',
     fontWeight: 500,
   }),
   samplecode: css({
-    backgroundColor: theme.gray100,
-    color: theme.gray700,
+    backgroundColor: colors.gray100,
+    color: colors.gray700,
     fontSize: 12,
     lineHeight: '16px',
     padding: 4,
   }),
   badge: css({
-    backgroundColor: theme.gray100,
-    color: theme.gray700,
+    backgroundColor: colors.gray100,
+    color: colors.gray700,
     textTransform: 'capitalize',
     letterSpacing: 1,
     fontWeight: 500,
@@ -104,12 +104,12 @@ const styles = {
     -webkit-box-orient: vertical;
   `,
   command: css`
-    font-family: ${theme.monospace};
+    font-family: ${fonts.monospace};
     font-size: 13px;
     font-weight: 500;
-    border-radius: ${theme.borderRadius};
-    color: ${theme.gray700};
-    background-color: ${theme.gray100};
+    border-radius: ${radii.default};
+    color: ${colors.gray700};
+    background-color: ${colors.gray100};
     padding: 3px 5px;
   `,
 }
@@ -134,23 +134,23 @@ const variantTags = {
 
 const textColors = {
   inherit: 'inherit',
-  alert: theme.orange,
-  white: theme.white,
-  darkBlack: theme.gray950,
-  lightBlack: theme.gray700,
-  darkGrey: theme.gray550, // TODO: deprecated, to be removed soon
-  grey: theme.gray350, // TODO: deprecated, to be removed soon
-  darkGray: theme.gray550,
-  gray: theme.gray350,
-  light: theme.gray100,
-  green: theme.green,
-  red: theme.red,
-  warning: theme.warning,
-  blue: theme.blue,
-  violet: theme.primary,
-  primary: theme.primary,
-  lightPrimary: theme.gray200,
-  gold: theme.gold,
+  alert: colors.orange,
+  white: colors.white,
+  darkBlack: colors.gray950,
+  lightBlack: colors.gray700,
+  darkGrey: colors.gray550, // TODO: deprecated, to be removed soon
+  grey: colors.gray350, // TODO: deprecated, to be removed soon
+  darkGray: colors.gray550,
+  gray: colors.gray350,
+  light: colors.gray100,
+  green: colors.green,
+  red: colors.red,
+  warning: colors.warning,
+  blue: colors.blue,
+  violet: colors.primary,
+  primary: colors.primary,
+  lightPrimary: colors.gray200,
+  gold: colors.gold,
 }
 
 const Text = ({

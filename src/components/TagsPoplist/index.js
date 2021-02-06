@@ -7,7 +7,7 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Tag } from '../Tag'
 
@@ -19,7 +19,7 @@ const textStyle = maxTagWidth => css`
 `
 
 const text = css`
-  color: ${theme.gray700};
+  color: ${colors.gray700};
   font-size: 14px;
   align-self: center;
   max-width: 350px;
@@ -49,7 +49,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
           <Box
             display="flex"
             alignItems="center"
-            color={theme.gray700}
+            color={colors.gray700}
             {...props}
           >
             {tags.slice(0, visibleTagsCount).map((tag, i) => (
@@ -69,7 +69,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
                 as={Box}
                 css={text}
                 px={1}
-                color={theme.primary}
+                color={colors.primary}
                 border="none"
                 backgroundColor="transparent"
               >
@@ -78,7 +78,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
               <Tooltip {...tooltip}>
                 <TooltipArrow
                   {...tooltip}
-                  style={{ fill: theme.white, top: '93%' }}
+                  style={{ fill: colors.white, top: '93%' }}
                 />
                 <Box
                   boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
@@ -86,7 +86,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
                   py="4px"
                   display="flex"
                   alignItems="center"
-                  backgroundColor={theme.white}
+                  backgroundColor={colors.white}
                   borderRadius="4px"
                   maxWidth="80vw"
                   flexWrap="wrap"

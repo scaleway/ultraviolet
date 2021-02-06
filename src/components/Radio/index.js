@@ -4,7 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio as ReakitRadio } from 'reakit'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 
@@ -21,7 +21,7 @@ const IconContainer = styled(Box)`
 `
 
 const disabledClass = () => css`
-  color: ${theme.gray300};
+  color: ${colors.gray300};
   cursor: not-allowed;
 `
 
@@ -29,11 +29,11 @@ const activeFocusClass = () => css`
   :hover,
   :focus {
     ${IconContainer} {
-      background-color: ${transparentize(0.75, theme.gray300)};
+      background-color: ${transparentize(0.75, colors.gray300)};
       border-radius: 50%;
 
       > ${StyledIcon} {
-        fill: ${theme.primary};
+        fill: ${colors.primary};
       }
     }
   }

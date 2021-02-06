@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const Label = styled(Box)`
-  color: ${theme.gray950};
+  color: ${colors.gray950};
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;

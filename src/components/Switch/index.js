@@ -3,29 +3,29 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Checkbox } from 'reakit'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Tooltip } from '../Tooltip'
 
 const PADDING = 6
 
 const styles = {
-  inactiveLabelColor: theme.gray700,
-  inactiveBigBallColor: theme.gray700,
-  inactiveBgColor: theme.gray550,
-  smallBallColor: theme.gray100,
-  disabled: theme.gray300,
+  inactiveLabelColor: colors.gray700,
+  inactiveBigBallColor: colors.gray700,
+  inactiveBgColor: colors.gray550,
+  smallBallColor: colors.gray100,
+  disabled: colors.gray300,
 }
 
 const variants = {
   primary: {
-    bgColor: theme.primary,
-    activeLabelColor: theme.gray100,
-    activeBigBallColor: theme.gray100,
+    bgColor: colors.primary,
+    activeLabelColor: colors.gray100,
+    activeBigBallColor: colors.gray100,
   },
   success: {
-    bgColor: theme.foam,
-    activeLabelColor: theme.success,
-    activeBigBallColor: theme.success,
+    bgColor: colors.foam,
+    activeLabelColor: colors.success,
+    activeBigBallColor: colors.success,
   },
 }
 

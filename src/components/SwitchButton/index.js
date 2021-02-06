@@ -4,7 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio } from 'reakit'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 
@@ -20,24 +20,24 @@ const variants = {
     &:focus {
       box-shadow: none;
       border: none;
-      color: ${theme.gray700};
+      color: ${colors.gray700};
     }
 
     &[aria-checked='true'] {
-      background-color: ${theme.primary};
-      color: ${theme.white};
+      background-color: ${colors.primary};
+      color: ${colors.white};
       :hover {
-        color: ${theme.white};
+        color: ${colors.white};
       }
     }
 
     &[aria-checked='false'] {
       background-color: white;
-      color: ${theme.gray700};
-      border-color: ${theme.transparent};
+      color: ${colors.gray700};
+      border-color: ${colors.transparent};
       :hover,
       :focus {
-        color: ${theme.gray700};
+        color: ${colors.gray700};
         border: none;
         box-shadow: none;
       }
@@ -48,29 +48,29 @@ const variants = {
 const active = () => css`
   &:hover,
   &:focus {
-    color: ${theme.gray550};
-    border-color: ${theme.primary};
+    color: ${colors.gray550};
+    border-color: ${colors.primary};
   }
 
   &:hover {
-    box-shadow: 0 0 8px 2px ${theme.gray200};
+    box-shadow: 0 0 8px 2px ${colors.gray200};
   }
 
   &:focus {
-    box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.primary)};
+    box-shadow: 0 0 1px 2px ${transparentize(0.75, colors.primary)};
   }
 `
 
 const disabledClass = () => css`
   cursor: not-allowed;
-  color: ${theme.gray350};
-  background-color: ${theme.gray50};
-  border-color: ${theme.gray350};
+  color: ${colors.gray350};
+  background-color: ${colors.gray50};
+  border-color: ${colors.gray350};
   pointer-events: none;
 
   &[aria-checked='true'] {
-    color: ${theme.gray350};
-    border-color: ${theme.gray350};
+    color: ${colors.gray350};
+    border-color: ${colors.gray350};
   }
 `
 
@@ -81,13 +81,13 @@ const StyledSwitch = styled(Box)`
   border-radius: 4px;
   align-items: center;
   border-style: solid;
-  border-color: ${theme.gray350};
+  border-color: ${colors.gray350};
   border-width: 1px;
   padding: 16px;
   transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
   user-select: none;
   touch-action: manipulation;
-  color: ${theme.gray550};
+  color: ${colors.gray550};
   font-size: 16px;
   line-height: 22px;
   position: relative;
@@ -96,8 +96,8 @@ const StyledSwitch = styled(Box)`
 
   &[aria-checked='true'] {
     cursor: auto;
-    color: ${theme.primary};
-    border-color: ${theme.primary};
+    color: ${colors.primary};
+    border-color: ${colors.primary};
   }
 
   ${({ checked, disabled }) => !checked && !disabled && active}

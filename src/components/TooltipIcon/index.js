@@ -3,8 +3,9 @@ import React from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
+<<<<<<< HEAD
 export const TooltipIcon = ({ color, name, size, tooltip, baseId }) => (
-  <Tooltip text={tooltip} baseId={baseId} width="max-content">
+  <Tooltip text={tooltip} baseId={baseId} w="max-content">
     <Icon color={color} name={name} size={size} />
   </Tooltip>
 )

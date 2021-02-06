@@ -3352,6 +3352,35 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@xstyled/core@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-2.2.2.tgz#526e91d9444a81963409cbb454af45efe1632481"
+  integrity sha512-CxdazBYO5RQoavbR5rk9mJImweSfXSxCV/vaF2gN46lSQp6gJpua0i9/j4fZF6m1mCTUqR7e6D5aT/ehE32YOQ==
+  dependencies:
+    "@xstyled/system" "^2.2.2"
+
+"@xstyled/emotion@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/emotion/-/emotion-2.2.2.tgz#d048949d2661d1005e343a3259b540055f2aa5e2"
+  integrity sha512-cdBS73jYPxTbh1TrO7+RLAooeVJEf/MBOyGoxYlDQ9T4dRXxUB/ORlVQHQlOeEntZvlfmH2C4e45WKHGk3+v9A==
+  dependencies:
+    "@xstyled/core" "^2.2.2"
+    "@xstyled/system" "^2.2.2"
+    "@xstyled/util" "^2.2.2"
+
+"@xstyled/system@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-2.2.2.tgz#6fec0efed71ac4433ff2bdee4f3ea065bef186d0"
+  integrity sha512-rzf/pXT3PiDXBS1Pj9GZx9vQOz/UY/gM015VSYogJBV3N0r8bMiQrDH6JPaGnyckgE1LDp4cDOeDBEwbjmsNjA==
+  dependencies:
+    "@xstyled/util" "^2.2.2"
+    csstype "^3.0.6"
+
+"@xstyled/util@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@xstyled/util/-/util-2.2.2.tgz#dd9144f0de8821f8050c191fd8b9df01bdf2a9f4"
+  integrity sha512-TDa2R8tOOSB/G1Lnq05bsc1t0jy1S364KZbzzhTEtvuK1o4IpPGjjXiQRA5qsgnFskdm9Q8Z1wcPaXNCouYN0Q==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -5843,7 +5872,7 @@ csstype@^2.5.7:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.14.tgz#004822a4050345b55ad4dcc00be1d9cf2f4296de"
   integrity sha512-2mSc+VEpGPblzAxyeR+vZhJKgYg0Og0nnRi7pmRXFYYxSfnOnW8A5wwQb4n4cE2nIOzqKOAzLCaEX6aBmNEv8A==
 
-csstype@^3.0.2:
+csstype@^3.0.2, csstype@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.6.tgz#865d0b5833d7d8d40f4e5b8a6d76aea3de4725ef"
   integrity sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==

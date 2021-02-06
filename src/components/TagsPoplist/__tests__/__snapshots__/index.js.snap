@@ -58,7 +58,8 @@ exports[`TagsPoplist renders correctly 1`] = `
 }
 
 .emotion-4.emotion-4 {
-  box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  --x-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  box-shadow: var(--x-ring-shadow, 0 0 #0000),var(--x-shadow);
   padding-right: 8px;
   padding-left: 8px;
   padding-top: 4px;
@@ -114,13 +115,13 @@ exports[`TagsPoplist renders correctly 1`] = `
 
 <div>
     <div
-      class="sui-box emotion-0"
+      class="emotion-0"
     >
       <div
-        class="sui-box emotion-1"
+        class="emotion-1"
       >
         <div
-          class="sui-box emotion-2"
+          class="emotion-2"
         >
           <span
             class="emotion-3"
@@ -131,10 +132,10 @@ exports[`TagsPoplist renders correctly 1`] = `
       </div>
       +1
       <div
-        class="sui-box emotion-4"
+        class="emotion-4"
       >
         <div
-          class="sui-box emotion-5"
+          class="emotion-5"
         >
           <span
             class="emotion-6"
@@ -228,13 +229,13 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
 
 <div>
     <div
-      class="sui-box emotion-0"
+      class="emotion-0"
     >
       <div
-        class="sui-box emotion-1"
+        class="emotion-1"
       >
         <div
-          class="sui-box emotion-2"
+          class="emotion-2"
         >
           <span
             class="emotion-3"
@@ -243,7 +244,7 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
           </span>
         </div>
         <div
-          class="sui-box emotion-4"
+          class="emotion-4"
         >
           <span
             class="emotion-3"
@@ -335,7 +336,8 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
 }
 
 .emotion-6.emotion-6 {
-  box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  --x-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  box-shadow: var(--x-ring-shadow, 0 0 #0000),var(--x-shadow);
   padding-right: 8px;
   padding-left: 8px;
   padding-top: 4px;
@@ -391,13 +393,13 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
 
 <div>
     <div
-      class="sui-box emotion-0"
+      class="emotion-0"
     >
       <div
-        class="sui-box emotion-1"
+        class="emotion-1"
       >
         <div
-          class="sui-box emotion-2"
+          class="emotion-2"
         >
           <span
             class="emotion-3"
@@ -406,7 +408,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
           </span>
         </div>
         <div
-          class="sui-box emotion-4"
+          class="emotion-4"
         >
           <span
             class="emotion-3"
@@ -417,10 +419,10 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
       </div>
       +1
       <div
-        class="sui-box emotion-6"
+        class="emotion-6"
       >
         <div
-          class="sui-box emotion-7"
+          class="emotion-7"
         >
           <span
             class="emotion-8"
@@ -492,7 +494,8 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
 }
 
 .emotion-4.emotion-4 {
-  box-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  --x-shadow: 0 -1px 5px 3px rgba(165,165,205,0.15);
+  box-shadow: var(--x-ring-shadow, 0 0 #0000),var(--x-shadow);
   padding-right: 8px;
   padding-left: 8px;
   padding-top: 4px;
@@ -548,13 +551,13 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
 
 <div>
     <div
-      class="sui-box emotion-0"
+      class="emotion-0"
     >
       <div
-        class="sui-box emotion-1"
+        class="emotion-1"
       >
         <div
-          class="sui-box emotion-2"
+          class="emotion-2"
         >
           <span
             class="emotion-3"
@@ -565,10 +568,10 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
       </div>
       +2
       <div
-        class="sui-box emotion-4"
+        class="emotion-4"
       >
         <div
-          class="sui-box emotion-5"
+          class="emotion-5"
         >
           <span
             class="emotion-6"
@@ -577,7 +580,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
           </span>
         </div>
         <div
-          class="sui-box emotion-5"
+          class="emotion-5"
         >
           <span
             class="emotion-6"

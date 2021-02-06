@@ -8,7 +8,7 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { colors, radii } from '../../new_theme'
+import { colors, radii } from '../../theme'
 import { Box } from '../Box'
 
 const variants = {

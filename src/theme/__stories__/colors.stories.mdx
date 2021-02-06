@@ -1,0 +1,29 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+import { colors } from '..'
+import { Box } from '../..'
+
+<Meta title="Theme/Colors" />
+
+# Colors
+
+<Story name="Palette">
+  {Object.keys(colors).map(
+    color =>
+      color !== 'colors' && (
+        <Box display="flex" justifyContent="center" key={color}>
+          <Box textAlign="center" w={100} p={1} m={1} backgroundColor="black">
+            <p style={{ color: colors[color] }}>{color}</p>
+          </Box>
+          <Box textAlign="center" w={100} p={1} m={1} backgroundColor="white">
+            <p style={{ color: colors[color] }}>{color}</p>
+          </Box>
+          <Box textAlign="center" w={100} p={1} m={1} backgroundColor={color}>
+            <p style={{ color: 'white' }}>{color}</p>
+          </Box>
+          <Box textAlign="center" w={100} p={1} m={1} backgroundColor={color}>
+            <p style={{ color: 'black' }}>{color}</p>
+          </Box>
+        </Box>
+      ),
+  )}
+</Story>

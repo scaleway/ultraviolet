@@ -28,7 +28,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
           <Row>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-0"
                 value="a"
                 checked={value === 'a'}
@@ -39,7 +38,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             </Col>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-1"
                 value="b"
                 checked={value === 'b'}
@@ -70,7 +68,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
           <Row>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-2"
                 value="a"
                 variant="default"
@@ -82,7 +79,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             </Col>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-2"
                 value="b"
                 variant="default"
@@ -101,13 +97,12 @@ import ControlValue from '../../../__stories__/components/ControlValue'
     <ControlValue value="a">
       {({ value, onChange }) => (
         <Grid>
-          <Row width={320}>
+          <Row w={320}>
             <Col pr={0}>
               <BorderedBox p="4px">
                 <Row>
                   <Col xsmall={6} pr={0}>
                     <SwitchButton
-                      width={1}
                       name="switch-3"
                       value="a"
                       variant="segment"
@@ -119,7 +114,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
                   </Col>
                   <Col xsmall={6} pl={0}>
                     <SwitchButton
-                      width={1}
                       name="switch-3"
                       value="b"
                       variant="segment"
@@ -153,7 +147,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
           <Row>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-4"
                 value="a"
                 checked={value === 'a'}
@@ -164,7 +157,6 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             </Col>
             <Col xsmall={3}>
               <SwitchButton
-                width={1}
                 name="switch-4"
                 value="b"
                 disabled

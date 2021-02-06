@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import { Pentagon } from '..'
-import { theme } from '../../../theme'
+import { colors } from '../../../theme'
 
 <Meta title="Components/Pentagon" component={Pentagon} />
 
@@ -24,10 +24,10 @@ import { theme } from '../../../theme'
     <Pentagon>X</Pentagon>
   </Story>
   <Story name="color">
-    <Pentagon color={theme.zumthor}>X</Pentagon>
+    <Pentagon color={colors.zumthor}>X</Pentagon>
   </Story>
   <Story name="size">
-    <Pentagon color={theme.serenade} size="200px">
+    <Pentagon color={colors.serenade} size="200px">
       X
     </Pentagon>
   </Story>

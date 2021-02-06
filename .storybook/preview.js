@@ -1,8 +1,8 @@
 import React from 'react'
-import { ThemeProvider } from '@emotion/react'
-import { Normalize } from '@smooth-ui/core-em'
+import { css, ThemeProvider } from '@emotion/react'
 
-import { theme } from '../src'
+import theme from '../src/theme'
+import { GlobalStyle } from '../src'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -15,13 +15,35 @@ export const parameters = {
   },
 }
 
+const adjustedTheme = ancestorTheme => ({
+  ...ancestorTheme,
+  ...Object.keys(theme).reduce(
+    (acc, themeItem) => ({
+      ...acc,
+      [themeItem]: {
+        ...(acc[themeItem] ?? {}),
+        ...theme[themeItem],
+      },
+    }),
+    ancestorTheme,
+  ),
+})
+
 export const decorators = [
   Story => (
-    <ThemeProvider theme={theme}>
-      <>
-        <Normalize />
+    <>
+      <GlobalStyle
+        additionalStyles={[
+          css`
+            body {
+              overflow: initial !important;
+            }
+          `,
+        ]}
+      />
+      <ThemeProvider theme={adjustedTheme}>
         <Story />
-      </>
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   ),
 ]

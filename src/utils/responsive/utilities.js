@@ -1,4 +1,4 @@
-import { breakpoints } from '../../new_theme'
+import { breakpoints } from '../../theme'
 
 export const up = (size, rules) => {
   if (!(size in breakpoints)) return null

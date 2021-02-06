@@ -1,9 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import createCache from '@emotion/cache'
 import { createSerializer } from '@emotion/jest'
-import { CacheProvider } from '@emotion/react'
+import { CacheProvider, ThemeProvider } from '@emotion/react'
 import { render } from '@testing-library/react'
 import React from 'react'
+import theme from '../theme'
 
 expect.addSnapshotSerializer(createSerializer())
 
@@ -18,7 +19,9 @@ export default component => {
   global.console = { error: jest.fn() }
 
   const { asFragment, unmount } = render(
-    <CacheProvider value={emotionCache}>{component}</CacheProvider>,
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>{component}</ThemeProvider>
+    </CacheProvider>,
     { container: document.body },
   )
   expect(asFragment()).toMatchSnapshot()

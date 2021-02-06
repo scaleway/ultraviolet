@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Typography } from '../Typography'
 

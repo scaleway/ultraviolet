@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Badge } from '../Badge'
 import { Box } from '../Box'
 import { Button } from '../Button'
@@ -10,20 +10,20 @@ import { Typography } from '../Typography'
 
 const variants = {
   error: {
-    main: theme.red,
-    background: theme.pippin,
+    main: colors.red,
+    background: colors.pippin,
   },
   warning: {
-    main: theme.orange,
-    background: theme.serenade,
+    main: colors.orange,
+    background: colors.serenade,
   },
   info: {
-    main: theme.blue,
-    background: theme.zumthor,
+    main: colors.blue,
+    background: colors.zumthor,
   },
   success: {
-    main: theme.gray700,
-    background: theme.foam,
+    main: colors.gray700,
+    background: colors.foam,
   },
 }
 
@@ -50,8 +50,8 @@ const styles = {
   `,
   link: css`
     margin-top: auto;
-    color: ${theme.blue};
-    background-color: ${theme.transparent};
+    color: ${colors.blue};
+    background-color: ${colors.transparent};
     padding: 0;
     width: transparent;
     display: flex;
@@ -84,7 +84,7 @@ const ExtendedReminder = ({
     <Box css={styles.container(variant)} {...props}>
       <Box css={styles.badge}>
         <Badge size="small" variant={badgeVariant[variant]}>
-          <Icon mr="4px" color={theme.white} name={icon} size={16} />{' '}
+          <Icon mr="4px" color={colors.white} name={icon} size={16} />{' '}
           {badgeText}
         </Badge>
       </Box>

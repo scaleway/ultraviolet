@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Tag } from '../Tag'
 
@@ -10,10 +10,10 @@ const container = {
   base: css`
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid ${theme.gray350};
+    border: 1px solid ${colors.gray350};
     &:focus-within {
-      border: 1px solid ${theme.primary};
-      box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.primary)};
+      border: 1px solid ${colors.primary};
+      box-shadow: 0 0 1px 2px ${transparentize(0.75, colors.primary)};
     }
 
     & > * {
@@ -25,7 +25,7 @@ const container = {
     padding: 8px 0;
 
     > input:focus {
-      box-shadow: 0 0 1px 2px ${transparentize(0.6, theme.primary)};
+      box-shadow: 0 0 1px 2px ${transparentize(0.6, colors.primary)};
     }
 
     > * {
@@ -37,7 +37,7 @@ const container = {
   `,
   noBorder: css`
     &:focus-within {
-      box-shadow: 0 0 2px 4px ${transparentize(0.75, theme.primary)};
+      box-shadow: 0 0 2px 4px ${transparentize(0.75, colors.primary)};
     }
 
     > * {
@@ -50,12 +50,12 @@ const container = {
 const styles = {
   input: css`
     font-size: 16px;
-    color: ${theme.gray700};
+    color: ${colors.gray700};
     border: none;
     outline: none;
-    background-color: ${theme.white};
+    background-color: ${colors.white};
     &::placeholder {
-      color: ${theme.gray550};
+      color: ${colors.gray550};
     }
   `,
 }

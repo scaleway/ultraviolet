@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const progressionAnimation = keyframes`
@@ -24,10 +24,10 @@ const ProgressionContainer = styled(Box)`
   z-index: 0;
   background: repeating-linear-gradient(
     45deg,
-    ${theme.gray550},
-    ${theme.gray550} 10px,
-    ${transparentize(0.25, theme.gray550)} 10px,
-    ${transparentize(0.25, theme.gray550)} 30px
+    ${colors.gray550},
+    ${colors.gray550} 10px,
+    ${transparentize(0.25, colors.gray550)} 10px,
+    ${transparentize(0.25, colors.gray550)} 30px
   );
   overflow: hidden;
   border-radius: 4px;
@@ -41,7 +41,7 @@ const ProgressionContainer = styled(Box)`
 `
 
 const Progression = styled.div`
-  background-color: ${({ color }) => theme[color]};
+  background-color: ${({ color }) => colors[color]};
   position: absolute;
   z-index: -1;
   top: 0;

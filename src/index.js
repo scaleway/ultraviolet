@@ -1,6 +1,5 @@
 export * from './components'
 export * from './helpers'
 export * from './hooks'
-export * from './theme'
+export { default as theme } from './theme'
 export * from './utils'
-export { default as newTheme } from './new_theme'

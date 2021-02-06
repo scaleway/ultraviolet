@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import { colors, radii, space } from '../../new_theme'
+import { colors, radii, space } from '../../theme'
 import { Box } from '../Box'
 
 const style = css`

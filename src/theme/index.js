@@ -30,11 +30,17 @@ const breakpoints = {
   xlarge: 1200,
 }
 
+const fonts = {
+  monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
+  sansSerif: 'Asap, System, sans-serif',
+}
+
 export default {
   colors,
   breakpoints,
   space,
   radii,
+  fonts,
 }
 
-export { colors, breakpoints, space, radii }
+export { colors, breakpoints, space, radii, fonts }

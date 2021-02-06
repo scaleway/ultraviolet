@@ -8,20 +8,20 @@ import React, {
   useState,
 } from 'react'
 import { onKeyOnlyNumbers, parseIntOr } from '../../helpers'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const styles = {
   limit: offsetTop => css`
     position: absolute;
     font-size: 12px;
-    color: ${theme.gray950};
+    color: ${colors.gray950};
     font-weight: 500;
     top: ${offsetTop + 8}px;
 
     ::before {
       content: '';
-      background-color: ${theme.gray950};
+      background-color: ${colors.gray950};
       width: 2px;
       position: absolute;
       height: 10px;
@@ -52,23 +52,23 @@ const styles = {
   `,
   bar(offsetTop) {
     return css`
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background-color ${theme.zumthor};
-  border-radius: 8px;
-  user-select: none;
-  top: ${offsetTop}px;
-  `
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: ${colors.zumthor};
+      border-radius: 8px;
+      user-select: none;
+      top: ${offsetTop}px;
+    `
   },
   cursorsLink: offsetTop => css`
-  position: absolute;
-  top: ${offsetTop + 0}px;
-  height: 4px;
-  width: 100%;
-  background-color ${theme.violet};
-  border-radius: 8px;
-  user-select: none;
+    position: absolute;
+    top: ${offsetTop + 0}px;
+    height: 4px;
+    width: 100%;
+    background-color: ${colors.violet};
+    border-radius: 8px;
+    user-select: none;
   `,
   cursor: (offsetTop, cursorWidth, isGrabbed) => css`
     position: absolute;
@@ -76,17 +76,17 @@ const styles = {
     height: 16px;
     width: ${cursorWidth}px;
     border-radius: 50%;
-    border: 4px solid ${theme.violet};
+    border: 4px solid ${colors.violet};
     background-color: white;
     cursor: ${isGrabbed ? 'grabbing' : 'grab'};
     margin-bottom: 16px;
   `,
   input: css`
     position: absolute;
-    color: ${theme.gray950};
-    background-color: ${theme.white};
+    color: ${colors.gray950};
+    background-color: ${colors.white};
     font-size: 16px;
-    border: 1px solid ${theme.violet};
+    border: 1px solid ${colors.violet};
     border-radius: 4px;
     min-height: 25px;
     min-width: 40px;

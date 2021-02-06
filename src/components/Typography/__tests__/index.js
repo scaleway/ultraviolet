@@ -27,7 +27,7 @@ describe('Typography', () => {
   typographyVariants.forEach(variant => {
     test(`variant "${variant}" with tooltip renders correctly`, () => {
       shouldMatchEmotionSnapshot(
-        <Typography variant={variant} ellipsis width={100}>
+        <Typography variant={variant} ellipsis w={100}>
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.

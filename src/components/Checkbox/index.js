@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
-import { colors, radii } from '../../new_theme'
+import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -116,7 +116,7 @@ export function Checkbox({
         )}
         {hasChildren && <div css={styles.children(size)}>{children}</div>}
       </Typography>
-      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
         <Box fontSize={12} color="warning" px="4px">
           {error}
         </Box>

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { breakpoints, space } from '../../new_theme'
+import { breakpoints, space } from '../../theme'
 import { up } from '../../utils'
 import { Box } from '../Box'
 
