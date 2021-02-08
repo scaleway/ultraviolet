@@ -1,6 +1,11 @@
 name: CI
 
-on: push
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+  push:
+    branches:
+      - master
 
 jobs:
   lint:
