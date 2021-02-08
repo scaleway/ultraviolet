@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { breakpoints, space } from '../../theme'
+import { screens, space } from '../../theme'
 import { up } from '../../utils'
 import { Box } from '../Box'
 
@@ -11,7 +11,7 @@ const gridMaxWidths = {
   xlarge: '1140px',
 }
 
-const query = (brk, style) => (breakpoints[brk] === 0 ? style : up(brk, style))
+const query = (brk, style) => (screens[brk] === 0 ? style : up(brk, style))
 
 const Grid = styled(Box, {
   shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop),
@@ -24,7 +24,7 @@ const Grid = styled(Box, {
   ${({ fluid }) =>
     fluid
       ? ''
-      : Object.keys(breakpoints).reduce(
+      : Object.keys(screens).reduce(
           (style, brk) =>
             `${style} ${query(brk, `max-width: ${gridMaxWidths[brk]};`)}`,
           '',

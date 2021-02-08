@@ -263,7 +263,7 @@ const SelectContainer = props => {
       }}
     >
       {children}
-      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
+      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
         <Box fontSize={12} color="warning" pt="2px">
           {error}
         </Box>

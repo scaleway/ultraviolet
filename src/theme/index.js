@@ -22,7 +22,7 @@ const space = {
   9: '72px',
 }
 
-const breakpoints = {
+const screens = {
   xsmall: 0,
   small: 576,
   medium: 768,
@@ -37,10 +37,10 @@ const fonts = {
 
 export default {
   colors,
-  breakpoints,
   space,
   radii,
   fonts,
+  screens,
 }
 
-export { colors, breakpoints, space, radii, fonts }
+export { colors, space, radii, fonts, screens }

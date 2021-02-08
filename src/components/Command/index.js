@@ -31,8 +31,8 @@ Command.propTypes = {
 }
 
 Command.defaultProps = {
-  color: colors.lightBlack,
-  backgroundColor: colors.light,
+  color: colors.gray700,
+  backgroundColor: colors.gray100,
 }
 
 export { Command }
