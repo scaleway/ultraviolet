@@ -272,26 +272,29 @@ const defaultProps = {
   size: 'large',
   icon: undefined,
   iconPosition: 'left',
-  children: () => null,
+  children: null,
   extend: undefined,
   displayProgressOnly: false,
   type: 'button',
 }
 
 const propTypes = {
-  as: PropTypes.node,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
   disabled: PropTypes.bool,
   displayProgressOnly: PropTypes.bool,
   extend: PropTypes.bool,
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   progress: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(['left', 'right']),
   ]),
   size: PropTypes.oneOf(buttonSizes),
-  tooltip: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   variant: PropTypes.oneOf(buttonVariants),
   type: PropTypes.string,
 }

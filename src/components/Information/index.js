@@ -42,9 +42,11 @@ export const Information = ({
           {heading}
         </Typography>
       )}
-      <Typography variant="bodyA" color={color}>
-        {text}
-      </Typography>
+      {text && (
+        <Typography variant="bodyA" color={color}>
+          {text}
+        </Typography>
+      )}
     </Box>
     {children}
   </Box>
@@ -55,10 +57,19 @@ Information.defaultProps = {
   color: 'primary',
   iconSize: 32,
   imgSize: 57,
+  icon: undefined,
+  iconColor: undefined,
+  img: undefined,
+  heading: undefined,
+  text: undefined,
 }
 
 Information.propTypes = {
+  children: PropTypes.node.isRequired,
+  text: PropTypes.string,
   backgroundColor: PropTypes.string,
+  img: PropTypes.string,
+  heading: PropTypes.string,
   color: PropTypes.string,
   icon: PropTypes.string,
   iconSize: PropTypes.number,

@@ -1,0 +1,79 @@
+import React from 'react'
+import { Button, buttonSizes, buttonVariants } from '..'
+import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+
+const SampleIcon = () => 'IconMock'
+
+describe('Button', () => {
+  describe('variant', () => {
+    buttonVariants.forEach(variant => {
+      test(`render ${variant}`, () => {
+        shouldMatchEmotionSnapshot(<Button variant={variant}>Hello</Button>)
+      })
+    })
+  })
+
+  describe('size', () => {
+    buttonSizes.forEach(size => {
+      test(`render ${size}`, () => {
+        shouldMatchEmotionSnapshot(<Button size={size}>Hello</Button>)
+      })
+    })
+  })
+
+  test(`should render correctly when disabled`, () => {
+    shouldMatchEmotionSnapshot(<Button disabled>Hello</Button>)
+  })
+
+  test(`should render correctly without a children`, () => {
+    shouldMatchEmotionSnapshot(<Button />)
+  })
+
+  test(`should render correctly without a children and an icon`, () => {
+    shouldMatchEmotionSnapshot(<Button icon="check" />)
+  })
+
+  test(`should render correctly with a custom Icon`, () => {
+    shouldMatchEmotionSnapshot(<Button icon={<SampleIcon />} />)
+  })
+
+  test(`should render correctly when acting as Link`, () => {
+    shouldMatchEmotionSnapshot(<Button to="/">Hello</Button>)
+  })
+
+  test(`should render correctly when acting as dom link`, () => {
+    shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>)
+  })
+
+  test(`should render correctly when extendable`, () => {
+    shouldMatchEmotionSnapshot(<Button extend>Hello</Button>)
+  })
+
+  test(`should render correctly when extendable with an icon`, () => {
+    shouldMatchEmotionSnapshot(
+      <Button extend icon="check">
+        Hello
+      </Button>,
+    )
+  })
+
+  test(`should render correctly loading`, () => {
+    shouldMatchEmotionSnapshot(<Button progress>Hello</Button>)
+  })
+
+  test(`should render correctly loading with an icon`, () => {
+    shouldMatchEmotionSnapshot(
+      <Button progress icon="check" iconPosition="right">
+        Hello
+      </Button>,
+    )
+  })
+
+  test(`should render correctly with an icon on the right`, () => {
+    shouldMatchEmotionSnapshot(
+      <Button icon="check" iconPosition="right">
+        Hello
+      </Button>,
+    )
+  })
+})
