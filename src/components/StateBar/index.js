@@ -6,9 +6,20 @@ import { ProgressBar } from '../ProgressBar'
 import { Typography } from '../Typography'
 
 const State = ({ label, children, ...props }) => (
-  <Typography as="div" variant="bodyA" color="darkBlack" {...props}>
+  <Typography
+    as="div"
+    variant="bodyA"
+    fontWeight={500}
+    color="darkBlack"
+    display="flex"
+    {...props}
+  >
     <strong>{`${label}${children ? ': ' : ''}`}</strong>
-    {children}
+    {children && (
+      <Typography as="span" variant="bodyA" ml={1}>
+        {children}
+      </Typography>
+    )}
   </Typography>
 )
 
