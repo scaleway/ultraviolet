@@ -1,3 +1,10 @@
+### [0.55.1](https://github.com/scaleway/scaleway-ui/compare/v0.55.0...v0.55.1) (2021-02-08)
+
+
+### :bug: Bug Fixes
+
+* remove invalid css ([#25](https://github.com/scaleway/scaleway-ui/issues/25)) ([344e6d7](https://github.com/scaleway/scaleway-ui/commit/344e6d70c710afa5e2b85ad5b217a1fba19414b4))
+
 ## [0.55.0](https://github.com/scaleway/scaleway-ui/compare/v0.54.0...v0.55.0) (2021-02-08)
 
 
