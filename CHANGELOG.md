@@ -1,3 +1,10 @@
+### [0.53.1](https://github.com/scaleway/scaleway-ui/compare/v0.53.0...v0.53.1) (2021-02-08)
+
+
+### Bug Fixes
+
+* correct ProgressBar migration ([#8](https://github.com/scaleway/scaleway-ui/issues/8)) ([0b2489d](https://github.com/scaleway/scaleway-ui/commit/0b2489d05b051511f86a8929311a760cc76ce374))
+
 ## [0.53.0](https://github.com/scaleway/scaleway-ui/compare/v0.52.2...v0.53.0) (2021-02-04)
 
 
