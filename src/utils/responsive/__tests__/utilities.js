@@ -1,9 +1,9 @@
-import { breakpoints } from '../../../theme'
+import { screens } from '../../../theme'
 import { down, up } from '../utilities'
 
 describe('Responsive utilities', () => {
   describe('up', () => {
-    Object.keys(breakpoints).forEach(brk => {
+    Object.keys(screens).forEach(brk => {
       test(`works with ${brk}`, () => {
         expect(up(brk, 'border: 1px solid red;')).toMatchSnapshot()
       })
@@ -13,7 +13,7 @@ describe('Responsive utilities', () => {
     })
   })
   describe('down', () => {
-    Object.keys(breakpoints).forEach(brk => {
+    Object.keys(screens).forEach(brk => {
       test(`works with ${brk}`, () => {
         expect(down(brk, 'border: 1px solid red;')).toMatchSnapshot()
       })
