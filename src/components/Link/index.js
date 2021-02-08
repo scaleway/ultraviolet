@@ -6,7 +6,7 @@ import { colors } from '../../new_theme'
 import { Icon } from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
-const variant = color => css`
+const generateVariant = color => css`
   color: ${color};
   &:hover,
   &:focus {
@@ -15,10 +15,10 @@ const variant = color => css`
 `
 
 const variants = {
-  blue: variant(colors.blue),
-  grey: variant(colors.gray550), // TODO: deprecated, to be removed soon
-  gray: variant(colors.gray550),
-  white: variant(colors.white),
+  blue: generateVariant(colors.blue),
+  grey: generateVariant(colors.gray550), // TODO: deprecated, to be removed soon
+  gray: generateVariant(colors.gray550),
+  white: generateVariant(colors.white),
   primary: css`
     color: ${colors.primary};
     &:hover,
@@ -54,18 +54,21 @@ const styles = {
   `,
 }
 
-export function Link({ variant, children, ...props }) {
-  const isBlank = props.target === '_blank'
-  return (
-    <UniversalLink css={[styles.link, variants[variant]]} {...props}>
-      {children}
-      {isBlank && (
-        <Icon name="open-in-new" css={styles.openInNew} verticalAlign="top" />
-      )}
-    </UniversalLink>
-  )
+export const Link = ({ variant, children, ...props }) => (
+  <UniversalLink css={[styles.link, variants[variant]]} {...props}>
+    {children}
+    {props.target === '_blank' && (
+      <Icon name="open-in-new" css={styles.openInNew} verticalAlign="top" />
+    )}
+  </UniversalLink>
+)
+
+Link.defaultProps = {
+  target: undefined,
 }
 
 Link.propTypes = {
-  variant: PropTypes.oneOf(linkVariants),
+  variant: PropTypes.oneOf(linkVariants).isRequired,
+  target: PropTypes.string,
+  children: PropTypes.node.isRequired,
 }

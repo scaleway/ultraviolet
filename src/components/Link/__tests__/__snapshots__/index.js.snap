@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link render correctly with target blank 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #4f0599;
+}
+
+.emotion-1 {
+  fill: currentColor;
+  vertical-align: top;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  padding-left: 2px;
+  opacity: 0.5;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    rel="noopener noreferrer"
+    target="_blank"
+    to="/"
+  >
+    Hello
+    <svg
+      class="sui-box emotion-1"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+      />
+    </svg>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link render correctly with to props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #4f0599;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render blue 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #3f6ed8;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #1e4293;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render gray 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #b2b6c3;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #798096;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render grey 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #b2b6c3;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #798096;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render inherit 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: inherit;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #4f0599;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render white 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #fff;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #ccc;
+}
+
+<a
+    class="sui-box emotion-0"
+    href="/"
+    to="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
