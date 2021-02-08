@@ -1,3 +1,10 @@
+## [0.54.0](https://github.com/scaleway/scaleway-ui/compare/v0.53.1...v0.54.0) (2021-02-08)
+
+
+### Features
+
+* add loading feature on select and some exemples ([#2](https://github.com/scaleway/scaleway-ui/issues/2)) ([70e6e12](https://github.com/scaleway/scaleway-ui/commit/70e6e129eb4355f01216f121ade15ac367e56189))
+
 ### [0.53.1](https://github.com/scaleway/scaleway-ui/compare/v0.53.0...v0.53.1) (2021-02-08)
 
 
