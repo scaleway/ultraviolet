@@ -1,3 +1,22 @@
+## [0.55.0](https://github.com/scaleway/scaleway-ui/compare/v0.54.0...v0.55.0) (2021-02-08)
+
+
+### :repeat: CI
+
+* add dependabot reviewers + pretty changelog ([#7](https://github.com/scaleway/scaleway-ui/issues/7)) ([f3e0cbd](https://github.com/scaleway/scaleway-ui/commit/f3e0cbd1d827a0342a1b346570b40624f443b03e))
+
+
+### :package: Chore
+
+* **deps:** bump @emotion/react from 11.1.4 to 11.1.5 ([#23](https://github.com/scaleway/scaleway-ui/issues/23)) ([a6e5d4e](https://github.com/scaleway/scaleway-ui/commit/a6e5d4e74010d4e0f5350231e10a43bdfcb67537))
+* **deps:** bump react-toastify from 6.2.0 to 7.0.3 ([#3](https://github.com/scaleway/scaleway-ui/issues/3)) ([a12a2c4](https://github.com/scaleway/scaleway-ui/commit/a12a2c47923a8c82a765ee2d2eca421156f5cb50))
+* **deps-dev:** bump @emotion/styled from 11.0.0 to 11.1.5 ([#20](https://github.com/scaleway/scaleway-ui/issues/20)) ([887e728](https://github.com/scaleway/scaleway-ui/commit/887e728e011a65c68b91f1f5132babebb995bba6))
+
+
+### :gear: Features
+
+* port StateBar semantic ([#24](https://github.com/scaleway/scaleway-ui/issues/24)) ([f28b22e](https://github.com/scaleway/scaleway-ui/commit/f28b22ef7fbc6f246fc8e350abb68949b02ae559))
+
 ## [0.54.0](https://github.com/scaleway/scaleway-ui/compare/v0.53.1...v0.54.0) (2021-02-08)
 
 
