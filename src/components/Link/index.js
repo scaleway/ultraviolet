@@ -65,10 +65,11 @@ export const Link = ({ variant, children, ...props }) => (
 
 Link.defaultProps = {
   target: undefined,
+  variant: undefined,
 }
 
 Link.propTypes = {
-  variant: PropTypes.oneOf(linkVariants).isRequired,
+  variant: PropTypes.oneOf(linkVariants),
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
