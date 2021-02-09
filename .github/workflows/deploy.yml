@@ -68,6 +68,7 @@ jobs:
       - name: Deploy docker
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
+        # TODO: remove the context rm when we switch back to public runners
         run: |
           docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
           docker context rm ${VERSION}

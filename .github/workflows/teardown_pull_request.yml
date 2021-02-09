@@ -23,13 +23,16 @@ jobs:
         uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
         with:
           docker_host: ${{ env.REMOTE_SSH_SERVER }}
-          context_name: 'remote'
+          context_name: ${{ env.BRANCH_SLUG }}
           ssh_cert: ${{ secrets.SSH_CERT }}
           ssh_key: ${{ secrets.SSH_KEY }}
       - name: Remove deployment
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
-        run: docker-compose -p ${VERSION} --context remote down --rmi all
+        # TODO: remove the context rm when we switch back to public runners
+        run: |
+          docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
+          docker context rm ${VERSION}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.4.3
