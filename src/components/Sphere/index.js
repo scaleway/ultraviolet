@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const styles = {
@@ -36,8 +36,8 @@ export const Sphere = ({
 }) => (
   <Box
     css={styles.sphere({ size, bgColors })}
-    width={size}
-    height={size}
+    w={size}
+    h={size}
     position="relative"
     {...props}
   >
@@ -56,9 +56,9 @@ export const Sphere = ({
 
 Sphere.defaultProps = {
   size: 32,
-  bgColors: [theme.violet],
+  bgColors: [colors.violet],
   text: undefined,
-  textColor: theme.white,
+  textColor: colors.white,
   textSize: 16,
 }
 

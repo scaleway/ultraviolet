@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
@@ -26,7 +26,7 @@ const roundStep = (value, step) => Math.ceil(value / step) * step
 
 const styles = {
   container: size => css`
-    background-color: ${theme.white};
+    background-color: ${colors.white};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,7 @@ const styles = {
         medium: '10px',
         small: '4px',
       }[size]};
-    border-right: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+    border-right: ${size === 'large' ? '0' : '1px'} solid ${colors.gray350};
   `,
 
   rightButton: size => css`
@@ -62,7 +62,7 @@ const styles = {
         medium: '10px',
         small: '4px',
       }[size]};
-    border-left: ${size === 'large' ? '0' : '1px'} solid ${theme.gray350};
+    border-left: ${size === 'large' ? '0' : '1px'} solid ${colors.gray350};
   `,
 
   separator: size => css`
@@ -70,7 +70,7 @@ const styles = {
     font-size: 30px;
     top: 7px;
     font-weight: 500;
-    color: ${theme.gray350};
+    color: ${colors.gray350};
     ${size !== 'large' ? 'display: none' : ''};
   `,
 
@@ -83,15 +83,15 @@ const styles = {
     align-items: center;
     outline: none;
     justify-content: center;
-    border: 1px solid ${theme.gray350};
+    border: 1px solid ${colors.gray350};
 
     border-left-width: 0;
     border-right-width: 0;
   `,
   input: css`
     pointer-events: none;
-    color: ${theme.gray700};
-    background-color: ${theme.white};
+    color: ${colors.gray700};
+    background-color: ${colors.white};
     font-size: 16;
     border: none;
     text-align: right;
@@ -103,7 +103,7 @@ const styles = {
     text-align: center;
   `,
   button: isDisabled => css`
-    border: 1px solid ${theme.gray350};
+    border: 1px solid ${colors.gray350};
 
     justify-content: center;
     align-items: center;
@@ -115,14 +115,14 @@ const styles = {
     :hover,
     :focus {
       > svg {
-        fill: ${!isDisabled && theme.primary};
+        fill: ${!isDisabled && colors.primary};
       }
     }
   `,
   disabled: css`
-    background-color: ${theme.gray100};
+    background-color: ${colors.gray100};
     border: none;
-    color: ${theme.gray550};
+    color: ${colors.gray550};
     opacity: 1;
     cursor: not-allowed;
   `,

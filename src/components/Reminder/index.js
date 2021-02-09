@@ -1,23 +1,23 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
 const variants = {
   error: {
-    main: theme.red,
-    background: theme.pippin,
+    main: colors.red,
+    background: colors.pippin,
   },
   warning: {
-    main: theme.orange,
-    background: theme.serenade,
+    main: colors.orange,
+    background: colors.serenade,
   },
   info: {
-    main: theme.blue,
-    background: theme.zumthor,
+    main: colors.blue,
+    background: colors.zumthor,
   },
 }
 
@@ -30,7 +30,7 @@ const Notification = styled(Box, {
   cursor: pointer;
   border-radius: 14px;
   text-decoration: none;
-  color: ${theme.gray700};
+  color: ${colors.gray700};
   font-weight: 400;
 
   &:hover {
@@ -39,9 +39,9 @@ const Notification = styled(Box, {
 
   ${({ variant, bordered }) => `
     background-color: ${
-      bordered ? theme.transparent : variants[variant].background
+      bordered ? colors.transparent : variants[variant].background
     };
-    border: 1px solid ${bordered ? theme.gray300 : theme.transparent};
+    border: 1px solid ${bordered ? colors.gray300 : colors.transparent};
     transition: all .3s ease-in-out;
 
     &:hover {

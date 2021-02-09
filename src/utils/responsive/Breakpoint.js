@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { breakpoints } from '../../new_theme'
+import { screens } from '../../theme'
 import { down, up } from './utilities'
 
 const Breakpoint = styled.div`
@@ -12,8 +12,8 @@ const Breakpoint = styled.div`
 `
 
 Breakpoint.propTypes = {
-  up: PropTypes.oneOf(Object.keys(breakpoints)),
-  down: PropTypes.oneOf(Object.keys(breakpoints)),
+  up: PropTypes.oneOf(Object.keys(screens)),
+  down: PropTypes.oneOf(Object.keys(screens)),
 }
 
 Breakpoint.defaultProps = {

@@ -12,12 +12,12 @@ import { Box, Button } from '../..'
 
 <Canvas>
   <Story name="basic">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip">Tooltip around the text</Tooltip>
     </Box>
   </Story>
   <Story name="visible">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip visible text="tooltip">
         Tooltip around the text
       </Tooltip>
@@ -25,28 +25,28 @@ import { Box, Button } from '../..'
   </Story>
   <Story name="wrap">
     <Tooltip text="tooltip">
-      <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+      <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
         Tooltip around the box
       </Box>
     </Tooltip>
   </Story>
   <Story name="function">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip">
         {referenceProps => <Box {...referenceProps}>I'm a function</Box>}
       </Tooltip>
     </Box>
   </Story>
   <Story name="on-click">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip">
-        <Button width={220} onClick={() => alert('fired!')}>
+        <Button w={220} onClick={() => alert('fired!')}>
           Should be fired on click
         </Button>
       </Tooltip>
       <Box mt={2}>
         <Tooltip text="tooltip">
-          <Button width={220} disabled onClick={() => alert('fired!')}>
+          <Button w={220} disabled onClick={() => alert('fired!')}>
             Should not be fired on click
           </Button>
         </Tooltip>
@@ -54,7 +54,7 @@ import { Box, Button } from '../..'
     </Box>
   </Story>
   <Story name="nested">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip">
         <Box>
           <div>I'm a nested element</div>
@@ -63,7 +63,7 @@ import { Box, Button } from '../..'
     </Box>
   </Story>
   <Story name="nested-function">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip">
         {referenceProps => (
           <Box {...referenceProps}>
@@ -74,16 +74,16 @@ import { Box, Button } from '../..'
     </Box>
   </Story>
   <Story name="customized">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip" backgroundColor="red">
         <Box>I'm a customized tooltip</Box>
       </Tooltip>
     </Box>
   </Story>
   <Story name="long">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip
-        width={150}
+        w={150}
         text="I have a very very very very very very very very very very very very very very long text"
       >
         <Box>I'm a long tooltip</Box>
@@ -91,14 +91,14 @@ import { Box, Button } from '../..'
     </Box>
   </Story>
   <Story name="empty-div">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="empty div">
         <Box style={{ width: 10, height: 10, backgroundColor: 'red' }} />
       </Tooltip>
     </Box>
   </Story>
   <Story name="multiple-children">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
+    <Box borderRadius={20} border="2px solid #333" p={4} w="max-content">
       <Tooltip text="tooltip" backgroundColor="red">
         <>
           <Box>I'm the first children</Box>

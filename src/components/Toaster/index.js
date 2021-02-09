@@ -6,7 +6,7 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import { injectStyle } from 'react-toastify/dist/inject-style'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Icon } from '../Icon'
 import { NotificationBar } from '../NotificationBar'
 
@@ -26,38 +26,38 @@ const styles = {
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${theme.foam};
-      color: ${theme.success};
+      background-color: ${colors.foam};
+      color: ${colors.success};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.success};
+        background-color: ${colors.success};
       }
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${theme.zumthor};
-      color: ${theme.info};
+      background-color: ${colors.zumthor};
+      color: ${colors.info};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.info};
+        background-color: ${colors.info};
       }
     }
 
     &${PREFIX}__toast--warning {
-      background-color: ${theme.pippin};
-      color: ${theme.warning};
+      background-color: ${colors.pippin};
+      color: ${colors.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.warning};
+        background-color: ${colors.warning};
       }
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${theme.pippin};
-      color: ${theme.warning};
+      background-color: ${colors.pippin};
+      color: ${colors.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.warning};
+        background-color: ${colors.warning};
       }
     }
   `,

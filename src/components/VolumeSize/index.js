@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
@@ -37,7 +37,7 @@ const styles = {
     width: 100%;
   `,
   cursor: size => css`
-    background-color: ${theme.gray950};
+    background-color: ${colors.gray950};
     position: absolute;
     height: ${(sizes[size] || 1) * 15}px;
     width: ${(sizes[size] || 1) * 3}px;
@@ -68,10 +68,10 @@ const styles = {
   `,
   value: hasError => css`
     font-weight: 800;
-    color: ${hasError ? theme.orange : theme.gray950};
+    color: ${hasError ? colors.orange : colors.gray950};
   `,
   volume: (percentUsed, hasError) => css`
-    background-color: ${hasError ? theme.orange : theme.green};
+    background-color: ${hasError ? colors.orange : colors.green};
     border-radius: ${percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
     position: absolute;
     left: 0;
@@ -84,7 +84,7 @@ const styles = {
     animation: ${widthGrow} 1.2s ease backwards;
   `,
   volumeContainer: size => css`
-    background-color: ${theme.gray200};
+    background-color: ${colors.gray200};
     border-radius: 3px;
     position: relative;
 

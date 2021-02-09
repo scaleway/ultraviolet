@@ -22,7 +22,7 @@ const space = {
   9: '72px',
 }
 
-const breakpoints = {
+const screens = {
   xsmall: 0,
   small: 576,
   medium: 768,
@@ -30,11 +30,17 @@ const breakpoints = {
   xlarge: 1200,
 }
 
-export default {
-  colors,
-  breakpoints,
-  space,
-  radii,
+const fonts = {
+  monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
+  sansSerif: 'Asap, System, sans-serif',
 }
 
-export { colors, breakpoints, space, radii }
+export default {
+  colors,
+  space,
+  radii,
+  fonts,
+  screens,
+}
+
+export { colors, space, radii, fonts, screens }

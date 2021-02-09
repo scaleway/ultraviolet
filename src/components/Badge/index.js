@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors, radii, space } from '../../new_theme'
+import { colors, radii, space } from '../../theme'
 import { Box } from '../Box'
 
 const variants = {

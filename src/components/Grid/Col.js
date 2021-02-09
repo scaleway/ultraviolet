@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { breakpoints, space } from '../../new_theme'
+import { screens, space } from '../../theme'
 import { up } from '../../utils'
 import { Box } from '../Box'
 
@@ -8,11 +8,11 @@ const GRID_COLUMNS = 12
 
 const getSizeWidth = (size, nbColumns) =>
   `${Math.round((size / nbColumns) * 10 ** 6) / 10 ** 4}%`
-const query = (brk, style) => (breakpoints[brk] === 0 ? style : up(brk, style))
+const query = (brk, style) => (screens[brk] === 0 ? style : up(brk, style))
 
 const Col = styled(Box, {
   shouldForwardProp: prop =>
-    ![...Object.keys(breakpoints), 'gutter'].includes(prop),
+    ![...Object.keys(screens), 'gutter'].includes(prop),
 })`
   box-sizing: border-box;
   flex-basis: 0;
@@ -26,7 +26,7 @@ const Col = styled(Box, {
   padding-right: ${({ gutter }) => space[gutter]};
 
   ${props =>
-    Object.keys(breakpoints)
+    Object.keys(screens)
       .filter(brk => props[brk] && props[brk] !== 0)
       .map(brk => {
         const rule = props[brk]

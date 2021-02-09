@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 
 const Pentagon = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ Pentagon.propTypes = {
 
 Pentagon.defaultProps = {
   size: '48px',
-  color: theme.pippin,
+  color: colors.pippin,
 }
 
 export { Pentagon }

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React, { useEffect, useRef, useState } from 'react'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const blankImg = new Image()

@@ -232,10 +232,11 @@ exports[`Table renders correctly while loading 1`] = `
 
 .emotion-14.emotion-14 {
   height: 80px;
+  position: relative;
 }
 
 .emotion-16.emotion-16 {
-  color: #bd4932;
+  color: #4f0599;
   position: absolute;
   top: 16px;
   left: 50%;
@@ -280,12 +281,11 @@ exports[`Table renders correctly while loading 1`] = `
         <td
           class="emotion-14 emotion-15"
           colspan="2"
-          height="80"
         >
           <div
             aria-valuemax="1"
             aria-valuemin="0"
-            class="sui-box emotion-16"
+            class="emotion-16"
             role="progressbar"
           >
             <div

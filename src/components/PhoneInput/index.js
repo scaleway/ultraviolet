@@ -3,7 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import ReactPhoneInput from 'react-phone-input-2'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import 'react-phone-input-2/lib/style.css'
 import 'react-phone-input-2/lib/material.css'
 
@@ -12,7 +12,7 @@ const StyleWrapper = styled.div`
   flex: 1;
 
   > label {
-    color: ${theme.gray550};
+    color: ${colors.gray550};
     display: block;
     font-size: 16;
     height: 48;
@@ -53,13 +53,13 @@ const StyleWrapper = styled.div`
       }
     }
     > input.form-control[type='tel'] {
-      background-color: ${theme.white};
+      background-color: ${colors.white};
       background-image: none;
-      border-color: ${theme.gray350};
+      border-color: ${colors.gray350};
       border-radius: 4px;
       border-style: solid;
       border-width: 1px;
-      color: ${({ visited }) => (visited ? theme.gray700 : theme.white)};
+      color: ${({ visited }) => (visited ? colors.gray700 : colors.white)};
       display: block;
       font-size: 16px;
       line-height: 24px;
@@ -73,8 +73,8 @@ const StyleWrapper = styled.div`
       height: 48px;
 
       :focus {
-        box-shadow: 0 0 0 2px ${transparentize(0.75, theme.primary)};
-        border-color: ${theme.primary};
+        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
+        border-color: ${colors.primary};
       }
     }
   }

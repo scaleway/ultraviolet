@@ -2,7 +2,7 @@ import { Global, css } from '@emotion/react'
 import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors, fonts } from '../../theme'
 
 const globalStyles = css`
   ${normalize()}
@@ -49,11 +49,11 @@ const globalStyles = css`
   }
 
   body {
-    background-color: ${theme.white};
+    background-color: ${colors.white};
     /* TODO: Add me in theme; ps: I am hard coded in shire. */
     color: #5c6275;
     /* important is for docz */
-    font-family: 'Asap', 'System', sans-serif !important;
+    font-family: ${fonts.sansSerif} !important;
     overflow: hidden;
     height: 100%;
     text-rendering: optimizeLegibility;
@@ -66,7 +66,7 @@ const globalStyles = css`
   textarea,
   select,
   button {
-    font-family: 'Asap', 'System', sans-serif !important;
+    font-family: ${fonts.sansSerif} !important;
   }
 
   button,
@@ -87,7 +87,7 @@ const globalStyles = css`
   }
 
   a {
-    color: ${theme.blue};
+    color: ${colors.blue};
     text-decoration: none;
   }
 

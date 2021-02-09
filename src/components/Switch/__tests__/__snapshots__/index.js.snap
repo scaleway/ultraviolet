@@ -530,7 +530,7 @@ exports[`Switch renders correctly with custom width 1`] = `
   .emotion-0 {
   overflow: hidden;
   outline: none;
-  width: 120px;
+  width: 72px;
   height: 32px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -557,16 +557,16 @@ exports[`Switch renders correctly with custom width 1`] = `
 
 .emotion-0[aria-checked='true']>.emotion-5 {
   -webkit-transform: translateX(
-          108px
+          60px
         ) translateX(-100%);
   -moz-transform: translateX(
-          108px
+          60px
         ) translateX(-100%);
   -ms-transform: translateX(
-          108px
+          60px
         ) translateX(-100%);
   transform: translateX(
-          108px
+          60px
         ) translateX(-100%);
   background-color: #f6f5f7;
 }
@@ -577,7 +577,7 @@ exports[`Switch renders correctly with custom width 1`] = `
   text-align: center;
   position: absolute;
   line-height: 20px;
-  width: 88px;
+  width: 40px;
   content: "";
   color: #4a4f62;
   left: 20px;
@@ -589,7 +589,7 @@ exports[`Switch renders correctly with custom width 1`] = `
   text-align: center;
   position: absolute;
   line-height: 20px;
-  width: 88px;
+  width: 40px;
   content: "";
   color: #f6f5f7;
   right: 20px;
@@ -615,7 +615,7 @@ exports[`Switch renders correctly with custom width 1`] = `
 <label
     aria-checked="false"
     class="emotion-0 emotion-1"
-    width="120"
+    w="120"
   >
     <input
       aria-checked="false"

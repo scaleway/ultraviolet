@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import avatar from './avatar.svg'
@@ -47,11 +47,11 @@ const Avatar = ({
   lock,
   ...props
 }) => (
-  <Box width={size} height={size} position="relative" {...props}>
+  <Box w={size} h={size} position="relative" {...props}>
     {text ? (
       <div
         css={styles.textAvatar({
-          textBgColor: lock ? theme.gray50 : textBgColor,
+          textBgColor: lock ? colors.gray50 : textBgColor,
           textColor,
           textSize,
         })}
@@ -68,8 +68,8 @@ Avatar.defaultProps = {
   image: avatar,
   size: 32,
   text: null,
-  textBgColor: theme.lightViolet,
-  textColor: theme.white,
+  textBgColor: colors.lightViolet,
+  textColor: colors.white,
   textSize: 10,
   lock: false,
 }

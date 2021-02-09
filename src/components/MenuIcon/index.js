@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const ICONS = {
@@ -38,22 +38,15 @@ const ICONS = {
 const styles = {
   icon: color => css`
     transition: fill 300ms;
-    fill: ${theme[color]};
+    fill: ${colors[color]};
   `,
 }
 
 const MenuIcon = ({ name, size, color, isButton, ...props }) => (
-  <Box
-    display="flex"
-    alignItems="center"
-    height={20}
-    width={20}
-    mr={1}
-    {...props}
-  >
+  <Box display="flex" alignItems="center" h={20} w={20} mr={1} {...props}>
     <Box
-      height={size}
-      width={size}
+      h={size}
+      w={size}
       viewBox="0 0 16 16"
       as="svg"
       css={styles.icon(color)}

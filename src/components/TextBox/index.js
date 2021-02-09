@@ -10,7 +10,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { colors, radii } from '../../new_theme'
+import { colors, radii } from '../../theme'
 import { useUUID } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -433,7 +433,7 @@ const TextBox = React.forwardRef(
             </div>
           ) : null}
         </Box>
-        <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
           <Box fontSize={12} color="warning" pt="2px">
             {error}
           </Box>

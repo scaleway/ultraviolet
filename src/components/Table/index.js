@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 
@@ -15,26 +15,26 @@ const Table = styled(Box.withComponent('table'))`
 const Head = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
-  border-color: ${theme.gray350};
+  border-color: ${colors.gray350};
   border-style: solid;
 `
 
 const Row = styled(Box.withComponent('tr'))`
-  color: ${theme.gray700};
+  color: ${colors.gray700};
 
   a {
     color: inherit;
   }
 
   tr:nth-of-type(even) {
-    background-color: ${theme.gray50};
+    background-color: ${colors.gray50};
   }
 
   ${({ highlight }) =>
     highlight &&
     `
     &:hover {
-      color: ${theme.primary};
+      color: ${colors.primary};
 
       td:first-of-type {
         font-weight: 500;
@@ -74,7 +74,7 @@ const HeadCell = styled(Box.withComponent('th'))`
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
-  color: ${theme.gray550};
+  color: ${colors.gray550};
   text-align: left;
   ${cellStyle};
 `
@@ -90,7 +90,7 @@ const TBody = Box.withComponent('tbody')
 const BodyLoader = props => (
   <TBody>
     <Row>
-      <BodyCell height={80} {...props}>
+      <BodyCell h={80} position="relative" {...props}>
         <ActivityIndicator position="absolute" top={16} left="50%" size={40} />
       </BodyCell>
     </Row>

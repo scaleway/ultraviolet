@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const shineAnimation = keyframes`

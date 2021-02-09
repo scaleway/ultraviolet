@@ -8,20 +8,20 @@ import {
   PopoverDisclosure,
   usePopoverState,
 } from 'reakit/Popover'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 
 const variants = {
   white: css`
-    background-color: ${theme.white};
-    color: ${theme.black};
-    fill: ${theme.white};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+    background-color: ${colors.white};
+    color: ${colors.black};
+    fill: ${colors.white};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
   `,
   black: css`
-    background-color: ${theme.black};
-    color: ${theme.white};
-    fill: ${theme.black};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.shadow)};
+    background-color: ${colors.black};
+    color: ${colors.white};
+    fill: ${colors.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
   `,
 }
 const popoverStyle = css`

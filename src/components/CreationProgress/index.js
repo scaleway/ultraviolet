@@ -2,7 +2,7 @@ import { css, keyframes } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
-import { theme } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
@@ -32,7 +32,7 @@ const styles = {
     margin-right: -36px;
     margin-top: 12px;
     border-radius: 2px;
-    background-color: ${theme.gray350};
+    background-color: ${colors.gray350};
   `,
   stepContainer: css`
     display: flex;
@@ -49,7 +49,7 @@ const styles = {
     justify-content: center;
   `,
   past: css`
-    background-color: ${theme.success};
+    background-color: ${colors.success};
   `,
   future: css`
     height: 32px;
@@ -60,11 +60,11 @@ const styles = {
     justify-content: center;
     background-color: transparent;
     border-style: solid;
-    border-color: ${theme.gray350};
+    border-color: ${colors.gray350};
     border-width: 3px;
   `,
   futureInternalDot: css`
-    background-color: ${theme.gray350};
+    background-color: ${colors.gray350};
     height: 8px;
     width: 8px;
     border-radius: 16px;
@@ -77,7 +77,7 @@ const styles = {
   `,
   progress: css`
     border-radius: 2px;
-    background-color: ${theme.success};
+    background-color: ${colors.success};
     position: absolute;
     top: 0;
     left: 0;
@@ -128,7 +128,7 @@ const CreationProgress = ({
                 <Box css={[styles.step, styles.future]}>
                   {isStepsNumber ? (
                     <Typography
-                      style={{ color: theme.gray300 }}
+                      style={{ color: colors.gray300 }}
                       fontWeight={500}
                     >
                       {index + 1}

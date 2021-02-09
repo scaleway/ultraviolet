@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { Icon } from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../new_theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
@@ -35,7 +35,7 @@ export const Information = ({
     {icon && (
       <Icon mr={2} name={icon} size={iconSize} color={iconColor || color} />
     )}
-    {img && <Box as="img" mr={3} src={img} width={imgSize} height={imgSize} />}
+    {img && <Box as="img" mr={3} src={img} w={imgSize} h={imgSize} />}
     <Box display="flex" flexDirection="column">
       {heading && (
         <Typography variant="bodyA" fontWeight={500} color={color}>
