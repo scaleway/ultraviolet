@@ -363,13 +363,10 @@ const ClearIndicator = ({ error }) => ({
         size={20}
         cursor={isDisabled ? 'none' : 'pointer'}
         color={
-          isDisabled
-            ? 'gray300'
-            : checked
-            ? 'primary'
-            : error
-            ? 'warning'
-            : 'gray350'
+          (isDisabled && 'gray300') ||
+          (checked && 'primary') ||
+          (error && 'warning') ||
+          'gray350'
         }
       />
     </components.ClearIndicator>
@@ -407,6 +404,7 @@ function RichSelect({
   animationOnChange,
   animation,
   animationDuration,
+  customComponents,
   ...props
 }) {
   const labelId = getUUID('label')
@@ -441,6 +439,7 @@ function RichSelect({
         MultiValueContainer,
         MultiValueLabel,
         MultiValueRemove,
+        ...customComponents,
       }}
       placeholder={placeholder}
       className={className}
@@ -498,9 +497,11 @@ RichSelectWithRef.defaultProps = {
   animationDuration: 1000,
   required: false,
   value: undefined,
+  customComponents: undefined,
 }
 
 RichSelectWithRef.propTypes = {
+  customComponents: PropTypes.shape({}),
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
@@ -523,5 +524,7 @@ RichSelectWithRef.propTypes = {
   isSearchable: PropTypes.bool,
   isClearable: PropTypes.bool,
 }
+RichSelect.defaultProps = RichSelectWithRef.defaultProps
+RichSelect.propTypes = RichSelectWithRef.propTypes
 
 export { RichSelectWithRef as RichSelect }

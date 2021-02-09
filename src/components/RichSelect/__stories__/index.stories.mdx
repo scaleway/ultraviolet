@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useEffect, useState } from 'react'
 import { RichSelect } from '..'
-import { ActivityIndicator, Box, Button } from "../.."
+import { ActivityIndicator, Box, Button } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -226,7 +226,7 @@ of RichSelect with an external way (check example with button).
           </Button>
           <RichSelect
             isLoading={isLoading}
-            components={{
+            customComponents={{
               LoadingIndicator: () => <ActivityIndicator size={24} />,
             }}
           >

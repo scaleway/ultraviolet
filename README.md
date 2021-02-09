@@ -4,9 +4,13 @@ Scaleway official UI library.
 
 ---
 
+## Install environment
+
+Install all dependencies with `yarn install`
+
 ## Develop
 
-Start storybook using `yarn dev`.
+Start storybook using `yarn start`.
 
 ### Test
 
