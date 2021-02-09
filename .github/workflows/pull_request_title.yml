@@ -6,7 +6,7 @@ on:
 
 jobs:
   check-title:
-    runs-on: runs-on: [self-hosted, console]
+    runs-on: [self-hosted, console]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2.1.4

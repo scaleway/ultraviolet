@@ -9,7 +9,7 @@ on:
 
 jobs:
   lint:
-    runs-on: runs-on: [self-hosted, console]
+    runs-on: [self-hosted, console]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2.1.4
@@ -25,7 +25,7 @@ jobs:
     - run: yarn
     - run: yarn run lint
   test:
-    runs-on: runs-on: [self-hosted, console]
+    runs-on: [self-hosted, console]
     steps:
     - uses: actions/checkout@v2
       with:
@@ -46,7 +46,7 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
   build:
-    runs-on: runs-on: [self-hosted, console]
+    runs-on: [self-hosted, console]
     needs: [lint, test]
     steps:
     - uses: actions/checkout@v2
@@ -57,7 +57,7 @@ jobs:
     - run: yarn --pure-lockfile
     - run: yarn run build
   deploy:
-    runs-on: runs-on: [self-hosted, console]
+    runs-on: [self-hosted, console]
     needs: [build]
     if: github.ref == 'refs/heads/master'
     env:
