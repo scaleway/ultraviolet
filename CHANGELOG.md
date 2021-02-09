@@ -1,3 +1,10 @@
+### [0.55.3](https://github.com/scaleway/scaleway-ui/compare/v0.55.2...v0.55.3) (2021-02-09)
+
+
+### :bug: Bug Fixes
+
+* improve documentation and fix text overlap ([#29](https://github.com/scaleway/scaleway-ui/issues/29)) ([01f8ca8](https://github.com/scaleway/scaleway-ui/commit/01f8ca8cc03249960b6b80e38948504831bdb929))
+
 ### [0.55.2](https://github.com/scaleway/scaleway-ui/compare/v0.55.1...v0.55.2) (2021-02-09)
 
 
