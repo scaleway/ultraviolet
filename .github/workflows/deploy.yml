@@ -69,7 +69,7 @@ jobs:
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
         run: |
-          docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
+          docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
           docker context rm ${VERSION}
 
       - name: Update deployment status
