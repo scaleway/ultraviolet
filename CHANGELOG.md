@@ -1,3 +1,21 @@
+### [0.55.2](https://github.com/scaleway/scaleway-ui/compare/v0.55.1...v0.55.2) (2021-02-09)
+
+
+### :white_check_mark: Test
+
+* add some more tests ([#28](https://github.com/scaleway/scaleway-ui/issues/28)) ([f316841](https://github.com/scaleway/scaleway-ui/commit/f31684135f31d1ba8a7279062dc3a9a35c1f8a99))
+
+
+### :repeat: CI
+
+* correct Pull Request teardown ([#31](https://github.com/scaleway/scaleway-ui/issues/31)) ([49b5b10](https://github.com/scaleway/scaleway-ui/commit/49b5b108823c08114aedbc8c2ba56da9fb96e573))
+* use self-hosted runner ([#30](https://github.com/scaleway/scaleway-ui/issues/30)) ([969be06](https://github.com/scaleway/scaleway-ui/commit/969be06c2561b59109f5f3b1c3cb68ecb8e07ea8))
+
+
+### :bug: Bug Fixes
+
+* change props name of custom components in richselect ([#27](https://github.com/scaleway/scaleway-ui/issues/27)) ([c8e309f](https://github.com/scaleway/scaleway-ui/commit/c8e309f905c875eb5e3595df6638f324f7c83bac))
+
 ### [0.55.1](https://github.com/scaleway/scaleway-ui/compare/v0.55.0...v0.55.1) (2021-02-08)
 
 
