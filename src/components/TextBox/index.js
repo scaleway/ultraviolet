@@ -195,269 +195,321 @@ const styles = {
   `,
 }
 
-function TextBox(
-  {
-    autoComplete = 'on',
-    autoFocus,
-    tabIndex,
-    cols,
-    defaultValue,
-    disabled,
-    edit: forceEdit,
-    error,
-    generated,
-    label,
-    multiline,
-    fillAvailable,
-    name,
-    notice,
-    onBlur,
-    onChange,
-    onFocus,
-    placeholder,
-    random,
-    readOnly,
-    required,
-    resizable,
-    rows,
-    size = 'medium',
-    type = 'text',
-    valid,
-    value,
-    height,
-    unit,
-    unitAlignment = 'flex-end',
-    wrap,
-    ...props
-  },
-  ref,
-) {
-  const labelId = useUUID('label')
-  const controlId = useUUID('input')
-  const controlRef = useRef()
-  const [visited, setVisited] = useState(false)
-  const [passwordVisible, setPasswordVisible] = useState(false)
+const TextBox = React.forwardRef(
+  (
+    {
+      autoComplete,
+      autoFocus,
+      tabIndex,
+      cols,
+      defaultValue,
+      disabled,
+      edit: forceEdit,
+      error,
+      generated,
+      label,
+      multiline,
+      fillAvailable,
+      name,
+      notice,
+      onBlur,
+      onChange,
+      onFocus,
+      placeholder,
+      random,
+      readOnly,
+      required,
+      resizable,
+      rows,
+      size,
+      type,
+      valid,
+      value,
+      height,
+      unit,
+      unitAlignment,
+      wrap,
+      ...props
+    },
+    ref,
+  ) => {
+    const labelId = useUUID('label')
+    const controlId = useUUID('input')
+    const controlRef = useRef()
+    const [visited, setVisited] = useState(false)
+    const [passwordVisible, setPasswordVisible] = useState(false)
 
-  // Forward ref to parent ref
-  useImperativeHandle(ref, () => controlRef)
+    // Forward ref to parent ref
+    useImperativeHandle(ref, () => controlRef)
 
-  // Focus when password is visible
-  useEffect(() => {
-    if (passwordVisible) {
-      controlRef.current.focus()
+    // Focus when password is visible
+    useEffect(() => {
+      if (passwordVisible) {
+        controlRef.current.focus()
+      }
+    }, [passwordVisible])
+
+    const togglePasswordVisibility = useCallback(
+      () => setPasswordVisible(x => !x),
+      [],
+    )
+
+    const handlePassVisibilityClick = useCallback(
+      () => togglePasswordVisibility(),
+      [togglePasswordVisibility],
+    )
+
+    const handlePassVisiblityKeyDown = useCallback(
+      event => {
+        const keyCode = event.key.charCodeAt(0)
+        // SPACE key is pressed
+        if (keyCode === 32) {
+          event.preventDefault()
+          togglePasswordVisibility()
+        }
+      },
+      [togglePasswordVisibility],
+    )
+
+    const randomize = useCallback(() => onChange(randomName(random)), [
+      onChange,
+      random,
+    ])
+
+    const handleRandomizeClick = useCallback(() => randomize(), [randomize])
+    const handleRandomizeKeyDown = useCallback(
+      event => {
+        const keyCode = event.key.charCodeAt(0)
+        // SPACE key is pressed
+        if (keyCode === 32) {
+          event.preventDefault()
+          randomize()
+        }
+      },
+      [randomize],
+    )
+
+    const handleFocus = useCallback(
+      event => {
+        if (!visited && !readOnly) {
+          setVisited(true)
+        }
+
+        if (onFocus) {
+          onFocus(event)
+        }
+      },
+      [visited, readOnly, onFocus],
+    )
+
+    const handleChange = useCallback(event => onChange(event.target.value), [
+      onChange,
+    ])
+
+    const ControlComponent = multiline ? 'textarea' : 'input'
+    const isPassToggleable = type === 'toggleable-password'
+    const hasLabel = Boolean((error || label) && size === 'medium')
+    const edit = Boolean(
+      hasLabel && (forceEdit || visited || value || error || generated),
+    )
+    const isPlaceholderVisible = Boolean(!hasLabel || edit)
+    const hasRightElement = Boolean(
+      valid || required || isPassToggleable || random || unit,
+    )
+
+    function getType() {
+      if (isPassToggleable) {
+        return passwordVisible || generated ? 'text' : 'password'
+      }
+
+      return multiline ? null : type
     }
-  }, [passwordVisible])
 
-  const togglePasswordVisibility = useCallback(
-    () => setPasswordVisible(x => !x),
-    [],
-  )
-
-  const handlePassVisibilityClick = useCallback(
-    () => togglePasswordVisibility(),
-    [togglePasswordVisibility],
-  )
-
-  const handlePassVisiblityKeyDown = useCallback(
-    event => {
-      const keyCode = event.key.charCodeAt(0)
-      // SPACE key is pressed
-      if (keyCode === 32) {
-        event.preventDefault()
-        togglePasswordVisibility()
-      }
-    },
-    [togglePasswordVisibility],
-  )
-
-  const randomize = useCallback(() => onChange(randomName(random)), [
-    onChange,
-    random,
-  ])
-
-  const handleRandomizeClick = useCallback(() => randomize(), [randomize])
-  const handleRandomizeKeyDown = useCallback(
-    event => {
-      const keyCode = event.key.charCodeAt(0)
-      // SPACE key is pressed
-      if (keyCode === 32) {
-        event.preventDefault()
-        randomize()
-      }
-    },
-    [randomize],
-  )
-
-  const handleFocus = useCallback(
-    event => {
-      if (!visited && !readOnly) {
-        setVisited(true)
-      }
-
-      if (onFocus) {
-        onFocus(event)
-      }
-    },
-    [visited, readOnly, onFocus],
-  )
-
-  const handleChange = useCallback(event => onChange(event.target.value), [
-    onChange,
-  ])
-
-  const ControlComponent = multiline ? 'textarea' : 'input'
-  const isPassToggleable = type === 'toggleable-password'
-  const hasLabel = Boolean((error || label) && size === 'medium')
-  const edit = Boolean(
-    hasLabel && (forceEdit || visited || value || error || generated),
-  )
-  const isPlaceholderVisible = Boolean(!hasLabel || edit)
-  const hasRightElement = Boolean(
-    valid || required || isPassToggleable || random || unit,
-  )
-
-  function getType() {
-    if (isPassToggleable) {
-      return passwordVisible || generated ? 'text' : 'password'
-    }
-
-    return multiline ? null : type
-  }
-
-  return (
-    <Box {...props}>
-      <Box position="relative">
-        <ControlComponent
-          ref={controlRef}
-          type={getType()}
-          aria-controls={hasLabel ? labelId : undefined}
-          id={controlId}
-          value={value}
-          placeholder={placeholder}
-          onFocus={handleFocus}
-          onBlur={onBlur}
-          onChange={handleChange}
-          css={[
-            styles.input,
-            isPlaceholderVisible && styles.inputWithPlaceholder,
-            disabled && styles.inputDisabled,
-            readOnly && styles.inputReadOnly,
-            hasRightElement && styles.inputWithRightElement,
-            error && styles.inputError,
-            size && inputSizes[size].default,
-            size && !hasLabel && inputSizes[size].full,
-            multiline && styles.inputMultiline({ resizable, fillAvailable }),
-            multiline && !hasLabel && styles.inputMultilineFull,
-          ]}
-          disabled={disabled}
-          readOnly={readOnly}
-          rows={rows}
-          cols={cols}
-          autoFocus={autoFocus}
-          tabIndex={tabIndex}
-          autoComplete={autoComplete}
-          name={name}
-          style={{ height }}
-          wrap={wrap}
-        />
-        {hasLabel && (
-          <label
+    return (
+      <Box {...props}>
+        <Box position="relative">
+          <ControlComponent
+            ref={controlRef}
+            type={getType()}
+            aria-controls={hasLabel ? labelId : undefined}
+            id={controlId}
+            value={value}
+            placeholder={placeholder}
+            onFocus={handleFocus}
+            onBlur={onBlur}
+            onChange={handleChange}
             css={[
-              styles.label,
-              edit && styles.labelEdit,
-              disabled && styles.labelDisabled,
-              readOnly && styles.labelReadOnly,
-              error && styles.labelError,
+              styles.input,
+              isPlaceholderVisible && styles.inputWithPlaceholder,
+              disabled && styles.inputDisabled,
+              readOnly && styles.inputReadOnly,
+              error && styles.inputError,
+              size && inputSizes[size].default,
+              size && !hasLabel && inputSizes[size].full,
+              multiline && styles.inputMultiline({ resizable, fillAvailable }),
+              multiline && !hasLabel && styles.inputMultilineFull,
+              hasRightElement && styles.inputWithRightElement,
             ]}
-            htmlFor={controlId}
-            id={labelId}
-            aria-live="assertive"
-          >
-            {label}
-          </label>
-        )}
+            disabled={disabled}
+            readOnly={readOnly}
+            rows={rows}
+            cols={cols}
+            autoFocus={autoFocus}
+            tabIndex={tabIndex}
+            autoComplete={autoComplete}
+            name={name}
+            style={{ height }}
+            wrap={wrap}
+          />
+          {hasLabel && (
+            <label
+              css={[
+                styles.label,
+                edit && styles.labelEdit,
+                disabled && styles.labelDisabled,
+                readOnly && styles.labelReadOnly,
+                error && styles.labelError,
+              ]}
+              htmlFor={controlId}
+              id={labelId}
+              aria-live="assertive"
+            >
+              {label}
+            </label>
+          )}
 
-        {hasRightElement ? (
-          <div
-            css={[
-              styles.rightElement,
-              edit && styles.rightElementEdit,
-              (isPassToggleable || random) && styles.rightElementTouchable,
-              unit && styles.unit,
-            ]}
-          >
-            {isPassToggleable && !generated ? (
-              <Touchable
-                onClick={handlePassVisibilityClick}
-                onKeyDown={handlePassVisiblityKeyDown}
-                title={passwordVisible ? 'Hide' : 'Show'}
-              >
-                <Icon name={passwordVisible ? 'eye-off' : 'eye'} />
-              </Touchable>
-            ) : random ? (
-              <Touchable
-                onClick={handleRandomizeClick}
-                onKeyDown={handleRandomizeKeyDown}
-                title="Randomize"
-              >
-                <Icon name="auto-fix" />
-              </Touchable>
-            ) : valid === false || valid === true ? (
-              <Icon
-                name={valid === false ? 'close' : 'check'}
-                color={valid === false ? 'warning' : 'success'}
-                size={20}
-              />
-            ) : unit ? (
-              <>
-                <Separator
-                  css={styles.verticalSeparator}
-                  direction="vertical"
-                />
-                <Typography
-                  variant="bodyB"
-                  display="flex"
-                  alignSelf={unitAlignment}
-                  py={1}
+          {hasRightElement ? (
+            <div
+              css={[
+                styles.rightElement,
+                edit && styles.rightElementEdit,
+                (isPassToggleable || random) && styles.rightElementTouchable,
+                unit && styles.unit,
+              ]}
+            >
+              {isPassToggleable && !generated ? (
+                <Touchable
+                  onClick={handlePassVisibilityClick}
+                  onKeyDown={handlePassVisiblityKeyDown}
+                  title={passwordVisible ? 'Hide' : 'Show'}
                 >
-                  {unit}
-                  {required && (
-                    <Icon ml="2px" name="asterisk" color="warning" size={8} />
-                  )}
-                </Typography>
-              </>
-            ) : required ? (
-              <Icon name="asterisk" color="warning" size={10} />
-            ) : null}
-          </div>
-        ) : null}
-      </Box>
-      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
-        <Box fontSize={12} color="warning" pt="2px">
-          {error}
+                  <Icon name={passwordVisible ? 'eye-off' : 'eye'} />
+                </Touchable>
+              ) : random ? (
+                <Touchable
+                  onClick={handleRandomizeClick}
+                  onKeyDown={handleRandomizeKeyDown}
+                  title="Randomize"
+                >
+                  <Icon name="auto-fix" />
+                </Touchable>
+              ) : valid === false || valid === true ? (
+                <Icon
+                  name={valid === false ? 'close' : 'check'}
+                  color={valid === false ? 'warning' : 'success'}
+                  size={20}
+                />
+              ) : unit ? (
+                <>
+                  <Separator
+                    css={styles.verticalSeparator}
+                    direction="vertical"
+                  />
+                  <Typography
+                    variant="bodyB"
+                    display="flex"
+                    alignSelf={unitAlignment}
+                    py={1}
+                  >
+                    {unit}
+                    {required && (
+                      <Icon ml="2px" name="asterisk" color="warning" size={8} />
+                    )}
+                  </Typography>
+                </>
+              ) : required ? (
+                <Icon name="asterisk" color="warning" size={10} />
+              ) : null}
+            </div>
+          ) : null}
         </Box>
-      </Expandable>
-      {notice && <Notice mt={1}>{notice}</Notice>}
-    </Box>
-  )
-}
-
-// eslint-disable-next-line no-func-assign
-TextBox = React.forwardRef(TextBox)
+        <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+          <Box fontSize={12} color="warning" pt="2px">
+            {error}
+          </Box>
+        </Expandable>
+        {notice && <Notice mt={1}>{notice}</Notice>}
+      </Box>
+    )
+  },
+)
 
 TextBox.propTypes = {
-  size: PropTypes.oneOf(textBoxSizes),
-  multiline: PropTypes.bool,
-  resizable: PropTypes.bool,
-  notice: PropTypes.node,
-  valid: PropTypes.bool,
-  placeholder: PropTypes.string,
-  label: PropTypes.node,
+  autoComplete: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  cols: PropTypes.number,
+  defaultValue: PropTypes.string,
+  disabled: PropTypes.bool,
   edit: PropTypes.bool,
+  error: PropTypes.string,
   fillAvailable: PropTypes.bool,
+  generated: PropTypes.bool,
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  label: PropTypes.node,
+  multiline: PropTypes.bool,
+  name: PropTypes.string,
+  notice: PropTypes.node,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  placeholder: PropTypes.string,
+  random: PropTypes.string,
+  readOnly: PropTypes.bool,
   required: PropTypes.bool,
+  resizable: PropTypes.bool,
+  rows: PropTypes.number,
+  size: PropTypes.oneOf(textBoxSizes),
+  tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  type: PropTypes.string,
+  unit: PropTypes.string,
   unitAlignment: PropTypes.oneOf(['center', 'flex-end', 'flex-start']),
+  valid: PropTypes.bool,
+  value: PropTypes.string,
   wrap: PropTypes.string,
+}
+
+TextBox.defaultProps = {
+  autoComplete: 'on',
+  autoFocus: undefined,
+  tabIndex: undefined,
+  cols: undefined,
+  defaultValue: undefined,
+  disabled: undefined,
+  edit: undefined,
+  error: undefined,
+  generated: undefined,
+  label: undefined,
+  multiline: undefined,
+  fillAvailable: undefined,
+  name: undefined,
+  notice: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onFocus: undefined,
+  placeholder: undefined,
+  random: undefined,
+  readOnly: undefined,
+  required: undefined,
+  resizable: undefined,
+  rows: undefined,
+  size: 'medium',
+  type: 'text',
+  valid: undefined,
+  value: undefined,
+  height: undefined,
+  unit: undefined,
+  unitAlignment: 'flex-end',
+  wrap: undefined,
 }
 
 export { TextBox }
