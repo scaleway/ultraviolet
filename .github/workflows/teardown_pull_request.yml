@@ -29,7 +29,10 @@ jobs:
       - name: Remove deployment
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
-        run: docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
+        # TODO: remove the context rm when we switch back to public runners
+        run: |
+          docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
+          docker context rm ${VERSION}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.4.3
