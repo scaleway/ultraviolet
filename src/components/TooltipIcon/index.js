@@ -3,8 +3,8 @@ import React from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
-export const TooltipIcon = ({ color, name, size, tooltip }) => (
-  <Tooltip text={tooltip} width="max-content">
+export const TooltipIcon = ({ color, name, size, tooltip, baseId }) => (
+  <Tooltip text={tooltip} baseId={baseId} width="max-content">
     <Icon color={color} name={name} size={size} />
   </Tooltip>
 )
@@ -13,9 +13,11 @@ TooltipIcon.defaultProps = {
   color: 'gray550',
   name: 'help-circle-outline',
   size: 20,
+  baseId: undefined,
 }
 
 TooltipIcon.propTypes = {
+  baseId: PropTypes.string,
   color: PropTypes.string,
   name: PropTypes.string,
   size: PropTypes.number,

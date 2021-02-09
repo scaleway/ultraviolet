@@ -52,7 +52,6 @@ export const Tooltip = ({
   animated,
   children,
   text = '',
-  customStyle,
   placement,
   visible,
   variant,
@@ -117,6 +116,11 @@ Tooltip.propTypes = {
   visible: PropTypes.bool,
   text: PropTypes.node,
   baseId: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.func,
+  ]),
 }
 
 Tooltip.defaultProps = {
@@ -126,4 +130,5 @@ Tooltip.defaultProps = {
   visible: false,
   text: '',
   baseId: undefined,
+  children: undefined,
 }

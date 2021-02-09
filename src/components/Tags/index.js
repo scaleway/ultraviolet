@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
+import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import { theme } from '../../theme'
 import { Box } from '../Box'
@@ -32,7 +33,7 @@ const container = {
       &:not(:last-child) {
         margin-right: 6px;
       }
-    },
+    }
   `,
   noBorder: css`
     &:focus-within {
@@ -62,17 +63,17 @@ const styles = {
 export const Tags = ({
   // If this component is used with a RichSelect, tags will be a
   // list of objects.
-  areTagsObject = false,
-  borderedContainer = true,
-  controlled = false,
+  areTagsObject,
+  borderedContainer,
+  controlled,
   disabled,
-  manualInput = true,
+  manualInput,
   name,
   onChange,
-  onChangeError = () => {},
+  onChangeError,
   placeholder,
-  tags = [],
-  variant = 'base',
+  tags,
+  variant,
   ...props
 }) => {
   const [tagsState, setTags] = useState(tags)
@@ -186,4 +187,37 @@ export const Tags = ({
       </Box>
     )
   )
+}
+
+Tags.defaultProps = {
+  areTagsObject: false,
+  borderedContainer: true,
+  controlled: false,
+  disabled: false,
+  manualInput: true,
+  onChangeError: () => {},
+  placeholder: undefined,
+  tags: [],
+  variant: 'base',
+}
+
+Tags.propTypes = {
+  areTagsObject: PropTypes.bool,
+  borderedContainer: PropTypes.bool,
+  controlled: PropTypes.bool,
+  disabled: PropTypes.bool,
+  manualInput: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onChangeError: PropTypes.func,
+  placeholder: PropTypes.string,
+  tags: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.shape({
+        label: PropTypes.string,
+      }),
+    ]),
+  ),
+  variant: PropTypes.string,
 }

@@ -9,6 +9,12 @@ describe('NotificationBar', () => {
     )
   })
 
+  test('renders correctly with custom icon', () => {
+    shouldMatchEmotionSnapshot(
+      <NotificationBar icon="eye">Sample NotificationBar</NotificationBar>,
+    )
+  })
+
   notificationVariants.forEach(variant => {
     test(`renders correctly variant ${variant}`, () => {
       shouldMatchEmotionSnapshot(
