@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import { TextBox, textBoxSizes } from '..'
 import { Boxer } from '../..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
@@ -555,3 +561,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
     </Boxer>
   </Story>
 </Canvas>
+
+## Props
+
+<ArgsTable of={TextBox} />
