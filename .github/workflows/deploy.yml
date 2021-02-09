@@ -62,13 +62,15 @@ jobs:
         uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
         with:
           docker_host: ${{ env.REMOTE_SSH_SERVER }}
-          context_name: 'remote'
+          context_name: ${{ env.VERSION }}}
           ssh_cert: ${{ secrets.SSH_CERT }}
           ssh_key: ${{ secrets.SSH_KEY }}
       - name: Deploy docker
         env:
           VERSION: ${{ env.BRANCH_SLUG }}
-        run: docker-compose --context remote pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
+        run: |
+          docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context remote up -d --force-recreate
+          docker context rm ${VERSION}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.4.3
