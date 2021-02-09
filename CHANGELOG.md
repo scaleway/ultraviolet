@@ -1,3 +1,10 @@
+## [0.56.0](https://github.com/scaleway/scaleway-ui/compare/v0.55.3...v0.56.0) (2021-02-09)
+
+
+### :gear: Features
+
+* migrate to xstyled ([#17](https://github.com/scaleway/scaleway-ui/issues/17)) ([4b8bc07](https://github.com/scaleway/scaleway-ui/commit/4b8bc07fa03631b363c50fee27b83a9b2b82f0b6))
+
 ### [0.55.3](https://github.com/scaleway/scaleway-ui/compare/v0.55.2...v0.55.3) (2021-02-09)
 
 
