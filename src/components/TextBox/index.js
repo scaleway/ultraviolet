@@ -433,7 +433,7 @@ const TextBox = React.forwardRef(
             </div>
           ) : null}
         </Box>
-      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
+        <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
           <Box fontSize={12} color="warning" pt="2px">
             {error}
           </Box>

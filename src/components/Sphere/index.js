@@ -36,8 +36,8 @@ export const Sphere = ({
 }) => (
   <Box
     css={styles.sphere({ size, bgColors })}
-    w={size}
-    h={size}
+    width={size}
+    height={size}
     position="relative"
     {...props}
   >

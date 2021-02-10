@@ -11,16 +11,40 @@ import { Box } from '../..'
     color =>
       color !== 'colors' && (
         <Box display="flex" justifyContent="center" key={color}>
-          <Box textAlign="center" w={100} p={1} m={1} backgroundColor="black">
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor="black"
+          >
             <p style={{ color: colors[color] }}>{color}</p>
           </Box>
-          <Box textAlign="center" w={100} p={1} m={1} backgroundColor="white">
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor="white"
+          >
             <p style={{ color: colors[color] }}>{color}</p>
           </Box>
-          <Box textAlign="center" w={100} p={1} m={1} backgroundColor={color}>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor={color}
+          >
             <p style={{ color: 'white' }}>{color}</p>
           </Box>
-          <Box textAlign="center" w={100} p={1} m={1} backgroundColor={color}>
+          <Box
+            textAlign="center"
+            width={100}
+            p={1}
+            m={1}
+            backgroundColor={color}
+          >
             <p style={{ color: 'black' }}>{color}</p>
           </Box>
         </Box>

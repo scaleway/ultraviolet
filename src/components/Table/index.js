@@ -90,7 +90,7 @@ const TBody = Box.withComponent('tbody')
 const BodyLoader = props => (
   <TBody>
     <Row>
-      <BodyCell h={80} position="relative" {...props}>
+      <BodyCell height={80} position="relative" {...props}>
         <ActivityIndicator position="absolute" top={16} left="50%" size={40} />
       </BodyCell>
     </Row>
