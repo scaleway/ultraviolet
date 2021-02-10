@@ -43,10 +43,17 @@ const styles = {
 }
 
 const MenuIcon = ({ name, size, color, isButton, ...props }) => (
-  <Box display="flex" alignItems="center" h={20} w={20} mr={1} {...props}>
+  <Box
+    display="flex"
+    alignItems="center"
+    height={20}
+    width={20}
+    mr={1}
+    {...props}
+  >
     <Box
-      h={size}
-      w={size}
+      height={size}
+      width={size}
       viewBox="0 0 16 16"
       as="svg"
       css={styles.icon(color)}

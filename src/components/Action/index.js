@@ -60,7 +60,7 @@ Action.defaultProps = {
   rounded: false,
   variant: 'primary',
   tooltip: undefined,
-  children: () => null,
+  children: null,
   key: undefined,
   name: undefined,
 }

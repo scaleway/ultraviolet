@@ -9,7 +9,7 @@ describe('Box', () => {
 
   test('Box renders with system', () => {
     shouldMatchEmotionSnapshot(
-      <Box backgroundColor="primary" h={100} mx="auto" p={2} />,
+      <Box backgroundColor="primary" height={100} mx="auto" p={2} />,
     )
   })
 })

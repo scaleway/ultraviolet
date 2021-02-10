@@ -116,7 +116,7 @@ export function Checkbox({
         )}
         {hasChildren && <div css={styles.children(size)}>{children}</div>}
       </Typography>
-      <Expandable h={56} overflow="hidden" opened={Boolean(error)}>
+      <Expandable height={56} overflow="hidden" opened={!!error}>
         <Box fontSize={12} color="warning" px="4px">
           {error}
         </Box>

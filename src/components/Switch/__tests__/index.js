@@ -33,7 +33,7 @@ describe('Switch', () => {
 
   test('renders correctly with custom width', () => {
     shouldMatchEmotionSnapshot(
-      <Switch name="test" onChange={() => {}} w={120} />,
+      <Switch name="test" onChange={() => {}} width={120} />,
     )
   })
 

@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,18 +19,18 @@ exports[`Radio renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:hover .emotion-3,
-.emotion-0:focus .emotion-3 {
+.emotion-1:hover .emotion-2,
+.emotion-1:focus .emotion-2 {
   background-color: rgba(220,225,235,0.25);
   border-radius: 50%;
 }
 
-.emotion-0:hover .emotion-3>.emotion-4,
-.emotion-0:focus .emotion-3>.emotion-4 {
+.emotion-1:hover .emotion-2>.emotion-4,
+.emotion-1:focus .emotion-2>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-2 {
+.emotion-3 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -95,7 +95,7 @@ exports[`Radio renders correctly 1`] = `
 
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -112,18 +112,18 @@ exports[`Radio renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:hover .emotion-3,
-.emotion-0:focus .emotion-3 {
+.emotion-1:hover .emotion-2,
+.emotion-1:focus .emotion-2 {
   background-color: rgba(220,225,235,0.25);
   border-radius: 50%;
 }
 
-.emotion-0:hover .emotion-3>.emotion-4,
-.emotion-0:focus .emotion-3>.emotion-4 {
+.emotion-1:hover .emotion-2>.emotion-4,
+.emotion-1:focus .emotion-2>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-2 {
+.emotion-3 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -189,7 +189,7 @@ exports[`Radio renders correctly when checked 1`] = `
 
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -208,7 +208,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2 {
+.emotion-3 {
   min-width: 32px;
   width: 32px;
   height: 32px;

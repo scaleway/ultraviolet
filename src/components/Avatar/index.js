@@ -47,7 +47,7 @@ const Avatar = ({
   lock,
   ...props
 }) => (
-  <Box w={size} h={size} position="relative" {...props}>
+  <Box width={size} height={size} position="relative" {...props}>
     {text ? (
       <div
         css={styles.textAvatar({
