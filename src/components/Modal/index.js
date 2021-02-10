@@ -287,9 +287,8 @@ const Modal = memo(
                   </Touchable>
                 )}
               </div>
-              {dialog.visible && typeof children === 'function'
-                ? children(dialog)
-                : children}
+              {dialog.visible &&
+                (typeof children === 'function' ? children(dialog) : children)}
             </>
           </Dialog>
         </DialogBackdrop>
