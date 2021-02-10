@@ -1,3 +1,10 @@
+### [0.56.1](https://github.com/scaleway/scaleway-ui/compare/v0.56.0...v0.56.1) (2021-02-10)
+
+
+### :bug: Bug Fixes
+
+* shim old width/height behavior on Box ([#32](https://github.com/scaleway/scaleway-ui/issues/32)) ([9b41179](https://github.com/scaleway/scaleway-ui/commit/9b411791009857098dc6dc79020b442c62d96fd2))
+
 ## [0.56.0](https://github.com/scaleway/scaleway-ui/compare/v0.55.3...v0.56.0) (2021-02-09)
 
 
