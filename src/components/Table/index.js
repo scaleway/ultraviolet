@@ -6,22 +6,20 @@ import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 
-const as = element => props => <Box as={element} {...props} />
-
-const Table = styled(as('table'))`
+const Table = styled(Box.withComponent('table'))`
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 `
 
-const Head = styled(as('thead'))`
+const Head = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
   border-color: ${colors.gray350};
   border-style: solid;
 `
 
-const Row = styled(as('tr'), {
+const Row = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => !['highlight'].includes(prop),
 })`
   color: ${colors.gray700};
@@ -73,7 +71,7 @@ const cellStyle = css`
   line-height: 24px;
 `
 
-const HeadCell = styled(as('th'))`
+const HeadCell = styled(Box.withComponent('th'))`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -83,13 +81,13 @@ const HeadCell = styled(as('th'))`
   ${cellStyle};
 `
 
-const BodyCell = styled(as('td'))`
+const BodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
   white-space: nowrap;
   ${cellStyle};
 `
 
-const TBody = as('tbody')
+const TBody = Box.withComponent('tbody')
 
 const BodyLoader = props => (
   <TBody>

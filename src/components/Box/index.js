@@ -1,10 +1,12 @@
 import { x } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-export const Box = ({ width, height, ...props }) => (
-  <x.div w={width} h={height} {...props} />
-)
+export const Box = forwardRef(({ width, height, ...props }, ref) => (
+  <x.div ref={ref} w={width} h={height} {...props} />
+))
+
+Box.withComponent = element => props => <Box as={element} {...props} />
 
 Box.defaultProps = {
   width: undefined,
