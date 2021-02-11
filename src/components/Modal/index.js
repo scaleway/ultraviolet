@@ -10,7 +10,6 @@ import {
 } from 'reakit/Dialog'
 import { colors } from '../../theme'
 import * as animations from '../../utils'
-import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
 
@@ -195,13 +194,16 @@ const Disclosure = memo(({ disclosure, dialog }) => {
   )
 })
 
+Disclosure.propTypes = {
+  disclosure: PropTypes.func,
+  dialog: PropTypes.shape({}).isRequired,
+}
+
 const Modal = memo(
   ({
     animated,
     animation,
     ariaLabel,
-    back,
-    backContent,
     baseId,
     bordered,
     children,
@@ -257,25 +259,6 @@ const Modal = memo(
           >
             <>
               <div css={containerStyles}>
-                {back && backContent && (
-                  <Button
-                    icon={
-                      <Icon
-                        name="chevron-left"
-                        size={12}
-                        color="primary"
-                        mr={1}
-                      />
-                    }
-                    variant="link"
-                    color="primary"
-                    onClick={back}
-                    mr="auto"
-                    p={0}
-                  >
-                    {backContent}
-                  </Button>
-                )}
                 {isClosable && (
                   <Touchable
                     onClick={onClose || dialog.toggle}
@@ -301,11 +284,11 @@ Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   animation: PropTypes.oneOf(Object.keys(MODAL_ANNIMATION)),
   ariaLabel: PropTypes.string,
-  back: PropTypes.func,
-  backContent: PropTypes.node,
   bordered: PropTypes.bool,
   baseId: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  customDialogBackdropStyles: PropTypes.shape({}),
+  customDialogStyles: PropTypes.shape({}),
   disclosure: PropTypes.func,
   height: PropTypes.string,
   hideOnClickOutside: PropTypes.bool,
@@ -323,9 +306,10 @@ Modal.defaultProps = {
   animated: false,
   animation: 'zoom',
   ariaLabel: 'modal',
-  backContent: 'Back',
   bordered: true,
   baseId: 'modal',
+  customDialogBackdropStyles: {},
+  customDialogStyles: {},
   height: 'initial',
   hideOnClickOutside: true,
   hideOnEsc: true,

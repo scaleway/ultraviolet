@@ -142,19 +142,6 @@ import { Box, Button, Modal } from '../..'
   </Story>
 </Canvas>
 
-## with Back Content
-
-<Canvas>
-  <Story name="back">
-    <Modal
-      disclosure={() => <Button>Open Modal</Button>}
-      backContent="test to back content"
-    >
-      <Box p={4}>Content should be present in center of the modal</Box>
-    </Modal>
-  </Story>
-</Canvas>
-
 ## Width
 
 <Description>
@@ -163,7 +150,7 @@ import { Box, Button, Modal } from '../..'
 
 <Canvas>
   <Story name="Width xssmall">
-    <Modal disclosure={() => <Button>xxsmall</Button>} width="xxsmall">
+    <Modal width="xxsmall">
       <Box p={4}>Content should be present in center of the modal</Box>
     </Modal>
   </Story>
