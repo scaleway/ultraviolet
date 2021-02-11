@@ -1,3 +1,15 @@
+### [0.56.2](https://github.com/scaleway/scaleway-ui/compare/v0.56.1...v0.56.2) (2021-02-11)
+
+
+### :package: Chore
+
+* **deps:** bump react-select from 4.0.2 to 4.1.0 ([#21](https://github.com/scaleway/scaleway-ui/issues/21)) ([b60c16f](https://github.com/scaleway/scaleway-ui/commit/b60c16fa8e7dd8dafd5b6d8266802516ad2c8e69))
+
+
+### :bug: Bug Fixes
+
+* add forwardRef and withComponent shim to Box ([#34](https://github.com/scaleway/scaleway-ui/issues/34)) ([1c7c4f9](https://github.com/scaleway/scaleway-ui/commit/1c7c4f92eb2b6758fa36e01ba5a6301780816f09))
+
 ### [0.56.1](https://github.com/scaleway/scaleway-ui/compare/v0.56.0...v0.56.1) (2021-02-10)
 
 
