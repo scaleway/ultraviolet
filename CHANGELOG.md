@@ -1,3 +1,10 @@
+### [0.56.3](https://github.com/scaleway/scaleway-ui/compare/v0.56.2...v0.56.3) (2021-02-11)
+
+
+### :bug: Bug Fixes
+
+* uses disclosure on modal example and fixes warning ([#33](https://github.com/scaleway/scaleway-ui/issues/33)) ([8b05c94](https://github.com/scaleway/scaleway-ui/commit/8b05c947d68018b98c4a059d2d60fbafbc01d350))
+
 ### [0.56.2](https://github.com/scaleway/scaleway-ui/compare/v0.56.1...v0.56.2) (2021-02-11)
 
 
