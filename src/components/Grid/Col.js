@@ -72,7 +72,7 @@ const PropTypesBreakpoint = PropTypes.oneOfType([
 ])
 
 Col.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   gutter: PropTypes.oneOf(Object.keys(space).map(Number)),
   xsmall: PropTypesBreakpoint,
   small: PropTypesBreakpoint,
