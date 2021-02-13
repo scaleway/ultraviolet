@@ -19,7 +19,7 @@ Row.defaultProps = {
 }
 
 Row.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   gutter: PropTypes.oneOf(Object.keys(space).map(Number)),
 }
 
