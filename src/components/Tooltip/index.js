@@ -130,5 +130,5 @@ Tooltip.defaultProps = {
   visible: false,
   text: '',
   baseId: undefined,
-  children: undefined,
+  children: null,
 }
