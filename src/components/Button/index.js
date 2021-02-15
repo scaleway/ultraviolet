@@ -212,7 +212,7 @@ function FwdButton({
     if (props.href || props.download) return 'a'
 
     return 'button'
-  }, [props])
+  }, [props.to, props.href, props.download])
 
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
