@@ -62,17 +62,15 @@ RootRendererComponent.defaultProps = {
   parentProps: {},
 }
 
+const rootRenderer = (inline, parentProps) => props => (
+  <RootRendererComponent {...props} inline={inline} parentProps={parentProps} />
+)
+
 const MarkDown = ({ source, linkTarget, escapeHtml, inline, ...props }) => (
   <ReactMarkDown
     source={source}
     renderers={{
-      root: rootProps => (
-        <RootRendererComponent
-          {...rootProps}
-          inline={inline}
-          parentProps={props}
-        />
-      ),
+      root: rootRenderer(inline, props),
       heading: headingRenderer,
       inlineCode: inlineCodeRenderer,
       text: textRenderer,
