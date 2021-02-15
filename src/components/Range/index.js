@@ -157,7 +157,7 @@ const Limit = ({ value, label, ...props }) => (
 )
 
 Limit.defaultProps = {
-  value: '',
+  value: 0,
   label: '',
 }
 Limit.propTypes = {

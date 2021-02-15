@@ -34,20 +34,20 @@ const linkRenderer = ({ children, node, ...props }) => {
   )
 }
 
-const RootRendererComponent = props => (
+const RootRendererComponent = ({ inline, parentProps, children }) => (
   <Box
-    as={props.inline ? 'span' : 'div'}
+    as={inline ? 'span' : 'div'}
     css={
-      props.inline &&
+      inline &&
       css`
         > p {
           display: inline;
         }
       `
     }
-    {...props.parentProps}
+    {...parentProps}
   >
-    {props.children}
+    {children}
   </Box>
 )
 RootRendererComponent.propTypes = {
@@ -57,7 +57,7 @@ RootRendererComponent.propTypes = {
 }
 
 RootRendererComponent.defaultProps = {
-  children: '',
+  children: null,
   inline: false,
   parentProps: {},
 }

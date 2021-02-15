@@ -62,11 +62,11 @@ export function Checkbox({
   typographyVariant,
   ...props
 }) {
-  const hasChildren = Boolean(children)
+  const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
   const color = useMemo(() => {
     if (disabled) return 'gray100'
-    if (valid === false || Boolean(error)) return 'warning'
+    if (valid === false || !!error) return 'warning'
     if (valid === true) return 'success'
     if (checked) return 'primary'
 

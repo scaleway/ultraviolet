@@ -29,7 +29,7 @@ export function IconMessage({ variant, icon, children, ...props }) {
 IconMessage.defaultProps = {
   variant: 'warning',
   icon: 'alert',
-  children: '',
+  children: null,
 }
 
 IconMessage.propTypes = {

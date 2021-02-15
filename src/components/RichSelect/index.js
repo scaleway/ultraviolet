@@ -363,7 +363,7 @@ ValueContainer.defaultProps = {
   labelId: undefined,
   inputId: undefined,
   error: undefined,
-  children: undefined,
+  children: null,
   hasValue: false,
 }
 ValueContainer.propTypes = {
