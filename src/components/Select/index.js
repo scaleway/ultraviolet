@@ -109,6 +109,14 @@ export function Select({
       }),
     )
 
+  const color = React.useMemo(() => {
+    if (arrowColor) return arrowColor
+    if (error) return 'warning'
+    if (disabled) return 'gray'
+
+    return 'gray550'
+  }, [arrowColor, error, disabled])
+
   return (
     <Box css={[styles.container, ...mainStyles]} {...props}>
       <select
@@ -134,17 +142,7 @@ export function Select({
         {isLoading ? (
           <ActivityIndicator size={20} />
         ) : (
-          <Icon
-            name="chevron-down"
-            size={11}
-            color={(() => {
-              if (arrowColor) return arrowColor
-              if (error) return 'warning'
-              if (disabled) return 'gray'
-
-              return 'gray550'
-            })()}
-          />
+          <Icon name="chevron-down" size={11} color={color} />
         )}
       </Box>
     </Box>
