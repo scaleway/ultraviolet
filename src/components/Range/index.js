@@ -345,14 +345,14 @@ const Range = ({
 
     // Set initial cursors position
     cursorsRef.forEach((cursor, index) => {
+      const cursorCurrent = cursor.current
       const percent = getPercent(min, max, internValues[index])
       const translate =
         (container.current.offsetWidth - limitOffset * 2) * percent
 
       const tresholdedTranslate = translate + limitOffset - halfCursorWidth
 
-      // eslint-disable-next-line no-param-reassign
-      cursor.current.style.transform = `translate3d(${tresholdedTranslate}px, 0, 0)`
+      cursorCurrent.style.transform = `translate3d(${tresholdedTranslate}px, 0, 0)`
 
       if (hasCursorsLink) {
         if (index === 0 || index === cursorsRef.length - 1) {

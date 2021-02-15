@@ -88,11 +88,22 @@ function Progress({ children, selected, ...props }) {
         }
 
         const { onClick, title } = child.props
-        const isLeft = index === 0
-        const isRight = index === length - 1
         const isPast = selected > index
         const isClickable = isPast && Boolean(onClick)
-        const isCurrent = selected === index
+
+        const isLeftOrRightStyles = React.useMemo(() => {
+          if (index === 0) return styles.left
+          if (index === length - 1) return styles.right
+
+          return styles.middle
+        }, [index])
+
+        const isPastOrCurrentStyles = React.useMemo(() => {
+          if (selected > index) return styles.past
+          if (selected === index) return styles.current
+
+          return styles.future
+        }, [index, selected])
 
         return (
           <Box
@@ -102,19 +113,9 @@ function Progress({ children, selected, ...props }) {
             css={[
               styles.base,
               css({ zIndex: length - index }),
-              (() => {
-                if (isLeft) return styles.left
-                if (isRight) return styles.right
-
-                return styles.middle
-              })(),
+              isLeftOrRightStyles,
               isClickable && styles.clickable,
-              (() => {
-                if (isPast) return styles.past
-                if (isCurrent) return styles.current
-
-                return styles.future
-              })(),
+              isPastOrCurrentStyles,
             ]}
           >
             {title}

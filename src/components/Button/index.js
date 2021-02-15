@@ -207,12 +207,12 @@ function FwdButton({
   innerRef,
   ...props
 }) {
-  const as = (() => {
+  const as = React.useMemo(() => {
     if (props.to) return UniversalLink
     if (props.href || props.download) return 'a'
 
     return 'button'
-  })()
+  }, [props])
 
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8

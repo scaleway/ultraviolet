@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
 import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -64,6 +64,14 @@ export function Checkbox({
 }) {
   const hasChildren = Boolean(children)
   const checkbox = useCheckboxState({ state: checked })
+  const color = useMemo(() => {
+    if (disabled) return 'gray100'
+    if (valid === false || Boolean(error)) return 'warning'
+    if (valid === true) return 'success'
+    if (checked) return 'primary'
+
+    return 'gray300'
+  }, [disabled, valid, checked, error])
 
   useEffect(() => {
     checkbox.setState(checked)
@@ -100,14 +108,7 @@ export function Checkbox({
                 ? 'checkbox-marked-outline'
                 : 'checkbox-blank-outline'
             }
-            color={(() => {
-              if (disabled) return 'gray100'
-              if (valid === false || Boolean(error)) return 'warning'
-              if (valid === true) return 'success'
-              if (checked) return 'primary'
-
-              return 'gray300'
-            })()}
+            color={color}
             size={size}
           />
         )}

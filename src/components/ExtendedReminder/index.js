@@ -111,7 +111,7 @@ const ExtendedReminder = ({
 }
 
 ExtendedReminder.propTypes = {
-  variant: PropTypes.oneOf(['error', 'warning', 'info', 'success']),
+  variant: PropTypes.oneOf(Object.keys(variants)),
   badgeText: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

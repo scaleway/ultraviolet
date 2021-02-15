@@ -103,7 +103,7 @@ Tag.propTypes = {
   onClose: PropTypes.func,
   textStyle: PropTypes.shape({}),
   disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(['base', 'bordered']),
+  variant: PropTypes.oneOf(Object.keys(variantsContainer)),
 }
 
 Tag.defaultProps = {
