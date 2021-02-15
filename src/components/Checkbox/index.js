@@ -136,7 +136,7 @@ Checkbox.defaultProps = {
   size: 24,
   typographyVariant: 'default',
   valid: undefined,
-  value: '',
+  value: undefined,
 }
 
 Checkbox.propTypes = {
