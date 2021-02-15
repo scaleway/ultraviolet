@@ -21,7 +21,7 @@ const styles = {
     margin-left: 0;
     margin-right: 0;
     border-radius: 2px;
-    background-color: ${colors[backgroundColor]};
+    background-color: ${colors[backgroundColor] || backgroundColor};
   `,
   filled: ({ variant, value }) => css`
     border-radius: 2px;
