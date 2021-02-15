@@ -291,7 +291,7 @@ const Icon = React.forwardRef(
 
 Icon.propTypes = {
   color: PropTypes.string,
-  name: PropTypes.oneOfType([PropTypes.oneOf(icons), PropTypes.string]),
+  name: PropTypes.oneOf(icons),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.string,
 }

@@ -66,7 +66,7 @@ const Tag = ({
   onClose,
   textStyle,
   disabled,
-  variant = 'base',
+  variant,
   ...props
 }) => (
   <Box
@@ -112,7 +112,7 @@ Tag.defaultProps = {
   isLoading: false,
   disabled: false,
   textStyle: {},
-  onClose: () => {},
+  onClose: undefined,
 }
 
 export { Tag }
