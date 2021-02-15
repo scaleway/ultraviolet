@@ -19,6 +19,7 @@ Show strength of a password based on many criteria.
 <Canvas>
   <Story name="basic">
     <UncontrolledPasswordStrengthMeter
+      name="basic"
       estimate={zxcvbn}
       strength={[
         { color: 'red', t: 'veryWeak' },
@@ -45,6 +46,7 @@ using `userInputs` properties.
 <Canvas>
   <Story name="with userInputs">
     <UncontrolledPasswordStrengthMeter
+      name="user-inputs"
       estimate={zxcvbn}
       strength={[
         { color: 'red', t: 'veryWeak' },

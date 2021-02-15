@@ -7,6 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import { Stepper } from '..'
+import { log } from '../../../__stories__/helpers'
 import { Box } from '../../Box'
 
 <Meta title="Components/Stepper" component={Stepper} />
@@ -15,7 +16,7 @@ import { Box } from '../../Box'
 
 ## Basic
 
-<Description>Stepper //:TODO</Description>
+<Description>Stepper</Description>
 
 <Canvas>
   <Story name="basic">
@@ -71,11 +72,11 @@ import { Box } from '../../Box'
       maxValue={100}
       text="unit"
       value={50}
-      onChange={() => console.log('onChange')}
-      onFocus={() => console.log('onFocus')}
-      onBlur={() => console.log('onBlur')}
-      onMinCrossed={() => console.log('onMinCrossed')}
-      onMaxCrossed={() => console.log('onMaxCrossed')}
+      onChange={() => log('onChange')}
+      onFocus={() => log('onFocus')}
+      onBlur={() => log('onBlur')}
+      onMinCrossed={() => log('onMinCrossed')}
+      onMaxCrossed={() => log('onMaxCrossed')}
     />
   </Story>
 </Canvas>
@@ -83,32 +84,30 @@ import { Box } from '../../Box'
 ## Sizes
 
 <Canvas>
-  <Story name="size"
-         args={{
-           sizes: [
-             'small',
-             'medium',
-             'large',
-           ]
-         }}
-  >
-    {args => args.sizes.map(size => {
-      const [value, setValue] = useState(10)
-      return (
-        <Box my={2}>
-          {size}
-          <Stepper
-            minValue={0}
-            maxValue={100}
-            size={size}
-            onChange={setValue}
-            value={value}
-            mt={1}
-          />
-        </Box>
-      )
-    })
+  <Story
+    name="size"
+    args={{
+      sizes: ['small', 'medium', 'large'],
     }}
+  >
+    {args =>
+      args.sizes.map(size => {
+        const [value, setValue] = useState(10)
+        return (
+          <Box my={2} key={size}>
+            {size}
+            <Stepper
+              minValue={0}
+              maxValue={100}
+              size={size}
+              onChange={setValue}
+              value={value}
+              mt={1}
+            />
+          </Box>
+        )
+      })
+    }
   </Story>
 </Canvas>
 

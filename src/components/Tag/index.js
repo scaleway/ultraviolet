@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -59,7 +60,7 @@ export const variantsContainer = {
   `,
 }
 
-export const Tag = ({
+const Tag = ({
   children,
   isLoading,
   onClose,
@@ -95,3 +96,23 @@ export const Tag = ({
     )}
   </Box>
 )
+
+Tag.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  isLoading: PropTypes.bool,
+  onClose: PropTypes.func,
+  textStyle: PropTypes.shape({}),
+  disabled: PropTypes.bool,
+  variant: PropTypes.oneOf(['base', 'bordered']),
+}
+
+Tag.defaultProps = {
+  variant: 'base',
+  children: undefined,
+  isLoading: false,
+  disabled: false,
+  textStyle: {},
+  onClose: () => {},
+}
+
+export { Tag }

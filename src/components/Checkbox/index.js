@@ -100,17 +100,14 @@ export function Checkbox({
                 ? 'checkbox-marked-outline'
                 : 'checkbox-blank-outline'
             }
-            color={
-              disabled
-                ? 'gray100'
-                : valid === false || Boolean(error)
-                ? 'warning'
-                : valid === true
-                ? 'success'
-                : checked
-                ? 'primary'
-                : 'gray300'
-            }
+            color={(() => {
+              if (disabled) return 'gray100'
+              if (valid === false || Boolean(error)) return 'warning'
+              if (valid === true) return 'success'
+              if (checked) return 'primary'
+
+              return 'gray300'
+            })()}
             size={size}
           />
         )}
@@ -126,17 +123,23 @@ export function Checkbox({
 }
 
 Checkbox.defaultProps = {
+  autoFocus: false,
   checked: false,
+  children: '',
   disabled: false,
+  error: undefined,
   onBlur: () => {},
   onFocus: () => {},
   progress: false,
   name: 'checkbox',
-  typographyVariant: 'default',
   size: 24,
+  typographyVariant: 'default',
+  valid: undefined,
+  value: '',
 }
 
 Checkbox.propTypes = {
+  autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
   children: PropTypes.node,
   disabled: PropTypes.bool,
@@ -146,7 +149,11 @@ Checkbox.propTypes = {
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   progress: PropTypes.bool,
   name: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.number,
+  ]),
   valid: PropTypes.bool,
   size: PropTypes.number,
   typographyVariant: PropTypes.oneOf(typographyVariants),

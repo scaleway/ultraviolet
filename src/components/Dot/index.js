@@ -12,12 +12,17 @@ const style = ({ color }) => css`
   background-color: ${colors[color] ?? color};
 `
 
-function FwdDot({ color = 'primary', innerRef, ...props }) {
+function FwdDot({ color, innerRef, ...props }) {
   return <Box css={style({ color })} ref={innerRef} {...props} />
 }
 
 FwdDot.propTypes = {
   color: PropTypes.string,
+  innerRef: PropTypes.func,
+}
+FwdDot.defaultProps = {
+  color: 'primary',
+  innerRef: undefined,
 }
 
 function forwardRef(props, ref) {

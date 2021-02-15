@@ -5,13 +5,18 @@ const ControlValue = ({ value, children }) => {
 
   const onChange = valueOrEvent =>
     setState({
-      value:
-        valueOrEvent && valueOrEvent.currentTarget
-          ? valueOrEvent.currentTarget.type === 'checkbox' ||
+      value: (() => {
+        if (valueOrEvent && valueOrEvent.currentTarget) {
+          if (
+            valueOrEvent.currentTarget.type === 'checkbox' ||
             valueOrEvent.currentTarget.type === 'radio'
-            ? valueOrEvent.currentTarget.checked
-            : valueOrEvent.currentTarget.value
-          : valueOrEvent,
+          )
+            return valueOrEvent.currentTarget.checked
+
+          return valueOrEvent.currentTarget.value
+        }
+        return valueOrEvent
+      })(),
     })
 
   return children({

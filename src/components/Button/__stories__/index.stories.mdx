@@ -163,7 +163,7 @@ import { Button, buttonSizes, buttonVariants } from '..'
 <Canvas>
   <Story name="btn-icons-position">
     {['left', 'right'].map(position => (
-      <Button iconPosition={position} icon="lock" m={2}>
+      <Button key={position} iconPosition={position} icon="lock" m={2}>
         {position}
       </Button>
     ))}

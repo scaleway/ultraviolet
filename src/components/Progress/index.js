@@ -102,9 +102,19 @@ function Progress({ children, selected, ...props }) {
             css={[
               styles.base,
               css({ zIndex: length - index }),
-              isLeft ? styles.left : isRight ? styles.right : styles.middle,
+              (() => {
+                if (isLeft) return styles.left
+                if (isRight) return styles.right
+
+                return styles.middle
+              })(),
               isClickable && styles.clickable,
-              isPast ? styles.past : isCurrent ? styles.current : styles.future,
+              (() => {
+                if (isPast) return styles.past
+                if (isCurrent) return styles.current
+
+                return styles.future
+              })(),
             ]}
           >
             {title}

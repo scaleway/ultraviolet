@@ -6,6 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import { Tags } from '..'
+import { log } from '../../../__stories__/helpers'
 
 <Meta title="Components/Tags" component={Tags} />
 
@@ -17,7 +18,7 @@ import { Tags } from '..'
 
 <Canvas>
   <Story name="basic">
-    <Tags onChange={tags => console.log(tags)} tags={['Smooth', 'code']} />
+    <Tags name="basic" onChange={tags => log(tags)} tags={['Smooth', 'code']} />
   </Story>
 </Canvas>
 
@@ -26,8 +27,9 @@ import { Tags } from '..'
 <Canvas>
   <Story name="bordered">
     <Tags
+      name="bordered"
       variant="bordered"
-      onChange={tags => console.log(tags)}
+      onChange={tags => log(tags)}
       tags={['Smooth', 'code']}
     />
   </Story>
@@ -38,8 +40,9 @@ import { Tags } from '..'
 <Canvas>
   <Story name="placeholder">
     <Tags
+      name="placeholder"
       placeholder="Please type your tags"
-      onChange={tags => console.log(tags)}
+      onChange={tags => log(tags)}
     />
   </Story>
 </Canvas>
@@ -49,8 +52,9 @@ import { Tags } from '..'
 <Canvas>
   <Story name="error-handler">
     <Tags
+      name="error-handler"
       onChangeError={error => {
-        console.log(error)
+        log(error)
       }}
       onChange={() => {
         throw new Error('')
@@ -65,8 +69,9 @@ import { Tags } from '..'
 <Canvas>
   <Story name="disabled">
     <Tags
+      name="disabled"
       disabled
-      onChange={tags => console.log(tags)}
+      onChange={tags => log(tags)}
       tags={['Smooth', 'code']}
     />
   </Story>

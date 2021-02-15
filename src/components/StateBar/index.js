@@ -41,7 +41,11 @@ const line = css`
 const Bar = ({ unlimited, value, ...props }) => (
   <ProgressBar
     css={line}
-    variant={unlimited ? 'success' : value >= 90 ? 'warning' : 'primary'}
+    variant={(() => {
+      if (unlimited) return 'success'
+      if (value >= 90) return 'warning'
+      return 'primary'
+    })()}
     value={unlimited ? 100 : value}
     {...props}
   />

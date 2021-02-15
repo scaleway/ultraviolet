@@ -34,28 +34,45 @@ const linkRenderer = ({ children, node, ...props }) => {
   )
 }
 
-const rootRenderer = (inline, parentProps) => props => (
+const RootRendererComponent = props => (
   <Box
-    as={inline ? 'span' : 'div'}
+    as={props.inline ? 'span' : 'div'}
     css={
-      inline &&
+      props.inline &&
       css`
         > p {
           display: inline;
         }
       `
     }
-    {...parentProps}
+    {...props.parentProps}
   >
     {props.children}
   </Box>
 )
+RootRendererComponent.propTypes = {
+  children: PropTypes.node,
+  inline: PropTypes.bool,
+  parentProps: PropTypes.shape({}),
+}
+
+RootRendererComponent.defaultProps = {
+  children: '',
+  inline: false,
+  parentProps: {},
+}
 
 const MarkDown = ({ source, linkTarget, escapeHtml, inline, ...props }) => (
   <ReactMarkDown
     source={source}
     renderers={{
-      root: rootRenderer(inline, props),
+      root: rootProps => (
+        <RootRendererComponent
+          {...rootProps}
+          inline={inline}
+          parentProps={props}
+        />
+      ),
       heading: headingRenderer,
       inlineCode: inlineCodeRenderer,
       text: textRenderer,

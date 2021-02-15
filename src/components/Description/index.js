@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { colors, space } from '../../theme'
 import { Box } from '../Box'
@@ -54,18 +55,26 @@ const styles = {
   `,
 }
 
-export function Description({ inline, selectable, ...props }) {
-  return (
-    <Box
-      as="dl"
-      css={[
-        styles.default,
-        inline && styles.inline,
-        selectable && styles.selectable,
-      ]}
-      {...props}
-    />
-  )
+const Description = ({ inline, selectable, ...props }) => (
+  <Box
+    as="dl"
+    css={[
+      styles.default,
+      inline && styles.inline,
+      selectable && styles.selectable,
+    ]}
+    {...props}
+  />
+)
+
+Description.propTypes = {
+  inline: PropTypes.bool,
+  selectable: PropTypes.bool,
+}
+
+Description.defaultProps = {
+  inline: false,
+  selectable: false,
 }
 
 Description.Term = function Term(props) {
@@ -75,3 +84,5 @@ Description.Term = function Term(props) {
 Description.Desc = function Term(props) {
   return <Box as="dd" {...props} />
 }
+
+export { Description }

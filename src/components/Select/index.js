@@ -83,9 +83,9 @@ const styles = {
 }
 
 export function Select({
-  styles: mainStyles = [],
-  selectStyles = [],
-  chevronStyles = [],
+  styles: mainStyles,
+  selectStyles,
+  chevronStyles,
   error,
   disabled,
   readOnly,
@@ -137,9 +137,13 @@ export function Select({
           <Icon
             name="chevron-down"
             size={11}
-            color={
-              arrowColor || (error ? 'warning' : disabled ? 'gray' : 'gray550')
-            }
+            color={(() => {
+              if (arrowColor) return arrowColor
+              if (error) return 'warning'
+              if (disabled) return 'gray'
+
+              return 'gray550'
+            })()}
           />
         )}
       </Box>
@@ -161,6 +165,10 @@ Select.defaultProps = {
   onChange: () => {},
   required: false,
   value: undefined,
+  styles: [],
+  selectStyles: [],
+  chevronStyles: [],
+  readOnly: false,
 }
 
 Select.propTypes = {
@@ -174,4 +182,9 @@ Select.propTypes = {
   onChange: PropTypes.func,
   required: PropTypes.bool,
   value: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  styles: PropTypes.arrayOf(PropTypes.shape({})),
+  selectStyles: PropTypes.arrayOf(PropTypes.shape({})),
+  chevronStyles: PropTypes.arrayOf(PropTypes.shape({})),
+  readOnly: PropTypes.bool,
 }

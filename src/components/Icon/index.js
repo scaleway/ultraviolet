@@ -270,29 +270,28 @@ const style = ({ verticalAlign, size, color }) => {
   `
 }
 
-function Icon({ name, color, size, verticalAlign, ...props }, ref) {
-  const render = ICONS[name] || ICONS.circle
+const Icon = React.forwardRef(
+  ({ name, color, size, verticalAlign, ...props }, ref) => {
+    const render = ICONS[name] || ICONS.circle
 
-  return (
-    <Box
-      ref={ref}
-      className="sc-ui-icon"
-      css={style({ color, size, verticalAlign })}
-      {...props}
-      viewBox="0 0 24 24"
-      as="svg"
-    >
-      {render()}
-    </Box>
-  )
-}
-
-// eslint-disable-next-line no-func-assign
-Icon = React.forwardRef(Icon)
+    return (
+      <Box
+        ref={ref}
+        className="sc-ui-icon"
+        css={style({ color, size, verticalAlign })}
+        {...props}
+        viewBox="0 0 24 24"
+        as="svg"
+      >
+        {render()}
+      </Box>
+    )
+  },
+)
 
 Icon.propTypes = {
   color: PropTypes.string,
-  name: PropTypes.oneOf(icons),
+  name: PropTypes.oneOfType([PropTypes.oneOf(icons), PropTypes.string]),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.string,
 }

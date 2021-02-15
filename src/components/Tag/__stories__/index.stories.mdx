@@ -6,6 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import { Tag } from '..'
+import { showAlert } from '../../../__stories__/helpers'
 
 <Meta title="Components/Tag" component={Tag} />
 
@@ -13,7 +14,7 @@ import { Tag } from '..'
 
 ## Basic
 
-<Description>Tag //:TODO</Description>
+<Description>Tag</Description>
 
 <Canvas>
   <Story name="basic">
@@ -33,7 +34,7 @@ import { Tag } from '..'
 
 <Canvas>
   <Story name="on-close">
-    <Tag onClose={() => alert('closed')}>Close Me</Tag>
+    <Tag onClose={() => showAlert('closed')}>Close Me</Tag>
   </Story>
 </Canvas>
 
@@ -41,8 +42,8 @@ import { Tag } from '..'
 
 <Canvas>
   <Story name="on-close-is-loading">
-    <Tag onClose={() => alert('closed')} isLoading>
-      You can't close me
+    <Tag onClose={() => showAlert('closed')} isLoading>
+      You can&apos;t close me
     </Tag>
   </Story>
 </Canvas>
@@ -51,7 +52,7 @@ import { Tag } from '..'
 
 <Canvas>
   <Story name="disabled">
-    <Tag disabled>Can't touch this</Tag>
+    <Tag disabled>Can&apos;t touch this</Tag>
   </Story>
 </Canvas>
 

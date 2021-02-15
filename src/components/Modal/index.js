@@ -195,7 +195,7 @@ const Disclosure = memo(({ disclosure, dialog }) => {
 })
 
 Disclosure.propTypes = {
-  disclosure: PropTypes.func,
+  disclosure: PropTypes.func.isRequired,
   dialog: PropTypes.shape({}).isRequired,
 }
 
@@ -319,6 +319,8 @@ Modal.defaultProps = {
   placement: 'center',
   preventBodyScroll: true,
   width: 'small',
+  disclosure: undefined,
+  onClose: undefined,
 }
 
 export { Modal, MODAL_WIDTH }

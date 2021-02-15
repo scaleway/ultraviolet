@@ -4,12 +4,7 @@ import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Typography } from '../Typography'
 
-export function IconMessage({
-  variant = 'warning',
-  icon = 'alert',
-  children,
-  ...props
-}) {
+export function IconMessage({ variant, icon, children, ...props }) {
   return (
     <Box
       display="flex"
@@ -29,6 +24,12 @@ export function IconMessage({
       </Box>
     </Box>
   )
+}
+
+IconMessage.defaultProps = {
+  variant: 'warning',
+  icon: 'alert',
+  children: '',
 }
 
 IconMessage.propTypes = {

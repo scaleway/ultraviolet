@@ -125,13 +125,7 @@ const canMove = (value, values = [], valueIndex) => {
   return tmp.some(cb)
 }
 
-const Input = ({
-  onChange = () => {},
-  onKeyPress = () => {},
-  onBlur = () => {},
-  value = '',
-  ...props
-}) => (
+const Input = ({ onChange, onKeyPress, onBlur, value, ...props }) => (
   <input
     {...props}
     css={[styles.input]}
@@ -142,11 +136,34 @@ const Input = ({
   />
 )
 
+Input.defaultProps = {
+  onChange: () => {},
+  onKeyPress: () => {},
+  onBlur: () => {},
+  value: 0,
+}
+
+Input.propTypes = {
+  onChange: PropTypes.func,
+  onKeyPress: PropTypes.func,
+  onBlur: PropTypes.func,
+  value: PropTypes.number,
+}
+
 const Limit = ({ value, label, ...props }) => (
   <Box {...props}>
     {value} {label}
   </Box>
 )
+
+Limit.defaultProps = {
+  value: '',
+  label: '',
+}
+Limit.propTypes = {
+  value: PropTypes.number,
+  label: PropTypes.string,
+}
 
 const Range = ({
   min,
@@ -262,8 +279,12 @@ const Range = ({
 
         const minX = x + limitOffset
         const maxX = x + (container.current.offsetWidth - limitOffset)
-        const tresholdedValue =
-          ev.pageX >= maxX ? maxX : ev.pageX <= minX ? minX : ev.pageX
+        const tresholdedValue = (() => {
+          if (ev.pageX >= maxX) return maxX
+          if (ev.pageX <= minX) return minX
+
+          return ev.pageX
+        })()
 
         const percent = getPercent(minX, maxX, tresholdedValue)
         const valueFromPercentage = Math.round(percent * (max - min) + min)
@@ -290,12 +311,12 @@ const Range = ({
           if (values[grabbedCursor] !== valueFromPercentage) {
             container.current.removeEventListener('mousemove', onMouseMove)
             const nextValues = [...values]
-            nextValues[grabbedCursor] =
-              valueFromPercentage >= max
-                ? max
-                : valueFromPercentage <= min
-                ? min
-                : valueFromPercentage
+            nextValues[grabbedCursor] = (() => {
+              if (valueFromPercentage >= max) return max
+              if (valueFromPercentage <= min) return min
+
+              return valueFromPercentage
+            })()
             onChange(nextValues)
           }
         }
@@ -330,7 +351,9 @@ const Range = ({
 
       const tresholdedTranslate = translate + limitOffset - halfCursorWidth
 
+      // eslint-disable-next-line no-param-reassign
       cursor.current.style.transform = `translate3d(${tresholdedTranslate}px, 0, 0)`
+
       if (hasCursorsLink) {
         if (index === 0 || index === cursorsRef.length - 1) {
           initialCursorsTranslate.push(tresholdedTranslate)
@@ -414,7 +437,10 @@ const Range = ({
 Range.propTypes = {
   min: PropTypes.number,
   max: PropTypes.number,
-  value: PropTypes.arrayOf(PropTypes.number),
+  value: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.number,
+  ]),
   onChange: PropTypes.func,
   name: PropTypes.string,
   cursorWidth: PropTypes.number,

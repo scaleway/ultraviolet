@@ -207,11 +207,13 @@ function FwdButton({
   innerRef,
   ...props
 }) {
-  const as = props.to
-    ? UniversalLink
-    : props.href || props.download
-    ? 'a'
-    : 'button'
+  const as = (() => {
+    if (props.to) return UniversalLink
+    if (props.href || props.download) return 'a'
+
+    return 'button'
+  })()
+
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
   const SmartIcon = () =>
@@ -266,16 +268,20 @@ function FwdButton({
 }
 
 const defaultProps = {
-  progress: undefined,
+  children: null,
+  download: undefined,
   disabled: false,
-  variant: 'primary',
-  size: 'large',
+  displayProgressOnly: false,
+  extend: undefined,
+  href: undefined,
   icon: undefined,
   iconPosition: 'left',
-  children: null,
-  extend: undefined,
-  displayProgressOnly: false,
+  innerRef: undefined,
+  progress: undefined,
+  size: 'large',
+  to: undefined,
   type: 'button',
+  variant: 'primary',
 }
 
 const propTypes = {
@@ -285,17 +291,21 @@ const propTypes = {
     PropTypes.func,
     PropTypes.arrayOf(PropTypes.node),
   ]),
+  download: PropTypes.string,
   disabled: PropTypes.bool,
   displayProgressOnly: PropTypes.bool,
   extend: PropTypes.bool,
+  href: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  innerRef: PropTypes.func,
   progress: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(['left', 'right']),
   ]),
   size: PropTypes.oneOf(buttonSizes),
   variant: PropTypes.oneOf(buttonVariants),
+  to: PropTypes.string,
   type: PropTypes.string,
 }
 

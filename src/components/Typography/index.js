@@ -234,6 +234,10 @@ const TextWithTooltip = props => {
   )
 }
 
+TextWithTooltip.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
 const Typography = forwardRef((props, ref) => {
   const Component = props.ellipsis ? TextWithTooltip : Text
   return <Component ref={ref} {...props} />
@@ -251,7 +255,11 @@ Typography.propTypes = {
   maxLines: PropTypes.number,
   lineHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fontWeight: PropTypes.number,
+  onMouseEnter: PropTypes.func,
+  onFocus: PropTypes.func,
+  tooltipProps: PropTypes.shape({}),
 }
+Text.propTypes = Typography.propTypes
 
 Typography.defaultProps = {
   as: null,
@@ -262,7 +270,12 @@ Typography.defaultProps = {
   lineHeight: null,
   fontWeight: null,
   variant: 'default',
+  onMouseEnter: undefined,
+  onFocus: undefined,
+  tooltipProps: {},
 }
+
+Typography.defaultProps = Text.defaultProps
 
 const MemoizedTypography = memo(Typography)
 
