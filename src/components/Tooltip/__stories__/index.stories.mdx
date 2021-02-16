@@ -1,7 +1,6 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Tooltip } from '..'
 import { Box, Button } from '../..'
-import { showAlert } from '../../../__stories__/helpers'
 
 <Meta title="Components/Tooltip" component={Tooltip} />
 
@@ -41,13 +40,13 @@ import { showAlert } from '../../../__stories__/helpers'
   <Story name="on-click">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip">
-        <Button width={220} onClick={() => showAlert()}>
+        <Button width={220} onClick={() => alert()}>
           Should be fired on click
         </Button>
       </Tooltip>
       <Box mt={2}>
         <Tooltip text="tooltip">
-          <Button width={220} disabled onClick={() => showAlert()}>
+          <Button width={220} disabled onClick={() => alert()}>
             Should not be fired on click
           </Button>
         </Tooltip>

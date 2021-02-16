@@ -1,6 +1,5 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Reminder } from '..'
-import { showAlert } from '../../../__stories__/helpers'
 
 <Meta title="Components/Reminder" component={Reminder} />
 
@@ -11,7 +10,7 @@ import { showAlert } from '../../../__stories__/helpers'
 <Canvas>
   <Story name="error">
     <Reminder
-      onClick={() => showAlert('clicked')}
+      onClick={() => alert('clicked')}
       mb={1}
       variant="error"
       text="Your credit card [has expired]"
@@ -19,7 +18,7 @@ import { showAlert } from '../../../__stories__/helpers'
   </Story>
   <Story name="warning">
     <Reminder
-      onClick={() => showAlert('clicked')}
+      onClick={() => alert('clicked')}
       mb={1}
       variant="warning"
       text="You have [1 locked instance]"
@@ -27,7 +26,7 @@ import { showAlert } from '../../../__stories__/helpers'
   </Story>
   <Story name="info">
     <Reminder
-      onClick={() => showAlert('clicked')}
+      onClick={() => alert('clicked')}
       mb={1}
       variant="info"
       text="[2FA] is deactivated"
@@ -35,7 +34,7 @@ import { showAlert } from '../../../__stories__/helpers'
   </Story>
   <Story name="default">
     <Reminder
-      onClick={() => showAlert('clicked')}
+      onClick={() => alert('clicked')}
       mb={1}
       text="No [phone number] registered"
     />

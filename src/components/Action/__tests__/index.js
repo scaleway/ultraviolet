@@ -34,7 +34,6 @@ describe('Action', () => {
           'Action component need to have either children (as string) or a name prop',
         ),
       )
-      // eslint-disable-next-line no-console
       expect(console.error).toHaveBeenCalledTimes(2)
     }
     spy.mockRestore()

@@ -7,7 +7,6 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import { Stepper } from '..'
-import { log } from '../../../__stories__/helpers'
 import { Box } from '../../Box'
 
 <Meta title="Components/Stepper" component={Stepper} />
@@ -72,11 +71,11 @@ import { Box } from '../../Box'
       maxValue={100}
       text="unit"
       value={50}
-      onChange={() => log('onChange')}
-      onFocus={() => log('onFocus')}
-      onBlur={() => log('onBlur')}
-      onMinCrossed={() => log('onMinCrossed')}
-      onMaxCrossed={() => log('onMaxCrossed')}
+      onChange={() => console.log('onChange')}
+      onFocus={() => console.log('onFocus')}
+      onBlur={() => console.log('onBlur')}
+      onMinCrossed={() => console.log('onMinCrossed')}
+      onMaxCrossed={() => console.log('onMaxCrossed')}
     />
   </Story>
 </Canvas>

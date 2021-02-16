@@ -1,6 +1,5 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import { ExtendedReminder } from '..'
-import { log } from '../../../__stories__/helpers'
 
 <Meta title="Components/ExtendedReminder" component={ExtendedReminder} />
 
@@ -68,7 +67,7 @@ import { log } from '../../../__stories__/helpers'
       variant="warning"
       icon="alert"
       badgeText="10 days remaining"
-      onClick={() => log('clicked')}
+      onClick={() => console.log('clicked')}
       mb={4}
       title="Verify your credit card"
       text="Enter the code we send to your bank account to validate your payment method."
@@ -80,7 +79,7 @@ import { log } from '../../../__stories__/helpers'
       variant="error"
       icon="lock"
       badgeText="10 days remaining"
-      onClick={() => log('clicked')}
+      onClick={() => console.log('clicked')}
       mb={4}
       title="Verify your credit card"
       text="Enter the code we send to your bank account to validate your payment method."
@@ -92,7 +91,7 @@ import { log } from '../../../__stories__/helpers'
       variant="info"
       icon="check"
       badgeText="10 days remaining"
-      onClick={() => log('clicked')}
+      onClick={() => console.log('clicked')}
       mb={4}
       title="Verify your credit card"
       text="Enter the code we send to your bank account to validate your payment method."
@@ -104,7 +103,7 @@ import { log } from '../../../__stories__/helpers'
       variant="success"
       icon="check"
       badgeText="10 days remaining"
-      onClick={() => log('clicked')}
+      onClick={() => console.log('clicked')}
       title="Verify your credit card"
       text="Enter the code we send to your bank account to validate your payment method."
       linkText="Verify my credit card"
