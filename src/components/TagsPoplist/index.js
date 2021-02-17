@@ -74,7 +74,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
                 border="none"
                 backgroundColor="transparent"
               >
-                +{tags.length - threshold}
+                +{tags.length - tmpThreshold}
               </TooltipReference>
               <Tooltip {...tooltip}>
                 <TooltipArrow
