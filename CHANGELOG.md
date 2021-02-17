@@ -1,3 +1,10 @@
+### [0.56.4](https://github.com/scaleway/scaleway-ui/compare/v0.56.3...v0.56.4) (2021-02-17)
+
+
+### :bug: Bug Fixes
+
+* removed required children from col ([fad4b9c](https://github.com/scaleway/scaleway-ui/commit/fad4b9c46020c5942c1a2a33e2eb6bcd73e726f7))
+
 ### [0.56.3](https://github.com/scaleway/scaleway-ui/compare/v0.56.2...v0.56.3) (2021-02-11)
 
 
