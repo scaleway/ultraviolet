@@ -151,6 +151,7 @@ const textColors = {
   primary: colors.primary,
   lightPrimary: colors.gray200,
   gold: colors.gold,
+  info: colors.info,
 }
 
 const Text = ({

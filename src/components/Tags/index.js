@@ -165,7 +165,7 @@ export const Tags = ({
           <Tag
             variant={variant}
             disabled={disabled}
-            key={index}
+            key={`tag-${index}`}
             isLoading={status[index] === 'loading'}
             onClose={() => deleteTag(index)}
           >

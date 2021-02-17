@@ -62,10 +62,11 @@ Information.defaultProps = {
   img: undefined,
   heading: undefined,
   text: undefined,
+  children: null,
 }
 
 Information.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   text: PropTypes.string,
   backgroundColor: PropTypes.string,
   img: PropTypes.string,
