@@ -13,7 +13,6 @@ describe('CategoryIcon', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
 
     shouldMatchEmotionSnapshot(<CategoryIcon name="unknow" />)
-    // eslint-disable-next-line no-console
     expect(console.error).toHaveBeenCalledTimes(1)
     spy.mockRestore()
   })
