@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import { colors } from '../../theme'
 import { Box } from '../Box'
@@ -155,6 +156,17 @@ export function Slider({ children, ...props }) {
 
 Slider.Item = function Item({ as, ...props }) {
   return <Box as={as} css={borderWrapper} {...props} draggable="true" />
+}
+
+Slider.Item.propTypes = {
+  as: PropTypes.string,
+}
+Slider.Item.defaultProps = {
+  as: undefined,
+}
+
+Slider.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Slider

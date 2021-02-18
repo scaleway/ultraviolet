@@ -1,11 +1,7 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { useState } from 'react'
 import { VerificationCode } from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/VerificationCode" component={VerificationCode} />
 
@@ -13,16 +9,54 @@ import { VerificationCode } from '..'
 
 ## With initial value
 
-<Description>VerificationCode //TODO:</Description>
-
 <Canvas>
   <Story name="initial">
-    <VerificationCode
-      initialValue="1337"
-      inputId="verification-code-input"
-      onChange={val => console.log('change', val)}
-      onComplete={val => console.log('complete', val)}
-    />
+    <VerificationCode initialValue="1337" inputId="verification-code-input" />
+  </Story>
+</Canvas>
+
+## Controlled
+
+<Canvas>
+  <Story name="controlled">
+    <ControlValue>
+      {({ value, onChange }) => (
+        <>
+          <VerificationCode
+            value={value}
+            onChange={onChange}
+            placeholder="0000"
+            inputId="verification-code-input-controlled"
+          />
+          Value is : {value}
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## With Completed action
+
+<Canvas>
+  <Story name="on-complete">
+    {() => {
+      const [displayComplete, setDisplayComplete] = useState(false)
+      return (
+        <>
+          <VerificationCode
+            placeholder="0000"
+            inputId="verification-code-input-completed-action"
+            onChange={() => {
+              if (displayComplete) setDisplayComplete(false)
+            }}
+            onComplete={() => {
+              setDisplayComplete(true)
+            }}
+          />
+          {displayComplete && 'Completed !'}
+        </>
+      )
+    }}
   </Story>
 </Canvas>
 
@@ -33,8 +67,6 @@ import { VerificationCode } from '..'
     <VerificationCode
       placeholder="0000"
       inputId="verification-code-input-no-value"
-      onChange={val => console.log('change', val)}
-      onComplete={val => console.log('complete', val)}
     />
   </Story>
 </Canvas>
@@ -48,8 +80,6 @@ import { VerificationCode } from '..'
       initialValue="13"
       placeholder="0037"
       inputId="verification-code-input-incomplete"
-      onChange={val => console.log('change', val)}
-      onComplete={val => console.log('complete', val)}
     />
   </Story>
 </Canvas>

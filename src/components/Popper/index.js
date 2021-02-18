@@ -40,6 +40,14 @@ const Disclosure = memo(({ disclosure, popover }) => {
   )
 })
 
+Disclosure.propTypes = {
+  disclosure: PropTypes.func.isRequired,
+  popover: PropTypes.shape({}),
+}
+Disclosure.defaultProps = {
+  popover: {},
+}
+
 const Popper = memo(
   ({
     animated,
@@ -127,6 +135,8 @@ Popper.defaultProps = {
   placement: 'auto',
   preventBodyScroll: false,
   visible: false,
+  backgroudColor: undefined,
+  disclosure: undefined,
 }
 
 export { Popper }

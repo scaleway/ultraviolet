@@ -34,12 +34,12 @@ import { icons } from '../../Icon'
 ## Size
 
 <Description>Set size using `size` property.</Description>
-<Description>size will throw an error if size > 32 </Description>
+<Description>size will throw an error if size &gt; 32 </Description>
 
 <Canvas>
   <Story name="size">
-    {[10, 25, 40, 60].map(size => (
-      <Action name="lock" variant="secondary" size={size} mr={2} />
+    {[10, 18, 24, 32].map(size => (
+      <Action key={size} name="lock" variant="secondary" size={size} mr={2} />
     ))}
   </Story>
 </Canvas>
@@ -48,7 +48,7 @@ import { icons } from '../../Icon'
 
 <Canvas>
   <Story name="disabled">
-    <Action name="lock" variant="lock" mr={2} disabled />
+    <Action name="lock" mr={2} disabled />
   </Story>
 </Canvas>
 
@@ -59,7 +59,7 @@ import { icons } from '../../Icon'
 <Canvas>
   <Story name="icon">
     {icons.map(icon => (
-      <Action name={icon} mr={2} mb={2} />
+      <Action key={icon} name={icon} mr={2} mb={2} />
     ))}
   </Story>
 </Canvas>
@@ -91,7 +91,7 @@ import { icons } from '../../Icon'
 
 <Canvas>
   <Story name="string">
-    <Action variant="secondary-bordered" width={72}>
+    <Action variant="secondary-bordered" width={32}>
       hello
     </Action>
   </Story>

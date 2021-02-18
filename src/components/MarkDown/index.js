@@ -34,7 +34,7 @@ const linkRenderer = ({ children, node, ...props }) => {
   )
 }
 
-const rootRenderer = (inline, parentProps) => props => (
+const RootRendererComponent = ({ inline, parentProps, children }) => (
   <Box
     as={inline ? 'span' : 'div'}
     css={
@@ -47,8 +47,23 @@ const rootRenderer = (inline, parentProps) => props => (
     }
     {...parentProps}
   >
-    {props.children}
+    {children}
   </Box>
+)
+RootRendererComponent.propTypes = {
+  children: PropTypes.node,
+  inline: PropTypes.bool,
+  parentProps: PropTypes.shape({}),
+}
+
+RootRendererComponent.defaultProps = {
+  children: null,
+  inline: false,
+  parentProps: {},
+}
+
+const rootRenderer = (inline, parentProps) => props => (
+  <RootRendererComponent {...props} inline={inline} parentProps={parentProps} />
 )
 
 const MarkDown = ({ source, linkTarget, escapeHtml, inline, ...props }) => (

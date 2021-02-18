@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { colors, radii, space } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -83,9 +83,9 @@ const styles = {
 }
 
 export function Select({
-  styles: mainStyles = [],
-  selectStyles = [],
-  chevronStyles = [],
+  styles: mainStyles,
+  selectStyles,
+  chevronStyles,
   error,
   disabled,
   readOnly,
@@ -108,6 +108,14 @@ export function Select({
         ...child.props,
       }),
     )
+
+  const color = useMemo(() => {
+    if (arrowColor) return arrowColor
+    if (error) return 'warning'
+    if (disabled) return 'gray'
+
+    return 'gray550'
+  }, [arrowColor, error, disabled])
 
   return (
     <Box css={[styles.container, ...mainStyles]} {...props}>
@@ -134,13 +142,7 @@ export function Select({
         {isLoading ? (
           <ActivityIndicator size={20} />
         ) : (
-          <Icon
-            name="chevron-down"
-            size={11}
-            color={
-              arrowColor || (error ? 'warning' : disabled ? 'gray' : 'gray550')
-            }
-          />
+          <Icon name="chevron-down" size={11} color={color} />
         )}
       </Box>
     </Box>
@@ -152,6 +154,8 @@ Select.OptGroup = 'optgroup'
 
 Select.defaultProps = {
   arrowColor: undefined,
+  chevronStyles: [],
+  children: null,
   disabled: false,
   error: undefined,
   id: undefined,
@@ -159,19 +163,27 @@ Select.defaultProps = {
   name: undefined,
   onBlur: undefined,
   onChange: () => {},
+  readOnly: false,
   required: false,
+  styles: [],
+  selectStyles: [],
   value: undefined,
 }
 
 Select.propTypes = {
   arrowColor: PropTypes.string,
+  chevronStyles: PropTypes.arrayOf(PropTypes.shape({})),
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   id: PropTypes.string,
   isLoading: PropTypes.bool,
-  name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  name: PropTypes.string,
+  readOnly: PropTypes.bool,
   required: PropTypes.bool,
+  styles: PropTypes.arrayOf(PropTypes.shape({})),
+  selectStyles: PropTypes.arrayOf(PropTypes.shape({})),
   value: PropTypes.string,
 }

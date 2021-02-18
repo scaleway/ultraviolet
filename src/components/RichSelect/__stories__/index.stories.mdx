@@ -26,7 +26,7 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Uncontrolled" height="175px">
     <Box m={2}>
-      <RichSelect>
+      <RichSelect name="uncontrolled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
@@ -39,9 +39,9 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Controlled" height="175px">
     <Box m={2}>
-      <ControlValue value>
+      <ControlValue value="">
         {({ value, onChange }) => (
-          <RichSelect value={value} onChange={onChange}>
+          <RichSelect name="controlled" value={value} onChange={onChange}>
             <RichSelect.Option value="a">Option A</RichSelect.Option>
             <RichSelect.Option value="b">Option B</RichSelect.Option>
           </RichSelect>
@@ -56,7 +56,7 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Disabled" height="100px">
     <Box m={2}>
-      <RichSelect disabled>
+      <RichSelect name="disabled" disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
@@ -69,7 +69,7 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Required" height="175px">
     <Box m={2}>
-      <RichSelect required>
+      <RichSelect name="required" required>
         <RichSelect.Option value="11">11:00</RichSelect.Option>
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>
@@ -90,8 +90,8 @@ of RichSelect with an external way (check example with button).
 <ControlValue>
   {() => (
     <Box>
-      {Object.keys(animations).map(animation => (
-        <code>{animation}</code>
+      {Object.keys(animations).map((animation, index) => (
+        <code key={index}>{animation}</code>
       ))}
     </Box>
   )}
@@ -100,7 +100,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Animated" height="400px">
     <Box mx={8} my={2}>
-      <ControlValue value>
+      <ControlValue value="">
         {({ value, onChange }) => (
           <>
             <Button
@@ -110,6 +110,7 @@ of RichSelect with an external way (check example with button).
               Select pulse animation
             </Button>
             <RichSelect
+              name="animated"
               animationOnChange
               animation={value.value}
               animationDuration={1000}
@@ -117,7 +118,7 @@ of RichSelect with an external way (check example with button).
               onChange={onChange}
             >
               {Object.keys(animations).map(animation => (
-                <RichSelect.Option value={animation}>
+                <RichSelect.Option key={animation} value={animation}>
                   {animation}
                 </RichSelect.Option>
               ))}
@@ -136,7 +137,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Multi" height="300px">
     <Box m={2}>
-      <RichSelect isMulti>
+      <RichSelect name="multi" isMulti>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
         <RichSelect.Option value="c">Option C</RichSelect.Option>
@@ -153,7 +154,12 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Multi Disabled" height="100px">
     <Box m={2}>
-      <RichSelect value={{ value: 'a', label: 'Option A' }} isMulti disabled>
+      <RichSelect
+        name="multi-disabled"
+        value={{ value: 'a', label: 'Option A' }}
+        isMulti
+        disabled
+      >
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
@@ -168,7 +174,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Time" height="175px">
     <Box m={2}>
-      <RichSelect time>
+      <RichSelect name="time" time>
         <RichSelect.Option value="11">11:00</RichSelect.Option>
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>
@@ -181,7 +187,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Time Error" height="175px">
     <Box m={2}>
-      <RichSelect time error>
+      <RichSelect name="time-error" time error>
         <RichSelect.Option value="11">11:00</RichSelect.Option>
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>
@@ -196,7 +202,7 @@ of RichSelect with an external way (check example with button).
 <Canvas>
   <Story name="Demo Loading" height="175px">
     <Box>
-      <RichSelect isLoading>
+      <RichSelect name="loading" isLoading>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
@@ -225,6 +231,7 @@ of RichSelect with an external way (check example with button).
             Load data
           </Button>
           <RichSelect
+            name="exemple"
             isLoading={isLoading}
             customComponents={{
               LoadingIndicator: () => <ActivityIndicator size={24} />,

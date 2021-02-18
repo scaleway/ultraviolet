@@ -19,7 +19,7 @@ import { Box } from '../../Box'
 <Canvas isColumn>
   <Story name="basic">
     {availableIcons.map(icon => (
-      <Box display="flex">
+      <Box key={icon} display="flex">
         <MenuIcon name={icon} />
         {icon}
       </Box>

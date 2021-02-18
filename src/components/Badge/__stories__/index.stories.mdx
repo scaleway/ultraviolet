@@ -49,7 +49,7 @@ import { Badge } from '..'
   >
     {args =>
       args.variants.map(variant => (
-        <Badge variant={variant} mx={1}>
+        <Badge key={variant} variant={variant} mx={1}>
           {variant}
         </Badge>
       ))
@@ -74,7 +74,7 @@ import { Badge } from '..'
   >
     {args =>
       args.variants.map(variant => (
-        <Badge variant={variant} mx={1}>
+        <Badge key={variant} variant={variant} mx={1}>
           {variant}
         </Badge>
       ))
@@ -93,7 +93,7 @@ import { Badge } from '..'
   >
     {args =>
       args.sizes.map(size => (
-        <Badge size={size} mx={1}>
+        <Badge key={size} size={size} mx={1}>
           {size}
         </Badge>
       ))

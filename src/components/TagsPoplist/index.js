@@ -29,16 +29,17 @@ const text = css`
 `
 
 const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
+  let tmpThreshold = threshold
   if (
     tags.length &&
-    tags.slice(0, threshold).reduce((_, tag) => _ + tag).length > maxLength
+    tags.slice(0, tmpThreshold).reduce((_, tag) => _ + tag).length > maxLength
   ) {
     // If total tags length in characters is above maxLength,
     // threshold is decremented in order to prevent too many long tags displayed.
-    threshold -= 1
+    tmpThreshold -= 1
   }
-  const hasManyTags = tags.length > threshold || false
-  const visibleTagsCount = hasManyTags ? threshold : tags.length
+  const hasManyTags = tags.length > tmpThreshold || false
+  const visibleTagsCount = hasManyTags ? tmpThreshold : tags.length
 
   const tooltip = useTooltipState({ gutter: 8 })
 
@@ -73,7 +74,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
                 border="none"
                 backgroundColor="transparent"
               >
-                +{tags.length - threshold}
+                +{tags.length - tmpThreshold}
               </TooltipReference>
               <Tooltip {...tooltip}>
                 <TooltipArrow

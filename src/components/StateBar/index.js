@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Box } from '../Box'
 import { ProgressBar } from '../ProgressBar'
 import { Typography } from '../Typography'
@@ -38,14 +38,21 @@ const line = css`
   margin-top: 12px;
 `
 
-const Bar = ({ unlimited, value, ...props }) => (
-  <ProgressBar
-    css={line}
-    variant={unlimited ? 'success' : value >= 90 ? 'warning' : 'primary'}
-    value={unlimited ? 100 : value}
-    {...props}
-  />
-)
+const Bar = ({ unlimited, value, ...props }) => {
+  const variant = useMemo(() => {
+    if (unlimited) return 'success'
+    if (value >= 90) return 'warning'
+    return 'primary'
+  }, [unlimited, value])
+  return (
+    <ProgressBar
+      css={line}
+      variant={variant}
+      value={unlimited ? 100 : value}
+      {...props}
+    />
+  )
+}
 
 Bar.propTypes = {
   unlimited: PropTypes.bool,

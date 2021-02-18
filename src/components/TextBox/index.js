@@ -325,6 +325,57 @@ const TextBox = React.forwardRef(
       return multiline ? null : type
     }
 
+    const getRightComponent = () => {
+      if (isPassToggleable && !generated)
+        return (
+          <Touchable
+            onClick={handlePassVisibilityClick}
+            onKeyDown={handlePassVisiblityKeyDown}
+            title={passwordVisible ? 'Hide' : 'Show'}
+          >
+            <Icon name={passwordVisible ? 'eye-off' : 'eye'} />
+          </Touchable>
+        )
+      if (random)
+        return (
+          <Touchable
+            onClick={handleRandomizeClick}
+            onKeyDown={handleRandomizeKeyDown}
+            title="Randomize"
+          >
+            <Icon name="auto-fix" />
+          </Touchable>
+        )
+      if (valid === false || valid === true)
+        return (
+          <Icon
+            name={valid === false ? 'close' : 'check'}
+            color={valid === false ? 'warning' : 'success'}
+            size={20}
+          />
+        )
+      if (unit)
+        return (
+          <>
+            <Separator css={styles.verticalSeparator} direction="vertical" />
+            <Typography
+              variant="bodyB"
+              display="flex"
+              alignSelf={unitAlignment}
+              py={1}
+            >
+              {unit}
+              {required && (
+                <Icon ml="2px" name="asterisk" color="warning" size={8} />
+              )}
+            </Typography>
+          </>
+        )
+      if (required) return <Icon name="asterisk" color="warning" size={10} />
+
+      return null
+    }
+
     return (
       <Box {...props}>
         <Box position="relative">
@@ -387,49 +438,7 @@ const TextBox = React.forwardRef(
                 unit && styles.unit,
               ]}
             >
-              {isPassToggleable && !generated ? (
-                <Touchable
-                  onClick={handlePassVisibilityClick}
-                  onKeyDown={handlePassVisiblityKeyDown}
-                  title={passwordVisible ? 'Hide' : 'Show'}
-                >
-                  <Icon name={passwordVisible ? 'eye-off' : 'eye'} />
-                </Touchable>
-              ) : random ? (
-                <Touchable
-                  onClick={handleRandomizeClick}
-                  onKeyDown={handleRandomizeKeyDown}
-                  title="Randomize"
-                >
-                  <Icon name="auto-fix" />
-                </Touchable>
-              ) : valid === false || valid === true ? (
-                <Icon
-                  name={valid === false ? 'close' : 'check'}
-                  color={valid === false ? 'warning' : 'success'}
-                  size={20}
-                />
-              ) : unit ? (
-                <>
-                  <Separator
-                    css={styles.verticalSeparator}
-                    direction="vertical"
-                  />
-                  <Typography
-                    variant="bodyB"
-                    display="flex"
-                    alignSelf={unitAlignment}
-                    py={1}
-                  >
-                    {unit}
-                    {required && (
-                      <Icon ml="2px" name="asterisk" color="warning" size={8} />
-                    )}
-                  </Typography>
-                </>
-              ) : required ? (
-                <Icon name="asterisk" color="warning" size={10} />
-              ) : null}
+              {getRightComponent()}
             </div>
           ) : null}
         </Box>

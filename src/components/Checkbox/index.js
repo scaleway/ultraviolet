@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
 import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -62,8 +62,16 @@ export function Checkbox({
   typographyVariant,
   ...props
 }) {
-  const hasChildren = Boolean(children)
+  const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
+  const color = useMemo(() => {
+    if (disabled) return 'gray100'
+    if (valid === false || !!error) return 'warning'
+    if (valid === true) return 'success'
+    if (checked) return 'primary'
+
+    return 'gray300'
+  }, [disabled, valid, checked, error])
 
   useEffect(() => {
     checkbox.setState(checked)
@@ -100,17 +108,7 @@ export function Checkbox({
                 ? 'checkbox-marked-outline'
                 : 'checkbox-blank-outline'
             }
-            color={
-              disabled
-                ? 'gray100'
-                : valid === false || Boolean(error)
-                ? 'warning'
-                : valid === true
-                ? 'success'
-                : checked
-                ? 'primary'
-                : 'gray300'
-            }
+            color={color}
             size={size}
           />
         )}
@@ -126,17 +124,23 @@ export function Checkbox({
 }
 
 Checkbox.defaultProps = {
+  autoFocus: false,
   checked: false,
+  children: '',
   disabled: false,
+  error: undefined,
   onBlur: () => {},
   onFocus: () => {},
   progress: false,
   name: 'checkbox',
-  typographyVariant: 'default',
   size: 24,
+  typographyVariant: 'default',
+  valid: undefined,
+  value: undefined,
 }
 
 Checkbox.propTypes = {
+  autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
   children: PropTypes.node,
   disabled: PropTypes.bool,
@@ -146,7 +150,11 @@ Checkbox.propTypes = {
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   progress: PropTypes.bool,
   name: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.number,
+  ]),
   valid: PropTypes.bool,
   size: PropTypes.number,
   typographyVariant: PropTypes.oneOf(typographyVariants),

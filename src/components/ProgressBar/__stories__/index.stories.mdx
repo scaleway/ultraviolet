@@ -18,7 +18,9 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
       const [value, setValue] = useState(0)
       useEffect(() => {
         setInterval(() => {
-          setValue(value => (value === 0 ? Math.round(Math.random() * 100) : 0))
+          setValue(currentValue =>
+            currentValue === 0 ? Math.round(Math.random() * 100) : 0,
+          )
         }, 800)
       }, [])
       return <ProgressBar value={value} />
@@ -66,8 +68,8 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 ## 100% cap
 
 <Description>
-  Value will be capped out above 0 and below 100, so you're safe to pass an even
-  greater/lower value
+  Value will be capped out above 0 and below 100, so you&apos;re safe to pass an
+  even greater/lower value
 </Description>
 
 <Canvas>

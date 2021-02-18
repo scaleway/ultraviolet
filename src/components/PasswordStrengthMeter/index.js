@@ -47,7 +47,7 @@ export function PasswordStrengthMeter({
   const [width, setWidth] = useState(0)
 
   const getScore = useCallback(
-    password => estimate(password || '', userInputs).score || 0,
+    passwordToTest => estimate(passwordToTest || '', userInputs).score || 0,
     [estimate],
   )
 

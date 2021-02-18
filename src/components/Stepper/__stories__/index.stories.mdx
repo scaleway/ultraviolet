@@ -15,7 +15,7 @@ import { Box } from '../../Box'
 
 ## Basic
 
-<Description>Stepper //:TODO</Description>
+<Description>Stepper</Description>
 
 <Canvas>
   <Story name="basic">
@@ -83,32 +83,30 @@ import { Box } from '../../Box'
 ## Sizes
 
 <Canvas>
-  <Story name="size"
-         args={{
-           sizes: [
-             'small',
-             'medium',
-             'large',
-           ]
-         }}
-  >
-    {args => args.sizes.map(size => {
-      const [value, setValue] = useState(10)
-      return (
-        <Box my={2}>
-          {size}
-          <Stepper
-            minValue={0}
-            maxValue={100}
-            size={size}
-            onChange={setValue}
-            value={value}
-            mt={1}
-          />
-        </Box>
-      )
-    })
+  <Story
+    name="size"
+    args={{
+      sizes: ['small', 'medium', 'large'],
     }}
+  >
+    {args =>
+      args.sizes.map(size => {
+        const [value, setValue] = useState(10)
+        return (
+          <Box my={2} key={size}>
+            {size}
+            <Stepper
+              minValue={0}
+              maxValue={100}
+              size={size}
+              onChange={setValue}
+              value={value}
+              mt={1}
+            />
+          </Box>
+        )
+      })
+    }
   </Story>
 </Canvas>
 
