@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { memo } from 'react'
+import React, { memo, useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { colors } from '../../theme'
 import { Box } from '../Box'
@@ -91,14 +91,14 @@ function Progress({ children, selected, ...props }) {
         const isPast = selected > index
         const isClickable = isPast && Boolean(onClick)
 
-        const isLeftOrRightStyles = React.useMemo(() => {
+        const isLeftOrRightStyles = useMemo(() => {
           if (index === 0) return styles.left
           if (index === length - 1) return styles.right
 
           return styles.middle
         }, [index])
 
-        const isPastOrCurrentStyles = React.useMemo(() => {
+        const isPastOrCurrentStyles = useMemo(() => {
           if (selected > index) return styles.past
           if (selected === index) return styles.current
 

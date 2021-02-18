@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Box } from '../Box'
 import { ProgressBar } from '../ProgressBar'
 import { Typography } from '../Typography'
@@ -39,7 +39,7 @@ const line = css`
 `
 
 const Bar = ({ unlimited, value, ...props }) => {
-  const variant = React.useMemo(() => {
+  const variant = useMemo(() => {
     if (unlimited) return 'success'
     if (value >= 90) return 'warning'
     return 'primary'

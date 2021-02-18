@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJsonString } from '../../helpers/isJson'
@@ -418,7 +418,7 @@ const DropdownIndicator = ({
   selectProps: { checked, time, required },
   ...props
 }) => {
-  const color = React.useMemo(() => {
+  const color = useMemo(() => {
     if (isDisabled) return 'gray300'
     if (checked) return 'primary'
     if (error) return 'warning'

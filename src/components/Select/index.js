@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { colors, radii, space } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
@@ -109,7 +109,7 @@ export function Select({
       }),
     )
 
-  const color = React.useMemo(() => {
+  const color = useMemo(() => {
     if (arrowColor) return arrowColor
     if (error) return 'warning'
     if (disabled) return 'gray'

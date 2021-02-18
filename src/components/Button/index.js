@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
@@ -207,7 +207,7 @@ function FwdButton({
   innerRef,
   ...props
 }) {
-  const as = React.useMemo(() => {
+  const as = useMemo(() => {
     if (props.to) return UniversalLink
     if (props.href || props.download) return 'a'
 
