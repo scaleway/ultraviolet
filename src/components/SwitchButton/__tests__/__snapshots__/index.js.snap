@@ -315,7 +315,7 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
 .emotion-1:hover,
 .emotion-1:focus {
   box-shadow: none;
-  border: none;
+  border-color: transparent;
   color: #4a4f62;
 }
 
@@ -337,7 +337,7 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
 .emotion-1[aria-checked='false']:hover,
 .emotion-1[aria-checked='false']:focus {
   color: #4a4f62;
-  border: none;
+  border-color: transparent;
   box-shadow: none;
 }
 

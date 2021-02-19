@@ -19,7 +19,7 @@ const variants = {
     &:hover,
     &:focus {
       box-shadow: none;
-      border: none;
+      border-color: ${colors.transparent};
       color: ${colors.gray700};
     }
 
@@ -38,7 +38,7 @@ const variants = {
       :hover,
       :focus {
         color: ${colors.gray700};
-        border: none;
+        border-color: ${colors.transparent};
         box-shadow: none;
       }
     }
