@@ -18,7 +18,7 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v2.1.4
         with:
-          path: /tmp/.buildx-cache
+          path: /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
           key: ${{ runner.os }}-buildx-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-buildx-
@@ -82,3 +82,8 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: https://${{ env.HOST }}
+
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
+          mv /tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }} /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
