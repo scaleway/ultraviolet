@@ -1,3 +1,10 @@
+### [0.57.1](https://github.com/scaleway/scaleway-ui/compare/v0.57.0...v0.57.1) (2021-02-22)
+
+
+### :bug: Bug Fixes
+
+* **button-switch:** do not unset border on hover ([#38](https://github.com/scaleway/scaleway-ui/issues/38)) ([c76793c](https://github.com/scaleway/scaleway-ui/commit/c76793c62af06d94d9be2b0530c45b566783a948))
+
 ## [0.57.0](https://github.com/scaleway/scaleway-ui/compare/v0.56.4...v0.57.0) (2021-02-22)
 
 
