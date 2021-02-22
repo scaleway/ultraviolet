@@ -55,8 +55,8 @@ jobs:
         with:
           push: true
           tags: ${{ env.IMAGE }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
+          cache-from: type=local,src=/tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
+          cache-to: type=local,dest=/tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }},mode=max
 
       - name: Set Docker context
         uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
