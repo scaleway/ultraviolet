@@ -1,3 +1,27 @@
+## [0.57.0](https://github.com/scaleway/scaleway-ui/compare/v0.56.4...v0.57.0) (2021-02-22)
+
+
+### :zap: Refactor
+
+* clean warnings and lint ([#36](https://github.com/scaleway/scaleway-ui/issues/36)) ([3acbf13](https://github.com/scaleway/scaleway-ui/commit/3acbf130bbe2b7be26c6924d51cf40683dbd76af))
+
+
+### :repeat: CI
+
+* update dependabot reviewers team ([0f80453](https://github.com/scaleway/scaleway-ui/commit/0f80453a4234d176032d4bf6a155a7b9f267a605))
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.12.13 to 7.12.18 ([#42](https://github.com/scaleway/scaleway-ui/issues/42)) ([2340232](https://github.com/scaleway/scaleway-ui/commit/2340232c9a488b377d8decf8018f034e2d4a513c))
+* **deps-dev:** bump @storybook/addon-links from 6.1.17 to 6.1.18 ([#45](https://github.com/scaleway/scaleway-ui/issues/45)) ([ae0bd95](https://github.com/scaleway/scaleway-ui/commit/ae0bd95dcbd27e79fd68c928e5bfb961c53583b2))
+* **deps-dev:** bump @storybook/addons from 6.1.17 to 6.1.18 ([#39](https://github.com/scaleway/scaleway-ui/issues/39)) ([d0c4399](https://github.com/scaleway/scaleway-ui/commit/d0c43993d98670b47b2cb6110b467a55bf5ac937))
+
+
+### :gear: Features
+
+* add ray-start-arrow icon ([#37](https://github.com/scaleway/scaleway-ui/issues/37)) ([7b44dea](https://github.com/scaleway/scaleway-ui/commit/7b44dea8b9b843122771de3014f3bbb5ee47d3ab))
+
 ### [0.56.4](https://github.com/scaleway/scaleway-ui/compare/v0.56.3...v0.56.4) (2021-02-17)
 
 
