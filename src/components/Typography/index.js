@@ -7,90 +7,90 @@ import { Box } from '../Box'
 import { Tooltip } from '../Tooltip'
 
 const styles = {
-  main: css({
-    color: colors.gray700,
-    fontWeight: 400,
-    marginBottom: 0,
-    marginTop: 0,
-  }),
-  ellipsis: css({
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-  }),
-  hero: css({
-    color: colors.gray950,
-    fontSize: 35,
-    lineHeight: '41px',
-    marginBottom: 72,
-  }),
-  lead: css({
-    color: colors.gray950,
-    fontSize: 25,
-    lineHeight: '25px',
-    marginBottom: 0,
-  }),
-  'lead-block': css({
-    marginBottom: 16,
-    marginTop: 48,
-  }),
-  'lead-text': css({
-    marginBottom: 24,
-  }),
-  title: css({
-    color: colors.gray950,
-    fontSize: 21,
-    lineHeight: '24px',
-  }),
-  bodyA: css({
-    color: colors.gray700,
-    fontSize: 16,
-    lineHeight: '24px',
-  }),
-  bodyB: css({
-    color: colors.gray550,
-    fontSize: 14,
-    lineHeight: '18px',
-  }),
-  bodyC: css({
-    color: colors.gray700,
-    fontSize: 14,
-    lineHeight: '22px',
-  }),
-  bodyD: css({
-    color: colors.gray700,
-    fontSize: 14,
-    lineHeight: '20px',
-  }),
-  tiny: css({
-    color: colors.gray550,
-    fontSize: 12,
-    lineHeight: '16px',
-  }),
-  description: css({
-    color: colors.gray950,
-    fontSize: 16,
-    lineHeight: '24px',
-    fontWeight: 500,
-  }),
-  samplecode: css({
-    backgroundColor: colors.gray100,
-    color: colors.gray700,
-    fontSize: 12,
-    lineHeight: '16px',
-    padding: 4,
-  }),
-  badge: css({
-    backgroundColor: colors.gray100,
-    color: colors.gray700,
-    textTransform: 'capitalize',
-    letterSpacing: 1,
-    fontWeight: 500,
-    fontSize: 14,
-    lineHeight: '16px',
-    padding: '6px 12px',
-    borderRadius: 20,
-  }),
+  main: css`
+    color: ${colors.gray700};
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+  `,
+  ellipsis: css`
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  `,
+  hero: css`
+    color: ${colors.gray950};
+    font-size: 35px;
+    line-height: 41px;
+    margin-bottom: 72px;
+  `,
+  lead: css`
+    color: ${colors.gray950};
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 0;
+  `,
+  'lead-block': css`
+    margin-bottom: 16px;
+    margin-top: 48px;
+  `,
+  'lead-text': css`
+    margin-bottom: 24px;
+  `,
+  title: css`
+    color: ${colors.gray950};
+    font-size: 21px;
+    line-height: 24px;
+  `,
+  bodyA: css`
+    color: ${colors.gray700};
+    font-size: 16px;
+    line-height: 24px;
+  `,
+  bodyB: css`
+    color: ${colors.gray550};
+    font-size: 14px;
+    line-height: 18px;
+  `,
+  bodyC: css`
+    color: ${colors.gray700};
+    font-size: 14px;
+    line-height: 22px;
+  `,
+  bodyD: css`
+    color: ${colors.gray700};
+    font-size: 14px;
+    line-height: 20px;
+  `,
+  tiny: css`
+    color: ${colors.gray550};
+    font-size: 12px;
+    line-height: 16px;
+  `,
+  description: css`
+    color: ${colors.gray950};
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  `,
+  samplecode: css`
+    background-color: ${colors.gray100};
+    color: ${colors.gray700};
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+  `,
+  badge: css`
+    background-color: ${colors.gray100};
+    color: ${colors.gray700};
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+  `,
   link: css`
     color: #3f6ed8;
     :hover {
@@ -185,11 +185,23 @@ const Text = ({
       css={[
         styles.main,
         ...variantStyles,
-        color && css({ color: textColors[color] }),
-        align && css({ textAlign: align }),
+        color &&
+          css`
+            color: ${textColors[color]};
+          `,
+        align &&
+          css`
+            text-align: align;
+          `,
         ellipsis && styles.ellipsis,
-        lineHeight && css({ lineHeight }),
-        fontWeight && css({ fontWeight }),
+        lineHeight &&
+          css`
+            line-height: ${lineHeight};
+          `,
+        fontWeight &&
+          css`
+            font-weight: ${fontWeight};
+          `,
         maxLines && maxLines > 0 && styles.clamp(maxLines),
       ]}
     >

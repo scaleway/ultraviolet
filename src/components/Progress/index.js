@@ -7,71 +7,71 @@ import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const styles = {
-  container: css({
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    height: 48,
-  }),
-  base: css({
-    display: 'flex',
-    flex: 1,
-    fontWeight: 500,
-    borderRadius: 24,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    touchAction: 'manipulation',
-    outline: 'none',
-  }),
-  left: css({
-    paddingRight: 24,
-    paddingLeft: 24,
-    marginRight: -24,
-  }),
-  middle: css({
-    paddingRight: 24,
-    paddingLeft: 48,
-    marginLeft: -24,
-    marginRight: -24,
-  }),
-  right: css({
-    paddingRight: 24,
-    paddingLeft: 48,
-    marginLeft: -24,
-  }),
-  past: css({
-    backgroundColor: colors.success,
-    color: colors.white,
-    borderColor: colors.white,
-  }),
-  clickable: css({
-    cursor: 'pointer',
+  container: css`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+  `,
+  base: css`
+    display: flex;
+    flex: 1;
+    font-weight: 500;
+    border-radius: 24px;
+    border-style: solid;
+    border-width: 1px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    touch-action: manipulation;
+    outline: none;
+  `,
+  left: css`
+    padding-right: 24px;
+    padding-left: 24px;
+    margin-right: -24px;
+  `,
+  middle: css`
+    padding-right: 24px;
+    padding-left: 48px;
+    margin-left: -24px;
+    margin-right: -24px;
+  `,
+  right: css`
+    padding-right: 24px;
+    padding-left: 48px;
+    margin-left: -24px;
+  `,
+  past: css`
+    background-color: ${colors.success};
+    color: ${colors.white};
+    border-color: ${colors.white};
+  `,
+  clickable: css`
+    cursor: pointer;
 
-    ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.success)}`,
-    },
-  }),
-  current: css({
-    backgroundColor: colors.primary,
-    color: colors.white,
-    borderColor: colors.white,
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.success)};
+    }
+  `,
+  current: css`
+    background-color: ${colors.primary};
+    color: ${colors.white};
+    border-color: ${colors.white};
 
-    ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.primary)}`,
-    },
-  }),
-  future: css({
-    backgroundColor: colors.white,
-    color: colors.gray550,
-    borderColor: colors.gray350,
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
+    }
+  `,
+  future: css`
+    background-color: ${colors.white};
+    color: ${colors.gray550};
+    border-color: ${colors.gray350};
 
-    ':focus': {
-      boxShadow: `0 0 0 2px ${transparentize(0.75, colors.gray550)}`,
-    },
-  }),
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.gray550)};
+    }
+  `,
 }
 
 const Step = () => null
@@ -112,7 +112,9 @@ function Progress({ children, selected, ...props }) {
             as={isClickable ? 'button' : 'div'}
             css={[
               styles.base,
-              css({ zIndex: length - index }),
+              css`
+                z-index: ${length - index};
+              `,
               isLeftOrRightStyles,
               isClickable && styles.clickable,
               isPastOrCurrentStyles,
