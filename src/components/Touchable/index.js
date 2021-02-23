@@ -4,22 +4,22 @@ import React from 'react'
 import { Box } from '../Box'
 
 const styles = {
-  root: css({
-    border: 0,
-    transitionProperty: 'opacity',
-    transitionDuration: '0.15s',
-    userSelect: 'none',
-    backgroundColor: 'transparent',
-    padding: 0,
-    margin: 0,
-  }),
-  actionable: css({
-    cursor: 'pointer',
-    touchAction: 'manipulation',
-  }),
-  disabled: css({
-    opacity: 0.5,
-  }),
+  root: css`
+    border: 0;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    user-select: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  `,
+  actionable: css`
+    cursor: pointer;
+    touch-action: manipulation;
+  `,
+  disabled: css`
+    opacity: 0.5;
+  `,
 }
 
 const Touchable = ({
@@ -37,9 +37,11 @@ const Touchable = ({
       styles.root,
       !disabled && styles.actionable,
       !disabled &&
-        css({
-          ':active': { opacity: activeOpacity },
-        }),
+        css`
+          &:active {
+            opacity: ${activeOpacity};
+          }
+        `,
       disabled && styles.disabled,
     ]}
     {...props}

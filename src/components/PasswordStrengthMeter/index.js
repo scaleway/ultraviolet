@@ -71,7 +71,12 @@ export function PasswordStrengthMeter({
       <Typography
         as="span"
         variant="bodyB"
-        css={[styles.strength, css({ color: strength[score].color })]}
+        css={[
+          styles.strength,
+          css`
+            color: ${strength[score].color};
+          `,
+        ]}
       >
         {strength[score].t}
       </Typography>
