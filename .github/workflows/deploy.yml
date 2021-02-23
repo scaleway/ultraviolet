@@ -18,7 +18,7 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v2.1.4
         with:
-          path: /tmp/.buildx-cache
+          path: /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
           key: ${{ runner.os }}-buildx-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-buildx-
@@ -55,8 +55,8 @@ jobs:
         with:
           push: true
           tags: ${{ env.IMAGE }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache,mode=max
+          cache-from: type=local,src=/tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
+          cache-to: type=local,dest=/tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }},mode=max
 
       - name: Set Docker context
         uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
@@ -82,3 +82,8 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: https://${{ env.HOST }}
+
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
+          mv /tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }} /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
