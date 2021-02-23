@@ -7,7 +7,8 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { onKeyOnlyNumbers, parseIntOr } from '../../helpers'
+import { onKeyOnlyNumbers } from '../../helpers/keycode'
+import { parseIntOr } from '../../helpers/numbers'
 import { colors } from '../../theme'
 import { Box } from '../Box'
 

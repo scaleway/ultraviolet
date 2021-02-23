@@ -1,4 +1,6 @@
 import { isJSONString } from '../isJSON'
+import { onKeyOnlyNumbers } from '../keycode'
+import { parseIntOr } from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
 
 describe('isJSONString', () => {
@@ -38,5 +40,44 @@ describe('recursivelyGetChildrenString', () => {
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `('returns "$expected" when $test', ({ value, expected }) => {
     expect(recursivelyGetChildrenString(value)).toBe(expected)
+  })
+})
+
+describe('onKeyOnlyNumbers', () => {
+  test('should only prevent numbers keyCodes', () => {
+    ;[...Array(100).keys()].forEach(keyCode => {
+      const preventDefault = jest.fn()
+
+      onKeyOnlyNumbers({
+        preventDefault,
+        key: String.fromCharCode(keyCode),
+      })
+
+      expect(preventDefault).toHaveBeenCalledTimes(
+        keyCode < 48 || keyCode > 57 ? 1 : 0,
+      )
+    })
+  })
+})
+
+describe('parseIntOr', () => {
+  const fallback = 987_654_321
+
+  test.each`
+    test                                | value                  | expected
+    ${'is correct number'}              | ${10}                  | ${10}
+    ${'is BigInt'}                      | ${900719925474099267n} | ${900719925474099300}
+    ${'is string containing Number'}    | ${'10'}                | ${10}
+    ${'is string starting w/ Number'}   | ${'10a'}               | ${10}
+    ${'is Float'}                       | ${15.6}                | ${15}
+    ${'is complex string'}              | ${'a1003ù^'}           | ${fallback}
+    ${'is Boolean'}                     | ${true}                | ${fallback}
+    ${'is null'}                        | ${null}                | ${fallback}
+    ${'no argument passed'}             | ${undefined}           | ${fallback}
+    ${'is Array of string'}             | ${['a', 'b', 'c']}     | ${fallback}
+    ${'is Array w/ first index Number'} | ${[1, 'b', 'c']}       | ${1}
+    ${'is String'}                      | ${'hello'}             | ${fallback}
+  `('returns $expected when $test', ({ value, expected }) => {
+    expect(parseIntOr(value, fallback)).toBe(expected)
   })
 })
