@@ -1,26 +1,14 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
+import { onKeyOnlyNumbers } from '../../helpers/keycode'
+import { parseIntOr } from '../../helpers/numbers'
 import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
 import { Touchable } from '../Touchable'
 
 const bounded = (value, min, max) => Math.max(min, Math.min(value, max))
-
-const parseIntOr = (str, fallback) => {
-  const value = Number.parseInt(str, 10)
-  return !Number.isNaN(value) ? value : fallback
-}
-
-const preventNonDigitsKey = event => {
-  // `event.which` and `event.keyCode` are deprecated
-  // see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
-  const keyCode = event.key.charCodeAt(0)
-  if (keyCode < 48 || keyCode > 57) {
-    event.preventDefault()
-  }
-}
 
 const roundStep = (value, step) => Math.ceil(value / step) * step
 
@@ -238,7 +226,7 @@ const Stepper = ({
           name={name}
           onChange={handleChange}
           onFocus={handleOnFocus}
-          onKeyPress={preventNonDigitsKey}
+          onKeyPress={onKeyOnlyNumbers}
           onBlur={handleOnBlur}
           value={inputValue.toString()} // A dom element can only have string attributes.
           disabled={disabled}
