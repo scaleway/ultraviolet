@@ -1,17 +1,7 @@
 import { useMemo } from 'react'
 
-function chr4() {
-  return Math.random().toString(16).slice(-4)
-}
+const chr4 = () => Math.random().toString(16).slice(-4)
+const uuid = () => Array.from({ length: 8 }, chr4).join('')
 
-function uuid() {
-  return Array.from({ length: 8 }, () => chr4()).join('')
-}
-
-export function getUUID(prefix = '') {
-  return `${prefix}-${uuid()}`
-}
-
-export function useUUID(prefix = '') {
-  return useMemo(() => getUUID(prefix), [prefix])
-}
+export const getUUID = (prefix = '') => `${prefix ? `${prefix}-` : ''}${uuid()}`
+export const useUUID = (prefix = '') => useMemo(() => getUUID(prefix), [prefix])

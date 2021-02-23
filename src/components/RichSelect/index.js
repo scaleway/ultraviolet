@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useMemo, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
-import { isJsonString } from '../../helpers/isJson'
+import { isJSONString } from '../../helpers/isJSON'
 import { colors } from '../../theme'
 import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
@@ -393,7 +393,7 @@ const Input = ({ inputId, labelId, isMulti }) => props => (
 const Option = props => (
   <div
     data-testid={`option-${props.selectProps.name}-${
-      isJsonString(props.value) ? props.label : props.value
+      isJSONString(props.value) ? props.label : props.value
     }`}
   >
     <components.Option {...props} />
