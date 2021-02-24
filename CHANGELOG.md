@@ -1,3 +1,28 @@
+### [0.57.2](https://github.com/scaleway/scaleway-ui/compare/v0.57.1...v0.57.2) (2021-02-24)
+
+
+### :repeat: CI
+
+* do not reuse dirty cache on deploy ([#46](https://github.com/scaleway/scaleway-ui/issues/46)) ([eae2dd8](https://github.com/scaleway/scaleway-ui/commit/eae2dd8e4e91539ac0664d66db2217ca15cbd3c7))
+
+
+### :package: Chore
+
+* **deps:** bump actions/setup-node from v2.1.4 to v2.1.5 ([#48](https://github.com/scaleway/scaleway-ui/issues/48)) ([340f8a2](https://github.com/scaleway/scaleway-ui/commit/340f8a2ef6835626be6d644d1446e303235da492))
+* **deps-dev:** bump @babel/core from 7.12.13 to 7.13.1 ([#49](https://github.com/scaleway/scaleway-ui/issues/49)) ([6664964](https://github.com/scaleway/scaleway-ui/commit/666496462bd936d9d6fa961895a5b49051c5ecf1))
+* **deps-dev:** bump @commitlint/cli from 11.0.0 to 12.0.0 ([#52](https://github.com/scaleway/scaleway-ui/issues/52)) ([3f8707e](https://github.com/scaleway/scaleway-ui/commit/3f8707ebea8e9d64ef729bee6ec03415368af515))
+* **deps-dev:** bump @emotion/eslint-plugin from 11.0.0 to 11.2.0 ([#47](https://github.com/scaleway/scaleway-ui/issues/47)) ([f420ba9](https://github.com/scaleway/scaleway-ui/commit/f420ba9007434fd4c66f0acf47e118f49638885d))
+* **deps-dev:** bump @emotion/jest from 11.1.0 to 11.2.0 ([#41](https://github.com/scaleway/scaleway-ui/issues/41)) ([305b7e4](https://github.com/scaleway/scaleway-ui/commit/305b7e4002029753a89b199285217270598a0abe))
+* **deps-dev:** bump @rollup/plugin-node-resolve from 11.1.1 to 11.2.0 ([#40](https://github.com/scaleway/scaleway-ui/issues/40)) ([ca22c45](https://github.com/scaleway/scaleway-ui/commit/ca22c450ad24d6e91f825f8f151e3c1575ea9db0))
+* **deps-dev:** bump @storybook/addon-essentials from 6.1.17 to 6.1.19 ([#54](https://github.com/scaleway/scaleway-ui/issues/54)) ([e351f3f](https://github.com/scaleway/scaleway-ui/commit/e351f3f706a7ed89a3660cf5ead0bb0153843aad))
+* **deps-dev:** bump postcss from 8.2.5 to 8.2.6 ([#58](https://github.com/scaleway/scaleway-ui/issues/58)) ([172609c](https://github.com/scaleway/scaleway-ui/commit/172609c0adb3e83597361912aeb094a86efb4352))
+* **deps-dev:** bump rollup from 2.38.5 to 2.39.1 ([#50](https://github.com/scaleway/scaleway-ui/issues/50)) ([44f044d](https://github.com/scaleway/scaleway-ui/commit/44f044dd39ed7c727dca07754dad539dc8e59c72))
+
+
+### :bug: Bug Fixes
+
+* textbox can have number and text as value ([#53](https://github.com/scaleway/scaleway-ui/issues/53)) ([d10d0c5](https://github.com/scaleway/scaleway-ui/commit/d10d0c5dbc37c9b49531698a84595f874d5ff31d))
+
 ### [0.57.1](https://github.com/scaleway/scaleway-ui/compare/v0.57.0...v0.57.1) (2021-02-22)
 
 
