@@ -35,7 +35,7 @@ jobs:
           docker context rm ${VERSION}
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v0.5.1
         with:
           step: deactivate-env
           token: ${{ secrets.GITHUB_TOKEN }}

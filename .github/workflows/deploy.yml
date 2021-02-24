@@ -32,7 +32,7 @@ jobs:
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=scw.company" || echo "HOST=$GITHUB_HEAD_REF_SLUG_URL.scw.company") >> $GITHUB_ENV
 
       - name: Start deployment
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v0.5.1
         id: deployment
         with:
           step: start
@@ -74,7 +74,7 @@ jobs:
           docker context rm ${VERSION}
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v0.4.3
+        uses: bobheadxi/deployments@v0.5.1
         if: always()
         with:
           step: finish
