@@ -483,7 +483,7 @@ TextBox.propTypes = {
   unit: PropTypes.string,
   unitAlignment: PropTypes.oneOf(['center', 'flex-end', 'flex-start']),
   valid: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   wrap: PropTypes.string,
 }
 
