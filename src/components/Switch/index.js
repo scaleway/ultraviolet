@@ -65,9 +65,11 @@ const label = ({ size, width }) => css`
   width: ${(width || SIZES[size].width) - 2 * PADDING - SIZES[size].ball}px;
 `
 
-const StyledSwitch = styled('label', {
+const StyledSwitch = styled('span', {
   shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop),
+    !['offLabel', 'onLabel', 'labeled', 'labelPlacement', 'variant'].includes(
+      prop,
+    ),
 })`
   overflow: hidden;
   outline: none;
@@ -104,7 +106,8 @@ const StyledSwitch = styled('label', {
   &[aria-checked='false'] > ${SwitchBall} {
     &:after {
       ${label}
-      content: ${({ labeled, offLabel }) => `"${labeled ? offLabel : ''}"`};
+      content: ${({ labeled, offLabel, labelPlacement }) =>
+        `"${labeled && labelPlacement === 'inside' ? offLabel : ''}"`};
       color: ${styles.inactiveLabelColor};
       left: ${({ size }) => SIZES[size].ball}px;
     }
@@ -113,7 +116,8 @@ const StyledSwitch = styled('label', {
   &[aria-checked='true'] > ${SwitchBall} {
     &:before {
       ${label}
-      content: ${({ labeled, onLabel }) => `"${labeled ? onLabel : ''}"`};
+      content: ${({ labeled, onLabel, labelPlacement }) =>
+        `"${labeled && labelPlacement === 'inside' ? onLabel : ''}"`};
       color: ${({ variant }) => variants[variant].activeLabelColor};
       right: ${({ size }) => SIZES[size].ball}px;
     }
@@ -125,57 +129,103 @@ const StyledCheckbox = styled(Checkbox)`
   opacity: 0.01;
 `
 
+const StyledLabel = styled('label')`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`
+
 const Switch = ({
   checked,
   disabled,
+  id,
   name,
   onChange,
   size,
   tooltip,
+  labeled,
+  labelPlacement,
+  onLabel,
+  offLabel,
+  variant,
+  labelRender,
   ...props
 }) => (
   <Tooltip text={tooltip}>
-    <StyledSwitch
-      size={size}
-      aria-checked={checked}
-      disabled={disabled}
-      {...props}
-    >
-      <StyledCheckbox
-        checked={checked}
+    <StyledLabel aria-checked={checked} disabled={disabled} {...props}>
+      {labeled && labelPlacement === 'left'
+        ? labelRender || (
+            <span
+              style={{
+                marginRight: 10,
+                width: Math.max(onLabel.length, offLabel.length) * 10 - 2,
+                textAlign: 'right',
+              }}
+            >
+              {checked ? onLabel : offLabel}
+            </span>
+          )
+        : null}
+      <StyledSwitch
+        size={size}
+        aria-checked={checked}
         disabled={disabled}
-        name={name}
-        onChange={onChange}
-      />
-      <SwitchBall size={size} />
-    </StyledSwitch>
+        labeled={labeled}
+        labelPlacement={labelPlacement}
+        onLabel={onLabel}
+        offLabel={offLabel}
+        variant={variant}
+      >
+        <StyledCheckbox
+          id={id || name}
+          checked={checked}
+          disabled={disabled}
+          name={name}
+          onChange={onChange}
+        />
+        <SwitchBall size={size} />
+      </StyledSwitch>
+      {labeled && labelPlacement === 'right'
+        ? labelRender || (
+            <span style={{ marginLeft: 10 }}>
+              {checked ? onLabel : offLabel}
+            </span>
+          )
+        : null}
+    </StyledLabel>
   </Tooltip>
 )
 
 Switch.propTypes = {
-  tooltip: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(SIZES)),
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(Object.keys(variants)),
   checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
   labeled: PropTypes.bool,
-  onLabel: PropTypes.string,
+  labelPlacement: PropTypes.string,
+  labelRender: PropTypes.node,
+  name: PropTypes.string.isRequired,
   offLabel: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
+  onLabel: PropTypes.string,
+  size: PropTypes.oneOf(Object.keys(SIZES)),
+  tooltip: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 Switch.defaultProps = {
-  tooltip: null,
-  size: 'medium',
-  width: null,
-  disabled: false,
-  variant: 'primary',
   checked: false,
+  disabled: false,
+  id: undefined,
   labeled: false,
-  onLabel: 'ON',
+  labelPlacement: 'inside',
+  labelRender: null,
   offLabel: 'OFF',
+  onLabel: 'ON',
+  size: 'medium',
+  tooltip: null,
+  variant: 'primary',
+  width: null,
 }
 
 export { Switch }

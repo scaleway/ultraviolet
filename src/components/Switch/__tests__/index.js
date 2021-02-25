@@ -43,7 +43,7 @@ describe('Switch', () => {
     )
   })
 
-  test('renders correctly with custom labels', () => {
+  test('renders correctly with custom inside labels', () => {
     shouldMatchEmotionSnapshot(
       <Switch
         name="test"
@@ -51,6 +51,37 @@ describe('Switch', () => {
         labeled
         onLabel="Yes"
         offLabel="No"
+      />,
+    )
+  })
+
+  test('renders correctly with labels on left', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} labeled labelPlacement="left" />,
+    )
+  })
+
+  test('renders correctly with custom labels on right', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch
+        name="test"
+        onChange={() => {}}
+        labeled
+        labelPlacement="right"
+        onLabel="Checked"
+        offLabel="Unchecked"
+      />,
+    )
+  })
+
+  test('renders correctly with custom label render on right', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch
+        name="test"
+        onChange={() => {}}
+        labeled
+        labelPlacement="right"
+        labelRender={<span>Custom label rendered</span>}
       />,
     )
   })
