@@ -151,7 +151,7 @@ const Stepper = ({
     if (onChange) {
       onChange(inputValue)
     }
-  }, [inputValue])
+  }, [inputValue, onChange])
 
   const offsetFn = direction => () => {
     setInputValue(currentValue => {

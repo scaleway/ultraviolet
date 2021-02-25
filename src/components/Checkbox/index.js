@@ -75,7 +75,7 @@ export function Checkbox({
 
   useEffect(() => {
     checkbox.setState(checked)
-  }, [checked])
+  }, [checkbox, checked])
 
   return (
     <Box {...props}>

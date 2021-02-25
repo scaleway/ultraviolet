@@ -409,16 +409,14 @@ import { Box, Button, Modal } from '../..'
         );
       `
       return (
-        <>
-          <Modal
-            disclosure={() => <Button>modal</Button>}
-            bordered={false}
-            customDialogBackdropStyles={customDialogBackdropStyles}
-            customDialogStyles={customDialogStyles}
-          >
-            <p>Your Modal is not bordered</p>
-          </Modal>
-        </>
+        <Modal
+          disclosure={() => <Button>modal</Button>}
+          bordered={false}
+          customDialogBackdropStyles={customDialogBackdropStyles}
+          customDialogStyles={customDialogStyles}
+        >
+          <p>Your Modal is not bordered</p>
+        </Modal>
       )
     }}
   </Story>

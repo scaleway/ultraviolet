@@ -228,7 +228,7 @@ const Modal = memo(
       visible: opened,
     })
 
-    useEffect(() => dialog.setVisible(opened), [opened])
+    useEffect(() => dialog.setVisible(opened), [dialog, opened])
 
     return (
       <>
