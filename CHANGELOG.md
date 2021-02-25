@@ -1,3 +1,30 @@
+## [0.58.0](https://github.com/scaleway/scaleway-ui/compare/v0.57.2...v0.58.0) (2021-02-25)
+
+
+### :gear: Features
+
+* migrate TimeInput ([#77](https://github.com/scaleway/scaleway-ui/issues/77)) ([5b350c9](https://github.com/scaleway/scaleway-ui/commit/5b350c9c1d384e4b9f05c783ffc4350773554680))
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.12.18 to 7.13.7 ([#62](https://github.com/scaleway/scaleway-ui/issues/62)) ([4b9dcf2](https://github.com/scaleway/scaleway-ui/commit/4b9dcf2fa9905021a414bfda821d7a8fa575afb4))
+* **deps:** bump @scaleway/random-name from 1.2.0 to 1.2.1 ([#76](https://github.com/scaleway/scaleway-ui/issues/76)) ([542a575](https://github.com/scaleway/scaleway-ui/commit/542a5757eef1f6ad1240787721bde7aeaa31de3e))
+* **deps:** bump @xstyled/emotion from 2.2.2 to 2.2.3 ([#73](https://github.com/scaleway/scaleway-ui/issues/73)) ([c7042f9](https://github.com/scaleway/scaleway-ui/commit/c7042f92c94cf9f70986ec8d0350b901e22daf95))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#69](https://github.com/scaleway/scaleway-ui/issues/69)) ([b7bba3d](https://github.com/scaleway/scaleway-ui/commit/b7bba3ddcf6ec4f593522c90e9c96104133e387f))
+* **deps-dev:** bump @babel/preset-env from 7.12.13 to 7.13.5 ([#57](https://github.com/scaleway/scaleway-ui/issues/57)) ([8c79ae6](https://github.com/scaleway/scaleway-ui/commit/8c79ae6e5f81339469367063ec23a85dc4c3de1b))
+* **deps-dev:** bump @commitlint/config-conventional ([#60](https://github.com/scaleway/scaleway-ui/issues/60)) ([3cca2d9](https://github.com/scaleway/scaleway-ui/commit/3cca2d904d913c8ec25ecb62d3f67e990ce9ab4a))
+* **deps-dev:** bump @rollup/plugin-babel from 5.2.3 to 5.3.0 ([#71](https://github.com/scaleway/scaleway-ui/issues/71)) ([8325d5c](https://github.com/scaleway/scaleway-ui/commit/8325d5cd045000a69e21b5372246f6e7a098707d))
+* **deps-dev:** bump @scaleway/eslint-config-react from 1.2.0 to 1.3.1 ([#75](https://github.com/scaleway/scaleway-ui/issues/75)) ([78d3501](https://github.com/scaleway/scaleway-ui/commit/78d3501852f7b69f2ad4d565adfc75f39b076eb6))
+* **deps-dev:** bump @storybook/addon-actions from 6.1.19 to 6.1.20 ([#70](https://github.com/scaleway/scaleway-ui/issues/70)) ([c5e0fed](https://github.com/scaleway/scaleway-ui/commit/c5e0fed4088a399a937efc25139dd4c33f8062e5))
+* **deps-dev:** bump @storybook/addon-links from 6.1.18 to 6.1.20 ([#66](https://github.com/scaleway/scaleway-ui/issues/66)) ([519816c](https://github.com/scaleway/scaleway-ui/commit/519816cb219d5a678c1ecb16d0041095d7d67cf8))
+* **deps-dev:** bump @storybook/addons from 6.1.19 to 6.1.20 ([#65](https://github.com/scaleway/scaleway-ui/issues/65)) ([f8633b6](https://github.com/scaleway/scaleway-ui/commit/f8633b6c5caf52286f142a6b23081261bc520d83))
+* **deps-dev:** bump @storybook/react from 6.1.17 to 6.1.20 ([#68](https://github.com/scaleway/scaleway-ui/issues/68)) ([e13cdf6](https://github.com/scaleway/scaleway-ui/commit/e13cdf6f5518213378b0c6ca9103c5c7d75864f5))
+* **deps-dev:** bump @storybook/theming from 6.1.18 to 6.1.20 ([#64](https://github.com/scaleway/scaleway-ui/issues/64)) ([bcfbca3](https://github.com/scaleway/scaleway-ui/commit/bcfbca33c9c9a92c7adff81a652614994cb77993))
+* **deps-dev:** bump eslint from 7.19.0 to 7.20.0 ([#59](https://github.com/scaleway/scaleway-ui/issues/59)) ([d40f448](https://github.com/scaleway/scaleway-ui/commit/d40f4484b07984f13ada8c3e278e56306c6cbce1))
+* **deps-dev:** bump eslint-plugin-mdx from 1.8.2 to 1.9.0 ([#74](https://github.com/scaleway/scaleway-ui/issues/74)) ([7bdfa58](https://github.com/scaleway/scaleway-ui/commit/7bdfa58a91d6f0fa25c9ff7e1e167b8433e4270b))
+* **deps-dev:** bump semantic-release from 17.3.7 to 17.3.9 ([#72](https://github.com/scaleway/scaleway-ui/issues/72)) ([e7d68f1](https://github.com/scaleway/scaleway-ui/commit/e7d68f1ea0cefff6eb3b519166aa6d74dc18f7b7))
+
 ### [0.57.2](https://github.com/scaleway/scaleway-ui/compare/v0.57.1...v0.57.2) (2021-02-24)
 
 
