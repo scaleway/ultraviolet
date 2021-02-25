@@ -1,4 +1,4 @@
-export function isJsonString(str) {
+export const isJSONString = str => {
   try {
     JSON.parse(str)
   } catch (e) {

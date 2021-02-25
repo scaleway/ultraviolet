@@ -5,7 +5,7 @@ const recursivelyGetChildrenString = children => {
     const childProps = children?.props?.children
     if (childProps) return recursivelyGetChildrenString(childProps)
   }
-  return children
+  return ''
 }
 
 export default recursivelyGetChildrenString
