@@ -531,14 +531,12 @@ function RichSelect({
 
   const [isAnimated, setIsAnimated] = useState(false)
 
-  if (animationOnChange) {
-    const deepValue = value?.value
-
-    useEffect(() => {
+  useEffect(() => {
+    if (animationOnChange) {
       setIsAnimated(true)
       setTimeout(() => setIsAnimated(false), animationDuration)
-    }, [setIsAnimated, animationOnChange, deepValue])
-  }
+    }
+  }, [setIsAnimated, animationOnChange, animationDuration, value?.value])
 
   return (
     <Select

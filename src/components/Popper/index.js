@@ -72,7 +72,7 @@ const Popper = memo(
       visible,
     })
 
-    useEffect(() => popover.setVisible(visible), [visible])
+    useEffect(() => popover.setVisible(visible), [popover, visible])
 
     return (
       <>

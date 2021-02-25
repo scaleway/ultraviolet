@@ -43,67 +43,62 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
 
   const tooltip = useTooltipState({ gutter: 8 })
 
+  if (!tags.length) {
+    return null
+  }
+
   return (
-    <>
-      {tags.length ? (
-        <Box display="flex">
-          <Box
-            display="flex"
-            alignItems="center"
-            color={colors.gray700}
-            {...props}
+    <Box display="flex">
+      <Box display="flex" alignItems="center" color={colors.gray700} {...props}>
+        {tags.slice(0, visibleTagsCount).map((tag, i) => (
+          <Tag
+            key={`${tag}-${i}`}
+            textStyle={textStyle(maxTagWidth)}
+            mr={i + 1 !== visibleTagsCount ? 1 : 0}
           >
-            {tags.slice(0, visibleTagsCount).map((tag, i) => (
-              <Tag
-                key={`${tag}-${i}`}
-                textStyle={textStyle(maxTagWidth)}
-                mr={i + 1 !== visibleTagsCount ? 1 : 0}
-              >
-                {tag}
-              </Tag>
-            ))}
-          </Box>
-          {hasManyTags && (
-            <>
-              <TooltipReference
-                {...tooltip}
-                as={Box}
-                css={text}
-                px={1}
-                color={colors.primary}
-                border="none"
-                backgroundColor="transparent"
-              >
-                +{tags.length - tmpThreshold}
-              </TooltipReference>
-              <Tooltip {...tooltip}>
-                <TooltipArrow
-                  {...tooltip}
-                  style={{ fill: colors.white, top: '93%' }}
-                />
-                <Box
-                  boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
-                  px={1}
-                  py="4px"
-                  display="flex"
-                  alignItems="center"
-                  backgroundColor={colors.white}
-                  borderRadius="4px"
-                  maxWidth="80vw"
-                  flexWrap="wrap"
-                >
-                  {tags.slice(visibleTagsCount).map((tag, index) => (
-                    <Tag m="4px" key={`${tag}-${index}`}>
-                      {tag}
-                    </Tag>
-                  ))}
-                </Box>
-              </Tooltip>
-            </>
-          )}
-        </Box>
-      ) : null}
-    </>
+            {tag}
+          </Tag>
+        ))}
+      </Box>
+      {hasManyTags && (
+        <>
+          <TooltipReference
+            {...tooltip}
+            as={Box}
+            css={text}
+            px={1}
+            color={colors.primary}
+            border="none"
+            backgroundColor="transparent"
+          >
+            +{tags.length - tmpThreshold}
+          </TooltipReference>
+          <Tooltip {...tooltip}>
+            <TooltipArrow
+              {...tooltip}
+              style={{ fill: colors.white, top: '93%' }}
+            />
+            <Box
+              boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
+              px={1}
+              py="4px"
+              display="flex"
+              alignItems="center"
+              backgroundColor={colors.white}
+              borderRadius="4px"
+              maxWidth="80vw"
+              flexWrap="wrap"
+            >
+              {tags.slice(visibleTagsCount).map((tag, index) => (
+                <Tag m="4px" key={`${tag}-${index}`}>
+                  {tag}
+                </Tag>
+              ))}
+            </Box>
+          </Tooltip>
+        </>
+      )}
+    </Box>
   )
 }
 

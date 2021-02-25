@@ -59,7 +59,7 @@ export const Tooltip = ({
   ...props
 }) => {
   const tooltip = useTooltipState({ animated, placement, visible, baseId })
-  useEffect(() => tooltip.setVisible(visible), [visible])
+  useEffect(() => tooltip.setVisible(visible), [tooltip, visible])
 
   if (!children) return null
   if (Array.isArray(children)) {
