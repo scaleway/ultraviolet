@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeInput renders correctly with base props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #dce1eb;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-1:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-1:hover {
+  border-color: #4f0599;
+}
+
+.emotion-1:hover svg {
+  fill: #4f0599;
+}
+
+.emotion-1:focus-within {
+  border-color: #4f0599;
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
+}
+
+.emotion-1:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.emotion-3 {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-weight: 400;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+.emotion-5 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+}
+
+.emotion-6 input {
+  position: absolute;
+  top: 50%;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-8 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: #eeeeff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-9:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-10 {
+  fill: #d4dae7;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  margin-right: 0;
+}
+
+.emotion-11 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+<div
+    class="emotion-0"
+    data-testid="rich-select-timeinput-test-0"
+  >
+    <div
+      class=" emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <label
+          aria-live="assertive"
+          class="emotion-3"
+          for="input-6c756c756c756c756c756c756c756c75"
+          id="label-6c756c756c756c756c756c756c756c75"
+        >
+          Select...
+        </label>
+        <div
+          class=" emotion-4"
+        >
+          00:00
+        </div>
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-6"
+            style="caret-color: transparent; display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-controls="label-6c756c756c756c756c756c756c756c75"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="input-6c756c756c756c756c756c756c756c75"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-7"
+      >
+        <span
+          class=" emotion-8"
+        />
+        <div
+          aria-hidden="true"
+          class=" emotion-9"
+        >
+          <svg
+            class="sc-ui-icon emotion-10"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input
+      name="timeinput-test-0"
+      type="hidden"
+      value="00:00"
+    />
+    <div
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
