@@ -341,6 +341,7 @@ const TextBox = React.forwardRef(
           <Touchable
             onClick={handleRandomizeClick}
             onKeyDown={handleRandomizeKeyDown}
+            disabled={disabled}
             title="Randomize"
           >
             <Icon name="auto-fix" />
