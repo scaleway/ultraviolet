@@ -1,3 +1,15 @@
+### [0.58.1](https://github.com/scaleway/scaleway-ui/compare/v0.58.0...v0.58.1) (2021-02-26)
+
+
+### :white_check_mark: Test
+
+* add tests on helpers and utils ([#55](https://github.com/scaleway/scaleway-ui/issues/55)) ([107b407](https://github.com/scaleway/scaleway-ui/commit/107b4078736c8d55cfdba9d7bd5b99a3276d6144))
+
+
+### :bug: Bug Fixes
+
+* textbox random disabled ([#80](https://github.com/scaleway/scaleway-ui/issues/80)) ([3a7b769](https://github.com/scaleway/scaleway-ui/commit/3a7b7692da4051a7d57a15fd590f62ad796af8d6))
+
 ## [0.58.0](https://github.com/scaleway/scaleway-ui/compare/v0.57.2...v0.58.0) (2021-02-25)
 
 
