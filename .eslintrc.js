@@ -3,18 +3,6 @@ module.exports = {
   extends: ['@scaleway/react', 'plugin:mdx/recommended'],
   plugins: ['@emotion'],
   rules: {
-    'no-nested-ternary': 'warn',
-    'no-param-reassign': 'warn',
-    'no-shadow': 'warn',
-
-    // Sort
-    'sort-imports': [
-      'error',
-      {
-        ignoreDeclarationSort: true,
-        memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none'],
-      },
-    ],
     // Import
     'import/no-extraneous-dependencies': [
       'error',
@@ -28,15 +16,14 @@ module.exports = {
         ],
       },
     ],
-    'import/prefer-default-export': 'off',
+
+    'import/prefer-default-export': 'warn',
 
     // React
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.mdx'] }],
-    'react/destructuring-assignment': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/no-array-index-key': 'off',
-    'react/prop-types': 'warn',
-    'react/require-default-props': 'warn',
+    'react/destructuring-assignment': 'warn',
+    'react/jsx-props-no-spreading': 'warn',
+    'react/no-array-index-key': 'warn',
 
     // emotion
     '@emotion/styled-import': 'error',
