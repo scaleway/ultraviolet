@@ -201,7 +201,7 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
   id: PropTypes.string,
   labeled: PropTypes.bool,
-  labelPlacement: PropTypes.string,
+  labelPlacement: PropTypes.oneOf(['inside', 'left', 'right']),
   labelRender: PropTypes.node,
   name: PropTypes.string.isRequired,
   offLabel: PropTypes.string,
