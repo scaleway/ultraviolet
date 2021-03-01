@@ -1,5 +1,5 @@
 import React from 'react'
-import { PhoneInput } from '..'
+import PhoneInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PhoneInput', () => {

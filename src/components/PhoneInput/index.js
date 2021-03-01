@@ -5,11 +5,19 @@ import React, { useEffect, useState } from 'react'
 import ReactPhoneInput from 'react-phone-input-2'
 import { colors } from '../../theme'
 import 'react-phone-input-2/lib/style.css'
-import 'react-phone-input-2/lib/material.css'
+import IntlPhoneInput from './IntlPhoneInput'
 
 const StyleWrapper = styled.div`
   position: relative;
   flex: 1;
+
+  & .special-label {
+    position: absolute;
+    top: -9px;
+    display: block;
+    padding: 0 10px;
+    left: 10px;
+  }
 
   > label {
     color: ${colors.gray550};
@@ -33,6 +41,11 @@ const StyleWrapper = styled.div`
       padding-left: 56px;
       transform: translate(-9.6%, -3px) scale(0.8);
     }
+  }
+
+  .react-tel-input {
+    display: flex;
+    align-items: center;
   }
 
   .react-tel-input {
@@ -66,7 +79,6 @@ const StyleWrapper = styled.div`
       max-width: 100%;
       outline: none;
       padding-right: 8px;
-      padding-top: 14px;
       position: relative;
       transition: border 0.1s;
       width: 100%;
@@ -85,6 +97,7 @@ const PhoneInput = ({
   inputProps,
   onChange,
   value,
+  label,
 }) => {
   const [visited, setVisited] = useState(false)
 
@@ -111,6 +124,7 @@ const PhoneInput = ({
         enableSearchField
         enableLongNumbers={15}
         onFocus={handleFocus}
+        specialLabel={label}
         placeholder={visited ? '+1 012346789' : ''}
         country="us"
       />
@@ -124,6 +138,7 @@ PhoneInput.propTypes = {
   inputProps: PropTypes.objectOf(PropTypes.bool),
   onChange: PropTypes.func,
   value: PropTypes.string,
+  label: PropTypes.string,
 }
 
 PhoneInput.defaultProps = {
@@ -132,6 +147,8 @@ PhoneInput.defaultProps = {
   inputProps: {},
   onChange: () => {},
   value: '',
+  label: 'Phone',
 }
 
-export { PhoneInput }
+export default PhoneInput
+export { IntlPhoneInput }

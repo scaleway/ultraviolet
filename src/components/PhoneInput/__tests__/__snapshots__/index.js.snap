@@ -9,6 +9,14 @@ exports[`PhoneInput renders correctly 1`] = `
   flex: 1;
 }
 
+.emotion-0 .special-label {
+  position: absolute;
+  top: -9px;
+  display: block;
+  padding: 0 10px;
+  left: 10px;
+}
+
 .emotion-0>label {
   color: #b2b6c3;
   display: block;
@@ -38,6 +46,17 @@ exports[`PhoneInput renders correctly 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
+}
+
+.emotion-0 .react-tel-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0 .react-tel-input>.flag-dropdown,
@@ -70,7 +89,6 @@ exports[`PhoneInput renders correctly 1`] = `
   max-width: 100%;
   outline: none;
   padding-right: 8px;
-  padding-top: 14px;
   position: relative;
   -webkit-transition: border 0.1s;
   transition: border 0.1s;
@@ -133,6 +151,14 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   flex: 1;
 }
 
+.emotion-0 .special-label {
+  position: absolute;
+  top: -9px;
+  display: block;
+  padding: 0 10px;
+  left: 10px;
+}
+
 .emotion-0>label {
   color: #b2b6c3;
   display: block;
@@ -162,6 +188,17 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
+}
+
+.emotion-0 .react-tel-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0 .react-tel-input>.flag-dropdown,
@@ -194,7 +231,6 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   max-width: 100%;
   outline: none;
   padding-right: 8px;
-  padding-top: 14px;
   position: relative;
   -webkit-transition: border 0.1s;
   transition: border 0.1s;
