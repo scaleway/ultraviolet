@@ -1,0 +1,90 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import TabGroup from '../TabGroup'
+import TouchableTabGroup from '../TouchableTabGroup'
+
+<Meta title="Components/TabGroup" />
+
+# TabGroup
+
+## Infos
+
+Every `Tab` must have a `name` prop set.
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <ControlValue value="first">
+      {({ value, onChange }) => (
+        <TabGroup onChange={onChange} selected={value}>
+          <TabGroup.Tab name="first">First</TabGroup.Tab>
+          <TabGroup.Tab name="second">Second</TabGroup.Tab>
+          <TabGroup.Tab name="three">Very long tab name</TabGroup.Tab>
+        </TabGroup>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Touchable
+
+Use a `TouchableTabGroup` when you can control your `TabGroup`.
+`Tab` is a `Touchable` component.
+
+Here, `TouchableTabGroup` selected prop is set when `onChange` is trigger (so, if you click on a `Tab`)
+
+<Canvas>
+  <Story name="touchable">
+    <ControlValue value="first">
+      {({ value, onChange }) => (
+        <TouchableTabGroup onChange={onChange} selected={value}>
+          <TouchableTabGroup.Tab name="first">First</TouchableTabGroup.Tab>
+          <TouchableTabGroup.Tab name="second">Second</TouchableTabGroup.Tab>
+        </TouchableTabGroup>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Disabled
+
+You can disable a `Tab` using the `disabled` prop
+
+### Touchable
+
+<Canvas>
+  <Story name="disabled">
+    <ControlValue value="first">
+      {({ value, onChange }) => (
+        <TouchableTabGroup onChange={onChange} selected={value}>
+          <TouchableTabGroup.Tab name="first">First</TouchableTabGroup.Tab>
+          <TouchableTabGroup.Tab name="second">Second</TouchableTabGroup.Tab>
+          <TouchableTabGroup.Tab disabled name="disabled">
+            Disabled tab
+          </TouchableTabGroup.Tab>
+        </TouchableTabGroup>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Basic
+
+<Canvas>
+  <Story name="basic-disabled">
+    <ControlValue value="second">
+      {({ value, onChange }) => (
+        <TabGroup onChange={onChange} selected={value}>
+          <TabGroup.Tab name="first">First</TabGroup.Tab>
+          <TabGroup.Tab name="second">Second</TabGroup.Tab>
+          <TabGroup.Tab disabled name="disabled">
+            Disabled tab
+          </TabGroup.Tab>
+        </TabGroup>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+<ArgsTable of={TouchableTabGroup} />

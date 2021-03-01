@@ -53,10 +53,7 @@ const Touchable = ({
 )
 
 Touchable.propTypes = {
-  innerRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.elementType }),
-  ]),
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
   disabled: PropTypes.bool,
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hasFocus: PropTypes.bool,

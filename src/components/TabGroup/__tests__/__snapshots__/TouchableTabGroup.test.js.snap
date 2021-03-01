@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TouchableTabGroup renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0.emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+}
+
+.emotion-3 {
+  position: absolute;
+  display: block;
+  background-color: #4f0599;
+  height: 2px;
+  padding: inherit;
+  -webkit-transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+  transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class=" emotion-1 emotion-2"
+      role="tablist"
+    />
+    <div
+      class="emotion-3 emotion-4"
+      style="width: 0px; left: 0px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TouchableTabGroup renders correctly with Tabs and last disabled 1`] = `
+<DocumentFragment>
+  .emotion-0.emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+}
+
+.emotion-4 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-4[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-4[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
+  color: #4a4f62!important;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  color: #4f0599!important;
+}
+
+.emotion-4[aria-selected='true'] {
+  color: #4f0599!important;
+}
+
+.emotion-4[aria-disbabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-4[aria-disbabled='true']:hover,
+.emotion-4[aria-disbabled='true']:focus {
+  color: #4a4f62!important;
+}
+
+.emotion-9 {
+  position: absolute;
+  display: block;
+  background-color: #4f0599;
+  height: 2px;
+  padding: inherit;
+  -webkit-transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+  transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class=" emotion-1 emotion-2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        First
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        Second
+      </button>
+      <button
+        aria-disabled="true"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        Very long tab name
+      </button>
+    </div>
+    <div
+      class="emotion-9 emotion-10"
+      style="left: 0px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TouchableTabGroup renders correctly with Tabs with name prop 1`] = `
+<DocumentFragment>
+  .emotion-0.emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+}
+
+.emotion-4 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-4[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-4[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
+  color: #4a4f62!important;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  color: #4f0599!important;
+}
+
+.emotion-4[aria-selected='true'] {
+  color: #4f0599!important;
+}
+
+.emotion-4[aria-disbabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-4[aria-disbabled='true']:hover,
+.emotion-4[aria-disbabled='true']:focus {
+  color: #4a4f62!important;
+}
+
+.emotion-9 {
+  position: absolute;
+  display: block;
+  background-color: #4f0599;
+  height: 2px;
+  padding: inherit;
+  -webkit-transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+  transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class=" emotion-1 emotion-2"
+      role="tablist"
+    >
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        First
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        Second
+      </button>
+      <button
+        aria-disabled="false"
+        aria-selected="false"
+        class="emotion-3 emotion-4"
+        role="tab"
+        type="button"
+        variant="default"
+      >
+        Very long tab name
+      </button>
+    </div>
+    <div
+      class="emotion-9 emotion-10"
+      style="left: 0px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TouchableTabGroup renders correctly with variant default 1`] = `
+<DocumentFragment>
+  .emotion-0.emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+}
+
+.emotion-3 {
+  position: absolute;
+  display: block;
+  background-color: #4f0599;
+  height: 2px;
+  padding: inherit;
+  -webkit-transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+  transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),width 300ms cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class=" emotion-1 emotion-2"
+      role="tablist"
+    />
+    <div
+      class="emotion-3 emotion-4"
+      style="width: 0px; left: 0px;"
+    />
+  </div>
+</DocumentFragment>
+`;
