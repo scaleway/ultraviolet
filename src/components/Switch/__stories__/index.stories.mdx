@@ -207,7 +207,7 @@ Default label placement is inside the Switch. you can customize the text with `o
 
 ### Label placement
 
-By setting the `labelPlacement` prop you can choose where you want to put the label. Moreover you can customise the label rendered with the `labelRender` prop.
+By setting the `labelPlacement` prop you can choose where you want to put the label. By setting the label on `left` or `right` the width is automatically calculated.
 
 <Canvas>
   <Story name="label-placement">
@@ -224,20 +224,34 @@ By setting the `labelPlacement` prop you can choose where you want to put the la
           />
         )}
       </ControlValue>
-      <ControlValue value>
-        {({ value, onChange }) => (
-          <Switch
-            name="switch-label-left"
-            labelPlacement="left"
-            labeled
-            onLabel="CHECKED"
-            offLabel="NOT CHECKED"
-            variant="primary"
-            checked={value}
-            onChange={e => onChange(e.target.checked)}
-          />
-        )}
-      </ControlValue>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <ControlValue value>
+          {({ value, onChange }) => (
+            <Switch
+              name="switch-label-left"
+              labelPlacement="left"
+              labeled
+              onLabel="CHECKED"
+              offLabel="NOT CHECKED"
+              variant="primary"
+              checked={value}
+              onChange={e => onChange(e.target.checked)}
+            />
+          )}
+        </ControlValue>
+        <ControlValue value>
+          {({ value, onChange }) => (
+            <Switch
+              name="switch-label-right"
+              labelPlacement="right"
+              labeled
+              variant="primary"
+              checked={value}
+              onChange={e => onChange(e.target.checked)}
+            />
+          )}
+        </ControlValue>
+      </div>
     </BlockList>
   </Story>
 </Canvas>

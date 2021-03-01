@@ -187,7 +187,12 @@ const Switch = ({
       </StyledSwitch>
       {labeled && labelPlacement === 'right'
         ? labelRender || (
-            <span style={{ marginLeft: 10 }}>
+            <span
+              style={{
+                marginLeft: 10,
+                width: Math.max(onLabel.length, offLabel.length) * 10 - 2,
+              }}
+            >
               {checked ? onLabel : offLabel}
             </span>
           )
@@ -223,9 +228,9 @@ Switch.defaultProps = {
   offLabel: 'OFF',
   onLabel: 'ON',
   size: 'medium',
-  tooltip: null,
+  tooltip: undefined,
   variant: 'primary',
-  width: null,
+  width: undefined,
 }
 
 export { Switch }
