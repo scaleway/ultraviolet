@@ -12,7 +12,7 @@ jobs:
     runs-on: [self-hosted, console]
     env:
       IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
-      REMOTE_SSH_SERVER: ssh://root@scw.company
+      REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
     steps:
       - uses: actions/checkout@v2
       - name: Cache Docker layers
@@ -29,7 +29,7 @@ jobs:
         run: |
           env
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=scw.company" || echo "HOST=$GITHUB_HEAD_REF_SLUG_URL.scw.company") >> $GITHUB_ENV
+          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v0.4.3
