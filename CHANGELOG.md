@@ -1,3 +1,34 @@
+### [0.58.2](https://github.com/scaleway/scaleway-ui/compare/v0.58.1...v0.58.2) (2021-03-02)
+
+
+### :lipstick: Style
+
+* enable second batch of eslint warnings ([#81](https://github.com/scaleway/scaleway-ui/issues/81)) ([ec77432](https://github.com/scaleway/scaleway-ui/commit/ec77432e30085017b94b28197f2514171a549389))
+
+
+### :repeat: CI
+
+* use new scaleway domain ([#89](https://github.com/scaleway/scaleway-ui/issues/89)) ([170acf0](https://github.com/scaleway/scaleway-ui/commit/170acf04d066c6fcf280c1af62293cc1667dc62b))
+
+
+### :package: Chore
+
+* remove useCopyToClipboard hook ([#88](https://github.com/scaleway/scaleway-ui/issues/88)) ([c0e8507](https://github.com/scaleway/scaleway-ui/commit/c0e8507cb2bed2d5835ea933b62ae6c49d8e16df))
+* **deps:** bump polished from 4.1.0 to 4.1.1 ([#84](https://github.com/scaleway/scaleway-ui/issues/84)) ([935a379](https://github.com/scaleway/scaleway-ui/commit/935a3794494ba037c75d66e66bd77d0612f9c6f6))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#91](https://github.com/scaleway/scaleway-ui/issues/91)) ([f3ed91a](https://github.com/scaleway/scaleway-ui/commit/f3ed91ac424058baa8d7c6178f45919772e35717))
+* **deps-dev:** bump @babel/preset-env from 7.13.5 to 7.13.8 ([#94](https://github.com/scaleway/scaleway-ui/issues/94)) ([b49e771](https://github.com/scaleway/scaleway-ui/commit/b49e771b30c4badb544c133a2f595efb1689fa19))
+* **deps-dev:** bump @commitlint/cli from 12.0.0 to 12.0.1 ([#92](https://github.com/scaleway/scaleway-ui/issues/92)) ([1879e9a](https://github.com/scaleway/scaleway-ui/commit/1879e9a6d8269e2b8bbb0394c3d80a95596bd9e7))
+* **deps-dev:** bump @emotion/babel-preset-css-prop ([#83](https://github.com/scaleway/scaleway-ui/issues/83)) ([8065808](https://github.com/scaleway/scaleway-ui/commit/806580861f577b1e7be52ffae088721e024469e7))
+* **deps-dev:** bump @storybook/addon-essentials from 6.1.19 to 6.1.20 ([#78](https://github.com/scaleway/scaleway-ui/issues/78)) ([75b0aeb](https://github.com/scaleway/scaleway-ui/commit/75b0aebb01dbe70acc3b2a4f4e57363095ebb678))
+* **deps-dev:** bump eslint from 7.20.0 to 7.21.0 ([#93](https://github.com/scaleway/scaleway-ui/issues/93)) ([9af87fd](https://github.com/scaleway/scaleway-ui/commit/9af87fd4abfafdd0befa2eabd3b58ae32a7a27af))
+* **deps-dev:** bump rollup from 2.39.1 to 2.40.0 ([#87](https://github.com/scaleway/scaleway-ui/issues/87)) ([ae4efaa](https://github.com/scaleway/scaleway-ui/commit/ae4efaa4145ba4a69af58f516fdc6241c10f6e2b))
+* **deps-dev:** bump semantic-release from 17.3.9 to 17.4.0 ([#86](https://github.com/scaleway/scaleway-ui/issues/86)) ([d753a09](https://github.com/scaleway/scaleway-ui/commit/d753a09e989f40d2f32d627f30bd26f65b6dd0ef))
+
+
+### :bug: Bug Fixes
+
+* correct useEffect when using reakit state ([#100](https://github.com/scaleway/scaleway-ui/issues/100)) ([01d0241](https://github.com/scaleway/scaleway-ui/commit/01d0241417bb8d606ac9c809b4e3384406b8176c))
+
 ### [0.58.1](https://github.com/scaleway/scaleway-ui/compare/v0.58.0...v0.58.1) (2021-02-26)
 
 
