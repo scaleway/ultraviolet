@@ -72,7 +72,8 @@ const Popper = memo(
       visible,
     })
 
-    useEffect(() => popover.setVisible(visible), [popover, visible])
+    const { setVisible } = popover
+    useEffect(() => setVisible(visible), [setVisible, visible])
 
     return (
       <>
@@ -139,4 +140,4 @@ Popper.defaultProps = {
   disclosure: undefined,
 }
 
-export { Popper }
+export default Popper

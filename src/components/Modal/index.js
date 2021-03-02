@@ -228,7 +228,8 @@ const Modal = memo(
       visible: opened,
     })
 
-    useEffect(() => dialog.setVisible(opened), [dialog, opened])
+    const { setVisible } = dialog
+    useEffect(() => setVisible(opened), [setVisible, opened])
 
     return (
       <>
@@ -323,4 +324,4 @@ Modal.defaultProps = {
   onClose: undefined,
 }
 
-export { Modal, MODAL_WIDTH }
+export default Modal

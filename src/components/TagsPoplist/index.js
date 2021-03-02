@@ -116,4 +116,4 @@ TagsPoplist.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 }
 
-export { TagsPoplist }
+export default TagsPoplist
