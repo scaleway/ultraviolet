@@ -83,7 +83,7 @@ const PhoneInput = ({
     setVisited(true)
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     let keyUpEL
     let changeEL
     const inputElement = inputRef.current
@@ -142,7 +142,10 @@ const PhoneInput = ({
 PhoneInput.propTypes = {
   disabled: PropTypes.bool,
   disableDropdown: PropTypes.bool,
-  inputProps: PropTypes.objectOf(PropTypes.bool),
+  inputProps: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    name: PropTypes.string,
+  }),
   onChange: PropTypes.func,
   value: PropTypes.string,
   label: PropTypes.string,
