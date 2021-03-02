@@ -31,7 +31,7 @@ const styles = {
 
 const Block = props => (
   <Box {...props} css={styles.container}>
-    <Box css={styles.block}>
+    <div css={styles.block}>
       {Array.from({ length: 3 }, (_, i) => (
         <React.Fragment key={i}>
           <Box display="flex" alignItems="center" p={2}>
@@ -41,7 +41,7 @@ const Block = props => (
           {i !== 2 && <Separator my={1} />}
         </React.Fragment>
       ))}
-    </Box>
+    </div>
   </Box>
 )
 

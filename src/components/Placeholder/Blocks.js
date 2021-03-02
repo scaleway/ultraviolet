@@ -21,6 +21,7 @@ const styles = {
     border-radius: 4px;
   `,
   icon: theme => css`
+    margin-right: 8px;
     width: 32px;
     height: 32px;
     border-radius: 12px;
@@ -34,10 +35,10 @@ const Blocks = ({ col, length, ...props }) => (
       <Row>
         {Array.from({ length }, (_, i) => (
           <Col xsmall={12 / col} key={`placeholder-block-${i}`}>
-            <Box css={styles.block}>
-              <Box css={styles.icon} mr={1} />
+            <div css={styles.block}>
+              <div css={styles.icon} />
               <Line />
-            </Box>
+            </div>
           </Col>
         ))}
       </Row>

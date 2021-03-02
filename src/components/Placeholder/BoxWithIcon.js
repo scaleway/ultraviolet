@@ -22,7 +22,7 @@ const boxStyled = theme => css`
 const BoxWithIcon = ({ length, ...props }) =>
   Array.from({ length }, (_, i) => (
     <Box css={boxStyled} mx={1} key={i} {...props}>
-      <Box css={iconStyle(props.height / 3)} />
+      <div css={iconStyle(props.height / 3)} />
       <Line mt={3} width={props.width / 2} />
     </Box>
   ))
