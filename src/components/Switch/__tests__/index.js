@@ -57,7 +57,7 @@ describe('Switch', () => {
 
   test('renders correctly with labels on left', () => {
     shouldMatchEmotionSnapshot(
-      <Switch name="test" onChange={() => {}} labeled labelPlacement="left" />,
+      <Switch name="test" onChange={() => {}} labeled="left" />,
     )
   })
 
@@ -66,8 +66,7 @@ describe('Switch', () => {
       <Switch
         name="test"
         onChange={() => {}}
-        labeled
-        labelPlacement="right"
+        labeled="right"
         onLabel="Checked"
         offLabel="Unchecked"
       />,
@@ -79,9 +78,11 @@ describe('Switch', () => {
       <Switch
         name="test"
         onChange={() => {}}
-        labeled
-        labelPlacement="right"
-        labelRender={<span>Custom label rendered</span>}
+        labeled="left"
+        onLabel={<span>Custom label rendered</span>}
+        offLabel={
+          <span style={{ fontWeight: 'bold' }}>Custom label rendered</span>
+        }
       />,
     )
   })

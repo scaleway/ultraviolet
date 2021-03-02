@@ -58,28 +58,14 @@ exports[`Switch renders correctly 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -164,7 +150,7 @@ exports[`Switch renders correctly labeled 1`] = `
   background-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7 {
+.emotion-2[aria-checked='true']>.emotion-9 {
   -webkit-transform: translateX(
           60px
         ) translateX(-100%);
@@ -180,28 +166,14 @@ exports[`Switch renders correctly labeled 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "OFF";
+.emotion-2[aria-checked='false']>.emotion-7 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "ON";
+.emotion-2[aria-checked='true']>.emotion-7 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -210,6 +182,26 @@ exports[`Switch renders correctly labeled 1`] = `
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+  position: absolute;
+  line-height: 20px;
+  width: calc(100% - 20px);
+}
+
+.emotion-8 {
   display: block;
   position: relative;
   border-radius: 34px;
@@ -238,6 +230,11 @@ exports[`Switch renders correctly labeled 1`] = `
       />
       <span
         class="emotion-6 emotion-7"
+      >
+        OFF
+      </span>
+      <span
+        class="emotion-8 emotion-9"
       />
     </span>
   </label>
@@ -302,28 +299,14 @@ exports[`Switch renders correctly when checked 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -378,7 +361,7 @@ exports[`Switch renders correctly when disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -397,7 +380,7 @@ exports[`Switch renders correctly when disabled 1`] = `
   background-color: #dce1eb;
   border: none;
   border-radius: 34px;
-  cursor: pointer;
+  cursor: not-allowed;
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
@@ -425,28 +408,14 @@ exports[`Switch renders correctly when disabled 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -536,7 +505,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   background-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7 {
+.emotion-2[aria-checked='true']>.emotion-9 {
   -webkit-transform: translateX(
           60px
         ) translateX(-100%);
@@ -552,28 +521,14 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "No";
+.emotion-2[aria-checked='false']>.emotion-7 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "Yes";
+.emotion-2[aria-checked='true']>.emotion-7 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -582,6 +537,26 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+  position: absolute;
+  line-height: 20px;
+  width: calc(100% - 20px);
+}
+
+.emotion-8 {
   display: block;
   position: relative;
   border-radius: 34px;
@@ -610,6 +585,11 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
       />
       <span
         class="emotion-6 emotion-7"
+      >
+        No
+      </span>
+      <span
+        class="emotion-8 emotion-9"
       />
     </span>
   </label>
@@ -631,6 +611,24 @@ exports[`Switch renders correctly with custom label render on right 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: NaNpx;
+  text-align: right;
+}
+
+.emotion-4 {
   overflow: hidden;
   outline: none;
   width: 72px;
@@ -654,11 +652,11 @@ exports[`Switch renders correctly with custom label render on right 1`] = `
   opacity: 1;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-4[aria-checked='true'] {
   background-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7 {
+.emotion-4[aria-checked='true']>.emotion-9 {
   -webkit-transform: translateX(
           60px
         ) translateX(-100%);
@@ -674,36 +672,22 @@ exports[`Switch renders correctly with custom label render on right 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-4[aria-checked='false']>.emotion-3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-4[aria-checked='true']>.emotion-3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
-.emotion-4 {
+.emotion-6 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: block;
   position: relative;
   border-radius: 34px;
@@ -720,22 +704,28 @@ exports[`Switch renders correctly with custom label render on right 1`] = `
     class="emotion-0 emotion-1"
   >
     <span
-      aria-checked="false"
       class="emotion-2 emotion-3"
+    >
+      <span
+        style="font-weight: bold;"
+      >
+        Custom label rendered
+      </span>
+    </span>
+    <span
+      aria-checked="false"
+      class="emotion-4 emotion-5"
     >
       <input
         aria-checked="false"
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
         id="test"
         name="test"
         type="checkbox"
       />
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-8 emotion-9"
       />
-    </span>
-    <span>
-      Custom label rendered
     </span>
   </label>
 </DocumentFragment>
@@ -799,28 +789,14 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.emotion-9 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.emotion-9 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -838,6 +814,23 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   width: 20px;
   height: 20px;
   background-color: #4a4f62;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-left: 10px;
+  width: 88px;
 }
 
 <label
@@ -860,7 +853,7 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
       />
     </span>
     <span
-      style="margin-left: 10px; width: 88px;"
+      class="emotion-8 emotion-9"
     >
       Unchecked
     </span>
@@ -885,7 +878,7 @@ exports[`Switch renders correctly with custom width 1`] = `
 .emotion-2 {
   overflow: hidden;
   outline: none;
-  width: 72px;
+  width: 120px;
   height: 32px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -912,42 +905,28 @@ exports[`Switch renders correctly with custom width 1`] = `
 
 .emotion-2[aria-checked='true']>.emotion-7 {
   -webkit-transform: translateX(
-          60px
+          108px
         ) translateX(-100%);
   -moz-transform: translateX(
-          60px
+          108px
         ) translateX(-100%);
   -ms-transform: translateX(
-          60px
+          108px
         ) translateX(-100%);
   transform: translateX(
-          60px
+          108px
         ) translateX(-100%);
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -970,11 +949,11 @@ exports[`Switch renders correctly with custom width 1`] = `
 <label
     aria-checked="false"
     class="emotion-0 emotion-1"
-    width="120"
   >
     <span
       aria-checked="false"
       class="emotion-2 emotion-3"
+      width="120"
     >
       <input
         aria-checked="false"
@@ -1006,6 +985,24 @@ exports[`Switch renders correctly with labels on left 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 28px;
+  text-align: right;
+}
+
+.emotion-4 {
   overflow: hidden;
   outline: none;
   width: 72px;
@@ -1029,11 +1026,11 @@ exports[`Switch renders correctly with labels on left 1`] = `
   opacity: 1;
 }
 
-.emotion-2[aria-checked='true'] {
+.emotion-4[aria-checked='true'] {
   background-color: #4f0599;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7 {
+.emotion-4[aria-checked='true']>.emotion-9 {
   -webkit-transform: translateX(
           60px
         ) translateX(-100%);
@@ -1049,36 +1046,22 @@ exports[`Switch renders correctly with labels on left 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-4[aria-checked='false']>.emotion-3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-4[aria-checked='true']>.emotion-3 {
   color: #f6f5f7;
-  right: 20px;
+  left: 0;
 }
 
-.emotion-4 {
+.emotion-6 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: block;
   position: relative;
   border-radius: 34px;
@@ -1095,23 +1078,23 @@ exports[`Switch renders correctly with labels on left 1`] = `
     class="emotion-0 emotion-1"
   >
     <span
-      style="margin-right: 10px; width: 28px; text-align: right;"
+      class="emotion-2 emotion-3"
     >
       OFF
     </span>
     <span
       aria-checked="false"
-      class="emotion-2 emotion-3"
+      class="emotion-4 emotion-5"
     >
       <input
         aria-checked="false"
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
         id="test"
         name="test"
         type="checkbox"
       />
       <span
-        class="emotion-6 emotion-7"
+        class="emotion-8 emotion-9"
       />
     </span>
   </label>
@@ -1176,28 +1159,14 @@ exports[`Switch renders correctly with non default size 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 12px;
-  width: 16px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 12px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 12px;
-  width: 16px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #f6f5f7;
-  right: 12px;
+  left: 0;
 }
 
 .emotion-4 {
@@ -1298,28 +1267,14 @@ exports[`Switch renders correctly with non default variant 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-2[aria-checked='false']>.emotion-7:after {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='false']>.euthihp3 {
   color: #4a4f62;
-  left: 20px;
+  right: 0;
 }
 
-.emotion-2[aria-checked='true']>.emotion-7:before {
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: 20px;
-  width: 40px;
-  content: "";
+.emotion-2[aria-checked='true']>.euthihp3 {
   color: #45d6b5;
-  right: 20px;
+  left: 0;
 }
 
 .emotion-4 {
