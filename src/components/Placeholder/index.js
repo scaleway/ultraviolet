@@ -77,4 +77,4 @@ Placeholder.defaultProps = {
   col: undefined,
 }
 
-export { Placeholder }
+export default Placeholder
