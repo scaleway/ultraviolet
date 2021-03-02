@@ -71,14 +71,11 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 }
 
 .emotion-4 {
+  margin-right: 8px;
   width: 32px;
   height: 32px;
   border-radius: 12px;
   background-color: #dce1eb;
-}
-
-.emotion-4.emotion-4 {
-  margin-right: 8px;
 }
 
 .emotion-5 {
@@ -824,31 +821,17 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   overflow: hidden;
 }
 
-.emotion-2 {
+.emotion-1 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-2.emotion-2 {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.emotion-2>.emotion-3:nth-of-type(even) {
+.emotion-1>.emotion-4:nth-of-type(even) {
   background-color: #fafafb;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -861,22 +844,14 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   padding: 4px 8px;
 }
 
-.emotion-5.emotion-5 {
-  width: 240px;
-}
-
-.emotion-6 {
+.emotion-5 {
   height: 12px;
   width: 120px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
 
-.emotion-7.emotion-7 {
-  width: 360px;
-}
-
-.emotion-15 {
+.emotion-11 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -906,17 +881,17 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
         class="emotion-3 emotion-4"
       >
         <div
-          class="emotion-5"
+          style="width: 240px;"
         >
           <div
-            class="emotion-6"
+            class="emotion-5"
           />
         </div>
         <div
-          class="emotion-7"
+          style="width: 360px;"
         >
           <div
-            class="emotion-6"
+            class="emotion-5"
           />
         </div>
       </li>
@@ -924,23 +899,23 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
         class="emotion-3 emotion-4"
       >
         <div
-          class="emotion-5"
+          style="width: 240px;"
         >
           <div
-            class="emotion-6"
+            class="emotion-5"
           />
         </div>
         <div
-          class="emotion-7"
+          style="width: 360px;"
         >
           <div
-            class="emotion-6"
+            class="emotion-5"
           />
         </div>
       </li>
     </ul>
     <div
-      class="emotion-15"
+      class="emotion-11"
     />
   </div>
 </DocumentFragment>

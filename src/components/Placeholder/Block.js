@@ -22,6 +22,7 @@ const styles = {
     border-radius: 4px;
   `,
   icon: theme => css`
+    margin-right: 8px;
     width: 32px;
     height: 32px;
     border-radius: 12px;
@@ -35,7 +36,7 @@ const Block = props => (
       {Array.from({ length: 3 }, (_, i) => (
         <React.Fragment key={i}>
           <Box display="flex" alignItems="center" p={2}>
-            <Box css={styles.icon} mr={1} />
+            <div css={styles.icon} />
             <Line />
           </Box>
           {i !== 2 && <Separator my={1} />}

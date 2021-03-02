@@ -1,17 +1,16 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
 import Line from './Line'
 
-const StyledItem = styled(Box)`
+const StyledItem = styled.li`
   display: flex;
   align-items: center;
   height: 48px;
   padding: 4px 8px;
 `
 
-const StyledList = styled(Box)`
+const StyledList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
@@ -22,18 +21,18 @@ const StyledList = styled(Box)`
 `
 
 const Item = () => (
-  <StyledItem as="li">
-    <Box width={240}>
+  <StyledItem>
+    <div style={{ width: '240px' }}>
       <Line />
-    </Box>
-    <Box width={360}>
+    </div>
+    <div style={{ width: '360px' }}>
       <Line />
-    </Box>
+    </div>
   </StyledItem>
 )
 
-const List = ({ length, ...props }) => (
-  <StyledList as="ul" {...props}>
+const List = ({ length }) => (
+  <StyledList>
     {Array.from({ length }, (_, i) => (
       <Item key={`placeholder-list-${i}`} />
     ))}
