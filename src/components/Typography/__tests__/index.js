@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom'
 import { Typography, typographyVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
-jest.mock('../../Tooltip', () => ({
-  Tooltip: ({ children, ...props }) => children(props),
-}))
+jest.mock('../../Tooltip', () => ({ children, ...props }) => children(props))
 
 describe('Typography', () => {
   beforeEach(() => {
