@@ -4,11 +4,11 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -77,10 +77,13 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   background-color: #dce1eb;
 }
 
+.emotion-4.emotion-4 {
+  margin-right: 8px;
+}
+
 .emotion-5 {
   height: 12px;
   width: 120px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -117,6 +120,8 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -177,11 +182,11 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -292,10 +297,13 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
   background-color: #dce1eb;
 }
 
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
 .emotion-10 {
   height: 12px;
   width: 120px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -316,6 +324,8 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -456,11 +466,11 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -517,7 +527,6 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 .emotion-3 {
   height: 12px;
   width: 12.5px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -543,6 +552,8 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -569,11 +580,11 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -642,7 +653,6 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
 .emotion-6 {
   height: 12px;
   width: 120px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -663,6 +673,8 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -729,11 +741,11 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -746,7 +758,6 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
 .emotion-1 {
   height: 12px;
   width: 120px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -781,6 +792,8 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -800,11 +813,11 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -858,7 +871,6 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
 .emotion-6 {
   height: 12px;
   width: 120px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
@@ -883,6 +895,8 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div
@@ -939,11 +953,11 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    left: 0%;
+    left: -25%;
   }
 
   to {
-    left: 75%;
+    left: 100%;
   }
 }
 
@@ -959,6 +973,7 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: auto;
 }
 
 .emotion-1.emotion-1 {
@@ -1008,6 +1023,8 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
     );
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
 
 <div

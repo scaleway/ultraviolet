@@ -12,10 +12,10 @@ import Slider from './Slider'
 
 const shineAnimation = keyframes`
   from {
-    left: 0%;
+    left: -25%;
   }
   to {
-    left: 75%;
+    left: 100%;
   }
 `
 
@@ -34,6 +34,7 @@ const style = css`
     rgba(255, 255, 255, 0)
   );
   animation: ${shineAnimation} 1s linear infinite;
+  animation-direction: alternate;
 `
 
 const types = {

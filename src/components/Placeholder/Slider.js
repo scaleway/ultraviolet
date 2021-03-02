@@ -7,6 +7,7 @@ const styles = {
   container: css`
     height: 277px;
     display: flex;
+    overflow: auto;
   `,
   card: theme => css`
     border: 1px solid ${theme.colors.gray300};

@@ -35,7 +35,7 @@ const Block = props => (
       {Array.from({ length: 3 }, (_, i) => (
         <React.Fragment key={i}>
           <Box display="flex" alignItems="center" p={2}>
-            <Box css={styles.icon} />
+            <Box css={styles.icon} mr={1} />
             <Line />
           </Box>
           {i !== 2 && <Separator my={1} />}

@@ -35,7 +35,7 @@ const Blocks = ({ col, length, ...props }) => (
         {Array.from({ length }, (_, i) => (
           <Col xsmall={12 / col} key={`placeholder-block-${i}`}>
             <Box css={styles.block}>
-              <Box css={styles.icon} />
+              <Box css={styles.icon} mr={1} />
               <Line />
             </Box>
           </Col>

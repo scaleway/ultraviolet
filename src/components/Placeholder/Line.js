@@ -10,7 +10,6 @@ const randomSize = () => sizes[Math.floor(Math.random() * sizes.length)]
 const style = width => theme => css`
   height: 12px;
   width: ${width}px;
-  margin-left: 8px;
   border-radius: 10px;
   background-color: ${theme.colors.gray300};
 `
