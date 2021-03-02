@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Checkbox } from 'reakit'
 import { colors } from '../../theme'
-import { Tooltip } from '../Tooltip'
+import Tooltip from '../Tooltip'
 
 const PADDING = 6
 

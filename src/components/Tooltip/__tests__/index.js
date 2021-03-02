@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip } from '..'
+import Tooltip from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 describe('Tooltip', () => {

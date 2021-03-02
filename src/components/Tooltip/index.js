@@ -48,7 +48,7 @@ const style = {
   `,
 }
 
-export const Tooltip = ({
+const Tooltip = ({
   animated,
   children,
   text = '',
@@ -59,7 +59,8 @@ export const Tooltip = ({
   ...props
 }) => {
   const tooltip = useTooltipState({ animated, placement, visible, baseId })
-  useEffect(() => tooltip.setVisible(visible), [tooltip, visible])
+  const { setVisible } = tooltip
+  useEffect(() => setVisible(visible), [setVisible, visible])
 
   if (!children) return null
   if (Array.isArray(children)) {
@@ -132,3 +133,5 @@ Tooltip.defaultProps = {
   baseId: undefined,
   children: null,
 }
+
+export default Tooltip

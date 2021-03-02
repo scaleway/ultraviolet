@@ -1,5 +1,5 @@
 import React from 'react'
-import { Popper } from '..'
+import Popper from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 describe('Popper', () => {

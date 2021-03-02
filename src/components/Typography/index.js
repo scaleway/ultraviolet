@@ -4,7 +4,7 @@ import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { colors, fonts, radii } from '../../theme'
 import { Box } from '../Box'
-import { Tooltip } from '../Tooltip'
+import Tooltip from '../Tooltip'
 
 const styles = {
   main: css`

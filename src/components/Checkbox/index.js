@@ -45,7 +45,7 @@ const styles = {
   `,
 }
 
-export function Checkbox({
+const Checkbox = ({
   checked,
   onChange,
   onFocus,
@@ -61,7 +61,7 @@ export function Checkbox({
   autoFocus,
   typographyVariant,
   ...props
-}) {
+}) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
   const color = useMemo(() => {
@@ -73,9 +73,10 @@ export function Checkbox({
     return 'gray300'
   }, [disabled, valid, checked, error])
 
+  const { setState } = checkbox
   useEffect(() => {
-    checkbox.setState(checked)
-  }, [checkbox, checked])
+    setState(checked)
+  }, [setState, checked])
 
   return (
     <Box {...props}>
@@ -160,4 +161,4 @@ Checkbox.propTypes = {
   typographyVariant: PropTypes.oneOf(typographyVariants),
 }
 
-export default { Checkbox }
+export default Checkbox

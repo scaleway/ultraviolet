@@ -6,7 +6,7 @@ import React from 'react'
 import { Radio } from 'reakit'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Tooltip } from '../Tooltip'
+import Tooltip from '../Tooltip'
 
 const variants = {
   segment: () => css`

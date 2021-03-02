@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import { Modal } from '..'
+import Modal from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 const customDialogBackdropStyles = css`
