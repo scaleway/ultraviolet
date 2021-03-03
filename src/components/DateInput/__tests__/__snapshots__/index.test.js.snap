@@ -1,0 +1,2520 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput renders correctly currentLocale 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: gray;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-e36b77b6c965c8de9296ffc71cca7829"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-efea6fb25ce896f9ee43fd4be60df916"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-efea6fb25ce896f9ee43fd4be60df916"
+                id="label-e36b77b6c965c8de9296ffc71cca7829"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: gray;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          disabled=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-fa811872c8195f5c5212e3f15c79e3af"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-dbd51d12926899e7b8aaa23e608acd54"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-dbd51d12926899e7b8aaa23e608acd54"
+                id="label-fa811872c8195f5c5212e3f15c79e3af"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly disabled required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-4:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::placeholder {
+  opacity: 1;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: gray;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          value="12/17/1995"
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-18c7efc72cf18368f9d88dafacdde884"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-40287dd3f277b95616d9b37c13215b8c"
+                type="text"
+                value="Sun Dec 17 1995 03:24:00 GMT+0100 (heure normale d’Europe centrale)"
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-40287dd3f277b95616d9b37c13215b8c"
+                id="label-18c7efc72cf18368f9d88dafacdde884"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly error 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: #ef5774;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-5a81a5d31c6277d40e57d5b156835713"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-9f210721d3bc54152d0aa4140d4ac0dd"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-9f210721d3bc54152d0aa4140d4ac0dd"
+                id="label-5a81a5d31c6277d40e57d5b156835713"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly error disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: #ef5774;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          disabled=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-88e4733fbf6f7ca687f39f3b949e3822"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-d8954a7833892de8feede901c852e79d"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-d8954a7833892de8feede901c852e79d"
+                id="label-88e4733fbf6f7ca687f39f3b949e3822"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly error disabled required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: #ef5774;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          disabled=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-e86b67ccff05d7c4f8c8b84267b36d5e"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-4ef82096d0da52644e375c84482c9583"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-4ef82096d0da52644e375c84482c9583"
+                id="label-e86b67ccff05d7c4f8c8b84267b36d5e"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: gray;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-845a2c56357cc955551fe83f850a7991"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-61ba4d27a1e21bef14619e54aab64a7d"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-61ba4d27a1e21bef14619e54aab64a7d"
+                id="label-845a2c56357cc955551fe83f850a7991"
+              >
+                Date
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInput renders correctly with default props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-0 div.react-datepicker-wrapper {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__input-container {
+  display: block;
+}
+
+.emotion-0 div.react-datepicker__triangle {
+  display: none;
+}
+
+.emotion-0 div.react-datepicker__month-container {
+  padding: 16px;
+}
+
+.emotion-0 .react-datepicker-popper {
+  z-index: 1000;
+}
+
+.emotion-0 .calendar {
+  font-family: 'Asap';
+  border-color: #eeeeff;
+}
+
+.emotion-0 .calendar .react-datepicker__header {
+  color: #151a2d;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: inherit;
+  display: block;
+  padding-top: 0;
+  position: inherit;
+}
+
+.emotion-0 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
+}
+
+.emotion-0 .calendar .react-datepicker__month {
+  margin: 0;
+}
+
+.emotion-0 .calendar .react-datepicker__day-names {
+  margin-top: 8px;
+}
+
+.emotion-0 .calendar .react-datepicker__day-name {
+  font-family: 'Asap';
+  color: #151a2d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day {
+  color: #d4dae7;
+  font-size: 16px;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.emotion-0 .calendar .react-datepicker__day--selected {
+  color: #a365f6;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
+  background-color: #a365f6;
+  border-radius: 50%;
+}
+
+.emotion-0 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
+  border-radius: 50%;
+  background-color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled {
+  color: #a365f6;
+}
+
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
+  color: #a365f6;
+  background-color: transparent;
+}
+
+.emotion-3.emotion-3 {
+  position: relative;
+}
+
+.emotion-4 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #dbdbdf;
+}
+
+.emotion-4:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+  border-color: #4f0599;
+}
+
+.emotion-5 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.emotion-6 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-6.emotion-6 {
+  overflow: hidden;
+}
+
+.emotion-7.emotion-7 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+.emotion-8.emotion-8 {
+  height: 48px;
+  padding: 8px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #eeeeff;
+}
+
+.emotion-9.emotion-9 {
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  fill: gray;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-10.emotion-10 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="react-datepicker-wrapper"
+    >
+      <div
+        class="react-datepicker__input-container"
+      >
+        <div
+          class=""
+          value=""
+        >
+          <div
+            class="emotion-2"
+          >
+            <div
+              class="emotion-3"
+            >
+              <input
+                aria-controls="label-dad207a646ca1d8b539b562229958d2f"
+                autocomplete="on"
+                class="emotion-4"
+                id="input-d8b53b51ad71233bc362fa8914dfbc53"
+                type="text"
+                value=""
+              />
+              <label
+                aria-live="assertive"
+                class="emotion-5"
+                for="input-d8b53b51ad71233bc362fa8914dfbc53"
+                id="label-dad207a646ca1d8b539b562229958d2f"
+              >
+                Time
+              </label>
+            </div>
+            <div
+              class="emotion-6"
+            >
+              <div
+                class="emotion-7"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-8"
+          >
+            <hr
+              class="emotion-9"
+            />
+            <svg
+              class="sc-ui-icon emotion-10"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

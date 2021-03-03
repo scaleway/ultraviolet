@@ -1,0 +1,48 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import DateInput from '..'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
+
+<Meta title="Components/DateInput" />
+
+# DateInput
+
+## DateInput Uncontrolled
+
+DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).
+
+<Canvas>
+  <Story name="uncontrolled">
+    <BlockList>
+      <DateInput label="Time" />
+      <DateInput label="Date" disabled />
+      <DateInput label="Date" required />
+      <DateInput label="Date" error />
+      <DateInput label="Date" currentLocale="fr-FR" />
+      <DateInput label="Date" currentLocale="de-DE" />
+    </BlockList>
+  </Story>
+</Canvas>
+
+## DateInput Controlled
+
+Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components).
+
+<Canvas>
+  <Story name="Controlled">
+    <BlockList>
+      <ControlValue value={new Date('December 17, 1995 03:24:00')}>
+        {({ value, onChange }) => (
+          <DateInput label="Date" value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+      <ControlValue value={new Date('1995-12-17T03:24:00')}>
+        {({ value, onChange }) => (
+          <DateInput label="Date" value={value} onChange={onChange} />
+        )}
+      </ControlValue>
+    </BlockList>
+  </Story>
+</Canvas>
+
+<ArgsTable of={DateInput} />
