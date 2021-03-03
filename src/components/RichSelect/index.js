@@ -6,7 +6,7 @@ import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJSONString } from '../../helpers/isJSON'
 import { colors } from '../../theme'
-import { useUUID } from '../../utils'
+import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
@@ -526,8 +526,8 @@ function RichSelect({
   customComponents,
   ...props
 }) {
-  const labelId = useUUID('label')
-  const inputId = useUUID('input')
+  const labelId = getUUID('label')
+  const inputId = getUUID('input')
 
   const [isAnimated, setIsAnimated] = useState(false)
 
