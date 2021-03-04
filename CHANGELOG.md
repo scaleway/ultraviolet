@@ -1,3 +1,26 @@
+### [0.58.3](https://github.com/scaleway/scaleway-ui/compare/v0.58.2...v0.58.3) (2021-03-04)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.13.7 to 7.13.9 ([#96](https://github.com/scaleway/scaleway-ui/issues/96)) ([da59040](https://github.com/scaleway/scaleway-ui/commit/da59040ec407f96c1a4c9d34c9443d60065717ca))
+* **deps:** bump @scaleway/random-name from 1.2.1 to 1.3.0 ([#116](https://github.com/scaleway/scaleway-ui/issues/116)) ([3f44509](https://github.com/scaleway/scaleway-ui/commit/3f44509b70df54bc781b700d69463444219e747a))
+* **deps-dev:** bump @babel/core from 7.13.1 to 7.13.8 ([#97](https://github.com/scaleway/scaleway-ui/issues/97)) ([6d35c4f](https://github.com/scaleway/scaleway-ui/commit/6d35c4f7828c1ac84b3298e738695edba552955f))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#99](https://github.com/scaleway/scaleway-ui/issues/99)) ([06940f8](https://github.com/scaleway/scaleway-ui/commit/06940f89e912ef102d6ac5054c65bd4056fe74ec))
+* **deps-dev:** bump @babel/preset-env from 7.13.8 to 7.13.9 ([#98](https://github.com/scaleway/scaleway-ui/issues/98)) ([01b645c](https://github.com/scaleway/scaleway-ui/commit/01b645cbcc62738dcc2d3a7226090630fc58c9c8))
+* **deps-dev:** bump @commitlint/config-conventional ([#115](https://github.com/scaleway/scaleway-ui/issues/115)) ([2884b92](https://github.com/scaleway/scaleway-ui/commit/2884b92a1d3b2b582da69d785b3281c4e1b0695f))
+* **deps-dev:** bump @storybook/addon-essentials from 6.1.20 to 6.1.21 ([#107](https://github.com/scaleway/scaleway-ui/issues/107)) ([6e8ac42](https://github.com/scaleway/scaleway-ui/commit/6e8ac4291331037e06bef98db5d0ed234c51b9c2))
+* **deps-dev:** bump @storybook/addon-links from 6.1.20 to 6.1.21 ([#103](https://github.com/scaleway/scaleway-ui/issues/103)) ([5bf17f9](https://github.com/scaleway/scaleway-ui/commit/5bf17f9dcd3ad6832ca76fc99e3fa4a81ee4afe1))
+* **deps-dev:** bump @storybook/react from 6.1.20 to 6.1.21 ([#104](https://github.com/scaleway/scaleway-ui/issues/104)) ([154498f](https://github.com/scaleway/scaleway-ui/commit/154498f77e54d8ce9261a03b1d9bc70adaf8e2ef))
+* **deps-dev:** bump @storybook/theming from 6.1.20 to 6.1.21 ([#111](https://github.com/scaleway/scaleway-ui/issues/111)) ([c4ca4df](https://github.com/scaleway/scaleway-ui/commit/c4ca4df880ca77a81baf57b2f4af8a7840ec4d20))
+* **deps-dev:** bump postcss from 8.2.6 to 8.2.7 ([#110](https://github.com/scaleway/scaleway-ui/issues/110)) ([49cf977](https://github.com/scaleway/scaleway-ui/commit/49cf97797ac27285946f2dcb5042269e6d8e8a52))
+* **deps-dev:** bump semantic-release from 17.4.0 to 17.4.1 ([#112](https://github.com/scaleway/scaleway-ui/issues/112)) ([f4e3d81](https://github.com/scaleway/scaleway-ui/commit/f4e3d8103f1d123f53905f316a4defa094b05fb7))
+
+
+### :bug: Bug Fixes
+
+* adds yalc into readme ([#113](https://github.com/scaleway/scaleway-ui/issues/113)) ([a9f4aaf](https://github.com/scaleway/scaleway-ui/commit/a9f4aaff1252d07ac7ab60cff0f59c4895ad9119))
+
 ### [0.58.2](https://github.com/scaleway/scaleway-ui/compare/v0.58.1...v0.58.2) (2021-03-02)
 
 
