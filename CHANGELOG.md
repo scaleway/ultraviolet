@@ -1,3 +1,10 @@
+## [0.59.0](https://github.com/scaleway/scaleway-ui/compare/v0.58.4...v0.59.0) (2021-03-04)
+
+
+### :gear: Features
+
+* add some new functionnalities to switch component ([#82](https://github.com/scaleway/scaleway-ui/issues/82)) ([b73468a](https://github.com/scaleway/scaleway-ui/commit/b73468a6273734d96b7b082a74a66f83e2d3766a))
+
 ### [0.58.4](https://github.com/scaleway/scaleway-ui/compare/v0.58.3...v0.58.4) (2021-03-04)
 
 
