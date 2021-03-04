@@ -1,3 +1,15 @@
+### [0.58.4](https://github.com/scaleway/scaleway-ui/compare/v0.58.3...v0.58.4) (2021-03-04)
+
+
+### :bug: Bug Fixes
+
+* add orange as text color in information ([9629a1e](https://github.com/scaleway/scaleway-ui/commit/9629a1e15d1675113a2d7e1ea687af9d9076cbfb))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/eslint-config-react from 1.3.1 to 1.4.0 ([#114](https://github.com/scaleway/scaleway-ui/issues/114)) ([86f5acd](https://github.com/scaleway/scaleway-ui/commit/86f5acd7d6b1fd7bf6bf5dc62c3b4d4da8db524b))
+
 ### [0.58.3](https://github.com/scaleway/scaleway-ui/compare/v0.58.2...v0.58.3) (2021-03-04)
 
 
