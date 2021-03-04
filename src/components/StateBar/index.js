@@ -42,8 +42,10 @@ const Bar = ({ unlimited, value, ...props }) => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
     if (value >= 90) return 'warning'
+
     return 'primary'
   }, [unlimited, value])
+
   return (
     <ProgressBar
       css={line}

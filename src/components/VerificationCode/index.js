@@ -78,6 +78,7 @@ export const VerificationCode = ({
     ) {
       newValues[index] = ''
       setValues(newValues)
+
       return
     }
 
@@ -169,6 +170,7 @@ export const VerificationCode = ({
     setValues(vals => {
       const newArray = vals.slice()
       newArray.splice(currentIndex, pastedValue.length, ...pastedValue)
+
       return newArray
     })
   }

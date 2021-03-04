@@ -13,6 +13,7 @@ const formatTextToAvatar = text => {
 
   if (text.split(' ').length > 1) {
     const [a, b] = text.split(' ')
+
     return `${a[0]}${b[0]}`.toUpperCase()
   }
 

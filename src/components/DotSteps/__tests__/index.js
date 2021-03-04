@@ -4,6 +4,7 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 const DotStepsComponent = () => {
   const [step, setStep] = useState(2)
+
   return <DotSteps steps={10} step={step} setStep={setStep} />
 }
 describe('DotSteps', () => {

@@ -264,6 +264,7 @@ export const icons = Object.keys(ICONS)
 const style = ({ verticalAlign, size, color }) => {
   const pxSize =
     typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
+
   return css`
     fill: ${colors[color] ?? color};
     vertical-align: ${verticalAlign};

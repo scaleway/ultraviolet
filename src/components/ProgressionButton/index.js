@@ -60,6 +60,7 @@ const ProgressionButton = ({
 }) => {
   const createdAt = typeof creation === 'string' ? new Date(creation) : creation
   const delay = Math.floor((Date.now() - createdAt.getTime()) / 1000)
+
   return (
     <ProgressionContainer role="progressbar" {...props}>
       <Progression color={color} delay={delay} duration={duration} />

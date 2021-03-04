@@ -46,6 +46,7 @@ Action.propTypes = {
         `Invalid prop ${propName} supplied to ${componentName}. Must be a "number" and inferior or equal to 32`,
       )
     }
+
     return null
   },
   key: PropTypes.string,

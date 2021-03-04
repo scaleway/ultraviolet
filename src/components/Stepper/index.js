@@ -149,6 +149,7 @@ const Stepper = ({
         parseInt(minValue, 10),
         parseInt(maxValue, 10),
       )
+
       return boundedValue
     })
   }
@@ -167,11 +168,13 @@ const Stepper = ({
       const properVal = roundStep(currentValue, step)
       if (properVal < minValue) {
         if (onMinCrossed) onMinCrossed()
+
         return minValue
       }
 
       if (inputValue > maxValue) {
         if (onMaxCrossed) onMaxCrossed()
+
         return maxValue
       }
 

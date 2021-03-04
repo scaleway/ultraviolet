@@ -39,5 +39,11 @@ module.exports = {
         'no-alert': 'off',
       },
     },
+    {
+      files: ['**/__stories__/**/*.mdx'],
+      rules: {
+        'padding-line-between-statements': 'off',
+      },
+    },
   ],
 }

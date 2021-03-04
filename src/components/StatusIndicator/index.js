@@ -66,6 +66,7 @@ StatusIndicator.propTypes = {
         )}\` Validation failed.`,
       )
     }
+
     return null
   },
   tooltip: PropTypes.string,

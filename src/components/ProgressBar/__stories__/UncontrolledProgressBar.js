@@ -10,6 +10,7 @@ const UncontrolledProgressBar = props => {
       )
     }, Math.random() * 400 + 800)
   }, [])
+
   return <ProgressBar value={value} {...props} />
 }
 

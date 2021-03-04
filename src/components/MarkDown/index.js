@@ -16,6 +16,7 @@ const headingRenderer = ({ node, ...props }) => {
     )
   }
   const { heading: Heading } = ReactMarkDown.renderers
+
   return <Heading {...props} />
 }
 

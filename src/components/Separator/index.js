@@ -8,6 +8,7 @@ import { Icon, icons } from '../Icon'
 const styles = {
   hr: ({ direction, color, thickness, icon }) => {
     const thicknessValue = `${thickness}px`
+
     return css`
       margin: 0;
       border: 0;
@@ -43,6 +44,7 @@ export function Separator({ direction, thickness, color, icon, ...props }) {
       </Box>
     )
   }
+
   return (
     <Box as="hr" css={styles.hr({ direction, thickness, color })} {...props} />
   )

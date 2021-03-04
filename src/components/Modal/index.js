@@ -185,6 +185,7 @@ const containerStyles = css`
 
 const Disclosure = memo(({ disclosure, dialog }) => {
   const innerRef = useRef(disclosure(dialog))
+
   return (
     <DialogDisclosure {...dialog} ref={innerRef} {...disclosure.props}>
       {disclosureProps =>

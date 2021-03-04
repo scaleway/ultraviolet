@@ -111,6 +111,7 @@ export function Slider({ children, ...props }) {
   useEffect(() => cleanUp)
   const [dragStartX, setDragStartX] = useState(0)
   const [deltaX, setDeltaX] = useState(0)
+
   return (
     <Box css={wrapper} {...props}>
       {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
