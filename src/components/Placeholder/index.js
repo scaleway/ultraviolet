@@ -51,7 +51,13 @@ const Placeholder = ({ type, length, width, height, col, ...props }) => {
   const Component = types[type]
 
   return (
-    <Box position="relative" display="block" {...props} overflow="hidden">
+    <Box
+      position="relative"
+      display="block"
+      width="100%"
+      overflow="hidden"
+      {...props}
+    >
       <Component length={length} width={width} height={height} col={col} />
 
       <div css={style} />
