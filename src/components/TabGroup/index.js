@@ -36,8 +36,10 @@ const computeBarProperties = (tabsWidth, index) => {
     if (idx < index) {
       return acc + cur
     }
+
     return acc
   }, 0)
+
   return [width, left]
 }
 
@@ -56,6 +58,7 @@ const TabGroup = ({
       setTabsWidth(prev => {
         const all = [...prev]
         all[index] = width
+
         return all
       }),
     [setTabsWidth],

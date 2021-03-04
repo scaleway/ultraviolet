@@ -6,12 +6,12 @@ export const variants = {
   default: ({ theme: { colors } }) => ({
     focus: colors.primary,
     selected: colors.primary,
-    disabled: colors.gray700,
+    disabled: colors.gray550,
   }),
   primary: ({ theme: { colors } }) => ({
     focus: colors.primary,
     selected: colors.primary,
-    disabled: colors.gray700,
+    disabled: colors.gray550,
   }),
 }
 
@@ -31,42 +31,30 @@ export const StyledTab = styled.span`
   user-select: none;
   touch-action: manipulation;
 
-  &[aria-selected='true'] {
-    color: ${({ theme: { colors } }) => colors.primary};
-  }
-
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-    opacity: 0.5;
-    &:hover,
-    &:focus {
-      color: ${({ theme: { colors } }) => colors.gray700} !important;
-    }
-  }
-
   ${({ variant, theme }) => {
     const colors = variants[variant]
       ? variants[variant]({ theme })
       : variants.default({ theme })
+
     return `
       transition: color 0.2s;
       &:hover,
       &:active,
       &:focus {
-        color: ${colors.focus} !important;
+        color: ${colors.focus};
         text-decoration: none;
       }
 
       &[aria-selected='true'] {
-        color: ${colors.selected} !important;
+        color: ${colors.selected};
       }
 
-      &[aria-disbabled='true'] {
+      &[aria-disabled='true'] {
       cursor: not-allowed;
       opacity: 0.5;
       &:hover,
       &:focus {
-        color: ${colors.disabled} !important;
+        color: ${colors.disabled};
       }
     }
     `
@@ -85,7 +73,6 @@ const Tab = ({
   onClick,
   hasEndedCount,
   as,
-  ...props
 }) => {
   const ref = useRef({})
 
@@ -113,7 +100,6 @@ const Tab = ({
       aria-disabled={disabled}
       onClick={onClick}
       variant={variant}
-      {...props}
     >
       {children}
     </StyledTab>
@@ -129,11 +115,7 @@ Tab.propTypes = {
   index: PropTypes.number,
   onClick: PropTypes.func,
   hasEndedCount: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.node,
-    PropTypes.string,
-  ]),
+  children: PropTypes.node,
   name: PropTypes.string,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
 }

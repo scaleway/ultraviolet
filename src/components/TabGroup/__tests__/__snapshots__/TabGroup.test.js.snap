@@ -103,6 +103,14 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   transition: color 0.2s;
 }
 
+.emotion-3:hover,
+.emotion-3:active,
+.emotion-3:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-3[aria-selected='true'] {
   color: #4f0599;
 }
@@ -114,29 +122,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
 
 .emotion-3[aria-disabled='true']:hover,
 .emotion-3[aria-disabled='true']:focus {
-  color: #4a4f62!important;
-}
-
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
-  color: #4f0599!important;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-3[aria-selected='true'] {
-  color: #4f0599!important;
-}
-
-.emotion-3[aria-disbabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-3[aria-disbabled='true']:hover,
-.emotion-3[aria-disbabled='true']:focus {
-  color: #4a4f62!important;
+  color: #b2b6c3;
 }
 
 .emotion-9 {
@@ -248,6 +234,14 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   transition: color 0.2s;
 }
 
+.emotion-3:hover,
+.emotion-3:active,
+.emotion-3:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-3[aria-selected='true'] {
   color: #4f0599;
 }
@@ -259,29 +253,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
 
 .emotion-3[aria-disabled='true']:hover,
 .emotion-3[aria-disabled='true']:focus {
-  color: #4a4f62!important;
-}
-
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
-  color: #4f0599!important;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-3[aria-selected='true'] {
-  color: #4f0599!important;
-}
-
-.emotion-3[aria-disbabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-3[aria-disbabled='true']:hover,
-.emotion-3[aria-disbabled='true']:focus {
-  color: #4a4f62!important;
+  color: #b2b6c3;
 }
 
 .emotion-9 {
@@ -340,7 +312,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TabGroup renders correctly with Tabs with name prop 1`] = `
+exports[`TabGroup renders correctly with Tabs with prop 1`] = `
 <DocumentFragment>
   .emotion-0.emotion-0 {
   position: relative;
@@ -396,6 +368,14 @@ exports[`TabGroup renders correctly with Tabs with name prop 1`] = `
   transition: color 0.2s;
 }
 
+.emotion-3:hover,
+.emotion-3:active,
+.emotion-3:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-3[aria-selected='true'] {
   color: #4f0599;
 }
@@ -407,29 +387,7 @@ exports[`TabGroup renders correctly with Tabs with name prop 1`] = `
 
 .emotion-3[aria-disabled='true']:hover,
 .emotion-3[aria-disabled='true']:focus {
-  color: #4a4f62!important;
-}
-
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
-  color: #4f0599!important;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-3[aria-selected='true'] {
-  color: #4f0599!important;
-}
-
-.emotion-3[aria-disbabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-3[aria-disbabled='true']:hover,
-.emotion-3[aria-disbabled='true']:focus {
-  color: #4a4f62!important;
+  color: #b2b6c3;
 }
 
 .emotion-9 {
@@ -451,7 +409,7 @@ exports[`TabGroup renders correctly with Tabs with name prop 1`] = `
     >
       <span
         aria-disabled="false"
-        aria-selected="false"
+        aria-selected="true"
         class="emotion-3 emotion-4"
         role="tab"
         tabindex="0"
@@ -479,7 +437,7 @@ exports[`TabGroup renders correctly with Tabs with name prop 1`] = `
     </div>
     <div
       class="emotion-9 emotion-10"
-      style="left: 0px;"
+      style="width: 0px; left: 0px;"
     />
   </div>
 </DocumentFragment>
@@ -541,6 +499,14 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   transition: color 0.2s;
 }
 
+.emotion-3:hover,
+.emotion-3:active,
+.emotion-3:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-3[aria-selected='true'] {
   color: #4f0599;
 }
@@ -552,29 +518,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
 
 .emotion-3[aria-disabled='true']:hover,
 .emotion-3[aria-disabled='true']:focus {
-  color: #4a4f62!important;
-}
-
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
-  color: #4f0599!important;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-3[aria-selected='true'] {
-  color: #4f0599!important;
-}
-
-.emotion-3[aria-disbabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-3[aria-disbabled='true']:hover,
-.emotion-3[aria-disbabled='true']:focus {
-  color: #4a4f62!important;
+  color: #b2b6c3;
 }
 
 .emotion-8 {
@@ -611,6 +555,14 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   transition: color 0.2s;
 }
 
+.emotion-8:hover,
+.emotion-8:active,
+.emotion-8:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .emotion-8[aria-selected='true'] {
   color: #4f0599;
 }
@@ -622,29 +574,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
 
 .emotion-8[aria-disabled='true']:hover,
 .emotion-8[aria-disabled='true']:focus {
-  color: #4a4f62!important;
-}
-
-.emotion-8:hover,
-.emotion-8:active,
-.emotion-8:focus {
-  color: #4f0599!important;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8[aria-selected='true'] {
-  color: #4f0599!important;
-}
-
-.emotion-8[aria-disbabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-8[aria-disbabled='true']:hover,
-.emotion-8[aria-disbabled='true']:focus {
-  color: #4a4f62!important;
+  color: #b2b6c3;
 }
 
 .emotion-9 {

@@ -12,9 +12,9 @@ describe('TabGroup', () => {
     shouldMatchEmotionSnapshot(<TabGroup variant="default" />)
   })
 
-  test('renders correctly with Tabs with name prop', () => {
+  test('renders correctly with Tabs with prop', () => {
     shouldMatchEmotionSnapshot(
-      <TabGroup>
+      <TabGroup selected={0} onChange={() => {}}>
         <TabGroup.Tab>First</TabGroup.Tab>
         <TabGroup.Tab>Second</TabGroup.Tab>
         <TabGroup.Tab>Very long tab name</TabGroup.Tab>
@@ -24,7 +24,7 @@ describe('TabGroup', () => {
 
   test('renders correctly with Tabs and last disabled', () => {
     shouldMatchEmotionSnapshot(
-      <TabGroup selected={2}>
+      <TabGroup selected={2} onChange={() => {}}>
         <TabGroup.Tab>First</TabGroup.Tab>
         <TabGroup.Tab>Second</TabGroup.Tab>
         <TabGroup.Tab disabled>Very long tab name</TabGroup.Tab>
