@@ -93,7 +93,7 @@ const Tab = ({
     if (ref && ref.current) {
       setInternTabsWidth(ref.current.offsetWidth, index)
     }
-  }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name])
+  }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
 
   return typeof children === 'function' ? (
     children({ ref, onClick, disabled, isSelected, variant })
