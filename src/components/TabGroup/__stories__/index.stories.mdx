@@ -1,47 +1,40 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import TabGroup from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import TabGroup from '../TabGroup'
-import TouchableTabGroup from '../TouchableTabGroup'
 
 <Meta title="Components/TabGroup" />
 
 # TabGroup
 
-## Infos
-
-Every `Tab` must have a `name` prop set.
-
 ## Basic
 
 <Canvas>
   <Story name="basic">
-    <ControlValue value="first">
+    <ControlValue value={0}>
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
-          <TabGroup.Tab name="first">First</TabGroup.Tab>
-          <TabGroup.Tab name="second">Second</TabGroup.Tab>
-          <TabGroup.Tab name="three">Very long tab name</TabGroup.Tab>
+          <TabGroup.Tab>First</TabGroup.Tab>
+          <TabGroup.Tab>Second</TabGroup.Tab>
+          <TabGroup.Tab>Very long tab name</TabGroup.Tab>
         </TabGroup>
       )}
     </ControlValue>
   </Story>
 </Canvas>
 
-## Touchable
+## Named tabs
 
-Use a `TouchableTabGroup` when you can control your `TabGroup`.
-`Tab` is a `Touchable` component.
-
-Here, `TouchableTabGroup` selected prop is set when `onChange` is trigger (so, if you click on a `Tab`)
+Every `Tab` can have a `name` prop set, like this the selected tab will not be the index of the tab but it&apos;s name
 
 <Canvas>
-  <Story name="touchable">
+  <Story name="named">
     <ControlValue value="first">
       {({ value, onChange }) => (
-        <TouchableTabGroup onChange={onChange} selected={value}>
-          <TouchableTabGroup.Tab name="first">First</TouchableTabGroup.Tab>
-          <TouchableTabGroup.Tab name="second">Second</TouchableTabGroup.Tab>
-        </TouchableTabGroup>
+        <TabGroup onChange={onChange} selected={value}>
+          <TabGroup.Tab name="first">First</TabGroup.Tab>
+          <TabGroup.Tab name="second">Second</TabGroup.Tab>
+          <TabGroup.Tab name="third">Very long tab name</TabGroup.Tab>
+        </TabGroup>
       )}
     </ControlValue>
   </Story>
@@ -51,34 +44,32 @@ Here, `TouchableTabGroup` selected prop is set when `onChange` is trigger (so, i
 
 You can disable a `Tab` using the `disabled` prop
 
-### Touchable
-
 <Canvas>
   <Story name="disabled">
-    <ControlValue value="first">
+    <ControlValue value={1}>
       {({ value, onChange }) => (
-        <TouchableTabGroup onChange={onChange} selected={value}>
-          <TouchableTabGroup.Tab name="first">First</TouchableTabGroup.Tab>
-          <TouchableTabGroup.Tab name="second">Second</TouchableTabGroup.Tab>
-          <TouchableTabGroup.Tab disabled name="disabled">
-            Disabled tab
-          </TouchableTabGroup.Tab>
-        </TouchableTabGroup>
+        <TabGroup onChange={onChange} selected={value}>
+          <TabGroup.Tab>First</TabGroup.Tab>
+          <TabGroup.Tab>Second</TabGroup.Tab>
+          <TabGroup.Tab disabled>Disabled tab</TabGroup.Tab>
+        </TabGroup>
       )}
     </ControlValue>
   </Story>
 </Canvas>
 
-### Basic
+## Custom tab component
+
+You can change the component used for the `Tab` using the `as` prop
 
 <Canvas>
-  <Story name="basic-disabled">
-    <ControlValue value="second">
+  <Story name="as">
+    <ControlValue value={1}>
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
-          <TabGroup.Tab name="first">First</TabGroup.Tab>
-          <TabGroup.Tab name="second">Second</TabGroup.Tab>
-          <TabGroup.Tab disabled name="disabled">
+          <TabGroup.Tab as="a">First</TabGroup.Tab>
+          <TabGroup.Tab as="a">Second</TabGroup.Tab>
+          <TabGroup.Tab disabled as="div">
             Disabled tab
           </TabGroup.Tab>
         </TabGroup>
@@ -87,4 +78,4 @@ You can disable a `Tab` using the `disabled` prop
   </Story>
 </Canvas>
 
-<ArgsTable of={TouchableTabGroup} />
+<ArgsTable of={TabGroup} />

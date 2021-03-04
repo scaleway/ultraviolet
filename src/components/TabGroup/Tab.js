@@ -51,8 +51,10 @@ export const StyledTab = styled.span`
     return `
       transition: color 0.2s;
       &:hover,
+      &:active,
       &:focus {
         color: ${colors.focus} !important;
+        text-decoration: none;
       }
 
       &[aria-selected='true'] {
@@ -82,6 +84,8 @@ const Tab = ({
   name,
   onClick,
   hasEndedCount,
+  as,
+  ...props
 }) => {
   const ref = useRef({})
 
@@ -95,13 +99,13 @@ const Tab = ({
     children({ ref, onClick, disabled, isSelected, variant })
   ) : (
     <StyledTab
+      as={as}
       aria-label={name}
       ref={ref}
       role="tab"
       tabIndex={0}
       onKeyDown={event => {
-        if (['Enter', 'Space'].includes(event.code)) {
-          event.preventDefault()
+        if (['Enter', 'Space'].includes(event.code) && onClick) {
           onClick(event)
         }
       }}
@@ -109,6 +113,7 @@ const Tab = ({
       aria-disabled={disabled}
       onClick={onClick}
       variant={variant}
+      {...props}
     >
       {children}
     </StyledTab>
@@ -129,7 +134,8 @@ Tab.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
 }
 
 Tab.defaultProps = {
@@ -142,6 +148,8 @@ Tab.defaultProps = {
   onClick: () => {},
   hasEndedCount: false,
   children: null,
+  as: undefined,
+  name: undefined,
 }
 
 export default Tab

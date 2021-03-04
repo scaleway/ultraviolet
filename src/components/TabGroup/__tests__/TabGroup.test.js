@@ -1,6 +1,7 @@
 import React from 'react'
+import TabGroup from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import TabGroup from '../TabGroup'
+import { Box } from '../../Box'
 
 describe('TabGroup', () => {
   test('renders correctly', () => {
@@ -14,19 +15,41 @@ describe('TabGroup', () => {
   test('renders correctly with Tabs with name prop', () => {
     shouldMatchEmotionSnapshot(
       <TabGroup>
-        <TabGroup.Tab name="first">First</TabGroup.Tab>
-        <TabGroup.Tab name="second">Second</TabGroup.Tab>
-        <TabGroup.Tab name="three">Very long tab name</TabGroup.Tab>
+        <TabGroup.Tab>First</TabGroup.Tab>
+        <TabGroup.Tab>Second</TabGroup.Tab>
+        <TabGroup.Tab>Very long tab name</TabGroup.Tab>
       </TabGroup>,
     )
   })
 
   test('renders correctly with Tabs and last disabled', () => {
     shouldMatchEmotionSnapshot(
+      <TabGroup selected={2}>
+        <TabGroup.Tab>First</TabGroup.Tab>
+        <TabGroup.Tab>Second</TabGroup.Tab>
+        <TabGroup.Tab disabled>Very long tab name</TabGroup.Tab>
+      </TabGroup>,
+    )
+  })
+
+  test('renders correctly with Tabs name', () => {
+    shouldMatchEmotionSnapshot(
       <TabGroup selected="second">
         <TabGroup.Tab name="first">First</TabGroup.Tab>
         <TabGroup.Tab name="second">Second</TabGroup.Tab>
         <TabGroup.Tab name="three" disabled>
+          Very long tab name
+        </TabGroup.Tab>
+      </TabGroup>,
+    )
+  })
+
+  test('renders correctly with custom Tabs component', () => {
+    shouldMatchEmotionSnapshot(
+      <TabGroup>
+        <TabGroup.Tab as="div">First</TabGroup.Tab>
+        <TabGroup.Tab as="a">Second</TabGroup.Tab>
+        <TabGroup.Tab as={Box} disabled>
           Very long tab name
         </TabGroup.Tab>
       </TabGroup>,

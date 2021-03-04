@@ -51,8 +51,11 @@ exports[`Tab renders correctly 1`] = `
 }
 
 .emotion-0:hover,
+.emotion-0:active,
 .emotion-0:focus {
   color: #4f0599!important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -133,8 +136,11 @@ exports[`Tab renders correctly when disabled 1`] = `
 }
 
 .emotion-0:hover,
+.emotion-0:active,
 .emotion-0:focus {
   color: #4f0599!important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -215,8 +221,11 @@ exports[`Tab renders correctly with variant default 1`] = `
 }
 
 .emotion-0:hover,
+.emotion-0:active,
 .emotion-0:focus {
   color: #4f0599!important;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0[aria-selected='true'] {
