@@ -79,7 +79,7 @@ const StyledSpan = styled('span', {
       case 'inside':
       default:
         return `
-          font-weight: 800;
+          font-weight: 700;
           font-size: 16px;
           position: absolute;
           line-height: ${SIZES[size].ball}px;
@@ -163,19 +163,17 @@ const Switch = ({
   variant,
   width,
 }) => {
-  const renderLabel = () => {
-    const spanProps = {
-      labeled,
-      onLabel,
-      offLabel,
-      size,
-      width,
-    }
-    if (checked) {
-      return <StyledSpan {...spanProps}>{onLabel}</StyledSpan>
-    }
-    return <StyledSpan {...spanProps}>{offLabel}</StyledSpan>
-  }
+  const renderLabel = () => (
+    <StyledSpan
+      labeled={labeled}
+      onLabel={onLabel}
+      offLabel={offLabel}
+      size={size}
+      width={width}
+    >
+      {checked ? onLabel : offLabel}
+    </StyledSpan>
+  )
 
   const renderInsideLabel = labeled && labeled !== 'right' && labeled !== 'left'
 
@@ -240,4 +238,4 @@ Switch.defaultProps = {
   width: undefined,
 }
 
-export { Switch }
+export default Switch

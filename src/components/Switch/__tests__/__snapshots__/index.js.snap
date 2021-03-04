@@ -194,7 +194,7 @@ exports[`Switch renders correctly labeled 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   position: absolute;
   line-height: 20px;
@@ -345,6 +345,403 @@ exports[`Switch renders correctly when checked 1`] = `
       <span
         class="emotion-6 emotion-7"
       />
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Switch renders correctly when checked and labeled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  outline: none;
+  width: 72px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b2b6c3;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  padding: 0 6px;
+  opacity: 1;
+}
+
+.emotion-2[aria-checked='true'] {
+  background-color: #4f0599;
+}
+
+.emotion-2[aria-checked='true']>.emotion-9 {
+  -webkit-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -moz-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -ms-transform: translateX(
+          60px
+        ) translateX(-100%);
+  transform: translateX(
+          60px
+        ) translateX(-100%);
+  background-color: #f6f5f7;
+}
+
+.emotion-2[aria-checked='false']>.emotion-7 {
+  color: #4a4f62;
+  right: 0;
+}
+
+.emotion-2[aria-checked='true']>.emotion-7 {
+  color: #f6f5f7;
+  left: 0;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  line-height: 20px;
+  width: calc(100% - 20px);
+}
+
+.emotion-8 {
+  display: block;
+  position: relative;
+  border-radius: 34px;
+  pointer-events: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  width: 20px;
+  height: 20px;
+  background-color: #4a4f62;
+}
+
+<label
+    aria-checked="true"
+    class="emotion-0 emotion-1"
+  >
+    <span
+      aria-checked="true"
+      class="emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="true"
+        checked=""
+        class="emotion-4 emotion-5"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+      <span
+        class="emotion-6 emotion-7"
+      >
+        ON
+      </span>
+      <span
+        class="emotion-8 emotion-9"
+      />
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Switch renders correctly when checked and labeled on left 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 28px;
+  text-align: right;
+}
+
+.emotion-4 {
+  overflow: hidden;
+  outline: none;
+  width: 72px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b2b6c3;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  padding: 0 6px;
+  opacity: 1;
+}
+
+.emotion-4[aria-checked='true'] {
+  background-color: #4f0599;
+}
+
+.emotion-4[aria-checked='true']>.emotion-9 {
+  -webkit-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -moz-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -ms-transform: translateX(
+          60px
+        ) translateX(-100%);
+  transform: translateX(
+          60px
+        ) translateX(-100%);
+  background-color: #f6f5f7;
+}
+
+.emotion-4[aria-checked='false']>.emotion-3 {
+  color: #4a4f62;
+  right: 0;
+}
+
+.emotion-4[aria-checked='true']>.emotion-3 {
+  color: #f6f5f7;
+  left: 0;
+}
+
+.emotion-6 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-8 {
+  display: block;
+  position: relative;
+  border-radius: 34px;
+  pointer-events: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  width: 20px;
+  height: 20px;
+  background-color: #4a4f62;
+}
+
+<label
+    aria-checked="true"
+    class="emotion-0 emotion-1"
+  >
+    <span
+      class="emotion-2 emotion-3"
+    >
+      ON
+    </span>
+    <span
+      aria-checked="true"
+      class="emotion-4 emotion-5"
+    >
+      <input
+        aria-checked="true"
+        checked=""
+        class="emotion-6 emotion-7"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+      <span
+        class="emotion-8 emotion-9"
+      />
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Switch renders correctly when checked and labeled on right 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  outline: none;
+  width: 72px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b2b6c3;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  padding: 0 6px;
+  opacity: 1;
+}
+
+.emotion-2[aria-checked='true'] {
+  background-color: #4f0599;
+}
+
+.emotion-2[aria-checked='true']>.emotion-7 {
+  -webkit-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -moz-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -ms-transform: translateX(
+          60px
+        ) translateX(-100%);
+  transform: translateX(
+          60px
+        ) translateX(-100%);
+  background-color: #f6f5f7;
+}
+
+.emotion-2[aria-checked='false']>.emotion-9 {
+  color: #4a4f62;
+  right: 0;
+}
+
+.emotion-2[aria-checked='true']>.emotion-9 {
+  color: #f6f5f7;
+  left: 0;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-6 {
+  display: block;
+  position: relative;
+  border-radius: 34px;
+  pointer-events: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  width: 20px;
+  height: 20px;
+  background-color: #4a4f62;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-left: 10px;
+  width: 28px;
+}
+
+<label
+    aria-checked="true"
+    class="emotion-0 emotion-1"
+  >
+    <span
+      aria-checked="true"
+      class="emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="true"
+        checked=""
+        class="emotion-4 emotion-5"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+      <span
+        class="emotion-6 emotion-7"
+      />
+    </span>
+    <span
+      class="emotion-8 emotion-9"
+    >
+      ON
     </span>
   </label>
 </DocumentFragment>
@@ -549,7 +946,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   position: absolute;
   line-height: 20px;
@@ -596,7 +993,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Switch renders correctly with custom label render on right 1`] = `
+exports[`Switch renders correctly with custom label render on left 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -964,6 +1361,139 @@ exports[`Switch renders correctly with custom width 1`] = `
       />
       <span
         class="emotion-6 emotion-7"
+      />
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Switch renders correctly with label inside 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  overflow: hidden;
+  outline: none;
+  width: 72px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b2b6c3;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  padding: 0 6px;
+  opacity: 1;
+}
+
+.emotion-2[aria-checked='true'] {
+  background-color: #4f0599;
+}
+
+.emotion-2[aria-checked='true']>.emotion-9 {
+  -webkit-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -moz-transform: translateX(
+          60px
+        ) translateX(-100%);
+  -ms-transform: translateX(
+          60px
+        ) translateX(-100%);
+  transform: translateX(
+          60px
+        ) translateX(-100%);
+  background-color: #f6f5f7;
+}
+
+.emotion-2[aria-checked='false']>.emotion-7 {
+  color: #4a4f62;
+  right: 0;
+}
+
+.emotion-2[aria-checked='true']>.emotion-7 {
+  color: #f6f5f7;
+  left: 0;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  position: absolute;
+  line-height: 20px;
+  width: calc(100% - 20px);
+}
+
+.emotion-8 {
+  display: block;
+  position: relative;
+  border-radius: 34px;
+  pointer-events: none;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  width: 20px;
+  height: 20px;
+  background-color: #4a4f62;
+}
+
+<label
+    aria-checked="false"
+    class="emotion-0 emotion-1"
+  >
+    <span
+      aria-checked="false"
+      class="emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-4 emotion-5"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+      <span
+        class="emotion-6 emotion-7"
+      >
+        OFF
+      </span>
+      <span
+        class="emotion-8 emotion-9"
       />
     </span>
   </label>
