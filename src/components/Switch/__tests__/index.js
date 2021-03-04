@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch } from '..'
+import Switch from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Switch', () => {
@@ -43,7 +43,7 @@ describe('Switch', () => {
     )
   })
 
-  test('renders correctly with custom labels', () => {
+  test('renders correctly with custom inside labels', () => {
     shouldMatchEmotionSnapshot(
       <Switch
         name="test"
@@ -52,6 +52,62 @@ describe('Switch', () => {
         onLabel="Yes"
         offLabel="No"
       />,
+    )
+  })
+
+  test('renders correctly with label inside', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} labeled="inside" />,
+    )
+  })
+
+  test('renders correctly with labels on left', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} labeled="left" />,
+    )
+  })
+
+  test('renders correctly with custom labels on right', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch
+        name="test"
+        onChange={() => {}}
+        labeled="right"
+        onLabel="Checked"
+        offLabel="Unchecked"
+      />,
+    )
+  })
+
+  test('renders correctly with custom label render on left', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch
+        name="test"
+        onChange={() => {}}
+        labeled="left"
+        onLabel={<span>Custom label rendered</span>}
+        offLabel={
+          <span style={{ fontWeight: 'bold' }}>Custom label rendered</span>
+        }
+      />,
+    )
+  })
+
+  test('renders correctly when checked and labeled', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} checked labeled="inside" />,
+    )
+  })
+
+  test('renders correctly when checked and labeled on right', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} checked labeled="right" />,
+    )
+  })
+
+  test('renders correctly when checked and labeled on left', () => {
+    shouldMatchEmotionSnapshot(
+      <Switch name="test" onChange={() => {}} checked labeled="left" />,
     )
   })
 })

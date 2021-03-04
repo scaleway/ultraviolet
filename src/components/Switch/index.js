@@ -1,4 +1,3 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -56,18 +55,45 @@ const SwitchBall = styled.span`
     size === 'small' ? styles.smallBallColor : styles.inactiveBigBallColor};
 `
 
-const label = ({ size, width }) => css`
-  font-weight: 800;
-  font-size: 16px;
-  text-align: center;
-  position: absolute;
-  line-height: ${SIZES[size].ball}px;
-  width: ${(width || SIZES[size].width) - 2 * PADDING - SIZES[size].ball}px;
+const StyledSpan = styled('span', {
+  shouldForwardProp: prop =>
+    !['onLabel', 'offLabel', 'labeled', 'size', 'width'].includes(prop),
+})`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${({ labeled, onLabel, offLabel, size }) => {
+    const spanWidth = Math.max(onLabel.length, offLabel.length) * 10 - 2
+    switch (labeled) {
+      case 'left':
+        return `
+        margin-right: 10px;
+        width: ${spanWidth}px;
+        text-align: right;
+        `
+      case 'right':
+        return `
+        margin-left: 10px;
+        width: ${spanWidth}px;
+        `
+      case 'inside':
+      default:
+        return `
+          font-weight: 700;
+          font-size: 16px;
+          position: absolute;
+          line-height: ${SIZES[size].ball}px;
+          width: calc(100% - ${SIZES[size].ball}px);
+          `
+    }
+  }}
 `
 
-const StyledSwitch = styled('label', {
+const StyledSwitch = styled('span', {
   shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop),
+    !['offLabel', 'onLabel', 'labeled', 'labelPlacement', 'variant'].includes(
+      prop,
+    ),
 })`
   overflow: hidden;
   outline: none;
@@ -79,7 +105,7 @@ const StyledSwitch = styled('label', {
     (disabled && styles.disabled) || styles.inactiveBgColor};
   border: none;
   border-radius: 34px;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   position: relative;
   transition: all 250ms;
   padding: 0 ${PADDING}px;
@@ -101,22 +127,14 @@ const StyledSwitch = styled('label', {
         : variants[variant].activeBigBallColor};
   }
 
-  &[aria-checked='false'] > ${SwitchBall} {
-    &:after {
-      ${label}
-      content: ${({ labeled, offLabel }) => `"${labeled ? offLabel : ''}"`};
-      color: ${styles.inactiveLabelColor};
-      left: ${({ size }) => SIZES[size].ball}px;
-    }
+  &[aria-checked='false'] > ${StyledSpan} {
+    color: ${styles.inactiveLabelColor};
+    right: 0;
   }
 
-  &[aria-checked='true'] > ${SwitchBall} {
-    &:before {
-      ${label}
-      content: ${({ labeled, onLabel }) => `"${labeled ? onLabel : ''}"`};
-      color: ${({ variant }) => variants[variant].activeLabelColor};
-      right: ${({ size }) => SIZES[size].ball}px;
-    }
+  &[aria-checked='true'] > ${StyledSpan} {
+    color: ${({ variant }) => variants[variant].activeLabelColor};
+    left: 0;
   }
 `
 
@@ -125,57 +143,99 @@ const StyledCheckbox = styled(Checkbox)`
   opacity: 0.01;
 `
 
+const StyledLabel = styled.label`
+  display: flex;
+  align-items: center;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+`
+
 const Switch = ({
   checked,
   disabled,
+  id,
   name,
   onChange,
   size,
   tooltip,
-  ...props
-}) => (
-  <Tooltip text={tooltip}>
-    <StyledSwitch
+  labeled,
+  onLabel,
+  offLabel,
+  variant,
+  width,
+}) => {
+  const renderLabel = () => (
+    <StyledSpan
+      labeled={labeled}
+      onLabel={onLabel}
+      offLabel={offLabel}
       size={size}
-      aria-checked={checked}
-      disabled={disabled}
-      {...props}
+      width={width}
     >
-      <StyledCheckbox
-        checked={checked}
-        disabled={disabled}
-        name={name}
-        onChange={onChange}
-      />
-      <SwitchBall size={size} />
-    </StyledSwitch>
-  </Tooltip>
-)
+      {checked ? onLabel : offLabel}
+    </StyledSpan>
+  )
+
+  const renderInsideLabel = labeled && labeled !== 'right' && labeled !== 'left'
+
+  return (
+    <Tooltip text={tooltip}>
+      <StyledLabel aria-checked={checked} disabled={disabled}>
+        {labeled === 'left' ? renderLabel() : null}
+        <StyledSwitch
+          size={size}
+          aria-checked={checked}
+          disabled={disabled}
+          labeled={labeled}
+          onLabel={onLabel}
+          offLabel={offLabel}
+          variant={variant}
+          width={width}
+        >
+          <StyledCheckbox
+            id={id || name}
+            checked={checked}
+            disabled={disabled}
+            name={name}
+            onChange={onChange}
+          />
+          {renderInsideLabel ? renderLabel() : null}
+          <SwitchBall size={size} />
+        </StyledSwitch>
+        {labeled === 'right' ? renderLabel() : null}
+      </StyledLabel>
+    </Tooltip>
+  )
+}
 
 Switch.propTypes = {
-  tooltip: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(SIZES)),
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(Object.keys(variants)),
   checked: PropTypes.bool,
-  labeled: PropTypes.bool,
-  onLabel: PropTypes.string,
-  offLabel: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  labeled: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['inside', 'left', 'right']),
+  ]),
   name: PropTypes.string.isRequired,
+  offLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  onChange: PropTypes.func.isRequired,
+  onLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  size: PropTypes.oneOf(Object.keys(SIZES)),
+  tooltip: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 Switch.defaultProps = {
-  tooltip: null,
-  size: 'medium',
-  width: null,
-  disabled: false,
-  variant: 'primary',
   checked: false,
+  disabled: false,
+  id: undefined,
   labeled: false,
-  onLabel: 'ON',
   offLabel: 'OFF',
+  onLabel: 'ON',
+  size: 'medium',
+  tooltip: undefined,
+  variant: 'primary',
+  width: undefined,
 }
 
-export { Switch }
+export default Switch

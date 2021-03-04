@@ -5,7 +5,8 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Switch } from '..'
+import Switch from '..'
+import { Box, Icon } from '../..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -26,7 +27,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
       {({ value, onChange }) => (
         <Switch
           checked={value}
-          name="switch"
+          name="switch-basic"
           onChange={e => {
             onChange(e.target.checked)
           }}
@@ -165,13 +166,58 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Labeled
 
+By setting `labeled` prop you can put the label in the `Switch` component
+
 <Canvas>
-  <Story name="labeled">
+  <Story name="labeled-basic">
+    <ControlValue value={false}>
+      {({ value, onChange }) => (
+        <Switch
+          name="switch-label"
+          labeled
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(e.target.checked)}
+        />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Custom on/off texts
+
+Default label placement is inside the Switch. you can customize the text with `onLabel` and `offLabel`props.
+
+<Canvas>
+  <Story name="label-inside">
+    <ControlValue value>
+      {({ value, onChange }) => (
+        <Switch
+          name="switch-label-custom"
+          labeled
+          onLabel="YES"
+          offLabel="NO"
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(e.target.checked)}
+        />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Label placement
+
+By setting the `labelPlacement` prop you can choose where you want to put the label. By setting the label on `left` or `right` the width is automatically calculated.
+
+<Canvas>
+  <Story name="label-placement">
     <BlockList>
-      <ControlValue value={false}>
+      <ControlValue value>
         {({ value, onChange }) => (
           <Switch
-            name="switch-label"
+            name="switch-label-right"
+            labelPlacement="right"
             labeled
             variant="primary"
             checked={value}
@@ -182,10 +228,93 @@ import ControlValue from '../../../__stories__/components/ControlValue'
       <ControlValue value>
         {({ value, onChange }) => (
           <Switch
-            name="switch-label-custom"
+            name="switch-label-right"
+            labelPlacement="right"
             labeled
-            onLabel="YES"
-            offLabel="NO"
+            width={140}
+            variant="primary"
+            checked={value}
+            onChange={e => onChange(e.target.checked)}
+          />
+        )}
+      </ControlValue>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <ControlValue value>
+          {({ value, onChange }) => (
+            <Switch
+              name="switch-label-left"
+              labeled="left"
+              onLabel="CHECKED"
+              offLabel="NOT CHECKED"
+              variant="primary"
+              checked={value}
+              onChange={e => onChange(e.target.checked)}
+            />
+          )}
+        </ControlValue>
+        <ControlValue value>
+          {({ value, onChange }) => (
+            <Switch
+              name="switch-label-right"
+              labeled="right"
+              variant="primary"
+              checked={value}
+              onChange={e => onChange(e.target.checked)}
+            />
+          )}
+        </ControlValue>
+      </div>
+    </BlockList>
+  </Story>
+</Canvas>
+
+### Custom Label render
+
+If you choose to place label near the Switch component with `labelPlacement` you can set a custom element for the label with the `labelRender` prop.
+
+<Canvas>
+  <Story name="custom-label-render">
+    <BlockList>
+      <ControlValue value>
+        {({ value, onChange }) => (
+          <Switch
+            name="switch-label-left"
+            labeled
+            onLabel={<Icon size={24} name="check-circle-outline" />}
+            offLabel={<Icon size={24} name="close-circle-outline" />}
+            variant="primary"
+            checked={value}
+            onChange={e => onChange(e.target.checked)}
+          />
+        )}
+      </ControlValue>
+      <ControlValue value>
+        {({ value, onChange }) => (
+          <Switch
+            name="switch-label-left"
+            labeled="left"
+            onLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Enabled</span>&nbsp;
+                <Icon size={24} name="check-circle-outline" />
+              </Box>
+            }
+            offLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Disabled</span>&nbsp;
+                <Icon size={24} name="close-circle-outline" />
+              </Box>
+            }
             variant="primary"
             checked={value}
             onChange={e => onChange(e.target.checked)}
