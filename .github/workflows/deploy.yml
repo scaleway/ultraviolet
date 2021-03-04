@@ -27,7 +27,6 @@ jobs:
         uses: rlespinasse/github-slug-action@v3.x
       - name: Export custom variables
         run: |
-          env
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 

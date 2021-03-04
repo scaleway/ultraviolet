@@ -10,6 +10,7 @@ const getNewValue = valueOrEvent => {
 
     return valueOrEvent.currentTarget.value
   }
+
   return valueOrEvent
 }
 

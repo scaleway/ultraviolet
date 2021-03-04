@@ -20,6 +20,7 @@ const styles = {
 
 function reverseZIndexes() {
   const count = 10
+
   return Array.from(
     { length: count },
     (_, index) => css`
@@ -103,6 +104,7 @@ function contractString(str) {
   if (typeof str === 'string' && str.length > 30) {
     return `${str.slice(0, 15)}...${str.slice(-15)}`
   }
+
   return str
 }
 
@@ -125,6 +127,7 @@ const Breadcrumbs = ({
           if (!child) return null
 
           const active = activeIndex === index
+
           return (
             <React.Fragment key={child.key}>
               {cloneElement(child, {

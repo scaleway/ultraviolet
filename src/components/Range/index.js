@@ -110,6 +110,7 @@ const getCursorLinkWidth = cursorsRef => {
       cursorsX.push(x)
     }
   })
+
   return cursorsX[1] - cursorsX[0]
 }
 
@@ -123,6 +124,7 @@ const canMove = (value, values = [], valueIndex) => {
   const isBiggest = otherValue => value > otherValue
 
   const cb = valueIndex === 0 ? isSmallest : isBiggest
+
   return tmp.some(cb)
 }
 
@@ -191,6 +193,7 @@ const Range = ({
     (value, index) => {
       const nextValues = [...values]
       nextValues[index] = value
+
       return nextValues
     },
     [values],
@@ -210,11 +213,13 @@ const Range = ({
           if (value >= next) {
             return next - 1
           }
+
           return value
         }
         if (value >= max) {
           return max
         }
+
         return value
       }
       if (isLast) {
@@ -224,8 +229,10 @@ const Range = ({
         if (value <= prev) {
           return prev + 1
         }
+
         return value
       }
+
       return value
     },
     [hasCursorsLink, min, max, values],

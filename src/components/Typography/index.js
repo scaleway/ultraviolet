@@ -215,6 +215,7 @@ const TextWithTooltip = props => {
   const isTruncated = useCallback((target = {}) => {
     // If the text is really truncated
     const { offsetWidth, scrollWidth } = target
+
     return offsetWidth < scrollWidth
   }, [])
 
@@ -253,6 +254,7 @@ TextWithTooltip.propTypes = {
 
 const Typography = forwardRef((props, ref) => {
   const Component = props.ellipsis ? TextWithTooltip : Text
+
   return <Component ref={ref} {...props} />
 })
 

@@ -7,6 +7,7 @@ import { Box } from '../Box'
 const styles = {
   sphere: ({ size, bgColors }) => {
     const isHalved = bgColors.length > 1
+
     return css`
       align-items: center;
       border-left: ${size / 2}px solid ${bgColors[0]};

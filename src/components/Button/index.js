@@ -12,6 +12,7 @@ const borderedVariant = (color, bgColor, hoverColor) => {
   const colorValue = colors[color]
   const bgColorValue = colors[bgColor]
   const hoverColorValue = colors[hoverColor]
+
   return css`
     border: 1px solid ${colorValue};
     background-color: ${bgColorValue};
@@ -43,6 +44,7 @@ const borderedVariant = (color, bgColor, hoverColor) => {
 const plainVariant = (bgColor, textColor) => {
   const bgColorValue = colors[bgColor]
   const textColorValue = colors[textColor]
+
   return css`
     background-color: ${bgColorValue};
     color: ${textColorValue};

@@ -246,6 +246,7 @@ const SelectContainer = props => {
       error,
     },
   } = props
+
   return (
     <Box
       data-testid={`rich-select-${props.selectProps.name}`}
@@ -422,8 +423,10 @@ const DropdownIndicator = ({
     if (isDisabled) return 'gray300'
     if (checked) return 'primary'
     if (error) return 'warning'
+
     return 'gray350'
   }, [isDisabled, checked, error])
+
   return (
     <components.DropdownIndicator {...props}>
       <Icon
@@ -457,6 +460,7 @@ const ClearIndicator = ({
   const {
     innerProps: { ref, ...restInnerProps },
   } = props
+
   return (
     <components.ClearIndicator {...props}>
       <Icon

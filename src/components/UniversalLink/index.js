@@ -11,6 +11,7 @@ const needNativeLink = url => {
   const isAbsolute = ABSOLUTE_LINK_REGEXP.test(url)
   const isTelLink = TEL_LINK_REGEXP.test(url)
   const isAnchor = url[0] === '#'
+
   return isAbsolute || isTelLink || isAnchor
 }
 
@@ -20,6 +21,7 @@ const UniversalLink = ({ children, ...props }) => {
   const rel = props.rel || (isBlank ? 'noopener noreferrer' : undefined)
   const href = props.to || props.href
   const as = props.as || (needNativeLink(href) ? 'a' : linkComponent)
+
   return (
     <Box {...props} as={as} href={href} rel={rel}>
       {children}

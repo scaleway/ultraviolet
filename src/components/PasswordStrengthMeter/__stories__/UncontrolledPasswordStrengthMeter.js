@@ -5,6 +5,7 @@ import { TextBox } from '../..'
 
 const UncontrolledPasswordStrengthMeter = props => {
   const [value, setValue] = useState('')
+
   return (
     <>
       <TextBox

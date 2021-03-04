@@ -68,6 +68,7 @@ const Tooltip = ({
     console.error(
       "ScalewayUI - Tooltip: children of Tooltip component can't be an array.",
     )
+
     return children
   }
   // If children is a function, we return it with the Tooltip system
@@ -89,6 +90,7 @@ const Tooltip = ({
     if (childProps.disabled) {
       return <div {...referenceProps}>{children}</div>
     }
+
     return React.cloneElement(children, {
       ...referenceProps,
       ...childProps,

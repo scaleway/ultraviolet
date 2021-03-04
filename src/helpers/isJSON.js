@@ -4,5 +4,6 @@ export const isJSONString = str => {
   } catch (e) {
     return false
   }
+
   return true
 }
