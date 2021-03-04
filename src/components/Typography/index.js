@@ -135,6 +135,7 @@ const variantTags = {
 const textColors = {
   inherit: 'inherit',
   alert: colors.orange,
+  orange: colors.orange,
   white: colors.white,
   darkBlack: colors.gray950,
   lightBlack: colors.gray700,
