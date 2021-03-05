@@ -35,7 +35,7 @@ export const Information = ({
       <Icon mr={2} name={icon} size={iconSize} color={iconColor || color} />
     )}
     {img && <Box as="img" mr={3} src={img} width={imgSize} height={imgSize} />}
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection={heading ? 'column' : 'row'} width="100%">
       {heading && (
         <Typography variant="bodyA" fontWeight={500} color={color}>
           {heading}

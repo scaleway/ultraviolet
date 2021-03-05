@@ -2,6 +2,8 @@ import React from 'react'
 import { Information } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
+const TestComponent = () => <div>Testing component</div>
+
 describe('Information', () => {
   test(`should render correctly with default props`, () => {
     shouldMatchEmotionSnapshot(<Information>Hello</Information>)
@@ -36,6 +38,14 @@ describe('Information', () => {
   test(`should render correctly with an heading`, () => {
     shouldMatchEmotionSnapshot(
       <Information heading="Bonjour">Hello</Information>,
+    )
+  })
+
+  test(`should render correctly with an children`, () => {
+    shouldMatchEmotionSnapshot(
+      <Information>
+        <TestComponent />
+      </Information>,
     )
   })
 })
