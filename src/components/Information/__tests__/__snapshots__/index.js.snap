@@ -3,50 +3,7 @@
 exports[`Information should render correctly with a custom backgroundColor 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  background-color: guess who s black;
-  border-radius: 4px;
-}
-
-.emotion-0.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 24px;
-  padding-left: 24px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-1.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    />
-    Hello
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Information should render correctly with a text 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  background-color: #fff;
+  background-color: #45d6b5;
   border-radius: 4px;
 }
 
@@ -95,10 +52,68 @@ exports[`Information should render correctly with a text 1`] = `
       <p
         class="emotion-2"
       >
-        Bonjour
+        Hello
       </p>
     </div>
-    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Information should render correctly with a custom color 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.emotion-0.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 24px;
+  padding-left: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #45d6b5;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <p
+        class="emotion-2"
+      >
+        Hello
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -147,6 +162,17 @@ exports[`Information should render correctly with an heading 1`] = `
   font-weight: 500;
 }
 
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -158,8 +184,12 @@ exports[`Information should render correctly with an heading 1`] = `
       >
         Bonjour
       </p>
+      <p
+        class="emotion-3"
+      >
+        Hello
+      </p>
     </div>
-    Hello
   </div>
 </DocumentFragment>
 `;
@@ -187,12 +217,12 @@ exports[`Information should render correctly with an icon 1`] = `
 }
 
 .emotion-1 {
-  fill: #4f0599;
+  fill: #45d6b5;
   vertical-align: middle;
-  height: 32px;
-  width: 32px;
-  min-width: 32px;
-  min-height: 32px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 .emotion-1.emotion-1 {
@@ -209,6 +239,17 @@ exports[`Information should render correctly with an icon 1`] = `
   flex-direction: column;
 }
 
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -222,8 +263,13 @@ exports[`Information should render correctly with an icon 1`] = `
     </svg>
     <div
       class="emotion-2"
-    />
-    Hello
+    >
+      <p
+        class="emotion-3"
+      >
+        Hello
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -251,8 +297,8 @@ exports[`Information should render correctly with an image 1`] = `
 }
 
 .emotion-1.emotion-1 {
-  width: 57px;
-  height: 57px;
+  width: 24px;
+  height: 24px;
   margin-right: 24px;
 }
 
@@ -266,6 +312,17 @@ exports[`Information should render correctly with an image 1`] = `
   flex-direction: column;
 }
 
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -275,8 +332,13 @@ exports[`Information should render correctly with an image 1`] = `
     />
     <div
       class="emotion-2"
-    />
-    Hello
+    >
+      <p
+        class="emotion-3"
+      >
+        Hello
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -313,13 +375,29 @@ exports[`Information should render correctly with default props 1`] = `
   flex-direction: column;
 }
 
+.emotion-2 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
     <div
       class="emotion-1"
-    />
-    Hello
+    >
+      <p
+        class="emotion-2"
+      >
+        Hello
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;

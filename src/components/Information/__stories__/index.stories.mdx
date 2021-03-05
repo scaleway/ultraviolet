@@ -1,55 +1,101 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Information } from '..'
-import { Box } from '../..'
+import { Button, Typography } from '../..'
 
 <Meta title="Components/Information" component={Information} />
 
 # Information
 
-## Usage
+## Basic
 
-<Canvas isColumn>
-  <Story name="primary">
+<Canvas>
+  <Story name="Basic">
+    <Information backgroundColor="#f8f3ff" color="primary">
+      Text information
+    </Information>
+  </Story>
+</Canvas>
+
+## Colors & Backgrounds
+
+<Canvas>
+  <Story name="Colors & Backgrounds">
+    <Information backgroundColor="#f8f3ff" color="primary" mb={1}>
+      Text information
+    </Information>
+    <Information color="warning" mb={1}>
+      Text information
+    </Information>
+    <Information backgroundColor="warning" color="white" mb={1}>
+      Text information
+    </Information>
+    <Information color="info">Text information</Information>
+  </Story>
+</Canvas>
+
+## With Icon
+
+<Canvas>
+  <Story name="Icon">
+    <Information backgroundColor="warning" color="white" icon="alert" mb={1}>
+      Text information
+    </Information>
+    <Information
+      backgroundColor="info"
+      color="white"
+      icon="information-outline"
+      iconSize={18}
+      mb={1}
+    >
+      Text information
+    </Information>
     <Information
       backgroundColor="#f8f3ff"
       color="primary"
-      heading="An awesome title"
-      text="Text information"
-    />
+      icon="lock"
+      iconColor="warning"
+    >
+      Text information
+    </Information>
   </Story>
-  <Story name="warning">
+</Canvas>
+
+## With Heading
+
+<Canvas>
+  <Story name="Heading">
     <Information
-      color="warning"
-      icon="alert"
-      heading="An awesome title"
-      text="Text information"
-    />
-  </Story>
-  <Story name="warning-full">
+      backgroundColor="#f8f3ff"
+      color="primary"
+      heading="My awesome header"
+      mb={1}
+    >
+      Text information
+    </Information>
     <Information
       backgroundColor="warning"
       color="white"
       icon="alert"
-      heading="An awesome title"
-      text="Text information"
-    />
-  </Story>
-  <Story name="info">
-    <Information
-      color="info"
-      icon="alert"
-      heading="An awesome title"
-      text="Text information"
-    />
+      heading="My awesome header with icon"
+    >
+      Text information
+    </Information>
   </Story>
 </Canvas>
 
-## Usage with children
+## With a complex children
 
-<Canvas isColumn>
-  <Story name="with-children">
-    <Information icon="alert" backgroundColor="#f8f3ff" color="primary">
-      <Box color="primary">Hello, I am a children. I can be anything!</Box>
+<Canvas>
+  <Story name="Complex Children">
+    <Information
+      backgroundColor="#f8f3ff"
+      color="primary"
+      heading="My awesome header"
+      icon="information-outline"
+      mb={1}
+    >
+      <Typography mb={1}>Welcome in a more complex children</Typography>
+      <Button variant="primary-bordered">I have a button</Button>
     </Information>
   </Story>
 </Canvas>
