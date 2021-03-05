@@ -6,6 +6,8 @@
 - Feature
 - Enhancement
 - Documentation
+- Migration
+- Refactor
 
 ### Summarize concisely:
 
