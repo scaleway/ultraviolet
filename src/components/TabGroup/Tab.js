@@ -51,6 +51,7 @@ const Tab = ({
   onClick,
   hasEndedCount,
   as,
+  ...props
 }) => {
   const ref = useRef({})
 
@@ -75,6 +76,7 @@ const Tab = ({
       aria-selected={isSelected}
       aria-disabled={disabled}
       onClick={onClick}
+      {...props}
     >
       {children}
     </StyledTab>
