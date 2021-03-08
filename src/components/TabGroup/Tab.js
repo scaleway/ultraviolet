@@ -8,11 +8,6 @@ export const variants = {
     selected: colors.primary,
     disabled: colors.gray550,
   }),
-  primary: ({ theme: { colors } }) => ({
-    focus: colors.primary,
-    selected: colors.primary,
-    disabled: colors.gray550,
-  }),
 }
 
 export const StyledTab = styled.span`
