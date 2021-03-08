@@ -125,6 +125,7 @@ const DateInput = ({
   label,
   maxDate,
   minDate,
+  name,
   onBlur,
   onChange,
   onFocus,
@@ -133,6 +134,7 @@ const DateInput = ({
 }) => (
   <StyledWrapper>
     <DatePicker
+      name={name}
       type={type}
       autoFocus={autoFocus}
       selected={value}
@@ -211,6 +213,7 @@ DateInput.propTypes = {
   label: PropTypes.string,
   maxDate: PropTypes.string,
   minDate: PropTypes.string,
+  name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -227,6 +230,7 @@ DateInput.defaultProps = {
   label: undefined,
   maxDate: undefined,
   minDate: undefined,
+  name: undefined,
   onBlur: () => {},
   onChange: () => {},
   onFocus: () => {},
