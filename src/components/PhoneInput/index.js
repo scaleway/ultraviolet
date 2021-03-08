@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import intlTelInput from 'intl-tel-input'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import 'intl-tel-input/build/js/utils'
 
@@ -12,6 +12,11 @@ const StyledLabel = styled.label`
   border-radius: 4px;
   border: 1px solid ${({ theme: { colors } }) => colors.gray350};
   padding: 0.8rem 0rem;
+
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
   &:focus-within {
     border: 1px solid ${({ theme: { colors } }) => colors.primary};
@@ -34,12 +39,12 @@ const StyledLabel = styled.label`
     flex-grow: 1;
 
     .iti__selected-flag {
-      background-color: white;
+      background-color: inherit;
       outline: none;
 
       &:hover,
       &:focus {
-        background-color: white;
+        background-color: inherit;
       }
     }
 
@@ -60,9 +65,10 @@ const StyledLabel = styled.label`
       outline: none;
       width: 100%;
 
-      &[disabled] {
+      &:disabled {
         cursor: not-allowed;
         pointer-events: none;
+        background-color: inherit;
       }
     }
   }
@@ -71,29 +77,31 @@ const StyledLabel = styled.label`
 const PhoneInput = ({
   disabled,
   disableDropdown,
-  inputProps: { name, id },
+  inputProps: { name, id, placeholder, dataTestid },
   onChange,
   value,
   label,
 }) => {
-  const [visited, setVisited] = useState(false)
   const inputRef = useRef()
 
-  useEffect(() => {
-    setVisited(visited || (!!value && value.length > 0))
-  }, [value, visited])
-
-  const handleFocus = () => {
-    setVisited(true)
+  const formatIntlTelInput = () => {
+    const { intlTelInputUtils, intlTelInputGlobals } = window
+    const iti = intlTelInputGlobals.getInstance(inputRef.current)
+    if (typeof intlTelInputUtils !== 'undefined') {
+      // utils are lazy loaded, so must check
+      const currentText = iti.getNumber(intlTelInputUtils.numberFormat.E164)
+      if (typeof currentText === 'string') {
+        // sometimes the currentText is an object :)
+        iti.setNumber(currentText) // will autoformat because of formatOnDisplay=true
+      }
+    }
   }
 
   useEffect(() => {
-    let keyUpEL
-    let changeEL
     const inputElement = inputRef.current
 
     if (inputElement) {
-      const iti = intlTelInput(inputElement, {
+      intlTelInput(inputElement, {
         customContainer: 'input__tel__container',
         initialCountry: 'US',
         autoPlaceholder: 'aggressive',
@@ -101,43 +109,33 @@ const PhoneInput = ({
         nationalMode: false,
         separateDialCode: false,
       })
-
-      const formatIntlTelInput = () => {
-        const { intlTelInputUtils } = window
-        if (typeof intlTelInputUtils !== 'undefined') {
-          // utils are lazy loaded, so must check
-          const currentText = iti.getNumber(intlTelInputUtils.numberFormat.E164)
-          if (typeof currentText === 'string') {
-            // sometimes the currentText is an object :)
-            iti.setNumber(currentText) // will autoformat because of formatOnDisplay=true
-          }
-        }
-      }
-
-      keyUpEL = inputElement.addEventListener('keyup', formatIntlTelInput)
-      changeEL = inputElement.addEventListener('change', formatIntlTelInput)
-    }
-
-    return () => {
-      if (inputElement) {
-        if (keyUpEL) inputElement.removeEventListener('keyup', keyUpEL)
-        if (changeEL) inputElement.removeEventListener('change', changeEL)
-      }
     }
   }, [inputRef])
 
   return (
-    <StyledLabel disableDropdown={disableDropdown} disabled={disabled}>
+    <StyledLabel
+      disableDropdown={disableDropdown}
+      disabled={disabled}
+      aria-disabled={disabled}
+    >
       <span>{label}</span>
       <input
-        onChange={onChange}
-        onFocus={handleFocus}
+        onKeyUp={formatIntlTelInput}
+        onChange={event => {
+          formatIntlTelInput()
+          const { intlTelInputGlobals } = window
+          const iti = intlTelInputGlobals.getInstance(inputRef.current)
+          onChange?.(event, iti)
+        }}
         type="tel"
         ref={inputRef}
         value={value}
         name={name}
         id={id}
         disabled={disabled}
+        placeholder={placeholder}
+        maxLength={15}
+        data-testid={dataTestid}
       />
     </StyledLabel>
   )
@@ -149,6 +147,8 @@ PhoneInput.propTypes = {
   inputProps: PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     name: PropTypes.string,
+    placeholder: PropTypes.string,
+    dataTestid: PropTypes.string,
   }),
   onChange: PropTypes.func,
   value: PropTypes.string,
@@ -159,8 +159,8 @@ PhoneInput.defaultProps = {
   disabled: false,
   disableDropdown: false,
   inputProps: {},
-  onChange: () => {},
-  value: '',
+  onChange: undefined,
+  value: undefined,
   label: 'Phone',
 }
 
