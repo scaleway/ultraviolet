@@ -103,7 +103,7 @@ const Tab = ({
 
 Tab.propTypes = {
   disabled: PropTypes.bool,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
   isSelected: PropTypes.bool,
   setInternTabsWidth: PropTypes.func,
   isTabsWidthSet: PropTypes.bool,

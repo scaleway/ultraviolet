@@ -111,12 +111,19 @@ const TabGroup = ({
   )
 }
 
+// React doesn't support type checking from another file in stable release (react-docgen) so we need to define variants like this
+// At this moment (2021-03-08 (March)  5.4.0-alpha.0 contains the fix (but it's not a stable release))
+// In the future don't forget to update "babel-plugin-react-docgen" taht support imported types (take care that storybook support it)
+// https://github.com/reactjs/react-docgen/issues/153
+// More information here : https://github.com/reactjs/react-docgen/pull/464
+const variants = ['default']
+
 TabGroup.propTypes = {
   children: PropTypes.node,
   selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onChange: PropTypes.func,
   className: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(variants),
 }
 
 TabGroup.defaultProps = {
