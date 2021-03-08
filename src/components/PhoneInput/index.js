@@ -12,10 +12,6 @@ const StyledLabel = styled.label`
   border-radius: 4px;
   border: 1px solid ${({ theme: { colors } }) => colors.gray350};
   padding: 0.8rem 0rem;
-  cursor: ${({ disabled, disableDropdown }) =>
-    disabled || disableDropdown ? 'not-allowed' : 'inherit'};
-  pointer-events: ${({ disabled, disableDropdown }) =>
-    disabled || disableDropdown ? 'none' : 'inherit'};
 
   &:focus-within {
     border: 1px solid ${({ theme: { colors } }) => colors.primary};
@@ -35,10 +31,6 @@ const StyledLabel = styled.label`
   & .input__tel__container {
     border: none;
     width: calc(100%-2px);
-    cursor: ${({ disabled, disableDropdown }) =>
-      disabled || disableDropdown ? 'not-allowed' : 'inherit'};
-    pointer-events: ${({ disabled, disableDropdown }) =>
-      disabled || disableDropdown ? 'none' : 'inherit'};
     flex-grow: 1;
 
     .iti__selected-flag {
@@ -51,6 +43,13 @@ const StyledLabel = styled.label`
       }
     }
 
+    .iti__flag-container {
+      cursor: ${({ disabled, disableDropdown }) =>
+        disabled || disableDropdown ? 'not-allowed' : 'inherit'};
+      pointer-events: ${({ disabled, disableDropdown }) =>
+        disabled || disableDropdown ? 'none' : 'inherit'};
+    }
+
     .iti__selected-dial-code {
       padding-left: 5px;
     }
@@ -60,6 +59,11 @@ const StyledLabel = styled.label`
       border: none;
       outline: none;
       width: 100%;
+
+      &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
     }
   }
 `
@@ -95,7 +99,7 @@ const PhoneInput = ({
         autoPlaceholder: 'aggressive',
         formatOnDisplay: true,
         nationalMode: false,
-        separateDialCode: true,
+        separateDialCode: false,
       })
 
       const formatIntlTelInput = () => {
