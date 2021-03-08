@@ -2,14 +2,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef } from 'react'
 
-export const variants = {
-  default: ({ theme: { colors } }) => ({
-    focus: colors.primary,
-    selected: colors.primary,
-    disabled: colors.gray550,
-  }),
-}
-
 export const StyledTab = styled.span`
   display: flex;
   flex-direction: row;
@@ -26,40 +18,31 @@ export const StyledTab = styled.span`
   user-select: none;
   touch-action: manipulation;
 
-  ${({ variant, theme }) => {
-    const colors = variants[variant]
-      ? variants[variant]({ theme })
-      : variants.default({ theme })
+  transition: color 0.2s;
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${({ theme: { colors } }) => colors.primary};
+    text-decoration: none;
+  }
 
-    return `
-      transition: color 0.2s;
-      &:hover,
-      &:active,
-      &:focus {
-        color: ${colors.focus};
-        text-decoration: none;
-      }
+  &[aria-selected='true'] {
+    color: ${({ theme: { colors } }) => colors.primary};
+  }
 
-      &[aria-selected='true'] {
-        color: ${colors.selected};
-      }
-
-      &[aria-disabled='true'] {
-      cursor: not-allowed;
-      opacity: 0.5;
-      &:hover,
-      &:focus {
-        color: ${colors.disabled};
-      }
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover,
+    &:focus {
+      color: ${({ theme: { colors } }) => colors.gray550};
     }
-    `
-  }}
+  }
 `
 
 const Tab = ({
   children,
   disabled,
-  variant,
   isSelected,
   setInternTabsWidth,
   isTabsWidthSet,
@@ -77,9 +60,7 @@ const Tab = ({
     }
   }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
 
-  return typeof children === 'function' ? (
-    children({ ref, onClick, disabled, isSelected, variant })
-  ) : (
+  return (
     <StyledTab
       as={as}
       aria-label={name}
@@ -94,7 +75,6 @@ const Tab = ({
       aria-selected={isSelected}
       aria-disabled={disabled}
       onClick={onClick}
-      variant={variant}
     >
       {children}
     </StyledTab>
@@ -103,7 +83,6 @@ const Tab = ({
 
 Tab.propTypes = {
   disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(Object.keys(variants)),
   isSelected: PropTypes.bool,
   setInternTabsWidth: PropTypes.func,
   isTabsWidthSet: PropTypes.bool,
@@ -117,7 +96,6 @@ Tab.propTypes = {
 
 Tab.defaultProps = {
   disabled: false,
-  variant: 'default',
   isSelected: false,
   setInternTabsWidth: () => {},
   isTabsWidthSet: false,
