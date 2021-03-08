@@ -1,5 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
-import PhoneInput, { IntlPhoneInput } from '..'
+import PhoneInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/PhoneInput" />
@@ -8,23 +8,15 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Basic
 
-## Existing
-
-<Story name="Basic">
-  <ControlValue value="">
-    {({ value, onChange }) => <PhoneInput value={value} onChange={onChange} />}
-  </ControlValue>
-</Story>
-
-## Intl library
-
-<Story name="basic-intl">
-  <ControlValue value="">
-    {({ value, onChange }) => (
-      <IntlPhoneInput value={value} onChange={onChange} />
-    )}
-  </ControlValue>
-</Story>
+<Canvas>
+  <Story name="Basic">
+    <ControlValue value="">
+      {({ value, onChange }) => (
+        <PhoneInput value={value} onChange={onChange} />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
 
 ## Prefilled indicator
 
