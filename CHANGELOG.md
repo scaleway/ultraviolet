@@ -1,3 +1,10 @@
+## [0.61.0](https://github.com/scaleway/scaleway-ui/compare/v0.60.1...v0.61.0) (2021-03-08)
+
+
+### :gear: Features
+
+* add tab group ([#101](https://github.com/scaleway/scaleway-ui/issues/101)) ([213c5e8](https://github.com/scaleway/scaleway-ui/commit/213c5e872d587ec7e3c7309c8f54da2e48914c10))
+
 ### [0.60.1](https://github.com/scaleway/scaleway-ui/compare/v0.60.0...v0.60.1) (2021-03-08)
 
 
