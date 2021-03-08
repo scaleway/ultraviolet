@@ -22,9 +22,11 @@ To explain how to make this documentation we will use component `<Button>` as ex
 Below you will find an example on how the documentation should be written and ordered, with title, descriptions,
 sub-titles, etc. You will also find a file `story.example` that you can use as a base when adding a new component.
 
-It's important to **define PropTypes and DefaultProps of a component** so StoryBook will show them in API using `<ArgsTable>` component.
+**Here are the rules to follow**:
 
-Pattern should be:
+1. Define **PropTypes** and **DefaultProps** of a component and add `<ArgsTable>` at the end of the documentation of your component.
+
+2. Pattern should be:
 
 - Title
   - Description
@@ -36,7 +38,15 @@ Pattern should be:
       - Example
     - API
 
-**Note: Please always add a disabled option of your component in the documentation**
+3. When writing your story you should set a name with uppercase and spaces. Example:
+
+```js
+<Story name="My Custom Story & Co">...</Story>
+```
+
+4. Add `disabled` example of your component in the documentation.
+
+5. Try to use **all the props** your component can take.
 
 ## Example
 
@@ -54,7 +64,7 @@ Pattern should be:
 </Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Button>Button</Button>
   </Story>
 </Canvas>
@@ -67,7 +77,7 @@ Pattern should be:
 </Description>
 
 <Canvas>
-  <Story name="variant">
+  <Story name="Variant">
     <Button variant="primary" mr={2}>
       Button
     </Button>
@@ -88,7 +98,7 @@ Pattern should be:
 </Description>
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Button disabled>Button</Button>
   </Story>
 </Canvas>

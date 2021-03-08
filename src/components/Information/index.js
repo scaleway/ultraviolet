@@ -21,7 +21,6 @@ export const Information = ({
   img,
   imgSize,
   heading,
-  text,
   ...props
 }) => (
   <Box
@@ -36,19 +35,20 @@ export const Information = ({
       <Icon mr={2} name={icon} size={iconSize} color={iconColor || color} />
     )}
     {img && <Box as="img" mr={3} src={img} width={imgSize} height={imgSize} />}
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection={heading ? 'column' : 'row'} width="100%">
       {heading && (
         <Typography variant="bodyA" fontWeight={500} color={color}>
           {heading}
         </Typography>
       )}
-      {text && (
+      {typeof children === 'string' ? (
         <Typography variant="bodyA" color={color}>
-          {text}
+          {children}
         </Typography>
+      ) : (
+        children
       )}
     </Box>
-    {children}
   </Box>
 )
 
@@ -61,13 +61,11 @@ Information.defaultProps = {
   iconColor: undefined,
   img: undefined,
   heading: undefined,
-  text: undefined,
   children: null,
 }
 
 Information.propTypes = {
   children: PropTypes.node,
-  text: PropTypes.string,
   backgroundColor: PropTypes.string,
   img: PropTypes.string,
   heading: PropTypes.string,
