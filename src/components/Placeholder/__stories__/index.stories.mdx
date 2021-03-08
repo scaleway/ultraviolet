@@ -1,0 +1,72 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import Placeholder from '..'
+
+<Meta title="Components/Placeholder" />
+
+# Placeholder
+
+## Block
+
+<Canvas isColumn>
+  <Story name="Block">
+    <Placeholder type="block" />
+  </Story>
+</Canvas>
+
+## Blocks
+
+<Canvas isColumn>
+  <Story name="Blocks">
+    <Placeholder type="blocks" />
+  </Story>
+</Canvas>
+
+## Box
+
+<Canvas>
+  <Story name="BoxWIthIcon">
+    <Placeholder
+      display="flex"
+      height={130}
+      width={180}
+      length={4}
+      type="box"
+    />
+  </Story>
+</Canvas>
+
+## Donut
+
+<Canvas isColumn>
+  <Story name="Donut">
+    <Placeholder type="donut" />
+  </Story>
+</Canvas>
+
+## Line
+
+<Canvas isColumn>
+  <Story name="Line">
+    <Placeholder type="line" />
+  </Story>
+</Canvas>
+
+## Slider
+
+<Canvas isColumn>
+  <Story name="Slider">
+    <Placeholder type="slider" />
+  </Story>
+</Canvas>
+
+## List
+
+<Canvas isColumn>
+  <Story name="List">
+    <Placeholder type="list" />
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Placeholder} />
