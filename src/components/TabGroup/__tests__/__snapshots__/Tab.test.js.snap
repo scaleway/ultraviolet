@@ -1,0 +1,426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<span
+    aria-disabled="false"
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly when as component 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<a
+    aria-disabled="false"
+    aria-label="test"
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly when disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<span
+    aria-disabled="true"
+    aria-label="test"
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly when selected 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<span
+    aria-disabled="false"
+    aria-label="test"
+    aria-selected="true"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly with variant default 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<span
+    aria-disabled="false"
+    aria-label="test"
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly with variant primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-0[aria-disabled='true']:hover,
+.emotion-0[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+<span
+    aria-disabled="false"
+    aria-label="test"
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    role="tab"
+    tabindex="0"
+  >
+    Test tab
+  </span>
+</DocumentFragment>
+`;
