@@ -1,3 +1,15 @@
+### [0.60.1](https://github.com/scaleway/scaleway-ui/compare/v0.60.0...v0.60.1) (2021-03-08)
+
+
+### :memo: Documentation
+
+* added default template for pull requests ([0e01007](https://github.com/scaleway/scaleway-ui/commit/0e01007da66f9c1db7ada054cb0f530ed8264aca))
+
+
+### :bug: Bug Fixes
+
+* **information:** fixed component to use children only ([263e9f6](https://github.com/scaleway/scaleway-ui/commit/263e9f6ad55ca97525e25835d1a4beab4d010379))
+
 ## [0.60.0](https://github.com/scaleway/scaleway-ui/compare/v0.59.0...v0.60.0) (2021-03-08)
 
 
