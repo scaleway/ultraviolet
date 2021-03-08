@@ -226,7 +226,7 @@ DateInput.defaultProps = {
   currentLocale: 'en-EN',
   disabled: false,
   error: false,
-  format: value => value,
+  format: value => value?.toString(),
   label: undefined,
   maxDate: undefined,
   minDate: undefined,

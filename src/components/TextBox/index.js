@@ -4,6 +4,7 @@ import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
+  forwardRef,
   useCallback,
   useEffect,
   useImperativeHandle,
@@ -11,7 +12,6 @@ import React, {
   useState,
 } from 'react'
 import { colors, radii } from '../../theme'
-import { useUUID } from '../../utils'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
@@ -195,9 +195,10 @@ const styles = {
   `,
 }
 
-const TextBox = React.forwardRef(
+const TextBox = forwardRef(
   (
     {
+      ariaControls,
       autoComplete,
       autoFocus,
       tabIndex,
@@ -207,6 +208,7 @@ const TextBox = React.forwardRef(
       edit: forceEdit,
       error,
       generated,
+      id,
       label,
       multiline,
       fillAvailable,
@@ -233,8 +235,6 @@ const TextBox = React.forwardRef(
     },
     ref,
   ) => {
-    const labelId = useUUID('label')
-    const controlId = useUUID('input')
     const controlRef = useRef()
     const [visited, setVisited] = useState(false)
     const [passwordVisible, setPasswordVisible] = useState(false)
@@ -383,8 +383,8 @@ const TextBox = React.forwardRef(
           <ControlComponent
             ref={controlRef}
             type={getType()}
-            aria-controls={hasLabel ? labelId : undefined}
-            id={controlId}
+            aria-controls={ariaControls}
+            id={id}
             value={value}
             placeholder={placeholder}
             onFocus={handleFocus}
@@ -422,8 +422,8 @@ const TextBox = React.forwardRef(
                 readOnly && styles.labelReadOnly,
                 error && styles.labelError,
               ]}
-              htmlFor={controlId}
-              id={labelId}
+              id={ariaControls}
+              htmlFor={id}
               aria-live="assertive"
             >
               {label}
@@ -455,6 +455,7 @@ const TextBox = React.forwardRef(
 )
 
 TextBox.propTypes = {
+  ariaControls: PropTypes.string,
   autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
   cols: PropTypes.number,
@@ -464,10 +465,11 @@ TextBox.propTypes = {
   error: PropTypes.string,
   fillAvailable: PropTypes.bool,
   generated: PropTypes.bool,
+  id: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   label: PropTypes.node,
   multiline: PropTypes.bool,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   notice: PropTypes.node,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -489,6 +491,7 @@ TextBox.propTypes = {
 }
 
 TextBox.defaultProps = {
+  ariaControls: undefined,
   autoComplete: 'on',
   autoFocus: undefined,
   tabIndex: undefined,
@@ -498,9 +501,11 @@ TextBox.defaultProps = {
   edit: undefined,
   error: undefined,
   generated: undefined,
+  id: undefined,
   label: undefined,
   multiline: undefined,
   fillAvailable: undefined,
+  name: undefined,
   notice: undefined,
   onBlur: undefined,
   onChange: undefined,
