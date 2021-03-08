@@ -1,3 +1,16 @@
+## [0.60.0](https://github.com/scaleway/scaleway-ui/compare/v0.59.0...v0.60.0) (2021-03-08)
+
+
+### :package: Chore
+
+* **deps:** bump reakit from 1.3.5 to 1.3.6 ([#95](https://github.com/scaleway/scaleway-ui/issues/95)) ([b6620c7](https://github.com/scaleway/scaleway-ui/commit/b6620c7f2c15a96bd3b4e1a76b5d7ec7c8908f1b))
+* **deps-dev:** bump @emotion/jest from 11.2.0 to 11.2.1 ([#121](https://github.com/scaleway/scaleway-ui/issues/121)) ([3d246d9](https://github.com/scaleway/scaleway-ui/commit/3d246d9a19312ae4a3ba4b6fca31fc78c2a6c8e6))
+
+
+### :gear: Features
+
+* migrate Placeholder ([#79](https://github.com/scaleway/scaleway-ui/issues/79)) ([3a760d8](https://github.com/scaleway/scaleway-ui/commit/3a760d89c1f26ccbf99539b52e1b6aab8901add3))
+
 ## [0.59.0](https://github.com/scaleway/scaleway-ui/compare/v0.58.4...v0.59.0) (2021-03-04)
 
 
