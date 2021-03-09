@@ -12,7 +12,7 @@ env:
   REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
 
 jobs:
-  deploy:
+  build:
     runs-on: [self-hosted, console]
     steps:
       - uses: actions/checkout@v2
