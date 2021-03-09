@@ -67,7 +67,7 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day {
-      color: ${({ theme: { colors } }) => colors.gray350};
+      color: ${({ theme: { colors } }) => colors.gray550};
       font-size: 16px;
       width: 1.7rem;
       height: 1.7rem;
@@ -82,22 +82,22 @@ const StyledWrapper = styled.div`
     }
     ${PREFIX}__day--keyboard-selected {
       color: ${({ theme: { colors } }) => colors.primary};
-      background-color: ${({ theme: { colors } }) => colors.lightViolet};
+      background-color: ${({ theme: { colors } }) => colors.zumthor};
       border-radius: 50%;
     }
 
     ${PREFIX}__day: hover {
       color: ${({ theme: { colors } }) => colors.primary};
       border-radius: 50%;
-      background-color: ${({ theme: { colors } }) => colors.lightViolet};
+      background-color: ${({ theme: { colors } }) => colors.zumthor};
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme: { colors } }) => colors.lightViolet};
+      color: ${({ theme: { colors } }) => colors.gray100};
     }
 
     ${PREFIX}__day--disabled: hover {
-      color: ${({ theme: { colors } }) => colors.lightViolet};
+      color: ${({ theme: { colors } }) => colors.gray100};
       background-color: ${({ theme: { colors } }) => colors.transparent};
     }
   }
@@ -129,6 +129,7 @@ const DateInput = ({
   onBlur,
   onChange,
   onFocus,
+  required,
   type,
   value,
 }) => (
@@ -144,16 +145,22 @@ const DateInput = ({
       onBlur={onBlur}
       customInput={
         <div>
-          <TextBox label={label} value={format(value) || ''} />
+          <TextBox
+            error={error ? `${error}` : undefined}
+            label={label}
+            value={format(value) || ''}
+          />
           <Box
             p={1}
             position="absolute"
             display="flex"
+            alignItems="center"
             right={0}
             top={0}
             height={48}
           >
-            <Separator direction="vertical" mr={1} />
+            {required && <Icon name="asterisk" color="warning" size={8} />}
+            <Separator direction="vertical" mx={1} height="100%" />
             <Icon
               name="calendar-range"
               color={error ? 'warning' : 'gray'}
@@ -208,15 +215,16 @@ DateInput.propTypes = {
   autoFocus: PropTypes.bool,
   currentLocale: PropTypes.string,
   disabled: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   format: PropTypes.func,
   label: PropTypes.string,
-  maxDate: PropTypes.string,
-  minDate: PropTypes.string,
+  maxDate: PropTypes.instanceOf(Date),
+  minDate: PropTypes.instanceOf(Date),
   name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
+  required: PropTypes.bool,
   type: PropTypes.string,
   value: PropTypes.shape(Date.prototype),
 }
@@ -226,7 +234,7 @@ DateInput.defaultProps = {
   currentLocale: 'en-EN',
   disabled: false,
   error: false,
-  format: value => value?.toString(),
+  format: value => value?.toISOString(),
   label: undefined,
   maxDate: undefined,
   minDate: undefined,
@@ -234,6 +242,7 @@ DateInput.defaultProps = {
   onBlur: () => {},
   onChange: () => {},
   onFocus: () => {},
+  required: false,
   type: undefined,
   value: undefined,
 }

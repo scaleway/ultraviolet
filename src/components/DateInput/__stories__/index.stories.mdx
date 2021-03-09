@@ -1,6 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import DateInput from '..'
-import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/DateInput" />
@@ -13,14 +12,7 @@ DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
 
 <Canvas>
   <Story name="Uncontrolled">
-    <BlockList>
-      <DateInput label="Date" />
-      <DateInput label="Date" disabled />
-      <DateInput label="Date" required />
-      <DateInput label="Date" error />
-      <DateInput label="Date" currentLocale="fr-FR" />
-      <DateInput label="Date" currentLocale="de-DE" />
-    </BlockList>
+    <DateInput label="Date" />
   </Story>
 </Canvas>
 
@@ -30,18 +22,56 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 <Canvas>
   <Story name="Controlled">
-    <BlockList>
-      <ControlValue value={new Date('December 17, 1995 03:24:00')}>
-        {({ value, onChange }) => (
-          <DateInput label="Date" value={value} onChange={onChange} />
-        )}
-      </ControlValue>
-      <ControlValue value={new Date('1995-12-17T03:24:00')}>
-        {({ value, onChange }) => (
-          <DateInput label="Date" value={value} onChange={onChange} />
-        )}
-      </ControlValue>
-    </BlockList>
+    <ControlValue value={new Date('December 17, 1995 03:24:00')}>
+      {({ value, onChange }) => (
+        <DateInput label="Date" value={value} onChange={onChange} />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Error
+
+<Canvas>
+  <Story name="Error">
+    <DateInput label="Error" error />
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled">
+    <DateInput label="Disabled" disabled />
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story name="Required">
+    <DateInput label="Required" required />
+  </Story>
+</Canvas>
+
+## Localized
+
+<Canvas>
+  <Story name="Localized">
+    <DateInput label="fr-FR" currentLocale="fr-FR" />
+  </Story>
+</Canvas>
+
+## Min Max
+
+<Canvas>
+  <Story name="Min-Max">
+    <DateInput
+      label="Date"
+      value={new Date('1995-12-17T03:24:00')}
+      minDate={new Date('December 12, 1995 03:24:00')}
+      maxDate={new Date('December 25, 1995 03:24:00')}
+    />
   </Story>
 </Canvas>
 

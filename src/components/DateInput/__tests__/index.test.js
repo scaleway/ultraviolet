@@ -4,7 +4,19 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('DateInput', () => {
   test('renders correctly with default props', () => {
-    shouldMatchEmotionSnapshot(<DateInput label="Time" />)
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        onBlur={() => {}}
+        onFocus={() => {}}
+        currentLocale="fr-FR"
+        value={new Date('1995-12-17T03:24:00.000+00:00')}
+        name="test"
+        autoFocus={false}
+        format={value => value?.toISOString()}
+      />,
+    )
   })
   test('renders correctly disabled', () => {
     shouldMatchEmotionSnapshot(<DateInput label="Date" disabled />)
@@ -12,16 +24,6 @@ describe('DateInput', () => {
 
   test('renders correctly required', () => {
     shouldMatchEmotionSnapshot(<DateInput label="Date" required />)
-  })
-  test('renders correctly disabled required', () => {
-    shouldMatchEmotionSnapshot(
-      <DateInput
-        label="Date"
-        diasbled
-        required
-        value={new Date('December 17, 1995 03:24:00')}
-      />,
-    )
   })
 
   test('renders correctly currentLocale', () => {
@@ -38,6 +40,16 @@ describe('DateInput', () => {
   test('renders correctly error disabled required', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" error disabled required />,
+    )
+  })
+
+  test('renders correctly min-max', () => {
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        minDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        maxDate={new Date('1995-12-25T03:24:00.000+00:00')}
+      />,
     )
   })
 })
