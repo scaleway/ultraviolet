@@ -5,7 +5,9 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Tags } from '..'
+import Tags from '..'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/Tags" component={Tags} />
 
@@ -20,20 +22,47 @@ import { Tags } from '..'
     <Tags
       name="basic"
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
 
-## Variant Bordered
+## Variants
+
+### Base
+
+This is the default variant when you don't override `variant` prop or set it to `base`.
 
 <Canvas>
-  <Story name="bordered">
+  <Story name="variant-base">
+    <BlockList>
+      <Tags name="base" tags={['Scaleway', 'ui']} />
+      <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
+    </BlockList>
+  </Story>
+</Canvas>
+
+### No Border
+
+By setting `variant` prop to `no-border` you can get this variant.
+
+<Canvas>
+  <Story name="variant-no-border">
+    <Tags name="noBorder" variant="no-border" tags={['Scaleway', 'ui']} />
+  </Story>
+</Canvas>
+
+### Bordered
+
+To obtain this you need to set the `variant` prop to `bordered`
+
+<Canvas>
+  <Story name="variant-bordered">
     <Tags
       name="bordered"
       variant="bordered"
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
@@ -62,7 +91,7 @@ import { Tags } from '..'
       onChange={() => {
         throw new Error('')
       }}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
@@ -75,8 +104,51 @@ import { Tags } from '..'
       name="disabled"
       disabled
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
+  </Story>
+</Canvas>
+
+## Controlled
+
+### String tag
+
+<Canvas>
+  <Story name="controlled">
+    <ControlValue value={['Scaleway', 'ui']}>
+      {({ value, onChange }) => (
+        <>
+          <Tags name="controlled" onChange={onChange} tags={value} />
+          <p>Value : {JSON.stringify(value)}</p>
+          <button type="button" onClick={() => onChange([])}>
+            Reset
+          </button>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Object tag
+
+<Canvas>
+  <Story name="controlled-object">
+    <ControlValue value={[{ label: 'Scaleway' }, { label: 'ui' }]}>
+      {({ value, onChange }) => (
+        <>
+          <Tags
+            areTagsObject
+            name="controlled-object"
+            onChange={onChange}
+            tags={value}
+          />
+          <p>Value : {JSON.stringify(value)}</p>
+          <button type="button" onClick={() => onChange([])}>
+            Reset
+          </button>
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 

@@ -1,13 +1,12 @@
-import { css } from '@emotion/react'
+import randomName from '@scaleway/random-name'
+import styled from '@xstyled/emotion'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import { colors } from '../../theme'
-import { Box } from '../Box'
-import { Tag } from '../Tag'
+import { Tag, variantsContainer } from '../Tag'
 
-const container = {
-  base: css`
+const variants = {
+  base: ({ theme: { colors } }) => `
     padding: 8px;
     border-radius: 4px;
     border: 1px solid ${colors.gray350};
@@ -20,7 +19,7 @@ const container = {
       margin: 6px;
     }
   `,
-  bordered: css`
+  bordered: ({ theme: { colors } }) => `
     margin-top: 0;
     padding: 8px 0;
 
@@ -35,7 +34,7 @@ const container = {
       }
     }
   `,
-  noBorder: css`
+  'no-border': ({ theme: { colors } }) => `
     &:focus-within {
       box-shadow: 0 0 2px 4px ${transparentize(0.75, colors.primary)};
     }
@@ -47,26 +46,36 @@ const container = {
   `,
 }
 
-const styles = {
-  input: css`
-    font-size: 16px;
-    color: ${colors.gray700};
-    border: none;
-    outline: none;
-    background-color: ${colors.white};
-    &::placeholder {
-      color: ${colors.gray550};
-    }
-  `,
-}
+const TagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  ${({ variant, theme }) =>
+    variants[variant] ? variants[variant]({ theme }) : variants.base({ theme })}
+`
 
-export const Tags = ({
-  // If this component is used with a RichSelect, tags will be a
-  // list of objects.
+const StyledInput = styled.input`
+  font-size: 16px;
+  color: ${({ theme: { colors } }) => colors.gray700};
+  border: none;
+  outline: none;
+  background-color: ${({ theme: { colors } }) => colors.white};
+  &::placeholder {
+    color: ${({ theme: { colors } }) => colors.gray550};
+  }
+`
+
+const convertTagArrayToTagStateArray = tags =>
+  tags.map(tag =>
+    typeof tag === 'object'
+      ? { ...tag, index: randomName('tag') }
+      : { label: tag, index: randomName('tag') },
+  )
+
+const Tags = ({
   areTagsObject,
-  borderedContainer,
   controlled,
   disabled,
+  id,
   manualInput,
   name,
   onChange,
@@ -76,22 +85,23 @@ export const Tags = ({
   variant,
   ...props
 }) => {
-  const [tagsState, setTags] = useState(tags)
+  const [tagsState, setTags] = useState(convertTagArrayToTagStateArray(tags))
   const [input, setInput] = useState('')
   const [status, setStatus] = useState({})
 
   useEffect(() => {
-    // In a RichSelect, the new value is not a text input
-    // Tags management is done higher, and the source of truth
-    // is the tags prop.
-    if (controlled) {
-      if (tags.length !== tagsState.length) {
-        setTags(tags)
-      }
-    }
-  }, [controlled, tags, tagsState.length])
+    setTags(convertTagArrayToTagStateArray(tags))
+  }, [tags])
 
   const inputRef = useRef(null)
+
+  const dispatchOnChange = newState => {
+    onChange(
+      areTagsObject
+        ? newState.map(({ index, ...tag }) => tag)
+        : newState.map(({ label }) => label),
+    )
+  }
 
   const handleContainerClick = () => {
     if (inputRef.current) {
@@ -104,34 +114,35 @@ export const Tags = ({
   }
 
   const addTag = async () => {
-    const newTags = input ? [...tagsState, input] : tagsState
+    const newTags = input
+      ? [...tagsState, { label: input, index: randomName('tag') }]
+      : tagsState
     setInput('')
     setTags(newTags)
     if (newTags.length !== tagsState.length) {
-      setStatus({ [newTags.length - 1]: 'loading' })
+      setStatus({ [newTags[newTags.length - 1].index]: 'loading' })
     }
     try {
-      await onChange(newTags)
-      setStatus({ [newTags.length - 1]: 'idle' })
+      await dispatchOnChange(newTags)
+      setStatus({ [newTags[newTags.length - 1].index]: 'idle' })
     } catch (e) {
       onChangeError(e)
       setTags(tagsState)
     }
   }
 
-  const deleteTag = async index => {
-    setStatus({ [index]: 'loading' })
-    const newTags = [
-      ...tags.slice(0, index),
-      ...tags.slice(index + 1, tags.length),
-    ]
+  const deleteTag = async tagIndex => {
+    setStatus({ [tagIndex]: 'loading' })
+    const index = tagsState.findIndex(tag => tag.index === tagIndex)
+    const newTags = [...tagsState]
+    newTags.splice(index, 1)
     try {
-      await onChange(newTags)
+      await dispatchOnChange(newTags)
       setTags(newTags)
-      setStatus({ [index]: 'idle' })
+      setStatus({ [tagIndex]: 'idle' })
     } catch (e) {
       onChangeError(e)
-      setTags(tags)
+      setTags(tagsState)
     }
   }
 
@@ -144,57 +155,81 @@ export const Tags = ({
     if (
       e.keyCode === 8 &&
       inputRef.current.selectionStart === 0 &&
-      tags.length
+      tagsState.length
     ) {
       e.preventDefault()
-      deleteTag(tags.length - 1)
+      deleteTag(tagsState[tagsState.length - 1].index)
+    }
+  }
+
+  const handlePaste = async e => {
+    e.preventDefault()
+    const newTags = [
+      ...tagsState,
+      { label: e.clipboardData.getData('Text'), index: randomName('tag') },
+    ]
+    setTags(newTags)
+    setStatus({ [newTags.length - 1]: 'loading' })
+    try {
+      await dispatchOnChange(newTags)
+      setStatus({ [newTags.length - 1]: 'idle' })
+    } catch (error) {
+      onChangeError(error)
+      setTags(tagsState)
     }
   }
 
   return (
     !(variant === 'bordered' && !tagsState.length) && (
-      <Box
-        css={borderedContainer ? container[variant] : container.noBorder}
+      <TagsContainer
         onClick={handleContainerClick}
-        display="flex"
-        flexWrap="wrap"
+        variant={variant}
         onBlur={addTag}
         {...props}
       >
-        {tagsState.map((tab, index) => (
+        {tagsState.map(tag => (
           <Tag
-            variant={variant}
+            variant={
+              Object.keys(variantsContainer).includes(variant)
+                ? variant
+                : 'base'
+            }
             disabled={disabled}
-            key={`tag-${index}`}
-            isLoading={status[index] === 'loading'}
-            onClose={() => deleteTag(index)}
+            key={`tag-${tag.index}`}
+            isLoading={status[tag.index] === 'loading'}
+            onClose={e => {
+              e.stopPropagation()
+              deleteTag(tag.index)
+            }}
           >
-            {areTagsObject ? tab.label : tab}
+            {tag.label}
           </Tag>
         ))}
         {!disabled && manualInput ? (
-          <input
+          <StyledInput
+            id={id}
             name={name}
             type="text"
             placeholder={!tagsState.length ? placeholder : ''}
             value={input}
-            css={styles.input}
             onChange={onInputChange}
             onKeyDown={handleInputKeydown}
+            onPaste={handlePaste}
             ref={inputRef}
           />
         ) : null}
-      </Box>
+      </TagsContainer>
     )
   )
 }
 
 Tags.defaultProps = {
   areTagsObject: false,
-  borderedContainer: true,
   controlled: false,
   disabled: false,
+  id: undefined,
   manualInput: true,
+  onChange: () => {},
   onChangeError: () => {},
   placeholder: undefined,
   tags: [],
@@ -203,12 +238,12 @@ Tags.defaultProps = {
 
 Tags.propTypes = {
   areTagsObject: PropTypes.bool,
-  borderedContainer: PropTypes.bool,
   controlled: PropTypes.bool,
   disabled: PropTypes.bool,
+  id: PropTypes.string,
   manualInput: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onChangeError: PropTypes.func,
   placeholder: PropTypes.string,
   tags: PropTypes.arrayOf(
@@ -219,5 +254,7 @@ Tags.propTypes = {
       }),
     ]),
   ),
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
 }
+
+export default Tags
