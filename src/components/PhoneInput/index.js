@@ -6,6 +6,15 @@ import React, { useEffect, useRef } from 'react'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import 'intl-tel-input/build/js/utils'
 
+const StyledSpan = styled.span`
+  position: absolute;
+  top: -11px;
+  left: 10px;
+  font-size: 14px;
+  padding: 0 10px;
+  background-color: ${({ theme: { colors } }) => colors.white};
+`
+
 const StyledLabel = styled.label`
   position: relative;
   display: flex;
@@ -22,15 +31,6 @@ const StyledLabel = styled.label`
     border: 1px solid ${({ theme: { colors } }) => colors.primary};
     box-shadow: 0 0 0 2px
       ${({ theme: { colors } }) => transparentize(0.75, colors.primary)};
-  }
-
-  & > span {
-    position: absolute;
-    top: -11px;
-    left: 10px;
-    font-size: 14px;
-    padding: 0 10px;
-    background-color: ${({ theme: { colors } }) => colors.white};
   }
 
   & .input__tel__container {
@@ -58,19 +58,19 @@ const StyledLabel = styled.label`
     .iti__selected-dial-code {
       padding-left: 5px;
     }
+  }
+`
 
-    input {
-      height: 100%;
-      border: none;
-      outline: none;
-      width: 100%;
+const StyledInput = styled.input`
+  height: 100%;
+  border: none;
+  outline: none;
+  width: 100%;
 
-      &:disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-        background-color: inherit;
-      }
-    }
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: inherit;
   }
 `
 
@@ -118,8 +118,8 @@ const PhoneInput = ({
       disabled={disabled}
       aria-disabled={disabled}
     >
-      <span>{label}</span>
-      <input
+      <StyledSpan>{label}</StyledSpan>
+      <StyledInput
         onKeyUp={formatIntlTelInput}
         onChange={event => {
           formatIntlTelInput()
