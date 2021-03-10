@@ -73,7 +73,6 @@ const convertTagArrayToTagStateArray = tags =>
 
 const Tags = ({
   areTagsObject,
-  controlled,
   disabled,
   id,
   manualInput,
@@ -225,7 +224,6 @@ const Tags = ({
 
 Tags.defaultProps = {
   areTagsObject: false,
-  controlled: false,
   disabled: false,
   id: undefined,
   manualInput: true,
@@ -238,7 +236,6 @@ Tags.defaultProps = {
 
 Tags.propTypes = {
   areTagsObject: PropTypes.bool,
-  controlled: PropTypes.bool,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   manualInput: PropTypes.bool,
