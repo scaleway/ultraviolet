@@ -11,7 +11,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).
 
 <Canvas>
-  <Story name="Uncontrolled">
+  <Story name="Uncontrolled" height="360px">
     <DateInput label="Date" />
   </Story>
 </Canvas>
@@ -21,7 +21,7 @@ DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
 Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components).
 
 <Canvas>
-  <Story name="Controlled">
+  <Story name="Controlled" height="360px">
     <ControlValue value={new Date('December 17, 1995 03:24:00')}>
       {({ value, onChange }) => (
         <DateInput label="Date" value={value} onChange={onChange} />
@@ -33,8 +33,8 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 ## Error
 
 <Canvas>
-  <Story name="Error">
-    <DateInput label="Error" error />
+  <Story name="Error" height="380px">
+    <DateInput label="Error" error="This is an error" />
   </Story>
 </Canvas>
 
@@ -49,7 +49,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 ## Required
 
 <Canvas>
-  <Story name="Required">
+  <Story name="Required" height="360px">
     <DateInput label="Required" required />
   </Story>
 </Canvas>
@@ -57,7 +57,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 ## Localized
 
 <Canvas>
-  <Story name="Localized">
+  <Story name="Localized" height="360px">
     <DateInput label="fr-FR" currentLocale="fr-FR" />
   </Story>
 </Canvas>
@@ -65,7 +65,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 ## Min Max
 
 <Canvas>
-  <Story name="Min-Max">
+  <Story name="Min-Max" height="360px">
     <DateInput
       label="Date"
       value={new Date('1995-12-17T03:24:00')}

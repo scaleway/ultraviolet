@@ -439,6 +439,11 @@ exports[`DateInput renders correctly disabled 1`] = `
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
+  cursor: default;
+  pointer-events: none;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
@@ -496,6 +501,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   -moz-transform: translate(0, 12px) scale(1);
   -ms-transform: translate(0, 12px) scale(1);
   transform: translate(0, 12px) scale(1);
+  color: #d4dae7;
 }
 
 .emotion-6 {
@@ -589,6 +595,7 @@ exports[`DateInput renders correctly disabled 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4"
+                disabled=""
                 type="text"
                 value=""
               />
@@ -1107,6 +1114,11 @@ exports[`DateInput renders correctly error disabled 1`] = `
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
+  cursor: default;
+  pointer-events: none;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   border-color: #ef5774;
   height: 48px;
   padding-left: 8px;
@@ -1195,6 +1207,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
+  color: #d4dae7;
   color: #ef5774;
 }
 
@@ -1294,6 +1307,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4"
+                disabled=""
                 type="text"
                 value=""
               />
@@ -1461,6 +1475,11 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
+  cursor: default;
+  pointer-events: none;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   border-color: #ef5774;
   height: 48px;
   padding-left: 8px;
@@ -1549,6 +1568,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
+  color: #d4dae7;
   color: #ef5774;
 }
 
@@ -1657,6 +1677,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4"
+                disabled=""
                 type="text"
                 value=""
               />

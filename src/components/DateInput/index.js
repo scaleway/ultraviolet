@@ -149,6 +149,7 @@ const DateInput = ({
             error={error ? `${error}` : undefined}
             label={label}
             value={format(value) || ''}
+            disabled={disabled}
           />
           <Box
             p={1}
