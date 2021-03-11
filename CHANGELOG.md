@@ -1,3 +1,22 @@
+## [0.62.0](https://github.com/scaleway/scaleway-ui/compare/v0.61.0...v0.62.0) (2021-03-11)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.13.9 to 7.13.10 ([#127](https://github.com/scaleway/scaleway-ui/issues/127)) ([a558ead](https://github.com/scaleway/scaleway-ui/commit/a558ead83c28380ab11633d4b9d6031c04bb6cdc))
+* **deps-dev:** bump @babel/core from 7.13.8 to 7.13.10 ([#125](https://github.com/scaleway/scaleway-ui/issues/125)) ([2c876ab](https://github.com/scaleway/scaleway-ui/commit/2c876abd8dd75ebcf42e6cb17a231aad3d9c4798))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#128](https://github.com/scaleway/scaleway-ui/issues/128)) ([a82bfa5](https://github.com/scaleway/scaleway-ui/commit/a82bfa5e54d02bf9b6f0626a03f951668d9819df))
+* **deps-dev:** bump @babel/preset-env from 7.13.9 to 7.13.10 ([#124](https://github.com/scaleway/scaleway-ui/issues/124)) ([bec2a48](https://github.com/scaleway/scaleway-ui/commit/bec2a48c29536b119e3557e04b3157044d1aa194))
+* **deps-dev:** bump @semantic-release/release-notes-generator ([#122](https://github.com/scaleway/scaleway-ui/issues/122)) ([396cedd](https://github.com/scaleway/scaleway-ui/commit/396cedd5d2eaeecaa47a1460ed460e53394be5a1))
+* **deps-dev:** bump postcss from 8.2.7 to 8.2.8 ([#129](https://github.com/scaleway/scaleway-ui/issues/129)) ([42738f4](https://github.com/scaleway/scaleway-ui/commit/42738f4c7e75ffe72e5fa41ae3f75a3839e1d7e2))
+* **deps-dev:** bump rollup from 2.40.0 to 2.41.0 ([#123](https://github.com/scaleway/scaleway-ui/issues/123)) ([36c8ce7](https://github.com/scaleway/scaleway-ui/commit/36c8ce729660cd3aa58d6b344dabc1eacd224e53))
+* **deps-dev:** bump rollup from 2.41.0 to 2.41.1 ([#131](https://github.com/scaleway/scaleway-ui/issues/131)) ([455716f](https://github.com/scaleway/scaleway-ui/commit/455716f91c62dfcc6126d5ab200060afdbce8f83))
+
+
+### :gear: Features
+
+* migrate phoneinput ([#90](https://github.com/scaleway/scaleway-ui/issues/90)) ([2d467ad](https://github.com/scaleway/scaleway-ui/commit/2d467ade5c312820c91e76b135d891ec737e350f))
+
 ## [0.61.0](https://github.com/scaleway/scaleway-ui/compare/v0.60.1...v0.61.0) (2021-03-08)
 
 
