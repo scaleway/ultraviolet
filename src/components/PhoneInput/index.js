@@ -77,7 +77,7 @@ const StyledInput = styled.input`
 const PhoneInput = ({
   disabled,
   disableDropdown,
-  inputProps: { name, id, placeholder, dataTestid },
+  inputProps: { name, id, placeholder, ...inputProps },
   onChange,
   value,
   label,
@@ -87,12 +87,12 @@ const PhoneInput = ({
   const formatIntlTelInput = () => {
     const { intlTelInputUtils, intlTelInputGlobals } = window
     const iti = intlTelInputGlobals.getInstance(inputRef.current)
-    if (typeof intlTelInputUtils !== 'undefined') {
-      // utils are lazy loaded, so must check
-      const currentText = iti.getNumber(intlTelInputUtils.numberFormat.E164)
+    if (typeof intlTelInputUtils !== 'undefined' && iti) {
+      const currentText = iti.getNumber(
+        intlTelInputUtils.numberFormat.INTERNATIONAL,
+      )
       if (typeof currentText === 'string') {
-        // sometimes the currentText is an object :)
-        iti.setNumber(currentText) // will autoformat because of formatOnDisplay=true
+        iti.setNumber(currentText)
       }
     }
   }
@@ -122,7 +122,6 @@ const PhoneInput = ({
       <StyledInput
         onKeyUp={formatIntlTelInput}
         onChange={event => {
-          formatIntlTelInput()
           const { intlTelInputGlobals } = window
           const iti = intlTelInputGlobals.getInstance(inputRef.current)
           onChange?.(event, iti)
@@ -132,10 +131,10 @@ const PhoneInput = ({
         value={value}
         name={name}
         id={id}
+        maxLength={50}
         disabled={disabled}
         placeholder={placeholder}
-        maxLength={15}
-        data-testid={dataTestid}
+        data-testid={inputProps['data-testid']}
       />
     </StyledLabel>
   )
@@ -148,7 +147,7 @@ PhoneInput.propTypes = {
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     name: PropTypes.string,
     placeholder: PropTypes.string,
-    dataTestid: PropTypes.string,
+    'data-testid': PropTypes.string,
   }),
   onChange: PropTypes.func,
   value: PropTypes.string,
