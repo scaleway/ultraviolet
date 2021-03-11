@@ -1,137 +1,166 @@
 import styled from '@emotion/styled'
+import intlTelInput from 'intl-tel-input'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
-import ReactPhoneInput from 'react-phone-input-2'
-import { colors } from '../../theme'
-import 'react-phone-input-2/lib/style.css'
-import 'react-phone-input-2/lib/material.css'
+import React, { useEffect, useRef } from 'react'
+import 'intl-tel-input/build/css/intlTelInput.css'
+import 'intl-tel-input/build/js/utils'
 
-const StyleWrapper = styled.div`
+const StyledSpan = styled.span`
+  position: absolute;
+  top: -11px;
+  left: 10px;
+  font-size: 14px;
+  padding: 0 10px;
+  background-color: ${({ theme: { colors } }) => colors.white};
+`
+
+const StyledLabel = styled.label`
   position: relative;
-  flex: 1;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid ${({ theme: { colors } }) => colors.gray350};
+  padding: 0.8rem 0rem;
 
-  > label {
-    color: ${colors.gray550};
-    display: block;
-    font-size: 16;
-    height: 48;
-    left: 0;
-    overflow: hidden;
-    padding-left: 48px;
-    padding-right: 8;
-    pointer-events: none;
-    position: absolute;
-    text-overflow: ellipsis;
-    top: 0;
-    transform: translate(0, 12px) scale(1);
-    transition: transform 0.15s;
-    white-space: nowrap;
-    width: 100%;
-
-    &.visited {
-      padding-left: 56px;
-      transform: translate(-9.6%, -3px) scale(0.8);
-    }
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
-  .react-tel-input {
-    > .flag-dropdown,
-    > .flag-dropdown .selected-flag {
-      background: none;
-      border: none;
+  &:focus-within {
+    border: 1px solid ${({ theme: { colors } }) => colors.primary};
+    box-shadow: 0 0 0 2px
+      ${({ theme: { colors } }) => transparentize(0.75, colors.primary)};
+  }
+
+  & .input__tel__container {
+    border: none;
+    width: calc(100%-2px);
+    flex-grow: 1;
+
+    .iti__selected-flag {
+      background-color: inherit;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        background-color: inherit;
+      }
+    }
+
+    .iti__flag-container {
       cursor: ${({ disabled, disableDropdown }) =>
         disabled || disableDropdown ? 'not-allowed' : 'inherit'};
       pointer-events: ${({ disabled, disableDropdown }) =>
         disabled || disableDropdown ? 'none' : 'inherit'};
     }
-    .country-list {
-      max-height: 300px;
 
-      .search-emoji {
-        display: none;
-      }
-    }
-    > input.form-control[type='tel'] {
-      background-color: ${colors.white};
-      background-image: none;
-      border-color: ${colors.gray350};
-      border-radius: 4px;
-      border-style: solid;
-      border-width: 1px;
-      color: ${({ visited }) => (visited ? colors.gray700 : colors.white)};
-      display: block;
-      font-size: 16px;
-      line-height: 24px;
-      max-width: 100%;
-      outline: none;
-      padding-right: 8px;
-      padding-top: 14px;
-      position: relative;
-      transition: border 0.1s;
-      width: 100%;
-      height: 48px;
-
-      :focus {
-        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
-        border-color: ${colors.primary};
-      }
+    .iti__selected-dial-code {
+      padding-left: 5px;
     }
   }
 `
+
+const StyledInput = styled.input`
+  height: 100%;
+  border: none;
+  outline: none;
+  width: 100%;
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: inherit;
+  }
+`
+
 const PhoneInput = ({
   disabled,
   disableDropdown,
-  inputProps,
+  inputProps: { name, id, placeholder, ...inputProps },
   onChange,
   value,
+  label,
 }) => {
-  const [visited, setVisited] = useState(false)
+  const inputRef = useRef()
 
-  useEffect(() => {
-    setVisited(visited || (!!value && value.length > 0))
-  }, [value, visited])
-
-  const handleFocus = () => {
-    setVisited(true)
+  const formatIntlTelInput = () => {
+    const { intlTelInputUtils, intlTelInputGlobals } = window
+    const iti = intlTelInputGlobals.getInstance(inputRef.current)
+    if (typeof intlTelInputUtils !== 'undefined' && iti) {
+      const currentText = iti.getNumber(
+        intlTelInputUtils.numberFormat.INTERNATIONAL,
+      )
+      if (typeof currentText === 'string') {
+        iti.setNumber(currentText)
+      }
+    }
   }
 
+  useEffect(() => {
+    const inputElement = inputRef.current
+
+    if (inputElement) {
+      intlTelInput(inputElement, {
+        customContainer: 'input__tel__container',
+        initialCountry: 'US',
+        autoPlaceholder: 'aggressive',
+        formatOnDisplay: true,
+        nationalMode: false,
+        separateDialCode: false,
+      })
+    }
+  }, [inputRef])
+
   return (
-    <StyleWrapper
-      visited={visited}
-      disabled={disabled}
+    <StyledLabel
       disableDropdown={disableDropdown}
+      disabled={disabled}
+      aria-disabled={disabled}
     >
-      <ReactPhoneInput
-        disabled={disabled}
-        disableDropdown={disableDropdown}
-        inputProps={inputProps}
+      <StyledSpan>{label}</StyledSpan>
+      <StyledInput
+        onKeyUp={formatIntlTelInput}
+        onChange={event => {
+          const { intlTelInputGlobals } = window
+          const iti = intlTelInputGlobals.getInstance(inputRef.current)
+          onChange?.(event, iti)
+        }}
+        type="tel"
+        ref={inputRef}
         value={value}
-        onChange={onChange}
-        enableSearchField
-        enableLongNumbers={15}
-        onFocus={handleFocus}
-        placeholder={visited ? '+1 012346789' : ''}
-        country="us"
+        name={name}
+        id={id}
+        maxLength={50}
+        disabled={disabled}
+        placeholder={placeholder}
+        data-testid={inputProps['data-testid']}
       />
-    </StyleWrapper>
+    </StyledLabel>
   )
 }
 
 PhoneInput.propTypes = {
   disabled: PropTypes.bool,
   disableDropdown: PropTypes.bool,
-  inputProps: PropTypes.objectOf(PropTypes.bool),
+  inputProps: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    'data-testid': PropTypes.string,
+  }),
   onChange: PropTypes.func,
   value: PropTypes.string,
+  label: PropTypes.string,
 }
 
 PhoneInput.defaultProps = {
   disabled: false,
   disableDropdown: false,
   inputProps: {},
-  onChange: () => {},
-  value: '',
+  onChange: undefined,
+  value: undefined,
+  label: 'Phone',
 }
 
-export { PhoneInput }
+export default PhoneInput
