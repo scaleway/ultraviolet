@@ -1,8 +1,8 @@
-import randomName from '@scaleway/random-name'
 import styled from '@xstyled/emotion'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
+import { getUUID } from '../../utils/ids'
 import { Tag, variantsContainer } from '../Tag'
 
 const variants = {
@@ -67,8 +67,8 @@ const StyledInput = styled.input`
 const convertTagArrayToTagStateArray = tags =>
   tags.map(tag =>
     typeof tag === 'object'
-      ? { ...tag, index: randomName('tag') }
-      : { label: tag, index: randomName('tag') },
+      ? { ...tag, index: getUUID('tag') }
+      : { label: tag, index: getUUID('tag') },
   )
 
 const Tags = ({
@@ -114,7 +114,7 @@ const Tags = ({
 
   const addTag = async () => {
     const newTags = input
-      ? [...tagsState, { label: input, index: randomName('tag') }]
+      ? [...tagsState, { label: input, index: getUUID('tag') }]
       : tagsState
     setInput('')
     setTags(newTags)
@@ -165,7 +165,7 @@ const Tags = ({
     e.preventDefault()
     const newTags = [
       ...tagsState,
-      { label: e.clipboardData.getData('Text'), index: randomName('tag') },
+      { label: e.clipboardData.getData('Text'), index: getUUID('tag') },
     ]
     setTags(newTags)
     setStatus({ [newTags.length - 1]: 'loading' })

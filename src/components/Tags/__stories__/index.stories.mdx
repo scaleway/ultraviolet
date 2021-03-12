@@ -8,6 +8,8 @@ import {
 import Tags from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import { Button } from '../../Button'
+import { Typography } from '../../Typography'
 
 <Meta title="Components/Tags" component={Tags} />
 
@@ -15,7 +17,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Basic
 
-<Description>`Open your console to check onChange event`</Description>
+<Description>Open your console to check onChange event</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -119,10 +121,10 @@ To obtain this you need to set the `variant` prop to `bordered`
       {({ value, onChange }) => (
         <>
           <Tags name="controlled" onChange={onChange} tags={value} />
-          <p>Value : {JSON.stringify(value)}</p>
-          <button type="button" onClick={() => onChange([])}>
+          <Typography my={1}>Value : {JSON.stringify(value)}</Typography>
+          <Button size="small" type="button" onClick={() => onChange([])}>
             Reset
-          </button>
+          </Button>
         </>
       )}
     </ControlValue>
@@ -142,10 +144,10 @@ To obtain this you need to set the `variant` prop to `bordered`
             onChange={onChange}
             tags={value}
           />
-          <p>Value : {JSON.stringify(value)}</p>
-          <button type="button" onClick={() => onChange([])}>
+          <Typography my={1}>Value : {JSON.stringify(value)}</Typography>
+          <Button size="small" type="button" onClick={() => onChange([])}>
             Reset
-          </button>
+          </Button>
         </>
       )}
     </ControlValue>

@@ -11,12 +11,7 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 describe('Tags', () => {
   test('renders correctly with base props', () => {
     shouldMatchEmotionSnapshot(
-      <Tags
-        onChange={() => {}}
-        name="radio"
-        onChangeError={() => {}}
-        placeholder="Tags..."
-      />,
+      <Tags name="radio" onChangeError={() => {}} placeholder="Tags..." />,
     )
   })
 
