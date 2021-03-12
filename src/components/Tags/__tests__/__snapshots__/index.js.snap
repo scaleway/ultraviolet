@@ -2,7 +2,23 @@
 
 exports[`Tags add tag from input 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +116,20 @@ exports[`Tags add tag from input 1`] = `
   min-height: 16px;
 }
 
-.emotion-9 {
+.emotion-12.emotion-12 {
+  color: #4f0599;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-14 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -108,19 +137,19 @@ exports[`Tags add tag from input 1`] = `
   background-color: #fff;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::placeholder {
+.emotion-14::placeholder {
   color: #b2b6c3;
 }
 
@@ -171,8 +200,56 @@ exports[`Tags add tag from input 1`] = `
         </svg>
       </button>
     </div>
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-2"
+      >
+        test
+      </span>
+      <button
+        class="emotion-3"
+        type="button"
+      >
+        <div
+          aria-valuemax="1"
+          aria-valuemin="0"
+          class="emotion-12"
+          role="progressbar"
+        >
+          <div
+            class="emotion-13"
+            style="height: 16px; width: 16px;"
+          >
+            <svg
+              height="100%"
+              viewBox="0 0 32 32"
+              width="100%"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; opacity: 0.2;"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
+              />
+            </svg>
+          </div>
+        </div>
+      </button>
+    </div>
     <input
-      class="emotion-9"
+      class="emotion-14"
       id="test"
       name="radio"
       placeholder=""
@@ -283,7 +360,7 @@ exports[`Tags add tag on paste 1`] = `
   min-height: 16px;
 }
 
-.emotion-9 {
+.emotion-13 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -291,19 +368,19 @@ exports[`Tags add tag on paste 1`] = `
   background-color: #fff;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-13::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-13::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-13:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::placeholder {
+.emotion-13::placeholder {
   color: #b2b6c3;
 }
 
@@ -354,8 +431,30 @@ exports[`Tags add tag on paste 1`] = `
         </svg>
       </button>
     </div>
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-2"
+      >
+        test
+      </span>
+      <button
+        class="emotion-3"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon emotion-4"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
     <input
-      class="emotion-9"
+      class="emotion-13"
       id="test"
       name="radio"
       placeholder=""
@@ -368,7 +467,23 @@ exports[`Tags add tag on paste 1`] = `
 
 exports[`Tags delete tag 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -457,7 +572,20 @@ exports[`Tags delete tag 1`] = `
   fill: #4f0599;
 }
 
-.emotion-4 {
+.emotion-4.emotion-4 {
+  color: #4f0599;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-9 {
   fill: #b2b6c3;
   vertical-align: middle;
   height: 16px;
@@ -466,7 +594,7 @@ exports[`Tags delete tag 1`] = `
   min-height: 16px;
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -474,19 +602,19 @@ exports[`Tags delete tag 1`] = `
   background-color: #fff;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::placeholder {
+.emotion-10::placeholder {
   color: #b2b6c3;
 }
 
@@ -505,14 +633,40 @@ exports[`Tags delete tag 1`] = `
         class="emotion-3"
         type="button"
       >
-        <svg
-          class="sc-ui-icon emotion-4"
-          viewBox="0 0 24 24"
+        <div
+          aria-valuemax="1"
+          aria-valuemin="0"
+          class="emotion-4"
+          role="progressbar"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <div
+            class="emotion-5"
+            style="height: 16px; width: 16px;"
+          >
+            <svg
+              height="100%"
+              viewBox="0 0 32 32"
+              width="100%"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; opacity: 0.2;"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
+              />
+            </svg>
+          </div>
+        </div>
       </button>
     </div>
     <div
@@ -528,7 +682,7 @@ exports[`Tags delete tag 1`] = `
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4"
+          class="sc-ui-icon emotion-9"
           viewBox="0 0 24 24"
         >
           <path
@@ -538,7 +692,7 @@ exports[`Tags delete tag 1`] = `
       </button>
     </div>
     <input
-      class="emotion-9"
+      class="emotion-10"
       id="test"
       name="radio"
       placeholder=""
@@ -551,7 +705,23 @@ exports[`Tags delete tag 1`] = `
 
 exports[`Tags delete tag with backspace 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -649,7 +819,20 @@ exports[`Tags delete tag with backspace 1`] = `
   min-height: 16px;
 }
 
+.emotion-8.emotion-8 {
+  color: #4f0599;
+}
+
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-10 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -657,19 +840,19 @@ exports[`Tags delete tag with backspace 1`] = `
   background-color: #fff;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-9::placeholder {
+.emotion-10::placeholder {
   color: #b2b6c3;
 }
 
@@ -710,18 +893,44 @@ exports[`Tags delete tag with backspace 1`] = `
         class="emotion-3"
         type="button"
       >
-        <svg
-          class="sc-ui-icon emotion-4"
-          viewBox="0 0 24 24"
+        <div
+          aria-valuemax="1"
+          aria-valuemin="0"
+          class="emotion-8"
+          role="progressbar"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <div
+            class="emotion-9"
+            style="height: 16px; width: 16px;"
+          >
+            <svg
+              height="100%"
+              viewBox="0 0 32 32"
+              width="100%"
+            >
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; opacity: 0.2;"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                fill="none"
+                r="14"
+                stroke-width="4"
+                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
+              />
+            </svg>
+          </div>
+        </div>
       </button>
     </div>
     <input
-      class="emotion-9"
+      class="emotion-10"
       id="test"
       name="radio"
       placeholder=""

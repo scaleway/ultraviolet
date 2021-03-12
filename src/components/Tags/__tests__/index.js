@@ -98,7 +98,7 @@ describe('Tags', () => {
     )
   })
 
-  test('delete tag', async () => {
+  test('delete tag', async done => {
     shouldMatchEmotionSnapshot(
       <Tags
         id="test"
@@ -106,15 +106,20 @@ describe('Tags', () => {
         name="radio"
         tags={['hello', 'world']}
       />,
+      {
+        transform: async () => {
+          const input = document.getElementById('test')
+          const tagClose = screen.getByText('hello').nextElementSibling
+          userEvent.click(input)
+          userEvent.click(tagClose)
+          await waitForElementToBeRemoved(() => screen.getByText('hello'))
+          done()
+        },
+      },
     )
-    const input = document.getElementById('test')
-    const tagClose = screen.getByText('hello').nextElementSibling
-    userEvent.click(input)
-    userEvent.click(tagClose)
-    await waitForElementToBeRemoved(() => screen.getByText('hello'))
   })
 
-  test('add tag from input', async () => {
+  test('add tag from input', async done => {
     shouldMatchEmotionSnapshot(
       <Tags
         id="test"
@@ -122,14 +127,19 @@ describe('Tags', () => {
         name="radio"
         tags={['hello', 'world']}
       />,
+      {
+        transform: async () => {
+          const input = document.getElementById('test')
+          userEvent.type(input, 'test{enter}')
+          await waitFor(() => expect(input.value).toBe(''))
+          await expect(screen.getByText('test')).toBeInTheDocument()
+          done()
+        },
+      },
     )
-    const input = document.getElementById('test')
-    userEvent.type(input, 'test{enter}')
-    await waitFor(() => expect(input.value).toBe(''))
-    await expect(screen.getByText('test')).toBeInTheDocument()
   })
 
-  test('delete tag with backspace', async () => {
+  test('delete tag with backspace', async done => {
     shouldMatchEmotionSnapshot(
       <Tags
         id="test"
@@ -137,13 +147,18 @@ describe('Tags', () => {
         name="radio"
         tags={['hello', 'world']}
       />,
+      {
+        transform: async () => {
+          const input = document.getElementById('test')
+          userEvent.type(input, '{backspace}')
+          await waitForElementToBeRemoved(() => screen.getByText('world'))
+          done()
+        },
+      },
     )
-    const input = document.getElementById('test')
-    userEvent.type(input, '{backspace}')
-    await waitForElementToBeRemoved(() => screen.getByText('world'))
   })
 
-  test('add tag on paste', async () => {
+  test('add tag on paste', async done => {
     shouldMatchEmotionSnapshot(
       <Tags
         id="test"
@@ -151,12 +166,17 @@ describe('Tags', () => {
         name="radio"
         tags={['hello', 'world']}
       />,
+      {
+        transform: async () => {
+          const input = document.getElementById('test')
+          userEvent.paste(input, '', {
+            clipboardData: { getData: () => 'test' },
+          })
+          await waitFor(() => expect(input.value).toBe(''))
+          await waitFor(() => screen.getByText('test'))
+          done()
+        },
+      },
     )
-    const input = document.getElementById('test')
-    userEvent.paste(input, '', {
-      clipboardData: { getData: () => 'test' },
-    })
-    await waitFor(() => expect(input.value).toBe(''))
-    await expect(screen.getByText('test')).toBeInTheDocument()
   })
 })
