@@ -18,7 +18,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 <Description>`Open your console to check onChange event`</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Tags
       name="basic"
       onChange={tags => console.log(tags)}
@@ -34,7 +34,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 This is the default variant when you don't override `variant` prop or set it to `base`.
 
 <Canvas>
-  <Story name="variant-base">
+  <Story name="Variant base">
     <BlockList>
       <Tags name="base" tags={['Scaleway', 'ui']} />
       <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
@@ -47,7 +47,7 @@ This is the default variant when you don't override `variant` prop or set it to 
 By setting `variant` prop to `no-border` you can get this variant.
 
 <Canvas>
-  <Story name="variant-no-border">
+  <Story name="Variant no-border">
     <Tags name="noBorder" variant="no-border" tags={['Scaleway', 'ui']} />
   </Story>
 </Canvas>
@@ -57,7 +57,7 @@ By setting `variant` prop to `no-border` you can get this variant.
 To obtain this you need to set the `variant` prop to `bordered`
 
 <Canvas>
-  <Story name="variant-bordered">
+  <Story name="Variant bordered">
     <Tags
       name="bordered"
       variant="bordered"
@@ -70,7 +70,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ## Custom placeholder
 
 <Canvas>
-  <Story name="placeholder">
+  <Story name="Placeholder">
     <Tags
       name="placeholder"
       placeholder="Please type your tags"
@@ -82,7 +82,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ## With a custom error handler
 
 <Canvas>
-  <Story name="error-handler">
+  <Story name="Error handler">
     <Tags
       name="error-handler"
       onChangeError={error => {
@@ -99,7 +99,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ## Disabled
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Tags
       name="disabled"
       disabled
@@ -114,7 +114,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ### String tag
 
 <Canvas>
-  <Story name="controlled">
+  <Story name="Controlled">
     <ControlValue value={['Scaleway', 'ui']}>
       {({ value, onChange }) => (
         <>
@@ -132,7 +132,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ### Object tag
 
 <Canvas>
-  <Story name="controlled-object">
+  <Story name="Controlled object">
     <ControlValue value={[{ label: 'Scaleway' }, { label: 'ui' }]}>
       {({ value, onChange }) => (
         <>
