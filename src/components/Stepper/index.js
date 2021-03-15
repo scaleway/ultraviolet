@@ -117,19 +117,19 @@ const styles = {
 }
 
 const Stepper = ({
-  text,
-  size,
   disabled,
-  minValue,
   maxValue,
+  minValue,
   name,
-  step,
-  value,
+  onBlur,
   onChange,
   onFocus,
-  onBlur,
-  onMinCrossed,
   onMaxCrossed,
+  onMinCrossed,
+  size,
+  step,
+  text,
+  value,
   ...props
 }) => {
   const inputRef = useRef()
@@ -222,18 +222,19 @@ const Stepper = ({
           }
         }}
         px={1}
+        aria-label="Input"
       >
         <input
-          ref={inputRef}
           css={[styles.input, disabled && styles.disabled]}
+          disabled={disabled}
           name={name}
+          onBlur={handleOnBlur}
           onChange={handleChange}
           onFocus={handleOnFocus}
           onKeyPress={onKeyOnlyNumbers}
-          onBlur={handleOnBlur}
-          value={inputValue.toString()} // A dom element can only have string attributes.
-          disabled={disabled}
+          ref={inputRef}
           style={{ width: inputValue.toString().length * 10 + 15 }}
+          value={inputValue.toString()} // A dom element can only have string attributes.
         />
 
         <span css={[styles.input, disabled && styles.disabled]}>{text}</span>
@@ -297,4 +298,4 @@ Stepper.defaultProps = {
   onMaxCrossed: null,
 }
 
-export { Stepper }
+export default Stepper
