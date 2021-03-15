@@ -94,7 +94,7 @@ describe('Tags', () => {
   })
 
   test('delete tag', async done => {
-    shouldMatchEmotionSnapshot(
+    await shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -114,8 +114,8 @@ describe('Tags', () => {
     )
   })
 
-  test('add tag from input', async done => {
-    shouldMatchEmotionSnapshot(
+  test('add tag from input', async () => {
+    await shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -128,14 +128,13 @@ describe('Tags', () => {
           userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
           await expect(screen.getByText('test')).toBeInTheDocument()
-          done()
         },
       },
     )
   })
 
-  test('delete tag with backspace', async done => {
-    shouldMatchEmotionSnapshot(
+  test('delete tag with backspace', async () => {
+    await shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -147,14 +146,13 @@ describe('Tags', () => {
           const input = document.getElementById('test')
           userEvent.type(input, '{backspace}')
           await waitForElementToBeRemoved(() => screen.getByText('world'))
-          done()
         },
       },
     )
   })
 
-  test('add tag on paste', async done => {
-    shouldMatchEmotionSnapshot(
+  test('add tag on paste', async () => {
+    await shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -169,7 +167,6 @@ describe('Tags', () => {
           })
           await waitFor(() => expect(input.value).toBe(''))
           await waitFor(() => screen.getByText('test'))
-          done()
         },
       },
     )

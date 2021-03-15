@@ -13,13 +13,13 @@ const emotionCache = createCache({
 })
 emotionCache.compat = true
 
-export default (component, { transform } = {}) => {
+export default async (component, { transform } = {}) => {
   const node = render(
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>{component}</ThemeProvider>
     </CacheProvider>,
   )
-  if (transform) transform(node)
+  if (transform) await transform(node)
 
   expect(node.asFragment()).toMatchSnapshot()
 }

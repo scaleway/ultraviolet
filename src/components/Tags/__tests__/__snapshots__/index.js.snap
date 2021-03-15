@@ -2,23 +2,7 @@
 
 exports[`Tags add tag from input 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,20 +100,7 @@ exports[`Tags add tag from input 1`] = `
   min-height: 16px;
 }
 
-.emotion-12.emotion-12 {
-  color: #4f0599;
-}
-
 .emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.emotion-14 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -137,19 +108,19 @@ exports[`Tags add tag from input 1`] = `
   background-color: #fff;
 }
 
-.emotion-14::-webkit-input-placeholder {
+.emotion-13::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-14::-moz-placeholder {
+.emotion-13::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-14:-ms-input-placeholder {
+.emotion-13:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-14::placeholder {
+.emotion-13::placeholder {
   color: #b2b6c3;
 }
 
@@ -212,44 +183,18 @@ exports[`Tags add tag from input 1`] = `
         class="emotion-3"
         type="button"
       >
-        <div
-          aria-valuemax="1"
-          aria-valuemin="0"
-          class="emotion-12"
-          role="progressbar"
+        <svg
+          class="sc-ui-icon emotion-4"
+          viewBox="0 0 24 24"
         >
-          <div
-            class="emotion-13"
-            style="height: 16px; width: 16px;"
-          >
-            <svg
-              height="100%"
-              viewBox="0 0 32 32"
-              width="100%"
-            >
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; opacity: 0.2;"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
-              />
-            </svg>
-          </div>
-        </div>
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
       </button>
     </div>
     <input
-      class="emotion-14"
+      class="emotion-13"
       id="test"
       name="radio"
       placeholder=""
@@ -467,261 +412,7 @@ exports[`Tags add tag on paste 1`] = `
 
 exports[`Tags delete tag 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-}
-
-.emotion-0:focus-within {
-  border: 1px solid #4f0599;
-  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
-}
-
-.emotion-0>* {
-  margin: 6px;
-}
-
-.emotion-1 {
-  border-radius: 4px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f5f7;
-  height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.emotion-2 {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-}
-
-.emotion-3 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  margin-left: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-3:hover,
-.emotion-3:focus {
-  background-color: #eeeeff;
-}
-
-.emotion-3:hover svg,
-.emotion-3:focus svg {
-  fill: #4f0599;
-}
-
-.emotion-4.emotion-4 {
-  color: #4f0599;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.emotion-9 {
-  fill: #b2b6c3;
-  vertical-align: middle;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-10 {
-  font-size: 16px;
-  color: #4a4f62;
-  border: none;
-  outline: none;
-  background-color: #fff;
-}
-
-.emotion-10::-webkit-input-placeholder {
-  color: #b2b6c3;
-}
-
-.emotion-10::-moz-placeholder {
-  color: #b2b6c3;
-}
-
-.emotion-10:-ms-input-placeholder {
-  color: #b2b6c3;
-}
-
-.emotion-10::placeholder {
-  color: #b2b6c3;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      <span
-        class="emotion-2"
-      >
-        hello
-      </span>
-      <button
-        class="emotion-3"
-        type="button"
-      >
-        <div
-          aria-valuemax="1"
-          aria-valuemin="0"
-          class="emotion-4"
-          role="progressbar"
-        >
-          <div
-            class="emotion-5"
-            style="height: 16px; width: 16px;"
-          >
-            <svg
-              height="100%"
-              viewBox="0 0 32 32"
-              width="100%"
-            >
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; opacity: 0.2;"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
-              />
-            </svg>
-          </div>
-        </div>
-      </button>
-    </div>
-    <div
-      class="emotion-1"
-    >
-      <span
-        class="emotion-2"
-      >
-        world
-      </span>
-      <button
-        class="emotion-3"
-        type="button"
-      >
-        <svg
-          class="sc-ui-icon emotion-9"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </div>
-    <input
-      class="emotion-10"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tags delete tag with backspace 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -819,20 +510,7 @@ exports[`Tags delete tag with backspace 1`] = `
   min-height: 16px;
 }
 
-.emotion-8.emotion-8 {
-  color: #4f0599;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.emotion-10 {
+.emotion-5 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -840,19 +518,180 @@ exports[`Tags delete tag with backspace 1`] = `
   background-color: #fff;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-10::placeholder {
+.emotion-5::placeholder {
+  color: #b2b6c3;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-2"
+      >
+        world
+      </span>
+      <button
+        class="emotion-3"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon emotion-4"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <input
+      class="emotion-5"
+      id="test"
+      name="radio"
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tags delete tag with backspace 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.emotion-0:focus-within {
+  border: 1px solid #4f0599;
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+}
+
+.emotion-0>* {
+  margin: 6px;
+}
+
+.emotion-1 {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-2 {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.emotion-3 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3:hover,
+.emotion-3:focus {
+  background-color: #eeeeff;
+}
+
+.emotion-3:hover svg,
+.emotion-3:focus svg {
+  fill: #4f0599;
+}
+
+.emotion-4 {
+  fill: #b2b6c3;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-5 {
+  font-size: 16px;
+  color: #4a4f62;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.emotion-5::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.emotion-5::placeholder {
   color: #b2b6c3;
 }
 
@@ -881,56 +720,8 @@ exports[`Tags delete tag with backspace 1`] = `
         </svg>
       </button>
     </div>
-    <div
-      class="emotion-1"
-    >
-      <span
-        class="emotion-2"
-      >
-        world
-      </span>
-      <button
-        class="emotion-3"
-        type="button"
-      >
-        <div
-          aria-valuemax="1"
-          aria-valuemin="0"
-          class="emotion-8"
-          role="progressbar"
-        >
-          <div
-            class="emotion-9"
-            style="height: 16px; width: 16px;"
-          >
-            <svg
-              height="100%"
-              viewBox="0 0 32 32"
-              width="100%"
-            >
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; opacity: 0.2;"
-              />
-              <circle
-                cx="16"
-                cy="16"
-                fill="none"
-                r="14"
-                stroke-width="4"
-                style="stroke: currentColor; stroke-dashoffset: 60; stroke-dasharray: 80;"
-              />
-            </svg>
-          </div>
-        </div>
-      </button>
-    </div>
     <input
-      class="emotion-10"
+      class="emotion-5"
       id="test"
       name="radio"
       placeholder=""
