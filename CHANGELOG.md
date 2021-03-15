@@ -1,3 +1,16 @@
+## [0.63.0](https://github.com/scaleway/scaleway-ui/compare/v0.62.0...v0.63.0) (2021-03-15)
+
+
+### :package: Chore
+
+* **deps:** bump bobheadxi/deployments from v0.4.3 to v0.5.2 ([#132](https://github.com/scaleway/scaleway-ui/issues/132)) ([6982722](https://github.com/scaleway/scaleway-ui/commit/6982722a4d1b96f39c6b44c14ab1021fcdb92f15))
+* **deps-dev:** bump semantic-release from 17.4.1 to 17.4.2 ([#134](https://github.com/scaleway/scaleway-ui/issues/134)) ([19b6028](https://github.com/scaleway/scaleway-ui/commit/19b60284c4846770b7867a9ad1a7542be665055e))
+
+
+### :gear: Features
+
+* migrate date input ([#108](https://github.com/scaleway/scaleway-ui/issues/108)) ([12ea81d](https://github.com/scaleway/scaleway-ui/commit/12ea81d0c3c0c06d9e157a8108c4dfdbcbb8c684))
+
 ## [0.62.0](https://github.com/scaleway/scaleway-ui/compare/v0.61.0...v0.62.0) (2021-03-11)
 
 
