@@ -5,7 +5,11 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Tags } from '..'
+import Tags from '..'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import { Button } from '../../Button'
+import { Typography } from '../../Typography'
 
 <Meta title="Components/Tags" component={Tags} />
 
@@ -13,27 +17,54 @@ import { Tags } from '..'
 
 ## Basic
 
-<Description>`Open your console to check onChange event`</Description>
+<Description>Open your console to check onChange event</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Tags
       name="basic"
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
 
-## Variant Bordered
+## Variants
+
+### Base
+
+This is the default variant when you don't override `variant` prop or set it to `base`.
 
 <Canvas>
-  <Story name="bordered">
+  <Story name="Variant base">
+    <BlockList>
+      <Tags name="base" tags={['Scaleway', 'ui']} />
+      <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
+    </BlockList>
+  </Story>
+</Canvas>
+
+### No Border
+
+By setting `variant` prop to `no-border` you can get this variant.
+
+<Canvas>
+  <Story name="Variant no-border">
+    <Tags name="noBorder" variant="no-border" tags={['Scaleway', 'ui']} />
+  </Story>
+</Canvas>
+
+### Bordered
+
+To obtain this you need to set the `variant` prop to `bordered`
+
+<Canvas>
+  <Story name="Variant bordered">
     <Tags
       name="bordered"
       variant="bordered"
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
@@ -41,7 +72,7 @@ import { Tags } from '..'
 ## Custom placeholder
 
 <Canvas>
-  <Story name="placeholder">
+  <Story name="Placeholder">
     <Tags
       name="placeholder"
       placeholder="Please type your tags"
@@ -53,7 +84,7 @@ import { Tags } from '..'
 ## With a custom error handler
 
 <Canvas>
-  <Story name="error-handler">
+  <Story name="Error handler">
     <Tags
       name="error-handler"
       onChangeError={error => {
@@ -62,7 +93,7 @@ import { Tags } from '..'
       onChange={() => {
         throw new Error('')
       }}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
   </Story>
 </Canvas>
@@ -70,13 +101,56 @@ import { Tags } from '..'
 ## Disabled
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Tags
       name="disabled"
       disabled
       onChange={tags => console.log(tags)}
-      tags={['Smooth', 'code']}
+      tags={['Scaleway', 'ui']}
     />
+  </Story>
+</Canvas>
+
+## Controlled
+
+### String tag
+
+<Canvas>
+  <Story name="Controlled">
+    <ControlValue value={['Scaleway', 'ui']}>
+      {({ value, onChange }) => (
+        <>
+          <Tags name="controlled" onChange={onChange} tags={value} />
+          <Typography my={1}>Value : {JSON.stringify(value)}</Typography>
+          <Button size="small" type="button" onClick={() => onChange([])}>
+            Reset
+          </Button>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Object tag
+
+<Canvas>
+  <Story name="Controlled object">
+    <ControlValue value={[{ label: 'Scaleway' }, { label: 'ui' }]}>
+      {({ value, onChange }) => (
+        <>
+          <Tags
+            areTagsObject
+            name="controlled-object"
+            onChange={onChange}
+            tags={value}
+          />
+          <Typography my={1}>Value : {JSON.stringify(value)}</Typography>
+          <Button size="small" type="button" onClick={() => onChange([])}>
+            Reset
+          </Button>
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
