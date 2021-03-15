@@ -1,3 +1,10 @@
+## [0.64.0](https://github.com/scaleway/scaleway-ui/compare/v0.63.0...v0.64.0) (2021-03-15)
+
+
+### :gear: Features
+
+* tags component ([#130](https://github.com/scaleway/scaleway-ui/issues/130)) ([f66f1f7](https://github.com/scaleway/scaleway-ui/commit/f66f1f7fd9fe9f1db044aa0aa625287a21f2af9f))
+
 ## [0.63.0](https://github.com/scaleway/scaleway-ui/compare/v0.62.0...v0.63.0) (2021-03-15)
 
 
