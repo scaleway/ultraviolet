@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-for */
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
@@ -11,7 +11,6 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { colors, radii } from '../../theme'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
@@ -22,25 +21,25 @@ import { Typography } from '../Typography'
 
 const inputSizes = {
   small: {
-    default: css`
+    default: `
       height: 30px;
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 14px;
       font-size: 14px;
     `,
-    full: css`
+    full: `
       padding: 4px 8px;
     `,
   },
   medium: {
-    default: css`
+    default: `
       height: 48px;
       padding-left: 8px;
       padding-right: 20px;
       padding-top: 14px;
     `,
-    full: css`
+    full: `
       padding: 8px;
     `,
   },
@@ -48,114 +47,16 @@ const inputSizes = {
 
 export const textBoxSizes = Object.keys(inputSizes)
 
-const styles = {
-  input: css`
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    appearance: none;
-    background-color: ${colors.white};
-    background-image: none;
-    border: 1px solid ${colors.gray350};
-    border-radius: ${radii.default};
-    color: ${colors.gray700};
-    display: block;
-    max-width: 100%;
-    outline: none;
-    position: relative;
-    width: 100%;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 14px;
-    font-size: 16px;
-    line-height: 24px;
+const StyledSeparator = styled(Separator)`
+  margin-right: 8px;
+  margin-top: 1px;
+  height: calc(100% - 2px);
+  background-color: ${({ theme: { colors } }) => colors.gray350};
+`
 
-    &::placeholder {
-      color: ${colors.gray550};
-      opacity: 0;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: ${colors.ngray300};
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
-      border-color: ${colors.primary};
-    }
-  `,
-  inputMultiline: ({ resizable, fillAvailable }) => css`
-    padding-top: 20px;
-    height: ${fillAvailable ? '100%' : 'initial'};
-    resize: ${resizable === false ? 'none' : 'vertical'};
-  `,
-  inputMultilineFull: css`
-    padding-top: 8px;
-  `,
-  inputWithPlaceholder: css`
-    &::placeholder {
-      opacity: 1;
-    }
-  `,
-  inputDisabled: css`
-    cursor: default;
-    pointer-events: none;
-    background-color: ${colors.gray50};
-    border-color: ${colors.gray50};
-    color: ${colors.gray350};
-  `,
-  inputReadOnly: css`
-    background-color: ${colors.gray100};
-    border-color: ${colors.gray100};
-    color: ${colors.gray700};
-  `,
-  inputWithRightElement: css`
-    padding-right: 32px;
-  `,
-  inputError: css`
-    border-color: ${colors.warning};
-
-    &:hover,
-    &:focus {
-      border-color: ${colors.warning};
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.warning)};
-      border-color: ${colors.warning};
-    }
-  `,
-  label: css`
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding-left: 8px;
-    padding-right: 8px;
-    pointer-events: none;
-    color: ${colors.gray550};
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-    height: 48px;
-    font-size: 16px;
-    transition: transform 150ms;
-    transform: translate(0, 12px) scale(1);
-  `,
-  labelEdit: css`
-    transform: translate(-9.6%, -3px) scale(0.8);
-  `,
-  labelDisabled: css`
-    color: ${colors.gray350};
-  `,
-  labelReadOnly: css`
-    color: ${colors.gray550};
-  `,
-  labelError: css`
-    color: ${colors.warning};
-  `,
-  rightElement: css`
-    pointer-events: none;
+const StyledRightElement = styled.div`
+  ${({ theme: { colors } }) => `
+  pointer-events: none;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -169,31 +70,152 @@ const styles = {
     &:hover,
     &:focus-within {
       color: ${colors.gray700};
-    }
-  `,
-  rightElementEdit: css`
-    transform: translateY(8px);
-  `,
-  rightElementTouchable: css`
-    pointer-events: auto;
+    }`}
 
+  ${({ edit }) => edit && `transform: translateY(8px);`}
+
+    ${({ touchable }) =>
+    touchable &&
+    `
+    pointer-events: auto;
     > button {
       box-shadow: none !important;
     }
-  `,
-  unit: css`
+    `}
+
+    ${({ unit }) =>
+    unit &&
+    `
     padding-top: 0;
     padding-bottom: 0;
     transform: none;
     align-items: flex-start;
-  `,
-  verticalSeparator: css`
-    margin-right: 8px;
-    margin-top: 1px;
-    height: calc(100% - 2px);
-    background-color: ${colors.gray350};
-  `,
-}
+    `}
+`
+
+const StyledLabel = styled.label`
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: ${({ theme: { colors } }) => colors.gray550};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  transition: transform 150ms;
+  transform: translate(0, 12px) scale(1);
+
+  ${({ edit }) => edit && `transform: translate(-9.6%, -3px) scale(0.8);`}
+
+  ${({ disabled, theme: { colors } }) =>
+    disabled && `color: ${colors.gray350};`}
+
+  ${({ readOnly, theme: { colors } }) =>
+    readOnly && `color: ${colors.gray550};`}
+
+  ${({ error, theme: { colors } }) => error && `color: ${colors.warning};`}
+`
+
+const StyledInput = styled.input`
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  background-color: ${({ theme: { colors } }) => colors.white};
+  background-image: none;
+  border: 1px solid ${({ theme: { colors } }) => colors.gray350};
+  border-radius: ${({ theme: { radii } }) => radii.default};
+  color: ${({ theme: { colors } }) => colors.gray700};
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+
+  &::placeholder {
+    color: ${({ theme: { colors } }) => colors.gray550};
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: ${({ theme: { colors } }) => colors.ngray300};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px
+      ${({ theme: { colors } }) => transparentize(0.75, colors.primary)};
+    border-color: ${({ theme: { colors } }) => colors.primary};
+  }
+
+  ${({ isPlaceholderVisible }) =>
+    isPlaceholderVisible &&
+    `&::placeholder {
+      opacity: 1;
+    }`}
+
+  ${({ disabled, theme: { colors } }) =>
+    disabled &&
+    `cursor: default;
+    pointer-events: none;
+    background-color: ${colors.gray50};
+    border-color: ${colors.gray50};
+    color: ${colors.gray350};`}
+
+  ${({ readOnly, theme: { colors } }) =>
+    readOnly &&
+    `background-color: ${colors.gray100};
+    border-color: ${colors.gray100};
+    color: ${colors.gray700};`}
+
+  ${({ size }) => inputSizes[size]?.default}
+
+  ${({ size, hasLabel }) => !!size && !hasLabel && inputSizes[size]?.full}
+
+  ${({ error, theme: { colors } }) =>
+    error &&
+    `border-color: ${colors.warning};
+
+    &:hover,
+    &:focus {
+      border-color: ${colors.warning};
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.warning)};
+      border-color: ${colors.warning};
+    }`}
+
+    ${({ multiline, resizable, fillAvailable }) =>
+    multiline &&
+    `
+    padding-top: 20px;
+    height: ${fillAvailable ? '100%' : 'initial'};
+    resize: ${resizable === false ? 'none' : 'vertical'};
+  `}
+
+  ${({ multiline, hasLabel }) =>
+    multiline &&
+    !hasLabel &&
+    `
+    padding-top: 8px;
+  `}
+
+  ${({ hasRightElement }) =>
+    hasRightElement &&
+    `
+    padding-right: 32px;
+  `}
+`
 
 const TextBox = forwardRef(
   (
@@ -211,6 +233,7 @@ const TextBox = forwardRef(
       id,
       label,
       multiline,
+      noTopLabel,
       fillAvailable,
       name,
       notice,
@@ -306,16 +329,14 @@ const TextBox = forwardRef(
       onChange,
     ])
 
-    const ControlComponent = multiline ? 'textarea' : 'input'
     const isPassToggleable = type === 'toggleable-password'
-    const hasLabel = Boolean((error || label) && size === 'medium')
-    const edit = Boolean(
-      hasLabel && (forceEdit || visited || value || error || generated),
-    )
-    const isPlaceholderVisible = Boolean(!hasLabel || edit)
-    const hasRightElement = Boolean(
-      valid || required || isPassToggleable || random || unit,
-    )
+    const hasLabel = !!label && !noTopLabel && size === 'medium'
+    const edit =
+      hasLabel && (forceEdit || visited || value || error || generated)
+
+    const isPlaceholderVisible = !hasLabel || edit
+    const hasRightElement =
+      valid || required || isPassToggleable || random || unit
 
     function getType() {
       if (isPassToggleable) {
@@ -358,7 +379,7 @@ const TextBox = forwardRef(
       if (unit)
         return (
           <>
-            <Separator css={styles.verticalSeparator} direction="vertical" />
+            <StyledSeparator direction="vertical" />
             <Typography
               variant="bodyB"
               display="flex"
@@ -380,28 +401,26 @@ const TextBox = forwardRef(
     return (
       <Box {...props}>
         <Box position="relative">
-          <ControlComponent
+          <StyledInput
+            as={multiline ? 'textarea' : 'input'}
             ref={controlRef}
             type={getType()}
             aria-controls={ariaControls}
+            aria-label={label && noTopLabel ? label : undefined}
             id={id}
             value={value}
             placeholder={placeholder}
             onFocus={handleFocus}
             onBlur={onBlur}
             onChange={handleChange}
-            css={[
-              styles.input,
-              isPlaceholderVisible && styles.inputWithPlaceholder,
-              disabled && styles.inputDisabled,
-              readOnly && styles.inputReadOnly,
-              error && styles.inputError,
-              size && inputSizes[size].default,
-              size && !hasLabel && inputSizes[size].full,
-              multiline && styles.inputMultiline({ resizable, fillAvailable }),
-              multiline && !hasLabel && styles.inputMultilineFull,
-              hasRightElement && styles.inputWithRightElement,
-            ]}
+            isPlaceholderVisible={isPlaceholderVisible}
+            size={size}
+            hasLabel={hasLabel}
+            error={error}
+            multiline={multiline}
+            resizable={resizable}
+            fillAvailable={fillAvailable}
+            hasRightElement={hasRightElement}
             disabled={disabled}
             readOnly={readOnly}
             rows={rows}
@@ -414,36 +433,30 @@ const TextBox = forwardRef(
             wrap={wrap}
           />
           {hasLabel && (
-            <label
-              css={[
-                styles.label,
-                edit && styles.labelEdit,
-                disabled && styles.labelDisabled,
-                readOnly && styles.labelReadOnly,
-                error && styles.labelError,
-              ]}
+            <StyledLabel
+              edit={edit}
+              disabled={disabled}
+              readOnly={readOnly}
+              error={!!error}
               id={ariaControls}
               htmlFor={id}
               aria-live="assertive"
             >
               {label}
-            </label>
+            </StyledLabel>
           )}
 
           {hasRightElement ? (
-            <div
-              css={[
-                styles.rightElement,
-                edit && styles.rightElementEdit,
-                (isPassToggleable || random) && styles.rightElementTouchable,
-                unit && styles.unit,
-              ]}
+            <StyledRightElement
+              edit={edit}
+              touchable={isPassToggleable || random}
+              unit={unit}
             >
               {getRightComponent()}
-            </div>
+            </StyledRightElement>
           ) : null}
         </Box>
-        <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
+        <Expandable height={56} overflow="hidden" opened={!!error}>
           <Box fontSize={12} color="warning" pt="2px">
             {error}
           </Box>
@@ -465,12 +478,13 @@ TextBox.propTypes = {
   error: PropTypes.string,
   fillAvailable: PropTypes.bool,
   generated: PropTypes.bool,
-  id: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  id: PropTypes.string,
   label: PropTypes.node,
   multiline: PropTypes.bool,
   name: PropTypes.string,
   notice: PropTypes.node,
+  noTopLabel: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -500,13 +514,15 @@ TextBox.defaultProps = {
   disabled: undefined,
   edit: undefined,
   error: undefined,
+  fillAvailable: undefined,
   generated: undefined,
+  height: undefined,
   id: undefined,
   label: undefined,
   multiline: undefined,
-  fillAvailable: undefined,
   name: undefined,
   notice: undefined,
+  noTopLabel: false,
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
@@ -520,7 +536,6 @@ TextBox.defaultProps = {
   type: 'text',
   valid: undefined,
   value: undefined,
-  height: undefined,
   unit: undefined,
   unitAlignment: 'flex-end',
   wrap: undefined,

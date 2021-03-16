@@ -161,7 +161,7 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   border-color: #4f0599;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -184,7 +184,7 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   transform: translate(0, 12px) scale(1);
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -194,17 +194,17 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   margin-top: 0;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -220,7 +220,7 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -231,13 +231,13 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: gray;
   vertical-align: middle;
   height: 24px;
@@ -246,7 +246,7 @@ exports[`DateInput renders correctly currentLocale 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -273,33 +273,33 @@ exports[`DateInput renders correctly currentLocale 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               />
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
@@ -480,7 +480,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   border-color: #4f0599;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -504,7 +504,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -514,17 +514,17 @@ exports[`DateInput renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -540,7 +540,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -551,13 +551,13 @@ exports[`DateInput renders correctly disabled 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: gray;
   vertical-align: middle;
   height: 24px;
@@ -566,7 +566,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -594,34 +594,35 @@ exports[`DateInput renders correctly disabled 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 disabled=""
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
+                disabled=""
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               />
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
@@ -761,11 +762,11 @@ exports[`DateInput renders correctly error 1`] = `
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
-  border-color: #ef5774;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
+  border-color: #ef5774;
 }
 
 .emotion-4::-webkit-input-placeholder {
@@ -824,7 +825,7 @@ exports[`DateInput renders correctly error 1`] = `
   border-color: #ef5774;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -852,7 +853,7 @@ exports[`DateInput renders correctly error 1`] = `
   color: #ef5774;
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -867,17 +868,17 @@ exports[`DateInput renders correctly error 1`] = `
   overflow: visible;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -893,7 +894,7 @@ exports[`DateInput renders correctly error 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -904,13 +905,13 @@ exports[`DateInput renders correctly error 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: #ef5774;
   vertical-align: middle;
   height: 24px;
@@ -919,7 +920,7 @@ exports[`DateInput renders correctly error 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -946,35 +947,35 @@ exports[`DateInput renders correctly error 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               >
                 true
               </div>
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
@@ -1119,11 +1120,11 @@ exports[`DateInput renders correctly error disabled 1`] = `
   background-color: #fafafb;
   border-color: #fafafb;
   color: #d4dae7;
-  border-color: #ef5774;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
+  border-color: #ef5774;
 }
 
 .emotion-4::-webkit-input-placeholder {
@@ -1182,7 +1183,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   border-color: #ef5774;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -1211,7 +1212,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   color: #ef5774;
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1226,17 +1227,17 @@ exports[`DateInput renders correctly error disabled 1`] = `
   overflow: visible;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -1252,7 +1253,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1263,13 +1264,13 @@ exports[`DateInput renders correctly error disabled 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: #ef5774;
   vertical-align: middle;
   height: 24px;
@@ -1278,7 +1279,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -1306,36 +1307,37 @@ exports[`DateInput renders correctly error disabled 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 disabled=""
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
+                disabled=""
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               >
                 true
               </div>
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
@@ -1480,11 +1482,11 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   background-color: #fafafb;
   border-color: #fafafb;
   color: #d4dae7;
-  border-color: #ef5774;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
+  border-color: #ef5774;
 }
 
 .emotion-4::-webkit-input-placeholder {
@@ -1543,7 +1545,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   border-color: #ef5774;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -1572,7 +1574,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   color: #ef5774;
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1587,17 +1589,17 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   overflow: visible;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -1613,7 +1615,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   fill: #ef5774;
   vertical-align: middle;
   height: 8px;
@@ -1622,7 +1624,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   min-height: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1633,13 +1635,13 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-11 {
+.emotion-13 {
   fill: #ef5774;
   vertical-align: middle;
   height: 24px;
@@ -1648,7 +1650,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   min-height: 24px;
 }
 
-.emotion-11.emotion-11 {
+.emotion-13.emotion-13 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -1676,33 +1678,34 @@ exports[`DateInput renders correctly error disabled required 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 disabled=""
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
+                disabled=""
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               >
                 true
               </div>
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <svg
-              class="sc-ui-icon emotion-9"
+              class="sc-ui-icon emotion-11"
               viewBox="0 0 24 24"
             >
               <path
@@ -1710,10 +1713,10 @@ exports[`DateInput renders correctly error disabled required 1`] = `
               />
             </svg>
             <hr
-              class="emotion-10"
+              class="emotion-12"
             />
             <svg
-              class="sc-ui-icon emotion-11"
+              class="sc-ui-icon emotion-13"
               viewBox="0 0 24 24"
             >
               <path
@@ -1889,7 +1892,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   border-color: #4f0599;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -1912,7 +1915,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   transform: translate(0, 12px) scale(1);
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1922,17 +1925,17 @@ exports[`DateInput renders correctly min-max 1`] = `
   margin-top: 0;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -1948,7 +1951,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1959,13 +1962,13 @@ exports[`DateInput renders correctly min-max 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: gray;
   vertical-align: middle;
   height: 24px;
@@ -1974,7 +1977,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2001,33 +2004,33 @@ exports[`DateInput renders correctly min-max 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               />
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
@@ -2203,7 +2206,7 @@ exports[`DateInput renders correctly required 1`] = `
   border-color: #4f0599;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -2226,7 +2229,7 @@ exports[`DateInput renders correctly required 1`] = `
   transform: translate(0, 12px) scale(1);
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2236,17 +2239,17 @@ exports[`DateInput renders correctly required 1`] = `
   margin-top: 0;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -2262,7 +2265,7 @@ exports[`DateInput renders correctly required 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   fill: #ef5774;
   vertical-align: middle;
   height: 8px;
@@ -2271,7 +2274,7 @@ exports[`DateInput renders correctly required 1`] = `
   min-height: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -2282,13 +2285,13 @@ exports[`DateInput renders correctly required 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-11 {
+.emotion-13 {
   fill: gray;
   vertical-align: middle;
   height: 24px;
@@ -2297,7 +2300,7 @@ exports[`DateInput renders correctly required 1`] = `
   min-height: 24px;
 }
 
-.emotion-11.emotion-11 {
+.emotion-13.emotion-13 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2324,30 +2327,30 @@ exports[`DateInput renders correctly required 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               />
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <svg
-              class="sc-ui-icon emotion-9"
+              class="sc-ui-icon emotion-11"
               viewBox="0 0 24 24"
             >
               <path
@@ -2355,10 +2358,10 @@ exports[`DateInput renders correctly required 1`] = `
               />
             </svg>
             <hr
-              class="emotion-10"
+              class="emotion-12"
             />
             <svg
-              class="sc-ui-icon emotion-11"
+              class="sc-ui-icon emotion-13"
               viewBox="0 0 24 24"
             >
               <path
@@ -2550,7 +2553,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   opacity: 1;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   position: absolute;
   left: 0;
@@ -2577,7 +2580,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2587,17 +2590,17 @@ exports[`DateInput renders correctly with default props 1`] = `
   margin-top: 0;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   overflow: hidden;
 }
 
-.emotion-7.emotion-7 {
+.emotion-9.emotion-9 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   height: 48px;
   padding: 8px;
   position: absolute;
@@ -2613,7 +2616,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   top: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -2624,13 +2627,13 @@ exports[`DateInput renders correctly with default props 1`] = `
   background-color: #eeeeff;
 }
 
-.emotion-9.emotion-9 {
+.emotion-11.emotion-11 {
   height: 100%;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: gray;
   vertical-align: middle;
   height: 24px;
@@ -2639,7 +2642,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-12.emotion-12 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2667,33 +2670,33 @@ exports[`DateInput renders correctly with default props 1`] = `
             >
               <input
                 autocomplete="on"
-                class="emotion-4"
+                class="emotion-4 emotion-5"
                 type="text"
                 value="1995-12-17T03:24:00.000Z"
               />
               <label
                 aria-live="assertive"
-                class="emotion-5"
+                class="emotion-6 emotion-7"
               >
                 Date
               </label>
             </div>
             <div
-              class="emotion-6"
+              class="emotion-8"
             >
               <div
-                class="emotion-7"
+                class="emotion-9"
               />
             </div>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-10"
           >
             <hr
-              class="emotion-9"
+              class="emotion-11"
             />
             <svg
-              class="sc-ui-icon emotion-10"
+              class="sc-ui-icon emotion-12"
               viewBox="0 0 24 24"
             >
               <path
