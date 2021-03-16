@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  parser: '@babel/eslint-parser',
   extends: ['@scaleway/react', 'plugin:mdx/recommended'],
   plugins: ['@emotion'],
   rules: {
@@ -41,6 +42,7 @@ module.exports = {
     },
     {
       files: ['**/__stories__/**/*.mdx'],
+      parser: 'eslint-mdx',
       rules: {
         'padding-line-between-statements': 'off',
       },
