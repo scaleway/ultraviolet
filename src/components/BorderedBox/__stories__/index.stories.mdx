@@ -1,22 +1,43 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs/blocks'
-import { BorderedBox } from '..'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import BorderedBox from '..'
 
 <Meta title="Components/BorderedBox" component={BorderedBox} />
 
 # BorderedBox
 
-<Description>A basic bordered box.</Description>
+## Basic
 
 <Canvas>
   <Story name="basic">
     <BorderedBox>Basic BorderedBox</BorderedBox>
   </Story>
 </Canvas>
+
+## Custom component
+
+Set a custom base component using `as` prop.
+
+<Canvas>
+  <Story name="Custom component">
+    <BorderedBox as="span">BorderedBox as span</BorderedBox>
+  </Story>
+</Canvas>
+
+## Link
+
+<Canvas>
+  <Story name="As link">
+    <BorderedBox href="#" m={1}>
+      Href Link
+    </BorderedBox>
+    <BorderedBox to="/" m={1}>
+      To Link
+    </BorderedBox>
+  </Story>
+</Canvas>
+
+## API
+
+### BorderedBox
 
 <ArgsTable of={BorderedBox} />

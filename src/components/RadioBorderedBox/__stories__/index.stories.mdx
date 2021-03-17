@@ -1,0 +1,70 @@
+import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import RadioBorderedBox from '..'
+import BlockList from '../../../__stories__/components/BlockList'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import { Badge } from '../../Badge'
+
+<Meta title="Components/RadioBorderedBox" component={RadioBorderedBox} />
+
+# RadioBorderedBox
+
+<Description>
+  RadioBorderedBox only work as [controlled
+  component](https://reactjs.org/docs/forms.html).
+</Description>
+
+## Controlled
+
+<Canvas>
+  <Story name="basic">
+    <ControlValue value="choice-1">
+      {({ value, onChange }) => (
+        <>
+          <RadioBorderedBox
+            name="choice-1"
+            checked={value === 'choice-1'}
+            value="choice-1"
+            onChange={e => onChange(e.currentTarget.value)}
+            label="Choice 1"
+            labelDescription="(choice details)"
+            badge={
+              <Badge size="xsmall" variant="info">
+                Badge
+              </Badge>
+            }
+            mb={1}
+          >
+            Description content
+          </RadioBorderedBox>
+          <RadioBorderedBox
+            name="choice-2"
+            checked={value === 'choice-2'}
+            value="choice-2"
+            onChange={e => onChange(e.currentTarget.value)}
+            label="Choice 2"
+          >
+            Description content choice 2
+          </RadioBorderedBox>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="disabled">
+    <BlockList>
+      <RadioBorderedBox
+        value="disabled"
+        name="radio-disabled"
+        disabled
+        onChange={() => {}}
+        label="Disabled"
+      >
+        Disabled radio
+      </RadioBorderedBox>
+    </BlockList>
+  </Story>
+</Canvas>

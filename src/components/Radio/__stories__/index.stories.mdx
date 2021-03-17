@@ -1,5 +1,5 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
-import { Radio } from '..'
+import Radio from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -79,12 +79,7 @@ Set size using `size` property.
 <Canvas>
   <Story name="disabled">
     <BlockList>
-      <Radio
-        value="disabled"
-        name="radio-size"
-        disabled
-        onChange={() => {}}
-      >
+      <Radio value="disabled" name="radio-size" disabled onChange={() => {}}>
         Disabled radio
       </Radio>
     </BlockList>
