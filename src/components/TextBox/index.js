@@ -225,6 +225,7 @@ const TextBox = forwardRef(
       autoFocus,
       tabIndex,
       cols,
+      'data-testid': dataTestId,
       defaultValue,
       disabled,
       edit: forceEdit,
@@ -371,8 +372,8 @@ const TextBox = forwardRef(
       if (valid === false || valid === true)
         return (
           <Icon
-            name={valid === false ? 'close' : 'check'}
-            color={valid === false ? 'warning' : 'success'}
+            name={!valid ? 'close' : 'check'}
+            color={!valid ? 'warning' : 'success'}
             size={20}
           />
         )
@@ -431,6 +432,7 @@ const TextBox = forwardRef(
             name={name}
             style={{ height }}
             wrap={wrap}
+            data-testid={dataTestId}
           />
           {hasLabel && (
             <StyledLabel
@@ -472,6 +474,7 @@ TextBox.propTypes = {
   autoComplete: PropTypes.string,
   autoFocus: PropTypes.bool,
   cols: PropTypes.number,
+  'data-testid': PropTypes.string,
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
   edit: PropTypes.bool,
@@ -510,6 +513,7 @@ TextBox.defaultProps = {
   autoFocus: undefined,
   tabIndex: undefined,
   cols: undefined,
+  'data-testid': undefined,
   defaultValue: undefined,
   disabled: undefined,
   edit: undefined,
