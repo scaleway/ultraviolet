@@ -1,19 +1,18 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
-import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
-const borderedVariant = (color, bgColor, hoverColor) => {
+const borderedVariant = ({ theme: { colors }, color, bgColor, hoverColor }) => {
   const colorValue = colors[color]
   const bgColorValue = colors[bgColor]
   const hoverColorValue = colors[hoverColor]
 
-  return css`
+  return `
     border: 1px solid ${colorValue};
     background-color: ${bgColorValue};
     color: ${colorValue};
@@ -41,11 +40,11 @@ const borderedVariant = (color, bgColor, hoverColor) => {
   `
 }
 
-const plainVariant = (bgColor, textColor) => {
+const plainVariant = ({ theme: { colors }, bgColor, textColor }) => {
   const bgColorValue = colors[bgColor]
   const textColorValue = colors[textColor]
 
-  return css`
+  return `
     background-color: ${bgColorValue};
     color: ${textColorValue};
 
@@ -62,20 +61,72 @@ const plainVariant = (bgColor, textColor) => {
 }
 
 const variants = {
-  primary: plainVariant('primary', 'white'),
-  'primary-bordered': borderedVariant('primary', 'white', 'primary'),
-  'primary-soft-bordered': borderedVariant('gray350', 'white', 'primary'),
-  secondary: plainVariant('gray100', 'gray700'),
-  'secondary-bordered': borderedVariant('gray550', 'white', 'primary'),
-  success: plainVariant('success', 'white'),
-  'success-bordered': borderedVariant('success', 'white', 'success'),
-  'success-soft-bordered': borderedVariant('gray350', 'white', 'success'),
-  warning: plainVariant('warning', 'white'),
-  'warning-bordered': borderedVariant('warning', 'white', 'warning'),
-  'warning-soft-bordered': borderedVariant('gray350', 'white', 'warning'),
-  info: plainVariant('zumthor', 'blue'),
-  'info-bordered': borderedVariant('blue', 'white', 'blue'),
-  link: css`
+  primary: theme =>
+    plainVariant({ theme, bgColor: 'primary', textColor: 'white' }),
+  'primary-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'primary',
+      bgColor: 'white',
+      hoverColor: 'primary',
+    }),
+  'primary-soft-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'gray350',
+      bgColor: 'white',
+      hoverColor: 'primary',
+    }),
+  secondary: theme =>
+    plainVariant({ theme, bgColor: 'gray100', textColor: 'gray700' }),
+  'secondary-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'gray550',
+      bgColor: 'white',
+      hoverColor: 'primary',
+    }),
+  success: theme =>
+    plainVariant({ theme, bgColor: 'success', textColor: 'white' }),
+  'success-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'success',
+      bgColor: 'white',
+      hoverColor: 'success',
+    }),
+  'success-soft-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'gray350',
+      bgColor: 'white',
+      hoverColor: 'success',
+    }),
+  warning: theme =>
+    plainVariant({ theme, bgColor: 'warning', textColor: 'white' }),
+  'warning-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'warning',
+      bgColor: 'white',
+      hoverColor: 'warning',
+    }),
+  'warning-soft-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'gray350',
+      bgColor: 'white',
+      hoverColor: 'warning',
+    }),
+  info: theme => plainVariant({ theme, bgColor: 'zumthor', textColor: 'blue' }),
+  'info-bordered': theme =>
+    borderedVariant({
+      theme,
+      color: 'blue',
+      bgColor: 'white',
+      hoverColor: 'blue',
+    }),
+  link: ({ colors }) => `
     background-color: ${colors.white};
     color: ${colors.blue};
     vertical-align: baseline;
@@ -87,7 +138,7 @@ const variants = {
       text-decoration: underline;
     }
   `,
-  transparent: css`
+  transparent: ({ colors }) => `
     background-color: transparent;
     color: ${colors.gray700};
   `,
@@ -96,38 +147,47 @@ const variants = {
 export const buttonVariants = Object.keys(variants)
 
 const sizes = {
-  large: css`
+  large: `
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
     padding: 8px 16px;
   `,
-  medium: css`
+  medium: `
     font-size: 16px;
     line-height: 24px;
     padding: 8px 16px;
   `,
-  small: css`
+  small: `
     font-size: 16px;
     line-height: 16px;
     padding: 8px 16px;
   `,
-  xsmall: css`
+  xsmall: `
     font-size: 14px;
     line-height: 20px;
     padding: 8px;
   `,
-  xxsmall: css`
+  xxsmall: `
     font-size: 12px;
   `,
 }
 
 export const buttonSizes = Object.keys(sizes)
 
-const styles = {
-  button: css`
+const StyledContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+`
+
+const StyledButton = styled(Box, {
+  shouldForwardProp: prop => !['variant', 'extend', 'icon'].includes(prop),
+})(
+  ({ theme, variant, size, 'aria-disabled': disabled, extend, icon }) => `
     display: inline-flex;
-    border-radius: ${radii.default};
+    border-radius: ${theme.radii.default};
     border-width: 0;
     cursor: pointer;
     justify-content: center;
@@ -147,38 +207,33 @@ const styles = {
     &:focus {
       text-decoration: none;
     }
-  `,
-  content: css`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-  `,
-  icon: (margin, position) => css`
-    ${position === 'left'
-      ? css`
-          margin-right: ${margin}px;
-        `
-      : position === 'right' &&
-        css`
-          margin-left: ${margin}px;
-        `}
-    pointer-events: none;
-  `,
-  disabled: ({ variant }) => css`
+
+    ${variants[variant]?.(theme)}
+    ${sizes[size]}
+  ${
+    disabled
+      ? `
     cursor: default;
     pointer-events: none;
-    color: ${colors.gray350};
+    color: ${theme.colors.gray350};`
+      : ``
+  }
 
-    ${variant !== 'link' &&
-    css`
-      background-color: ${colors.gray50};
-      border-color: ${colors.gray50};
-      box-shadow: none;
-    `}
-  `,
-  extend: icon => css`
-    & .content {
+  ${
+    variant !== 'link' && disabled
+      ? `
+    background-color: ${theme.colors.gray50};
+    border-color: ${theme.colors.gray50};
+    box-shadow: none;
+  `
+      : ``
+  }
+
+  ${
+    extend
+      ? `
+    display: inline-flex;
+    & ${StyledContent} {
       transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
       max-width: 0;
       margin-right: 0;
@@ -186,15 +241,27 @@ const styles = {
       overflow: hidden;
     }
 
-    &:focus .content,
-    &:hover .content {
+    &:focus ${StyledContent},
+    &:hover ${StyledContent} {
       max-width: 275px;
       margin-right: 8px;
       ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
     }
+  `
+      : ``
+  }
   `,
-}
+)
 
+const StyledIconContainer = styled('div', {
+  shouldForwardProp: prop => !['margin', 'position'].includes(prop),
+})`
+  display: flex;
+  ${({ margin, position }) => `
+    ${position === 'left' ? `margin-right: ${margin}px;` : ``}
+    ${position === 'right' ? `margin-left: ${margin}px;` : ``}
+    pointer-events: none;`}
+`
 function FwdButton({
   progress,
   disabled,
@@ -207,65 +274,67 @@ function FwdButton({
   displayProgressOnly,
   type: elementType,
   innerRef,
+  to,
+  href,
+  download,
   ...props
 }) {
   const as = useMemo(() => {
-    if (props.to) return UniversalLink
-    if (props.href || props.download) return 'a'
+    if (to) return UniversalLink
+    if (href || download) return 'a'
 
     return 'button'
-  }, [props.to, props.href, props.download])
+  }, [to, href, download])
 
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
+
   const SmartIcon = () =>
     icon && typeof icon === 'string' ? <Icon name={icon} /> : icon
 
   return (
-    <Box
+    <StyledButton
       {...props}
+      href={href}
+      to={to}
+      download={download}
       ref={innerRef}
       type={type}
       as={as}
       disabled={as === 'button' && disabled}
       aria-disabled={disabled}
-      css={[
-        styles.button,
-        variants[variant],
-        sizes[size],
-        disabled && styles.disabled(variant),
-        extend && styles.extend(icon),
-      ]}
+      variant={variant}
+      size={size}
+      extend={extend}
+      icon={icon}
     >
       {progress === true ||
       progress === 'left' ||
       (icon && iconPosition === 'left') ? (
-        <Box
-          display="flex"
-          css={styles.icon(iconMargin, children ? 'left' : '')}
+        <StyledIconContainer
+          margin={iconMargin}
+          position={children ? 'left' : ''}
         >
           {progress ? (
             <ActivityIndicator color="currentColor" size="1em" />
           ) : (
             <SmartIcon />
           )}
-        </Box>
+        </StyledIconContainer>
       ) : null}
       {(!progress || !displayProgressOnly) && children && (
-        <div css={styles.content} className="content">
-          {children}
-        </div>
+        <StyledContent>{children}</StyledContent>
       )}
       {progress === 'right' || (icon && iconPosition === 'right') ? (
-        <Box display="flex" css={styles.icon(iconMargin, 'right')}>
+        <StyledIconContainer margin={iconMargin} position="right">
           {progress ? (
             <ActivityIndicator color="currentColor" size="1em" />
           ) : (
             <SmartIcon />
           )}
-        </Box>
+        </StyledIconContainer>
       ) : null}
-    </Box>
+    </StyledButton>
   )
 }
 

@@ -99,12 +99,17 @@ exports[`MarkDown render simple string 1`] = `
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
 }
 
 .emotion-20.emotion-20 {
+<<<<<<< HEAD
+=======
+  padding: 8px;
+>>>>>>> feat: use colors from theme
   color: #4a4f62;
   background-color: #f6f5f7;
-  padding: 8px;
 }
 
 <div
@@ -201,7 +206,11 @@ exports[`MarkDown render simple string 1`] = `
       class="emotion-3"
     >
       <span
+<<<<<<< HEAD
         class="emotion-20"
+=======
+        class="emotion-19 emotion-20"
+>>>>>>> feat: use colors from theme
       >
         const example = 1 // Inline code
       </span>
@@ -264,21 +273,31 @@ exports[`MarkDown render simple string with target blank 1`] = `
   opacity: 0.5;
 }
 
+<<<<<<< HEAD
 .emotion-16.emotion-16 {
   vertical-align: top;
 }
 
 .emotion-22 {
+=======
+.emotion-21 {
+>>>>>>> feat: use colors from theme
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
-}
-
-.emotion-22.emotion-22 {
   color: #4a4f62;
   background-color: #f6f5f7;
+}
+
+<<<<<<< HEAD
+.emotion-22.emotion-22 {
+=======
+.emotion-21.emotion-21 {
   padding: 8px;
+>>>>>>> feat: use colors from theme
+  color: #4a4f62;
+  background-color: #f6f5f7;
 }
 
 <div
@@ -385,7 +404,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
       class="emotion-3"
     >
       <span
+<<<<<<< HEAD
         class="emotion-22"
+=======
+        class="emotion-20 emotion-21"
+>>>>>>> feat: use colors from theme
       >
         const example = 1 // Inline code
       </span>

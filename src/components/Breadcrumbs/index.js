@@ -1,29 +1,17 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { cloneElement } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { colors, space } from '../../theme'
 import { Box } from '../Box'
 import { Link } from '../Link'
-
-const styles = {
-  ol: css`
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    /* bubble */
-    display: flex;
-  `,
-}
 
 function reverseZIndexes() {
   const count = 10
 
   return Array.from(
     { length: count },
-    (_, index) => css`
+    (_, index) => `
       &:nth-child(${index + 1}) {
         z-index: ${count - index};
       }
@@ -32,7 +20,7 @@ function reverseZIndexes() {
 }
 
 const variants = {
-  link: css`
+  link: ({ colors }) => `
     display: inline;
 
     &[aria-current='page'] {
@@ -44,7 +32,7 @@ const variants = {
       margin: 0 8px;
     }
   `,
-  bubble: css`
+  bubble: ({ colors, space }) => `
     display: flex;
     flex: 1;
     font-weight: 500;
@@ -110,6 +98,13 @@ function contractString(str) {
 
 export const breadcrumbsVariants = Object.keys(variants)
 
+const StyledOl = styled.ol`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+`
+
 const Breadcrumbs = ({
   children,
   variant,
@@ -122,7 +117,7 @@ const Breadcrumbs = ({
 
   return (
     <Box as="nav" aria-label="Breadcrumb" {...props}>
-      <Box css={styles.ol} as="ol">
+      <StyledOl>
         {flatChildren.map((child, index) => {
           if (!child) return null
 
@@ -137,7 +132,7 @@ const Breadcrumbs = ({
             </React.Fragment>
           )
         })}
-      </Box>
+      </StyledOl>
     </Box>
   )
 }
@@ -153,8 +148,12 @@ Breadcrumbs.defaultProps = {
   activeIndex: undefined,
 }
 
-Breadcrumbs.Item = ({ to, children, variant, ...props }) => (
-  <Box css={variants[variant]} as="li" {...props}>
+const StyledItemBox = styled.li`
+  ${({ variant, theme }) => variants[variant]?.(theme)}
+`
+
+Breadcrumbs.Item = ({ to, children, variant, 'aria-current': ariaCurrent }) => (
+  <StyledItemBox variant={variant} aria-current={ariaCurrent}>
     {to ? (
       <Link variant="primary" to={to}>
         {contractString(children)}
@@ -162,18 +161,20 @@ Breadcrumbs.Item = ({ to, children, variant, ...props }) => (
     ) : (
       contractString(children)
     )}
-  </Box>
+  </StyledItemBox>
 )
 
 Breadcrumbs.Item.propTypes = {
-  to: PropTypes.string,
+  'aria-current': PropTypes.string,
   children: PropTypes.node.isRequired,
+  to: PropTypes.string,
   variant: PropTypes.string,
 }
 
 Breadcrumbs.Item.defaultProps = {
+  'aria-current': undefined,
   to: null,
   variant: 'link',
 }
 
-export { Breadcrumbs }
+export default Breadcrumbs

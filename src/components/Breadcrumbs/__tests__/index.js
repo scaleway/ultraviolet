@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumbs } from '..'
+import Breadcrumbs from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Breadcrumbs', () => {

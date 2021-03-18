@@ -1,83 +1,82 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors, radii, space } from '../../theme'
 import { Box } from '../Box'
 
 const variants = {
-  primary: css`
+  primary: ({ colors }) => `
     background-color: ${colors.primary};
   `,
-  'light-primary': css`
+  'light-primary': ({ colors }) => `
     color: ${colors.primary};
     background-color: ${colors.gray200};
   `,
-  success: css`
+  success: ({ colors }) => `
     background-color: ${colors.success};
   `,
-  'light-success': css`
+  'light-success': ({ colors }) => `
     color: ${colors.success};
     background-color: ${colors.foam};
   `,
-  beta: css`
+  beta: ({ colors }) => `
     background-color: ${colors.beta};
   `,
-  'light-beta': css`
+  'light-beta': ({ colors }) => `
     color: ${colors.beta};
     background-color: ${colors.serenade};
   `,
-  warning: css`
+  warning: ({ colors }) => `
     background-color: ${colors.warning};
   `,
-  'light-error': css`
+  'light-error': ({ colors }) => `
     color: ${colors.red};
     background-color: ${colors.pippin};
   `,
-  error: css`
+  error: ({ colors }) => `
     background-color: ${colors.red};
   `,
-  info: css`
+  info: ({ colors }) => `
     background-color: ${colors.info};
   `,
-  'light-info': css`
+  'light-info': ({ colors }) => `
     color: ${colors.info};
     background-color: ${colors.zumthor};
   `,
-  'light-neutral': css`
+  'light-neutral': ({ colors }) => `
     color: ${colors.gray550};
     background-color: ${colors.gray100};
   `,
-  neutral: css`
+  neutral: ({ colors }) => `
     color: ${colors.gray700};
     background-color: ${colors.gray350};
   `,
 }
 
 const sizes = {
-  rounded: css`
+  rounded: ({ space, radii }) => `
     border-radius: ${radii.large};
     font-size: 10px;
     height: ${space['2']};
     padding: ${space['0.25']} ${space['0.75']};
     text-transform: uppercase;
   `,
-  medium: css`
+  medium: ({ space }) => `
     font-size: 14px;
     line-height: ${space['4']};
     height: ${space['4']};
   `,
-  small: css`
+  small: ({ space }) => `
     font-size: 12px;
     line-height: ${space['3']};
     height: ${space['3']};
   `,
-  xsmall: css`
+  xsmall: ({ space, radii }) => `
     border-radius: ${radii.default};
     font-size: 12px;
     line-height: ${space['2.25']};
     height: ${space['2.25']};
   `,
-  xxsmall: css`
+  xxsmall: ({ space, radii }) => `
     border-radius: ${radii.default};
     font-size: 10px;
     line-height: ${space['2']};
@@ -86,19 +85,26 @@ const sizes = {
   `,
 }
 
-const style = css`
+const StyledBox = styled(Box, {
+  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
+})(
+  ({ theme, variant, size }) => `
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: ${colors.white};
+  color: ${theme.colors.white};
   white-space: nowrap;
-  border-radius: ${space['2']};
-  padding: 0 ${space['2']};
+  border-radius: ${theme.space['2']};
+  padding: 0 ${theme.space['2']};
   width: fit-content;
-`
+
+  ${variants[variant]?.(theme)}
+  ${sizes[size]?.(theme)}
+`,
+)
 
 const Badge = ({ variant, size, ...props }) => (
-  <Box as="span" css={[style, variants[variant], sizes[size]]} {...props} />
+  <StyledBox as="span" variant={variant} size={size} {...props} />
 )
 
 export const badgeVariants = Object.keys(variants)
@@ -114,4 +120,4 @@ Badge.defaultProps = {
   size: 'medium',
 }
 
-export { Badge }
+export default Badge
