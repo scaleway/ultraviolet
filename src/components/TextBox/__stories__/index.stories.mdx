@@ -19,10 +19,30 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 ## Basic
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Boxer my={1}>
       <UncontrolledTextBox label="First Name" />
       <UncontrolledTextBox label="First Name" defaultValue="James Bond" />
+    </Boxer>
+  </Story>
+</Canvas>
+
+## No label
+
+<Description>
+  You can hide the label and but it in `aria-label` attribute of the input by
+  passing `noTopLabel` to the component
+</Description>
+
+<Canvas>
+  <Story name="No Label">
+    <Boxer my={1}>
+      <UncontrolledTextBox label="First Name" noTopLabel />
+      <UncontrolledTextBox
+        label="First Name"
+        defaultValue="James Bond"
+        noTopLabel
+      />
     </Boxer>
   </Story>
 </Canvas>
@@ -36,7 +56,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="placeholder">
+  <Story name="Placeholder">
     <UncontrolledTextBox label="First Name" placeholder="Type your name" />
   </Story>
 </Canvas>
@@ -46,7 +66,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Set size using `size` property.</Description>
 
 <Canvas>
-  <Story name="size">
+  <Story name="Size">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -80,7 +100,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Mark `TextBox` as disabled using `disabled` property.</Description>
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -126,7 +146,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="read-only">
+  <Story name="Read only">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -163,7 +183,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Add a required mark using `required` property.</Description>
 
 <Canvas>
-  <Story name="required">
+  <Story name="Required">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -200,7 +220,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Add a check mark using `valid` property.</Description>
 
 <Canvas>
-  <Story name="valid">
+  <Story name="Valid">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -237,7 +257,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Fill `TextBox` error using `error` property.</Description>
 
 <Canvas>
-  <Story name="error">
+  <Story name="Error">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <ErrorTransition
@@ -279,7 +299,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="notice">
+  <Story name="Notice">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -320,7 +340,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="toggleable">
+  <Story name="Toggleable">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -357,7 +377,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Specify a unit using `unit` prop.</Description>
 
 <Canvas>
-  <Story name="unit">
+  <Story name="Unit">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -394,7 +414,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Set `random` prop adds a randomize button.</Description>
 
 <Canvas>
-  <Story name="randomize">
+  <Story name="Randomize">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -434,7 +454,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="force">
+  <Story name="Force">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -471,7 +491,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 <Description>Enable multiline mode using `multiline` property.</Description>
 
 <Canvas>
-  <Story name="multiline">
+  <Story name="Multiline">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -510,7 +530,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="disable-resize">
+  <Story name="Disable resize">
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -552,7 +572,7 @@ import UncontrolledTextBox from './UncontrolledTextBox'
 </Description>
 
 <Canvas>
-  <Story name="tabindex">
+  <Story name="Tab index">
     <Boxer my={1}>
       <UncontrolledTextBox
         label="First Name"
