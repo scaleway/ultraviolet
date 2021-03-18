@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Badge } from '../Badge'
 import BorderedBox from '../BorderedBox'
 import { Box } from '../Box'
 import Radio from '../Radio'
@@ -30,7 +31,9 @@ const StyledBorderedBox = styled(BorderedBox)`
 const RadioBorderedBox = ({
   label,
   labelDescription,
-  badge,
+  badgeText,
+  badgeSize,
+  badgeVariant,
   checked,
   onChange,
   onFocus,
@@ -66,7 +69,11 @@ const RadioBorderedBox = ({
       <Box as="span" mr={1}>
         {labelDescription}
       </Box>
-      {badge}
+      {badgeText && (
+        <Badge size={badgeSize} variant={badgeVariant}>
+          {badgeText}
+        </Badge>
+      )}
     </Box>
     <Box>{children}</Box>
   </StyledBorderedBox>
@@ -75,7 +82,9 @@ const RadioBorderedBox = ({
 RadioBorderedBox.propTypes = {
   label: PropTypes.string.isRequired,
   labelDescription: PropTypes.string,
-  badge: PropTypes.node,
+  badgeText: PropTypes.string,
+  badgeVariant: PropTypes.string,
+  badgeSize: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
@@ -88,13 +97,15 @@ RadioBorderedBox.propTypes = {
 }
 
 RadioBorderedBox.defaultProps = {
-  labelDescription: '',
+  labelDescription: undefined,
   size: 24,
   disabled: false,
   checked: false,
   onFocus: null,
   onBlur: null,
-  badge: null,
+  badgeText: undefined,
+  badgeVariant: 'info',
+  badgeSize: 'xsmall',
 }
 
 export default RadioBorderedBox

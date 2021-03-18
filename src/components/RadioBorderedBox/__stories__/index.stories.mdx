@@ -8,7 +8,6 @@ import {
 import RadioBorderedBox from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import { Badge } from '../../Badge'
 
 <Meta title="Components/RadioBorderedBox" component={RadioBorderedBox} />
 
@@ -28,23 +27,19 @@ import { Badge } from '../../Badge'
         <>
           <RadioBorderedBox
             name="choice-1"
-            checked={value === 'choice-1'}
+            checked={value === 'choice-1' ? true : undefined}
             value="choice-1"
             onChange={e => onChange(e.currentTarget.value)}
             label="Choice 1"
             labelDescription="(choice details)"
-            badge={
-              <Badge size="xsmall" variant="info">
-                Badge
-              </Badge>
-            }
+            badgeText="Badge"
             mb={1}
           >
             Description content
           </RadioBorderedBox>
           <RadioBorderedBox
             name="choice-2"
-            checked={value === 'choice-2'}
+            checked={value === 'choice-2' ? true : undefined}
             value="choice-2"
             onChange={e => onChange(e.currentTarget.value)}
             label="Choice 2"

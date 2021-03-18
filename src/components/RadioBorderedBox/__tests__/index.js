@@ -5,7 +5,6 @@ import React from 'react'
 import RadioBorderedBox from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import theme from '../../../theme'
-import { Badge } from '../../Badge'
 
 describe('Radio', () => {
   test('renders correctly', () => {
@@ -54,7 +53,9 @@ describe('Radio', () => {
       <RadioBorderedBox
         label="Choice"
         labelDescription="(something)"
-        badge={<Badge variant="info">Badge</Badge>}
+        badgeText="Badge"
+        badgeVariant="warning"
+        badgeSize="small"
         onChange={() => {}}
         name="radio"
         value="choice"
