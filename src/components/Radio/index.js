@@ -58,7 +58,7 @@ const StyledRadio = styled(ReakitRadio)`
   opacity: 0.01;
 `
 
-export const Radio = ({
+const Radio = ({
   checked,
   onChange,
   onFocus,
@@ -117,3 +117,5 @@ Radio.defaultProps = {
   onFocus: null,
   onBlur: null,
 }
+
+export default Radio
