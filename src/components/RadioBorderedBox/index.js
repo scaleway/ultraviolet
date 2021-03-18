@@ -24,7 +24,7 @@ const StyledBorderedBox = styled(BorderedBox)`
         box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
       `
 
-    return ''
+    return null
   }}
 `
 
