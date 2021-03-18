@@ -21,6 +21,19 @@ $ yarn run test:watch # Will watch tests and only rerun the one who are modified
 $ yarn run test:coverage # Will generate a coverage report
 ```
 
+### Test coverage
+
+If you want to have a visual representation of your test coverage
+
+```sh
+$ # In the scaleway-ui project
+$ yarn test:coverage --coverageReporters lcov
+$ # In a new terminal
+$ npx http-server ./coverage/lcov-report/
+$ # Open populated local url
+```
+
+
 ### Lint
 
 ```sh
