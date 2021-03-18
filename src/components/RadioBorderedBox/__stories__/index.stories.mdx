@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import RadioBorderedBox from '..'
 import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
@@ -65,15 +71,12 @@ import { Badge } from '../../Badge'
       >
         Disabled radio
       </RadioBorderedBox>
-      <RadioBorderedBox
-        checked={undefined}
-        id="radiotest"
-        label="Choice 1"
-        name="radioborderedbox"
-        value="choice1"
-      >
-        Choice 1 description
-      </RadioBorderedBox>
     </BlockList>
   </Story>
 </Canvas>
+
+## API
+
+### BorderedBox
+
+<ArgsTable of={RadioBorderedBox} />
