@@ -5,6 +5,13 @@ import { colors, radii, space } from '../../theme'
 import { Box } from '../Box'
 
 const variants = {
+  primary: css`
+    background-color: ${colors.primary};
+  `,
+  'light-primary': css`
+    color: ${colors.primary};
+    background-color: ${colors.gray200};
+  `,
   success: css`
     background-color: ${colors.success};
   `,
