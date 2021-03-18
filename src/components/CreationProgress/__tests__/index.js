@@ -1,5 +1,5 @@
 import React from 'react'
-import { CreationProgress } from '..'
+import CreationProgress from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('CreationProgress', () => {

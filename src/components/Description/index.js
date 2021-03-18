@@ -1,70 +1,71 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors, space } from '../../theme'
 import { Box } from '../Box'
 
-const styles = {
-  default: css`
+const StyledDt = styled(Box)``
+const StyledDd = styled(Box)``
+const StyledBox = styled(Box, {
+  shouldForwardProp: prop => !['inline', 'selectable'].includes(prop),
+})(
+  ({ theme, inline, selectable }) => `
     font-size: 16px;
     line-height: 16px;
     margin: 0;
-
-    > dt {
+    > ${StyledDt} {
       font-weight: 500;
-      color: ${colors.gray950};
+      color: ${theme.colors.gray950};
       &:after {
         content: ':';
       }
     }
-
-    > dd {
-      color: ${colors.gray700};
+    > ${StyledDd} {
+      color: ${theme.colors.gray700};
       margin: 0;
-      margin-top: ${space['1']};
+      margin-top: ${theme.space['1']};
+    }
+    ${StyledDd} + ${StyledDt} {
+      margin-top: ${theme.space['2']};
     }
 
-    dd + dt {
-      margin-top: ${space['2']};
-    }
-  `,
-  inline: css`
-    > dt {
+    ${
+      inline
+        ? `
+         & > ${StyledDt} {
       float: left;
       clear: left;
-      margin-right: ${space['1']};
+      margin-right: ${theme.space['1']};
     }
 
-    > dd {
+      & > ${StyledDd} {
       margin-top: 0;
     }
 
-    dd + dt + dd {
-      margin-top: ${space['2']};
+    ${StyledDd} + ${StyledDt} + ${StyledDd} {
+      margin-top: ${theme.space['2']};
     }
-  `,
-  selectable: css`
-    > dd {
+    `
+        : ``
+    }
+
+    ${
+      selectable
+        ? `
+       > ${StyledDd} {
       user-select: all;
 
       &::selection {
-        color: ${colors.gray200};
-        background: ${colors.primary};
+        color: ${theme.colors.gray200};
+        background: ${theme.colors.primary};
       }
+    }`
+        : ``
     }
-  `,
-}
+`,
+)
 
 const Description = ({ inline, selectable, ...props }) => (
-  <Box
-    as="dl"
-    css={[
-      styles.default,
-      inline && styles.inline,
-      selectable && styles.selectable,
-    ]}
-    {...props}
-  />
+  <StyledBox as="dl" inline={inline} selectable={selectable} {...props} />
 )
 
 Description.propTypes = {
@@ -78,11 +79,11 @@ Description.defaultProps = {
 }
 
 Description.Term = function Term(props) {
-  return <Box as="dt" {...props} />
+  return <StyledDt as="dt" {...props} />
 }
 
 Description.Desc = function Term(props) {
-  return <Box as="dd" {...props} />
+  return <StyledDd as="dd" {...props} />
 }
 
-export { Description }
+export default Description

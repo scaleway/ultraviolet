@@ -1,8 +1,8 @@
 import { css, keyframes } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import { Typography } from '../Typography'
@@ -17,79 +17,93 @@ const loadingAnimation = keyframes`
   }
 `
 
-const styles = {
-  container: css`
-    display: flex;
-    flex-direction: row;
-    align-self: stretch;
-    justify-content: space-between;
-  `,
-  line: css`
-    position: relative;
-    flex: 1;
-    height: 4px;
-    margin-left: -36px;
-    margin-right: -36px;
-    margin-top: 12px;
-    border-radius: 2px;
-    background-color: ${colors.gray350};
-  `,
-  stepContainer: css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-  `,
-  step: css`
-    height: 32px;
+const StyledContainer = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  justify-content: space-between;
+`
+
+const StyledStepContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+`
+
+const StyledStep = styled('div', {
+  shouldForwardProp: prop => !['isPast', 'isCurrent'].includes(prop),
+})(
+  ({ isPast, isCurrent, theme: { colors } }) => `
+      height: 32px;
     width: 32px;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-  `,
-  past: css`
-    background-color: ${colors.success};
-  `,
-  future: css`
-    height: 32px;
-    width: 32px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border-style: solid;
-    border-color: ${colors.gray350};
-    border-width: 3px;
-  `,
-  futureInternalDot: css`
-    background-color: ${colors.gray350};
-    height: 8px;
-    width: 8px;
-    border-radius: 16px;
-  `,
-  text: css`
-    margin-top: 16px;
-    font-size: 16px;
-    display: flex;
-    text-align: center;
-  `,
-  progress: css`
-    border-radius: 2px;
-    background-color: ${colors.success};
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-  `,
-  complete: css`
-    width: 100%;
-  `,
-  animated: css`
-    animation: ${loadingAnimation} 1s linear infinite;
-  `,
-}
+
+    ${
+      isPast || isCurrent
+        ? `background-color: ${colors.success};`
+        : `
+          height: 32px;
+          width: 32px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+          border-style: solid;
+          border-color: ${colors.gray350};
+          border-width: 3px;
+        `
+    }
+`,
+)
+
+const StyledText = styled.div`
+  margin-top: 16px;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+`
+
+const StyledFutureInternalDot = styled.div`
+  background-color: ${({ theme: { colors } }) => colors.gray350};
+  height: 8px;
+  width: 8px;
+  border-radius: 16px;
+`
+
+const StyledLine = styled.div`
+  position: relative;
+  flex: 1;
+  height: 4px;
+  margin-left: -36px;
+  margin-right: -36px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background-color: ${({ theme: { colors } }) => colors.gray350};
+`
+
+const loadingStyle = css`
+  animation: ${loadingAnimation} 1s linear infinite;
+`
+
+const StyledLineContent = styled('div', {
+  shouldForwardProp: prop => !['isPast'].includes(prop),
+})(
+  ({ theme, isPast }) => `
+  border-radius: 2px;
+  background-color: ${theme.colors.success};
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  ${isPast ? `width: 100%;` : ``}
+`,
+)
 
 const CreationProgress = ({
   children,
@@ -101,64 +115,56 @@ const CreationProgress = ({
   const lastStep = children.length - 1
 
   return (
-    <Box css={styles.container} {...props}>
+    <StyledContainer {...props}>
       {flattenChildren(children).map((child, index) => {
-        // if (!child) {
-        //   return null
-        // }
-
         const isCurrent = selected === index
         const isPast = selected > index
         const isNotLast = index < lastStep
 
+        const renderStep = () => {
+          if (isPast || isCurrent) {
+            return isStepsNumber ? (
+              <Typography color="white" fontWeight={500}>
+                {index + 1}
+              </Typography>
+            ) : (
+              <Icon name="check" color="white" size={20} />
+            )
+          }
+
+          return isStepsNumber ? (
+            <Typography color="gray300" fontWeight={500}>
+              {index + 1}
+            </Typography>
+          ) : (
+            <StyledFutureInternalDot />
+          )
+        }
+
         return (
           <React.Fragment key={index}>
-            <Box css={styles.stepContainer}>
-              {isPast || isCurrent ? (
-                <Box css={[styles.step, styles.past]}>
-                  {isStepsNumber ? (
-                    <Typography color="white" fontWeight={500}>
-                      {index + 1}
-                    </Typography>
-                  ) : (
-                    <Icon name="check" color="white" size={20} />
-                  )}
-                </Box>
-              ) : (
-                <Box css={[styles.step, styles.future]}>
-                  {isStepsNumber ? (
-                    <Typography
-                      style={{ color: colors.gray300 }}
-                      fontWeight={500}
-                    >
-                      {index + 1}
-                    </Typography>
-                  ) : (
-                    <Box css={styles.futureInternalDot} />
-                  )}
-                </Box>
-              )}
+            <StyledStepContainer>
+              <StyledStep isPast={isPast} isCurrent={isCurrent}>
+                {renderStep()}
+              </StyledStep>
 
-              <div css={styles.text}>{child.props.children}</div>
-            </Box>
+              <StyledText>{child.props.children}</StyledText>
+            </StyledStepContainer>
 
             {isNotLast && (
-              <Box css={styles.line}>
+              <StyledLine>
                 {(isPast || isCurrent) && (
-                  <div
-                    css={[
-                      styles.progress,
-                      isPast && styles.complete,
-                      isCurrent && animated && styles.animated,
-                    ]}
+                  <StyledLineContent
+                    css={[isCurrent && animated && loadingStyle]}
+                    isPast={isPast}
                   />
                 )}
-              </Box>
+              </StyledLine>
             )}
           </React.Fragment>
         )
       })}
-    </Box>
+    </StyledContainer>
   )
 }
 
@@ -178,4 +184,4 @@ CreationProgress.defaultProps = {
   isStepsNumber: false,
 }
 
-export { CreationProgress }
+export default CreationProgress
