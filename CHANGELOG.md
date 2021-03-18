@@ -1,3 +1,10 @@
+## [0.65.0](https://github.com/scaleway/scaleway-ui/compare/v0.64.1...v0.65.0) (2021-03-18)
+
+
+### :gear: Features
+
+* radioborderedbox and bordered box from console ([#144](https://github.com/scaleway/scaleway-ui/issues/144)) ([1cccb8a](https://github.com/scaleway/scaleway-ui/commit/1cccb8ad861ce44467335d1203d8d1dfe383f42e))
+
 ### [0.64.1](https://github.com/scaleway/scaleway-ui/compare/v0.64.0...v0.64.1) (2021-03-18)
 
 
