@@ -1,10 +1,8 @@
-import { ThemeProvider } from '@emotion/react'
-import { render, waitFor } from '@testing-library/react'
+import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import PhoneInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import theme from '../../../theme'
 
 describe('PhoneInput', () => {
   test('renders correctly', () => {
@@ -33,19 +31,24 @@ describe('PhoneInput', () => {
     )
   })
   test('renders correctly with change', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <PhoneInput
-          label="Phone number"
-          inputProps={{
-            id: 'tel-id',
-            name: 'phone-number',
-          }}
-        />
-      </ThemeProvider>,
+    shouldMatchEmotionSnapshot(
+      <PhoneInput
+        value="+33"
+        onChange={() => {}}
+        label="Phone number"
+        inputProps={{
+          id: 'tel-id',
+          name: 'phone-number',
+          placeholder: '+33 6 01 02 03 04',
+        }}
+      />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('textbox')
+          userEvent.type(input, '+33102030405')
+          await waitFor(() => expect(input.value).toBe('+33 1 02 03 04 05'))
+        },
+      },
     )
-    const input = document.getElementById('tel-id')
-    userEvent.type(input, '+33102030405')
-    await waitFor(() => expect(input.value).toBe('+33 1 02 03 04 05'))
   })
 })
