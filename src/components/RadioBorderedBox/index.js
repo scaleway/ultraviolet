@@ -1,4 +1,3 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
@@ -14,12 +13,12 @@ const StyledBorderedBox = styled(BorderedBox)`
 
   ${({ disabled, checked, theme: { colors } }) => {
     if (disabled)
-      return css`
+      return `
         cursor: not-allowed !important;
         color: ${colors.gray300};
       `
     if (checked)
-      return css`
+      return `
         border: 1px solid ${colors.primary} !important;
         box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
       `

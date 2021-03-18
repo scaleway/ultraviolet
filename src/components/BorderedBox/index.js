@@ -1,4 +1,3 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -10,33 +9,39 @@ const StyledBox = styled(Box)`
   border-radius: ${({ theme: { radii } }) => radii.default};
   border: 1px solid ${({ theme: { colors } }) => colors.gray350};
 
-  ${({ variant }) =>
+  ${({ variant, theme: { space } }) =>
     variant === 'vertical' &&
-    css`
+    `
       > * {
         margin-top: 0;
       }
       > * + * {
-        margin-top: ${({ theme: { space } }) => space['2']};
+        margin-top: ${space['2']};
       }
     `}
 
-  ${({ to, href }) =>
+  ${({ to, href, theme: { colors } }) =>
     (to || href) &&
-    css`
+    `
       transition: box-shadow 0.2s ease, border-color 0.2s ease;
       &:hover,
       &:focus {
         text-decoration: none;
-        border-color: ${({ theme: { colors } }) => colors.primary};
+        border-color: ${colors.primary};
         box-shadow: 2px 2px 14px 8px
-          ${({ theme: { colors } }) => colors.gray200};
+          ${colors.gray200};
       }
     `}
 `
 
 const BorderedBox = ({ children, variant, to, href, as, ...props }) => (
-  <StyledBox as={to || href ? Link : as} to={to} href={href} {...props}>
+  <StyledBox
+    variant={variant}
+    as={to || href ? Link : as}
+    to={to}
+    href={href}
+    {...props}
+  >
     {children}
   </StyledBox>
 )
