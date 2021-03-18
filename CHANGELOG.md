@@ -1,3 +1,10 @@
+## [0.66.0](https://github.com/scaleway/scaleway-ui/compare/v0.65.0...v0.66.0) (2021-03-18)
+
+
+### :gear: Features
+
+* **badge:** new variant ([7c77b34](https://github.com/scaleway/scaleway-ui/commit/7c77b34c0e68b9383002fed727598b6bfcf906ee))
+
 ## [0.65.0](https://github.com/scaleway/scaleway-ui/compare/v0.64.1...v0.65.0) (2021-03-18)
 
 
