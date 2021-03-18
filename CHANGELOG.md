@@ -1,3 +1,19 @@
+### [0.64.1](https://github.com/scaleway/scaleway-ui/compare/v0.64.0...v0.64.1) (2021-03-18)
+
+
+### :package: Chore
+
+* **deps-dev:** bump eslint from 7.21.0 to 7.22.0 ([#135](https://github.com/scaleway/scaleway-ui/issues/135)) ([50b2222](https://github.com/scaleway/scaleway-ui/commit/50b22229c0b6cc693e7a62068f8446c16c08735f))
+* **deps-dev:** bump eslint-plugin-mdx from 1.9.0 to 1.9.1 ([#133](https://github.com/scaleway/scaleway-ui/issues/133)) ([54b6fd9](https://github.com/scaleway/scaleway-ui/commit/54b6fd99bd8eace2031919a8f1ecc0caa9364b47))
+* **deps-dev:** bump rollup from 2.41.1 to 2.41.2 ([#136](https://github.com/scaleway/scaleway-ui/issues/136)) ([3ea600b](https://github.com/scaleway/scaleway-ui/commit/3ea600b7c8dc171187405dcb3971c9b833d88fd9))
+* **deps-dev:** bump rollup from 2.41.2 to 2.41.3 ([#138](https://github.com/scaleway/scaleway-ui/issues/138)) ([0e7ef20](https://github.com/scaleway/scaleway-ui/commit/0e7ef20ffd7cc7a2b6e4c1adde5003f27a32b6cc))
+* **deps-dev:** bump rollup from 2.41.3 to 2.41.4 ([#142](https://github.com/scaleway/scaleway-ui/issues/142)) ([899e1f3](https://github.com/scaleway/scaleway-ui/commit/899e1f31bee1aba051ff2689fc93b9f20dbd3d28))
+
+
+### :bug: Bug Fixes
+
+* spacing on textbox error with medium size and no label ([#139](https://github.com/scaleway/scaleway-ui/issues/139)) ([d26ceb4](https://github.com/scaleway/scaleway-ui/commit/d26ceb4828aa4448aa6454f3f44c4bebef95ce6d))
+
 ## [0.64.0](https://github.com/scaleway/scaleway-ui/compare/v0.63.0...v0.64.0) (2021-03-15)
 
 
