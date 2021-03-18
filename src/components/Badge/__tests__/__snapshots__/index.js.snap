@@ -446,6 +446,43 @@ exports[`Badge renders correctly variant light-neutral 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Badge renders correctly variant light-primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #4f0599;
+  background-color: #eeeeff;
+  font-size: 14px;
+  line-height: 32px;
+  height: 32px;
+}
+
+<span
+    class="emotion-0"
+  >
+    Sample badge
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Badge renders correctly variant light-success 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -507,6 +544,42 @@ exports[`Badge renders correctly variant neutral 1`] = `
   width: fit-content;
   color: #4a4f62;
   background-color: #d4dae7;
+  font-size: 14px;
+  line-height: 32px;
+  height: 32px;
+}
+
+<span
+    class="emotion-0"
+  >
+    Sample badge
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Badge renders correctly variant primary 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #4f0599;
   font-size: 14px;
   line-height: 32px;
   height: 32px;

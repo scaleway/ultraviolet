@@ -9,7 +9,7 @@
 - Migration
 - Refactor
 
-### Summarize concisely:
+### Summarise concisely:
 
 #### What is expected?
 

@@ -1,11 +1,6 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { Badge } from '..'
+import { Box } from '../../Box'
 
 <Meta
   title="Components/Badge"
@@ -28,42 +23,23 @@ import { Badge } from '..'
 
 # Badge
 
-<Description>Highlights information.</Description>
+## Basic
 
 <Canvas>
-  <Story name="default" args={{}}>
+  <Story name="Basic" args={{}}>
     {args => <Badge {...args}>A Badge</Badge>}
   </Story>
 </Canvas>
 
-## `variant`
-
-#### `neutral`
+## Variants
 
 <Canvas>
   <Story
-    name="neutral"
+    name="Variants"
     args={{
-      variants: ['success', 'beta', 'error', 'info', 'neutral'],
-    }}
-  >
-    {args =>
-      args.variants.map(variant => (
-        <Badge key={variant} variant={variant} mx={1}>
-          {variant}
-        </Badge>
-      ))
-    }
-  </Story>
-</Canvas>
-
-#### `lighter`
-
-<Canvas>
-  <Story
-    name="light"
-    args={{
-      variants: [
+      variants: ['primary', 'success', 'beta', 'error', 'info', 'neutral'],
+      variantsLight: [
+        'light-primary',
         'light-success',
         'light-beta',
         'light-error',
@@ -72,21 +48,32 @@ import { Badge } from '..'
       ],
     }}
   >
-    {args =>
-      args.variants.map(variant => (
-        <Badge key={variant} variant={variant} mx={1}>
-          {variant}
-        </Badge>
-      ))
-    }
+    {args => (
+      <>
+        <Box mb={2}>
+          {args.variants.map(variant => (
+            <Badge key={variant} variant={variant} mx={1}>
+              {variant}
+            </Badge>
+          ))}
+        </Box>
+        <Box>
+          {args.variantsLight.map(light => (
+            <Badge key={light} variant={light} mx={1}>
+              {light}
+            </Badge>
+          ))}
+        </Box>
+      </>
+    )}
   </Story>
 </Canvas>
 
-## `size`
+## Sizes
 
 <Canvas>
   <Story
-    name="medium"
+    name="Sizes"
     args={{
       sizes: ['medium', 'small', 'xsmall', 'xxsmall', 'rounded'],
     }}
@@ -100,5 +87,7 @@ import { Badge } from '..'
     }
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Badge} />
