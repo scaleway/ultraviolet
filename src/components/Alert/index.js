@@ -10,15 +10,13 @@ const variantIcons = {
   success: 'check',
 }
 
-const StyledAlert = styled(Typography)(
-  ({ theme, color }) => `
+const StyledAlert = styled(Typography)`
   display: flex;
   align-items: center;
-  margin-bottom: ${theme.space['2']};
-  color: ${theme.colors[color]};
+  margin-bottom: ${({ theme }) => theme.space['2']};
+  color: ${({ theme, color }) => theme.colors[color]};
   font-weight: 700;
-`,
-)
+`
 
 export const alertVariants = Object.keys(variantIcons)
 

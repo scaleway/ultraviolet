@@ -8,40 +8,38 @@ import { Expandable } from '../Expandable'
 import Icon from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 
-const StyledCheckBoxContainer = styled(Typography)(
-  ({ 'aria-disabled': disabled }) => `
+const StyledCheckBoxContainer = styled(Typography)`
   position: relative;
-    display: inline-flex;
-    align-items: flex-start;
-    cursor: ${disabled ? 'not-allowed' : 'pointer'};
-`,
-)
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: ${({ 'aria-disabled': disabled }) =>
+    disabled ? 'not-allowed' : 'pointer'};
+`
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
   shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop),
-})(
-  ({ theme, hasChildren, size, disabled }) => `
+})`
   opacity: 0.01;
-    width: ${size}px;
-    height: ${size}px;
-    position: absolute;
-    cursor: pointer;
-    margin-right: ${hasChildren ? '10px' : 0};
-    padding: 2px;
-    pointer-events: auto;
-    &:hover {
-      svg {
-        border-radius: ${theme.radii.default};
-        background-color: ${!disabled && theme.colors.gray100};
-        fill: ${!disabled && theme.colors.primary};
-        transition: fill 300ms;
-      }
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: ${({ hasChildren }) => (hasChildren ? '10px' : 0)};
+  padding: 2px;
+  pointer-events: auto;
+  &:hover {
+    svg {
+      border-radius: ${({ theme }) => theme.radii.default};
+      background-color: ${({ theme, disabled }) =>
+        !disabled && theme.colors.gray100};
+      fill: ${({ theme, disabled }) => !disabled && theme.colors.primary};
+      transition: fill 300ms;
     }
-    &:focus + svg {
-      outline: 1px ${theme.colors.gray550} dotted;
-    }
-`,
-)
+  }
+  &:focus + svg {
+    outline: 1px ${({ theme }) => theme.colors.gray550} dotted;
+  }
+`
 
 const StyledIcon = styled(Icon)`
   box-sizing: content-box;

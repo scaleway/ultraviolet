@@ -61,72 +61,73 @@ const plainVariant = ({ theme: { colors }, bgColor, textColor }) => {
 }
 
 const variants = {
-  primary: theme =>
+  primary: ({ theme }) =>
     plainVariant({ theme, bgColor: 'primary', textColor: 'white' }),
-  'primary-bordered': theme =>
+  'primary-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'primary',
       bgColor: 'white',
       hoverColor: 'primary',
     }),
-  'primary-soft-bordered': theme =>
+  'primary-soft-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'gray350',
       bgColor: 'white',
       hoverColor: 'primary',
     }),
-  secondary: theme =>
+  secondary: ({ theme }) =>
     plainVariant({ theme, bgColor: 'gray100', textColor: 'gray700' }),
-  'secondary-bordered': theme =>
+  'secondary-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'gray550',
       bgColor: 'white',
       hoverColor: 'primary',
     }),
-  success: theme =>
+  success: ({ theme }) =>
     plainVariant({ theme, bgColor: 'success', textColor: 'white' }),
-  'success-bordered': theme =>
+  'success-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'success',
       bgColor: 'white',
       hoverColor: 'success',
     }),
-  'success-soft-bordered': theme =>
+  'success-soft-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'gray350',
       bgColor: 'white',
       hoverColor: 'success',
     }),
-  warning: theme =>
+  warning: ({ theme }) =>
     plainVariant({ theme, bgColor: 'warning', textColor: 'white' }),
-  'warning-bordered': theme =>
+  'warning-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'warning',
       bgColor: 'white',
       hoverColor: 'warning',
     }),
-  'warning-soft-bordered': theme =>
+  'warning-soft-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'gray350',
       bgColor: 'white',
       hoverColor: 'warning',
     }),
-  info: theme => plainVariant({ theme, bgColor: 'zumthor', textColor: 'blue' }),
-  'info-bordered': theme =>
+  info: ({ theme }) =>
+    plainVariant({ theme, bgColor: 'zumthor', textColor: 'blue' }),
+  'info-bordered': ({ theme }) =>
     borderedVariant({
       theme,
       color: 'blue',
       bgColor: 'white',
       hoverColor: 'blue',
     }),
-  link: ({ colors }) => `
+  link: ({ theme: { colors } }) => `
     background-color: ${colors.white};
     color: ${colors.blue};
     vertical-align: baseline;
@@ -138,7 +139,7 @@ const variants = {
       text-decoration: underline;
     }
   `,
-  transparent: ({ colors }) => `
+  transparent: ({ theme: { colors } }) => `
     background-color: transparent;
     color: ${colors.gray700};
   `,
@@ -175,6 +176,9 @@ const sizes = {
 
 export const buttonSizes = Object.keys(sizes)
 
+const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
+const sizeStyles = ({ size }) => sizes[size]
+
 const StyledContent = styled.div`
   display: flex;
   align-items: center;
@@ -184,54 +188,50 @@ const StyledContent = styled.div`
 
 const StyledButton = styled(Box, {
   shouldForwardProp: prop => !['variant', 'extend', 'icon'].includes(prop),
-})(
-  ({ theme, variant, size, 'aria-disabled': disabled, extend, icon }) => `
-    display: inline-flex;
-    border-radius: ${theme.radii.default};
-    border-width: 0;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+})`
+  display: inline-flex;
+  border-radius: ${({ theme }) => theme.radii.default};
+  border-width: 0;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
+    border-color 150ms ease-in-out;
+
+  &:hover,
+  &:focus {
     text-decoration: none;
-    user-select: none;
-    outline: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    font-weight: 500;
-
-    transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
-      border-color 150ms ease-in-out;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-
-    ${variants[variant]?.(theme)}
-    ${sizes[size]}
-  ${
-    disabled
-      ? `
-    cursor: default;
-    pointer-events: none;
-    color: ${theme.colors.gray350};`
-      : ``
   }
 
-  ${
-    variant !== 'link' && disabled
-      ? `
+  ${variantStyles}
+  ${sizeStyles}
+  ${({ disabled, theme }) =>
+    disabled &&
+    `
+    cursor: default;
+    pointer-events: none;
+    color: ${theme.colors.gray350};`}
+
+  ${({ variant, disabled, theme }) =>
+    variant !== 'link' &&
+    disabled &&
+    `
     background-color: ${theme.colors.gray50};
     border-color: ${theme.colors.gray50};
     box-shadow: none;
-  `
-      : ``
-  }
+    `}
 
-  ${
-    extend
-      ? `
+  ${({ extend, icon }) =>
+    extend &&
+    `
     display: inline-flex;
     & ${StyledContent} {
       transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
@@ -247,11 +247,8 @@ const StyledButton = styled(Box, {
       margin-right: 8px;
       ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
     }
-  `
-      : ``
-  }
-  `,
-)
+  `}
+`
 
 const StyledIconContainer = styled('div', {
   shouldForwardProp: prop => !['margin', 'position'].includes(prop),

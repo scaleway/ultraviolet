@@ -19,21 +19,18 @@ const formatTextToAvatar = text => {
   return text.substring(0, 2).toUpperCase()
 }
 
-const StyledDiv = styled.div(
-  ({ theme, lock, textBgColor, textSize, textColor }) => `
+const StyledDiv = styled.div`
   align-items: center;
-  background-color: ${
-    lock ? theme.colors.gray50 : theme.colors[textBgColor] || textBgColor
-  };
+  background-color: ${({ lock, theme, textBgColor }) =>
+    lock ? theme.colors.gray50 : theme.colors[textBgColor] || textBgColor};
   border-radius: 50%;
-  color: ${theme.colors[textColor] || textColor};
-  font-size: ${textSize}px;
+  color: ${({ theme, textColor }) => theme.colors[textColor] || textColor};
+  font-size: ${({ textSize }) => textSize}px;
   display: flex;
   height: 100%;
   justify-content: center;
   width: 100%;
-`,
-)
+`
 
 const StyledImg = styled.img`
   height: 100%;
