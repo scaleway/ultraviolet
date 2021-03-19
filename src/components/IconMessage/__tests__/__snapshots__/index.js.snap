@@ -33,11 +33,15 @@ exports[`IconMessage renders correctly 1`] = `
   min-height: 40px;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+  color: #ef5774;
+}
+
+.emotion-5.emotion-5 {
   color: #ef5774;
   font-weight: 700;
 }
@@ -61,7 +65,7 @@ exports[`IconMessage renders correctly 1`] = `
       class="emotion-3"
     >
       <div
-        class="emotion-4"
+        class="emotion-4 emotion-5"
       >
         This is default.
       </div>
@@ -103,11 +107,15 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
   min-height: 40px;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+  color: #4f0599;
+}
+
+.emotion-5.emotion-5 {
   color: #4f0599;
   font-weight: 700;
 }
@@ -131,7 +139,7 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
       class="emotion-3"
     >
       <div
-        class="emotion-4"
+        class="emotion-4 emotion-5"
       >
         This is variant
       </div>

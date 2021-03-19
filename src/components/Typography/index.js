@@ -1,88 +1,83 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { colors, fonts, radii } from '../../theme'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import Tooltip from '../Tooltip'
 
 const styles = {
-  main: css`
-    color: ${colors.gray700};
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0;
-  `,
-  ellipsis: css`
+  ellipsis: () => css`
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   `,
-  hero: css`
-    color: ${colors.gray950};
+  hero: ({ theme }) => css`
+    color: ${theme.colors.gray950};
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 72px;
   `,
-  lead: css`
-    color: ${colors.gray950};
+  lead: ({ theme }) => css`
+    color: ${theme.colors.gray950};
     font-size: 25px;
     line-height: 25px;
     margin-bottom: 0;
   `,
-  'lead-block': css`
+  'lead-block': () => css`
     margin-bottom: 16px;
     margin-top: 48px;
   `,
-  'lead-text': css`
+  'lead-text': () => css`
     margin-bottom: 24px;
   `,
-  title: css`
-    color: ${colors.gray950};
+  title: ({ theme }) => css`
+    color: ${theme.colors.gray950};
     font-size: 21px;
     line-height: 24px;
   `,
-  bodyA: css`
-    color: ${colors.gray700};
+  bodyA: ({ theme }) => css`
+    color: ${theme.colors.gray700};
     font-size: 16px;
     line-height: 24px;
   `,
-  bodyB: css`
-    color: ${colors.gray550};
+  bodyB: ({ theme }) => css`
+    color: ${theme.colors.gray550};
     font-size: 14px;
     line-height: 18px;
   `,
-  bodyC: css`
-    color: ${colors.gray700};
+  bodyC: ({ theme }) => css`
+    color: ${theme.colors.gray700};
     font-size: 14px;
     line-height: 22px;
   `,
-  bodyD: css`
-    color: ${colors.gray700};
+  bodyD: ({ theme }) => css`
+    color: ${theme.colors.gray700};
     font-size: 14px;
     line-height: 20px;
   `,
-  tiny: css`
-    color: ${colors.gray550};
+  tiny: ({ theme }) => css`
+    color: ${theme.colors.gray550};
     font-size: 12px;
     line-height: 16px;
   `,
-  description: css`
-    color: ${colors.gray950};
+  description: ({ theme }) => css`
+    color: ${theme.colors.gray950};
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
   `,
-  samplecode: css`
-    background-color: ${colors.gray100};
-    color: ${colors.gray700};
+  samplecode: ({ theme }) => css`
+    background-color: ${theme.colors.gray100};
+    color: ${theme.colors.gray700};
     font-size: 12px;
     line-height: 16px;
     padding: 4px;
   `,
-  badge: css`
-    background-color: ${colors.gray100};
-    color: ${colors.gray700};
+  badge: ({ theme }) => css`
+    background-color: ${theme.colors.gray100};
+    color: ${theme.colors.gray700};
     text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 500;
@@ -91,25 +86,25 @@ const styles = {
     padding: 6px 12px;
     border-radius: 20px;
   `,
-  link: css`
+  link: () => css`
     color: #3f6ed8;
     :hover {
       text-decoration: underline;
     }
   `,
-  clamp: maxLines => css`
+  clamp: ({ maxLines }) => css`
     -webkit-line-clamp: ${maxLines};
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
   `,
-  command: css`
-    font-family: ${fonts.monospace};
+  command: ({ theme }) => css`
+    font-family: ${theme.fonts.monospace};
     font-size: 13px;
     font-weight: 500;
-    border-radius: ${radii.default};
-    color: ${colors.gray700};
-    background-color: ${colors.gray100};
+    border-radius: ${theme.radii.default};
+    color: ${theme.colors.gray700};
+    background-color: ${theme.colors.gray100};
     padding: 3px 5px;
   `,
 }
@@ -132,28 +127,38 @@ const variantTags = {
   link: 'div',
 }
 
-const textColors = {
-  inherit: 'inherit',
-  alert: colors.orange,
-  orange: colors.orange,
-  white: colors.white,
-  darkBlack: colors.gray950,
-  lightBlack: colors.gray700,
-  darkGrey: colors.gray550, // TODO: deprecated, to be removed soon
-  grey: colors.gray350, // TODO: deprecated, to be removed soon
-  darkGray: colors.gray550,
-  gray: colors.gray350,
-  light: colors.gray100,
-  green: colors.green,
-  red: colors.red,
-  warning: colors.warning,
-  blue: colors.blue,
-  violet: colors.primary,
-  primary: colors.primary,
-  lightPrimary: colors.gray200,
-  gold: colors.gold,
-  info: colors.info,
-}
+const colorStyles = ({ theme, color }) =>
+  color
+    ? css`
+        color: ${theme.colors[color] ?? color};
+      `
+    : undefined
+
+const variantStyles = ({ theme, variant }) =>
+  ['lead-block', 'lead-text'].includes(variant)
+    ? css`
+        ${styles.lead({ theme })}
+        ${styles[variant]?.({ theme })}
+      `
+    : css`
+        ${styles[variant]?.({ theme })}
+      `
+
+const StyledText = styled(Box, {
+  shouldForwardProp: prop =>
+    !['ellipsis', 'variant', 'maxLines'].includes(prop),
+})`
+  color: ${({ theme }) => theme.colors.gray700};
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  ${variantStyles}
+  ${colorStyles}
+
+    ${({ ellipsis, theme }) => ellipsis && styles.ellipsis({ theme })}
+    ${({ maxLines }) => !!maxLines && styles.clamp({ maxLines })}
+`
 
 const Text = ({
   onMouseEnter = undefined,
@@ -170,46 +175,25 @@ const Text = ({
   fontWeight,
   ref,
   ...props
-}) => {
-  const variantStyles = ['lead-block', 'lead-text'].includes(variant)
-    ? [styles.lead, styles[variant]]
-    : [styles[variant]]
-
-  return (
-    <Box
-      ref={ref}
-      onMouseEnter={onMouseEnter}
-      onFocus={onFocus}
-      {...tooltipProps}
-      {...props}
-      as={as || variantTags[variant]}
-      css={[
-        styles.main,
-        ...variantStyles,
-        color &&
-          css`
-            color: ${textColors[color]};
-          `,
-        align &&
-          css`
-            text-align: align;
-          `,
-        ellipsis && styles.ellipsis,
-        lineHeight &&
-          css`
-            line-height: ${lineHeight};
-          `,
-        fontWeight &&
-          css`
-            font-weight: ${fontWeight};
-          `,
-        maxLines && maxLines > 0 && styles.clamp(maxLines),
-      ]}
-    >
-      {children}
-    </Box>
-  )
-}
+}) => (
+  <StyledText
+    ref={ref}
+    onMouseEnter={onMouseEnter}
+    onFocus={onFocus}
+    {...tooltipProps}
+    {...props}
+    as={as || variantTags[variant]}
+    color={color}
+    variant={variant}
+    align={align}
+    ellipsis={ellipsis}
+    lineHeight={lineHeight}
+    fontWeight={fontWeight}
+    maxLines={maxLines}
+  >
+    {children}
+  </StyledText>
+)
 
 const TextWithTooltip = props => {
   const isTruncated = useCallback((target = {}) => {
@@ -264,7 +248,7 @@ Typography.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(typographyVariants),
   as: PropTypes.string,
-  color: PropTypes.oneOf(Object.keys(textColors)),
+  color: PropTypes.oneOf(Object.keys(colors)),
   align: PropTypes.string,
   ellipsis: PropTypes.bool,
   maxLines: PropTypes.number,
