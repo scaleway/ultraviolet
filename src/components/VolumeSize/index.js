@@ -153,7 +153,7 @@ const VolumeSize = ({
           name={hasError ? 'alert' : 'checkbox-marked-circle-outline'}
         />
         {hasError && (
-          <Typography variant="bodyA" color="alert">
+          <Typography variant="bodyA" color="orange">
             {isTooBig ? tooBigMessage : tooSmallMessage}
           </Typography>
         )}
