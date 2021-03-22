@@ -1,7 +1,6 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const ICONS = {
@@ -35,12 +34,12 @@ const ICONS = {
   ),
 }
 
-const styles = {
-  icon: color => css`
-    transition: fill 300ms;
-    fill: ${colors[color]};
-  `,
-}
+const StyledIconBox = styled(Box, {
+  shouldForwardProp: prop => !['color'].includes(prop),
+})`
+  transition: fill 300ms;
+  fill: ${({ theme, color }) => theme.colors[color] ?? color};
+`
 
 const MenuIcon = ({ name, size, color, isButton, ...props }) => (
   <Box
@@ -51,16 +50,16 @@ const MenuIcon = ({ name, size, color, isButton, ...props }) => (
     mr={1}
     {...props}
   >
-    <Box
+    <StyledIconBox
       height={size}
       width={size}
       viewBox="0 0 16 16"
       as="svg"
-      css={styles.icon(color)}
+      color={color}
       pl={isButton ? 0 : '2px'}
     >
       {ICONS[name] && ICONS[name]()}
-    </Box>
+    </StyledIconBox>
   </Box>
 )
 
@@ -79,4 +78,4 @@ MenuIcon.propTypes = {
   isButton: PropTypes.bool,
 }
 
-export { MenuIcon }
+export default MenuIcon

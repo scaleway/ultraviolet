@@ -2,7 +2,7 @@
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11,18 +11,22 @@ exports[`Link render correctly with target blank 1`] = `
   color: #4f0599;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #4f0599;
 }
 
+<<<<<<< HEAD
 .emotion-2 {
+=======
+.emotion-3 {
+>>>>>>> refactor: use colors from theme from globalstyles to modal
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -37,7 +41,7 @@ exports[`Link render correctly with target blank 1`] = `
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -45,7 +49,11 @@ exports[`Link render correctly with target blank 1`] = `
   >
     Hello
     <svg
+<<<<<<< HEAD
       class="emotion-1 emotion-2"
+=======
+      class="emotion-2 emotion-3"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       viewBox="0 0 24 24"
     >
       <path
@@ -58,7 +66,7 @@ exports[`Link render correctly with target blank 1`] = `
 
 exports[`Link render correctly with to props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -67,19 +75,19 @@ exports[`Link render correctly with to props 1`] = `
   color: #4f0599;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #4f0599;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -90,7 +98,7 @@ exports[`Link render correctly with to props 1`] = `
 
 exports[`Link variant render blue 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -99,19 +107,19 @@ exports[`Link variant render blue 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #1e4293;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -122,7 +130,7 @@ exports[`Link variant render blue 1`] = `
 
 exports[`Link variant render gray 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -131,19 +139,19 @@ exports[`Link variant render gray 1`] = `
   color: #b2b6c3;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #798096;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -154,7 +162,7 @@ exports[`Link variant render gray 1`] = `
 
 exports[`Link variant render grey 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -163,19 +171,19 @@ exports[`Link variant render grey 1`] = `
   color: #b2b6c3;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #798096;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -186,7 +194,7 @@ exports[`Link variant render grey 1`] = `
 
 exports[`Link variant render inherit 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -195,21 +203,21 @@ exports[`Link variant render inherit 1`] = `
   color: inherit;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -220,7 +228,7 @@ exports[`Link variant render inherit 1`] = `
 
 exports[`Link variant render primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -229,19 +237,19 @@ exports[`Link variant render primary 1`] = `
   color: #4f0599;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #4f0599;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >
@@ -252,7 +260,7 @@ exports[`Link variant render primary 1`] = `
 
 exports[`Link variant render white 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -261,19 +269,19 @@ exports[`Link variant render white 1`] = `
   color: #fff;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #ccc;
 }
 
 <a
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     href="/"
     to="/"
   >

@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box } from '../Box'
-import { Link } from '../Link'
+import Link from '../Link'
 
 const variants = {
   vertical: ({ theme }) => css`

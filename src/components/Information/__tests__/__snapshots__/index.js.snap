@@ -2,12 +2,12 @@
 
 exports[`Information should render correctly with a custom backgroundColor 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #45d6b5;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,13 +49,17 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <p
+<<<<<<< HEAD
         class="emotion-2 emotion-3"
+=======
+        class="emotion-3"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>
@@ -66,12 +70,12 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
 
 exports[`Information should render correctly with a custom color 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +90,7 @@ exports[`Information should render correctly with a custom color 1`] = `
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,13 +117,17 @@ exports[`Information should render correctly with a custom color 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <p
+<<<<<<< HEAD
         class="emotion-2 emotion-3"
+=======
+        class="emotion-3"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>
@@ -130,12 +138,12 @@ exports[`Information should render correctly with a custom color 1`] = `
 
 exports[`Information should render correctly with an children 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,7 +158,7 @@ exports[`Information should render correctly with an children 1`] = `
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -162,10 +170,10 @@ exports[`Information should render correctly with an children 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <div>
         Testing component
@@ -177,12 +185,12 @@ exports[`Information should render correctly with an children 1`] = `
 
 exports[`Information should render correctly with an heading 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,7 +205,7 @@ exports[`Information should render correctly with an heading 1`] = `
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -224,7 +232,11 @@ exports[`Information should render correctly with an heading 1`] = `
   font-weight: 500;
 }
 
+<<<<<<< HEAD
 .emotion-5 {
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme from globalstyles to modal
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -240,18 +252,26 @@ exports[`Information should render correctly with an heading 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <p
+<<<<<<< HEAD
         class="emotion-2 emotion-3"
+=======
+        class="emotion-3"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Bonjour
       </p>
       <p
+<<<<<<< HEAD
         class="emotion-2 emotion-5"
+=======
+        class="emotion-4"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>
@@ -262,12 +282,12 @@ exports[`Information should render correctly with an heading 1`] = `
 
 exports[`Information should render correctly with an icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,7 +311,10 @@ exports[`Information should render correctly with an icon 1`] = `
 }
 
 .emotion-2.emotion-2 {
+<<<<<<< HEAD
   vertical-align: middle;
+=======
+>>>>>>> refactor: use colors from theme from globalstyles to modal
   margin-right: 16px;
 }
 
@@ -322,10 +345,14 @@ exports[`Information should render correctly with an icon 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <svg
+<<<<<<< HEAD
       class="sc-ui-icon emotion-1 emotion-2"
+=======
+      class="sc-ui-icon emotion-2"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       viewBox="0 0 24 24"
     >
       <path
@@ -336,7 +363,15 @@ exports[`Information should render correctly with an icon 1`] = `
       class="emotion-3"
     >
       <p
+<<<<<<< HEAD
         class="emotion-4 emotion-5"
+=======
+<<<<<<< HEAD
+        class="emotion-3 emotion-4"
+=======
+        class="emotion-4"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>
@@ -347,12 +382,12 @@ exports[`Information should render correctly with an icon 1`] = `
 
 exports[`Information should render correctly with an image 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -367,13 +402,13 @@ exports[`Information should render correctly with an image 1`] = `
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 24px;
   height: 24px;
   margin-right: 24px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -400,17 +435,21 @@ exports[`Information should render correctly with an image 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <img
-      class="emotion-1"
+      class="emotion-2"
       src="//img.jpg"
     />
     <div
-      class="emotion-2"
+      class="emotion-3"
     >
       <p
+<<<<<<< HEAD
         class="emotion-3 emotion-4"
+=======
+        class="emotion-4"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>
@@ -421,12 +460,12 @@ exports[`Information should render correctly with an image 1`] = `
 
 exports[`Information should render correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   background-color: #fff;
   border-radius: 4px;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,7 +480,7 @@ exports[`Information should render correctly with default props 1`] = `
   align-items: center;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -468,13 +507,17 @@ exports[`Information should render correctly with default props 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <p
+<<<<<<< HEAD
         class="emotion-2 emotion-3"
+=======
+        class="emotion-3"
+>>>>>>> refactor: use colors from theme from globalstyles to modal
       >
         Hello
       </p>

@@ -1,10 +1,9 @@
-import { Global, css } from '@emotion/react'
+import { Global, css, useTheme } from '@emotion/react'
 import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors, fonts } from '../../theme'
 
-const globalStyles = css`
+const globalStyles = ({ theme }) => css`
   ${normalize()}
 
   /* Fallback system fonts */
@@ -49,11 +48,11 @@ const globalStyles = css`
   }
 
   body {
-    background-color: ${colors.white};
+    background-color: ${theme.colors.white};
     /* TODO: Add me in theme; ps: I am hard coded in shire. */
     color: #5c6275;
     /* important is for docz */
-    font-family: ${fonts.sansSerif} !important;
+    font-family: ${theme.fonts.sansSerif} !important;
     overflow: hidden;
     height: 100%;
     text-rendering: optimizeLegibility;
@@ -66,7 +65,7 @@ const globalStyles = css`
   textarea,
   select,
   button {
-    font-family: ${fonts.sansSerif} !important;
+    font-family: ${theme.fonts.sansSerif} !important;
   }
 
   button,
@@ -87,7 +86,7 @@ const globalStyles = css`
   }
 
   a {
-    color: ${colors.blue};
+    color: ${theme.colors.blue};
     text-decoration: none;
   }
 
@@ -95,7 +94,7 @@ const globalStyles = css`
   a:focus,
   a:active {
     /* TODO: Move me in theme; ps: I am the darkBlue shire color. */
-    color: #2f52a1;
+    color: ${theme.colors.darkBlue};
     text-decoration: underline;
   }
 
@@ -103,9 +102,12 @@ const globalStyles = css`
     margin: 0;
   }
 `
-export const GlobalStyle = ({ additionalStyles }) => (
-  <Global styles={[globalStyles, ...additionalStyles]} />
-)
+
+const GlobalStyle = ({ additionalStyles }) => {
+  const theme = useTheme()
+
+  return <Global styles={[globalStyles({ theme }), ...additionalStyles]} />
+}
 
 GlobalStyle.propTypes = {
   additionalStyles: PropTypes.arrayOf(PropTypes.object),
@@ -114,3 +116,5 @@ GlobalStyle.propTypes = {
 GlobalStyle.defaultProps = {
   additionalStyles: [],
 }
+
+export default GlobalStyle

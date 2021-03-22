@@ -18,6 +18,7 @@ export const green = '#45d6b5'
 export const red = '#ef5774'
 export const orange = '#ff8c69'
 export const blue = '#3f6ed8'
+export const darkBlue = '#2f52a1'
 
 export const zumthor = '#e4edff'
 export const foam = '#cdfcf1'
