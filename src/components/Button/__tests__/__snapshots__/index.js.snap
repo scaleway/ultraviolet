@@ -825,7 +825,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   display: flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -834,7 +834,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   min-height: 1em;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,7 +859,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
       class="emotion-1"
     >
       <svg
-        class="sc-ui-icon emotion-2"
+        class="sc-ui-icon emotion-2 emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -868,7 +868,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="content emotion-3"
+      class="content emotion-4"
     >
       Hello
     </div>
@@ -1039,7 +1039,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   display: flex;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -1062,7 +1062,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
       class="emotion-2"
     >
       <svg
-        class="sc-ui-icon emotion-3"
+        class="sc-ui-icon emotion-3 emotion-4"
         viewBox="0 0 24 24"
       >
         <path
@@ -1203,7 +1203,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   display: flex;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -1221,7 +1221,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
       class="emotion-1"
     >
       <svg
-        class="sc-ui-icon emotion-2"
+        class="sc-ui-icon emotion-2 emotion-3"
         viewBox="0 0 24 24"
       >
         <path

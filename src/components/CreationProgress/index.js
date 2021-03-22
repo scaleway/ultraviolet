@@ -4,7 +4,7 @@ import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography } from '../Typography'
 
 const loadingAnimation = keyframes`

@@ -127,7 +127,7 @@ exports[`TextBox should handle events on random button 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -136,7 +136,7 @@ exports[`TextBox should handle events on random button 1`] = `
   min-height: 1em;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -146,11 +146,11 @@ exports[`TextBox should handle events on random button 1`] = `
   margin-top: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   overflow: hidden;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -178,7 +178,7 @@ exports[`TextBox should handle events on random button 1`] = `
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-7"
+            class="sc-ui-icon emotion-7 emotion-8"
             viewBox="0 0 24 24"
           >
             <path
@@ -189,10 +189,10 @@ exports[`TextBox should handle events on random button 1`] = `
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-9"
     >
       <div
-        class="emotion-9"
+        class="emotion-10"
       />
     </div>
   </div>
@@ -326,7 +326,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -335,7 +335,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   min-height: 1em;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -345,11 +345,11 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   margin-top: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   overflow: hidden;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -377,7 +377,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-7"
+            class="sc-ui-icon emotion-7 emotion-8"
             viewBox="0 0 24 24"
           >
             <path
@@ -388,10 +388,10 @@ exports[`TextBox should handle events on toggleable password 1`] = `
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-9"
     >
       <div
-        class="emotion-9"
+        class="emotion-10"
       />
     </div>
   </div>
@@ -1536,7 +1536,7 @@ exports[`TextBox should render correctly required true 1`] = `
   color: #4a4f62;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #ef5774;
   vertical-align: middle;
   height: 10px;
@@ -1545,7 +1545,7 @@ exports[`TextBox should render correctly required true 1`] = `
   min-height: 10px;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1555,11 +1555,11 @@ exports[`TextBox should render correctly required true 1`] = `
   margin-top: 0;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   overflow: hidden;
 }
 
-.emotion-10.emotion-10 {
+.emotion-11.emotion-11 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1587,7 +1587,7 @@ exports[`TextBox should render correctly required true 1`] = `
         class="emotion-6 emotion-7"
       >
         <svg
-          class="sc-ui-icon emotion-8"
+          class="sc-ui-icon emotion-8 emotion-9"
           viewBox="0 0 24 24"
         >
           <path
@@ -1597,10 +1597,10 @@ exports[`TextBox should render correctly required true 1`] = `
       </div>
     </div>
     <div
-      class="emotion-9"
+      class="emotion-10"
     >
       <div
-        class="emotion-10"
+        class="emotion-11"
       />
     </div>
   </div>
@@ -2794,7 +2794,7 @@ exports[`TextBox should render correctly with notice 1`] = `
   margin-top: 8px;
 }
 
-.emotion-9 {
+.emotion-10 {
   fill: currentColor;
   vertical-align: top;
   height: 20px;
@@ -2803,7 +2803,7 @@ exports[`TextBox should render correctly with notice 1`] = `
   min-height: 20px;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   margin-right: 8px;
 }
 
@@ -2838,7 +2838,7 @@ exports[`TextBox should render correctly with notice 1`] = `
       role="alert"
     >
       <svg
-        class="sc-ui-icon emotion-9"
+        class="sc-ui-icon emotion-9 emotion-10"
         viewBox="0 0 24 24"
       >
         <path
@@ -3639,7 +3639,11 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
         >
           px
           <svg
+<<<<<<< HEAD
             class="sc-ui-icon emotion-12"
+=======
+            class="sc-ui-icon emotion-11 emotion-12"
+>>>>>>> feat: migrate colors from theme in icon
             viewBox="0 0 24 24"
           >
             <path
@@ -3911,7 +3915,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
   color: #4a4f62;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #45d6b5;
   vertical-align: middle;
   height: 20px;
@@ -3920,7 +3924,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
   min-height: 20px;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -3930,11 +3934,11 @@ exports[`TextBox should render correctly with valid true 1`] = `
   margin-top: 0;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   overflow: hidden;
 }
 
-.emotion-10.emotion-10 {
+.emotion-11.emotion-11 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -3963,7 +3967,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
         class="emotion-6 emotion-7"
       >
         <svg
-          class="sc-ui-icon emotion-8"
+          class="sc-ui-icon emotion-8 emotion-9"
           viewBox="0 0 24 24"
         >
           <path
@@ -3973,10 +3977,10 @@ exports[`TextBox should render correctly with valid true 1`] = `
       </div>
     </div>
     <div
-      class="emotion-9"
+      class="emotion-10"
     >
       <div
-        class="emotion-10"
+        class="emotion-11"
       />
     </div>
   </div>
@@ -4401,7 +4405,7 @@ exports[`TextBox should render random 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -4410,7 +4414,7 @@ exports[`TextBox should render random 1`] = `
   min-height: 1em;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4420,11 +4424,11 @@ exports[`TextBox should render random 1`] = `
   margin-top: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   overflow: hidden;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4452,7 +4456,7 @@ exports[`TextBox should render random 1`] = `
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-7"
+            class="sc-ui-icon emotion-7 emotion-8"
             viewBox="0 0 24 24"
           >
             <path
@@ -4463,10 +4467,10 @@ exports[`TextBox should render random 1`] = `
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-9"
     >
       <div
-        class="emotion-9"
+        class="emotion-10"
       />
     </div>
   </div>
@@ -4611,7 +4615,7 @@ exports[`TextBox should render random 2`] = `
   opacity: 0.5;
 }
 
-.emotion-9 {
+.emotion-10 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -4620,7 +4624,7 @@ exports[`TextBox should render random 2`] = `
   min-height: 1em;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4630,11 +4634,11 @@ exports[`TextBox should render random 2`] = `
   margin-top: 0;
 }
 
-.emotion-10.emotion-10 {
+.emotion-11.emotion-11 {
   overflow: hidden;
 }
 
-.emotion-11.emotion-11 {
+.emotion-12.emotion-12 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4671,7 +4675,7 @@ exports[`TextBox should render random 2`] = `
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-9"
+            class="sc-ui-icon emotion-9 emotion-10"
             viewBox="0 0 24 24"
           >
             <path
@@ -4682,10 +4686,10 @@ exports[`TextBox should render random 2`] = `
       </div>
     </div>
     <div
-      class="emotion-10"
+      class="emotion-11"
     >
       <div
-        class="emotion-11"
+        class="emotion-12"
       />
     </div>
   </div>
@@ -4819,7 +4823,7 @@ exports[`TextBox should render toggleable password 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: currentColor;
   vertical-align: middle;
   height: 1em;
@@ -4828,7 +4832,7 @@ exports[`TextBox should render toggleable password 1`] = `
   min-height: 1em;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4838,11 +4842,11 @@ exports[`TextBox should render toggleable password 1`] = `
   margin-top: 0;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   overflow: hidden;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4870,7 +4874,7 @@ exports[`TextBox should render toggleable password 1`] = `
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-7"
+            class="sc-ui-icon emotion-7 emotion-8"
             viewBox="0 0 24 24"
           >
             <path
@@ -4881,10 +4885,10 @@ exports[`TextBox should render toggleable password 1`] = `
       </div>
     </div>
     <div
-      class="emotion-8"
+      class="emotion-9"
     >
       <div
-        class="emotion-9"
+        class="emotion-10"
       />
     </div>
   </div>

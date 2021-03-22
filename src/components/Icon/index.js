@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
 // Non Material Design icons: 'send',
@@ -261,12 +261,12 @@ const ICONS = {
 
 export const icons = Object.keys(ICONS)
 
-const style = ({ verticalAlign, size, color }) => {
+const iconStyles = ({ size, color, verticalAlign, theme }) => {
   const pxSize =
     typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
 
   return css`
-    fill: ${colors[color] ?? color};
+    fill: ${theme.colors[color] ?? color};
     vertical-align: ${verticalAlign};
     height: ${pxSize};
     width: ${pxSize};
@@ -275,21 +275,29 @@ const style = ({ verticalAlign, size, color }) => {
   `
 }
 
+const StyledIcon = styled(Box, {
+  shouldForwardProp: prop => !['size', 'verticalAlign', 'color'].includes(prop),
+})`
+  ${iconStyles}
+`
+
 const Icon = React.forwardRef(
   ({ name, color, size, verticalAlign, ...props }, ref) => {
     const render = ICONS[name] || ICONS.circle
 
     return (
-      <Box
+      <StyledIcon
         ref={ref}
         className="sc-ui-icon"
-        css={style({ color, size, verticalAlign })}
+        color={color}
+        size={size}
+        verticalAlign={verticalAlign}
         {...props}
         viewBox="0 0 24 24"
         as="svg"
       >
         {render()}
-      </Box>
+      </StyledIcon>
     )
   },
 )
@@ -308,4 +316,4 @@ Icon.defaultProps = {
   verticalAlign: 'middle',
 }
 
-export { Icon }
+export default Icon

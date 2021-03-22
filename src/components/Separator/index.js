@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 
 const styles = {
   hr: ({ direction, color, thickness, icon }) => {

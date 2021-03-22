@@ -6,7 +6,7 @@ import flattenChildren from 'react-flatten-children'
 import { colors, radii, space } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 const styles = {
   container: css`
