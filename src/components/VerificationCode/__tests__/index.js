@@ -1,19 +1,14 @@
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import { VerificationCode } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
-const pasteEventWithValue = value => {
-  const clipboardEvent = new Event('paste', {
-    bubbles: true,
-    cancelable: true,
-    composed: true,
+const pasteEventWithValue = (selector, value) => {
+  userEvent.paste(selector, value, {
+    clipboardData: {
+      getData: () => value,
+    },
   })
-
-  clipboardEvent.clipboardData = {
-    getData: () => value,
-  }
-
-  return clipboardEvent
 }
 
 describe('VerificationCode', () => {
@@ -32,9 +27,7 @@ describe('VerificationCode', () => {
       <VerificationCode type="number" fields={4} initialValue="1" />,
       {
         transform: ({ getByDisplayValue }) => {
-          const inputElement = getByDisplayValue('1')
-          const clipboardEvent = pasteEventWithValue('1234')
-          inputElement.dispatchEvent(clipboardEvent)
+          pasteEventWithValue(getByDisplayValue('1'), '1234')
         },
       },
     )
@@ -45,9 +38,7 @@ describe('VerificationCode', () => {
       <VerificationCode fields={4} initialValue="1" />,
       {
         transform: ({ getByDisplayValue }) => {
-          const inputElement = getByDisplayValue('1')
-          const clipboardEvent = pasteEventWithValue('1a34')
-          inputElement.dispatchEvent(clipboardEvent)
+          pasteEventWithValue(getByDisplayValue('1'), '1a34')
         },
       },
     )
@@ -58,9 +49,7 @@ describe('VerificationCode', () => {
       <VerificationCode fields={4} initialValue="12" />,
       {
         transform: ({ getByDisplayValue }) => {
-          const inputElement = getByDisplayValue('1')
-          const clipboardEvent = pasteEventWithValue('123456')
-          inputElement.dispatchEvent(clipboardEvent)
+          pasteEventWithValue(getByDisplayValue('1'), '123456')
         },
       },
     )
@@ -71,9 +60,7 @@ describe('VerificationCode', () => {
       <VerificationCode fields={4} initialValue="12" />,
       {
         transform: ({ getByDisplayValue }) => {
-          const inputElement = getByDisplayValue('2')
-          const clipboardEvent = pasteEventWithValue('123456')
-          inputElement.dispatchEvent(clipboardEvent)
+          pasteEventWithValue(getByDisplayValue('2'), '123456')
         },
       },
     )
@@ -84,9 +71,7 @@ describe('VerificationCode', () => {
       <VerificationCode type="text" fields={6} initialValue="12" />,
       {
         transform: ({ getByDisplayValue }) => {
-          const inputElement = getByDisplayValue('2')
-          const clipboardEvent = pasteEventWithValue('h23a*6')
-          inputElement.dispatchEvent(clipboardEvent)
+          pasteEventWithValue(getByDisplayValue('2'), 'h23a*6')
         },
       },
     )
