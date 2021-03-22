@@ -1,5 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import Badge from '..'
+import { Box } from '../../Box'
 
 <Meta
   title="Components/Badge"
@@ -49,16 +50,20 @@ import Badge from '..'
   >
     {args => (
       <>
-        {args.variants.map(variant => (
-          <Badge m={1} key={variant} variant={variant}>
-            {variant}
-          </Badge>
-        ))}
-        {args.variantsLight.map(light => (
-          <Badge m={1} key={light} variant={light}>
-            {light}
-          </Badge>
-        ))}
+        <Box>
+          {args.variants.map(variant => (
+            <Badge m={1} key={variant} variant={variant}>
+              {variant}
+            </Badge>
+          ))}
+        </Box>
+        <Box>
+          {args.variantsLight.map(light => (
+            <Badge m={1} key={light} variant={light}>
+              {light}
+            </Badge>
+          ))}
+        </Box>
       </>
     )}
   </Story>
