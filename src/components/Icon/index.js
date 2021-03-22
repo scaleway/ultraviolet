@@ -261,13 +261,11 @@ const ICONS = {
 
 export const icons = Object.keys(ICONS)
 
-const iconStyles = ({ size, color, verticalAlign, theme }) => {
+const sizeStyles = ({ size }) => {
   const pxSize =
     typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
 
   return css`
-    fill: ${theme.colors[color] ?? color};
-    vertical-align: ${verticalAlign};
     height: ${pxSize};
     width: ${pxSize};
     min-width: ${pxSize};
@@ -276,9 +274,10 @@ const iconStyles = ({ size, color, verticalAlign, theme }) => {
 }
 
 const StyledIcon = styled(Box, {
-  shouldForwardProp: prop => !['size', 'verticalAlign', 'color'].includes(prop),
+  shouldForwardProp: prop => !['size', 'color'].includes(prop),
 })`
-  ${iconStyles}
+  fill: ${({ theme, color }) => theme.colors[color] ?? color};
+  ${sizeStyles}
 `
 
 const Icon = React.forwardRef(

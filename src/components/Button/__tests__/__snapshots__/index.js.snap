@@ -827,11 +827,14 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 .emotion-3 {
   fill: currentColor;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  vertical-align: middle;
 }
 
 .emotion-4 {
@@ -1041,11 +1044,14 @@ exports[`Button should render correctly with an icon on the right 1`] = `
 
 .emotion-4 {
   fill: currentColor;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: middle;
 }
 
 <button
@@ -1205,11 +1211,14 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 
 .emotion-3 {
   fill: currentColor;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  vertical-align: middle;
 }
 
 <button

@@ -17,7 +17,7 @@ import { Box, Boxer } from '../..'
 <Description>Set desired icon using `name` property.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     {icons.map(name => (
       <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
         <Icon name={name} /> {name}
@@ -31,7 +31,7 @@ import { Box, Boxer } from '../..'
 <Description>Set size using `size` property.</Description>
 
 <Canvas>
-  <Story name="size">
+  <Story name="Size">
     <Boxer mr={2} display="inline-block">
       <Icon name="eye" size={40} />
       <Icon name="eye" size={50} />
@@ -45,7 +45,7 @@ import { Box, Boxer } from '../..'
 <Description>Set color using `color` property.</Description>
 
 <Canvas>
-  <Story name="color">
+  <Story name="Color">
     <Boxer mr={2} display="inline-block">
       <Icon name="eye" color="primary" />
       <Icon name="eye" color="success" />
@@ -62,10 +62,29 @@ import { Box, Boxer } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="default">
+  <Story name="Default icon">
     <Boxer mr={2} display="inline-block">
       <Icon name={undefined} color="red" />
       <Icon name="unknown" color="orange" />
+    </Boxer>
+  </Story>
+</Canvas>
+
+## Vertical Align
+
+<Description>
+  `Icon` is based on `Box`component which allow declarative css like
+  `verticalAlign` in this example.
+</Description>
+
+<Canvas>
+  <Story name="Vertical align">
+    <Boxer display="flex">
+      {['top', 'middle', 'bottom'].map(align => (
+        <Box m={1}>
+          <Icon name="eye" verticalAlign={align} /> {align}
+        </Box>
+      ))}
     </Boxer>
   </Story>
 </Canvas>

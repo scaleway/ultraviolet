@@ -56,11 +56,14 @@ exports[`Avatar renders correctly with lock 1`] = `
 
 .emotion-3 {
   fill: #b2b6c3;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-3.emotion-3 {
+  vertical-align: middle;
 }
 
 <div

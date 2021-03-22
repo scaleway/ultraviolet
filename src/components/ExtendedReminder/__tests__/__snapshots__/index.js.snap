@@ -52,7 +52,6 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 
 .emotion-4 {
   fill: #fff;
-  vertical-align: middle;
   height: 16px;
   width: 16px;
   min-width: 16px;
@@ -60,6 +59,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 }
 
 .emotion-4.emotion-4 {
+  vertical-align: middle;
   margin-right: 4px;
 }
 
@@ -209,11 +209,14 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 
 .emotion-10 {
   fill: currentColor;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
 }
 
 .emotion-11 {
@@ -361,7 +364,6 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
 
 .emotion-4 {
   fill: #fff;
-  vertical-align: middle;
   height: 16px;
   width: 16px;
   min-width: 16px;
@@ -369,6 +371,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
 }
 
 .emotion-4.emotion-4 {
+  vertical-align: middle;
   margin-right: 4px;
 }
 
@@ -518,11 +521,14 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
 
 .emotion-10 {
   fill: currentColor;
-  vertical-align: middle;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
 }
 
 .emotion-11 {
@@ -670,7 +676,6 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
 
 .emotion-4 {
   fill: #fff;
-  vertical-align: middle;
   height: 16px;
   width: 16px;
   min-width: 16px;
@@ -678,6 +683,7 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
 }
 
 .emotion-4.emotion-4 {
+  vertical-align: middle;
   margin-right: 4px;
 }
 

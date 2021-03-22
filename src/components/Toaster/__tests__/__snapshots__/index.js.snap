@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toaster renders correctly with all kind of toast 1`] = `
+<DocumentFragment>
+  <div
+    class="Toastify"
+  />
+</DocumentFragment>
+`;
+
+exports[`Toaster renders correctly with all kind of toast 2`] = `
 Array [
   .emotion-0 {
   display: -webkit-box;
@@ -25,16 +33,61 @@ Array [
   padding: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #3f6ed8;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px;
+  background-color: #e4edff;
+  color: #3f6ed8;
+}
+
+.emotion-0.emotion-0 {
+  padding: 0;
+}
+
 .emotion-2 {
+  fill: #3f6ed8;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
   font-size: 16px;
   line-height: 22px;
   padding-left: 16px;
@@ -49,7 +102,7 @@ Array [
       class="emotion-0"
     >
       <svg
-        class="sc-ui-icon emotion-1"
+        class="sc-ui-icon emotion-1 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -57,7 +110,7 @@ Array [
         />
       </svg>
       <p
-        class="emotion-2"
+        class="emotion-3"
       >
         This is an info
       </p>
@@ -86,16 +139,61 @@ Array [
   padding: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #45d6b5;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px;
+  background-color: #cdfcf1;
+  color: #45d6b5;
+}
+
+.emotion-0.emotion-0 {
+  padding: 0;
+}
+
 .emotion-2 {
+  fill: #45d6b5;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
   font-size: 16px;
   line-height: 22px;
   padding-left: 16px;
@@ -110,7 +208,7 @@ Array [
       class="emotion-0"
     >
       <svg
-        class="sc-ui-icon emotion-1"
+        class="sc-ui-icon emotion-1 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -118,7 +216,7 @@ Array [
         />
       </svg>
       <p
-        class="emotion-2"
+        class="emotion-3"
       >
         This is a success
       </p>
@@ -147,16 +245,61 @@ Array [
   padding: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #ef5774;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px;
+  background-color: #ffe1e7;
+  color: #ef5774;
+}
+
+.emotion-0.emotion-0 {
+  padding: 0;
+}
+
 .emotion-2 {
+  fill: #ef5774;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
   font-size: 16px;
   line-height: 22px;
   padding-left: 16px;
@@ -171,7 +314,7 @@ Array [
       class="emotion-0"
     >
       <svg
-        class="sc-ui-icon emotion-1"
+        class="sc-ui-icon emotion-1 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -179,7 +322,7 @@ Array [
         />
       </svg>
       <p
-        class="emotion-2"
+        class="emotion-3"
       >
         This is a warning
       </p>
@@ -208,16 +351,61 @@ Array [
   padding: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #ef5774;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px;
+  background-color: #ffe1e7;
+  color: #ef5774;
+}
+
+.emotion-0.emotion-0 {
+  padding: 0;
+}
+
 .emotion-2 {
+  fill: #ef5774;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-2.emotion-2 {
+  vertical-align: middle;
+}
+
+.emotion-3 {
   font-size: 16px;
   line-height: 22px;
   padding-left: 16px;
@@ -232,7 +420,7 @@ Array [
       class="emotion-0"
     >
       <svg
-        class="sc-ui-icon emotion-1"
+        class="sc-ui-icon emotion-1 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -240,7 +428,7 @@ Array [
         />
       </svg>
       <p
-        class="emotion-2"
+        class="emotion-3"
       >
         This is an error
       </p>

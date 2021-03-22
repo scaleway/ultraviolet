@@ -1,7 +1,8 @@
 import { createSerializer } from '@emotion/jest'
-import { act, render, screen } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import React from 'react'
 import { ToastContainer, toast } from '..'
+import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 expect.addSnapshotSerializer(createSerializer())
 
@@ -15,7 +16,7 @@ describe('Toaster', () => {
   })
 
   test('renders correctly with all kind of toast', async () => {
-    render(<ToastContainer />)
+    shouldMatchEmotionSnapshot(<ToastContainer />)
     toast.info('This is an info')
     toast.success('This is a success')
     toast.warn('This is a warning')
