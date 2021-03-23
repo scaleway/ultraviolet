@@ -700,16 +700,20 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
   color: #fff;
+}
+
+.emotion-4.emotion-4 {
+  color: #fff;
   font-weight: 500;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -719,7 +723,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -732,7 +736,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-7 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -742,7 +746,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-14 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -753,7 +757,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-14 {
+.emotion-16 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -790,11 +794,14 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   border-width: 3px;
 }
 
-.emotion-15 {
+.emotion-18 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.emotion-18.emotion-18 {
   font-weight: 500;
 }
 
@@ -808,22 +815,22 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
         class="emotion-2"
       >
         <div
-          class="emotion-3"
+          class="emotion-3 emotion-4"
         >
           1
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-6"
     >
       <div
-        class="emotion-6"
+        class="emotion-7"
       />
     </div>
     <div
@@ -833,39 +840,39 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
         class="emotion-2"
       >
         <div
-          class="emotion-3"
+          class="emotion-3 emotion-4"
         >
           2
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-6"
     >
       <div
-        class="emotion-12"
+        class="emotion-14"
       />
     </div>
     <div
       class="emotion-1"
     >
       <div
-        class="emotion-14"
+        class="emotion-16"
       >
         <div
-          class="emotion-15"
+          class="emotion-3 emotion-18"
           style="color: rgb(220, 225, 235);"
         >
           3
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-5"
       >
         Step 3
       </div>

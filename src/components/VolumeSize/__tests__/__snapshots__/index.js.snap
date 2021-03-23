@@ -46,7 +46,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -54,23 +54,23 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
   font-weight: 500;
 }
 
-.emotion-2.emotion-2 {
-  margin-right: 16px;
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-right: 5px;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-weight: 800;
   color: #151a2d;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #45d6b5;
   vertical-align: middle;
   height: 1em;
@@ -79,11 +79,11 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,7 +97,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -105,7 +105,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-9 {
   background-color: #45d6b5;
   border-radius: 3px 0 0 3px;
   position: absolute;
@@ -122,7 +122,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-9 {
+.emotion-10 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -134,7 +134,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   transform: translateX(0);
 }
 
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,11 +150,11 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   left: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   text-align: left;
 }
 
-.emotion-12 {
+.emotion-14 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -164,7 +164,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   line-height: 22px;
 }
 
-.emotion-13 {
+.emotion-15 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -172,7 +172,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   right: 10%;
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +188,7 @@ exports[`VolumeSize renders correctly with all props 1`] = `
   right: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   text-align: right;
 }
 
@@ -199,21 +199,21 @@ exports[`VolumeSize renders correctly with all props 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <span
-          class="emotion-3"
+          class="emotion-4"
         >
           Test
         </span>
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           15 GB
         </span>
       </p>
       <svg
-        class="sc-ui-icon emotion-5"
+        class="sc-ui-icon emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -222,46 +222,46 @@ exports[`VolumeSize renders correctly with all props 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-7"
     >
       <div
-        class="emotion-7"
+        class="emotion-8"
       >
         <span
-          class="emotion-8"
+          class="emotion-9"
         />
       </div>
       <div
-        class="emotion-9"
+        class="emotion-10"
       >
         <div
-          class="emotion-10"
+          class="emotion-11"
         >
           <div
-            class="emotion-11"
+            class="emotion-12"
           >
             0 GB
           </div>
           <p
-            class="emotion-12"
+            class="emotion-2 emotion-14"
           >
             min
           </p>
         </div>
       </div>
       <div
-        class="emotion-13"
+        class="emotion-15"
       >
         <div
-          class="emotion-14"
+          class="emotion-16"
         >
           <div
-            class="emotion-15"
+            class="emotion-17"
           >
             20 GB
           </div>
           <p
-            class="emotion-12"
+            class="emotion-2 emotion-14"
           >
             max
           </p>
@@ -304,7 +304,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -312,23 +312,23 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
   font-weight: 500;
 }
 
-.emotion-2.emotion-2 {
-  margin-right: 16px;
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-right: 5px;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-weight: 800;
   color: #ff8c69;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #ff8c69;
   vertical-align: middle;
   height: 1em;
@@ -337,11 +337,11 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 8px;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -352,7 +352,11 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   color: #ff8c69;
 }
 
-.emotion-7 {
+.emotion-8.emotion-8 {
+  color: #ff8c69;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,7 +370,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-10 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -374,7 +378,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   background-color: #ff8c69;
   border-radius: 3px;
   position: absolute;
@@ -391,7 +395,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-10 {
+.emotion-12 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -403,7 +407,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -419,11 +423,11 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   left: 0;
 }
 
-.emotion-12 {
+.emotion-14 {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -440,19 +444,19 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <span
-          class="emotion-3"
+          class="emotion-4"
         />
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           5 GB
         </span>
       </p>
       <svg
-        class="sc-ui-icon emotion-5"
+        class="sc-ui-icon emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -460,34 +464,34 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
         />
       </svg>
       <p
-        class="emotion-6"
+        class="emotion-2 emotion-8"
       >
         Volume capacity exceeded
       </p>
     </div>
     <div
-      class="emotion-7"
+      class="emotion-9"
     >
-      <div
-        class="emotion-8"
-      >
-        <span
-          class="emotion-9"
-        />
-      </div>
       <div
         class="emotion-10"
       >
-        <div
+        <span
           class="emotion-11"
+        />
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <div
+          class="emotion-13"
         >
           <div
-            class="emotion-12"
+            class="emotion-14"
           >
             0 GB
           </div>
           <p
-            class="emotion-13"
+            class="emotion-2 emotion-16"
           >
             required
           </p>
@@ -558,7 +562,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -566,23 +570,23 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
   font-weight: 500;
 }
 
-.emotion-2.emotion-2 {
-  margin-right: 16px;
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-right: 5px;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-weight: 800;
   color: #ff8c69;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #ff8c69;
   vertical-align: middle;
   height: 1em;
@@ -591,11 +595,11 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 8px;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -606,7 +610,11 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   color: #ff8c69;
 }
 
-.emotion-7 {
+.emotion-8.emotion-8 {
+  color: #ff8c69;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -620,7 +628,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-10 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -628,7 +636,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   background-color: #ff8c69;
   border-radius: 3px;
   position: absolute;
@@ -645,7 +653,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-10 {
+.emotion-12 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -657,7 +665,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -673,11 +681,11 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   left: 0;
 }
 
-.emotion-12 {
+.emotion-14 {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -694,21 +702,21 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <span
-          class="emotion-3"
+          class="emotion-4"
         >
           Test
         </span>
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           15 GB
         </span>
       </p>
       <svg
-        class="sc-ui-icon emotion-5"
+        class="sc-ui-icon emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -716,34 +724,34 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
         />
       </svg>
       <p
-        class="emotion-6"
+        class="emotion-2 emotion-8"
       >
         Test too big
       </p>
     </div>
     <div
-      class="emotion-7"
+      class="emotion-9"
     >
-      <div
-        class="emotion-8"
-      >
-        <span
-          class="emotion-9"
-        />
-      </div>
       <div
         class="emotion-10"
       >
-        <div
+        <span
           class="emotion-11"
+        />
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <div
+          class="emotion-13"
         >
           <div
-            class="emotion-12"
+            class="emotion-14"
           >
             0 GB
           </div>
           <p
-            class="emotion-13"
+            class="emotion-2 emotion-16"
           >
             required
           </p>
@@ -842,7 +850,7 @@ exports[`VolumeSize should display too big error 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -850,23 +858,23 @@ exports[`VolumeSize should display too big error 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
   font-weight: 500;
 }
 
-.emotion-2.emotion-2 {
-  margin-right: 16px;
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-right: 5px;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-weight: 800;
   color: #ff8c69;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #ff8c69;
   vertical-align: middle;
   height: 1em;
@@ -875,11 +883,11 @@ exports[`VolumeSize should display too big error 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 8px;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -890,7 +898,11 @@ exports[`VolumeSize should display too big error 1`] = `
   color: #ff8c69;
 }
 
-.emotion-7 {
+.emotion-8.emotion-8 {
+  color: #ff8c69;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -904,7 +916,7 @@ exports[`VolumeSize should display too big error 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-10 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -912,7 +924,7 @@ exports[`VolumeSize should display too big error 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   background-color: #ff8c69;
   border-radius: 3px;
   position: absolute;
@@ -929,7 +941,7 @@ exports[`VolumeSize should display too big error 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-10 {
+.emotion-12 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -941,7 +953,7 @@ exports[`VolumeSize should display too big error 1`] = `
   transform: translateX(0);
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -957,11 +969,11 @@ exports[`VolumeSize should display too big error 1`] = `
   left: 0;
 }
 
-.emotion-12 {
+.emotion-14 {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -971,7 +983,7 @@ exports[`VolumeSize should display too big error 1`] = `
   line-height: 22px;
 }
 
-.emotion-14 {
+.emotion-17 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -979,7 +991,7 @@ exports[`VolumeSize should display too big error 1`] = `
   right: 10%;
 }
 
-.emotion-15 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -995,7 +1007,7 @@ exports[`VolumeSize should display too big error 1`] = `
   right: 0;
 }
 
-.emotion-16 {
+.emotion-19 {
   text-align: right;
 }
 
@@ -1006,21 +1018,21 @@ exports[`VolumeSize should display too big error 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <span
-          class="emotion-3"
+          class="emotion-4"
         >
           Test
         </span>
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           25 GB
         </span>
       </p>
       <svg
-        class="sc-ui-icon emotion-5"
+        class="sc-ui-icon emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -1028,52 +1040,52 @@ exports[`VolumeSize should display too big error 1`] = `
         />
       </svg>
       <p
-        class="emotion-6"
+        class="emotion-2 emotion-8"
       >
         Test too big
       </p>
     </div>
     <div
-      class="emotion-7"
+      class="emotion-9"
     >
-      <div
-        class="emotion-8"
-      >
-        <span
-          class="emotion-9"
-        />
-      </div>
       <div
         class="emotion-10"
       >
-        <div
+        <span
           class="emotion-11"
+        />
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <div
+          class="emotion-13"
         >
           <div
-            class="emotion-12"
+            class="emotion-14"
           >
             0 GB
           </div>
           <p
-            class="emotion-13"
+            class="emotion-2 emotion-16"
           >
             minimum
           </p>
         </div>
       </div>
       <div
-        class="emotion-14"
+        class="emotion-17"
       >
         <div
-          class="emotion-15"
+          class="emotion-18"
         >
           <div
-            class="emotion-16"
+            class="emotion-19"
           >
             20 GB
           </div>
           <p
-            class="emotion-13"
+            class="emotion-2 emotion-16"
           >
             maximum
           </p>
@@ -1158,7 +1170,7 @@ exports[`VolumeSize should display too small error 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1166,23 +1178,23 @@ exports[`VolumeSize should display too small error 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
   font-weight: 500;
 }
 
-.emotion-2.emotion-2 {
-  margin-right: 16px;
-}
-
-.emotion-3 {
+.emotion-4 {
   margin-right: 5px;
 }
 
-.emotion-4 {
+.emotion-5 {
   font-weight: 800;
   color: #ff8c69;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #ff8c69;
   vertical-align: middle;
   height: 1em;
@@ -1191,11 +1203,11 @@ exports[`VolumeSize should display too small error 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 8px;
 }
 
-.emotion-6 {
+.emotion-8 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1206,7 +1218,11 @@ exports[`VolumeSize should display too small error 1`] = `
   color: #ff8c69;
 }
 
-.emotion-7 {
+.emotion-8.emotion-8 {
+  color: #ff8c69;
+}
+
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1220,7 +1236,7 @@ exports[`VolumeSize should display too small error 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-10 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -1228,7 +1244,7 @@ exports[`VolumeSize should display too small error 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-11 {
   background-color: #ff8c69;
   border-radius: 3px 0 0 3px;
   position: absolute;
@@ -1245,7 +1261,7 @@ exports[`VolumeSize should display too small error 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-10 {
+.emotion-12 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -1257,7 +1273,7 @@ exports[`VolumeSize should display too small error 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1273,11 +1289,11 @@ exports[`VolumeSize should display too small error 1`] = `
   left: 0;
 }
 
-.emotion-12 {
+.emotion-14 {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1294,21 +1310,21 @@ exports[`VolumeSize should display too small error 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <span
-          class="emotion-3"
+          class="emotion-4"
         >
           Test
         </span>
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           15 GB
         </span>
       </p>
       <svg
-        class="sc-ui-icon emotion-5"
+        class="sc-ui-icon emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -1316,34 +1332,34 @@ exports[`VolumeSize should display too small error 1`] = `
         />
       </svg>
       <p
-        class="emotion-6"
+        class="emotion-2 emotion-8"
       >
         Test too small
       </p>
     </div>
     <div
-      class="emotion-7"
+      class="emotion-9"
     >
-      <div
-        class="emotion-8"
-      >
-        <span
-          class="emotion-9"
-        />
-      </div>
       <div
         class="emotion-10"
       >
-        <div
+        <span
           class="emotion-11"
+        />
+      </div>
+      <div
+        class="emotion-12"
+      >
+        <div
+          class="emotion-13"
         >
           <div
-            class="emotion-12"
+            class="emotion-14"
           >
             20 GB
           </div>
           <p
-            class="emotion-13"
+            class="emotion-2 emotion-16"
           >
             required
           </p>
