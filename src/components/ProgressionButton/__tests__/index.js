@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProgressionButton } from '..'
+import ProgressionButton from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ProgressionButton', () => {

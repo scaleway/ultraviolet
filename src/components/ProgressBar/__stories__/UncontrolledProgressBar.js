@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { ProgressBar } from '..'
+import ProgressBar from '..'
 
 const UncontrolledProgressBar = props => {
   const [value, setValue] = useState(0)
   useEffect(() => {
-    setInterval(() => {
+    const handler = setInterval(() => {
       setValue(currentValue =>
         currentValue === 0 ? Math.round(Math.random() * 100) : 0,
       )
     }, Math.random() * 400 + 800)
+
+    return () => {
+      clearInterval(handler)
+    }
   }, [])
 
   return <ProgressBar value={value} {...props} />

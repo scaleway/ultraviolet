@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { colors } from '../../theme'
 
 const Pentagon = styled.div`
   display: flex;
@@ -8,10 +7,10 @@ const Pentagon = styled.div`
   align-items: center;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 
-  ${({ size, color }) => `
+  ${({ size, color, theme }) => `
     width: ${size};
     height: ${size};
-    background-color: ${color};
+    background-color: ${theme.colors[color] ?? color};
   `}
 `
 
@@ -22,7 +21,7 @@ Pentagon.propTypes = {
 
 Pentagon.defaultProps = {
   size: '48px',
-  color: colors.pippin,
+  color: 'pippin',
 }
 
-export { Pentagon }
+export default Pentagon

@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import Popper from '..'
+import Popper, { popperVariants } from '..'
 import { Box } from '../../Box'
 import { Button } from '../../Button'
 import Icon from '../../Icon'
@@ -19,7 +19,7 @@ import Icon from '../../Icon'
 <Description>Popper //:TODO</Description>
 
 <Canvas>
-  <Story name="basic" parameters={{ layout: 'centered' }}>
+  <Story name="Basic" parameters={{ layout: 'centered' }}>
     <Box>
       <Popper
         aria-label="Custom popover"
@@ -41,10 +41,30 @@ import Icon from '../../Icon'
   </Story>
 </Canvas>
 
+## Variants
+
+<Canvas>
+  <Story name="Variants" parameters={{ layout: 'centered' }}>
+    <Box display="flex">
+      {popperVariants.map(variant => (
+        <Box m={1}>
+          <Popper
+            variant={variant}
+            aria-label={`variant-${variant}`}
+            disclosure={() => <Button>{variant}</Button>}
+          >
+            <Box p={2}>{variant}</Box>
+          </Popper>
+        </Box>
+      ))}
+    </Box>
+  </Story>
+</Canvas>
+
 ## Complex children
 
 <Canvas>
-  <Story name="complexe children" parameters={{ layout: 'centered' }}>
+  <Story name="Complex children" parameters={{ layout: 'centered' }}>
     <Box>
       <Popper
         variant="black"
@@ -70,7 +90,7 @@ import Icon from '../../Icon'
 <Description>Set placement using `placement` prop.</Description>
 
 <Canvas>
-  <Story height="100px" name="placement" parameters={{ layout: 'centered' }}>
+  <Story height="100px" name="Placement" parameters={{ layout: 'centered' }}>
     <Box>
       <Box display="flex" flexDirection="column">
         <Popper
@@ -186,7 +206,7 @@ import Icon from '../../Icon'
 ## Without portal
 
 <Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="without modal/portal" parameters={{ layout: 'centered' }}>
+  <Story name="Without modal/portal" parameters={{ layout: 'centered' }}>
     <Popper
       aria-label="Custom popover with buttom"
       disclosure={() => <Button>Test</Button>}
