@@ -10,7 +10,7 @@ const State = ({ label, children, ...props }) => (
     as="div"
     variant="bodyA"
     fontWeight={500}
-    color="darkBlack"
+    color="gray950"
     display="flex"
     {...props}
   >

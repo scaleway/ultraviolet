@@ -33,7 +33,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   flex-direction: row;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -44,6 +44,10 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   color: #4f0599;
 }
 
+.emotion-3.emotion-3 {
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -51,7 +55,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         Hello
       </p>
@@ -93,7 +97,7 @@ exports[`Information should render correctly with a custom color 1`] = `
   flex-direction: row;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -104,6 +108,10 @@ exports[`Information should render correctly with a custom color 1`] = `
   color: #45d6b5;
 }
 
+.emotion-3.emotion-3 {
+  color: #45d6b5;
+}
+
 <div
     class="emotion-0"
   >
@@ -111,7 +119,7 @@ exports[`Information should render correctly with a custom color 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         Hello
       </p>
@@ -200,18 +208,6 @@ exports[`Information should render correctly with an heading 1`] = `
   flex-direction: column;
 }
 
-.emotion-2 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4f0599;
-  font-weight: 500;
-}
-
 .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
@@ -223,6 +219,26 @@ exports[`Information should render correctly with an heading 1`] = `
   color: #4f0599;
 }
 
+.emotion-3.emotion-3 {
+  color: #4f0599;
+  font-weight: 500;
+}
+
+.emotion-5 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
+.emotion-5.emotion-5 {
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -230,12 +246,12 @@ exports[`Information should render correctly with an heading 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         Bonjour
       </p>
       <p
-        class="emotion-3"
+        class="emotion-2 emotion-5"
       >
         Hello
       </p>
@@ -290,7 +306,7 @@ exports[`Information should render correctly with an icon 1`] = `
   flex-direction: row;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -298,6 +314,10 @@ exports[`Information should render correctly with an icon 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+  color: #4f0599;
+}
+
+.emotion-4.emotion-4 {
   color: #4f0599;
 }
 
@@ -316,7 +336,7 @@ exports[`Information should render correctly with an icon 1`] = `
       class="emotion-2"
     >
       <p
-        class="emotion-3"
+        class="emotion-3 emotion-4"
       >
         Hello
       </p>
@@ -364,7 +384,7 @@ exports[`Information should render correctly with an image 1`] = `
   flex-direction: row;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -372,6 +392,10 @@ exports[`Information should render correctly with an image 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
+  color: #4f0599;
+}
+
+.emotion-4.emotion-4 {
   color: #4f0599;
 }
 
@@ -386,7 +410,7 @@ exports[`Information should render correctly with an image 1`] = `
       class="emotion-2"
     >
       <p
-        class="emotion-3"
+        class="emotion-3 emotion-4"
       >
         Hello
       </p>
@@ -428,7 +452,7 @@ exports[`Information should render correctly with default props 1`] = `
   flex-direction: row;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -439,6 +463,10 @@ exports[`Information should render correctly with default props 1`] = `
   color: #4f0599;
 }
 
+.emotion-3.emotion-3 {
+  color: #4f0599;
+}
+
 <div
     class="emotion-0"
   >
@@ -446,7 +474,7 @@ exports[`Information should render correctly with default props 1`] = `
       class="emotion-1"
     >
       <p
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         Hello
       </p>
