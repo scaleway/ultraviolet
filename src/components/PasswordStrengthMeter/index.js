@@ -64,7 +64,7 @@ export function PasswordStrengthMeter({
 
   return (
     <Box {...props} title={title} role="alert" aria-live="polite">
-      <Typography variant="bodyB" color="lightBlack" css={styles.title}>
+      <Typography variant="bodyB" color="gray700" css={styles.title}>
         {title}
       </Typography>
 
