@@ -409,7 +409,7 @@ Option.defaultProps = {
 Option.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})])
     .isRequired,
-  label: PropTypes.string,
+  label: PropTypes.node,
   selectProps: SelectContainer.propTypes.selectProps,
 }
 

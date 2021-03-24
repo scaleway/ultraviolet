@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useEffect, useState } from 'react'
 import { RichSelect } from '..'
-import { ActivityIndicator, Box, Button } from '../..'
+import { ActivityIndicator, Badge, Box, Button } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -51,6 +51,31 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
+### Custom Option
+
+<Description>
+  You can customize options in a RichSelect by adding component inside of it.
+  Here we added a Badge inside of option B.
+</Description>
+
+<Canvas>
+  <Story name="Custom Option" height="175px">
+    <Box m={2}>
+      <RichSelect name="disabled">
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">
+          <Box display="flex" alignItems="center">
+            Option B
+            <Badge size="rounded" ml={1}>
+              Awesome badge
+            </Badge>
+          </Box>
+        </RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
 ### Disabled
 
 <Canvas>
@@ -59,6 +84,21 @@ import * as animations from '../../../utils/animations'
       <RichSelect name="disabled" disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
+### Option Disabled
+
+<Canvas>
+  <Story name="Option Disabled" height="175px">
+    <Box m={2}>
+      <RichSelect name="disabled">
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b" disabled>
+          Option B
+        </RichSelect.Option>
       </RichSelect>
     </Box>
   </Story>
