@@ -3,7 +3,7 @@ import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const globalStyles = ({ theme }) => css`
+const globalStyles = theme => css`
   ${normalize()}
 
   /* Fallback system fonts */
@@ -51,8 +51,7 @@ const globalStyles = ({ theme }) => css`
     background-color: ${theme.colors.white};
     /* TODO: Add me in theme; ps: I am hard coded in shire. */
     color: #5c6275;
-    /* important is for docz */
-    font-family: ${theme.fonts.sansSerif} !important;
+    font-family: ${theme.fonts.sansSerif};
     overflow: hidden;
     height: 100%;
     text-rendering: optimizeLegibility;
@@ -65,7 +64,7 @@ const globalStyles = ({ theme }) => css`
   textarea,
   select,
   button {
-    font-family: ${theme.fonts.sansSerif} !important;
+    font-family: ${theme.fonts.sansSerif};
   }
 
   button,
@@ -93,7 +92,6 @@ const globalStyles = ({ theme }) => css`
   a:hover,
   a:focus,
   a:active {
-    /* TODO: Move me in theme; ps: I am the darkBlue shire color. */
     color: ${theme.colors.darkBlue};
     text-decoration: underline;
   }
@@ -106,7 +104,7 @@ const globalStyles = ({ theme }) => css`
 const GlobalStyle = ({ additionalStyles }) => {
   const theme = useTheme()
 
-  return <Global styles={[globalStyles({ theme }), ...additionalStyles]} />
+  return <Global styles={[globalStyles(theme), ...additionalStyles]} />
 }
 
 GlobalStyle.propTypes = {
