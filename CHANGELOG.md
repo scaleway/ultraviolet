@@ -1,3 +1,36 @@
+### [0.66.1](https://github.com/scaleway/scaleway-ui/compare/v0.66.0...v0.66.1) (2021-03-24)
+
+
+### :memo: Documentation
+
+* adds doc about coverage ([#149](https://github.com/scaleway/scaleway-ui/issues/149)) ([57dc62b](https://github.com/scaleway/scaleway-ui/commit/57dc62b8bfbfa55b812b9e0aefeb7fc87848e5a6))
+
+
+### :white_check_mark: Test
+
+* use testing-library to handle paste events ([#145](https://github.com/scaleway/scaleway-ui/issues/145)) ([f315a2a](https://github.com/scaleway/scaleway-ui/commit/f315a2ac7c010d56df82fe4843ccfbc5af1ca7b8))
+* **stepper:** add user event test ([#137](https://github.com/scaleway/scaleway-ui/issues/137)) ([5c0e422](https://github.com/scaleway/scaleway-ui/commit/5c0e4228974bf447bdf3baeddd1310bb478888a6))
+
+
+### :package: Chore
+
+* **deps:** bump @xstyled/emotion from 2.2.3 to 2.3.0 ([#166](https://github.com/scaleway/scaleway-ui/issues/166)) ([29adafb](https://github.com/scaleway/scaleway-ui/commit/29adafbee7683894611b006e92c8146475a354af))
+* **deps-dev:** bump @babel/preset-env from 7.13.10 to 7.13.12 ([#162](https://github.com/scaleway/scaleway-ui/issues/162)) ([059d91d](https://github.com/scaleway/scaleway-ui/commit/059d91d470d1a24f0b9788b1f10ff1067259fe30))
+* **deps-dev:** bump @testing-library/user-event from 12.8.3 to 13.0.6 ([#156](https://github.com/scaleway/scaleway-ui/issues/156)) ([972063c](https://github.com/scaleway/scaleway-ui/commit/972063c2555c53cc1ba8710e920823851900a972))
+* **deps-dev:** bump @testing-library/user-event from 13.0.6 to 13.0.7 ([#167](https://github.com/scaleway/scaleway-ui/issues/167)) ([73ef3be](https://github.com/scaleway/scaleway-ui/commit/73ef3be9c141bb63e5b3a6d188881d8363a82880))
+* **deps-dev:** bump @testing-library/user-event from 13.0.7 to 13.0.10 ([#171](https://github.com/scaleway/scaleway-ui/issues/171)) ([66d7eaa](https://github.com/scaleway/scaleway-ui/commit/66d7eaa9bb6643b4348a5d0da757332f348783c8))
+* **deps-dev:** bump react from 17.0.1 to 17.0.2 ([#163](https://github.com/scaleway/scaleway-ui/issues/163)) ([9129d86](https://github.com/scaleway/scaleway-ui/commit/9129d866e6267df806f2e8d20aa310e6e40e5a07))
+* **deps-dev:** bump react-is from 17.0.1 to 17.0.2 ([#165](https://github.com/scaleway/scaleway-ui/issues/165)) ([7cc567f](https://github.com/scaleway/scaleway-ui/commit/7cc567f112bab11b50211fe3b7ed314607cc6574))
+* **deps-dev:** bump rollup from 2.41.4 to 2.42.2 ([#157](https://github.com/scaleway/scaleway-ui/issues/157)) ([0edbe4e](https://github.com/scaleway/scaleway-ui/commit/0edbe4e0cdc5fe2d0715523b0c056ecd1b884e22))
+* **deps-dev:** bump rollup from 2.42.2 to 2.42.3 ([#164](https://github.com/scaleway/scaleway-ui/issues/164)) ([04edd4c](https://github.com/scaleway/scaleway-ui/commit/04edd4c20b32bacc68878db4ef7b8ee5620c43f1))
+* **deps-dev:** bump rollup-plugin-visualizer from 4.2.0 to 4.2.1 ([#146](https://github.com/scaleway/scaleway-ui/issues/146)) ([8261e7a](https://github.com/scaleway/scaleway-ui/commit/8261e7aecea99f55d31f6d018ff78d99845dd9b3))
+* **deps-dev:** bump rollup-plugin-visualizer from 4.2.1 to 4.2.2 ([#170](https://github.com/scaleway/scaleway-ui/issues/170)) ([65bea02](https://github.com/scaleway/scaleway-ui/commit/65bea02666b984670fac4a7f62da0e29eb21fbd3))
+
+
+### :bug: Bug Fixes
+
+* rich select option label ([658d0c9](https://github.com/scaleway/scaleway-ui/commit/658d0c9bf52291c51bcc51259822768c7b2e8cf9))
+
 ## [0.66.0](https://github.com/scaleway/scaleway-ui/compare/v0.65.0...v0.66.0) (2021-03-18)
 
 
