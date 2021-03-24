@@ -55,7 +55,7 @@ const StyledFilled = styled('div', {
   left: 0;
   bottom: 0;
   background-color: ${({ theme, variant }) =>
-    theme.colors[variant] ?? undefined};
+    theme.colors[variant] ?? 'inherit'};
   transition: 0.3s width;
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `

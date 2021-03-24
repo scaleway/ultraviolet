@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 
-const Pentagon = styled.div`
+const Pentagon = styled('div', {
+  shouldForwardProp: prop => !['color', 'size'].includes(prop),
+})`
   display: flex;
   justify-content: center;
   align-items: center;
