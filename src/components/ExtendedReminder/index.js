@@ -29,16 +29,15 @@ const variants = {
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop),
-})(
-  ({ theme, variant }) => `
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    position: relative;
-    padding: 16px;
-    background-color: ${variants[variant]?.(theme).background};
-`,
-)
+})`
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: ${({ variant, theme }) =>
+    variants[variant]?.(theme).background};
+`
 
 const StyledBadgeContainer = styled(Box)`
   position: absolute;

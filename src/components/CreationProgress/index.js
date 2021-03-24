@@ -31,35 +31,35 @@ const StyledStepContainer = styled.div`
   width: 120px;
 `
 
-const StyledStep = styled('div', {
-  shouldForwardProp: prop => !['isPast', 'isCurrent'].includes(prop),
-})(
-  ({ isPast, isCurrent, theme: { colors } }) => `
-      height: 32px;
-    width: 32px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+const temporalStepStyles = ({ temporal, theme }) =>
+  temporal !== 'future'
+    ? css`
+        background-color: ${theme.colors.success};
+      `
+    : css`
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border-style: solid;
+        border-color: ${theme.colors.gray350};
+        border-width: 3px;
+      `
 
-    ${
-      isPast || isCurrent
-        ? `background-color: ${colors.success};`
-        : `
-          height: 32px;
-          width: 32px;
-          border-radius: 16px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: transparent;
-          border-style: solid;
-          border-color: ${colors.gray350};
-          border-width: 3px;
-        `
-    }
-`,
-)
+const StyledStep = styled('div', {
+  shouldForwardProp: prop => !['temporal'].includes(prop),
+})`
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${temporalStepStyles}
+`
 
 const StyledText = styled.div`
   margin-top: 16px;
@@ -91,19 +91,18 @@ const loadingStyle = css`
 `
 
 const StyledLineContent = styled('div', {
-  shouldForwardProp: prop => !['isPast'].includes(prop),
-})(
-  ({ theme, isPast }) => `
+  shouldForwardProp: prop => !['temporal', 'animated'].includes(prop),
+})`
   border-radius: 2px;
-  background-color: ${theme.colors.success};
+  background-color: ${({ theme }) => theme.colors.success};
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-
-  ${isPast ? `width: 100%;` : ``}
-`,
-)
+  ${({ temporal }) => temporal === 'past' && `width: 100%;`}
+  ${({ temporal, animated }) =>
+    temporal === 'current' && animated && loadingStyle}
+`
 
 const CreationProgress = ({
   children,
@@ -117,12 +116,18 @@ const CreationProgress = ({
   return (
     <StyledContainer {...props}>
       {flattenChildren(children).map((child, index) => {
-        const isCurrent = selected === index
-        const isPast = selected > index
+        const getTemporal = () => {
+          if (selected > index) return 'past'
+
+          if (selected === index) return 'current'
+
+          return 'future'
+        }
         const isNotLast = index < lastStep
+        const temporal = getTemporal()
 
         const renderStep = () => {
-          if (isPast || isCurrent) {
+          if (temporal !== 'future') {
             return isStepsNumber ? (
               <Typography color="white" fontWeight={500}>
                 {index + 1}
@@ -144,20 +149,15 @@ const CreationProgress = ({
         return (
           <React.Fragment key={index}>
             <StyledStepContainer>
-              <StyledStep isPast={isPast} isCurrent={isCurrent}>
-                {renderStep()}
-              </StyledStep>
+              <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 
               <StyledText>{child.props.children}</StyledText>
             </StyledStepContainer>
 
             {isNotLast && (
               <StyledLine>
-                {(isPast || isCurrent) && (
-                  <StyledLineContent
-                    css={[isCurrent && animated && loadingStyle]}
-                    isPast={isPast}
-                  />
+                {temporal !== 'future' && (
+                  <StyledLineContent temporal={temporal} animated={animated} />
                 )}
               </StyledLine>
             )}

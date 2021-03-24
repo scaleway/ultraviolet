@@ -7,62 +7,57 @@ const StyledDt = styled(Box)``
 const StyledDd = styled(Box)``
 const StyledBox = styled(Box, {
   shouldForwardProp: prop => !['inline', 'selectable'].includes(prop),
-})(
-  ({ theme, inline, selectable }) => `
-    font-size: 16px;
-    line-height: 16px;
+})`
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  > ${StyledDt} {
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.gray950};
+    &:after {
+      content: ':';
+    }
+  }
+  > ${StyledDd} {
+    color: ${({ theme }) => theme.colors.gray700};
     margin: 0;
-    > ${StyledDt} {
-      font-weight: 500;
-      color: ${theme.colors.gray950};
-      &:after {
-        content: ':';
-      }
-    }
-    > ${StyledDd} {
-      color: ${theme.colors.gray700};
-      margin: 0;
-      margin-top: ${theme.space['1']};
-    }
-    ${StyledDd} + ${StyledDt} {
-      margin-top: ${theme.space['2']};
-    }
+    margin-top: ${({ theme }) => theme.space['1']};
+  }
+  ${StyledDd} + ${StyledDt} {
+    margin-top: ${({ theme }) => theme.space['2']};
+  }
 
-    ${
-      inline
-        ? `
-         & > ${StyledDt} {
+  ${({ theme, inline }) =>
+    inline &&
+    `
+    & > ${StyledDt} {
       float: left;
       clear: left;
       margin-right: ${theme.space['1']};
     }
 
-      & > ${StyledDd} {
+    & > ${StyledDd} {
       margin-top: 0;
     }
 
     ${StyledDd} + ${StyledDt} + ${StyledDd} {
       margin-top: ${theme.space['2']};
     }
-    `
-        : ``
-    }
+  `}
 
-    ${
-      selectable
-        ? `
-       > ${StyledDd} {
+  ${({ theme, selectable }) =>
+    selectable &&
+    `
+    > ${StyledDd} {
       user-select: all;
 
       &::selection {
         color: ${theme.colors.gray200};
         background: ${theme.colors.primary};
       }
-    }`
-        : ``
     }
-`,
-)
+  `}
+`
 
 const Description = ({ inline, selectable, ...props }) => (
   <StyledBox as="dl" inline={inline} selectable={selectable} {...props} />
