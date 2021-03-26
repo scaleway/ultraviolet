@@ -14,7 +14,6 @@ const StyledAlert = styled(Typography)`
   display: flex;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.space['2']};
-  color: ${({ theme, color }) => theme.colors[color]};
   font-weight: 700;
 `
 

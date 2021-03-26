@@ -8,9 +8,9 @@ const StyledBox = styled(Box)`
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
-  color: ${({ color, theme: { colors } }) => colors[color] || color};
+  color: ${({ color, theme: { colors } }) => colors[color] ?? color};
   background-color: ${({ backgroundColor, theme: { colors } }) =>
-    colors[backgroundColor] || backgroundColor};
+    colors[backgroundColor] ?? backgroundColor};
 `
 
 const Command = ({ children, ...props }) => (
