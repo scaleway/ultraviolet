@@ -4,7 +4,6 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio as ReakitRadio } from 'reakit'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 
@@ -20,20 +19,20 @@ const IconContainer = styled(Box)`
   margin-right: 8px;
 `
 
-const disabledClass = () => css`
-  color: ${colors.gray300};
+const disabledClass = ({ theme }) => css`
+  color: ${theme.colors.gray300};
   cursor: not-allowed;
 `
 
-const activeFocusClass = () => css`
+const activeFocusClass = ({ theme }) => css`
   :hover,
   :focus {
     ${IconContainer} {
-      background-color: ${transparentize(0.75, colors.gray300)};
+      background-color: ${transparentize(0.75, theme.colors.gray300)};
       border-radius: 50%;
 
       > ${StyledIcon} {
-        fill: ${colors.primary};
+        fill: ${theme.colors.primary};
       }
     }
   }
@@ -59,6 +58,7 @@ const StyledRadio = styled(ReakitRadio)`
 `
 
 const Radio = ({
+  defaultChecked,
   checked,
   onChange,
   onFocus,
@@ -94,28 +94,31 @@ const Radio = ({
       value={value}
       disabled={disabled}
       name={name}
+      defaultChecked={defaultChecked}
     />
   </StyledBox>
 )
 
 Radio.propTypes = {
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   checked: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onFocus: PropTypes.func,
+  name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   size: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 Radio.defaultProps = {
-  size: 24,
+  checked: undefined,
+  defaultChecked: undefined,
   disabled: false,
-  checked: false,
-  onFocus: null,
   onBlur: null,
+  onFocus: null,
+  size: 24,
 }
 
 export default Radio
