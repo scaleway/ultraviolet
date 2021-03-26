@@ -197,7 +197,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
+<<<<<<< HEAD
 .emotion-13 {
+=======
+.emotion-11 {
+>>>>>>> refactor: migrate colors from theme in icon (#160)
   fill: #d4dae7;
   height: 24px;
   width: 24px;
@@ -205,12 +209,20 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
+<<<<<<< HEAD
 .emotion-13.emotion-13 {
+=======
+.emotion-11.emotion-11 {
+>>>>>>> refactor: migrate colors from theme in icon (#160)
   vertical-align: middle;
   margin-right: 0;
 }
 
+<<<<<<< HEAD
 .emotion-14 {
+=======
+.emotion-12 {
+>>>>>>> refactor: migrate colors from theme in icon (#160)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -220,11 +232,19 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 .emotion-14.emotion-14 {
   overflow: hidden;
 }
 
 .emotion-15.emotion-15 {
+=======
+.emotion-12.emotion-12 {
+  overflow: hidden;
+}
+
+.emotion-13.emotion-13 {
+>>>>>>> refactor: migrate colors from theme in icon (#160)
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -290,7 +310,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
           class=" emotion-11"
         >
           <svg
+<<<<<<< HEAD
             class="sc-ui-icon emotion-12 emotion-13"
+=======
+            class="sc-ui-icon emotion-10 emotion-11"
+>>>>>>> refactor: migrate colors from theme in icon (#160)
             viewBox="0 0 24 24"
           >
             <path
@@ -306,10 +330,17 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
+<<<<<<< HEAD
       class="emotion-14"
     >
       <div
         class="emotion-15"
+=======
+      class="emotion-12"
+    >
+      <div
+        class="emotion-13"
+>>>>>>> refactor: migrate colors from theme in icon (#160)
       />
     </div>
   </div>
