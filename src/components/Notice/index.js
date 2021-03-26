@@ -1,25 +1,25 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import { Icon } from '../Icon'
+import { MarkDown } from '../MarkDown'
 
-const style = css`
-  color: ${colors.gray550};
+const Container = styled(Box)`
+  color: ${({ theme: { colors } }) => colors.gray550};
   font-size: 12px;
-  line-height: 20px;
+  display: flex;
+  align-items: center;
 `
 
 const Notice = ({ children, ...props }) => (
-  <Box css={style} role="alert" {...props}>
+  <Container {...props}>
     <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
-    {children}
-  </Box>
+    <MarkDown source={children} linkTarget="_blank" />
+  </Container>
 )
-
 Notice.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export { Notice }
+export default Notice

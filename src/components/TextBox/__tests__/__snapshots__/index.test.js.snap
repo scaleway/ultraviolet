@@ -2784,17 +2784,24 @@ exports[`TextBox should render correctly with notice 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #b2b6c3;
   font-size: 12px;
-  line-height: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   margin-top: 8px;
 }
 
-.emotion-9 {
+.emotion-10 {
   fill: currentColor;
   vertical-align: top;
   height: 20px;
@@ -2803,7 +2810,7 @@ exports[`TextBox should render correctly with notice 1`] = `
   min-height: 20px;
 }
 
-.emotion-9.emotion-9 {
+.emotion-10.emotion-10 {
   margin-right: 8px;
 }
 
@@ -2834,19 +2841,28 @@ exports[`TextBox should render correctly with notice 1`] = `
       />
     </div>
     <div
-      class="emotion-8"
-      role="alert"
+      class="emotion-8 emotion-9"
     >
       <svg
-        class="sc-ui-icon emotion-9"
+        class="sc-ui-icon emotion-10"
         viewBox="0 0 24 24"
       >
         <path
           d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
         />
       </svg>
-      <div>
-        Test notice
+      <div
+        class="emotion-11"
+      >
+        <p
+          class="emotion-0"
+        >
+          <span
+            class="emotion-0"
+          >
+            Test notice
+          </span>
+        </p>
       </div>
     </div>
   </div>

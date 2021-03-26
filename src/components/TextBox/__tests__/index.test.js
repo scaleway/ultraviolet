@@ -29,7 +29,7 @@ describe('TextBox', () => {
 
   test('should render correctly with notice', () => {
     shouldMatchEmotionSnapshot(
-      <TextBox label="Test" value="test" notice={<div>Test notice</div>} />,
+      <TextBox label="Test" value="test" notice="Test notice" />,
     )
   })
 
