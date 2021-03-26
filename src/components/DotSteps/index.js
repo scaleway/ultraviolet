@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box } from '../Box'
-import { Dot } from '../Dot'
+import Dot from '../Dot'
 
 export function DotSteps({ steps, step, setStep }) {
   return (

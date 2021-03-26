@@ -1,7 +1,7 @@
-import { css } from '@emotion/react'
+import { useTheme } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import Badge from '../Badge'
 import { Box } from '../Box'
 import { Button } from '../Button'
@@ -9,58 +9,64 @@ import Icon from '../Icon'
 import { Typography } from '../Typography'
 
 const variants = {
-  error: {
+  error: ({ colors }) => ({
     main: colors.red,
     background: colors.pippin,
-  },
-  warning: {
+  }),
+  warning: ({ colors }) => ({
     main: colors.orange,
     background: colors.serenade,
-  },
-  info: {
+  }),
+  info: ({ colors }) => ({
     main: colors.blue,
     background: colors.zumthor,
-  },
-  success: {
+  }),
+  success: ({ colors }) => ({
     main: colors.gray700,
     background: colors.foam,
-  },
+  }),
 }
 
-const styles = {
-  container: variant => css`
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    position: relative;
-    padding: 16px;
-    background-color: ${variants[variant].background};
-  `,
-  badge: css`
-    position: absolute;
-    top: -12px;
-    left: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-  `,
-  title: variant => css`
-    font-weight: 600;
-    text-transform: uppercase;
-    color: ${variants[variant].main};
-  `,
-  link: css`
-    margin-top: auto;
-    color: ${colors.blue};
-    background-color: ${colors.transparent};
-    padding: 0;
-    width: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-decoration: none;
-    font-size: 14px;
-  `,
-}
+const StyledContainer = styled(Box, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: ${({ variant, theme }) =>
+    variants[variant]?.(theme).background};
+`
+
+const StyledBadgeContainer = styled(Box)`
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+`
+
+const StyledTitle = styled(Typography, {
+  shouldForwardProp: prop => !['color'].includes(prop),
+})`
+  font-weight: 600;
+  text-transform: uppercase;
+  color: ${({ theme, color }) => variants[color]?.(theme).main};
+`
+
+const StyledButtonLink = styled(Button)`
+  margin-top: auto;
+  color: ${({ theme: { colors } }) => colors.blue};
+  background-color: ${({ theme: { colors } }) => colors.transparent};
+  padding: 0;
+  width: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-decoration: none;
+  font-size: 14px;
+`
 
 const ExtendedReminder = ({
   icon,
@@ -73,6 +79,7 @@ const ExtendedReminder = ({
   variant,
   ...props
 }) => {
+  const theme = useTheme()
   const badgeVariant = {
     warning: 'beta',
     error: 'error',
@@ -81,32 +88,31 @@ const ExtendedReminder = ({
   }
 
   return (
-    <Box css={styles.container(variant)} {...props}>
-      <Box css={styles.badge}>
+    <StyledContainer variant={variant} {...props}>
+      <StyledBadgeContainer>
         <Badge size="small" variant={badgeVariant[variant]}>
-          <Icon mr="4px" color={colors.white} name={icon} size={16} />{' '}
+          <Icon mr="4px" color={theme.colors.white} name={icon} size={16} />
           {badgeText}
         </Badge>
-      </Box>
-      <Typography mb={1} variant="bodyC" css={styles.title(variant)}>
+      </StyledBadgeContainer>
+      <StyledTitle color={variant} mb={1} variant="bodyC">
         {title}
-      </Typography>
+      </StyledTitle>
       <Typography mb={1} variant="bodyD">
         {text}
       </Typography>
       {linkText && (
-        <Button
+        <StyledButtonLink
           variant="link"
           to={to}
           onClick={onClick}
           size="xsmall"
           icon="east"
-          css={styles.link}
         >
           {linkText}
-        </Button>
+        </StyledButtonLink>
       )}
-    </Box>
+    </StyledContainer>
   )
 }
 
@@ -128,4 +134,4 @@ ExtendedReminder.defaultProps = {
   linkText: null,
 }
 
-export { ExtendedReminder }
+export default ExtendedReminder

@@ -2,7 +2,7 @@
 
 exports[`CreationProgress renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,7 +33,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -52,7 +52,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-4 {
+.emotion-7 {
   fill: #fff;
   height: 20px;
   width: 20px;
@@ -60,11 +60,11 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   min-height: 20px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-7.emotion-7 {
   vertical-align: middle;
 }
 
-.emotion-5 {
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -74,7 +74,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   text-align: center;
 }
 
-.emotion-6 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -87,7 +87,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-7 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -98,16 +98,16 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -116,26 +116,26 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-7"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -144,26 +144,26 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-7"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -172,7 +172,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
@@ -193,7 +193,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +209,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,7 +224,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -243,7 +243,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-4 {
+.emotion-7 {
   fill: #fff;
   height: 20px;
   width: 20px;
@@ -251,11 +251,11 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   min-height: 20px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-7.emotion-7 {
   vertical-align: middle;
 }
 
-.emotion-5 {
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -263,231 +263,9 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-}
-
-.emotion-6 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
-  border-radius: 2px;
-  background-color: #d4dae7;
-}
-
-.emotion-7 {
-  border-radius: 2px;
-  background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-9 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
-  border-width: 3px;
 }
 
 .emotion-10 {
-  background-color: #d4dae7;
-  height: 8px;
-  width: 8px;
-  border-radius: 16px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-      >
-        <svg
-          class="sc-ui-icon emotion-3 emotion-4"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 1
-      </div>
-    </div>
-    <div
-      class="emotion-6"
-    >
-      <div
-        class="emotion-7"
-      />
-    </div>
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-9"
-      >
-        <div
-          class="emotion-10"
-        />
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 2
-      </div>
-    </div>
-    <div
-      class="emotion-6"
-    />
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-9"
-      >
-        <div
-          class="emotion-10"
-        />
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 3
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`CreationProgress renders correctly with selected prop 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 120px;
-}
-
-.emotion-2 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: #45d6b5;
-}
-
-.emotion-4 {
-  fill: #fff;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-4.emotion-4 {
-  vertical-align: middle;
-}
-
-.emotion-5 {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.emotion-6 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -500,262 +278,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-7 {
-  border-radius: 2px;
-  background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.emotion-14 {
-  border-radius: 2px;
-  background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.emotion-16 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
-  border-width: 3px;
-}
-
-.emotion-17 {
-  background-color: #d4dae7;
-  height: 8px;
-  width: 8px;
-  border-radius: 16px;
-}
-
-<div
-    class="emotion-0"
-  >
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-      >
-        <svg
-          class="sc-ui-icon emotion-3 emotion-4"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 1
-      </div>
-    </div>
-    <div
-      class="emotion-6"
-    >
-      <div
-        class="emotion-7"
-      />
-    </div>
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-2"
-      >
-        <svg
-          class="sc-ui-icon emotion-3 emotion-4"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 2
-      </div>
-    </div>
-    <div
-      class="emotion-6"
-    >
-      <div
-        class="emotion-14"
-      />
-    </div>
-    <div
-      class="emotion-1"
-    >
-      <div
-        class="emotion-16"
-      >
-        <div
-          class="emotion-17"
-        />
-      </div>
-      <div
-        class="emotion-5"
-      >
-        Step 3
-      </div>
-    </div>
-    <div
-      class="emotion-6"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`CreationProgress renders correctly with steps number 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 120px;
-}
-
-.emotion-2 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: #45d6b5;
-}
-
-.emotion-4 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #fff;
-}
-
-.emotion-4.emotion-4 {
-  color: #fff;
-  font-weight: 500;
-}
-
-.emotion-5 {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.emotion-6 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
-  border-radius: 2px;
-  background-color: #d4dae7;
-}
-
-.emotion-7 {
-  border-radius: 2px;
-  background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.emotion-14 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -804,84 +327,74 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
 }
 
 .emotion-18 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.emotion-18.emotion-18 {
-  font-weight: 500;
+  background-color: #d4dae7;
+  height: 8px;
+  width: 8px;
+  border-radius: 16px;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
-        <div
-          class="emotion-3 emotion-4"
+        <svg
+          class="sc-ui-icon emotion-6 emotion-7"
+          viewBox="0 0 24 24"
         >
-          1
-        </div>
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-7"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-16 emotion-5"
       >
         <div
-          class="emotion-3 emotion-4"
-        >
-          2
-        </div>
+          class="emotion-18 emotion-19"
+        />
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-6"
-    >
-      <div
-        class="emotion-14"
-      />
-    </div>
+      class="emotion-10 emotion-11"
+    />
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-16"
+        class="emotion-16 emotion-5"
       >
         <div
-          class="emotion-3 emotion-18"
-          style="color: rgb(220, 225, 235);"
-        >
-          3
-        </div>
+          class="emotion-18 emotion-19"
+        />
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
@@ -890,9 +403,19 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
 </DocumentFragment>
 `;
 
-exports[`CreationProgress renders correctly without animation 1`] = `
+exports[`CreationProgress renders correctly with selected prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  @keyframes animation-0 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -908,7 +431,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -923,7 +446,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -942,7 +465,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-4 {
+.emotion-7 {
   fill: #fff;
   height: 20px;
   width: 20px;
@@ -950,11 +473,11 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   min-height: 20px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-7.emotion-7 {
   vertical-align: middle;
 }
 
-.emotion-5 {
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -964,7 +487,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   text-align: center;
 }
 
-.emotion-6 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -977,7 +500,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-7 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -987,16 +510,18 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-24 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
 }
 
-.emotion-16 {
+.emotion-28 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -1033,7 +558,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   border-width: 3px;
 }
 
-.emotion-17 {
+.emotion-30 {
   background-color: #d4dae7;
   height: 8px;
   width: 8px;
@@ -1041,16 +566,16 @@ exports[`CreationProgress renders correctly without animation 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -1059,26 +584,26 @@ exports[`CreationProgress renders correctly without animation 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-7"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -1087,30 +612,506 @@ exports[`CreationProgress renders correctly without animation 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-6"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-14"
+        class="emotion-24 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-16"
+        class="emotion-28 emotion-5"
       >
         <div
-          class="emotion-17"
+          class="emotion-30 emotion-31"
         />
       </div>
       <div
-        class="emotion-5"
+        class="emotion-8 emotion-9"
+      >
+        Step 3
+      </div>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CreationProgress renders correctly with steps number 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 120px;
+}
+
+.emotion-4 {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #45d6b5;
+}
+
+.emotion-7 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+}
+
+.emotion-7.emotion-7 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.emotion-8 {
+  margin-top: 16px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.emotion-10 {
+  position: relative;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 4px;
+  margin-left: -36px;
+  margin-right: -36px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background-color: #d4dae7;
+}
+
+.emotion-12 {
+  border-radius: 2px;
+  background-color: #45d6b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.emotion-24 {
+  border-radius: 2px;
+  background-color: #45d6b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+.emotion-28 {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #d4dae7;
+  border-width: 3px;
+}
+
+.emotion-31 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #dce1eb;
+}
+
+.emotion-31.emotion-31 {
+  color: #dce1eb;
+  font-weight: 500;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        Step 1
+      </div>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      <div
+        class="emotion-12 emotion-13"
+      />
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        Step 2
+      </div>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      <div
+        class="emotion-24 emotion-13"
+      />
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-28 emotion-5"
+      >
+        <div
+          class="emotion-6 emotion-31"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        Step 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CreationProgress renders correctly without animation 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 120px;
+}
+
+.emotion-4 {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #45d6b5;
+}
+
+.emotion-7 {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-7.emotion-7 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
+  margin-top: 16px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.emotion-10 {
+  position: relative;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 4px;
+  margin-left: -36px;
+  margin-right: -36px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background-color: #d4dae7;
+}
+
+.emotion-12 {
+  border-radius: 2px;
+  background-color: #45d6b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.emotion-24 {
+  border-radius: 2px;
+  background-color: #45d6b5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.emotion-28 {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #d4dae7;
+  border-width: 3px;
+}
+
+.emotion-30 {
+  background-color: #d4dae7;
+  height: 8px;
+  width: 8px;
+  border-radius: 16px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <svg
+          class="sc-ui-icon emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        Step 1
+      </div>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      <div
+        class="emotion-12 emotion-13"
+      />
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <svg
+          class="sc-ui-icon emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        Step 2
+      </div>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      <div
+        class="emotion-24 emotion-13"
+      />
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-28 emotion-5"
+      >
+        <div
+          class="emotion-30 emotion-31"
+        />
+      </div>
+      <div
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>

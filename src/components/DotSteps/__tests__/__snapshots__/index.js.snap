@@ -13,7 +13,7 @@ exports[`DotSteps renders correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -22,11 +22,11 @@ exports[`DotSteps renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 8px;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -35,7 +35,7 @@ exports[`DotSteps renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-2.emotion-2 {
+.emotion-4.emotion-4 {
   margin-right: 0;
 }
 
@@ -43,10 +43,10 @@ exports[`DotSteps renders correctly 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-2"
+      class="emotion-1 emotion-4"
     />
   </div>
 </DocumentFragment>
@@ -65,7 +65,7 @@ exports[`DotSteps renders correctly useState function 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -74,11 +74,11 @@ exports[`DotSteps renders correctly useState function 1`] = `
   cursor: pointer;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 8px;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -87,11 +87,11 @@ exports[`DotSteps renders correctly useState function 1`] = `
   cursor: pointer;
 }
 
-.emotion-2.emotion-2 {
+.emotion-4.emotion-4 {
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-20 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -100,7 +100,7 @@ exports[`DotSteps renders correctly useState function 1`] = `
   cursor: pointer;
 }
 
-.emotion-10.emotion-10 {
+.emotion-20.emotion-20 {
   margin-right: 0;
 }
 
@@ -108,34 +108,34 @@ exports[`DotSteps renders correctly useState function 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-2"
+      class="emotion-1 emotion-4"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-10"
+      class="emotion-1 emotion-20"
     />
   </div>
 </DocumentFragment>
@@ -154,7 +154,7 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -163,11 +163,11 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
   margin-right: 8px;
 }
 
-.emotion-4 {
+.emotion-8 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -176,11 +176,11 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-4.emotion-4 {
+.emotion-8.emotion-8 {
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-20 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -189,7 +189,7 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   cursor: pointer;
 }
 
-.emotion-10.emotion-10 {
+.emotion-20.emotion-20 {
   margin-right: 0;
 }
 
@@ -197,34 +197,34 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-4"
+      class="emotion-1 emotion-8"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     />
     <div
-      class="emotion-10"
+      class="emotion-1 emotion-20"
     />
   </div>
 </DocumentFragment>
