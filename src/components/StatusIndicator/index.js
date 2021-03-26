@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
 import { flash } from '../../utils/animations'
-import { Dot } from '../Dot'
+import Dot from '../Dot'
 import Tooltip from '../Tooltip'
 
 const defaultStatuses = {
