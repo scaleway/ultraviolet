@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { colors, space } from '../../theme'
-import { Icon, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 import { Typography } from '../Typography'
 
 const style = ({ variant }) => css`

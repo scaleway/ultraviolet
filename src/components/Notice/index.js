@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 const style = css`
   color: ${colors.gray550};

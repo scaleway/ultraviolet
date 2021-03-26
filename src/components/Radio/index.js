@@ -6,7 +6,7 @@ import React from 'react'
 import { Radio as ReakitRadio } from 'reakit'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 const StyledIcon = styled(Icon)``
 

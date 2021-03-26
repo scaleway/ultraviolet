@@ -282,20 +282,20 @@ exports[`Information should render correctly with an icon 1`] = `
   align-items: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: #45d6b5;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-2.emotion-2 {
+  vertical-align: middle;
   margin-right: 16px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -306,7 +306,7 @@ exports[`Information should render correctly with an icon 1`] = `
   flex-direction: row;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -317,7 +317,7 @@ exports[`Information should render correctly with an icon 1`] = `
   color: #4f0599;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   color: #4f0599;
 }
 
@@ -325,7 +325,7 @@ exports[`Information should render correctly with an icon 1`] = `
     class="emotion-0"
   >
     <svg
-      class="sc-ui-icon emotion-1"
+      class="sc-ui-icon emotion-1 emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -333,10 +333,10 @@ exports[`Information should render correctly with an icon 1`] = `
       />
     </svg>
     <div
-      class="emotion-2"
+      class="emotion-3"
     >
       <p
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         Hello
       </p>

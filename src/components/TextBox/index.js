@@ -13,7 +13,7 @@ import React, {
 } from 'react'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Notice } from '../Notice'
 import { Separator } from '../Separator'
 import { Touchable } from '../Touchable'

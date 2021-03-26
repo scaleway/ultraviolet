@@ -49,16 +49,19 @@ exports[`Radio renders correctly 1`] = `
   margin-right: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #dce1eb;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.emotion-6 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
   position: absolute;
   opacity: 0.01;
 }
@@ -71,7 +74,7 @@ exports[`Radio renders correctly 1`] = `
       class="emotion-2 emotion-3"
     >
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -82,7 +85,7 @@ exports[`Radio renders correctly 1`] = `
     Choice
     <input
       aria-checked="false"
-      class="emotion-6 emotion-7"
+      class="emotion-7 emotion-8"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -142,16 +145,19 @@ exports[`Radio renders correctly when checked 1`] = `
   margin-right: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #4f0599;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.emotion-6 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
   position: absolute;
   opacity: 0.01;
 }
@@ -164,7 +170,7 @@ exports[`Radio renders correctly when checked 1`] = `
       class="emotion-2 emotion-3"
     >
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -176,7 +182,7 @@ exports[`Radio renders correctly when checked 1`] = `
     <input
       aria-checked="true"
       checked=""
-      class="emotion-6 emotion-7"
+      class="emotion-7 emotion-8"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -227,16 +233,19 @@ exports[`Radio renders correctly when disabled 1`] = `
   margin-right: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #dce1eb;
-  vertical-align: middle;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.emotion-6 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
   position: absolute;
   opacity: 0.01;
 }
@@ -250,7 +259,7 @@ exports[`Radio renders correctly when disabled 1`] = `
       class="emotion-2 emotion-3"
     >
       <svg
-        class="emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
@@ -262,7 +271,7 @@ exports[`Radio renders correctly when disabled 1`] = `
     <input
       aria-checked="false"
       aria-disabled="true"
-      class="emotion-6 emotion-7"
+      class="emotion-7 emotion-8"
       disabled=""
       id="radio-choice"
       name="radio"

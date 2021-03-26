@@ -24,16 +24,19 @@ exports[`IconMessage renders correctly 1`] = `
   margin-right: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: #ef5774;
-  vertical-align: middle;
   height: 40px;
   width: 40px;
   min-width: 40px;
   min-height: 40px;
 }
 
-.emotion-5 {
+.emotion-3.emotion-3 {
+  vertical-align: middle;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -41,7 +44,7 @@ exports[`IconMessage renders correctly 1`] = `
   color: #ef5774;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   color: #ef5774;
   font-weight: 700;
 }
@@ -53,7 +56,7 @@ exports[`IconMessage renders correctly 1`] = `
       class="emotion-1"
     >
       <svg
-        class="sc-ui-icon emotion-2"
+        class="sc-ui-icon emotion-2 emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -62,10 +65,10 @@ exports[`IconMessage renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
       >
         This is default.
       </div>
@@ -98,16 +101,19 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
   margin-right: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: #4f0599;
-  vertical-align: middle;
   height: 40px;
   width: 40px;
   min-width: 40px;
   min-height: 40px;
 }
 
-.emotion-5 {
+.emotion-3.emotion-3 {
+  vertical-align: middle;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -115,7 +121,7 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
   color: #4f0599;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   color: #4f0599;
   font-weight: 700;
 }
@@ -127,7 +133,7 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
       class="emotion-1"
     >
       <svg
-        class="sc-ui-icon emotion-2"
+        class="sc-ui-icon emotion-2 emotion-3"
         viewBox="0 0 24 24"
       >
         <path
@@ -136,10 +142,10 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
       >
         This is variant
       </div>

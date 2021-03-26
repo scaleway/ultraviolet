@@ -7,7 +7,7 @@ import {
 } from 'react-toastify'
 import { injectStyle } from 'react-toastify/dist/inject-style'
 import { colors } from '../../theme'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { NotificationBar } from '../NotificationBar'
 
 injectStyle()
