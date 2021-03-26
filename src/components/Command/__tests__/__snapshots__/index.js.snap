@@ -2,21 +2,23 @@
 
 exports[`Commands renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
-}
-
-.emotion-0.emotion-0 {
   color: #4a4f62;
   background-color: #f6f5f7;
+}
+
+.emotion-1.emotion-1 {
   padding: 8px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
 }
 
 <span
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     halt
   </span>

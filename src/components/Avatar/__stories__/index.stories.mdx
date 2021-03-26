@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Avatar } from '..'
+import Avatar from '..'
 import support from './support.svg'
 
 <Meta title="Components/Avatar" component={Avatar} />
@@ -14,13 +14,13 @@ import support from './support.svg'
 
 ## Basic
 
-<Description>Avatar //:TODO</Description>
+<Description>Avatar</Description>
 
 <Canvas>
-  <Story name="success">
+  <Story name="Success">
     <Avatar />
   </Story>
-  <Story name="size">
+  <Story name="Size">
     <Avatar size={48} />
   </Story>
 </Canvas>
@@ -28,16 +28,16 @@ import support from './support.svg'
 ## With text
 
 <Canvas>
-  <Story name="text">
+  <Story name="Text">
     <Avatar text="Hello You" />
   </Story>
-  <Story name="text-size">
+  <Story name="Text size">
     <Avatar text="Hello You" size={48} />
   </Story>
-  <Story name="text-lock">
+  <Story name="Text lock">
     <Avatar lock text="Hello You" />
   </Story>
-  <Story name="text-lock-size">
+  <Story name="Text lock and size">
     <Avatar lock text="Hello You" size={48} />
   </Story>
 </Canvas>
@@ -45,11 +45,23 @@ import support from './support.svg'
 ## Custom image
 
 <Canvas>
-  <Story name="image">
+  <Story name="Image">
     <Avatar image={support} />
   </Story>
-  <Story name="image-size">
+  <Story name="Image size">
     <Avatar image={support} size={48} />
+  </Story>
+</Canvas>
+
+## Custom colors
+
+<Description>
+  You can change colors by changing default `textBgColor` and `textColor` props
+</Description>
+
+<Canvas>
+  <Story name="Custom color">
+    <Avatar text="Hello You" textBgColor="gray300" textColor="lightBlack" />
   </Story>
 </Canvas>
 

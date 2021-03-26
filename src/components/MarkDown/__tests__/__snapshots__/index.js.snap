@@ -94,17 +94,19 @@ exports[`MarkDown render simple string 1`] = `
   color: #1e4293;
 }
 
-.emotion-20 {
+.emotion-21 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
-}
-
-.emotion-20.emotion-20 {
   color: #4a4f62;
   background-color: #f6f5f7;
+}
+
+.emotion-21.emotion-21 {
   padding: 8px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
 }
 
 <div
@@ -201,7 +203,7 @@ exports[`MarkDown render simple string 1`] = `
       class="emotion-3"
     >
       <span
-        class="emotion-20"
+        class="emotion-20 emotion-21"
       >
         const example = 1 // Inline code
       </span>
@@ -268,17 +270,19 @@ exports[`MarkDown render simple string with target blank 1`] = `
   vertical-align: top;
 }
 
-.emotion-22 {
+.emotion-23 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
-}
-
-.emotion-22.emotion-22 {
   color: #4a4f62;
   background-color: #f6f5f7;
+}
+
+.emotion-23.emotion-23 {
   padding: 8px;
+  color: #4a4f62;
+  background-color: #f6f5f7;
 }
 
 <div
@@ -385,7 +389,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       class="emotion-3"
     >
       <span
-        class="emotion-22"
+        class="emotion-22 emotion-23"
       >
         const example = 1 // Inline code
       </span>

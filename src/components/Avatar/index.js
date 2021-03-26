@@ -1,7 +1,6 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import avatar from './avatar.svg'
@@ -20,23 +19,23 @@ const formatTextToAvatar = text => {
   return text.substring(0, 2).toUpperCase()
 }
 
-const styles = {
-  textAvatar: ({ textBgColor, textColor, textSize }) => css`
-    align-items: center;
-    background-color: ${textBgColor};
-    border-radius: 50%;
-    color: ${textColor};
-    font-size: ${textSize}px;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-  `,
-  imgAvatar: css`
-    height: 100%;
-    width: 100%;
-  `,
-}
+const StyledDiv = styled.div`
+  align-items: center;
+  background-color: ${({ lock, theme, textBgColor }) =>
+    lock ? theme.colors.gray50 : theme.colors[textBgColor] || textBgColor};
+  border-radius: 50%;
+  color: ${({ theme, textColor }) => theme.colors[textColor] || textColor};
+  font-size: ${({ textSize }) => textSize}px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+`
+
+const StyledImg = styled.img`
+  height: 100%;
+  width: 100%;
+`
 
 const Avatar = ({
   image,
@@ -50,17 +49,16 @@ const Avatar = ({
 }) => (
   <Box width={size} height={size} position="relative" {...props}>
     {text ? (
-      <div
-        css={styles.textAvatar({
-          textBgColor: lock ? colors.gray50 : textBgColor,
-          textColor,
-          textSize,
-        })}
+      <StyledDiv
+        lock={lock}
+        textBgColor={textBgColor}
+        textColor={textColor}
+        textSize={textSize}
       >
         {lock ? <Icon name="lock" color="gray550" /> : formatTextToAvatar(text)}
-      </div>
+      </StyledDiv>
     ) : (
-      <img css={styles.imgAvatar} src={image} alt="" />
+      <StyledImg src={image} alt="" />
     )}
   </Box>
 )
@@ -69,8 +67,8 @@ Avatar.defaultProps = {
   image: avatar,
   size: 32,
   text: null,
-  textBgColor: colors.lightViolet,
-  textColor: colors.white,
+  textBgColor: 'lightViolet',
+  textColor: 'white',
   textSize: 10,
   lock: false,
 }
@@ -85,4 +83,4 @@ Avatar.propTypes = {
   lock: PropTypes.bool,
 }
 
-export { Avatar }
+export default Avatar
