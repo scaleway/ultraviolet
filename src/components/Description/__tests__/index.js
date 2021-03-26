@@ -1,5 +1,5 @@
 import React from 'react'
-import { Description } from '..'
+import Description from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Description', () => {
