@@ -3,10 +3,14 @@
 exports[`Checkbox renders correctly 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -24,10 +28,14 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -39,10 +47,14 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -50,6 +62,7 @@ exports[`Checkbox renders correctly 1`] = `
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -67,6 +80,13 @@ exports[`Checkbox renders correctly 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -77,6 +97,7 @@ exports[`Checkbox renders correctly 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -84,12 +105,16 @@ exports[`Checkbox renders correctly 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -111,6 +136,13 @@ exports[`Checkbox renders correctly 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -120,6 +152,7 @@ exports[`Checkbox renders correctly 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -141,6 +174,13 @@ exports[`Checkbox renders correctly 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -151,6 +191,7 @@ exports[`Checkbox renders correctly 1`] = `
     class="emotion-0"
   >
     <label
+<<<<<<< HEAD
 <<<<<<< HEAD
       aria-disabled="false"
       class="emotion-1 emotion-2 emotion-3"
@@ -165,10 +206,19 @@ exports[`Checkbox renders correctly 1`] = `
         aria-checked="false"
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="false"
+      class="emotion-1 emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         name="checkbox"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -178,6 +228,9 @@ exports[`Checkbox renders correctly 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -187,6 +240,7 @@ exports[`Checkbox renders correctly 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -194,11 +248,15 @@ exports[`Checkbox renders correctly 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -217,6 +275,12 @@ exports[`Checkbox renders correctly 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
@@ -226,10 +290,14 @@ exports[`Checkbox renders correctly 1`] = `
 exports[`Checkbox renders correctly checked 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -247,10 +315,14 @@ exports[`Checkbox renders correctly checked 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -262,10 +334,14 @@ exports[`Checkbox renders correctly checked 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -273,6 +349,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -290,6 +367,13 @@ exports[`Checkbox renders correctly checked 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #4f0599;
   height: 24px;
   width: 24px;
@@ -300,6 +384,7 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -307,12 +392,16 @@ exports[`Checkbox renders correctly checked 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -334,6 +423,13 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -343,6 +439,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -364,6 +461,13 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -375,24 +479,34 @@ exports[`Checkbox renders correctly checked 1`] = `
   >
     <label
 <<<<<<< HEAD
+<<<<<<< HEAD
       aria-disabled="false"
       class="emotion-1 emotion-2 emotion-3"
 =======
       class="emotion-1 emotion-2"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="false"
+      class="emotion-1 emotion-2 emotion-3"
+>>>>>>> refactor: use colors from theme 1 (#150)
     >
       <input
         aria-checked="true"
         checked=""
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-4 emotion-5"
 =======
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         name="checkbox"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -402,6 +516,9 @@ exports[`Checkbox renders correctly checked 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -411,6 +528,7 @@ exports[`Checkbox renders correctly checked 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -418,11 +536,15 @@ exports[`Checkbox renders correctly checked 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -441,6 +563,12 @@ exports[`Checkbox renders correctly checked 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
@@ -450,10 +578,14 @@ exports[`Checkbox renders correctly checked 1`] = `
 exports[`Checkbox renders correctly checked and disabled 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -471,10 +603,14 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -486,15 +622,20 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -512,6 +653,13 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #f6f5f7;
   height: 24px;
   width: 24px;
@@ -522,6 +670,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -529,12 +678,16 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -556,6 +709,13 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -565,6 +725,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -586,6 +747,13 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -597,27 +765,37 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   >
     <label
 <<<<<<< HEAD
+<<<<<<< HEAD
       aria-disabled="true"
       class="emotion-1 emotion-2 emotion-3"
 =======
       class="emotion-1 emotion-2"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="true"
+      class="emotion-1 emotion-2 emotion-3"
+>>>>>>> refactor: use colors from theme 1 (#150)
     >
       <input
         aria-checked="true"
         aria-disabled="true"
         checked=""
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-4 emotion-5"
 =======
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         disabled=""
         name="checkbox"
         style="pointer-events: none;"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -627,6 +805,9 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -636,6 +817,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -643,11 +825,15 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -666,6 +852,12 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
@@ -675,10 +867,14 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 exports[`Checkbox renders correctly disabled 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -696,10 +892,14 @@ exports[`Checkbox renders correctly disabled 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -711,15 +911,20 @@ exports[`Checkbox renders correctly disabled 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -737,6 +942,13 @@ exports[`Checkbox renders correctly disabled 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #f6f5f7;
   height: 24px;
   width: 24px;
@@ -747,6 +959,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -754,12 +967,16 @@ exports[`Checkbox renders correctly disabled 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -781,6 +998,13 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -790,6 +1014,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -811,6 +1036,13 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -822,26 +1054,36 @@ exports[`Checkbox renders correctly disabled 1`] = `
   >
     <label
 <<<<<<< HEAD
+<<<<<<< HEAD
       aria-disabled="true"
       class="emotion-1 emotion-2 emotion-3"
 =======
       class="emotion-1 emotion-2"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="true"
+      class="emotion-1 emotion-2 emotion-3"
+>>>>>>> refactor: use colors from theme 1 (#150)
     >
       <input
         aria-checked="false"
         aria-disabled="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-4 emotion-5"
 =======
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         disabled=""
         name="checkbox"
         style="pointer-events: none;"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -851,6 +1093,9 @@ exports[`Checkbox renders correctly disabled 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -860,6 +1105,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -867,11 +1113,15 @@ exports[`Checkbox renders correctly disabled 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -890,6 +1140,12 @@ exports[`Checkbox renders correctly disabled 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
@@ -899,10 +1155,14 @@ exports[`Checkbox renders correctly disabled 1`] = `
 exports[`Checkbox renders correctly with a value 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -920,10 +1180,14 @@ exports[`Checkbox renders correctly with a value 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -935,10 +1199,14 @@ exports[`Checkbox renders correctly with a value 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -946,6 +1214,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -963,6 +1232,13 @@ exports[`Checkbox renders correctly with a value 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -973,6 +1249,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -980,12 +1257,16 @@ exports[`Checkbox renders correctly with a value 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -1007,6 +1288,13 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1016,6 +1304,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -1037,6 +1326,13 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -1047,6 +1343,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
     class="emotion-0"
   >
     <label
+<<<<<<< HEAD
 <<<<<<< HEAD
       aria-disabled="false"
       class="emotion-1 emotion-2 emotion-3"
@@ -1061,11 +1358,20 @@ exports[`Checkbox renders correctly with a value 1`] = `
         aria-checked="false"
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="false"
+      class="emotion-1 emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         name="checkbox"
         type="checkbox"
         value="test"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -1075,6 +1381,9 @@ exports[`Checkbox renders correctly with a value 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -1084,6 +1393,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -1091,11 +1401,15 @@ exports[`Checkbox renders correctly with a value 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -1114,6 +1428,12 @@ exports[`Checkbox renders correctly with a value 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
@@ -1123,10 +1443,14 @@ exports[`Checkbox renders correctly with a value 1`] = `
 exports[`Checkbox renders correctly with an error 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1144,10 +1468,14 @@ exports[`Checkbox renders correctly with an error 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -1159,10 +1487,14 @@ exports[`Checkbox renders correctly with an error 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -1170,6 +1502,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -1187,6 +1520,13 @@ exports[`Checkbox renders correctly with an error 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #ef5774;
   height: 24px;
   width: 24px;
@@ -1197,6 +1537,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -1204,12 +1545,16 @@ exports[`Checkbox renders correctly with an error 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -1231,6 +1576,13 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1247,6 +1599,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-11.emotion-11 {
   overflow: hidden;
 }
@@ -1266,6 +1619,13 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -1276,6 +1636,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
     class="emotion-0"
   >
     <label
+<<<<<<< HEAD
 <<<<<<< HEAD
       aria-disabled="false"
       class="emotion-1 emotion-2 emotion-3"
@@ -1290,10 +1651,19 @@ exports[`Checkbox renders correctly with an error 1`] = `
         aria-checked="false"
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="false"
+      class="emotion-1 emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         name="checkbox"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -1303,6 +1673,9 @@ exports[`Checkbox renders correctly with an error 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -1312,6 +1685,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -1319,11 +1693,15 @@ exports[`Checkbox renders correctly with an error 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -1342,6 +1720,12 @@ exports[`Checkbox renders correctly with an error 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         test error
       </div>
@@ -1353,10 +1737,14 @@ exports[`Checkbox renders correctly with an error 1`] = `
 exports[`Checkbox renders correctly with valid 1`] = `
 <DocumentFragment>
 <<<<<<< HEAD
+<<<<<<< HEAD
   .emotion-3 {
 =======
   .emotion-2 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+  .emotion-3 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1374,10 +1762,14 @@ exports[`Checkbox renders correctly with valid 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4 {
 =======
 .emotion-3 {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   opacity: 0.01;
   width: 24px;
   height: 24px;
@@ -1389,10 +1781,14 @@ exports[`Checkbox renders correctly with valid 1`] = `
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-4:hover svg {
 =======
 .emotion-3:hover svg {
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+.emotion-4:hover svg {
+>>>>>>> refactor: use colors from theme 1 (#150)
   border-radius: 4px;
   background-color: #f6f5f7;
   fill: #4f0599;
@@ -1400,6 +1796,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
   transition: fill 300ms;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-4:focus+svg {
   outline: 1px #b2b6c3 dotted;
@@ -1417,6 +1814,13 @@ exports[`Checkbox renders correctly with valid 1`] = `
 =======
 .emotion-5 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-4:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   fill: #45d6b5;
   height: 24px;
   width: 24px;
@@ -1427,6 +1831,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .emotion-8.emotion-8 {
   vertical-align: middle;
 =======
@@ -1434,12 +1839,16 @@ exports[`Checkbox renders correctly with valid 1`] = `
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
 =======
 .emotion-5.emotion-5 {
+=======
+.emotion-8.emotion-8 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   vertical-align: middle;
 >>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 10px;
   padding: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-9 {
@@ -1461,6 +1870,13 @@ exports[`Checkbox renders correctly with valid 1`] = `
 
 .emotion-7 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-9 {
+  padding-top: 2px;
+}
+
+.emotion-11 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1470,6 +1886,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
   margin-top: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .emotion-11.emotion-11 {
@@ -1491,6 +1908,13 @@ exports[`Checkbox renders correctly with valid 1`] = `
 
 .emotion-8.emotion-8 {
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+.emotion-11.emotion-11 {
+  overflow: hidden;
+}
+
+.emotion-12.emotion-12 {
+>>>>>>> refactor: use colors from theme 1 (#150)
   font-size: 12px;
   color: #ef5774;
   padding-right: 4px;
@@ -1501,6 +1925,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
     class="emotion-0"
   >
     <label
+<<<<<<< HEAD
 <<<<<<< HEAD
       aria-disabled="false"
       class="emotion-1 emotion-2 emotion-3"
@@ -1515,10 +1940,19 @@ exports[`Checkbox renders correctly with valid 1`] = `
         aria-checked="false"
         class="emotion-3"
 >>>>>>> refactor: migrate typography to use colors from theme (#155)
+=======
+      aria-disabled="false"
+      class="emotion-1 emotion-2 emotion-3"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-4 emotion-5"
+>>>>>>> refactor: use colors from theme 1 (#150)
         name="checkbox"
         type="checkbox"
       />
       <svg
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         class="emotion-6 emotion-7 emotion-8"
@@ -1528,6 +1962,9 @@ exports[`Checkbox renders correctly with valid 1`] = `
 =======
         class="emotion-4 emotion-5"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-6 emotion-7 emotion-8"
+>>>>>>> refactor: use colors from theme 1 (#150)
         viewBox="0 0 24 24"
       >
         <path
@@ -1537,6 +1974,7 @@ exports[`Checkbox renders correctly with valid 1`] = `
       <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         class="emotion-9 emotion-10"
 =======
         class="emotion-5"
@@ -1544,11 +1982,15 @@ exports[`Checkbox renders correctly with valid 1`] = `
 =======
         class="emotion-6"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+        class="emotion-9 emotion-10"
+>>>>>>> refactor: use colors from theme 1 (#150)
       >
         Checkbox Label
       </div>
     </label>
     <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       class="emotion-11"
@@ -1567,6 +2009,12 @@ exports[`Checkbox renders correctly with valid 1`] = `
       <div
         class="emotion-8"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="emotion-11"
+    >
+      <div
+        class="emotion-12"
+>>>>>>> refactor: use colors from theme 1 (#150)
       />
     </div>
   </div>
