@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command } from '..'
+import Command from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Commands', () => {

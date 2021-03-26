@@ -24,7 +24,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -37,7 +37,6 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
@@ -45,12 +44,13 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   background-color: #3f6ed8;
+  color: #fff;
   font-size: 12px;
   line-height: 24px;
   height: 24px;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #fff;
   height: 16px;
   width: 16px;
@@ -58,12 +58,12 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   min-height: 16px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   vertical-align: middle;
   margin-right: 4px;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -76,11 +76,11 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   margin-bottom: 8px;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -90,11 +90,11 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   line-height: 20px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   margin-bottom: 8px;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -152,32 +152,29 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   font-size: 14px;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-11:hover,
+.emotion-11:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-11:hover,
+.emotion-11:focus {
   color: #1e4293;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10 {
-  margin-right: 8px;
-  pointer-events: none;
-}
-
-.emotion-10.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 8px;
+  pointer-events: none;
 }
 
-.emotion-12 {
+.emotion-15 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -185,11 +182,11 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   min-height: 1em;
 }
 
-.emotion-12.emotion-12 {
+.emotion-15.emotion-15 {
   vertical-align: middle;
 }
 
-.emotion-13 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -212,10 +209,10 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
       class="emotion-1"
     >
       <span
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-4 emotion-5"
           viewBox="0 0 24 24"
         >
           <path
@@ -226,26 +223,26 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
       </span>
     </div>
     <p
-      class="emotion-5 emotion-6"
+      class="emotion-6 emotion-7"
     >
       Verify your credit card
     </p>
     <p
-      class="emotion-5 emotion-8"
+      class="emotion-6 emotion-9"
     >
       Enter the code we send to your bank account to validate your payment method.
     </p>
     <a
       aria-disabled="false"
-      class="emotion-9"
+      class="emotion-10 emotion-11"
       href="/"
       to="/"
     >
       <div
-        class="emotion-10"
+        class="emotion-12 emotion-13"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-12"
+          class="sc-ui-icon emotion-4 emotion-15"
           viewBox="0 0 24 24"
         >
           <path
@@ -254,7 +251,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
         </svg>
       </div>
       <div
-        class="content emotion-13"
+        class="emotion-16 emotion-17"
       >
         Verify my credit card
       </div>
@@ -287,7 +284,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -300,7 +297,6 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
@@ -308,12 +304,13 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   background-color: #ff8c69;
+  color: #fff;
   font-size: 12px;
   line-height: 24px;
   height: 24px;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #fff;
   height: 16px;
   width: 16px;
@@ -321,12 +318,12 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   min-height: 16px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   vertical-align: middle;
   margin-right: 4px;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -339,11 +336,11 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   color: #ff8c69;
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   margin-bottom: 8px;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -353,11 +350,11 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   line-height: 20px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   margin-bottom: 8px;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -415,32 +412,29 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   font-size: 14px;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-11:hover,
+.emotion-11:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-11:hover,
+.emotion-11:focus {
   color: #1e4293;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10 {
-  margin-right: 8px;
-  pointer-events: none;
-}
-
-.emotion-10.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 8px;
+  pointer-events: none;
 }
 
-.emotion-12 {
+.emotion-15 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -448,11 +442,11 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
   min-height: 1em;
 }
 
-.emotion-12.emotion-12 {
+.emotion-15.emotion-15 {
   vertical-align: middle;
 }
 
-.emotion-13 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -475,10 +469,10 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
       class="emotion-1"
     >
       <span
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-4 emotion-5"
           viewBox="0 0 24 24"
         >
           <path
@@ -489,26 +483,26 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
       </span>
     </div>
     <p
-      class="emotion-5 emotion-6"
+      class="emotion-6 emotion-7"
     >
       Verify your credit card
     </p>
     <p
-      class="emotion-5 emotion-8"
+      class="emotion-6 emotion-9"
     >
       Enter the code we send to your bank account to validate your payment method.
     </p>
     <a
       aria-disabled="false"
-      class="emotion-9"
+      class="emotion-10 emotion-11"
       href="/"
       to="/"
     >
       <div
-        class="emotion-10"
+        class="emotion-12 emotion-13"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-12"
+          class="sc-ui-icon emotion-4 emotion-15"
           viewBox="0 0 24 24"
         >
           <path
@@ -517,7 +511,7 @@ exports[`ExtendedReminder renders correctly with variant 1`] = `
         </svg>
       </div>
       <div
-        class="content emotion-13"
+        class="emotion-16 emotion-17"
       >
         Verify my credit card
       </div>
@@ -550,7 +544,7 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -563,7 +557,6 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
@@ -571,12 +564,13 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   background-color: #ff8c69;
+  color: #fff;
   font-size: 12px;
   line-height: 24px;
   height: 24px;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #fff;
   height: 16px;
   width: 16px;
@@ -584,12 +578,12 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   min-height: 16px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   vertical-align: middle;
   margin-right: 4px;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -602,11 +596,11 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   color: #ff8c69;
 }
 
-.emotion-6.emotion-6 {
+.emotion-7.emotion-7 {
   margin-bottom: 8px;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -616,7 +610,7 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   line-height: 20px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   margin-bottom: 8px;
 }
 
@@ -627,10 +621,10 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
       class="emotion-1"
     >
       <span
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <svg
-          class="sc-ui-icon emotion-3 emotion-4"
+          class="sc-ui-icon emotion-4 emotion-5"
           viewBox="0 0 24 24"
         >
           <path
@@ -641,12 +635,12 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
       </span>
     </div>
     <p
-      class="emotion-5 emotion-6"
+      class="emotion-6 emotion-7"
     >
       Verify your credit card
     </p>
     <p
-      class="emotion-5 emotion-8"
+      class="emotion-6 emotion-9"
     >
       Enter the code we send to your bank account to validate your payment method.
     </p>
