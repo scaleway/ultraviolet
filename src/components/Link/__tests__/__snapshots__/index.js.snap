@@ -22,15 +22,18 @@ exports[`Link render correctly with target blank 1`] = `
   color: #4f0599;
 }
 
-.emotion-1 {
+.emotion-2 {
   fill: currentColor;
-  vertical-align: top;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
   padding-left: 2px;
   opacity: 0.5;
+}
+
+.emotion-2.emotion-2 {
+  vertical-align: top;
 }
 
 <a
@@ -42,7 +45,7 @@ exports[`Link render correctly with target blank 1`] = `
   >
     Hello
     <svg
-      class="emotion-1"
+      class="emotion-1 emotion-2"
       viewBox="0 0 24 24"
     >
       <path

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 
 export const TooltipIcon = ({ color, name, size, tooltip, baseId }) => (

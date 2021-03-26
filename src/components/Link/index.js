@@ -3,7 +3,7 @@ import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
 const generateVariant = color => css`

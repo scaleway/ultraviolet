@@ -10,7 +10,7 @@ import {
 } from 'reakit/Dialog'
 import { colors } from '../../theme'
 import * as animations from '../../utils'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 
 const MODAL_WIDTH = {
