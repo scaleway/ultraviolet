@@ -1,27 +1,22 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
-const style = css`
+const StyledBox = styled(Box)`
   font-family: 'Lucida Console', 'Monaco', 'Courier New', 'Courier', monospace;
   font-size: 13px;
   font-weight: 500;
   border-radius: 5px;
+  color: ${({ color, theme: { colors } }) => colors[color] ?? color};
+  background-color: ${({ backgroundColor, theme: { colors } }) =>
+    colors[backgroundColor] ?? backgroundColor};
 `
 
-const Command = ({ children, color, backgroundColor, ...props }) => (
-  <Box
-    color={color}
-    backgroundColor={backgroundColor}
-    css={style}
-    as="span"
-    p={1}
-    {...props}
-  >
+const Command = ({ children, ...props }) => (
+  <StyledBox as="span" p={1} {...props}>
     {children}
-  </Box>
+  </StyledBox>
 )
 
 Command.propTypes = {
@@ -31,8 +26,8 @@ Command.propTypes = {
 }
 
 Command.defaultProps = {
-  color: colors.gray700,
-  backgroundColor: colors.gray100,
+  color: 'gray700',
+  backgroundColor: 'gray100',
 }
 
-export { Command }
+export default Command

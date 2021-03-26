@@ -18,7 +18,7 @@ exports[`Avatar renders correctly with default props 1`] = `
   >
     <img
       alt=""
-      class="emotion-1"
+      class="emotion-1 emotion-2"
       src="test-file-stub"
     />
   </div>
@@ -54,7 +54,7 @@ exports[`Avatar renders correctly with lock 1`] = `
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: #b2b6c3;
   height: 1em;
   width: 1em;
@@ -62,7 +62,7 @@ exports[`Avatar renders correctly with lock 1`] = `
   min-height: 1em;
 }
 
-.emotion-3.emotion-3 {
+.emotion-4.emotion-4 {
   vertical-align: middle;
 }
 
@@ -70,10 +70,10 @@ exports[`Avatar renders correctly with lock 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <svg
-        class="sc-ui-icon emotion-2 emotion-3"
+        class="sc-ui-icon emotion-3 emotion-4"
         viewBox="0 0 24 24"
       >
         <path
@@ -118,7 +118,7 @@ exports[`Avatar renders correctly with sentence 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       HW
     </div>
@@ -159,7 +159,7 @@ exports[`Avatar renders correctly with small text 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       HW
     </div>
@@ -200,7 +200,7 @@ exports[`Avatar renders correctly with text 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       HE
     </div>
@@ -221,9 +221,9 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: red;
+  background-color: #ef5774;
   border-radius: 50%;
-  color: white;
+  color: #fff;
   font-size: 14px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -241,7 +241,7 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       HW
     </div>

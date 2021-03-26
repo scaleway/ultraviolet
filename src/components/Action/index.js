@@ -14,11 +14,7 @@ const action = rounded => css`
     // safari issue prevent event propgation
     pointer-events: none;
   }
-  ${rounded
-    ? `
-    border-radius: 16px;
-  `
-    : ''}
+  ${rounded && `border-radius: 16px;`}
 `
 
 const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
