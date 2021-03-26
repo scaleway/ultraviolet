@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Col, Grid, Row } from '../Grid'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 const styles = {
   condition: css`

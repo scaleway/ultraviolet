@@ -4,7 +4,7 @@ import React from 'react'
 import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 
 export const styles = {

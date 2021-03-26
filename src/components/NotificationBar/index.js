@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { radii, colors as themeColors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 export const colors = {
   info: 'info',

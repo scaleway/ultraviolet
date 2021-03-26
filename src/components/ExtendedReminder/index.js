@@ -5,7 +5,7 @@ import { colors } from '../../theme'
 import { Badge } from '../Badge'
 import { Box } from '../Box'
 import { Button } from '../Button'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography } from '../Typography'
 
 const variants = {

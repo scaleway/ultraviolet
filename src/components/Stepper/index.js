@@ -5,7 +5,7 @@ import { onKeyOnlyNumbers } from '../../helpers/keycode'
 import { parseIntOr } from '../../helpers/numbers'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 
 const bounded = (value, min, max) => Math.max(min, Math.min(value, max))

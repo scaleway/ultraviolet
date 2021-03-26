@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, icons } from '..'
+import Icon, { icons } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Icon', () => {

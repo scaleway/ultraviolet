@@ -10,7 +10,7 @@ import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 
 const styles = {
   select: css`

@@ -6,7 +6,7 @@ import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 
 const styles = {
