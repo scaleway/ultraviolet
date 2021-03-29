@@ -76,12 +76,38 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
+### No Label
+
+<Canvas>
+  <Story name="No Label" height="175px">
+    <Box m={2}>
+      <RichSelect name="label" noTopLabel>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story name="Required" height="175px">
+    <Box m={2}>
+      <RichSelect name="required" required>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
 ### Disabled
 
 <Canvas>
   <Story name="Disabled" height="100px">
     <Box m={2}>
-      <RichSelect name="disabled" disabled>
+      <RichSelect name="disabled" disabled value="a">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
@@ -94,24 +120,11 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Option Disabled" height="175px">
     <Box m={2}>
-      <RichSelect name="disabled">
+      <RichSelect name="option-disabled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b" disabled>
           Option B
         </RichSelect.Option>
-      </RichSelect>
-    </Box>
-  </Story>
-</Canvas>
-
-### Required
-
-<Canvas>
-  <Story name="Required" height="175px">
-    <Box m={2}>
-      <RichSelect name="required" required>
-        <RichSelect.Option value="11">11:00</RichSelect.Option>
-        <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>
     </Box>
   </Story>
@@ -250,7 +263,7 @@ of RichSelect with an external way (check example with button).
   </Story>
 </Canvas>
 
-### Exemple
+### Example
 
 <Canvas>
   <Story name="Exemple with custom LoadingIndicator" height="175px">

@@ -86,7 +86,13 @@ const getOptionColor = state => {
   return { backgroundColor, color }
 }
 
-const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
+const getSelectStyles = (
+  error,
+  customStyle,
+  animation,
+  animationDuration,
+  noTopLabel,
+) => ({
   control: (provided, state) => ({
     ...provided,
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
@@ -144,7 +150,7 @@ const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
   }),
   singleValue: (provided, state) => ({
     ...provided,
-    marginTop: !state.hasValue || state.isDisabled ? 0 : '8px',
+    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '8px',
     marginLeft: state.hasValue && 0,
     marginRight: state.hasValue && 0,
     paddingLeft: state.hasValue && 0,
@@ -578,6 +584,7 @@ function RichSelect({
         customStyle,
         isAnimated && animation,
         animationDuration,
+        noTopLabel,
       )}
       options={
         options ||
