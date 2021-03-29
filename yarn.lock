@@ -2888,9 +2888,9 @@
     pretty-format "^26.6.2"
 
 "@testing-library/jest-dom@^5.11.9":
-  version "5.11.9"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.9.tgz#e6b3cd687021f89f261bd53cbe367041fbd3e975"
-  integrity sha512-Mn2gnA9d1wStlAIT2NU8J15LNob0YFBVjs2aEQ3j8rsfRQo+lAs7/ui1i2TGaJjapLmuNPLTsrm+nPjmZDwpcQ==
+  version "5.11.10"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.10.tgz#1cd90715023e1627f5ed26ab3b38e6f22d77046c"
+  integrity sha512-FuKiq5xuk44Fqm0000Z9w0hjOdwZRNzgx7xGGxQYepWFZy+OYUMOT/wPI4nLYXCaVltNVpU1W/qmD88wLWDsqQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -3408,26 +3408,26 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xstyled/core@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-2.3.0.tgz#95a7c73f98370d0592a113fd54271e0bcf7b73f6"
-  integrity sha512-HSUyCfoIZvOZZRIjslTHe890zj787OhHV/vvsQ5w5/hREiPGZ6QA985I20fcqc9RCs55tXsb4mH85oizDJHfbQ==
+"@xstyled/core@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-2.4.1.tgz#52e1659159e9a21bfb7a6544c56278784c67e7ef"
+  integrity sha512-+lXEP7NSXJ6RqAIK0yfTikr9B9QRLCRED7nP/+seNIV2rRPfkezDHnPDFdKYU5vW28u1pXu2FVHWjF0rRbHFEQ==
   dependencies:
-    "@xstyled/system" "^2.3.0"
+    "@xstyled/system" "^2.4.0"
 
 "@xstyled/emotion@^2.2.2":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@xstyled/emotion/-/emotion-2.3.0.tgz#619c9537f0758c7a3ae43d87c931abd3fb55ec3a"
-  integrity sha512-sDEaKSbv+r49xZHhAc/W5i3v1jvWFBkIWMMKFHTeY51Mz9ebAvqJxGPGvBKrd4uJMw/OVJ42GsWkzF7psGoItA==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@xstyled/emotion/-/emotion-2.4.1.tgz#c1b79aa1e40bab0980a927551770454f3d43fa25"
+  integrity sha512-ZMRH2u0fMwLq+Enof+TB9RYCWnJ0ySSdnrUfrR+J1FZ6T6002WAyOtMW5Mag5nCbSmI/7h9Q9AKBZYLADz/v3w==
   dependencies:
-    "@xstyled/core" "^2.3.0"
-    "@xstyled/system" "^2.3.0"
+    "@xstyled/core" "^2.4.1"
+    "@xstyled/system" "^2.4.0"
     "@xstyled/util" "^2.2.3"
 
-"@xstyled/system@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-2.3.0.tgz#73e132e8b5b109ce3195bc2584711c867f93c3ea"
-  integrity sha512-URCiuYejlsHiv7QPrTSPpNQU6h3921UWNQFXxPb7hjDFWt1h7LCRgnVHlB7BwVPUifwA6xQe81UiuHNK0hnWjg==
+"@xstyled/system@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-2.4.0.tgz#2eef2fc6f7415a7bf14f4bf8f0baf7c516ca5a94"
+  integrity sha512-tc/Dd+AmMgk7AZW44SHBQ5QqTEeJfqIMcM+h8HnUFHBn7yc+yjOIUK2jX1hl8kk80qOcf30p9JRyWIKZSr1Q+g==
   dependencies:
     "@xstyled/util" "^2.2.3"
     csstype "^3.0.7"
@@ -14034,9 +14034,9 @@ rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.38.0:
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.43.1.tgz#9e5c9208c2011de227ac6c93101e11dc12e88e04"
-  integrity sha512-kvRE6VJbiv4d8m2nGeccc3qRpzOMghAhu2KeITjyZVCjneIFLPQ3zm2Wmqnl0LcUg3FvDaV0MfKnG4NCMbiSfw==
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.44.0.tgz#8da324d1c4fd12beef9ae6e12f4068265b6d95eb"
+  integrity sha512-rGSF4pLwvuaH/x4nAS+zP6UNn5YUDWf/TeEU5IoXSZKBbKRNTCI3qMnYXKZgrC0D2KzS2baiOZt1OlqhMu5rnQ==
   optionalDependencies:
     fsevents "~2.3.1"
 
