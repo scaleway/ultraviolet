@@ -1,5 +1,5 @@
 import React from 'react'
-import Reminder from '..'
+import { Reminder } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Reminder', () => {

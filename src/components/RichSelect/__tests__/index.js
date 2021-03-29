@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import RichSelect from '..'
+import { RichSelect } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 const customStyles = {
@@ -22,7 +22,7 @@ const customStyles = {
 describe('RichSelect', () => {
   test('renders correctly uncontrolled', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="uncontrolled">
+      <RichSelect inputId="test" labelId="test-label" name="uncontrolled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -32,7 +32,7 @@ describe('RichSelect', () => {
   test('renders correctly with custom styles', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="uncontrolled"
         customStyles={customStyles}
@@ -46,7 +46,7 @@ describe('RichSelect', () => {
   test('renders correctly controlled', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="controlled"
         value="test"
@@ -60,7 +60,7 @@ describe('RichSelect', () => {
 
   test('renders correctly disabled', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="disabled" disabled>
+      <RichSelect inputId="test" labelId="test-label" name="disabled" disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -69,7 +69,7 @@ describe('RichSelect', () => {
 
   test('renders correctly required', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="required" required>
+      <RichSelect inputId="test" labelId="test-label" name="required" required>
         <RichSelect.Option value="11">11:00</RichSelect.Option>
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>,
@@ -77,7 +77,7 @@ describe('RichSelect', () => {
   })
   test('renders correctly timed', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="time" time>
+      <RichSelect inputId="test" labelId="test-label" name="time" time>
         <RichSelect.Option value="11">11:00</RichSelect.Option>
         <RichSelect.Option value="12">12:00</RichSelect.Option>
       </RichSelect>,
@@ -86,7 +86,7 @@ describe('RichSelect', () => {
   test('renders correctly timed with error', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="time-error"
         time
@@ -100,7 +100,7 @@ describe('RichSelect', () => {
 
   test('renders correctly with click', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="test">
+      <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -115,7 +115,7 @@ describe('RichSelect', () => {
 
   test('renders correctly with click and option disabled', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="test">
+      <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
         <RichSelect.Option value="c" disabled>
@@ -133,7 +133,7 @@ describe('RichSelect', () => {
 
   test('renders correctly with click and options', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="test">
+      <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a" isFocused>
           Option A
         </RichSelect.Option>
@@ -154,7 +154,7 @@ describe('RichSelect', () => {
   })
   test('renders correctly disabled with click', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="test" disabled>
+      <RichSelect inputId="test" labelId="test-label" name="test" disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -168,7 +168,7 @@ describe('RichSelect', () => {
   })
   test('renders correctly default values with click', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="test" value="a">
+      <RichSelect inputId="test" labelId="test-label" name="test" value="a">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -184,7 +184,7 @@ describe('RichSelect', () => {
   test('renders correctly animated', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="animated"
         animationOnChange
@@ -200,7 +200,7 @@ describe('RichSelect', () => {
   })
   test('renders correctly multi', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="multi" isMulti>
+      <RichSelect inputId="test" labelId="test-label" name="multi" isMulti>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
         <RichSelect.Option value="c">Option C</RichSelect.Option>
@@ -213,7 +213,7 @@ describe('RichSelect', () => {
   test('renders correctly multi disabled', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="multi-disabled"
         value={{ value: 'a', label: 'Option A' }}
@@ -229,7 +229,7 @@ describe('RichSelect', () => {
   test('should render correctly multi isClearable', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="loading"
         value={{ value: 'a', label: 'Option A' }}
@@ -243,7 +243,7 @@ describe('RichSelect', () => {
   test('should render correctly multi isSearchable', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="loading"
         value={{ value: 'a', label: 'Option A' }}
@@ -257,7 +257,7 @@ describe('RichSelect', () => {
 
   test('should render correctly isLoading', () => {
     shouldMatchEmotionSnapshot(
-      <RichSelect id="test" labelId="test-label" name="loading" isLoading>
+      <RichSelect inputId="test" labelId="test-label" name="loading" isLoading>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
@@ -266,7 +266,7 @@ describe('RichSelect', () => {
   test('should render correctly custom isLoading', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
-        id="test"
+        inputId="test"
         labelId="test-label"
         name="test-loading"
         isLoading

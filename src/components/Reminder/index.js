@@ -1,22 +1,23 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
 const variants = {
   error: {
-    main: 'red',
-    background: 'pippin',
+    main: colors.red,
+    background: colors.pippin,
   },
   warning: {
-    main: 'orange',
-    background: 'serenade',
+    main: colors.orange,
+    background: colors.serenade,
   },
   info: {
-    main: 'blue',
-    background: 'zumthor',
+    main: colors.blue,
+    background: colors.zumthor,
   },
 }
 
@@ -29,38 +30,34 @@ const Notification = styled(Box, {
   cursor: pointer;
   border-radius: 14px;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.gray700};
+  color: ${colors.gray700};
   font-weight: 400;
 
   &:hover {
     text-decoration: none;
   }
 
-  ${({ variant, bordered, theme }) => `
+  ${({ variant, bordered }) => `
     background-color: ${
-      bordered
-        ? theme.colors.transparent
-        : theme.colors[variants[variant].background]
+      bordered ? colors.transparent : variants[variant].background
     };
-    border: 1px solid ${
-      bordered ? theme.colors.gray300 : theme.colors.transparent
-    };
+    border: 1px solid ${bordered ? colors.gray300 : colors.transparent};
     transition: all .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 3px 6px ${theme.colors[variants[variant].background]};
-      border: 1px solid ${theme.colors[variants[variant].main]};
+      box-shadow: 0 3px 6px ${variants[variant].background};
+      border: 1px solid ${variants[variant].main};
     }
   `}
 
   & strong {
-    ${({ variant, theme }) => `
-      color: ${theme.colors[variants[variant].main]};
+    ${({ variant }) => `
+      color: ${variants[variant].main};
     `}
   }
 `
 
-const Reminder = ({ text, variant, bordered, ...props }) => (
+export const Reminder = ({ text, variant, bordered, ...props }) => (
   <Notification
     as={props.to ? UniversalLink : 'a'}
     type={props.to ? null : 'button'}
@@ -94,5 +91,3 @@ Reminder.defaultProps = {
   bordered: false,
   to: undefined,
 }
-
-export default Reminder

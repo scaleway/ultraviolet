@@ -2,7 +2,7 @@
 
 exports[`Range should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -13,7 +13,7 @@ exports[`Range should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -26,15 +26,16 @@ exports[`Range should render correctly 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -44,7 +45,36 @@ exports[`Range should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.emotion-9 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -57,7 +87,7 @@ exports[`Range should render correctly 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-10 {
+.emotion-5 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -74,27 +104,27 @@ exports[`Range should render correctly 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       5 (max)
     </div>
     <span
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="transform: translate3d(-12.799999999999997px, 0, 0);"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-5"
         name="rangeInput-0"
         value="3"
       />
@@ -105,7 +135,7 @@ exports[`Range should render correctly 1`] = `
 
 exports[`Range should render correctly with input change 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -116,7 +146,7 @@ exports[`Range should render correctly with input change 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -129,15 +159,16 @@ exports[`Range should render correctly with input change 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -147,7 +178,36 @@ exports[`Range should render correctly with input change 1`] = `
   border-radius: 4px;
 }
 
-.emotion-9 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -160,7 +220,7 @@ exports[`Range should render correctly with input change 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-10 {
+.emotion-5 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -177,27 +237,27 @@ exports[`Range should render correctly with input change 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <span
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-5"
         name="test-0"
         value="5"
       />
@@ -208,7 +268,7 @@ exports[`Range should render correctly with input change 1`] = `
 
 exports[`Range should render correctly with min max 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -219,7 +279,7 @@ exports[`Range should render correctly with min max 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -232,15 +292,16 @@ exports[`Range should render correctly with min max 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -250,7 +311,36 @@ exports[`Range should render correctly with min max 1`] = `
   border-radius: 4px;
 }
 
-.emotion-8 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 16px;
   height: 4px;
@@ -263,7 +353,7 @@ exports[`Range should render correctly with min max 1`] = `
   user-select: none;
 }
 
-.emotion-11 {
+.emotion-5 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -276,7 +366,7 @@ exports[`Range should render correctly with min max 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -293,41 +383,41 @@ exports[`Range should render correctly with min max 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="width: -12px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-8px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-1"
         value="10"
       />
@@ -338,7 +428,7 @@ exports[`Range should render correctly with min max 1`] = `
 
 exports[`Range should render correctly with min max 2`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -349,7 +439,7 @@ exports[`Range should render correctly with min max 2`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -362,15 +452,16 @@ exports[`Range should render correctly with min max 2`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -380,7 +471,36 @@ exports[`Range should render correctly with min max 2`] = `
   border-radius: 4px;
 }
 
-.emotion-9 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -393,7 +513,7 @@ exports[`Range should render correctly with min max 2`] = `
   margin-bottom: 16px;
 }
 
-.emotion-10 {
+.emotion-5 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -410,27 +530,27 @@ exports[`Range should render correctly with min max 2`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <span
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-5"
         name="rangeInput-0"
         value="5"
       />
@@ -441,7 +561,7 @@ exports[`Range should render correctly with min max 2`] = `
 
 exports[`Range should render correctly with min max and out of range value 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -452,7 +572,7 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -465,15 +585,16 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -483,7 +604,36 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   border-radius: 4px;
 }
 
-.emotion-8 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 16px;
   height: 4px;
@@ -496,7 +646,7 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   user-select: none;
 }
 
-.emotion-11 {
+.emotion-5 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -509,7 +659,7 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   margin-bottom: 16px;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -526,41 +676,41 @@ exports[`Range should render correctly with min max and out of range value 1`] =
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="width: -60px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-56px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-1"
         value="30"
       />
@@ -571,7 +721,7 @@ exports[`Range should render correctly with min max and out of range value 1`] =
 
 exports[`Range should render correctly with min max and out of range value 2`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -582,7 +732,7 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -595,15 +745,16 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -613,7 +764,36 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   border-radius: 4px;
 }
 
-.emotion-9 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -626,7 +806,7 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   margin-bottom: 16px;
 }
 
-.emotion-10 {
+.emotion-5 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -643,27 +823,27 @@ exports[`Range should render correctly with min max and out of range value 2`] =
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       10 (max)
     </div>
     <span
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="transform: translate3d(-56px, 0, 0);"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-5"
         name="rangeInput-0"
         value="15"
       />
@@ -674,7 +854,7 @@ exports[`Range should render correctly with min max and out of range value 2`] =
 
 exports[`Range should render correctly with one value 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -685,7 +865,7 @@ exports[`Range should render correctly with one value 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -698,15 +878,16 @@ exports[`Range should render correctly with one value 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -716,7 +897,36 @@ exports[`Range should render correctly with one value 1`] = `
   border-radius: 4px;
 }
 
-.emotion-9 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -729,7 +939,7 @@ exports[`Range should render correctly with one value 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-10 {
+.emotion-5 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -746,27 +956,27 @@ exports[`Range should render correctly with one value 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       5 (max)
     </div>
     <span
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="transform: translate3d(-32px, 0, 0);"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-5"
         name="rangeInput-0"
         value="5"
       />
@@ -777,7 +987,7 @@ exports[`Range should render correctly with one value 1`] = `
 
 exports[`Range should render correctly with props 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -788,7 +998,7 @@ exports[`Range should render correctly with props 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -801,15 +1011,16 @@ exports[`Range should render correctly with props 1`] = `
   top: 120px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 128px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -819,7 +1030,36 @@ exports[`Range should render correctly with props 1`] = `
   border-radius: 4px;
 }
 
-.emotion-8 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 128px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 120px;
   height: 4px;
@@ -832,7 +1072,7 @@ exports[`Range should render correctly with props 1`] = `
   user-select: none;
 }
 
-.emotion-11 {
+.emotion-5 {
   position: absolute;
   top: 114px;
   height: 16px;
@@ -845,7 +1085,7 @@ exports[`Range should render correctly with props 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -862,41 +1102,41 @@ exports[`Range should render correctly with props 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="width: -225px; transform: translate3d(45px, 0, 0);"
     />
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(25px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="test-0"
         value="5"
       />
     </span>
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-200px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="test-1"
         value="30"
       />
@@ -907,7 +1147,7 @@ exports[`Range should render correctly with props 1`] = `
 
 exports[`Range should render correctly with two values 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -918,7 +1158,7 @@ exports[`Range should render correctly with two values 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -931,15 +1171,16 @@ exports[`Range should render correctly with two values 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -949,7 +1190,36 @@ exports[`Range should render correctly with two values 1`] = `
   border-radius: 4px;
 }
 
-.emotion-8 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 16px;
   height: 4px;
@@ -962,7 +1232,7 @@ exports[`Range should render correctly with two values 1`] = `
   user-select: none;
 }
 
-.emotion-11 {
+.emotion-5 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -975,7 +1245,7 @@ exports[`Range should render correctly with two values 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -992,41 +1262,41 @@ exports[`Range should render correctly with two values 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       5 (max)
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="width: -48px; transform: translate3d(-24px, 0, 0);"
     />
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-32px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-80px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="rangeInput-1"
         value="10"
       />
@@ -1037,7 +1307,7 @@ exports[`Range should render correctly with two values 1`] = `
 
 exports[`Range should render correctly with two values input change 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-0 {
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -1048,7 +1318,7 @@ exports[`Range should render correctly with two values input change 1`] = `
   user-select: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: absolute;
   height: 4px;
   width: 100%;
@@ -1061,15 +1331,16 @@ exports[`Range should render correctly with two values input change 1`] = `
   top: 16px;
 }
 
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.emotion-5::before {
+.emotion-2::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -1079,7 +1350,36 @@ exports[`Range should render correctly with two values input change 1`] = `
   border-radius: 4px;
 }
 
-.emotion-8 {
+.emotion-2::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-3 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-3::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-3::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-4 {
   position: absolute;
   top: 16px;
   height: 4px;
@@ -1092,7 +1392,7 @@ exports[`Range should render correctly with two values input change 1`] = `
   user-select: none;
 }
 
-.emotion-11 {
+.emotion-5 {
   position: absolute;
   top: 10px;
   height: 16px;
@@ -1105,7 +1405,7 @@ exports[`Range should render correctly with two values input change 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   color: #151a2d;
   background-color: #fff;
@@ -1122,41 +1422,41 @@ exports[`Range should render correctly with two values input change 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     />
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-2"
     >
       0 (min)
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3"
     >
       20 (max)
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-4"
       style="width: -12px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="test-0"
         value="5"
       />
     </span>
     <span
-      class="emotion-10 emotion-11"
+      class="emotion-5"
       style="transform: translate3d(-8px, 0, 0);"
     >
       <input
-        class="emotion-12 emotion-13"
+        class="emotion-6"
         name="test-1"
         value="10"
       />

@@ -1,86 +1,121 @@
-import { css, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useMemo, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
 import { isJSONString } from '../../helpers/isJSON'
+import { colors } from '../../theme'
 import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import Icon from '../Icon'
 
-const getControlColor = ({ state, error, theme }) => {
-  if (state.isDisabled) return theme.colors.gray300
-  if (error) return theme.colors.warning
-
-  return theme.colors.gray700
+const styles = {
+  select: css`
+    width: 100%;
+  `,
+  scaled: css`
+    transform: translate(0, -8px) scale(0.8);
+    transform-origin: left;
+    padding-left: 8px;
+    left: 0;
+    top: 0;
+    opacity: 1;
+  `,
+  placeholder: css`
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 400;
+    pointer-events: none;
+    color: ${colors.gray550};
+    white-space: nowrap;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    transition: transform 250ms ease;
+    opacity: 0;
+  `,
+  error: css`
+    color: ${colors.warning};
+  `,
+  pointerEvents: css`
+    pointer-events: initial;
+  `,
+  disabledCursor: css`
+    cursor: not-allowed;
+  `,
+  input: css`
+    input {
+      position: absolute;
+      top: 50%;
+    }
+  `,
 }
 
-const getPlaceholderColor = ({ state, error, theme }) => {
-  if (state.isDisabled) return theme.colors.gray300
-  if (error) return theme.colors.warning
+const getControlColor = (state, error) => {
+  if (state.isDisabled) return colors.gray300
+  if (error) return colors.warning
 
-  return theme.colors.gray550
+  return colors.gray700
 }
 
-const getOptionColor = ({ state, theme }) => {
-  let color = theme.colors.gray700
-  let backgroundColor = theme.colors.white
+const getPlaceholderColor = (state, error) => {
+  if (state.isDisabled) return colors.gray300
+  if (error) return colors.warning
+
+  return colors.gray550
+}
+
+const getOptionColor = state => {
+  let color = colors.gray700
+  let backgroundColor = colors.white
 
   if (state.isDisabled) {
-    backgroundColor = theme.colors.gray50
-    color = theme.colors.gray300
+    backgroundColor = colors.gray50
+    color = colors.gray300
   } else if (state.isSelected) {
-    backgroundColor = theme.colors.primary
-    color = theme.colors.white
+    backgroundColor = colors.primary
+    color = colors.white
   } else if (state.isFocused) {
-    backgroundColor = theme.colors.gray200
+    backgroundColor = colors.gray200
   }
 
   return { backgroundColor, color }
 }
 
-const getSelectStyles = ({
-  error,
-  customStyle,
-  animation,
-  animationDuration,
-  theme,
-}) => ({
+const getSelectStyles = (error, customStyle, animation, animationDuration) => ({
   control: (provided, state) => ({
     ...provided,
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
     borderStyle: state.isDisabled ? 'none' : 'solid',
     borderWidth: state.isDisabled ? 0 : '1px',
-    backgroundColor: state.isDisabled
-      ? theme.colors.gray50
-      : theme.colors.white,
-    color: getControlColor({ state, error, theme }),
+    backgroundColor: state.isDisabled ? colors.gray50 : colors.white,
+    color: getControlColor(state, error),
     minHeight: '48px',
     fontWeight: 500,
     fontSize: '16px',
     lineHeight: '24px',
     borderRadius: '4px',
     boxShadow: 'none',
-    borderColor: error ? theme.colors.warning : theme.colors.gray300,
+    borderColor: error ? colors.warning : colors.gray300,
     ...(!state.isDisabled && {
       ':hover': {
-        borderColor: error ? theme.colors.warning : theme.colors.primary,
+        borderColor: error ? colors.warning : colors.primary,
         svg: {
-          fill: error ? theme.colors.warning : theme.colors.primary,
+          fill: error ? colors.warning : colors.primary,
         },
       },
       ':focus-within': {
-        borderColor: error ? theme.colors.warning : theme.colors.primary,
+        borderColor: error ? colors.warning : colors.primary,
         boxShadow: `0 0 2px 2px ${transparentize(
           0.75,
-          error ? theme.colors.warning : theme.colors.primary,
+          error ? colors.warning : colors.primary,
         )}`,
         svg: {
-          fill: error ? theme.colors.warning : theme.colors.primary,
+          fill: error ? colors.warning : colors.primary,
         },
       },
     }),
@@ -92,7 +127,6 @@ const getSelectStyles = ({
   valueContainer: (provided, state) => ({
     ...provided,
     ...((customStyle(state) || {}).valueContainer || {}),
-    cursor: state.isDisabled ? 'not-allowed' : undefined,
   }),
   menu: (provided, state) => ({
     ...provided,
@@ -114,13 +148,13 @@ const getSelectStyles = ({
     marginLeft: state.hasValue && 0,
     marginRight: state.hasValue && 0,
     paddingLeft: state.hasValue && 0,
-    color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
+    color: state.isDisabled ? colors.gray550 : colors.gray700,
     ...((customStyle(state) || {}).singleValue || {}),
   }),
   multiValue: (provided, state) => ({
     ...provided,
-    color: theme.colors.gray700,
-    backgroundColor: theme.colors.gray100,
+    color: colors.gray700,
+    backgroundColor: colors.gray100,
     fontWeight: 500,
     fontSize: '14px',
     borderRadius: '4px',
@@ -132,7 +166,7 @@ const getSelectStyles = ({
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
-    color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
+    color: state.isDisabled ? colors.gray300 : colors.gray700,
     fontSize: '14px',
     lineHeight: '20px',
     fontWeight: 'normal',
@@ -144,37 +178,33 @@ const getSelectStyles = ({
       ? {
           pointerEvents: 'none',
           cursor: 'none',
-          color: theme.colors.gray300,
+          color: colors.gray300,
         }
       : {
-          color: theme.colors.gray550,
+          color: colors.gray550,
         }),
     ':hover': {
       pointerEvents: state.isDisabled ? 'none' : 'fill',
       cursor: state.isDisabled ? 'none' : 'pointer',
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.primary,
+      color: state.isDisabled ? colors.gray300 : colors.primary,
     },
     ...((customStyle(state) || {}).multiValueRemove || {}),
   }),
   placeholder: (provided, state) => ({
     ...provided,
-    color: getPlaceholderColor({ state, error, theme }),
+    color: getPlaceholderColor(state, error),
     ...((customStyle(state) || {}).placeholder || {}),
   }),
   option: (provided, state) => ({
     ...provided,
-    ...getOptionColor({ state, theme }),
+    ...getOptionColor(state),
     ':active': {
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
-      backgroundColor: state.isDisabled
-        ? theme.colors.gray50
-        : theme.colors.gray200,
+      color: state.isDisabled ? colors.gray300 : colors.gray700,
+      backgroundColor: state.isDisabled ? colors.gray50 : colors.gray200,
     },
     ':hover': {
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
-      backgroundColor: state.isDisabled
-        ? theme.colors.gray50
-        : theme.colors.gray200,
+      color: state.isDisabled ? colors.gray300 : colors.gray700,
+      backgroundColor: state.isDisabled ? colors.gray50 : colors.gray200,
     },
     ...((customStyle(state) || {}).option || {}),
   }),
@@ -184,19 +214,11 @@ const getSelectStyles = ({
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colors.gray200,
+    backgroundColor: colors.gray200,
     display: state.selectProps.time ? 'flex' : 'none',
     ...((customStyle(state) || {}).indicatorSeparator || {}),
   }),
 })
-
-const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['isDisabled', 'additionalStyles'].includes(prop),
-})`
-  width: 100%;
-  ${({ isDisabled }) => isDisabled && `pointer-events: initial;`};
-  ${({ additionalStyles }) => css(additionalStyles)}
-`
 
 const SelectContainer = props => {
   const {
@@ -226,10 +248,12 @@ const SelectContainer = props => {
   } = props
 
   return (
-    <StyledContainer
+    <Box
       data-testid={`rich-select-${props.selectProps.name}`}
-      additionalStyles={getStyles('container', props)}
-      isDisabled={isDisabled}
+      css={[
+        css(getStyles('container', props)),
+        isDisabled && styles.pointerEvents,
+      ]}
       className={className}
       {...innerProps}
       {...{
@@ -251,12 +275,12 @@ const SelectContainer = props => {
       }}
     >
       {children}
-      <Expandable height={56} overflow="hidden" opened={!!error}>
+      <Expandable height={56} overflow="hidden" opened={Boolean(error)}>
         <Box fontSize={12} color="warning" pt="2px">
           {error}
         </Box>
       </Expandable>
-    </StyledContainer>
+    </Box>
   )
 }
 
@@ -296,60 +320,36 @@ SelectContainer.propTypes = {
   className: PropTypes.string,
 }
 
-const StyledPlaceholder = styled(Box, {
-  shouldForwardProp: prop => !['error', 'scaled'].includes(prop),
-})`
-  position: absolute;
-  left: 0;
-  top: 6px;
-  font-weight: 400;
-  pointer-events: none;
-  color: ${({ theme }) => theme.colors.gray550};
-  white-space: nowrap;
-  width: 100%;
-  height: 48px;
-  font-size: 16px;
-  transition: transform 250ms ease;
-  opacity: 0;
-
-  ${({ error, theme }) => error && `color: ${theme.colors.warning};`}
-  ${({ scaled }) =>
-    scaled &&
-    `
-    transform: translate(0, -8px) scale(0.8);
-    transform-origin: left;
-    padding-left: 8px;
-    left: 0;
-    top: 0;
-    opacity: 1;
-  `}
-`
-
 const ValueContainer = ({
   noTopLabel,
   labelId,
   inputId,
-  isDisabled,
   error,
   children,
   ...props
 }) => (
-  <components.ValueContainer isDisabled={isDisabled} {...props}>
+  <components.ValueContainer
+    {...props}
+    css={props.isDisabled && styles.disabledCursor}
+  >
     <>
-      {!isDisabled &&
+      {!props.isDisabled &&
         props.selectProps.placeholder &&
         !noTopLabel &&
         !props.isMulti && (
-          <StyledPlaceholder
+          <Box
             as="label"
             id={labelId}
             htmlFor={inputId}
             aria-live="assertive"
-            error={error}
-            scaled={props.hasValue && !props.isMulti}
+            css={[
+              styles.placeholder,
+              error && styles.error,
+              props.hasValue && !props.isMulti && styles.scaled,
+            ]}
           >
             {props.selectProps.placeholder}
-          </StyledPlaceholder>
+          </Box>
         )}
       {children}
     </>
@@ -379,36 +379,17 @@ ValueContainer.propTypes = {
   hasValue: PropTypes.bool,
 }
 
-const inputStyles = css`
-  input {
-    position: absolute;
-    top: 50%;
-  }
-`
-
-const Input = ({ inputId, labelId, isMulti, ...props }) => (
+const Input = ({ inputId, labelId, isMulti }) => props => (
   <components.Input
     {...props}
-    css={inputStyles}
     style={{
       caretColor: !isMulti && 'transparent',
     }}
+    css={styles.input}
     id={inputId}
     aria-controls={labelId}
   />
 )
-
-Input.propTypes = {
-  inputId: PropTypes.string,
-  labelId: PropTypes.string,
-  isMulti: PropTypes.bool,
-}
-
-Input.defaultProps = {
-  inputId: undefined,
-  labelId: undefined,
-  isMulti: false,
-}
 
 const Option = props => (
   <div
@@ -460,7 +441,7 @@ const DropdownIndicator = ({
 }
 
 DropdownIndicator.propTypes = {
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.bool,
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
 }
@@ -506,7 +487,7 @@ ClearIndicator.defaultProps = {
 }
 
 ClearIndicator.propTypes = {
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.string,
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
   innerProps: PropTypes.shape({
@@ -531,9 +512,11 @@ function RichSelect({
   className,
   disabled,
   error,
+  inputId: inputIdProp,
   isMulti,
   isSearchable,
   isClearable,
+  labelId: labelIdProp,
   menuPortalTarget,
   noTopLabel,
   onChange,
@@ -549,9 +532,8 @@ function RichSelect({
   customComponents,
   ...props
 }) {
-  const { id: inputId, labelId } = props
-  const theme = useTheme()
-
+  const inputId = inputIdProp || getUUID('input')
+  const labelId = labelIdProp || getUUID('label')
   const [isAnimated, setIsAnimated] = useState(false)
 
   useEffect(() => {
@@ -564,6 +546,7 @@ function RichSelect({
   return (
     <Select
       ref={innerRef}
+      css={styles.select}
       components={{
         SelectContainer,
         ValueContainer: valueContainerProps => (
@@ -575,14 +558,7 @@ function RichSelect({
           />
         ),
         Option,
-        Input: inputProps => (
-          <Input
-            inputId={inputId}
-            labelId={labelId}
-            isMulti={isMulti}
-            {...inputProps}
-          />
-        ),
+        Input: Input({ inputId, labelId, isMulti }),
         DropdownIndicator: dropDownIndicatorProps => (
           <DropdownIndicator error={error} {...dropDownIndicatorProps} />
         ),
@@ -598,15 +574,12 @@ function RichSelect({
       className={className}
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => option.disabled}
-      styles={{
-        ...getSelectStyles({
-          error,
-          customStyle,
-          animation: isAnimated && animation,
-          animationDuration,
-          theme,
-        }),
-      }}
+      styles={getSelectStyles(
+        error,
+        customStyle,
+        isAnimated && animation,
+        animationDuration,
+      )}
       options={
         options ||
         flattenChildren(children).map(
@@ -640,11 +613,11 @@ RichSelectWithRef.defaultProps = {
   className: undefined,
   disabled: false,
   error: false,
-  id: getUUID('input'),
+  inputId: undefined,
   isMulti: false,
   isSearchable: true,
   isClearable: false,
-  labelId: getUUID('label'),
+  labelId: undefined,
   noTopLabel: false,
   onChange: null,
   placeholder: undefined,
@@ -659,18 +632,6 @@ RichSelectWithRef.defaultProps = {
 }
 
 RichSelectWithRef.propTypes = {
-  customComponents: PropTypes.shape({}),
-  name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  disabled: PropTypes.bool,
-  required: PropTypes.bool,
-  readOnly: PropTypes.bool,
-  noTopLabel: PropTypes.bool,
-  onChange: PropTypes.func,
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  className: PropTypes.string,
-  customStyle: PropTypes.func,
   animation: PropTypes.oneOf(Object.keys(animations)),
   animationOnChange: PropTypes.bool,
   animationDuration: PropTypes.number,
@@ -678,13 +639,25 @@ RichSelectWithRef.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  id: PropTypes.string,
+  className: PropTypes.string,
+  customStyle: PropTypes.func,
+  customComponents: PropTypes.shape({}),
+  disabled: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  inputId: PropTypes.string,
+  isClearable: PropTypes.bool,
   isMulti: PropTypes.bool,
   isSearchable: PropTypes.bool,
-  isClearable: PropTypes.bool,
   labelId: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  noTopLabel: PropTypes.bool,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 RichSelect.defaultProps = RichSelectWithRef.defaultProps
 RichSelect.propTypes = RichSelectWithRef.propTypes
 
-export default RichSelectWithRef
+export { RichSelectWithRef as RichSelect }

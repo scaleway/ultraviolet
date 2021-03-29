@@ -4,6 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio as ReakitRadio } from 'reakit'
+import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 
@@ -19,20 +20,20 @@ const IconContainer = styled(Box)`
   margin-right: 8px;
 `
 
-const disabledClass = ({ theme }) => css`
-  color: ${theme.colors.gray300};
+const disabledClass = () => css`
+  color: ${colors.gray300};
   cursor: not-allowed;
 `
 
-const activeFocusClass = ({ theme }) => css`
+const activeFocusClass = () => css`
   :hover,
   :focus {
     ${IconContainer} {
-      background-color: ${transparentize(0.75, theme.colors.gray300)};
+      background-color: ${transparentize(0.75, colors.gray300)};
       border-radius: 50%;
 
       > ${StyledIcon} {
-        fill: ${theme.colors.primary};
+        fill: ${colors.primary};
       }
     }
   }
@@ -58,7 +59,6 @@ const StyledRadio = styled(ReakitRadio)`
 `
 
 const Radio = ({
-  defaultChecked,
   checked,
   onChange,
   onFocus,
@@ -94,31 +94,28 @@ const Radio = ({
       value={value}
       disabled={disabled}
       name={name}
-      defaultChecked={defaultChecked}
     />
   </StyledBox>
 )
 
 Radio.propTypes = {
-  checked: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  defaultChecked: PropTypes.bool,
-  disabled: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  onBlur: PropTypes.func,
   onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  size: PropTypes.number,
+  children: PropTypes.node.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  size: PropTypes.number,
 }
 
 Radio.defaultProps = {
-  checked: undefined,
-  defaultChecked: undefined,
-  disabled: false,
-  onBlur: null,
-  onFocus: null,
   size: 24,
+  disabled: false,
+  checked: false,
+  onFocus: null,
+  onBlur: null,
 }
 
 export default Radio
