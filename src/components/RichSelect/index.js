@@ -461,7 +461,7 @@ const DropdownIndicator = ({
 }
 
 DropdownIndicator.propTypes = {
-  error: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
 }
@@ -507,7 +507,7 @@ ClearIndicator.defaultProps = {
 }
 
 ClearIndicator.propTypes = {
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
   innerProps: PropTypes.shape({

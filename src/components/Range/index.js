@@ -299,7 +299,6 @@ const Range = ({
     ev => {
       if (ev.target.tagName === 'INPUT') return
       const cursor = cursorsRef[grabbedCursor].current
-
       if (cursor) {
         const { x } = container.current.getBoundingClientRect()
 

@@ -48,8 +48,7 @@ const StyledBox = styled(Box)`
   height: 32px;
   cursor: pointer;
 
-  ${({ disabled }) => disabled && disabledClass}
-  ${({ disabled }) => !disabled && activeFocusClass}
+  ${({ disabled }) => (disabled ? disabledClass : activeFocusClass)}
 `
 
 const StyledRadio = styled(ReakitRadio)`
