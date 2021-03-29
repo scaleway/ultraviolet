@@ -1,0 +1,98 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { colors } from '../../../theme'
+import ProgressCircle from '../index'
+
+<Meta title="Components/ProgressCircle" component={ProgressCircle} />
+
+# Progress Circle
+
+## Basic
+
+<Canvas>
+  <Story name="Basic">
+    <ProgressCircle percentage={75} />
+  </Story>
+</Canvas>
+
+## Percentage
+
+<Canvas>
+  <Story name="Percentage">
+    {[8, 32, 50, 75, 90, 100].map(percentage => (
+      <ProgressCircle
+        key={percentage}
+        percentage={percentage}
+        display="inline-flex"
+        mr={1}
+      />
+    ))}
+  </Story>
+</Canvas>
+
+## Path Color
+
+<Canvas>
+  <Story name="Path Color">
+    {Object.keys(colors).map(color => (
+      <ProgressCircle
+        key={color}
+        pathColor={color}
+        percentage={75}
+        display="inline-flex"
+        mr={1}
+      />
+    ))}
+  </Story>
+</Canvas>
+
+## Trail Color
+
+<Canvas>
+  <Story name="Trail Color">
+    {['white', 'gray300', 'gray550', 'zumthor', 'shadow', 'beta', 'gold'].map(
+      color => (
+        <ProgressCircle
+          key={color}
+          trailColor={color}
+          percentage={75}
+          display="inline-flex"
+          mr={1}
+        />
+      ),
+    )}
+  </Story>
+</Canvas>
+
+## Stroke Width
+
+<Canvas>
+  <Story name="Stroke Width">
+    {[8, 16, 24, 32, 40, 100].map(size => (
+      <ProgressCircle
+        key={size}
+        percentage={75}
+        strokeWidth={size}
+        display="inline-flex"
+        mr={1}
+      />
+    ))}
+  </Story>
+</Canvas>
+
+## Text
+
+<Canvas>
+  <Story name="Text">
+    {[8, 32, 50, 75, 90, 100].map(percentage => (
+      <ProgressCircle
+        key={percentage}
+        percentage={percentage}
+        text={`${percentage}%`}
+        display="inline-flex"
+        mr={1}
+      />
+    ))}
+  </Story>
+</Canvas>
+
+<ArgsTable of={ProgressCircle} />
