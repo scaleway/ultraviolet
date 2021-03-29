@@ -299,7 +299,6 @@ const Range = ({
     ev => {
       if (ev.target.tagName === 'INPUT') return
       const cursor = cursorsRef[grabbedCursor].current
-
       if (cursor) {
         const { x } = container.current.getBoundingClientRect()
 
@@ -437,7 +436,7 @@ const Range = ({
           onMouseDown={() => onMouseDown(index)}
         >
           <Input
-            name={name}
+            name={`${name}-${index}`}
             value={values[index] === -1 ? '' : value}
             onChange={ev => handleInputChange(ev, index)}
             onKeyPress={ev => handleInputKeyPress(ev, index)}

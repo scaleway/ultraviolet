@@ -460,7 +460,7 @@ const DropdownIndicator = ({
 }
 
 DropdownIndicator.propTypes = {
-  error: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
 }
@@ -506,7 +506,7 @@ ClearIndicator.defaultProps = {
 }
 
 ClearIndicator.propTypes = {
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
   innerProps: PropTypes.shape({
@@ -549,8 +549,7 @@ function RichSelect({
   customComponents,
   ...props
 }) {
-  const labelId = getUUID('label')
-  const inputId = getUUID('input')
+  const { id: inputId, labelId } = props
   const theme = useTheme()
 
   const [isAnimated, setIsAnimated] = useState(false)
@@ -641,9 +640,11 @@ RichSelectWithRef.defaultProps = {
   className: undefined,
   disabled: false,
   error: false,
+  id: getUUID('input'),
   isMulti: false,
   isSearchable: true,
   isClearable: false,
+  labelId: getUUID('label'),
   noTopLabel: false,
   onChange: null,
   placeholder: undefined,
@@ -677,9 +678,11 @@ RichSelectWithRef.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  id: PropTypes.string,
   isMulti: PropTypes.bool,
   isSearchable: PropTypes.bool,
   isClearable: PropTypes.bool,
+  labelId: PropTypes.string,
 }
 RichSelect.defaultProps = RichSelectWithRef.defaultProps
 RichSelect.propTypes = RichSelectWithRef.propTypes

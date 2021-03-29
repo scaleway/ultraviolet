@@ -1,0 +1,1166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range should render correctly 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-10 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      5 (max)
+    </div>
+    <span
+      class="emotion-8 emotion-9"
+      style="transform: translate3d(-12.799999999999997px, 0, 0);"
+    >
+      <input
+        class="emotion-10 emotion-11"
+        name="rangeInput-0"
+        value="3"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with input change 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-10 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <span
+      class="emotion-8 emotion-9"
+      style="transform: translate3d(4px, 0, 0);"
+    >
+      <input
+        class="emotion-10 emotion-11"
+        name="test-0"
+        value="5"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with min max 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 16px;
+  height: 4px;
+  width: 100%;
+  background-color: #4f0599;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-12 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+      style="width: -12px; transform: translate3d(12px, 0, 0);"
+    />
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(4px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-0"
+        value="5"
+      />
+    </span>
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-8px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-1"
+        value="10"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with min max 2`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-10 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <span
+      class="emotion-8 emotion-9"
+      style="transform: translate3d(4px, 0, 0);"
+    >
+      <input
+        class="emotion-10 emotion-11"
+        name="rangeInput-0"
+        value="5"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with min max and out of range value 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 16px;
+  height: 4px;
+  width: 100%;
+  background-color: #4f0599;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-12 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+      style="width: -60px; transform: translate3d(12px, 0, 0);"
+    />
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(4px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-0"
+        value="5"
+      />
+    </span>
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-56px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-1"
+        value="30"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with min max and out of range value 2`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-10 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      10 (max)
+    </div>
+    <span
+      class="emotion-8 emotion-9"
+      style="transform: translate3d(-56px, 0, 0);"
+    >
+      <input
+        class="emotion-10 emotion-11"
+        name="rangeInput-0"
+        value="15"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with one value 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-10 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      5 (max)
+    </div>
+    <span
+      class="emotion-8 emotion-9"
+      style="transform: translate3d(-32px, 0, 0);"
+    >
+      <input
+        class="emotion-10 emotion-11"
+        name="rangeInput-0"
+        value="5"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with props 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 120px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 128px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 120px;
+  height: 4px;
+  width: 100%;
+  background-color: #4f0599;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 114px;
+  height: 16px;
+  width: 45px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-12 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+      style="width: -225px; transform: translate3d(45px, 0, 0);"
+    />
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(25px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="test-0"
+        value="5"
+      />
+    </span>
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-200px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="test-1"
+        value="30"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with two values 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 16px;
+  height: 4px;
+  width: 100%;
+  background-color: #4f0599;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-12 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      5 (max)
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+      style="width: -48px; transform: translate3d(-24px, 0, 0);"
+    />
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-32px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-0"
+        value="5"
+      />
+    </span>
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-80px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="rangeInput-1"
+        value="10"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Range should render correctly with two values input change 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e4edff;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 16px;
+}
+
+.emotion-5 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+}
+
+.emotion-5::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 16px;
+  height: 4px;
+  width: 100%;
+  background-color: #4f0599;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 10px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid #4f0599;
+  background-color: white;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-bottom: 16px;
+}
+
+.emotion-12 {
+  position: absolute;
+  color: #151a2d;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #4f0599;
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      0 (min)
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      20 (max)
+    </div>
+    <div
+      class="emotion-8 emotion-9"
+      style="width: -12px; transform: translate3d(12px, 0, 0);"
+    />
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(4px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="test-0"
+        value="5"
+      />
+    </span>
+    <span
+      class="emotion-10 emotion-11"
+      style="transform: translate3d(-8px, 0, 0);"
+    >
+      <input
+        class="emotion-12 emotion-13"
+        name="test-1"
+        value="10"
+      />
+    </span>
+  </div>
+</DocumentFragment>
+`;
