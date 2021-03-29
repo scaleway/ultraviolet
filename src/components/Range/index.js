@@ -430,7 +430,7 @@ const Range = ({
           onMouseDown={() => onMouseDown(index)}
         >
           <Input
-            name={name}
+            name={`${name}-${index}`}
             value={values[index] === -1 ? '' : value}
             onChange={ev => handleInputChange(ev, index)}
             onKeyPress={ev => handleInputKeyPress(ev, index)}

@@ -13,13 +13,8 @@ import React, {
 } from 'react'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
-<<<<<<< HEAD
-import { Icon } from '../Icon'
-import Notice from '../Notice'
-=======
 import Icon from '../Icon'
-import { Notice } from '../Notice'
->>>>>>> refactor: migrate colors from theme in icon (#160)
+import Notice from '../Notice'
 import { Separator } from '../Separator'
 import { Touchable } from '../Touchable'
 import { Typography } from '../Typography'

@@ -15,7 +15,7 @@ exports[`Notice renders correctly with default props 1`] = `
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   fill: currentColor;
   height: 20px;
   width: 20px;
@@ -23,11 +23,8 @@ exports[`Notice renders correctly with default props 1`] = `
   min-height: 20px;
 }
 
-.emotion-2.emotion-2 {
-<<<<<<< HEAD
-=======
+.emotion-3.emotion-3 {
   vertical-align: top;
->>>>>>> refactor: migrate colors from theme in icon (#160)
   margin-right: 8px;
 }
 
@@ -35,11 +32,7 @@ exports[`Notice renders correctly with default props 1`] = `
     class="emotion-0 emotion-1"
   >
     <svg
-<<<<<<< HEAD
-      class="sc-ui-icon emotion-2"
-=======
-      class="sc-ui-icon emotion-1 emotion-2"
->>>>>>> refactor: migrate colors from theme in icon (#160)
+      class="sc-ui-icon emotion-2 emotion-3"
       viewBox="0 0 24 24"
     >
       <path
@@ -47,13 +40,13 @@ exports[`Notice renders correctly with default props 1`] = `
       />
     </svg>
     <div
-      class="emotion-3"
+      class="emotion-4"
     >
       <p
-        class="emotion-4"
+        class="emotion-5"
       >
         <span
-          class="emotion-4"
+          class="emotion-5"
         >
           Hello
         </span>

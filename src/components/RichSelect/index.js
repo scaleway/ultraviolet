@@ -518,9 +518,11 @@ function RichSelect({
   className,
   disabled,
   error,
+  inputId: inputIdProp,
   isMulti,
   isSearchable,
   isClearable,
+  labelId: labelIdProp,
   menuPortalTarget,
   noTopLabel,
   onChange,
@@ -536,9 +538,8 @@ function RichSelect({
   customComponents,
   ...props
 }) {
-  const labelId = getUUID('label')
-  const inputId = getUUID('input')
-
+  const inputId = inputIdProp || getUUID('input')
+  const labelId = labelIdProp || getUUID('label')
   const [isAnimated, setIsAnimated] = useState(false)
 
   useEffect(() => {
@@ -619,9 +620,11 @@ RichSelectWithRef.defaultProps = {
   className: undefined,
   disabled: false,
   error: false,
+  inputId: undefined,
   isMulti: false,
   isSearchable: true,
   isClearable: false,
+  labelId: undefined,
   noTopLabel: false,
   onChange: null,
   placeholder: undefined,
@@ -636,18 +639,6 @@ RichSelectWithRef.defaultProps = {
 }
 
 RichSelectWithRef.propTypes = {
-  customComponents: PropTypes.shape({}),
-  name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  disabled: PropTypes.bool,
-  required: PropTypes.bool,
-  readOnly: PropTypes.bool,
-  noTopLabel: PropTypes.bool,
-  onChange: PropTypes.func,
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  className: PropTypes.string,
-  customStyle: PropTypes.func,
   animation: PropTypes.oneOf(Object.keys(animations)),
   animationOnChange: PropTypes.bool,
   animationDuration: PropTypes.number,
@@ -655,9 +646,23 @@ RichSelectWithRef.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  className: PropTypes.string,
+  customStyle: PropTypes.func,
+  customComponents: PropTypes.shape({}),
+  disabled: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  inputId: PropTypes.string,
+  isClearable: PropTypes.bool,
   isMulti: PropTypes.bool,
   isSearchable: PropTypes.bool,
-  isClearable: PropTypes.bool,
+  labelId: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  noTopLabel: PropTypes.bool,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
+  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 RichSelect.defaultProps = RichSelectWithRef.defaultProps
 RichSelect.propTypes = RichSelectWithRef.propTypes
