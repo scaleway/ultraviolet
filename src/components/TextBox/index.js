@@ -14,7 +14,7 @@ import React, {
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
-import { Notice } from '../Notice'
+import Notice from '../Notice'
 import { Separator } from '../Separator'
 import { Touchable } from '../Touchable'
 import { Typography } from '../Typography'
@@ -486,7 +486,7 @@ TextBox.propTypes = {
   label: PropTypes.node,
   multiline: PropTypes.bool,
   name: PropTypes.string,
-  notice: PropTypes.node,
+  notice: PropTypes.string,
   noTopLabel: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
