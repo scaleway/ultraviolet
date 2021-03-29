@@ -1,3 +1,19 @@
+### [0.66.2](https://github.com/scaleway/scaleway-ui/compare/v0.66.1...v0.66.2) (2021-03-29)
+
+
+### :package: Chore
+
+* **deps:** bump @xstyled/emotion from 2.3.0 to 2.4.1 ([#183](https://github.com/scaleway/scaleway-ui/issues/183)) ([958ec61](https://github.com/scaleway/scaleway-ui/commit/958ec61ca8fbb1c37f0c9b3541b7d0150917434a))
+* **deps-dev:** bump @rollup/plugin-node-resolve from 11.2.0 to 11.2.1 ([#182](https://github.com/scaleway/scaleway-ui/issues/182)) ([a8f782c](https://github.com/scaleway/scaleway-ui/commit/a8f782c4d32d2c3ba6e4f36fabd82ef57d1f81e3))
+* **deps-dev:** bump @testing-library/jest-dom from 5.11.9 to 5.11.10 ([#175](https://github.com/scaleway/scaleway-ui/issues/175)) ([eb966ed](https://github.com/scaleway/scaleway-ui/commit/eb966edd13bcb3289af22a01d078b0a87b9f701f))
+* **deps-dev:** bump @testing-library/user-event ([#176](https://github.com/scaleway/scaleway-ui/issues/176)) ([cca6fca](https://github.com/scaleway/scaleway-ui/commit/cca6fcafa75a11146b11f1be8bebb9024ddc5a08))
+* **deps-dev:** bump rollup from 2.42.3 to 2.43.1 ([#181](https://github.com/scaleway/scaleway-ui/issues/181)) ([c3e9621](https://github.com/scaleway/scaleway-ui/commit/c3e962108f2d876a42c078b6d565eb70977601bc))
+
+
+### :bug: Bug Fixes
+
+* **richselect:** fixed no label ([5e714a0](https://github.com/scaleway/scaleway-ui/commit/5e714a06f66c3b419c45d6c651ec105e98707b28))
+
 ### [0.66.1](https://github.com/scaleway/scaleway-ui/compare/v0.66.0...v0.66.1) (2021-03-24)
 
 
