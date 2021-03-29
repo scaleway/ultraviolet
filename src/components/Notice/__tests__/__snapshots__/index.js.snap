@@ -31,8 +31,14 @@ exports[`Notice renders correctly with default props 1`] = `
 .emotion-3.emotion-3 {
 =======
 .emotion-2.emotion-2 {
+<<<<<<< HEAD
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+<<<<<<< HEAD
+>>>>>>> feat: port Notice (#178)
   vertical-align: top;
+=======
+>>>>>>> feat: port Notice (#178)
   margin-right: 8px;
 }
 
@@ -41,10 +47,17 @@ exports[`Notice renders correctly with default props 1`] = `
   >
     <svg
 <<<<<<< HEAD
+<<<<<<< HEAD
       class="sc-ui-icon emotion-2 emotion-3"
 =======
       class="sc-ui-icon emotion-1 emotion-2"
 >>>>>>> refactor: migrate colors from theme in icon (#160)
+=======
+      class="sc-ui-icon emotion-1 emotion-2"
+=======
+      class="sc-ui-icon emotion-2"
+>>>>>>> feat: port Notice (#178)
+>>>>>>> feat: port Notice (#178)
       viewBox="0 0 24 24"
     >
       <path
@@ -52,6 +65,7 @@ exports[`Notice renders correctly with default props 1`] = `
       />
     </svg>
     <div
+<<<<<<< HEAD
       class="emotion-4"
     >
       <p
@@ -59,6 +73,15 @@ exports[`Notice renders correctly with default props 1`] = `
       >
         <span
           class="emotion-5"
+=======
+      class="emotion-3"
+    >
+      <p
+        class="emotion-4"
+      >
+        <span
+          class="emotion-4"
+>>>>>>> feat: port Notice (#178)
         >
           Hello
         </span>
