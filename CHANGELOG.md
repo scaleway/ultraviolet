@@ -1,3 +1,20 @@
+## [0.67.0](https://github.com/scaleway/scaleway-ui/compare/v0.66.2...v0.67.0) (2021-03-29)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/core from 7.13.10 to 7.13.14 ([#190](https://github.com/scaleway/scaleway-ui/issues/190)) ([a8809e3](https://github.com/scaleway/scaleway-ui/commit/a8809e35e82f48bd582282a99df3c96c9a1de7ca))
+* **deps-dev:** bump @babel/eslint-parser from 7.13.10 to 7.13.14 ([#192](https://github.com/scaleway/scaleway-ui/issues/192)) ([87a1223](https://github.com/scaleway/scaleway-ui/commit/87a1223187344d3420cfd52458885856466f692f))
+* **deps-dev:** bump @babel/preset-react from 7.12.13 to 7.13.13 ([#184](https://github.com/scaleway/scaleway-ui/issues/184)) ([ab53307](https://github.com/scaleway/scaleway-ui/commit/ab533074cf44c52b4ba2611bb040d05331bbc34f))
+* **deps-dev:** bump @rollup/plugin-commonjs from 17.1.0 to 18.0.0 ([#186](https://github.com/scaleway/scaleway-ui/issues/186)) ([f49de37](https://github.com/scaleway/scaleway-ui/commit/f49de3794e599b60f62d3a2117d6db728072e7f1))
+* **deps-dev:** bump eslint from 7.22.0 to 7.23.0 ([#185](https://github.com/scaleway/scaleway-ui/issues/185)) ([c767c31](https://github.com/scaleway/scaleway-ui/commit/c767c3125484f2347429d39e38e581d8c16e490e))
+* **deps-dev:** bump rollup from 2.43.1 to 2.44.0 ([#188](https://github.com/scaleway/scaleway-ui/issues/188)) ([eadc227](https://github.com/scaleway/scaleway-ui/commit/eadc227c532a7fed5dd6edbae1fa8357739ea850))
+
+
+### :gear: Features
+
+* port Notice ([#178](https://github.com/scaleway/scaleway-ui/issues/178)) ([05e17be](https://github.com/scaleway/scaleway-ui/commit/05e17bef3e5d281067f4a716302b4b43448b88dd))
+
 ### [0.66.2](https://github.com/scaleway/scaleway-ui/compare/v0.66.1...v0.66.2) (2021-03-29)
 
 
