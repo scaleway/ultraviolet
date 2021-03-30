@@ -36,14 +36,8 @@
     "prebuild": "shx rm -rf dist",
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
-    "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
+    "test": "jest",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": [
