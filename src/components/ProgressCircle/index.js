@@ -1,7 +1,7 @@
+import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
-import { colors } from '../../theme'
 
 const ProgressCircle = ({
   percentage,
@@ -10,32 +10,36 @@ const ProgressCircle = ({
   strokeWidth,
   pathColor,
   trailColor,
-}) => (
-  <div style={{ width: size, height: size }}>
-    <CircularProgressbar
-      value={percentage}
-      text={text}
-      strokeWidth={strokeWidth}
-      styles={{
-        root: {},
-        path: {
-          stroke: colors[pathColor] || pathColor,
-          strokeLinecap: 'round',
-        },
-        trail: {
-          stroke: colors[trailColor] || trailColor,
-          strokeLinecap: 'round',
-        },
-        text: {
-          fill: colors.primary,
-          fontSize: '26px',
-          dominantBaseline: 'middle',
-          textAnchor: 'middle',
-        },
-      }}
-    />
-  </div>
-)
+}) => {
+  const theme = useTheme()
+
+  return (
+    <div style={{ width: size, height: size }}>
+      <CircularProgressbar
+        value={percentage}
+        text={text}
+        strokeWidth={strokeWidth}
+        styles={{
+          root: {},
+          path: {
+            stroke: theme.colors[pathColor] || pathColor,
+            strokeLinecap: 'round',
+          },
+          trail: {
+            stroke: theme.colors[trailColor] || trailColor,
+            strokeLinecap: 'round',
+          },
+          text: {
+            fill: theme.colors.primary,
+            fontSize: '26px',
+            dominantBaseline: 'middle',
+            textAnchor: 'middle',
+          },
+        }}
+      />
+    </div>
+  )
+}
 
 ProgressCircle.propTypes = {
   percentage: PropTypes.number,
