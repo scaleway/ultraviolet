@@ -1,0 +1,39 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import StealthCopiable from '..'
+
+<Meta title="Components/StealthCopiable" component={StealthCopiable} />
+
+# StealthCopiable
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <StealthCopiable>Hover me and copy me</StealthCopiable>
+  </Story>
+</Canvas>
+
+## Side
+
+<Canvas>
+  <Story name="Side">
+    <StealthCopiable side="left">Hover me and copy me from the left</StealthCopiable>
+    <StealthCopiable side="right">Hover me and copy me from the right</StealthCopiable>
+  </Story>
+</Canvas>
+
+## Custom Text
+
+<Canvas>
+  <Story name="Custom">
+    <StealthCopiable copyText="📋" copiedText="🎉">Hover me and copy me with a suprise</StealthCopiable>
+  </Story>
+</Canvas>
+
+<ArgsTable of={StealthCopiable} />

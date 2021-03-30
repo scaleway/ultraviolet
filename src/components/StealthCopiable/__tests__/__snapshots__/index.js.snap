@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StealthCopiable should renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.emotion-0:hover .emotion-5 {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  background-color: transparent;
+  border: none;
+  color: #4f0599;
+  display: inline-block;
+  padding-left: 8px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.emotion-4:focus {
+  opacity: 1;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Hello
+    <span
+      class="emotion-2 emotion-3"
+    >
+      <button
+        class="emotion-4 emotion-5"
+        tabindex="0"
+        type="button"
+      >
+        Copy
+      </button>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StealthCopiable should renders correctly with custom side 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.emotion-0:hover .emotion-5 {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  background-color: transparent;
+  border: none;
+  color: #4f0599;
+  display: inline-block;
+  padding-left: 8px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.emotion-4:focus {
+  opacity: 1;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <span
+      class="emotion-2 emotion-3"
+    >
+      <button
+        class="emotion-4 emotion-5"
+        tabindex="0"
+        type="button"
+      >
+        Copy
+      </button>
+    </span>
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StealthCopiable should renders correctly with custom side 2`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.emotion-0:hover .emotion-5 {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  background-color: transparent;
+  border: none;
+  color: #4f0599;
+  display: inline-block;
+  padding-left: 8px;
+  opacity: 0;
+  z-index: 100;
+}
+
+.emotion-4:focus {
+  opacity: 1;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <span
+      class="emotion-2 emotion-3"
+    >
+      <button
+        class="emotion-4 emotion-5"
+        tabindex="0"
+        type="button"
+      >
+        Copied
+      </button>
+    </span>
+    Hello
+  </div>
+</DocumentFragment>
+`;
