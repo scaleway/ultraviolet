@@ -1,10 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-<<<<<<< HEAD
-=======
-import { colors, space } from '../../theme'
->>>>>>> refactor: migrate colors from theme in icon (#160)
 import Icon, { icons } from '../Icon'
 import { Typography } from '../Typography'
 

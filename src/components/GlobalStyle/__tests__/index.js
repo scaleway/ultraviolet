@@ -1,20 +1,15 @@
-import serializer from '@emotion/jest'
-import { prettyDOM, waitFor } from '@testing-library/react'
+import { waitFor } from '@testing-library/react'
 import React from 'react'
 import GlobalStyle from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-
-expect.addSnapshotSerializer(serializer)
+import renderWithTheme from '../../../helpers/renderWithTheme'
 
 describe('GlobalStyle', () => {
-  test('renders correctly with default values', () => {
-    shouldMatchEmotionSnapshot(<GlobalStyle />)
+  test('renders correctly with default values', async () => {
+    renderWithTheme(<GlobalStyle />, { container: document.html })
 
-    waitFor(
+    await waitFor(
       () => {
-        expect(
-          prettyDOM(document.head, 7000, { highlight: false }),
-        ).toMatchSnapshot()
+        expect(document.head).toMatchSnapshot()
       },
       { container: document.head },
     )

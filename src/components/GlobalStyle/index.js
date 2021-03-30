@@ -1,4 +1,4 @@
-import { Global, css, useTheme } from '@emotion/react'
+import { Global, css } from '@emotion/react'
 import { normalize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -101,11 +101,9 @@ const globalStyles = theme => css`
   }
 `
 
-const GlobalStyle = ({ additionalStyles }) => {
-  const theme = useTheme()
-
-  return <Global styles={[globalStyles(theme), ...additionalStyles]} />
-}
+const GlobalStyle = ({ additionalStyles }) => (
+  <Global styles={[globalStyles, ...additionalStyles]} />
+)
 
 GlobalStyle.propTypes = {
   additionalStyles: PropTypes.arrayOf(PropTypes.object),
