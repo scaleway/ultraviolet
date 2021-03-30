@@ -445,646 +445,646 @@
 
 * migrate to github ([#1](https://github.com/scaleway/scaleway-ui/issues/1)) ([fcb97eb](https://github.com/scaleway/scaleway-ui/commit/fcb97eb4f7ef6824b32bcde498207ef66951dd58))
 
-### [0.52.2](https://github.com/chambo-e/scw-ui/compare/v0.52.1...v0.52.2) (2021-02-03)
+### [0.52.2](https://github.com/scaleway/scaleway-ui/compare/v0.52.1...v0.52.2) (2021-02-03)
 
 
 ### Bug Fixes
 
-* **switchbutton:** fixed SwitchButton border when disabled ([7eb1c0e](https://github.com/chambo-e/scw-ui/commit/7eb1c0e54353d2f0d7fb7c891d0c6984af1b46c0))
+* **switchbutton:** fixed SwitchButton border when disabled ([7eb1c0e](https://github.com/scaleway/scaleway-ui/commit/7eb1c0e54353d2f0d7fb7c891d0c6984af1b46c0))
 
-### [0.52.1](https://github.com/chambo-e/scw-ui/compare/v0.52.0...v0.52.1) (2021-02-03)
+### [0.52.1](https://github.com/scaleway/scaleway-ui/compare/v0.52.0...v0.52.1) (2021-02-03)
 
 
 ### Bug Fixes
 
-* updated documentation ([165653a](https://github.com/chambo-e/scw-ui/commit/165653a53d59ea8dba325232a81ca888ab233017))
+* updated documentation ([165653a](https://github.com/scaleway/scaleway-ui/commit/165653a53d59ea8dba325232a81ca888ab233017))
 
-## [0.52.0](https://github.com/chambo-e/scw-ui/compare/v0.51.0...v0.52.0) (2021-02-02)
+## [0.52.0](https://github.com/scaleway/scaleway-ui/compare/v0.51.0...v0.52.0) (2021-02-02)
 
 
 ### Features
 
-* upgrade to emotion@11 :tada: ([79af477](https://github.com/chambo-e/scw-ui/commit/79af477370ced8edde4b8f375e4c51160f6c7796))
+* upgrade to emotion@11 :tada: ([79af477](https://github.com/scaleway/scaleway-ui/commit/79af477370ced8edde4b8f375e4c51160f6c7796))
 
-## [0.51.0](https://github.com/chambo-e/scw-ui/compare/v0.50.1...v0.51.0) (2021-01-28)
-
-
-### Features
-
-* add icon size on alert ([c7826ff](https://github.com/chambo-e/scw-ui/commit/c7826ffaa5c7a81fe847d79c901cea57302163f5))
-
-### [0.50.1](https://github.com/chambo-e/scw-ui/compare/v0.50.0...v0.50.1) (2021-01-27)
-
-
-### Bug Fixes
-
-* **passwordstrengthmeter:** added new properties - userInputs - to ban specific words in password ([62ff565](https://github.com/chambo-e/scw-ui/commit/62ff565bb5a9b61e53fa7d62982b786d7192c8e9))
-
-## [0.50.0](https://github.com/chambo-e/scw-ui/compare/v0.49.1...v0.50.0) (2021-01-26)
+## [0.51.0](https://github.com/scaleway/scaleway-ui/compare/v0.50.1...v0.51.0) (2021-01-28)
 
 
 ### Features
 
-* add ability to not display a link in ExtendedReminder ([0da1b70](https://github.com/chambo-e/scw-ui/commit/0da1b709257a66b773524474c2782019f1c882ed))
+* add icon size on alert ([c7826ff](https://github.com/scaleway/scaleway-ui/commit/c7826ffaa5c7a81fe847d79c901cea57302163f5))
 
-### [0.49.1](https://github.com/chambo-e/scw-ui/compare/v0.49.0...v0.49.1) (2021-01-26)
+### [0.50.1](https://github.com/scaleway/scaleway-ui/compare/v0.50.0...v0.50.1) (2021-01-27)
 
 
 ### Bug Fixes
 
-* correct overflowing ProgressBar ([0e474ea](https://github.com/chambo-e/scw-ui/commit/0e474eac85fc42d22f554d68e3927ccc28e3666c))
+* **passwordstrengthmeter:** added new properties - userInputs - to ban specific words in password ([62ff565](https://github.com/scaleway/scaleway-ui/commit/62ff565bb5a9b61e53fa7d62982b786d7192c8e9))
 
-## [0.49.0](https://github.com/chambo-e/scw-ui/compare/v0.48.2...v0.49.0) (2021-01-26)
+## [0.50.0](https://github.com/scaleway/scaleway-ui/compare/v0.49.1...v0.50.0) (2021-01-26)
 
 
 ### Features
 
-* port Grid system from smooth-ui ([1b10e30](https://github.com/chambo-e/scw-ui/commit/1b10e30e7230bdaf4c9e9a67ba8e49986a60ec05))
+* add ability to not display a link in ExtendedReminder ([0da1b70](https://github.com/scaleway/scaleway-ui/commit/0da1b709257a66b773524474c2782019f1c882ed))
 
-### [0.48.2](https://github.com/chambo-e/scw-ui/compare/v0.48.1...v0.48.2) (2021-01-25)
-
-
-### Bug Fixes
-
-* **richselect:** fixed animation timeout depending on animationDuration ([2d9e376](https://github.com/chambo-e/scw-ui/commit/2d9e376c5ea4e6d28450438b56302e78f3f3178f))
-
-### [0.48.1](https://github.com/chambo-e/scw-ui/compare/v0.48.0...v0.48.1) (2021-01-21)
+### [0.49.1](https://github.com/scaleway/scaleway-ui/compare/v0.49.0...v0.49.1) (2021-01-26)
 
 
 ### Bug Fixes
 
-* correct some missing props on Switch and SwitchButton ([bd7ce3e](https://github.com/chambo-e/scw-ui/commit/bd7ce3e6da50342ad8de904be26048a427a671db))
+* correct overflowing ProgressBar ([0e474ea](https://github.com/scaleway/scaleway-ui/commit/0e474eac85fc42d22f554d68e3927ccc28e3666c))
 
-## [0.48.0](https://github.com/chambo-e/scw-ui/compare/v0.47.1...v0.48.0) (2021-01-21)
+## [0.49.0](https://github.com/scaleway/scaleway-ui/compare/v0.48.2...v0.49.0) (2021-01-26)
 
 
 ### Features
 
-* add up, down and Breakpoint to replace smooth-ui's ([1a11404](https://github.com/chambo-e/scw-ui/commit/1a114040c97a5a55b9a7ef0b5e21838a54579e97))
+* port Grid system from smooth-ui ([1b10e30](https://github.com/scaleway/scaleway-ui/commit/1b10e30e7230bdaf4c9e9a67ba8e49986a60ec05))
 
-### [0.47.1](https://github.com/chambo-e/scw-ui/compare/v0.47.0...v0.47.1) (2021-01-20)
+### [0.48.2](https://github.com/scaleway/scaleway-ui/compare/v0.48.1...v0.48.2) (2021-01-25)
 
 
 ### Bug Fixes
 
-* **statusindicator:** move animated as a prop ([8f2685f](https://github.com/chambo-e/scw-ui/commit/8f2685f07823e30dce684fcd0512d867239c4c42))
+* **richselect:** fixed animation timeout depending on animationDuration ([2d9e376](https://github.com/scaleway/scaleway-ui/commit/2d9e376c5ea4e6d28450438b56302e78f3f3178f))
 
-## [0.47.0](https://github.com/chambo-e/scw-ui/compare/v0.46.0...v0.47.0) (2021-01-20)
+### [0.48.1](https://github.com/scaleway/scaleway-ui/compare/v0.48.0...v0.48.1) (2021-01-21)
+
+
+### Bug Fixes
+
+* correct some missing props on Switch and SwitchButton ([bd7ce3e](https://github.com/scaleway/scaleway-ui/commit/bd7ce3e6da50342ad8de904be26048a427a671db))
+
+## [0.48.0](https://github.com/scaleway/scaleway-ui/compare/v0.47.1...v0.48.0) (2021-01-21)
 
 
 ### Features
 
-* **phoneinput:** migrate phone input CNS-2095 ([fce0708](https://github.com/chambo-e/scw-ui/commit/fce070857672010ad0527547259ac6b1d5092bc2))
+* add up, down and Breakpoint to replace smooth-ui's ([1a11404](https://github.com/scaleway/scaleway-ui/commit/1a114040c97a5a55b9a7ef0b5e21838a54579e97))
 
-## [0.46.0](https://github.com/chambo-e/scw-ui/compare/v0.45.1...v0.46.0) (2021-01-20)
+### [0.47.1](https://github.com/scaleway/scaleway-ui/compare/v0.47.0...v0.47.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* **statusindicator:** move animated as a prop ([8f2685f](https://github.com/scaleway/scaleway-ui/commit/8f2685f07823e30dce684fcd0512d867239c4c42))
+
+## [0.47.0](https://github.com/scaleway/scaleway-ui/compare/v0.46.0...v0.47.0) (2021-01-20)
 
 
 ### Features
 
-* migrate Radio to reakit ([7e73eb1](https://github.com/chambo-e/scw-ui/commit/7e73eb188e21eb8c4bc2448cbf7536826cfed8ed))
+* **phoneinput:** migrate phone input CNS-2095 ([fce0708](https://github.com/scaleway/scaleway-ui/commit/fce070857672010ad0527547259ac6b1d5092bc2))
 
-### [0.45.1](https://github.com/chambo-e/scw-ui/compare/v0.45.0...v0.45.1) (2021-01-20)
-
-
-### Bug Fixes
-
-* correct SwitchButton label id ([587defc](https://github.com/chambo-e/scw-ui/commit/587defcbd87b65e6e6321a371987253e93cca278))
-
-## [0.45.0](https://github.com/chambo-e/scw-ui/compare/v0.44.0...v0.45.0) (2021-01-20)
+## [0.46.0](https://github.com/scaleway/scaleway-ui/compare/v0.45.1...v0.46.0) (2021-01-20)
 
 
 ### Features
 
-* **richselect:** added animation on RichSelect CNS-3553 ([dbe64d7](https://github.com/chambo-e/scw-ui/commit/dbe64d7d6e83e2cb12097d4754a6af25b688e63c))
+* migrate Radio to reakit ([7e73eb1](https://github.com/scaleway/scaleway-ui/commit/7e73eb188e21eb8c4bc2448cbf7536826cfed8ed))
 
-## [0.44.0](https://github.com/chambo-e/scw-ui/compare/v0.43.1...v0.44.0) (2021-01-20)
+### [0.45.1](https://github.com/scaleway/scaleway-ui/compare/v0.45.0...v0.45.1) (2021-01-20)
+
+
+### Bug Fixes
+
+* correct SwitchButton label id ([587defc](https://github.com/scaleway/scaleway-ui/commit/587defcbd87b65e6e6321a371987253e93cca278))
+
+## [0.45.0](https://github.com/scaleway/scaleway-ui/compare/v0.44.0...v0.45.0) (2021-01-20)
 
 
 ### Features
 
-* migration of volumesize - CNS-2118 ([dd02e0c](https://github.com/chambo-e/scw-ui/commit/dd02e0c6e26c60d05c2ef939781ec40253e7fc61))
+* **richselect:** added animation on RichSelect CNS-3553 ([dbe64d7](https://github.com/scaleway/scaleway-ui/commit/dbe64d7d6e83e2cb12097d4754a6af25b688e63c))
 
-### [0.43.1](https://github.com/chambo-e/scw-ui/compare/v0.43.0...v0.43.1) (2021-01-19)
-
-
-### Bug Fixes
-
-* **stepper:** added sizes to stepper ([a071877](https://github.com/chambo-e/scw-ui/commit/a07187743cdded19eea8245dfa2a6ef7edf82551))
-
-## [0.43.0](https://github.com/chambo-e/scw-ui/compare/v0.42.0...v0.43.0) (2021-01-19)
+## [0.44.0](https://github.com/scaleway/scaleway-ui/compare/v0.43.1...v0.44.0) (2021-01-20)
 
 
 ### Features
 
-* migrate SwitchButton to reakit ([b231b90](https://github.com/chambo-e/scw-ui/commit/b231b9026f1b553cd7588b507c649c886a433269))
+* migration of volumesize - CNS-2118 ([dd02e0c](https://github.com/scaleway/scaleway-ui/commit/dd02e0c6e26c60d05c2ef939781ec40253e7fc61))
 
-## [0.42.0](https://github.com/chambo-e/scw-ui/compare/v0.41.0...v0.42.0) (2021-01-19)
+### [0.43.1](https://github.com/scaleway/scaleway-ui/compare/v0.43.0...v0.43.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* **stepper:** added sizes to stepper ([a071877](https://github.com/scaleway/scaleway-ui/commit/a07187743cdded19eea8245dfa2a6ef7edf82551))
+
+## [0.43.0](https://github.com/scaleway/scaleway-ui/compare/v0.42.0...v0.43.0) (2021-01-19)
 
 
 ### Features
 
-* migrate Switch to reakit ([d6e785d](https://github.com/chambo-e/scw-ui/commit/d6e785d74310054864e16e53fd2d5b48a88e4332))
+* migrate SwitchButton to reakit ([b231b90](https://github.com/scaleway/scaleway-ui/commit/b231b9026f1b553cd7588b507c649c886a433269))
 
-## [0.41.0](https://github.com/chambo-e/scw-ui/compare/v0.40.0...v0.41.0) (2021-01-15)
-
-
-### Features
-
-* add paste ability to VerificationCode ([db5bf4d](https://github.com/chambo-e/scw-ui/commit/db5bf4daea659f93c71d13ae844e2f83cd42c5bc))
-
-## [0.40.0](https://github.com/chambo-e/scw-ui/compare/v0.39.0...v0.40.0) (2021-01-12)
+## [0.42.0](https://github.com/scaleway/scaleway-ui/compare/v0.41.0...v0.42.0) (2021-01-19)
 
 
 ### Features
 
-* add ExtendedReminder success variant ([9513a3a](https://github.com/chambo-e/scw-ui/commit/9513a3a34122b26e7fa5f8402240078d494d7054))
+* migrate Switch to reakit ([d6e785d](https://github.com/scaleway/scaleway-ui/commit/d6e785d74310054864e16e53fd2d5b48a88e4332))
 
-## [0.39.0](https://github.com/chambo-e/scw-ui/compare/v0.38.2...v0.39.0) (2021-01-08)
-
-
-### Features
-
-* **PasswordCheck:** migration of PasswordCheck CNS-2093 ([9aa110b](https://github.com/chambo-e/scw-ui/commit/9aa110b0fbf258042ad2aa5c11e954a9e6043ead))
-
-### [0.38.2](https://github.com/chambo-e/scw-ui/compare/v0.38.1...v0.38.2) (2021-01-07)
-
-
-### Bug Fixes
-
-* **tooltips:** remove z-index ([f83214c](https://github.com/chambo-e/scw-ui/commit/f83214c16eda1c029dcdaf3a099a14e8db6d84f0))
-
-### [0.38.1](https://github.com/chambo-e/scw-ui/compare/v0.38.0...v0.38.1) (2021-01-05)
-
-
-### Bug Fixes
-
-* **tooltip:** z-index ([987dde9](https://github.com/chambo-e/scw-ui/commit/987dde99d35652c87d5e7d94a3b384f01aa904bb))
-
-## [0.38.0](https://github.com/chambo-e/scw-ui/compare/v0.37.12...v0.38.0) (2021-01-04)
+## [0.41.0](https://github.com/scaleway/scaleway-ui/compare/v0.40.0...v0.41.0) (2021-01-15)
 
 
 ### Features
 
-* **modal:** add slide animations ([0352898](https://github.com/chambo-e/scw-ui/commit/0352898303c6139ace84a896231403134b5b1675))
+* add paste ability to VerificationCode ([db5bf4d](https://github.com/scaleway/scaleway-ui/commit/db5bf4daea659f93c71d13ae844e2f83cd42c5bc))
 
-### [0.37.12](https://github.com/chambo-e/scw-ui/compare/v0.37.11...v0.37.12) (2021-01-04)
-
-
-### Bug Fixes
-
-* **modal:** overflow on modal with lot of content inside ([e72d006](https://github.com/chambo-e/scw-ui/commit/e72d00615d9c0bf034cc9725c68591f082ef7562))
-
-### [0.37.11](https://github.com/chambo-e/scw-ui/compare/v0.37.10...v0.37.11) (2020-12-30)
-
-
-### Bug Fixes
-
-* **checkbox:** added autofocus parameter ([6b515fb](https://github.com/chambo-e/scw-ui/commit/6b515fb043efdde50dfc82026097512dfafb9902))
-
-### [0.37.10](https://github.com/chambo-e/scw-ui/compare/v0.37.9...v0.37.10) (2020-12-28)
-
-
-### Bug Fixes
-
-* replace or deprecate grey with gray and update tests CNS-3523 ([aff72cf](https://github.com/chambo-e/scw-ui/commit/aff72cf57c642bde99d5a3c69660b6ac876a96fd))
-
-### [0.37.9](https://github.com/chambo-e/scw-ui/compare/v0.37.8...v0.37.9) (2020-12-23)
-
-
-### Bug Fixes
-
-* **modal:** dom backdrop element ([0f40ba0](https://github.com/chambo-e/scw-ui/commit/0f40ba03dd35e0b5cc2dd1d7063349dc0d10dc8b))
-
-### [0.37.8](https://github.com/chambo-e/scw-ui/compare/v0.37.7...v0.37.8) (2020-12-23)
-
-
-### Bug Fixes
-
-* **modal:** render content only when modal is open ([e7a9252](https://github.com/chambo-e/scw-ui/commit/e7a925200e428d8ee2280d2fb93fb5c0abc4bdc1))
-
-### [0.37.7](https://github.com/chambo-e/scw-ui/compare/v0.37.6...v0.37.7) (2020-12-21)
-
-
-### Bug Fixes
-
-* **modal:** add animated props ([3253079](https://github.com/chambo-e/scw-ui/commit/3253079ad1ddc347d0a392abe6ad2e0314538d48))
-
-### [0.37.6](https://github.com/chambo-e/scw-ui/compare/v0.37.5...v0.37.6) (2020-12-21)
-
-
-### Bug Fixes
-
-* **notificationbar:** adds possibility to have custom icon ([52fa884](https://github.com/chambo-e/scw-ui/commit/52fa884a048607487e0c5e8ce5c6971e89b8e8e3))
-
-### [0.37.5](https://github.com/chambo-e/scw-ui/compare/v0.37.4...v0.37.5) (2020-12-18)
-
-
-### Bug Fixes
-
-* **checkbox:** cursor pointer on label ([559817c](https://github.com/chambo-e/scw-ui/commit/559817cbe371e184c2bbfef06369156c9781856b))
-
-### [0.37.4](https://github.com/chambo-e/scw-ui/compare/v0.37.3...v0.37.4) (2020-12-18)
-
-
-### Bug Fixes
-
-* **events:** safari propagation ([df5d3d1](https://github.com/chambo-e/scw-ui/commit/df5d3d1117204e5b9e1c249715c64f790f9090b6))
-
-### [0.37.3](https://github.com/chambo-e/scw-ui/compare/v0.37.2...v0.37.3) (2020-12-18)
-
-
-### Bug Fixes
-
-* **events:** safari event propagation on svg ([e2ec70b](https://github.com/chambo-e/scw-ui/commit/e2ec70bf7d238ace6568c88f36944fbc060f2b5f))
-
-### [0.37.2](https://github.com/chambo-e/scw-ui/compare/v0.37.1...v0.37.2) (2020-12-17)
-
-
-### Bug Fixes
-
-* **checkbox:** propagation event without visibile input ([9de0736](https://github.com/chambo-e/scw-ui/commit/9de073626357fabd2bd9ee0fb7eca8bd6680ffb5))
-
-### [0.37.1](https://github.com/chambo-e/scw-ui/compare/v0.37.0...v0.37.1) (2020-12-15)
-
-
-### Bug Fixes
-
-* **checkbox:** stopPropagation ([f64505e](https://github.com/chambo-e/scw-ui/commit/f64505e632c92c5a7247ead00631c5978cda9951))
-
-## [0.37.0](https://github.com/chambo-e/scw-ui/compare/v0.36.0...v0.37.0) (2020-12-14)
+## [0.40.0](https://github.com/scaleway/scaleway-ui/compare/v0.39.0...v0.40.0) (2021-01-12)
 
 
 ### Features
 
-* **modal:** migration reakit ([b9706d1](https://github.com/chambo-e/scw-ui/commit/b9706d1b4552710778bb60edd30444765f2a53ce))
+* add ExtendedReminder success variant ([9513a3a](https://github.com/scaleway/scaleway-ui/commit/9513a3a34122b26e7fa5f8402240078d494d7054))
 
-## [0.36.0](https://github.com/chambo-e/scw-ui/compare/v0.35.0...v0.36.0) (2020-12-09)
-
-
-### Features
-
-* port CategoryIcon from shire ([c40269d](https://github.com/chambo-e/scw-ui/commit/c40269dc60202370e4cb7ea85d1d99dc3200b225))
-
-## [0.35.0](https://github.com/chambo-e/scw-ui/compare/v0.34.2...v0.35.0) (2020-12-08)
+## [0.39.0](https://github.com/scaleway/scaleway-ui/compare/v0.38.2...v0.39.0) (2021-01-08)
 
 
 ### Features
 
-* **badge:** added lighter variants for badge ([c0c7dd1](https://github.com/chambo-e/scw-ui/commit/c0c7dd1dc9b2ca6bb7bb1c73804eaad795ab4baa))
+* **PasswordCheck:** migration of PasswordCheck CNS-2093 ([9aa110b](https://github.com/scaleway/scaleway-ui/commit/9aa110b0fbf258042ad2aa5c11e954a9e6043ead))
 
-### [0.34.2](https://github.com/chambo-e/scw-ui/compare/v0.34.1...v0.34.2) (2020-12-07)
-
-
-### Bug Fixes
-
-* correct checkbox onClick handler ([e11efe1](https://github.com/chambo-e/scw-ui/commit/e11efe1e8237b59e90302c227acd8c53949a7924))
-
-### [0.34.1](https://github.com/chambo-e/scw-ui/compare/v0.34.0...v0.34.1) (2020-12-07)
+### [0.38.2](https://github.com/scaleway/scaleway-ui/compare/v0.38.1...v0.38.2) (2021-01-07)
 
 
 ### Bug Fixes
 
-* stop propagation on checkbox ([1f27113](https://github.com/chambo-e/scw-ui/commit/1f27113f98d213677bddf9fe68d0dec741f712df))
+* **tooltips:** remove z-index ([f83214c](https://github.com/scaleway/scaleway-ui/commit/f83214c16eda1c029dcdaf3a099a14e8db6d84f0))
 
-## [0.34.0](https://github.com/chambo-e/scw-ui/compare/v0.33.0...v0.34.0) (2020-12-03)
+### [0.38.1](https://github.com/scaleway/scaleway-ui/compare/v0.38.0...v0.38.1) (2021-01-05)
+
+
+### Bug Fixes
+
+* **tooltip:** z-index ([987dde9](https://github.com/scaleway/scaleway-ui/commit/987dde99d35652c87d5e7d94a3b384f01aa904bb))
+
+## [0.38.0](https://github.com/scaleway/scaleway-ui/compare/v0.37.12...v0.38.0) (2021-01-04)
 
 
 ### Features
 
-* **checkbox:** use reakit ([97b09d6](https://github.com/chambo-e/scw-ui/commit/97b09d6b35280e6448d48bb9d56314f9cec5d2c6))
+* **modal:** add slide animations ([0352898](https://github.com/scaleway/scaleway-ui/commit/0352898303c6139ace84a896231403134b5b1675))
 
-## [0.33.0](https://github.com/chambo-e/scw-ui/compare/v0.32.6...v0.33.0) (2020-12-03)
+### [0.37.12](https://github.com/scaleway/scaleway-ui/compare/v0.37.11...v0.37.12) (2021-01-04)
+
+
+### Bug Fixes
+
+* **modal:** overflow on modal with lot of content inside ([e72d006](https://github.com/scaleway/scaleway-ui/commit/e72d00615d9c0bf034cc9725c68591f082ef7562))
+
+### [0.37.11](https://github.com/scaleway/scaleway-ui/compare/v0.37.10...v0.37.11) (2020-12-30)
+
+
+### Bug Fixes
+
+* **checkbox:** added autofocus parameter ([6b515fb](https://github.com/scaleway/scaleway-ui/commit/6b515fb043efdde50dfc82026097512dfafb9902))
+
+### [0.37.10](https://github.com/scaleway/scaleway-ui/compare/v0.37.9...v0.37.10) (2020-12-28)
+
+
+### Bug Fixes
+
+* replace or deprecate grey with gray and update tests CNS-3523 ([aff72cf](https://github.com/scaleway/scaleway-ui/commit/aff72cf57c642bde99d5a3c69660b6ac876a96fd))
+
+### [0.37.9](https://github.com/scaleway/scaleway-ui/compare/v0.37.8...v0.37.9) (2020-12-23)
+
+
+### Bug Fixes
+
+* **modal:** dom backdrop element ([0f40ba0](https://github.com/scaleway/scaleway-ui/commit/0f40ba03dd35e0b5cc2dd1d7063349dc0d10dc8b))
+
+### [0.37.8](https://github.com/scaleway/scaleway-ui/compare/v0.37.7...v0.37.8) (2020-12-23)
+
+
+### Bug Fixes
+
+* **modal:** render content only when modal is open ([e7a9252](https://github.com/scaleway/scaleway-ui/commit/e7a925200e428d8ee2280d2fb93fb5c0abc4bdc1))
+
+### [0.37.7](https://github.com/scaleway/scaleway-ui/compare/v0.37.6...v0.37.7) (2020-12-21)
+
+
+### Bug Fixes
+
+* **modal:** add animated props ([3253079](https://github.com/scaleway/scaleway-ui/commit/3253079ad1ddc347d0a392abe6ad2e0314538d48))
+
+### [0.37.6](https://github.com/scaleway/scaleway-ui/compare/v0.37.5...v0.37.6) (2020-12-21)
+
+
+### Bug Fixes
+
+* **notificationbar:** adds possibility to have custom icon ([52fa884](https://github.com/scaleway/scaleway-ui/commit/52fa884a048607487e0c5e8ce5c6971e89b8e8e3))
+
+### [0.37.5](https://github.com/scaleway/scaleway-ui/compare/v0.37.4...v0.37.5) (2020-12-18)
+
+
+### Bug Fixes
+
+* **checkbox:** cursor pointer on label ([559817c](https://github.com/scaleway/scaleway-ui/commit/559817cbe371e184c2bbfef06369156c9781856b))
+
+### [0.37.4](https://github.com/scaleway/scaleway-ui/compare/v0.37.3...v0.37.4) (2020-12-18)
+
+
+### Bug Fixes
+
+* **events:** safari propagation ([df5d3d1](https://github.com/scaleway/scaleway-ui/commit/df5d3d1117204e5b9e1c249715c64f790f9090b6))
+
+### [0.37.3](https://github.com/scaleway/scaleway-ui/compare/v0.37.2...v0.37.3) (2020-12-18)
+
+
+### Bug Fixes
+
+* **events:** safari event propagation on svg ([e2ec70b](https://github.com/scaleway/scaleway-ui/commit/e2ec70bf7d238ace6568c88f36944fbc060f2b5f))
+
+### [0.37.2](https://github.com/scaleway/scaleway-ui/compare/v0.37.1...v0.37.2) (2020-12-17)
+
+
+### Bug Fixes
+
+* **checkbox:** propagation event without visibile input ([9de0736](https://github.com/scaleway/scaleway-ui/commit/9de073626357fabd2bd9ee0fb7eca8bd6680ffb5))
+
+### [0.37.1](https://github.com/scaleway/scaleway-ui/compare/v0.37.0...v0.37.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* **checkbox:** stopPropagation ([f64505e](https://github.com/scaleway/scaleway-ui/commit/f64505e632c92c5a7247ead00631c5978cda9951))
+
+## [0.37.0](https://github.com/scaleway/scaleway-ui/compare/v0.36.0...v0.37.0) (2020-12-14)
 
 
 ### Features
 
-* port CreationProgress from shire ([215c192](https://github.com/chambo-e/scw-ui/commit/215c19256a0509e8818b7ef705a917d26ebbba7f))
+* **modal:** migration reakit ([b9706d1](https://github.com/scaleway/scaleway-ui/commit/b9706d1b4552710778bb60edd30444765f2a53ce))
 
-### [0.32.6](https://github.com/chambo-e/scw-ui/compare/v0.32.5...v0.32.6) (2020-11-26)
-
-
-### Bug Fixes
-
-* correctly pass style system to Table [CNS-3468] ([3d57e3d](https://github.com/chambo-e/scw-ui/commit/3d57e3d351c005aa514b1ccd1fce1eed3edf31ea))
-
-### [0.32.5](https://github.com/chambo-e/scw-ui/compare/v0.32.4...v0.32.5) (2020-11-23)
-
-
-### Bug Fixes
-
-* **status:** add few missing status ([251f51e](https://github.com/chambo-e/scw-ui/commit/251f51ebde37942c66b497a6065471cb13713d38))
-
-### [0.32.4](https://github.com/chambo-e/scw-ui/compare/v0.32.3...v0.32.4) (2020-11-20)
-
-
-### Bug Fixes
-
-* **tooltips:** use effect first ([f4135e0](https://github.com/chambo-e/scw-ui/commit/f4135e03e89ae39d3c01d9e3bd49535561d95088))
-
-### [0.32.3](https://github.com/chambo-e/scw-ui/compare/v0.32.2...v0.32.3) (2020-11-20)
-
-
-### Bug Fixes
-
-* **popper:** add border-radius ([d7b7ad4](https://github.com/chambo-e/scw-ui/commit/d7b7ad4f23e628439bab98f0a812b179ae965236))
-
-### [0.32.2](https://github.com/chambo-e/scw-ui/compare/v0.32.1...v0.32.2) (2020-11-20)
-
-
-### Bug Fixes
-
-* avoid direct font reference in GlobalStyle ([9e2d1bb](https://github.com/chambo-e/scw-ui/commit/9e2d1bb0ebc1d489c32c3fdc414c163808963144))
-
-### [0.32.1](https://github.com/chambo-e/scw-ui/compare/v0.32.0...v0.32.1) (2020-11-20)
-
-
-### Bug Fixes
-
-* wrap when large list of tags [CNS-3466] ([19610af](https://github.com/chambo-e/scw-ui/commit/19610afd3126a3bcddf8146d40a9a715cefabbf2))
-
-## [0.32.0](https://github.com/chambo-e/scw-ui/compare/v0.31.4...v0.32.0) (2020-11-20)
+## [0.36.0](https://github.com/scaleway/scaleway-ui/compare/v0.35.0...v0.36.0) (2020-12-09)
 
 
 ### Features
 
-* **component:** add Popper ([8afce23](https://github.com/chambo-e/scw-ui/commit/8afce236ea86de85d9ea7db03de2a0f8ca563113))
+* port CategoryIcon from shire ([c40269d](https://github.com/scaleway/scaleway-ui/commit/c40269dc60202370e4cb7ea85d1d99dc3200b225))
 
-### [0.31.4](https://github.com/chambo-e/scw-ui/compare/v0.31.3...v0.31.4) (2020-11-19)
-
-
-### Bug Fixes
-
-* **link:** support tel links ([e814bf5](https://github.com/chambo-e/scw-ui/commit/e814bf5e7a2e8819a7a343ef741f84860f687fcb))
-
-### [0.31.3](https://github.com/chambo-e/scw-ui/compare/v0.31.2...v0.31.3) (2020-11-18)
-
-
-### Bug Fixes
-
-* **checkbox:** design feedback and fix html syntax CNS-3131 ([6ddc38e](https://github.com/chambo-e/scw-ui/commit/6ddc38e49798cdf502bd144f37597c762af194fb))
-
-### [0.31.2](https://github.com/chambo-e/scw-ui/compare/v0.31.1...v0.31.2) (2020-11-17)
-
-
-### Bug Fixes
-
-* correct Toaster propTypes ([52a2c45](https://github.com/chambo-e/scw-ui/commit/52a2c45104048cb17816615079090e96879e853a))
-
-### [0.31.1](https://github.com/chambo-e/scw-ui/compare/v0.31.0...v0.31.1) (2020-11-17)
-
-
-### Bug Fixes
-
-* **counter:** propagate onend api func ([66b19a6](https://github.com/chambo-e/scw-ui/commit/66b19a6097b7e2d401b419fd2409fd33a3d21104))
-
-## [0.31.0](https://github.com/chambo-e/scw-ui/compare/v0.30.1...v0.31.0) (2020-11-16)
+## [0.35.0](https://github.com/scaleway/scaleway-ui/compare/v0.34.2...v0.35.0) (2020-12-08)
 
 
 ### Features
 
-* port Stepper from shire [CNS-2109] ([71d43ac](https://github.com/chambo-e/scw-ui/commit/71d43ac728ff509b4bb14a01aab137e691a729fe))
+* **badge:** added lighter variants for badge ([c0c7dd1](https://github.com/scaleway/scaleway-ui/commit/c0c7dd1dc9b2ca6bb7bb1c73804eaad795ab4baa))
 
-### [0.30.1](https://github.com/chambo-e/scw-ui/compare/v0.30.0...v0.30.1) (2020-11-16)
+### [0.34.2](https://github.com/scaleway/scaleway-ui/compare/v0.34.1...v0.34.2) (2020-12-07)
 
 
 ### Bug Fixes
 
-* avoid false on Touchable tabIndex ([055e7e3](https://github.com/chambo-e/scw-ui/commit/055e7e3ed9cb562853c3b558f387189c34a2e3b0))
+* correct checkbox onClick handler ([e11efe1](https://github.com/scaleway/scaleway-ui/commit/e11efe1e8237b59e90302c227acd8c53949a7924))
 
-## [0.30.0](https://github.com/chambo-e/scw-ui/compare/v0.29.0...v0.30.0) (2020-11-13)
+### [0.34.1](https://github.com/scaleway/scaleway-ui/compare/v0.34.0...v0.34.1) (2020-12-07)
+
+
+### Bug Fixes
+
+* stop propagation on checkbox ([1f27113](https://github.com/scaleway/scaleway-ui/commit/1f27113f98d213677bddf9fe68d0dec741f712df))
+
+## [0.34.0](https://github.com/scaleway/scaleway-ui/compare/v0.33.0...v0.34.0) (2020-12-03)
 
 
 ### Features
 
-* migrate Avatar from shire ([202aba9](https://github.com/chambo-e/scw-ui/commit/202aba98f8c4cbf44bb6ace5c7bc61d486499be2))
+* **checkbox:** use reakit ([97b09d6](https://github.com/scaleway/scaleway-ui/commit/97b09d6b35280e6448d48bb9d56314f9cec5d2c6))
 
-## [0.29.0](https://github.com/chambo-e/scw-ui/compare/v0.28.0...v0.29.0) (2020-11-13)
-
-
-### Features
-
-* migrate Label, ScrollView, StatusIndicator and Unselectable from shire ([e0be446](https://github.com/chambo-e/scw-ui/commit/e0be446a6de90fd7cd4dd3e0913962e5bdba849c))
-
-## [0.28.0](https://github.com/chambo-e/scw-ui/compare/v0.27.1...v0.28.0) (2020-11-13)
+## [0.33.0](https://github.com/scaleway/scaleway-ui/compare/v0.32.6...v0.33.0) (2020-12-03)
 
 
 ### Features
 
-* add backgroundColor on ProgressBar + tests ([a4b8562](https://github.com/chambo-e/scw-ui/commit/a4b85628f747c4fedc09f72b0d919c42a7037bb8))
+* port CreationProgress from shire ([215c192](https://github.com/scaleway/scaleway-ui/commit/215c19256a0509e8818b7ef705a917d26ebbba7f))
 
-### [0.27.1](https://github.com/chambo-e/scw-ui/compare/v0.27.0...v0.27.1) (2020-11-13)
+### [0.32.6](https://github.com/scaleway/scaleway-ui/compare/v0.32.5...v0.32.6) (2020-11-26)
 
 
 ### Bug Fixes
 
-* correct popper position on Table BodyCell ([e0ee00c](https://github.com/chambo-e/scw-ui/commit/e0ee00caa74551569c54157a073cc83d58f2bd07))
+* correctly pass style system to Table [CNS-3468] ([3d57e3d](https://github.com/scaleway/scaleway-ui/commit/3d57e3d351c005aa514b1ccd1fce1eed3edf31ea))
 
-## [0.27.0](https://github.com/chambo-e/scw-ui/compare/v0.26.2...v0.27.0) (2020-11-12)
+### [0.32.5](https://github.com/scaleway/scaleway-ui/compare/v0.32.4...v0.32.5) (2020-11-23)
+
+
+### Bug Fixes
+
+* **status:** add few missing status ([251f51e](https://github.com/scaleway/scaleway-ui/commit/251f51ebde37942c66b497a6065471cb13713d38))
+
+### [0.32.4](https://github.com/scaleway/scaleway-ui/compare/v0.32.3...v0.32.4) (2020-11-20)
+
+
+### Bug Fixes
+
+* **tooltips:** use effect first ([f4135e0](https://github.com/scaleway/scaleway-ui/commit/f4135e03e89ae39d3c01d9e3bd49535561d95088))
+
+### [0.32.3](https://github.com/scaleway/scaleway-ui/compare/v0.32.2...v0.32.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* **popper:** add border-radius ([d7b7ad4](https://github.com/scaleway/scaleway-ui/commit/d7b7ad4f23e628439bab98f0a812b179ae965236))
+
+### [0.32.2](https://github.com/scaleway/scaleway-ui/compare/v0.32.1...v0.32.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* avoid direct font reference in GlobalStyle ([9e2d1bb](https://github.com/scaleway/scaleway-ui/commit/9e2d1bb0ebc1d489c32c3fdc414c163808963144))
+
+### [0.32.1](https://github.com/scaleway/scaleway-ui/compare/v0.32.0...v0.32.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* wrap when large list of tags [CNS-3466] ([19610af](https://github.com/scaleway/scaleway-ui/commit/19610afd3126a3bcddf8146d40a9a715cefabbf2))
+
+## [0.32.0](https://github.com/scaleway/scaleway-ui/compare/v0.31.4...v0.32.0) (2020-11-20)
 
 
 ### Features
 
-* add Pentagon component ([8a91a19](https://github.com/chambo-e/scw-ui/commit/8a91a19ef0952881cc169c1993fea5edc5c4d29e))
+* **component:** add Popper ([8afce23](https://github.com/scaleway/scaleway-ui/commit/8afce236ea86de85d9ea7db03de2a0f8ca563113))
 
-### [0.26.2](https://github.com/chambo-e/scw-ui/compare/v0.26.1...v0.26.2) (2020-11-09)
-
-
-### Bug Fixes
-
-* correct Typography const instance to allow forwarding ref ([a6b958e](https://github.com/chambo-e/scw-ui/commit/a6b958ecde03a095225f6f8825c73823ce376e0d))
-
-### [0.26.1](https://github.com/chambo-e/scw-ui/compare/v0.26.0...v0.26.1) (2020-11-09)
+### [0.31.4](https://github.com/scaleway/scaleway-ui/compare/v0.31.3...v0.31.4) (2020-11-19)
 
 
 ### Bug Fixes
 
-* **components:** add focus style ([d206ad6](https://github.com/chambo-e/scw-ui/commit/d206ad6ef662d2dd3f47d734a143a46d9d0272e6))
+* **link:** support tel links ([e814bf5](https://github.com/scaleway/scaleway-ui/commit/e814bf5e7a2e8819a7a343ef741f84860f687fcb))
 
-## [0.26.0](https://github.com/chambo-e/scw-ui/compare/v0.25.0...v0.26.0) (2020-11-09)
+### [0.31.3](https://github.com/scaleway/scaleway-ui/compare/v0.31.2...v0.31.3) (2020-11-18)
+
+
+### Bug Fixes
+
+* **checkbox:** design feedback and fix html syntax CNS-3131 ([6ddc38e](https://github.com/scaleway/scaleway-ui/commit/6ddc38e49798cdf502bd144f37597c762af194fb))
+
+### [0.31.2](https://github.com/scaleway/scaleway-ui/compare/v0.31.1...v0.31.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* correct Toaster propTypes ([52a2c45](https://github.com/scaleway/scaleway-ui/commit/52a2c45104048cb17816615079090e96879e853a))
+
+### [0.31.1](https://github.com/scaleway/scaleway-ui/compare/v0.31.0...v0.31.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* **counter:** propagate onend api func ([66b19a6](https://github.com/scaleway/scaleway-ui/commit/66b19a6097b7e2d401b419fd2409fd33a3d21104))
+
+## [0.31.0](https://github.com/scaleway/scaleway-ui/compare/v0.30.1...v0.31.0) (2020-11-16)
 
 
 ### Features
 
-* port Typography component from shire [CNS-2106] ([5576c7e](https://github.com/chambo-e/scw-ui/commit/5576c7e137f3800135a039a1323ad27150b5d60a))
+* port Stepper from shire [CNS-2109] ([71d43ac](https://github.com/scaleway/scaleway-ui/commit/71d43ac728ff509b4bb14a01aab137e691a729fe))
 
-## [0.25.0](https://github.com/chambo-e/scw-ui/compare/v0.24.1...v0.25.0) (2020-11-09)
+### [0.30.1](https://github.com/scaleway/scaleway-ui/compare/v0.30.0...v0.30.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* avoid false on Touchable tabIndex ([055e7e3](https://github.com/scaleway/scaleway-ui/commit/055e7e3ed9cb562853c3b558f387189c34a2e3b0))
+
+## [0.30.0](https://github.com/scaleway/scaleway-ui/compare/v0.29.0...v0.30.0) (2020-11-13)
 
 
 ### Features
 
-* port Table component from shire ([77a651d](https://github.com/chambo-e/scw-ui/commit/77a651d4af2bb4c1b873a1ac248489156cc52a24))
+* migrate Avatar from shire ([202aba9](https://github.com/scaleway/scaleway-ui/commit/202aba98f8c4cbf44bb6ace5c7bc61d486499be2))
 
-### [0.24.1](https://github.com/chambo-e/scw-ui/compare/v0.24.0...v0.24.1) (2020-11-09)
-
-
-### Bug Fixes
-
-* coherent style ([824f405](https://github.com/chambo-e/scw-ui/commit/824f405bfe8ab817099636ba7e191c15ebb605fe))
-
-## [0.24.0](https://github.com/chambo-e/scw-ui/compare/v0.23.3...v0.24.0) (2020-11-09)
+## [0.29.0](https://github.com/scaleway/scaleway-ui/compare/v0.28.0...v0.29.0) (2020-11-13)
 
 
 ### Features
 
-* **range:** adds range component ([fe1cad1](https://github.com/chambo-e/scw-ui/commit/fe1cad120985a8cca616bbc1cf2421ad94755e9b))
+* migrate Label, ScrollView, StatusIndicator and Unselectable from shire ([e0be446](https://github.com/scaleway/scaleway-ui/commit/e0be446a6de90fd7cd4dd3e0913962e5bdba849c))
 
-### [0.23.3](https://github.com/chambo-e/scw-ui/compare/v0.23.2...v0.23.3) (2020-11-06)
-
-
-### Bug Fixes
-
-* **deps:** yarn lock ([1d2ea35](https://github.com/chambo-e/scw-ui/commit/1d2ea35848f0b69c53e3cfbbfbb2351ab32d7dd9))
-
-### [0.23.2](https://github.com/chambo-e/scw-ui/compare/v0.23.1...v0.23.2) (2020-11-06)
-
-
-### Bug Fixes
-
-* correct storybook build ([f5f3efe](https://github.com/chambo-e/scw-ui/commit/f5f3efe245890d4acf5e28e8449ca46176ce326f))
-
-### [0.23.1](https://github.com/chambo-e/scw-ui/compare/v0.23.0...v0.23.1) (2020-11-05)
-
-
-### Bug Fixes
-
-* correct Action default size ([ea6ae5b](https://github.com/chambo-e/scw-ui/commit/ea6ae5b472f0ee0e0046d92307cc1e31d38b48c3))
-
-## [0.23.0](https://github.com/chambo-e/scw-ui/compare/v0.22.0...v0.23.0) (2020-11-05)
+## [0.28.0](https://github.com/scaleway/scaleway-ui/compare/v0.27.1...v0.28.0) (2020-11-13)
 
 
 ### Features
 
-* add Progress component [CNS-2098] ([c43fce2](https://github.com/chambo-e/scw-ui/commit/c43fce2a4915efc193a93295784a99c729a30b11))
+* add backgroundColor on ProgressBar + tests ([a4b8562](https://github.com/scaleway/scaleway-ui/commit/a4b85628f747c4fedc09f72b0d919c42a7037bb8))
 
-## [0.22.0](https://github.com/chambo-e/scw-ui/compare/v0.21.3...v0.22.0) (2020-11-05)
+### [0.27.1](https://github.com/scaleway/scaleway-ui/compare/v0.27.0...v0.27.1) (2020-11-13)
+
+
+### Bug Fixes
+
+* correct popper position on Table BodyCell ([e0ee00c](https://github.com/scaleway/scaleway-ui/commit/e0ee00caa74551569c54157a073cc83d58f2bd07))
+
+## [0.27.0](https://github.com/scaleway/scaleway-ui/compare/v0.26.2...v0.27.0) (2020-11-12)
 
 
 ### Features
 
-* **component:** migration Command component ([0f80ae2](https://github.com/chambo-e/scw-ui/commit/0f80ae2c6965b719179c69b8921288e5f0588931))
+* add Pentagon component ([8a91a19](https://github.com/scaleway/scaleway-ui/commit/8a91a19ef0952881cc169c1993fea5edc5c4d29e))
 
-### [0.21.3](https://github.com/chambo-e/scw-ui/compare/v0.21.2...v0.21.3) (2020-11-04)
-
-
-### Bug Fixes
-
-* correct Breadcrumbs export ([464dc34](https://github.com/chambo-e/scw-ui/commit/464dc3447b5630e195010dc742966a2724acf546))
-
-### [0.21.2](https://github.com/chambo-e/scw-ui/compare/v0.21.1...v0.21.2) (2020-11-04)
+### [0.26.2](https://github.com/scaleway/scaleway-ui/compare/v0.26.1...v0.26.2) (2020-11-09)
 
 
 ### Bug Fixes
 
-* some PropTypes ([f04db3c](https://github.com/chambo-e/scw-ui/commit/f04db3cef0504c53e9328ecbd8bb81e1d241f879))
+* correct Typography const instance to allow forwarding ref ([a6b958e](https://github.com/scaleway/scaleway-ui/commit/a6b958ecde03a095225f6f8825c73823ce376e0d))
 
-### [0.21.1](https://github.com/chambo-e/scw-ui/compare/v0.21.0...v0.21.1) (2020-11-04)
+### [0.26.1](https://github.com/scaleway/scaleway-ui/compare/v0.26.0...v0.26.1) (2020-11-09)
 
 
 ### Bug Fixes
 
-* adds glacier icons ([60ff63b](https://github.com/chambo-e/scw-ui/commit/60ff63bf4dd2664b066b3efe40dc5a0549188b68))
+* **components:** add focus style ([d206ad6](https://github.com/scaleway/scaleway-ui/commit/d206ad6ef662d2dd3f47d734a143a46d9d0272e6))
 
-## [0.21.0](https://github.com/chambo-e/scw-ui/compare/v0.20.2...v0.21.0) (2020-11-03)
+## [0.26.0](https://github.com/scaleway/scaleway-ui/compare/v0.25.0...v0.26.0) (2020-11-09)
 
 
 ### Features
 
-* **component:** action ([85a48dd](https://github.com/chambo-e/scw-ui/commit/85a48dd032669ddee3898a334df4a45315f16a27))
+* port Typography component from shire [CNS-2106] ([5576c7e](https://github.com/scaleway/scaleway-ui/commit/5576c7e137f3800135a039a1323ad27150b5d60a))
 
-### [0.20.2](https://github.com/chambo-e/scw-ui/compare/v0.20.1...v0.20.2) (2020-11-02)
-
-
-### Bug Fixes
-
-* support react 16 and 17 ([c581458](https://github.com/chambo-e/scw-ui/commit/c5814588ead06f07dac0965d66345e6b58418f2f))
-
-### [0.20.1](https://github.com/chambo-e/scw-ui/compare/v0.20.0...v0.20.1) (2020-11-02)
-
-
-### Bug Fixes
-
-* **build:** ensure css files are bundled ([19996ba](https://github.com/chambo-e/scw-ui/commit/19996baf9441a740b65570602322d112ea471f34))
-
-## [0.20.0](https://github.com/chambo-e/scw-ui/compare/v0.19.1...v0.20.0) (2020-11-02)
+## [0.25.0](https://github.com/scaleway/scaleway-ui/compare/v0.24.1...v0.25.0) (2020-11-09)
 
 
 ### Features
 
-* migrate ProgressionButton from shire ([80f7cb6](https://github.com/chambo-e/scw-ui/commit/80f7cb65c0244d1b335293ce2ee105efe12377e0))
+* port Table component from shire ([77a651d](https://github.com/scaleway/scaleway-ui/commit/77a651d4af2bb4c1b873a1ac248489156cc52a24))
 
-### [0.19.1](https://github.com/chambo-e/scw-ui/compare/v0.19.0...v0.19.1) (2020-10-28)
+### [0.24.1](https://github.com/scaleway/scaleway-ui/compare/v0.24.0...v0.24.1) (2020-11-09)
 
 
 ### Bug Fixes
 
-* **engine:** lax engine version ([ef65e47](https://github.com/chambo-e/scw-ui/commit/ef65e479b59d969bacb752e9ebfbb891a09bb00a))
+* coherent style ([824f405](https://github.com/scaleway/scaleway-ui/commit/824f405bfe8ab817099636ba7e191c15ebb605fe))
 
-## [0.19.0](https://github.com/chambo-e/scw-ui/compare/v0.18.0...v0.19.0) (2020-10-27)
+## [0.24.0](https://github.com/scaleway/scaleway-ui/compare/v0.23.3...v0.24.0) (2020-11-09)
 
-
-### Features
-
-* add shielded-account icon (also Icon tests) ([2257e40](https://github.com/chambo-e/scw-ui/commit/2257e406e35508aca9ba79c6792d7baddb2f149e))
-
-## [0.18.0](https://github.com/chambo-e/scw-ui/compare/v0.17.0...v0.18.0) (2020-10-27)
 
 ### Features
 
-- refactor Reminder to add ability to act as a Button ([5567ced](https://github.com/chambo-e/scw-ui/commit/5567ced94efce893fc1a8f19f1d5627f737f6205))
+* **range:** adds range component ([fe1cad1](https://github.com/scaleway/scaleway-ui/commit/fe1cad120985a8cca616bbc1cf2421ad94755e9b))
 
-## [0.17.0](https://github.com/chambo-e/scw-ui/compare/v0.16.0...v0.17.0) (2020-10-26)
+### [0.23.3](https://github.com/scaleway/scaleway-ui/compare/v0.23.2...v0.23.3) (2020-11-06)
 
-### Features
-
-- **code:** code component CNS-3413 ([8be5b65](https://github.com/chambo-e/scw-ui/commit/8be5b6582dbda16561217f295fc14b956952ff68))
-
-## [0.16.0](https://github.com/chambo-e/scw-ui/compare/v0.15.3...v0.16.0) (2020-10-26)
-
-### Features
-
-- **extendedreminder:** new component extended reminder ([39e71e1](https://github.com/chambo-e/scw-ui/commit/39e71e14d4e0ccf59ae76255421d72144556dc9f))
-
-### [0.15.3](https://github.com/chambo-e/scw-ui/compare/v0.15.2...v0.15.3) (2020-10-19)
 
 ### Bug Fixes
 
-- **config:** harmonise renovate config with shire one and enable renovate on docker too ([03f35d0](https://github.com/chambo-e/scw-ui/commit/03f35d0d69334cccd1be408e42628c3acacb9dbf))
+* **deps:** yarn lock ([1d2ea35](https://github.com/scaleway/scaleway-ui/commit/1d2ea35848f0b69c53e3cfbbfbb2351ab32d7dd9))
 
-### [0.15.2](https://github.com/chambo-e/scw-ui/compare/v0.15.1...v0.15.2) (2020-10-16)
+### [0.23.2](https://github.com/scaleway/scaleway-ui/compare/v0.23.1...v0.23.2) (2020-11-06)
 
-### Bug Fixes
-
-- **icon:** add key icon ([7d3e5cf](https://github.com/chambo-e/scw-ui/commit/7d3e5cf9114dd071310315498b7bc4e98ea82e98))
-
-### [0.15.1](https://github.com/chambo-e/scw-ui/compare/v0.15.0...v0.15.1) (2020-10-14)
 
 ### Bug Fixes
 
-- **badge:** width to fit-content ([4449128](https://github.com/chambo-e/scw-ui/commit/44491284dd7f41d29d50e704ce54ba6654cdb8a5))
+* correct storybook build ([f5f3efe](https://github.com/scaleway/scaleway-ui/commit/f5f3efe245890d4acf5e28e8449ca46176ce326f))
 
-## [0.15.0](https://github.com/chambo-e/scw-ui/compare/v0.14.2...v0.15.0) (2020-10-13)
+### [0.23.1](https://github.com/scaleway/scaleway-ui/compare/v0.23.0...v0.23.1) (2020-11-05)
+
+
+### Bug Fixes
+
+* correct Action default size ([ea6ae5b](https://github.com/scaleway/scaleway-ui/commit/ea6ae5b472f0ee0e0046d92307cc1e31d38b48c3))
+
+## [0.23.0](https://github.com/scaleway/scaleway-ui/compare/v0.22.0...v0.23.0) (2020-11-05)
+
 
 ### Features
 
-- adds sphere component ([897b216](https://github.com/chambo-e/scw-ui/commit/897b2165909dc14f7f3f7b5f9055bc759b240702))
+* add Progress component [CNS-2098] ([c43fce2](https://github.com/scaleway/scaleway-ui/commit/c43fce2a4915efc193a93295784a99c729a30b11))
 
-### [0.14.2](https://github.com/chambo-e/scw-ui/compare/v0.14.1...v0.14.2) (2020-10-13)
+## [0.22.0](https://github.com/scaleway/scaleway-ui/compare/v0.21.3...v0.22.0) (2020-11-05)
 
-### Bug Fixes
-
-- **richselect:** adds forward ref ([2a3e7ab](https://github.com/chambo-e/scw-ui/commit/2a3e7ab6afbe79ba24d130bb5507b6aa514a9b20))
-
-### [0.14.1](https://github.com/chambo-e/scw-ui/compare/v0.14.0...v0.14.1) (2020-10-12)
-
-### Bug Fixes
-
-- **ci:** correct deploy ([9b4b806](https://github.com/chambo-e/scw-ui/commit/9b4b806b5aead19f500acdec05a463442888198e))
-
-## [0.14.0](https://github.com/chambo-e/scw-ui/compare/v0.13.14...v0.14.0) (2020-10-12)
 
 ### Features
 
-- add Reminder component [CNS-3354] ([64e87e7](https://github.com/chambo-e/scw-ui/commit/64e87e7941aadee77694f5ba665511e44ae9cd7a))
+* **component:** migration Command component ([0f80ae2](https://github.com/scaleway/scaleway-ui/commit/0f80ae2c6965b719179c69b8921288e5f0588931))
+
+### [0.21.3](https://github.com/scaleway/scaleway-ui/compare/v0.21.2...v0.21.3) (2020-11-04)
+
+
+### Bug Fixes
+
+* correct Breadcrumbs export ([464dc34](https://github.com/scaleway/scaleway-ui/commit/464dc3447b5630e195010dc742966a2724acf546))
+
+### [0.21.2](https://github.com/scaleway/scaleway-ui/compare/v0.21.1...v0.21.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* some PropTypes ([f04db3c](https://github.com/scaleway/scaleway-ui/commit/f04db3cef0504c53e9328ecbd8bb81e1d241f879))
+
+### [0.21.1](https://github.com/scaleway/scaleway-ui/compare/v0.21.0...v0.21.1) (2020-11-04)
+
+
+### Bug Fixes
+
+* adds glacier icons ([60ff63b](https://github.com/scaleway/scaleway-ui/commit/60ff63bf4dd2664b066b3efe40dc5a0549188b68))
+
+## [0.21.0](https://github.com/scaleway/scaleway-ui/compare/v0.20.2...v0.21.0) (2020-11-03)
+
+
+### Features
+
+* **component:** action ([85a48dd](https://github.com/scaleway/scaleway-ui/commit/85a48dd032669ddee3898a334df4a45315f16a27))
+
+### [0.20.2](https://github.com/scaleway/scaleway-ui/compare/v0.20.1...v0.20.2) (2020-11-02)
+
+
+### Bug Fixes
+
+* support react 16 and 17 ([c581458](https://github.com/scaleway/scaleway-ui/commit/c5814588ead06f07dac0965d66345e6b58418f2f))
+
+### [0.20.1](https://github.com/scaleway/scaleway-ui/compare/v0.20.0...v0.20.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* **build:** ensure css files are bundled ([19996ba](https://github.com/scaleway/scaleway-ui/commit/19996baf9441a740b65570602322d112ea471f34))
+
+## [0.20.0](https://github.com/scaleway/scaleway-ui/compare/v0.19.1...v0.20.0) (2020-11-02)
+
+
+### Features
+
+* migrate ProgressionButton from shire ([80f7cb6](https://github.com/scaleway/scaleway-ui/commit/80f7cb65c0244d1b335293ce2ee105efe12377e0))
+
+### [0.19.1](https://github.com/scaleway/scaleway-ui/compare/v0.19.0...v0.19.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* **engine:** lax engine version ([ef65e47](https://github.com/scaleway/scaleway-ui/commit/ef65e479b59d969bacb752e9ebfbb891a09bb00a))
+
+## [0.19.0](https://github.com/scaleway/scaleway-ui/compare/v0.18.0...v0.19.0) (2020-10-27)
+
+
+### Features
+
+* add shielded-account icon (also Icon tests) ([2257e40](https://github.com/scaleway/scaleway-ui/commit/2257e406e35508aca9ba79c6792d7baddb2f149e))
+
+## [0.18.0](https://github.com/scaleway/scaleway-ui/compare/v0.17.0...v0.18.0) (2020-10-27)
+
+### Features
+
+- refactor Reminder to add ability to act as a Button ([5567ced](https://github.com/scaleway/scaleway-ui/commit/5567ced94efce893fc1a8f19f1d5627f737f6205))
+
+## [0.17.0](https://github.com/scaleway/scaleway-ui/compare/v0.16.0...v0.17.0) (2020-10-26)
+
+### Features
+
+- **code:** code component CNS-3413 ([8be5b65](https://github.com/scaleway/scaleway-ui/commit/8be5b6582dbda16561217f295fc14b956952ff68))
+
+## [0.16.0](https://github.com/scaleway/scaleway-ui/compare/v0.15.3...v0.16.0) (2020-10-26)
+
+### Features
+
+- **extendedreminder:** new component extended reminder ([39e71e1](https://github.com/scaleway/scaleway-ui/commit/39e71e14d4e0ccf59ae76255421d72144556dc9f))
+
+### [0.15.3](https://github.com/scaleway/scaleway-ui/compare/v0.15.2...v0.15.3) (2020-10-19)
+
+### Bug Fixes
+
+- **config:** harmonise renovate config with shire one and enable renovate on docker too ([03f35d0](https://github.com/scaleway/scaleway-ui/commit/03f35d0d69334cccd1be408e42628c3acacb9dbf))
+
+### [0.15.2](https://github.com/scaleway/scaleway-ui/compare/v0.15.1...v0.15.2) (2020-10-16)
+
+### Bug Fixes
+
+- **icon:** add key icon ([7d3e5cf](https://github.com/scaleway/scaleway-ui/commit/7d3e5cf9114dd071310315498b7bc4e98ea82e98))
+
+### [0.15.1](https://github.com/scaleway/scaleway-ui/compare/v0.15.0...v0.15.1) (2020-10-14)
+
+### Bug Fixes
+
+- **badge:** width to fit-content ([4449128](https://github.com/scaleway/scaleway-ui/commit/44491284dd7f41d29d50e704ce54ba6654cdb8a5))
+
+## [0.15.0](https://github.com/scaleway/scaleway-ui/compare/v0.14.2...v0.15.0) (2020-10-13)
+
+### Features
+
+- adds sphere component ([897b216](https://github.com/scaleway/scaleway-ui/commit/897b2165909dc14f7f3f7b5f9055bc759b240702))
+
+### [0.14.2](https://github.com/scaleway/scaleway-ui/compare/v0.14.1...v0.14.2) (2020-10-13)
+
+### Bug Fixes
+
+- **richselect:** adds forward ref ([2a3e7ab](https://github.com/scaleway/scaleway-ui/commit/2a3e7ab6afbe79ba24d130bb5507b6aa514a9b20))
+
+### [0.14.1](https://github.com/scaleway/scaleway-ui/compare/v0.14.0...v0.14.1) (2020-10-12)
+
+### Bug Fixes
+
+- **ci:** correct deploy ([9b4b806](https://github.com/scaleway/scaleway-ui/commit/9b4b806b5aead19f500acdec05a463442888198e))
+
+## [0.14.0](https://github.com/scaleway/scaleway-ui/compare/v0.13.14...v0.14.0) (2020-10-12)
+
+### Features
+
+- add Reminder component [CNS-3354] ([64e87e7](https://github.com/scaleway/scaleway-ui/commit/64e87e7941aadee77694f5ba665511e44ae9cd7a))
 
 # Changelog
 
@@ -1464,77 +1464,77 @@ All notable changes to this project will be documented in this file. See [standa
 - checkbox new errors display ([1bdc006](https://***REMOVED***///commit/1bdc006))
 - textbox new errors display ([ca8bce6](https://***REMOVED***///commit/ca8bce6))
 
-# [0.7.0](https://github.com/chambo-e/scw-ui/compare/v0.6.0...v0.7.0) (2019-07-03)
+# [0.7.0](https://github.com/scaleway/scaleway-ui/compare/v0.6.0...v0.7.0) (2019-07-03)
 
 ### Bug Fixes
 
-- remove npm private config ([4dfdf70](https://github.com/chambo-e/scw-ui/commit/4dfdf70))
-- upgrade minor dependancies ([182a0a6](https://github.com/chambo-e/scw-ui/commit/182a0a6))
-- use google fonts for asap ([1421e1f](https://github.com/chambo-e/scw-ui/commit/1421e1f))
+- remove npm private config ([4dfdf70](https://github.com/scaleway/scaleway-ui/commit/4dfdf70))
+- upgrade minor dependancies ([182a0a6](https://github.com/scaleway/scaleway-ui/commit/182a0a6))
+- use google fonts for asap ([1421e1f](https://github.com/scaleway/scaleway-ui/commit/1421e1f))
 
 ### Features
 
-- introduce fontsRoot in GlobalStyle ([8552ca7](https://github.com/chambo-e/scw-ui/commit/8552ca7))
+- introduce fontsRoot in GlobalStyle ([8552ca7](https://github.com/scaleway/scaleway-ui/commit/8552ca7))
 
-# [0.6.0](https://github.com/chambo-e/scw-ui/compare/v0.5.3...v0.6.0) (2019-06-27)
-
-### Features
-
-- make clipboard util SSR compilant ([34afefd](https://github.com/chambo-e/scw-ui/commit/34afefd))
-
-## [0.5.3](https://github.com/chambo-e/scw-ui/compare/v0.5.2...v0.5.3) (2019-06-26)
-
-### Bug Fixes
-
-- GlobalStyle prop types ([c1d2887](https://github.com/chambo-e/scw-ui/commit/c1d2887))
-- select chevron centering ([2eae9d2](https://github.com/chambo-e/scw-ui/commit/2eae9d2))
-
-## [0.5.2](https://github.com/chambo-e/scw-ui/compare/v0.5.1...v0.5.2) (2019-06-25)
-
-### Bug Fixes
-
-- yarn install before publish ([cd606b3](https://github.com/chambo-e/scw-ui/commit/cd606b3))
-
-## [0.5.1](https://github.com/chambo-e/scw-ui/compare/v0.5.0...v0.5.1) (2019-06-25)
-
-### Bug Fixes
-
-- prepublishOnly perm ([21ce0b5](https://github.com/chambo-e/scw-ui/commit/21ce0b5))
-
-# [0.5.0](https://github.com/chambo-e/scw-ui/compare/v0.4.0...v0.5.0) (2019-06-25)
-
-### Bug Fixes
-
-- use front-ci-cd ansible_user ([e22d96b](https://github.com/chambo-e/scw-ui/commit/e22d96b))
+# [0.6.0](https://github.com/scaleway/scaleway-ui/compare/v0.5.3...v0.6.0) (2019-06-27)
 
 ### Features
 
-- ci-cd publish npm registry ([35ce0d2](https://github.com/chambo-e/scw-ui/commit/35ce0d2))
-- GlobalStyle component ([f9dc3d4](https://github.com/chambo-e/scw-ui/commit/f9dc3d4))
-- Select component ([70e2592](https://github.com/chambo-e/scw-ui/commit/70e2592))
-- useCopyToClipboard ([2c79b00](https://github.com/chambo-e/scw-ui/commit/2c79b00))
+- make clipboard util SSR compilant ([34afefd](https://github.com/scaleway/scaleway-ui/commit/34afefd))
 
-# [0.4.0](https://github.com/chambo-e/scw-ui/compare/v0.3.1...v0.4.0) (2019-06-14)
+## [0.5.3](https://github.com/scaleway/scaleway-ui/compare/v0.5.2...v0.5.3) (2019-06-26)
 
 ### Bug Fixes
 
-- button proptypes ([e2537b2](https://github.com/chambo-e/scw-ui/commit/e2537b2))
+- GlobalStyle prop types ([c1d2887](https://github.com/scaleway/scaleway-ui/commit/c1d2887))
+- select chevron centering ([2eae9d2](https://github.com/scaleway/scaleway-ui/commit/2eae9d2))
+
+## [0.5.2](https://github.com/scaleway/scaleway-ui/compare/v0.5.1...v0.5.2) (2019-06-25)
+
+### Bug Fixes
+
+- yarn install before publish ([cd606b3](https://github.com/scaleway/scaleway-ui/commit/cd606b3))
+
+## [0.5.1](https://github.com/scaleway/scaleway-ui/compare/v0.5.0...v0.5.1) (2019-06-25)
+
+### Bug Fixes
+
+- prepublishOnly perm ([21ce0b5](https://github.com/scaleway/scaleway-ui/commit/21ce0b5))
+
+# [0.5.0](https://github.com/scaleway/scaleway-ui/compare/v0.4.0...v0.5.0) (2019-06-25)
+
+### Bug Fixes
+
+- use front-ci-cd ansible_user ([e22d96b](https://github.com/scaleway/scaleway-ui/commit/e22d96b))
 
 ### Features
 
-- UniversalLink for link logic delegation ([a63a594](https://github.com/chambo-e/scw-ui/commit/a63a594))
-- use native link for anchors ([b86eb01](https://github.com/chambo-e/scw-ui/commit/b86eb01))
+- ci-cd publish npm registry ([35ce0d2](https://github.com/scaleway/scaleway-ui/commit/35ce0d2))
+- GlobalStyle component ([f9dc3d4](https://github.com/scaleway/scaleway-ui/commit/f9dc3d4))
+- Select component ([70e2592](https://github.com/scaleway/scaleway-ui/commit/70e2592))
+- useCopyToClipboard ([2c79b00](https://github.com/scaleway/scaleway-ui/commit/2c79b00))
 
-## [0.3.1](https://github.com/chambo-e/scw-ui/compare/v0.3.0...v0.3.1) (2019-04-29)
+# [0.4.0](https://github.com/scaleway/scaleway-ui/compare/v0.3.1...v0.4.0) (2019-06-14)
 
-# [0.3.0](https://github.com/chambo-e/scw-ui/compare/v0.2.1...v0.3.0) (2019-04-24)
+### Bug Fixes
+
+- button proptypes ([e2537b2](https://github.com/scaleway/scaleway-ui/commit/e2537b2))
 
 ### Features
 
-- add TextBox ([b4709ef](https://github.com/chambo-e/scw-ui/commit/b4709ef))
-- rename project to @scaleway/ui ([1654dc7](https://github.com/chambo-e/scw-ui/commit/1654dc7))
+- UniversalLink for link logic delegation ([a63a594](https://github.com/scaleway/scaleway-ui/commit/a63a594))
+- use native link for anchors ([b86eb01](https://github.com/scaleway/scaleway-ui/commit/b86eb01))
 
-## [0.2.1](https://github.com/chambo-e/scw-ui/compare/v0.2.0...v0.2.1) (2019-04-24)
+## [0.3.1](https://github.com/scaleway/scaleway-ui/compare/v0.3.0...v0.3.1) (2019-04-29)
+
+# [0.3.0](https://github.com/scaleway/scaleway-ui/compare/v0.2.1...v0.3.0) (2019-04-24)
+
+### Features
+
+- add TextBox ([b4709ef](https://github.com/scaleway/scaleway-ui/commit/b4709ef))
+- rename project to @scaleway/ui ([1654dc7](https://github.com/scaleway/scaleway-ui/commit/1654dc7))
+
+## [0.2.1](https://github.com/scaleway/scaleway-ui/compare/v0.2.0...v0.2.1) (2019-04-24)
 
 # [0.2.0](https://github.com/smooth-code/scaleway-ui/compare/v0.1.0...v0.2.0) (2019-04-24)
 
