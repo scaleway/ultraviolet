@@ -20,9 +20,11 @@ const ProgressCircle = ({
         root: {},
         path: {
           stroke: colors[pathColor] || pathColor,
+          strokeLinecap: 'round',
         },
         trail: {
           stroke: colors[trailColor] || trailColor,
+          strokeLinecap: 'round',
         },
         text: {
           fill: colors.primary,
