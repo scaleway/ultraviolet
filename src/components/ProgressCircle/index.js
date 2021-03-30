@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { colors } from '../../theme'
-import { Box } from '../Box'
 
 const ProgressCircle = ({
   percentage,
@@ -11,9 +10,8 @@ const ProgressCircle = ({
   strokeWidth,
   pathColor,
   trailColor,
-  ...props
 }) => (
-  <Box height={size} width={size} {...props}>
+  <div style={{ width: size, height: size }}>
     <CircularProgressbar
       value={percentage}
       text={text}
@@ -34,7 +32,7 @@ const ProgressCircle = ({
         },
       }}
     />
-  </Box>
+  </div>
 )
 
 ProgressCircle.propTypes = {
