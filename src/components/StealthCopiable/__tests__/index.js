@@ -5,8 +5,11 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('StealthCopiable', () => {
   beforeAll(() => {
+    let data = ''
+
     window.clipboardData = {
-      setData: jest.fn()
+      setData: jest.fn((_, val) => { console.log(val); data = val }),
+      getData: jest.fn(() => data)
     }
   });
 
@@ -27,6 +30,7 @@ describe('StealthCopiable', () => {
       <StealthCopiable side="left">Hello</StealthCopiable>,
       { transform: ({ getByText }) => {
         fireEvent.click(getByText('Copy'))
+        expect(window.clipboardData.getData()).toBe('Hello')
       }}
     )
   })
