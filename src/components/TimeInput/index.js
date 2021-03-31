@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { RichSelect } from '../RichSelect'
+import RichSelect from '../RichSelect'
 
 const hours = [
   '00:00',

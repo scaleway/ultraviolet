@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   useCallback,
@@ -9,95 +9,7 @@ import React, {
 } from 'react'
 import { onKeyOnlyNumbers } from '../../helpers/keycode'
 import { parseIntOr } from '../../helpers/numbers'
-import { colors } from '../../theme'
 import { Box } from '../Box'
-
-const styles = {
-  limit: offsetTop => css`
-    position: absolute;
-    font-size: 12px;
-    color: ${colors.gray950};
-    font-weight: 500;
-    top: ${offsetTop + 8}px;
-
-    ::before {
-      content: '';
-      background-color: ${colors.gray950};
-      width: 2px;
-      position: absolute;
-      height: 10px;
-      top: -11px;
-      border-radius: 4px;
-    }
-  `,
-  limitLeft: css`
-    left: 8px;
-    ::before {
-      left: 16px;
-      right: unset;
-    }
-  `,
-  limitRight: css`
-    right: 8px;
-    ::before {
-      right: 16px;
-      left: unset;
-    }
-  `,
-  container: css`
-    height: 36px;
-    margin-bottom: 8px;
-    width: 100%;
-    position: relative;
-    user-select: none;
-  `,
-  bar(offsetTop) {
-    return css`
-      position: absolute;
-      height: 4px;
-      width: 100%;
-      background-color: ${colors.zumthor};
-      border-radius: 8px;
-      user-select: none;
-      top: ${offsetTop}px;
-    `
-  },
-  cursorsLink: offsetTop => css`
-    position: absolute;
-    top: ${offsetTop + 0}px;
-    height: 4px;
-    width: 100%;
-    background-color: ${colors.violet};
-    border-radius: 8px;
-    user-select: none;
-  `,
-  cursor: (offsetTop, cursorWidth, isGrabbed) => css`
-    position: absolute;
-    top: ${offsetTop + -6}px;
-    height: 16px;
-    width: ${cursorWidth}px;
-    border-radius: 50%;
-    border: 4px solid ${colors.violet};
-    background-color: white;
-    cursor: ${isGrabbed ? 'grabbing' : 'grab'};
-    margin-bottom: 16px;
-  `,
-  input: css`
-    position: absolute;
-    color: ${colors.gray950};
-    background-color: ${colors.white};
-    font-size: 16px;
-    border: 1px solid ${colors.violet};
-    border-radius: 4px;
-    min-height: 25px;
-    min-width: 40px;
-    text-align: center;
-    outline: none;
-    max-width: 100%;
-    top: -33px;
-    left: -15px;
-  `,
-}
 
 const getPercent = (min, max, v) => (v - min) / (max - min)
 
@@ -128,10 +40,131 @@ const canMove = (value, values = [], valueIndex) => {
   return tmp.some(cb)
 }
 
+const StyledContainer = styled(Box)`
+  height: 36px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  user-select: none;
+`
+
+const StyledBar = styled('div', {
+  shouldForwardProp: prop => !['offsetTop'].includes(prop),
+})`
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.zumthor};
+  border-radius: 8px;
+  user-select: none;
+  top: ${({ offsetTop }) => offsetTop}px;
+`
+
+const StyledLimit = styled(Box, {
+  shouldForwardProp: prop => !['offsetTop', 'postion'].includes(prop),
+})`
+  position: absolute;
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.gray950};
+  font-weight: 500;
+  top: ${({ offsetTop }) => offsetTop + 8}px;
+
+  ::before {
+    content: '';
+    background-color: ${({ theme }) => theme.colors.gray950};
+    width: 2px;
+    position: absolute;
+    height: 10px;
+    top: -11px;
+    border-radius: 4px;
+  }
+
+  ${({ position }) =>
+    position === 'left' &&
+    `
+    left: 8px;
+    ::before {
+      left: 16px;
+      right: unset;
+    }
+  `}
+
+  ${({ position }) =>
+    position === 'right' &&
+    `
+    right: 8px;
+    ::before {
+      right: 16px;
+      left: unset;
+    }
+  `}
+`
+
+const Limit = ({ value, label, position, offsetTop }) => (
+  <StyledLimit position={position} offsetTop={offsetTop}>
+    {value} {label}
+  </StyledLimit>
+)
+
+Limit.defaultProps = {
+  label: '',
+  offsetTop: 0,
+  position: undefined,
+  value: 0,
+}
+
+Limit.propTypes = {
+  label: PropTypes.string,
+  offsetTop: PropTypes.number,
+  position: PropTypes.oneOf(['left', 'right']),
+  value: PropTypes.number,
+}
+
+const StyledCursorLink = styled('div', {
+  shouldForwardProp: prop => !['offsetTop'].includes(prop),
+})`
+  position: absolute;
+  top: ${({ offsetTop }) => offsetTop + 0}px;
+  height: 4px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.violet};
+  border-radius: 8px;
+  user-select: none;
+`
+
+const StyledCursor = styled(Box, {
+  shouldForwardProp: prop => !['offsetTop', 'width', 'grabbed'].includes(prop),
+})`
+  position: absolute;
+  top: ${({ offsetTop }) => offsetTop + -6}px;
+  height: 16px;
+  width: ${({ width }) => width}px;
+  border-radius: 50%;
+  border: 4px solid ${({ theme }) => theme.colors.violet};
+  background-color: white;
+  cursor: ${({ grabbed }) => (grabbed ? 'grabbing' : 'grab')};
+  margin-bottom: 16px;
+`
+
+const StyledInput = styled.input`
+  position: absolute;
+  color: ${({ theme }) => theme.colors.gray950};
+  background-color: ${({ theme }) => theme.colors.white};
+  font-size: 16px;
+  border: 1px solid ${({ theme }) => theme.colors.violet};
+  border-radius: 4px;
+  min-height: 25px;
+  min-width: 40px;
+  text-align: center;
+  outline: none;
+  max-width: 100%;
+  top: -33px;
+  left: -15px;
+`
+
 const Input = ({ onChange, onKeyPress, onBlur, value, ...props }) => (
-  <input
+  <StyledInput
     {...props}
-    css={[styles.input]}
     onChange={onChange}
     onKeyPress={onKeyPress}
     onBlur={onBlur}
@@ -151,21 +184,6 @@ Input.propTypes = {
   onKeyPress: PropTypes.func,
   onBlur: PropTypes.func,
   value: PropTypes.number,
-}
-
-const Limit = ({ value, label, ...props }) => (
-  <Box {...props}>
-    {value} {label}
-  </Box>
-)
-
-Limit.defaultProps = {
-  value: 0,
-  label: '',
-}
-Limit.propTypes = {
-  value: PropTypes.number,
-  label: PropTypes.string,
 }
 
 const Range = ({
@@ -281,7 +299,6 @@ const Range = ({
     ev => {
       if (ev.target.tagName === 'INPUT') return
       const cursor = cursorsRef[grabbedCursor].current
-
       if (cursor) {
         const { x } = container.current.getBoundingClientRect()
 
@@ -395,36 +412,25 @@ const Range = ({
   }, [cursorsRef, grabbedCursor, onMouseMove, values])
 
   return (
-    <Box
-      css={styles.container}
+    <StyledContainer
       ref={container}
       onMouseLeave={onMouseUp}
       onMouseUp={onMouseUp}
       onTouchEnd={onMouseUp}
       {...props}
     >
-      <div css={styles.bar(offsetTop)} />
-      <Limit
-        css={[styles.limit(offsetTop), styles.limitLeft]}
-        value={min}
-        label="(min)"
-      />
-      <Limit
-        css={[styles.limit(offsetTop), styles.limitRight]}
-        value={max}
-        label="(max)"
-      />
+      <StyledBar offsetTop={offsetTop} />
+      <Limit postion="left" offsetTop={offsetTop} value={min} label="(min)" />
+      <Limit postion="right" offsetTop={offsetTop} value={max} label="(max)" />
       {hasCursorsLink && (
-        <div css={styles.cursorsLink(offsetTop)} ref={cursorsLinkRef} />
+        <StyledCursorLink offsetTop={offsetTop} ref={cursorsLinkRef} />
       )}
       {values.map((value, index) => (
-        <Box
+        <StyledCursor
           as="span"
-          css={styles.cursor(
-            offsetTop,
-            cursorWidth,
-            grabbedCursor !== undefined,
-          )}
+          offsetTop={offsetTop}
+          width={cursorWidth}
+          grabbed={grabbedCursor !== undefined}
           key={`cursor-${index}`}
           ref={cursorsRef[index]}
           onMouseDown={() => onMouseDown(index)}
@@ -436,9 +442,9 @@ const Range = ({
             onKeyPress={ev => handleInputKeyPress(ev, index)}
             onBlur={ev => handleInputBlur(ev, index)}
           />
-        </Box>
+        </StyledCursor>
       ))}
-    </Box>
+    </StyledContainer>
   )
 }
 
@@ -469,4 +475,4 @@ Range.defaultProps = {
   offsetTop: 16,
 }
 
-export { Range }
+export default Range
