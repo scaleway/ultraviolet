@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { cloneElement } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { Box } from '../Box'
-import { Link } from '../Link'
+import Link from '../Link'
 
 function reverseZIndexes() {
   const count = 10

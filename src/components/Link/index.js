@@ -1,29 +1,29 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import Icon from '../Icon'
 import { UniversalLink } from '../UniversalLink'
 
-const generateVariant = color => css`
-  color: ${color};
+const generateVariant = color => ({ theme }) => css`
+  color: ${theme.colors[color] ?? color};
   &:hover,
   &:focus {
-    color: ${darken(0.2, color)};
+    color: ${darken(0.2, theme.colors[color] ?? color)};
   }
 `
 
 const variants = {
-  blue: generateVariant(colors.blue),
-  grey: generateVariant(colors.gray550), // TODO: deprecated, to be removed soon
-  gray: generateVariant(colors.gray550),
-  white: generateVariant(colors.white),
-  primary: css`
-    color: ${colors.primary};
+  blue: generateVariant('blue'),
+  grey: generateVariant('gray550'), // TODO: deprecated, to be removed soon
+  gray: generateVariant('gray550'),
+  white: generateVariant('white'),
+  primary: ({ theme }) => css`
+    color: ${theme.colors.primary};
     &:hover,
     &:focus {
-      color: ${colors.primary};
+      color: ${theme.colors.primary};
     }
   `,
   inherit: css`
@@ -38,29 +38,33 @@ const variants = {
 
 export const linkVariants = Object.keys(variants)
 
-const styles = {
-  link: css`
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 200ms ease;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  `,
-  openInNew: css`
-    padding-left: 2px;
-    opacity: 0.5;
-  `,
-}
+const variantStyles = ({ variant }) =>
+  Object.keys(variants).includes(variant) ? variants[variant] : undefined
 
-export const Link = ({ variant, children, ...props }) => (
-  <UniversalLink css={[styles.link, variants[variant]]} {...props}>
+const StyledLink = styled(UniversalLink, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 200ms ease;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  ${variantStyles}
+`
+
+const StyledIcon = styled(Icon)`
+  padding-left: 2px;
+  opacity: 0.5;
+`
+const Link = ({ variant, children, ...props }) => (
+  <StyledLink variant={variant} {...props}>
     {children}
     {props.target === '_blank' && (
-      <Icon name="open-in-new" css={styles.openInNew} verticalAlign="top" />
+      <StyledIcon name="open-in-new" verticalAlign="top" />
     )}
-  </UniversalLink>
+  </StyledLink>
 )
 
 Link.defaultProps = {
@@ -73,3 +77,5 @@ Link.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
+
+export default Link

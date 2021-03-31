@@ -2,7 +2,7 @@
 
 exports[`BorderedBox renders correctly as a href link 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-2 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15,14 +15,14 @@ exports[`BorderedBox renders correctly as a href link 1`] = `
   transition: box-shadow 0.2s ease,border-color 0.2s ease;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -30,7 +30,7 @@ exports[`BorderedBox renders correctly as a href link 1`] = `
 }
 
 <a
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     href="/"
   >
     Link BorderedBox
@@ -56,7 +56,7 @@ exports[`BorderedBox renders correctly as a span 1`] = `
 
 exports[`BorderedBox renders correctly as a to link 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-2 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -69,14 +69,14 @@ exports[`BorderedBox renders correctly as a to link 1`] = `
   transition: box-shadow 0.2s ease,border-color 0.2s ease;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -84,7 +84,7 @@ exports[`BorderedBox renders correctly as a to link 1`] = `
 }
 
 <a
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     href="/"
     to="/"
   >
@@ -130,7 +130,7 @@ exports[`BorderedBox renders correctly with multiple vertical variant 1`] = `
   >
     Vertical BorderedBox
   </div>
-  .emotion-1 {
+  .emotion-2 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -143,22 +143,22 @@ exports[`BorderedBox renders correctly with multiple vertical variant 1`] = `
   transition: box-shadow 0.2s ease,border-color 0.2s ease;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1>* {
+.emotion-2>* {
   margin-top: 0;
 }
 
-.emotion-1>*+* {
+.emotion-2>*+* {
   margin-top: 16px;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -166,12 +166,12 @@ exports[`BorderedBox renders correctly with multiple vertical variant 1`] = `
 }
 
 <a
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     href="/"
   >
     Vertical BorderedBox
   </a>
-  .emotion-1 {
+  .emotion-2 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -184,22 +184,22 @@ exports[`BorderedBox renders correctly with multiple vertical variant 1`] = `
   transition: box-shadow 0.2s ease,border-color 0.2s ease;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1>* {
+.emotion-2>* {
   margin-top: 0;
 }
 
-.emotion-1>*+* {
+.emotion-2>*+* {
   margin-top: 16px;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -207,7 +207,7 @@ exports[`BorderedBox renders correctly with multiple vertical variant 1`] = `
 }
 
 <a
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     href="/"
     to="/"
   >

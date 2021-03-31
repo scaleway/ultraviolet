@@ -4,7 +4,7 @@ import React from 'react'
 import ReactMarkDown from 'react-markdown'
 import { Box } from '../Box'
 import Command from '../Command'
-import { Link } from '../Link'
+import Link from '../Link'
 import { Typography } from '../Typography'
 
 const headingRenderer = ({ node, ...props }) => {

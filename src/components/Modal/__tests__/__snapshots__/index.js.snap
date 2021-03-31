@@ -26,7 +26,7 @@ exports[`Modal renders with customStyle 1`] = `
   background-color: aliceblue;
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -40,13 +40,13 @@ exports[`Modal renders with customStyle 1`] = `
   background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   height: 100%;
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,7 +69,7 @@ exports[`Modal renders with customStyle 1`] = `
   left: 16px;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -84,14 +84,14 @@ exports[`Modal renders with customStyle 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-3.emotion-3 {
+.emotion-6.emotion-6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -99,7 +99,7 @@ exports[`Modal renders with customStyle 1`] = `
   min-height: 20px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -107,28 +107,28 @@ exports[`Modal renders with customStyle 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-1"
+        class="emotion-2 emotion-3"
         data-dialog="true"
         id="modal"
         role="dialog"
         tabindex="-1"
       >
         <div
-          class="emotion-2"
+          class="emotion-4 emotion-5"
         >
           <button
-            class="emotion-3"
+            class="emotion-6"
             title="close"
             type="button"
           >
             <svg
-              class="sc-ui-icon emotion-4 emotion-5"
+              class="sc-ui-icon emotion-7 emotion-8"
               viewBox="0 0 24 24"
             >
               <path
@@ -171,7 +171,7 @@ exports[`Modal renders with default Props 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -184,13 +184,13 @@ exports[`Modal renders with default Props 1`] = `
   opacity: 1;
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   height: 100%;
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,7 +213,7 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -228,14 +228,14 @@ exports[`Modal renders with default Props 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-3.emotion-3 {
+.emotion-6.emotion-6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -243,7 +243,7 @@ exports[`Modal renders with default Props 1`] = `
   min-height: 20px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -251,7 +251,7 @@ exports[`Modal renders with default Props 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
       data-dialog-ref="modal"
       hidden=""
       style="display: none;"
@@ -259,7 +259,7 @@ exports[`Modal renders with default Props 1`] = `
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-1"
+        class="emotion-2 emotion-3"
         data-dialog="true"
         hidden=""
         id="modal"
@@ -268,15 +268,15 @@ exports[`Modal renders with default Props 1`] = `
         tabindex="-1"
       >
         <div
-          class="emotion-2"
+          class="emotion-4 emotion-5"
         >
           <button
-            class="emotion-3"
+            class="emotion-6"
             title="close"
             type="button"
           >
             <svg
-              class="sc-ui-icon emotion-4 emotion-5"
+              class="sc-ui-icon emotion-7 emotion-8"
               viewBox="0 0 24 24"
             >
               <path
@@ -318,7 +318,7 @@ exports[`Modal renders with disclosure 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -331,13 +331,13 @@ exports[`Modal renders with disclosure 1`] = `
   opacity: 1;
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   height: 100%;
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -360,7 +360,7 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -375,14 +375,14 @@ exports[`Modal renders with disclosure 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-3.emotion-3 {
+.emotion-6.emotion-6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -390,7 +390,7 @@ exports[`Modal renders with disclosure 1`] = `
   min-height: 20px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -398,7 +398,7 @@ exports[`Modal renders with disclosure 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
       data-dialog-ref="modal-test"
       hidden=""
       style="display: none;"
@@ -406,7 +406,7 @@ exports[`Modal renders with disclosure 1`] = `
       <div
         aria-label="modal-test"
         aria-modal="true"
-        class="emotion-1"
+        class="emotion-2 emotion-3"
         data-dialog="true"
         hidden=""
         id="modal-test"
@@ -415,15 +415,15 @@ exports[`Modal renders with disclosure 1`] = `
         tabindex="-1"
       >
         <div
-          class="emotion-2"
+          class="emotion-4 emotion-5"
         >
           <button
-            class="emotion-3"
+            class="emotion-6"
             title="close"
             type="button"
           >
             <svg
-              class="sc-ui-icon emotion-4 emotion-5"
+              class="sc-ui-icon emotion-7 emotion-8"
               viewBox="0 0 24 24"
             >
               <path
@@ -463,7 +463,7 @@ exports[`Modal renders with opened={true} 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -476,13 +476,13 @@ exports[`Modal renders with opened={true} 1`] = `
   opacity: 1;
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   height: 100%;
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -505,7 +505,7 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -520,14 +520,14 @@ exports[`Modal renders with opened={true} 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-3.emotion-3 {
+.emotion-6.emotion-6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -535,7 +535,7 @@ exports[`Modal renders with opened={true} 1`] = `
   min-height: 20px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -543,28 +543,28 @@ exports[`Modal renders with opened={true} 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="emotion-1"
+        class="emotion-2 emotion-3"
         data-dialog="true"
         id="modal"
         role="dialog"
         tabindex="-1"
       >
         <div
-          class="emotion-2"
+          class="emotion-4 emotion-5"
         >
           <button
-            class="emotion-3"
+            class="emotion-6"
             title="close"
             type="button"
           >
             <svg
-              class="sc-ui-icon emotion-4 emotion-5"
+              class="sc-ui-icon emotion-7 emotion-8"
               viewBox="0 0 24 24"
             >
               <path
@@ -607,7 +607,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   background-color: rgba(74,79,98,0.2);
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #fff;
   position: relative;
   border-radius: 4px;
@@ -620,13 +620,13 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   opacity: 1;
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   height: 100%;
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -649,7 +649,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -664,14 +664,14 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-3.emotion-3 {
+.emotion-6.emotion-6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -679,19 +679,19 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   min-height: 20px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     data-dialog-ref="modal-test"
     hidden=""
     style="display: none;"
   >
     <div
       aria-label="modal-test"
-      class="emotion-1"
+      class="emotion-2 emotion-3"
       data-dialog="true"
       hidden=""
       id="modal-test"
@@ -700,15 +700,15 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
       tabindex="-1"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <button
-          class="emotion-3"
+          class="emotion-6"
           title="close"
           type="button"
         >
           <svg
-            class="sc-ui-icon emotion-4 emotion-5"
+            class="sc-ui-icon emotion-7 emotion-8"
             viewBox="0 0 24 24"
           >
             <path
