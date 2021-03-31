@@ -1,3 +1,10 @@
+## [0.69.0](https://github.com/scaleway/scaleway-ui/compare/v0.68.0...v0.69.0) (2021-03-31)
+
+
+### :gear: Features
+
+* migration of ProgressCircle ([#193](https://github.com/scaleway/scaleway-ui/issues/193)) ([daf63e4](https://github.com/scaleway/scaleway-ui/commit/daf63e49ae2fe0291b67d7cd83a3abead3956863))
+
 ## [0.68.0](https://github.com/scaleway/scaleway-ui/compare/v0.67.0...v0.68.0) (2021-03-31)
 
 
