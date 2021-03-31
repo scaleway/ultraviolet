@@ -1,3 +1,20 @@
+## [0.68.0](https://github.com/scaleway/scaleway-ui/compare/v0.67.0...v0.68.0) (2021-03-31)
+
+
+### :memo: Documentation
+
+* updated logo url in storybook ([49fbbae](https://github.com/scaleway/scaleway-ui/commit/49fbbae505b776ff4cad13345a3fd77d33eb7e1b))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @testing-library/user-event from 13.0.16 to 13.1.1 ([#197](https://github.com/scaleway/scaleway-ui/issues/197)) ([5945938](https://github.com/scaleway/scaleway-ui/commit/5945938c4f23ddcbdff35987eae0f8d26be48d0b))
+
+
+### :gear: Features
+
+* port StealthCopiable ([#195](https://github.com/scaleway/scaleway-ui/issues/195)) ([b631fd1](https://github.com/scaleway/scaleway-ui/commit/b631fd13cb73922f2f7c2df06405ede183d9a820))
+
 ## [0.67.0](https://github.com/scaleway/scaleway-ui/compare/v0.66.2...v0.67.0) (2021-03-29)
 
 
