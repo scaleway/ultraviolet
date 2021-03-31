@@ -4,6 +4,14 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {
+  beforeAll(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterAll(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
   test(`renders with default props`, () => {
     shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => {}} />)
   })
