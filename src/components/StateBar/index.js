@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import { Box } from '../Box'
-import { ProgressBar } from '../ProgressBar'
+import ProgressBar from '../ProgressBar'
 import { Typography } from '../Typography'
 
 const State = ({ label, children, ...props }) => (

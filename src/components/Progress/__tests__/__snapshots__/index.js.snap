@@ -2,7 +2,7 @@
 
 exports[`Progress renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12,75 +12,6 @@ exports[`Progress renders correctly 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   height: 48px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 3;
-  padding-right: 24px;
-  padding-left: 24px;
-  margin-right: -24px;
-  background-color: #45d6b5;
-  color: #fff;
-  border-color: #fff;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 2;
-  padding-right: 24px;
-  padding-left: 48px;
-  margin-left: -24px;
-  margin-right: -24px;
-  background-color: #4f0599;
-  color: #fff;
-  border-color: #fff;
-}
-
-.emotion-2:focus {
-  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3 {
@@ -106,7 +37,81 @@ exports[`Progress renders correctly 1`] = `
   text-align: center;
   touch-action: manipulation;
   outline: none;
-  z-index: 1;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: -24px;
+  background-color: #45d6b5;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-3.emotion-3 {
+  z-index: 3;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  padding-right: 24px;
+  padding-left: 48px;
+  margin-left: -24px;
+  margin-right: -24px;
+  background-color: #4f0599;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-5.emotion-5 {
+  z-index: 2;
+}
+
+.emotion-5:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
   padding-right: 24px;
   padding-left: 48px;
   margin-left: -24px;
@@ -115,25 +120,29 @@ exports[`Progress renders correctly 1`] = `
   border-color: #d4dae7;
 }
 
-.emotion-3:focus {
+.emotion-7.emotion-7 {
+  z-index: 1;
+}
+
+.emotion-7:focus {
   box-shadow: 0 0 0 2px rgba(178,182,195,0.25);
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       Step 1
     </div>
     <div
-      class="emotion-2"
+      class="emotion-2 emotion-5"
     >
       Step 2
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2 emotion-7"
     >
       Step 3
     </div>
@@ -143,7 +152,7 @@ exports[`Progress renders correctly 1`] = `
 
 exports[`Progress renders correctly when one children is clickable 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -153,76 +162,6 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   height: 48px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 3;
-  padding-right: 24px;
-  padding-left: 24px;
-  margin-right: -24px;
-  cursor: pointer;
-  background-color: #45d6b5;
-  color: #fff;
-  border-color: #fff;
-}
-
-.emotion-1:focus {
-  box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  border-radius: 24px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  touch-action: manipulation;
-  outline: none;
-  z-index: 2;
-  padding-right: 24px;
-  padding-left: 48px;
-  margin-left: -24px;
-  margin-right: -24px;
-  background-color: #45d6b5;
-  color: #fff;
-  border-color: #fff;
 }
 
 .emotion-3 {
@@ -248,7 +187,82 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   text-align: center;
   touch-action: manipulation;
   outline: none;
-  z-index: 1;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: -24px;
+  background-color: #45d6b5;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.emotion-3.emotion-3 {
+  z-index: 3;
+}
+
+.emotion-3:focus {
+  box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+  padding-right: 24px;
+  padding-left: 48px;
+  margin-left: -24px;
+  margin-right: -24px;
+  background-color: #45d6b5;
+  color: #fff;
+  border-color: #fff;
+}
+
+.emotion-5.emotion-5 {
+  z-index: 2;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
   padding-right: 24px;
   padding-left: 48px;
   margin-left: -24px;
@@ -257,25 +271,29 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   border-color: #fff;
 }
 
-.emotion-3:focus {
+.emotion-7.emotion-7 {
+  z-index: 1;
+}
+
+.emotion-7:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <button
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       Step 1
     </button>
     <div
-      class="emotion-2"
+      class="emotion-2 emotion-5"
     >
       Step 2
     </div>
     <div
-      class="emotion-3"
+      class="emotion-2 emotion-7"
     >
       Step 3
     </div>
@@ -285,7 +303,7 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
 
 exports[`Progress renders correctly when one children is empty 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -297,7 +315,7 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   height: 48px;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -320,7 +338,6 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   text-align: center;
   touch-action: manipulation;
   outline: none;
-  z-index: 2;
   padding-right: 24px;
   padding-left: 24px;
   margin-right: -24px;
@@ -329,7 +346,11 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   border-color: #fff;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  z-index: 2;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -352,7 +373,6 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   text-align: center;
   touch-action: manipulation;
   outline: none;
-  z-index: 1;
   padding-right: 24px;
   padding-left: 48px;
   margin-left: -24px;
@@ -361,20 +381,24 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   border-color: #fff;
 }
 
-.emotion-2:focus {
+.emotion-5.emotion-5 {
+  z-index: 1;
+}
+
+.emotion-5:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       Step 1
     </div>
     <div
-      class="emotion-2"
+      class="emotion-2 emotion-5"
     >
       Step 3
     </div>

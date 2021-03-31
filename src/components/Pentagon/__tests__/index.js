@@ -1,5 +1,5 @@
 import React from 'react'
-import { Pentagon } from '..'
+import Pentagon from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Pentagon', () => {

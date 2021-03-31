@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { PasswordStrengthMeter } from '..'
+import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
 
 const UncontrolledPasswordStrengthMeter = props => {

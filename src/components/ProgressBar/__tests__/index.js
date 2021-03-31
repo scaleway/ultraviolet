@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProgressBar, progressBarVariants } from '..'
+import ProgressBar, { progressBarVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ProgressBar', () => {
