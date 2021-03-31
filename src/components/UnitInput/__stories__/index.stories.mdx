@@ -1,0 +1,101 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import UnitInput from '..'
+
+<Meta title="Components/UnitInput" />
+
+# UnitInput
+
+<Description of={UnitInput}>
+  UnitInput is a component made out of 2 components: a **TextBox** and a
+  **RichSelect**.
+</Description>
+
+UnitInput provide data as follows:
+
+```js
+{
+    unit: [string],
+    value: [string]
+}
+```
+
+## Basic
+
+<Canvas isColumn>
+  <Story name="Basic" height="225px">
+    <UnitInput name="basic-time" />
+  </Story>
+</Canvas>
+
+## Custom Options
+
+### Description
+
+You can customize options by passing an array of object. Be careful objects should have following structure:
+
+```js
+{
+    value: [string],
+    label: [string]
+}
+```
+
+Where label is text shown in RichSelect component and value the value that will be given back by component in the name `unit`.
+
+<Canvas isColumn>
+  <Story name="Custom Options" height="225px">
+    <UnitInput
+      name="custom-options"
+      options={[
+        {
+          value: 'kb',
+          label: 'KB',
+        },
+        {
+          value: 'mb',
+          label: 'MB',
+        },
+        {
+          value: 'gb',
+          label: 'GB',
+        },
+      ]}
+      defaultOption={{
+        value: 'gb',
+        label: 'GB',
+      }}
+      defaultValue={100}
+    />
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas isColumn>
+  <Story name="Sizes" height="400px">
+    {['small', 'medium', 'large'].map(size => (
+      <div style={{ marginTop: '8px' }}>
+        {size}:
+        <UnitInput name="basic-time" size={size} />
+      </div>
+    ))}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas isColumn>
+  <Story name="Disabled">
+    <UnitInput name="basic-time" disabled />
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={UnitInput} />
