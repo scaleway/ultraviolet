@@ -94,6 +94,7 @@ const getSelectStyles = ({
     ...provided,
     ...((customStyle(state) || {}).valueContainer || {}),
     cursor: state.isDisabled ? 'not-allowed' : undefined,
+    height: '100%',
   }),
   menu: (provided, state) => ({
     ...provided,
