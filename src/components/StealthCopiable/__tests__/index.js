@@ -8,15 +8,15 @@ describe('StealthCopiable', () => {
     let data = ''
 
     window.clipboardData = {
-      setData: jest.fn((_, val) => { console.log(val); data = val }),
-      getData: jest.fn(() => data)
+      setData: jest.fn((_, val) => {
+        data = val
+      }),
+      getData: jest.fn(() => data),
     }
-  });
+  })
 
   it('should renders correctly', () => {
-    shouldMatchEmotionSnapshot(
-      <StealthCopiable>Hello</StealthCopiable>,
-    )
+    shouldMatchEmotionSnapshot(<StealthCopiable>Hello</StealthCopiable>)
   })
 
   it('should renders correctly with custom side', () => {
@@ -28,10 +28,12 @@ describe('StealthCopiable', () => {
   it('should renders correctly with custom side', () => {
     shouldMatchEmotionSnapshot(
       <StealthCopiable side="left">Hello</StealthCopiable>,
-      { transform: ({ getByText }) => {
-        fireEvent.click(getByText('Copy'))
-        expect(window.clipboardData.getData()).toBe('Hello')
-      }}
+      {
+        transform: ({ getByText }) => {
+          fireEvent.click(getByText('Copy'))
+          expect(window.clipboardData.getData()).toBe('Hello')
+        },
+      },
     )
   })
 })

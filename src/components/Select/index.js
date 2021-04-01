@@ -1,88 +1,89 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { colors, radii, space } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import Icon from '../Icon'
 
-const styles = {
-  container: css`
-    position: relative;
-    display: flex;
-    justify-content: center;
-  `,
-  select: css`
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-    appearance: none;
-    background-color: ${colors.white};
-    background-image: none;
-    border-width: 1px;
-    border-color: ${colors.gray350};
-    border-style: solid;
-    border-radius: ${radii.default};
-    color: ${colors.black};
-    display: block;
-    height: ${space['6']};
-    max-width: 100%;
-    outline: none;
-    position: relative;
-    width: 100%;
-    padding-left: ${space['1']};
-    padding-right: ${space['4']};
-    font-weight: 500;
-    font-size: 16px;
-    line-height: ${space['3']};
+const StyledContainer = styled(Box)`
+  position: relative;
+  display: flex;
+  justify-content: center;
+`
 
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
-      border-color: ${colors.primary};
-    }
-  `,
-  label: css`
-    position: absolute;
-    padding-left: ${space['1']};
-    padding-right: ${space['1']};
-    pointer-events: none;
-    color: ${colors.black};
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-  `,
-  error: css`
-    border-color: ${colors.warning};
-    color: ${colors.warning};
-  `,
-  disabled: css`
-    cursor: default;
-    pointer-events: none;
-    background: ${colors.gray50};
-    color: ${colors.gray350};
-    border-color: ${colors.gray350};
-  `,
-  readOnly: css`
-    background: ${colors.gray100};
-    border-color: ${colors.gray100};
-    color: ${colors.black};
-  `,
-  chevron: css`
-    background-color: transparent;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    padding: ${space[1]};
-  `,
-}
+const StyledSelect = styled('select', {
+  shouldForwardProp: prop => !['isLoading', 'error'].includes(prop),
+})`
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  appearance: none;
+  background-color: ${({ theme }) => theme.colors.white};
+  background-image: none;
+  border-width: 1px;
+  border-color: ${({ theme }) => theme.colors.gray350};
+  border-style: solid;
+  border-radius: ${({ theme }) => theme.radii.default};
+  color: ${({ theme }) => theme.colors.black};
+  display: block;
+  height: ${({ theme }) => theme.space['6']};
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: ${({ theme }) => theme.space['1']};
+  padding-right: ${({ theme }) => theme.space['4']};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: ${({ theme }) => theme.space['3']};
 
-export function Select({
+  &:focus {
+    box-shadow: 0 0 0 2px
+      ${({ theme }) => transparentize(0.75, theme.colors.primary)};
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  ${({ disabled, isLoading, theme }) =>
+    disabled &&
+    !isLoading &&
+    `
+      cursor: default;
+      pointer-events: none;
+      background: ${theme.colors.gray50};
+      color: ${theme.colors.gray350};
+      border-color: ${theme.colors.gray350};
+    `}
+
+  ${({ readOnly, theme }) =>
+    readOnly &&
+    `
+      background: ${theme.colors.gray100};
+      border-color: ${theme.colors.gray100};
+      color: ${theme.colors.black};
+    `}
+
+  ${({ theme, error }) =>
+    error &&
+    `
+      border-color: ${theme.colors.warning};
+      color: ${theme.colors.warning};
+    `}
+`
+
+const StyledChevron = styled.div`
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding: ${({ theme }) => theme.space[1]};
+`
+
+const Select = ({
   styles: mainStyles,
   selectStyles,
   chevronStyles,
@@ -99,7 +100,7 @@ export function Select({
   id,
   isLoading,
   ...props
-}) {
+}) => {
   const disabledChildren = () =>
     flattenChildren(children).map((child, index) =>
       React.cloneElement(child, {
@@ -118,34 +119,31 @@ export function Select({
   }, [arrowColor, error, disabled])
 
   return (
-    <Box css={[styles.container, ...mainStyles]} {...props}>
-      <select
-        css={[
-          styles.select,
-          disabled && styles.disabled,
-          readOnly && styles.readOnly,
-          error && styles.error,
-          ...selectStyles,
-        ]}
+    <StyledContainer css={[...mainStyles]} {...props}>
+      <StyledSelect
+        css={[...selectStyles]}
         id={id}
         name={name}
         required={required}
         disabled={disabled || isLoading}
+        isLoading={isLoading}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        readOnly={readOnly}
+        error={error}
       >
         {readOnly ? disabledChildren() : children}
-      </select>
+      </StyledSelect>
 
-      <Box css={[styles.chevron, ...chevronStyles]}>
+      <StyledChevron css={[...chevronStyles]}>
         {isLoading ? (
           <ActivityIndicator size={20} />
         ) : (
           <Icon name="chevron-down" size={11} color={color} />
         )}
-      </Box>
-    </Box>
+      </StyledChevron>
+    </StyledContainer>
   )
 }
 
@@ -187,3 +185,5 @@ Select.propTypes = {
   selectStyles: PropTypes.arrayOf(PropTypes.shape({})),
   value: PropTypes.string,
 }
+
+export default Select

@@ -7,7 +7,13 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 describe('Stepper', () => {
   it('should renders correctly', () => {
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} maxValue={100} text="unit" value={10} />,
+      <Stepper
+        minValue={0}
+        maxValue={100}
+        text="unit"
+        value={10}
+        onChange={() => {}}
+      />,
     )
   })
 
@@ -49,7 +55,13 @@ describe('Stepper', () => {
 
   it('should click on plus button with a step value', async () => {
     await shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} step={10} maxValue={100} value={10} />,
+      <Stepper
+        minValue={0}
+        step={10}
+        maxValue={100}
+        value={10}
+        onBlur={() => {}}
+      />,
       {
         transform: async ({ getByLabelText, getByRole }) => {
           const plus = getByLabelText('Plus')
@@ -75,9 +87,55 @@ describe('Stepper', () => {
 
           userEvent.click(buttonContainer)
           await waitFor(() => expect(input).toHaveFocus())
+          input.blur()
+
+          userEvent.click(buttonContainer)
           userEvent.clear(input)
           userEvent.type(input, '20')
           await waitFor(() => expect(input.value).toBe('20'))
+        },
+      },
+    )
+  })
+  it('should focus input and modify value onMinCrossed', async () => {
+    await shouldMatchEmotionSnapshot(
+      <Stepper
+        minValue={10}
+        maxValue={100}
+        value={30}
+        onMinCrossed={() => {}}
+      />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('textbox')
+          userEvent.click(input.parentElement)
+          userEvent.clear(input)
+          userEvent.type(input, '1')
+          await waitFor(() => expect(input.value).toBe('1'))
+          input.blur()
+          await waitFor(() => expect(input.value).toBe('10'))
+        },
+      },
+    )
+  })
+
+  it('should focus input and modify value onMaxCrossed', async () => {
+    await shouldMatchEmotionSnapshot(
+      <Stepper
+        minValue={10}
+        maxValue={100}
+        value={30}
+        onMaxCrossed={() => {}}
+      />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('textbox')
+          userEvent.click(input.parentElement)
+          userEvent.clear(input)
+          userEvent.type(input, '120')
+          await waitFor(() => expect(input.value).toBe('120'))
+          input.blur()
+          await waitFor(() => expect(input.value).toBe('100'))
         },
       },
     )
