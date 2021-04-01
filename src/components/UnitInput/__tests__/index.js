@@ -1,6 +1,9 @@
+import { ThemeProvider } from '@emotion/react'
+import { render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import theme from '../../../theme'
 import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {
@@ -78,29 +81,46 @@ describe('UnitInput', () => {
     )
   })
 
-  test(`renders with RichSelect update`, () => {
-    shouldMatchEmotionSnapshot(<UnitInput name="test" />, {
-      transform: node => {
-        const richSelect = node.getByRole('textbox', 'text')
-        userEvent.click(richSelect)
-        userEvent.click(richSelect.parentElement, {
-          view: window,
-          pageX: 0,
-          movementX: 200,
-        })
-      },
-    })
-  })
+  test(`renders with RichSelect update`, async () => {
+    let unit
+    render(
+      <ThemeProvider theme={theme}>
+        <UnitInput
+          name="test"
+          onChange={value => {
+            unit = value.unit
+          }}
+        />
+      </ThemeProvider>,
+    )
 
-  test(`renders with TextBox update`, () => {
-    shouldMatchEmotionSnapshot(<UnitInput name="test" />, {
-      transform: node => {
-        const input = node.getByRole('textbox', 'number')
-        userEvent.click(input)
-        userEvent.type(input, '10')
-        userEvent.type(input, '111')
-        userEvent.type(input, '0')
-      },
-    })
+    const richSelect = document.querySelector("input[type='text']")
+    userEvent.click(richSelect)
+    userEvent.type(richSelect, 'weeks{enter}')
+    await waitFor(() => expect(unit).toBe('weeks'))
   })
+})
+
+test(`renders with TextBox update`, async () => {
+  let value
+  render(
+    <ThemeProvider theme={theme}>
+      <UnitInput
+        name="test"
+        onChange={val => {
+          value = val.value
+        }}
+      />
+    </ThemeProvider>,
+  )
+
+  const input = document.querySelector("input[type='number']")
+  await waitFor(() => expect(value).toBe('1'))
+  userEvent.click(input)
+  userEvent.type(input, '10')
+  await waitFor(() => expect(value).toBe('110'))
+  userEvent.type(input, '{selectall}{del}')
+  await waitFor(() => expect(value).toBe('1'))
+  userEvent.type(input, '{selectall}{del}00000')
+  await waitFor(() => expect(value).toBe('100000'))
 })
