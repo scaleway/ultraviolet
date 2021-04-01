@@ -1,0 +1,1109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart renders correctly with data 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #4F1A81;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-0 1s ease forwards;
+  animation: animation-0 1s ease forwards;
+}
+
+.emotion-9 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #F4306C;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-1 1s ease forwards;
+  animation: animation-1 1s ease forwards;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+          <circle
+            class="emotion-7 emotion-6"
+            color="#4F1A81"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+          <circle
+            class="emotion-9 emotion-6"
+            color="#F4306C"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chart renders correctly with data and content 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #4F1A81;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-0 1s ease forwards;
+  animation: animation-0 1s ease forwards;
+}
+
+.emotion-9 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #F4306C;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-1 1s ease forwards;
+  animation: animation-1 1s ease forwards;
+}
+
+.emotion-11 {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 25px;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+          <circle
+            class="emotion-7 emotion-6"
+            color="#4F1A81"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+          <circle
+            class="emotion-9 emotion-6"
+            color="#F4306C"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+        </svg>
+        <div
+          class="emotion-11 emotion-12"
+        >
+          Test
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chart renders correctly with detailed legend 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #4F1A81;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-0 1s ease forwards;
+  animation: animation-0 1s ease forwards;
+}
+
+.emotion-9 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #F4306C;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-1 1s ease forwards;
+  animation: animation-1 1s ease forwards;
+}
+
+.emotion-11 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.emotion-16 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.emotion-18 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-22 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.emotion-24 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-26 {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.emotion-28 {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+          <circle
+            class="emotion-7 emotion-6"
+            color="#4F1A81"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+          <circle
+            class="emotion-9 emotion-6"
+            color="#F4306C"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="emotion-11 emotion-12"
+    >
+      <div
+        class="emotion-13"
+      >
+        <li
+          aria-describedby="chart-tooltip-compute"
+          class="emotion-14 emotion-15"
+          tabindex="0"
+        >
+          <div
+            class="emotion-16 emotion-17"
+          />
+          <div
+            class="emotion-18 emotion-19"
+          />
+          <div
+            class="emotion-20 emotion-21"
+          >
+            <span
+              class="emotion-22 emotion-23"
+            >
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
+              <span
+                class="emotion-26 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        class="emotion-13"
+      >
+        <li
+          aria-describedby="chart-tooltip-gpu"
+          class="emotion-14 emotion-15"
+          tabindex="0"
+        >
+          <div
+            class="emotion-16 emotion-17"
+          />
+          <div
+            class="emotion-18 emotion-19"
+          />
+          <div
+            class="emotion-20 emotion-21"
+          >
+            <span
+              class="emotion-22 emotion-23"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
+              <span
+                class="emotion-26 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chart renders correctly with empty legend placeholder 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.emotion-9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="emotion-7 emotion-8"
+    >
+      <p
+        class="emotion-9"
+      >
+        I am a legend
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chart renders correctly with legend 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    stroke-dasharray: 3 566 10 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    stroke-dasharray: 283 566 10 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #4F1A81;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-0 1s ease forwards;
+  animation: animation-0 1s ease forwards;
+}
+
+.emotion-9 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #F4306C;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  -webkit-animation: animation-1 1s ease forwards;
+  animation: animation-1 1s ease forwards;
+}
+
+.emotion-11 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.emotion-16 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.emotion-18 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-22 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.emotion-24 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-26 {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.emotion-28 {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+          <circle
+            class="emotion-7 emotion-6"
+            color="#4F1A81"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+          <circle
+            class="emotion-9 emotion-6"
+            color="#F4306C"
+            cx="103"
+            cy="103"
+            r="90"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="emotion-11 emotion-12"
+    >
+      <div
+        class="emotion-13"
+      >
+        <li
+          aria-describedby="chart-tooltip-compute"
+          class="emotion-14 emotion-15"
+          tabindex="0"
+        >
+          <div
+            class="emotion-16 emotion-17"
+          />
+          <div
+            class="emotion-18 emotion-19"
+          />
+          <div
+            class="emotion-20 emotion-21"
+          >
+            <span
+              class="emotion-22 emotion-23"
+            >
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
+              <span
+                class="emotion-26 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        class="emotion-13"
+      >
+        <li
+          aria-describedby="chart-tooltip-gpu"
+          class="emotion-14 emotion-15"
+          tabindex="0"
+        >
+          <div
+            class="emotion-16 emotion-17"
+          />
+          <div
+            class="emotion-18 emotion-19"
+          />
+          <div
+            class="emotion-20 emotion-21"
+          >
+            <span
+              class="emotion-22 emotion-23"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
+              <span
+                class="emotion-26 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chart renders correctly with no props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-4.emotion-4 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.emotion-5 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <svg
+          style="height: 206px; width: 206px; transform: rotate(-90deg);"
+        >
+          <defs />
+          <circle
+            class="emotion-5 emotion-6"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
