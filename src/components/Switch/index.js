@@ -1,32 +1,11 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Checkbox } from 'reakit'
-import { colors } from '../../theme'
 import Tooltip from '../Tooltip'
 
 const PADDING = 6
-
-const styles = {
-  inactiveLabelColor: colors.gray700,
-  inactiveBigBallColor: colors.gray700,
-  inactiveBgColor: colors.gray550,
-  smallBallColor: colors.gray100,
-  disabled: colors.gray300,
-}
-
-const variants = {
-  primary: {
-    bgColor: colors.primary,
-    activeLabelColor: colors.gray100,
-    activeBigBallColor: colors.gray100,
-  },
-  success: {
-    bgColor: colors.foam,
-    activeLabelColor: colors.success,
-    activeBigBallColor: colors.success,
-  },
-}
 
 const SIZES = {
   small: {
@@ -41,6 +20,29 @@ const SIZES = {
   },
 }
 
+const COLORS = {
+  inactiveLabelColor: 'gray700',
+  inactiveBigBallColor: 'gray700',
+  inactiveBgColor: 'gray550',
+  smallBallColor: 'gray100',
+  disabled: 'gray300',
+}
+
+const getSwitchWidth = ({ width, onLabel, offLabel, size, labeled }) => {
+  if (width) return width
+
+  if (
+    typeof onLabel === 'string' &&
+    typeof offLabel === 'string' &&
+    (labeled === true || labeled === 'inside')
+  )
+    return (
+      Math.max(onLabel.length, offLabel.length) * 10 + SIZES[size].ball + 20
+    )
+
+  return SIZES[size].width
+}
+
 const SwitchBall = styled.span`
   display: block;
   position: relative;
@@ -51,8 +53,10 @@ const SwitchBall = styled.span`
   width: ${({ size }) => SIZES[size].ball}px;
   height: ${({ size }) => SIZES[size].ball}px;
 
-  background-color: ${({ size }) =>
-    size === 'small' ? styles.smallBallColor : styles.inactiveBigBallColor};
+  background-color: ${({ size, theme }) =>
+    theme.colors[
+      size === 'small' ? COLORS.smallBallColor : COLORS.inactiveBigBallColor
+    ]};
 `
 
 const StyledSpan = styled('span', {
@@ -89,20 +93,65 @@ const StyledSpan = styled('span', {
   }}
 `
 
+const buildVariants = ({ bgColor, activeBigBallColor, activeLabelColor }) => ({
+  theme,
+  width,
+  onLabel,
+  offLabel,
+  labeled,
+  size,
+}) => css`
+  &[aria-checked='true'] {
+    background-color: ${theme.colors[bgColor] ?? bgColor};
+  }
+
+  &[aria-checked='true'] > ${SwitchBall} {
+    transform: translateX(
+        ${getSwitchWidth({ width, onLabel, offLabel, labeled, size }) -
+        2 * PADDING}px
+      )
+      translateX(-100%);
+    background-color: ${size === 'small'
+      ? theme.colors[COLORS.smallBallColor]
+      : theme.colors[activeBigBallColor] ?? activeBigBallColor};
+  }
+
+  &[aria-checked='false'] > ${StyledSpan} {
+    color: ${theme.colors[COLORS.inactiveLabelColor]};
+    right: 0;
+  }
+
+  &[aria-checked='true'] > ${StyledSpan} {
+    color: ${theme.colors[activeLabelColor] ?? activeLabelColor};
+    left: 0;
+  }
+`
+
+const variants = {
+  primary: buildVariants({
+    bgColor: 'primary',
+    activeLabelColor: 'gray100',
+    activeBigBallColor: 'gray100',
+  }),
+  success: buildVariants({
+    bgColor: 'foam',
+    activeLabelColor: 'success',
+    activeBigBallColor: 'success',
+  }),
+}
+
 const StyledSwitch = styled('span', {
   shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'labelPlacement', 'variant'].includes(
-      prop,
-    ),
+    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop),
 })`
   overflow: hidden;
   outline: none;
-  width: ${({ width, size }) => width || SIZES[size].width}px;
+  width: ${getSwitchWidth}px;
   height: ${({ size }) => SIZES[size].height}px;
   display: inline-flex;
   align-items: center;
-  background-color: ${({ disabled }) =>
-    (disabled && styles.disabled) || styles.inactiveBgColor};
+  background-color: ${({ disabled, theme }) =>
+    theme.colors[disabled ? COLORS.disabled : COLORS.inactiveBgColor]};
   border: none;
   border-radius: 34px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
@@ -112,30 +161,7 @@ const StyledSwitch = styled('span', {
 
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
-  &[aria-checked='true'] {
-    background-color: ${({ variant }) => variants[variant].bgColor};
-  }
-
-  &[aria-checked='true'] > ${SwitchBall} {
-    transform: translateX(
-        ${({ width, size }) => (width || SIZES[size].width) - 2 * PADDING}px
-      )
-      translateX(-100%);
-    background-color: ${({ size, variant }) =>
-      size === 'small'
-        ? styles.smallBallColor
-        : variants[variant].activeBigBallColor};
-  }
-
-  &[aria-checked='false'] > ${StyledSpan} {
-    color: ${styles.inactiveLabelColor};
-    right: 0;
-  }
-
-  &[aria-checked='true'] > ${StyledSpan} {
-    color: ${({ variant }) => variants[variant].activeLabelColor};
-    left: 0;
-  }
+  ${({ variant }) => variants[variant]}
 `
 
 const StyledCheckbox = styled(Checkbox)`

@@ -22,7 +22,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <ControlValue value={false}>
       {({ value, onChange }) => (
         <Switch
@@ -44,7 +44,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas>
-  <Story name="variants">
+  <Story name="Variants">
     <BlockList>
       <ControlValue value>
         {({ value, onChange }) => (
@@ -75,7 +75,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 <Description>Set disabled using `disabled` prop.</Description>
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <BlockList>
       <ControlValue value={false}>
         {({ value, onChange }) => (
@@ -112,7 +112,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas>
-  <Story name="size">
+  <Story name="Size">
     <BlockList>
       <ControlValue value={false}>
         {({ value, onChange }) => (
@@ -166,60 +166,19 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Labeled
 
-By setting `labeled` prop you can put the label in the `Switch` component
+Add the `labeled` prop you can choose where you want to put the label in the Switch. Possible positions are `left`, `right` or `inside` (it's the default label position when labeled is `true`). The width is automatically calculated. But you can override it by passing the `width` prop.
 
 <Canvas>
-  <Story name="labeled-basic">
-    <ControlValue value={false}>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label"
-          labeled
-          variant="primary"
-          checked={value}
-          onChange={e => onChange(e.target.checked)}
-        />
-      )}
-    </ControlValue>
-  </Story>
-</Canvas>
-
-### Custom on/off texts
-
-Default label placement is inside the Switch. you can customize the text with `onLabel` and `offLabel`props.
-
-<Canvas>
-  <Story name="label-inside">
-    <ControlValue value>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label-custom"
-          labeled
-          onLabel="YES"
-          offLabel="NO"
-          variant="primary"
-          checked={value}
-          onChange={e => onChange(e.target.checked)}
-        />
-      )}
-    </ControlValue>
-  </Story>
-</Canvas>
-
-### Label placement
-
-By setting the `labelPlacement` prop you can choose where you want to put the label. By setting the label on `left` or `right` the width is automatically calculated.
-
-<Canvas>
-  <Story name="label-placement">
+  <Story name="Labeled">
     <BlockList>
       <ControlValue value>
         {({ value, onChange }) => (
           <Switch
             name="switch-label-right"
-            labelPlacement="right"
             labeled
             variant="primary"
+            onLabel="CHECKED"
+            offLabel="NOT CHECKED"
             checked={value}
             onChange={e => onChange(e.target.checked)}
           />
@@ -229,8 +188,9 @@ By setting the `labelPlacement` prop you can choose where you want to put the la
         {({ value, onChange }) => (
           <Switch
             name="switch-label-right"
-            labelPlacement="right"
-            labeled
+            labeled="inside"
+            onLabel="CHECKED"
+            offLabel="NOT CHECKED"
             width={140}
             variant="primary"
             checked={value}
@@ -268,12 +228,34 @@ By setting the `labelPlacement` prop you can choose where you want to put the la
   </Story>
 </Canvas>
 
-### Custom Label render
+### Custom on/off texts
 
-If you choose to place label near the Switch component with `labelPlacement` you can set a custom element for the label with the `labelRender` prop.
+Default label placement is inside the Switch. you can customize the text with `onLabel` and `offLabel`props.
 
 <Canvas>
-  <Story name="custom-label-render">
+  <Story name="Custom texts">
+    <ControlValue value>
+      {({ value, onChange }) => (
+        <Switch
+          name="switch-label-custom"
+          labeled
+          onLabel="YES"
+          offLabel="NO"
+          variant="primary"
+          checked={value}
+          onChange={e => onChange(e.target.checked)}
+        />
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+### Custom Label render
+
+If you choose to place label near the Switch component with `labeled` you can set a custom element for the label with the `onLabel` and `offLabel` props.
+
+<Canvas>
+  <Story name="Custom label render">
     <BlockList>
       <ControlValue value>
         {({ value, onChange }) => (
