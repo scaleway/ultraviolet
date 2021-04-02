@@ -26,18 +26,18 @@ const Tooltip = ({ data }) => (
   <div tabIndex="-1" role="tooltip">
     <StyledList>
       <StyledItem>
-        <Typography color="darkBlack">{data.name}</Typography>
+        <Typography color="gray950">{data.name}</Typography>
         <Space />
-        <Typography color="darkBlack">{data.value}</Typography>
+        <Typography color="gray950">{data.value}</Typography>
       </StyledItem>
       {data.details &&
         data.details.map(detail => (
           <StyledItem key={detail.name}>
-            <Typography variant="bodyB" color="lightBlack">
+            <Typography variant="bodyB" color="gray700">
               {detail.name}
             </Typography>
             <Space />
-            <Typography variant="bodyB" color="darkBlack">
+            <Typography variant="bodyB" color="gray950">
               {detail.value}
             </Typography>
           </StyledItem>
