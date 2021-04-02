@@ -1,9 +1,8 @@
-import { ThemeProvider } from '@emotion/react'
-import { render, waitFor } from '@testing-library/react'
+import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
+import renderWithTheme from '../../../helpers/renderWithTheme'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import theme from '../../../theme'
 import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {
@@ -83,15 +82,13 @@ describe('UnitInput', () => {
 
   test(`renders with RichSelect update`, async () => {
     let unit
-    render(
-      <ThemeProvider theme={theme}>
-        <UnitInput
-          name="test"
-          onChange={value => {
-            unit = value.unit
-          }}
-        />
-      </ThemeProvider>,
+    renderWithTheme(
+      <UnitInput
+        name="test"
+        onChange={value => {
+          unit = value.unit
+        }}
+      />,
     )
 
     const richSelect = document.querySelector("input[type='text']")
@@ -103,15 +100,13 @@ describe('UnitInput', () => {
 
 test(`renders with TextBox update`, async () => {
   let value
-  render(
-    <ThemeProvider theme={theme}>
-      <UnitInput
-        name="test"
-        onChange={val => {
-          value = val.value
-        }}
-      />
-    </ThemeProvider>,
+  renderWithTheme(
+    <UnitInput
+      name="test"
+      onChange={val => {
+        value = val.value
+      }}
+    />,
   )
 
   const input = document.querySelector("input[type='number']")

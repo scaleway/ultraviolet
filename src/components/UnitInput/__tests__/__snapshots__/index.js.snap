@@ -120,26 +120,26 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -179,28 +179,28 @@ exports[`UnitInput renders with custom options 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -224,7 +224,7 @@ exports[`UnitInput renders with custom options 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -243,7 +243,7 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -252,12 +252,12 @@ exports[`UnitInput renders with custom options 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -276,7 +276,7 @@ exports[`UnitInput renders with custom options 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -288,7 +288,7 @@ exports[`UnitInput renders with custom options 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -300,20 +300,20 @@ exports[`UnitInput renders with custom options 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -345,26 +345,26 @@ exports[`UnitInput renders with custom options 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             KB
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -387,17 +387,17 @@ exports[`UnitInput renders with custom options 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -544,26 +544,26 @@ exports[`UnitInput renders with default props 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -603,28 +603,28 @@ exports[`UnitInput renders with default props 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -648,7 +648,7 @@ exports[`UnitInput renders with default props 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -667,7 +667,7 @@ exports[`UnitInput renders with default props 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -676,12 +676,12 @@ exports[`UnitInput renders with default props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -700,7 +700,7 @@ exports[`UnitInput renders with default props 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -712,7 +712,7 @@ exports[`UnitInput renders with default props 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -724,20 +724,20 @@ exports[`UnitInput renders with default props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -769,26 +769,26 @@ exports[`UnitInput renders with default props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -811,17 +811,17 @@ exports[`UnitInput renders with default props 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -968,26 +968,26 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1027,28 +1027,28 @@ exports[`UnitInput renders with defaultOption 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1072,7 +1072,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -1091,7 +1091,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -1100,12 +1100,12 @@ exports[`UnitInput renders with defaultOption 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1124,7 +1124,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1136,7 +1136,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1148,20 +1148,20 @@ exports[`UnitInput renders with defaultOption 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -1193,26 +1193,26 @@ exports[`UnitInput renders with defaultOption 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -1235,17 +1235,17 @@ exports[`UnitInput renders with defaultOption 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -1392,26 +1392,26 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1451,28 +1451,28 @@ exports[`UnitInput renders with defaultValue 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1496,7 +1496,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -1515,7 +1515,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -1524,12 +1524,12 @@ exports[`UnitInput renders with defaultValue 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1548,7 +1548,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1560,7 +1560,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1572,20 +1572,20 @@ exports[`UnitInput renders with defaultValue 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -1617,26 +1617,26 @@ exports[`UnitInput renders with defaultValue 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -1659,17 +1659,17 @@ exports[`UnitInput renders with defaultValue 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -1821,28 +1821,28 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
+  pointer-events: initial;
   pointer-events: none;
   position: relative;
   box-sizing: border-box;
-  pointer-events: initial;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1882,11 +1882,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1907,11 +1907,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  height: 100%;
   cursor: not-allowed;
+  height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #b2b6c3;
   margin-left: 0;
   margin-right: 0;
@@ -1930,7 +1930,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -1939,12 +1939,12 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1963,7 +1963,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1975,7 +1975,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1987,20 +1987,20 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #dce1eb;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -2033,26 +2033,26 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -2076,17 +2076,17 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -2228,26 +2228,26 @@ exports[`UnitInput renders with min max 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2287,28 +2287,28 @@ exports[`UnitInput renders with min max 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2332,7 +2332,7 @@ exports[`UnitInput renders with min max 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -2351,7 +2351,7 @@ exports[`UnitInput renders with min max 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -2360,12 +2360,12 @@ exports[`UnitInput renders with min max 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2384,7 +2384,7 @@ exports[`UnitInput renders with min max 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2396,7 +2396,7 @@ exports[`UnitInput renders with min max 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2408,20 +2408,20 @@ exports[`UnitInput renders with min max 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -2453,26 +2453,26 @@ exports[`UnitInput renders with min max 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -2495,17 +2495,17 @@ exports[`UnitInput renders with min max 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -2652,26 +2652,26 @@ exports[`UnitInput renders with size large 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 48px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2711,28 +2711,28 @@ exports[`UnitInput renders with size large 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2756,7 +2756,7 @@ exports[`UnitInput renders with size large 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -2775,7 +2775,7 @@ exports[`UnitInput renders with size large 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -2784,12 +2784,12 @@ exports[`UnitInput renders with size large 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2808,7 +2808,7 @@ exports[`UnitInput renders with size large 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2820,7 +2820,7 @@ exports[`UnitInput renders with size large 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2832,20 +2832,20 @@ exports[`UnitInput renders with size large 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -2877,26 +2877,26 @@ exports[`UnitInput renders with size large 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-default-unit"
       id="default-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -2919,17 +2919,17 @@ exports[`UnitInput renders with size large 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -3076,26 +3076,26 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3135,28 +3135,28 @@ exports[`UnitInput renders with size medium 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3180,7 +3180,7 @@ exports[`UnitInput renders with size medium 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -3199,7 +3199,7 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -3208,12 +3208,12 @@ exports[`UnitInput renders with size medium 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3232,7 +3232,7 @@ exports[`UnitInput renders with size medium 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3244,7 +3244,7 @@ exports[`UnitInput renders with size medium 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3256,20 +3256,20 @@ exports[`UnitInput renders with size medium 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -3301,26 +3301,26 @@ exports[`UnitInput renders with size medium 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-default-unit"
       id="default-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -3343,17 +3343,17 @@ exports[`UnitInput renders with size medium 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -3500,26 +3500,26 @@ exports[`UnitInput renders with size small 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 200px;
   height: 32px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3559,28 +3559,28 @@ exports[`UnitInput renders with size small 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3604,7 +3604,7 @@ exports[`UnitInput renders with size small 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -3623,7 +3623,7 @@ exports[`UnitInput renders with size small 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -3632,12 +3632,12 @@ exports[`UnitInput renders with size small 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3656,7 +3656,7 @@ exports[`UnitInput renders with size small 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3668,7 +3668,7 @@ exports[`UnitInput renders with size small 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3680,20 +3680,20 @@ exports[`UnitInput renders with size small 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -3725,26 +3725,26 @@ exports[`UnitInput renders with size small 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-default-unit"
       id="default-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -3767,17 +3767,17 @@ exports[`UnitInput renders with size small 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
@@ -3924,26 +3924,26 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-9 {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   width: 100px;
   height: 40px;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
   box-shadow: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3983,28 +3983,28 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4028,7 +4028,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   height: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -4047,7 +4047,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-left: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -4056,12 +4056,12 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13 input {
+.emotion-14 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4080,7 +4080,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   max-height: 48px;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4092,7 +4092,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   display: none;
 }
 
-.emotion-16 {
+.emotion-17 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4104,20 +4104,20 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #d4dae7;
-  vertical-align: middle;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-17.emotion-17 {
+.emotion-19.emotion-19 {
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -4149,26 +4149,26 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
       </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-7 emotion-8 emotion-9"
       data-testid="rich-select-test-unit"
       id="test-unit"
     >
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class="emotion-10"
+          class=" emotion-11"
         >
           <div
-            class=" emotion-11"
+            class=" emotion-12"
           >
             Hours
           </div>
           <div
-            class="emotion-12"
+            class="emotion-13"
           >
             <div
-              class="emotion-13"
+              class="emotion-14"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -4191,17 +4191,17 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-14"
+          class=" emotion-15"
         >
           <span
-            class=" emotion-15"
+            class=" emotion-16"
           />
           <div
             aria-hidden="true"
-            class=" emotion-16"
+            class=" emotion-17"
           >
             <svg
-              class="sc-ui-icon emotion-17"
+              class="sc-ui-icon emotion-18 emotion-19"
               viewBox="0 0 24 24"
             >
               <path
