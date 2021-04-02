@@ -1,3 +1,10 @@
+## [0.71.0](https://github.com/scaleway/scaleway-ui/compare/v0.70.0...v0.71.0) (2021-04-02)
+
+
+### :gear: Features
+
+* port Image component ([#203](https://github.com/scaleway/scaleway-ui/issues/203)) ([7bc518d](https://github.com/scaleway/scaleway-ui/commit/7bc518d0939edd70e8cb6473b0b0e04c8e9579a9))
+
 ## [0.70.0](https://github.com/scaleway/scaleway-ui/compare/v0.69.0...v0.70.0) (2021-04-02)
 
 
