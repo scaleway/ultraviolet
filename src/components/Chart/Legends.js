@@ -99,21 +99,25 @@ const Legends = ({
   focused,
   data,
   onFocusChange,
+  chartId,
 }) => (
   <List>
     {data.map((item, index) => {
       const isSegmentFocused = focused !== undefined && index === focused
+
+      const id = `${chartId ? `${chartId}-` : ''}chart-tooltip-${item.product}`
 
       return (
         <Tooltip
           key={item.product}
           visible={isSegmentFocused}
           variant="white"
-          baseId={`chart-tooltip-${item.product}`}
+          baseId={id}
           text={<TooltipContainer data={item} />}
         >
           <ListItem isFocused={isSegmentFocused}>
             <ToggleBox
+              data-testid={id}
               onMouseOver={() => onFocusChange(index)}
               onFocus={() => onFocusChange(index)}
               onMouseOut={() => onFocusChange()}
@@ -140,6 +144,7 @@ const Legends = ({
 
 Legends.defaultProps = {
   focused: undefined,
+  chartId: undefined,
 }
 
 Legends.propTypes = {
@@ -155,6 +160,7 @@ Legends.propTypes = {
   ).isRequired,
   focused: PropTypes.number,
   onFocusChange: PropTypes.func.isRequired,
+  chartId: PropTypes.string,
 }
 
 export default Legends

@@ -125,14 +125,15 @@ const Donut = ({
           previousSegmentLength.current =
             sumPreviousValues + segmentValueFromPercent
 
-          const id = `${chartId ?? `${chartId}-`}donut-`
+          const id = `${chartId ? `${chartId}-` : ''}donut-${item.product}`
 
           return (
             <Circle
               onMouseEnter={() => onFocusChange(index)}
               onMouseLeave={() => onFocusChange()}
               color={item.color}
-              key={`${id}${item.product}`}
+              data-testid={id}
+              key={id}
               isFocused={isFocused}
               lengthSegment={segmentValueFromPercent}
               rotationSegment={rotateValueFromPercent}

@@ -139,3 +139,34 @@ import Chart from '..'
     />
   </Story>
 </Canvas>
+
+### Donut with discount
+
+<Canvas>
+  <Story name="With Discount">
+    <Chart
+      variant="donut"
+      hasLegend
+      data={[
+        {
+          product: 'discount',
+          needPattern: true,
+          name: 'GPU Instances',
+          color: '#F4306C',
+          percent: 100,
+          value: '20',
+          details: [
+            {
+              name: 'Start-1S',
+              value: '€10',
+            },
+            {
+              name: 'Start-2L',
+              value: '€10',
+            },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Canvas>

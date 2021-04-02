@@ -54,6 +54,7 @@ const Chart = ({
             focused={currentFocusIndex}
             data={data}
             onFocusChange={setCurrentFocusIndex}
+            chartId={chartId}
           />
         ))}
     </Container>
