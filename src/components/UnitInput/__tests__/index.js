@@ -81,41 +81,25 @@ describe('UnitInput', () => {
   })
 
   test(`renders with RichSelect update`, async () => {
-    let unit
-    renderWithTheme(
-      <UnitInput
-        name="test"
-        onChange={value => {
-          unit = value.unit
-        }}
-      />,
-    )
+    const node = renderWithTheme(<UnitInput name="test" />)
 
-    const richSelect = document.querySelector("input[type='text']")
+    const richSelect = node.getByRole('textbox')
     userEvent.click(richSelect)
     userEvent.type(richSelect, 'weeks{enter}')
-    await waitFor(() => expect(unit).toBe('weeks'))
+    await waitFor(() => expect(richSelect.value).toBe('weeks'))
   })
 })
 
 test(`renders with TextBox update`, async () => {
-  let value
-  renderWithTheme(
-    <UnitInput
-      name="test"
-      onChange={val => {
-        value = val.value
-      }}
-    />,
-  )
+  const node = renderWithTheme(<UnitInput name="test" />)
 
-  const input = document.querySelector("input[type='number']")
-  await waitFor(() => expect(value).toBe('1'))
+  const input = node.getByRole('spinbutton')
+  await waitFor(() => expect(input.value).toBe('1'))
   userEvent.click(input)
   userEvent.type(input, '10')
-  await waitFor(() => expect(value).toBe('110'))
+  await waitFor(() => expect(input.value).toBe('110'))
   userEvent.type(input, '{selectall}{del}')
-  await waitFor(() => expect(value).toBe('1'))
+  await waitFor(() => expect(input.value).toBe('1'))
   userEvent.type(input, '{selectall}{del}00000')
-  await waitFor(() => expect(value).toBe('100000'))
+  await waitFor(() => expect(input.value).toBe('99999'))
 })
