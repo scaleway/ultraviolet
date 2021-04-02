@@ -21,12 +21,12 @@ const EmptyLegend = styled.div`
 `
 
 const Chart = ({
+  chartId,
+  data,
+  content,
+  emptyLegend,
   hasLegend,
   variant,
-  data,
-  emptyLegend,
-  chartId,
-  ...props
 }) => {
   const ChartVariant = variants[variant]
   const [currentFocusIndex, setCurrentFocusIndex] = useState()
@@ -39,7 +39,7 @@ const Chart = ({
           focused={currentFocusIndex}
           onFocusChange={setCurrentFocusIndex}
           chartId={chartId}
-          {...props}
+          content={content}
         />
       </Breakpoint>
       {hasLegend &&

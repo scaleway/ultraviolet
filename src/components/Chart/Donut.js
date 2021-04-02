@@ -89,7 +89,6 @@ const Donut = ({
   focused,
   onFocusChange,
   chartId,
-  ...props
 }) => {
   const previousSegmentLength = useRef(0)
   const fillMustBeAnimated = !previousSegmentLength.current
@@ -101,7 +100,7 @@ const Donut = ({
   )
 
   return (
-    <Box position="relative" height={height} width={width} {...props}>
+    <Box position="relative" height={height} width={width}>
       <svg style={{ height, width, transform: 'rotate(-90deg)' }}>
         <defs>{patterns}</defs>
 
