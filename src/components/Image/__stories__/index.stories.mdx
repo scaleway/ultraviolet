@@ -1,0 +1,25 @@
+import {
+  ArgsTable,
+  Canvas,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import Image from '..'
+import logo from './scaleway-text.png'
+
+<Meta title="Components/Image" component={Image} />
+
+# Image
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <Image src={logo} />
+  </Story>
+</Canvas>
+
+
+## API
+
+<ArgsTable of={Image} />
