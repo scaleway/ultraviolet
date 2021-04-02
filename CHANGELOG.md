@@ -1,3 +1,15 @@
+## [0.70.0](https://github.com/scaleway/scaleway-ui/compare/v0.69.0...v0.70.0) (2021-04-02)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @testing-library/react from 11.2.5 to 11.2.6 ([#198](https://github.com/scaleway/scaleway-ui/issues/198)) ([85c6ffd](https://github.com/scaleway/scaleway-ui/commit/85c6ffd78c73b002885331a5bd745e77370c6de0))
+
+
+### :gear: Features
+
+* use colors from theme start ([#169](https://github.com/scaleway/scaleway-ui/issues/169)) ([0ad3b42](https://github.com/scaleway/scaleway-ui/commit/0ad3b42fc62939488e8d3a65c568e65cc498a0b3)), closes [#155](https://github.com/scaleway/scaleway-ui/issues/155) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#150](https://github.com/scaleway/scaleway-ui/issues/150) [#152](https://github.com/scaleway/scaleway-ui/issues/152) [#187](https://github.com/scaleway/scaleway-ui/issues/187) [#161](https://github.com/scaleway/scaleway-ui/issues/161) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#178](https://github.com/scaleway/scaleway-ui/issues/178) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#168](https://github.com/scaleway/scaleway-ui/issues/168) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#179](https://github.com/scaleway/scaleway-ui/issues/179) [#160](https://github.com/scaleway/scaleway-ui/issues/160)
+
 ## [0.69.0](https://github.com/scaleway/scaleway-ui/compare/v0.68.0...v0.69.0) (2021-03-31)
 
 
