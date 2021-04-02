@@ -1,7 +1,7 @@
-import { css, keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const shineAnimation = keyframes`
@@ -14,70 +14,74 @@ const shineAnimation = keyframes`
   }
 `
 
-const styles = {
-  line: backgroundColor => css`
-    position: relative;
-    height: 4px;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 2px;
-    background-color: ${colors[backgroundColor] || backgroundColor};
-  `,
-  filled: ({ variant, value }) => css`
-    border-radius: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: ${colors[variant]};
-    transition: 0.3s width;
-    width: ${Math.max(0, Math.min(100, value))}%;
-  `,
-  progress: css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 25%;
-    opacity: 0.8;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0)
-    );
-    animation: ${shineAnimation} 1s linear infinite;
-  `,
-}
-
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
-export function ProgressBar({
+const StyledBox = styled(Box, {
+  shouldForwardProp: prop => !['backgroundColor'].includes(prop),
+})`
+  position: relative;
+  height: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 2px;
+  background-color: ${({ theme, backgroundColor }) =>
+    theme.colors[backgroundColor] ?? backgroundColor};
+`
+
+const StyledProgress = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  animation: ${shineAnimation} 1s linear infinite;
+`
+
+const StyledFilled = styled('div', {
+  shouldForwardProp: prop => !['variant', 'value'].includes(prop),
+})`
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: ${({ theme, variant }) =>
+    theme.colors[variant] ?? 'inherit'};
+  transition: 0.3s width;
+  width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
+`
+
+const ProgressBar = ({
   variant,
   backgroundColor,
   value,
   progress,
   ...props
-}) {
-  return (
-    <Box
-      role="progressbar"
-      aria-valuenow={value}
-      aria-valuemin="0"
-      aria-valuemax="100"
-      css={styles.line(backgroundColor)}
-      {...props}
-    >
-      {progress ? (
-        <div css={styles.progress} />
-      ) : (
-        <div css={styles.filled({ variant, value })} />
-      )}
-    </Box>
-  )
-}
+}) => (
+  <StyledBox
+    role="progressbar"
+    aria-valuenow={value}
+    aria-valuemin="0"
+    aria-valuemax="100"
+    backgroundColor={backgroundColor}
+    {...props}
+  >
+    {progress ? (
+      <StyledProgress />
+    ) : (
+      <StyledFilled variant={variant} value={value} />
+    )}
+  </StyledBox>
+)
 
 ProgressBar.propTypes = {
   variant: PropTypes.oneOf(progressBarVariants),
@@ -88,7 +92,7 @@ ProgressBar.propTypes = {
 
 ProgressBar.defaultProps = {
   variant: 'primary',
-  backgroundColor: colors.gray300,
+  backgroundColor: 'gray300',
   value: 0,
   progress: false,
 }

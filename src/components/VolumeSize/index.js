@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography } from '../Typography'
 
 const sizes = {
@@ -153,7 +153,7 @@ const VolumeSize = ({
           name={hasError ? 'alert' : 'checkbox-marked-circle-outline'}
         />
         {hasError && (
-          <Typography variant="bodyA" color="alert">
+          <Typography variant="bodyA" color="orange">
             {isTooBig ? tooBigMessage : tooSmallMessage}
           </Typography>
         )}

@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo, useEffect, useRef } from 'react'
@@ -8,25 +9,32 @@ import {
   PopoverDisclosure,
   usePopoverState,
 } from 'reakit/Popover'
-import { colors } from '../../theme'
 
-const variants = {
-  white: css`
-    background-color: ${colors.white};
-    color: ${colors.black};
-    fill: ${colors.white};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
-  `,
-  black: css`
-    background-color: ${colors.black};
-    color: ${colors.white};
-    fill: ${colors.black};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
-  `,
-}
-const popoverStyle = css`
-  border-radius: 4px;
+const buildVariant = ({ bgColor, color, fill, shadow }) => ({ theme }) => css`
+  background-color: ${theme.colors[bgColor] ?? bgColor};
+  color: ${theme.colors[color] ?? color};
+  fill: ${theme.colors[fill] ?? fill};
+  box-shadow: 0 2px 5px 5px
+    ${transparentize(0.7, theme.colors[shadow] ?? shadow)};
 `
+const variants = {
+  white: buildVariant({
+    bgColor: 'white',
+    color: 'black',
+    fill: 'white',
+    shadow: 'shadow',
+  }),
+  black: buildVariant({
+    bgColor: 'black',
+    color: 'white',
+    fill: 'black',
+    shadow: 'shadow',
+  }),
+}
+
+export const popperVariants = Object.keys(variants)
+
+const variantStyles = ({ variant }) => variants[variant] ?? undefined
 
 const Disclosure = memo(({ disclosure, popover }) => {
   const innerRef = useRef(disclosure(popover))
@@ -48,6 +56,12 @@ Disclosure.defaultProps = {
   popover: {},
 }
 
+const StyledPopover = styled(Popover, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  border-radius: 4px;
+  ${variantStyles}
+`
 const Popper = memo(
   ({
     animated,
@@ -78,8 +92,8 @@ const Popper = memo(
     return (
       <>
         {disclosure && <Disclosure popover={popover} disclosure={disclosure} />}
-        <Popover
-          css={[popoverStyle, variants[variant]]}
+        <StyledPopover
+          variant={variant}
           hideOnClickOutside={hideOnClickOutside}
           preventBodyScroll={preventBodyScroll}
           {...popover}
@@ -88,8 +102,8 @@ const Popper = memo(
           {hasArrow && (
             <PopoverArrow {...popover} style={{ fill: backgroudColor }} />
           )}
-          {children({ ...popover })}
-        </Popover>
+          {typeof children === 'function' ? children({ ...popover }) : children}
+        </StyledPopover>
       </>
     )
   },

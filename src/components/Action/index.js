@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Button } from '../Button'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 
 const action = rounded => css`
@@ -14,11 +14,7 @@ const action = rounded => css`
     // safari issue prevent event propgation
     pointer-events: none;
   }
-  ${rounded
-    ? `
-    border-radius: 16px;
-  `
-    : ''}
+  ${rounded && `border-radius: 16px;`}
 `
 
 const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {

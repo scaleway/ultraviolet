@@ -1,17 +1,8 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors, space } from '../../theme'
-import { Icon, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 import { Typography } from '../Typography'
-
-const style = ({ variant }) => css`
-  display: flex;
-  align-items: center;
-  margin-bottom: ${space['2']};
-  color: ${colors[variant]};
-  font-weight: 700;
-`
 
 const variantIcons = {
   warning: 'alert',
@@ -19,15 +10,17 @@ const variantIcons = {
   success: 'check',
 }
 
+const StyledAlert = styled(Typography)`
+  display: flex;
+  align-items: center;
+  margin-bottom: ${({ theme }) => theme.space['2']};
+  font-weight: 700;
+`
+
 export const alertVariants = Object.keys(variantIcons)
 
 const Alert = ({ variant, icon, children, iconSize, ...props }) => (
-  <Typography
-    variant="default"
-    css={style({ variant })}
-    role="alert"
-    {...props}
-  >
+  <StyledAlert variant="default" role="alert" color={variant} {...props}>
     <Icon
       mr={2}
       name={icon || variantIcons[variant]}
@@ -35,7 +28,7 @@ const Alert = ({ variant, icon, children, iconSize, ...props }) => (
       color={variant}
     />
     <span>{children}</span>
-  </Typography>
+  </StyledAlert>
 )
 
 Alert.propTypes = {
@@ -51,4 +44,4 @@ Alert.defaultProps = {
   iconSize: 40,
 }
 
-export { Alert }
+export default Alert

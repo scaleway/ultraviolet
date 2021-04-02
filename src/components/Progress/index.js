@@ -1,87 +1,103 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
-const styles = {
-  container: css`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 48px;
-  `,
-  base: css`
-    display: flex;
-    flex: 1;
-    font-weight: 500;
-    border-radius: 24px;
-    border-style: solid;
-    border-width: 1px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    touch-action: manipulation;
-    outline: none;
-  `,
-  left: css`
+const clickableStyles = ({ theme }) => `
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${transparentize(0.75, theme.colors.success)};
+  }
+`
+
+const positions = {
+  left: `
     padding-right: 24px;
     padding-left: 24px;
     margin-right: -24px;
   `,
-  middle: css`
+  middle: `
     padding-right: 24px;
     padding-left: 48px;
     margin-left: -24px;
     margin-right: -24px;
   `,
-  right: css`
+  right: `
     padding-right: 24px;
     padding-left: 48px;
     margin-left: -24px;
   `,
-  past: css`
-    background-color: ${colors.success};
-    color: ${colors.white};
-    border-color: ${colors.white};
+}
+
+const temporals = {
+  past: ({ theme }) => `
+    background-color: ${theme.colors.success};
+    color: ${theme.colors.white};
+    border-color: ${theme.colors.white};
   `,
-  clickable: css`
-    cursor: pointer;
+  current: ({ theme }) => `
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+    border-color: ${theme.colors.white};
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.success)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, theme.colors.primary)};
     }
   `,
-  current: css`
-    background-color: ${colors.primary};
-    color: ${colors.white};
-    border-color: ${colors.white};
+  future: ({ theme }) => `
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.gray550};
+    border-color: ${theme.colors.gray350};
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.primary)};
-    }
-  `,
-  future: css`
-    background-color: ${colors.white};
-    color: ${colors.gray550};
-    border-color: ${colors.gray350};
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colors.gray550)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, theme.colors.gray550)};
     }
   `,
 }
 
+const positionStyles = ({ position }) => positions[position] ?? undefined
+
+const temporalStyles = ({ temporal }) => temporals[temporal]
+
+const StyledContainer = styled(Box)`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+`
+
+const StyledStep = styled(Box, {
+  shouldForwardProp: prop =>
+    !['clickable', 'temporal', 'position'].includes(prop),
+})`
+  display: flex;
+  flex: 1;
+  font-weight: 500;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  outline: none;
+
+  ${positionStyles}
+  ${temporalStyles}
+  ${({ clickable }) => clickable && clickableStyles}
+`
+
 const Step = () => null
 
-function Progress({ children, selected, ...props }) {
+const Progress = ({ children, selected, ...props }) => {
   const flatChildren = flattenChildren(children)
   const { length } = flatChildren
 
   return (
-    <Box css={styles.container} {...props}>
+    <StyledContainer {...props}>
       {flatChildren.map((child, index) => {
         if (!child) {
           return null
@@ -91,40 +107,35 @@ function Progress({ children, selected, ...props }) {
         const isPast = selected > index
         const isClickable = isPast && Boolean(onClick)
 
-        const isLeftOrRightStyles = () => {
-          if (index === 0) return styles.left
-          if (index === length - 1) return styles.right
+        const getPosition = () => {
+          if (index === 0) return 'left'
+          if (index === length - 1) return 'right'
 
-          return styles.middle
+          return 'middle'
         }
 
-        const isPastOrCurrentStyles = () => {
-          if (selected > index) return styles.past
-          if (selected === index) return styles.current
+        const getTemporal = () => {
+          if (selected > index) return 'past'
+          if (selected === index) return 'current'
 
-          return styles.future
+          return 'future'
         }
 
         return (
-          <Box
+          <StyledStep
             key={`step-${index}`}
             onClick={isClickable ? () => onClick(index) : undefined}
             as={isClickable ? 'button' : 'div'}
-            css={[
-              styles.base,
-              css`
-                z-index: ${length - index};
-              `,
-              isLeftOrRightStyles(),
-              isClickable && styles.clickable,
-              isPastOrCurrentStyles(),
-            ]}
+            zIndex={length - index}
+            position={getPosition()}
+            temporal={getTemporal()}
+            clickable={isClickable}
           >
             {title}
-          </Box>
+          </StyledStep>
         )
       })}
-    </Box>
+    </StyledContainer>
   )
 }
 
@@ -137,4 +148,4 @@ const MemoProgress = memo(Progress)
 
 MemoProgress.Step = Step
 
-export { MemoProgress as Progress }
+export default MemoProgress

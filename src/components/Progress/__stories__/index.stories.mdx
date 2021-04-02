@@ -5,7 +5,9 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Progress } from '..'
+import Progress from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import { Button } from '../../Button'
 
 <Meta title="Components/Progress" component={Progress} />
 
@@ -13,15 +15,39 @@ import { Progress } from '..'
 
 ## Basic
 
-<Description>Progress //:TODO</Description>
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Progress selected={1}>
       <Progress.Step title="Step 1" />
       <Progress.Step title="Step 2" />
       <Progress.Step title="Step 3" />
     </Progress>
+  </Story>
+</Canvas>
+
+## Clickable
+
+<Description>
+  By adding `onClick` prop on `Progress.Step` you can handle a click on a
+  previous completed step
+</Description>
+
+<Canvas>
+  <Story name="Clickable">
+    <ControlValue value={2}>
+      {({ value, onChange }) => (
+        <>
+          <Progress selected={value}>
+            <Progress.Step onClick={onChange} title="Step 1" />
+            <Progress.Step onClick={onChange} title="Step 2" />
+            <Progress.Step onClick={onChange} title="Step 3" />
+          </Progress>
+          <Button mt={1} onClick={() => onChange(2)}>
+            Reset
+          </Button>
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 

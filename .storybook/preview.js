@@ -32,16 +32,16 @@ const adjustedTheme = ancestorTheme => ({
 export const decorators = [
   Story => (
     <>
-      <GlobalStyle
-        additionalStyles={[
-          css`
-            body {
-              overflow: initial !important;
-            }
-          `,
-        ]}
-      />
       <ThemeProvider theme={adjustedTheme}>
+        <GlobalStyle
+          additionalStyles={[
+            css`
+              body {
+                overflow: initial !important;
+              }
+            `,
+          ]}
+        />
         <Story />
       </ThemeProvider>
     </>

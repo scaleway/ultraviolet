@@ -1,5 +1,5 @@
 import React from 'react'
-import { Information } from '..'
+import Information from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 const TestComponent = () => <div>Testing component</div>

@@ -2,7 +2,7 @@
 
 exports[`PasswordStrengthMeter render with empty password 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -17,7 +17,11 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  color: #4a4f62;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -25,24 +29,28 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
   color: #b2b6c3;
   font-size: 14px;
   line-height: 18px;
+  color: #ef5774;
   float: right;
   vertical-align: top;
   font-weight: 500;
-  color: red;
 }
 
-.emotion-3 {
+.emotion-6.emotion-6 {
+  color: #ef5774;
+}
+
+.emotion-8 {
   background-color: #f6f5f7;
   border-radius: 5px;
   height: 8px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8.emotion-8 {
   margin-top: 8px;
   margin-bottom: 16px;
 }
 
-.emotion-4 {
+.emotion-9 {
   border-radius: 5px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -56,20 +64,20 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
     title="MyTitle"
   >
     <p
-      class="emotion-1"
+      class="emotion-1 emotion-2 emotion-3"
     >
       MyTitle
     </p>
     <span
-      class="emotion-2"
+      class="emotion-4 emotion-2 emotion-6"
     >
       veryWeak
     </span>
     <div
-      class="emotion-3"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-4"
+        class="emotion-9 emotion-10"
         style="background-color: red; width: 20%;"
       />
     </div>
@@ -79,7 +87,7 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
 
 exports[`PasswordStrengthMeter render with medium password 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -94,7 +102,11 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  color: #4a4f62;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -102,24 +114,28 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
   color: #b2b6c3;
   font-size: 14px;
   line-height: 18px;
+  color: #ef5774;
   float: right;
   vertical-align: top;
   font-weight: 500;
-  color: red;
 }
 
-.emotion-3 {
+.emotion-6.emotion-6 {
+  color: #ef5774;
+}
+
+.emotion-8 {
   background-color: #f6f5f7;
   border-radius: 5px;
   height: 8px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8.emotion-8 {
   margin-top: 8px;
   margin-bottom: 16px;
 }
 
-.emotion-4 {
+.emotion-9 {
   border-radius: 5px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -133,20 +149,20 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
     title="MyTitle"
   >
     <p
-      class="emotion-1"
+      class="emotion-1 emotion-2 emotion-3"
     >
       MyTitle
     </p>
     <span
-      class="emotion-2"
+      class="emotion-4 emotion-2 emotion-6"
     >
       veryWeak
     </span>
     <div
-      class="emotion-3"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-4"
+        class="emotion-9 emotion-10"
         style="background-color: red; width: 20%;"
       />
     </div>
@@ -156,7 +172,7 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
 
 exports[`PasswordStrengthMeter render with strong password 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -171,7 +187,11 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  color: #4a4f62;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -179,24 +199,28 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
   color: #b2b6c3;
   font-size: 14px;
   line-height: 18px;
+  color: #ef5774;
   float: right;
   vertical-align: top;
   font-weight: 500;
-  color: red;
 }
 
-.emotion-3 {
+.emotion-6.emotion-6 {
+  color: #ef5774;
+}
+
+.emotion-8 {
   background-color: #f6f5f7;
   border-radius: 5px;
   height: 8px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8.emotion-8 {
   margin-top: 8px;
   margin-bottom: 16px;
 }
 
-.emotion-4 {
+.emotion-9 {
   border-radius: 5px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -210,20 +234,20 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
     title="MyTitle"
   >
     <p
-      class="emotion-1"
+      class="emotion-1 emotion-2 emotion-3"
     >
       MyTitle
     </p>
     <span
-      class="emotion-2"
+      class="emotion-4 emotion-2 emotion-6"
     >
       veryWeak
     </span>
     <div
-      class="emotion-3"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-4"
+        class="emotion-9 emotion-10"
         style="background-color: red; width: 20%;"
       />
     </div>
@@ -233,7 +257,7 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
 
 exports[`PasswordStrengthMeter render with very strong password 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -248,7 +272,11 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  color: #4a4f62;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -256,24 +284,28 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
   color: #b2b6c3;
   font-size: 14px;
   line-height: 18px;
+  color: #ef5774;
   float: right;
   vertical-align: top;
   font-weight: 500;
-  color: red;
 }
 
-.emotion-3 {
+.emotion-6.emotion-6 {
+  color: #ef5774;
+}
+
+.emotion-8 {
   background-color: #f6f5f7;
   border-radius: 5px;
   height: 8px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8.emotion-8 {
   margin-top: 8px;
   margin-bottom: 16px;
 }
 
-.emotion-4 {
+.emotion-9 {
   border-radius: 5px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -287,20 +319,20 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
     title="MyTitle"
   >
     <p
-      class="emotion-1"
+      class="emotion-1 emotion-2 emotion-3"
     >
       MyTitle
     </p>
     <span
-      class="emotion-2"
+      class="emotion-4 emotion-2 emotion-6"
     >
       veryWeak
     </span>
     <div
-      class="emotion-3"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-4"
+        class="emotion-9 emotion-10"
         style="background-color: red; width: 20%;"
       />
     </div>
@@ -310,7 +342,7 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
 
 exports[`PasswordStrengthMeter render with weak password 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -325,7 +357,11 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
   font-weight: 500;
 }
 
-.emotion-2 {
+.emotion-3.emotion-3 {
+  color: #4a4f62;
+}
+
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -333,24 +369,28 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
   color: #b2b6c3;
   font-size: 14px;
   line-height: 18px;
+  color: #ef5774;
   float: right;
   vertical-align: top;
   font-weight: 500;
-  color: red;
 }
 
-.emotion-3 {
+.emotion-6.emotion-6 {
+  color: #ef5774;
+}
+
+.emotion-8 {
   background-color: #f6f5f7;
   border-radius: 5px;
   height: 8px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8.emotion-8 {
   margin-top: 8px;
   margin-bottom: 16px;
 }
 
-.emotion-4 {
+.emotion-9 {
   border-radius: 5px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -364,20 +404,20 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
     title="MyTitle"
   >
     <p
-      class="emotion-1"
+      class="emotion-1 emotion-2 emotion-3"
     >
       MyTitle
     </p>
     <span
-      class="emotion-2"
+      class="emotion-4 emotion-2 emotion-6"
     >
       veryWeak
     </span>
     <div
-      class="emotion-3"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-4"
+        class="emotion-9 emotion-10"
         style="background-color: red; width: 20%;"
       />
     </div>

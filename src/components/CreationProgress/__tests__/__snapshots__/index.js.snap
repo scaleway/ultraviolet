@@ -2,7 +2,7 @@
 
 exports[`CreationProgress renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,7 +33,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -52,16 +52,19 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-7 {
   fill: #fff;
-  vertical-align: middle;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
 }
 
-.emotion-4 {
+.emotion-7.emotion-7 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -71,7 +74,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -84,7 +87,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -95,16 +98,16 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -113,26 +116,26 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -141,26 +144,26 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -169,7 +172,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
@@ -190,7 +193,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,7 +209,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -221,7 +224,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -240,16 +243,19 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-7 {
   fill: #fff;
-  vertical-align: middle;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
 }
 
-.emotion-4 {
+.emotion-7.emotion-7 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -259,7 +265,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -272,7 +278,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -283,7 +289,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-8 {
+.emotion-16 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -320,7 +326,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   border-width: 3px;
 }
 
-.emotion-9 {
+.emotion-18 {
   background-color: #d4dae7;
   height: 8px;
   width: 8px;
@@ -328,16 +334,16 @@ exports[`CreationProgress renders correctly with default props 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -346,49 +352,49 @@ exports[`CreationProgress renders correctly with default props 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-8"
+        class="emotion-16 emotion-5"
       >
         <div
-          class="emotion-9"
+          class="emotion-18 emotion-19"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     />
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-8"
+        class="emotion-16 emotion-5"
       >
         <div
-          class="emotion-9"
+          class="emotion-18 emotion-19"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
@@ -409,7 +415,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -425,7 +431,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -440,7 +446,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -459,16 +465,19 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-7 {
   fill: #fff;
-  vertical-align: middle;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
 }
 
-.emotion-4 {
+.emotion-7.emotion-7 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -478,7 +487,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -491,7 +500,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -501,7 +510,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-24 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -512,7 +521,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-14 {
+.emotion-28 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -549,7 +558,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   border-width: 3px;
 }
 
-.emotion-15 {
+.emotion-30 {
   background-color: #d4dae7;
   height: 8px;
   width: 8px;
@@ -557,16 +566,16 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -575,26 +584,26 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -603,36 +612,36 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-12"
+        class="emotion-24 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-14"
+        class="emotion-28 emotion-5"
       >
         <div
-          class="emotion-15"
+          class="emotion-30 emotion-31"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     />
   </div>
 </DocumentFragment>
@@ -650,7 +659,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -666,7 +675,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -681,7 +690,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -700,16 +709,20 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-7 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
   color: #fff;
+}
+
+.emotion-7.emotion-7 {
+  color: #fff;
   font-weight: 500;
 }
 
-.emotion-4 {
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -719,7 +732,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -732,7 +745,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -742,7 +755,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-24 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -753,7 +766,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-14 {
+.emotion-28 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -790,82 +803,86 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   border-width: 3px;
 }
 
-.emotion-15 {
+.emotion-31 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
+  color: #dce1eb;
+}
+
+.emotion-31.emotion-31 {
+  color: #dce1eb;
   font-weight: 500;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-6 emotion-7"
         >
           1
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-3"
+          class="emotion-6 emotion-7"
         >
           2
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-12"
+        class="emotion-24 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-14"
+        class="emotion-28 emotion-5"
       >
         <div
-          class="emotion-15"
-          style="color: rgb(220, 225, 235);"
+          class="emotion-6 emotion-31"
         >
           3
         </div>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>
@@ -876,7 +893,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
 
 exports[`CreationProgress renders correctly without animation 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -892,7 +909,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   justify-content: space-between;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -907,7 +924,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   width: 120px;
 }
 
-.emotion-2 {
+.emotion-4 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -926,16 +943,19 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: #45d6b5;
 }
 
-.emotion-3 {
+.emotion-7 {
   fill: #fff;
-  vertical-align: middle;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
 }
 
-.emotion-4 {
+.emotion-7.emotion-7 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   margin-top: 16px;
   font-size: 16px;
   display: -webkit-box;
@@ -945,7 +965,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   text-align: center;
 }
 
-.emotion-5 {
+.emotion-10 {
   position: relative;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -958,7 +978,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: #d4dae7;
 }
 
-.emotion-6 {
+.emotion-12 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -968,7 +988,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-24 {
   border-radius: 2px;
   background-color: #45d6b5;
   position: absolute;
@@ -977,7 +997,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   bottom: 0;
 }
 
-.emotion-14 {
+.emotion-28 {
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -1014,7 +1034,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   border-width: 3px;
 }
 
-.emotion-15 {
+.emotion-30 {
   background-color: #d4dae7;
   height: 8px;
   width: 8px;
@@ -1022,16 +1042,16 @@ exports[`CreationProgress renders correctly without animation 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -1040,26 +1060,26 @@ exports[`CreationProgress renders correctly without animation 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 1
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-6"
+        class="emotion-12 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-2"
+        class="emotion-4 emotion-5"
       >
         <svg
-          class="sc-ui-icon emotion-3"
+          class="sc-ui-icon emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <path
@@ -1068,30 +1088,30 @@ exports[`CreationProgress renders correctly without animation 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 2
       </div>
     </div>
     <div
-      class="emotion-5"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-12"
+        class="emotion-24 emotion-13"
       />
     </div>
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-14"
+        class="emotion-28 emotion-5"
       >
         <div
-          class="emotion-15"
+          class="emotion-30 emotion-31"
         />
       </div>
       <div
-        class="emotion-4"
+        class="emotion-8 emotion-9"
       >
         Step 3
       </div>

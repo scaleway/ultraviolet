@@ -1,49 +1,55 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useMemo } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
-import { colors, radii } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 
-const styles = {
-  container: ({ disabled }) => css`
-    position: relative;
-    display: inline-flex;
-    align-items: flex-start;
-    cursor: ${disabled ? 'not-allowed' : 'pointer'};
-  `,
-  input: ({ size, hasChildren, disabled }) => css`
-    opacity: 0.01;
-    width: ${size}px;
-    height: ${size}px;
-    position: absolute;
-    cursor: pointer;
-    margin-right: ${hasChildren ? '10px' : 0};
-    padding: 2px;
-    pointer-events: auto;
-    &:hover {
-      svg {
-        border-radius: ${radii.default};
-        background-color: ${!disabled && colors.gray100};
-        fill: ${!disabled && colors.primary};
-        transition: fill 300ms;
-      }
+const StyledCheckBoxContainer = styled(Typography)`
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: ${({ 'aria-disabled': disabled }) =>
+    disabled ? 'not-allowed' : 'pointer'};
+`
+
+const StyledReakitCheckbox = styled(ReakitCheckbox, {
+  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop),
+})`
+  opacity: 0.01;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: ${({ hasChildren }) => (hasChildren ? '10px' : 0)};
+  padding: 2px;
+  pointer-events: auto;
+  &:hover {
+    svg {
+      border-radius: ${({ theme }) => theme.radii.default};
+      background-color: ${({ theme, disabled }) =>
+        !disabled && theme.colors.gray100};
+      fill: ${({ theme, disabled }) => !disabled && theme.colors.primary};
+      transition: fill 300ms;
     }
-    &:focus + svg {
-      outline: 1px ${colors.gray550} dotted;
-    }
-  `,
-  icon: css`
-    box-sizing: content-box;
-  `,
-  children: size => css`
-    padding-top: ${size > 27 ? '4px' : '2px'};
-  `,
-}
+  }
+  &:focus + svg {
+    outline: 1px ${({ theme }) => theme.colors.gray550} dotted;
+  }
+`
+
+const StyledIcon = styled(Icon)`
+  box-sizing: content-box;
+`
+
+const StyledChildrenContainer = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})`
+  padding-top: ${({ size }) => (size > 27 ? '4px' : '2px')};
+`
 
 const Checkbox = ({
   checked,
@@ -80,14 +86,15 @@ const Checkbox = ({
 
   return (
     <Box {...props}>
-      <Typography
+      <StyledCheckBoxContainer
         as="label"
         variant={typographyVariant}
-        css={styles.container({ disabled })}
+        aria-disabled={disabled}
       >
-        <ReakitCheckbox
+        <StyledReakitCheckbox
           {...checkbox}
-          css={styles.input({ disabled, hasChildren, size })}
+          hasChildren={hasChildren}
+          size={size}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
@@ -100,10 +107,9 @@ const Checkbox = ({
         {progress ? (
           <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
         ) : (
-          <Icon
+          <StyledIcon
             mr={hasChildren ? '10px' : 0}
             p="2px"
-            css={styles.icon}
             name={
               checkbox?.state
                 ? 'checkbox-marked-outline'
@@ -113,8 +119,10 @@ const Checkbox = ({
             size={size}
           />
         )}
-        {hasChildren && <div css={styles.children(size)}>{children}</div>}
-      </Typography>
+        {hasChildren && (
+          <StyledChildrenContainer>{children}</StyledChildrenContainer>
+        )}
+      </StyledCheckBoxContainer>
       <Expandable height={56} overflow="hidden" opened={!!error}>
         <Box fontSize={12} color="warning" px="4px">
           {error}

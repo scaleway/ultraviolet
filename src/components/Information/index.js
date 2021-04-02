@@ -1,17 +1,19 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Typography } from '../Typography'
 
-const style = ({ backgroundColor }) => css`
-  background-color: ${colors[backgroundColor] ?? backgroundColor};
+const StyledBox = styled(Box, {
+  shouldForwardProp: prop => !['backgroundColor'].includes(prop),
+})`
+  background-color: ${({ theme, backgroundColor }) =>
+    theme.colors[backgroundColor] ?? backgroundColor};
   border-radius: 4px;
 `
 
-export const Information = ({
+const Information = ({
   children,
   backgroundColor,
   color,
@@ -23,12 +25,12 @@ export const Information = ({
   heading,
   ...props
 }) => (
-  <Box
+  <StyledBox
+    backgroundColor={backgroundColor}
     display="flex"
     py={2}
     px={3}
     alignItems="center"
-    css={style({ backgroundColor })}
     {...props}
   >
     {icon && (
@@ -49,7 +51,7 @@ export const Information = ({
         children
       )}
     </Box>
-  </Box>
+  </StyledBox>
 )
 
 Information.defaultProps = {
@@ -75,3 +77,5 @@ Information.propTypes = {
   iconColor: PropTypes.string,
   imgSize: PropTypes.number,
 }
+
+export default Information

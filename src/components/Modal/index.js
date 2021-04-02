@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo, useEffect, useRef } from 'react'
@@ -8,9 +9,8 @@ import {
   DialogDisclosure,
   useDialogState,
 } from 'reakit/Dialog'
-import { colors } from '../../theme'
 import * as animations from '../../utils'
-import { Icon } from '../Icon'
+import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 
 const MODAL_WIDTH = {
@@ -22,42 +22,42 @@ const MODAL_WIDTH = {
 }
 
 const MODAL_PLACEMENT = {
-  center: css`
+  center: `
     margin: auto;
   `,
-  'top-left': css`
+  'top-left': `
     margin: auto;
     margin-left: 0;
     margin-top: 0;
   `,
-  top: css`
+  top: `
     margin: auto;
     margin-top: 0px;
   `,
-  'top-right': css`
+  'top-right': `
     margin: auto;
     margin-right: 0;
     margin-top: 0;
   `,
-  right: css`
+  right: `
     margin: auto;
     margin-right: 0;
   `,
-  'bottom-right': css`
+  'bottom-right': `
     margin: auto;
     margin-right: 0;
     margin-bottom: 0;
   `,
-  bottom: css`
+  bottom: `
     margin: auto;
     margin-bottom: 0;
   `,
-  'bottom-left': css`
+  'bottom-left': `
     margin: auto;
     margin-left: 0;
     margin-bottom: 0;
   `,
-  left: css`
+  left: `
     margin: auto;
     margin-left: 0;
   `,
@@ -102,7 +102,7 @@ const MODAL_ANNIMATION = {
   },
 }
 
-const backdropAnimatedStyle = css`
+const backdropAnimatedStyle = `
   opacity: 0;
   transition: opacity 250ms ease-in-out;
   &[data-enter] {
@@ -131,58 +131,6 @@ const dialogAnimatedStyle = ({ animation }) => css`
   }
 `
 
-const backdropStyles = ({ animated }) => css`
-  display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 1;
-  background-color: ${transparentize(0.8, colors.gray700)};
-  ${animated && backdropAnimatedStyle}
-`
-
-const dialogStyles = ({
-  animated,
-  animation,
-  width,
-  height,
-  placement,
-  bordered,
-}) => css`
-  background-color: ${colors.white};
-  position: relative;
-  border-radius: ${bordered ? 4 : 0}px;
-  border: 0;
-  padding: 32px;
-  ${MODAL_PLACEMENT[placement]}
-  width: ${MODAL_WIDTH[width]}px;
-  min-height: ${height};
-  box-shadow: 0 0 12px 18px ${transparentize(0.8, colors.shadow)};
-  opacity: 1;
-  &::before {
-    content: '';
-    height: 100%;
-    width: 100%;
-  }
-  ${animated && dialogAnimatedStyle({ animation })}
-`
-
-const containerStyles = css`
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
-`
-
 const Disclosure = memo(({ disclosure, dialog }) => {
   const innerRef = useRef(disclosure(dialog))
 
@@ -199,6 +147,55 @@ Disclosure.propTypes = {
   disclosure: PropTypes.func.isRequired,
   dialog: PropTypes.shape({}).isRequired,
 }
+
+const StyledDialogBackdrop = styled(DialogBackdrop)`
+  display: flex;
+  position: fixed;
+  overflow: auto;
+  padding: 16px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+  background-color: ${({ theme }) => transparentize(0.8, theme.colors.gray700)};
+  ${({ animated }) => animated && backdropAnimatedStyle}
+`
+
+const StyledDialog = styled(Dialog, {
+  shouldForwardProp: prop =>
+    !['animation', 'placement', 'width', 'height', 'bordered'].includes(prop),
+})`
+  background-color: ${({ theme }) => theme.colors.white};
+  position: relative;
+  border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
+  border: 0;
+  padding: 32px;
+  ${({ placement }) => MODAL_PLACEMENT[placement]}
+  width: ${({ width }) => MODAL_WIDTH[width]}px;
+  min-height: ${({ height }) => height};
+  box-shadow: 0 0 12px 18px
+    ${({ theme }) => transparentize(0.8, theme.colors.shadow)};
+  opacity: 1;
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+  ${({ animated, animation }) => animated && dialogAnimatedStyle({ animation })}
+`
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+`
 
 const Modal = memo(
   ({
@@ -235,24 +232,16 @@ const Modal = memo(
     return (
       <>
         {disclosure && <Disclosure dialog={dialog} disclosure={disclosure} />}
-        <DialogBackdrop
-          {...dialog}
-          css={[backdropStyles({ animated }), customDialogBackdropStyles]}
-        >
-          <Dialog
+        <StyledDialogBackdrop {...dialog} css={[customDialogBackdropStyles]}>
+          <StyledDialog
             aria-label={ariaLabel}
             role="dialog"
-            css={[
-              dialogStyles({
-                animated,
-                animation,
-                bordered,
-                height,
-                placement,
-                width,
-              }),
-              customDialogStyles,
-            ]}
+            animation={animation}
+            bordered={bordered}
+            height={height}
+            placement={placement}
+            width={width}
+            css={[customDialogStyles]}
             hideOnClickOutside={hideOnClickOutside}
             hideOnEsc={hideOnEsc}
             preventBodyScroll={preventBodyScroll}
@@ -260,7 +249,7 @@ const Modal = memo(
             hide={onClose || dialog.toggle}
           >
             <>
-              <div css={containerStyles}>
+              <StyledContainer>
                 {isClosable && (
                   <Touchable
                     onClick={onClose || dialog.toggle}
@@ -271,12 +260,12 @@ const Modal = memo(
                     <Icon name="close" size={20} color="gray550" />
                   </Touchable>
                 )}
-              </div>
+              </StyledContainer>
               {dialog.visible &&
                 (typeof children === 'function' ? children(dialog) : children)}
             </>
-          </Dialog>
-        </DialogBackdrop>
+          </StyledDialog>
+        </StyledDialogBackdrop>
       </>
     )
   },

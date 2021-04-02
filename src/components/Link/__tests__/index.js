@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, linkVariants } from '..'
+import Link, { linkVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Link', () => {

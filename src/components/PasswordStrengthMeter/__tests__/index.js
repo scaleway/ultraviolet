@@ -1,5 +1,5 @@
 import React from 'react'
-import { PasswordStrengthMeter } from '..'
+import PasswordStrengthMeter from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PasswordStrengthMeter', () => {
