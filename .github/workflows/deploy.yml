@@ -27,8 +27,9 @@ jobs:
         uses: rlespinasse/github-slug-action@v3.x
       - name: Export custom variables
         run: |
-          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
+          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | cut -c-62)
+          ([[ $REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          ([[ $REF == 'refs/heads/master' ]] && echo "ENV_URL=https://react.ui.scaleway.com" || echo "ENV_URL=https://$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v0.5.2
