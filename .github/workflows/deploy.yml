@@ -29,7 +29,7 @@ jobs:
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | cut -c-62)
           ([[ $REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-          ([[ $REF == 'refs/heads/master' ]] && echo "ENV_URL=https://react.ui.scaleway.com" || echo "ENV_URL=https://$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
+          ([[ $REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v0.5.2
@@ -81,7 +81,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: https://${{ env.ENV_URL }}
+          env_url: https://${{ env.HOST }}
 
       - name: Move cache
         run: |
