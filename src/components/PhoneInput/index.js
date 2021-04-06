@@ -1,9 +1,10 @@
+import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import intlTelInput from 'intl-tel-input'
+import style from 'intl-tel-input/build/css/intlTelInput.css'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef } from 'react'
-import 'intl-tel-input/build/css/intlTelInput.css'
 import 'intl-tel-input/build/js/utils'
 
 const StyledSpan = styled.span`
@@ -113,30 +114,33 @@ const PhoneInput = ({
   }, [inputRef])
 
   return (
-    <StyledLabel
-      disableDropdown={disableDropdown}
-      disabled={disabled}
-      aria-disabled={disabled}
-    >
-      <StyledSpan>{label}</StyledSpan>
-      <StyledInput
-        onKeyUp={formatIntlTelInput}
-        onChange={event => {
-          const { intlTelInputGlobals } = window
-          const iti = intlTelInputGlobals.getInstance(inputRef.current)
-          onChange?.(event, iti)
-        }}
-        type="tel"
-        ref={inputRef}
-        value={value}
-        name={name}
-        id={id}
-        maxLength={50}
+    <>
+      <Global styles={style} />
+      <StyledLabel
+        disableDropdown={disableDropdown}
         disabled={disabled}
-        placeholder={placeholder}
-        data-testid={inputProps['data-testid']}
-      />
-    </StyledLabel>
+        aria-disabled={disabled}
+      >
+        <StyledSpan>{label}</StyledSpan>
+        <StyledInput
+          onKeyUp={formatIntlTelInput}
+          onChange={event => {
+            const { intlTelInputGlobals } = window
+            const iti = intlTelInputGlobals.getInstance(inputRef.current)
+            onChange?.(event, iti)
+          }}
+          type="tel"
+          ref={inputRef}
+          value={value}
+          name={name}
+          id={id}
+          maxLength={50}
+          disabled={disabled}
+          placeholder={placeholder}
+          data-testid={inputProps['data-testid']}
+        />
+      </StyledLabel>
+    </>
   )
 }
 
