@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
@@ -8,45 +9,48 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { colors, radii } from '../../theme'
 import { Box } from '../Box'
 
 const variants = {
-  white: css`
-    background-color: ${colors.white};
-    color: ${colors.black};
-    fill: ${colors.white};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
+  white: ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.black};
+    fill: ${theme.colors.white};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.colors.shadow)};
   `,
-  black: css`
-    background-color: ${colors.black};
-    color: ${colors.white};
-    fill: ${colors.black};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, colors.shadow)};
-  `,
-}
-
-const style = {
-  tooltip: css`
-    border-radius: ${radii.default};
-    opacity: 0;
-    font-size: 0.8rem;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    line-height: 16px;
-    padding: 8px;
-    text-align: center;
-
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    transform-origin: top center;
-    transform: translate3d(0, -4px, 0);
-
-    [data-enter] & {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
+  black: ({ theme }) => css`
+    background-color: ${theme.colors.black};
+    color: ${theme.colors.white};
+    fill: ${theme.colors.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.colors.shadow)};
   `,
 }
+
+const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
+
+const StyledTooltip = styled(Box, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  border-radius: ${({ theme }) => theme.radii.default};
+  opacity: 0;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 16px;
+  padding: 8px;
+  text-align: center;
+
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  transform-origin: top center;
+  transform: translate3d(0, -4px, 0);
+
+  [data-enter] & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  ${variantStyles}
+`
 
 const Tooltip = ({
   animated,
@@ -103,10 +107,10 @@ const Tooltip = ({
         {finalChildren}
       </TooltipReference>
       <ReakitTooltip {...tooltip}>
-        <Box css={[style.tooltip, variants[variant]]} {...props}>
+        <StyledTooltip variant={variant} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
-        </Box>
+        </StyledTooltip>
       </ReakitTooltip>
     </Box>
   )
