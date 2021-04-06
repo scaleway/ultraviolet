@@ -36,14 +36,8 @@
     "prebuild": "shx rm -rf dist",
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
-    "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
+    "test": "jest",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": [
@@ -139,7 +133,7 @@
     "eslint": "^7.19.0",
     "eslint-mdx": "^1.9.1",
     "eslint-plugin-mdx": "^1.8.2",
-    "husky": "^4.3.7",
+    "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "jest-junit": "^12.0.0",
@@ -153,7 +147,7 @@
     "regenerator-runtime": "^0.13.7",
     "rollup": "^2.38.0",
     "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-visualizer": "^4.2.0",
+    "rollup-plugin-visualizer": "^5.3.0",
     "semantic-release": "^17.3.7",
     "shx": "^0.3.3",
     "zxcvbn": "^4.4.2"
