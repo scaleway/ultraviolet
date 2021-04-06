@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../src/**/__stories__/*.stories.mdx'],
   addons: [
     '@storybook/addon-docs',
