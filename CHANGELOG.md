@@ -1,3 +1,10 @@
+## [0.72.0](https://github.com/scaleway/scaleway-ui/compare/v0.71.0...v0.72.0) (2021-04-06)
+
+
+### :gear: Features
+
+* **migration:** migrated UnitInput ([#200](https://github.com/scaleway/scaleway-ui/issues/200)) ([28dd07a](https://github.com/scaleway/scaleway-ui/commit/28dd07add427f7f28509b7939501728d07272644))
+
 ## [0.71.0](https://github.com/scaleway/scaleway-ui/compare/v0.70.0...v0.71.0) (2021-04-02)
 
 
