@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionBar renders correctly  1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
+  bottom: 20px;
+  box-shadow: 0 2px 14px 8px rgba(238,238,255,0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  left: 50%;
+  padding: 16px;
+  position: fixed;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 600px;
+  z-index: 2;
+}
+
+<div
+    class="emotion-0 emotion-1"
+    rank="0"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionBar renders correctly with custom rank 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
+  bottom: 172px;
+  box-shadow: 0 2px 14px 8px rgba(238,238,255,0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  left: 50%;
+  padding: 16px;
+  position: fixed;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 600px;
+  z-index: 2;
+}
+
+<div
+    class="emotion-0 emotion-1"
+    rank="2"
+  >
+    I am rank 2
+  </div>
+</DocumentFragment>
+`;

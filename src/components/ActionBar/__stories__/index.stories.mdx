@@ -1,0 +1,27 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import ActionBar from '..'
+
+<Meta title="Components/ActionBar" />
+
+# ActionBar
+
+## Basic
+
+<Canvas>
+  <Story name="Basic">
+    <div>Look at the bottom of the page</div>
+    <ActionBar>Hello</ActionBar>
+  </Story>
+</Canvas>
+
+## With Custom Rank
+
+<Canvas>
+  <Story name="With Custom Rank">
+    <div>Look at the bottom of the page</div>
+    <ActionBar rank={1}>I am at rank 1</ActionBar>
+    <ActionBar rank={2}>I am at rank 2</ActionBar>
+  </Story>
+</Canvas>
+
+<ArgsTable of={ActionBar} />
