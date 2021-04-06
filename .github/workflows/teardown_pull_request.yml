@@ -16,7 +16,7 @@ jobs:
         uses: rlespinasse/github-slug-action@v3.x
       - name: Export custom variables
         run: |
-          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | cut -c-61)
+          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | | rev | cut -c-40 | rev)
           ([[ $REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
       - name: Set Docker context
