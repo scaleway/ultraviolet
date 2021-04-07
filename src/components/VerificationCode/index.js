@@ -1,29 +1,29 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
-const styles = {
-  input: error => css`
-    border: solid 1px ${error ? colors.red : colors.gray300};
-    font-size: 24px;
-    color: ${error ? colors.red : colors.gray700};
-    text-align: center;
-    border-radius: 4px;
-    margin-right: 8px;
-    width: 56px;
-    height: 64px;
+const StyledInput = styled.input`
+  border: solid 1px
+    ${({ 'aria-invalid': error, theme }) =>
+      error ? theme.colors.red : theme.colors.gray300};
+  font-size: 24px;
+  color: ${({ 'aria-invalid': error, theme }) =>
+    error ? theme.colors.red : theme.colors.gray700};
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    &::placeholder {
-      color: ${colors.gray300};
-    }
-  `,
-}
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.gray300};
+  }
+`
 
 const KEY_CODE = {
   backspace: 8,
@@ -33,7 +33,7 @@ const KEY_CODE = {
   down: 40,
 }
 
-export const VerificationCode = ({
+const VerificationCode = ({
   disabled,
   error,
   fields,
@@ -178,8 +178,9 @@ export const VerificationCode = ({
   return (
     <Box {...props}>
       {values.map((value, index) => (
-        <input
-          css={[styles.input(error), inputStyle]}
+        <StyledInput
+          css={[inputStyle]}
+          aria-invalid={error}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : null}
           key={`${inputId}-${index}`}
@@ -227,3 +228,5 @@ VerificationCode.defaultProps = {
   required: false,
   type: 'number',
 }
+
+export default VerificationCode

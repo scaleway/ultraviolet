@@ -1,7 +1,7 @@
-import { css, keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import { Typography } from '../Typography'
@@ -27,71 +27,94 @@ const widthGrow = keyframes`
   }
 `
 
-const styles = {
-  container: size => css`
-    display: flex;
-    align-items: center;
-    position: relative;
+const StyledTitle = styled.span`
+  margin-right: 5px;
+`
 
-    height: ${(sizes[size] || 1) * 15}px;
-    width: 100%;
-  `,
-  cursor: size => css`
-    background-color: ${colors.gray950};
-    position: absolute;
-    height: ${(sizes[size] || 1) * 15}px;
-    width: ${(sizes[size] || 1) * 3}px;
-  `,
-  label: type => css`
-    text-align: ${type === 'min' ? 'left' : 'right'};
-  `,
-  labelContainer: (type, size) => css`
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;
-    font-weight: 500;
-    line-height: ${(sizes[size] || 1) * 8}px;
+const StyledValue = styled('span', {
+  shouldForwardProp: prop => !['hasError'].includes(prop),
+})`
+  font-weight: 800;
+  color: ${({ hasError, theme }) =>
+    hasError ? theme.colors.orange : theme.colors.gray950};
+`
 
-    position: absolute;
-    top: 32px;
-    ${type === 'min' ? `left: 0;` : `right: 0;`}
-  `,
-  minSizeCursor: hasMaxSize => css`
-    left: ${hasMaxSize ? '10%' : '50%'};
-    transform: translateX(${hasMaxSize ? '0' : '-50%'});
-  `,
-  maxSizeCursor: css`
-    right: 10%;
-  `,
-  title: css`
-    margin-right: 5px;
-  `,
-  value: hasError => css`
-    font-weight: 800;
-    color: ${hasError ? colors.orange : colors.gray950};
-  `,
-  volume: (percentUsed, hasError) => css`
-    background-color: ${hasError ? colors.orange : colors.green};
-    border-radius: ${percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: ${percentUsed}%;
-    min-width: 0;
-    max-width: 100%;
-    transition: width 1000ms ease;
-    animation-iteration-count: 1;
-    animation: ${widthGrow} 1.2s ease backwards;
-  `,
-  volumeContainer: size => css`
-    background-color: ${colors.gray200};
-    border-radius: 3px;
-    position: relative;
+const StyledContainer = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})`
+  display: flex;
+  align-items: center;
+  position: relative;
 
-    height: ${(sizes[size] || 1) * 6}px;
-    width: 100%;
-  `,
-}
+  height: ${({ size }) => (sizes[size] || 1) * 15}px;
+  width: 100%;
+`
+
+const StyledVolumeContainer = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})`
+  background-color: ${({ theme }) => theme.colors.gray200};
+  border-radius: 3px;
+  position: relative;
+
+  height: ${({ size }) => (sizes[size] || 1) * 6}px;
+  width: 100%;
+`
+
+const StyledVolume = styled('span', {
+  shouldForwardProp: prop => !['percentUsed', 'hasError'].includes(prop),
+})`
+  background-color: ${({ hasError, theme }) =>
+    hasError ? theme.colors.orange : theme.colors.green};
+  border-radius: ${({ percentUsed }) =>
+    percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: ${({ percentUsed }) => percentUsed}%;
+  min-width: 0;
+  max-width: 100%;
+  transition: width 1000ms ease;
+  animation-iteration-count: 1;
+  animation: ${widthGrow} 1.2s ease backwards;
+`
+
+const StyledCursor = styled('div', {
+  shouldForwardProp: prop =>
+    !['size', 'hasMaxSize', 'isMaxSize'].includes(prop),
+})`
+  background-color: ${({ theme }) => theme.colors.gray950};
+  position: absolute;
+  height: ${({ size }) => (sizes[size] || 1) * 15}px;
+  width: ${({ size }) => (sizes[size] || 1) * 3}px;
+  ${({ isMaxSize, hasMaxSize }) =>
+    isMaxSize
+      ? `right: 10%;`
+      : `
+  left: ${hasMaxSize ? '10%' : '50%'};
+  transform: translateX(${hasMaxSize ? '0' : '-50%'});
+  `}
+`
+
+const StyledLabelContainer = styled('div', {
+  shouldForwardProp: prop => !['size', 'type'].includes(prop),
+})`
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: ${({ size }) => (sizes[size] || 1) * 8}px;
+
+  position: absolute;
+  top: 32px;
+  ${({ type }) => (type === 'min' ? `left: 0;` : `right: 0;`)}
+`
+
+const StyledLabel = styled('div', {
+  shouldForwardProp: prop => !['type'].includes(prop),
+})`
+  text-align: ${({ type }) => (type === 'min' ? 'left' : 'right')};
+`
 
 const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
   const validMinSize = minSize === 0 ? 1 : minSize
@@ -142,10 +165,10 @@ const VolumeSize = ({
     <Box mb={5}>
       <Box display="flex" alignItems="center" mb={1}>
         <Typography variant="bodyA" mr={2} fontWeight={500}>
-          <span css={styles.title}>{title}</span>
-          <span css={styles.value(hasError)}>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledValue hasError={hasError}>
             {value} {unit}
-          </span>
+          </StyledValue>
         </Typography>
         <Icon
           color={hasError ? 'orange' : 'green'}
@@ -158,44 +181,40 @@ const VolumeSize = ({
           </Typography>
         )}
       </Box>
-      <div css={styles.container(size)}>
-        <div css={styles.volumeContainer(size)}>
-          <span
-            css={styles.volume(
-              getPercentUsed({
-                minSize,
-                maxSize,
-                value,
-                isTooBig,
-                isTooSmall,
-              }),
-              hasError,
-            )}
+      <StyledContainer size={size}>
+        <StyledVolumeContainer size={size}>
+          <StyledVolume
+            percentUsed={getPercentUsed({
+              minSize,
+              maxSize,
+              value,
+              isTooBig,
+              isTooSmall,
+            })}
+            hasError={hasError}
           />
-        </div>
-        <div
-          css={[styles.cursor(size), styles.minSizeCursor(Boolean(maxSize))]}
-        >
-          <div css={styles.labelContainer('min', size)}>
-            <div css={styles.label('min')}>
+        </StyledVolumeContainer>
+        <StyledCursor size={size} hasMaxSize={!!maxSize}>
+          <StyledLabelContainer size={size} type="min">
+            <StyledLabel type="min">
               {minSize} {unit}
-            </div>
+            </StyledLabel>
             <Typography variant="bodyC">
               {maxSize ? minLabel : requiredLabel}
             </Typography>
-          </div>
-        </div>
+          </StyledLabelContainer>
+        </StyledCursor>
         {maxSize && (
-          <div css={[styles.cursor(size), styles.maxSizeCursor]}>
-            <div css={styles.labelContainer('max', size)}>
-              <div css={styles.label('max')}>
+          <StyledCursor isMaxSize>
+            <StyledLabelContainer size={size} type="max">
+              <StyledLabel type="max">
                 {maxSize} {unit}
-              </div>
+              </StyledLabel>
               <Typography variant="bodyC">{maxLabel}</Typography>
-            </div>
-          </div>
+            </StyledLabelContainer>
+          </StyledCursor>
         )}
-      </div>
+      </StyledContainer>
     </Box>
   )
 }
@@ -225,4 +244,4 @@ VolumeSize.defaultProps = {
   tooSmallMessage: 'Not enough volume allocated',
 }
 
-export { VolumeSize }
+export default VolumeSize

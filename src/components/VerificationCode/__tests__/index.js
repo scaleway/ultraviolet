@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import { VerificationCode } from '..'
+import VerificationCode from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 const pasteEventWithValue = (selector, value) => {
