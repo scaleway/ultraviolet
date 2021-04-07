@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 
@@ -15,28 +14,28 @@ const Table = styled(Box.withComponent('table'))`
 const Head = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
-  border-color: ${colors.gray350};
+  border-color: ${({ theme }) => theme.colors.gray350};
   border-style: solid;
 `
 
 const Row = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => !['highlight'].includes(prop),
 })`
-  color: ${colors.gray700};
+  color: ${({ theme }) => theme.colors.gray700};
 
   a {
     color: inherit;
   }
 
   tr:nth-of-type(even) {
-    background-color: ${colors.gray50};
+    background-color: ${({ theme }) => theme.colors.gray50};
   }
 
-  ${({ highlight }) =>
+  ${({ highlight, theme }) =>
     highlight &&
     `
     &:hover {
-      color: ${colors.primary};
+      color: ${theme.colors.primary};
 
       td:first-of-type {
         font-weight: 500;
@@ -76,7 +75,7 @@ const HeadCell = styled(Box.withComponent('th'))`
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
-  color: ${colors.gray550};
+  color: ${({ theme }) => theme.colors.gray550};
   text-align: left;
   ${cellStyle};
 `
@@ -118,4 +117,4 @@ Table.Row = Row
 Table.HeadCell = HeadCell
 Table.BodyCell = BodyCell
 
-export { Table }
+export default Table

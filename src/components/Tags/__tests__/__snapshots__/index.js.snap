@@ -25,7 +25,7 @@ exports[`Tags add tag from input 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -41,7 +41,7 @@ exports[`Tags add tag from input 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -53,7 +53,7 @@ exports[`Tags add tag from input 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -81,17 +81,17 @@ exports[`Tags add tag from input 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -99,11 +99,11 @@ exports[`Tags add tag from input 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-16 {
+.emotion-25 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -111,19 +111,19 @@ exports[`Tags add tag from input 1`] = `
   background-color: #fff;
 }
 
-.emotion-16::-webkit-input-placeholder {
+.emotion-25::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16::-moz-placeholder {
+.emotion-25::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16:-ms-input-placeholder {
+.emotion-25:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16::placeholder {
+.emotion-25::placeholder {
   color: #b2b6c3;
 }
 
@@ -131,19 +131,20 @@ exports[`Tags add tag from input 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -153,19 +154,20 @@ exports[`Tags add tag from input 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -175,19 +177,20 @@ exports[`Tags add tag from input 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         test
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -197,7 +200,7 @@ exports[`Tags add tag from input 1`] = `
       </button>
     </div>
     <input
-      class="emotion-16"
+      class="emotion-25"
       id="test"
       name="radio"
       placeholder=""
@@ -233,7 +236,7 @@ exports[`Tags add tag on paste 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -249,7 +252,7 @@ exports[`Tags add tag on paste 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -261,7 +264,7 @@ exports[`Tags add tag on paste 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -289,17 +292,17 @@ exports[`Tags add tag on paste 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -307,11 +310,11 @@ exports[`Tags add tag on paste 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-16 {
+.emotion-25 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -319,19 +322,19 @@ exports[`Tags add tag on paste 1`] = `
   background-color: #fff;
 }
 
-.emotion-16::-webkit-input-placeholder {
+.emotion-25::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16::-moz-placeholder {
+.emotion-25::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16:-ms-input-placeholder {
+.emotion-25:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-16::placeholder {
+.emotion-25::placeholder {
   color: #b2b6c3;
 }
 
@@ -339,19 +342,20 @@ exports[`Tags add tag on paste 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -361,19 +365,20 @@ exports[`Tags add tag on paste 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -383,19 +388,20 @@ exports[`Tags add tag on paste 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         test
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -405,7 +411,7 @@ exports[`Tags add tag on paste 1`] = `
       </button>
     </div>
     <input
-      class="emotion-16"
+      class="emotion-25"
       id="test"
       name="radio"
       placeholder=""
@@ -441,7 +447,7 @@ exports[`Tags delete tag 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -457,7 +463,7 @@ exports[`Tags delete tag 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -469,7 +475,7 @@ exports[`Tags delete tag 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -497,17 +503,17 @@ exports[`Tags delete tag 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -515,11 +521,11 @@ exports[`Tags delete tag 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-6 {
+.emotion-9 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -527,19 +533,19 @@ exports[`Tags delete tag 1`] = `
   background-color: #fff;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6::placeholder {
+.emotion-9::placeholder {
   color: #b2b6c3;
 }
 
@@ -547,19 +553,20 @@ exports[`Tags delete tag 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -569,7 +576,7 @@ exports[`Tags delete tag 1`] = `
       </button>
     </div>
     <input
-      class="emotion-6"
+      class="emotion-9"
       id="test"
       name="radio"
       placeholder=""
@@ -605,7 +612,7 @@ exports[`Tags delete tag with backspace 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -621,7 +628,7 @@ exports[`Tags delete tag with backspace 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -633,7 +640,7 @@ exports[`Tags delete tag with backspace 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -661,17 +668,17 @@ exports[`Tags delete tag with backspace 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -679,11 +686,11 @@ exports[`Tags delete tag with backspace 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-6 {
+.emotion-9 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -691,19 +698,19 @@ exports[`Tags delete tag with backspace 1`] = `
   background-color: #fff;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-6::placeholder {
+.emotion-9::placeholder {
   color: #b2b6c3;
 }
 
@@ -711,19 +718,20 @@ exports[`Tags delete tag with backspace 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -733,7 +741,7 @@ exports[`Tags delete tag with backspace 1`] = `
       </button>
     </div>
     <input
-      class="emotion-6"
+      class="emotion-9"
       id="test"
       name="radio"
       placeholder=""
@@ -769,7 +777,7 @@ exports[`Tags renders correctly when disabled 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   opacity: 0.5;
   border-radius: 4px;
   -webkit-box-pack: center;
@@ -786,7 +794,7 @@ exports[`Tags renders correctly when disabled 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   opacity: 0.5;
   color: #4a4f62;
   font-size: 14px;
@@ -799,7 +807,7 @@ exports[`Tags renders correctly when disabled 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -826,17 +834,17 @@ exports[`Tags renders correctly when disabled 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -844,7 +852,7 @@ exports[`Tags renders correctly when disabled 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -852,20 +860,21 @@ exports[`Tags renders correctly when disabled 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="true"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         disabled=""
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -875,20 +884,21 @@ exports[`Tags renders correctly when disabled 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="true"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         disabled=""
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -926,7 +936,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -942,7 +952,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -954,7 +964,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -982,17 +992,17 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1000,7 +1010,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
@@ -1008,19 +1018,20 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1030,19 +1041,20 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1080,7 +1092,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1096,7 +1108,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1108,7 +1120,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1136,17 +1148,17 @@ exports[`Tags renders correctly when variant = base 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1154,11 +1166,11 @@ exports[`Tags renders correctly when variant = base 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -1166,19 +1178,19 @@ exports[`Tags renders correctly when variant = base 1`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -1186,19 +1198,20 @@ exports[`Tags renders correctly when variant = base 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1208,19 +1221,20 @@ exports[`Tags renders correctly when variant = base 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1230,7 +1244,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"
@@ -1267,7 +1281,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   margin-right: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1281,7 +1295,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   border: 1px solid #d4dae7;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1293,7 +1307,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1320,23 +1334,22 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
-  border: 1px solid #b2b6c3;
   padding: 4px;
   width: 32px;
   height: 32px;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1344,11 +1357,11 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -1356,19 +1369,19 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -1376,19 +1389,20 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1398,19 +1412,20 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1420,7 +1435,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"
@@ -1452,7 +1467,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   margin-bottom: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1468,7 +1483,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1480,7 +1495,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1508,17 +1523,17 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1526,11 +1541,11 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -1538,19 +1553,19 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -1558,19 +1573,20 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1580,19 +1596,20 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1602,7 +1619,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"
@@ -1700,7 +1717,7 @@ exports[`Tags renders correctly with some tags 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1716,7 +1733,7 @@ exports[`Tags renders correctly with some tags 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1728,7 +1745,7 @@ exports[`Tags renders correctly with some tags 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1756,17 +1773,17 @@ exports[`Tags renders correctly with some tags 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1774,11 +1791,11 @@ exports[`Tags renders correctly with some tags 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -1786,19 +1803,19 @@ exports[`Tags renders correctly with some tags 1`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -1806,19 +1823,20 @@ exports[`Tags renders correctly with some tags 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1828,19 +1846,20 @@ exports[`Tags renders correctly with some tags 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -1850,7 +1869,7 @@ exports[`Tags renders correctly with some tags 1`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"
@@ -1885,7 +1904,7 @@ exports[`Tags renders correctly with some tags 2`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1901,7 +1920,7 @@ exports[`Tags renders correctly with some tags 2`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1913,7 +1932,7 @@ exports[`Tags renders correctly with some tags 2`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1941,17 +1960,17 @@ exports[`Tags renders correctly with some tags 2`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1959,11 +1978,11 @@ exports[`Tags renders correctly with some tags 2`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -1971,19 +1990,19 @@ exports[`Tags renders correctly with some tags 2`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -1991,19 +2010,20 @@ exports[`Tags renders correctly with some tags 2`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -2013,19 +2033,20 @@ exports[`Tags renders correctly with some tags 2`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -2035,7 +2056,7 @@ exports[`Tags renders correctly with some tags 2`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"
@@ -2070,7 +2091,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   margin: 6px;
 }
 
-.emotion-1 {
+.emotion-2 {
   border-radius: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -2086,7 +2107,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -2098,7 +2119,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-3 {
+.emotion-6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2126,17 +2147,17 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   justify-content: center;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   background-color: #eeeeff;
 }
 
-.emotion-3:hover svg,
-.emotion-3:focus svg {
+.emotion-6:hover svg,
+.emotion-6:focus svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.emotion-8 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -2144,11 +2165,11 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   min-height: 16px;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-11 {
+.emotion-17 {
   font-size: 16px;
   color: #4a4f62;
   border: none;
@@ -2156,19 +2177,19 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   background-color: #fff;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-17::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-17::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-17:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.emotion-11::placeholder {
+.emotion-17::placeholder {
   color: #b2b6c3;
 }
 
@@ -2176,19 +2197,20 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         hello
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -2198,19 +2220,20 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
       </button>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-1 emotion-2"
     >
       <span
-        class="emotion-2"
+        aria-disabled="false"
+        class="emotion-3 emotion-4"
       >
         world
       </span>
       <button
-        class="emotion-3"
+        class="emotion-5 emotion-6"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-4 emotion-5"
+          class="sc-ui-icon emotion-7 emotion-8"
           viewBox="0 0 24 24"
         >
           <path
@@ -2220,7 +2243,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
       </button>
     </div>
     <input
-      class="emotion-11"
+      class="emotion-17"
       name="radio"
       placeholder=""
       type="text"

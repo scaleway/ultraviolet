@@ -1,65 +1,77 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { ActivityIndicator } from '../ActivityIndicator'
 import { Box } from '../Box'
 import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 
-export const styles = {
-  container: css`
-    border-radius: 4px;
-    justify-content: center;
-    display: flex;
-  `,
-  text: css`
-    color: ${colors.gray700};
-    font-size: 14px;
-    align-self: center;
-    max-width: 350px;
-    overflow: hidden;
-    white-space: pre;
-    text-overflow: ellipsis;
-  `,
-  disabled: css`
-    opacity: 0.5;
-  `,
-  icon: css`
-    margin-left: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &:hover,
-    &:focus {
-      background-color: ${colors.gray200};
-      svg {
-        fill: ${colors.primary};
-      }
-    }
-  `,
-  bordered: css`
-    border-radius: 4px;
-    border: 1px solid ${colors.gray550};
-    padding: 4px;
-    width: 32px;
-    height: 32px;
-  `,
-}
+const disabledStyles = css`
+  opacity: 0.5;
+`
 
 export const variantsContainer = {
-  base: css`
-    background-color: ${colors.gray100};
+  base: ({ theme }) => css`
+    background-color: ${theme.colors.gray100};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
   `,
-  bordered: css`
+  bordered: ({ theme }) => css`
     padding: 8px;
-    border: 1px solid ${colors.gray350};
+    border: 1px solid ${theme.colors.gray350};
   `,
 }
 
+const variantStyles = ({ variant, ...props }) =>
+  variantsContainer[variant]?.(props)
+
+const StyledContainer = styled(Box, {
+  shouldForwardProp: prop => !['disabled', 'variant'].includes(prop),
+})`
+  ${({ disabled }) => disabled && disabledStyles}
+  border-radius: 4px;
+  justify-content: center;
+  display: flex;
+  ${variantStyles}
+`
+
+const StyledText = styled('span')`
+  ${({ 'aria-disabled': disabled }) => disabled && disabledStyles}
+  color: ${({ theme }) => theme.colors.gray700};
+  font-size: 14px;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+`
+
+const StyledTouchable = styled(Touchable, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    background-color: ${({ theme }) => theme.colors.gray200};
+    svg {
+      fill: ${({ theme }) => theme.colors.primary};
+    }
+  }
+  ${({ variant }) =>
+    variant === 'bordered' &&
+    `
+  border-radius: 4px;
+  border: 1px solid ${({ theme }) => theme.colors.gray550};
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+`}
+`
 const Tag = ({
   children,
   isLoading,
@@ -69,22 +81,15 @@ const Tag = ({
   variant,
   ...props
 }) => (
-  <Box
-    {...props}
-    css={[
-      disabled && styles.disabled,
-      styles.container,
-      variantsContainer[variant],
-    ]}
-  >
-    <span css={[disabled && styles.disabled, styles.text, textStyle]}>
+  <StyledContainer {...props} disabled={disabled} variant={variant}>
+    <StyledText aria-disabled={disabled} css={[textStyle]}>
       {children}
-    </span>
+    </StyledText>
 
     {onClose && (
-      <Touchable
+      <StyledTouchable
         onClick={!isLoading ? onClose : undefined}
-        css={[styles.icon, variant === 'bordered' && styles.bordered]}
+        variant={variant}
         disabled={disabled}
       >
         {isLoading ? (
@@ -92,9 +97,9 @@ const Tag = ({
         ) : (
           <Icon name="close" size={16} color="gray550" />
         )}
-      </Touchable>
+      </StyledTouchable>
     )}
-  </Box>
+  </StyledContainer>
 )
 
 Tag.propTypes = {
@@ -115,4 +120,4 @@ Tag.defaultProps = {
   onClose: undefined,
 }
 
-export { Tag }
+export default Tag
