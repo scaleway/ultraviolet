@@ -45,7 +45,7 @@ export default async () => {
         ],
       }),
       postcss({
-        plugins: [],
+        inject: false,
       }),
       resolve({
         preferBuiltins: true,
