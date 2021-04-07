@@ -1,7 +1,7 @@
 import { createSerializer } from '@emotion/jest'
 import { act, screen } from '@testing-library/react'
 import React from 'react'
-import { ToastContainer, toast } from '..'
+import ToastContainer, { toast } from '..'
 import renderWithTheme from '../../../helpers/renderWithTheme'
 
 expect.addSnapshotSerializer(createSerializer())

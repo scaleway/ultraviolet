@@ -1,4 +1,4 @@
-import { ClassNames, css } from '@emotion/react'
+import { ClassNames, css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -6,16 +6,15 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import { injectStyle } from 'react-toastify/dist/inject-style'
-import { colors } from '../../theme'
 import Icon from '../Icon'
-import { NotificationBar } from '../NotificationBar'
+import NotificationBar from '../NotificationBar'
 
 injectStyle()
 
 const PREFIX = '.Toastify'
 
 const styles = {
-  toast: css`
+  toast: theme => css`
     border-radius: 4px;
     box-shadow: none;
     min-height: 0;
@@ -26,38 +25,38 @@ const styles = {
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${colors.foam};
-      color: ${colors.success};
+      background-color: ${theme.colors.foam};
+      color: ${theme.colors.success};
 
       ${PREFIX}__progress-bar {
-        background-color: ${colors.success};
+        background-color: ${theme.colors.success};
       }
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${colors.zumthor};
-      color: ${colors.info};
+      background-color: ${theme.colors.zumthor};
+      color: ${theme.colors.info};
 
       ${PREFIX}__progress-bar {
-        background-color: ${colors.info};
+        background-color: ${theme.colors.info};
       }
     }
 
     &${PREFIX}__toast--warning {
-      background-color: ${colors.pippin};
-      color: ${colors.warning};
+      background-color: ${theme.colors.pippin};
+      color: ${theme.colors.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${colors.warning};
+        background-color: ${theme.colors.warning};
       }
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${colors.pippin};
-      color: ${colors.warning};
+      background-color: ${theme.colors.pippin};
+      color: ${theme.colors.warning};
 
       ${PREFIX}__progress-bar {
-        background-color: ${colors.warning};
+        background-color: ${theme.colors.warning};
       }
     }
   `,
@@ -125,16 +124,21 @@ const toast = {
     ),
 }
 
-const ToastContainer = props => (
-  <ClassNames>
-    {({ css: localCss }) => (
-      <BaseToastContainer
-        closeButton={<CloseButton />}
-        toastClassName={localCss(styles.toast)}
-        {...props}
-      />
-    )}
-  </ClassNames>
-)
+const ToastContainer = props => {
+  const theme = useTheme()
 
-export { toast, ToastContainer }
+  return (
+    <ClassNames>
+      {({ css: localCss }) => (
+        <BaseToastContainer
+          closeButton={<CloseButton />}
+          toastClassName={localCss(styles.toast(theme))}
+          {...props}
+        />
+      )}
+    </ClassNames>
+  )
+}
+
+export default ToastContainer
+export { toast }
