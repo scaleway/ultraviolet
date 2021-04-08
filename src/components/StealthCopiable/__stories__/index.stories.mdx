@@ -1,10 +1,6 @@
-import {
-  ArgsTable,
-  Canvas,
-  Meta,
-  Story,
-} from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import StealthCopiable from '..'
+import { Typography } from '../../Typography'
 
 <Meta title="Components/StealthCopiable" component={StealthCopiable} />
 
@@ -18,12 +14,26 @@ import StealthCopiable from '..'
   </Story>
 </Canvas>
 
+## With a complex children
+
+<Canvas>
+  <Story name="With a complex children">
+    <StealthCopiable>
+      <Typography variant="command">I'm a command Typography</Typography>
+    </StealthCopiable>
+  </Story>
+</Canvas>
+
 ## Side
 
 <Canvas>
   <Story name="Side">
-    <StealthCopiable side="left">Hover me and copy me from the left</StealthCopiable>
-    <StealthCopiable side="right">Hover me and copy me from the right</StealthCopiable>
+    <StealthCopiable side="left">
+      Hover me and copy me from the left
+    </StealthCopiable>
+    <StealthCopiable side="right">
+      Hover me and copy me from the right
+    </StealthCopiable>
   </Story>
 </Canvas>
 
@@ -31,7 +41,9 @@ import StealthCopiable from '..'
 
 <Canvas>
   <Story name="Custom">
-    <StealthCopiable copyText="📋" copiedText="🎉">Hover me and copy me with a suprise</StealthCopiable>
+    <StealthCopiable copyText="📋" copiedText="🎉">
+      Hover me and copy me with a suprise
+    </StealthCopiable>
   </Story>
 </Canvas>
 
