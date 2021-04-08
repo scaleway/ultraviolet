@@ -7,8 +7,8 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { onKeyOnlyNumbers } from '../../helpers/keycode'
-import { parseIntOr } from '../../helpers/numbers'
+import onKeyOnlyNumbers from '../../helpers/keycode'
+import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 
 const getPercent = (min, max, v) => (v - min) / (max - min)

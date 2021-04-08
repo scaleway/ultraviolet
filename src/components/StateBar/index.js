@@ -70,4 +70,4 @@ const StateBar = Box
 StateBar.Bar = Bar
 StateBar.State = State
 
-export { StateBar }
+export default StateBar

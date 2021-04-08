@@ -5,4 +5,4 @@ const Unselectable = styled(Box)`
   user-select: none;
 `
 
-export { Unselectable }
+export default Unselectable

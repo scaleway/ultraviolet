@@ -5,7 +5,7 @@ import React, { useMemo } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Icon from '../Icon'
-import { UniversalLink } from '../UniversalLink'
+import UniversalLink from '../UniversalLink'
 
 const borderedVariant = ({ theme: { colors }, color, bgColor, hoverColor }) => {
   const colorValue = colors[color]

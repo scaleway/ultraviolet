@@ -4,7 +4,7 @@ import React, { useEffect, useMemo } from 'react'
 import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
-import { Expandable } from '../Expandable'
+import Expandable from '../Expandable'
 import Icon from '../Icon'
 import { Typography, typographyVariants } from '../Typography'
 

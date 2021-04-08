@@ -15,15 +15,23 @@ const needNativeLink = url => {
   return isAbsolute || isTelLink || isAnchor
 }
 
-const UniversalLink = ({ children, ...props }) => {
+const UniversalLink = ({
+  children,
+  target,
+  rel: propsRel,
+  to,
+  as: propsAs,
+  href: propsHref,
+  ...props
+}) => {
   const { linkComponent = 'a' } = useTheme()
-  const isBlank = props.target === '_blank'
-  const rel = props.rel || (isBlank ? 'noopener noreferrer' : undefined)
-  const href = props.to || props.href
-  const as = props.as || (needNativeLink(href) ? 'a' : linkComponent)
+  const isBlank = target === '_blank'
+  const rel = propsRel || (isBlank ? 'noopener noreferrer' : undefined)
+  const href = to || propsHref
+  const asValue = propsAs || (needNativeLink(href) ? 'a' : linkComponent)
 
   return (
-    <Box {...props} as={as} href={href} rel={rel}>
+    <Box {...props} as={asValue} href={href} rel={rel}>
       {children}
     </Box>
   )
@@ -46,4 +54,4 @@ UniversalLink.defaultProps = {
   as: null,
 }
 
-export { UniversalLink }
+export default UniversalLink

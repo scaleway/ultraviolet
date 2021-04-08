@@ -14,8 +14,8 @@ const style = width => theme => css`
   background-color: ${theme.colors.gray300};
 `
 
-const Line = props => (
-  <Box css={style(props?.width ?? randomSize())} {...props} />
+const Line = ({ width, ...props }) => (
+  <Box css={style(width ?? randomSize())} {...props} />
 )
 
 Line.propTypes = {

@@ -4,7 +4,7 @@ import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Icon from '../Icon'
-import { UniversalLink } from '../UniversalLink'
+import UniversalLink from '../UniversalLink'
 
 const generateVariant = color => ({ theme }) => css`
   color: ${theme.colors[color] ?? color};
@@ -58,10 +58,10 @@ const StyledIcon = styled(Icon)`
   padding-left: 2px;
   opacity: 0.5;
 `
-const Link = ({ variant, children, ...props }) => (
-  <StyledLink variant={variant} {...props}>
+const Link = ({ variant, children, target, ...props }) => (
+  <StyledLink variant={variant} target={target} {...props}>
     {children}
-    {props.target === '_blank' && (
+    {target === '_blank' && (
       <StyledIcon name="open-in-new" verticalAlign="top" />
     )}
   </StyledLink>

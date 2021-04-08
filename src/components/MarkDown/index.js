@@ -7,11 +7,11 @@ import Command from '../Command'
 import Link from '../Link'
 import { Typography } from '../Typography'
 
-const headingRenderer = ({ node, ...props }) => {
+const headingRenderer = ({ node, children, ...props }) => {
   if (props.level === 1) {
     return (
       <Typography mt={0} variant="lead-block">
-        {props.children}
+        {children}
       </Typography>
     )
   }
@@ -96,4 +96,4 @@ MarkDown.defaultProps = {
   inline: false,
 }
 
-export { MarkDown }
+export default MarkDown

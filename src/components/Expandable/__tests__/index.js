@@ -1,5 +1,5 @@
 import React from 'react'
-import { Expandable } from '..'
+import Expandable from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Expandable', () => {

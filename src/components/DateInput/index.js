@@ -8,7 +8,7 @@ import Box from '../Box'
 import Icon from '../Icon'
 import Separator from '../Separator'
 import { TextBox } from '../TextBox'
-import { Touchable } from '../Touchable'
+import Touchable from '../Touchable'
 import { Typography } from '../Typography'
 
 const PREFIX = '.react-datepicker'

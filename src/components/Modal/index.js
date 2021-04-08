@@ -11,7 +11,7 @@ import {
 } from 'reakit/Dialog'
 import * as animations from '../../utils'
 import Icon from '../Icon'
-import { Touchable } from '../Touchable'
+import Touchable from '../Touchable'
 
 const MODAL_WIDTH = {
   large: 850,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { PasswordCheck } from '..'
+import PasswordCheck from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PasswordCheck', () => {

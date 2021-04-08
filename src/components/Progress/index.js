@@ -123,7 +123,7 @@ const Progress = ({ children, selected, ...props }) => {
 
         return (
           <StyledStep
-            key={`step-${index}`}
+            key={`step-${title}`}
             onClick={isClickable ? () => onClick(index) : undefined}
             as={isClickable ? 'button' : 'div'}
             zIndex={length - index}

@@ -8,4 +8,4 @@ const ScrollView = styled(Box)`
   overflow-y: auto;
 `
 
-export { ScrollView }
+export default ScrollView

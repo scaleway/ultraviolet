@@ -52,10 +52,10 @@ StatusIndicator.defaultProps = {
 
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
-  status: (props, propName, componentName) => {
+  status: ({ statuses: propsStatuses, ...props }, propName, componentName) => {
     const availableStatuses = [
       ...statuses,
-      ...(props.statuses ? Object.keys(props.statuses) : []),
+      ...(propsStatuses ? Object.keys(propsStatuses) : []),
     ]
 
     if (!availableStatuses.includes(props[propName])) {

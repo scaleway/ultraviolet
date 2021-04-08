@@ -51,4 +51,4 @@ PasswordCheck.propTypes = {
   ).isRequired,
 }
 
-export { PasswordCheck }
+export default PasswordCheck
