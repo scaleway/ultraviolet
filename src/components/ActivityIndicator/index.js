@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const spinAnimation = keyframes`
   from {
@@ -70,4 +70,4 @@ ActivityIndicator.defaultProps = {
   color: 'primary',
 }
 
-export { ActivityIndicator }
+export default ActivityIndicator

@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
 const TEL_LINK_REGEXP = /^tel:/

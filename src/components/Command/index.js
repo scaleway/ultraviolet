@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const StyledBox = styled(Box)`
   font-family: 'Lucida Console', 'Monaco', 'Courier New', 'Courier', monospace;

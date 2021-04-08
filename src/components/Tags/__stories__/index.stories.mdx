@@ -6,7 +6,6 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import Tags from '..'
-import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import { Button } from '../../Button'
 import { Typography } from '../../Typography'
@@ -37,10 +36,10 @@ This is the default variant when you don't override `variant` prop or set it to 
 
 <Canvas>
   <Story name="Variant base">
-    <BlockList>
+    <div style={{ marginBottom: '16px' }}>
       <Tags name="base" tags={['Scaleway', 'ui']} />
-      <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
-    </BlockList>
+    </div>
+    <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
   </Story>
 </Canvas>
 

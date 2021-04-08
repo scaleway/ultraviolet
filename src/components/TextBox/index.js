@@ -11,7 +11,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import { Expandable } from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'

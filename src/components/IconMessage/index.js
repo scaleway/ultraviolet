@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import Icon from '../Icon'
 import { Typography } from '../Typography'
 

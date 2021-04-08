@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { screens, space } from '../../theme'
 import { up } from '../../utils'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const gridMaxWidths = {
   small: '540px',

@@ -8,7 +8,7 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { Box } from '../Box'
+import Box from '../Box'
 import Tag from '../Tag'
 
 const textStyle = maxTagWidth => css`

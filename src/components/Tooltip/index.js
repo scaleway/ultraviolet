@@ -9,7 +9,7 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const variants = {
   white: ({ theme }) => css`

@@ -6,7 +6,6 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import RadioBorderedBox from '..'
-import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/RadioBorderedBox" component={RadioBorderedBox} />
@@ -56,17 +55,15 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Canvas>
   <Story name="disabled">
-    <BlockList>
-      <RadioBorderedBox
-        value="disabled"
-        name="radio-disabled"
-        disabled
-        onChange={() => {}}
-        label="Disabled"
-      >
-        Disabled radio
-      </RadioBorderedBox>
-    </BlockList>
+    <RadioBorderedBox
+      value="disabled"
+      name="radio-disabled"
+      disabled
+      onChange={() => {}}
+      label="Disabled"
+    >
+      Disabled radio
+    </RadioBorderedBox>
   </Story>
 </Canvas>
 

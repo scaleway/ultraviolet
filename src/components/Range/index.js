@@ -9,7 +9,7 @@ import React, {
 } from 'react'
 import { onKeyOnlyNumbers } from '../../helpers/keycode'
 import { parseIntOr } from '../../helpers/numbers'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const getPercent = (min, max, v) => (v - min) / (max - min)
 

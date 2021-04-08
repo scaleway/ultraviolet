@@ -3,8 +3,8 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { ActivityIndicator } from '../ActivityIndicator'
-import { Box } from '../Box'
+import ActivityIndicator from '../ActivityIndicator'
+import Box from '../Box'
 import Icon from '../Icon'
 
 const StyledContainer = styled(Box)`

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import { Action } from '..'
+import Action from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Action', () => {

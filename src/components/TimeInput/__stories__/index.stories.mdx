@@ -1,6 +1,5 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { TimeInput } from '..'
-import BlockList from '../../../__stories__/components/BlockList'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/TimeInput" />
@@ -13,16 +12,20 @@ TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
 
 <Canvas>
   <Story name="Uncontrolled">
-    <BlockList>
+    <div style={{ marginBottom: '16px' }}>
       <TimeInput
         name="timeinput-test-0"
         placeholder="Time"
         value={{ value: '03:30', label: '03:30' }}
       />
+    </div>
+    <div style={{ marginBottom: '16px' }}>
       <TimeInput name="timeinput-test-1" placeholder="Time" disabled />
+    </div>
+    <div style={{ marginBottom: '16px' }}>
       <TimeInput name="timeinput-test-2" placeholder="Time" required />
-      <TimeInput name="timeinput-test-3" placeholder="Time" error />
-    </BlockList>
+    </div>
+    <TimeInput name="timeinput-test-3" placeholder="Time" error />
   </Story>
 </Canvas>
 
@@ -32,8 +35,8 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 <Canvas>
   <Story name="Controlled">
-    <BlockList>
-      <ControlValue value={{ value: '03:30', label: '03:30' }}>
+    <div style={{ marginBottom: '16px' }}>
+      <ControlValue value={{ value: '03:30', label: '03:30' }} mb={2}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-4"
@@ -43,17 +46,17 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
           />
         )}
       </ControlValue>
-      <ControlValue value={{ value: '04:30', label: '04:30' }}>
-        {({ value, onChange }) => (
-          <TimeInput
-            name="timeinput-test-5"
-            placeholder="Time"
-            value={value}
-            onChange={onChange}
-          />
-        )}
-      </ControlValue>
-    </BlockList>
+    </div>
+    <ControlValue value={{ value: '04:30', label: '04:30' }} mb={2}>
+      {({ value, onChange }) => (
+        <TimeInput
+          name="timeinput-test-5"
+          placeholder="Time"
+          value={value}
+          onChange={onChange}
+        />
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
@@ -67,7 +70,7 @@ By default, the `hours` option is selected.
 
 <Canvas>
   <Story name="Schedule">
-    <BlockList>
+    <div style={{ marginBottom: '16px' }}>
       <ControlValue value={{ value: '10:15', label: '10:15' }}>
         {({ value, onChange }) => (
           <TimeInput
@@ -79,6 +82,8 @@ By default, the `hours` option is selected.
           />
         )}
       </ControlValue>
+    </div>
+    <div style={{ marginBottom: '16px' }}>
       <ControlValue value={{ value: '10:30', label: '10:30' }}>
         {({ value, onChange }) => (
           <TimeInput
@@ -90,17 +95,17 @@ By default, the `hours` option is selected.
           />
         )}
       </ControlValue>
-      <ControlValue value={{ value: '10:00', label: '10:00' }}>
-        {({ value, onChange }) => (
-          <TimeInput
-            name="timeinput-test-8"
-            placeholder="Time"
-            value={value}
-            onChange={onChange}
-          />
-        )}
-      </ControlValue>
-    </BlockList>
+    </div>
+    <ControlValue value={{ value: '10:00', label: '10:00' }}>
+      {({ value, onChange }) => (
+        <TimeInput
+          name="timeinput-test-8"
+          placeholder="Time"
+          value={value}
+          onChange={onChange}
+        />
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 

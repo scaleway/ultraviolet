@@ -62,4 +62,4 @@ Action.defaultProps = {
   name: undefined,
 }
 
-export { Action }
+export default Action

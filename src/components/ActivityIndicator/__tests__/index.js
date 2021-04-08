@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActivityIndicator } from '..'
+import ActivityIndicator from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ActivityIndicator', () => {

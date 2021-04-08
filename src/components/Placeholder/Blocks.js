@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import { Col, Grid, Row } from '../Grid'
 import Line from './Line'
 

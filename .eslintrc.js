@@ -23,7 +23,7 @@ module.exports = {
     // React
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.mdx'] }],
     'react/destructuring-assignment': 'warn',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'warn',
 
     // emotion

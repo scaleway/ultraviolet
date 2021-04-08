@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import Icon, { icons } from '../Icon'
 
 const StyledIcon = styled(Box, {

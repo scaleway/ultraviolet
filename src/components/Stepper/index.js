@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import { onKeyOnlyNumbers } from '../../helpers/keycode'
 import { parseIntOr } from '../../helpers/numbers'
-import { Box } from '../Box'
+import Box from '../Box'
 import Icon from '../Icon'
 import { Touchable } from '../Touchable'
 

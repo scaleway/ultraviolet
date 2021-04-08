@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { colors } from '../../theme'
-import { Box } from '../Box'
+import Box from '../Box'
 import Tooltip from '../Tooltip'
 
 const styles = {

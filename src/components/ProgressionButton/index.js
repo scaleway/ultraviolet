@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const progressionAnimation = keyframes`
   from {

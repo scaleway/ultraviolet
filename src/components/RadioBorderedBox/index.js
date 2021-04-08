@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Badge from '../Badge'
 import BorderedBox from '../BorderedBox'
-import { Box } from '../Box'
+import Box from '../Box'
 import Radio from '../Radio'
 
 const StyledBorderedBox = styled(BorderedBox)`
