@@ -9,6 +9,18 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -45,28 +57,28 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -90,7 +102,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -115,7 +127,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -134,7 +146,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-left: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -143,12 +155,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -167,7 +179,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -182,7 +194,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,11 +206,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 24px;
   width: 24px;
@@ -206,12 +218,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -221,11 +233,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -235,30 +247,36 @@ exports[`TimeInput renders correctly with base props 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-timeinput-test-0"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           00:00
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -281,17 +299,17 @@ exports[`TimeInput renders correctly with base props 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -307,10 +325,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>

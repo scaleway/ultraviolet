@@ -35,6 +35,18 @@ exports[`RichSelect renders correctly animated 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -71,28 +83,28 @@ exports[`RichSelect renders correctly animated 1`] = `
   animation: 1000ms animation-0;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -116,7 +128,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -132,7 +144,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -145,7 +157,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -154,12 +166,12 @@ exports[`RichSelect renders correctly animated 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -178,7 +190,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -190,7 +202,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,11 +214,11 @@ exports[`RichSelect renders correctly animated 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -214,12 +226,12 @@ exports[`RichSelect renders correctly animated 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -229,11 +241,11 @@ exports[`RichSelect renders correctly animated 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -243,30 +255,36 @@ exports[`RichSelect renders correctly animated 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-animated"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -289,17 +307,17 @@ exports[`RichSelect renders correctly animated 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -315,10 +333,10 @@ exports[`RichSelect renders correctly animated 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -334,6 +352,18 @@ exports[`RichSelect renders correctly controlled 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -370,28 +400,28 @@ exports[`RichSelect renders correctly controlled 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -415,7 +445,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -431,7 +461,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -444,7 +474,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -453,12 +483,12 @@ exports[`RichSelect renders correctly controlled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -477,7 +507,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -489,7 +519,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -501,11 +531,11 @@ exports[`RichSelect renders correctly controlled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -513,12 +543,12 @@ exports[`RichSelect renders correctly controlled 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -528,11 +558,11 @@ exports[`RichSelect renders correctly controlled 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -542,30 +572,36 @@ exports[`RichSelect renders correctly controlled 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-controlled"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -588,17 +624,17 @@ exports[`RichSelect renders correctly controlled 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -614,10 +650,10 @@ exports[`RichSelect renders correctly controlled 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -633,6 +669,18 @@ exports[`RichSelect renders correctly default values with click 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -669,28 +717,28 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -714,7 +762,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -730,7 +778,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -743,7 +791,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -752,12 +800,12 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -776,7 +824,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -788,7 +836,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -800,11 +848,11 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -812,12 +860,12 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -827,11 +875,11 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -841,30 +889,36 @@ exports[`RichSelect renders correctly default values with click 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -887,17 +941,17 @@ exports[`RichSelect renders correctly default values with click 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -913,10 +967,10 @@ exports[`RichSelect renders correctly default values with click 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -934,6 +988,18 @@ exports[`RichSelect renders correctly disabled 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -970,11 +1036,11 @@ exports[`RichSelect renders correctly disabled 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -999,7 +1065,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #dce1eb;
   margin-left: 2px;
   margin-right: 2px;
@@ -1012,21 +1078,21 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-5 {
+.emotion-6 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
-  visibility: visible;
+  visibility: hidden;
   color: hsl(0, 0%, 20%);
   box-sizing: border-box;
 }
 
-.emotion-6 input {
+.emotion-7 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1045,7 +1111,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   max-height: 48px;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1057,7 +1123,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   display: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1069,11 +1135,11 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-11 {
+.emotion-12 {
   fill: #dce1eb;
   height: 11px;
   width: 11px;
@@ -1081,12 +1147,12 @@ exports[`RichSelect renders correctly disabled 1`] = `
   min-height: 11px;
 }
 
-.emotion-11.emotion-11 {
+.emotion-12.emotion-12 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1096,11 +1162,11 @@ exports[`RichSelect renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-12.emotion-12 {
+.emotion-13.emotion-13 {
   overflow: hidden;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1110,22 +1176,28 @@ exports[`RichSelect renders correctly disabled 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-disabled"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <div
-          class=" emotion-4"
+          class=" emotion-5"
         >
           Select...
         </div>
         <div
-          class="emotion-5"
+          class="emotion-6"
         >
           <div
-            class="emotion-6"
+            class="emotion-7"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -1149,17 +1221,17 @@ exports[`RichSelect renders correctly disabled 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-7"
+        class=" emotion-8"
       >
         <span
-          class=" emotion-8"
+          class=" emotion-9"
         />
         <div
           aria-hidden="true"
-          class=" emotion-9"
+          class=" emotion-10"
         >
           <svg
-            class="sc-ui-icon emotion-10 emotion-11"
+            class="sc-ui-icon emotion-11 emotion-12"
             viewBox="0 0 24 24"
           >
             <path
@@ -1170,10 +1242,10 @@ exports[`RichSelect renders correctly disabled 1`] = `
       </div>
     </div>
     <div
-      class="emotion-12"
+      class="emotion-13"
     >
       <div
-        class="emotion-13"
+        class="emotion-14"
       />
     </div>
   </div>
@@ -1191,6 +1263,18 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1227,11 +1311,11 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1256,7 +1340,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #dce1eb;
   margin-left: 2px;
   margin-right: 2px;
@@ -1269,21 +1353,21 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-5 {
+.emotion-6 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
-  visibility: visible;
+  visibility: hidden;
   color: hsl(0, 0%, 20%);
   box-sizing: border-box;
 }
 
-.emotion-6 input {
+.emotion-7 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1302,7 +1386,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   max-height: 48px;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1314,7 +1398,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   display: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1326,11 +1410,11 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-11 {
+.emotion-12 {
   fill: #dce1eb;
   height: 11px;
   width: 11px;
@@ -1338,12 +1422,12 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   min-height: 11px;
 }
 
-.emotion-11.emotion-11 {
+.emotion-12.emotion-12 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1353,11 +1437,11 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-12.emotion-12 {
+.emotion-13.emotion-13 {
   overflow: hidden;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1367,22 +1451,28 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <div
-          class=" emotion-4"
+          class=" emotion-5"
         >
           Select...
         </div>
         <div
-          class="emotion-5"
+          class="emotion-6"
         >
           <div
-            class="emotion-6"
+            class="emotion-7"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -1406,17 +1496,17 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-7"
+        class=" emotion-8"
       >
         <span
-          class=" emotion-8"
+          class=" emotion-9"
         />
         <div
           aria-hidden="true"
-          class=" emotion-9"
+          class=" emotion-10"
         >
           <svg
-            class="sc-ui-icon emotion-10 emotion-11"
+            class="sc-ui-icon emotion-11 emotion-12"
             viewBox="0 0 24 24"
           >
             <path
@@ -1427,10 +1517,10 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
       </div>
     </div>
     <div
-      class="emotion-12"
+      class="emotion-13"
     >
       <div
-        class="emotion-13"
+        class="emotion-14"
       />
     </div>
   </div>
@@ -1446,6 +1536,18 @@ exports[`RichSelect renders correctly multi 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1482,28 +1584,28 @@ exports[`RichSelect renders correctly multi 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1527,7 +1629,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -1540,7 +1642,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-5 {
+.emotion-6 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -1549,12 +1651,12 @@ exports[`RichSelect renders correctly multi 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6 input {
+.emotion-7 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1573,7 +1675,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   max-height: 48px;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1585,7 +1687,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   display: none;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1597,11 +1699,11 @@ exports[`RichSelect renders correctly multi 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-11 {
+.emotion-12 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -1609,12 +1711,12 @@ exports[`RichSelect renders correctly multi 1`] = `
   min-height: 11px;
 }
 
-.emotion-11.emotion-11 {
+.emotion-12.emotion-12 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1624,11 +1726,11 @@ exports[`RichSelect renders correctly multi 1`] = `
   margin-top: 0;
 }
 
-.emotion-12.emotion-12 {
+.emotion-13.emotion-13 {
   overflow: hidden;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1638,22 +1740,28 @@ exports[`RichSelect renders correctly multi 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-multi"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <div
-          class=" emotion-4"
+          class=" emotion-5"
         >
           Select...
         </div>
         <div
-          class="emotion-5"
+          class="emotion-6"
         >
           <div
-            class="emotion-6"
+            class="emotion-7"
             style="display: inline-block;"
           >
             <input
@@ -1676,17 +1784,17 @@ exports[`RichSelect renders correctly multi 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-7"
+        class=" emotion-8"
       >
         <span
-          class=" emotion-8"
+          class=" emotion-9"
         />
         <div
           aria-hidden="true"
-          class=" emotion-9"
+          class=" emotion-10"
         >
           <svg
-            class="sc-ui-icon emotion-10 emotion-11"
+            class="sc-ui-icon emotion-11 emotion-12"
             viewBox="0 0 24 24"
           >
             <path
@@ -1703,10 +1811,10 @@ exports[`RichSelect renders correctly multi 1`] = `
       />
     </div>
     <div
-      class="emotion-12"
+      class="emotion-13"
     >
       <div
-        class="emotion-13"
+        class="emotion-14"
       />
     </div>
   </div>
@@ -1724,6 +1832,18 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1760,11 +1880,11 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1789,7 +1909,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   background-color: #f6f5f7;
   border-radius: 4px;
   display: -webkit-box;
@@ -1814,7 +1934,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   height: 24px;
 }
 
-.emotion-5 {
+.emotion-6 {
   border-radius: 2px;
   color: #dce1eb;
   font-size: 14px;
@@ -1828,7 +1948,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   font-weight: normal;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1846,13 +1966,13 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   color: #dce1eb;
 }
 
-.emotion-6:hover {
+.emotion-7:hover {
   pointer-events: none;
   cursor: none;
   color: #dce1eb;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: currentColor;
   height: 16px;
   width: 16px;
@@ -1860,25 +1980,25 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   min-height: 16px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-9.emotion-9 {
   vertical-align: middle;
 }
 
-.emotion-9 {
+.emotion-10 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
-  visibility: visible;
+  visibility: hidden;
   color: hsl(0, 0%, 20%);
   box-sizing: border-box;
 }
 
-.emotion-10 input {
+.emotion-11 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1897,7 +2017,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   max-height: 48px;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1909,7 +2029,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   display: none;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1921,11 +2041,11 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-13:hover {
+.emotion-14:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-15 {
+.emotion-16 {
   fill: #dce1eb;
   height: 11px;
   width: 11px;
@@ -1933,12 +2053,12 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   min-height: 11px;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1948,11 +2068,11 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-16.emotion-16 {
+.emotion-17.emotion-17 {
   overflow: hidden;
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1962,25 +2082,31 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-multi-disabled"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <div
-          class="emotion-4"
+          class="emotion-5"
         >
           <div
-            class="emotion-5"
+            class="emotion-6"
           >
             Option A
           </div>
           <div
-            class="emotion-6"
+            class="emotion-7"
           >
             <svg
-              class="sc-ui-icon emotion-7 emotion-8"
+              class="sc-ui-icon emotion-8 emotion-9"
               viewBox="0 0 24 24"
             >
               <path
@@ -1990,10 +2116,10 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
           </div>
         </div>
         <div
-          class="emotion-9"
+          class="emotion-10"
         >
           <div
-            class="emotion-10"
+            class="emotion-11"
             style="display: inline-block;"
           >
             <input
@@ -2017,17 +2143,17 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-11"
+        class=" emotion-12"
       >
         <span
-          class=" emotion-12"
+          class=" emotion-13"
         />
         <div
           aria-hidden="true"
-          class=" emotion-13"
+          class=" emotion-14"
         >
           <svg
-            class="sc-ui-icon emotion-7 emotion-15"
+            class="sc-ui-icon emotion-8 emotion-16"
             viewBox="0 0 24 24"
           >
             <path
@@ -2038,10 +2164,10 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
       </div>
     </div>
     <div
-      class="emotion-16"
+      class="emotion-17"
     >
       <div
-        class="emotion-17"
+        class="emotion-18"
       />
     </div>
   </div>
@@ -2057,6 +2183,18 @@ exports[`RichSelect renders correctly required 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2093,28 +2231,28 @@ exports[`RichSelect renders correctly required 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2138,7 +2276,7 @@ exports[`RichSelect renders correctly required 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -2154,7 +2292,7 @@ exports[`RichSelect renders correctly required 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -2167,7 +2305,7 @@ exports[`RichSelect renders correctly required 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -2176,12 +2314,12 @@ exports[`RichSelect renders correctly required 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2200,7 +2338,7 @@ exports[`RichSelect renders correctly required 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2212,7 +2350,7 @@ exports[`RichSelect renders correctly required 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2224,11 +2362,11 @@ exports[`RichSelect renders correctly required 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -2236,12 +2374,12 @@ exports[`RichSelect renders correctly required 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 16px;
 }
 
-.emotion-15 {
+.emotion-16 {
   fill: #ef5774;
   height: 8px;
   width: 8px;
@@ -2249,11 +2387,11 @@ exports[`RichSelect renders correctly required 1`] = `
   min-height: 8px;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   vertical-align: middle;
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2263,11 +2401,11 @@ exports[`RichSelect renders correctly required 1`] = `
   margin-top: 0;
 }
 
-.emotion-16.emotion-16 {
+.emotion-17.emotion-17 {
   overflow: hidden;
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2277,30 +2415,36 @@ exports[`RichSelect renders correctly required 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-required"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -2323,17 +2467,17 @@ exports[`RichSelect renders correctly required 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -2341,7 +2485,7 @@ exports[`RichSelect renders correctly required 1`] = `
             />
           </svg>
           <svg
-            class="sc-ui-icon emotion-12 emotion-15"
+            class="sc-ui-icon emotion-13 emotion-16"
             viewBox="0 0 24 24"
           >
             <path
@@ -2357,10 +2501,10 @@ exports[`RichSelect renders correctly required 1`] = `
       value=""
     />
     <div
-      class="emotion-16"
+      class="emotion-17"
     >
       <div
-        class="emotion-17"
+        class="emotion-18"
       />
     </div>
   </div>
@@ -2376,6 +2520,18 @@ exports[`RichSelect renders correctly timed 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2412,28 +2568,28 @@ exports[`RichSelect renders correctly timed 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2457,7 +2613,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -2473,7 +2629,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -2486,7 +2642,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -2495,12 +2651,12 @@ exports[`RichSelect renders correctly timed 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2519,7 +2675,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2534,7 +2690,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2546,11 +2702,11 @@ exports[`RichSelect renders correctly timed 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 24px;
   width: 24px;
@@ -2558,12 +2714,12 @@ exports[`RichSelect renders correctly timed 1`] = `
   min-height: 24px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2573,11 +2729,11 @@ exports[`RichSelect renders correctly timed 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2587,30 +2743,36 @@ exports[`RichSelect renders correctly timed 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-time"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -2633,17 +2795,17 @@ exports[`RichSelect renders correctly timed 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -2659,10 +2821,10 @@ exports[`RichSelect renders correctly timed 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -2678,6 +2840,18 @@ exports[`RichSelect renders correctly timed with error 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2714,28 +2888,28 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #ef5774;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #ef5774;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #ef5774;
   box-shadow: 0 0 2px 2px rgba(239,87,116,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #ef5774;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2759,7 +2933,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -2775,7 +2949,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #ef5774;
   margin-left: 2px;
   margin-right: 2px;
@@ -2788,7 +2962,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -2797,12 +2971,12 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2821,7 +2995,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2836,7 +3010,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   display: flex;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2848,11 +3022,11 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #ef5774;
   height: 24px;
   width: 24px;
@@ -2860,12 +3034,12 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   min-height: 24px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2880,11 +3054,11 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   overflow: visible;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2894,30 +3068,36 @@ exports[`RichSelect renders correctly timed with error 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-time-error"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -2940,17 +3120,17 @@ exports[`RichSelect renders correctly timed with error 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -2966,10 +3146,10 @@ exports[`RichSelect renders correctly timed with error 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       >
         Test error
       </div>
@@ -2987,6 +3167,18 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3023,28 +3215,28 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3068,7 +3260,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -3084,7 +3276,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -3097,7 +3289,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -3106,12 +3298,12 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3130,7 +3322,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3142,7 +3334,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3154,11 +3346,11 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -3166,12 +3358,12 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -3181,11 +3373,11 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -3195,30 +3387,36 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-uncontrolled"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -3241,17 +3439,17 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -3267,10 +3465,10 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -3286,6 +3484,18 @@ exports[`RichSelect renders correctly with click 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3322,28 +3532,28 @@ exports[`RichSelect renders correctly with click 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3367,7 +3577,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -3383,7 +3593,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -3396,7 +3606,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -3405,12 +3615,12 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3429,7 +3639,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3441,7 +3651,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3453,11 +3663,11 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -3465,12 +3675,12 @@ exports[`RichSelect renders correctly with click 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -3480,11 +3690,11 @@ exports[`RichSelect renders correctly with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -3494,30 +3704,36 @@ exports[`RichSelect renders correctly with click 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -3540,17 +3756,17 @@ exports[`RichSelect renders correctly with click 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -3566,10 +3782,10 @@ exports[`RichSelect renders correctly with click 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -3585,6 +3801,18 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3621,28 +3849,28 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3666,7 +3894,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -3682,7 +3910,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -3695,7 +3923,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -3704,12 +3932,12 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3728,7 +3956,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3740,7 +3968,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3752,11 +3980,11 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -3764,12 +3992,12 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -3779,11 +4007,11 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -3793,30 +4021,36 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -3839,17 +4073,17 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -3865,10 +4099,10 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -3884,6 +4118,18 @@ exports[`RichSelect renders correctly with click and options 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3920,28 +4166,28 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3965,7 +4211,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -3981,7 +4227,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -3994,7 +4240,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -4003,12 +4249,12 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4027,7 +4273,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4039,7 +4285,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4051,11 +4297,11 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -4063,12 +4309,12 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4078,11 +4324,11 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4092,30 +4338,36 @@ exports[`RichSelect renders correctly with click and options 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -4138,17 +4390,17 @@ exports[`RichSelect renders correctly with click and options 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -4164,10 +4416,10 @@ exports[`RichSelect renders correctly with click and options 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -4183,6 +4435,18 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4219,28 +4483,28 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4264,7 +4528,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -4280,7 +4544,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -4293,7 +4557,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -4302,12 +4566,12 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4326,7 +4590,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4338,7 +4602,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4350,11 +4614,11 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -4362,12 +4626,12 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4377,11 +4641,11 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4391,30 +4655,36 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-uncontrolled"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -4437,17 +4707,17 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -4463,10 +4733,10 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -4482,6 +4752,18 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4518,28 +4800,28 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4563,7 +4845,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -4579,7 +4861,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -4592,7 +4874,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -4601,12 +4883,12 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4625,7 +4907,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4637,7 +4919,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4649,11 +4931,11 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -4661,12 +4943,12 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4676,11 +4958,11 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -4690,30 +4972,36 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-test-loading"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Select...
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -4736,20 +5024,20 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div>
           Loading...
         </div>
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -4765,10 +5053,10 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
       value=""
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
@@ -4814,6 +5102,18 @@ exports[`RichSelect should render correctly isLoading 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4850,28 +5150,28 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4895,7 +5195,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -4911,7 +5211,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   opacity: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -4924,7 +5224,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -4933,12 +5233,12 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4957,7 +5257,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4977,7 +5277,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-animation: animation-0 1s ease-in-out 0ms infinite;
   animation: animation-0 1s ease-in-out 0ms infinite;
   background-color: currentColor;
@@ -4988,7 +5288,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1em;
 }
 
-.emotion-12 {
+.emotion-13 {
   -webkit-animation: animation-0 1s ease-in-out 160ms infinite;
   animation: animation-0 1s ease-in-out 160ms infinite;
   background-color: currentColor;
@@ -5000,7 +5300,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1em;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-animation: animation-0 1s ease-in-out 320ms infinite;
   animation: animation-0 1s ease-in-out 320ms infinite;
   background-color: currentColor;
@@ -5010,6 +5310,381 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   height: 1em;
   vertical-align: top;
   width: 1em;
+}
+
+.emotion-15 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: #eeeeff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-16 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-16:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-18 {
+  fill: #d4dae7;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.emotion-18.emotion-18 {
+  vertical-align: middle;
+  margin-right: 0;
+}
+
+.emotion-19 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-19.emotion-19 {
+  overflow: hidden;
+}
+
+.emotion-20.emotion-20 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+<div
+    class=" emotion-0 emotion-1"
+    data-testid="rich-select-loading"
+  >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
+    <div
+      class=" emotion-3"
+    >
+      <div
+        class=" emotion-4"
+      >
+        <label
+          aria-live="assertive"
+          class="emotion-5 emotion-6"
+          for="test"
+          id="test-label"
+        >
+          Select...
+        </label>
+        <div
+          class=" emotion-7"
+        >
+          Select...
+        </div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-9"
+            style="caret-color: transparent; display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-controls="test-label"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-10"
+      >
+        <div
+          aria-hidden="true"
+          class=" emotion-11"
+        >
+          <span
+            class="emotion-12"
+          />
+          <span
+            class="emotion-13"
+          />
+          <span
+            class="emotion-14"
+          />
+        </div>
+        <span
+          class=" emotion-15"
+        />
+        <div
+          aria-hidden="true"
+          class=" emotion-16"
+        >
+          <svg
+            class="sc-ui-icon emotion-17 emotion-18"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.88,18.29l-9-8.55a2.75,2.75,0,0,1,0-4,3.12,3.12,0,0,1,4.24,0L12,12.25l6.88-6.54a3.12,3.12,0,0,1,4.24,0,2.75,2.75,0,0,1,0,4l-9,8.55a3.12,3.12,0,0,1-4.24,0Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input
+      name="loading"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="emotion-19"
+    >
+      <div
+        class="emotion-20"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RichSelect should render correctly multi isClearable 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #dce1eb;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-3:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
+  fill: #4f0599;
+}
+
+.emotion-3:focus-within {
+  border-color: #4f0599;
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
+}
+
+.emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.emotion-6 {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-weight: 400;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+.emotion-7 {
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+.emotion-8 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: visible;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+}
+
+.emotion-9 input {
+  position: absolute;
+  top: 50%;
+}
+
+.emotion-10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-11 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-11:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-13 {
+  fill: #d4dae7;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-13.emotion-13 {
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .emotion-14 {
@@ -5022,22 +5697,6 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1px;
   box-sizing: border-box;
   display: none;
-}
-
-.emotion-15 {
-  color: hsl(0, 0%, 80%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px;
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
-  box-sizing: border-box;
-}
-
-.emotion-15:hover {
-  color: hsl(0, 0%, 60%);
 }
 
 .emotion-17 {
@@ -5077,371 +5736,36 @@ exports[`RichSelect should render correctly isLoading 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-loading"
   >
-    <div
-      class=" emotion-2"
-    >
-      <div
-        class=" emotion-3"
-      >
-        <label
-          aria-live="assertive"
-          class="emotion-4 emotion-5"
-          for="test"
-          id="test-label"
-        >
-          Select...
-        </label>
-        <div
-          class=" emotion-6"
-        >
-          Select...
-        </div>
-        <div
-          class="emotion-7"
-        >
-          <div
-            class="emotion-8"
-            style="caret-color: transparent; display: inline-block;"
-          >
-            <input
-              aria-autocomplete="list"
-              aria-controls="test-label"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              id="test"
-              spellcheck="false"
-              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
-            <div
-              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class=" emotion-9"
-      >
-        <div
-          aria-hidden="true"
-          class=" emotion-10"
-        >
-          <span
-            class="emotion-11"
-          />
-          <span
-            class="emotion-12"
-          />
-          <span
-            class="emotion-13"
-          />
-        </div>
-        <span
-          class=" emotion-14"
-        />
-        <div
-          aria-hidden="true"
-          class=" emotion-15"
-        >
-          <svg
-            class="sc-ui-icon emotion-16 emotion-17"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M9.88,18.29l-9-8.55a2.75,2.75,0,0,1,0-4,3.12,3.12,0,0,1,4.24,0L12,12.25l6.88-6.54a3.12,3.12,0,0,1,4.24,0,2.75,2.75,0,0,1,0,4l-9,8.55a3.12,3.12,0,0,1-4.24,0Z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <input
-      name="loading"
-      type="hidden"
-      value=""
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
     />
     <div
-      class="emotion-18"
+      class=" emotion-3"
     >
       <div
-        class="emotion-19"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`RichSelect should render correctly multi isClearable 1`] = `
-<DocumentFragment>
-  .emotion-1 {
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  border-color: #dce1eb;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
-  cursor: default;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  min-height: 48px;
-  outline: 0!important;
-  position: relative;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  box-sizing: border-box;
-  color: #4a4f62;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.emotion-2:hover {
-  border-color: hsl(0, 0%, 70%);
-}
-
-.emotion-2:hover {
-  border-color: #4f0599;
-}
-
-.emotion-2:hover svg {
-  fill: #4f0599;
-}
-
-.emotion-2:focus-within {
-  border-color: #4f0599;
-  box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
-}
-
-.emotion-2:focus-within svg {
-  fill: #4f0599;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 2px 8px;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-  height: 100%;
-}
-
-.emotion-5 {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  font-weight: 400;
-  pointer-events: none;
-  color: #b2b6c3;
-  white-space: nowrap;
-  width: 100%;
-  height: 48px;
-  font-size: 16px;
-  -webkit-transition: -webkit-transform 250ms ease;
-  transition: transform 250ms ease;
-  opacity: 0;
-  -webkit-transform: translate(0, -8px) scale(0.8);
-  -moz-transform: translate(0, -8px) scale(0.8);
-  -ms-transform: translate(0, -8px) scale(0.8);
-  transform: translate(0, -8px) scale(0.8);
-  transform-origin: left;
-  padding-left: 8px;
-  left: 0;
-  top: 0;
-  opacity: 1;
-}
-
-.emotion-6 {
-  color: #4a4f62;
-  margin-left: 0;
-  margin-right: 0;
-  max-width: calc(100% - 8px);
-  overflow: hidden;
-  position: absolute;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  box-sizing: border-box;
-  margin-top: 8px;
-  padding-left: 0;
-}
-
-.emotion-7 {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  visibility: visible;
-  color: hsl(0, 0%, 20%);
-  box-sizing: border-box;
-}
-
-.emotion-8 input {
-  position: absolute;
-  top: 50%;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  max-height: 48px;
-}
-
-.emotion-10 {
-  color: hsl(0, 0%, 80%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px;
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
-  box-sizing: border-box;
-}
-
-.emotion-10:hover {
-  color: hsl(0, 0%, 60%);
-}
-
-.emotion-12 {
-  fill: #d4dae7;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.emotion-12.emotion-12 {
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.emotion-13 {
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  background-color: #eeeeff;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  width: 1px;
-  box-sizing: border-box;
-  display: none;
-}
-
-.emotion-16 {
-  fill: #d4dae7;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
-}
-
-.emotion-16.emotion-16 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-17 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.emotion-17.emotion-17 {
-  overflow: hidden;
-}
-
-.emotion-18.emotion-18 {
-  font-size: 12px;
-  color: #ef5774;
-  padding-top: 2px;
-}
-
-<div
-    class=" emotion-0 emotion-1"
-    data-testid="rich-select-loading"
-  >
-    <div
-      class=" emotion-2"
-    >
-      <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Option A
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -5464,15 +5788,15 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
           aria-hidden="true"
-          class=" emotion-10"
+          class=" emotion-11"
         >
           <svg
             aria-hidden="true"
-            class="sc-ui-icon emotion-11 emotion-12"
+            class="sc-ui-icon emotion-12 emotion-13"
             viewBox="0 0 24 24"
           >
             <path
@@ -5481,14 +5805,14 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
           </svg>
         </div>
         <span
-          class=" emotion-13"
+          class=" emotion-14"
         />
         <div
           aria-hidden="true"
-          class=" emotion-10"
+          class=" emotion-11"
         >
           <svg
-            class="sc-ui-icon emotion-11 emotion-16"
+            class="sc-ui-icon emotion-12 emotion-17"
             viewBox="0 0 24 24"
           >
             <path
@@ -5504,10 +5828,10 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
       value="a"
     />
     <div
-      class="emotion-17"
+      class="emotion-18"
     >
       <div
-        class="emotion-18"
+        class="emotion-19"
       />
     </div>
   </div>
@@ -5523,6 +5847,18 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
 }
 
 .emotion-2 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5559,28 +5895,28 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   animation: none;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   border-color: #4f0599;
 }
 
-.emotion-2:hover svg {
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
-.emotion-2:focus-within {
+.emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2:focus-within svg {
+.emotion-3:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5604,7 +5940,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   left: 0;
   top: 6px;
@@ -5629,7 +5965,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   opacity: 1;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -5648,7 +5984,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-left: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 2px;
@@ -5657,12 +5993,12 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-8 input {
+.emotion-9 input {
   position: absolute;
   top: 50%;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5681,7 +6017,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   max-height: 48px;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -5693,7 +6029,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   display: none;
 }
 
-.emotion-11 {
+.emotion-12 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -5705,11 +6041,11 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-11:hover {
+.emotion-12:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -5717,12 +6053,12 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   min-height: 11px;
 }
 
-.emotion-13.emotion-13 {
+.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -5732,11 +6068,11 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   margin-top: 0;
 }
 
-.emotion-14.emotion-14 {
+.emotion-15.emotion-15 {
   overflow: hidden;
 }
 
-.emotion-15.emotion-15 {
+.emotion-16.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -5746,30 +6082,36 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
     class=" emotion-0 emotion-1"
     data-testid="rich-select-loading"
   >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
     <div
-      class=" emotion-2"
+      class=" emotion-3"
     >
       <div
-        class=" emotion-3"
+        class=" emotion-4"
       >
         <label
           aria-live="assertive"
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           Option A
         </div>
         <div
-          class="emotion-7"
+          class="emotion-8"
         >
           <div
-            class="emotion-8"
+            class="emotion-9"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -5792,17 +6134,17 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <span
-          class=" emotion-10"
+          class=" emotion-11"
         />
         <div
           aria-hidden="true"
-          class=" emotion-11"
+          class=" emotion-12"
         >
           <svg
-            class="sc-ui-icon emotion-12 emotion-13"
+            class="sc-ui-icon emotion-13 emotion-14"
             viewBox="0 0 24 24"
           >
             <path
@@ -5818,10 +6160,10 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
       value="a"
     />
     <div
-      class="emotion-14"
+      class="emotion-15"
     >
       <div
-        class="emotion-15"
+        class="emotion-16"
       />
     </div>
   </div>
