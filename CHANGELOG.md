@@ -1,3 +1,17 @@
+## [0.75.0](https://github.com/scaleway/scaleway-ui/compare/v0.74.0...v0.75.0) (2021-04-09)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @semantic-release/npm from 7.1.0 to 7.1.1 ([#242](https://github.com/scaleway/scaleway-ui/issues/242)) ([76753fe](https://github.com/scaleway/scaleway-ui/commit/76753fe6ccd1d546f52898b34fa30c6c9ac79201))
+* **deps-dev:** bump @storybook/addon-actions from 6.2.5 to 6.2.7 ([#243](https://github.com/scaleway/scaleway-ui/issues/243)) ([4027b0b](https://github.com/scaleway/scaleway-ui/commit/4027b0bd4ba0a49e344a0b518a7e21f1da95cc11))
+* **deps-dev:** bump @storybook/addon-docs from 6.2.5 to 6.2.7 ([#229](https://github.com/scaleway/scaleway-ui/issues/229)) ([1a03abb](https://github.com/scaleway/scaleway-ui/commit/1a03abbd4de4245483be1c61a956030ca64ed118))
+
+
+### :gear: Features
+
+* use colors from theme end ([#231](https://github.com/scaleway/scaleway-ui/issues/231)) ([b6def9c](https://github.com/scaleway/scaleway-ui/commit/b6def9c81c96afe33c95faae868a8d82e6761c3e)), closes [#209](https://github.com/scaleway/scaleway-ui/issues/209) [#210](https://github.com/scaleway/scaleway-ui/issues/210) [#211](https://github.com/scaleway/scaleway-ui/issues/211) [#201](https://github.com/scaleway/scaleway-ui/issues/201) [#155](https://github.com/scaleway/scaleway-ui/issues/155) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#150](https://github.com/scaleway/scaleway-ui/issues/150) [#152](https://github.com/scaleway/scaleway-ui/issues/152) [#187](https://github.com/scaleway/scaleway-ui/issues/187) [#161](https://github.com/scaleway/scaleway-ui/issues/161) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#178](https://github.com/scaleway/scaleway-ui/issues/178) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#168](https://github.com/scaleway/scaleway-ui/issues/168) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#179](https://github.com/scaleway/scaleway-ui/issues/179) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#202](https://github.com/scaleway/scaleway-ui/issues/202) [#155](https://github.com/scaleway/scaleway-ui/issues/155) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#150](https://github.com/scaleway/scaleway-ui/issues/150) [#152](https://github.com/scaleway/scaleway-ui/issues/152) [#187](https://github.com/scaleway/scaleway-ui/issues/187) [#161](https://github.com/scaleway/scaleway-ui/issues/161) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#178](https://github.com/scaleway/scaleway-ui/issues/178) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#168](https://github.com/scaleway/scaleway-ui/issues/168) [#160](https://github.com/scaleway/scaleway-ui/issues/160) [#179](https://github.com/scaleway/scaleway-ui/issues/179) [#160](https://github.com/scaleway/scaleway-ui/issues/160)
+
 ## [0.74.0](https://github.com/scaleway/scaleway-ui/compare/v0.73.0...v0.74.0) (2021-04-09)
 
 
