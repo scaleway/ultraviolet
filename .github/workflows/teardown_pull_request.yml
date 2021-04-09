@@ -8,7 +8,6 @@ jobs:
   teardown:
     runs-on: [self-hosted, console]
     env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
       REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
     steps:
       - uses: actions/checkout@v2

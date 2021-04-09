@@ -51,7 +51,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v2
         env:
-          IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          IMAGE: ${{ env.IMAGE_NAME }}:v-${{ env.BRANCH_SLUG }}
         with:
           push: true
           tags: ${{ env.IMAGE }}
@@ -67,7 +67,7 @@ jobs:
           ssh_key: ${{ secrets.SSH_KEY }}
       - name: Deploy docker
         env:
-          VERSION: ${{ env.BRANCH_SLUG }}
+          VERSION: v-${{ env.BRANCH_SLUG }}
         # TODO: remove the context rm when we switch back to public runners
         run: |
           docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
