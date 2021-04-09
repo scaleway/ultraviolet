@@ -5,17 +5,42 @@
 
 # Scaleway UI
 
-Scaleway official UI library.
+Scaleway UI library.
 
 ---
 
-## Install environment
+⚠️ This library is far from being ready. We are actively working on it. Our goal is to have an easy to use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
+⚠️ We are going to break a lot of things towards V1. This library is not yet made to be used by external projects
 
-Install all dependencies with `yarn install`
+## Quick Start
 
-## Develop
+```sh
+$ yarn add @scaleway/ui @emotion/react
+```
 
-Start storybook using `yarn start`.
+```js
+import { GlobalStyle, theme, Button } from "@scaleway/ui";
+import { ThemeProvider } from "@emotion/react";
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <Button variant="primary" onClick={() => console.log("clicked")}>
+      Click Me
+    </Button>
+  </ThemeProvider>
+);
+```
+
+## Development
+
+### Storybook
+
+Make sure to have dependencies up to date by running `yarn install`
+
+```sh
+$ yarn run start
+```
 
 ### Test
 
@@ -24,6 +49,7 @@ $ yarn run test # Will run all tests
 $ yarn run test --updateSnapshot # Will update all snapshots
 $ yarn run test:watch # Will watch tests and only rerun the one who are modified
 $ yarn run test:coverage # Will generate a coverage report
+$ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
 ```
 
 ### Test coverage
@@ -49,14 +75,12 @@ $ yarn run lint:fix
 
 ```sh
 $ yarn run build
-$ yarn run build:profile
+$ yarn run build:profile # Will open a visual representation of the modules inside the compile package
 ```
 
----
+### Use a locally built package
 
-## Usage
-
-### Link against another project (with `yalc`) => FAVORED
+You might want to test your local changes against a React application.
 
 > [`yalc`](https://github.com/whitecolor/yalc) is a tool aiming to simplify working with local npm packages by providing a different workflow than `npm/yarn link`, hence avoiding most of their issues with module resolving.
 
@@ -79,20 +103,9 @@ $ yalc publish --push # --push will automatically update the package on projects
 
 > :warning: `yalc` create a `yalc.lock` and updates the `package.json` in the target project. Make sure to not commit these changes
 
-### NPM link
-
-```sh
-$ # In the scaleway-ui project
-$ yarn link
-$ # In the project where you want to use it
-$ yarn link @scaleway/ui
-$ # When you are done, to restore the original package
-$ yarn unlink @scaleway/ui && yarn install --force
-```
-
 ---
 
-## Versioning
+### Versioning
 
 We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
 
