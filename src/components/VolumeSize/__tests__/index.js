@@ -24,6 +24,20 @@ describe('VolumeSize', () => {
     )
   })
 
+  test('renders correctly with non modifiable value', () => {
+    shouldMatchEmotionSnapshot(
+      <VolumeSize
+        minSize={15}
+        maxSize={15}
+        title="Test"
+        unit="GB"
+        tooBigMessage="Test too big"
+        tooSmallMessage="Test too small"
+        value={15}
+      />,
+    )
+  })
+
   test('renders correctly without maxSize', () => {
     shouldMatchEmotionSnapshot(
       <VolumeSize

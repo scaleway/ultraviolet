@@ -157,8 +157,8 @@ const VolumeSize = ({
   unit,
   value,
 }) => {
-  const isTooBig = maxSize ? value > maxSize : value > minSize
-  const isTooSmall = value < minSize
+  const isTooBig = maxSize ? value > maxSize : false
+  const isTooSmall = minSize ? value < minSize : false
   const hasError = isTooBig || isTooSmall
 
   return (
