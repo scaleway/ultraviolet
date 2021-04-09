@@ -38,6 +38,7 @@ module.exports = {
       rules: {
         'no-console': 'off',
         'no-alert': 'off',
+        'react/prop-types': 'off',
       },
     },
     {

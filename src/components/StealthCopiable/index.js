@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import useClipboard from 'react-use-clipboard'
+import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Unselectable } from '../Unselectable'
 
 const CopyButton = styled.button`
@@ -30,7 +31,9 @@ const StyledContainer = styled.div`
 `
 
 const StealthCopiable = ({ children, side, copyText, copiedText }) => {
-  const [isCopied, setCopied] = useClipboard(children, {
+  const string = recursivelyGetChildrenString(children)
+
+  const [isCopied, setCopied] = useClipboard(string, {
     successDuration: 5000,
   })
 
@@ -55,7 +58,7 @@ StealthCopiable.defaultProps = {
 
 StealthCopiable.propTypes = {
   side: PropTypes.oneOf(['left', 'right']),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   copyText: PropTypes.string,
   copiedText: PropTypes.string,
 }
