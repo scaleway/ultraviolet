@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BulletList renders correctly  1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.emotion-2 {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #4a4f62;
+  color: #fff;
+  margin-right: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.emotion-6.emotion-6 {
+  width: 100%;
+}
+
+<ul
+    class="emotion-0 emotion-1"
+  >
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        1
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        2
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        3
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          c
+        </div>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`BulletList renders correctly with custom keyPrefix 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.emotion-2 {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #4a4f62;
+  color: #fff;
+  margin-right: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.emotion-6.emotion-6 {
+  width: 100%;
+}
+
+<ul
+    class="emotion-0 emotion-1"
+  >
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        1
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          a
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        2
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          b
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        3
+      </span>
+      <div
+        class="emotion-6"
+      >
+        y
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-4 emotion-5"
+      >
+        4
+      </span>
+      <div
+        class="emotion-6"
+      >
+        <div>
+          c
+        </div>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

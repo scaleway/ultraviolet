@@ -1,0 +1,74 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import Container from '..'
+
+<Meta title="Components/Container" />
+
+# Container
+
+## Basic
+
+<Canvas>
+  <Story name="Basic">
+    <Container>Hello</Container>
+  </Story>
+</Canvas>
+
+## With Title
+
+<Canvas>
+  <Story name="With Title">
+    <Container title="Hello there">General Kenobi</Container>
+  </Story>
+</Canvas>
+
+## With Custom Header
+
+<Canvas>
+  <Story name="With Custom Header">
+    <Container title="Hello there" header="Header">
+      General Kenobi
+    </Container>
+  </Story>
+</Canvas>
+
+## With Subtitle and RightTitle
+
+<Canvas>
+  <Story name="With Subtitle and RightTitle">
+    <Container rightTitle="Hello there" subtitle="Waza">
+      General Kenobi
+    </Container>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled">
+    <Container title="Hello there" disabled>
+      General Kenobi
+    </Container>
+  </Story>
+</Canvas>
+
+## Small variant
+
+<Canvas>
+  <Story name="Small variant">
+    <Container title="Hello there" small>
+      General Kenobi
+    </Container>
+  </Story>
+</Canvas>
+
+## Edition mode
+
+<Canvas>
+  <Story name="Edition mode">
+    <Container title="Hello there" edition>
+      General Kenobi
+    </Container>
+  </Story>
+</Canvas>
+
+<ArgsTable of={Container} />
