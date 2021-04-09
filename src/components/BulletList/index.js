@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Children } from 'react'
 import { Box } from '../Box'
 
 export const Steps = styled.ul`
@@ -30,7 +30,7 @@ export const Chip = styled.span`
 
 const BulletList = ({ children, keyPrefix }) => (
   <Steps>
-    {React.Children.toArray(children).map((child, index) => (
+    {Children.toArray(children).map((child, index) => (
       <Step key={`${keyPrefix ? `${keyPrefix}-` : ''}bullet-${index + 1}`}>
         <Chip>{`${index + 1}`}</Chip>
         <Box width="100%">{child}</Box>
