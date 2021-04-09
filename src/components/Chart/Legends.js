@@ -40,7 +40,8 @@ const ListItem = styled.li`
   align-items: center;
   margin-top: 8px;
   width: 100%;
-  color: ${({ isFocused, theme }) => isFocused ? theme.colors.primary : theme.colors.gray700};
+  color: ${({ isFocused, theme }) =>
+    isFocused ? theme.colors.primary : theme.colors.gray700};
 `
 
 const Bullet = styled.div`
@@ -51,7 +52,9 @@ const Bullet = styled.div`
   margin: 0 8px;
   background: ${({ color, theme }) => theme.colors[color] ?? color};
 
-  ${({ needPattern, color, theme, product }) => needPattern && patternVariants[`${product}-dot`](theme.colors[color] ?? color)};
+  ${({ needPattern, color, theme, product }) =>
+    needPattern &&
+    patternVariants[`${product}-dot`](theme.colors[color] ?? color)};
 
   ${({ isFocused }) => animationFlash(isFocused)}
 `
@@ -64,13 +67,13 @@ const Label = styled.div`
 
 const Value = styled.div`
   margin-left: 6px;
-  font-weight: ${({ isFocused }) => isFocused ? 500 : 400};
+  font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
 `
 
 const Text = styled.span`
   flex: none;
   margin-right: 6px;
-  font-weight: ${({ isFocused }) => isFocused ? 500 : 400};
+  font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
 `
 
 const ToggleBox = styled.div`
@@ -92,15 +95,10 @@ const ProgressiveLine = styled.span`
   top: 0;
   bottom: -1px;
   transition: width 500ms ease;
-  width: ${({ isFocused }) => isFocused ? 100 : 0}%;
+  width: ${({ isFocused }) => (isFocused ? 100 : 0)}%;
 `
 
-const Legends = ({
-  focused,
-  data,
-  onFocusChange,
-  chartId,
-}) => (
+const Legends = ({ focused, data, onFocusChange, chartId }) => (
   <List>
     {data.map((item, index) => {
       const isSegmentFocused = focused !== undefined && index === focused
@@ -124,6 +122,7 @@ const Legends = ({
               onBlur={() => onFocusChange()}
             />
             <Bullet
+              color={item.color}
               isFocused={isSegmentFocused}
               needPattern={item.needPattern}
               product={item.product}
