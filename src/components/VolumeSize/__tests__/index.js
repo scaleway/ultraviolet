@@ -1,5 +1,5 @@
 import React from 'react'
-import { VolumeSize } from '..'
+import VolumeSize from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('VolumeSize', () => {

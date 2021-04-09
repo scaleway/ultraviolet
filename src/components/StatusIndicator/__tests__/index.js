@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatusIndicator, statuses } from '..'
+import StatusIndicator, { statuses } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('StatusIndicator', () => {

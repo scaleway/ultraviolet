@@ -3,7 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import { getUUID } from '../../utils/ids'
-import { Tag, variantsContainer } from '../Tag'
+import Tag, { variantsContainer } from '../Tag'
 
 const variants = {
   base: ({ theme: { colors } }) => `

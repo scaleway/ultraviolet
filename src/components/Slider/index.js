@@ -1,40 +1,33 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
 const blankImg = new Image()
 blankImg.src =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 
-const wrapper = css`
+const StyledWrapper = styled(Box)`
   position: relative;
   margin-left: -100px;
   margin-right: -100px;
 `
-const beforeScroll = css`
+
+const StyledBeforeScroll = styled.span`
   position: absolute;
   width: 100px;
   height: 100%;
   content: '';
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), ${colors.white});
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 0),
+    ${({ theme }) => theme.colors.white}
+  );
   cursor: w-resize;
   z-index: auto;
 `
-const afterScroll = css`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  content: '';
-  cursor: e-resize;
-  z-index: auto;
-  background: linear-gradient(-90deg, ${colors.white}, rgba(255, 255, 255, 0));
-`
 
-const scrollableWrapper = css`
+const StyledScrollableWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -47,10 +40,26 @@ const scrollableWrapper = css`
   }
 `
 
-const borderWrapper = css`
+const StyledAfterScroll = styled.span`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  content: '';
+  cursor: e-resize;
+  z-index: auto;
+  background: linear-gradient(
+    -90deg,
+    ${({ theme }) => theme.colors.white},
+    rgba(255, 255, 255, 0)
+  );
+`
+
+const StyledBorderWrapper = styled(Box)`
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid ${colors.gray350};
+  border: 1px solid ${({ theme }) => theme.colors.gray350};
   height: 261px;
   width: 248px;
   max-width: 240px;
@@ -61,9 +70,9 @@ const borderWrapper = css`
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid ${colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     transition: box-shadow 0.2s ease;
-    box-shadow: 2px 2px 14px 8px ${colors.gray200};
+    box-shadow: 2px 2px 14px 8px ${({ theme }) => theme.colors.gray200};
   }
 
   img {
@@ -71,7 +80,7 @@ const borderWrapper = css`
   }
 `
 
-export function Slider({ children, ...props }) {
+const Slider = ({ children, ...props }) => {
   const scrollRef = useRef(null)
   let intervalLeft
   let intervalRight
@@ -113,17 +122,13 @@ export function Slider({ children, ...props }) {
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <Box css={wrapper} {...props}>
-      {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
-      <span
-        css={beforeScroll}
+    <StyledWrapper {...props}>
+      <StyledBeforeScroll
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
       />
-      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-      <div
+      <StyledScrollableWrapper
         ref={scrollRef}
-        css={scrollableWrapper}
         onDragOver={e => {
           setDeltaX(dragStartX - e.pageX)
           setDragStartX(e.pageX)
@@ -143,21 +148,19 @@ export function Slider({ children, ...props }) {
         }}
       >
         {children}
-      </div>
+      </StyledScrollableWrapper>
 
-      {/* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */}
-      <span
-        css={afterScroll}
+      <StyledAfterScroll
         onMouseOver={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
       />
-    </Box>
+    </StyledWrapper>
   )
 }
 
-Slider.Item = function Item({ as, ...props }) {
-  return <Box as={as} css={borderWrapper} {...props} draggable="true" />
-}
+Slider.Item = ({ as, ...props }) => (
+  <StyledBorderWrapper as={as} {...props} draggable="true" />
+)
 
 Slider.Item.propTypes = {
   as: PropTypes.string,

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { radii, colors as themeColors } from '../../theme'
 import { Box } from '../Box'
 import Icon from '../Icon'
 
@@ -27,67 +27,71 @@ const icons = {
   'alert-red': 'alert',
 }
 
-const styles = {
-  container: css`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: ${radii.default};
-    color: ${themeColors.white};
-    padding: 12px;
+const variants = {
+  info: ({ theme }) => css`
+    background-color: ${theme.colors.zumthor};
+    color: ${theme.colors.info};
   `,
-  text: css`
-    font-size: 16px;
-    line-height: 22px;
-    padding-left: 16px;
-    width: 100%;
+  success: ({ theme }) => css`
+    background-color: ${theme.colors.foam};
+    color: ${theme.colors.success};
+  `,
+  security: ({ theme }) => css`
+    background-color: ${theme.colors.gray100};
+    color: ${theme.colors.gray550};
+  `,
+  warning: ({ theme }) => css`
+    background-color: ${theme.colors.pippin};
+    color: ${theme.colors.warning};
+  `,
+  'warning-blue': ({ theme }) => css`
+    background-color: ${theme.colors.zumthor};
+    color: ${theme.colors.info};
+  `,
+  'warning-orange': ({ theme }) => css`
+    background-color: ${theme.colors.serenade};
+    color: ${theme.colors.orange};
+  `,
+  'alert-orange': ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.orange};
+  `,
+  'alert-red': ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.warning};
   `,
 }
 
-const variants = {
-  info: css`
-    background-color: ${themeColors.zumthor};
-    color: ${themeColors.info};
-  `,
-  success: css`
-    background-color: ${themeColors.foam};
-    color: ${themeColors.success};
-  `,
-  security: css`
-    background-color: ${themeColors.gray100};
-    color: ${themeColors.gray550};
-  `,
-  warning: css`
-    background-color: ${themeColors.pippin};
-    color: ${themeColors.warning};
-  `,
-  'warning-blue': css`
-    background-color: ${themeColors.zumthor};
-    color: ${themeColors.info};
-  `,
-  'warning-orange': css`
-    background-color: ${themeColors.serenade};
-    color: ${themeColors.orange};
-  `,
-  'alert-orange': css`
-    background-color: ${themeColors.white};
-    color: ${themeColors.orange};
-  `,
-  'alert-red': css`
-    background-color: ${themeColors.white};
-    color: ${themeColors.warning};
-  `,
-}
+const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
+
+const StyledContainer = styled(Box, {
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: ${({ theme }) => theme.radii.default};
+  color: ${({ theme }) => theme.colors.white};
+  padding: 12px;
+  ${variantStyles}
+`
+
+const StyledText = styled.p`
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 16px;
+  width: 100%;
+`
 
 const NotificationBar = ({ variant, children, iconSize, icon, ...props }) => (
-  <Box css={[styles.container, variants[variant]]} {...props}>
+  <StyledContainer variant={variant} {...props}>
     <Icon
       color={colors[variant]}
       name={icon !== '' ? icon : icons[variant]}
       size={iconSize}
     />
-    <p css={styles.text}>{children}</p>
-  </Box>
+    <StyledText>{children}</StyledText>
+  </StyledContainer>
 )
 
 NotificationBar.defaultProps = {
@@ -105,4 +109,4 @@ NotificationBar.propTypes = {
   variant: PropTypes.oneOf(notificationVariants),
 }
 
-export { NotificationBar }
+export default NotificationBar

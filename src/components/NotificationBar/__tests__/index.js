@@ -1,5 +1,5 @@
 import React from 'react'
-import { NotificationBar, notificationVariants } from '..'
+import NotificationBar, { notificationVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('NotificationBar', () => {

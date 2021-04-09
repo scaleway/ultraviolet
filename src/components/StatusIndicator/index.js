@@ -1,30 +1,29 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { flash } from '../../utils/animations'
 import Dot from '../Dot'
 import Tooltip from '../Tooltip'
 
 const defaultStatuses = {
-  ready: colors.green,
-  available: colors.green,
-  running: colors.green,
-  error: colors.red,
-  unavailable: colors.red,
-  locked: colors.red,
-  disk_full: colors.red,
-  starting: colors.blue,
-  stopping: colors.blue,
-  snapshotting: colors.blue,
-  stopped: colors.gray550,
-  pending: colors.blue,
-  deleting: colors.blue,
-  creating: colors.blue,
-  updating: colors.blue,
-  warning: colors.blue,
-  stopped_in_place: colors.orange,
-  deployed: colors.green,
+  ready: 'green',
+  available: 'green',
+  running: 'green',
+  error: 'red',
+  unavailable: 'red',
+  locked: 'red',
+  disk_full: 'red',
+  starting: 'blue',
+  stopping: 'blue',
+  snapshotting: 'blue',
+  stopped: 'gray550',
+  pending: 'blue',
+  deleting: 'blue',
+  creating: 'blue',
+  updating: 'blue',
+  warning: 'blue',
+  stopped_in_place: 'orange',
+  deployed: 'green',
 }
 
 const cssAnimation = css`
@@ -34,7 +33,7 @@ const cssAnimation = css`
 const StatusIndicator = ({ tooltip, status, statuses, animated, ...props }) => (
   <Tooltip text={tooltip}>
     <Dot
-      color={{ ...defaultStatuses, ...statuses }[status] || colors.blue}
+      color={{ ...defaultStatuses, ...statuses }[status] || 'blue'}
       css={animated && cssAnimation}
       status={status}
       {...props}
@@ -73,4 +72,4 @@ StatusIndicator.propTypes = {
   statuses: PropTypes.objectOf(PropTypes.string),
 }
 
-export { StatusIndicator }
+export default StatusIndicator

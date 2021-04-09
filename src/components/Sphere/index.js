@@ -1,33 +1,43 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 
-const styles = {
-  sphere: ({ size, bgColors }) => {
-    const isHalved = bgColors.length > 1
+const bordersStyles = ({ size, bgColors, theme }) => {
+  const isHalved = bgColors.length > 1
+  const finalColors = bgColors?.map(bgColor => theme.colors[bgColor] ?? bgColor)
 
-    return css`
-      align-items: center;
-      border-left: ${size / 2}px solid ${bgColors[0]};
-      border-top: ${size / 2}px solid ${bgColors[0]};
-      border-right: ${size / 2}px solid ${isHalved ? bgColors[1] : bgColors[0]};
-      border-bottom: ${size / 2}px solid ${isHalved ? bgColors[1] : bgColors[0]};
-      border-radius: 50%;
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      width: 100%;
-    `
-  },
-  textSphere: ({ textColor, textSize = 10 }) => css`
-    color: ${textColor};
-    font-size: ${textSize}px;
-  `,
+  return css`
+    border-left: ${size / 2}px solid ${finalColors[0]};
+    border-top: ${size / 2}px solid ${finalColors[0]};
+    border-right: ${size / 2}px solid
+      ${isHalved ? finalColors[1] : finalColors[0]};
+    border-bottom: ${size / 2}px solid
+      ${isHalved ? finalColors[1] : finalColors[0]};
+    border-radius: 50%;
+  `
 }
 
-export const Sphere = ({
+const StyledSphere = styled(Box, {
+  shouldForwardProp: prop => !['size', 'bgColors'].includes(prop),
+})`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  ${bordersStyles}
+`
+
+const StyledTextSphere = styled('div', {
+  shouldForwardProp: prop => !['color', 'fontSize'].includes(prop),
+})`
+  color: ${({ theme, color }) => theme.colors[color] ?? color};
+  font-size: ${({ fontSize = 10 }) => fontSize}px;
+`
+
+const Sphere = ({
   size,
   bgColors,
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
@@ -35,31 +45,27 @@ export const Sphere = ({
   textSize,
   ...props
 }) => (
-  <Box
-    css={styles.sphere({ size, bgColors })}
+  <StyledSphere
+    size={size}
+    bgColors={bgColors}
     width={size}
     height={size}
     position="relative"
     {...props}
   >
     {text && (
-      <div
-        css={styles.textSphere({
-          textColor,
-          textSize,
-        })}
-      >
+      <StyledTextSphere color={textColor} fontSize={textSize}>
         {text[0]}
-      </div>
+      </StyledTextSphere>
     )}
-  </Box>
+  </StyledSphere>
 )
 
 Sphere.defaultProps = {
   size: 32,
-  bgColors: [colors.violet],
+  bgColors: ['violet'],
   text: undefined,
-  textColor: colors.white,
+  textColor: 'white',
   textSize: 16,
 }
 

@@ -1,4 +1,5 @@
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -7,9 +8,8 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import { colors } from '../../theme'
 import { Box } from '../Box'
-import { Tag } from '../Tag'
+import Tag from '../Tag'
 
 const textStyle = maxTagWidth => css`
   overflow: hidden;
@@ -18,17 +18,20 @@ const textStyle = maxTagWidth => css`
   white-space: nowrap;
 `
 
-const text = css`
-  color: ${colors.gray700};
+const StyledTooltipReference = styled(TooltipReference)`
+  color: ${({ theme }) => theme.colors.primary};
+  border: none;
   font-size: 14px;
   align-self: center;
   max-width: 350px;
   overflow: hidden;
   white-space: pre;
   text-overflow: ellipsis;
+  background-color: transparent;
 `
 
 const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
+  const theme = useTheme()
   let tmpThreshold = threshold
   if (
     tags.length &&
@@ -49,7 +52,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
 
   return (
     <Box display="flex">
-      <Box display="flex" alignItems="center" color={colors.gray700} {...props}>
+      <Box display="flex" alignItems="center" color="gray700" {...props}>
         {tags.slice(0, visibleTagsCount).map((tag, i) => (
           <Tag
             key={`${tag}-${i}`}
@@ -62,21 +65,13 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
       </Box>
       {hasManyTags && (
         <>
-          <TooltipReference
-            {...tooltip}
-            as={Box}
-            css={text}
-            px={1}
-            color={colors.primary}
-            border="none"
-            backgroundColor="transparent"
-          >
+          <StyledTooltipReference {...tooltip} as={Box} px={1}>
             +{tags.length - tmpThreshold}
-          </TooltipReference>
+          </StyledTooltipReference>
           <Tooltip {...tooltip}>
             <TooltipArrow
               {...tooltip}
-              style={{ fill: colors.white, top: '93%' }}
+              style={{ fill: theme.colors.white, top: '93%' }}
             />
             <Box
               boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
@@ -84,7 +79,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
               py="4px"
               display="flex"
               alignItems="center"
-              backgroundColor={colors.white}
+              backgroundColor="white"
               borderRadius="4px"
               maxWidth="80vw"
               flexWrap="wrap"

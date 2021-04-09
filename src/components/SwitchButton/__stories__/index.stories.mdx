@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { SwitchButton } from '..'
+import SwitchButton from '..'
 import { BorderedBox, Col, Grid, Row } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -21,7 +21,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <ControlValue value="a">
       {({ value, onChange }) => (
         <Grid>
@@ -61,7 +61,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas isColumn>
-  <Story name="variants-default">
+  <Story name="Variant default">
     <ControlValue value="a">
       {({ value, onChange }) => (
         <Grid>
@@ -93,7 +93,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
       )}
     </ControlValue>
   </Story>
-  <Story name="variants-segment">
+  <Story name="Variant segment">
     <ControlValue value="a">
       {({ value, onChange }) => (
         <Grid>
@@ -140,7 +140,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 </Description>
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <ControlValue value="a">
       {({ value, onChange }) => (
         <Grid>

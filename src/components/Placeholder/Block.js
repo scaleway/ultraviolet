@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import React from 'react'
 import { Box } from '../Box'
-import { Separator } from '../Separator'
+import Separator from '../Separator'
 import Line from './Line'
 
 const styles = {

@@ -4,12 +4,11 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio } from 'reakit'
-import { colors } from '../../theme'
 import { Box } from '../Box'
 import Tooltip from '../Tooltip'
 
 const variants = {
-  segment: () => css`
+  segment: ({ theme }) => css`
     font-size: 14;
     height: 40px;
     transition: none;
@@ -19,58 +18,58 @@ const variants = {
     &:hover,
     &:focus {
       box-shadow: none;
-      border-color: ${colors.transparent};
-      color: ${colors.gray700};
+      border-color: ${theme.colors.transparent};
+      color: ${theme.colors.gray700};
     }
 
     &[aria-checked='true'] {
-      background-color: ${colors.primary};
-      color: ${colors.white};
+      background-color: ${theme.colors.primary};
+      color: ${theme.colors.white};
       :hover {
-        color: ${colors.white};
+        color: ${theme.colors.white};
       }
     }
 
     &[aria-checked='false'] {
       background-color: white;
-      color: ${colors.gray700};
-      border-color: ${colors.transparent};
+      color: ${theme.colors.gray700};
+      border-color: ${theme.colors.transparent};
       :hover,
       :focus {
-        color: ${colors.gray700};
-        border-color: ${colors.transparent};
+        color: ${theme.colors.gray700};
+        border-color: ${theme.colors.transparent};
         box-shadow: none;
       }
     }
   `,
 }
 
-const active = () => css`
+const active = ({ theme }) => css`
   &:hover,
   &:focus {
-    color: ${colors.gray550};
-    border-color: ${colors.primary};
+    color: ${theme.colors.gray550};
+    border-color: ${theme.colors.primary};
   }
 
   &:hover {
-    box-shadow: 0 0 8px 2px ${colors.gray200};
+    box-shadow: 0 0 8px 2px ${theme.colors.gray200};
   }
 
   &:focus {
-    box-shadow: 0 0 1px 2px ${transparentize(0.75, colors.primary)};
+    box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.colors.primary)};
   }
 `
 
-const disabledClass = () => css`
+const disabledClass = ({ theme }) => css`
   cursor: not-allowed;
-  color: ${colors.gray350};
-  background-color: ${colors.gray50};
-  border-color: ${colors.gray350};
+  color: ${theme.colors.gray350};
+  background-color: ${theme.colors.gray50};
+  border-color: ${theme.colors.gray350};
   pointer-events: none;
 
   &[aria-checked='true'] {
-    color: ${colors.gray350};
-    border-color: ${colors.gray350};
+    color: ${theme.colors.gray350};
+    border-color: ${theme.colors.gray350};
   }
 `
 
@@ -81,13 +80,13 @@ const StyledSwitch = styled(Box)`
   border-radius: 4px;
   align-items: center;
   border-style: solid;
-  border-color: ${colors.gray350};
+  border-color: ${({ theme }) => theme.colors.gray350};
   border-width: 1px;
   padding: 16px;
   transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
   user-select: none;
   touch-action: manipulation;
-  color: ${colors.gray550};
+  color: ${({ theme }) => theme.colors.gray550};
   font-size: 16px;
   line-height: 22px;
   position: relative;
@@ -96,8 +95,8 @@ const StyledSwitch = styled(Box)`
 
   &[aria-checked='true'] {
     cursor: auto;
-    color: ${colors.primary};
-    border-color: ${colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
 
   ${({ checked, disabled }) => !checked && !disabled && active}
@@ -110,7 +109,7 @@ const StyledRadio = styled(Radio)`
   opacity: 0.01;
 `
 
-export const SwitchButton = ({
+const SwitchButton = ({
   checked,
   disabled,
   onChange,
@@ -179,3 +178,5 @@ SwitchButton.propTypes = {
   variant: PropTypes.string,
   tooltip: PropTypes.string,
 }
+
+export default SwitchButton

@@ -1,5 +1,5 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
-import { Separator } from '..'
+import Separator from '..'
 import { Box } from '../..'
 
 <Meta title="Components/Separator" component={Separator} />
@@ -57,9 +57,14 @@ import { Box } from '../..'
 <Canvas>
   <Story name="with-icon">
     <Box>
-      <Box>top part</Box>
+      <Box>horizontal start</Box>
       <Separator my={1} icon="ray-top-arrow" />
-      <Box>bottom part</Box>
+      <Box>horizontal end</Box>
+    </Box>
+    <Box mt={2} display="flex" alignItems="center">
+      <Box>vertical start</Box>
+      <Separator direction="vertical" mx={1} icon="ray-start-arrow" />
+      <Box>vertical end</Box>
     </Box>
   </Story>
 </Canvas>
