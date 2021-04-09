@@ -37,7 +37,7 @@
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
     "test": "jest",
-    "prepare": "is-ci || husky install"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": [
