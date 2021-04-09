@@ -1,3 +1,29 @@
+## [0.74.0](https://github.com/scaleway/scaleway-ui/compare/v0.73.0...v0.74.0) (2021-04-09)
+
+
+### :repeat: CI
+
+* safeguard deploy domain name ([#207](https://github.com/scaleway/scaleway-ui/issues/207)) ([7560fb9](https://github.com/scaleway/scaleway-ui/commit/7560fb9e17a98b2a17c3082840280916cd2210ba))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/core from 7.13.14 to 7.13.15 ([#238](https://github.com/scaleway/scaleway-ui/issues/238)) ([3d20b02](https://github.com/scaleway/scaleway-ui/commit/3d20b0237444bcef629cbbe7a27866ba36f97359))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#241](https://github.com/scaleway/scaleway-ui/issues/241)) ([2020bd7](https://github.com/scaleway/scaleway-ui/commit/2020bd7be4b58068d1317cf63eecd8c052863572))
+* **deps-dev:** bump @babel/preset-env from 7.13.12 to 7.13.15 ([#227](https://github.com/scaleway/scaleway-ui/issues/227)) ([9c12420](https://github.com/scaleway/scaleway-ui/commit/9c1242005993d88a3342a8a4a67e082243157bf0))
+* **deps-dev:** bump @emotion/jest from 11.2.1 to 11.3.0 ([#233](https://github.com/scaleway/scaleway-ui/issues/233)) ([0b96542](https://github.com/scaleway/scaleway-ui/commit/0b965428fdabc2d228709dcecbb5dfaec1a679ba))
+* **deps-dev:** bump @emotion/styled from 11.1.5 to 11.3.0 ([#236](https://github.com/scaleway/scaleway-ui/issues/236)) ([18d5a5e](https://github.com/scaleway/scaleway-ui/commit/18d5a5eddeaea1d153c8adf62c6eee076367170d))
+* **deps-dev:** bump @storybook/addon-links from 6.2.5 to 6.2.7 ([#237](https://github.com/scaleway/scaleway-ui/issues/237)) ([9e752aa](https://github.com/scaleway/scaleway-ui/commit/9e752aab6724a26d9b77ba1905ca1b9292712db9))
+* **deps-dev:** bump @storybook/addons from 6.2.5 to 6.2.7 ([#230](https://github.com/scaleway/scaleway-ui/issues/230)) ([286c534](https://github.com/scaleway/scaleway-ui/commit/286c53486e3554c51d00c2b17c7c63fcead21867))
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.2.5 to 6.2.7 ([#239](https://github.com/scaleway/scaleway-ui/issues/239)) ([8a491a5](https://github.com/scaleway/scaleway-ui/commit/8a491a50138a7ae5e8d5b24d129416f7bc7a5351))
+* **deps-dev:** bump @storybook/react from 6.2.5 to 6.2.7 ([#234](https://github.com/scaleway/scaleway-ui/issues/234)) ([6d6dc96](https://github.com/scaleway/scaleway-ui/commit/6d6dc96d1f1da1bf2978c9f361ab0e0ed03d08fe))
+* **deps-dev:** bump rollup from 2.44.0 to 2.45.0 ([#228](https://github.com/scaleway/scaleway-ui/issues/228)) ([c055a22](https://github.com/scaleway/scaleway-ui/commit/c055a228eb8a623c9544cdf849bfce882a0f4b76))
+
+
+### :gear: Features
+
+* port Chart ([#204](https://github.com/scaleway/scaleway-ui/issues/204)) ([b51c123](https://github.com/scaleway/scaleway-ui/commit/b51c123b86f6f0ee463b1d93740fb193e27ac2b7))
+
 ## [0.73.0](https://github.com/scaleway/scaleway-ui/compare/v0.72.1...v0.73.0) (2021-04-09)
 
 
