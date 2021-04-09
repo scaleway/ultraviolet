@@ -1,3 +1,27 @@
+### [0.72.1](https://github.com/scaleway/scaleway-ui/compare/v0.72.0...v0.72.1) (2021-04-09)
+
+
+### :package: Chore
+
+* **deps:** bump react-datepicker from 3.6.0 to 3.7.0 ([#216](https://github.com/scaleway/scaleway-ui/issues/216)) ([158c42e](https://github.com/scaleway/scaleway-ui/commit/158c42e8f8dcadd1767ccea380ca4335310c03b1))
+* **deps:** bump react-select from 4.1.0 to 4.3.0 ([#159](https://github.com/scaleway/scaleway-ui/issues/159)) ([ca60aba](https://github.com/scaleway/scaleway-ui/commit/ca60aba3f60529db2f5b7309ff5df470ebc76460))
+* **deps:** bump reakit from 1.3.6 to 1.3.7 ([#217](https://github.com/scaleway/scaleway-ui/issues/217)) ([e8ca8a8](https://github.com/scaleway/scaleway-ui/commit/e8ca8a84e386a21178fd30648dcd3c70f4c67c67))
+* upgrade all deps ([ffe9e33](https://github.com/scaleway/scaleway-ui/commit/ffe9e331d52645e58e1c65fdc5f95c1b6f961ecd))
+* **deps-dev:** bump @commitlint/cli from 12.0.1 to 12.1.1 ([#213](https://github.com/scaleway/scaleway-ui/issues/213)) ([a2d21e8](https://github.com/scaleway/scaleway-ui/commit/a2d21e81ecc14e36d5a298c0f12ff0c9fb00a76d))
+* **deps-dev:** bump @commitlint/config-conventional ([#218](https://github.com/scaleway/scaleway-ui/issues/218)) ([df9219a](https://github.com/scaleway/scaleway-ui/commit/df9219a1afdb19b8d1aa6b1e8ddc179abb29f1c1))
+* **deps-dev:** bump @semantic-release/github from 7.2.0 to 7.2.1 ([#220](https://github.com/scaleway/scaleway-ui/issues/220)) ([8bc282f](https://github.com/scaleway/scaleway-ui/commit/8bc282fb088c956e9d89ab15f608af47576407bf))
+* **deps-dev:** bump @semantic-release/npm from 7.0.10 to 7.1.0 ([#212](https://github.com/scaleway/scaleway-ui/issues/212)) ([74f5b8f](https://github.com/scaleway/scaleway-ui/commit/74f5b8f93f98d92e0adb8c93764740a0c44e3668))
+* **deps-dev:** bump @storybook/react from 6.1.21 to 6.2.2 ([#206](https://github.com/scaleway/scaleway-ui/issues/206)) ([6dbbee1](https://github.com/scaleway/scaleway-ui/commit/6dbbee1d550fe0f1b3c284974443cc4dbaa2dbab))
+* **deps-dev:** bump @storybook/theming from 6.2.3 to 6.2.4 ([#221](https://github.com/scaleway/scaleway-ui/issues/221)) ([c770192](https://github.com/scaleway/scaleway-ui/commit/c770192a9dc3e0c260ff77ff7c542d9cdee9bf1f))
+* **deps-dev:** bump husky from 4.3.8 to 6.0.0 ([#189](https://github.com/scaleway/scaleway-ui/issues/189)) ([ef231c8](https://github.com/scaleway/scaleway-ui/commit/ef231c82d2b9c66a9cbc704f09695fc54c8d8c86))
+* **deps-dev:** bump rollup-plugin-visualizer from 4.2.2 to 5.3.0 ([#214](https://github.com/scaleway/scaleway-ui/issues/214)) ([af4528b](https://github.com/scaleway/scaleway-ui/commit/af4528b41494c7b9d51ee6a05264f28ca9ca93af))
+
+
+### :bug: Bug Fixes
+
+* **build:** manually inject css files ([#219](https://github.com/scaleway/scaleway-ui/issues/219)) ([47b3eca](https://github.com/scaleway/scaleway-ui/commit/47b3ecaa5ec402447cec84cc194c7299c9ae09bd))
+* **StealthCopiable:** allow component as children instead of only string ([#224](https://github.com/scaleway/scaleway-ui/issues/224)) ([eea458e](https://github.com/scaleway/scaleway-ui/commit/eea458e81a7cfd3f7bbef4e721f326fa52f0935f))
+
 ## [0.72.0](https://github.com/scaleway/scaleway-ui/compare/v0.71.0...v0.72.0) (2021-04-06)
 
 
