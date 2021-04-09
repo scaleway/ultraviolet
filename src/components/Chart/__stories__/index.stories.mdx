@@ -1,0 +1,172 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import Chart from '..'
+
+<Meta title="Components/Chart" />
+
+# Chart
+
+## Variants
+
+### Donut
+
+<Canvas>
+  <Story name="Basic">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          product: 'compute',
+          color: '#4F1A81',
+          percent: 50,
+        },
+        {
+          product: 'gpu',
+          color: '#F4306C',
+          percent: 50,
+        },
+      ]}
+    />
+  </Story>
+</Canvas>
+
+### Donut with content
+
+<Canvas>
+  <Story name="With Content">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          product: 'compute',
+          color: '#4F1A81',
+          percent: 50,
+        },
+        {
+          product: 'gpu',
+          color: '#F4306C',
+          percent: 50,
+        },
+      ]}
+      content="40"
+    />
+  </Story>
+</Canvas>
+
+### Donut With Empty Legend Placeholder
+
+<Canvas>
+  <Story name="With Empty Legend Placeholder">
+    <Chart
+      variant="donut"
+      emptyLegend="I'm alone in the dark"
+      hasLegend
+    />
+  </Story>
+</Canvas>
+
+## With Legends
+
+<Canvas>
+  <Story name="With Legends">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          product: 'compute',
+          name: 'Compute',
+          color: '#4F1A81',
+          percent: 50,
+          value: '20',
+        },
+        {
+          product: 'gpu',
+          name: 'GPU Instances',
+          color: '#F4306C',
+          percent: 50,
+          value: '20',
+        },
+      ]}
+      content="40"
+      hasLegend
+    />
+  </Story>
+</Canvas>
+
+### Legends with Popper details
+
+<Canvas>
+  <Story name="With Popper">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          product: 'compute',
+          name: 'Compute',
+          color: '#4F1A81',
+          percent: 50,
+          value: '20',
+          details: [
+            {
+              name: 'Start-1S',
+              value: '€10',
+            },
+            {
+              name: 'Start-2L',
+              value: '€10',
+            },
+          ],
+        },
+        {
+          product: 'gpu',
+          name: 'GPU Instances',
+          color: '#F4306C',
+          percent: 50,
+          value: '20',
+          details: [
+            {
+              name: 'Start-1S',
+              value: '€10',
+            },
+            {
+              name: 'Start-2L',
+              value: '€10',
+            },
+          ],
+        },
+      ]}
+      content="40"
+      hasLegend
+    />
+  </Story>
+</Canvas>
+
+### Donut with discount
+
+<Canvas>
+  <Story name="With Discount">
+    <Chart
+      variant="donut"
+      hasLegend
+      data={[
+        {
+          product: 'discount',
+          needPattern: true,
+          name: 'GPU Instances',
+          color: '#F4306C',
+          percent: 100,
+          value: '20',
+          details: [
+            {
+              name: 'Start-1S',
+              value: '€10',
+            },
+            {
+              name: 'Start-2L',
+              value: '€10',
+            },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Canvas>
