@@ -2,16 +2,11 @@
 
 exports[`Sphere renders correctly when halved 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-left: 16px solid #333;
-  border-top: 16px solid #333;
-  border-right: 16px solid #666;
-  border-bottom: 16px solid #666;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,32 +17,32 @@ exports[`Sphere renders correctly when halved 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
+  border-left: 16px solid #333;
+  border-top: 16px solid #333;
+  border-right: 16px solid #666;
+  border-bottom: 16px solid #666;
+  border-radius: 50%;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   />
 </DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-left: 16px solid #4f0599;
-  border-top: 16px solid #4f0599;
-  border-right: 16px solid #4f0599;
-  border-bottom: 16px solid #4f0599;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,32 +53,32 @@ exports[`Sphere renders correctly with default values 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
+  border-left: 16px solid #4f0599;
+  border-top: 16px solid #4f0599;
+  border-right: 16px solid #4f0599;
+  border-bottom: 16px solid #4f0599;
+  border-radius: 50%;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   width: 32px;
   height: 32px;
   position: relative;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   />
 </DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with one char and smaller 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .emotion-1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-left: 10px solid #000;
-  border-top: 10px solid #000;
-  border-right: 10px solid #000;
-  border-bottom: 10px solid #000;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,24 +89,29 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
+  border-left: 10px solid #000;
+  border-top: 10px solid #000;
+  border-right: 10px solid #000;
+  border-bottom: 10px solid #000;
+  border-radius: 50%;
 }
 
-.emotion-0.emotion-0 {
+.emotion-1.emotion-1 {
   width: 20px;
   height: 20px;
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #fff;
   font-size: 10px;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1"
+      class="emotion-2 emotion-3"
     >
       ★
     </div>
