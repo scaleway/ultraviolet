@@ -1,3 +1,10 @@
+### [0.75.2](https://github.com/scaleway/scaleway-ui/compare/v0.75.1...v0.75.2) (2021-04-12)
+
+
+### :bug: Bug Fixes
+
+* correct named exports ([#247](https://github.com/scaleway/scaleway-ui/issues/247)) ([2ec0e25](https://github.com/scaleway/scaleway-ui/commit/2ec0e2540fe143ccb2c98f7c6a260a4a7cdae1de))
+
 ### [0.75.1](https://github.com/scaleway/scaleway-ui/compare/v0.75.0...v0.75.1) (2021-04-12)
 
 
