@@ -55,6 +55,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
       <Box display="flex" alignItems="center" color="gray700" {...props}>
         {tags.slice(0, visibleTagsCount).map((tag, i) => (
           <Tag
+            // eslint-disable-next-line react/no-array-index-key
             key={`${tag}-${i}`}
             textStyle={textStyle(maxTagWidth)}
             mr={i + 1 !== visibleTagsCount ? 1 : 0}
@@ -85,6 +86,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
               flexWrap="wrap"
             >
               {tags.slice(visibleTagsCount).map((tag, index) => (
+                // eslint-disable-next-line react/no-array-index-key
                 <Tag m="4px" key={`${tag}-${index}`}>
                   {tag}
                 </Tag>

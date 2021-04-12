@@ -183,6 +183,7 @@ const VerificationCode = ({
           aria-invalid={error}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : null}
+          // eslint-disable-next-line react/no-array-index-key
           key={`${inputId}-${index}`}
           data-id={index}
           value={value}

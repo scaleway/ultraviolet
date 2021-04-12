@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
-import { getUUID } from '../../utils'
 import Box from '../Box'
 import Icon from '../Icon'
 import { Typography } from '../Typography'
@@ -148,7 +147,8 @@ const CreationProgress = ({
         }
 
         return (
-          <React.Fragment key={getUUID()}>
+          // eslint-disable-next-line react/no-array-index-key
+          <React.Fragment key={index}>
             <StyledStepContainer>
               <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 

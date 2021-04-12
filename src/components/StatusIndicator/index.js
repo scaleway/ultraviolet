@@ -53,12 +53,13 @@ StatusIndicator.defaultProps = {
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
   status: ({ statuses: propsStatuses, ...props }, propName, componentName) => {
+    const { [propName]: propsPropName } = props
     const availableStatuses = [
       ...statuses,
       ...(propsStatuses ? Object.keys(propsStatuses) : []),
     ]
 
-    if (!availableStatuses.includes(props[propName])) {
+    if (!availableStatuses.includes(propsPropName)) {
       return new Error(
         `Invalid prop \`${propName}\` supplied to \`'${componentName}\`. Must be one of \`${JSON.stringify(
           availableStatuses,

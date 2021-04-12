@@ -431,6 +431,7 @@ const Range = ({
           offsetTop={offsetTop}
           width={cursorWidth}
           grabbed={grabbedCursor !== undefined}
+          // eslint-disable-next-line react/no-array-index-key
           key={`cursor-${index}`}
           ref={cursorsRef[index]}
           onMouseDown={() => onMouseDown(index)}

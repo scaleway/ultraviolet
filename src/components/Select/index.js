@@ -102,9 +102,9 @@ const Select = ({
   ...props
 }) => {
   const disabledChildren = () =>
-    flattenChildren(children).map((child, index) =>
+    flattenChildren(children).map(child =>
       React.cloneElement(child, {
-        key: index,
+        key: child.key,
         disabled: true,
         ...child.props,
       }),

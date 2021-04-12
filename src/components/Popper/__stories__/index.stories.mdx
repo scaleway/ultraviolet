@@ -6,6 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import Popper, { popperVariants } from '..'
+import { getUUID } from '../../../utils'
 import Box from '../../Box'
 import { Button } from '../../Button'
 import Icon from '../../Icon'
@@ -73,11 +74,14 @@ import Icon from '../../Icon'
       >
         {() => (
           <Box display="flex" flexDirection="column">
-            {new Array(15).fill(0).map((arr, index) => (
-              <Box key={index} width={30} height={30} m={2}>
-                {index}
-              </Box>
-            ))}
+            {new Array(15).fill(0).map(() => {
+              const uuid = getUUID()
+              return (
+                <Box key={uuid} width={30} height={30} m={2}>
+                  {uuid.substr(0, 3)}
+                </Box>
+              )
+            })}
           </Box>
         )}
       </Popper>
@@ -94,6 +98,7 @@ import Icon from '../../Icon'
     <Box>
       <Box display="flex" flexDirection="column">
         <Popper
+          key="left-1"
           placement="left-start"
           variant="black"
           aria-label="Custom popover with buttom"
@@ -102,6 +107,7 @@ import Icon from '../../Icon'
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
         <Popper
+          key="left-2"
           placement="left"
           variant="black"
           aria-label="Custom popover with buttom"
@@ -110,6 +116,7 @@ import Icon from '../../Icon'
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
         <Popper
+          key="left-3"
           placement="left-end"
           variant="black"
           aria-label="Custom popover with buttom"
