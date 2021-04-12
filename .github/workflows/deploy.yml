@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, console]
+    runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
       REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
@@ -18,8 +18,8 @@ jobs:
       - name: Cache Docker layers
         uses: actions/cache@v2.1.4
         with:
-          path: /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
-          key: ${{ runner.os }}-buildx-${{ hashFiles('**/yarn.lock') }}
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx
           restore-keys: |
             ${{ runner.os }}-buildx-
 
@@ -27,7 +27,6 @@ jobs:
         uses: rlespinasse/github-slug-action@v3.x
       - name: Export custom variables
         run: |
-          env
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
           ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
@@ -56,8 +55,8 @@ jobs:
         with:
           push: true
           tags: ${{ env.IMAGE }}
-          cache-from: type=local,src=/tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
-          cache-to: type=local,dest=/tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }},mode=max
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
 
       - name: Set Docker context
         uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
@@ -69,10 +68,7 @@ jobs:
       - name: Deploy docker
         env:
           VERSION: v-${{ env.BRANCH_SLUG }}
-        # TODO: remove the context rm when we switch back to public runners
-        run: |
-          docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
-          docker context rm ${VERSION}
+        run: docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.5.2
@@ -86,5 +82,5 @@ jobs:
 
       - name: Move cache
         run: |
-          rm -rf /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
-          mv /tmp/.buildx-cache-new-${{ hashFiles('**/yarn.lock') }} /tmp/.buildx-cache-${{ hashFiles('**/yarn.lock') }}
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
