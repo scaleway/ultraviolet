@@ -132,6 +132,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #4F1A81;
   -webkit-animation: animation-0 linear 1500ms infinite;
   animation: animation-0 linear 1500ms infinite;
 }
@@ -200,6 +201,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #F4306C;
 }
 
 .emotion-39 {
@@ -283,6 +285,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
           />
           <div
             class="emotion-18 emotion-19"
+            color="#4F1A81"
           />
           <div
             class="emotion-20 emotion-21"
@@ -321,6 +324,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
           />
           <div
             class="emotion-35 emotion-19"
+            color="#F4306C"
           />
           <div
             class="emotion-20 emotion-21"
@@ -482,6 +486,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #4F1A81;
   -webkit-animation: animation-0 linear 1500ms infinite;
   animation: animation-0 linear 1500ms infinite;
 }
@@ -550,6 +555,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #F4306C;
 }
 
 .emotion-39 {
@@ -633,6 +639,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
           />
           <div
             class="emotion-18 emotion-19"
+            color="#4F1A81"
           />
           <div
             class="emotion-20 emotion-21"
@@ -671,6 +678,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
           />
           <div
             class="emotion-35 emotion-19"
+            color="#F4306C"
           />
           <div
             class="emotion-20 emotion-21"
@@ -832,6 +840,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #4F1A81;
   -webkit-animation: animation-0 linear 1500ms infinite;
   animation: animation-0 linear 1500ms infinite;
 }
@@ -900,6 +909,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #F4306C;
 }
 
 .emotion-39 {
@@ -983,6 +993,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
           />
           <div
             class="emotion-18 emotion-19"
+            color="#4F1A81"
           />
           <div
             class="emotion-20 emotion-21"
@@ -1021,6 +1032,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
           />
           <div
             class="emotion-35 emotion-19"
+            color="#F4306C"
           />
           <div
             class="emotion-20 emotion-21"
@@ -1513,6 +1525,7 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #4F1A81;
 }
 
 .emotion-20 {
@@ -1557,6 +1570,15 @@ exports[`Chart renders correctly with detailed legend 1`] = `
 .emotion-28 {
   margin-left: 6px;
   font-weight: 400;
+}
+
+.emotion-35 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
 }
 
 <div
@@ -1616,6 +1638,7 @@ exports[`Chart renders correctly with detailed legend 1`] = `
           />
           <div
             class="emotion-18 emotion-19"
+            color="#4F1A81"
           />
           <div
             class="emotion-20 emotion-21"
@@ -1653,7 +1676,8 @@ exports[`Chart renders correctly with detailed legend 1`] = `
             data-testid="chart-tooltip-gpu"
           />
           <div
-            class="emotion-18 emotion-19"
+            class="emotion-35 emotion-19"
+            color="#F4306C"
           />
           <div
             class="emotion-20 emotion-21"
@@ -1800,16 +1824,17 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #F4306C;
   opacity: 0.6;
-  border: 0.3px solid;
+  border: 0.3px solid #F4306C;
   -webkit-background-size: 10px;
   background-size: 10px;
   background: repeating-linear-gradient(
       0deg,
       transparent,
       transparent 1px,
-       1px,
-       2px
+      #F4306C 1px,
+      #F4306C 2px
     );
 }
 
@@ -1930,6 +1955,7 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
           />
           <div
             class="emotion-16 emotion-17"
+            color="#F4306C"
           />
           <div
             class="emotion-18 emotion-19"
@@ -2207,6 +2233,7 @@ exports[`Chart renders correctly with legend 1`] = `
   width: 10px;
   height: 10px;
   margin: 0 8px;
+  background: #4F1A81;
 }
 
 .emotion-20 {
@@ -2251,6 +2278,15 @@ exports[`Chart renders correctly with legend 1`] = `
 .emotion-28 {
   margin-left: 6px;
   font-weight: 400;
+}
+
+.emotion-35 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
 }
 
 <div
@@ -2310,6 +2346,7 @@ exports[`Chart renders correctly with legend 1`] = `
           />
           <div
             class="emotion-18 emotion-19"
+            color="#4F1A81"
           />
           <div
             class="emotion-20 emotion-21"
@@ -2347,7 +2384,8 @@ exports[`Chart renders correctly with legend 1`] = `
             data-testid="chart-tooltip-gpu"
           />
           <div
-            class="emotion-18 emotion-19"
+            class="emotion-35 emotion-19"
+            color="#F4306C"
           />
           <div
             class="emotion-20 emotion-21"
