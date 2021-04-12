@@ -10,7 +10,10 @@ Scaleway UI library.
 ---
 
 ⚠️ This library is far from being ready. We are actively working on it. Our goal is to have an easy to use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
+
 ⚠️ We are going to break a lot of things towards V1. This library is not yet made to be used by external projects
+
+⚠️ We currently do not accept contributions from external contributors
 
 ## Quick Start
 
