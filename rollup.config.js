@@ -21,6 +21,7 @@ export default async () => {
 
   const external = id =>
     !id.endsWith('.css') &&
+    !id.endsWith('.png') &&
     [
       '@emotion',
       ...Object.keys(pkg.dependencies || {}),
@@ -53,7 +54,9 @@ export default async () => {
       commonjs({
         include: '**/node_modules/**',
       }),
-      url(),
+      url({
+        limit: 63488,
+      }),
       svgr({ memo: true }),
       PROFILE &&
         visualizer({
