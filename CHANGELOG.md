@@ -1,3 +1,15 @@
+### [0.75.1](https://github.com/scaleway/scaleway-ui/compare/v0.75.0...v0.75.1) (2021-04-12)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @storybook/addon-essentials from 6.2.5 to 6.2.7 ([#240](https://github.com/scaleway/scaleway-ui/issues/240)) ([3752790](https://github.com/scaleway/scaleway-ui/commit/375279027cb89f56fa3dca918590b659bbc954ec))
+
+
+### :bug: Bug Fixes
+
+* **Chart:** correct Legend bullet color ([#246](https://github.com/scaleway/scaleway-ui/issues/246)) ([0b7358c](https://github.com/scaleway/scaleway-ui/commit/0b7358c3224eb38225b85dede6911f1143330d2c))
+
 ## [0.75.0](https://github.com/scaleway/scaleway-ui/compare/v0.74.0...v0.75.0) (2021-04-09)
 
 
