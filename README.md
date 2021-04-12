@@ -55,18 +55,6 @@ $ yarn run test:coverage # Will generate a coverage report
 $ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
 ```
 
-### Test coverage
-
-If you want to have a visual representation of your test coverage
-
-```sh
-$ # In the scaleway-ui project
-$ yarn test:coverage --coverageReporters lcov
-$ # In a new terminal
-$ npx http-server ./coverage/lcov-report/
-$ # Open populated local url
-```
-
 ### Lint
 
 ```sh
