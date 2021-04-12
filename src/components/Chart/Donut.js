@@ -2,7 +2,7 @@ import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import patternVariants from './patterns'
 
 const CIRCUM = 566
@@ -22,9 +22,8 @@ const circleFill = ({ lengthSegment, rotationSegment, fillMustBeAnimated }) =>
   fillMustBeAnimated
     ? css`
         ${fillAndRotateCircleAnim(lengthSegment, rotationSegment).styles}
-        animation: ${
-          fillAndRotateCircleAnim(lengthSegment, rotationSegment).name
-        } 1s ease forwards;
+        animation: ${fillAndRotateCircleAnim(lengthSegment, rotationSegment)
+          .name} 1s ease forwards;
       `
     : css`
         stroke-dasharray: ${lengthSegment} ${CIRCUM} 10 0;
@@ -38,8 +37,9 @@ const getRotationFormPercent = percent => (percent / CIRCUM) * 360
 const Circle = styled.circle`
   transform-origin: 50% 50%;
   transition: stroke-width 500ms ease;
-  stroke: ${({ patternName, color, theme }) => patternName ? `url(#${patternName})` : (theme.colors[color] ?? color)};
-  stroke-width: ${({ isFocused }) => isFocused ? 23 : 18};
+  stroke: ${({ patternName, color, theme }) =>
+    patternName ? `url(#${patternName})` : theme.colors[color] ?? color};
+  stroke-width: ${({ isFocused }) => (isFocused ? 23 : 18)};
   stroke-linecap: butt;
   fill: none;
   cursor: pointer;
@@ -52,7 +52,7 @@ Circle.defaultProps = {
   lengthSegment: CIRCUM,
   rotationSegment: 0,
   fillMustBeAnimated: false,
-  patternName :'',
+  patternName: '',
 }
 
 Circle.propTypes = {
