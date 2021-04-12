@@ -1,3 +1,10 @@
+### [0.75.3](https://github.com/scaleway/scaleway-ui/compare/v0.75.2...v0.75.3) (2021-04-12)
+
+
+### :bug: Bug Fixes
+
+* **PhoneInput:** correct country flags not showing ([#244](https://github.com/scaleway/scaleway-ui/issues/244)) ([6845409](https://github.com/scaleway/scaleway-ui/commit/684540974d8cc50276793b75fef8b89142215dd6))
+
 ### [0.75.2](https://github.com/scaleway/scaleway-ui/compare/v0.75.1...v0.75.2) (2021-04-12)
 
 
