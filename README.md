@@ -1,3 +1,8 @@
+![Codecov](https://img.shields.io/codecov/c/github/scaleway/scaleway-ui)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/scaleway/scaleway-ui)
+![dependencies](https://david-dm.org/scaleway/scaleway-ui.svg)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/scaleway/scaleway-ui)
+
 # Scaleway UI
 
 Scaleway official UI library.
@@ -32,7 +37,6 @@ $ # In a new terminal
 $ npx http-server ./coverage/lcov-report/
 $ # Open populated local url
 ```
-
 
 ### Lint
 
