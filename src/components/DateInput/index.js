@@ -34,10 +34,10 @@ const StyledWrapper = styled.div`
   }
   .calendar {
     font-family: 'Asap';
-    border-color: ${({ theme: { colors } }) => colors.gray200};
+    border-color: ${({ theme: { colors } }) => colors.gray300};
 
     ${PREFIX}__header {
-      color: ${({ theme: { colors } }) => colors.gray950};
+      color: ${({ theme: { colors } }) => colors.gray700};
       background-color: ${({ theme: { colors } }) => colors.white};
       border-bottom: none;
       text-align: inherit;
@@ -59,7 +59,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day-name {
       font-family: 'Asap';
-      color: ${({ theme: { colors } }) => colors.gray950};
+      color: ${({ theme: { colors } }) => colors.gray700};
       font-weight: 500;
       font-size: 14px;
       line-height: 24px;
@@ -77,28 +77,28 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day--selected {
-      color: ${({ theme: { colors } }) => colors.lightViolet};
+      color: ${({ theme: { colors } }) => colors.gray200};
       background-color: ${({ theme: { colors } }) => colors.primary};
       border-radius: 50%;
     }
     ${PREFIX}__day--keyboard-selected {
       color: ${({ theme: { colors } }) => colors.primary};
-      background-color: ${({ theme: { colors } }) => colors.zumthor};
+      background-color: ${({ theme: { colors } }) => colors.gray200};
       border-radius: 50%;
     }
 
     ${PREFIX}__day: hover {
       color: ${({ theme: { colors } }) => colors.primary};
       border-radius: 50%;
-      background-color: ${({ theme: { colors } }) => colors.zumthor};
+      background-color: ${({ theme: { colors } }) => colors.gray200};
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme: { colors } }) => colors.gray100};
+      color: ${({ theme: { colors } }) => colors.gray200};
     }
 
     ${PREFIX}__day--disabled: hover {
-      color: ${({ theme: { colors } }) => colors.gray100};
+      color: ${({ theme: { colors } }) => colors.gray200};
       background-color: ${({ theme: { colors } }) => colors.transparent};
     }
   }
