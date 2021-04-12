@@ -1,3 +1,25 @@
+### [0.75.4](https://github.com/scaleway/scaleway-ui/compare/v0.75.3...v0.75.4) (2021-04-12)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @testing-library/user-event from 13.1.1 to 13.1.2 ([#248](https://github.com/scaleway/scaleway-ui/issues/248)) ([3a966bc](https://github.com/scaleway/scaleway-ui/commit/3a966bc8d5c7f2bbf41d96cecd924da4312d25c6))
+* **deps-dev:** bump eslint from 7.23.0 to 7.24.0 ([#252](https://github.com/scaleway/scaleway-ui/issues/252)) ([3744e91](https://github.com/scaleway/scaleway-ui/commit/3744e918dde9119df9bac70af9c74f7b72dd61af))
+* **deps-dev:** bump postcss from 8.2.9 to 8.2.10 ([#251](https://github.com/scaleway/scaleway-ui/issues/251)) ([1308c53](https://github.com/scaleway/scaleway-ui/commit/1308c53b923417ad802e55ca46b18bc7e371dc70))
+* **deps-dev:** bump rollup from 2.45.0 to 2.45.1 ([#250](https://github.com/scaleway/scaleway-ui/issues/250)) ([4adb8a2](https://github.com/scaleway/scaleway-ui/commit/4adb8a280e6bd9a11883db6a8943df9bfdeb2567))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.3.0 to 5.3.4 ([#249](https://github.com/scaleway/scaleway-ui/issues/249)) ([a518f43](https://github.com/scaleway/scaleway-ui/commit/a518f4370db8ecbbf771ae2c772402385be2f95d))
+
+
+### :memo: Documentation
+
+* reword README and add disclaimer ([#235](https://github.com/scaleway/scaleway-ui/issues/235)) ([e643b64](https://github.com/scaleway/scaleway-ui/commit/e643b64ab603f5e8c59f2f939749d29d2d5ddfa0))
+* **readme:** add badges ([#225](https://github.com/scaleway/scaleway-ui/issues/225)) ([2861338](https://github.com/scaleway/scaleway-ui/commit/286133820f6aade20142ce4763ca7d839e48cf8c))
+
+
+### :bug: Bug Fixes
+
+* **DateInput:** correct colors ([#253](https://github.com/scaleway/scaleway-ui/issues/253)) ([7892120](https://github.com/scaleway/scaleway-ui/commit/78921203caaa2f58f7f93d1280e353d88300ae6d))
+
 ### [0.75.3](https://github.com/scaleway/scaleway-ui/compare/v0.75.2...v0.75.3) (2021-04-12)
 
 
