@@ -1,16 +1,16 @@
-import babel from '@rollup/plugin-babel'
+import { babel } from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
-import resolve from '@rollup/plugin-node-resolve'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
-import readPkg from 'read-pkg'
+import { readPackageAsync } from 'read-pkg'
 import postcss from 'rollup-plugin-postcss'
 import visualizer from 'rollup-plugin-visualizer'
 
 const PROFILE = !!process.env.PROFILE
 
 export default async () => {
-  const pkg = await readPkg()
+  const pkg = await readPackageAsync()
 
   const targets = `
     > 1%,
@@ -48,7 +48,7 @@ export default async () => {
       postcss({
         inject: false,
       }),
-      resolve({
+      nodeResolve({
         preferBuiltins: true,
       }),
       commonjs({
@@ -57,7 +57,7 @@ export default async () => {
       url({
         limit: 63488,
       }),
-      svgr({ memo: true }),
+      svgr.default({ memo: true }),
       PROFILE &&
         visualizer({
           gzipSize: true,
