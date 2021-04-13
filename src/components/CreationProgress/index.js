@@ -148,7 +148,7 @@ const CreationProgress = ({
 
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <React.Fragment key={index}>
+          <React.Fragment key={`creation-progress-${index}`}>
             <StyledStepContainer>
               <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 

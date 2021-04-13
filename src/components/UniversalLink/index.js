@@ -31,7 +31,7 @@ const UniversalLink = ({
   const asValue = propsAs || (needNativeLink(href) ? 'a' : linkComponent)
 
   return (
-    <Box {...props} as={asValue} href={href} rel={rel}>
+    <Box {...props} target={target} as={asValue} href={href} rel={rel}>
       {children}
     </Box>
   )
