@@ -226,7 +226,9 @@ const TextWithTooltip = ({ children, ...props }) => {
           }}
           tooltipProps={tooltipProps}
           {...props}
-        />
+        >
+          {children}
+        </Text>
       )}
     </Tooltip>
   )

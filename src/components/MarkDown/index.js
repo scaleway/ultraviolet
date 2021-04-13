@@ -17,7 +17,7 @@ const headingRenderer = ({ node, children, ...props }) => {
   }
   const { heading: Heading } = ReactMarkDown.renderers
 
-  return <Heading {...props} />
+  return <Heading {...props}>{children}</Heading>
 }
 
 const inlineCodeRenderer = props => <Command>{props.children}</Command>
