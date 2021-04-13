@@ -74,7 +74,7 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -83,18 +83,18 @@ exports[`MarkDown render simple string 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   color: #1e4293;
 }
 
-.emotion-21 {
+.emotion-22 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
@@ -103,7 +103,7 @@ exports[`MarkDown render simple string 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-21.emotion-21 {
+.emotion-22.emotion-22 {
   padding: 8px;
   color: #4a4f62;
   background-color: #f6f5f7;
@@ -121,7 +121,13 @@ exports[`MarkDown render simple string 1`] = `
         I am a Markdown H1
       </span>
     </h2>
-    <h2 />
+    <h2>
+      <span
+        class="emotion-3"
+      >
+        I am a Markdown H2
+      </span>
+    </h2>
     <p
       class="emotion-3"
     >
@@ -164,7 +170,7 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="emotion-12 emotion-13"
+        class="emotion-13 emotion-14"
         href="https://commonmark.org/help/"
       >
         <span
@@ -196,7 +202,7 @@ exports[`MarkDown render simple string 1`] = `
       class="emotion-3"
     >
       <span
-        class="emotion-20 emotion-21"
+        class="emotion-21 emotion-22"
       >
         const example = 1 // Inline code
       </span>
@@ -229,7 +235,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -238,18 +244,18 @@ exports[`MarkDown render simple string with target blank 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   color: #1e4293;
 }
 
-.emotion-17 {
+.emotion-18 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -259,11 +265,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
   opacity: 0.5;
 }
 
-.emotion-17.emotion-17 {
+.emotion-18.emotion-18 {
   vertical-align: top;
 }
 
-.emotion-24 {
+.emotion-25 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
@@ -272,7 +278,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-24.emotion-24 {
+.emotion-25.emotion-25 {
   padding: 8px;
   color: #4a4f62;
   background-color: #f6f5f7;
@@ -290,7 +296,13 @@ exports[`MarkDown render simple string with target blank 1`] = `
         I am a Markdown H1
       </span>
     </h2>
-    <h2 />
+    <h2>
+      <span
+        class="emotion-3"
+      >
+        I am a Markdown H2
+      </span>
+    </h2>
     <p
       class="emotion-3"
     >
@@ -333,7 +345,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="emotion-12 emotion-13"
+        class="emotion-13 emotion-14"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
@@ -344,7 +356,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
           here
         </span>
         <svg
-          class="emotion-15 emotion-16 emotion-17"
+          class="emotion-16 emotion-17 emotion-18"
           viewBox="0 0 24 24"
         >
           <path
@@ -375,7 +387,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       class="emotion-3"
     >
       <span
-        class="emotion-23 emotion-24"
+        class="emotion-24 emotion-25"
       >
         const example = 1 // Inline code
       </span>
