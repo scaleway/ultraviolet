@@ -7,7 +7,6 @@ exports[`UniversalLink renders correctly with a taregt blank 1`] = `
     href="/"
     rel="noopener noreferrer"
     target="_blank"
-    to="/"
   >
     This is a link
   </a>
@@ -21,7 +20,6 @@ exports[`UniversalLink renders correctly with an absolute utl 1`] = `
     href="https://google.com"
     rel="noopener noreferrer"
     target="_blank"
-    to="https://google.com"
   >
     This is a link
   </a>
@@ -54,7 +52,6 @@ exports[`UniversalLink renders correctly with to prop 1`] = `
   <a
     class="emotion-0"
     href="/"
-    to="/"
   >
     This is a link
   </a>
