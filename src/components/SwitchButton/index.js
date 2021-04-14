@@ -4,7 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Radio } from 'reakit'
-import { Box } from '../Box'
+import Box from '../Box'
 import Tooltip from '../Tooltip'
 
 const variants = {

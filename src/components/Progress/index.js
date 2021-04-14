@@ -3,7 +3,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const clickableStyles = ({ theme }) => `
   cursor: pointer;
@@ -123,7 +123,7 @@ const Progress = ({ children, selected, ...props }) => {
 
         return (
           <StyledStep
-            key={`step-${index}`}
+            key={`step-${title}`}
             onClick={isClickable ? () => onClick(index) : undefined}
             as={isClickable ? 'button' : 'div'}
             zIndex={length - index}

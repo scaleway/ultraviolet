@@ -2,22 +2,22 @@ import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ReactMarkDown from 'react-markdown'
-import { Box } from '../Box'
+import Box from '../Box'
 import Command from '../Command'
 import Link from '../Link'
 import { Typography } from '../Typography'
 
-const headingRenderer = ({ node, ...props }) => {
+const headingRenderer = ({ node, children, ...props }) => {
   if (props.level === 1) {
     return (
       <Typography mt={0} variant="lead-block">
-        {props.children}
+        {children}
       </Typography>
     )
   }
   const { heading: Heading } = ReactMarkDown.renderers
 
-  return <Heading {...props} />
+  return <Heading {...props}>{children}</Heading>
 }
 
 const inlineCodeRenderer = props => <Command>{props.children}</Command>
@@ -96,4 +96,4 @@ MarkDown.defaultProps = {
   inline: false,
 }
 
-export { MarkDown }
+export default MarkDown

@@ -1,5 +1,5 @@
 import React from 'react'
-import { UniversalLink } from '..'
+import UniversalLink from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('UniversalLink', () => {

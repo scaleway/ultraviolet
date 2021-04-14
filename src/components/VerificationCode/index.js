@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const StyledInput = styled.input`
   border: solid 1px
@@ -183,6 +183,7 @@ const VerificationCode = ({
           aria-invalid={error}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : null}
+          // eslint-disable-next-line react/no-array-index-key
           key={`${inputId}-${index}`}
           data-id={index}
           value={value}

@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useMemo, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, { components } from 'react-select'
-import { isJSONString } from '../../helpers/isJSON'
+import isJSONString from '../../helpers/isJSON'
 import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
-import { Box } from '../Box'
-import { Expandable } from '../Expandable'
+import Box from '../Box'
+import Expandable from '../Expandable'
 import Icon from '../Icon'
 
 const getControlColor = ({ state, error, theme }) => {
@@ -224,12 +224,13 @@ const SelectContainer = props => {
       height,
       width,
       error,
+      name,
     },
   } = props
 
   return (
     <StyledContainer
-      data-testid={`rich-select-${props.selectProps.name}`}
+      data-testid={`rich-select-${name}`}
       additionalStyles={getStyles('container', props)}
       isDisabled={isDisabled}
       className={className}
@@ -334,25 +335,31 @@ const ValueContainer = ({
   isDisabled,
   error,
   children,
+  selectProps,
+  isMulti,
+  hasValue,
   ...props
 }) => (
-  <components.ValueContainer isDisabled={isDisabled} {...props}>
+  <components.ValueContainer
+    selectProps={selectProps}
+    isMulti={isMulti}
+    hasValue={hasValue}
+    isDisabled={isDisabled}
+    {...props}
+  >
     <>
-      {!isDisabled &&
-        props.selectProps.placeholder &&
-        !noTopLabel &&
-        !props.isMulti && (
-          <StyledPlaceholder
-            as="label"
-            id={labelId}
-            htmlFor={inputId}
-            aria-live="assertive"
-            error={error}
-            scaled={props.hasValue && !props.isMulti}
-          >
-            {props.selectProps.placeholder}
-          </StyledPlaceholder>
-        )}
+      {!isDisabled && selectProps.placeholder && !noTopLabel && !isMulti && (
+        <StyledPlaceholder
+          as="label"
+          id={labelId}
+          htmlFor={inputId}
+          aria-live="assertive"
+          error={error}
+          scaled={hasValue && !isMulti}
+        >
+          {selectProps.placeholder}
+        </StyledPlaceholder>
+      )}
       {children}
     </>
   </components.ValueContainer>
@@ -412,13 +419,18 @@ Input.defaultProps = {
   isMulti: false,
 }
 
-const Option = props => (
+const Option = ({ selectProps, value, label, ...props }) => (
   <div
-    data-testid={`option-${props.selectProps.name}-${
-      isJSONString(props.value) ? props.label : props.value
+    data-testid={`option-${selectProps.name}-${
+      isJSONString(value) ? label : value
     }`}
   >
-    <components.Option {...props} />
+    <components.Option
+      selectProps={selectProps}
+      value={value}
+      label={label}
+      {...props}
+    />
   </div>
 )
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { forwardRef, memo, useCallback } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { colors } from '../../theme'
-import { Box } from '../Box'
+import Box from '../Box'
 import Tooltip from '../Tooltip'
 
 const styles = {
@@ -195,7 +195,7 @@ const Text = ({
   </StyledText>
 )
 
-const TextWithTooltip = props => {
+const TextWithTooltip = ({ children, ...props }) => {
   const isTruncated = useCallback((target = {}) => {
     // If the text is really truncated
     const { offsetWidth, scrollWidth } = target
@@ -203,7 +203,7 @@ const TextWithTooltip = props => {
     return offsetWidth < scrollWidth
   }, [])
 
-  const finalStringChildren = recursivelyGetChildrenString(props.children)
+  const finalStringChildren = recursivelyGetChildrenString(children)
 
   return (
     <Tooltip text={finalStringChildren} maxWidth={650}>
@@ -226,7 +226,9 @@ const TextWithTooltip = props => {
           }}
           tooltipProps={tooltipProps}
           {...props}
-        />
+        >
+          {children}
+        </Text>
       )}
     </Tooltip>
   )

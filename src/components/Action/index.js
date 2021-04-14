@@ -37,7 +37,8 @@ const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
 Action.propTypes = {
   children: PropTypes.node,
   size: (props, propName, componentName) => {
-    if (typeof props[propName] !== 'number' || props[propName] > 32) {
+    const { [propName]: propsPropName } = props
+    if (typeof propsPropName !== 'number' || propsPropName > 32) {
       return new Error(
         `Invalid prop ${propName} supplied to ${componentName}. Must be a "number" and inferior or equal to 32`,
       )
@@ -62,4 +63,4 @@ Action.defaultProps = {
   name: undefined,
 }
 
-export { Action }
+export default Action

@@ -3,8 +3,8 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { ActivityIndicator } from '../ActivityIndicator'
-import { Box } from '../Box'
+import ActivityIndicator from '../ActivityIndicator'
+import Box from '../Box'
 import Icon from '../Icon'
 
 const StyledContainer = styled(Box)`
@@ -102,9 +102,9 @@ const Select = ({
   ...props
 }) => {
   const disabledChildren = () =>
-    flattenChildren(children).map((child, index) =>
+    flattenChildren(children).map(child =>
       React.cloneElement(child, {
-        key: index,
+        key: child.key,
         disabled: true,
         ...child.props,
       }),

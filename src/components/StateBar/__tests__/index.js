@@ -1,5 +1,5 @@
 import React from 'react'
-import { StateBar } from '..'
+import StateBar from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('StateBar', () => {

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const styles = {
   container: css`
@@ -21,13 +21,11 @@ const openedStyle = height => css`
   overflow: visible;
 `
 
-export function Expandable({ opened, height, children, ...props }) {
-  return (
-    <Box css={[styles.container, opened && openedStyle(height)]} {...props}>
-      {children}
-    </Box>
-  )
-}
+const Expandable = ({ opened, height, children, ...props }) => (
+  <Box css={[styles.container, opened && openedStyle(height)]} {...props}>
+    {children}
+  </Box>
+)
 
 Expandable.propTypes = {
   children: PropTypes.node.isRequired,
@@ -39,3 +37,5 @@ Expandable.defaultProps = {
   opened: false,
   height: 5000,
 }
+
+export default Expandable

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const styles = {
   root: css`
@@ -22,7 +22,7 @@ const styles = {
   `,
 }
 
-const Touchable = ({
+const BaseTouchable = ({
   innerRef,
   disabled,
   activeOpacity,
@@ -52,7 +52,7 @@ const Touchable = ({
   />
 )
 
-Touchable.propTypes = {
+BaseTouchable.propTypes = {
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
   disabled: PropTypes.bool,
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -61,7 +61,7 @@ Touchable.propTypes = {
   type: PropTypes.string,
 }
 
-Touchable.defaultProps = {
+BaseTouchable.defaultProps = {
   innerRef: null,
   disabled: false,
   activeOpacity: null,
@@ -70,8 +70,8 @@ Touchable.defaultProps = {
   type: null,
 }
 
-const forwardRef = (props, ref) => <Touchable {...props} innerRef={ref} />
-const ForwardRef = React.forwardRef(forwardRef)
-ForwardRef.displayName = 'fwd(Touchable)'
+const forwardRef = (props, ref) => <BaseTouchable {...props} innerRef={ref} />
+const Touchable = React.forwardRef(forwardRef)
+Touchable.displayName = 'fwd(Touchable)'
 
-export { ForwardRef as Touchable }
+export default Touchable

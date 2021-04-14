@@ -7,9 +7,9 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { onKeyOnlyNumbers } from '../../helpers/keycode'
-import { parseIntOr } from '../../helpers/numbers'
-import { Box } from '../Box'
+import onKeyOnlyNumbers from '../../helpers/keycode'
+import parseIntOr from '../../helpers/numbers'
+import Box from '../Box'
 
 const getPercent = (min, max, v) => (v - min) / (max - min)
 
@@ -431,6 +431,7 @@ const Range = ({
           offsetTop={offsetTop}
           width={cursorWidth}
           grabbed={grabbedCursor !== undefined}
+          // eslint-disable-next-line react/no-array-index-key
           key={`cursor-${index}`}
           ref={cursorsRef[index]}
           onMouseDown={() => onMouseDown(index)}

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import { Typography } from '../Typography'
 
@@ -70,4 +70,4 @@ const StateBar = Box
 StateBar.Bar = Bar
 StateBar.State = State
 
-export { StateBar }
+export default StateBar

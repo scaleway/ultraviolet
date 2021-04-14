@@ -1,7 +1,7 @@
 import React from 'react'
 import TabGroup from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import { Box } from '../../Box'
+import Box from '../../Box'
 
 describe('TabGroup', () => {
   test('renders correctly', () => {

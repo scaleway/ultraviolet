@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { Unselectable } from '../Unselectable'
+import Unselectable from '../Unselectable'
 
 const CopyButton = styled.button`
   background-color: ${({ theme }) => theme.colors.transparent};

@@ -6,7 +6,8 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import Popper, { popperVariants } from '..'
-import { Box } from '../../Box'
+import { getUUID } from '../../../utils'
+import Box from '../../Box'
 import { Button } from '../../Button'
 import Icon from '../../Icon'
 
@@ -73,11 +74,14 @@ import Icon from '../../Icon'
       >
         {() => (
           <Box display="flex" flexDirection="column">
-            {new Array(15).fill(0).map((arr, index) => (
-              <Box key={index} width={30} height={30} m={2}>
-                {index}
-              </Box>
-            ))}
+            {new Array(15).fill(0).map(() => {
+              const uuid = getUUID()
+              return (
+                <Box key={uuid} width={30} height={30} m={2}>
+                  {uuid.substr(0, 3)}
+                </Box>
+              )
+            })}
           </Box>
         )}
       </Popper>

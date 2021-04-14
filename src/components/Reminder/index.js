@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Box } from '../Box'
+import Box from '../Box'
 import Icon from '../Icon'
-import { UniversalLink } from '../UniversalLink'
+import MarkDown from '../MarkDown'
+import UniversalLink from '../UniversalLink'
 
 const variants = {
   error: {
@@ -60,10 +61,10 @@ const Notification = styled(Box, {
   }
 `
 
-const Reminder = ({ text, variant, bordered, ...props }) => (
+const Reminder = ({ text, variant, bordered, to, ...props }) => (
   <Notification
-    as={props.to ? UniversalLink : 'a'}
-    type={props.to ? null : 'button'}
+    as={to ? UniversalLink : 'a'}
+    type={to ? null : 'button'}
     icon="east"
     style={{}}
     fontSize={12}
@@ -71,13 +72,10 @@ const Reminder = ({ text, variant, bordered, ...props }) => (
     py={1}
     bordered={bordered}
     variant={variant}
+    to={to}
     {...props}
   >
-    <span
-      dangerouslySetInnerHTML={{
-        __html: text.replace(/\[(.*)\]/, '<strong>$1</strong>'),
-      }}
-    />
+    <MarkDown inline source={text.replace(/\[(.*)\]/, '__$1__')} />
     <Icon ml="4px" color={variants[variant].main} name="east" size={20} />
   </Notification>
 )

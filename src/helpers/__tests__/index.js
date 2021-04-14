@@ -1,6 +1,6 @@
-import { isJSONString } from '../isJSON'
-import { onKeyOnlyNumbers } from '../keycode'
-import { parseIntOr } from '../numbers'
+import isJSONString from '../isJSON'
+import onKeyOnlyNumbers from '../keycode'
+import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
 
 describe('isJSONString', () => {

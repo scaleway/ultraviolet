@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useCallback, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { Box } from '../Box'
+import Box from '../Box'
 import Tab from './Tab'
 
 const StyledTabs = styled.div`

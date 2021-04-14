@@ -2,10 +2,10 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ActivityIndicator } from '../ActivityIndicator'
-import { Box } from '../Box'
+import ActivityIndicator from '../ActivityIndicator'
+import Box from '../Box'
 import Icon from '../Icon'
-import { Touchable } from '../Touchable'
+import Touchable from '../Touchable'
 
 const disabledStyles = css`
   opacity: 0.5;

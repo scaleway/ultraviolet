@@ -143,8 +143,8 @@ of RichSelect with an external way (check example with button).
 <ControlValue>
   {() => (
     <Box>
-      {Object.keys(animations).map((animation, index) => (
-        <code key={index}>{animation}</code>
+      {Object.keys(animations).map(animation => (
+        <code key={animation}>{animation}</code>
       ))}
     </Box>
   )}

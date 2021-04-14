@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Box } from '../Box'
+import Box from '../Box'
 
 const ScrollView = styled(Box)`
   display: flex;
@@ -8,4 +8,4 @@ const ScrollView = styled(Box)`
   overflow-y: auto;
 `
 
-export { ScrollView }
+export default ScrollView

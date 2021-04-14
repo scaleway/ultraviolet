@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
 
-const UncontrolledPasswordStrengthMeter = props => {
+const UncontrolledPasswordStrengthMeter = ({ name, ...props }) => {
   const [value, setValue] = useState('')
 
   return (
     <>
       <TextBox
-        name={props.name}
+        name={name}
         label="Password"
         value={value}
         onChange={setValue}

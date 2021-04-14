@@ -1,5 +1,5 @@
 import React from 'react'
-import { Unselectable } from '..'
+import Unselectable from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Unselectable', () => {

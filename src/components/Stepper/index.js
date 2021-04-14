@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import { onKeyOnlyNumbers } from '../../helpers/keycode'
-import { parseIntOr } from '../../helpers/numbers'
-import { Box } from '../Box'
+import onKeyOnlyNumbers from '../../helpers/keycode'
+import parseIntOr from '../../helpers/numbers'
+import Box from '../Box'
 import Icon from '../Icon'
-import { Touchable } from '../Touchable'
+import Touchable from '../Touchable'
 
 const bounded = (value, min, max) => Math.max(min, Math.min(value, max))
 

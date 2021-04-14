@@ -1,5 +1,5 @@
 import React from 'react'
-import { MarkDown } from '..'
+import MarkDown from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 export const simple = `
