@@ -28,6 +28,12 @@ const COLORS = {
   disabled: 'gray300',
 }
 
+// Multiplies the max number of chars between labels by a "magic" number representing the average number of pixel per char
+// The goal is to stick as much as possible to real label size
+// number 10 has been chosen using letter O
+const labelSize = (onLabel, offLabel) =>
+  Math.max(onLabel.length, offLabel.length) * 10
+
 const getSwitchWidth = ({ width, onLabel, offLabel, size, labeled }) => {
   if (width) return width
 
@@ -36,9 +42,9 @@ const getSwitchWidth = ({ width, onLabel, offLabel, size, labeled }) => {
     typeof offLabel === 'string' &&
     (labeled === true || labeled === 'inside')
   )
-    return (
-      Math.max(onLabel.length, offLabel.length) * 10 + SIZES[size].ball + 20
-    )
+    // + 20 comes from the ball size to have some space around it
+    // it centers the text with 10px margin on each side
+    return labelSize(onLabel, offLabel) + SIZES[size].ball + 20
 
   return SIZES[size].width
 }
@@ -67,7 +73,7 @@ const StyledSpan = styled('span', {
   align-items: center;
   justify-content: center;
   ${({ labeled, onLabel, offLabel, size }) => {
-    const spanWidth = Math.max(onLabel.length, offLabel.length) * 10 - 2
+    const spanWidth = labelSize(onLabel, offLabel) - 2
     switch (labeled) {
       case 'left':
         return `
