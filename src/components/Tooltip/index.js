@@ -55,7 +55,7 @@ const StyledTooltip = styled(Box, {
 const Tooltip = ({
   animated,
   children,
-  text = '',
+  text,
   placement,
   visible,
   variant,
@@ -106,8 +106,8 @@ const Tooltip = ({
       <TooltipReference {...tooltip} ref={children.ref}>
         {finalChildren}
       </TooltipReference>
-      <ReakitTooltip {...tooltip}>
-        <StyledTooltip variant={variant} {...props}>
+      <ReakitTooltip {...tooltip} {...props}>
+        <StyledTooltip variant={variant}>
           <TooltipArrow {...tooltip} />
           {text}
         </StyledTooltip>
