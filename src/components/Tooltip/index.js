@@ -60,6 +60,7 @@ const Tooltip = ({
   visible,
   variant,
   baseId,
+  zIndex,
   ...props
 }) => {
   const tooltip = useTooltipState({ animated, placement, visible, baseId })
@@ -106,8 +107,8 @@ const Tooltip = ({
       <TooltipReference {...tooltip} ref={children.ref}>
         {finalChildren}
       </TooltipReference>
-      <ReakitTooltip {...tooltip} {...props}>
-        <StyledTooltip variant={variant}>
+      <ReakitTooltip {...tooltip} style={{ zIndex }}>
+        <StyledTooltip variant={variant} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
         </StyledTooltip>
@@ -128,6 +129,7 @@ Tooltip.propTypes = {
     PropTypes.node,
     PropTypes.func,
   ]),
+  zIndex: PropTypes.number,
 }
 
 Tooltip.defaultProps = {
@@ -138,6 +140,7 @@ Tooltip.defaultProps = {
   text: '',
   baseId: undefined,
   children: null,
+  zIndex: undefined,
 }
 
 export default Tooltip
