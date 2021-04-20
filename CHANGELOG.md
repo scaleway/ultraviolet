@@ -1,3 +1,39 @@
+### [0.75.5](https://github.com/scaleway/scaleway-ui/compare/v0.75.4...v0.75.5) (2021-04-20)
+
+
+### :lipstick: Style
+
+* eslint warnings ([#226](https://github.com/scaleway/scaleway-ui/issues/226)) ([477bea7](https://github.com/scaleway/scaleway-ui/commit/477bea77aff77b00952204100cbeab9780e55a32))
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** fixed prop spreading ([#272](https://github.com/scaleway/scaleway-ui/issues/272)) ([dd7da00](https://github.com/scaleway/scaleway-ui/commit/dd7da0080573f553a3a63670ce06c06f09799c71))
+
+
+### :package: Chore
+
+* **deps:** bump actions/cache from v2.1.4 to v2.1.5 ([#255](https://github.com/scaleway/scaleway-ui/issues/255)) ([21922c7](https://github.com/scaleway/scaleway-ui/commit/21922c7cd6e8e54673ad4ce3ccd082274d8a9b1b))
+* **deps:** bump react-datepicker from 3.7.0 to 3.8.0 ([#275](https://github.com/scaleway/scaleway-ui/issues/275)) ([8a74fdd](https://github.com/scaleway/scaleway-ui/commit/8a74fdd6e165045549bb8819c55a650fdc144a2e))
+* **deps-dev:** bump @storybook/addon-essentials from 6.2.7 to 6.2.8 ([#261](https://github.com/scaleway/scaleway-ui/issues/261)) ([3fefe3a](https://github.com/scaleway/scaleway-ui/commit/3fefe3aff92c532a4884c7b986655bd22548257f))
+* **deps-dev:** bump @storybook/addon-links from 6.2.7 to 6.2.8 ([#265](https://github.com/scaleway/scaleway-ui/issues/265)) ([53ade2e](https://github.com/scaleway/scaleway-ui/commit/53ade2ef6ec14a4aee402084f3b5af8e6aeecbf3))
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.2.7 to 6.2.8 ([#258](https://github.com/scaleway/scaleway-ui/issues/258)) ([30d0395](https://github.com/scaleway/scaleway-ui/commit/30d0395320f60db32c5a3e2b0acbf5bf10b05eb2))
+* **deps-dev:** bump @storybook/react from 6.2.7 to 6.2.8 ([#259](https://github.com/scaleway/scaleway-ui/issues/259)) ([8a3c60a](https://github.com/scaleway/scaleway-ui/commit/8a3c60afb228b05c14b77aa9d06fed60d3463426))
+* **deps-dev:** bump read-pkg from 5.2.0 to 6.0.0 ([#180](https://github.com/scaleway/scaleway-ui/issues/180)) ([249e768](https://github.com/scaleway/scaleway-ui/commit/249e7688617abd8c2c48f9f3a5040481cfd7243f))
+* **deps-dev:** bump rollup from 2.45.1 to 2.45.2 ([#256](https://github.com/scaleway/scaleway-ui/issues/256)) ([886707f](https://github.com/scaleway/scaleway-ui/commit/886707f5ec3afa2ab2cb809dd24402f9b8c85590))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.3.4 to 5.3.6 ([#257](https://github.com/scaleway/scaleway-ui/issues/257)) ([ff349f9](https://github.com/scaleway/scaleway-ui/commit/ff349f9fc80c6c229154f357ed7754618b46ac94))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.3.6 to 5.4.0 ([#271](https://github.com/scaleway/scaleway-ui/issues/271)) ([202d7ce](https://github.com/scaleway/scaleway-ui/commit/202d7ce1b965fd0c53122677343eecaa75128ebb))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.4.0 to 5.4.1 ([#273](https://github.com/scaleway/scaleway-ui/issues/273)) ([8ce5676](https://github.com/scaleway/scaleway-ui/commit/8ce567633101a78de7b8045cf5002bc60ed82e50))
+
+
+### :repeat: CI
+
+* avoid persisting credentials ([449e32f](https://github.com/scaleway/scaleway-ui/commit/449e32fe8ec4b7c73c703e6bad54a199d8918193))
+* correct deployment author ([0b54555](https://github.com/scaleway/scaleway-ui/commit/0b5455542c6dd6a5077bb9638dde97edb2c76480))
+* remove CODECOV_TOKEN as repository is public ([#269](https://github.com/scaleway/scaleway-ui/issues/269)) ([0d77bf5](https://github.com/scaleway/scaleway-ui/commit/0d77bf5b75c7a28585ce853149cda0aff1d6d513))
+* use github actions runners ([#254](https://github.com/scaleway/scaleway-ui/issues/254)) ([3214513](https://github.com/scaleway/scaleway-ui/commit/3214513899ae6561a2582b1a472476b3e0893c3d))
+* use pat instead of gh_token ([c531dfd](https://github.com/scaleway/scaleway-ui/commit/c531dfd7583136e8dc063445d63994714b627a6d))
+
 ### [0.75.4](https://github.com/scaleway/scaleway-ui/compare/v0.75.3...v0.75.4) (2021-04-12)
 
 
