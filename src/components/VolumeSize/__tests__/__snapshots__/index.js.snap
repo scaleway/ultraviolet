@@ -325,11 +325,11 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
 
 .emotion-6 {
   font-weight: 800;
-  color: #ff8c69;
+  color: #151a2d;
 }
 
 .emotion-9 {
-  fill: #ff8c69;
+  fill: #45d6b5;
   height: 1em;
   width: 1em;
   min-width: 1em;
@@ -341,22 +341,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   margin-right: 8px;
 }
 
-.emotion-11 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ff8c69;
-}
-
-.emotion-11.emotion-11 {
-  color: #ff8c69;
-}
-
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -370,7 +355,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-12 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -378,8 +363,8 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
-  background-color: #ff8c69;
+.emotion-14 {
+  background-color: #45d6b5;
   border-radius: 3px;
   position: absolute;
   left: 0;
@@ -395,7 +380,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-18 {
+.emotion-16 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
@@ -407,7 +392,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   transform: translateX(-50%);
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,11 +408,11 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
   left: 0;
 }
 
-.emotion-22 {
+.emotion-20 {
   text-align: left;
 }
 
-.emotion-25 {
+.emotion-23 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -460,38 +445,33 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
         viewBox="0 0 24 24"
       >
         <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
         />
       </svg>
-      <p
-        class="emotion-2 emotion-11"
-      >
-        Volume capacity exceeded
-      </p>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-12 emotion-13"
       >
         <span
-          class="emotion-16 emotion-17"
+          class="emotion-14 emotion-15"
         />
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-18 emotion-19"
         >
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-20 emotion-21"
           >
             0 GB
           </div>
           <p
-            class="emotion-2 emotion-25"
+            class="emotion-2 emotion-23"
           >
             required
           </p>
@@ -502,7 +482,7 @@ exports[`VolumeSize renders correctly with minimal props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VolumeSize renders correctly without maxSize 1`] = `
+exports[`VolumeSize renders correctly with non modifiable value 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -583,11 +563,11 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
 
 .emotion-6 {
   font-weight: 800;
-  color: #ff8c69;
+  color: #151a2d;
 }
 
 .emotion-9 {
-  fill: #ff8c69;
+  fill: #45d6b5;
   height: 1em;
   width: 1em;
   min-width: 1em;
@@ -599,22 +579,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   margin-right: 8px;
 }
 
-.emotion-11 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ff8c69;
-}
-
-.emotion-11.emotion-11 {
-  color: #ff8c69;
-}
-
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -628,7 +593,7 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   width: 100%;
 }
 
-.emotion-14 {
+.emotion-12 {
   background-color: #eeeeff;
   border-radius: 3px;
   position: relative;
@@ -636,13 +601,13 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
-  background-color: #ff8c69;
-  border-radius: 3px;
+.emotion-14 {
+  background-color: #45d6b5;
+  border-radius: 3px 0 0 3px;
   position: absolute;
   left: 0;
   height: 100%;
-  width: 750%;
+  width: 10%;
   min-width: 0;
   max-width: 100%;
   -webkit-transition: width 1000ms ease;
@@ -653,19 +618,19 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   animation: animation-0 1.2s ease backwards;
 }
 
-.emotion-18 {
+.emotion-16 {
   background-color: #151a2d;
   position: absolute;
   height: 15px;
   width: 3px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  left: 10%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -681,11 +646,311 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
   left: 0;
 }
 
-.emotion-22 {
+.emotion-20 {
   text-align: left;
 }
 
-.emotion-25 {
+.emotion-23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.emotion-24 {
+  background-color: #151a2d;
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  right: 10%;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  right: 0;
+}
+
+.emotion-28 {
+  text-align: right;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <p
+        class="emotion-2 emotion-3"
+      >
+        <span
+          class="emotion-4 emotion-5"
+        >
+          Test
+        </span>
+        <span
+          class="emotion-6 emotion-7"
+        >
+          15 GB
+        </span>
+      </p>
+      <svg
+        class="sc-ui-icon emotion-8 emotion-9"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+        />
+      </svg>
+    </div>
+    <div
+      class="emotion-10 emotion-11"
+    >
+      <div
+        class="emotion-12 emotion-13"
+      >
+        <span
+          class="emotion-14 emotion-15"
+        />
+      </div>
+      <div
+        class="emotion-16 emotion-17"
+      >
+        <div
+          class="emotion-18 emotion-19"
+        >
+          <div
+            class="emotion-20 emotion-21"
+          >
+            15 GB
+          </div>
+          <p
+            class="emotion-2 emotion-23"
+          >
+            minimum
+          </p>
+        </div>
+      </div>
+      <div
+        class="emotion-24 emotion-17"
+      >
+        <div
+          class="emotion-26 emotion-19"
+        >
+          <div
+            class="emotion-28 emotion-21"
+          >
+            15 GB
+          </div>
+          <p
+            class="emotion-2 emotion-23"
+          >
+            maximum
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VolumeSize renders correctly without maxSize 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+.emotion-0.emotion-0 {
+  margin-bottom: 40px;
+}
+
+.emotion-1.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.emotion-3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.emotion-3.emotion-3 {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+.emotion-4 {
+  margin-right: 5px;
+}
+
+.emotion-6 {
+  font-weight: 800;
+  color: #151a2d;
+}
+
+.emotion-9 {
+  fill: #45d6b5;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-9.emotion-9 {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 15px;
+  width: 100%;
+}
+
+.emotion-12 {
+  background-color: #eeeeff;
+  border-radius: 3px;
+  position: relative;
+  height: 6px;
+  width: 100%;
+}
+
+.emotion-14 {
+  background-color: #45d6b5;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 750%;
+  min-width: 0;
+  max-width: 100%;
+  -webkit-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation: animation-0 1.2s ease backwards;
+  animation: animation-0 1.2s ease backwards;
+}
+
+.emotion-16 {
+  background-color: #151a2d;
+  position: absolute;
+  height: 15px;
+  width: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 8px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.emotion-20 {
+  text-align: left;
+}
+
+.emotion-23 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -720,38 +985,33 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
         viewBox="0 0 24 24"
       >
         <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
         />
       </svg>
-      <p
-        class="emotion-2 emotion-11"
-      >
-        Test too big
-      </p>
     </div>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-12 emotion-13"
       >
         <span
-          class="emotion-16 emotion-17"
+          class="emotion-14 emotion-15"
         />
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-20 emotion-21"
+          class="emotion-18 emotion-19"
         >
           <div
-            class="emotion-22 emotion-23"
+            class="emotion-20 emotion-21"
           >
             0 GB
           </div>
           <p
-            class="emotion-2 emotion-25"
+            class="emotion-2 emotion-23"
           >
             required
           </p>
@@ -765,6 +1025,20 @@ exports[`VolumeSize renders correctly without maxSize 1`] = `
 exports[`VolumeSize should display too big error 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
   0% {
     width: 0%;
   }
@@ -1099,6 +1373,20 @@ exports[`VolumeSize should display too big error 1`] = `
 exports[`VolumeSize should display too small error 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: -100%;
+  }
+}
+
+@keyframes animation-0 {
   0% {
     width: 0%;
   }
