@@ -2,7 +2,7 @@ import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import DatePicker from 'react-datepicker'
+import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -124,6 +124,7 @@ const DateInput = ({
   error,
   format,
   label,
+  locale,
   maxDate,
   minDate,
   name,
@@ -133,89 +134,96 @@ const DateInput = ({
   required,
   type,
   value,
-}) => (
-  <>
-    <Global styles={style} />
-    <StyledWrapper>
-      <DatePicker
-        name={name}
-        type={type}
-        autoFocus={autoFocus}
-        selected={value}
-        onChange={onChange}
-        fixedHeight
-        onFocus={onFocus}
-        onBlur={onBlur}
-        customInput={
-          <div>
-            <TextBox
-              error={error ? `${error}` : undefined}
-              label={label}
-              value={format(value) || ''}
-              disabled={disabled}
-            />
-            <Box
-              p={1}
-              position="absolute"
-              display="flex"
-              alignItems="center"
-              right={0}
-              top={0}
-              height={48}
-            >
-              {required && <Icon name="asterisk" color="warning" size={8} />}
-              <Separator direction="vertical" mx={1} height="100%" />
-              <Icon
-                name="calendar-range"
-                color={error ? 'warning' : 'gray'}
-                size={24}
-                alignSelf="center"
+}) => {
+  if (locale && currentLocale) {
+    registerLocale(currentLocale, locale)
+  }
+
+  return (
+    <>
+      <Global styles={style} />
+      <StyledWrapper>
+        <DatePicker
+          autoFocus={autoFocus}
+          fixedHeight
+          name={name}
+          locale={currentLocale}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          selected={value}
+          type={type}
+          customInput={
+            <div>
+              <TextBox
+                error={error ? `${error}` : undefined}
+                label={label}
+                value={format(value) || ''}
+                disabled={disabled}
               />
-            </Box>
-          </div>
-        }
-        disabled={disabled}
-        calendarClassName="calendar"
-        minDate={minDate}
-        maxDate={maxDate}
-        renderCustomHeader={({
-          date,
-          decreaseMonth,
-          increaseMonth,
-          prevMonthButtonDisabled,
-          nextMonthButtonDisabled,
-        }) => (
-          <>
-            <TopHeaderDiv>
-              <Typography variant="bodyA" mr={1}>
-                {new Date(date).toLocaleString(currentLocale, {
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </Typography>
-            </TopHeaderDiv>
-            <StyledSpan>
-              <Touchable
-                onClick={decreaseMonth}
-                disabled={prevMonthButtonDisabled}
-                mx={1}
+              <Box
+                p={1}
+                position="absolute"
+                display="flex"
+                alignItems="center"
+                right={0}
+                top={0}
+                height={48}
               >
-                <Icon size={11} name="chevron-left" color="lightBlack" />
-              </Touchable>
-              <Touchable
-                onClick={increaseMonth}
-                disabled={nextMonthButtonDisabled}
-                mx={1}
-              >
-                <Icon size={11} name="chevron-right" color="lightBlack" />
-              </Touchable>
-            </StyledSpan>
-          </>
-        )}
-      />
-    </StyledWrapper>
-  </>
-)
+                {required && <Icon name="asterisk" color="warning" size={8} />}
+                <Separator direction="vertical" mx={1} height="100%" />
+                <Icon
+                  name="calendar-range"
+                  color={error ? 'warning' : 'gray'}
+                  size={24}
+                  alignSelf="center"
+                />
+              </Box>
+            </div>
+          }
+          disabled={disabled}
+          calendarClassName="calendar"
+          minDate={minDate}
+          maxDate={maxDate}
+          renderCustomHeader={({
+            date,
+            decreaseMonth,
+            increaseMonth,
+            prevMonthButtonDisabled,
+            nextMonthButtonDisabled,
+          }) => (
+            <>
+              <TopHeaderDiv>
+                <Typography variant="bodyA" mr={1}>
+                  {new Date(date).toLocaleString(currentLocale, {
+                    month: 'long',
+                    year: 'numeric',
+                  })}
+                </Typography>
+              </TopHeaderDiv>
+              <StyledSpan>
+                <Touchable
+                  onClick={decreaseMonth}
+                  disabled={prevMonthButtonDisabled}
+                  mx={1}
+                >
+                  <Icon size={11} name="chevron-left" color="lightBlack" />
+                </Touchable>
+                <Touchable
+                  onClick={increaseMonth}
+                  disabled={nextMonthButtonDisabled}
+                  mx={1}
+                >
+                  <Icon size={11} name="chevron-right" color="lightBlack" />
+                </Touchable>
+              </StyledSpan>
+            </>
+          )}
+        />
+      </StyledWrapper>
+    </>
+  )
+}
 
 DateInput.propTypes = {
   autoFocus: PropTypes.bool,
@@ -224,6 +232,7 @@ DateInput.propTypes = {
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   format: PropTypes.func,
   label: PropTypes.string,
+  locale: PropTypes.shape({}),
   maxDate: PropTypes.instanceOf(Date),
   minDate: PropTypes.instanceOf(Date),
   name: PropTypes.string,
@@ -242,6 +251,7 @@ DateInput.defaultProps = {
   error: false,
   format: value => value?.toISOString(),
   label: undefined,
+  locale: undefined,
   maxDate: undefined,
   minDate: undefined,
   name: undefined,

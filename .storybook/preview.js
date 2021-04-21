@@ -1,4 +1,5 @@
 import React from 'react'
+import I18n from '@scaleway/use-i18n'
 import { css, ThemeProvider } from '@emotion/react'
 
 import theme from '../src/theme'
@@ -31,7 +32,15 @@ const adjustedTheme = ancestorTheme => ({
 
 export const decorators = [
   Story => (
-    <>
+    <I18n
+      defaultLoad={async ({ locale }) => import(`./locales/${locale}.json`)}
+      defaultLocale="en"
+      defaultTranslations={{}}
+      enableDebugKey={false}
+      enableDefaultLocale={false}
+      localeItemStorage="localeI18n"
+      supportedLocales={['en', 'fr', 'es']}
+    >
       <ThemeProvider theme={adjustedTheme}>
         <GlobalStyle
           additionalStyles={[
@@ -44,6 +53,6 @@ export const decorators = [
         />
         <Story />
       </ThemeProvider>
-    </>
+    </I18n>
   ),
 ]
