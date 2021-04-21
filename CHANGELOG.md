@@ -1,3 +1,20 @@
+### [0.75.6](https://github.com/scaleway/scaleway-ui/compare/v0.75.5...v0.75.6) (2021-04-21)
+
+
+### :repeat: CI
+
+* correct github login credentials ([5520541](https://github.com/scaleway/scaleway-ui/commit/5520541fc572205b4328860628e3c2627d256260))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/core from 7.13.15 to 7.13.16 ([#276](https://github.com/scaleway/scaleway-ui/issues/276)) ([5e3cd7a](https://github.com/scaleway/scaleway-ui/commit/5e3cd7a761257c93c178c67bc49ebcd98e954f3f))
+
+
+### :bug: Bug Fixes
+
+* errors has wrong conditions ([#245](https://github.com/scaleway/scaleway-ui/issues/245)) ([79c9ab6](https://github.com/scaleway/scaleway-ui/commit/79c9ab6f50abd9a418105030a58f1860530da1e7))
+
 ### [0.75.5](https://github.com/scaleway/scaleway-ui/compare/v0.75.4...v0.75.5) (2021-04-20)
 
 
