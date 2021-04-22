@@ -99,7 +99,6 @@ const StyledCenterTouchable = styled(Touchable)`
 `
 
 const StyledInput = styled.input`
-  pointer-events: none;
   color: ${({ theme }) => theme.colors.gray700};
   background-color: ${({ theme }) => theme.colors.white};
   font-size: 16;
