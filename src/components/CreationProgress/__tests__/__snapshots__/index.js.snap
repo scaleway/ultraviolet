@@ -10,12 +10,33 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 .emotion-5 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border-width: 3px;
+}
+
+.emotion-1 .emotion-11 {
+  height: 4px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.emotion-1 .emotion-9 {
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .emotion-2 {
@@ -30,13 +51,14 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .emotion-4 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,25 +97,24 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   border-radius: 2px;
   background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-12 {
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 
@@ -123,11 +144,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
@@ -151,11 +168,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
@@ -201,12 +214,33 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 .emotion-5 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border-width: 3px;
+}
+
+.emotion-1 .emotion-11 {
+  height: 4px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.emotion-1 .emotion-9 {
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .emotion-2 {
@@ -221,13 +255,14 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .emotion-4 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,48 +301,30 @@ exports[`CreationProgress renders correctly with default props 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   border-radius: 2px;
   background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-12 {
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-16 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+.emotion-14 {
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,14 +340,34 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   background-color: transparent;
   border-style: solid;
   border-color: #d4dae7;
-  border-width: 3px;
 }
 
-.emotion-18 {
+.emotion-16 {
   background-color: #d4dae7;
-  height: 8px;
-  width: 8px;
+  height: 7px;
+  width: 7px;
   border-radius: 16px;
+}
+
+.emotion-20 {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
+}
+
+.emotion-20::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #45d6b5;
 }
 
 <div
@@ -359,19 +396,15 @@ exports[`CreationProgress renders correctly with default props 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-16 emotion-5"
+        class="emotion-14 emotion-5"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         />
       </div>
       <div
@@ -381,16 +414,16 @@ exports[`CreationProgress renders correctly with default props 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-20 emotion-11"
     />
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-16 emotion-5"
+        class="emotion-14 emotion-5"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         />
       </div>
       <div
@@ -423,12 +456,33 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 .emotion-5 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border-width: 3px;
+}
+
+.emotion-1 .emotion-11 {
+  height: 4px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.emotion-1 .emotion-9 {
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .emotion-2 {
@@ -443,13 +497,14 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .emotion-4 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -488,58 +543,52 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   border-radius: 2px;
   background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-12 {
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-20 {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
+}
+
+.emotion-20::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-28 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+.emotion-24 {
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -555,14 +604,34 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   background-color: transparent;
   border-style: solid;
   border-color: #d4dae7;
-  border-width: 3px;
+}
+
+.emotion-26 {
+  background-color: #d4dae7;
+  height: 7px;
+  width: 7px;
+  border-radius: 16px;
 }
 
 .emotion-30 {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
   background-color: #d4dae7;
-  height: 8px;
-  width: 8px;
-  border-radius: 16px;
+  position: relative;
+}
+
+.emotion-30::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #45d6b5;
 }
 
 <div
@@ -591,11 +660,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
@@ -618,20 +683,16 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-24 emotion-13"
-      />
-    </div>
+      class="emotion-20 emotion-11"
+    />
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-28 emotion-5"
+        class="emotion-24 emotion-5"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-26 emotion-27"
         />
       </div>
       <div
@@ -641,7 +702,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-30 emotion-11"
     />
   </div>
 </DocumentFragment>
@@ -667,12 +728,33 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 .emotion-5 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border-width: 3px;
+}
+
+.emotion-1 .emotion-11 {
+  height: 4px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.emotion-1 .emotion-9 {
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .emotion-2 {
@@ -687,13 +769,14 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .emotion-4 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -733,58 +816,52 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   border-radius: 2px;
   background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-12 {
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-20 {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
+}
+
+.emotion-20::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
 
-.emotion-28 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+.emotion-24 {
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -800,10 +877,9 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   background-color: transparent;
   border-style: solid;
   border-color: #d4dae7;
-  border-width: 3px;
 }
 
-.emotion-31 {
+.emotion-27 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -811,7 +887,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   color: #dce1eb;
 }
 
-.emotion-31.emotion-31 {
+.emotion-27.emotion-27 {
   color: #dce1eb;
   font-weight: 500;
 }
@@ -839,11 +915,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
@@ -863,20 +935,16 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-24 emotion-13"
-      />
-    </div>
+      class="emotion-20 emotion-11"
+    />
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-28 emotion-5"
+        class="emotion-24 emotion-5"
       >
         <div
-          class="emotion-6 emotion-31"
+          class="emotion-6 emotion-27"
         >
           3
         </div>
@@ -901,12 +969,33 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-1 .emotion-5 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+  border-width: 3px;
+}
+
+.emotion-1 .emotion-11 {
+  height: 4px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.emotion-1 .emotion-9 {
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .emotion-2 {
@@ -921,13 +1010,14 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .emotion-4 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -966,56 +1056,50 @@ exports[`CreationProgress renders correctly without animation 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   border-radius: 2px;
   background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-12 {
+.emotion-10::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-radius: 2px;
   background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 
-.emotion-24 {
+.emotion-20 {
   border-radius: 2px;
-  background-color: #45d6b5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
 }
 
-.emotion-28 {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+.emotion-20::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #45d6b5;
+}
+
+.emotion-24 {
+  border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1031,13 +1115,12 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: transparent;
   border-style: solid;
   border-color: #d4dae7;
-  border-width: 3px;
 }
 
-.emotion-30 {
+.emotion-26 {
   background-color: #d4dae7;
-  height: 8px;
-  width: 8px;
+  height: 7px;
+  width: 7px;
   border-radius: 16px;
 }
 
@@ -1067,11 +1150,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
     </div>
     <div
       class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-12 emotion-13"
-      />
-    </div>
+    />
     <div
       class="emotion-2 emotion-3"
     >
@@ -1094,20 +1173,16 @@ exports[`CreationProgress renders correctly without animation 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
-    >
-      <div
-        class="emotion-24 emotion-13"
-      />
-    </div>
+      class="emotion-20 emotion-11"
+    />
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-28 emotion-5"
+        class="emotion-24 emotion-5"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-26 emotion-27"
         />
       </div>
       <div
