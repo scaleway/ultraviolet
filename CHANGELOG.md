@@ -1,3 +1,20 @@
+## [0.76.0](https://github.com/scaleway/scaleway-ui/compare/v0.75.6...v0.76.0) (2021-04-22)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.13.10 to 7.13.17 ([#277](https://github.com/scaleway/scaleway-ui/issues/277)) ([97520e6](https://github.com/scaleway/scaleway-ui/commit/97520e6a64f89bcf9483da8cb2e893b6ad4a96e3))
+
+
+### :lipstick: Style
+
+* adds comment and refacto code a bit ([#266](https://github.com/scaleway/scaleway-ui/issues/266)) ([ec1e433](https://github.com/scaleway/scaleway-ui/commit/ec1e4331defbd5b9665ab58d9a9e528089163c3a))
+
+
+### :gear: Features
+
+* **logo:** change with new logo ([#279](https://github.com/scaleway/scaleway-ui/issues/279)) ([5907b68](https://github.com/scaleway/scaleway-ui/commit/5907b6812a6ea24386481dd5004cf29ded1f9556))
+
 ### [0.75.6](https://github.com/scaleway/scaleway-ui/compare/v0.75.5...v0.75.6) (2021-04-21)
 
 
