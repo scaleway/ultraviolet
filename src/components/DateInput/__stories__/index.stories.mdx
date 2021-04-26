@@ -61,19 +61,19 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 <Canvas>
   <Story name="Localized fr" height="360px">
-    <DateInput label="fr-FR" currentLocale="fr" locale={fr} m={2} />
+    <DateInput label="fr-FR" locale={fr} m={2} />
   </Story>
 </Canvas>
 
 <Canvas>
   <Story name="Localized es" height="360px">
-    <DateInput label="es-ES" currentLocale="es" locale={es} m={2} />
+    <DateInput label="es-ES" locale={es} m={2} />
   </Story>
 </Canvas>
 
 <Canvas>
   <Story name="Localized ru" height="360px">
-    <DateInput label="ru-RU" currentLocale="ru" locale={ru} m={2} />
+    <DateInput label="ru-RU" locale={ru} m={2} />
   </Story>
 </Canvas>
 
@@ -102,11 +102,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
               </RichSelect.Option>
             ))}
           </RichSelect>
-          <DateInput
-            label={currentLocale}
-            currentLocale={currentLocale}
-            locale={dateFnsLocale}
-          />
+          <DateInput label={currentLocale} locale={dateFnsLocale} />
         </>
       )
     }}

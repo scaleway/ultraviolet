@@ -119,7 +119,6 @@ const TopHeaderDiv = styled.div`
 
 const DateInput = ({
   autoFocus,
-  currentLocale,
   disabled,
   error,
   format,
@@ -135,8 +134,8 @@ const DateInput = ({
   type,
   value,
 }) => {
-  if (locale && currentLocale) {
-    registerLocale(currentLocale, locale)
+  if (locale) {
+    registerLocale(locale?.code, locale)
   }
 
   return (
@@ -147,7 +146,7 @@ const DateInput = ({
           autoFocus={autoFocus}
           fixedHeight
           name={name}
-          locale={currentLocale}
+          locale={locale?.code || 'en-GB'}
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
@@ -195,7 +194,7 @@ const DateInput = ({
             <>
               <TopHeaderDiv>
                 <Typography variant="bodyA" mr={1}>
-                  {new Date(date).toLocaleString(currentLocale, {
+                  {new Date(date).toLocaleString(locale?.code || 'en-GB', {
                     month: 'long',
                     year: 'numeric',
                   })}
@@ -227,12 +226,13 @@ const DateInput = ({
 
 DateInput.propTypes = {
   autoFocus: PropTypes.bool,
-  currentLocale: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   format: PropTypes.func,
   label: PropTypes.string,
-  locale: PropTypes.shape({}),
+  locale: PropTypes.shape({
+    code: PropTypes.string,
+  }),
   maxDate: PropTypes.instanceOf(Date),
   minDate: PropTypes.instanceOf(Date),
   name: PropTypes.string,
@@ -246,7 +246,6 @@ DateInput.propTypes = {
 
 DateInput.defaultProps = {
   autoFocus: false,
-  currentLocale: 'en-EN',
   disabled: false,
   error: false,
   format: value => value?.toISOString(),
