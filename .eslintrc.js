@@ -10,6 +10,7 @@ module.exports = {
       {
         devDependencies: [
           '**/*.stories.*',
+          '**/__stories__/**/*',
           '**/*.test.js',
           '**/*.spec.js',
           '**/__tests__/*',

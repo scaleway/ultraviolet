@@ -1,6 +1,9 @@
+import { useI18n } from '@scaleway/use-i18n'
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { es, fr, ru } from 'date-fns/locale'
 import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import RichSelect from '../../RichSelect'
 
 <Meta title="Components/DateInput" />
 
@@ -57,8 +60,52 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 ## Localized
 
 <Canvas>
-  <Story name="Localized" height="360px">
-    <DateInput label="fr-FR" currentLocale="fr-FR" />
+  <Story name="Localized fr" height="360px">
+    <DateInput label="fr-FR" locale={fr} m={2} />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Localized es" height="360px">
+    <DateInput label="es-ES" locale={es} m={2} />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Localized ru" height="360px">
+    <DateInput label="ru-RU" locale={ru} m={2} />
+  </Story>
+</Canvas>
+
+## Localized with i18n Provider
+
+<Canvas>
+  <Story name="i18n provider" height="360px">
+    {() => {
+      const { locales, currentLocale, switchLocale, dateFnsLocale } = useI18n()
+      return (
+        <>
+          <RichSelect
+            name="locale-switcher"
+            isSearchable={false}
+            value={{
+              value: currentLocale,
+              label: currentLocale,
+            }}
+            onChange={({ value }) => switchLocale(value)}
+            noTopLabel
+            mb={3}
+          >
+            {locales.map(locale => (
+              <RichSelect.Option value={locale} key={locale}>
+                {locale}
+              </RichSelect.Option>
+            ))}
+          </RichSelect>
+          <DateInput label={currentLocale} locale={dateFnsLocale} />
+        </>
+      )
+    }}
   </Story>
 </Canvas>
 

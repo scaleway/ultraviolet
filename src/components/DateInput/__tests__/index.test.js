@@ -1,3 +1,4 @@
+import { es, fr, ru } from 'date-fns/locale/'
 import React from 'react'
 import DateInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
@@ -10,7 +11,7 @@ describe('DateInput', () => {
         onChange={() => {}}
         onBlur={() => {}}
         onFocus={() => {}}
-        currentLocale="fr-FR"
+        locale={fr}
         value={new Date('1995-12-17T03:24:00.000+00:00')}
         name="test"
         autoFocus={false}
@@ -24,10 +25,6 @@ describe('DateInput', () => {
 
   test('renders correctly required', () => {
     shouldMatchEmotionSnapshot(<DateInput label="Date" required />)
-  })
-
-  test('renders correctly currentLocale', () => {
-    shouldMatchEmotionSnapshot(<DateInput label="Date" currentLocale="fr-FR" />)
   })
 
   test('renders correctly error', () => {
@@ -51,5 +48,16 @@ describe('DateInput', () => {
         maxDate={new Date('1995-12-25T03:24:00.000+00:00')}
       />,
     )
+  })
+
+  test('renders correctly with date-fns locale fr', () => {
+    shouldMatchEmotionSnapshot(<DateInput label="Date fns fr" locale={fr} />)
+  })
+  test('renders correctly with date-fns locale es', () => {
+    shouldMatchEmotionSnapshot(<DateInput label="Date fns es" locale={es} />)
+  })
+
+  test('renders correctly with date-fns locale ru', () => {
+    shouldMatchEmotionSnapshot(<DateInput label="Date fns ru" locale={ru} />)
   })
 })
