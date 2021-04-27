@@ -1,0 +1,34 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { BrowserRouter, Link } from 'react-router-dom'
+import UniversalLink from '..'
+
+<Meta title="Components/UniversalLink" component={UniversalLink} />
+
+# UniversalLink
+
+## Basic
+
+<Canvas>
+  <Story name="basic">
+    <UniversalLink href="/?path=/docs/components-universallink--basic#basic">
+      href
+    </UniversalLink>
+  </Story>
+</Canvas>
+
+## With react router dom
+
+<Canvas>
+  <Story name="react-router-dom">
+    <BrowserRouter>
+      <UniversalLink
+        to="?path=/docs/components-universallink--basic#with-react-router"
+        as={Link}
+      >
+        to
+      </UniversalLink>
+    </BrowserRouter>
+  </Story>
+</Canvas>
+
+<ArgsTable of={UniversalLink} />

@@ -4,8 +4,8 @@ import renderWithTheme from './renderWithTheme'
 
 expect.addSnapshotSerializer(createSerializer())
 
-export default async (component, { transform } = {}) => {
-  const node = renderWithTheme(component)
+export default async (component, { transform, modifyTheme } = {}) => {
+  const node = renderWithTheme(component, modifyTheme)
   if (transform) await transform(node)
 
   expect(node.asFragment()).toMatchSnapshot()

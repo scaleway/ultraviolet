@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Link, { linkVariants } from '..'
 import { Box, Boxer } from '../..'
 
@@ -42,3 +48,5 @@ Absolute URLs (starting by `http` or `https`) are automatically detected in `to`
 ```
 
 is used instead of the default `linkComponent` specified in the theme.
+
+<ArgsTable of={Link} />

@@ -11,10 +11,12 @@ const emotionCache = createCache({
 
 emotionCache.compat = true
 
-export default (component, options) =>
+export default (component, options, modifyTheme = {}) =>
   render(
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>{component}</ThemeProvider>
+      <ThemeProvider theme={{ ...theme, ...modifyTheme }}>
+        {component}
+      </ThemeProvider>
     </CacheProvider>,
     options,
   )

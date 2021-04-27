@@ -29,9 +29,16 @@ const UniversalLink = ({
   const rel = propsRel || (isBlank ? 'noopener noreferrer' : undefined)
   const href = to || propsHref
   const asValue = propsAs || (needNativeLink(href) ? 'a' : linkComponent)
+  const parameter = asValue === 'a' ? 'href' : 'to'
 
   return (
-    <Box {...props} target={target} as={asValue} href={href} rel={rel}>
+    <Box
+      {...props}
+      target={target}
+      as={asValue}
+      {...{ [parameter]: href }}
+      rel={rel}
+    >
       {children}
     </Box>
   )
@@ -43,7 +50,7 @@ UniversalLink.propTypes = {
   rel: PropTypes.string,
   to: PropTypes.string,
   href: PropTypes.string,
-  as: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
 }
 
 UniversalLink.defaultProps = {
