@@ -1,3 +1,25 @@
+### [0.76.1](https://github.com/scaleway/scaleway-ui/compare/v0.76.0...v0.76.1) (2021-04-27)
+
+
+### :package: Chore
+
+* **deps:** bump polished from 4.1.1 to 4.1.2 ([#291](https://github.com/scaleway/scaleway-ui/issues/291)) ([377bb27](https://github.com/scaleway/scaleway-ui/commit/377bb2755f0e618badcccb64d07114c238fdff11))
+* **deps:** bump react-toastify from 7.0.3 to 7.0.4 ([#293](https://github.com/scaleway/scaleway-ui/issues/293)) ([83a73ad](https://github.com/scaleway/scaleway-ui/commit/83a73ad2f1af6d0b79bb3e70ce4342daf7810011))
+* **deps:** bump reakit from 1.3.7 to 1.3.8 ([#288](https://github.com/scaleway/scaleway-ui/issues/288)) ([f1bb6d6](https://github.com/scaleway/scaleway-ui/commit/f1bb6d6a8ebbce9883aadf38b823488899e0e5b7))
+* **deps-dev:** bump @storybook/addon-essentials from 6.2.8 to 6.2.9 ([#282](https://github.com/scaleway/scaleway-ui/issues/282)) ([0703d65](https://github.com/scaleway/scaleway-ui/commit/0703d652c786fb97c6371ce72c62645da59ab2aa))
+* **deps-dev:** bump @storybook/addon-links from 6.2.8 to 6.2.9 ([#284](https://github.com/scaleway/scaleway-ui/issues/284)) ([4e6639e](https://github.com/scaleway/scaleway-ui/commit/4e6639e8bf8f5cb370d07d15b34dcb4a54d5d438))
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.2.8 to 6.2.9 ([#286](https://github.com/scaleway/scaleway-ui/issues/286)) ([1c808b4](https://github.com/scaleway/scaleway-ui/commit/1c808b4e444454e56ee7d94db74c433d9962291d))
+* **deps-dev:** bump @storybook/react from 6.2.8 to 6.2.9 ([#283](https://github.com/scaleway/scaleway-ui/issues/283)) ([086f651](https://github.com/scaleway/scaleway-ui/commit/086f651469b4bd67d3c544309a3fb1cc177e7f00))
+* **deps-dev:** bump @testing-library/jest-dom from 5.11.10 to 5.12.0 ([#287](https://github.com/scaleway/scaleway-ui/issues/287)) ([101e8a1](https://github.com/scaleway/scaleway-ui/commit/101e8a1dfd7efdac28753c4c854484db7fb577cc))
+* **deps-dev:** bump eslint from 7.24.0 to 7.25.0 ([#292](https://github.com/scaleway/scaleway-ui/issues/292)) ([bb30fb2](https://github.com/scaleway/scaleway-ui/commit/bb30fb2d41dbc85276114a9bdde5e95feaa6b784))
+* **deps-dev:** bump postcss from 8.2.10 to 8.2.12 ([#290](https://github.com/scaleway/scaleway-ui/issues/290)) ([d382ac8](https://github.com/scaleway/scaleway-ui/commit/d382ac862e3fb568646f1c8027a1ffb22d8124eb))
+* **deps-dev:** bump postcss from 8.2.12 to 8.2.13 ([#294](https://github.com/scaleway/scaleway-ui/issues/294)) ([b552d92](https://github.com/scaleway/scaleway-ui/commit/b552d92a1c3fe21ecb2f5deddd2e7fe9de1911eb))
+
+
+### :bug: Bug Fixes
+
+* **date-input:** add locale props from date-fns ([#278](https://github.com/scaleway/scaleway-ui/issues/278)) ([b2f0a0c](https://github.com/scaleway/scaleway-ui/commit/b2f0a0c61c22d5b3a811ff659d87b1bc08e3667a))
+
 ## [0.76.0](https://github.com/scaleway/scaleway-ui/compare/v0.75.6...v0.76.0) (2021-04-22)
 
 
