@@ -66,7 +66,7 @@ describe('UniversalLink', () => {
           This is a link
         </UniversalLink>
       </BrowserRouter>,
-      { modifyTheme: theme },
+      { theme },
     )
   })
 })

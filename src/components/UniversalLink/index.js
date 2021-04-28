@@ -50,7 +50,7 @@ UniversalLink.propTypes = {
   rel: PropTypes.string,
   to: PropTypes.string,
   href: PropTypes.string,
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  as: PropTypes.node,
 }
 
 UniversalLink.defaultProps = {
