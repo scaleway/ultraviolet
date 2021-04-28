@@ -1,3 +1,10 @@
+### [0.76.2](https://github.com/scaleway/scaleway-ui/compare/v0.76.1...v0.76.2) (2021-04-28)
+
+
+### :bug: Bug Fixes
+
+* **universal-link:** add to when using react-router-dom ([#295](https://github.com/scaleway/scaleway-ui/issues/295)) ([2e18f91](https://github.com/scaleway/scaleway-ui/commit/2e18f911510d3b138a555f44449789d8e0d76c57))
+
 ### [0.76.1](https://github.com/scaleway/scaleway-ui/compare/v0.76.0...v0.76.1) (2021-04-27)
 
 
