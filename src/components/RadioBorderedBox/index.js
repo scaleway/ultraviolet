@@ -6,6 +6,7 @@ import Badge from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Box from '../Box'
 import Radio from '../Radio'
+import { Typography } from '../Typography'
 
 const StyledBorderedBox = styled(BorderedBox)`
   &:hover {
@@ -64,7 +65,7 @@ const RadioBorderedBox = ({
         size={size}
         mr="4px"
       >
-        {label}
+        <Typography color="gray950">{label}</Typography>
       </Radio>
       <Box as="span" mr={1}>
         {labelDescription}
