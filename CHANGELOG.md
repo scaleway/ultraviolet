@@ -1,3 +1,18 @@
+## [0.77.0](https://github.com/scaleway/scaleway-ui/compare/v0.76.2...v0.77.0) (2021-04-30)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.13.17 to 7.14.0 ([#299](https://github.com/scaleway/scaleway-ui/issues/299)) ([dc0e193](https://github.com/scaleway/scaleway-ui/commit/dc0e193b5a9249de3fc9ba8416e1f69df66d7be7))
+* **deps-dev:** bump @babel/core from 7.13.16 to 7.14.0 ([#297](https://github.com/scaleway/scaleway-ui/issues/297)) ([de4d0b7](https://github.com/scaleway/scaleway-ui/commit/de4d0b7a5da0db2c9b1f02d97eb963bf3da66ead))
+* **deps-dev:** bump @babel/preset-env from 7.13.15 to 7.14.0 ([#298](https://github.com/scaleway/scaleway-ui/issues/298)) ([4f01420](https://github.com/scaleway/scaleway-ui/commit/4f0142065bbb7e79afa57a4e22070a384935ea56))
+* **deps-dev:** bump rollup from 2.45.2 to 2.46.0 ([#296](https://github.com/scaleway/scaleway-ui/issues/296)) ([b833388](https://github.com/scaleway/scaleway-ui/commit/b83338833b8f9514343616e161eab2ec1e317306))
+
+
+### :gear: Features
+
+* add multiple creation progress sizes ([#280](https://github.com/scaleway/scaleway-ui/issues/280)) ([94dce4b](https://github.com/scaleway/scaleway-ui/commit/94dce4b136dcb50d084ea9e2450faadb712f683f))
+
 ### [0.76.2](https://github.com/scaleway/scaleway-ui/compare/v0.76.1...v0.76.2) (2021-04-28)
 
 
