@@ -14,6 +14,7 @@ const sizes = {
     text: 10,
     stepBorder: 1,
     stepTextMargin: 15,
+    dot: 3,
   },
   small: {
     line: 8,
@@ -21,6 +22,7 @@ const sizes = {
     text: 11,
     stepBorder: 2,
     stepTextMargin: 15,
+    dot: 4,
   },
   medium: {
     line: 10,
@@ -28,6 +30,7 @@ const sizes = {
     text: 12,
     stepBorder: 2,
     stepTextMargin: 15,
+    dot: 5,
   },
   large: {
     line: 12,
@@ -35,6 +38,7 @@ const sizes = {
     text: 14,
     stepBorder: 2,
     stepTextMargin: 15,
+    dot: 6,
   },
   xlarge: {
     line: 14,
@@ -42,6 +46,7 @@ const sizes = {
     text: 16,
     stepBorder: 3,
     stepTextMargin: 15,
+    dot: 7,
   },
 }
 
@@ -91,10 +96,9 @@ const StyledText = styled.div`
 `
 
 const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.gray350};
-  height: 7px;
-  width: 7px;
-  border-radius: 16px;
+  background-color: ${({ temporal, theme: { colors } }) =>
+    temporal === 'current' ? colors.white : colors.gray350};
+  border-radius: 50%;
 `
 
 const loadingStyle = css`
@@ -146,13 +150,18 @@ const StyledContainer = styled(Box)`
     margin-top: ${({ size }) => sizes[size].text}px;
     font-size: ${({ size }) => sizes[size].text}px;
   }
+
+  ${StyledFutureInternalDot} {
+    height: ${({ size }) => sizes[size].dot}px;
+    width: ${({ size }) => sizes[size].dot}px;
+  }
 `
 
 const CreationProgress = ({
   children,
   selected,
   animated,
-  isStepsNumber,
+  variant,
   size,
   ...props
 }) => {
@@ -173,21 +182,23 @@ const CreationProgress = ({
 
         const renderStep = () => {
           if (temporal !== 'future') {
-            return isStepsNumber ? (
-              <Typography color="white" fontWeight={500}>
-                {index + 1}
-              </Typography>
-            ) : (
-              <Icon name="check" color="white" size={20} />
-            )
+            if (animated) {
+              return <Icon name="check" color="white" size={sizes[size].text} />
+            }
+            if (temporal === 'past') {
+              return <Icon name="check" color="white" size={sizes[size].text} />
+            }
           }
 
-          return isStepsNumber ? (
-            <Typography color="gray300" fontWeight={500}>
+          return variant === 'number' ? (
+            <Typography
+              color={temporal === 'current' ? 'white' : 'gray300'}
+              fontWeight={500}
+            >
               {index + 1}
             </Typography>
           ) : (
-            <StyledFutureInternalDot />
+            <StyledFutureInternalDot temporal={temporal} />
           )
         }
 
@@ -217,14 +228,14 @@ CreationProgress.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   selected: PropTypes.number,
   animated: PropTypes.bool,
-  isStepsNumber: PropTypes.bool,
+  variant: PropTypes.oneOf(['default', 'number']),
   size: PropTypes.oneOf(Object.keys(sizes)),
 }
 
 CreationProgress.defaultProps = {
   selected: 0,
   animated: true,
-  isStepsNumber: false,
+  variant: 'default',
   size: 'xlarge',
 }
 

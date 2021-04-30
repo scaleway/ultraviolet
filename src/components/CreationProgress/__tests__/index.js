@@ -51,7 +51,17 @@ describe('CreationProgress', () => {
 
   test('renders correctly with steps number', () => {
     shouldMatchEmotionSnapshot(
-      <CreationProgress selected={1} isStepsNumber>
+      <CreationProgress selected={1} variant="number">
+        <CreationProgress.Step>Step 1</CreationProgress.Step>
+        <CreationProgress.Step>Step 2</CreationProgress.Step>
+        <CreationProgress.Step>Step 3</CreationProgress.Step>
+      </CreationProgress>,
+    )
+  })
+
+  test('renders correctly with steps number and not animated', () => {
+    shouldMatchEmotionSnapshot(
+      <CreationProgress selected={1} animated={false} variant="number">
         <CreationProgress.Step>Step 1</CreationProgress.Step>
         <CreationProgress.Step>Step 2</CreationProgress.Step>
         <CreationProgress.Step>Step 3</CreationProgress.Step>

@@ -6,6 +6,8 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import CreationProgress from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import { Button } from '../../Button'
 
 <Meta title="Components/CreationProgress" component={CreationProgress} />
 
@@ -57,9 +59,11 @@ import CreationProgress from '..'
 
 # With steps number
 
+By choosing `number` variant with `variant="number"` prop, step are numbered
+
 <Canvas>
-  <Story name="isStepsNumber">
-    <CreationProgress selected={1} isStepsNumber>
+  <Story name="numbered">
+    <CreationProgress selected={1} variant="number">
       <CreationProgress.Step>Step 1</CreationProgress.Step>
       <CreationProgress.Step>Step 2</CreationProgress.Step>
       <CreationProgress.Step>Step 3</CreationProgress.Step>
@@ -73,31 +77,47 @@ You can change the size of the creation progress with the `size` props which acc
 
 <Canvas>
   <Story name="Sizes">
-    <CreationProgress size="xsmall" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-    <CreationProgress my={2} size="small" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-    <CreationProgress size="medium" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-    <CreationProgress my={2} size="large" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-    <CreationProgress size="xlarge" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
+    <ControlValue value={{ animated: true, variant: 'default' }}>
+      {({ value, onChange }) => (
+        <>
+          <div>
+            <Button
+              mr={1}
+              mb={1}
+              onClick={() =>
+                onChange({
+                  ...value,
+                  variant: value.variant === 'number' ? 'default' : 'number',
+                })
+              }
+            >
+              Toggle variant
+            </Button>
+            <Button
+              mb={1}
+              onClick={() =>
+                onChange({ ...value, animated: !value.animated })
+              }
+            >
+              Toggle animated
+            </Button>
+          </div>
+          {['xsmall', 'small', 'medium', 'large', 'xlarge'].map(size => (
+            <CreationProgress
+              size={size}
+              mb={1}
+              selected={1}
+              animated={value.animated}
+              variant={value.variant}
+            >
+              <CreationProgress.Step>Step 1</CreationProgress.Step>
+              <CreationProgress.Step>Step 2</CreationProgress.Step>
+              <CreationProgress.Step>Step 3</CreationProgress.Step>
+            </CreationProgress>
+          ))}
+        </>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
