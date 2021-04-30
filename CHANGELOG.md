@@ -1,3 +1,10 @@
+### [0.77.1](https://github.com/scaleway/scaleway-ui/compare/v0.77.0...v0.77.1) (2021-04-30)
+
+
+### :bug: Bug Fixes
+
+* fixed radio bordered box label color ([#302](https://github.com/scaleway/scaleway-ui/issues/302)) ([b66146d](https://github.com/scaleway/scaleway-ui/commit/b66146d797a5df7ade56d8597bdfea909834a3db))
+
 ## [0.77.0](https://github.com/scaleway/scaleway-ui/compare/v0.76.2...v0.77.0) (2021-04-30)
 
 
