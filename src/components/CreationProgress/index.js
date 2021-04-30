@@ -7,6 +7,44 @@ import Box from '../Box'
 import Icon from '../Icon'
 import { Typography } from '../Typography'
 
+const sizes = {
+  xsmall: {
+    line: 5,
+    step: 16,
+    text: 10,
+    stepBorder: 1,
+    stepTextMargin: 15,
+  },
+  small: {
+    line: 8,
+    step: 20,
+    text: 11,
+    stepBorder: 2,
+    stepTextMargin: 15,
+  },
+  medium: {
+    line: 10,
+    step: 24,
+    text: 12,
+    stepBorder: 2,
+    stepTextMargin: 15,
+  },
+  large: {
+    line: 12,
+    step: 28,
+    text: 14,
+    stepBorder: 2,
+    stepTextMargin: 15,
+  },
+  xlarge: {
+    line: 14,
+    step: 32,
+    text: 16,
+    stepBorder: 3,
+    stepTextMargin: 15,
+  },
+}
+
 const loadingAnimation = keyframes`
   from {
     width: 0;
@@ -17,18 +55,11 @@ const loadingAnimation = keyframes`
   }
 `
 
-const StyledContainer = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  align-self: stretch;
-  justify-content: space-between;
-`
-
 const StyledStepContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 120px;
+  justify-content: flex-start;
 `
 
 const temporalStepStyles = ({ temporal, theme }) =>
@@ -37,24 +68,15 @@ const temporalStepStyles = ({ temporal, theme }) =>
         background-color: ${theme.colors.success};
       `
     : css`
-        height: 32px;
-        width: 32px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background-color: transparent;
         border-style: solid;
         border-color: ${theme.colors.gray350};
-        border-width: 3px;
       `
 
 const StyledStep = styled('div', {
   shouldForwardProp: prop => !['temporal'].includes(prop),
 })`
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,38 +92,60 @@ const StyledText = styled.div`
 
 const StyledFutureInternalDot = styled.div`
   background-color: ${({ theme: { colors } }) => colors.gray350};
-  height: 8px;
-  width: 8px;
+  height: 7px;
+  width: 7px;
   border-radius: 16px;
-`
-
-const StyledLine = styled.div`
-  position: relative;
-  flex: 1;
-  height: 4px;
-  margin-left: -36px;
-  margin-right: -36px;
-  margin-top: 12px;
-  border-radius: 2px;
-  background-color: ${({ theme: { colors } }) => colors.gray350};
 `
 
 const loadingStyle = css`
   animation: ${loadingAnimation} 1s linear infinite;
 `
 
-const StyledLineContent = styled('div', {
-  shouldForwardProp: prop => !['temporal', 'animated'].includes(prop),
-})`
+const StyledLine = styled.div`
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.colors.success};
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  ${({ temporal }) => temporal === 'past' && `width: 100%;`}
-  ${({ temporal, animated }) =>
-    temporal === 'current' && animated && loadingStyle}
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: ${({ theme: { colors } }) => colors.gray350};
+  position: relative;
+
+  ::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+    background-color: ${({ theme }) => theme.colors.success};
+    ${({ temporal }) => temporal === 'past' && `width: 100%;`}
+    ${({ temporal, animated }) =>
+      temporal === 'current' && animated && loadingStyle}
+  }
+`
+
+const StyledContainer = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  ${StyledStep} {
+    height: ${({ size }) => sizes[size].step}px;
+    width: ${({ size }) => sizes[size].step}px;
+    font-size: ${({ size }) => sizes[size].text}px;
+    line-height: 1;
+    border-width: ${({ size }) => sizes[size].stepBorder}px;
+  }
+
+  ${StyledLine} {
+    height: 4px;
+    margin-top: ${({ size }) => sizes[size].line}px;
+    margin-bottom: ${({ size }) => sizes[size].line}px;
+  }
+
+  ${StyledText} {
+    margin-top: ${({ size }) => sizes[size].text}px;
+    font-size: ${({ size }) => sizes[size].text}px;
+  }
 `
 
 const CreationProgress = ({
@@ -109,12 +153,13 @@ const CreationProgress = ({
   selected,
   animated,
   isStepsNumber,
+  size,
   ...props
 }) => {
   const lastStep = children.length - 1
 
   return (
-    <StyledContainer {...props}>
+    <StyledContainer size={size} {...props}>
       {flattenChildren(children).map((child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'past'
@@ -156,11 +201,7 @@ const CreationProgress = ({
             </StyledStepContainer>
 
             {isNotLast && (
-              <StyledLine>
-                {temporal !== 'future' && (
-                  <StyledLineContent temporal={temporal} animated={animated} />
-                )}
-              </StyledLine>
+              <StyledLine temporal={temporal} animated={animated} />
             )}
           </React.Fragment>
         )
@@ -177,12 +218,14 @@ CreationProgress.propTypes = {
   selected: PropTypes.number,
   animated: PropTypes.bool,
   isStepsNumber: PropTypes.bool,
+  size: PropTypes.oneOf(Object.keys(sizes)),
 }
 
 CreationProgress.defaultProps = {
   selected: 0,
   animated: true,
   isStepsNumber: false,
+  size: 'xlarge',
 }
 
 export default CreationProgress
