@@ -38,6 +38,7 @@ export const decorators = [
       defaultTranslations={{}}
       enableDebugKey={false}
       enableDefaultLocale={false}
+      loadDateLocale={async locale => import(`date-fns/locale/${locale}/index`)}
       localeItemStorage="localeI18n"
       supportedLocales={['en', 'fr', 'es']}
     >
