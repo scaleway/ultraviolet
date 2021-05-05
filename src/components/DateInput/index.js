@@ -156,6 +156,7 @@ const DateInput = ({
             <div>
               <TextBox
                 error={error ? `${error}` : undefined}
+                id={`date-input${name ? `-${name}` : ''}`}
                 label={label}
                 value={format(value) || ''}
                 disabled={disabled}
@@ -193,8 +194,8 @@ const DateInput = ({
           }) => (
             <>
               <TopHeaderDiv>
-                <Typography variant="bodyA" mr={1}>
-                  {new Date(date).toLocaleString(locale?.code || 'en-GB', {
+                <Typography variant="bodyA" mr={1} textTransform="capitalize">
+                  {new Date(date).toLocaleString(locale?.code || 'fr-FR', {
                     month: 'long',
                     year: 'numeric',
                   })}
