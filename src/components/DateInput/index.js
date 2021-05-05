@@ -196,7 +196,7 @@ const DateInput = ({
             <>
               <TopHeaderDiv>
                 <Typography variant="bodyA" mr={1} textTransform="capitalize">
-                  {new Date(date).toLocaleString(locale?.code || 'fr-FR', {
+                  {new Date(date).toLocaleString(locale?.code || 'en-GB', {
                     month: 'long',
                     year: 'numeric',
                   })}
