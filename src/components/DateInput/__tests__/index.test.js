@@ -1,8 +1,11 @@
 import userEvent from '@testing-library/user-event'
 import { es, fr, ru } from 'date-fns/locale/'
 import React from 'react'
+import tk from 'timekeeper'
 import DateInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+
+tk.freeze(new Date(1609503120000))
 
 describe('DateInput', () => {
   test('renders correctly with default props', () => {
