@@ -65,6 +65,7 @@ const StyledWrapper = styled.div`
       line-height: 24px;
       text-align: center;
       margin: 3px;
+      text-transform: capitalize;
     }
 
     ${PREFIX}__day {
