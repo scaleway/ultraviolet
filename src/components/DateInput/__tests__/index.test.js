@@ -1,7 +1,11 @@
+import userEvent from '@testing-library/user-event'
 import { es, fr, ru } from 'date-fns/locale/'
 import React from 'react'
+import tk from 'timekeeper'
 import DateInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+
+tk.freeze(new Date(1609503120000))
 
 describe('DateInput', () => {
   test('renders correctly with default props', () => {
@@ -51,13 +55,29 @@ describe('DateInput', () => {
   })
 
   test('renders correctly with date-fns locale fr', () => {
-    shouldMatchEmotionSnapshot(<DateInput label="Date fns fr" locale={fr} />)
+    shouldMatchEmotionSnapshot(<DateInput label="Date" locale={fr} />, {
+      transform: async ({ getByLabelText }) => {
+        const buttonContainer = getByLabelText('Date')
+        userEvent.click(buttonContainer)
+      },
+    })
   })
+
   test('renders correctly with date-fns locale es', () => {
-    shouldMatchEmotionSnapshot(<DateInput label="Date fns es" locale={es} />)
+    shouldMatchEmotionSnapshot(<DateInput label="Date" locale={es} />, {
+      transform: async ({ getByLabelText }) => {
+        const buttonContainer = getByLabelText('Date')
+        userEvent.click(buttonContainer)
+      },
+    })
   })
 
   test('renders correctly with date-fns locale ru', () => {
-    shouldMatchEmotionSnapshot(<DateInput label="Date fns ru" locale={ru} />)
+    shouldMatchEmotionSnapshot(<DateInput label="Date" locale={ru} />, {
+      transform: async ({ getByLabelText }) => {
+        const buttonContainer = getByLabelText('Date')
+        userEvent.click(buttonContainer)
+      },
+    })
   })
 })

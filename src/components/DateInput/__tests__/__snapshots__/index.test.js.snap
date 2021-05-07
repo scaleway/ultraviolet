@@ -61,6 +61,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -282,6 +283,7 @@ exports[`DateInput renders correctly disabled 1`] = `
                 autocomplete="on"
                 class="emotion-4 emotion-5"
                 disabled=""
+                id="date-input"
                 type="text"
                 value=""
               />
@@ -289,6 +291,7 @@ exports[`DateInput renders correctly disabled 1`] = `
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
                 disabled=""
+                for="date-input"
               >
                 Date
               </label>
@@ -384,6 +387,7 @@ exports[`DateInput renders correctly error 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -634,12 +638,14 @@ exports[`DateInput renders correctly error 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
                 Date
               </label>
@@ -737,6 +743,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -995,6 +1002,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
                 autocomplete="on"
                 class="emotion-4 emotion-5"
                 disabled=""
+                id="date-input"
                 type="text"
                 value=""
               />
@@ -1002,6 +1010,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
                 disabled=""
+                for="date-input"
               >
                 Date
               </label>
@@ -1099,6 +1108,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -1369,6 +1379,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
                 autocomplete="on"
                 class="emotion-4 emotion-5"
                 disabled=""
+                id="date-input"
                 type="text"
                 value=""
               />
@@ -1376,6 +1387,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
                 disabled=""
+                for="date-input"
               >
                 Date
               </label>
@@ -1481,6 +1493,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -1694,12 +1707,14 @@ exports[`DateInput renders correctly min-max 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
                 Date
               </label>
@@ -1795,6 +1810,7 @@ exports[`DateInput renders correctly required 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -2020,12 +2036,14 @@ exports[`DateInput renders correctly required 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
                 Date
               </label>
@@ -2129,6 +2147,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -2229,6 +2248,22 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   border-color: #4f0599;
 }
 
+.emotion-4::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-4:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::placeholder {
+  opacity: 1;
+}
+
 .emotion-6 {
   display: block;
   position: absolute;
@@ -2250,6 +2285,10 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   -moz-transform: translate(0, 12px) scale(1);
   -ms-transform: translate(0, 12px) scale(1);
   transform: translate(0, 12px) scale(1);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
 }
 
 .emotion-8 {
@@ -2320,6 +2359,66 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   align-self: center;
 }
 
+.emotion-15 {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.emotion-18 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.emotion-19 {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.emotion-21 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.emotion-21.emotion-21 {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.emotion-23 {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.emotion-23.emotion-23 {
+  vertical-align: middle;
+}
+
 <div
     class="emotion-0 emotion-1"
   >
@@ -2330,7 +2429,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class=""
+          class="react-datepicker-ignore-onclickoutside"
           value=""
         >
           <div
@@ -2342,14 +2441,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
-                Date fns es
+                Date
               </label>
             </div>
             <div
@@ -2377,6 +2478,526 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="react-datepicker__tab-loop"
+    >
+      <div
+        class="react-datepicker__tab-loop__start"
+        tabindex="0"
+      />
+      <div
+        class="react-datepicker-popper"
+        data-placement="bottom-start"
+        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+      >
+        <div>
+          <div
+            class="react-datepicker calendar"
+          >
+            <div
+              class="react-datepicker__triangle"
+            />
+            <div
+              class="react-datepicker__month-container"
+            >
+              <div
+                class="react-datepicker__header react-datepicker__header--custom"
+              >
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <p
+                    class="emotion-17 emotion-18"
+                  >
+                    enero de 2021
+                  </p>
+                </div>
+                <span
+                  class="emotion-19 emotion-20"
+                >
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <div
+                  class="react-datepicker__day-names"
+                >
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    lu
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    ma
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    mi
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    ju
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    vi
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    sa
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    do
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-label="month  2021-01"
+                class="react-datepicker__month"
+              >
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, December 28th, 2020"
+                    class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, December 29th, 2020"
+                    class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, December 30th, 2020"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, December 31st, 2020"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
+                    role="button"
+                    tabindex="0"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 8th, 2021"
+                    class="react-datepicker__day react-datepicker__day--008"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    8
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 9th, 2021"
+                    class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    9
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 10th, 2021"
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 11th, 2021"
+                    class="react-datepicker__day react-datepicker__day--011"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    11
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 12th, 2021"
+                    class="react-datepicker__day react-datepicker__day--012"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    12
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 13th, 2021"
+                    class="react-datepicker__day react-datepicker__day--013"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    13
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 14th, 2021"
+                    class="react-datepicker__day react-datepicker__day--014"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    14
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 15th, 2021"
+                    class="react-datepicker__day react-datepicker__day--015"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    15
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 16th, 2021"
+                    class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    16
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 17th, 2021"
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 18th, 2021"
+                    class="react-datepicker__day react-datepicker__day--018"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    18
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 19th, 2021"
+                    class="react-datepicker__day react-datepicker__day--019"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    19
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 20th, 2021"
+                    class="react-datepicker__day react-datepicker__day--020"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    20
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 21st, 2021"
+                    class="react-datepicker__day react-datepicker__day--021"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    21
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 22nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--022"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    22
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 23rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    23
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 24th, 2021"
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 25th, 2021"
+                    class="react-datepicker__day react-datepicker__day--025"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    25
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 26th, 2021"
+                    class="react-datepicker__day react-datepicker__day--026"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    26
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 27th, 2021"
+                    class="react-datepicker__day react-datepicker__day--027"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 28th, 2021"
+                    class="react-datepicker__day react-datepicker__day--028"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 29th, 2021"
+                    class="react-datepicker__day react-datepicker__day--029"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 30th, 2021"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 31st, 2021"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, February 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, February 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, February 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, February 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, February 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="react-datepicker__tab-loop__end"
+        tabindex="0"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -2443,6 +3064,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -2543,6 +3165,22 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   border-color: #4f0599;
 }
 
+.emotion-4::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-4:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::placeholder {
+  opacity: 1;
+}
+
 .emotion-6 {
   display: block;
   position: absolute;
@@ -2564,6 +3202,10 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   -moz-transform: translate(0, 12px) scale(1);
   -ms-transform: translate(0, 12px) scale(1);
   transform: translate(0, 12px) scale(1);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
 }
 
 .emotion-8 {
@@ -2634,6 +3276,66 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   align-self: center;
 }
 
+.emotion-15 {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.emotion-18 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.emotion-19 {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.emotion-21 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.emotion-21.emotion-21 {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.emotion-23 {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.emotion-23.emotion-23 {
+  vertical-align: middle;
+}
+
 <div
     class="emotion-0 emotion-1"
   >
@@ -2644,7 +3346,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class=""
+          class="react-datepicker-ignore-onclickoutside"
           value=""
         >
           <div
@@ -2656,14 +3358,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
-                Date fns fr
+                Date
               </label>
             </div>
             <div
@@ -2691,6 +3395,526 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="react-datepicker__tab-loop"
+    >
+      <div
+        class="react-datepicker__tab-loop__start"
+        tabindex="0"
+      />
+      <div
+        class="react-datepicker-popper"
+        data-placement="bottom-start"
+        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+      >
+        <div>
+          <div
+            class="react-datepicker calendar"
+          >
+            <div
+              class="react-datepicker__triangle"
+            />
+            <div
+              class="react-datepicker__month-container"
+            >
+              <div
+                class="react-datepicker__header react-datepicker__header--custom"
+              >
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <p
+                    class="emotion-17 emotion-18"
+                  >
+                    janvier 2021
+                  </p>
+                </div>
+                <span
+                  class="emotion-19 emotion-20"
+                >
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <div
+                  class="react-datepicker__day-names"
+                >
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    lu
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    ma
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    me
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    je
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    ve
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    sa
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    di
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-label="month  2021-01"
+                class="react-datepicker__month"
+              >
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, December 28th, 2020"
+                    class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, December 29th, 2020"
+                    class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, December 30th, 2020"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, December 31st, 2020"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
+                    role="button"
+                    tabindex="0"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 8th, 2021"
+                    class="react-datepicker__day react-datepicker__day--008"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    8
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 9th, 2021"
+                    class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    9
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 10th, 2021"
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 11th, 2021"
+                    class="react-datepicker__day react-datepicker__day--011"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    11
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 12th, 2021"
+                    class="react-datepicker__day react-datepicker__day--012"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    12
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 13th, 2021"
+                    class="react-datepicker__day react-datepicker__day--013"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    13
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 14th, 2021"
+                    class="react-datepicker__day react-datepicker__day--014"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    14
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 15th, 2021"
+                    class="react-datepicker__day react-datepicker__day--015"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    15
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 16th, 2021"
+                    class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    16
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 17th, 2021"
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 18th, 2021"
+                    class="react-datepicker__day react-datepicker__day--018"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    18
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 19th, 2021"
+                    class="react-datepicker__day react-datepicker__day--019"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    19
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 20th, 2021"
+                    class="react-datepicker__day react-datepicker__day--020"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    20
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 21st, 2021"
+                    class="react-datepicker__day react-datepicker__day--021"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    21
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 22nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--022"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    22
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 23rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    23
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 24th, 2021"
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 25th, 2021"
+                    class="react-datepicker__day react-datepicker__day--025"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    25
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 26th, 2021"
+                    class="react-datepicker__day react-datepicker__day--026"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    26
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 27th, 2021"
+                    class="react-datepicker__day react-datepicker__day--027"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 28th, 2021"
+                    class="react-datepicker__day react-datepicker__day--028"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 29th, 2021"
+                    class="react-datepicker__day react-datepicker__day--029"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 30th, 2021"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 31st, 2021"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, February 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, February 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, February 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, February 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, February 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="react-datepicker__tab-loop__end"
+        tabindex="0"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -2757,6 +3981,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -2857,6 +4082,22 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   border-color: #4f0599;
 }
 
+.emotion-4::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-4:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-4::placeholder {
+  opacity: 1;
+}
+
 .emotion-6 {
   display: block;
   position: absolute;
@@ -2878,6 +4119,10 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   -moz-transform: translate(0, 12px) scale(1);
   -ms-transform: translate(0, 12px) scale(1);
   transform: translate(0, 12px) scale(1);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
 }
 
 .emotion-8 {
@@ -2948,6 +4193,66 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   align-self: center;
 }
 
+.emotion-15 {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.emotion-18 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.emotion-19 {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.emotion-21 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.emotion-21.emotion-21 {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.emotion-23 {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.emotion-23.emotion-23 {
+  vertical-align: middle;
+}
+
 <div
     class="emotion-0 emotion-1"
   >
@@ -2958,7 +4263,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class=""
+          class="react-datepicker-ignore-onclickoutside"
           value=""
         >
           <div
@@ -2970,14 +4275,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input"
               >
-                Date fns ru
+                Date
               </label>
             </div>
             <div
@@ -3005,6 +4312,526 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      class="react-datepicker__tab-loop"
+    >
+      <div
+        class="react-datepicker__tab-loop__start"
+        tabindex="0"
+      />
+      <div
+        class="react-datepicker-popper"
+        data-placement="bottom-start"
+        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+      >
+        <div>
+          <div
+            class="react-datepicker calendar"
+          >
+            <div
+              class="react-datepicker__triangle"
+            />
+            <div
+              class="react-datepicker__month-container"
+            >
+              <div
+                class="react-datepicker__header react-datepicker__header--custom"
+              >
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <p
+                    class="emotion-17 emotion-18"
+                  >
+                    январь 2021 г.
+                  </p>
+                </div>
+                <span
+                  class="emotion-19 emotion-20"
+                >
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="emotion-21"
+                    type="button"
+                  >
+                    <svg
+                      class="sc-ui-icon emotion-13 emotion-23"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                <div
+                  class="react-datepicker__day-names"
+                >
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    пн
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    вт
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    ср
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    чт
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    пт
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    сб
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
+                    вс
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-label="month  2021-01"
+                class="react-datepicker__month"
+              >
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, December 28th, 2020"
+                    class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, December 29th, 2020"
+                    class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, December 30th, 2020"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, December 31st, 2020"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
+                    role="button"
+                    tabindex="0"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 8th, 2021"
+                    class="react-datepicker__day react-datepicker__day--008"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    8
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 9th, 2021"
+                    class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    9
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 10th, 2021"
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 11th, 2021"
+                    class="react-datepicker__day react-datepicker__day--011"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    11
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 12th, 2021"
+                    class="react-datepicker__day react-datepicker__day--012"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    12
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 13th, 2021"
+                    class="react-datepicker__day react-datepicker__day--013"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    13
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 14th, 2021"
+                    class="react-datepicker__day react-datepicker__day--014"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    14
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 15th, 2021"
+                    class="react-datepicker__day react-datepicker__day--015"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    15
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 16th, 2021"
+                    class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    16
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 17th, 2021"
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 18th, 2021"
+                    class="react-datepicker__day react-datepicker__day--018"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    18
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 19th, 2021"
+                    class="react-datepicker__day react-datepicker__day--019"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    19
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 20th, 2021"
+                    class="react-datepicker__day react-datepicker__day--020"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    20
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 21st, 2021"
+                    class="react-datepicker__day react-datepicker__day--021"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    21
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 22nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--022"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    22
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 23rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    23
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 24th, 2021"
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, January 25th, 2021"
+                    class="react-datepicker__day react-datepicker__day--025"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    25
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, January 26th, 2021"
+                    class="react-datepicker__day react-datepicker__day--026"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    26
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, January 27th, 2021"
+                    class="react-datepicker__day react-datepicker__day--027"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, January 28th, 2021"
+                    class="react-datepicker__day react-datepicker__day--028"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    28
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, January 29th, 2021"
+                    class="react-datepicker__day react-datepicker__day--029"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    29
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, January 30th, 2021"
+                    class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    30
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, January 31st, 2021"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                </div>
+                <div
+                  class="react-datepicker__week"
+                >
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Monday, February 1st, 2021"
+                    class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Thursday, February 4th, 2021"
+                    class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    4
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Friday, February 5th, 2021"
+                    class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    5
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Saturday, February 6th, 2021"
+                    class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    6
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose Sunday, February 7th, 2021"
+                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    7
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="react-datepicker__tab-loop__end"
+        tabindex="0"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -3071,6 +4898,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   line-height: 24px;
   text-align: center;
   margin: 3px;
+  text-transform: capitalize;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
@@ -3305,12 +5133,14 @@ exports[`DateInput renders correctly with default props 1`] = `
               <input
                 autocomplete="on"
                 class="emotion-4 emotion-5"
+                id="date-input-test"
                 type="text"
                 value="1995-12-17T03:24:00.000Z"
               />
               <label
                 aria-live="assertive"
                 class="emotion-6 emotion-7"
+                for="date-input-test"
               >
                 Date
               </label>

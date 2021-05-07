@@ -65,6 +65,7 @@ const StyledWrapper = styled.div`
       line-height: 24px;
       text-align: center;
       margin: 3px;
+      text-transform: capitalize;
     }
 
     ${PREFIX}__day {
@@ -156,6 +157,7 @@ const DateInput = ({
             <div>
               <TextBox
                 error={error ? `${error}` : undefined}
+                id={`date-input${name ? `-${name}` : ''}`}
                 label={label}
                 value={format(value) || ''}
                 disabled={disabled}
@@ -193,7 +195,7 @@ const DateInput = ({
           }) => (
             <>
               <TopHeaderDiv>
-                <Typography variant="bodyA" mr={1}>
+                <Typography variant="bodyA" mr={1} textTransform="capitalize">
                   {new Date(date).toLocaleString(locale?.code || 'en-GB', {
                     month: 'long',
                     year: 'numeric',
