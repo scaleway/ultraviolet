@@ -1,3 +1,31 @@
+### [0.77.2](https://github.com/scaleway/scaleway-ui/compare/v0.77.1...v0.77.2) (2021-05-07)
+
+
+### :memo: Documentation
+
+* **code-of-conduct:** add code of conduct ([#311](https://github.com/scaleway/scaleway-ui/issues/311)) ([743203f](https://github.com/scaleway/scaleway-ui/commit/743203f1133419466d964580f636d362c85ce2e6))
+
+
+### :package: Chore
+
+* **deps:** bump @xstyled/emotion from 2.4.1 to 2.5.0 ([#303](https://github.com/scaleway/scaleway-ui/issues/303)) ([3225e56](https://github.com/scaleway/scaleway-ui/commit/3225e566569c800c9da1b3e416eb3133bbf2e112))
+* **deps-dev:** bump @babel/preset-env from 7.14.0 to 7.14.1 ([#304](https://github.com/scaleway/scaleway-ui/issues/304)) ([a5a1f40](https://github.com/scaleway/scaleway-ui/commit/a5a1f4070f452e6c12337c7cd6794cceaebba6cc))
+* **deps-dev:** bump @emotion/cache from 11.1.3 to 11.4.0 ([#318](https://github.com/scaleway/scaleway-ui/issues/318)) ([16e9079](https://github.com/scaleway/scaleway-ui/commit/16e90797121468cb8fa3284aba1662bc5a50e6c9))
+* **deps-dev:** bump @rollup/plugin-commonjs from 18.0.0 to 18.1.0 ([#307](https://github.com/scaleway/scaleway-ui/issues/307)) ([8070a6c](https://github.com/scaleway/scaleway-ui/commit/8070a6c6e58114c764c6853dabc6e2cf41bc0924))
+* **deps-dev:** bump @scaleway/use-i18n from 1.1.1 to 2.0.0 ([#300](https://github.com/scaleway/scaleway-ui/issues/300)) ([30e6a25](https://github.com/scaleway/scaleway-ui/commit/30e6a25d085d2d4d12da9852b4b0f106ac6fd843))
+* **deps-dev:** bump @semantic-release/github from 7.2.1 to 7.2.2 ([#308](https://github.com/scaleway/scaleway-ui/issues/308)) ([44d5519](https://github.com/scaleway/scaleway-ui/commit/44d5519a8df9d904f0e899138a29f5be71fb71a1))
+* **deps-dev:** bump @semantic-release/npm from 7.1.1 to 7.1.3 ([#314](https://github.com/scaleway/scaleway-ui/issues/314)) ([e5fe61f](https://github.com/scaleway/scaleway-ui/commit/e5fe61f75b44633a7df87c03e3c958c65a213d7a))
+* **deps-dev:** bump date-fns from 2.21.1 to 2.21.2 ([#309](https://github.com/scaleway/scaleway-ui/issues/309)) ([4c5c3a9](https://github.com/scaleway/scaleway-ui/commit/4c5c3a95a666cb1f377d58aa7a1adbb423582d08))
+* **deps-dev:** bump postcss from 8.2.13 to 8.2.14 ([#316](https://github.com/scaleway/scaleway-ui/issues/316)) ([c090136](https://github.com/scaleway/scaleway-ui/commit/c09013693a4d19a2cfc47ceb076804f87d2aca75))
+* **deps-dev:** bump rollup from 2.46.0 to 2.47.0 ([#305](https://github.com/scaleway/scaleway-ui/issues/305)) ([63263d1](https://github.com/scaleway/scaleway-ui/commit/63263d12178494640dce0322708702587973c498))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.4.1 to 5.5.0 ([#306](https://github.com/scaleway/scaleway-ui/issues/306)) ([cf8d155](https://github.com/scaleway/scaleway-ui/commit/cf8d1555c65b7c7110768b370b03d1920f6d76ab))
+* **template:** add template bug  and feature request ([#310](https://github.com/scaleway/scaleway-ui/issues/310)) ([51ebc20](https://github.com/scaleway/scaleway-ui/commit/51ebc203ea925fe7184007ec0bce4715de0cf20c))
+
+
+### :bug: Bug Fixes
+
+* **DateInput:** capitalize month and day names ([#315](https://github.com/scaleway/scaleway-ui/issues/315)) ([215bda9](https://github.com/scaleway/scaleway-ui/commit/215bda9b9c11ae36ffabcfc108b4572f4203b282))
+
 ### [0.77.1](https://github.com/scaleway/scaleway-ui/compare/v0.77.0...v0.77.1) (2021-04-30)
 
 
