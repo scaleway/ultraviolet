@@ -385,9 +385,10 @@ function forwardRef(props, ref) {
   return <FwdButton {...props} innerRef={ref} />
 }
 
-export const Button = React.forwardRef(forwardRef)
-
+const Button = React.forwardRef(forwardRef)
 Button.defaultProps = defaultProps
 Button.propTypes = propTypes
 
 Button.displayName = 'fwd(Button)'
+
+export default Button

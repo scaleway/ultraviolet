@@ -16,7 +16,7 @@ const styles = {
   `,
 }
 
-export function Counter({ end, onEnd }) {
+const Counter = ({ end, onEnd }) => {
   const start = useRef(0)
   useEffect(() => {
     start.current = end

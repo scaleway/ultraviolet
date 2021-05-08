@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import Breakpoint from '../../utils/responsive/Breakpoint'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 import Donut from './Donut'
 import Legends from './Legends'
 
@@ -20,14 +20,7 @@ const EmptyLegend = styled.div`
   margin-left: 20px;
 `
 
-const Chart = ({
-  chartId,
-  data,
-  content,
-  emptyLegend,
-  hasLegend,
-  variant,
-}) => {
+const Chart = ({ chartId, data, content, emptyLegend, hasLegend, variant }) => {
   const ChartVariant = variants[variant]
   const [currentFocusIndex, setCurrentFocusIndex] = useState()
 
@@ -80,10 +73,12 @@ Chart.propTypes = {
       product: PropTypes.string.isRequired,
       color: PropTypes.string.isRequired,
       percent: PropTypes.number.isRequired,
-      details: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string,
-        value: PropTypes.string,
-      })),
+      details: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+          value: PropTypes.string,
+        }),
+      ),
     }),
   ),
   emptyLegend: PropTypes.string,

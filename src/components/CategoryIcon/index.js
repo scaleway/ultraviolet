@@ -192,4 +192,4 @@ CategoryIcon.defaultProps = {
   size: 16,
 }
 
-export { CategoryIcon }
+export default CategoryIcon

@@ -244,7 +244,7 @@ const Typography = forwardRef((props, ref) => {
   return <Component ref={ref} {...props} />
 })
 
-const typographyVariants = Object.keys(variantTags)
+export const typographyVariants = Object.keys(variantTags)
 
 Typography.propTypes = {
   children: PropTypes.node.isRequired,
@@ -280,4 +280,4 @@ Typography.defaultProps = Text.defaultProps
 
 const MemoizedTypography = memo(Typography)
 
-export { MemoizedTypography as Typography, typographyVariants }
+export default MemoizedTypography

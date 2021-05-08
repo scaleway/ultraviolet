@@ -184,7 +184,7 @@ const schedules = {
   quarter,
 }
 
-export const options = schedule =>
+const options = schedule =>
   schedules[schedule].map(hour => ({
     value: hour,
     label: hour,
@@ -211,4 +211,6 @@ TimeInput.defaultProps = {
   },
 }
 
-export { TimeInput }
+TimeInput.options = options
+
+export default TimeInput

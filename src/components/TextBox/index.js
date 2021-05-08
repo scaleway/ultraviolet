@@ -17,7 +17,7 @@ import Icon from '../Icon'
 import Notice from '../Notice'
 import Separator from '../Separator'
 import Touchable from '../Touchable'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const inputSizes = {
   small: {
@@ -545,4 +545,4 @@ TextBox.defaultProps = {
   wrap: undefined,
 }
 
-export { TextBox }
+export default TextBox

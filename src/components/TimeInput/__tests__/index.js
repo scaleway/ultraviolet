@@ -1,5 +1,5 @@
 import React from 'react'
-import { TimeInput } from '..'
+import TimeInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('TimeInput', () => {

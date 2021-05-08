@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import BorderedBox from '../BorderedBox'
 import Box from '../Box'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const StyledContainer = styled(Box)`
   margin-top: 40px;

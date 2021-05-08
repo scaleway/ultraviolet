@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Box from '../Box'
 import Icon from '../Icon'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const sizes = {
   xsmall: 0.5,

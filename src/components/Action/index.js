@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Button } from '../Button'
+import Button from '../Button'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 

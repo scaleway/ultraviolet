@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Icon, { icons } from '../Icon'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const variantIcons = {
   warning: 'alert',

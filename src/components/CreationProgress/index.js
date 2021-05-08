@@ -5,7 +5,7 @@ import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import Box from '../Box'
 import Icon from '../Icon'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const sizes = {
   xsmall: {

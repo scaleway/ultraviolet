@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import RichSelect from '../RichSelect'
-import { TextBox } from '../TextBox'
+import TextBox from '../TextBox'
 
 export const sizesHeight = {
   small: '32px',
