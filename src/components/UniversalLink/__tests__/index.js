@@ -4,52 +4,21 @@ import UniversalLink from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('UniversalLink', () => {
-  test('renders correctly with defaults', () => {
-    shouldMatchEmotionSnapshot(<UniversalLink>This is a link</UniversalLink>)
-  })
-
-  test('renders correctly with href', () => {
-    shouldMatchEmotionSnapshot(
-      <UniversalLink href="/">This is a link</UniversalLink>,
-    )
-  })
-
-  test('renders correctly with to prop', () => {
-    shouldMatchEmotionSnapshot(
-      <UniversalLink to="/">This is a link</UniversalLink>,
-    )
-  })
-
-  test('renders correctly with an absolute utl', () => {
-    shouldMatchEmotionSnapshot(
-      <UniversalLink to="https://google.com" target="_blank">
-        This is a link
-      </UniversalLink>,
-    )
-  })
-
-  test('renders correctly with a target blank', () => {
-    shouldMatchEmotionSnapshot(
-      <UniversalLink to="/" target="_blank">
-        This is a link
-      </UniversalLink>,
-    )
-  })
-
-  test('renders correctly with as Link ', () => {
+  test.each`
+    test                                        | href                               | to                          | target       | as
+    ${'renders correctly with defaults'}        | ${undefined}                       | ${undefined}                | ${undefined} | ${undefined}
+    ${'renders correctly with href'}            | ${'/'}                             | ${undefined}                | ${undefined} | ${undefined}
+    ${'renders correctly with to prop'}         | ${undefined}                       | ${'/'}                      | ${undefined} | ${undefined}
+    ${'renders correctly with an absolute utl'} | ${undefined}                       | ${'https://google.com'}     | ${'_blank'}  | ${undefined}
+    ${'renders correctly with a target blank'}  | ${undefined}                       | ${'/'}                      | ${'_blank'}  | ${undefined}
+    ${'renders correctly with as Link'}         | ${undefined}                       | ${'/test-react-router-dom'} | ${undefined} | ${Link}
+    ${'renders correctly with as a'}            | ${'https://react.ui.scaleway.com'} | ${undefined}                | ${undefined} | ${'a'}
+    ${'renders correctly with a tel link'}      | ${undefined}                       | ${'tel:+33666666'}          | ${'_blank'}  | ${undefined}
+    ${'renders correctly with a mailto link'}   | ${undefined}                       | ${'mailto:test@test.com'}   | ${'_blank'}  | ${undefined}
+  `('$test', ({ href, to, target, as }) => {
     shouldMatchEmotionSnapshot(
       <BrowserRouter>
-        <UniversalLink to="/test-react-router-dom" as={Link}>
-          This is a link
-        </UniversalLink>
-      </BrowserRouter>,
-    )
-  })
-
-  test('renders correctly with as a ', () => {
-    shouldMatchEmotionSnapshot(
-      <BrowserRouter>
-        <UniversalLink href="https://react.ui.scaleway.com" as="a">
+        <UniversalLink href={href} to={to} target={target} as={as}>
           This is a link
         </UniversalLink>
       </BrowserRouter>,

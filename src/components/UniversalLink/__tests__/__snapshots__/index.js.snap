@@ -1,10 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UniversalLink renders correctly with a mailto link 1`] = `
+<DocumentFragment>
+  <a
+    class="emotion-0"
+    href="mailto:test@test.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    This is a link
+  </a>
+</DocumentFragment>
+`;
+
 exports[`UniversalLink renders correctly with a target blank 1`] = `
 <DocumentFragment>
   <a
     class="emotion-0"
     href="/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    This is a link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`UniversalLink renders correctly with a tel link 1`] = `
+<DocumentFragment>
+  <a
+    class="emotion-0"
+    href="tel:+33666666"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -26,7 +52,7 @@ exports[`UniversalLink renders correctly with an absolute utl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`UniversalLink renders correctly with as Link  1`] = `
+exports[`UniversalLink renders correctly with as Link 1`] = `
 <DocumentFragment>
   <a
     class="emotion-0"
@@ -37,7 +63,7 @@ exports[`UniversalLink renders correctly with as Link  1`] = `
 </DocumentFragment>
 `;
 
-exports[`UniversalLink renders correctly with as a  1`] = `
+exports[`UniversalLink renders correctly with as a 1`] = `
 <DocumentFragment>
   <a
     class="emotion-0"
