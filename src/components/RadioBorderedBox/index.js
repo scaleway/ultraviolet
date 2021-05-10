@@ -6,7 +6,7 @@ import Badge from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Box from '../Box'
 import Radio from '../Radio'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const StyledBorderedBox = styled(BorderedBox)`
   &:hover {

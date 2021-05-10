@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const StyledList = styled.ul`
   padding: 0 8px 8px 8px;
@@ -50,10 +50,12 @@ Tooltip.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string,
-    details: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      value: PropTypes.string,
-    })),
+    details: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        value: PropTypes.string,
+      }),
+    ),
   }).isRequired,
 }
 

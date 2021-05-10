@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
 import Box from '../Box'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const StyledTitle = styled(Typography)`
   display: inline-block;

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
-import { Button } from '../Button'
+import Button from '../Button'
 import Icon from '../Icon'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const variants = {
   error: ({ colors }) => ({

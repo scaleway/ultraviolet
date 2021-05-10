@@ -5,7 +5,7 @@ import ReactMarkDown from 'react-markdown'
 import Box from '../Box'
 import Command from '../Command'
 import Link from '../Link'
-import { Typography } from '../Typography'
+import Typography from '../Typography'
 
 const headingRenderer = ({ node, children, ...props }) => {
   if (props.level === 1) {

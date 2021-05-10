@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { TextBox } from '..'
+import TextBox from '..'
 
 const UncontrolledTextBox = ({ defaultValue, ...props }) => {
   const [value, setValue] = useState(defaultValue)

@@ -6,7 +6,7 @@ import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
-import { Typography, typographyVariants } from '../Typography'
+import Typography, { typographyVariants } from '../Typography'
 
 const StyledCheckBoxContainer = styled(Typography)`
   position: relative;

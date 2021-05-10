@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Typography, typographyVariants } from '..'
+import Typography, { typographyVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 jest.mock('../../Tooltip', () => ({ children, ...props }) => children(props))

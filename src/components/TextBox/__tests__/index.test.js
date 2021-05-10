@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import { TextBox } from '..'
+import TextBox from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('TextBox', () => {
