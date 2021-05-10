@@ -1,11 +1,10 @@
 import { babel } from '@rollup/plugin-babel'
-import commonjs from '@rollup/plugin-commonjs'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
 import { readPackageAsync } from 'read-pkg'
 import postcss from 'rollup-plugin-postcss'
-import visualizer from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const PROFILE = !!process.env.PROFILE
 
@@ -51,9 +50,6 @@ export default async () => {
       nodeResolve({
         preferBuiltins: true,
       }),
-      commonjs({
-        include: '**/node_modules/**',
-      }),
       url({
         limit: 63488,
       }),
@@ -67,16 +63,9 @@ export default async () => {
         }),
     ].filter(Boolean),
     external,
-    output: [
-      {
-        format: 'umd',
-        name: pkg.name,
-        file: 'dist/index.js',
-      },
-      {
-        format: 'es',
-        file: 'dist/module.js',
-      },
-    ],
+    output: {
+      format: 'es',
+      file: 'dist/module.js',
+    },
   }
 }
