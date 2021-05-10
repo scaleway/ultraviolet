@@ -1,3 +1,26 @@
+### [0.77.3](https://github.com/scaleway/scaleway-ui/compare/v0.77.2...v0.77.3) (2021-05-10)
+
+
+### :repeat: CI
+
+* correct deployment ([#322](https://github.com/scaleway/scaleway-ui/issues/322)) ([1890773](https://github.com/scaleway/scaleway-ui/commit/1890773f693d40efbd2d5e598aa52e37e7b09729))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @emotion/react from 11.1.5 to 11.4.0 ([#317](https://github.com/scaleway/scaleway-ui/issues/317)) ([472d5f0](https://github.com/scaleway/scaleway-ui/commit/472d5f06eb209d98d59bda23fe9977428b98ff6c))
+* **deps-dev:** bump @rollup/plugin-node-resolve from 11.2.1 to 13.0.0 ([#313](https://github.com/scaleway/scaleway-ui/issues/313)) ([c88aaf8](https://github.com/scaleway/scaleway-ui/commit/c88aaf828ae6e297efb773b6efb4399ad9cbaf47))
+* **deps-dev:** bump @semantic-release/github from 7.2.2 to 7.2.3 ([#324](https://github.com/scaleway/scaleway-ui/issues/324)) ([726205e](https://github.com/scaleway/scaleway-ui/commit/726205e687d30d0a66c388f3f4900a1577c5d655))
+* **deps-dev:** bump date-fns from 2.21.2 to 2.21.3 ([#326](https://github.com/scaleway/scaleway-ui/issues/326)) ([505686b](https://github.com/scaleway/scaleway-ui/commit/505686b90a63bccb6519d8d1f521451ecf22c3a7))
+* **deps-dev:** bump eslint from 7.25.0 to 7.26.0 ([#325](https://github.com/scaleway/scaleway-ui/issues/325)) ([bc47521](https://github.com/scaleway/scaleway-ui/commit/bc47521f9972e84ec94982e29176a15ba10192c0))
+* **deps-dev:** bump lint-staged from 10.5.4 to 11.0.0 ([#328](https://github.com/scaleway/scaleway-ui/issues/328)) ([dce25d4](https://github.com/scaleway/scaleway-ui/commit/dce25d4da5ba8d7e38e6fc25ec5f554b9e119f23))
+* **deps-dev:** bump prettier from 2.2.1 to 2.3.0 ([#327](https://github.com/scaleway/scaleway-ui/issues/327)) ([2affb1d](https://github.com/scaleway/scaleway-ui/commit/2affb1de6ddcf0bd34e7ecb37d10b0402705e81e))
+
+
+### :bug: Bug Fixes
+
+* consistent export method ([#321](https://github.com/scaleway/scaleway-ui/issues/321)) ([eb2ce52](https://github.com/scaleway/scaleway-ui/commit/eb2ce529807b4da5ab24d4ad8bf40cffaf3a2c67))
+
 ### [0.77.2](https://github.com/scaleway/scaleway-ui/compare/v0.77.1...v0.77.2) (2021-05-07)
 
 
