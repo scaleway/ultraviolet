@@ -136,6 +136,19 @@ const StyledContainer = styled(Box)`
     border-width: ${({ size }) => sizes[size].stepBorder}px;
   }
 
+  ${StyledStepContainer} {
+    margin: 0 8px;
+    width: ${({ size }) => sizes[size].step}px;
+    white-space: nowrap;
+  }
+  ${StyledStepContainer}:first-child {
+    margin-left: 0px;
+  }
+
+  ${StyledStepContainer}:last-child {
+    margin-right: 0px;
+  }
+
   ${StyledLine} {
     height: 4px;
     margin-top: ${({ size }) => sizes[size].line}px;
