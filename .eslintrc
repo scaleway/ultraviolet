@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "extends": ["@scaleway/react", "plugin:mdx/recommended"],
+  "plugins": ["@emotion"],
+  "rules": {
+    // Import
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.stories.*",
+          "**/__stories__/**/*",
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/__tests__/*",
+          "rollup.config.mjs"
+        ]
+      }
+    ],
+
+    // React
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".mdx"] }],
+    "react/jsx-props-no-spreading": "warn",
+
+    // emotion
+    "@emotion/styled-import": "error",
+    "@emotion/no-vanilla": "error",
+    "@emotion/import-from-emotion": "error",
+    "@emotion/syntax-preference": ["error", "string"]
+  },
+  "overrides": [
+    {
+      "files": ["**/__stories__/*", "**/__tests__/*"],
+      "rules": {
+        "no-console": "off",
+        "no-alert": "off",
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["**/__stories__/**/*.mdx"],
+      "parser": "eslint-mdx",
+      "rules": {
+        "padding-line-between-statements": "off"
+      }
+    }
+  ]
+}
