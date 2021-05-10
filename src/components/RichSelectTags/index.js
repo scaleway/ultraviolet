@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { Button } from '../Button'
+import Button from '../Button'
 import RichSelect from '../RichSelect'
 import Tags from '../Tags'
 import Tooltip from '../Tooltip'
@@ -38,6 +38,7 @@ const RichSelectTags = ({
   onChangeSelectValue,
   value,
   options,
+  name,
   ...props
 }) => {
   const mapOptionsToTags = options.filter(
@@ -97,6 +98,7 @@ const RichSelectTags = ({
           value={value}
           options={finalOptions}
           flex={1}
+          name={`richselect-${name}`}
           {...props}
         />
         <Tooltip text={ctaTooltip}>
@@ -114,6 +116,7 @@ const RichSelectTags = ({
       </RichSelectContainer>
       <Tags
         manualInput={false}
+        name={`tags-${name}`}
         tags={stateTags}
         areTagsObject
         onChange={onChangeTag}
@@ -124,10 +127,10 @@ const RichSelectTags = ({
 }
 
 RichSelectTags.propTypes = {
-  ctaText: PropTypes.string.isRequired,
+  ctaText: PropTypes.string,
   ctaDisabled: PropTypes.bool,
   ctaTooltip: PropTypes.string,
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   icon: PropTypes.string,
   value: PropTypes.shape({
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -144,10 +147,13 @@ RichSelectTags.propTypes = {
   ),
   onChange: PropTypes.func.isRequired,
   onChangeSelectValue: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 RichSelectTags.defaultProps = {
   ctaDisabled: false,
+  ctaText: 'Add',
+  placeholder: 'Select an option in the list',
   ctaTooltip: undefined,
   initialTags: [],
   icon: undefined,

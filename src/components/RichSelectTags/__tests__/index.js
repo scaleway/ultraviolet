@@ -15,12 +15,10 @@ describe('RichSelectTags', () => {
   test('renders correctly with default values', () => {
     shouldMatchEmotionSnapshot(
       <RichSelectTags
-        ctaText="Add"
         onChange={() => {}}
         name="options"
         initialTags={['one']}
         onChangeSelectValue={() => {}}
-        placeholder="Select an option in the list"
         options={[
           { value: 'one', label: 'One' },
           { value: 'two', label: 'Two' },
@@ -35,12 +33,10 @@ describe('RichSelectTags', () => {
   test('renders correctly with icon', () => {
     shouldMatchEmotionSnapshot(
       <RichSelectTags
-        ctaText="Add"
         onChange={() => {}}
         name="options"
         initialTags={['one']}
         onChangeSelectValue={() => {}}
-        placeholder="Select an option in the list"
         icon="/toto.png"
         options={[
           { value: 'one', label: 'One' },
@@ -59,13 +55,11 @@ describe('RichSelectTags', () => {
 
     shouldMatchEmotionSnapshot(
       <RichSelectTags
-        ctaText="Add"
         onChange={onChange}
         name="options"
         initialTags={['one']}
         value={{ value: 'three', label: 'Three' }}
         onChangeSelectValue={onChangeSelectValue}
-        placeholder="Select an option in the list"
         options={[
           { value: 'one', label: 'One' },
           { value: 'two', label: 'Two' },
