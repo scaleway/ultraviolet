@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["@babel/preset-env", { "shippedProposals": true }],
+    ["@babel/preset-env", { "shippedProposals": true, "targets": { "node": "current" } }],
     "@babel/preset-react",
     [
       "@emotion/babel-preset-css-prop",
