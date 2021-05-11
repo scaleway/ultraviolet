@@ -65,22 +65,22 @@ const Avatar = ({
 
 Avatar.defaultProps = {
   image: avatar,
+  lock: false,
   size: 32,
   text: null,
   textBgColor: 'lightViolet',
   textColor: 'white',
   textSize: 10,
-  lock: false,
 }
 
 Avatar.propTypes = {
   image: PropTypes.string,
+  lock: PropTypes.bool,
   size: PropTypes.number,
   text: PropTypes.string,
   textBgColor: PropTypes.string,
   textColor: PropTypes.string,
   textSize: PropTypes.number,
-  lock: PropTypes.bool,
 }
 
 export default Avatar

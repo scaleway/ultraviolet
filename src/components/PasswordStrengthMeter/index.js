@@ -80,10 +80,9 @@ const PasswordStrengthMeter = ({
 }
 
 PasswordStrengthMeter.propTypes = {
+  estimate: PropTypes.func,
   onChange: PropTypes.func,
   password: PropTypes.string,
-  estimate: PropTypes.func,
-  userInputs: PropTypes.arrayOf(PropTypes.string),
   strength: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string,
@@ -91,11 +90,12 @@ PasswordStrengthMeter.propTypes = {
     }),
   ).isRequired,
   title: PropTypes.string.isRequired,
+  userInputs: PropTypes.arrayOf(PropTypes.string),
 }
 
 PasswordStrengthMeter.defaultProps = {
-  onChange: () => null,
   estimate: () => ({ score: 0 }),
+  onChange: () => null,
   password: '',
   userInputs: [],
 }

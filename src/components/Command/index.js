@@ -20,14 +20,14 @@ const Command = ({ children, ...props }) => (
 )
 
 Command.propTypes = {
+  backgroundColor: PropTypes.string,
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
-  backgroundColor: PropTypes.string,
 }
 
 Command.defaultProps = {
-  color: 'gray700',
   backgroundColor: 'gray100',
+  color: 'gray700',
 }
 
 export default Command

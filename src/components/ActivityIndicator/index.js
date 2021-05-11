@@ -25,8 +25,8 @@ const Spinner = ({ children, style }) => (
 )
 
 Spinner.propTypes = {
-  style: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
+  style: PropTypes.shape({}).isRequired,
 }
 
 const Circle = ({ style }) => (
@@ -47,12 +47,12 @@ const ActivityIndicator = ({ size, color, ...props }) => (
   >
     <Spinner style={{ height: size, width: size }}>
       <svg viewBox="0 0 32 32" height="100%" width="100%">
-        <Circle style={{ stroke: 'currentColor', opacity: 0.2 }} />
+        <Circle style={{ opacity: 0.2, stroke: 'currentColor' }} />
         <Circle
           style={{
             stroke: 'currentColor',
-            strokeDashoffset: 60,
             strokeDasharray: 80,
+            strokeDashoffset: 60,
           }}
         />
       </svg>
@@ -61,13 +61,13 @@ const ActivityIndicator = ({ size, color, ...props }) => (
 )
 
 ActivityIndicator.propTypes = {
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 ActivityIndicator.defaultProps = {
-  size: 10,
   color: 'primary',
+  size: 10,
 }
 
 export default ActivityIndicator

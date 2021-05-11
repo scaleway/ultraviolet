@@ -6,9 +6,6 @@ import { Col, Grid, Row } from '../Grid'
 import Line from './Line'
 
 const styles = {
-  container: ({ length }) => css`
-    min-height: ${length * 200} px;
-  `,
   block: theme => css`
     width: 100%;
     display: flex;
@@ -19,6 +16,9 @@ const styles = {
     border-width: 1px;
     border-color: ${theme.colors.gray300};
     border-radius: 4px;
+  `,
+  container: ({ length }) => css`
+    min-height: ${length * 200} px;
   `,
   icon: theme => css`
     margin-right: 8px;

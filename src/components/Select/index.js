@@ -104,8 +104,8 @@ const Select = ({
   const disabledChildren = () =>
     flattenChildren(children).map(child =>
       React.cloneElement(child, {
-        key: child.key,
         disabled: true,
+        key: child.key,
         ...child.props,
       }),
     )
@@ -163,8 +163,8 @@ Select.defaultProps = {
   onChange: () => {},
   readOnly: false,
   required: false,
-  styles: [],
   selectStyles: [],
+  styles: [],
   value: undefined,
 }
 
@@ -176,13 +176,13 @@ Select.propTypes = {
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   id: PropTypes.string,
   isLoading: PropTypes.bool,
+  name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  name: PropTypes.string,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
-  styles: PropTypes.arrayOf(PropTypes.shape({})),
   selectStyles: PropTypes.arrayOf(PropTypes.shape({})),
+  styles: PropTypes.arrayOf(PropTypes.shape({})),
   value: PropTypes.string,
 }
 

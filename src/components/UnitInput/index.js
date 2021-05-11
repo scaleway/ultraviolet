@@ -5,9 +5,9 @@ import RichSelect from '../RichSelect'
 import TextBox from '../TextBox'
 
 export const sizesHeight = {
-  small: '32px',
-  medium: '40px',
   large: '48px',
+  medium: '40px',
+  small: '32px',
 }
 
 const CustomTextBox = styled(TextBox)`
@@ -37,11 +37,11 @@ const CustomRichSelect = styled(RichSelect)`
 
 const customSelectStyle = state => ({
   control: {
-    borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
-    minHeight: state?.selectProps?.height,
-    height: state?.selectProps?.height,
+    borderTopLeftRadius: 0,
     boxShadow: 'none',
+    height: state?.selectProps?.height,
+    minHeight: state?.selectProps?.height,
   },
   singleValue: {
     marginTop: 0,
@@ -105,58 +105,58 @@ const UnitInput = ({
 
 const defaultOptionValues = [
   {
-    value: 'hours',
     label: 'Hours',
+    value: 'hours',
   },
   {
-    value: 'weeks',
     label: 'Weeks',
+    value: 'weeks',
   },
   {
-    value: 'months',
     label: 'Months',
+    value: 'months',
   },
   {
-    value: 'years',
     label: 'Years',
+    value: 'years',
   },
 ]
 
 UnitInput.propTypes = {
-  name: PropTypes.string.isRequired,
+  defaultOption: PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.string,
+  }),
+  defaultValue: PropTypes.number,
+  disabled: PropTypes.bool,
   maxValue: PropTypes.number,
   minValue: PropTypes.number,
-  defaultValue: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      value: PropTypes.string,
       label: PropTypes.string,
+      value: PropTypes.string,
     }),
   ),
-  defaultOption: PropTypes.shape({
-    value: PropTypes.string,
-    label: PropTypes.string,
-  }),
-  richSelectWidth: PropTypes.number,
-  textBoxWidth: PropTypes.number,
-  size: PropTypes.oneOf(Object.keys(sizesHeight)),
   placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  disabled: PropTypes.bool,
+  richSelectWidth: PropTypes.number,
+  size: PropTypes.oneOf(Object.keys(sizesHeight)),
+  textBoxWidth: PropTypes.number,
 }
 
 UnitInput.defaultProps = {
+  defaultOption: undefined,
+  defaultValue: 1,
+  disabled: false,
   maxValue: 99999,
   minValue: 1,
-  defaultValue: 1,
-  options: defaultOptionValues,
-  defaultOption: undefined,
-  size: 'medium',
-  placeholder: '0',
-  textBoxWidth: 100,
-  richSelectWidth: 200,
   onChange: () => null,
-  disabled: false,
+  options: defaultOptionValues,
+  placeholder: '0',
+  richSelectWidth: 200,
+  size: 'medium',
+  textBoxWidth: 100,
 }
 
 export default UnitInput

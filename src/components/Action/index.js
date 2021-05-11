@@ -36,6 +36,9 @@ const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
 
 Action.propTypes = {
   children: PropTypes.node,
+  key: PropTypes.string,
+  name: PropTypes.string,
+  rounded: PropTypes.bool,
   size: (props, propName, componentName) => {
     const { [propName]: propsPropName } = props
     if (typeof propsPropName !== 'number' || propsPropName > 32) {
@@ -46,21 +49,18 @@ Action.propTypes = {
 
     return null
   },
-  key: PropTypes.string,
-  name: PropTypes.string,
-  rounded: PropTypes.bool,
   tooltip: PropTypes.string,
   variant: PropTypes.string,
 }
 
 Action.defaultProps = {
-  size: 20,
-  rounded: false,
-  variant: 'primary',
-  tooltip: undefined,
   children: null,
   key: undefined,
   name: undefined,
+  rounded: false,
+  size: 20,
+  tooltip: undefined,
+  variant: 'primary',
 }
 
 export default Action

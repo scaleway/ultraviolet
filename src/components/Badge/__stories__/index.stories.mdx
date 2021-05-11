@@ -6,16 +6,16 @@ import Box from '../../Box'
   title="Components/Badge"
   component={Badge}
   argTypes={{
-    variant: {
-      control: {
-        type: 'select',
-        options: ['success', 'beta', 'warning', 'neutral'],
-      },
-    },
     size: {
       control: {
-        type: 'select',
         options: ['rounded', 'medium', 'small', 'xsmall', 'xxsmall'],
+        type: 'select',
+      },
+    },
+    variant: {
+      control: {
+        options: ['success', 'beta', 'warning', 'neutral'],
+        type: 'select',
       },
     },
   }}

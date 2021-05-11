@@ -9,13 +9,13 @@ const Box = forwardRef(({ width, height, ...props }, ref) => (
 Box.withComponent = element => props => <Box as={element} {...props} />
 
 Box.defaultProps = {
-  width: undefined,
   height: undefined,
+  width: undefined,
 }
 
 Box.propTypes = {
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default Box

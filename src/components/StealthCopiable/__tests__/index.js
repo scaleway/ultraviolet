@@ -10,10 +10,10 @@ describe('StealthCopiable', () => {
     let data = ''
 
     window.clipboardData = {
+      getData: jest.fn(() => data),
       setData: jest.fn((_, val) => {
         data = val
       }),
-      getData: jest.fn(() => data),
     }
   })
 

@@ -115,10 +115,10 @@ const PhoneInput = ({
 
     if (inputElement) {
       intlTelInput(inputElement, {
-        customContainer: 'input__tel__container',
-        initialCountry: 'US',
         autoPlaceholder: 'aggressive',
+        customContainer: 'input__tel__container',
         formatOnDisplay: true,
+        initialCountry: 'US',
         nationalMode: false,
         separateDialCode: false,
       })
@@ -157,26 +157,27 @@ const PhoneInput = ({
 }
 
 PhoneInput.propTypes = {
-  disabled: PropTypes.bool,
   disableDropdown: PropTypes.bool,
+  // eslint-disable-next-line react/sort-prop-types
+  disabled: PropTypes.bool,
   inputProps: PropTypes.shape({
+    'data-testid': PropTypes.string,
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     name: PropTypes.string,
     placeholder: PropTypes.string,
-    'data-testid': PropTypes.string,
   }),
+  label: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
-  label: PropTypes.string,
 }
 
 PhoneInput.defaultProps = {
-  disabled: false,
   disableDropdown: false,
+  disabled: false,
   inputProps: {},
+  label: 'Phone',
   onChange: undefined,
   value: undefined,
-  label: 'Phone',
 }
 
 export default PhoneInput

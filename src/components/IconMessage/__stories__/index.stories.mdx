@@ -5,15 +5,15 @@ import IconMessage from '..'
   title="Components/IconMessage"
   component={IconMessage}
   argTypes={{
-    variant: {
-      control: {
-        type: 'select',
-        options: ['warning', 'info', 'success'],
-      },
-    },
     icon: {
       control: {
         type: 'string',
+      },
+    },
+    variant: {
+      control: {
+        options: ['warning', 'info', 'success'],
+        type: 'select',
       },
     },
   }}
@@ -35,8 +35,8 @@ import IconMessage from '..'
   <Story
     name="warning"
     args={{
-      variant: 'warning',
       icon: 'alert',
+      variant: 'warning',
     }}
   >
     {args => (
@@ -52,8 +52,8 @@ import IconMessage from '..'
   <Story
     name="info"
     args={{
-      variant: 'info',
       icon: 'information-outline',
+      variant: 'info',
     }}
   >
     {args => (
@@ -66,8 +66,8 @@ import IconMessage from '..'
   <Story
     name="success"
     args={{
-      variant: 'success',
       icon: 'check',
+      variant: 'success',
     }}
   >
     {args => (

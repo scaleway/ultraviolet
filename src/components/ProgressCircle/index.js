@@ -14,26 +14,26 @@ const ProgressCircle = ({
   const theme = useTheme()
 
   return (
-    <div style={{ width: size, height: size }}>
+    <div style={{ height: size, width: size }}>
       <CircularProgressbar
         value={percentage}
         text={text}
         strokeWidth={strokeWidth}
         styles={{
-          root: {},
           path: {
             stroke: theme.colors[pathColor] || pathColor,
             strokeLinecap: 'round',
           },
+          root: {},
+          text: {
+            dominantBaseline: 'middle',
+            fill: theme.colors.primary,
+            fontSize: '26px',
+            textAnchor: 'middle',
+          },
           trail: {
             stroke: theme.colors[trailColor] || trailColor,
             strokeLinecap: 'round',
-          },
-          text: {
-            fill: theme.colors.primary,
-            fontSize: '26px',
-            dominantBaseline: 'middle',
-            textAnchor: 'middle',
           },
         }}
       />
@@ -42,20 +42,20 @@ const ProgressCircle = ({
 }
 
 ProgressCircle.propTypes = {
+  pathColor: PropTypes.string,
   percentage: PropTypes.number,
   size: PropTypes.number,
-  text: PropTypes.string,
   strokeWidth: PropTypes.number,
-  pathColor: PropTypes.string,
+  text: PropTypes.string,
   trailColor: PropTypes.string,
 }
 
 ProgressCircle.defaultProps = {
+  pathColor: 'primary',
   percentage: 0,
   size: 40,
-  text: undefined,
   strokeWidth: 16,
-  pathColor: 'primary',
+  text: undefined,
   trailColor: 'gray350',
 }
 

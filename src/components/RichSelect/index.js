@@ -53,27 +53,22 @@ const getSelectStyles = ({
 }) => ({
   control: (provided, state) => ({
     ...provided,
-    transition: 'border-color 200ms ease, box-shadow 200ms ease',
-    borderStyle: state.isDisabled ? 'none' : 'solid',
-    borderWidth: state.isDisabled ? 0 : '1px',
     backgroundColor: state.isDisabled
       ? theme.colors.gray50
       : theme.colors.white,
-    color: getControlColor({ state, error, theme }),
-    minHeight: '48px',
-    fontWeight: 500,
-    fontSize: '16px',
-    lineHeight: '24px',
-    borderRadius: '4px',
-    boxShadow: 'none',
     borderColor: error ? theme.colors.warning : theme.colors.gray300,
+    borderRadius: '4px',
+    borderStyle: state.isDisabled ? 'none' : 'solid',
+    borderWidth: state.isDisabled ? 0 : '1px',
+    boxShadow: 'none',
+    color: getControlColor({ error, state, theme }),
+    fontSize: '16px',
+    fontWeight: 500,
+    lineHeight: '24px',
+    minHeight: '48px',
+    transition: 'border-color 200ms ease, box-shadow 200ms ease',
+
     ...(!state.isDisabled && {
-      ':hover': {
-        borderColor: error ? theme.colors.warning : theme.colors.primary,
-        svg: {
-          fill: error ? theme.colors.warning : theme.colors.primary,
-        },
-      },
       ':focus-within': {
         borderColor: error ? theme.colors.warning : theme.colors.primary,
         boxShadow: `0 0 2px 2px ${transparentize(
@@ -84,17 +79,27 @@ const getSelectStyles = ({
           fill: error ? theme.colors.warning : theme.colors.primary,
         },
       },
+      ':hover': {
+        borderColor: error ? theme.colors.warning : theme.colors.primary,
+        svg: {
+          fill: error ? theme.colors.warning : theme.colors.primary,
+        },
+      },
     }),
     ...((customStyle(state) || {}).control || {}),
     animation: animation
       ? `${animationDuration}ms ${animations[animation]}`
       : 'none',
   }),
-  valueContainer: (provided, state) => ({
+  indicatorSeparator: (provided, state) => ({
     ...provided,
-    ...((customStyle(state) || {}).valueContainer || {}),
-    cursor: state.isDisabled ? 'not-allowed' : undefined,
-    height: '100%',
+    backgroundColor: theme.colors.gray200,
+    display: state.selectProps.time ? 'flex' : 'none',
+    ...((customStyle(state) || {}).indicatorSeparator || {}),
+  }),
+  indicatorsContainer: provided => ({
+    ...provided,
+    maxHeight: '48px',
   }),
   menu: (provided, state) => ({
     ...provided,
@@ -110,85 +115,81 @@ const getSelectStyles = ({
     zIndex: 10000,
     ...((customStyle(state) || {}).menuPortal || {}),
   }),
-  singleValue: (provided, state) => ({
-    ...provided,
-    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '8px',
-    marginLeft: state.hasValue && 0,
-    marginRight: state.hasValue && 0,
-    paddingLeft: state.hasValue && 0,
-    color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
-    ...((customStyle(state) || {}).singleValue || {}),
-  }),
   multiValue: (provided, state) => ({
     ...provided,
-    color: theme.colors.gray700,
-    backgroundColor: theme.colors.gray100,
-    fontWeight: 500,
-    fontSize: '14px',
-    borderRadius: '4px',
-    justifyContent: 'center',
     alignItems: 'center',
-    textOverflow: 'ellipsis',
+    backgroundColor: theme.colors.gray100,
+    borderRadius: '4px',
+    color: theme.colors.gray700,
+    fontSize: '14px',
+    fontWeight: 500,
     height: '24px',
+    justifyContent: 'center',
+    textOverflow: 'ellipsis',
     ...((customStyle(state) || {}).multiValue || {}),
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
     color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
     fontSize: '14px',
-    lineHeight: '20px',
     fontWeight: 'normal',
+    lineHeight: '20px',
     ...((customStyle(state) || {}).multiValueLabel || {}),
   }),
   multiValueRemove: (provided, state) => ({
     ...provided,
     ...(state.isDisabled
       ? {
-          pointerEvents: 'none',
-          cursor: 'none',
           color: theme.colors.gray300,
+          cursor: 'none',
+          pointerEvents: 'none',
         }
       : {
           color: theme.colors.gray550,
         }),
     ':hover': {
-      pointerEvents: state.isDisabled ? 'none' : 'fill',
-      cursor: state.isDisabled ? 'none' : 'pointer',
       color: state.isDisabled ? theme.colors.gray300 : theme.colors.primary,
+      cursor: state.isDisabled ? 'none' : 'pointer',
+      pointerEvents: state.isDisabled ? 'none' : 'fill',
     },
     ...((customStyle(state) || {}).multiValueRemove || {}),
-  }),
-  placeholder: (provided, state) => ({
-    ...provided,
-    color: getPlaceholderColor({ state, error, theme }),
-    ...((customStyle(state) || {}).placeholder || {}),
   }),
   option: (provided, state) => ({
     ...provided,
     ...getOptionColor({ state, theme }),
     ':active': {
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
       backgroundColor: state.isDisabled
         ? theme.colors.gray50
         : theme.colors.gray200,
+      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
     },
     ':hover': {
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
       backgroundColor: state.isDisabled
         ? theme.colors.gray50
         : theme.colors.gray200,
+      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
     },
     ...((customStyle(state) || {}).option || {}),
   }),
-  indicatorsContainer: provided => ({
+  placeholder: (provided, state) => ({
     ...provided,
-    maxHeight: '48px',
+    color: getPlaceholderColor({ error, state, theme }),
+    ...((customStyle(state) || {}).placeholder || {}),
   }),
-  indicatorSeparator: (provided, state) => ({
+  singleValue: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colors.gray200,
-    display: state.selectProps.time ? 'flex' : 'none',
-    ...((customStyle(state) || {}).indicatorSeparator || {}),
+    color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
+    marginLeft: state.hasValue && 0,
+    marginRight: state.hasValue && 0,
+    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '8px',
+    paddingLeft: state.hasValue && 0,
+    ...((customStyle(state) || {}).singleValue || {}),
+  }),
+  valueContainer: (provided, state) => ({
+    ...provided,
+    ...((customStyle(state) || {}).valueContainer || {}),
+    cursor: state.isDisabled ? 'not-allowed' : undefined,
+    height: '100%',
   }),
 })
 
@@ -236,20 +237,20 @@ const SelectContainer = props => {
       className={className}
       {...innerProps}
       {...{
-        mt,
-        mr,
-        mb,
-        ml,
-        mx,
-        my,
-        pt,
-        pr,
-        pb,
-        pl,
-        px,
-        py,
         flex,
         height,
+        mb,
+        ml,
+        mr,
+        mt,
+        mx,
+        my,
+        pb,
+        pl,
+        pr,
+        pt,
+        px,
+        py,
         width,
       }}
     >
@@ -264,39 +265,39 @@ const SelectContainer = props => {
 }
 
 SelectContainer.defaultProps = {
+  className: '',
   getStyles: () => {},
   innerProps: {},
   isDisabled: false,
-  className: '',
   selectProps: {
     mt: 0,
   },
 }
 SelectContainer.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   getStyles: PropTypes.func,
   innerProps: PropTypes.shape({}),
+  isDisabled: PropTypes.bool,
   selectProps: PropTypes.shape({
-    mt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    ml: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    my: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pl: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    py: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    error: PropTypes.string,
     flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    error: PropTypes.string,
+    mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ml: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    mr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    mt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    mx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    my: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     name: PropTypes.string,
+    pb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    pl: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    pr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    pt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    py: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }),
-  isDisabled: PropTypes.bool,
-  className: PropTypes.string,
 }
 
 const StyledPlaceholder = styled(Box, {
@@ -366,26 +367,26 @@ const ValueContainer = ({
 )
 
 ValueContainer.defaultProps = {
+  children: null,
+  error: undefined,
+  hasValue: false,
+  inputId: undefined,
   isDisabled: false,
   isMulti: false,
-  selectProps: {},
-  noTopLabel: false,
   labelId: undefined,
-  inputId: undefined,
-  error: undefined,
-  children: null,
-  hasValue: false,
+  noTopLabel: false,
+  selectProps: {},
 }
 ValueContainer.propTypes = {
-  selectProps: SelectContainer.propTypes.selectProps,
+  children: PropTypes.node,
+  error: PropTypes.string,
+  hasValue: PropTypes.bool,
+  inputId: PropTypes.string,
   isDisabled: PropTypes.bool,
   isMulti: PropTypes.bool,
-  noTopLabel: PropTypes.bool,
   labelId: PropTypes.string,
-  inputId: PropTypes.string,
-  error: PropTypes.string,
-  children: PropTypes.node,
-  hasValue: PropTypes.bool,
+  noTopLabel: PropTypes.bool,
+  selectProps: SelectContainer.propTypes.selectProps,
 }
 
 const inputStyles = css`
@@ -409,14 +410,14 @@ const Input = ({ inputId, labelId, isMulti, ...props }) => (
 
 Input.propTypes = {
   inputId: PropTypes.string,
-  labelId: PropTypes.string,
   isMulti: PropTypes.bool,
+  labelId: PropTypes.string,
 }
 
 Input.defaultProps = {
   inputId: undefined,
-  labelId: undefined,
   isMulti: false,
+  labelId: undefined,
 }
 
 const Option = ({ selectProps, value, label, ...props }) => (
@@ -440,10 +441,10 @@ Option.defaultProps = {
 }
 
 Option.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})])
-    .isRequired,
   label: PropTypes.node,
   selectProps: SelectContainer.propTypes.selectProps,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})])
+    .isRequired,
 }
 
 const DropdownIndicator = ({
@@ -513,19 +514,19 @@ const ClearIndicator = ({
 }
 
 ClearIndicator.defaultProps = {
+  error: undefined,
+  innerProps: {},
   isDisabled: false,
   selectProps: {},
-  innerProps: {},
-  error: undefined,
 }
 
 ClearIndicator.propTypes = {
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  isDisabled: PropTypes.bool,
-  selectProps: SelectContainer.propTypes.selectProps,
   innerProps: PropTypes.shape({
     ref: {},
   }),
+  isDisabled: PropTypes.bool,
+  selectProps: SelectContainer.propTypes.selectProps,
 }
 
 const MultiValueContainer = props => (
@@ -541,14 +542,20 @@ const MultiValueRemove = props => (
 )
 
 function RichSelect({
+  animation,
+  animationDuration,
+  animationOnChange,
   children,
   className,
+  customComponents,
+  customStyle,
   disabled,
   error,
+  innerRef,
   inputId: inputIdProp,
+  isClearable,
   isMulti,
   isSearchable,
-  isClearable,
   labelId: labelIdProp,
   menuPortalTarget,
   noTopLabel,
@@ -557,12 +564,6 @@ function RichSelect({
   placeholder,
   readOnly,
   value,
-  customStyle,
-  innerRef,
-  animationOnChange,
-  animation,
-  animationDuration,
-  customComponents,
   ...props
 }) {
   const inputId = inputIdProp || getUUID('input')
@@ -582,6 +583,24 @@ function RichSelect({
     <Select
       ref={innerRef}
       components={{
+        ClearIndicator: clearIndicatorProps => (
+          <ClearIndicator error={error} {...clearIndicatorProps} />
+        ),
+        DropdownIndicator: dropDownIndicatorProps => (
+          <DropdownIndicator error={error} {...dropDownIndicatorProps} />
+        ),
+        Input: inputProps => (
+          <Input
+            inputId={inputId}
+            labelId={labelId}
+            isMulti={isMulti}
+            {...inputProps}
+          />
+        ),
+        MultiValueContainer,
+        MultiValueLabel,
+        MultiValueRemove,
+        Option,
         SelectContainer,
         ValueContainer: valueContainerProps => (
           <ValueContainer
@@ -591,24 +610,6 @@ function RichSelect({
             {...valueContainerProps}
           />
         ),
-        Option,
-        Input: inputProps => (
-          <Input
-            inputId={inputId}
-            labelId={labelId}
-            isMulti={isMulti}
-            {...inputProps}
-          />
-        ),
-        DropdownIndicator: dropDownIndicatorProps => (
-          <DropdownIndicator error={error} {...dropDownIndicatorProps} />
-        ),
-        ClearIndicator: clearIndicatorProps => (
-          <ClearIndicator error={error} {...clearIndicatorProps} />
-        ),
-        MultiValueContainer,
-        MultiValueLabel,
-        MultiValueRemove,
         ...customComponents,
       }}
       placeholder={placeholder}
@@ -616,12 +617,12 @@ function RichSelect({
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => option.disabled}
       styles={getSelectStyles({
-        error,
-        customStyle,
         animation: isAnimated && animation,
         animationDuration,
-        theme,
+        customStyle,
+        error,
         noTopLabel,
+        theme,
       })}
       options={
         options ||
@@ -652,39 +653,39 @@ const RichSelectWithRef = React.forwardRef((props, ref) => (
 RichSelectWithRef.Option = () => null
 
 RichSelectWithRef.defaultProps = {
+  animation: 'pulse',
+  animationDuration: 1000,
+  animationOnChange: false,
   children: null,
   className: undefined,
+  customComponents: undefined,
+  customStyle: () => true,
   disabled: false,
   error: false,
   inputId: undefined,
+  isClearable: false,
   isMulti: false,
   isSearchable: true,
-  isClearable: false,
   labelId: undefined,
   noTopLabel: false,
   onChange: null,
   placeholder: undefined,
   readOnly: false,
-  customStyle: () => true,
-  animationOnChange: false,
-  animation: 'pulse',
-  animationDuration: 1000,
   required: false,
   value: undefined,
-  customComponents: undefined,
 }
 
 RichSelectWithRef.propTypes = {
   animation: PropTypes.oneOf(Object.keys(animations)),
-  animationOnChange: PropTypes.bool,
   animationDuration: PropTypes.number,
+  animationOnChange: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   className: PropTypes.string,
-  customStyle: PropTypes.func,
   customComponents: PropTypes.shape({}),
+  customStyle: PropTypes.func,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   inputId: PropTypes.string,

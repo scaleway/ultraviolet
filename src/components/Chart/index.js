@@ -68,17 +68,17 @@ Chart.propTypes = {
   content: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-      value: PropTypes.string,
-      product: PropTypes.string.isRequired,
       color: PropTypes.string.isRequired,
-      percent: PropTypes.number.isRequired,
       details: PropTypes.arrayOf(
         PropTypes.shape({
           name: PropTypes.string,
           value: PropTypes.string,
         }),
       ),
+      name: PropTypes.string,
+      percent: PropTypes.number.isRequired,
+      product: PropTypes.string.isRequired,
+      value: PropTypes.string,
     }),
   ),
   emptyLegend: PropTypes.string,

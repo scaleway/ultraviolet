@@ -77,10 +77,10 @@ ProgressionButton.defaultProps = {
 }
 
 ProgressionButton.propTypes = {
+  children: PropTypes.node.isRequired,
   color: PropTypes.string,
   creation: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
   duration: PropTypes.number,
-  children: PropTypes.node.isRequired,
 }
 
 export default ProgressionButton

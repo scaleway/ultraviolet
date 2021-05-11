@@ -12,16 +12,16 @@ import {
 import Box from '../Box'
 
 const variants = {
-  white: ({ theme }) => css`
-    background-color: ${theme.colors.white};
-    color: ${theme.colors.black};
-    fill: ${theme.colors.white};
-    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.colors.shadow)};
-  `,
   black: ({ theme }) => css`
     background-color: ${theme.colors.black};
     color: ${theme.colors.white};
     fill: ${theme.colors.black};
+    box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.colors.shadow)};
+  `,
+  white: ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.black};
+    fill: ${theme.colors.white};
     box-shadow: 0 2px 5px 5px ${transparentize(0.7, theme.colors.shadow)};
   `,
 }
@@ -63,7 +63,7 @@ const Tooltip = ({
   zIndex,
   ...props
 }) => {
-  const tooltip = useTooltipState({ animated, placement, visible, baseId })
+  const tooltip = useTooltipState({ animated, baseId, placement, visible })
   const { setVisible } = tooltip
   useEffect(() => setVisible(visible), [setVisible, visible])
 
@@ -119,27 +119,27 @@ const Tooltip = ({
 
 Tooltip.propTypes = {
   animated: PropTypes.number,
-  placement: PropTypes.string,
-  variant: PropTypes.string,
-  visible: PropTypes.bool,
-  text: PropTypes.node,
   baseId: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
   ]),
+  placement: PropTypes.string,
+  text: PropTypes.node,
+  variant: PropTypes.string,
+  visible: PropTypes.bool,
   zIndex: PropTypes.number,
 }
 
 Tooltip.defaultProps = {
   animated: 150,
-  placement: 'top',
-  variant: 'black',
-  visible: false,
-  text: '',
   baseId: undefined,
   children: null,
+  placement: 'top',
+  text: '',
+  variant: 'black',
+  visible: false,
   zIndex: undefined,
 }
 

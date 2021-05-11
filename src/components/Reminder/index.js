@@ -8,16 +8,16 @@ import UniversalLink from '../UniversalLink'
 
 const variants = {
   error: {
-    main: 'red',
     background: 'pippin',
-  },
-  warning: {
-    main: 'orange',
-    background: 'serenade',
+    main: 'red',
   },
   info: {
-    main: 'blue',
     background: 'zumthor',
+    main: 'blue',
+  },
+  warning: {
+    background: 'serenade',
+    main: 'orange',
   },
 }
 
@@ -81,16 +81,16 @@ const Reminder = ({ text, variant, bordered, to, ...props }) => (
 )
 
 Reminder.propTypes = {
-  variant: PropTypes.oneOf(['error', 'warning', 'info']),
   bordered: PropTypes.bool,
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
+  variant: PropTypes.oneOf(['error', 'warning', 'info']),
 }
 
 Reminder.defaultProps = {
-  variant: 'info',
   bordered: false,
   to: undefined,
+  variant: 'info',
 }
 
 export default Reminder

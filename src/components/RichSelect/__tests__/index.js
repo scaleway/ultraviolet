@@ -5,18 +5,18 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 const customStyles = {
   control: () => ({}),
-  valueContainer: () => ({}),
+  indicatorSeparator: () => ({}),
+  indicatorsContainer: () => ({}),
   menu: () => ({}),
   menuList: () => ({}),
   menuPortal: () => ({}),
-  singleValue: () => ({}),
   multiValue: () => ({}),
   multiValueLabel: () => ({}),
   multiValueRemove: () => ({}),
-  placeholder: () => ({}),
   option: () => ({}),
-  indicatorsContainer: () => ({}),
-  indicatorSeparator: () => ({}),
+  placeholder: () => ({}),
+  singleValue: () => ({}),
+  valueContainer: () => ({}),
 }
 
 describe('RichSelect', () => {
@@ -216,7 +216,7 @@ describe('RichSelect', () => {
         inputId="test"
         labelId="test-label"
         name="multi-disabled"
-        value={{ value: 'a', label: 'Option A' }}
+        value={{ label: 'Option A', value: 'a' }}
         isMulti
         disabled
       >
@@ -232,7 +232,7 @@ describe('RichSelect', () => {
         inputId="test"
         labelId="test-label"
         name="loading"
-        value={{ value: 'a', label: 'Option A' }}
+        value={{ label: 'Option A', value: 'a' }}
         isClearable
       >
         <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -246,7 +246,7 @@ describe('RichSelect', () => {
         inputId="test"
         labelId="test-label"
         name="loading"
-        value={{ value: 'a', label: 'Option A' }}
+        value={{ label: 'Option A', value: 'a' }}
         isSearchable
       >
         <RichSelect.Option value="a">Option A</RichSelect.Option>

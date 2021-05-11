@@ -5,18 +5,6 @@ import Box from '../Box'
 import Line from './Line'
 
 const styles = {
-  container: css`
-    display: flex;
-  `,
-  circleContainer: height => css`
-    position: relative;
-    height: ${height}px;
-  `,
-  linesContainer: css`
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  `,
   circle: theme => css`
     transform-origin: 50% 50%;
     stroke: ${theme.colors.gray300};
@@ -24,10 +12,22 @@ const styles = {
     stroke-linecap: butt;
     fill: none;
   `,
+  circleContainer: height => css`
+    position: relative;
+    height: ${height}px;
+  `,
+  container: css`
+    display: flex;
+  `,
   line: css`
     display: flex;
     margin-top: 16px;
     margin-left: 16px;
+  `,
+  linesContainer: css`
+    display: flex;
+    flex: 1;
+    flex-direction: column;
   `,
 }
 
@@ -36,11 +36,11 @@ const Donut = ({ height, width, ...props }) => (
     <div css={styles.circleContainer(height)}>
       <svg
         style={{
-          minHeight: height,
           height,
+          minHeight: height,
           minWidth: width,
-          width,
           transform: 'rotate(-90deg)',
+          width,
         }}
       >
         <circle css={styles.circle} cx={width / 2} cy={height / 2} r="90" />

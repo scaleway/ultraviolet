@@ -157,7 +157,7 @@ of RichSelect with an external way (check example with button).
         {({ value, onChange }) => (
           <>
             <Button
-              onClick={() => onChange({ value: 'pulse', label: 'pulse' })}
+              onClick={() => onChange({ label: 'pulse', value: 'pulse' })}
               mb={4}
             >
               Select pulse animation
@@ -209,7 +209,7 @@ of RichSelect with an external way (check example with button).
     <Box m={2}>
       <RichSelect
         name="multi-disabled"
-        value={{ value: 'a', label: 'Option A' }}
+        value={{ label: 'Option A', value: 'a' }}
         isMulti
         disabled
       >

@@ -4,7 +4,11 @@
     "@babel/preset-react",
     [
       "@emotion/babel-preset-css-prop",
-      { "sourceMap": false, "autoLabel": "dev-only", "labelFormat": "[filename]--[local]" }
+      {
+        "sourceMap": false,
+        "autoLabel": "dev-only",
+        "labelFormat": "[filename]--[local]"
+      }
     ]
   ]
 }

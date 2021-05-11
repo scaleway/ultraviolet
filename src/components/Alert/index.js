@@ -5,9 +5,9 @@ import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
 
 const variantIcons = {
-  warning: 'alert',
   info: 'information-outline',
   success: 'check',
+  warning: 'alert',
 }
 
 const StyledAlert = styled(Typography)`
@@ -32,16 +32,16 @@ const Alert = ({ variant, icon, children, iconSize, ...props }) => (
 )
 
 Alert.propTypes = {
-  variant: PropTypes.oneOf(alertVariants),
+  children: PropTypes.node.isRequired,
   icon: PropTypes.oneOf(icons),
   iconSize: PropTypes.number,
-  children: PropTypes.node.isRequired,
+  variant: PropTypes.oneOf(alertVariants),
 }
 
 Alert.defaultProps = {
-  variant: 'warning',
   icon: null,
   iconSize: 40,
+  variant: 'warning',
 }
 
 export default Alert

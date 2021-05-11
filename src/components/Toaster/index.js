@@ -82,21 +82,21 @@ const SanitizedNotificationBar = ({
 }) => <NotificationBar {...props}>{children}</NotificationBar>
 
 SanitizedNotificationBar.propTypes = {
+  children: PropTypes.node,
   closeToast: PropTypes.func,
   toastProps: PropTypes.shape({}),
-  children: PropTypes.node,
 }
 
 SanitizedNotificationBar.defaultProps = {
+  children: null,
   closeToast: undefined,
   toastProps: undefined,
-  children: null,
 }
 
 const toast = {
-  success: (children, options) =>
-    baseToast.success(
-      <SanitizedNotificationBar variant="success" p={0}>
+  error: (children, options) =>
+    baseToast.error(
+      <SanitizedNotificationBar variant="warning" p={0}>
         {children}
       </SanitizedNotificationBar>,
       options,
@@ -108,15 +108,15 @@ const toast = {
       </SanitizedNotificationBar>,
       options,
     ),
-  warn: (children, options) =>
-    baseToast.warn(
-      <SanitizedNotificationBar variant="warning" p={0}>
+  success: (children, options) =>
+    baseToast.success(
+      <SanitizedNotificationBar variant="success" p={0}>
         {children}
       </SanitizedNotificationBar>,
       options,
     ),
-  error: (children, options) =>
-    baseToast.error(
+  warn: (children, options) =>
+    baseToast.warn(
       <SanitizedNotificationBar variant="warning" p={0}>
         {children}
       </SanitizedNotificationBar>,

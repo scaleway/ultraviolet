@@ -17,13 +17,13 @@ const Pentagon = styled('div', {
 `
 
 Pentagon.propTypes = {
-  size: PropTypes.string,
   color: PropTypes.string,
+  size: PropTypes.string,
 }
 
 Pentagon.defaultProps = {
-  size: '48px',
   color: 'pippin',
+  size: '48px',
 }
 
 export default Pentagon

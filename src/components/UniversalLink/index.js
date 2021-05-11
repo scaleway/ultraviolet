@@ -45,20 +45,20 @@ const UniversalLink = ({
 }
 
 UniversalLink.propTypes = {
-  children: PropTypes.node.isRequired,
-  target: PropTypes.string,
-  rel: PropTypes.string,
-  to: PropTypes.string,
-  href: PropTypes.string,
   as: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string,
+  rel: PropTypes.string,
+  target: PropTypes.string,
+  to: PropTypes.string,
 }
 
 UniversalLink.defaultProps = {
-  target: undefined,
-  rel: undefined,
-  to: null,
-  href: null,
   as: null,
+  href: null,
+  rel: undefined,
+  target: undefined,
+  to: null,
 }
 
 export default UniversalLink

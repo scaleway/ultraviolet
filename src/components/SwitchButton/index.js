@@ -152,31 +152,31 @@ const SwitchButton = ({
 )
 
 SwitchButton.defaultProps = {
-  size: 24,
-  disabled: false,
   checked: false,
-  variant: 'default',
-  onFocus: null,
+  disabled: false,
   onBlur: null,
+  onFocus: null,
+  size: 24,
   tooltip: null,
+  variant: 'default',
 }
 
 SwitchButton.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.func,
   ]).isRequired,
-  checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onFocus: PropTypes.func,
+  name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   size: PropTypes.number,
-  variant: PropTypes.string,
   tooltip: PropTypes.string,
+  value: PropTypes.string.isRequired,
+  variant: PropTypes.string,
 }
 
 export default SwitchButton

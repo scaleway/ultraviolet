@@ -104,20 +104,20 @@ const Tag = ({
 
 Tag.propTypes = {
   children: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
   onClose: PropTypes.func,
   textStyle: PropTypes.shape({}),
-  disabled: PropTypes.bool,
   variant: PropTypes.oneOf(Object.keys(variantsContainer)),
 }
 
 Tag.defaultProps = {
-  variant: 'base',
   children: undefined,
-  isLoading: false,
   disabled: false,
-  textStyle: {},
+  isLoading: false,
   onClose: undefined,
+  textStyle: {},
+  variant: 'base',
 }
 
 export default Tag

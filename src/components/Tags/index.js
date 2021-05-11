@@ -68,7 +68,7 @@ const convertTagArrayToTagStateArray = tags =>
   tags.map(tag =>
     typeof tag === 'object'
       ? { ...tag, index: getUUID('tag') }
-      : { label: tag, index: getUUID('tag') },
+      : { index: getUUID('tag'), label: tag },
   )
 
 const Tags = ({
@@ -114,7 +114,7 @@ const Tags = ({
 
   const addTag = async () => {
     const newTags = input
-      ? [...tagsState, { label: input, index: getUUID('tag') }]
+      ? [...tagsState, { index: getUUID('tag'), label: input }]
       : tagsState
     setInput('')
     setTags(newTags)
@@ -165,7 +165,7 @@ const Tags = ({
     e.preventDefault()
     const newTags = [
       ...tagsState,
-      { label: e.clipboardData.getData('Text'), index: getUUID('tag') },
+      { index: getUUID('tag'), label: e.clipboardData.getData('Text') },
     ]
     setTags(newTags)
     setStatus({ [newTags.length - 1]: 'loading' })

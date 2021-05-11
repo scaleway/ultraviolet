@@ -81,32 +81,32 @@ const RadioBorderedBox = ({
 )
 
 RadioBorderedBox.propTypes = {
-  label: PropTypes.string.isRequired,
-  labelDescription: PropTypes.string,
+  badgeSize: PropTypes.string,
   badgeText: PropTypes.string,
   badgeVariant: PropTypes.string,
-  badgeSize: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   checked: PropTypes.bool,
+  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
-  onFocus: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  labelDescription: PropTypes.string,
+  name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   size: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 RadioBorderedBox.defaultProps = {
-  labelDescription: undefined,
-  size: 24,
-  disabled: false,
-  checked: false,
-  onFocus: null,
-  onBlur: null,
+  badgeSize: 'xsmall',
   badgeText: undefined,
   badgeVariant: 'info',
-  badgeSize: 'xsmall',
+  checked: false,
+  disabled: false,
+  labelDescription: undefined,
+  onBlur: null,
+  onFocus: null,
+  size: 24,
 }
 
 export default RadioBorderedBox

@@ -7,11 +7,11 @@ import Icon from '../Icon'
 import Typography from '../Typography'
 
 const sizes = {
-  xsmall: 0.5,
-  small: 0.7,
-  medium: 1,
   large: 1.3,
+  medium: 1,
+  small: 0.7,
   xlarge: 1.5,
+  xsmall: 0.5,
 }
 
 const widthGrow = keyframes`
@@ -185,11 +185,11 @@ const VolumeSize = ({
         <StyledVolumeContainer size={size}>
           <StyledVolume
             percentUsed={getPercentUsed({
-              minSize,
-              maxSize,
-              value,
               isTooBig,
               isTooSmall,
+              maxSize,
+              minSize,
+              value,
             })}
             hasError={hasError}
           />
@@ -227,15 +227,15 @@ VolumeSize.propTypes = {
   requiredLabel: PropTypes.string,
   size: PropTypes.oneOf(Object.keys(sizes)),
   title: PropTypes.string,
-  unit: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
   tooBigMessage: PropTypes.string,
   tooSmallMessage: PropTypes.string,
+  unit: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
 }
 
 VolumeSize.defaultProps = {
-  maxSize: undefined,
   maxLabel: 'maximum',
+  maxSize: undefined,
   minLabel: 'minimum',
   requiredLabel: 'required',
   size: 'medium',

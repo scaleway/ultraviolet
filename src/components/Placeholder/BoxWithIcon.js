@@ -4,12 +4,13 @@ import React from 'react'
 import Box from '../Box'
 import Line from './Line'
 
-const iconStyle = size => theme => css`
-  width: ${size}px;
-  height: ${size}px;
-  border-radius: ${size}px;
-  background-color: ${theme.colors.gray300};
-`
+const iconStyle = size => theme =>
+  css`
+    width: ${size}px;
+    height: ${size}px;
+    border-radius: ${size}px;
+    background-color: ${theme.colors.gray300};
+  `
 
 const boxStyled = theme => css`
   display: flex;
@@ -28,14 +29,14 @@ const BoxWithIcon = ({ length, ...props }) =>
   ))
 
 BoxWithIcon.defaultProps = {
-  length: 1,
   height: 25,
+  length: 1,
   width: 25,
 }
 
 BoxWithIcon.propTypes = {
-  length: PropTypes.number,
   height: PropTypes.number,
+  length: PropTypes.number,
   width: PropTypes.number,
 }
 

@@ -4,6 +4,13 @@ import React from 'react'
 import Box from '../Box'
 
 const styles = {
+  actionable: css`
+    cursor: pointer;
+    touch-action: manipulation;
+  `,
+  disabled: css`
+    opacity: 0.5;
+  `,
   root: css`
     border: 0;
     transition-property: opacity;
@@ -12,13 +19,6 @@ const styles = {
     background-color: transparent;
     padding: 0;
     margin: 0;
-  `,
-  actionable: css`
-    cursor: pointer;
-    touch-action: manipulation;
-  `,
-  disabled: css`
-    opacity: 0.5;
   `,
 }
 
@@ -53,20 +53,20 @@ const BaseTouchable = ({
 )
 
 BaseTouchable.propTypes = {
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
-  disabled: PropTypes.bool,
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hasFocus: PropTypes.bool,
   as: PropTypes.string,
+  disabled: PropTypes.bool,
+  hasFocus: PropTypes.bool,
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
   type: PropTypes.string,
 }
 
 BaseTouchable.defaultProps = {
-  innerRef: null,
-  disabled: false,
   activeOpacity: null,
-  hasFocus: false,
   as: 'button',
+  disabled: false,
+  hasFocus: false,
+  innerRef: null,
   type: null,
 }
 

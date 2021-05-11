@@ -33,11 +33,6 @@ const positions = {
 }
 
 const temporals = {
-  past: ({ theme }) => `
-    background-color: ${theme.colors.success};
-    color: ${theme.colors.white};
-    border-color: ${theme.colors.white};
-  `,
   current: ({ theme }) => `
     background-color: ${theme.colors.primary};
     color: ${theme.colors.white};
@@ -55,6 +50,11 @@ const temporals = {
     &:focus {
       box-shadow: 0 0 0 2px ${transparentize(0.75, theme.colors.gray550)};
     }
+  `,
+  past: ({ theme }) => `
+    background-color: ${theme.colors.success};
+    color: ${theme.colors.white};
+    border-color: ${theme.colors.white};
   `,
 }
 
@@ -140,8 +140,8 @@ const Progress = ({ children, selected, ...props }) => {
 }
 
 Progress.propTypes = {
-  selected: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
+  selected: PropTypes.number.isRequired,
 }
 
 const MemoProgress = memo(Progress)

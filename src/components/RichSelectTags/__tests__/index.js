@@ -20,11 +20,26 @@ describe('RichSelectTags', () => {
         initialTags={['one']}
         onChangeSelectValue={() => {}}
         options={[
-          { value: 'one', label: 'One' },
-          { value: 'two', label: 'Two' },
-          { value: 'three', label: 'Three' },
-          { value: 'four', label: 'Four' },
-          { value: 'five', label: 'Five' },
+          {
+            label: 'One',
+            value: 'one',
+          },
+          {
+            label: 'Two',
+            value: 'two',
+          },
+          {
+            label: 'Three',
+            value: 'three',
+          },
+          {
+            label: 'Four',
+            value: 'four',
+          },
+          {
+            label: 'Five',
+            value: 'five',
+          },
         ]}
       />,
     )
@@ -39,11 +54,11 @@ describe('RichSelectTags', () => {
         onChangeSelectValue={() => {}}
         icon="/toto.png"
         options={[
-          { value: 'one', label: 'One' },
-          { value: 'two', label: 'Two' },
-          { value: 'three', label: 'Three' },
-          { value: 'four', label: 'Four' },
-          { value: 'five', label: 'Five' },
+          { label: 'One', value: 'one' },
+          { label: 'Two', value: 'two' },
+          { label: 'Three', value: 'three' },
+          { label: 'Four', value: 'four' },
+          { label: 'Five', value: 'five' },
         ]}
       />,
     )
@@ -58,14 +73,14 @@ describe('RichSelectTags', () => {
         onChange={onChange}
         name="options"
         initialTags={['one']}
-        value={{ value: 'three', label: 'Three' }}
+        value={{ label: 'Three', value: 'three' }}
         onChangeSelectValue={onChangeSelectValue}
         options={[
-          { value: 'one', label: 'One' },
-          { value: 'two', label: 'Two' },
-          { value: 'three', label: 'Three' },
-          { value: 'four', label: 'Four' },
-          { value: 'five', label: 'Five' },
+          { label: 'One', value: 'one' },
+          { label: 'Two', value: 'two' },
+          { label: 'Three', value: 'three' },
+          { label: 'Four', value: 'four' },
+          { label: 'Five', value: 'five' },
         ]}
       />,
       {
@@ -81,12 +96,12 @@ describe('RichSelectTags', () => {
           userEvent.type(richSelect, 'three{enter}')
           userEvent.click(await getByTestId('rich-select-tags-add'))
           expect(onChangeSelectValue).toHaveBeenCalledWith({
-            value: 'three',
             label: 'Three',
+            value: 'three',
           })
           expect(onChange).toHaveBeenCalledWith([
-            { value: 'one', label: 'One' },
-            { value: 'three', label: 'Three' },
+            { label: 'One', value: 'one' },
+            { label: 'Three', value: 'three' },
           ])
         },
       },

@@ -16,7 +16,7 @@ TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
       <TimeInput
         name="timeinput-test-0"
         placeholder="Time"
-        value={{ value: '03:30', label: '03:30' }}
+        value={{ label: '03:30', value: '03:30' }}
       />
     </div>
     <div style={{ marginBottom: '16px' }}>
@@ -36,24 +36,24 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 <Canvas>
   <Story name="Controlled">
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ value: '03:30', label: '03:30' }} mb={2}>
+      <ControlValue value={{ label: '03:30', value: '03:30' }} mb={2}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-4"
+            onChange={onChange}
             placeholder="Time"
             value={value}
-            onChange={onChange}
           />
         )}
       </ControlValue>
     </div>
-    <ControlValue value={{ value: '04:30', label: '04:30' }} mb={2}>
+    <ControlValue value={{ label: '04:30', value: '04:30' }} mb={2}>
       {({ value, onChange }) => (
         <TimeInput
           name="timeinput-test-5"
+          onChange={onChange}
           placeholder="Time"
           value={value}
-          onChange={onChange}
         />
       )}
     </ControlValue>
@@ -71,7 +71,7 @@ By default, the `hours` option is selected.
 <Canvas>
   <Story name="Schedule">
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ value: '10:15', label: '10:15' }}>
+      <ControlValue value={{ label: '10:15', value: '10:15' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-6"
@@ -84,7 +84,7 @@ By default, the `hours` option is selected.
       </ControlValue>
     </div>
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ value: '10:30', label: '10:30' }}>
+      <ControlValue value={{ label: '10:30', value: '10:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-7"
@@ -96,7 +96,7 @@ By default, the `hours` option is selected.
         )}
       </ControlValue>
     </div>
-    <ControlValue value={{ value: '10:00', label: '10:00' }}>
+    <ControlValue value={{ label: '10:00', value: '10:00' }}>
       {({ value, onChange }) => (
         <TimeInput
           name="timeinput-test-8"

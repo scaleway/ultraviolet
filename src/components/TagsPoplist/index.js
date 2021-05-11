@@ -100,17 +100,17 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
 }
 
 TagsPoplist.defaultProps = {
-  tags: [],
-  threshold: 1,
   maxLength: 600,
   maxTagWidth: 115,
+  tags: [],
+  threshold: 1,
 }
 
 TagsPoplist.propTypes = {
   maxLength: PropTypes.number,
   maxTagWidth: PropTypes.number,
-  threshold: PropTypes.number,
   tags: PropTypes.arrayOf(PropTypes.string),
+  threshold: PropTypes.number,
 }
 
 export default TagsPoplist

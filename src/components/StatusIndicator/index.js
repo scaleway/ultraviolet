@@ -6,24 +6,24 @@ import Dot from '../Dot'
 import Tooltip from '../Tooltip'
 
 const defaultStatuses = {
-  ready: 'green',
   available: 'green',
-  running: 'green',
-  error: 'red',
-  unavailable: 'red',
-  locked: 'red',
-  disk_full: 'red',
-  starting: 'blue',
-  stopping: 'blue',
-  snapshotting: 'blue',
-  stopped: 'gray550',
-  pending: 'blue',
-  deleting: 'blue',
   creating: 'blue',
+  deleting: 'blue',
+  deployed: 'green',
+  disk_full: 'red',
+  error: 'red',
+  locked: 'red',
+  pending: 'blue',
+  ready: 'green',
+  running: 'green',
+  snapshotting: 'blue',
+  starting: 'blue',
+  stopped: 'gray550',
+  stopped_in_place: 'orange',
+  stopping: 'blue',
+  unavailable: 'red',
   updating: 'blue',
   warning: 'blue',
-  stopped_in_place: 'orange',
-  deployed: 'green',
 }
 
 const cssAnimation = css`
@@ -69,8 +69,8 @@ StatusIndicator.propTypes = {
 
     return null
   },
-  tooltip: PropTypes.string,
   statuses: PropTypes.objectOf(PropTypes.string),
+  tooltip: PropTypes.string,
 }
 
 export default StatusIndicator

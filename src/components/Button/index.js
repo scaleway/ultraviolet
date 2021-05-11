@@ -61,71 +61,14 @@ const plainVariant = ({ theme: { colors }, bgColor, textColor }) => {
 }
 
 const variants = {
-  primary: ({ theme }) =>
-    plainVariant({ theme, bgColor: 'primary', textColor: 'white' }),
-  'primary-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'primary',
-      bgColor: 'white',
-      hoverColor: 'primary',
-    }),
-  'primary-soft-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'gray350',
-      bgColor: 'white',
-      hoverColor: 'primary',
-    }),
-  secondary: ({ theme }) =>
-    plainVariant({ theme, bgColor: 'gray100', textColor: 'gray700' }),
-  'secondary-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'gray550',
-      bgColor: 'white',
-      hoverColor: 'primary',
-    }),
-  success: ({ theme }) =>
-    plainVariant({ theme, bgColor: 'success', textColor: 'white' }),
-  'success-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'success',
-      bgColor: 'white',
-      hoverColor: 'success',
-    }),
-  'success-soft-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'gray350',
-      bgColor: 'white',
-      hoverColor: 'success',
-    }),
-  warning: ({ theme }) =>
-    plainVariant({ theme, bgColor: 'warning', textColor: 'white' }),
-  'warning-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'warning',
-      bgColor: 'white',
-      hoverColor: 'warning',
-    }),
-  'warning-soft-bordered': ({ theme }) =>
-    borderedVariant({
-      theme,
-      color: 'gray350',
-      bgColor: 'white',
-      hoverColor: 'warning',
-    }),
   info: ({ theme }) =>
-    plainVariant({ theme, bgColor: 'zumthor', textColor: 'blue' }),
+    plainVariant({ bgColor: 'zumthor', textColor: 'blue', theme }),
   'info-bordered': ({ theme }) =>
     borderedVariant({
-      theme,
-      color: 'blue',
       bgColor: 'white',
+      color: 'blue',
       hoverColor: 'blue',
+      theme,
     }),
   link: ({ theme: { colors } }) => `
     background-color: ${colors.white};
@@ -139,10 +82,67 @@ const variants = {
       text-decoration: underline;
     }
   `,
+  primary: ({ theme }) =>
+    plainVariant({ bgColor: 'primary', textColor: 'white', theme }),
+  'primary-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'primary',
+      hoverColor: 'primary',
+      theme,
+    }),
+  'primary-soft-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'gray350',
+      hoverColor: 'primary',
+      theme,
+    }),
+  secondary: ({ theme }) =>
+    plainVariant({ bgColor: 'gray100', textColor: 'gray700', theme }),
+  'secondary-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'gray550',
+      hoverColor: 'primary',
+      theme,
+    }),
+  success: ({ theme }) =>
+    plainVariant({ bgColor: 'success', textColor: 'white', theme }),
+  'success-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'success',
+      hoverColor: 'success',
+      theme,
+    }),
+  'success-soft-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'gray350',
+      hoverColor: 'success',
+      theme,
+    }),
   transparent: ({ theme: { colors } }) => `
     background-color: transparent;
     color: ${colors.gray700};
   `,
+  warning: ({ theme }) =>
+    plainVariant({ bgColor: 'warning', textColor: 'white', theme }),
+  'warning-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'warning',
+      hoverColor: 'warning',
+      theme,
+    }),
+  'warning-soft-bordered': ({ theme }) =>
+    borderedVariant({
+      bgColor: 'white',
+      color: 'gray350',
+      hoverColor: 'warning',
+      theme,
+    }),
 }
 
 export const buttonVariants = Object.keys(variants)
@@ -337,9 +337,9 @@ function FwdButton({
 
 const defaultProps = {
   children: null,
-  download: undefined,
   disabled: false,
   displayProgressOnly: false,
+  download: undefined,
   extend: undefined,
   href: undefined,
   icon: undefined,
@@ -359,9 +359,9 @@ const propTypes = {
     PropTypes.func,
     PropTypes.arrayOf(PropTypes.node),
   ]),
-  download: PropTypes.string,
   disabled: PropTypes.bool,
   displayProgressOnly: PropTypes.bool,
+  download: PropTypes.string,
   extend: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
@@ -372,9 +372,9 @@ const propTypes = {
     PropTypes.oneOf(['left', 'right']),
   ]),
   size: PropTypes.oneOf(buttonSizes),
-  variant: PropTypes.oneOf(buttonVariants),
   to: PropTypes.string,
   type: PropTypes.string,
+  variant: PropTypes.oneOf(buttonVariants),
 }
 
 FwdButton.defaultProps = defaultProps

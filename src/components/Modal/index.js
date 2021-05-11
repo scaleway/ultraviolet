@@ -22,32 +22,6 @@ const MODAL_WIDTH = {
 }
 
 const MODAL_PLACEMENT = {
-  center: `
-    margin: auto;
-  `,
-  'top-left': `
-    margin: auto;
-    margin-left: 0;
-    margin-top: 0;
-  `,
-  top: `
-    margin: auto;
-    margin-top: 0px;
-  `,
-  'top-right': `
-    margin: auto;
-    margin-right: 0;
-    margin-top: 0;
-  `,
-  right: `
-    margin: auto;
-    margin-right: 0;
-  `,
-  'bottom-right': `
-    margin: auto;
-    margin-right: 0;
-    margin-bottom: 0;
-  `,
   bottom: `
     margin: auto;
     margin-bottom: 0;
@@ -57,9 +31,35 @@ const MODAL_PLACEMENT = {
     margin-left: 0;
     margin-bottom: 0;
   `,
+  'bottom-right': `
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+  `,
+  center: `
+    margin: auto;
+  `,
   left: `
     margin: auto;
     margin-left: 0;
+  `,
+  right: `
+    margin: auto;
+    margin-right: 0;
+  `,
+  top: `
+    margin: auto;
+    margin-top: 0px;
+  `,
+  'top-left': `
+    margin: auto;
+    margin-left: 0;
+    margin-top: 0;
+  `,
+  'top-right': `
+    margin: auto;
+    margin-right: 0;
+    margin-top: 0;
   `,
 }
 
@@ -68,37 +68,37 @@ const MODAL_ANNIMATION = {
     enter: animations.unfoldIn,
     leave: animations.unfoldOut,
   },
-  zoom: {
-    enter: animations.zoomIn,
-    leave: animations.zoomOut,
+  scaleBack: {
+    enter: animations.scaleForward,
+    leave: animations.scaleBack,
   },
   scaleUp: {
     enter: animations.scaleUp,
     leave: animations.scaleDown,
   },
-  scaleBack: {
-    enter: animations.scaleForward,
-    leave: animations.scaleBack,
-  },
   sketch: {
     enter: animations.sketchIn,
     leave: animations.sketchOut,
-  },
-  slideTop: {
-    enter: animations.slideFromTop,
-    leave: animations.slideToTop,
   },
   slideBottom: {
     enter: animations.slideFromBottom,
     leave: animations.slideToBottom,
   },
+  slideLeft: {
+    enter: animations.slideFromLeft,
+    leave: animations.slideToLeft,
+  },
   slideRight: {
     enter: animations.slideFromRight,
     leave: animations.slideToRight,
   },
-  slideLeft: {
-    enter: animations.slideFromLeft,
-    leave: animations.slideToLeft,
+  slideTop: {
+    enter: animations.slideFromTop,
+    leave: animations.slideToTop,
+  },
+  zoom: {
+    enter: animations.zoomIn,
+    leave: animations.zoomOut,
   },
 }
 
@@ -144,8 +144,8 @@ const Disclosure = memo(({ disclosure, dialog }) => {
 })
 
 Disclosure.propTypes = {
-  disclosure: PropTypes.func.isRequired,
   dialog: PropTypes.shape({}).isRequired,
+  disclosure: PropTypes.func.isRequired,
 }
 
 const StyledDialogBackdrop = styled(DialogBackdrop)`
@@ -275,8 +275,8 @@ Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   animation: PropTypes.oneOf(Object.keys(MODAL_ANNIMATION)),
   ariaLabel: PropTypes.string,
-  bordered: PropTypes.bool,
   baseId: PropTypes.string,
+  bordered: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   customDialogBackdropStyles: PropTypes.shape({}),
   customDialogStyles: PropTypes.shape({}),
@@ -297,21 +297,21 @@ Modal.defaultProps = {
   animated: false,
   animation: 'zoom',
   ariaLabel: 'modal',
-  bordered: true,
   baseId: 'modal',
+  bordered: true,
   customDialogBackdropStyles: {},
   customDialogStyles: {},
+  disclosure: undefined,
   height: 'initial',
   hideOnClickOutside: true,
   hideOnEsc: true,
   isClosable: true,
   modal: true,
+  onClose: undefined,
   opened: false,
   placement: 'center',
   preventBodyScroll: true,
   width: 'small',
-  disclosure: undefined,
-  onClose: undefined,
 }
 
 export default Modal

@@ -56,25 +56,25 @@ const Information = ({
 
 Information.defaultProps = {
   backgroundColor: 'white',
+  children: null,
   color: 'primary',
-  iconSize: 32,
-  imgSize: 57,
+  heading: undefined,
   icon: undefined,
   iconColor: undefined,
+  iconSize: 32,
   img: undefined,
-  heading: undefined,
-  children: null,
+  imgSize: 57,
 }
 
 Information.propTypes = {
-  children: PropTypes.node,
   backgroundColor: PropTypes.string,
-  img: PropTypes.string,
-  heading: PropTypes.string,
+  children: PropTypes.node,
   color: PropTypes.string,
+  heading: PropTypes.string,
   icon: PropTypes.string,
-  iconSize: PropTypes.number,
   iconColor: PropTypes.string,
+  iconSize: PropTypes.number,
+  img: PropTypes.string,
   imgSize: PropTypes.number,
 }
 

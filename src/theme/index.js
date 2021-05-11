@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys */
 import * as colors from './colors'
 
 const radii = {
@@ -37,10 +38,10 @@ const fonts = {
 
 export default {
   colors,
-  space,
-  radii,
   fonts,
+  radii,
   screens,
+  space,
 }
 
 export { colors, space, radii, fonts, screens }

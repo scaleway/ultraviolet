@@ -23,8 +23,8 @@ const ControlValue = ({ value, children }) => {
     })
 
   return children({
-    value: state.value,
     onChange,
+    value: state.value,
   })
 }
 

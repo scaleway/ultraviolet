@@ -11,15 +11,15 @@ import Breadcrumbs, { breadcrumbsVariants } from '..'
   title="Components/Breadcrumbs"
   component={Breadcrumbs}
   argTypes={{
-    variant: {
-      control: {
-        type: 'select',
-        options: breadcrumbsVariants,
-      },
-    },
     activeIndex: {
       control: {
         type: 'number',
+      },
+    },
+    variant: {
+      control: {
+        options: breadcrumbsVariants,
+        type: 'select',
       },
     },
   }}
@@ -47,8 +47,8 @@ import Breadcrumbs, { breadcrumbsVariants } from '..'
   <Story
     name="Breadcrumbs-bubble"
     args={{
-      variant: 'bubble',
       activeIndex: 1,
+      variant: 'bubble',
     }}
   >
     {args => (
@@ -62,8 +62,8 @@ import Breadcrumbs, { breadcrumbsVariants } from '..'
   <Story
     name="Breadcrumbs-link"
     args={{
-      variant: 'link',
       activeIndex: 1,
+      variant: 'link',
     }}
   >
     {args => (

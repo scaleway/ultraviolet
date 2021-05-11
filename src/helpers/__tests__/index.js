@@ -49,8 +49,8 @@ describe('onKeyOnlyNumbers', () => {
       const preventDefault = jest.fn()
 
       onKeyOnlyNumbers({
-        preventDefault,
         key: String.fromCharCode(keyCode),
+        preventDefault,
       })
 
       expect(preventDefault).toHaveBeenCalledTimes(

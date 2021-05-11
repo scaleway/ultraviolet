@@ -38,13 +38,13 @@ const style = css`
 `
 
 const types = {
-  donut: Donut,
-  blocks: Blocks,
-  line: Line,
-  slider: Slider,
   block: Block,
+  blocks: Blocks,
   box: BoxWithIcon,
+  donut: Donut,
+  line: Line,
   list: List,
+  slider: Slider,
 }
 
 const Placeholder = ({ type, length, width, height, col, ...props }) => {
@@ -68,19 +68,19 @@ const Placeholder = ({ type, length, width, height, col, ...props }) => {
 export const placeholderTypes = Object.keys(types)
 
 Placeholder.propTypes = {
-  type: PropTypes.oneOf(placeholderTypes),
-  length: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
   col: PropTypes.number,
+  height: PropTypes.number,
+  length: PropTypes.number,
+  type: PropTypes.oneOf(placeholderTypes),
+  width: PropTypes.number,
 }
 
 Placeholder.defaultProps = {
-  type: 'blocks',
-  length: undefined,
-  width: undefined,
-  height: undefined,
   col: undefined,
+  height: undefined,
+  length: undefined,
+  type: 'blocks',
+  width: undefined,
 }
 
 export default Placeholder

@@ -5,37 +5,9 @@ import React from 'react'
 import Box from '../Box'
 
 const variants = {
-  primary: ({ theme: { colors } }) => css`
-    background-color: ${colors.primary};
-    color: ${colors.white};
-  `,
-  'light-primary': ({ theme: { colors } }) => css`
-    color: ${colors.primary};
-    background-color: ${colors.gray200};
-  `,
-  success: ({ theme: { colors } }) => css`
-    background-color: ${colors.success};
-    color: ${colors.white};
-  `,
-  'light-success': ({ theme: { colors } }) => css`
-    color: ${colors.success};
-    background-color: ${colors.foam};
-  `,
   beta: ({ theme: { colors } }) => css`
     background-color: ${colors.beta};
     color: ${colors.white};
-  `,
-  'light-beta': ({ theme: { colors } }) => css`
-    color: ${colors.beta};
-    background-color: ${colors.serenade};
-  `,
-  warning: ({ theme: { colors } }) => css`
-    background-color: ${colors.warning};
-    color: ${colors.white};
-  `,
-  'light-error': ({ theme: { colors } }) => css`
-    color: ${colors.red};
-    background-color: ${colors.pippin};
   `,
   error: ({ theme: { colors } }) => css`
     background-color: ${colors.red};
@@ -45,6 +17,14 @@ const variants = {
     background-color: ${colors.info};
     color: ${colors.white};
   `,
+  'light-beta': ({ theme: { colors } }) => css`
+    color: ${colors.beta};
+    background-color: ${colors.serenade};
+  `,
+  'light-error': ({ theme: { colors } }) => css`
+    color: ${colors.red};
+    background-color: ${colors.pippin};
+  `,
   'light-info': ({ theme: { colors } }) => css`
     color: ${colors.info};
     background-color: ${colors.zumthor};
@@ -53,24 +33,44 @@ const variants = {
     color: ${colors.gray550};
     background-color: ${colors.gray100};
   `,
+  'light-primary': ({ theme: { colors } }) => css`
+    color: ${colors.primary};
+    background-color: ${colors.gray200};
+  `,
+  'light-success': ({ theme: { colors } }) => css`
+    color: ${colors.success};
+    background-color: ${colors.foam};
+  `,
   neutral: ({ theme: { colors } }) => css`
     color: ${colors.gray700};
     background-color: ${colors.gray350};
   `,
+  primary: ({ theme: { colors } }) => css`
+    background-color: ${colors.primary};
+    color: ${colors.white};
+  `,
+  success: ({ theme: { colors } }) => css`
+    background-color: ${colors.success};
+    color: ${colors.white};
+  `,
+  warning: ({ theme: { colors } }) => css`
+    background-color: ${colors.warning};
+    color: ${colors.white};
+  `,
 }
 
 const sizes = {
+  medium: ({ theme: { space } }) => css`
+    font-size: 14px;
+    line-height: ${space['4']};
+    height: ${space['4']};
+  `,
   rounded: ({ theme: { space, radii } }) => css`
     border-radius: ${radii.large};
     font-size: 10px;
     height: ${space['2']};
     padding: ${space['0.25']} ${space['0.75']};
     text-transform: uppercase;
-  `,
-  medium: ({ theme: { space } }) => css`
-    font-size: 14px;
-    line-height: ${space['4']};
-    height: ${space['4']};
   `,
   small: ({ theme: { space } }) => css`
     font-size: 12px;
@@ -118,13 +118,13 @@ export const badgeVariants = Object.keys(variants)
 export const badgeSizes = Object.keys(sizes)
 
 Badge.propTypes = {
-  variant: PropTypes.oneOf(badgeVariants),
   size: PropTypes.oneOf(badgeSizes),
+  variant: PropTypes.oneOf(badgeVariants),
 }
 
 Badge.defaultProps = {
-  variant: 'neutral',
   size: 'medium',
+  variant: 'neutral',
 }
 
 export default Badge

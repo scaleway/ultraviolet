@@ -51,18 +51,18 @@ const BorderedBox = ({ children, variant, to, href, as, ...props }) => (
 )
 
 BorderedBox.propTypes = {
-  variant: PropTypes.oneOf(['horizontal', 'vertical']),
-  children: PropTypes.node.isRequired,
-  to: PropTypes.string,
-  href: PropTypes.string,
   as: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string,
+  to: PropTypes.string,
+  variant: PropTypes.oneOf(['horizontal', 'vertical']),
 }
 
 BorderedBox.defaultProps = {
-  variant: 'horizontal',
-  to: undefined,
-  href: undefined,
   as: 'div',
+  href: undefined,
+  to: undefined,
+  variant: 'horizontal',
 }
 
 export default BorderedBox
