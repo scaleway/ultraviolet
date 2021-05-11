@@ -62,11 +62,11 @@ const StyledTouchable = styled(Touchable, {
       fill: ${({ theme }) => theme.colors.primary};
     }
   }
-  ${({ variant }) =>
+  ${({ variant, theme }) =>
     variant === 'bordered' &&
     `
   border-radius: 4px;
-  border: 1px solid ${({ theme }) => theme.colors.gray550};
+  border: 1px solid ${theme.colors.gray550};
   padding: 4px;
   width: 32px;
   height: 32px;
