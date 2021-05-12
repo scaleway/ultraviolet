@@ -1,3 +1,16 @@
+### [0.78.1](https://github.com/scaleway/scaleway-ui/compare/v0.78.0...v0.78.1) (2021-05-12)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @commitlint/cli from 12.1.1 to 12.1.3 ([#348](https://github.com/scaleway/scaleway-ui/issues/348)) ([c787f85](https://github.com/scaleway/scaleway-ui/commit/c787f8510e1391327b4f907e72af3378e3747e4e))
+* **deps-dev:** bump @commitlint/config-conventional ([#347](https://github.com/scaleway/scaleway-ui/issues/347)) ([b26fc80](https://github.com/scaleway/scaleway-ui/commit/b26fc80b1b5937fc0dbd81f819f75d6ef3338e75))
+
+
+### :bug: Bug Fixes
+
+* creationprogress space between lines ([#332](https://github.com/scaleway/scaleway-ui/issues/332)) ([66ea09c](https://github.com/scaleway/scaleway-ui/commit/66ea09c84a61349d2650df18d9f9fa2e5d797875))
+
 ## [0.78.0](https://github.com/scaleway/scaleway-ui/compare/v0.77.3...v0.78.0) (2021-05-12)
 
 
