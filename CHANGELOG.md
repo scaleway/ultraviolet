@@ -1,3 +1,28 @@
+## [0.78.0](https://github.com/scaleway/scaleway-ui/compare/v0.77.3...v0.78.0) (2021-05-12)
+
+
+### :memo: Documentation
+
+* **package:** add licence, homepage, and url field ([#330](https://github.com/scaleway/scaleway-ui/issues/330)) ([7dee175](https://github.com/scaleway/scaleway-ui/commit/7dee1758d9654a2d77ce08c731354e96b82e8a67))
+
+
+### :package: Chore
+
+* **deps:** bump @scaleway/random-name from 1.3.0 to 1.3.2 ([#336](https://github.com/scaleway/scaleway-ui/issues/336)) ([63bbc9f](https://github.com/scaleway/scaleway-ui/commit/63bbc9f500543d2f4f2d65da899c6aca6832641d))
+* **deps:** bump actions/checkout from 2 to 2.3.4 ([#342](https://github.com/scaleway/scaleway-ui/issues/342)) ([53001e5](https://github.com/scaleway/scaleway-ui/commit/53001e5b2bf8efc935cff7d9bdb5cea10d1edafa))
+* **deps:** bump codecov/codecov-action from 1 to 1.5.0 ([#344](https://github.com/scaleway/scaleway-ui/issues/344)) ([a009f21](https://github.com/scaleway/scaleway-ui/commit/a009f21a8c8d78fee7e39fc2d7c61a8be44cec49))
+* **deps:** bump docker/build-push-action from 2 to 2.4.0 ([#346](https://github.com/scaleway/scaleway-ui/issues/346)) ([0654f12](https://github.com/scaleway/scaleway-ui/commit/0654f12ec1caa8d2758fe99a1e4c7cc2c8bf6ab7))
+* **deps:** bump docker/login-action from 1 to 1.9.0 ([#345](https://github.com/scaleway/scaleway-ui/issues/345)) ([da0e7d9](https://github.com/scaleway/scaleway-ui/commit/da0e7d906bc3e541c80b59778b82e1ec61923b8b))
+* **deps:** bump docker/setup-buildx-action from 1 to 1.3.0 ([#343](https://github.com/scaleway/scaleway-ui/issues/343)) ([31ffb07](https://github.com/scaleway/scaleway-ui/commit/31ffb0777668c06239f2fd5d90b5a44a064a11be))
+* **deps-dev:** bump @scaleway/use-i18n from 2.0.0 to 2.0.2 ([#337](https://github.com/scaleway/scaleway-ui/issues/337)) ([93452fd](https://github.com/scaleway/scaleway-ui/commit/93452fd03255508bfdac2bdf5edb0f81f8f28098))
+* **deps-dev:** bump @scaleway/use-i18n from 2.0.2 to 2.1.0 ([#339](https://github.com/scaleway/scaleway-ui/issues/339)) ([83543ea](https://github.com/scaleway/scaleway-ui/commit/83543eafe20758d9ebd6081bf7cf3d1a509ea06e))
+* **deps-dev:** bump postcss from 8.2.14 to 8.2.15 ([#334](https://github.com/scaleway/scaleway-ui/issues/334)) ([b391f70](https://github.com/scaleway/scaleway-ui/commit/b391f7078ea7b304dfd9a8b1af2aee26f330806c))
+
+
+### :gear: Features
+
+* port RichSelectTags ([#323](https://github.com/scaleway/scaleway-ui/issues/323)) ([3d13ab7](https://github.com/scaleway/scaleway-ui/commit/3d13ab76d8757f1ee1e2954bb7cbdfc40ca6530b))
+
 ### [0.77.3](https://github.com/scaleway/scaleway-ui/compare/v0.77.2...v0.77.3) (2021-05-10)
 
 
