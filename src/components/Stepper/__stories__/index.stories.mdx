@@ -18,7 +18,28 @@ import Box from '../../Box'
 <Description>Stepper</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
+    {() => {
+      const [value, setValue] = useState(0)
+      return (
+        <Stepper
+          minValue={0}
+          maxValue={100}
+          onChange={setValue}
+          value={value}
+          width={250}
+        />
+      )
+    }}
+  </Story>
+</Canvas>
+
+## With text
+
+<Description>Stepper</Description>
+
+<Canvas>
+  <Story name="Text">
     {() => {
       const [value, setValue] = useState(0)
       return (
@@ -28,16 +49,22 @@ import Box from '../../Box'
           text="unit"
           onChange={setValue}
           value={value}
+          width={250}
         />
       )
     }}
   </Story>
 </Canvas>
 
-## Different stepping
+## Steps
+
+### Description
+
+You can change step size of your `Stepper` component. If you set it to 10 for example, your `Stepper` will increase
+& decrease by steps of 10.
 
 <Canvas>
-  <Story name="step">
+  <Story name="Steps">
     {() => {
       const [value, setValue] = useState(0)
       return (
@@ -45,9 +72,9 @@ import Box from '../../Box'
           minValue={0}
           maxValue={100}
           step={10}
-          text="unit (try to write 64)"
           onChange={setValue}
           value={value}
+          width={250}
         />
       )
     }}
@@ -58,24 +85,24 @@ import Box from '../../Box'
 
 <Canvas isColumn>
   <Story name="disabled">
-    <Stepper minValue={0} maxValue={100} text="unit" value={10} disabled />
+    <Stepper minValue={0} maxValue={100} value={10} disabled width={250} />
   </Story>
 </Canvas>
 
 ## Events
 
 <Canvas isColumn>
-  <Story name="events">
+  <Story name="Events">
     <Stepper
       minValue={50}
       maxValue={100}
-      text="unit"
       value={50}
       onChange={() => console.log('onChange')}
       onFocus={() => console.log('onFocus')}
       onBlur={() => console.log('onBlur')}
       onMinCrossed={() => console.log('onMinCrossed')}
       onMaxCrossed={() => console.log('onMaxCrossed')}
+      width={250}
     />
   </Story>
 </Canvas>
@@ -84,7 +111,7 @@ import Box from '../../Box'
 
 <Canvas>
   <Story
-    name="size"
+    name="Sizes"
     args={{
       sizes: ['small', 'medium', 'large'],
     }}
@@ -93,7 +120,7 @@ import Box from '../../Box'
       args.sizes.map(size => {
         const [value, setValue] = useState(10)
         return (
-          <Box my={2} key={size}>
+          <Box my={2} key={size} textTransform="capitalize">
             {size}
             <Stepper
               minValue={0}
@@ -102,6 +129,7 @@ import Box from '../../Box'
               onChange={setValue}
               value={value}
               mt={1}
+              width={250}
             />
           </Box>
         )

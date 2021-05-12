@@ -22,67 +22,44 @@ const disabledStyles = ({ disabled, theme }) =>
   `
 
 const containerSizes = {
-  large: '48px',
-  medium: '40px',
-  small: '32px',
+  large: 48,
+  medium: 40,
+  small: 32,
 }
 
-const buttonSizes = {
-  large: '16px',
-  medium: '10px',
-  small: '4px',
+const iconSizes = {
+  large: 26,
+  medium: 24,
+  small: 22,
 }
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop),
 })`
-  border: 1px solid ${({ theme }) => theme.colors.gray350};
-
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
+  border-radius: 4px;
+  width: ${({ size }) => containerSizes[size] - 10}px;
 
-  :hover,
-  :focus {
-    > svg {
-      fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
-    }
+  > svg {
+    fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
   }
 
-  ${({ position, size, theme }) =>
+  :hover:not([disabled]) {
+    background: ${({ theme }) => theme.colors.gray200};
+  }
+
+  ${({ position }) =>
     position === 'left'
       ? `
-      border-right-width: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      border-radius: 4px 0 0 4px;
-      padding: 0 ${buttonSizes[size]};
-      border-right: ${size === 'large' ? '0' : '1px'} solid ${
-          theme.colors.gray350
-        };
+      margin-left: 4px;
     `
       : `
-          border-left-width: 0;
-          border-radius: 0 4px 4px 0;
-          padding: 0 ${buttonSizes[size]};
-          border-left: ${size === 'large' ? '0' : '1px'} solid ${
-          theme.colors.gray350
+          margin-right: 4px;
         };
     `}
-`
-
-const StyledSeparator = styled('span', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.gray350};
-  ${({ size }) => (size !== 'large' ? 'display: none' : '')};
 `
 
 const StyledCenterTouchable = styled(Touchable)`
@@ -92,10 +69,6 @@ const StyledCenterTouchable = styled(Touchable)`
   align-items: center;
   outline: none;
   justify-content: center;
-  border: 1px solid ${({ theme }) => theme.colors.gray350};
-
-  border-left-width: 0;
-  border-right-width: 0;
 `
 
 const StyledInput = styled.input`
@@ -116,21 +89,23 @@ const StyledInput = styled.input`
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop),
 })`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.gray100 : theme.colors.white};
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: stretch;
   font-weight: 500;
-  height: ${({ size }) => containerSizes[size]};
-
+  height: ${({ size }) => containerSizes[size]}px;
+  border: 1px solid ${({ theme }) => theme.colors.gray300};
+  border-radius: 4px;
   ${({ disabled, theme }) =>
     disabled &&
     `
     > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
       ${disabledStyles({ disabled, theme })}
     }
-  `}
+  `};
 `
 
 const Stepper = ({
@@ -214,10 +189,6 @@ const Stepper = ({
         aria-label="Minus"
       >
         <Icon name="minus" size={size === 'large' ? 28 : 18} color="gray300" />
-
-        <StyledSeparator size={size} style={{ right: 0 }}>
-          |
-        </StyledSeparator>
       </StyledTouchable>
 
       <StyledCenterTouchable
@@ -255,10 +226,7 @@ const Stepper = ({
         disabled={isPlusDisabled}
         aria-label="Plus"
       >
-        <StyledSeparator size={size} style={{ left: 0 }}>
-          |
-        </StyledSeparator>
-        <Icon name="plus" size={size === 'large' ? 28 : 18} color="gray300" />
+        <Icon name="plus" size={iconSizes[size]} />
       </StyledTouchable>
     </StyledContainer>
   )
