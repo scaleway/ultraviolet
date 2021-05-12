@@ -1,0 +1,47 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import RichSelectTags from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
+
+<Meta title="Components/RichSelectTags" />
+
+# RichSelectTags
+
+## Controlled
+
+RichSelectTags only work as [controlled component](https://reactjs.org/docs/forms.html).
+
+<Canvas>
+  <Story name="Basic">
+    <ControlValue value={[]}>
+      {({ onChange: onChangeFormValue }) => (
+        <ControlValue value={{ value: 'two', label: 'Two' }}>
+          {({ value, onChange: onChangeSelectValue }) => {
+            const props = {
+              ctaText: 'Add',
+              name: 'options',
+              onChange: onChangeFormValue,
+              initialTags: ['one'],
+              onChangeSelectValue,
+              placeholder: 'Select an option in the list',
+              value,
+              options: [
+                { value: 'one', label: 'One' },
+                { value: 'two', label: 'Two' },
+                { value: 'three', label: 'Three' },
+                { value: 'four', label: 'Four' },
+                { value: 'five', label: 'Five' },
+              ],
+            }
+            return <RichSelectTags {...props} />
+          }}
+        </ControlValue>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## API
+
+### RichSelectTags
+
+<ArgsTable of={RichSelectTags} />
