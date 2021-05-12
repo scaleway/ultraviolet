@@ -1,10 +1,4 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs/blocks'
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import Stepper from '..'
 import Box from '../../Box'
@@ -14,8 +8,6 @@ import Box from '../../Box'
 # Stepper
 
 ## Basic
-
-<Description>Stepper</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -27,7 +19,7 @@ import Box from '../../Box'
           maxValue={100}
           onChange={setValue}
           value={value}
-          width={250}
+          width={200}
         />
       )
     }}
@@ -36,20 +28,18 @@ import Box from '../../Box'
 
 ## With text
 
-<Description>Stepper</Description>
-
 <Canvas>
-  <Story name="Text">
+  <Story name="With Text">
     {() => {
       const [value, setValue] = useState(0)
       return (
         <Stepper
           minValue={0}
           maxValue={100}
-          text="unit"
+          text="GB"
           onChange={setValue}
           value={value}
-          width={250}
+          width={200}
         />
       )
     }}
@@ -57,8 +47,6 @@ import Box from '../../Box'
 </Canvas>
 
 ## Steps
-
-### Description
 
 You can change step size of your `Stepper` component. If you set it to 10 for example, your `Stepper` will increase
 & decrease by steps of 10.
@@ -74,36 +62,10 @@ You can change step size of your `Stepper` component. If you set it to 10 for ex
           step={10}
           onChange={setValue}
           value={value}
-          width={250}
+          width={200}
         />
       )
     }}
-  </Story>
-</Canvas>
-
-## Disabled
-
-<Canvas isColumn>
-  <Story name="disabled">
-    <Stepper minValue={0} maxValue={100} value={10} disabled width={250} />
-  </Story>
-</Canvas>
-
-## Events
-
-<Canvas isColumn>
-  <Story name="Events">
-    <Stepper
-      minValue={50}
-      maxValue={100}
-      value={50}
-      onChange={() => console.log('onChange')}
-      onFocus={() => console.log('onFocus')}
-      onBlur={() => console.log('onBlur')}
-      onMinCrossed={() => console.log('onMinCrossed')}
-      onMaxCrossed={() => console.log('onMaxCrossed')}
-      width={250}
-    />
   </Story>
 </Canvas>
 
@@ -129,12 +91,38 @@ You can change step size of your `Stepper` component. If you set it to 10 for ex
               onChange={setValue}
               value={value}
               mt={1}
-              width={250}
+              width={200}
             />
           </Box>
         )
       })
     }
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas isColumn>
+  <Story name="Disabled">
+    <Stepper minValue={0} maxValue={100} value={10} disabled width={200} />
+  </Story>
+</Canvas>
+
+## Events
+
+<Canvas isColumn>
+  <Story name="Events">
+    <Stepper
+      minValue={50}
+      maxValue={100}
+      value={50}
+      onChange={() => console.log('onChange')}
+      onFocus={() => console.log('onFocus')}
+      onBlur={() => console.log('onBlur')}
+      onMinCrossed={() => console.log('onMinCrossed')}
+      onMaxCrossed={() => console.log('onMaxCrossed')}
+      width={200}
+    />
   </Story>
 </Canvas>
 

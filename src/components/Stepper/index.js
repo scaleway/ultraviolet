@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import onKeyOnlyNumbers from '../../helpers/keycode'
@@ -51,24 +52,25 @@ const StyledTouchable = styled(Touchable, {
     background: ${({ theme }) => theme.colors.gray200};
   }
 
-  ${({ position }) =>
-    position === 'left'
-      ? `
-      margin-left: 4px;
-    `
-      : `
-          margin-right: 4px;
-        };
-    `}
+  margin: 0 4px;
 `
 
 const StyledCenterTouchable = styled(Touchable)`
   flex: 1;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   align-items: center;
   outline: none;
   justify-content: center;
+  border-radius: 4px;
+  :hover:not([disabled]):not(:focus) {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+  :focus-within:not([disabled]) {
+    box-shadow: 0 0 2px 2px
+      ${({ theme }) => transparentize(0.7, theme.colors.primary)};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `
 
 const StyledInput = styled.input`
