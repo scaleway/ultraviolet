@@ -34,6 +34,8 @@ const iconSizes = {
   small: 22,
 }
 
+const StyledIcon = styled(Icon)``
+
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop),
 })`
@@ -44,7 +46,7 @@ const StyledTouchable = styled(Touchable, {
   border-radius: 4px;
   width: ${({ size }) => containerSizes[size] - 10}px;
 
-  > svg {
+  > ${StyledIcon} {
     fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
   }
 
@@ -63,7 +65,7 @@ const StyledCenterTouchable = styled(Touchable)`
   outline: none;
   justify-content: center;
   border-radius: 4px;
-  :hover:not([disabled]):not(:focus) {
+  :hover:not([disabled], :focus) {
     border: 1px solid ${({ theme }) => theme.colors.primary};
   }
   :focus-within:not([disabled]) {
@@ -190,7 +192,11 @@ const Stepper = ({
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={size === 'large' ? 28 : 18} color="gray300" />
+        <StyledIcon
+          name="minus"
+          size={size === 'large' ? 28 : 18}
+          color="gray300"
+        />
       </StyledTouchable>
 
       <StyledCenterTouchable
@@ -228,7 +234,7 @@ const Stepper = ({
         disabled={isPlusDisabled}
         aria-label="Plus"
       >
-        <Icon name="plus" size={iconSizes[size]} />
+        <StyledIcon name="plus" size={iconSizes[size]} />
       </StyledTouchable>
     </StyledContainer>
   )
