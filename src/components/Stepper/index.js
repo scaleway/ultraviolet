@@ -107,7 +107,7 @@ const StyledContainer = styled(Box, {
     > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
       ${disabledStyles({ disabled, theme })}
     }
-  `};
+  `}
 `
 
 const Stepper = ({
