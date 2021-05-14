@@ -10,20 +10,20 @@ import Typography from '../Typography'
 
 const variants = {
   error: ({ colors }) => ({
-    main: colors.red,
     background: colors.pippin,
-  }),
-  warning: ({ colors }) => ({
-    main: colors.orange,
-    background: colors.serenade,
+    main: colors.red,
   }),
   info: ({ colors }) => ({
-    main: colors.blue,
     background: colors.zumthor,
+    main: colors.blue,
   }),
   success: ({ colors }) => ({
-    main: colors.gray700,
     background: colors.foam,
+    main: colors.gray700,
+  }),
+  warning: ({ colors }) => ({
+    background: colors.serenade,
+    main: colors.orange,
   }),
 }
 
@@ -69,22 +69,22 @@ const StyledButtonLink = styled(Button)`
 `
 
 const ExtendedReminder = ({
-  icon,
   badgeText,
-  title,
-  text,
+  icon,
   linkText,
-  to,
   onClick,
+  text,
+  title,
+  to,
   variant,
   ...props
 }) => {
   const theme = useTheme()
   const badgeVariant = {
-    warning: 'beta',
     error: 'error',
     info: 'info',
     success: 'success',
+    warning: 'beta',
   }
 
   return (
@@ -117,21 +117,21 @@ const ExtendedReminder = ({
 }
 
 ExtendedReminder.propTypes = {
-  variant: PropTypes.oneOf(Object.keys(variants)),
   badgeText: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   linkText: PropTypes.string,
-  to: PropTypes.string,
   onClick: PropTypes.func,
+  text: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  to: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
 }
 
 ExtendedReminder.defaultProps = {
-  variant: 'info',
-  to: null,
-  onClick: null,
   linkText: null,
+  onClick: null,
+  to: null,
+  variant: 'info',
 }
 
 export default ExtendedReminder

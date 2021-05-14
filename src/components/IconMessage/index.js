@@ -25,15 +25,15 @@ const IconMessage = ({ variant, icon, children, ...props }) => (
 )
 
 IconMessage.defaultProps = {
-  variant: 'warning',
-  icon: 'alert',
   children: null,
+  icon: 'alert',
+  variant: 'warning',
 }
 
 IconMessage.propTypes = {
-  variant: PropTypes.string,
-  icon: PropTypes.string,
   children: PropTypes.node,
+  icon: PropTypes.string,
+  variant: PropTypes.string,
 }
 
 export default IconMessage

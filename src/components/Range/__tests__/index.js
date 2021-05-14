@@ -49,9 +49,9 @@ describe('Range', () => {
           const input = node.getByRole('textbox')
           userEvent.click(input)
           userEvent.click(input.parentElement, {
-            view: window,
-            pageX: 0,
             movementX: 200,
+            pageX: 0,
+            view: window,
           })
           input.blur()
           userEvent.type(input, '{space}')
@@ -72,9 +72,9 @@ describe('Range', () => {
           userEvent.click(input)
           userEvent.click(input2)
           userEvent.click(input.parentElement, {
-            view: window,
-            pageX: 0,
             movementX: 200,
+            pageX: 0,
+            view: window,
           })
           userEvent.type(input, '{space}')
           userEvent.type(input, 'ABCDE')

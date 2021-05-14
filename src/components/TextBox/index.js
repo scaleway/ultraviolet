@@ -20,6 +20,17 @@ import Touchable from '../Touchable'
 import Typography from '../Typography'
 
 const inputSizes = {
+  medium: {
+    default: `
+      height: 48px;
+      padding-left: 8px;
+      padding-right: 20px;
+      padding-top: 14px;
+    `,
+    full: `
+      padding: 8px;
+    `,
+  },
   small: {
     default: `
       height: 30px;
@@ -30,17 +41,6 @@ const inputSizes = {
     `,
     full: `
       padding: 4px 8px;
-    `,
-  },
-  medium: {
-    default: `
-      height: 48px;
-      padding-left: 8px;
-      padding-right: 20px;
-      padding-top: 14px;
-    `,
-    full: `
-      padding: 8px;
     `,
   },
 }
@@ -295,10 +295,10 @@ const TextBox = forwardRef(
       [togglePasswordVisibility],
     )
 
-    const randomize = useCallback(() => onChange(randomName(random)), [
-      onChange,
-      random,
-    ])
+    const randomize = useCallback(
+      () => onChange(randomName(random)),
+      [onChange, random],
+    )
 
     const handleRandomizeClick = useCallback(() => randomize(), [randomize])
     const handleRandomizeKeyDown = useCallback(
@@ -326,9 +326,10 @@ const TextBox = forwardRef(
       [visited, readOnly, onFocus],
     )
 
-    const handleChange = useCallback(event => onChange(event.target.value), [
-      onChange,
-    ])
+    const handleChange = useCallback(
+      event => onChange(event.target.value),
+      [onChange],
+    )
 
     const isPassToggleable = type === 'toggleable-password'
     const hasLabel = !!label && !noTopLabel && size === 'medium'
@@ -486,8 +487,9 @@ TextBox.propTypes = {
   label: PropTypes.node,
   multiline: PropTypes.bool,
   name: PropTypes.string,
-  notice: PropTypes.string,
   noTopLabel: PropTypes.bool,
+  // eslint-disable-next-line react/sort-prop-types
+  notice: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -511,7 +513,6 @@ TextBox.defaultProps = {
   ariaControls: undefined,
   autoComplete: 'on',
   autoFocus: undefined,
-  tabIndex: undefined,
   cols: undefined,
   'data-testid': undefined,
   defaultValue: undefined,
@@ -525,8 +526,8 @@ TextBox.defaultProps = {
   label: undefined,
   multiline: undefined,
   name: undefined,
-  notice: undefined,
   noTopLabel: false,
+  notice: undefined,
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
@@ -537,11 +538,12 @@ TextBox.defaultProps = {
   resizable: undefined,
   rows: undefined,
   size: 'medium',
+  tabIndex: undefined,
   type: 'text',
-  valid: undefined,
-  value: undefined,
   unit: undefined,
   unitAlignment: 'flex-end',
+  valid: undefined,
+  value: undefined,
   wrap: undefined,
 }
 

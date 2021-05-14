@@ -10,10 +10,10 @@ const TooltipIcon = ({ color, name, size, tooltip, baseId }) => (
 )
 
 TooltipIcon.defaultProps = {
+  baseId: undefined,
   color: 'gray550',
   name: 'help-circle-outline',
   size: 20,
-  baseId: undefined,
 }
 
 TooltipIcon.propTypes = {

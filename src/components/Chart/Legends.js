@@ -142,24 +142,24 @@ const Legends = ({ focused, data, onFocusChange, chartId }) => (
 )
 
 Legends.defaultProps = {
-  focused: undefined,
   chartId: undefined,
+  focused: undefined,
 }
 
 Legends.propTypes = {
+  chartId: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-      value: PropTypes.string,
-      product: PropTypes.string.isRequired,
       color: PropTypes.string.isRequired,
-      percent: PropTypes.number.isRequired,
+      name: PropTypes.string,
       needPattern: PropTypes.bool,
+      percent: PropTypes.number.isRequired,
+      product: PropTypes.string.isRequired,
+      value: PropTypes.string,
     }),
   ).isRequired,
   focused: PropTypes.number,
   onFocusChange: PropTypes.func.isRequired,
-  chartId: PropTypes.string,
 }
 
 export default Legends

@@ -48,20 +48,20 @@ const Circle = styled.circle`
 `
 
 Circle.defaultProps = {
+  fillMustBeAnimated: false,
   isFocused: false,
   lengthSegment: CIRCUM,
-  rotationSegment: 0,
-  fillMustBeAnimated: false,
   patternName: '',
+  rotationSegment: 0,
 }
 
 Circle.propTypes = {
   color: PropTypes.string,
+  fillMustBeAnimated: PropTypes.bool,
   isFocused: PropTypes.bool,
   lengthSegment: PropTypes.number,
-  rotationSegment: PropTypes.number,
-  fillMustBeAnimated: PropTypes.bool,
   patternName: PropTypes.string,
+  rotationSegment: PropTypes.number,
 }
 
 const StyledContent = styled.div`
@@ -101,7 +101,7 @@ const Donut = ({
 
   return (
     <Box position="relative" height={height} width={width}>
-      <svg style={{ height, width, transform: 'rotate(-90deg)' }}>
+      <svg style={{ height, transform: 'rotate(-90deg)', width }}>
         <defs>{patterns}</defs>
 
         {/* Initial Gray circle */}
@@ -118,9 +118,8 @@ const Donut = ({
           const isFocused = focused !== undefined && index === focused
           const segmentValueFromPercent = getValueFromPercent(item.percent)
           const sumPreviousValues = previousSegmentLength.current || 0
-          const rotateValueFromPercent = getRotationFormPercent(
-            sumPreviousValues,
-          )
+          const rotateValueFromPercent =
+            getRotationFormPercent(sumPreviousValues)
           previousSegmentLength.current =
             sumPreviousValues + segmentValueFromPercent
 
@@ -153,30 +152,30 @@ const Donut = ({
 }
 
 Donut.propTypes = {
-  height: PropTypes.number,
-  width: PropTypes.number,
-  content: PropTypes.node,
-  focused: PropTypes.number,
-  onFocusChange: PropTypes.func,
   chartId: PropTypes.string,
+  content: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-      value: PropTypes.string,
-      product: PropTypes.string.isRequired,
       color: PropTypes.string.isRequired,
+      name: PropTypes.string,
       percent: PropTypes.number.isRequired,
+      product: PropTypes.string.isRequired,
+      value: PropTypes.string,
     }),
   ).isRequired,
+  focused: PropTypes.number,
+  height: PropTypes.number,
+  onFocusChange: PropTypes.func,
+  width: PropTypes.number,
 }
 
 Donut.defaultProps = {
-  height: 206,
-  width: 206,
+  chartId: undefined,
   content: undefined,
   focused: undefined,
+  height: 206,
   onFocusChange: undefined,
-  chartId: undefined,
+  width: 206,
 }
 
 export default Donut

@@ -51,16 +51,16 @@ const StealthCopiable = ({ children, side, copyText, copiedText }) => {
 }
 
 StealthCopiable.defaultProps = {
-  side: 'right',
-  copyText: 'Copy',
   copiedText: 'Copied',
+  copyText: 'Copy',
+  side: 'right',
 }
 
 StealthCopiable.propTypes = {
-  side: PropTypes.oneOf(['left', 'right']),
   children: PropTypes.node.isRequired,
-  copyText: PropTypes.string,
   copiedText: PropTypes.string,
+  copyText: PropTypes.string,
+  side: PropTypes.oneOf(['left', 'right']),
 }
 
 export default StealthCopiable

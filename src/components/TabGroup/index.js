@@ -75,11 +75,10 @@ const TabGroup = ({ children, selected, onChange, className, ...props }) => {
             : index === selected
 
           return React.cloneElement(child, {
-            key: child.props.name || index,
-            isSelected,
-            setInternTabsWidth,
-            isTabsWidthSet,
             index,
+            isSelected,
+            isTabsWidthSet,
+            key: child.props.name || index,
             onClick: event => {
               if (!child.props.disabled && onChange) {
                 onChange(child.props.name || index)
@@ -88,14 +87,15 @@ const TabGroup = ({ children, selected, onChange, className, ...props }) => {
                 child.props.onClick(event)
               }
             },
+            setInternTabsWidth,
           })
         })}
       </StyledTabs>
 
       <StyledBorderBottom
         style={{
-          width,
           left,
+          width,
         }}
       />
     </Box>
@@ -104,15 +104,15 @@ const TabGroup = ({ children, selected, onChange, className, ...props }) => {
 
 TabGroup.propTypes = {
   children: PropTypes.node,
-  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  onChange: PropTypes.func,
   className: PropTypes.string,
+  onChange: PropTypes.func,
+  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 TabGroup.defaultProps = {
   children: null,
-  onChange: () => {},
   className: '',
+  onChange: () => {},
   selected: undefined,
 }
 

@@ -179,15 +179,15 @@ const quarter = [
 ]
 
 const schedules = {
-  hours,
   half,
+  hours,
   quarter,
 }
 
 const options = schedule =>
   schedules[schedule].map(hour => ({
-    value: hour,
     label: hour,
+    value: hour,
   }))
 
 const TimeInput = ({ value, schedule, ...props }) => (
@@ -198,16 +198,16 @@ TimeInput.propTypes = {
   ...RichSelect.propTypes,
   schedule: PropTypes.oneOf(Object.keys(schedules)),
   value: PropTypes.shape({
-    value: PropTypes.string,
     label: PropTypes.string,
+    value: PropTypes.string,
   }),
 }
 
 TimeInput.defaultProps = {
   schedule: 'hours',
   value: {
-    value: '00:00',
     label: '00:00',
+    value: '00:00',
   },
 }
 

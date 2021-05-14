@@ -84,17 +84,17 @@ const ProgressBar = ({
 )
 
 ProgressBar.propTypes = {
-  variant: PropTypes.oneOf(progressBarVariants),
   backgroundColor: PropTypes.string,
-  value: PropTypes.number,
   progress: PropTypes.bool,
+  value: PropTypes.number,
+  variant: PropTypes.oneOf(progressBarVariants),
 }
 
 ProgressBar.defaultProps = {
-  variant: 'primary',
   backgroundColor: 'gray300',
-  value: 0,
   progress: false,
+  value: 0,
+  variant: 'primary',
 }
 
 export default ProgressBar

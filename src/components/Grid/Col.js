@@ -74,21 +74,21 @@ const PropTypesBreakpoint = PropTypes.oneOfType([
 Col.propTypes = {
   children: PropTypes.node,
   gutter: PropTypes.oneOf(Object.keys(space).map(Number)),
-  xsmall: PropTypesBreakpoint,
-  small: PropTypesBreakpoint,
-  medium: PropTypesBreakpoint,
   large: PropTypesBreakpoint,
+  medium: PropTypesBreakpoint,
+  small: PropTypesBreakpoint,
   xlarge: PropTypesBreakpoint,
+  xsmall: PropTypesBreakpoint,
 }
 
 Col.defaultProps = {
-  gutter: 1,
-  xsmall: null,
-  small: null,
-  medium: null,
-  large: null,
-  xlarge: null,
   children: null,
+  gutter: 1,
+  large: null,
+  medium: null,
+  small: null,
+  xlarge: null,
+  xsmall: null,
 }
 
 export default Col

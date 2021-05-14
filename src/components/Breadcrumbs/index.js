@@ -20,18 +20,6 @@ function reverseZIndexes() {
 }
 
 const variants = {
-  link: ({ colors }) => `
-    display: inline;
-
-    &[aria-current='page'] {
-      color: ${colors.gray550};
-    }
-
-    &:not(:last-child)::after {
-      content: '›';
-      margin: 0 8px;
-    }
-  `,
   bubble: ({ colors, space }) => `
     display: flex;
     flex: 1;
@@ -86,6 +74,18 @@ const variants = {
 
     ${reverseZIndexes()}
   `,
+  link: ({ colors }) => `
+    display: inline;
+
+    &[aria-current='page'] {
+      color: ${colors.gray550};
+    }
+
+    &:not(:last-child)::after {
+      content: '›';
+      margin: 0 8px;
+    }
+  `,
 }
 
 function contractString(str) {
@@ -138,14 +138,14 @@ const Breadcrumbs = ({
 }
 
 Breadcrumbs.propTypes = {
+  activeIndex: PropTypes.number,
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(breadcrumbsVariants),
-  activeIndex: PropTypes.number,
 }
 
 Breadcrumbs.defaultProps = {
-  variant: 'link',
   activeIndex: undefined,
+  variant: 'link',
 }
 
 const StyledItemBox = styled.li`

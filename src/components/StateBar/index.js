@@ -24,8 +24,8 @@ const State = ({ label, children, ...props }) => (
 )
 
 State.propTypes = {
-  label: PropTypes.string,
   children: PropTypes.node,
+  label: PropTypes.string,
 }
 
 State.defaultProps = {

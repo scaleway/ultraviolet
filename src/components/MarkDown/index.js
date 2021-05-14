@@ -63,20 +63,19 @@ RootRendererComponent.defaultProps = {
   parentProps: {},
 }
 
-const rootRenderer = (inline, parentProps) => props => (
+const rootRenderer = (inline, parentProps) => props =>
   <RootRendererComponent {...props} inline={inline} parentProps={parentProps} />
-)
 
 const MarkDown = ({ source, linkTarget, escapeHtml, inline, ...props }) => (
   <ReactMarkDown
     source={source}
     renderers={{
-      root: rootRenderer(inline, props),
       heading: headingRenderer,
       inlineCode: inlineCodeRenderer,
-      text: textRenderer,
-      paragraph: paragraphRenderer,
       link: linkRenderer,
+      paragraph: paragraphRenderer,
+      root: rootRenderer(inline, props),
+      text: textRenderer,
     }}
     linkTarget={linkTarget}
     escapeHtml={escapeHtml}
@@ -84,16 +83,16 @@ const MarkDown = ({ source, linkTarget, escapeHtml, inline, ...props }) => (
 )
 
 MarkDown.propTypes = {
-  source: PropTypes.string.isRequired,
-  linkTarget: PropTypes.string,
   escapeHtml: PropTypes.bool,
   inline: PropTypes.bool,
+  linkTarget: PropTypes.string,
+  source: PropTypes.string.isRequired,
 }
 
 MarkDown.defaultProps = {
-  linkTarget: null,
   escapeHtml: true,
   inline: false,
+  linkTarget: null,
 }
 
 export default MarkDown

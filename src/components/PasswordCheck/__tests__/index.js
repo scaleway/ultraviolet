@@ -9,15 +9,13 @@ describe('PasswordCheck', () => {
         rules={[
           {
             name: 'custom1',
+            text: "That's a beautiful custom password check we have right there",
             valid: false,
-            text:
-              "That's a beautiful custom password check we have right there",
           },
           {
             name: 'custom2',
+            text: "That's a second beautiful custom password check we have right there",
             valid: true,
-            text:
-              "That's a second beautiful custom password check we have right there",
           },
         ]}
       />,

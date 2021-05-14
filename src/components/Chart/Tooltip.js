@@ -48,14 +48,14 @@ const Tooltip = ({ data }) => (
 
 Tooltip.propTypes = {
   data: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
     details: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
         value: PropTypes.string,
       }),
     ),
+    name: PropTypes.string,
+    value: PropTypes.string,
   }).isRequired,
 }
 

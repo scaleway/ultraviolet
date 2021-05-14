@@ -45,8 +45,8 @@ PasswordCheck.propTypes = {
   rules: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      valid: PropTypes.bool.isRequired,
       text: PropTypes.string.isRequired,
+      valid: PropTypes.bool.isRequired,
     }),
   ).isRequired,
 }

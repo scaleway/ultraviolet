@@ -68,26 +68,26 @@ const Container = ({
 )
 
 Container.defaultProps = {
-  title: undefined,
+  boxStyle: undefined,
+  disabled: false,
   edition: false,
   header: undefined,
   rightTitle: undefined,
-  subtitle: undefined,
-  disabled: false,
   small: false,
-  boxStyle: undefined,
+  subtitle: undefined,
+  title: undefined,
 }
 
 Container.propTypes = {
-  title: PropTypes.string,
+  boxStyle: PropTypes.shape({}),
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
   edition: PropTypes.bool,
   header: PropTypes.node,
   rightTitle: PropTypes.node,
-  subtitle: PropTypes.string,
-  disabled: PropTypes.bool,
   small: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  boxStyle: PropTypes.shape({}),
+  subtitle: PropTypes.string,
+  title: PropTypes.string,
 }
 
 export default Container

@@ -41,8 +41,8 @@ You can customize options by passing an array of object. Be careful objects shou
 
 ```js
 {
-    value: [string],
-    label: [string]
+    label: [string],
+    value: [string]
 }
 ```
 
@@ -54,21 +54,21 @@ Where label is text shown in RichSelect component and value the value that will 
       name="custom-options"
       options={[
         {
-          value: 'kb',
           label: 'KB',
+          value: 'kb',
         },
         {
-          value: 'mb',
           label: 'MB',
+          value: 'mb',
         },
         {
-          value: 'gb',
           label: 'GB',
+          value: 'gb',
         },
       ]}
       defaultOption={{
-        value: 'gb',
         label: 'GB',
+        value: 'gb',
       }}
       defaultValue={100}
     />

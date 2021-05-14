@@ -6,39 +6,47 @@ import Box from '../Box'
 import Icon from '../Icon'
 
 export const colors = {
+  'alert-orange': 'orange',
+  'alert-red': 'warning',
   info: 'info',
-  success: 'success',
   security: 'gray550',
+  success: 'success',
   warning: 'warning',
   'warning-blue': 'info',
   'warning-orange': 'orange',
-  'alert-orange': 'orange',
-  'alert-red': 'warning',
 }
 
 const icons = {
-  success: 'checkbox-marked-circle-outline',
+  'alert-orange': 'alert',
+  'alert-red': 'alert',
   info: 'information-outline',
   security: 'lock',
+  success: 'checkbox-marked-circle-outline',
   warning: 'alert',
   'warning-blue': 'alert',
   'warning-orange': 'alert',
-  'alert-orange': 'alert',
-  'alert-red': 'alert',
 }
 
 const variants = {
+  'alert-orange': ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.orange};
+  `,
+  'alert-red': ({ theme }) => css`
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.warning};
+  `,
   info: ({ theme }) => css`
     background-color: ${theme.colors.zumthor};
     color: ${theme.colors.info};
   `,
-  success: ({ theme }) => css`
-    background-color: ${theme.colors.foam};
-    color: ${theme.colors.success};
-  `,
   security: ({ theme }) => css`
     background-color: ${theme.colors.gray100};
     color: ${theme.colors.gray550};
+  `,
+  success: ({ theme }) => css`
+    background-color: ${theme.colors.foam};
+    color: ${theme.colors.success};
   `,
   warning: ({ theme }) => css`
     background-color: ${theme.colors.pippin};
@@ -51,14 +59,6 @@ const variants = {
   'warning-orange': ({ theme }) => css`
     background-color: ${theme.colors.serenade};
     color: ${theme.colors.orange};
-  `,
-  'alert-orange': ({ theme }) => css`
-    background-color: ${theme.colors.white};
-    color: ${theme.colors.orange};
-  `,
-  'alert-red': ({ theme }) => css`
-    background-color: ${theme.colors.white};
-    color: ${theme.colors.warning};
   `,
 }
 

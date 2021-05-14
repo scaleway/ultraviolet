@@ -24,16 +24,16 @@ describe('UnitInput', () => {
         name="test"
         options={[
           {
-            value: 'kb',
             label: 'KB',
+            value: 'kb',
           },
           {
-            value: 'mb',
             label: 'MB',
+            value: 'mb',
           },
           {
-            value: 'gb',
             label: 'GB',
+            value: 'gb',
           },
         ]}
       />,
@@ -55,8 +55,8 @@ describe('UnitInput', () => {
       <UnitInput
         name="test"
         defaultOption={{
-          value: 'hours',
           label: 'Hours',
+          value: 'hours',
         }}
       />,
     )

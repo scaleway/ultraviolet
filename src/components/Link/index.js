@@ -6,26 +6,21 @@ import React from 'react'
 import Icon from '../Icon'
 import UniversalLink from '../UniversalLink'
 
-const generateVariant = color => ({ theme }) => css`
-  color: ${theme.colors[color] ?? color};
-  &:hover,
-  &:focus {
-    color: ${darken(0.2, theme.colors[color] ?? color)};
-  }
-`
+const generateVariant =
+  color =>
+  ({ theme }) =>
+    css`
+      color: ${theme.colors[color] ?? color};
+      &:hover,
+      &:focus {
+        color: ${darken(0.2, theme.colors[color] ?? color)};
+      }
+    `
 
 const variants = {
   blue: generateVariant('blue'),
-  grey: generateVariant('gray550'), // TODO: deprecated, to be removed soon
   gray: generateVariant('gray550'),
-  white: generateVariant('white'),
-  primary: ({ theme }) => css`
-    color: ${theme.colors.primary};
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary};
-    }
-  `,
+  grey: generateVariant('gray550'), // TODO: deprecated, to be removed soon
   inherit: css`
     color: inherit;
     &:hover,
@@ -34,6 +29,14 @@ const variants = {
       text-decoration: none;
     }
   `,
+  primary: ({ theme }) => css`
+    color: ${theme.colors.primary};
+    &:hover,
+    &:focus {
+      color: ${theme.colors.primary};
+    }
+  `,
+  white: generateVariant('white'),
 }
 
 export const linkVariants = Object.keys(variants)
@@ -73,9 +76,9 @@ Link.defaultProps = {
 }
 
 Link.propTypes = {
-  variant: PropTypes.oneOf(linkVariants),
-  target: PropTypes.string,
   children: PropTypes.node.isRequired,
+  target: PropTypes.string,
+  variant: PropTypes.oneOf(linkVariants),
 }
 
 export default Link

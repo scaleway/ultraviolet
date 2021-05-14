@@ -102,13 +102,13 @@ const Body = ({ loading, colSpan, ...props }) =>
   loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />
 
 Body.propTypes = {
-  loading: PropTypes.bool,
   colSpan: PropTypes.number,
+  loading: PropTypes.bool,
 }
 
 Body.defaultProps = {
-  loading: false,
   colSpan: 1,
+  loading: false,
 }
 
 Table.Head = Head

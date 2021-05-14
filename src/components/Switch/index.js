@@ -8,24 +8,24 @@ import Tooltip from '../Tooltip'
 const PADDING = 6
 
 const SIZES = {
-  small: {
-    width: 40,
-    height: 24,
-    ball: 12,
-  },
   medium: {
-    width: 72,
-    height: 32,
     ball: 20,
+    height: 32,
+    width: 72,
+  },
+  small: {
+    ball: 12,
+    height: 24,
+    width: 40,
   },
 }
 
 const COLORS = {
-  inactiveLabelColor: 'gray700',
-  inactiveBigBallColor: 'gray700',
-  inactiveBgColor: 'gray550',
-  smallBallColor: 'gray100',
   disabled: 'gray300',
+  inactiveBgColor: 'gray550',
+  inactiveBigBallColor: 'gray700',
+  inactiveLabelColor: 'gray700',
+  smallBallColor: 'gray100',
 }
 
 // Multiplies the max number of chars between labels by a "magic" number representing the average number of pixel per char
@@ -99,50 +99,52 @@ const StyledSpan = styled('span', {
   }}
 `
 
-const buildVariants = ({ bgColor, activeBigBallColor, activeLabelColor }) => ({
-  theme,
-  width,
-  onLabel,
-  offLabel,
-  labeled,
-  size,
-}) => css`
-  &[aria-checked='true'] {
-    background-color: ${theme.colors[bgColor] ?? bgColor};
-  }
+const buildVariants =
+  ({ bgColor, activeBigBallColor, activeLabelColor }) =>
+  ({ theme, width, onLabel, offLabel, labeled, size }) =>
+    css`
+      &[aria-checked='true'] {
+        background-color: ${theme.colors[bgColor] ?? bgColor};
+      }
 
-  &[aria-checked='true'] > ${SwitchBall} {
-    transform: translateX(
-        ${getSwitchWidth({ width, onLabel, offLabel, labeled, size }) -
-        2 * PADDING}px
-      )
-      translateX(-100%);
-    background-color: ${size === 'small'
-      ? theme.colors[COLORS.smallBallColor]
-      : theme.colors[activeBigBallColor] ?? activeBigBallColor};
-  }
+      &[aria-checked='true'] > ${SwitchBall} {
+        transform: translateX(
+            ${getSwitchWidth({
+              labeled,
+              offLabel,
+              onLabel,
+              size,
+              width,
+            }) -
+            2 * PADDING}px
+          )
+          translateX(-100%);
+        background-color: ${size === 'small'
+          ? theme.colors[COLORS.smallBallColor]
+          : theme.colors[activeBigBallColor] ?? activeBigBallColor};
+      }
 
-  &[aria-checked='false'] > ${StyledSpan} {
-    color: ${theme.colors[COLORS.inactiveLabelColor]};
-    right: 0;
-  }
+      &[aria-checked='false'] > ${StyledSpan} {
+        color: ${theme.colors[COLORS.inactiveLabelColor]};
+        right: 0;
+      }
 
-  &[aria-checked='true'] > ${StyledSpan} {
-    color: ${theme.colors[activeLabelColor] ?? activeLabelColor};
-    left: 0;
-  }
-`
+      &[aria-checked='true'] > ${StyledSpan} {
+        color: ${theme.colors[activeLabelColor] ?? activeLabelColor};
+        left: 0;
+      }
+    `
 
 const variants = {
   primary: buildVariants({
-    bgColor: 'primary',
-    activeLabelColor: 'gray100',
     activeBigBallColor: 'gray100',
+    activeLabelColor: 'gray100',
+    bgColor: 'primary',
   }),
   success: buildVariants({
-    bgColor: 'foam',
-    activeLabelColor: 'success',
     activeBigBallColor: 'success',
+    activeLabelColor: 'success',
+    bgColor: 'foam',
   }),
 }
 

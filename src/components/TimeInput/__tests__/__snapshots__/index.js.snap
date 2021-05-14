@@ -50,8 +50,8 @@ exports[`TimeInput renders correctly with base props 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -61,20 +61,20 @@ exports[`TimeInput renders correctly with base props 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 

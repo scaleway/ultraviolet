@@ -84,29 +84,29 @@ const Tab = ({
 }
 
 Tab.propTypes = {
-  disabled: PropTypes.bool,
-  isSelected: PropTypes.bool,
-  setInternTabsWidth: PropTypes.func,
-  isTabsWidthSet: PropTypes.bool,
-  index: PropTypes.number,
-  onClick: PropTypes.func,
-  hasEndedCount: PropTypes.bool,
-  children: PropTypes.node,
-  name: PropTypes.string,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  hasEndedCount: PropTypes.bool,
+  index: PropTypes.number,
+  isSelected: PropTypes.bool,
+  isTabsWidthSet: PropTypes.bool,
+  name: PropTypes.string,
+  onClick: PropTypes.func,
+  setInternTabsWidth: PropTypes.func,
 }
 
 Tab.defaultProps = {
-  disabled: false,
-  isSelected: false,
-  setInternTabsWidth: () => {},
-  isTabsWidthSet: false,
-  index: 0,
-  onClick: () => {},
-  hasEndedCount: false,
-  children: null,
   as: undefined,
+  children: null,
+  disabled: false,
+  hasEndedCount: false,
+  index: 0,
+  isSelected: false,
+  isTabsWidthSet: false,
   name: undefined,
+  onClick: () => {},
+  setInternTabsWidth: () => {},
 }
 
 export default Tab

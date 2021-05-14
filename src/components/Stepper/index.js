@@ -265,35 +265,35 @@ const Stepper = ({
 }
 
 Stepper.propTypes = {
-  text: PropTypes.string,
   disabled: PropTypes.bool,
-  minValue: PropTypes.number,
   maxValue: PropTypes.number,
+  minValue: PropTypes.number,
   name: PropTypes.string,
-  size: PropTypes.string,
-  step: PropTypes.number,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  onMinCrossed: PropTypes.func,
   onMaxCrossed: PropTypes.func,
+  onMinCrossed: PropTypes.func,
+  size: PropTypes.string,
+  step: PropTypes.number,
+  text: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 Stepper.defaultProps = {
-  minValue: 0,
-  maxValue: 100,
-  name: 'stepper',
-  size: 'large',
-  text: '',
-  value: null,
-  step: 1,
   disabled: false,
+  maxValue: 100,
+  minValue: 0,
+  name: 'stepper',
+  onBlur: null,
   onChange: null,
   onFocus: null,
-  onBlur: null,
-  onMinCrossed: null,
   onMaxCrossed: null,
+  onMinCrossed: null,
+  size: 'large',
+  step: 1,
+  text: '',
+  value: null,
 }
 
 export default Stepper

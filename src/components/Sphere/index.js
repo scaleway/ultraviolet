@@ -62,16 +62,16 @@ const Sphere = ({
 )
 
 Sphere.defaultProps = {
-  size: 32,
   bgColors: ['violet'],
+  size: 32,
   text: undefined,
   textColor: 'white',
   textSize: 16,
 }
 
 Sphere.propTypes = {
-  size: PropTypes.number,
   bgColors: PropTypes.arrayOf(PropTypes.string),
+  size: PropTypes.number,
   text: PropTypes.string,
   textColor: PropTypes.string,
   textSize: PropTypes.number,

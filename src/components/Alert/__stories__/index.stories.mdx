@@ -11,15 +11,15 @@ import Alert from '..'
   title="Components/Alert"
   component={Alert}
   argTypes={{
-    variant: {
-      control: {
-        type: 'select',
-        options: ['warning', 'info', 'success'],
-      },
-    },
     icon: {
       control: {
         type: 'string',
+      },
+    },
+    variant: {
+      control: {
+        options: ['warning', 'info', 'success'],
+        type: 'select',
       },
     },
   }}
@@ -86,8 +86,8 @@ You can also change icon size using `iconSize` prop.
   <Story
     name="success-icon"
     args={{
-      variant: 'success',
       icon: 'lock',
+      variant: 'success',
     }}
   >
     {args => (

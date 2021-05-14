@@ -5,9 +5,6 @@ import Separator from '../Separator'
 import Line from './Line'
 
 const styles = {
-  container: css`
-    min-height: 200px;
-  `,
   block: theme => css`
     width: 100%;
     height: 100%;
@@ -20,6 +17,9 @@ const styles = {
     border-width: 1px;
     border-color: ${theme.colors.gray300};
     border-radius: 4px;
+  `,
+  container: css`
+    min-height: 200px;
   `,
   icon: theme => css`
     margin-right: 8px;

@@ -173,16 +173,16 @@ const Input = ({ onChange, onKeyPress, onBlur, value, ...props }) => (
 )
 
 Input.defaultProps = {
+  onBlur: () => {},
   onChange: () => {},
   onKeyPress: () => {},
-  onBlur: () => {},
   value: 0,
 }
 
 Input.propTypes = {
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyPress: PropTypes.func,
-  onBlur: PropTypes.func,
   value: PropTypes.number,
 }
 
@@ -388,10 +388,8 @@ const Range = ({
 
     // Set initial cursors links position
     if (hasCursorsLink) {
-      const [
-        firstCursorTranslate = 0,
-        lastCursorTranslate = 0,
-      ] = initialCursorsTranslate
+      const [firstCursorTranslate = 0, lastCursorTranslate = 0] =
+        initialCursorsTranslate
       cursorsLinkRef.current.style.width = `${
         lastCursorTranslate - firstCursorTranslate
       }px`
@@ -450,30 +448,30 @@ const Range = ({
 }
 
 Range.propTypes = {
-  min: PropTypes.number,
+  cursorWidth: PropTypes.number,
+  halfCursorWidth: PropTypes.number,
+  limitOffset: PropTypes.number,
   max: PropTypes.number,
+  min: PropTypes.number,
+  name: PropTypes.string,
+  offsetTop: PropTypes.number,
+  onChange: PropTypes.func,
   value: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.number),
     PropTypes.number,
   ]),
-  onChange: PropTypes.func,
-  name: PropTypes.string,
-  cursorWidth: PropTypes.number,
-  halfCursorWidth: PropTypes.number,
-  limitOffset: PropTypes.number,
-  offsetTop: PropTypes.number,
 }
 
 Range.defaultProps = {
-  min: 0,
-  max: 5,
-  value: [3],
-  onChange: () => {},
-  name: 'rangeInput',
   cursorWidth: 16,
   halfCursorWidth: 8,
   limitOffset: 24,
+  max: 5,
+  min: 0,
+  name: 'rangeInput',
   offsetTop: 16,
+  onChange: () => {},
+  value: [3],
 }
 
 export default Range

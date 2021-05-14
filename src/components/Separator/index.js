@@ -55,17 +55,17 @@ const Separator = ({ direction, thickness, color, icon, ...props }) =>
   )
 
 Separator.propTypes = {
-  direction: PropTypes.oneOf(['horizontal', 'vertical']),
-  thickness: PropTypes.number,
-  icon: PropTypes.oneOf(icons),
   color: PropTypes.string,
+  direction: PropTypes.oneOf(['horizontal', 'vertical']),
+  icon: PropTypes.oneOf(icons),
+  thickness: PropTypes.number,
 }
 
 Separator.defaultProps = {
-  direction: 'horizontal',
-  thickness: 1,
-  icon: null,
   color: 'gray200',
+  direction: 'horizontal',
+  icon: null,
+  thickness: 1,
 }
 
 export default Separator

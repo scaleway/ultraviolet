@@ -8,40 +8,40 @@ import Icon from '../Icon'
 import Typography from '../Typography'
 
 const sizes = {
-  xsmall: {
-    line: 5,
-    step: 16,
-    text: 10,
-    stepBorder: 1,
-    stepTextMargin: 15,
-  },
-  small: {
-    line: 8,
-    step: 20,
-    text: 11,
+  large: {
+    line: 12,
+    step: 28,
     stepBorder: 2,
     stepTextMargin: 15,
+    text: 14,
   },
   medium: {
     line: 10,
     step: 24,
+    stepBorder: 2,
+    stepTextMargin: 15,
     text: 12,
-    stepBorder: 2,
-    stepTextMargin: 15,
   },
-  large: {
-    line: 12,
-    step: 28,
-    text: 14,
+  small: {
+    line: 8,
+    step: 20,
     stepBorder: 2,
     stepTextMargin: 15,
+    text: 11,
   },
   xlarge: {
     line: 14,
     step: 32,
-    text: 16,
     stepBorder: 3,
     stepTextMargin: 15,
+    text: 16,
+  },
+  xsmall: {
+    line: 5,
+    step: 16,
+    stepBorder: 1,
+    stepTextMargin: 15,
+    text: 10,
   },
 }
 
@@ -227,17 +227,17 @@ const Step = () => null
 CreationProgress.Step = Step
 
 CreationProgress.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  selected: PropTypes.number,
   animated: PropTypes.bool,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
   isStepsNumber: PropTypes.bool,
+  selected: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(sizes)),
 }
 
 CreationProgress.defaultProps = {
-  selected: 0,
   animated: true,
   isStepsNumber: false,
+  selected: 0,
   size: 'xlarge',
 }
 

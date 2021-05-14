@@ -76,8 +76,8 @@ exports[`RichSelect renders correctly animated 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: 1000ms animation-0;
   animation: 1000ms animation-0;
@@ -87,20 +87,20 @@ exports[`RichSelect renders correctly animated 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -393,8 +393,8 @@ exports[`RichSelect renders correctly controlled 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -404,20 +404,20 @@ exports[`RichSelect renders correctly controlled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -710,8 +710,8 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -721,20 +721,20 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -1029,8 +1029,8 @@ exports[`RichSelect renders correctly disabled 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #dce1eb;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -1304,8 +1304,8 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #dce1eb;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -1577,8 +1577,8 @@ exports[`RichSelect renders correctly multi 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -1588,20 +1588,20 @@ exports[`RichSelect renders correctly multi 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -1873,8 +1873,8 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #dce1eb;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -1919,19 +1919,19 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   margin: 2px;
   min-width: 0;
   box-sizing: border-box;
-  color: #4a4f62;
-  font-weight: 500;
-  font-size: 14px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-overflow: ellipsis;
+  color: #4a4f62;
+  font-size: 14px;
+  font-weight: 500;
   height: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-overflow: ellipsis;
 }
 
 .emotion-6 {
@@ -1944,8 +1944,8 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
-  line-height: 20px;
   font-weight: normal;
+  line-height: 20px;
 }
 
 .emotion-7 {
@@ -1961,15 +1961,15 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   padding-left: 4px;
   padding-right: 4px;
   box-sizing: border-box;
-  pointer-events: none;
-  cursor: none;
   color: #dce1eb;
+  cursor: none;
+  pointer-events: none;
 }
 
 .emotion-7:hover {
-  pointer-events: none;
-  cursor: none;
   color: #dce1eb;
+  cursor: none;
+  pointer-events: none;
 }
 
 .emotion-9 {
@@ -2224,8 +2224,8 @@ exports[`RichSelect renders correctly required 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -2235,20 +2235,20 @@ exports[`RichSelect renders correctly required 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -2561,8 +2561,8 @@ exports[`RichSelect renders correctly timed 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -2572,20 +2572,20 @@ exports[`RichSelect renders correctly timed 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -2881,8 +2881,8 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #ef5774;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -2892,20 +2892,20 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #ef5774;
-}
-
-.emotion-3:hover svg {
-  fill: #ef5774;
-}
-
 .emotion-3:focus-within {
   border-color: #ef5774;
   box-shadow: 0 0 2px 2px rgba(239,87,116,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #ef5774;
+}
+
+.emotion-3:hover {
+  border-color: #ef5774;
+}
+
+.emotion-3:hover svg {
   fill: #ef5774;
 }
 
@@ -3208,8 +3208,8 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -3219,20 +3219,20 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -3525,8 +3525,8 @@ exports[`RichSelect renders correctly with click 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -3536,20 +3536,20 @@ exports[`RichSelect renders correctly with click 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -3842,8 +3842,8 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -3853,20 +3853,20 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -4159,8 +4159,8 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -4170,20 +4170,20 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -4476,8 +4476,8 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -4487,20 +4487,20 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -4793,8 +4793,8 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -4804,20 +4804,20 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -5143,8 +5143,8 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -5154,20 +5154,20 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -5529,8 +5529,8 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -5540,20 +5540,20 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 
@@ -5888,8 +5888,8 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   box-sizing: border-box;
   color: #4a4f62;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   -webkit-animation: none;
   animation: none;
@@ -5899,20 +5899,20 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-3:hover {
-  border-color: #4f0599;
-}
-
-.emotion-3:hover svg {
-  fill: #4f0599;
-}
-
 .emotion-3:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
 .emotion-3:focus-within svg {
+  fill: #4f0599;
+}
+
+.emotion-3:hover {
+  border-color: #4f0599;
+}
+
+.emotion-3:hover svg {
   fill: #4f0599;
 }
 

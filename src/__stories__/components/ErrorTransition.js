@@ -13,12 +13,12 @@ const ErrorTransition = ({ error, Component, ...props }) => {
 }
 
 ErrorTransition.propTypes = {
-  error: PropTypes.string.isRequired,
   Component: PropTypes.oneOfType([
-    PropTypes.node,
     PropTypes.func,
+    PropTypes.node,
     PropTypes.shape({}),
   ]).isRequired,
+  error: PropTypes.string.isRequired,
 }
 
 export default ErrorTransition

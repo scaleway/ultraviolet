@@ -29,13 +29,13 @@ const Expandable = ({ opened, height, children, ...props }) => (
 
 Expandable.propTypes = {
   children: PropTypes.node.isRequired,
-  opened: PropTypes.bool,
   height: PropTypes.number,
+  opened: PropTypes.bool,
 }
 
 Expandable.defaultProps = {
-  opened: false,
   height: 5000,
+  opened: false,
 }
 
 export default Expandable

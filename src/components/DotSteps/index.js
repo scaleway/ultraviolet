@@ -21,9 +21,9 @@ const DotSteps = ({ steps, step, setStep }) => (
 )
 
 DotSteps.propTypes = {
-  steps: PropTypes.number,
-  step: PropTypes.number,
   setStep: PropTypes.func.isRequired,
+  step: PropTypes.number,
+  steps: PropTypes.number,
 }
 
 DotSteps.defaultProps = {

@@ -12,13 +12,13 @@ const Breakpoint = styled.div`
 `
 
 Breakpoint.propTypes = {
-  up: PropTypes.oneOf(Object.keys(screens)),
   down: PropTypes.oneOf(Object.keys(screens)),
+  up: PropTypes.oneOf(Object.keys(screens)),
 }
 
 Breakpoint.defaultProps = {
-  up: null,
   down: null,
+  up: null,
 }
 
 export default Breakpoint

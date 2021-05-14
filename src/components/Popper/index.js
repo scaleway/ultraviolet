@@ -10,24 +10,27 @@ import {
   usePopoverState,
 } from 'reakit/Popover'
 
-const buildVariant = ({ bgColor, color, fill, shadow }) => ({ theme }) => css`
-  background-color: ${theme.colors[bgColor] ?? bgColor};
-  color: ${theme.colors[color] ?? color};
-  fill: ${theme.colors[fill] ?? fill};
-  box-shadow: 0 2px 5px 5px
-    ${transparentize(0.7, theme.colors[shadow] ?? shadow)};
-`
+const buildVariant =
+  ({ bgColor, color, fill, shadow }) =>
+  ({ theme }) =>
+    css`
+      background-color: ${theme.colors[bgColor] ?? bgColor};
+      color: ${theme.colors[color] ?? color};
+      fill: ${theme.colors[fill] ?? fill};
+      box-shadow: 0 2px 5px 5px
+        ${transparentize(0.7, theme.colors[shadow] ?? shadow)};
+    `
 const variants = {
-  white: buildVariant({
-    bgColor: 'white',
-    color: 'black',
-    fill: 'white',
-    shadow: 'shadow',
-  }),
   black: buildVariant({
     bgColor: 'black',
     color: 'white',
     fill: 'black',
+    shadow: 'shadow',
+  }),
+  white: buildVariant({
+    bgColor: 'white',
+    color: 'black',
+    fill: 'white',
     shadow: 'shadow',
   }),
 }
@@ -136,22 +139,22 @@ Popper.propTypes = {
     'left-start',
   ]),
   preventBodyScroll: PropTypes.bool,
-  visible: PropTypes.bool,
   variant: PropTypes.oneOf(Object.keys(variants)),
+  visible: PropTypes.bool,
 }
 
 Popper.defaultProps = {
   animated: 100,
-  variant: 'white',
+  backgroudColor: undefined,
   baseId: '',
+  disclosure: undefined,
   hasArrow: true,
   hideOnClickOutside: true,
   modal: true,
   placement: 'auto',
   preventBodyScroll: false,
+  variant: 'white',
   visible: false,
-  backgroudColor: undefined,
-  disclosure: undefined,
 }
 
 export default Popper

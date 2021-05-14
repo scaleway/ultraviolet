@@ -5,9 +5,9 @@ import { up } from '../../utils'
 import Box from '../Box'
 
 const gridMaxWidths = {
-  small: '540px',
-  medium: '720px',
   large: '960px',
+  medium: '720px',
+  small: '540px',
   xlarge: '1140px',
 }
 
@@ -32,14 +32,14 @@ const Grid = styled(Box, {
 `
 
 Grid.defaultProps = {
-  gutter: 1,
   fluid: false,
+  gutter: 1,
 }
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
-  gutter: PropTypes.oneOf(Object.keys(space).map(Number)),
   fluid: PropTypes.bool,
+  gutter: PropTypes.oneOf(Object.keys(space).map(Number)),
 }
 
 export default Grid

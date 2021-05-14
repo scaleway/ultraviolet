@@ -14,23 +14,23 @@ RichSelectTags only work as [controlled component](https://reactjs.org/docs/form
   <Story name="Basic">
     <ControlValue value={[]}>
       {({ onChange: onChangeFormValue }) => (
-        <ControlValue value={{ value: 'two', label: 'Two' }}>
+        <ControlValue value={{ label: 'Two', value: 'two' }}>
           {({ value, onChange: onChangeSelectValue }) => {
             const props = {
               ctaText: 'Add',
+              initialTags: ['one'],
               name: 'options',
               onChange: onChangeFormValue,
-              initialTags: ['one'],
               onChangeSelectValue,
+              options: [
+                { label: 'One', value: 'one' },
+                { label: 'Two', value: 'two' },
+                { label: 'Three', value: 'three' },
+                { label: 'Four', value: 'four' },
+                { label: 'Five', value: 'five' },
+              ],
               placeholder: 'Select an option in the list',
               value,
-              options: [
-                { value: 'one', label: 'One' },
-                { value: 'two', label: 'Two' },
-                { value: 'three', label: 'Three' },
-                { value: 'four', label: 'Four' },
-                { value: 'five', label: 'Five' },
-              ],
             }
             return <RichSelectTags {...props} />
           }}

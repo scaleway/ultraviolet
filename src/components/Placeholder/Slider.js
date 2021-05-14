@@ -4,17 +4,17 @@ import React from 'react'
 import Box from '../Box'
 
 const styles = {
-  container: css`
-    height: 277px;
-    display: flex;
-    overflow: auto;
-  `,
   card: theme => css`
     border: 1px solid ${theme.colors.gray300};
     border-radius: 4px;
     width: 240px;
     height: 261px;
     margin-right: 16px;
+  `,
+  container: css`
+    height: 277px;
+    display: flex;
+    overflow: auto;
   `,
   img: theme => css`
     border: 1px solid ${theme.colors.gray300};

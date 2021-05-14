@@ -46,8 +46,8 @@ const RichSelectTags = ({
   )
 
   const [{ stateTags, newPotentielTag }, setTags] = useState({
-    stateTags: mapOptionsToTags,
     newPotentielTag: value || '',
+    stateTags: mapOptionsToTags,
   })
 
   const tagsValue = stateTags.map(tag => tag.value)
@@ -59,8 +59,8 @@ const RichSelectTags = ({
   const onChangeSelect = e => {
     if (e) {
       setTags({
-        stateTags,
         newPotentielTag: e,
+        stateTags,
       })
       onChangeSelectValue(e)
     }
@@ -76,8 +76,8 @@ const RichSelectTags = ({
   const addTag = () => {
     if (value) {
       setTags({
-        stateTags: [...stateTags, value],
         newPotentielTag: null,
+        stateTags: [...stateTags, value],
       })
       onChangeSelectValue(null)
       onChange([...stateTags, value])
@@ -127,36 +127,36 @@ const RichSelectTags = ({
 }
 
 RichSelectTags.propTypes = {
-  ctaText: PropTypes.string,
   ctaDisabled: PropTypes.bool,
+  ctaText: PropTypes.string,
   ctaTooltip: PropTypes.string,
-  placeholder: PropTypes.string,
   icon: PropTypes.string,
-  value: PropTypes.shape({
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }),
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    }),
-  ).isRequired,
   initialTags: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ),
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onChangeSelectValue: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    }),
+  ).isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.shape({
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  }),
 }
 
 RichSelectTags.defaultProps = {
   ctaDisabled: false,
   ctaText: 'Add',
-  placeholder: 'Select an option in the list',
   ctaTooltip: undefined,
-  initialTags: [],
   icon: undefined,
+  initialTags: [],
+  placeholder: 'Select an option in the list',
   value: undefined,
 }
 
