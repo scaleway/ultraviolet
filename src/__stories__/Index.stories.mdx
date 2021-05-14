@@ -1,7 +1,38 @@
-import { Description, Meta } from '@storybook/addon-docs/blocks'
+import { Meta } from '@storybook/addon-docs/blocks'
 
 <Meta title="Home" />
 
 # Welcome to Scaleway UI
 
-<Description />
+Scaleway UI is a set of React components you can use to build your application. It is used to build our [Scaleway Console](https://console.scaleway.com).
+
+## Getting started
+
+### Installation
+
+```bash
+yarn add @scaleway/ui
+```
+
+### Add a ThemeProvider
+
+To use the library you need to put a `ThemeProvider` which come from `@emotion/react` library:
+
+```jsx
+import { ThemeProvider } from '@emotion/react'
+import { Typography, theme } from '@scaleway/ui'
+
+export default function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Typography textAlign="center" variant="hero">
+        Welcome to Scaleway UI
+      </Typography>
+    </ThemeProvider>
+  )
+}
+```
+
+### Customizing
+
+The default theme is available on Github, you can see it [here](https://github.com/scaleway/scaleway-ui/blob/master/src/theme/index.js). For more customization go to [Colors page](/docs/theme-colors--palette)

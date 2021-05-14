@@ -11,7 +11,7 @@ export const parameters = {
   previewTabs: { canvas: { hidden: true } },
   options: {
     storySort: {
-      order: ['Home', 'Migration'],
+      order: ['Home', 'Theme', 'Components'],
     },
   },
 }
