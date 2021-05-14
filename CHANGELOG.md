@@ -1,3 +1,20 @@
+### [0.78.2](https://github.com/scaleway/scaleway-ui/compare/v0.78.1...v0.78.2) (2021-05-14)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#350](https://github.com/scaleway/scaleway-ui/issues/350)) ([a27857c](https://github.com/scaleway/scaleway-ui/commit/a27857cfec5fafded4526c0ec3890d3f228754a9))
+* **deps-dev:** bump @babel/preset-env from 7.14.1 to 7.14.2 ([#353](https://github.com/scaleway/scaleway-ui/issues/353)) ([99015dd](https://github.com/scaleway/scaleway-ui/commit/99015dde4f1af9d1f6f4eb9ab2d1fe9687cb4a09))
+* **deps-dev:** bump @commitlint/cli from 12.1.3 to 12.1.4 ([#354](https://github.com/scaleway/scaleway-ui/issues/354)) ([ff69128](https://github.com/scaleway/scaleway-ui/commit/ff691286324832e3e4f5423abd635818ffda8c15))
+* **deps-dev:** bump @commitlint/config-conventional ([#351](https://github.com/scaleway/scaleway-ui/issues/351)) ([2c814f8](https://github.com/scaleway/scaleway-ui/commit/2c814f8cd0eb7a2b6c6f0917848dccbdbc582792))
+* **deps-dev:** bump semantic-release from 17.4.2 to 17.4.3 ([#356](https://github.com/scaleway/scaleway-ui/issues/356)) ([c6db620](https://github.com/scaleway/scaleway-ui/commit/c6db620ba7a29ddeddb67589ea02625fef716d1b))
+* **eslint:** sort ([#341](https://github.com/scaleway/scaleway-ui/issues/341)) ([4e31b7e](https://github.com/scaleway/scaleway-ui/commit/4e31b7e6b52a8129674ea552bd9af649770fb973))
+
+
+### :bug: Bug Fixes
+
+* correct node engine version ([#352](https://github.com/scaleway/scaleway-ui/issues/352)) ([6d221df](https://github.com/scaleway/scaleway-ui/commit/6d221df719f4c49b8366f0b8fd87091fdfb02720))
+
 ### [0.78.1](https://github.com/scaleway/scaleway-ui/compare/v0.78.0...v0.78.1) (2021-05-12)
 
 
