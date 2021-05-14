@@ -11,7 +11,7 @@ import Typography, { typographyVariants } from '../Typography'
 const StyledCheckBoxContainer = styled(Typography)`
   position: relative;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   cursor: ${({ 'aria-disabled': disabled }) =>
     disabled ? 'not-allowed' : 'pointer'};
 `
@@ -47,9 +47,7 @@ const StyledIcon = styled(Icon)`
 
 const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
-})`
-  padding-top: ${({ size }) => (size > 27 ? '4px' : '2px')};
-`
+})``
 
 const Checkbox = ({
   checked,
@@ -74,15 +72,15 @@ const Checkbox = ({
     if (disabled) return 'gray100'
     if (valid === false || !!error) return 'warning'
     if (valid === true) return 'success'
-    if (checked) return 'primary'
+    if (checkbox.state) return 'primary'
 
     return 'gray300'
-  }, [disabled, valid, checked, error])
+  }, [disabled, valid, checkbox.state, error])
 
   const { setState } = checkbox
   useEffect(() => {
     setState(checked)
-  }, [setState, checked])
+  }, [checked, setState])
 
   return (
     <Box {...props}>
@@ -98,7 +96,6 @@ const Checkbox = ({
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}
-          checked={checked}
           disabled={disabled}
           value={value}
           name={name}
@@ -139,8 +136,8 @@ Checkbox.defaultProps = {
   disabled: false,
   error: undefined,
   name: 'checkbox',
-  onBlur: () => {},
-  onFocus: () => {},
+  onBlur: undefined,
+  onFocus: undefined,
   progress: false,
   size: 24,
   typographyVariant: 'default',

@@ -5,8 +5,14 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 describe('Checkbox', () => {
   test('renders correctly', () => {
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}}>Checkbox Label</Checkbox>,
+      <Checkbox onBlur={() => {}} onFocus={() => {}} onChange={() => {}}>
+        Checkbox Label
+      </Checkbox>,
     )
+  })
+
+  test('renders correctly no child', () => {
+    shouldMatchEmotionSnapshot(<Checkbox onChange={() => {}} />)
   })
   test('renders correctly disabled', () => {
     shouldMatchEmotionSnapshot(
@@ -43,11 +49,37 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
   })
+
+  test('renders correctly with progress', () => {
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} progress>
+        Checkbox Label
+      </Checkbox>,
+    )
+  })
+
+  test('renders correctly with progress and no child', () => {
+    shouldMatchEmotionSnapshot(<Checkbox onChange={() => {}} progress />)
+  })
+
   test('renders correctly with a value', () => {
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
+    )
+  })
+
+  test('renders correctly with sizes', () => {
+    shouldMatchEmotionSnapshot(
+      <>
+        <Checkbox onChange={() => {}} size={37} value="test">
+          Checkbox Label
+        </Checkbox>
+        <Checkbox onChange={() => {}} progress size={37} value="test">
+          Checkbox Label
+        </Checkbox>
+      </>,
     )
   })
 })
