@@ -1,3 +1,18 @@
+## [0.79.0](https://github.com/scaleway/scaleway-ui/compare/v0.78.2...v0.79.0) (2021-05-17)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/core from 7.14.0 to 7.14.2 ([#355](https://github.com/scaleway/scaleway-ui/issues/355)) ([1031918](https://github.com/scaleway/scaleway-ui/commit/10319185a7f7d67dd291431f3dbacd8612a5ca1a))
+* **deps-dev:** bump @babel/eslint-parser from 7.13.14 to 7.14.2 ([#357](https://github.com/scaleway/scaleway-ui/issues/357)) ([e3a81ec](https://github.com/scaleway/scaleway-ui/commit/e3a81ec4a50fb851eccdc2758a20d2d20d9bb286))
+* **deps-dev:** bump @testing-library/react from 11.2.6 to 11.2.7 ([#361](https://github.com/scaleway/scaleway-ui/issues/361)) ([488b02f](https://github.com/scaleway/scaleway-ui/commit/488b02fe06031706e6ed6b2791e1cfbcea5cc1fa))
+* **deps-dev:** bump rollup from 2.47.0 to 2.48.0 ([#360](https://github.com/scaleway/scaleway-ui/issues/360)) ([0f08040](https://github.com/scaleway/scaleway-ui/commit/0f080406439b945850a6a5c20a1b94fa76ca2cad))
+
+
+### :gear: Features
+
+* **UniversalLink:** add mailto native support ([#331](https://github.com/scaleway/scaleway-ui/issues/331)) ([f4f4b91](https://github.com/scaleway/scaleway-ui/commit/f4f4b91df0735504cdbf0745d35abec05149a30e))
+
 ### [0.78.2](https://github.com/scaleway/scaleway-ui/compare/v0.78.1...v0.78.2) (2021-05-14)
 
 
