@@ -225,8 +225,8 @@ const Stepper = ({
           onKeyPress={onKeyOnlyNumbers}
           ref={inputRef}
           style={{
-            width: inputValue.toString().length * 10 + 15,
             maxWidth: inputMaxWidth || '100%',
+            width: inputValue.toString().length * 10 + 15,
           }}
           value={inputValue.toString()} // A dom element can only have string attributes.
         />
