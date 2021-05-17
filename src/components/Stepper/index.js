@@ -78,7 +78,7 @@ const StyledCenterTouchable = styled(Touchable)`
 const StyledInput = styled.input`
   pointer-events: none;
   color: ${({ theme }) => theme.colors.gray700};
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -183,6 +183,16 @@ const Stepper = ({
   const isMinusDisabled = inputValue <= minValue || disabled
   const isPlusDisabled = inputValue >= maxValue || disabled
 
+  const centerTouchableRef = useRef(null)
+
+  const [inputMaxWidth, setInputMaxWidth] = useState()
+
+  useEffect(() => {
+    setInputMaxWidth(
+      centerTouchableRef.current && centerTouchableRef.current.offsetWidth - 2,
+    )
+  }, [inputMaxWidth, setInputMaxWidth])
+
   return (
     <StyledContainer disabled={disabled} size={size} {...props}>
       <StyledTouchable
@@ -192,11 +202,7 @@ const Stepper = ({
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <StyledIcon
-          name="minus"
-          size={size === 'large' ? 28 : 18}
-          color="gray300"
-        />
+        <StyledIcon name="minus" size={iconSizes[size]} color="gray300" />
       </StyledTouchable>
 
       <StyledCenterTouchable
@@ -207,8 +213,8 @@ const Stepper = ({
             inputRef.current.focus()
           }
         }}
-        px={1}
         aria-label="Input"
+        ref={centerTouchableRef}
       >
         <StyledInput
           disabled={disabled}
@@ -218,7 +224,10 @@ const Stepper = ({
           onFocus={handleOnFocus}
           onKeyPress={onKeyOnlyNumbers}
           ref={inputRef}
-          style={{ width: inputValue.toString().length * 10 + 15 }}
+          style={{
+            width: inputValue.toString().length * 10 + 15,
+            maxWidth: inputMaxWidth || '100%',
+          }}
           value={inputValue.toString()} // A dom element can only have string attributes.
         />
 
