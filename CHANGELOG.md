@@ -1,3 +1,10 @@
+### [0.79.1](https://github.com/scaleway/scaleway-ui/compare/v0.79.0...v0.79.1) (2021-05-17)
+
+
+### :bug: Bug Fixes
+
+* checkbox text alignement ([#358](https://github.com/scaleway/scaleway-ui/issues/358)) ([47c19dc](https://github.com/scaleway/scaleway-ui/commit/47c19dce95debadae65b8f6f0880ce0ed08b67ca))
+
 ## [0.79.0](https://github.com/scaleway/scaleway-ui/compare/v0.78.2...v0.79.0) (2021-05-17)
 
 
