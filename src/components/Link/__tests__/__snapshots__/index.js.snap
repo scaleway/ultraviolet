@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Link render correctly with no variant 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<a
+    class="emotion-0 emotion-1"
+    href="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
   .emotion-1 {
