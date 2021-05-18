@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import onKeyOnlyNumbers from '../../helpers/keycode'
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -180,6 +179,26 @@ const Stepper = ({
     if (onBlur) onBlur(event)
   }
 
+  const onKeyDown = e => {
+    // Arrow Up
+    if (e.keyCode === 38) {
+      e.stopPropagation()
+      e.preventDefault()
+      if (inputValue + step <= maxValue) {
+        setInputValue(inputValue + step)
+      }
+    }
+
+    // Arrow Down
+    if (e.keyCode === 40) {
+      e.stopPropagation()
+      e.preventDefault()
+      if (inputValue - step >= minValue) {
+        setInputValue(inputValue - step)
+      }
+    }
+  }
+
   const isMinusDisabled = inputValue <= minValue || disabled
   const isPlusDisabled = inputValue >= maxValue || disabled
 
@@ -222,7 +241,7 @@ const Stepper = ({
           onBlur={handleOnBlur}
           onChange={handleChange}
           onFocus={handleOnFocus}
-          onKeyPress={onKeyOnlyNumbers}
+          onKeyDown={onKeyDown}
           ref={inputRef}
           style={{
             maxWidth: inputMaxWidth || '100%',
