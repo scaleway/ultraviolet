@@ -1,3 +1,18 @@
+### [0.79.2](https://github.com/scaleway/scaleway-ui/compare/v0.79.1...v0.79.2) (2021-05-18)
+
+
+### :package: Chore
+
+* **deps:** bump react-select from 4.3.0 to 4.3.1 ([#338](https://github.com/scaleway/scaleway-ui/issues/338)) ([c0a23b3](https://github.com/scaleway/scaleway-ui/commit/c0a23b3c77303444db08a2f7fd32e91bf3633083))
+* **deps-dev:** bump @babel/core from 7.14.2 to 7.14.3 ([#365](https://github.com/scaleway/scaleway-ui/issues/365)) ([4c98cdc](https://github.com/scaleway/scaleway-ui/commit/4c98cdc9787f13340eeaaab103b1db0a44dc8907))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.2 to 7.14.3 ([#364](https://github.com/scaleway/scaleway-ui/issues/364)) ([23080b8](https://github.com/scaleway/scaleway-ui/commit/23080b8bc2df3ceefd9f3c9766c9a88a2063b488))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#363](https://github.com/scaleway/scaleway-ui/issues/363)) ([de6beb7](https://github.com/scaleway/scaleway-ui/commit/de6beb7def1e8abb1bd3a6c15a696d7ec2d50327))
+
+
+### :bug: Bug Fixes
+
+* export RichSelectTags ([#362](https://github.com/scaleway/scaleway-ui/issues/362)) ([41c184f](https://github.com/scaleway/scaleway-ui/commit/41c184fb8f90930ea248f4fb3cee8c37639afca0))
+
 ### [0.79.1](https://github.com/scaleway/scaleway-ui/compare/v0.79.0...v0.79.1) (2021-05-17)
 
 
