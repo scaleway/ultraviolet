@@ -102,6 +102,7 @@ exports[`Stepper should click on min button 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -169,7 +170,7 @@ exports[`Stepper should click on min button 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 25px;"
+        style="width: 25px;"
         value="8"
       />
       <span
@@ -296,6 +297,7 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -363,7 +365,7 @@ exports[`Stepper should click on plus button with a step value 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         value="30"
       />
       <span
@@ -490,6 +492,7 @@ exports[`Stepper should focus input and modify value 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -557,7 +560,7 @@ exports[`Stepper should focus input and modify value 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         type="text"
         value="20"
       />
@@ -685,6 +688,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -783,7 +787,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 45px;"
+        style="width: 45px;"
         type="text"
         value="100"
       />
@@ -907,6 +911,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -1011,7 +1016,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         type="text"
         value="10"
       />
@@ -1139,6 +1144,7 @@ exports[`Stepper should renders correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -1206,7 +1212,7 @@ exports[`Stepper should renders correctly 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         value="10"
       />
       <span
@@ -1339,6 +1345,7 @@ exports[`Stepper should renders correctly disabled 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:hover:not([disabled], :focus) {
@@ -1406,7 +1413,7 @@ exports[`Stepper should renders correctly disabled 1`] = `
         class="emotion-9 emotion-10"
         disabled=""
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         value="10"
       />
       <span
@@ -1537,6 +1544,7 @@ exports[`Stepper should renders large size 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
 .emotion-8:active {
@@ -1604,7 +1612,7 @@ exports[`Stepper should renders large size 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         value="10"
       />
       <span
@@ -1731,6 +1739,7 @@ exports[`Stepper should renders small size 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 4px;
+  max-width: calc(100% - 64px);
 }
 
 .emotion-8:active {
@@ -1798,7 +1807,7 @@ exports[`Stepper should renders small size 1`] = `
       <input
         class="emotion-9 emotion-10"
         name="stepper"
-        style="max-width: -2px; width: 35px;"
+        style="width: 35px;"
         value="10"
       />
       <span

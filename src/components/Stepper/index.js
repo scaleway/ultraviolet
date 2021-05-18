@@ -72,6 +72,7 @@ const StyledCenterTouchable = styled(Touchable)`
       ${({ theme }) => transparentize(0.7, theme.colors.primary)};
     border: 1px solid ${({ theme }) => theme.colors.primary};
   }
+  max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
 `
 
 const StyledInput = styled.input`
@@ -202,16 +203,6 @@ const Stepper = ({
   const isMinusDisabled = inputValue <= minValue || disabled
   const isPlusDisabled = inputValue >= maxValue || disabled
 
-  const centerTouchableRef = useRef(null)
-
-  const [inputMaxWidth, setInputMaxWidth] = useState()
-
-  useEffect(() => {
-    setInputMaxWidth(
-      centerTouchableRef.current && centerTouchableRef.current.offsetWidth - 2,
-    )
-  }, [inputMaxWidth, setInputMaxWidth])
-
   return (
     <StyledContainer disabled={disabled} size={size} {...props}>
       <StyledTouchable
@@ -225,6 +216,7 @@ const Stepper = ({
       </StyledTouchable>
 
       <StyledCenterTouchable
+        size={size}
         activeOpacity={0.5}
         disabled={disabled}
         onClick={() => {
@@ -233,7 +225,6 @@ const Stepper = ({
           }
         }}
         aria-label="Input"
-        ref={centerTouchableRef}
       >
         <StyledInput
           disabled={disabled}
@@ -244,7 +235,6 @@ const Stepper = ({
           onKeyDown={onKeyDown}
           ref={inputRef}
           style={{
-            maxWidth: inputMaxWidth || '100%',
             width: inputValue.toString().length * 10 + 15,
           }}
           value={inputValue.toString()} // A dom element can only have string attributes.
