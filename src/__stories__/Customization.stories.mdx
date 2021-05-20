@@ -1,12 +1,18 @@
-import { Meta, Story } from '@storybook/addon-docs/blocks'
-import { colors } from '..'
-import Box from '../..'
+import { Meta } from '@storybook/addon-docs/blocks'
+import { Box } from '..'
+import { colors } from '../theme'
 
-<Meta title="Theme/Colors" />
+<Meta title="Theme" />
 
-# Colors
+# Theming
 
-<Story name="Palette">
+Scaleway UI is based on `@emotion/react` library. It allows you to customize the theme as you need.
+
+## Colors
+
+Here are all colors that we use in Scaleway UI. You can customize them in your custom theme.
+
+<div>
   {Object.keys(colors).map(
     color =>
       color !== 'colors' && (
@@ -50,4 +56,28 @@ import Box from '../..'
         </Box>
       ),
   )}
-</Story>
+</div>
+
+## Custom theme
+
+Here is an exemple of custom theme you can use to extend and replace colors from Scaleway UI's [default theme](https://github.com/scaleway/scaleway-ui/blob/master/src/theme/index.js)
+
+```js
+import { theme as scwTheme } from '@scaleway/ui'
+const theme = {
+  ...scwTheme,
+  colors: {
+    ...scwTheme.colors, // From Scaleway UI default theme
+
+    // Replace some existing colors
+    green: '#00b303',
+    red: '#ff0800',
+    orange: '#ffae00',
+    blue: '#007bff',
+    primary: blue,
+
+    // New color to add
+    secondary: orange,
+  },
+}
+```
