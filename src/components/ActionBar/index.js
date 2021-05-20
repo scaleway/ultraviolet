@@ -33,6 +33,9 @@ const ActionBar = ({ children, rank, ...props }) => (
 
 ActionBar.propTypes = {
   children: PropTypes.node.isRequired,
+  /**
+   * The position of the bar (start at 0)
+   */
   rank: PropTypes.number,
 }
 

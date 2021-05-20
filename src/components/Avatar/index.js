@@ -75,11 +75,26 @@ Avatar.defaultProps = {
 
 Avatar.propTypes = {
   image: PropTypes.string,
+  /**
+   * Used only when `text` prop is specified
+   */
   lock: PropTypes.bool,
+  /**
+   * Size of the component
+   */
   size: PropTypes.number,
   text: PropTypes.string,
+  /**
+   * Background color when `text` prop is specified
+   */
   textBgColor: PropTypes.string,
+  /**
+   * Text color when `text` prop is specified
+   */
   textColor: PropTypes.string,
+  /**
+   * Text size when `text` prop is specified or size of the lock when `lock` is true
+   */
   textSize: PropTypes.number,
 }
 

@@ -7,96 +7,78 @@ import {
 } from '@storybook/addon-docs/blocks'
 import Alert from '..'
 
-<Meta
-  title="Components/Alert"
-  component={Alert}
-  argTypes={{
-    icon: {
-      control: {
-        type: 'string',
-      },
-    },
-    variant: {
-      control: {
-        options: ['warning', 'info', 'success'],
-        type: 'select',
-      },
-    },
-  }}
-/>
+<Meta title="Components/Alert" component={Alert} />
 
 # Alert
 
-## Variant
-
-<Description>Alert //:TODO</Description>
+<Description>Display a colored message with an icon</Description>
 
 <Canvas>
-  <Story
-    name="success"
-    args={{
-      variant: 'success',
-    }}
-  >
-    {args => (
-      <Alert {...args}>
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Alert>
-    )}
+  <Story name="Basic">
+    <Alert>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
   </Story>
-  <Story
-    name="warning"
-    args={{
-      variant: 'warning',
-    }}
-  >
-    {args => (
-      <Alert {...args}>
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Alert>
-    )}
-  </Story>
-  <Story
-    name="info"
-    args={{
-      variant: 'info',
-    }}
-  >
-    {args => (
-      <Alert {...args}>
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Alert>
-    )}
+</Canvas>
+
+## Variant
+
+<Description>
+  You can choose the look of the `Alert` by using the `variant` prop.
+</Description>
+
+<Canvas>
+  <Story name="Variant">
+    <Alert variant="success">
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
+    <Alert variant="warning">
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
+    <Alert variant="info">
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
   </Story>
 </Canvas>
 
 ## Icon
 
-For basic variants, icon is automatically added. A specific one can be set using `icon` prop. All [icons](/docs-components-icon) are supported.
-
-You can also change icon size using `iconSize` prop.
+<Description>
+  You can change the default icon of a variant by using `icon` prop. All
+  [icons](/docs/components-icon) are supported.
+</Description>
 
 <Canvas>
-  <Story
-    name="success-icon"
-    args={{
-      icon: 'lock',
-      variant: 'success',
-    }}
-  >
-    {args => (
-      <Alert {...args}>
-        This text is quite long. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </Alert>
-    )}
+  <Story name="Icon">
+    <Alert icon="lock">
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
+  </Story>
+</Canvas>
+
+## Icon Size
+
+<Description>
+  You can change the default icon size by using `iconSize` prop.
+</Description>
+
+<Canvas>
+  <Story name="Icon size">
+    <Alert iconSize={64}>
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </Alert>
   </Story>
 </Canvas>
 

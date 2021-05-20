@@ -1,8 +1,8 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Button from '../Button'
-import Icon from '../Icon'
+import Button, { buttonVariants } from '../Button'
+import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
 const action = rounded => css`
@@ -17,7 +17,7 @@ const action = rounded => css`
   ${rounded && `border-radius: 16px;`}
 `
 
-const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
+const Action = ({ name, size, children, tooltip, rounded, ...props }) => {
   if (!name && !children) {
     throw new Error(
       'Action component need to have either children (as string) or a name prop',
@@ -25,7 +25,7 @@ const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
   }
 
   return (
-    <Tooltip key={key} text={tooltip}>
+    <Tooltip text={tooltip}>
       <Button css={action(rounded)} {...props}>
         {name && <Icon size={size} name={name} />}
         {children}
@@ -36,9 +36,14 @@ const Action = ({ key, name, size, children, tooltip, rounded, ...props }) => {
 
 Action.propTypes = {
   children: PropTypes.node,
-  key: PropTypes.string,
-  name: PropTypes.string,
+  /**
+   * Name of the icon. All [icons](/?path=/docs/components-icon) are supported.
+   */
+  name: PropTypes.oneOf(icons),
   rounded: PropTypes.bool,
+  /**
+   * Size of the icon (can't be greater than 32)
+   */
   size: (props, propName, componentName) => {
     const { [propName]: propsPropName } = props
     if (typeof propsPropName !== 'number' || propsPropName > 32) {
@@ -50,12 +55,11 @@ Action.propTypes = {
     return null
   },
   tooltip: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(buttonVariants),
 }
 
 Action.defaultProps = {
   children: null,
-  key: undefined,
   name: undefined,
   rounded: false,
   size: 20,
