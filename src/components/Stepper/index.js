@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
-import onKeyOnlyNumbers from '../../helpers/keycode'
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -22,86 +22,63 @@ const disabledStyles = ({ disabled, theme }) =>
   `
 
 const containerSizes = {
-  large: '48px',
-  medium: '40px',
-  small: '32px',
+  large: 48,
+  medium: 40,
+  small: 32,
 }
 
-const buttonSizes = {
-  large: '16px',
-  medium: '10px',
-  small: '4px',
+const iconSizes = {
+  large: 26,
+  medium: 24,
+  small: 22,
 }
+
+const StyledIcon = styled(Icon)``
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop),
 })`
-  border: 1px solid ${({ theme }) => theme.colors.gray350};
-
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
+  border-radius: 4px;
+  width: ${({ size }) => containerSizes[size] - 10}px;
 
-  :hover,
-  :focus {
-    > svg {
-      fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
-    }
+  > ${StyledIcon} {
+    fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
   }
 
-  ${({ position, size, theme }) =>
-    position === 'left'
-      ? `
-      border-right-width: 0;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      border-radius: 4px 0 0 4px;
-      padding: 0 ${buttonSizes[size]};
-      border-right: ${size === 'large' ? '0' : '1px'} solid ${
-          theme.colors.gray350
-        };
-    `
-      : `
-          border-left-width: 0;
-          border-radius: 0 4px 4px 0;
-          padding: 0 ${buttonSizes[size]};
-          border-left: ${size === 'large' ? '0' : '1px'} solid ${
-          theme.colors.gray350
-        };
-    `}
-`
+  :hover:not([disabled]) {
+    background: ${({ theme }) => theme.colors.gray200};
+  }
 
-const StyledSeparator = styled('span', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.gray350};
-  ${({ size }) => (size !== 'large' ? 'display: none' : '')};
+  margin: 0 4px;
 `
 
 const StyledCenterTouchable = styled(Touchable)`
   flex: 1;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   align-items: center;
   outline: none;
   justify-content: center;
-  border: 1px solid ${({ theme }) => theme.colors.gray350};
-
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  :hover:not([disabled], :focus) {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+  :focus-within:not([disabled]) {
+    box-shadow: 0 0 2px 2px
+      ${({ theme }) => transparentize(0.7, theme.colors.primary)};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+  max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
 `
 
 const StyledInput = styled.input`
   pointer-events: none;
   color: ${({ theme }) => theme.colors.gray700};
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -116,14 +93,16 @@ const StyledInput = styled.input`
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop),
 })`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.gray100 : theme.colors.white};
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: stretch;
   font-weight: 500;
-  height: ${({ size }) => containerSizes[size]};
-
+  height: ${({ size }) => containerSizes[size]}px;
+  border: 1px solid ${({ theme }) => theme.colors.gray300};
+  border-radius: 4px;
   ${({ disabled, theme }) =>
     disabled &&
     `
@@ -201,6 +180,26 @@ const Stepper = ({
     if (onBlur) onBlur(event)
   }
 
+  const onKeyDown = e => {
+    // Arrow Up
+    if (e.keyCode === 38) {
+      e.stopPropagation()
+      e.preventDefault()
+      if (inputValue + step <= maxValue) {
+        setInputValue(inputValue + step)
+      }
+    }
+
+    // Arrow Down
+    if (e.keyCode === 40) {
+      e.stopPropagation()
+      e.preventDefault()
+      if (inputValue - step >= minValue) {
+        setInputValue(inputValue - step)
+      }
+    }
+  }
+
   const isMinusDisabled = inputValue <= minValue || disabled
   const isPlusDisabled = inputValue >= maxValue || disabled
 
@@ -213,14 +212,11 @@ const Stepper = ({
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <Icon name="minus" size={size === 'large' ? 28 : 18} color="gray300" />
-
-        <StyledSeparator size={size} style={{ right: 0 }}>
-          |
-        </StyledSeparator>
+        <StyledIcon name="minus" size={iconSizes[size]} color="gray300" />
       </StyledTouchable>
 
       <StyledCenterTouchable
+        size={size}
         activeOpacity={0.5}
         disabled={disabled}
         onClick={() => {
@@ -228,7 +224,6 @@ const Stepper = ({
             inputRef.current.focus()
           }
         }}
-        px={1}
         aria-label="Input"
       >
         <StyledInput
@@ -237,9 +232,11 @@ const Stepper = ({
           onBlur={handleOnBlur}
           onChange={handleChange}
           onFocus={handleOnFocus}
-          onKeyPress={onKeyOnlyNumbers}
+          onKeyDown={onKeyDown}
           ref={inputRef}
-          style={{ width: inputValue.toString().length * 10 + 15 }}
+          style={{
+            width: inputValue.toString().length * 10 + 15,
+          }}
           value={inputValue.toString()} // A dom element can only have string attributes.
         />
 
@@ -255,10 +252,7 @@ const Stepper = ({
         disabled={isPlusDisabled}
         aria-label="Plus"
       >
-        <StyledSeparator size={size} style={{ left: 0 }}>
-          |
-        </StyledSeparator>
-        <Icon name="plus" size={size === 'large' ? 28 : 18} color="gray300" />
+        <StyledIcon name="plus" size={iconSizes[size]} />
       </StyledTouchable>
     </StyledContainer>
   )

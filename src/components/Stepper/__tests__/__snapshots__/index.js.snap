@@ -20,6 +20,8 @@ exports[`Stepper should click on min button 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -35,7 +37,6 @@ exports[`Stepper should click on min button 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -44,44 +45,34 @@ exports[`Stepper should click on min button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -100,7 +91,7 @@ exports[`Stepper should click on min button 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,24 +101,27 @@ exports[`Stepper should click on min button 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -139,41 +133,16 @@ exports[`Stepper should click on min button 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -185,48 +154,36 @@ exports[`Stepper should click on min button 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 25px;"
         value="8"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -258,6 +215,8 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -273,7 +232,6 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -282,44 +240,34 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -338,7 +286,7 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -348,24 +296,27 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -377,41 +328,16 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -423,48 +349,36 @@ exports[`Stepper should click on plus button with a step value 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         value="30"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -496,6 +410,8 @@ exports[`Stepper should focus input and modify value 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -511,7 +427,6 @@ exports[`Stepper should focus input and modify value 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -520,44 +435,34 @@ exports[`Stepper should focus input and modify value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -576,7 +481,7 @@ exports[`Stepper should focus input and modify value 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -586,24 +491,27 @@ exports[`Stepper should focus input and modify value 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -615,41 +523,16 @@ exports[`Stepper should focus input and modify value 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -661,49 +544,37 @@ exports[`Stepper should focus input and modify value 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         type="text"
         value="20"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -735,6 +606,8 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -750,7 +623,6 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -759,44 +631,34 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -815,7 +677,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -825,24 +687,27 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -854,7 +719,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
+.emotion-14 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -866,7 +731,6 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   padding: 0;
   margin: 0;
   opacity: 0.5;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -875,14 +739,27 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
+}
+
+.emotion-14:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -894,50 +771,38 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 45px;"
         type="text"
         value="100"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-14"
       disabled=""
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -969,6 +834,8 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -983,7 +850,6 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   padding: 0;
   margin: 0;
   opacity: 0.5;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -992,39 +858,30 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1043,7 +900,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1053,24 +910,27 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -1082,7 +942,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
+.emotion-14 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1095,7 +955,6 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1104,19 +963,31 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
+.emotion-14>.emotion-4 {
   fill: #4f0599;
+}
+
+.emotion-14:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -1129,49 +1000,37 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         type="text"
         value="10"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-14"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -1203,6 +1062,8 @@ exports[`Stepper should renders correctly 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -1218,7 +1079,6 @@ exports[`Stepper should renders correctly 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1227,44 +1087,34 @@ exports[`Stepper should renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1283,7 +1133,7 @@ exports[`Stepper should renders correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1293,24 +1143,27 @@ exports[`Stepper should renders correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -1322,41 +1175,16 @@ exports[`Stepper should renders correctly 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -1368,50 +1196,38 @@ exports[`Stepper should renders correctly 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       >
         unit
       </span>
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -1426,7 +1242,7 @@ exports[`Stepper should renders correctly 1`] = `
 exports[`Stepper should renders correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
+  background-color: #f6f5f7;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1443,11 +1259,13 @@ exports[`Stepper should renders correctly disabled 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-1>.emotion-2,
-.emotion-1 .emotion-11,
-.emotion-1 .emotion-8 {
+.emotion-1 .emotion-10,
+.emotion-1 .emotion-7 {
   background-color: #f6f5f7;
   border: none;
   color: #b2b6c3;
@@ -1467,7 +1285,6 @@ exports[`Stepper should renders correctly disabled 1`] = `
   padding: 0;
   margin: 0;
   opacity: 0.5;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1476,39 +1293,30 @@ exports[`Stepper should renders correctly disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1526,7 +1334,7 @@ exports[`Stepper should renders correctly disabled 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1536,20 +1344,23 @@ exports[`Stepper should renders correctly disabled 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
 }
 
-.emotion-10 {
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -1561,35 +1372,16 @@ exports[`Stepper should renders correctly disabled 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  opacity: 0.5;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -1603,35 +1395,29 @@ exports[`Stepper should renders correctly disabled 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       disabled=""
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         disabled=""
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         disabled=""
       >
         unit
@@ -1639,18 +1425,12 @@ exports[`Stepper should renders correctly disabled 1`] = `
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       disabled=""
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -1682,6 +1462,8 @@ exports[`Stepper should renders large size 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 48px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -1697,7 +1479,6 @@ exports[`Stepper should renders large size 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1706,44 +1487,34 @@ exports[`Stepper should renders large size 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 16px;
-  border-right: 0 solid #d4dae7;
+  border-radius: 4px;
+  width: 38px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
+  fill: #dce1eb;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1762,7 +1533,7 @@ exports[`Stepper should renders large size 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1772,24 +1543,27 @@ exports[`Stepper should renders large size 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 96px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -1801,41 +1575,16 @@ exports[`Stepper should renders large size 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 16px;
-  border-left: 0 solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -1847,48 +1596,36 @@ exports[`Stepper should renders large size 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
@@ -1920,6 +1657,8 @@ exports[`Stepper should renders small size 1`] = `
   align-self: stretch;
   font-weight: 500;
   height: 32px;
+  border: 1px solid #dce1eb;
+  border-radius: 4px;
 }
 
 .emotion-3 {
@@ -1935,7 +1674,6 @@ exports[`Stepper should renders small size 1`] = `
   margin: 0;
   cursor: pointer;
   touch-action: manipulation;
-  border: 1px solid #d4dae7;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1944,45 +1682,34 @@ exports[`Stepper should renders small size 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  height: calc(100% - 8px);
   position: relative;
-  border-right-width: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-radius: 4px 0 0 4px;
-  padding: 0 4px;
-  border-right: 1px solid #d4dae7;
+  border-radius: 4px;
+  width: 22px;
+  margin: 0 4px;
 }
 
-.emotion-3:hover>svg,
-.emotion-3:focus>svg {
+.emotion-3>.emotion-4 {
   fill: #4f0599;
 }
 
-.emotion-5 {
-  fill: #dce1eb;
-  height: 18px;
-  width: 18px;
-  min-width: 18px;
-  min-height: 18px;
-}
-
-.emotion-5.emotion-5 {
-  vertical-align: middle;
+.emotion-3:hover:not([disabled]) {
+  background: #eeeeff;
 }
 
 .emotion-6 {
-  position: absolute;
-  font-size: 30px;
-  top: 7px;
-  font-weight: 500;
-  color: #d4dae7;
-  display: none;
+  fill: #dce1eb;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
 }
 
-.emotion-9 {
+.emotion-6.emotion-6 {
+  vertical-align: middle;
+}
+
+.emotion-8 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2001,7 +1728,7 @@ exports[`Stepper should renders small size 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100%;
+  height: calc(100% - 8px);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2011,24 +1738,27 @@ exports[`Stepper should renders small size 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 1px solid #d4dae7;
-  border-left-width: 0;
-  border-right-width: 0;
+  border-radius: 4px;
+  max-width: calc(100% - 64px);
 }
 
-.emotion-9.emotion-9 {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-
-.emotion-9:active {
+.emotion-8:active {
   opacity: 0.5;
 }
 
-.emotion-10 {
+.emotion-8:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.emotion-8:focus-within:not([disabled]) {
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
+  border: 1px solid #4f0599;
+}
+
+.emotion-9 {
   pointer-events: none;
   color: #4a4f62;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 16;
   border: none;
   text-align: right;
@@ -2040,41 +1770,16 @@ exports[`Stepper should renders small size 1`] = `
   text-align: center;
 }
 
-.emotion-15 {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
-  border: 1px solid #d4dae7;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
-  position: relative;
-  border-left-width: 0;
-  border-radius: 0 4px 4px 0;
-  padding: 0 4px;
-  border-left: 1px solid #d4dae7;
+.emotion-17 {
+  fill: currentColor;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
 }
 
-.emotion-15:hover>svg,
-.emotion-15:focus>svg {
-  fill: #4f0599;
+.emotion-17.emotion-17 {
+  vertical-align: middle;
 }
 
 <div
@@ -2086,48 +1791,36 @@ exports[`Stepper should renders small size 1`] = `
       type="button"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-6"
         viewBox="0 0 24 24"
       >
         <path
           d="M19,13H5V11H19V13Z"
         />
       </svg>
-      <span
-        class="emotion-6 emotion-7"
-        style="right: 0px;"
-      >
-        |
-      </span>
     </button>
     <button
       aria-label="Input"
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
       type="button"
     >
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
         name="stepper"
         style="width: 35px;"
         value="10"
       />
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9 emotion-10"
       />
     </button>
     <button
       aria-label="Plus"
-      class="emotion-2 emotion-15"
+      class="emotion-2 emotion-3"
       type="button"
     >
-      <span
-        class="emotion-6 emotion-7"
-        style="left: 0px;"
-      >
-        |
-      </span>
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="emotion-4 emotion-5 emotion-17"
         viewBox="0 0 24 24"
       >
         <path
