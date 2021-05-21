@@ -33,6 +33,9 @@ const Alert = ({ variant, icon, children, iconSize, ...props }) => (
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
+  /**
+   * All [icons](/?path=/docs/components-icon) are supported.
+   */
   icon: PropTypes.oneOf(icons),
   iconSize: PropTypes.number,
   variant: PropTypes.oneOf(alertVariants),

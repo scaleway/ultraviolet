@@ -13,18 +13,24 @@ import { icons } from '../../Icon'
 
 # Action
 
-## Basic
+<Description>
+  Action is an icon button that act as a native HTML `button`.
+</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Action name="lock" />
   </Story>
 </Canvas>
 
 ## Variant
 
+<Description>
+  Using `variant` prop you can change the look and feel of the component.
+</Description>
+
 <Canvas>
-  <Story name="variant">
+  <Story name="Variant">
     {buttonVariants.map(variant => (
       <Action name="lock" variant={variant} mr={2} />
     ))}
@@ -33,11 +39,13 @@ import { icons } from '../../Icon'
 
 ## Size
 
-<Description>Set size using `size` property.</Description>
-<Description>size will throw an error if size &gt; 32 </Description>
+<Description>
+  Set size using `size` prop. It will throw an error if it is greater than
+  **32**.
+</Description>
 
 <Canvas>
-  <Story name="size">
+  <Story name="Size">
     {[10, 18, 24, 32].map(size => (
       <Action key={size} name="lock" variant="secondary" size={size} mr={2} />
     ))}
@@ -46,8 +54,10 @@ import { icons } from '../../Icon'
 
 ## Disabled
 
+<Description>Disable the component with `disabled` prop.</Description>
+
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Action name="lock" mr={2} disabled />
   </Story>
 </Canvas>
@@ -57,7 +67,7 @@ import { icons } from '../../Icon'
 <Description>You can change the icon by setting `name` prop.</Description>
 
 <Canvas>
-  <Story name="icon">
+  <Story name="Icon">
     {icons.map(icon => (
       <Action key={icon} name={icon} mr={2} mb={2} />
     ))}
@@ -66,8 +76,10 @@ import { icons } from '../../Icon'
 
 ## Rounded
 
+<Description>Make the button rounded by adding `rounded` prop.</Description>
+
 <Canvas>
-  <Story name="rounded">
+  <Story name="Rounded">
     <Action name="lock" rounded />
   </Story>
 </Canvas>
@@ -77,7 +89,7 @@ import { icons } from '../../Icon'
 <Description>Set tooltip using `tooltip` property.</Description>
 
 <Canvas>
-  <Story name="tooltip">
+  <Story name="Tooltip">
     <Action name="lock" variant="primary" tooltip="I am locked" />
   </Story>
 </Canvas>
@@ -90,7 +102,7 @@ import { icons } from '../../Icon'
 </Description>
 
 <Canvas>
-  <Story name="string">
+  <Story name="String">
     <Action variant="secondary-bordered" width={32}>
       hello
     </Action>

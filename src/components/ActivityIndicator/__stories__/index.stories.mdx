@@ -6,96 +6,46 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import ActivityIndicator from '..'
+import Box from '../../Box'
 
-<Meta
-  title="Components/ActivityIndicator"
-  component={ActivityIndicator}
-  argTypes={{
-    color: {
-      control: {
-        type: 'string',
-      },
-    },
-    size: {
-      control: {
-        type: 'number',
-      },
-    },
-  }}
-/>
+<Meta title="Components/ActivityIndicator" component={ActivityIndicator} />
 
 # ActivityIndicator
 
-<Description of={ActivityIndicator}>
-  Component that indicate a loading period.
-</Description>
-
-## Basic
+<Description>Component that indicate a loading period.</Description>
 
 <Canvas>
-  <Story name="default">
+  <Story name="Basic">
     <ActivityIndicator size={24} />
   </Story>
 </Canvas>
 
 ## Size
 
+<Description>
+  You can set the size of the component with the `size` prop.
+</Description>
+
 <Canvas>
-  <Story
-    name="40"
-    args={{
-      size: 40,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
-  </Story>
-  <Story
-    name="50"
-    args={{
-      size: 50,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
-  </Story>
-  <Story
-    name="60"
-    args={{
-      size: 60,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
+  <Story name="Size">
+    <Box display="flex" alignItems="center">
+      <ActivityIndicator size={40} />
+      <ActivityIndicator size={60} mx={1} />
+      <ActivityIndicator size={80} />
+    </Box>
   </Story>
 </Canvas>
 
 ## Color
 
+You can set the color of the component by using the `color` prop. You can use theme color or a custom one.
+
 <Canvas>
-  <Story
-    name="primary"
-    args={{
-      color: 'primary',
-      size: 24,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
-  </Story>
-  <Story
-    name="success"
-    args={{
-      color: 'success',
-      size: 24,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
-  </Story>
-  <Story
-    name="warning"
-    args={{
-      color: 'warning',
-      size: 24,
-    }}
-  >
-    {args => <ActivityIndicator {...args} />}
+  <Story name="Color">
+    <Box display="flex">
+      <ActivityIndicator mr={1} size={24} color="warning" />
+      <ActivityIndicator size={24} color="#000" />
+    </Box>
   </Story>
 </Canvas>
 
