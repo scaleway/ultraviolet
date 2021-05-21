@@ -1,3 +1,21 @@
+## [0.80.0](https://github.com/scaleway/scaleway-ui/compare/v0.79.2...v0.80.0) (2021-05-21)
+
+
+### :memo: Documentation
+
+* index and customization ([#359](https://github.com/scaleway/scaleway-ui/issues/359)) ([1735948](https://github.com/scaleway/scaleway-ui/commit/17359482ad0b11957c7bd172df08c56fdea59dff))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/use-i18n from 2.1.0 to 2.1.2 ([#367](https://github.com/scaleway/scaleway-ui/issues/367)) ([df86f16](https://github.com/scaleway/scaleway-ui/commit/df86f1672df71f8d9764b005028b6e30dd08275c))
+* **deps-dev:** bump postcss from 8.2.15 to 8.3.0 ([#369](https://github.com/scaleway/scaleway-ui/issues/369)) ([4ede66c](https://github.com/scaleway/scaleway-ui/commit/4ede66c6867333971abec75261c137a030feb620))
+
+
+### :gear: Features
+
+* **stepper:** new design ([#349](https://github.com/scaleway/scaleway-ui/issues/349)) ([9ff694b](https://github.com/scaleway/scaleway-ui/commit/9ff694b9f9c1598f7d1166c742c65e0a25b01433))
+
 ### [0.79.2](https://github.com/scaleway/scaleway-ui/compare/v0.79.1...v0.79.2) (2021-05-18)
 
 
