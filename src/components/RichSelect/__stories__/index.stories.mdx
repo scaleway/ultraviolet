@@ -89,6 +89,19 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
+### Searchable
+
+<Canvas>
+  <Story name="Searchable" height="175px">
+    <Box m={2}>
+      <RichSelect name="searchable" isSearchable>
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
+
 ### Required
 
 <Canvas>
@@ -120,7 +133,7 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Option Disabled" height="175px">
     <Box m={2}>
-      <RichSelect name="option-disabled">
+      <RichSelect inputId="test" labelId="test-label" name="option-disabled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b" disabled>
           Option B
@@ -154,30 +167,33 @@ of RichSelect with an external way (check example with button).
   <Story name="Animated" height="400px">
     <Box mx={8} my={2}>
       <ControlValue value="">
-        {({ value, onChange }) => (
-          <>
-            <Button
-              onClick={() => onChange({ label: 'pulse', value: 'pulse' })}
-              mb={4}
-            >
-              Select pulse animation
-            </Button>
-            <RichSelect
-              name="animated"
-              animationOnChange
-              animation={value.value}
-              animationDuration={1000}
-              value={value}
-              onChange={onChange}
-            >
-              {Object.keys(animations).map(animation => (
-                <RichSelect.Option key={animation} value={animation}>
-                  {animation}
-                </RichSelect.Option>
-              ))}
-            </RichSelect>
-          </>
-        )}
+        {({ value, onChange }) => {
+          const [options] = useState(
+            Object.keys(animations).map(animation => ({
+              label: animation,
+              value: animation,
+            })),
+          )
+          return (
+            <>
+              <Button
+                onClick={() => onChange({ label: 'pulse', value: 'pulse' })}
+                mb={4}
+              >
+                Select pulse animation
+              </Button>
+              <RichSelect
+                name="animated"
+                animationOnChange
+                animation={value.value}
+                animationDuration={1000}
+                value={value}
+                onChange={onChange}
+                options={options}
+              />
+            </>
+          )
+        }}
       </ControlValue>
     </Box>
   </Story>
@@ -291,13 +307,25 @@ of RichSelect with an external way (check example with button).
             }}
           >
             <RichSelect.Option value="a">Option A</RichSelect.Option>
-            <RichSelect.Option value="b">Option B</RichSelect.Option>
+            {!isLoading && (
+              <RichSelect.Option value="b">Option B</RichSelect.Option>
+            )}
           </RichSelect>
         </Box>
       )
     }}
   </Story>
 </Canvas>
+
+## Known issues
+
+### RichSelect doesn't keep focus on selected option
+
+<Description>
+  RichSelect is based on the `react-select` library. To keep the focus on the
+  selected option you need to use `options` prop with a memoized value or a
+  memoized `children`
+</Description>
 
 ## Properties
 

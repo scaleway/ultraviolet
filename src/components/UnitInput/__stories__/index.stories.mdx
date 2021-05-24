@@ -80,7 +80,7 @@ Where label is text shown in RichSelect component and value the value that will 
 <Canvas isColumn>
   <Story name="Sizes" height="400px">
     {['small', 'medium', 'large'].map(size => (
-      <div style={{ marginTop: '8px' }}>
+      <div key={size} style={{ marginTop: '8px' }}>
         {size}:
         <UnitInput name="basic-time" size={size} />
       </div>

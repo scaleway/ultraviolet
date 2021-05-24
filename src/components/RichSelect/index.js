@@ -29,7 +29,6 @@ const getPlaceholderColor = ({ state, error, theme }) => {
 const getOptionColor = ({ state, theme }) => {
   let color = theme.colors.gray700
   let backgroundColor = theme.colors.white
-
   if (state.isDisabled) {
     backgroundColor = theme.colors.gray50
     color = theme.colors.gray300
@@ -101,6 +100,12 @@ const getSelectStyles = ({
     ...provided,
     maxHeight: '48px',
   }),
+  input: provided => ({
+    ...provided,
+    flexGrow: 1,
+    marginLeft: 0,
+    paddingTop: 0,
+  }),
   menu: (provided, state) => ({
     ...provided,
     ...((customStyle(state) || {}).menu || {}),
@@ -125,6 +130,7 @@ const getSelectStyles = ({
     fontWeight: 500,
     height: '24px',
     justifyContent: 'center',
+    marginTop: '11px',
     textOverflow: 'ellipsis',
     ...((customStyle(state) || {}).multiValue || {}),
   }),
@@ -181,7 +187,7 @@ const getSelectStyles = ({
     color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
     marginLeft: state.hasValue && 0,
     marginRight: state.hasValue && 0,
-    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '8px',
+    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '5px',
     paddingLeft: state.hasValue && 0,
     ...((customStyle(state) || {}).singleValue || {}),
   }),
@@ -280,9 +286,11 @@ SelectContainer.propTypes = {
   innerProps: PropTypes.shape({}),
   isDisabled: PropTypes.bool,
   selectProps: PropTypes.shape({
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    inputId: PropTypes.string,
+    labelId: PropTypes.string,
     mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     ml: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     mr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -301,42 +309,42 @@ SelectContainer.propTypes = {
 }
 
 const StyledPlaceholder = styled(Box, {
-  shouldForwardProp: prop => !['error', 'scaled'].includes(prop),
+  shouldForwardProp: prop =>
+    !['error', 'hasValue', 'isDisabled', 'isMulti'].includes(prop),
 })`
   position: absolute;
   left: 0;
-  top: 6px;
   font-weight: 400;
   pointer-events: none;
   color: ${({ theme }) => theme.colors.gray550};
   white-space: nowrap;
   width: 100%;
-  height: 48px;
+  height: 100%;
   font-size: 16px;
   transition: transform 250ms ease;
   opacity: 0;
 
   ${({ error, theme }) => error && `color: ${theme.colors.warning};`}
-  ${({ scaled }) =>
-    scaled &&
+  ${({ hasValue }) =>
+    hasValue &&
     `
     transform: translate(0, -8px) scale(0.8);
     transform-origin: left;
     padding-left: 8px;
     left: 0;
-    top: 0;
+    top: 2px;
     opacity: 1;
   `}
+
+  ${({ isDisabled, hasValue }) =>
+    hasValue && isDisabled ? 'opacity: 0.5' : ''}
 `
 
 const ValueContainer = ({
-  noTopLabel,
-  labelId,
-  inputId,
   isDisabled,
   error,
   children,
-  selectProps,
+  selectProps: { labelId, inputId, noTopLabel, ...selectProps },
   isMulti,
   hasValue,
   ...props
@@ -349,18 +357,20 @@ const ValueContainer = ({
     {...props}
   >
     <>
-      {!isDisabled && selectProps.placeholder && !noTopLabel && !isMulti && (
+      {selectProps.placeholder && !noTopLabel ? (
         <StyledPlaceholder
           as="label"
           id={labelId}
           htmlFor={inputId}
           aria-live="assertive"
           error={error}
-          scaled={hasValue && !isMulti}
+          isMulti={isMulti}
+          isDisabled={isDisabled}
+          hasValue={hasValue}
         >
           {selectProps.placeholder}
         </StyledPlaceholder>
-      )}
+      ) : null}
       {children}
     </>
   </components.ValueContainer>
@@ -370,10 +380,8 @@ ValueContainer.defaultProps = {
   children: null,
   error: undefined,
   hasValue: false,
-  inputId: undefined,
   isDisabled: false,
   isMulti: false,
-  labelId: undefined,
   noTopLabel: false,
   selectProps: {},
 }
@@ -381,53 +389,64 @@ ValueContainer.propTypes = {
   children: PropTypes.node,
   error: PropTypes.string,
   hasValue: PropTypes.bool,
-  inputId: PropTypes.string,
   isDisabled: PropTypes.bool,
   isMulti: PropTypes.bool,
-  labelId: PropTypes.string,
   noTopLabel: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
 }
 
-const inputStyles = css`
-  input {
-    position: absolute;
-    top: 50%;
-  }
+const inputStyles = ({ hasValue, noTopLabel, placeholder }) => css`
+  padding-top: ${(placeholder && hasValue) || noTopLabel ? 11 : 0}px;
+  margin-left: 0px;
 `
 
-const Input = ({ inputId, labelId, isMulti, ...props }) => (
+const Input = ({
+  isMulti,
+  hasValue,
+  selectProps: { inputId, labelId, noTopLabel, placeholder, ...selectProps },
+  ...props
+}) => (
   <components.Input
     {...props}
-    css={inputStyles}
+    css={inputStyles({ hasValue, noTopLabel, placeholder })}
     style={{
       caretColor: !isMulti && 'transparent',
     }}
     id={inputId}
     aria-controls={labelId}
+    selectProps={{ ...selectProps, placeholder }}
   />
 )
-
 Input.propTypes = {
-  inputId: PropTypes.string,
+  hasValue: PropTypes.bool,
   isMulti: PropTypes.bool,
-  labelId: PropTypes.string,
+  selectProps: SelectContainer.propTypes.selectProps,
+  value: PropTypes.string,
 }
 
 Input.defaultProps = {
-  inputId: undefined,
+  hasValue: false,
   isMulti: false,
-  labelId: undefined,
+  selectProps: {},
+  value: '',
 }
 
-const Option = ({ selectProps, value, label, ...props }) => (
+const Option = ({
+  selectProps: { error, ...selectProps },
+  value,
+  label,
+  ...props
+}) => (
   <div
     data-testid={`option-${selectProps.name}-${
       isJSONString(value) ? label : value
     }`}
   >
     <components.Option
-      selectProps={selectProps}
+      selectProps={{
+        ...selectProps,
+        error: typeof error === 'string' ? error : undefined,
+      }}
       value={value}
       label={label}
       {...props}
@@ -448,18 +467,16 @@ Option.propTypes = {
 }
 
 const DropdownIndicator = ({
-  error,
   isDisabled,
-  selectProps: { checked, time, required },
+  selectProps: { error, time, required },
   ...props
 }) => {
   const color = useMemo(() => {
     if (isDisabled) return 'gray300'
-    if (checked) return 'primary'
     if (error) return 'warning'
 
     return 'gray350'
-  }, [isDisabled, checked, error])
+  }, [isDisabled, error])
 
   return (
     <components.DropdownIndicator {...props}>
@@ -486,9 +503,8 @@ DropdownIndicator.defaultProps = {
 }
 
 const ClearIndicator = ({
-  error,
   isDisabled,
-  selectProps: { checked },
+  selectProps: { checked, error },
   ...props
 }) => {
   const {
@@ -523,7 +539,7 @@ ClearIndicator.defaultProps = {
 ClearIndicator.propTypes = {
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   innerProps: PropTypes.shape({
-    ref: {},
+    ref: PropTypes.shape({}),
   }),
   isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
@@ -566,9 +582,22 @@ function RichSelect({
   value,
   ...props
 }) {
-  const inputId = inputIdProp || getUUID('input')
-  const labelId = labelIdProp || getUUID('label')
+  const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
+  const labelId = useMemo(() => labelIdProp || getUUID('label'), [labelIdProp])
   const theme = useTheme()
+
+  // Options need to keep the same reference otherwise react-select doesn't focus the selected option
+  const selectOptions = useMemo(
+    () =>
+      options ||
+      flattenChildren(children).map(
+        ({ props: { children: subChildren, ...subProps } } = {}) => ({
+          ...subProps,
+          label: subChildren,
+        }),
+      ),
+    [options, children],
+  )
 
   const [isAnimated, setIsAnimated] = useState(false)
 
@@ -581,35 +610,16 @@ function RichSelect({
 
   return (
     <Select
-      ref={innerRef}
       components={{
-        ClearIndicator: clearIndicatorProps => (
-          <ClearIndicator error={error} {...clearIndicatorProps} />
-        ),
-        DropdownIndicator: dropDownIndicatorProps => (
-          <DropdownIndicator error={error} {...dropDownIndicatorProps} />
-        ),
-        Input: inputProps => (
-          <Input
-            inputId={inputId}
-            labelId={labelId}
-            isMulti={isMulti}
-            {...inputProps}
-          />
-        ),
+        ClearIndicator,
+        DropdownIndicator,
+        Input,
         MultiValueContainer,
         MultiValueLabel,
         MultiValueRemove,
         Option,
         SelectContainer,
-        ValueContainer: valueContainerProps => (
-          <ValueContainer
-            noTopLabel={noTopLabel}
-            labelId={labelId}
-            inputId={inputId}
-            {...valueContainerProps}
-          />
-        ),
+        ValueContainer,
         ...customComponents,
       }}
       placeholder={placeholder}
@@ -624,23 +634,18 @@ function RichSelect({
         noTopLabel,
         theme,
       })}
-      options={
-        options ||
-        flattenChildren(children).map(
-          ({ props: { children: subChildren, ...subProps } } = {}) => ({
-            ...subProps,
-            label: subChildren,
-          }),
-        )
-      }
-      menuPortalTarget={menuPortalTarget || document.getElementById(inputId)}
+      options={selectOptions}
+      menuPortalTarget={menuPortalTarget || undefined}
       isSearchable={isSearchable}
       isClearable={isClearable}
       isMulti={isMulti}
       onChange={onChange}
       value={value}
       maxMenuHeight={250}
-      error={typeof error === 'string' ? error : undefined}
+      error={error}
+      inputId={inputId}
+      labelId={labelId}
+      noTopLabel={noTopLabel}
       {...props}
     />
   )
