@@ -26,7 +26,12 @@ import * as animations from '../../../utils/animations'
 <Canvas>
   <Story name="Uncontrolled" height="175px">
     <Box m={2}>
-      <RichSelect name="uncontrolled">
+      <RichSelect
+        isClearable
+        disabled
+        name="uncontrolled"
+        value={{ label: 'Option A', value: 'a' }}
+      >
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>

@@ -1,15 +1,13 @@
-import { ClassNames, css, useTheme } from '@emotion/react'
+import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
   ToastContainer as BaseToastContainer,
   toast as baseToast,
 } from 'react-toastify'
-import { injectStyle } from 'react-toastify/dist/inject-style'
+import style from 'react-toastify/dist/ReactToastify.min.css'
 import Icon from '../Icon'
 import NotificationBar from '../NotificationBar'
-
-injectStyle()
 
 const PREFIX = '.Toastify'
 
@@ -128,15 +126,18 @@ const ToastContainer = props => {
   const theme = useTheme()
 
   return (
-    <ClassNames>
-      {({ css: localCss }) => (
-        <BaseToastContainer
-          closeButton={<CloseButton />}
-          toastClassName={localCss(styles.toast(theme))}
-          {...props}
-        />
-      )}
-    </ClassNames>
+    <>
+      <Global styles={style} />
+      <ClassNames>
+        {({ css: localCss }) => (
+          <BaseToastContainer
+            closeButton={<CloseButton />}
+            toastClassName={localCss(styles.toast(theme))}
+            {...props}
+          />
+        )}
+      </ClassNames>
+    </>
   )
 }
 
