@@ -36,28 +36,16 @@ import Button, { buttonSizes, buttonVariants } from '..'
 
 # Button
 
-## Variants and Sizes Table
-
 <Description>
-  Set variant and size using `variant` and `size` property.
+  Button component is commonly used for actions into a web application. You can
+  set various of settings to let it have the behavior you want.
 </Description>
 
+## Basic
+
 <Canvas>
-  <Story name="button">
-    {buttonVariants.map(variant => (
-      <div key={variant} className="row">
-        {buttonSizes.map(size => (
-          <div key={size} className="button">
-            <Button size={size} variant={variant}>
-              BUTTON
-            </Button>
-            <span className="legend">
-              {size} {variant}
-            </span>
-          </div>
-        ))}
-      </div>
-    ))}
+  <Story name="Basic">
+    <Button>BUTTON</Button>
   </Story>
 </Canvas>
 
@@ -66,7 +54,7 @@ import Button, { buttonSizes, buttonVariants } from '..'
 <Description>Set variant using `variant` property.</Description>
 
 <Canvas>
-  <Story name="btn-variants">
+  <Story name="Variants">
     {buttonVariants.map(variant => (
       <Button key={variant} variant={variant} m={2}>
         {variant}
@@ -80,7 +68,7 @@ import Button, { buttonSizes, buttonVariants } from '..'
 <Description>Set size using `size` property.</Description>
 
 <Canvas>
-  <Story name="btn-sizes">
+  <Story name="Sizes">
     {buttonSizes.map(size => (
       <Button key={size} size={size} m={2}>
         {size}
@@ -94,12 +82,10 @@ import Button, { buttonSizes, buttonVariants } from '..'
 <Description>Set disabled using `disabled` property.</Description>
 
 <Canvas>
-  <Story name="btn-disabled">
-    {buttonVariants.map(variant => (
-      <Button key={variant} variant={variant} disabled m={2}>
-        {variant} disabled
-      </Button>
-    ))}
+  <Story name="Disabled">
+    <Button disabled m={2}>
+      disabled
+    </Button>
   </Story>
 </Canvas>
 
@@ -110,26 +96,26 @@ import Button, { buttonSizes, buttonVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story name="btn-progress">
-    <div>
-      {buttonSizes.map(size => (
-        <Button key={`left-${size}`} size={size} progress="left" m={2}>
-          {size} left progress
-        </Button>
-      ))}
-    </div>
-    <div>
-      {buttonSizes.map(size => (
-        <Button key={`right-${size}`} size={size} progress="right" m={2}>
-          {size} right progress
-        </Button>
-      ))}
-    </div>
-    <div>
-      {buttonSizes.map(size => (
-        <Button key={size} size={size} progress m={2} />
-      ))}
-    </div>
+  <Story name="Progress">
+    <Button progress="left" m={2}>
+      left progress
+    </Button>
+    <Button progress="right" m={2}>
+      right progress
+    </Button>
+  </Story>
+</Canvas>
+
+## Progress Only
+
+<Description>
+  Add `displayProgressOnly` if you want your button to have only a progress
+  circle in it.
+</Description>
+
+<Canvas>
+  <Story name="Progress Only">
+    <Button displayProgressOnly progress="right" m={2} />
   </Story>
 </Canvas>
 
@@ -141,15 +127,11 @@ import Button, { buttonSizes, buttonVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story name="btn-icons">
-    {buttonSizes.map(size => (
-      <React.Fragment key={size}>
-        <Button size={size} icon="lock" m={2}>
-          Icon + Text
-        </Button>
-        <Button size={size} icon="lock" m={2} />
-      </React.Fragment>
-    ))}
+  <Story name="Icons">
+    <Button icon="lock" m={2} />
+    <Button icon="lock" m={2}>
+      With text
+    </Button>
   </Story>
 </Canvas>
 
@@ -161,7 +143,7 @@ import Button, { buttonSizes, buttonVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story name="btn-icons-position">
+  <Story name="Icons Position">
     {['left', 'right'].map(position => (
       <Button key={position} iconPosition={position} icon="lock" m={2}>
         {position}
@@ -177,12 +159,22 @@ import Button, { buttonSizes, buttonVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story name="btn-extend">
-    {buttonSizes.map(size => (
-      <Button key={size} extend size={size} icon="plus" m={2}>
-        {size} extend
-      </Button>
-    ))}
+  <Story name="Extend">
+    <Button extend icon="plus" m={2}>
+      extend
+    </Button>
+  </Story>
+</Canvas>
+
+## Download
+
+<Description>
+  Use `download` prop if you want to make it a downloadable button.
+</Description>
+
+<Canvas>
+  <Story name="Download">
+    <Button download m={2} icon="download" />
   </Story>
 </Canvas>
 
@@ -194,11 +186,13 @@ import Button, { buttonSizes, buttonVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story name="btn-link">
+  <Story name="Link">
     <Button to="https://scaleway.com" target="_blank">
       Scaleway
     </Button>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Button} />

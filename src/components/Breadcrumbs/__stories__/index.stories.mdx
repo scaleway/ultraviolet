@@ -5,34 +5,19 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import Breadcrumbs, { breadcrumbsVariants } from '..'
+import Breadcrumbs, { Item } from '..'
 
-<Meta
-  title="Components/Breadcrumbs"
-  component={Breadcrumbs}
-  argTypes={{
-    activeIndex: {
-      control: {
-        type: 'number',
-      },
-    },
-    variant: {
-      control: {
-        options: breadcrumbsVariants,
-        type: 'select',
-      },
-    },
-  }}
-/>
+<Meta title="Components/Breadcrumbs" component={Breadcrumbs} />
 
 # Breadcrumbs
 
 <Description>Creates a Breadcrumbs of hierarchical pages.</Description>
-
 <Description>Link are automatically supported with `to` prop.</Description>
 
+## Basic
+
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Breadcrumbs>
       <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
       <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>
@@ -41,38 +26,23 @@ import Breadcrumbs, { breadcrumbsVariants } from '..'
   </Story>
 </Canvas>
 
-## `variant`
+## Variants
 
 <Canvas>
-  <Story
-    name="Breadcrumbs-bubble"
-    args={{
-      activeIndex: 1,
-      variant: 'bubble',
-    }}
-  >
-    {args => (
-      <Breadcrumbs {...args}>
-        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-      </Breadcrumbs>
-    )}
-  </Story>
-  <Story
-    name="Breadcrumbs-link"
-    args={{
-      activeIndex: 1,
-      variant: 'link',
-    }}
-  >
-    {args => (
-      <Breadcrumbs {...args}>
-        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-      </Breadcrumbs>
-    )}
+  <Story name="Variants">
+    <b>Bubble:</b>
+    <Breadcrumbs activeIndex={1} variant="bubble">
+      <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+    <br />
+    <b>Link:</b>
+    <Breadcrumbs activeIndex={1} variant="link">
+      <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
   </Story>
 </Canvas>
 
@@ -84,23 +54,21 @@ import Breadcrumbs, { breadcrumbsVariants } from '..'
 </Description>
 
 <Canvas>
-  <Story
-    name="Breadcrumbs-active"
-    args={{
-      activeIndex: 0,
-      variant: 'bubble',
-    }}
-  >
-    {args => (
-      <Breadcrumbs {...args}>
-        <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-      </Breadcrumbs>
-    )}
+  <Story name="Active Index">
+    <Breadcrumbs activeIndex={1} variant="bubble">
+      <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
   </Story>
 </Canvas>
 
+## API
+
+### `<Breadcrumbs>`
+
 <ArgsTable of={Breadcrumbs} />
 
-<ArgsTable of={Breadcrumbs.Item} />
+### `<Breadcrumbs.Item>`
+
+<ArgsTable of={Item} />

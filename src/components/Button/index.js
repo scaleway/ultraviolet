@@ -364,6 +364,9 @@ const propTypes = {
   download: PropTypes.string,
   extend: PropTypes.bool,
   href: PropTypes.string,
+  /**
+   * Name of the icon. All [icons](/?path=/docs/components-icon) are supported.
+   */
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   innerRef: PropTypes.func,

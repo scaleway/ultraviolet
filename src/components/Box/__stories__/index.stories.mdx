@@ -12,13 +12,23 @@ import Box from '..'
 # Box
 
 <Description>
-  System based Box, see [xstyled docs](https://xstyled.dev/docs/).
+  Box is base on [xstyled](https://xstyled.dev/docs/) `x.div`. You can use a
+  `Box` for wrapping your components in it and apply style on them.
+</Description>
+
+## Basic
+
+<Description>
+  In the example we have a `Box` with primary background, a height of `100px`,
+  margin x `auto` and padding of `16px`.
 </Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Box backgroundColor="primary" height={100} mx="auto" p={2} />
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Box} />

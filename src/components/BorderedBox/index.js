@@ -51,6 +51,9 @@ const BorderedBox = ({ children, variant, to, href, as, ...props }) => (
 )
 
 BorderedBox.propTypes = {
+  /**
+   * Allow you to change tag type.
+   */
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
