@@ -223,6 +223,8 @@ exports[`RichSelect renders correctly animated 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -230,12 +232,8 @@ exports[`RichSelect renders correctly animated 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -245,11 +243,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -476,6 +470,8 @@ exports[`RichSelect renders correctly animated 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -483,12 +479,8 @@ exports[`RichSelect renders correctly animated 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -498,11 +490,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -797,6 +785,8 @@ exports[`RichSelect renders correctly controlled 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -804,12 +794,8 @@ exports[`RichSelect renders correctly controlled 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -819,11 +805,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1023,7 +1005,9 @@ exports[`RichSelect renders correctly controlled 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-12 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -1031,12 +1015,8 @@ exports[`RichSelect renders correctly controlled 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
+.emotion-13 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1046,11 +1026,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1344,95 +1320,18 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   color: hsl(0, 0%, 20%);
 }
 
-.emotion-14 {
-  fill: #d4dae7;
+.emotion-12 {
+  vertical-align: middle;
+  margin-right: 0;
+  fill: #dce1eb;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
-  top: 100%;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1),0 4px 11px hsla(0, 0%, 0%, 0.1);
-  margin-bottom: 8px;
-  margin-top: 8px;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-.emotion-16 {
-  max-height: 225px;
-  overflow-y: auto;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
-
-.emotion-17 {
-  background-color: #eeeeff;
-  color: #4a4f62;
-  cursor: default;
-  display: block;
-  font-size: inherit;
-  padding: 8px 12px;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-}
-
-.emotion-17:active {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-17:hover {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-18 {
-  background-color: #fff;
-  color: #4a4f62;
-  cursor: default;
-  display: block;
-  font-size: inherit;
-  padding: 8px 12px;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-}
-
-.emotion-18:active {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-18:hover {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-19 {
+.emotion-13 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1442,11 +1341,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-19.emotion-19 {
-  overflow: hidden;
-}
-
-.emotion-20.emotion-20 {
+.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -1646,7 +1541,9 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   color: hsl(0, 0%, 20%);
 }
 
-.emotion-14 {
+.emotion-12 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -1654,87 +1551,8 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
-  top: 100%;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1),0 4px 11px hsla(0, 0%, 0%, 0.1);
-  margin-bottom: 8px;
-  margin-top: 8px;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  box-sizing: border-box;
-}
-
-.emotion-16 {
-  max-height: 225px;
-  overflow-y: auto;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
-
-.emotion-17 {
-  background-color: #eeeeff;
-  color: #4a4f62;
-  cursor: default;
-  display: block;
-  font-size: inherit;
-  padding: 8px 12px;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-}
-
-.emotion-17:active {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-17:hover {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-18 {
-  background-color: #fff;
-  color: #4a4f62;
-  cursor: default;
-  display: block;
-  font-size: inherit;
-  padding: 8px 12px;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-}
-
-.emotion-18:active {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-18:hover {
-  background-color: #eeeeff;
-  color: #4a4f62;
-}
-
-.emotion-19 {
+.emotion-13 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1744,11 +1562,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-19.emotion-19 {
-  overflow: hidden;
-}
-
-.emotion-20.emotion-20 {
+.emotion-14 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2025,6 +1839,53 @@ exports[`RichSelect renders correctly disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 4px;
+  padding-right: 4px;
+  box-sizing: border-box;
+  color: #dce1eb;
+  cursor: none;
+  pointer-events: none;
+}
+
+.emotion-7:hover {
+  color: #dce1eb;
+  cursor: none;
+  pointer-events: none;
+}
+
+.emotion-9 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-10 {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: hidden;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+}
+
+.emotion-11 input {
+  position: absolute;
+  top: 50%;
+}
+
+.emotion-12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2067,7 +1928,9 @@ exports[`RichSelect renders correctly disabled 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-16 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #dce1eb;
   height: 11px;
   width: 11px;
@@ -2075,12 +1938,8 @@ exports[`RichSelect renders correctly disabled 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
+.emotion-17 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2090,11 +1949,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-18 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2281,19 +2136,26 @@ exports[`RichSelect renders correctly disabled 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
+  vertical-align: middle;
+  margin-right: 16px;
+  fill: #d4dae7;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
+.emotion-16 {
   vertical-align: middle;
-  margin-right: 0;
+  fill: #ef5774;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
 }
 
-.emotion-15 {
+.emotion-17 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2303,11 +2165,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-18 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2584,19 +2442,17 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
-}
-
-.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
+  fill: #d4dae7;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2606,11 +2462,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -2797,19 +2649,17 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
-}
-
-.emotion-14.emotion-14 {
   vertical-align: middle;
   margin-right: 0;
+  fill: #ef5774;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2819,11 +2669,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -11797,19 +11643,17 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
+  vertical-align: middle;
+  margin-right: 0;
+  fill: #d4dae7;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -11819,11 +11663,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -12129,6 +11969,141 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
+  fill: #d4dae7;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.emotion-15 {
+  overflow: hidden;
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-16 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+<div
+    class=" emotion-0 emotion-1"
+    data-testid="rich-select-test"
+  >
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="emotion-2"
+    />
+    <div
+      class=" emotion-3"
+    >
+      <div
+        class=" emotion-4"
+      >
+        <label
+          aria-live="assertive"
+          class="emotion-5 emotion-6"
+          for="test"
+          id="test-label"
+        >
+          Select...
+        </label>
+        <div
+          class=" emotion-7"
+        >
+          Select...
+        </div>
+        <div
+          class="emotion-8"
+        >
+          <div
+            class="emotion-9"
+            style="caret-color: transparent; display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-controls="test-label"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-10"
+      >
+        <span
+          class=" emotion-11"
+        />
+        <div
+          aria-hidden="true"
+          class=" emotion-12"
+        >
+          <svg
+            class="sc-ui-icon emotion-13 emotion-14"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.88,18.29l-9-8.55a2.75,2.75,0,0,1,0-4,3.12,3.12,0,0,1,4.24,0L12,12.25l6.88-6.54a3.12,3.12,0,0,1,4.24,0,2.75,2.75,0,0,1,0,4l-9,8.55a3.12,3.12,0,0,1-4.24,0Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input
+      name="test"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="emotion-15"
+    >
+      <div
+        class="emotion-16"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+.emotion-12 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-12:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-14 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -12371,6 +12346,8 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -12378,12 +12355,8 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -12393,11 +12366,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -12694,19 +12663,17 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
+  vertical-align: middle;
+  margin-right: 0;
+  fill: #d4dae7;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -12716,11 +12683,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -12923,19 +12886,17 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
 }
 
 .emotion-14 {
-  fill: #dce1eb;
+  vertical-align: middle;
+  margin-right: 0;
+  fill: #d4dae7;
   height: 11px;
   width: 11px;
   min-width: 11px;
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -12945,11 +12906,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -13240,6 +13197,8 @@ exports[`RichSelect should render correctly with portal 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -13247,12 +13206,8 @@ exports[`RichSelect should render correctly with portal 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -13262,11 +13217,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -13466,7 +13417,9 @@ exports[`RichSelect should render correctly with portal 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-14 {
+.emotion-18 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -13474,12 +13427,8 @@ exports[`RichSelect should render correctly with portal 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
+.emotion-19 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -13489,11 +13438,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-20 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -13790,7 +13735,31 @@ exports[`RichSelect should render correctly without children 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
+.emotion-13 {
+  vertical-align: middle;
+  cursor: pointer;
+  fill: #d4dae7;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .emotion-14 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: #eeeeff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -13798,12 +13767,8 @@ exports[`RichSelect should render correctly without children 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
-.emotion-15 {
+.emotion-18 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -13813,11 +13778,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-19 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
@@ -14018,6 +13979,8 @@ exports[`RichSelect should render correctly without children 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -14025,12 +13988,8 @@ exports[`RichSelect should render correctly without children 1`] = `
   min-height: 11px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -14040,11 +13999,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;

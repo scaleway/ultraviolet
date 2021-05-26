@@ -3,6 +3,9 @@
 exports[`Sphere renders correctly when halved 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  width: 32px;
+  height: 32px;
+  position: relative;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -24,12 +27,6 @@ exports[`Sphere renders correctly when halved 1`] = `
   border-radius: 50%;
 }
 
-.emotion-1.emotion-1 {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
 <div
     class="emotion-0 emotion-1"
   />
@@ -39,6 +36,9 @@ exports[`Sphere renders correctly when halved 1`] = `
 exports[`Sphere renders correctly with default values 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  width: 32px;
+  height: 32px;
+  position: relative;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -60,12 +60,6 @@ exports[`Sphere renders correctly with default values 1`] = `
   border-radius: 50%;
 }
 
-.emotion-1.emotion-1 {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
 <div
     class="emotion-0 emotion-1"
   />
@@ -75,6 +69,9 @@ exports[`Sphere renders correctly with default values 1`] = `
 exports[`Sphere renders correctly with one char and smaller 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -94,12 +91,6 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   border-right: 10px solid #000;
   border-bottom: 10px solid #000;
   border-radius: 50%;
-}
-
-.emotion-1.emotion-1 {
-  width: 20px;
-  height: 20px;
-  position: relative;
 }
 
 .emotion-2 {

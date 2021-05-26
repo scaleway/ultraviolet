@@ -2,7 +2,7 @@
 
 exports[`IconMessage renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0.emotion-0 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,11 +20,12 @@ exports[`IconMessage renders correctly 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1 {
   margin-right: 16px;
 }
 
 .emotion-3 {
+  vertical-align: middle;
   fill: #ef5774;
   height: 40px;
   width: 40px;
@@ -32,21 +33,14 @@ exports[`IconMessage renders correctly 1`] = `
   min-height: 40px;
 }
 
-.emotion-3.emotion-3 {
-  vertical-align: middle;
-}
-
 .emotion-6 {
+  color: #ef5774;
+  font-weight: 700;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
   color: #ef5774;
-}
-
-.emotion-6.emotion-6 {
-  color: #ef5774;
-  font-weight: 700;
 }
 
 <div
@@ -79,7 +73,7 @@ exports[`IconMessage renders correctly 1`] = `
 
 exports[`IconMessage renders correctly with variant and icon 1`] = `
 <DocumentFragment>
-  .emotion-0.emotion-0 {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,11 +91,12 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-1 {
   margin-right: 16px;
 }
 
 .emotion-3 {
+  vertical-align: middle;
   fill: #4f0599;
   height: 40px;
   width: 40px;
@@ -109,21 +104,14 @@ exports[`IconMessage renders correctly with variant and icon 1`] = `
   min-height: 40px;
 }
 
-.emotion-3.emotion-3 {
-  vertical-align: middle;
-}
-
 .emotion-6 {
+  color: #4f0599;
+  font-weight: 700;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
   color: #4f0599;
-}
-
-.emotion-6.emotion-6 {
-  color: #4f0599;
-  font-weight: 700;
 }
 
 <div

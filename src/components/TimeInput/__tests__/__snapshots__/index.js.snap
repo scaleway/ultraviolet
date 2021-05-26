@@ -215,6 +215,8 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 .emotion-14 {
+  vertical-align: middle;
+  margin-right: 0;
   fill: #d4dae7;
   height: 24px;
   width: 24px;
@@ -222,12 +224,8 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.emotion-14.emotion-14 {
-  vertical-align: middle;
-  margin-right: 0;
-}
-
 .emotion-15 {
+  overflow: hidden;
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -237,11 +235,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
-.emotion-15.emotion-15 {
-  overflow: hidden;
-}
-
-.emotion-16.emotion-16 {
+.emotion-16 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
