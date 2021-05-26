@@ -47,7 +47,7 @@ const UniversalLink = ({
 }
 
 UniversalLink.propTypes = {
-  as: PropTypes.node,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   href: PropTypes.string,
   rel: PropTypes.string,
