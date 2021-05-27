@@ -1,3 +1,25 @@
+### [0.80.1](https://github.com/scaleway/scaleway-ui/compare/v0.80.0...v0.80.1) (2021-05-27)
+
+
+### :memo: Documentation
+
+* add story documentation on A components ([#368](https://github.com/scaleway/scaleway-ui/issues/368)) ([4cbf77b](https://github.com/scaleway/scaleway-ui/commit/4cbf77bd2793a0ad4557bfe05a71a8ab0172ecd6))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/use-i18n from 2.1.2 to 2.1.3 ([#378](https://github.com/scaleway/scaleway-ui/issues/378)) ([bca1f37](https://github.com/scaleway/scaleway-ui/commit/bca1f375fba28b953da624b0b513d9d0211b8485))
+* **deps-dev:** bump eslint from 7.26.0 to 7.27.0 ([#371](https://github.com/scaleway/scaleway-ui/issues/371)) ([c7ce9c7](https://github.com/scaleway/scaleway-ui/commit/c7ce9c70d49dd8681e73e6e2c640babc0cde2527))
+* **deps-dev:** bump jest-junit from 12.0.0 to 12.1.0 ([#381](https://github.com/scaleway/scaleway-ui/issues/381)) ([96d6aad](https://github.com/scaleway/scaleway-ui/commit/96d6aad78bb3d7ff6dca355cee72b72c489d973b))
+* **deps-dev:** bump rollup from 2.49.0 to 2.50.1 ([#382](https://github.com/scaleway/scaleway-ui/issues/382)) ([94eaf12](https://github.com/scaleway/scaleway-ui/commit/94eaf12dc6d935850a33cce310b576acd687a92d))
+* remove old renovate config ([#374](https://github.com/scaleway/scaleway-ui/issues/374)) ([1a9e33f](https://github.com/scaleway/scaleway-ui/commit/1a9e33ff611a0bc5ca23e93f84fbe6f08aac039f))
+* **deps-dev:** bump rollup from 2.48.0 to 2.49.0 ([#370](https://github.com/scaleway/scaleway-ui/issues/370)) ([11b2329](https://github.com/scaleway/scaleway-ui/commit/11b23296a7971ff410cbfe9a172d124efebbf737))
+
+
+### :bug: Bug Fixes
+
+* **stepper:** fixed border and added tests event ([#376](https://github.com/scaleway/scaleway-ui/issues/376)) ([0b67d84](https://github.com/scaleway/scaleway-ui/commit/0b67d849dc43a1dbe07a739f2fe2b95f6cb44940))
+
 ## [0.80.0](https://github.com/scaleway/scaleway-ui/compare/v0.79.2...v0.80.0) (2021-05-21)
 
 
