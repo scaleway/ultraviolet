@@ -74,10 +74,10 @@ const Container = ({
 Container.defaultProps = {
   boxStyle: undefined,
   disabled: false,
-  edition: undefined,
+  edition: false,
   header: undefined,
   rightTitle: undefined,
-  small: undefined,
+  small: false,
   subtitle: undefined,
   title: undefined,
 }
