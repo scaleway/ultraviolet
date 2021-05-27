@@ -1,3 +1,10 @@
+### [0.80.2](https://github.com/scaleway/scaleway-ui/compare/v0.80.1...v0.80.2) (2021-05-27)
+
+
+### :bug: Bug Fixes
+
+* textbox import ([#375](https://github.com/scaleway/scaleway-ui/issues/375)) ([e2ac446](https://github.com/scaleway/scaleway-ui/commit/e2ac4468f4613481ad96a5514fe1d383328df400))
+
 ### [0.80.1](https://github.com/scaleway/scaleway-ui/compare/v0.80.0...v0.80.1) (2021-05-27)
 
 
