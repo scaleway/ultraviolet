@@ -6,9 +6,23 @@ import theme from '../src/theme'
 import { GlobalStyle } from '../src'
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { disable: true, argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
+    disable: true,
+    grid: {
+      disable: true,
+    },
+  },
+  controls: {
+    disable: true,
+  },
   viewMode: 'docs',
-  previewTabs: { canvas: { hidden: true } },
+  previewTabs: {
+    'storybook/docs/panel': { index: -1 },
+  },
+  viewport: {
+    viewports: {},
+  },
   options: {
     storySort: {
       order: ['Home', 'Theme', 'Components'],

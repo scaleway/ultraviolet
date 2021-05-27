@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
   ],
   webpackFinal: config => {
     const cwd = process.cwd()
