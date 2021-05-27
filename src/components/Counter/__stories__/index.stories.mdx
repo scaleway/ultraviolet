@@ -1,5 +1,13 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import { useState } from 'react'
 import Counter from '..'
+import { Box, Button, Icon } from '../../index'
 
 <Meta
   title="Components/Counter"
@@ -15,15 +23,67 @@ import Counter from '..'
 
 # Counter
 
-<Description>A simple counter to 20.</Description>
+<Description>A simple counter with animation until its max value.</Description>
 
 <Canvas>
-  <Story
-    name="basic"
-    args={{
-      end: 20,
-    }}
-  >
-    {args => <Counter {...args} />}
+  <Story name="Basic">
+    <Counter end={20} />
   </Story>
 </Canvas>
+
+## End Value
+
+<Description>
+  `end` properties define until what value counter is gonna go. It can be
+  positive as much as negative value.
+</Description>
+
+<Canvas>
+  <Story name="End Value">
+    <Counter end={100} />
+    <Counter end={-100} />
+  </Story>
+</Canvas>
+
+## On End Value
+
+<Description>
+  `onEnd` properties will trigger associated function at the end of counter
+  animation. In this example we show `check` icon at the end of counter.
+</Description>
+
+<Canvas>
+  <Story name="On End Value">
+    {() => {
+      const [isShown, setIsShown] = useState(false)
+      const [reset, setReset] = useState(true)
+      return (
+        <Box display="flex" alignItems="center">
+          {reset && (
+            <>
+              <Counter end={1000} onEnd={() => setIsShown(true)} />
+              {isShown && <Icon name="check" ml={1} />}
+              <Button
+                size="xxsmall"
+                onClick={() => {
+                  setIsShown(false)
+                  setReset(false)
+                  setTimeout(() => {
+                    setReset(true)
+                  })
+                }}
+                ml={2}
+              >
+                Rerender
+              </Button>
+            </>
+          )}
+        </Box>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={Counter} />

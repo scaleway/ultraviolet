@@ -1,11 +1,21 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Container from '..'
+import { Button } from '../../index'
 
 <Meta title="Components/Container" />
 
 # Container
 
-## Basic
+<Description>
+  Description wrap other component inside of it with title, sub-title, and other
+  properties.
+</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -13,35 +23,56 @@ import Container from '..'
   </Story>
 </Canvas>
 
-## With Title
+## Title
 
 <Canvas>
-  <Story name="With Title">
+  <Story name="Title">
     <Container title="Hello there">General Kenobi</Container>
   </Story>
 </Canvas>
 
-## With Custom Header
+## Right Title
 
 <Canvas>
-  <Story name="With Custom Header">
-    <Container title="Hello there" header="Header">
+  <Story name="Right Title">
+    <Container rightTitle="Hello there">General Kenobi</Container>
+  </Story>
+</Canvas>
+
+## Sub Title
+
+<Canvas>
+  <Story name="Sub Title">
+    <Container title="Hello there" subtitle="(To: General Grievous)">
       General Kenobi
     </Container>
   </Story>
 </Canvas>
 
-## With Subtitle and RightTitle
+## Custom Header
+
+<Description>
+  Use `header` properties to add a component under title of your container. In
+  this example we added a button.
+</Description>
 
 <Canvas>
-  <Story name="With Subtitle and RightTitle">
-    <Container rightTitle="Hello there" subtitle="Waza">
+  <Story name="Custom Header">
+    <Container
+      title="Hello there"
+      header={<Button size="small" mb={1} icon="auto-fix" />}
+    >
       General Kenobi
     </Container>
   </Story>
 </Canvas>
 
 ## Disabled
+
+<Description>
+  Disabled properties will only disable children of the container. Title,
+  sub-title and header will remain unchanged.
+</Description>
 
 <Canvas>
   <Story name="Disabled">

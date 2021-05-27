@@ -1,14 +1,40 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Command from '..'
 
 <Meta title="Components/Command" component={Command} />
 
 # Command
 
-<Description>Command</Description>
+<Description>Display designed command.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Command>halt</Command>
   </Story>
 </Canvas>
+
+## Color
+
+<Canvas>
+  <Story name="Color">
+    <Command color="warning">halt</Command>
+  </Story>
+</Canvas>
+
+## Background Color
+
+<Canvas>
+  <Story name="Background Color">
+    <Command backgroundColor="gray200">halt</Command>
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={Command} />

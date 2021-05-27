@@ -12,10 +12,8 @@ import Box from '../../Box'
 
 # CategoryIcon
 
-<Description>CategoryIcon</Description>
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     {availableIcons.map(name => (
       <Box
         display="flex"
@@ -24,17 +22,21 @@ import Box from '../../Box'
         key={name}
         style={{ fontSize: '1.3em' }}
       >
-        <CategoryIcon name={name} />
-        &nbsp;&nbsp;&nbsp;{name}
+        <CategoryIcon name={name} mr={2} />
+        {name}
       </Box>
     ))}
   </Story>
 </Canvas>
 
-## Custom size
+## Size
+
+<Description>
+  You can change the size of the icon using `size` properties.
+</Description>
 
 <Canvas>
-  <Story name="custom-size">
+  <Story name="Size">
     {availableIcons.map(name => (
       <Box
         display="flex"
@@ -42,12 +44,15 @@ import Box from '../../Box'
         my={1}
         key={name}
         style={{ fontSize: '1.3em' }}
+        mb={2}
       >
-        <CategoryIcon size={64} name={name} />
-        &nbsp;&nbsp;&nbsp;{name}
+        <CategoryIcon size={64} name={name} mr={2} />
+        {name}
       </Box>
     ))}
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={CategoryIcon} />
