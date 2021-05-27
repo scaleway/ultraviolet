@@ -20,14 +20,19 @@ const customStyles = {
 }
 
 describe('RichSelect', () => {
-  test('renders correctly uncontrolled', () => {
+  test('renders correctly uncontrolled', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="uncontrolled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
-    )
-  })
+      {
+        transform: async node => {
+          const input = node.getByRole('textbox')
+          userEvent.click(input)
+        },
+      },
+    ))
 
   test('renders correctly with custom styles', () => {
     shouldMatchEmotionSnapshot(
@@ -98,7 +103,7 @@ describe('RichSelect', () => {
     )
   })
 
-  test('renders correctly with click', () => {
+  test('renders correctly with click', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -106,14 +111,13 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const container = node.getByTestId('rich-select-test')
-          userEvent.click(container)
+          const input = node.getByRole('textbox')
+          userEvent.click(input)
         },
       },
-    )
-  })
+    ))
 
-  test('renders correctly with click and option disabled', () => {
+  test('renders correctly with click and option disabled', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -124,14 +128,13 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const container = node.getByTestId('rich-select-test')
-          userEvent.click(container)
+          const input = node.getByRole('textbox')
+          userEvent.click(input)
         },
       },
-    )
-  })
+    ))
 
-  test('renders correctly with click and options', () => {
+  test('renders correctly with click and options', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="test">
         <RichSelect.Option value="a" isFocused>
@@ -146,27 +149,20 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const container = node.getByTestId('rich-select-test')
-          userEvent.click(container)
+          const input = node.getByRole('textbox')
+          userEvent.click(input)
         },
       },
-    )
-  })
+    ))
   test('renders correctly disabled with click', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="test" disabled>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
-      {
-        transform: node => {
-          const container = node.getByTestId('rich-select-test')
-          userEvent.click(container)
-        },
-      },
     )
   })
-  test('renders correctly default values with click', () => {
+  test('renders correctly default values with click', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="test" value="a">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -174,12 +170,11 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const container = node.getByTestId('rich-select-test')
-          userEvent.click(container)
+          const input = node.getByRole('textbox')
+          userEvent.click(input)
         },
       },
-    )
-  })
+    ))
 
   test('renders correctly animated', () => {
     shouldMatchEmotionSnapshot(

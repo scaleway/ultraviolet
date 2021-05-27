@@ -65,10 +65,10 @@ const StyledInput = styled.input`
 `
 
 const convertTagArrayToTagStateArray = tags =>
-  tags.map(tag =>
+  tags.map((tag, index) =>
     typeof tag === 'object'
-      ? { ...tag, index: getUUID('tag') }
-      : { index: getUUID('tag'), label: tag },
+      ? { ...tag, index: getUUID(`tag-${index}`) }
+      : { index: getUUID(`tag-${index}`), label: tag },
   )
 
 const Tags = ({
@@ -194,7 +194,7 @@ const Tags = ({
                 : 'base'
             }
             disabled={disabled}
-            key={`tag-${tag.index}`}
+            key={tag.index}
             isLoading={status[tag.index] === 'loading'}
             onClose={e => {
               e.stopPropagation()
