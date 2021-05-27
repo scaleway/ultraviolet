@@ -64,6 +64,7 @@ const StyledCenterTouchable = styled(Touchable)`
   outline: none;
   justify-content: center;
   border-radius: 4px;
+  border: 1px solid transparent;
   :hover:not([disabled], :focus) {
     border: 1px solid ${({ theme }) => theme.colors.primary};
   }

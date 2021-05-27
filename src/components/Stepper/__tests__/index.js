@@ -35,6 +35,21 @@ describe('Stepper', () => {
     )
   })
 
+  it('should click on center button', async () => {
+    await shouldMatchEmotionSnapshot(
+      <Stepper minValue={0} step={1} maxValue={100} value={10} />,
+      {
+        transform: async ({ getByRole, getByLabelText }) => {
+          const inputButton = getByLabelText('Input')
+          const input = getByRole('textbox')
+
+          userEvent.click(inputButton)
+          await waitFor(() => expect(input.value).toBe('10'))
+        },
+      },
+    )
+  })
+
   it('should click on min button', async () => {
     await shouldMatchEmotionSnapshot(
       <Stepper minValue={0} step={1} maxValue={100} value={10} />,
@@ -135,6 +150,30 @@ describe('Stepper', () => {
           userEvent.type(input, '120')
           await waitFor(() => expect(input.value).toBe('120'))
           input.blur()
+          await waitFor(() => expect(input.value).toBe('100'))
+        },
+      },
+    )
+  })
+
+  it('should increase and decrease input with arrow up and down', async () => {
+    await shouldMatchEmotionSnapshot(
+      <Stepper minValue={10} maxValue={100} value={30} />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('textbox')
+          userEvent.click(input.parentElement)
+          userEvent.type(input, '{arrowup}')
+          await waitFor(() => expect(input.value).toBe('31'))
+          userEvent.type(input, '{arrowdown}')
+          await waitFor(() => expect(input.value).toBe('30'))
+          userEvent.clear(input)
+          userEvent.type(input, '10')
+          userEvent.type(input, '{arrowdown}')
+          await waitFor(() => expect(input.value).toBe('10'))
+          userEvent.clear(input)
+          userEvent.type(input, '100')
+          userEvent.type(input, '{arrowup}')
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },
