@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import NotificationBar from '..'
 import { Box } from '../..'
 import notificationBarVariants from './helpers'
@@ -48,3 +54,5 @@ import notificationBarVariants from './helpers'
     </NotificationBar>
   </Story>
 </Canvas>
+
+<ArgsTable of={NotificationBar} />

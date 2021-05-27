@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import MarkDown from '..'
 import { simple, withMultipleParagraphs } from './markdown_example'
 
@@ -34,3 +40,5 @@ import { simple, withMultipleParagraphs } from './markdown_example'
     <MarkDown source={withMultipleParagraphs} inline />
   </Story>
 </Canvas>
+
+<ArgsTable of={MarkDown} />
