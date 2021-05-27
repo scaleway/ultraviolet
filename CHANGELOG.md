@@ -1,3 +1,15 @@
+### [0.80.3](https://github.com/scaleway/scaleway-ui/compare/v0.80.2...v0.80.3) (2021-05-27)
+
+
+### :package: Chore
+
+* **deps:** bump docker/build-push-action from 2.4.0 to 2.5.0 ([#384](https://github.com/scaleway/scaleway-ui/issues/384)) ([cf7c68f](https://github.com/scaleway/scaleway-ui/commit/cf7c68fae2d41eb0cc986c88aba30a35017bf350))
+
+
+### :bug: Bug Fixes
+
+* rich select issues ([#372](https://github.com/scaleway/scaleway-ui/issues/372)) ([c1db37b](https://github.com/scaleway/scaleway-ui/commit/c1db37b8a38eebc26f6989e50d9f4eca3665555a))
+
 ### [0.80.2](https://github.com/scaleway/scaleway-ui/compare/v0.80.1...v0.80.2) (2021-05-27)
 
 
