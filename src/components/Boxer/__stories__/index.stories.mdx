@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Boxer from '..'
 
 <Meta title="Components/Boxer" component={Boxer} />
@@ -6,8 +12,6 @@ import Boxer from '..'
 # Boxer
 
 <Description>Wraps its children into `Box` component.</Description>
-
-## Basic
 
 <Canvas>
   <Story name="Basic">
@@ -20,6 +24,4 @@ import Boxer from '..'
 
 ## API
 
-<p style={{ fontStyle: 'italic', textAlign: 'center' }}>
-  No props for this component :)
-</p>
+<ArgsTable of={Boxer} />

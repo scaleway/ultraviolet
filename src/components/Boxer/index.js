@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import flattenChildren from 'react-flatten-children'
 import Box from '../Box'
@@ -8,5 +9,9 @@ const Boxer = ({ children, ...props }) =>
       {child}
     </Box>
   ))
+
+Boxer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Boxer
