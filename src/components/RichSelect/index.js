@@ -631,7 +631,7 @@ const RichSelectWithRef = React.forwardRef((props, ref) => (
   <RichSelect innerRef={ref} {...props} />
 ))
 
-RichSelectWithRef.Option = {}
+RichSelectWithRef.Option = () => null
 
 RichSelectWithRef.defaultProps = {
   animation: 'pulse',
