@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import MarkDown from '..'
-import { simple, withMultipleParagraphs } from './markdown_example'
+import { html, simple, withMultipleParagraphs } from './markdown_example'
 
 <Meta title="Components/MarkDown" component={MarkDown} />
 
@@ -30,15 +30,41 @@ import { simple, withMultipleParagraphs } from './markdown_example'
 </Description>
 
 <Canvas>
-  <Story name="With paragraphs">
+  <Story name="Paragraphs">
     <MarkDown source={withMultipleParagraphs} />
   </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="With paragraphs inline">
+  <Story name="Paragraphs inline">
     <MarkDown source={withMultipleParagraphs} inline />
   </Story>
 </Canvas>
+
+## Link Target
+
+<Description>
+  `linkTarget` prop allows you to specify the target props for the links inside
+  your markdown text. By default in react-markdown links are opened in a new
+  tab.
+</Description>
+
+<Canvas>
+  <Story name="Link Target">
+    <MarkDown source={simple} linkTarget="_self" />
+  </Story>
+</Canvas>
+
+## Escape HTML
+
+<Description>`escapeHtml` manages the html escape of your markdown</Description>
+
+<Canvas>
+  <Story name="Escape HTML">
+    <MarkDown source={html} escapeHtml={false} />
+  </Story>
+</Canvas>
+
+## API
 
 <ArgsTable of={MarkDown} />

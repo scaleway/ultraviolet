@@ -5,9 +5,8 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import NotificationBar from '..'
+import NotificationBar, { notificationBarVariants } from '..'
 import { Box } from '../..'
-import notificationBarVariants from './helpers'
 
 <Meta title="Components/NotificationBar" component={NotificationBar} />
 
@@ -41,18 +40,32 @@ import notificationBarVariants from './helpers'
   </Story>
 </Canvas>
 
-## Custom icon
+## Icon
 
 <Description>
   Using `icon` prop you can add a custom icon to the notification.
 </Description>
 
 <Canvas>
-  <Story name="Custom icon">
+  <Story name="Icon">
     <NotificationBar icon="clock-outline">
       This is a notification bar with a custom icon.
     </NotificationBar>
   </Story>
 </Canvas>
+
+## Icon size
+
+<Description>Using `iconSize` prop you can change the icon size.</Description>
+
+<Canvas>
+  <Story name="Icon size">
+    <NotificationBar iconSize={40}>
+      This is a notification bar with a custom icon size.
+    </NotificationBar>
+  </Story>
+</Canvas>
+
+## API
 
 <ArgsTable of={NotificationBar} />

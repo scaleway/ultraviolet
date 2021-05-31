@@ -44,6 +44,24 @@ import { Box, Boxer } from '../..'
   </Story>
 </Canvas>
 
+## Target
+
+<Description>
+  Using `target` prop you can change specify the target you want for your link.
+</Description>
+
+<Canvas>
+  <Story name="Target">
+    <Box p={2} backgroundColor="gray200">
+      <Boxer my={1}>
+        <Link href="localhost:6006" target="_blank">
+          Link opens in a new tab
+        </Link>
+      </Boxer>
+    </Box>
+  </Story>
+</Canvas>
+
 ## Absolute URLs
 
 <Description>
@@ -68,5 +86,7 @@ import { Box, Boxer } from '../..'
   By default link is a `a`. You can specify a custom component (like React
   Router Link) by changing the theme entry `linkComponent`.
 </Description>
+
+## API
 
 <ArgsTable of={Link} />

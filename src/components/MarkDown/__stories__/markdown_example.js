@@ -22,3 +22,9 @@ export const withMultipleParagraphs = `
 
   And a second one
 `
+
+export const html = `
+  <div>This is an HTML example</div>
+  <p>You can use HTML tags</p>
+  <p><b>They are not escaped</b></p>
+`

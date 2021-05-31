@@ -19,12 +19,55 @@ import Box from '../../Box'
 <Canvas>
   <Story name="Basic">
     {availableIcons.map(icon => (
-      <Box key={icon} display="flex">
+      <Box key={icon} display="flex" alignItems="center">
         <MenuIcon name={icon} />
         {icon}
       </Box>
     ))}
   </Story>
 </Canvas>
+
+## Color
+
+<Description>Use `color` to change icon color</Description>
+
+<Canvas>
+  <Story name="Color">
+    <Box display="flex" alignItems="center">
+      <MenuIcon name="billing" color="red" />
+      Red icon
+    </Box>
+  </Story>
+</Canvas>
+
+## Size
+
+<Description>Use `size` to change icon size</Description>
+
+<Canvas>
+  <Story name="Size">
+    <Box display="flex" alignItems="center">
+      <MenuIcon name="billing" size={40} />
+      Bigger icon
+    </Box>
+  </Story>
+</Canvas>
+
+## isButton
+
+<Description>
+  `isButton` set to true removes the 2px left padding of the icon
+</Description>
+
+<Canvas>
+  <Story name="isButton">
+    <Box display="flex" alignItems="center">
+      <MenuIcon name="billing" isButton />
+      Button icon
+    </Box>
+  </Story>
+</Canvas>
+
+## API
 
 <ArgsTable of={MenuIcon} />

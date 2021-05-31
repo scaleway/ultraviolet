@@ -13,7 +13,7 @@ import * as animations from '../../utils'
 import Icon from '../Icon'
 import Touchable from '../Touchable'
 
-const MODAL_WIDTH = {
+export const MODAL_WIDTH = {
   large: 850,
   medium: 708,
   small: 616,
@@ -21,7 +21,7 @@ const MODAL_WIDTH = {
   xxsmall: 360,
 }
 
-const MODAL_PLACEMENT = {
+export const MODAL_PLACEMENT = {
   bottom: `
     margin: auto;
     margin-bottom: 0;
@@ -63,7 +63,7 @@ const MODAL_PLACEMENT = {
   `,
 }
 
-const MODAL_ANNIMATION = {
+export const MODAL_ANIMATION = {
   fold: {
     enter: animations.unfoldIn,
     leave: animations.unfoldOut,
@@ -120,13 +120,13 @@ const dialogAnimatedStyle = ({ animation }) => css`
   &[data-enter] {
     opacity: 1;
     transition: opacity 500ms ease-in-out;
-    animation: ${MODAL_ANNIMATION[animation].enter} 500ms
+    animation: ${MODAL_ANIMATION[animation].enter} 500ms
       cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
   &[data-leave] {
     opacity: 0;
     transition: opacity 500ms ease-in-out;
-    animation: ${MODAL_ANNIMATION[animation].leave} 500ms
+    animation: ${MODAL_ANIMATION[animation].leave} 500ms
       cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 `
@@ -273,7 +273,7 @@ const Modal = memo(
 
 Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-  animation: PropTypes.oneOf(Object.keys(MODAL_ANNIMATION)),
+  animation: PropTypes.oneOf(Object.keys(MODAL_ANIMATION)),
   ariaLabel: PropTypes.string,
   baseId: PropTypes.string,
   bordered: PropTypes.bool,

@@ -7,7 +7,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import { Box, Button, Modal } from '../..'
-import { animations, placements, widths } from './helpers'
+import { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '../index'
 
 <Meta title="Components/Modal" component={Modal} />
 
@@ -61,7 +61,7 @@ import { animations, placements, widths } from './helpers'
 
 <Canvas>
   <Story name="Animated">
-    {animations.map(animation => (
+    {Object.keys(MODAL_ANIMATION).map(animation => (
       <Box p={2} key={animation} display="inline-block">
         <Modal
           animated
@@ -81,7 +81,7 @@ import { animations, placements, widths } from './helpers'
 
 <Canvas>
   <Story name="Width">
-    {widths.map(width => (
+    {Object.keys(MODAL_WIDTH).map(width => (
       <Box p={2} key={width} display="inline-block">
         <Modal width={width} disclosure={() => <Button>{width}</Button>}>
           <Box p={4}>Content of the {width} modal</Box>
@@ -99,7 +99,7 @@ import { animations, placements, widths } from './helpers'
 
 <Canvas>
   <Story name="Placement">
-    {placements.map(placement => (
+    {Object.keys(MODAL_PLACEMENT).map(placement => (
       <Box p={2} key={placement} display="inline-block">
         <Modal
           placement={placement}
@@ -275,5 +275,7 @@ import { animations, placements, widths } from './helpers'
     </Modal>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Modal} />

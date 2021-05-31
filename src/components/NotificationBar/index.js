@@ -62,6 +62,8 @@ const variants = {
   `,
 }
 
+export const notificationBarVariants = Object.keys(variants)
+
 const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
 
 const StyledContainer = styled(Box, {
