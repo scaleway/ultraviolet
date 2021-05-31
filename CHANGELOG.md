@@ -1,3 +1,19 @@
+## [0.81.0](https://github.com/scaleway/scaleway-ui/compare/v0.80.4...v0.81.0) (2021-05-31)
+
+
+### :gear: Features
+
+* ssr safe rendering ([#380](https://github.com/scaleway/scaleway-ui/issues/380)) ([327d51a](https://github.com/scaleway/scaleway-ui/commit/327d51a859d95e15a6e6b8e77176abe434cc930b))
+
+
+### :package: Chore
+
+* **deps:** bump intl-tel-input from 17.0.12 to 17.0.13 ([#398](https://github.com/scaleway/scaleway-ui/issues/398)) ([89d782c](https://github.com/scaleway/scaleway-ui/commit/89d782c6579d61227154083bb07a1605afa6d1cc))
+* **deps:** bump polished from 4.1.2 to 4.1.3 ([#399](https://github.com/scaleway/scaleway-ui/issues/399)) ([715447d](https://github.com/scaleway/scaleway-ui/commit/715447d9e3ad2e837dfd368019de7e0a1c00310f))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.3 to 7.14.4 ([#393](https://github.com/scaleway/scaleway-ui/issues/393)) ([f9fdfa9](https://github.com/scaleway/scaleway-ui/commit/f9fdfa981df16d2c65ae94847c5236f47718646e))
+* **deps-dev:** bump @babel/preset-env from 7.14.2 to 7.14.4 ([#392](https://github.com/scaleway/scaleway-ui/issues/392)) ([147ea56](https://github.com/scaleway/scaleway-ui/commit/147ea5673f37c56aeae183a77384844ba1e87da3))
+* **deps-dev:** bump rollup from 2.50.2 to 2.50.5 ([#396](https://github.com/scaleway/scaleway-ui/issues/396)) ([f92a33a](https://github.com/scaleway/scaleway-ui/commit/f92a33a55cbe9618d7a78ccf540a8de2ac86d3bd))
+
 ### [0.80.4](https://github.com/scaleway/scaleway-ui/compare/v0.80.3...v0.80.4) (2021-05-31)
 
 
