@@ -1,3 +1,16 @@
+### [0.81.1](https://github.com/scaleway/scaleway-ui/compare/v0.81.0...v0.81.1) (2021-05-31)
+
+
+### :bug: Bug Fixes
+
+* richselect option ([#401](https://github.com/scaleway/scaleway-ui/issues/401)) ([02638e2](https://github.com/scaleway/scaleway-ui/commit/02638e2b7453d6f54afd388d99fc669cd6a95a6a))
+
+
+### :package: Chore
+
+* **deps:** bump @xstyled/emotion from 2.5.0 to 3.0.0 ([#373](https://github.com/scaleway/scaleway-ui/issues/373)) ([5c060ef](https://github.com/scaleway/scaleway-ui/commit/5c060efd9c01c08dbbc4f7c562cf2f2e4dbc90a1))
+* **deps-dev:** bump date-fns from 2.21.3 to 2.22.1 ([#400](https://github.com/scaleway/scaleway-ui/issues/400)) ([ae6bbb3](https://github.com/scaleway/scaleway-ui/commit/ae6bbb3ebb2775d31cdae4c8a8bb45b6e3daf033))
+
 ## [0.81.0](https://github.com/scaleway/scaleway-ui/compare/v0.80.4...v0.81.0) (2021-05-31)
 
 
