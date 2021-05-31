@@ -1,5 +1,7 @@
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Checkbox from '..'
+import renderWithTheme from '../../../helpers/renderWithTheme'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Checkbox', () => {
@@ -71,4 +73,28 @@ describe('Checkbox', () => {
         </Checkbox>
       </>,
     ))
+
+  test('renders with click event', async () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} size={37} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox')
+    userEvent.click(input)
+    expect(input.getAttribute('aria-checked')).toBe('true')
+  })
+
+  test('renders with click event with progress', async () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} size={37} value="test" progress>
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox')
+    userEvent.click(input)
+    expect(input.getAttribute('aria-checked')).toBe('true')
+  })
 })
