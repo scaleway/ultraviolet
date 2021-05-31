@@ -1,3 +1,16 @@
+### [0.80.4](https://github.com/scaleway/scaleway-ui/compare/v0.80.3...v0.80.4) (2021-05-31)
+
+
+### :package: Chore
+
+* **deps:** bump actions/cache from 2.1.5 to 2.1.6 ([#388](https://github.com/scaleway/scaleway-ui/issues/388)) ([f95ca9c](https://github.com/scaleway/scaleway-ui/commit/f95ca9ce8fea719b1fba7d57f50f4efa1bc16c94))
+* **deps-dev:** bump rollup from 2.50.1 to 2.50.2 ([#389](https://github.com/scaleway/scaleway-ui/issues/389)) ([c87cb3e](https://github.com/scaleway/scaleway-ui/commit/c87cb3eea788e45d17b7a714525d5c287a784ffc))
+
+
+### :bug: Bug Fixes
+
+* **action:** add forwardRef to button ([#390](https://github.com/scaleway/scaleway-ui/issues/390)) ([f656eb4](https://github.com/scaleway/scaleway-ui/commit/f656eb4923abf8f38cf175aa6252a4d1610a1a1c))
+
 ### [0.80.3](https://github.com/scaleway/scaleway-ui/compare/v0.80.2...v0.80.3) (2021-05-27)
 
 
