@@ -10,39 +10,35 @@ jest.mock('reakit/Tooltip', () => ({
 }))
 
 describe('TagsPoplist', () => {
-  test('renders correctly', () => {
+  test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <div>
         <TagsPoplist tags={['scaleway', 'cloud']} />{' '}
       </div>,
-    )
-  })
+    ))
 
-  test('renders correctly with not tags', () => {
+  test('renders correctly with not tags', () =>
     shouldMatchEmotionSnapshot(
       <div>
         <TagsPoplist />
       </div>,
-    )
-  })
+    ))
 
-  test('renders correctly with custom threshold', () => {
+  test('renders correctly with custom threshold', () =>
     shouldMatchEmotionSnapshot(
       <div>
         <TagsPoplist threshold={2} tags={['scaleway', 'cloud']} />
       </div>,
-    )
-  })
+    ))
 
-  test('renders correctly with custom threshold and extra tags', () => {
+  test('renders correctly with custom threshold and extra tags', () =>
     shouldMatchEmotionSnapshot(
       <div>
         <TagsPoplist threshold={2} tags={['scaleway', 'cloud', 'provider']} />
       </div>,
-    )
-  })
+    ))
 
-  test('renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags', () => {
+  test('renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags', () =>
     shouldMatchEmotionSnapshot(
       <div>
         <TagsPoplist
@@ -51,6 +47,5 @@ describe('TagsPoplist', () => {
           tags={['scaleway', 'cloud', 'provider']}
         />
       </div>,
-    )
-  })
+    ))
 })

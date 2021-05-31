@@ -7,7 +7,7 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 import theme from '../../../theme'
 
 describe('Radio', () => {
-  test('renders correctly', () => {
+  test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox
         label="Choice"
@@ -17,10 +17,9 @@ describe('Radio', () => {
       >
         Choice description
       </RadioBorderedBox>,
-    )
-  })
+    ))
 
-  test('renders correctly when disabled', () => {
+  test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox
         label="Choice"
@@ -31,10 +30,9 @@ describe('Radio', () => {
       >
         Choice description
       </RadioBorderedBox>,
-    )
-  })
+    ))
 
-  test('renders correctly when checked', () => {
+  test('renders correctly when checked', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox
         label="Choice"
@@ -45,10 +43,9 @@ describe('Radio', () => {
       >
         Choice description
       </RadioBorderedBox>,
-    )
-  })
+    ))
 
-  test('renders correctly with label desc and badge', () => {
+  test('renders correctly with label desc and badge', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox
         label="Choice"
@@ -63,8 +60,7 @@ describe('Radio', () => {
       >
         Choice description
       </RadioBorderedBox>,
-    )
-  })
+    ))
 
   test('renders correctly and triggers change on borderedbox click', async () => {
     let choice

@@ -15,21 +15,21 @@ describe('UniversalLink', () => {
     ${'renders correctly with as a'}            | ${'https://react.ui.scaleway.com'} | ${undefined}                | ${undefined} | ${'a'}
     ${'renders correctly with a tel link'}      | ${undefined}                       | ${'tel:+33666666'}          | ${'_blank'}  | ${undefined}
     ${'renders correctly with a mailto link'}   | ${undefined}                       | ${'mailto:test@test.com'}   | ${'_blank'}  | ${undefined}
-  `('$test', ({ href, to, target, as }) => {
+  `('$test', ({ href, to, target, as }) =>
     shouldMatchEmotionSnapshot(
       <BrowserRouter>
         <UniversalLink href={href} to={to} target={target} as={as}>
           This is a link
         </UniversalLink>
       </BrowserRouter>,
-    )
-  })
+    ),
+  )
 
-  test('renders correctly with modify Link on theme from react-router-dom', () => {
+  test('renders correctly with modify Link on theme from react-router-dom', async () => {
     const theme = {
       linkComponent: Link,
     }
-    shouldMatchEmotionSnapshot(
+    await shouldMatchEmotionSnapshot(
       <BrowserRouter>
         <UniversalLink to="/test-react-router-dom">
           This is a link

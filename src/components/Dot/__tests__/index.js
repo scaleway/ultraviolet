@@ -3,7 +3,6 @@ import Dot from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Button', () => {
-  test('renders correctly', () => {
-    shouldMatchEmotionSnapshot(<Dot>This is hotpink.</Dot>)
-  })
+  test('renders correctly', () =>
+    shouldMatchEmotionSnapshot(<Dot>This is hotpink.</Dot>))
 })

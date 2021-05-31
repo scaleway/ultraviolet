@@ -3,7 +3,7 @@ import Table from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Table', () => {
-  test('renders correctly', () => {
+  test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Table>
         <Table.Head>
@@ -26,10 +26,9 @@ describe('Table', () => {
           </Table.Row>
         </Table.Body>
       </Table>,
-    )
-  })
+    ))
 
-  test('renders correctly while loading', () => {
+  test('renders correctly while loading', () =>
     shouldMatchEmotionSnapshot(
       <Table>
         <Table.Head>
@@ -45,6 +44,5 @@ describe('Table', () => {
           </Table.Row>
         </Table.Body>
       </Table>,
-    )
-  })
+    ))
 })

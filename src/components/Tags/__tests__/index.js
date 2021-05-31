@@ -9,25 +9,22 @@ import Tags from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Tags', () => {
-  test('renders correctly with base props', () => {
+  test('renders correctly with base props', () =>
     shouldMatchEmotionSnapshot(
       <Tags name="radio" onChangeError={() => {}} placeholder="Tags..." />,
-    )
-  })
+    ))
 
-  test('renders correctly with some tags', () => {
+  test('renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
       <Tags onChange={() => {}} name="radio" tags={['hello', 'world']} />,
-    )
-  })
+    ))
 
-  test('renders correctly with some tags', () => {
+  test('renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
       <Tags onChange={() => {}} name="radio" tags={['hello', 'world']} />,
-    )
-  })
+    ))
 
-  test('renders correctly with some tags as objects', () => {
+  test('renders correctly with some tags as objects', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -35,10 +32,9 @@ describe('Tags', () => {
         areTagsObject
         tags={[{ label: 'hello' }, { label: 'world' }]}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when variant = bordered', () => {
+  test('renders correctly when variant = bordered', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -46,10 +42,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
         variant="bordered"
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when variant = base', () => {
+  test('renders correctly when variant = base', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -57,10 +52,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
         variant="base"
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when variant = no-border', () => {
+  test('renders correctly when variant = no-border', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -68,10 +62,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
         variant="no-border"
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when manualInput is disabled', () => {
+  test('renders correctly when manualInput is disabled', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -79,10 +72,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
         manualInput={false}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when disabled', () => {
+  test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
       <Tags
         onChange={() => {}}
@@ -90,11 +82,10 @@ describe('Tags', () => {
         tags={['hello', 'world']}
         disabled
       />,
-    )
-  })
+    ))
 
-  test('delete tag', async done => {
-    await shouldMatchEmotionSnapshot(
+  test('delete tag', () =>
+    shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -108,14 +99,12 @@ describe('Tags', () => {
           userEvent.click(input)
           userEvent.click(tagClose)
           await waitForElementToBeRemoved(() => screen.getByText('hello'))
-          done()
         },
       },
-    )
-  })
+    ))
 
-  test('add tag from input', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('add tag from input', () =>
+    shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -130,11 +119,10 @@ describe('Tags', () => {
           await expect(screen.getByText('test')).toBeInTheDocument()
         },
       },
-    )
-  })
+    ))
 
-  test('delete tag with backspace', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('delete tag with backspace', () =>
+    shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -148,11 +136,10 @@ describe('Tags', () => {
           await waitForElementToBeRemoved(() => screen.getByText('world'))
         },
       },
-    )
-  })
+    ))
 
-  test('add tag on paste', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('add tag on paste', () =>
+    shouldMatchEmotionSnapshot(
       <Tags
         id="test"
         onChange={() => {}}
@@ -169,6 +156,5 @@ describe('Tags', () => {
           await waitFor(() => screen.getByText('test'))
         },
       },
-    )
-  })
+    ))
 })

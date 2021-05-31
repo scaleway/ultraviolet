@@ -11,23 +11,21 @@ const customDialogStyles = css`
 `
 
 describe('Modal', () => {
-  test(`renders with default Props`, () => {
+  test(`renders with default Props`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal>
         <div>test</div>
       </Modal>,
-    )
-  })
+    ))
 
-  test(`renders with opened={true}`, () => {
+  test(`renders with opened={true}`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal opened>
         <div>test</div>
       </Modal>,
-    )
-  })
+    ))
 
-  test(`renders with customStyle`, () => {
+  test(`renders with customStyle`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
         opened
@@ -36,10 +34,9 @@ describe('Modal', () => {
       >
         <div>test</div>
       </Modal>,
-    )
-  })
+    ))
 
-  test(`renders with disclosure`, () => {
+  test(`renders with disclosure`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
@@ -48,13 +45,11 @@ describe('Modal', () => {
       >
         <div>modal</div>
       </Modal>,
-    )
-  })
-  test(`renders with portal node (modal=false)`, () => {
+    ))
+  test(`renders with portal node (modal=false)`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal ariaLabel="modal-test" baseId="modal-test" modal={false}>
         <div> test </div>
       </Modal>,
-    )
-  })
+    ))
 })

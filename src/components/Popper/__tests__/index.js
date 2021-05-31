@@ -4,15 +4,14 @@ import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEm
 
 describe('Popper', () => {
   // portals are not supported in test
-  test(`renders with modal=false`, () => {
+  test(`renders with modal=false`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Popper aria-label="test" modal={false} baseId="popover-test-1">
         {() => <div>test</div>}
       </Popper>,
-    )
-  })
+    ))
 
-  test(`renders with disclosure`, () => {
+  test(`renders with disclosure`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Popper
         aria-label="Custom popover with buttom"
@@ -23,6 +22,5 @@ describe('Popper', () => {
       >
         {({ placement }) => <div> {placement}</div>}
       </Popper>,
-    )
-  })
+    ))
 })

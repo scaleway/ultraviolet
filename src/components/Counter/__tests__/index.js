@@ -3,15 +3,12 @@ import Counter from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Counter', () => {
-  test('renders correctly end=0', () => {
-    shouldMatchEmotionSnapshot(<Counter end={0} />)
-  })
-
-  test('renders correctly end=100', () => {
-    shouldMatchEmotionSnapshot(<Counter end={100} />)
-  })
-
-  test('renders correctly end=10000', () => {
-    shouldMatchEmotionSnapshot(<Counter end={100} />)
-  })
+  test.each`
+    end
+    ${0}
+    ${100}
+    ${10000}
+  `('renders correctly end=$end', ({ end }) =>
+    shouldMatchEmotionSnapshot(<Counter end={end} />),
+  )
 })

@@ -3,7 +3,7 @@ import ExtendedReminder from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ExtendedReminder', () => {
-  test('renders correctly with default values', () => {
+  test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(
       <ExtendedReminder
         icon="alert"
@@ -13,10 +13,9 @@ describe('ExtendedReminder', () => {
         text="Enter the code we send to your bank account to validate your payment method."
         linkText="Verify my credit card"
       />,
-    )
-  })
+    ))
 
-  test('renders correctly with variant', () => {
+  test('renders correctly with variant', () =>
     shouldMatchEmotionSnapshot(
       <ExtendedReminder
         variant="warning"
@@ -27,10 +26,9 @@ describe('ExtendedReminder', () => {
         text="Enter the code we send to your bank account to validate your payment method."
         linkText="Verify my credit card"
       />,
-    )
-  })
+    ))
 
-  test('renders correctly without link', () => {
+  test('renders correctly without link', () =>
     shouldMatchEmotionSnapshot(
       <ExtendedReminder
         variant="warning"
@@ -39,6 +37,5 @@ describe('ExtendedReminder', () => {
         title="Verify your credit card"
         text="Enter the code we send to your bank account to validate your payment method."
       />,
-    )
-  })
+    ))
 })

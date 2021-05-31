@@ -5,18 +5,15 @@ import PhoneInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PhoneInput', () => {
-  test('renders correctly', () => {
-    shouldMatchEmotionSnapshot(<PhoneInput onChange={() => {}} />)
-  })
-  test('renders correctly disabled', () => {
-    shouldMatchEmotionSnapshot(<PhoneInput disabled disableDropdown />)
-  })
+  test('renders correctly', () =>
+    shouldMatchEmotionSnapshot(<PhoneInput onChange={() => {}} />))
+  test('renders correctly disabled', () =>
+    shouldMatchEmotionSnapshot(<PhoneInput disabled disableDropdown />))
 
-  test('renders correctly with default value', () => {
-    shouldMatchEmotionSnapshot(<PhoneInput value="+33" />)
-  })
+  test('renders correctly with default value', () =>
+    shouldMatchEmotionSnapshot(<PhoneInput value="+33" />))
 
-  test('renders correctly with props', () => {
+  test('renders correctly with props', () =>
     shouldMatchEmotionSnapshot(
       <PhoneInput
         value="+33"
@@ -28,8 +25,7 @@ describe('PhoneInput', () => {
           placeholder: '+33 6 01 02 03 04',
         }}
       />,
-    )
-  })
+    ))
   test('renders correctly with change', async () => {
     shouldMatchEmotionSnapshot(
       <PhoneInput

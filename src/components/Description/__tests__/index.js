@@ -3,7 +3,7 @@ import Description from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Description', () => {
-  test('renders correctly', () => {
+  test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Description>
         <Description.Term>Name</Description.Term>
@@ -11,10 +11,9 @@ describe('Description', () => {
         <Description.Term>Size</Description.Term>
         <Description.Desc>125 GB</Description.Desc>
       </Description>,
-    )
-  })
+    ))
 
-  test('renders correctly inline', () => {
+  test('renders correctly inline', () =>
     shouldMatchEmotionSnapshot(
       <Description inline>
         <Description.Term>Name</Description.Term>
@@ -22,10 +21,9 @@ describe('Description', () => {
         <Description.Term>Size</Description.Term>
         <Description.Desc>125 GB</Description.Desc>
       </Description>,
-    )
-  })
+    ))
 
-  test('renders correctly seletable', () => {
+  test('renders correctly seletable', () =>
     shouldMatchEmotionSnapshot(
       <Description inline selectable>
         <Description.Term>Name</Description.Term>
@@ -33,6 +31,5 @@ describe('Description', () => {
         <Description.Term>Size</Description.Term>
         <Description.Desc>125 GB</Description.Desc>
       </Description>,
-    )
-  })
+    ))
 })

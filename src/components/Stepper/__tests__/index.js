@@ -5,7 +5,7 @@ import Stepper from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Stepper', () => {
-  it('should renders correctly', () => {
+  it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Stepper
         minValue={0}
@@ -14,29 +14,25 @@ describe('Stepper', () => {
         value={10}
         onChange={() => {}}
       />,
-    )
-  })
+    ))
 
-  it('should renders correctly disabled', () => {
+  it('should renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
       <Stepper minValue={0} maxValue={100} text="unit" value={10} disabled />,
-    )
-  })
+    ))
 
-  it('should renders large size', () => {
+  it('should renders large size', () =>
     shouldMatchEmotionSnapshot(
       <Stepper minValue={0} maxValue={100} value={10} size="large" />,
-    )
-  })
+    ))
 
-  it('should renders small size', () => {
+  it('should renders small size', () =>
     shouldMatchEmotionSnapshot(
       <Stepper minValue={0} maxValue={100} value={10} size="small" />,
-    )
-  })
+    ))
 
-  it('should click on center button', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should click on center button', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
@@ -47,11 +43,10 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('10'))
         },
       },
-    )
-  })
+    ))
 
-  it('should click on min button', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should click on min button', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
@@ -65,11 +60,10 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('8'))
         },
       },
-    )
-  })
+    ))
 
-  it('should click on plus button with a step value', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should click on plus button with a step value', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper
         minValue={0}
         step={10}
@@ -89,11 +83,10 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('30'))
         },
       },
-    )
-  })
+    ))
 
-  it('should focus input and modify value', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should focus input and modify value', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper minValue={0} step={10} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
@@ -110,10 +103,9 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('20'))
         },
       },
-    )
-  })
-  it('should focus input and modify value onMinCrossed', async () => {
-    await shouldMatchEmotionSnapshot(
+    ))
+  it('should focus input and modify value onMinCrossed', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper
         minValue={10}
         maxValue={100}
@@ -131,11 +123,10 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('10'))
         },
       },
-    )
-  })
+    ))
 
-  it('should focus input and modify value onMaxCrossed', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should focus input and modify value onMaxCrossed', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper
         minValue={10}
         maxValue={100}
@@ -153,11 +144,10 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },
-    )
-  })
+    ))
 
-  it('should increase and decrease input with arrow up and down', async () => {
-    await shouldMatchEmotionSnapshot(
+  it('should increase and decrease input with arrow up and down', () =>
+    shouldMatchEmotionSnapshot(
       <Stepper minValue={10} maxValue={100} value={30} />,
       {
         transform: async ({ getByRole }) => {
@@ -177,6 +167,5 @@ describe('Stepper', () => {
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },
-    )
-  })
+    ))
 })

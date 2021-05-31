@@ -3,11 +3,10 @@ import VolumeSize from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('VolumeSize', () => {
-  test('renders correctly with minimal props', () => {
-    shouldMatchEmotionSnapshot(<VolumeSize minSize={0} value={5} unit="GB" />)
-  })
+  test('renders correctly with minimal props', () =>
+    shouldMatchEmotionSnapshot(<VolumeSize minSize={0} value={5} unit="GB" />))
 
-  test('renders correctly with all props', () => {
+  test('renders correctly with all props', () =>
     shouldMatchEmotionSnapshot(
       <VolumeSize
         maxLabel="max"
@@ -21,10 +20,9 @@ describe('VolumeSize', () => {
         tooSmallMessage="Test too small"
         value={15}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly with non modifiable value', () => {
+  test('renders correctly with non modifiable value', () =>
     shouldMatchEmotionSnapshot(
       <VolumeSize
         minSize={15}
@@ -35,10 +33,9 @@ describe('VolumeSize', () => {
         tooSmallMessage="Test too small"
         value={15}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly without maxSize', () => {
+  test('renders correctly without maxSize', () =>
     shouldMatchEmotionSnapshot(
       <VolumeSize
         minSize={0}
@@ -48,10 +45,9 @@ describe('VolumeSize', () => {
         tooSmallMessage="Test too small"
         value={15}
       />,
-    )
-  })
+    ))
 
-  test('should display too small error', () => {
+  test('should display too small error', () =>
     shouldMatchEmotionSnapshot(
       <VolumeSize
         minSize={20}
@@ -61,10 +57,9 @@ describe('VolumeSize', () => {
         tooSmallMessage="Test too small"
         value={15}
       />,
-    )
-  })
+    ))
 
-  test('should display too big error', () => {
+  test('should display too big error', () =>
     shouldMatchEmotionSnapshot(
       <VolumeSize
         minSize={0}
@@ -75,6 +70,5 @@ describe('VolumeSize', () => {
         tooSmallMessage="Test too small"
         value={25}
       />,
-    )
-  })
+    ))
 })

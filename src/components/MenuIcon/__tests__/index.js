@@ -4,12 +4,10 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('MenuIcon', () => {
   availableIcons.map(icon =>
-    test(`render simple ${icon}`, () => {
-      shouldMatchEmotionSnapshot(<MenuIcon name={icon} />)
-    }),
+    test(`render simple ${icon}`, () =>
+      shouldMatchEmotionSnapshot(<MenuIcon name={icon} />)),
   )
 
-  test(`render simple isButton`, () => {
-    shouldMatchEmotionSnapshot(<MenuIcon name="billing" isButton />)
-  })
+  test(`render simple isButton`, () =>
+    shouldMatchEmotionSnapshot(<MenuIcon name="billing" isButton />))
 })

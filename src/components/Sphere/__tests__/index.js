@@ -3,15 +3,13 @@ import Sphere from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Sphere', () => {
-  test('renders correctly with default values', () => {
-    shouldMatchEmotionSnapshot(<Sphere />)
-  })
+  test('renders correctly with default values', () =>
+    shouldMatchEmotionSnapshot(<Sphere />))
 
-  test('renders correctly when halved', () => {
-    shouldMatchEmotionSnapshot(<Sphere bgColors={['#333', '#666']} />)
-  })
+  test('renders correctly when halved', () =>
+    shouldMatchEmotionSnapshot(<Sphere bgColors={['#333', '#666']} />))
 
-  test('renders correctly with one char and smaller', () => {
+  test('renders correctly with one char and smaller', () =>
     shouldMatchEmotionSnapshot(
       <Sphere
         text="★"
@@ -20,6 +18,5 @@ describe('Sphere', () => {
         size={20}
         textSize={10}
       />,
-    )
-  })
+    ))
 })

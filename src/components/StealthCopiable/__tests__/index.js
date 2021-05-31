@@ -17,17 +17,15 @@ describe('StealthCopiable', () => {
     }
   })
 
-  it('should renders correctly', () => {
-    shouldMatchEmotionSnapshot(<StealthCopiable>Hello</StealthCopiable>)
-  })
+  it('should renders correctly', () =>
+    shouldMatchEmotionSnapshot(<StealthCopiable>Hello</StealthCopiable>))
 
-  it('should renders correctly with custom side', () => {
+  it('should renders correctly with custom side', () =>
     shouldMatchEmotionSnapshot(
       <StealthCopiable side="left">Hello</StealthCopiable>,
-    )
-  })
+    ))
 
-  it('should renders correctly with custom side', () => {
+  it('should renders correctly with custom side', () =>
     shouldMatchEmotionSnapshot(
       <StealthCopiable side="left">Hello</StealthCopiable>,
       {
@@ -36,10 +34,9 @@ describe('StealthCopiable', () => {
           expect(window.clipboardData.getData()).toBe('Hello')
         },
       },
-    )
-  })
+    ))
 
-  it('should renders correctly with a complex children', () => {
+  it('should renders correctly with a complex children', () =>
     shouldMatchEmotionSnapshot(
       <StealthCopiable side="left">
         <ComplexChild>
@@ -52,6 +49,5 @@ describe('StealthCopiable', () => {
           expect(window.clipboardData.getData()).toBe('Hello')
         },
       },
-    )
-  })
+    ))
 })
