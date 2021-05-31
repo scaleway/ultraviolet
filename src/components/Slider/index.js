@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import Box from '../Box'
 
-const blankImg = new Image()
+const blankImg = {}
 blankImg.src =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 

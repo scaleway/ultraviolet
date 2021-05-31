@@ -187,7 +187,7 @@ const getSelectStyles = ({
     color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
     marginLeft: state.hasValue && 0,
     marginRight: state.hasValue && 0,
-    marginTop: !state.hasValue || state.isDisabled || noTopLabel ? 0 : '5px',
+    marginTop: !state.hasValue || noTopLabel ? 0 : '5px',
     paddingLeft: state.hasValue && 0,
     ...((customStyle(state) || {}).singleValue || {}),
   }),
@@ -238,7 +238,7 @@ const SelectContainer = props => {
   return (
     <StyledContainer
       data-testid={`rich-select-${name}`}
-      additionalStyles={getStyles('container', props)}
+      additionalStyles={getStyles?.('container', props)}
       isDisabled={isDisabled}
       className={className}
       {...innerProps}
@@ -272,7 +272,7 @@ const SelectContainer = props => {
 
 SelectContainer.defaultProps = {
   className: '',
-  getStyles: () => {},
+  getStyles: undefined,
   innerProps: {},
   isDisabled: false,
   selectProps: {
@@ -342,15 +342,14 @@ const StyledPlaceholder = styled(Box, {
 
 const ValueContainer = ({
   isDisabled,
-  error,
   children,
-  selectProps: { labelId, inputId, noTopLabel, ...selectProps },
+  selectProps: { error, labelId, inputId, noTopLabel, ...selectProps },
   isMulti,
   hasValue,
   ...props
 }) => (
   <components.ValueContainer
-    selectProps={selectProps}
+    selectProps={{ error, ...selectProps }}
     isMulti={isMulti}
     hasValue={hasValue}
     isDisabled={isDisabled}
@@ -378,7 +377,6 @@ const ValueContainer = ({
 
 ValueContainer.defaultProps = {
   children: null,
-  error: undefined,
   hasValue: false,
   isDisabled: false,
   isMulti: false,
@@ -387,7 +385,6 @@ ValueContainer.defaultProps = {
 }
 ValueContainer.propTypes = {
   children: PropTypes.node,
-  error: PropTypes.string,
   hasValue: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isMulti: PropTypes.bool,
@@ -431,22 +428,14 @@ Input.defaultProps = {
   value: '',
 }
 
-const Option = ({
-  selectProps: { error, ...selectProps },
-  value,
-  label,
-  ...props
-}) => (
+const Option = ({ selectProps, value, label, ...props }) => (
   <div
     data-testid={`option-${selectProps.name}-${
       isJSONString(value) ? label : value
     }`}
   >
     <components.Option
-      selectProps={{
-        ...selectProps,
-        error: typeof error === 'string' ? error : undefined,
-      }}
+      selectProps={selectProps}
       value={value}
       label={label}
       {...props}
@@ -467,8 +456,7 @@ Option.propTypes = {
 }
 
 const DropdownIndicator = ({
-  isDisabled,
-  selectProps: { error, time, required },
+  selectProps: { isDisabled, error, time, required },
   ...props
 }) => {
   const color = useMemo(() => {
@@ -502,11 +490,7 @@ DropdownIndicator.defaultProps = {
   selectProps: SelectContainer.defaultProps.selectProps,
 }
 
-const ClearIndicator = ({
-  isDisabled,
-  selectProps: { checked, error },
-  ...props
-}) => {
+const ClearIndicator = ({ selectProps: { checked, error }, ...props }) => {
   const {
     innerProps: { ref, ...restInnerProps },
   } = props
@@ -517,13 +501,8 @@ const ClearIndicator = ({
         {...restInnerProps}
         name="close"
         size={20}
-        cursor={isDisabled ? 'none' : 'pointer'}
-        color={
-          (isDisabled && 'gray300') ||
-          (checked && 'primary') ||
-          (error && 'warning') ||
-          'gray350'
-        }
+        cursor="pointer"
+        color={(checked && 'primary') || (error && 'warning') || 'gray350'}
       />
     </components.ClearIndicator>
   )
@@ -532,7 +511,6 @@ const ClearIndicator = ({
 ClearIndicator.defaultProps = {
   error: undefined,
   innerProps: {},
-  isDisabled: false,
   selectProps: {},
 }
 
@@ -541,7 +519,6 @@ ClearIndicator.propTypes = {
   innerProps: PropTypes.shape({
     ref: PropTypes.shape({}),
   }),
-  isDisabled: PropTypes.bool,
   selectProps: SelectContainer.propTypes.selectProps,
 }
 
@@ -585,6 +562,7 @@ function RichSelect({
   const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
   const labelId = useMemo(() => labelIdProp || getUUID('label'), [labelIdProp])
   const theme = useTheme()
+  const [isAnimated, setIsAnimated] = useState(false)
 
   // Options need to keep the same reference otherwise react-select doesn't focus the selected option
   const selectOptions = useMemo(
@@ -598,8 +576,6 @@ function RichSelect({
       ),
     [options, children],
   )
-
-  const [isAnimated, setIsAnimated] = useState(false)
 
   useEffect(() => {
     if (animationOnChange) {
@@ -655,7 +631,7 @@ const RichSelectWithRef = React.forwardRef((props, ref) => (
   <RichSelect innerRef={ref} {...props} />
 ))
 
-RichSelectWithRef.Option = () => null
+RichSelectWithRef.Option = {}
 
 RichSelectWithRef.defaultProps = {
   animation: 'pulse',

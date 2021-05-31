@@ -2,6 +2,7 @@ import userEvent from '@testing-library/user-event'
 import React from 'react'
 import RichSelect from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 const customStyles = {
   control: () => ({}),
@@ -235,6 +236,22 @@ describe('RichSelect', () => {
       </RichSelect>,
     )
   })
+
+  test('should render correctly multi isClearable disabled', () => {
+    shouldMatchEmotionSnapshot(
+      <RichSelect
+        inputId="test"
+        labelId="test-label"
+        name="loading"
+        value={{ label: 'Option A', value: 'a' }}
+        isClearable
+        disabled
+      >
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>,
+    )
+  })
   test('should render correctly multi isSearchable', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect
@@ -250,12 +267,51 @@ describe('RichSelect', () => {
     )
   })
 
+  test('should render correctly multi isSearchable disabled', () => {
+    shouldMatchEmotionSnapshot(
+      <RichSelect
+        inputId="test"
+        labelId="test-label"
+        name="loading"
+        value={{ label: 'Option A', value: 'a' }}
+        isSearchable
+        disabled
+      >
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>,
+    )
+  })
+
   test('should render correctly isLoading', () => {
     shouldMatchEmotionSnapshot(
       <RichSelect inputId="test" labelId="test-label" name="loading" isLoading>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
+    )
+  })
+
+  test('should render correctly with portal', () => {
+    shouldMatchEmotionSnapshotWithPortal(
+      <>
+        <RichSelect
+          inputId="test"
+          labelId="test-label"
+          name="test"
+          menuPortalTarget={document.getElementById('test-portal')}
+        >
+          <RichSelect.Option value="a">Option A</RichSelect.Option>
+          <RichSelect.Option value="b">Option B</RichSelect.Option>
+        </RichSelect>
+        <div id="test-portal" />
+      </>,
+    )
+  })
+
+  test('should render correctly without children', () => {
+    shouldMatchEmotionSnapshotWithPortal(
+      <RichSelect inputId="test" labelId="test-label" name="test" />,
     )
   })
   test('should render correctly custom isLoading', () => {
