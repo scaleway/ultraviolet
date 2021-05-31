@@ -3,20 +3,17 @@
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  display: block;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-}
-
-.emotion-2.emotion-2 {
-  display: block;
 }
 
 .emotion-2:hover {
   cursor: pointer;
 }
 
-.emotion-3.emotion-3 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,6 +26,7 @@ exports[`Radio renders correctly 1`] = `
 }
 
 .emotion-5 {
+  margin-right: 4px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -43,10 +41,6 @@ exports[`Radio renders correctly 1`] = `
   font-weight: 500;
   height: 32px;
   cursor: pointer;
-}
-
-.emotion-5.emotion-5 {
-  margin-right: 4px;
 }
 
 .emotion-5:hover .emotion-6,
@@ -80,6 +74,7 @@ exports[`Radio renders correctly 1`] = `
 }
 
 .emotion-10 {
+  vertical-align: middle;
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -87,19 +82,12 @@ exports[`Radio renders correctly 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
-  vertical-align: middle;
-}
-
 .emotion-12 {
+  color: #151a2d;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-12.emotion-12 {
   color: #151a2d;
 }
 
@@ -108,7 +96,7 @@ exports[`Radio renders correctly 1`] = `
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-15 {
   margin-right: 8px;
 }
 
@@ -165,6 +153,7 @@ exports[`Radio renders correctly 1`] = `
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  display: block;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -172,15 +161,11 @@ exports[`Radio renders correctly when checked 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2.emotion-2 {
-  display: block;
-}
-
 .emotion-2:hover {
   cursor: pointer;
 }
 
-.emotion-3.emotion-3 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,6 +178,7 @@ exports[`Radio renders correctly when checked 1`] = `
 }
 
 .emotion-5 {
+  margin-right: 4px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -207,10 +193,6 @@ exports[`Radio renders correctly when checked 1`] = `
   font-weight: 500;
   height: 32px;
   cursor: pointer;
-}
-
-.emotion-5.emotion-5 {
-  margin-right: 4px;
 }
 
 .emotion-5:hover .emotion-6,
@@ -244,6 +226,7 @@ exports[`Radio renders correctly when checked 1`] = `
 }
 
 .emotion-10 {
+  vertical-align: middle;
   fill: #4f0599;
   height: 24px;
   width: 24px;
@@ -251,19 +234,12 @@ exports[`Radio renders correctly when checked 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
-  vertical-align: middle;
-}
-
 .emotion-12 {
+  color: #151a2d;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-12.emotion-12 {
   color: #151a2d;
 }
 
@@ -272,7 +248,7 @@ exports[`Radio renders correctly when checked 1`] = `
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-15 {
   margin-right: 8px;
 }
 
@@ -330,6 +306,7 @@ exports[`Radio renders correctly when checked 1`] = `
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  display: block;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -337,15 +314,11 @@ exports[`Radio renders correctly when disabled 1`] = `
   color: #dce1eb;
 }
 
-.emotion-2.emotion-2 {
-  display: block;
-}
-
 .emotion-2:hover {
   cursor: pointer;
 }
 
-.emotion-3.emotion-3 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,6 +331,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 }
 
 .emotion-5 {
+  margin-right: 4px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -374,10 +348,6 @@ exports[`Radio renders correctly when disabled 1`] = `
   cursor: pointer;
   color: #dce1eb;
   cursor: not-allowed;
-}
-
-.emotion-5.emotion-5 {
-  margin-right: 4px;
 }
 
 .emotion-7 {
@@ -400,6 +370,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 }
 
 .emotion-10 {
+  vertical-align: middle;
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -407,19 +378,12 @@ exports[`Radio renders correctly when disabled 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
-  vertical-align: middle;
-}
-
 .emotion-12 {
+  color: #151a2d;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-12.emotion-12 {
   color: #151a2d;
 }
 
@@ -428,7 +392,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-15 {
   margin-right: 8px;
 }
 
@@ -489,6 +453,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 exports[`Radio renders correctly with label desc and badge 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  display: block;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -496,15 +461,11 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   color: #dce1eb;
 }
 
-.emotion-2.emotion-2 {
-  display: block;
-}
-
 .emotion-2:hover {
   cursor: pointer;
 }
 
-.emotion-3.emotion-3 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,6 +478,7 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
 }
 
 .emotion-5 {
+  margin-right: 4px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -533,10 +495,6 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   cursor: pointer;
   color: #dce1eb;
   cursor: not-allowed;
-}
-
-.emotion-5.emotion-5 {
-  margin-right: 4px;
 }
 
 .emotion-7 {
@@ -559,6 +517,7 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
 }
 
 .emotion-10 {
+  vertical-align: middle;
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -566,19 +525,12 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
-  vertical-align: middle;
-}
-
 .emotion-12 {
+  color: #151a2d;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-12.emotion-12 {
   color: #151a2d;
 }
 
@@ -587,7 +539,7 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-15 {
   margin-right: 8px;
 }
 

@@ -3,11 +3,6 @@
 exports[`Information should render correctly with a custom backgroundColor 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #45d6b5;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,9 +15,11 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #45d6b5;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -34,6 +31,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
 }
 
 .emotion-4 {
+  color: #4f0599;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -41,10 +39,6 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-4.emotion-4 {
   color: #4f0599;
 }
 
@@ -67,11 +61,6 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
 exports[`Information should render correctly with a custom color 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,9 +73,11 @@ exports[`Information should render correctly with a custom color 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,6 +89,7 @@ exports[`Information should render correctly with a custom color 1`] = `
 }
 
 .emotion-4 {
+  color: #45d6b5;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -105,10 +97,6 @@ exports[`Information should render correctly with a custom color 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #45d6b5;
-}
-
-.emotion-4.emotion-4 {
   color: #45d6b5;
 }
 
@@ -131,11 +119,6 @@ exports[`Information should render correctly with a custom color 1`] = `
 exports[`Information should render correctly with an children 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,9 +131,11 @@ exports[`Information should render correctly with an children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -178,11 +163,6 @@ exports[`Information should render correctly with an children 1`] = `
 exports[`Information should render correctly with an heading 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,9 +175,11 @@ exports[`Information should render correctly with an heading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -209,6 +191,8 @@ exports[`Information should render correctly with an heading 1`] = `
 }
 
 .emotion-4 {
+  color: #4f0599;
+  font-weight: 500;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -217,14 +201,10 @@ exports[`Information should render correctly with an heading 1`] = `
   font-size: 16px;
   line-height: 24px;
   color: #4f0599;
-}
-
-.emotion-4.emotion-4 {
-  color: #4f0599;
-  font-weight: 500;
 }
 
 .emotion-6 {
+  color: #4f0599;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -232,10 +212,6 @@ exports[`Information should render correctly with an heading 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-6.emotion-6 {
   color: #4f0599;
 }
 
@@ -263,11 +239,6 @@ exports[`Information should render correctly with an heading 1`] = `
 exports[`Information should render correctly with an icon 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -280,9 +251,13 @@ exports[`Information should render correctly with an icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 .emotion-3 {
+  vertical-align: middle;
+  margin-right: 16px;
   fill: #45d6b5;
   height: 24px;
   width: 24px;
@@ -290,12 +265,7 @@ exports[`Information should render correctly with an icon 1`] = `
   min-height: 24px;
 }
 
-.emotion-3.emotion-3 {
-  vertical-align: middle;
-  margin-right: 16px;
-}
-
-.emotion-4.emotion-4 {
+.emotion-4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -307,6 +277,7 @@ exports[`Information should render correctly with an icon 1`] = `
 }
 
 .emotion-6 {
+  color: #4f0599;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -314,10 +285,6 @@ exports[`Information should render correctly with an icon 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-6.emotion-6 {
   color: #4f0599;
 }
 
@@ -348,11 +315,6 @@ exports[`Information should render correctly with an icon 1`] = `
 exports[`Information should render correctly with an image 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,15 +327,17 @@ exports[`Information should render correctly with an image 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 24px;
   height: 24px;
   margin-right: 24px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -385,6 +349,7 @@ exports[`Information should render correctly with an image 1`] = `
 }
 
 .emotion-5 {
+  color: #4f0599;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -392,10 +357,6 @@ exports[`Information should render correctly with an image 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-5.emotion-5 {
   color: #4f0599;
 }
 
@@ -422,11 +383,6 @@ exports[`Information should render correctly with an image 1`] = `
 exports[`Information should render correctly with default props 1`] = `
 <DocumentFragment>
   .emotion-1 {
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.emotion-1.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -439,9 +395,11 @@ exports[`Information should render correctly with default props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -453,6 +411,7 @@ exports[`Information should render correctly with default props 1`] = `
 }
 
 .emotion-4 {
+  color: #4f0599;
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -460,10 +419,6 @@ exports[`Information should render correctly with default props 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-4.emotion-4 {
   color: #4f0599;
 }
 

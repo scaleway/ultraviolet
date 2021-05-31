@@ -3,6 +3,29 @@ import React from 'react'
 import RichSelectTags from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
+const options = [
+  {
+    label: 'One',
+    value: 'one',
+  },
+  {
+    label: 'Two',
+    value: 'two',
+  },
+  {
+    label: 'Three',
+    value: 'three',
+  },
+  {
+    label: 'Four',
+    value: 'four',
+  },
+  {
+    label: 'Five',
+    value: 'five',
+  },
+]
+
 describe('RichSelectTags', () => {
   beforeAll(() => {
     jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
@@ -19,28 +42,7 @@ describe('RichSelectTags', () => {
         name="options"
         initialTags={['one']}
         onChangeSelectValue={() => {}}
-        options={[
-          {
-            label: 'One',
-            value: 'one',
-          },
-          {
-            label: 'Two',
-            value: 'two',
-          },
-          {
-            label: 'Three',
-            value: 'three',
-          },
-          {
-            label: 'Four',
-            value: 'four',
-          },
-          {
-            label: 'Five',
-            value: 'five',
-          },
-        ]}
+        options={options}
       />,
     )
   })
@@ -53,13 +55,7 @@ describe('RichSelectTags', () => {
         initialTags={['one']}
         onChangeSelectValue={() => {}}
         icon="/toto.png"
-        options={[
-          { label: 'One', value: 'one' },
-          { label: 'Two', value: 'two' },
-          { label: 'Three', value: 'three' },
-          { label: 'Four', value: 'four' },
-          { label: 'Five', value: 'five' },
-        ]}
+        options={options}
       />,
     )
   })
@@ -75,13 +71,7 @@ describe('RichSelectTags', () => {
         initialTags={['one']}
         value={{ label: 'Three', value: 'three' }}
         onChangeSelectValue={onChangeSelectValue}
-        options={[
-          { label: 'One', value: 'one' },
-          { label: 'Two', value: 'two' },
-          { label: 'Three', value: 'three' },
-          { label: 'Four', value: 'four' },
-          { label: 'Five', value: 'five' },
-        ]}
+        options={options}
       />,
       {
         transform: async ({ getByRole, getByTestId, getByText }) => {

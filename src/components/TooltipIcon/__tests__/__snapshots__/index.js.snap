@@ -3,15 +3,12 @@
 exports[`TooltipIcon renders with default props 1`] = `
 <DocumentFragment>
   .emotion-2 {
+  vertical-align: middle;
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-}
-
-.emotion-2.emotion-2 {
-  vertical-align: middle;
 }
 
 <div
@@ -29,6 +26,9 @@ exports[`TooltipIcon renders with default props 1`] = `
     </svg>
   </div>
   .emotion-1 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   border-radius: 4px;
   opacity: 0;
   font-size: 0.8rem;
@@ -48,12 +48,6 @@ exports[`TooltipIcon renders with default props 1`] = `
   color: #fff;
   fill: #000;
   box-shadow: 0 2px 5px 5px rgba(165,165,205,0.3);
-}
-
-.emotion-1.emotion-1 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 [data-enter] .emotion-1 {
