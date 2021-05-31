@@ -1,9 +1,26 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Placeholder from '..'
 
 <Meta title="Components/Placeholder" />
 
 # Placeholder
+
+<Description>
+  Placeholder will display empty blocks with animation. It can be used for
+  loading screen or loading components.
+</Description>
+
+<Canvas isColumn>
+  <Story name="Basic">
+    <Placeholder />
+  </Story>
+</Canvas>
 
 ## Block
 
@@ -67,6 +84,6 @@ import Placeholder from '..'
   </Story>
 </Canvas>
 
-## Props
+## API
 
 <ArgsTable of={Placeholder} />

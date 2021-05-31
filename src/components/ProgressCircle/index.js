@@ -46,6 +46,9 @@ ProgressCircle.propTypes = {
   percentage: PropTypes.number,
   size: PropTypes.number,
   strokeWidth: PropTypes.number,
+  /**
+   * Text is placed in center of ProgressCircle.
+   */
   text: PropTypes.string,
   trailColor: PropTypes.string,
 }

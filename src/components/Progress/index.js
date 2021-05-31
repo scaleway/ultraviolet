@@ -90,7 +90,7 @@ const StyledStep = styled(Box, {
   ${({ clickable }) => clickable && clickableStyles}
 `
 
-const Step = () => null
+export const Step = () => null
 
 const Progress = ({ children, selected, ...props }) => {
   const flatChildren = flattenChildren(children)

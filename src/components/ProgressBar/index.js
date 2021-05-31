@@ -85,6 +85,9 @@ const ProgressBar = ({
 
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,
+  /**
+   * Put ProgressBar in a loading state
+   */
   progress: PropTypes.bool,
   value: PropTypes.number,
   variant: PropTypes.oneOf(progressBarVariants),

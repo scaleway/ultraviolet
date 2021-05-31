@@ -13,11 +13,21 @@ import Button from '../../Button'
 
 # Progress
 
-## Basic
-
 <Canvas>
   <Story name="Basic">
     <Progress selected={1}>
+      <Progress.Step title="Step 1" />
+      <Progress.Step title="Step 2" />
+      <Progress.Step title="Step 3" />
+    </Progress>
+  </Story>
+</Canvas>
+
+## Selected
+
+<Canvas>
+  <Story name="Selected">
+    <Progress selected={2}>
       <Progress.Step title="Step 1" />
       <Progress.Step title="Step 2" />
       <Progress.Step title="Step 3" />
@@ -29,12 +39,12 @@ import Button from '../../Button'
 
 <Description>
   By adding `onClick` prop on `Progress.Step` you can handle a click on a
-  previous completed step
+  previous completed step.
 </Description>
 
 <Canvas>
   <Story name="Clickable">
-    <ControlValue value={2}>
+    <ControlValue value={3}>
       {({ value, onChange }) => (
         <>
           <Progress selected={value}>
@@ -42,7 +52,7 @@ import Button from '../../Button'
             <Progress.Step onClick={onChange} title="Step 2" />
             <Progress.Step onClick={onChange} title="Step 3" />
           </Progress>
-          <Button mt={1} onClick={() => onChange(2)}>
+          <Button mt={1} onClick={() => onChange(3)}>
             Reset
           </Button>
         </>
@@ -51,5 +61,8 @@ import Button from '../../Button'
   </Story>
 </Canvas>
 
+## API
+
+### `Progress`
+
 <ArgsTable of={Progress} />
-<ArgsTable of={Progress.Step} />

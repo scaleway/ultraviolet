@@ -1,7 +1,12 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
-import { useEffect, useState } from 'react'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import ProgressBar, { progressBarVariants } from '..'
-import Boxer from '../..'
+import Boxer from '../../Boxer'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 <Meta title="Components/ProgressBar" component={ProgressBar} />
@@ -10,21 +15,9 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 <Description>An horizontal progress bar.</Description>
 
-## Basic
-
 <Canvas>
-  <Story name="basic">
-    {() => {
-      const [value, setValue] = useState(0)
-      useEffect(() => {
-        setInterval(() => {
-          setValue(currentValue =>
-            currentValue === 0 ? Math.round(Math.random() * 100) : 0,
-          )
-        }, 800)
-      }, [])
-      return <ProgressBar value={value} />
-    }}
+  <Story name="Basic">
+    <ProgressBar value={40} />
   </Story>
 </Canvas>
 
@@ -33,7 +26,7 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 <Description>Set variant using `variant` prop.</Description>
 
 <Canvas>
-  <Story name="variants">
+  <Story name="Variants">
     {() => (
       <Boxer my={1}>
         {progressBarVariants.map(variant => (
@@ -46,9 +39,13 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 ## Progress
 
+<Description>
+  Progress is used to show a loading state of the component.
+</Description>
+
 <Canvas>
-  <Story name="progress">
-    <ProgressBar progress />
+  <Story name="Progress">
+    <ProgressBar progress my={3} />
   </Story>
 </Canvas>
 
@@ -60,7 +57,7 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 </Description>
 
 <Canvas>
-  <Story name="background">
+  <Story name="Background">
     <ProgressBar value={60} backgroundColor="green" />
   </Story>
 </Canvas>
@@ -73,10 +70,14 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 </Description>
 
 <Canvas>
-  <Story name="cap">
+  <Story name="Cap">
     <Boxer my={1}>
       <ProgressBar value={600} />
       <ProgressBar value={-600} />
     </Boxer>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={ProgressBar} />

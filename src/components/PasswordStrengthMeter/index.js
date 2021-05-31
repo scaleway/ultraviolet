@@ -80,9 +80,15 @@ const PasswordStrengthMeter = ({
 }
 
 PasswordStrengthMeter.propTypes = {
+  /**
+   * A function that should return a score based on password. The higher score is the stronger password is.
+   */
   estimate: PropTypes.func,
   onChange: PropTypes.func,
   password: PropTypes.string,
+  /**
+   * Strength is used for defining different color and text associated with it.
+   */
   strength: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string,
@@ -90,6 +96,9 @@ PasswordStrengthMeter.propTypes = {
     }),
   ).isRequired,
   title: PropTypes.string.isRequired,
+  /**
+   * An array of string that defines what word shouldn't be used in the password.
+   */
   userInputs: PropTypes.arrayOf(PropTypes.string),
 }
 
