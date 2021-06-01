@@ -33,23 +33,21 @@ export const withHtml = `
 `
 
 describe('MarkDown', () => {
-  test(`render simple string`, () => {
-    shouldMatchEmotionSnapshot(<MarkDown source={simple} />)
-  })
+  test(`render simple string`, () =>
+    shouldMatchEmotionSnapshot(<MarkDown source={simple} />))
 
-  test(`render simple string with target blank`, () => {
-    shouldMatchEmotionSnapshot(<MarkDown source={simple} linkTarget="_blank" />)
-  })
+  test(`render simple string with target blank`, () =>
+    shouldMatchEmotionSnapshot(
+      <MarkDown source={simple} linkTarget="_blank" />,
+    ))
 
-  test(`render paragraph inline`, () => {
+  test(`render paragraph inline`, () =>
     shouldMatchEmotionSnapshot(
       <MarkDown source={withMultipleParagraphs} inline />,
-    )
-  })
+    ))
 
-  test(`render html without escaing it`, () => {
+  test(`render html without escaing it`, () =>
     shouldMatchEmotionSnapshot(
       <MarkDown source={withHtml} escapeHtml={false} />,
-    )
-  })
+    ))
 })

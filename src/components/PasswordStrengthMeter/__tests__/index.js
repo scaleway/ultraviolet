@@ -3,7 +3,7 @@ import PasswordStrengthMeter from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PasswordStrengthMeter', () => {
-  test('render with empty password', () => {
+  test('render with empty password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password=""
@@ -16,10 +16,9 @@ describe('PasswordStrengthMeter', () => {
         ]}
         title="MyTitle"
       />,
-    )
-  })
+    ))
 
-  test('render with weak password', () => {
+  test('render with weak password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="weak"
@@ -32,10 +31,9 @@ describe('PasswordStrengthMeter', () => {
         ]}
         title="MyTitle"
       />,
-    )
-  })
+    ))
 
-  test('render with medium password', () => {
+  test('render with medium password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="mediumpas"
@@ -48,10 +46,9 @@ describe('PasswordStrengthMeter', () => {
         ]}
         title="MyTitle"
       />,
-    )
-  })
+    ))
 
-  test('render with strong password', () => {
+  test('render with strong password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="strongpass{"
@@ -64,10 +61,9 @@ describe('PasswordStrengthMeter', () => {
         ]}
         title="MyTitle"
       />,
-    )
-  })
+    ))
 
-  test('render with very strong password', () => {
+  test('render with very strong password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="verystrongpass{"
@@ -80,6 +76,5 @@ describe('PasswordStrengthMeter', () => {
         ]}
         title="MyTitle"
       />,
-    )
-  })
+    ))
 })

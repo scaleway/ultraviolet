@@ -35,7 +35,7 @@ describe('RichSelectTags', () => {
     jest.spyOn(global.Math, 'random').mockRestore()
   })
 
-  test('renders correctly with default values', () => {
+  test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(
       <RichSelectTags
         onChange={() => {}}
@@ -44,10 +44,9 @@ describe('RichSelectTags', () => {
         onChangeSelectValue={() => {}}
         options={options}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly with icon', () => {
+  test('renders correctly with icon', () =>
     shouldMatchEmotionSnapshot(
       <RichSelectTags
         onChange={() => {}}
@@ -57,14 +56,13 @@ describe('RichSelectTags', () => {
         icon="/toto.png"
         options={options}
       />,
-    )
-  })
+    ))
 
-  test('renders correctly when tags are removed then added', () => {
+  test('renders correctly when tags are removed then added', async () => {
     const onChangeSelectValue = jest.fn()
     const onChange = jest.fn()
 
-    shouldMatchEmotionSnapshot(
+    await shouldMatchEmotionSnapshot(
       <RichSelectTags
         onChange={onChange}
         name="options"

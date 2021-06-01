@@ -24,12 +24,10 @@ describe('ids', () => {
   })
 
   describe('useUUID', () => {
-    test('renders correctly without arguments', () => {
-      shouldMatchEmotionSnapshot(<Component />)
-    })
+    test('renders correctly without arguments', () =>
+      shouldMatchEmotionSnapshot(<Component />))
 
-    test('renders correctly with a prefix', () => {
-      shouldMatchEmotionSnapshot(<Component prefix="ah" />)
-    })
+    test('renders correctly with a prefix', () =>
+      shouldMatchEmotionSnapshot(<Component prefix="ah" />))
   })
 })

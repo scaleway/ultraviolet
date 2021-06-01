@@ -4,29 +4,25 @@ import Range from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Range', () => {
-  test('should render correctly', () => {
-    shouldMatchEmotionSnapshot(<Range />)
+  test('should render correctly', () => shouldMatchEmotionSnapshot(<Range />))
+
+  test('should render correctly with one value', () =>
+    shouldMatchEmotionSnapshot(<Range value={[5]} onChange={() => {}} />))
+
+  test('should render correctly with two values', () =>
+    shouldMatchEmotionSnapshot(<Range value={[5, 10]} />))
+
+  test('should render correctly with min max', async () => {
+    await shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5, 10]} />)
+    await shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5]} />)
   })
 
-  test('should render correctly with one value', () => {
-    shouldMatchEmotionSnapshot(<Range value={[5]} onChange={() => {}} />)
+  test('should render correctly with min max and out of range value', async () => {
+    await shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5, 30]} />)
+    await shouldMatchEmotionSnapshot(<Range min={0} max={10} value={[15]} />)
   })
 
-  test('should render correctly with two values', () => {
-    shouldMatchEmotionSnapshot(<Range value={[5, 10]} />)
-  })
-
-  test('should render correctly with min max', () => {
-    shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5, 10]} />)
-    shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5]} />)
-  })
-
-  test('should render correctly with min max and out of range value', () => {
-    shouldMatchEmotionSnapshot(<Range min={0} max={20} value={[5, 30]} />)
-    shouldMatchEmotionSnapshot(<Range min={0} max={10} value={[15]} />)
-  })
-
-  test('should render correctly with props', () => {
+  test('should render correctly with props', () =>
     shouldMatchEmotionSnapshot(
       <Range
         min={0}
@@ -38,10 +34,9 @@ describe('Range', () => {
         limitOffset={90}
         offsetTop={120}
       />,
-    )
-  })
+    ))
 
-  test('should render correctly with input change', () => {
+  test('should render correctly with input change', () =>
     shouldMatchEmotionSnapshot(
       <Range min={0} max={20} value={[5]} name="test" />,
       {
@@ -60,9 +55,8 @@ describe('Range', () => {
           userEvent.type(input, 'E')
         },
       },
-    )
-  })
-  test('should render correctly with two values input change', () => {
+    ))
+  test('should render correctly with two values input change', () =>
     shouldMatchEmotionSnapshot(
       <Range min={0} max={20} value={[5, 10]} name="test" />,
       {
@@ -86,6 +80,5 @@ describe('Range', () => {
           userEvent.type(input2, 'E')
         },
       },
-    )
-  })
+    ))
 })

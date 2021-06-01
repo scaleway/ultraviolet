@@ -93,40 +93,33 @@ const dataWithLegendsDetailsAndDiscount = [
 ]
 
 describe('Chart', () => {
-  test('renders correctly with no props', () => {
-    shouldMatchEmotionSnapshot(<Chart />)
-  })
+  test('renders correctly with no props', () =>
+    shouldMatchEmotionSnapshot(<Chart />))
 
-  test('renders correctly with data', () => {
-    shouldMatchEmotionSnapshot(<Chart data={data} />)
-  })
+  test('renders correctly with data', () =>
+    shouldMatchEmotionSnapshot(<Chart data={data} />))
 
-  test('renders correctly with data and content', () => {
-    shouldMatchEmotionSnapshot(<Chart data={data} content="Test" />)
-  })
+  test('renders correctly with data and content', () =>
+    shouldMatchEmotionSnapshot(<Chart data={data} content="Test" />))
 
-  test('renders correctly with legend', () => {
-    shouldMatchEmotionSnapshot(<Chart data={dataWithLegends} hasLegend />)
-  })
+  test('renders correctly with legend', () =>
+    shouldMatchEmotionSnapshot(<Chart data={dataWithLegends} hasLegend />))
 
-  test('renders correctly with detailed legend', () => {
+  test('renders correctly with detailed legend', () =>
     shouldMatchEmotionSnapshot(
       <Chart data={dataWithLegendsAndDetails} hasLegend />,
-    )
-  })
+    ))
 
-  test('renders correctly with detailed legend and discount', () => {
+  test('renders correctly with detailed legend and discount', () =>
     shouldMatchEmotionSnapshot(
       <Chart data={dataWithLegendsDetailsAndDiscount} hasLegend />,
-    )
-  })
+    ))
 
-  test('renders correctly with empty legend placeholder', () => {
-    shouldMatchEmotionSnapshot(<Chart hasLegend emptyLegend="I am a legend" />)
-  })
+  test('renders correctly with empty legend placeholder', () =>
+    shouldMatchEmotionSnapshot(<Chart hasLegend emptyLegend="I am a legend" />))
 
-  test('renders correctly when chart is hovered', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('renders correctly when chart is hovered', () =>
+    shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
         transform: async ({ getByTestId }) => {
@@ -135,11 +128,10 @@ describe('Chart', () => {
           await userEvent.hover(getByTestId(id))
         },
       },
-    )
-  })
+    ))
 
-  test('renders correctly when legend is hovered', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('renders correctly when legend is hovered', () =>
+    shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
         transform: async ({ getByTestId }) => {
@@ -148,11 +140,10 @@ describe('Chart', () => {
           await userEvent.hover(getByTestId(id))
         },
       },
-    )
-  })
+    ))
 
-  test('renders correctly when legend is focused', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('renders correctly when legend is focused', () =>
+    shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
         transform: async ({ getByTestId }) => {
@@ -161,6 +152,5 @@ describe('Chart', () => {
           await fireEvent.focus(getByTestId(id))
         },
       },
-    )
-  })
+    ))
 })

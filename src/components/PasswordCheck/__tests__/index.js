@@ -3,7 +3,7 @@ import PasswordCheck from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('PasswordCheck', () => {
-  test('render with custom values', () => {
+  test('render with custom values', () =>
     shouldMatchEmotionSnapshot(
       <PasswordCheck
         rules={[
@@ -19,6 +19,5 @@ describe('PasswordCheck', () => {
           },
         ]}
       />,
-    )
-  })
+    ))
 })

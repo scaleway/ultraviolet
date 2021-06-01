@@ -3,7 +3,7 @@ import ScrollView from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('ScrollView', () => {
-  it(`renders correctly`, () => {
+  it(`renders correctly`, () =>
     shouldMatchEmotionSnapshot(
       <ScrollView>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel
@@ -90,6 +90,5 @@ describe('ScrollView', () => {
         lacinia a lorem a, commodo consectetur ante. Mauris eu mauris interdum
         lorem sodales tristique. Curabitur id tellus ante.
       </ScrollView>,
-    )
-  })
+    ))
 })

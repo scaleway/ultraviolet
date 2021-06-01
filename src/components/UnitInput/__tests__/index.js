@@ -14,11 +14,10 @@ describe('UnitInput', () => {
     jest.spyOn(global.Math, 'random').mockRestore()
   })
 
-  test(`renders with default props`, () => {
-    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => {}} />)
-  })
+  test(`renders with default props`, () =>
+    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => {}} />))
 
-  test(`renders with custom options`, () => {
+  test(`renders with custom options`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
         name="test"
@@ -37,20 +36,17 @@ describe('UnitInput', () => {
           },
         ]}
       />,
-    )
-  })
+    ))
 
-  test(`renders with min max`, () => {
+  test(`renders with min max`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput name="test" minValue={10} maxValue={100} />,
-    )
-  })
+    ))
 
-  test(`renders with defaultValue`, () => {
-    shouldMatchEmotionSnapshot(<UnitInput name="test" defaultValue={10} />)
-  })
+  test(`renders with defaultValue`, () =>
+    shouldMatchEmotionSnapshot(<UnitInput name="test" defaultValue={10} />))
 
-  test(`renders with defaultOption`, () => {
+  test(`renders with defaultOption`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput
         name="test"
@@ -59,26 +55,22 @@ describe('UnitInput', () => {
           value: 'hours',
         }}
       />,
-    )
-  })
+    ))
 
   Object.keys(sizesHeight).forEach(size =>
-    test(`renders with size ${size}`, () => {
-      shouldMatchEmotionSnapshot(<UnitInput name="default" size={size} />)
-    }),
+    test(`renders with size ${size}`, () =>
+      shouldMatchEmotionSnapshot(<UnitInput name="default" size={size} />)),
   )
 
-  test(`renders with textBoxWidth and richSelectWidth`, () => {
+  test(`renders with textBoxWidth and richSelectWidth`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput name="test" richSelectWidth={100} textBoxWidth={100} />,
-    )
-  })
+    ))
 
-  test(`renders with disabled and placeHolder`, () => {
+  test(`renders with disabled and placeHolder`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput name="test" placeholder="100" disabled />,
-    )
-  })
+    ))
 
   test(`renders with RichSelect update`, async () => {
     const node = renderWithTheme(<UnitInput name="test" />)

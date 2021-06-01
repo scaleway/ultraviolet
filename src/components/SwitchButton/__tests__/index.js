@@ -3,15 +3,14 @@ import SwitchButton from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('SwitchButton', () => {
-  test('renders correctly', () => {
+  test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton onChange={() => {}} name="radio" value="choice">
         Choice
       </SwitchButton>,
-    )
-  })
+    ))
 
-  test('renders correctly with variant segment', () => {
+  test('renders correctly with variant segment', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
         onChange={() => {}}
@@ -21,18 +20,16 @@ describe('SwitchButton', () => {
       >
         Choice
       </SwitchButton>,
-    )
-  })
+    ))
 
-  test('renders correctly when disabled', () => {
+  test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton onChange={() => {}} name="radio" value="choice" disabled>
         Choice
       </SwitchButton>,
-    )
-  })
+    ))
 
-  test('renders correctly with complex child', () => {
+  test('renders correctly with complex child', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
         onChange={() => {}}
@@ -43,6 +40,5 @@ describe('SwitchButton', () => {
       >
         {({ checked, disabled }) => `${checked} ${disabled}`}
       </SwitchButton>,
-    )
-  })
+    ))
 })

@@ -5,47 +5,40 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 const TestComponent = () => <div>Testing component</div>
 
 describe('Information', () => {
-  test(`should render correctly with default props`, () => {
-    shouldMatchEmotionSnapshot(<Information>Hello</Information>)
-  })
+  test(`should render correctly with default props`, () =>
+    shouldMatchEmotionSnapshot(<Information>Hello</Information>))
 
-  test(`should render correctly with a custom backgroundColor`, () => {
+  test(`should render correctly with a custom backgroundColor`, () =>
     shouldMatchEmotionSnapshot(
       <Information backgroundColor="green">Hello</Information>,
-    )
-  })
+    ))
 
-  test(`should render correctly with a custom color`, () => {
-    shouldMatchEmotionSnapshot(<Information color="green">Hello</Information>)
-  })
+  test(`should render correctly with a custom color`, () =>
+    shouldMatchEmotionSnapshot(<Information color="green">Hello</Information>))
 
-  test(`should render correctly with an icon`, () => {
+  test(`should render correctly with an icon`, () =>
     shouldMatchEmotionSnapshot(
       <Information icon="check" iconColor="green" iconSize={24}>
         Hello
       </Information>,
-    )
-  })
+    ))
 
-  test(`should render correctly with an image`, () => {
+  test(`should render correctly with an image`, () =>
     shouldMatchEmotionSnapshot(
       <Information img="//img.jpg" imgSize={24}>
         Hello
       </Information>,
-    )
-  })
+    ))
 
-  test(`should render correctly with an heading`, () => {
+  test(`should render correctly with an heading`, () =>
     shouldMatchEmotionSnapshot(
       <Information heading="Bonjour">Hello</Information>,
-    )
-  })
+    ))
 
-  test(`should render correctly with an children`, () => {
+  test(`should render correctly with an children`, () =>
     shouldMatchEmotionSnapshot(
       <Information>
         <TestComponent />
       </Information>,
-    )
-  })
+    ))
 })

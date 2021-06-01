@@ -4,15 +4,14 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('CategoryIcon', () => {
   availableIcons.forEach(icon => {
-    test(`render ${icon}`, () => {
-      shouldMatchEmotionSnapshot(<CategoryIcon name={icon} />)
-    })
+    test(`render ${icon}`, () =>
+      shouldMatchEmotionSnapshot(<CategoryIcon name={icon} />))
   })
 
-  test(`render unknow`, () => {
+  test(`render unknow`, async () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
 
-    shouldMatchEmotionSnapshot(<CategoryIcon name="unknow" />)
+    await shouldMatchEmotionSnapshot(<CategoryIcon name="unknow" />)
     expect(console.error).toHaveBeenCalledTimes(1)
     spy.mockRestore()
   })

@@ -4,22 +4,20 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 describe('StatusIndicator', () => {
   statuses.forEach(status => {
-    test(`render ${status}`, () => {
-      shouldMatchEmotionSnapshot(<StatusIndicator status={status} />)
-    })
+    test(`render ${status}`, () =>
+      shouldMatchEmotionSnapshot(<StatusIndicator status={status} />))
   })
 
-  test(`render unknow`, () => {
+  test(`render unknow`, async () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
 
-    shouldMatchEmotionSnapshot(<StatusIndicator status="unknow" />)
+    await shouldMatchEmotionSnapshot(<StatusIndicator status="unknow" />)
     expect(console.error).toHaveBeenCalledTimes(1)
     spy.mockRestore()
   })
 
-  test(`render animated`, () => {
+  test(`render animated`, () =>
     shouldMatchEmotionSnapshot(
       <StatusIndicator status={statuses[0]} animated />,
-    )
-  })
+    ))
 })
