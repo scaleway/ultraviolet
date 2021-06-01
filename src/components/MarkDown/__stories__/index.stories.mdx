@@ -1,6 +1,12 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import MarkDown from '..'
-import { simple, withMultipleParagraphs } from './markdown_example'
+import { html, simple, withMultipleParagraphs } from './markdown_example'
 
 <Meta title="Components/MarkDown" component={MarkDown} />
 
@@ -10,10 +16,8 @@ import { simple, withMultipleParagraphs } from './markdown_example'
   A wrapper for [react-markdown](https://github.com/remarkjs/react-markdown)
 </Description>
 
-## Basic Usage
-
-<Canvas isColumn>
-  <Story name="basic">
+<Canvas>
+  <Story name="Basic">
     <MarkDown source={simple} linkTarget="_blank" />
   </Story>
 </Canvas>
@@ -21,15 +25,46 @@ import { simple, withMultipleParagraphs } from './markdown_example'
 ## Inline
 
 <Description>
-  You can make the paragraphs inside the source render inline by settting the
+  You can make the paragraphs inside the source render inline by setting the
   `inline prop`
 </Description>
 
-<Canvas isColumn>
-  <Story name="with-paragraphs">
+<Canvas>
+  <Story name="Paragraphs">
     <MarkDown source={withMultipleParagraphs} />
   </Story>
-  <Story name="with-paragraphs-inline">
+</Canvas>
+
+<Canvas>
+  <Story name="Paragraphs inline">
     <MarkDown source={withMultipleParagraphs} inline />
   </Story>
 </Canvas>
+
+## Link Target
+
+<Description>
+  `linkTarget` prop allows you to specify the target props for the links inside
+  your markdown text. By default in react-markdown links are opened in a new
+  tab.
+</Description>
+
+<Canvas>
+  <Story name="Link Target">
+    <MarkDown source={simple} linkTarget="_self" />
+  </Story>
+</Canvas>
+
+## Escape HTML
+
+<Description>`escapeHtml` manages the html escape of your markdown</Description>
+
+<Canvas>
+  <Story name="Escape HTML">
+    <MarkDown source={html} escapeHtml={false} />
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={MarkDown} />

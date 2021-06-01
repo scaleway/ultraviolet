@@ -1,16 +1,24 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Label from '..'
 
 <Meta title="Components/Label" component={Label} />
 
 # Label
 
-## Basic
+<Description>Label is a styled `label` tag</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Label>This is a label</Label>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Label} />

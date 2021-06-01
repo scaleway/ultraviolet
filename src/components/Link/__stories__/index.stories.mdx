@@ -14,12 +14,24 @@ import { Box, Boxer } from '../..'
 
 <Description>Creates a styled link.</Description>
 
-# Variants
+<Canvas>
+  <Story name="Basic">
+    <Box p={2} backgroundColor="gray200">
+      <Boxer my={1}>
+        <Link href="localhost:6006">Basic link</Link>
+      </Boxer>
+    </Box>
+  </Story>
+</Canvas>
 
-<Description>Set variant using `variant` property.</Description>
+## Variants
+
+<Description>
+  Using `variant` prop you can change the look and feel of the component.
+</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Variants">
     <Box p={2} backgroundColor="gray200">
       <Boxer my={1}>
         {linkVariants.map(variant => (
@@ -32,6 +44,42 @@ import { Box, Boxer } from '../..'
   </Story>
 </Canvas>
 
+## Target
+
+<Description>
+  Using `target` prop you can change specify the target you want for your link.
+</Description>
+
+<Canvas>
+  <Story name="Target">
+    <Box p={2} backgroundColor="gray200">
+      <Boxer my={1}>
+        <Link href="localhost:6006" target="_blank">
+          Link opens in a new tab
+        </Link>
+      </Boxer>
+    </Box>
+  </Story>
+</Canvas>
+
+## Absolute URLs
+
+<Description>
+  Absolute URLs (starting by `http` or `https`) are automatically detected in
+  `to`. If detected, a `a` tag is used instead of the default `linkComponent`
+  specified in the theme.
+</Description>
+
+<Canvas>
+  <Story name="Absolute URLs">
+    <Box p={2} backgroundColor="gray200">
+      <Boxer my={1}>
+        <Link href="https://localhost:6006">Absolute URL</Link>
+      </Boxer>
+    </Box>
+  </Story>
+</Canvas>
+
 ## Link Component
 
 <Description>
@@ -39,14 +87,6 @@ import { Box, Boxer } from '../..'
   Router Link) by changing the theme entry `linkComponent`.
 </Description>
 
-## Absolute URLs
-
-Absolute URLs (starting by `http` or `https`) are automatically detected in `to`. If detected, a
-
-```jsx
-<a href="..." />
-```
-
-is used instead of the default `linkComponent` specified in the theme.
+## API
 
 <ArgsTable of={Link} />
