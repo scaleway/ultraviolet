@@ -12,6 +12,6 @@ describe('Placeholder', () => {
   })
 
   test.each(placeholderTypes)('renders correctly with type="%s"', type =>
-    shouldMatchEmotionSnapshot(<Placeholder type={type} />),
+    shouldMatchEmotionSnapshot(<Placeholder variant={type} />),
   )
 })
