@@ -28,6 +28,11 @@ module.exports = {
       'emotion-theming': path.join(cwd, 'node_modules', '@emotion', 'react'),
     }
 
+    config.resolve.fallback = {
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+    }
+
     return config
   },
 }
