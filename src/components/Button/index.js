@@ -269,6 +269,7 @@ function FwdButton({
   children,
   extend,
   type: elementType,
+  innerRef,
   to,
   href,
   download,
@@ -295,6 +296,7 @@ function FwdButton({
       href={href}
       to={to}
       download={download}
+      ref={innerRef}
       type={type}
       as={as}
       disabled={as === 'button' && disabled}
@@ -342,6 +344,7 @@ const defaultProps = {
   href: undefined,
   icon: undefined,
   iconPosition: 'left',
+  innerRef: undefined,
   progress: undefined,
   size: 'large',
   to: undefined,
@@ -365,6 +368,7 @@ const propTypes = {
    */
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  innerRef: PropTypes.func,
   /**
    * Use this properties to associate ref to button component.
    */
@@ -382,8 +386,8 @@ FwdButton.defaultProps = defaultProps
 
 FwdButton.propTypes = propTypes
 
-function forwardRef(props) {
-  return <FwdButton {...props} />
+function forwardRef(props, ref) {
+  return <FwdButton {...props} innerRef={ref} />
 }
 
 const Button = React.forwardRef(forwardRef)
