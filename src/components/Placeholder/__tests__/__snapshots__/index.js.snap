@@ -20,10 +20,61 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 }
 
 .emotion-1 {
-  min-height: 200px;
+  min-height: 1600 px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -32,34 +83,20 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.emotion-2 {
+  max-width: 100%;
+  position: relative;
   width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 16px 16px;
-  margin-bottom: 16px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dce1eb;
-  border-radius: 4px;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
-.emotion-3.emotion-3 {
+.emotion-8 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,10 +105,15 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 16px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
+  border-radius: 4px;
 }
 
-.emotion-4 {
+.emotion-9 {
   margin-right: 8px;
   width: 32px;
   height: 32px;
@@ -79,30 +121,14 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   background-color: #dce1eb;
 }
 
-.emotion-5 {
+.emotion-10 {
   height: 12px;
   width: 120px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
 
-.emotion-7 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #eeeeff;
-}
-
-.emotion-7.emotion-7 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.emotion-16 {
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -124,53 +150,134 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 
 <div
     class="emotion-0"
+    type="block"
   >
     <div
       class="emotion-1"
     >
       <div
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-3"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="emotion-4"
-          />
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
           <div
-            class="emotion-5"
-          />
-        </div>
-        <hr
-          class="emotion-6 emotion-7"
-        />
-        <div
-          class="emotion-3"
-        >
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
           <div
-            class="emotion-4"
-          />
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
           <div
-            class="emotion-5"
-          />
-        </div>
-        <hr
-          class="emotion-6 emotion-7"
-        />
-        <div
-          class="emotion-3"
-        >
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
           <div
-            class="emotion-4"
-          />
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
           <div
-            class="emotion-5"
-          />
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div
-      class="emotion-16"
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>
@@ -326,6 +433,7 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
 
 <div
     class="emotion-0"
+    type="blocks"
   >
     <div
       class="emotion-1"
@@ -478,29 +586,61 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 }
 
 .emotion-1 {
+  min-height: 1600 px;
+}
+
+.emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border: 1px solid #dce1eb;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
-.emotion-1.emotion-1 {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-  margin-left: 8px;
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -509,31 +649,52 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
-.emotion-2 {
-  width: 8.333333333333334px;
-  height: 8.333333333333334px;
-  border-radius: 8.333333333333334px;
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
   background-color: #dce1eb;
 }
 
-.emotion-3 {
+.emotion-10 {
   height: 12px;
-  width: 12.5px;
+  width: 120px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
 
-.emotion-3.emotion-3 {
-  width: 12.5px;
-  margin-top: 24px;
-}
-
-.emotion-4 {
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -555,19 +716,134 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 
 <div
     class="emotion-0"
+    type="box"
   >
     <div
       class="emotion-1"
     >
       <div
-        class="emotion-2"
-      />
-      <div
-        class="emotion-3"
-      />
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      class="emotion-4"
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>
@@ -593,13 +869,61 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
 }
 
 .emotion-1 {
+  min-height: 1600 px;
+}
+
+.emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -608,54 +932,52 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.emotion-2 {
+  max-width: 100%;
   position: relative;
-  height: 206px;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
-.emotion-3 {
-  transform-origin: 50% 50%;
-  stroke: #dce1eb;
-  stroke-width: 18;
-  stroke-linecap: butt;
-  fill: none;
-}
-
-.emotion-4 {
+.emotion-8 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
+  border-radius: 4px;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 16px;
-  margin-left: 16px;
+.emotion-9 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #dce1eb;
 }
 
-.emotion-6 {
+.emotion-10 {
   height: 12px;
   width: 120px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
 
-.emotion-13 {
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -677,59 +999,134 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
 
 <div
     class="emotion-0"
+    type="donut"
   >
     <div
       class="emotion-1"
     >
       <div
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          style="height: 206px; min-height: 206px; min-width: 206px; transform: rotate(-90deg); width: 206px;"
+        <div
+          class="emotion-4 emotion-5"
         >
-          <circle
-            class="emotion-3"
-            cx="103"
-            cy="103"
-            r="90"
-          />
-        </svg>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <ul
-        class="emotion-4"
-      >
-        <li
-          class="emotion-5"
-        >
-          <div
-            class="emotion-6"
-          />
-        </li>
-        <li
-          class="emotion-5"
-        >
-          <div
-            class="emotion-6"
-          />
-        </li>
-        <li
-          class="emotion-5"
-        >
-          <div
-            class="emotion-6"
-          />
-        </li>
-        <li
-          class="emotion-5"
-        >
-          <div
-            class="emotion-6"
-          />
-        </li>
-      </ul>
     </div>
     <div
-      class="emotion-13"
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>
@@ -755,13 +1152,61 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
 }
 
 .emotion-1 {
-  height: 12px;
-  width: 120px;
-  border-radius: 10px;
-  background-color: #dce1eb;
+  min-height: 1600 px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -770,12 +1215,52 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
-.emotion-2 {
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
+  border-radius: 4px;
+}
+
+.emotion-9 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #dce1eb;
+}
+
+.emotion-10 {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #dce1eb;
+}
+
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -797,12 +1282,134 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
 
 <div
     class="emotion-0"
+    type="line"
   >
     <div
       class="emotion-1"
-    />
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
-      class="emotion-2"
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>
@@ -828,16 +1435,83 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
 }
 
 .emotion-1 {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-1>.emotion-4:nth-of-type(even) {
-  background-color: #fafafb;
+  min-height: 1600 px;
 }
 
 .emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-7 {
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.emotion-8 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -846,18 +1520,30 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
-  padding: 4px 8px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
+  border-radius: 4px;
 }
 
-.emotion-5 {
+.emotion-9 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #dce1eb;
+}
+
+.emotion-10 {
   height: 12px;
   width: 120px;
   border-radius: 10px;
   background-color: #dce1eb;
 }
 
-.emotion-11 {
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -879,49 +1565,134 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
 
 <div
     class="emotion-0"
+    type="list"
   >
-    <ul
-      class="emotion-1 emotion-2"
-    >
-      <li
-        class="emotion-3 emotion-4"
-      >
-        <div
-          style="width: 240px;"
-        >
-          <div
-            class="emotion-5"
-          />
-        </div>
-        <div
-          style="width: 360px;"
-        >
-          <div
-            class="emotion-5"
-          />
-        </div>
-      </li>
-      <li
-        class="emotion-3 emotion-4"
-      >
-        <div
-          style="width: 240px;"
-        >
-          <div
-            class="emotion-5"
-          />
-        </div>
-        <div
-          style="width: 360px;"
-        >
-          <div
-            class="emotion-5"
-          />
-        </div>
-      </li>
-    </ul>
     <div
-      class="emotion-11"
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>
@@ -947,15 +1718,61 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
 }
 
 .emotion-1 {
-  height: 277px;
+  min-height: 1600 px;
+}
+
+.emotion-3 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: undefined;
+}
+
+@media (min-width: 576px) {
+  .emotion-3 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .emotion-3 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emotion-3 {
+    max-width: 1140px;
+  }
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
-.emotion-1.emotion-1 {
+.emotion-7 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -964,29 +1781,52 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
-.emotion-2 {
-  border: 1px solid #dce1eb;
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dce1eb;
   border-radius: 4px;
-  width: 240px;
-  height: 261px;
-  margin-right: 16px;
 }
 
-.emotion-3 {
-  border: 1px solid #dce1eb;
+.emotion-9 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
   background-color: #dce1eb;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  width: 240px;
-  height: 77px;
 }
 
 .emotion-10 {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #dce1eb;
+}
+
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1008,41 +1848,134 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
 
 <div
     class="emotion-0"
+    type="slider"
   >
     <div
       class="emotion-1"
     >
       <div
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-3"
-        />
-      </div>
-      <div
-        class="emotion-2"
-      >
-        <div
-          class="emotion-3"
-        />
-      </div>
-      <div
-        class="emotion-2"
-      >
-        <div
-          class="emotion-3"
-        />
-      </div>
-      <div
-        class="emotion-2"
-      >
-        <div
-          class="emotion-3"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8"
+            >
+              <div
+                class="emotion-9"
+              />
+              <div
+                class="emotion-10"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
-      class="emotion-10"
+      class="emotion-46"
     />
   </div>
 </DocumentFragment>

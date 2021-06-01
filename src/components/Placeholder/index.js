@@ -37,7 +37,7 @@ const style = css`
   animation-direction: alternate;
 `
 
-const types = {
+const variants = {
   block: Block,
   blocks: Blocks,
   box: BoxWithIcon,
@@ -47,8 +47,8 @@ const types = {
   slider: Slider,
 }
 
-const Placeholder = ({ type, length, width, height, col, ...props }) => {
-  const Component = types[type]
+const Placeholder = ({ variant, length, width, height, col, ...props }) => {
+  const Component = variants[variant]
 
   return (
     <Box
@@ -65,13 +65,13 @@ const Placeholder = ({ type, length, width, height, col, ...props }) => {
   )
 }
 
-export const placeholderTypes = Object.keys(types)
+export const placeholderTypes = Object.keys(variants)
 
 Placeholder.propTypes = {
   col: PropTypes.number,
   height: PropTypes.number,
   length: PropTypes.number,
-  type: PropTypes.oneOf(placeholderTypes),
+  variant: PropTypes.oneOf(placeholderTypes),
   width: PropTypes.number,
 }
 
@@ -79,7 +79,7 @@ Placeholder.defaultProps = {
   col: undefined,
   height: undefined,
   length: undefined,
-  type: 'blocks',
+  variant: 'blocks',
   width: undefined,
 }
 
