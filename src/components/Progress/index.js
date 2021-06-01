@@ -149,9 +149,6 @@ const MemoProgress = memo(Progress)
 MemoProgress.Step = Step
 
 Step.propTypes = {
-  /**
-   * Test code export
-   */
   title: PropTypes.string,
 }
 
