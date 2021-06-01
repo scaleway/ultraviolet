@@ -31,7 +31,9 @@ const envParameters = {
     },
   },
   production: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
     viewMode: 'docs',
+    previewTabs: { canvas: { hidden: true } },
     options: {
       storySort: {
         order: ['Home', 'Theme', 'Components'],
@@ -41,6 +43,8 @@ const envParameters = {
 }
 export const parameters =
   envParameters[process.env.STORYBOOK_ENVIRONMENT] || envParameters.production
+
+console.log(parameters)
 
 const adjustedTheme = ancestorTheme => ({
   ...ancestorTheme,

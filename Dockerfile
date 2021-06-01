@@ -10,7 +10,7 @@ RUN yarn --pure-lockfile
 
 COPY . .
 
-RUN STORYBOOK_ENVIRONMENT=production yarn run build:storybook
+RUN yarn run build:storybook
 
 ######################################################################
 # This stage download a simple http server and serve the application #

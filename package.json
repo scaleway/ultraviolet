@@ -31,7 +31,7 @@
   "scripts": {
     "build": "rollup -c",
     "build:profile": "cross-env PROFILE=true yarn run build",
-    "build:storybook": "build-storybook",
+    "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
     "commit": "npx git-cz -a",
     "start": "STORYBOOK_ENVIRONMENT=development start-storybook -p 6006",
