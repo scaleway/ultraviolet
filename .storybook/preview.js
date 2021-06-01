@@ -5,6 +5,10 @@ import { css, ThemeProvider } from '@emotion/react'
 import theme from '../src/theme'
 import { GlobalStyle } from '../src'
 
+const storySort = {
+  order: ['Home', 'Theme', 'Components'],
+}
+
 const envParameters = {
   development: {
     actions: { disable: true, argTypesRegex: '^on[A-Z].*' },
@@ -25,9 +29,7 @@ const envParameters = {
       viewports: {},
     },
     options: {
-      storySort: {
-        order: ['Home', 'Theme', 'Components'],
-      },
+      storySort: storySort,
     },
   },
   production: {
@@ -35,9 +37,7 @@ const envParameters = {
     viewMode: 'docs',
     previewTabs: { canvas: { hidden: true } },
     options: {
-      storySort: {
-        order: ['Home', 'Theme', 'Components'],
-      },
+      storySort: storySort,
     },
   },
 }
