@@ -1,3 +1,5 @@
+### [0.82.1](https://github.com/scaleway/scaleway-ui/compare/v0.82.0...v0.82.1) (2021-06-02)
+
 ## [0.82.0](https://github.com/scaleway/scaleway-ui/compare/v0.81.1...v0.82.0) (2021-06-02)
 
 
