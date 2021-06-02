@@ -61,6 +61,7 @@
     }
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/__stories__/**/*.{js,mdx}"
@@ -146,7 +147,7 @@
     "eslint-plugin-mdx": "^1.8.2",
     "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.3",
+    "jest": "^27.0.3",
     "jest-junit": "^12.0.0",
     "lint-staged": "^11.0.0",
     "postcss": "^8.2.4",
