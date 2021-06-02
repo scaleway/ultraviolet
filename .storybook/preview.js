@@ -44,8 +44,6 @@ const ENV_PARAMETERS = {
 export const parameters =
   ENV_PARAMETERS[process.env.STORYBOOK_ENVIRONMENT] || ENV_PARAMETERS.production
 
-console.log(parameters)
-
 const adjustedTheme = ancestorTheme => ({
   ...ancestorTheme,
   ...Object.keys(theme).reduce(
