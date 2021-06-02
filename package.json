@@ -61,6 +61,7 @@
     }
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/__stories__/**/*.{js,mdx}"
