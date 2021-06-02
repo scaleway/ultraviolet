@@ -80,15 +80,9 @@ exports[`Button should render correctly loading 1`] = `
   pointer-events: none;
 }
 
-.emotion-4.emotion-4 {
-  color: currentColor;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  height: 1em;
+  width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
@@ -117,40 +111,36 @@ exports[`Button should render correctly loading 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <div
-        aria-valuemax="1"
-        aria-valuemin="0"
-        class="emotion-4"
-        role="progressbar"
+      <svg
+        class="CircularProgressbar  emotion-4 emotion-5"
+        data-test-id="CircularProgressbar"
+        viewBox="0 0 100 100"
       >
-        <div
-          class="emotion-5"
-          style="height: 1em; width: 1em;"
-        >
-          <svg
-            height="100%"
-            viewBox="0 0 32 32"
-            width="100%"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="opacity: 0.2; stroke: currentColor;"
-            />
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="stroke: currentColor; stroke-dasharray: 80; stroke-dashoffset: 60;"
-            />
-          </svg>
-        </div>
-      </div>
+        <path
+          class="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+        />
+        <path
+          class="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+        />
+      </svg>
     </div>
     <div
       class="emotion-6 emotion-7"
@@ -241,15 +231,9 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
-.emotion-4.emotion-4 {
-  color: currentColor;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 {
+  height: 1em;
+  width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
@@ -287,40 +271,36 @@ exports[`Button should render correctly loading with an icon 1`] = `
     <div
       class="emotion-2 emotion-3"
     >
-      <div
-        aria-valuemax="1"
-        aria-valuemin="0"
-        class="emotion-4"
-        role="progressbar"
+      <svg
+        class="CircularProgressbar  emotion-4 emotion-5"
+        data-test-id="CircularProgressbar"
+        viewBox="0 0 100 100"
       >
-        <div
-          class="emotion-5"
-          style="height: 1em; width: 1em;"
-        >
-          <svg
-            height="100%"
-            viewBox="0 0 32 32"
-            width="100%"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="opacity: 0.2; stroke: currentColor;"
-            />
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="stroke: currentColor; stroke-dasharray: 80; stroke-dashoffset: 60;"
-            />
-          </svg>
-        </div>
-      </div>
+        <path
+          class="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+        />
+        <path
+          class="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+        />
+      </svg>
     </div>
     <div
       class="emotion-6 emotion-7"
@@ -330,40 +310,36 @@ exports[`Button should render correctly loading with an icon 1`] = `
     <div
       class="emotion-8 emotion-3"
     >
-      <div
-        aria-valuemax="1"
-        aria-valuemin="0"
-        class="emotion-4"
-        role="progressbar"
+      <svg
+        class="CircularProgressbar  emotion-4 emotion-5"
+        data-test-id="CircularProgressbar"
+        viewBox="0 0 100 100"
       >
-        <div
-          class="emotion-5"
-          style="height: 1em; width: 1em;"
-        >
-          <svg
-            height="100%"
-            viewBox="0 0 32 32"
-            width="100%"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="opacity: 0.2; stroke: currentColor;"
-            />
-            <circle
-              cx="16"
-              cy="16"
-              fill="none"
-              r="14"
-              stroke-width="4"
-              style="stroke: currentColor; stroke-dasharray: 80; stroke-dashoffset: 60;"
-            />
-          </svg>
-        </div>
-      </div>
+        <path
+          class="CircularProgressbar-trail"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+        />
+        <path
+          class="CircularProgressbar-path"
+          d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+          fill-opacity="0"
+          stroke-width="16"
+          style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+        />
+      </svg>
     </div>
   </button>
 </DocumentFragment>

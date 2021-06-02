@@ -16,8 +16,8 @@ const spin = keyframes`
 
 const StyledProgressbar = styled(CircularProgressbar)`
   ${({ size }) => css`
-    height: ${size}px;
-    width: ${size}px;
+    height: ${typeof size === 'string' ? size : `${size}px`};
+    width: ${typeof size === 'string' ? size : `${size}px`};
   `}
 
   ${({ active }) =>
@@ -72,7 +72,7 @@ ActivityIndicator.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string,
   percentage: PropTypes.number,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   strokeWidth: PropTypes.number,
   /**
    * Text is placed in center of ProgressCircle.

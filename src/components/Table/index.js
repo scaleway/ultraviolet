@@ -92,7 +92,9 @@ const BodyLoader = props => (
   <TBody>
     <Row>
       <BodyCell height={80} position="relative" {...props}>
-        <ActivityIndicator position="absolute" top={16} left="50%" size={40} />
+        <Box position="absolute" top={16} left="50%">
+          <ActivityIndicator active size={40} />
+        </Box>
       </BodyCell>
     </Row>
   </TBody>
