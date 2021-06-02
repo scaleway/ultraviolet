@@ -2489,7 +2489,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
       <div
         class="react-datepicker-popper"
         data-placement="bottom-start"
-        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -2497,6 +2497,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
           >
             <div
               class="react-datepicker__triangle"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"
@@ -2549,6 +2550,11 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     class="react-datepicker__day-name"
                   >
+                    do
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
                     lu
                   </div>
                   <div
@@ -2576,11 +2582,6 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   >
                     sa
                   </div>
-                  <div
-                    class="react-datepicker__day-name"
-                  >
-                    do
-                  </div>
                 </div>
               </div>
               <div
@@ -2592,7 +2593,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, December 28th, 2020"
+                    aria-label="Choose domingo, 27 de diciembre de 2020"
+                    class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 28 de diciembre de 2020"
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2601,7 +2611,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, December 29th, 2020"
+                    aria-label="Choose martes, 29 de diciembre de 2020"
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2610,7 +2620,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, December 30th, 2020"
+                    aria-label="Choose miércoles, 30 de diciembre de 2020"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2619,7 +2629,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, December 31st, 2020"
+                    aria-label="Choose jueves, 31 de diciembre de 2020"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2628,7 +2638,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 1st, 2021"
+                    aria-label="Choose viernes, 1 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
                     role="button"
                     tabindex="0"
@@ -2637,21 +2647,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 2nd, 2021"
+                    aria-label="Choose sábado, 2 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     2
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 3rd, 2021"
-                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    3
                   </div>
                 </div>
                 <div
@@ -2659,7 +2660,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 4th, 2021"
+                    aria-label="Choose domingo, 3 de enero de 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 4 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--004"
                     role="button"
                     tabindex="-1"
@@ -2668,7 +2678,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 5th, 2021"
+                    aria-label="Choose martes, 5 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--005"
                     role="button"
                     tabindex="-1"
@@ -2677,7 +2687,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 6th, 2021"
+                    aria-label="Choose miércoles, 6 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--006"
                     role="button"
                     tabindex="-1"
@@ -2686,7 +2696,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 7th, 2021"
+                    aria-label="Choose jueves, 7 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--007"
                     role="button"
                     tabindex="-1"
@@ -2695,7 +2705,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 8th, 2021"
+                    aria-label="Choose viernes, 8 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--008"
                     role="button"
                     tabindex="-1"
@@ -2704,21 +2714,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 9th, 2021"
+                    aria-label="Choose sábado, 9 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     9
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 10th, 2021"
-                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    10
                   </div>
                 </div>
                 <div
@@ -2726,7 +2727,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 11th, 2021"
+                    aria-label="Choose domingo, 10 de enero de 2021"
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 11 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--011"
                     role="button"
                     tabindex="-1"
@@ -2735,7 +2745,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 12th, 2021"
+                    aria-label="Choose martes, 12 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--012"
                     role="button"
                     tabindex="-1"
@@ -2744,7 +2754,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 13th, 2021"
+                    aria-label="Choose miércoles, 13 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--013"
                     role="button"
                     tabindex="-1"
@@ -2753,7 +2763,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 14th, 2021"
+                    aria-label="Choose jueves, 14 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--014"
                     role="button"
                     tabindex="-1"
@@ -2762,7 +2772,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 15th, 2021"
+                    aria-label="Choose viernes, 15 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--015"
                     role="button"
                     tabindex="-1"
@@ -2771,21 +2781,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 16th, 2021"
+                    aria-label="Choose sábado, 16 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     16
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 17th, 2021"
-                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    17
                   </div>
                 </div>
                 <div
@@ -2793,7 +2794,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 18th, 2021"
+                    aria-label="Choose domingo, 17 de enero de 2021"
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 18 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--018"
                     role="button"
                     tabindex="-1"
@@ -2802,7 +2812,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 19th, 2021"
+                    aria-label="Choose martes, 19 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--019"
                     role="button"
                     tabindex="-1"
@@ -2811,7 +2821,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 20th, 2021"
+                    aria-label="Choose miércoles, 20 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--020"
                     role="button"
                     tabindex="-1"
@@ -2820,7 +2830,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 21st, 2021"
+                    aria-label="Choose jueves, 21 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--021"
                     role="button"
                     tabindex="-1"
@@ -2829,7 +2839,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 22nd, 2021"
+                    aria-label="Choose viernes, 22 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--022"
                     role="button"
                     tabindex="-1"
@@ -2838,21 +2848,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 23rd, 2021"
+                    aria-label="Choose sábado, 23 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     23
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 24th, 2021"
-                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    24
                   </div>
                 </div>
                 <div
@@ -2860,7 +2861,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 25th, 2021"
+                    aria-label="Choose domingo, 24 de enero de 2021"
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 25 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--025"
                     role="button"
                     tabindex="-1"
@@ -2869,7 +2879,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 26th, 2021"
+                    aria-label="Choose martes, 26 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--026"
                     role="button"
                     tabindex="-1"
@@ -2878,7 +2888,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 27th, 2021"
+                    aria-label="Choose miércoles, 27 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--027"
                     role="button"
                     tabindex="-1"
@@ -2887,7 +2897,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 28th, 2021"
+                    aria-label="Choose jueves, 28 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--028"
                     role="button"
                     tabindex="-1"
@@ -2896,7 +2906,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 29th, 2021"
+                    aria-label="Choose viernes, 29 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--029"
                     role="button"
                     tabindex="-1"
@@ -2905,21 +2915,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 30th, 2021"
+                    aria-label="Choose sábado, 30 de enero de 2021"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     30
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 31st, 2021"
-                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    31
                   </div>
                 </div>
                 <div
@@ -2927,7 +2928,16 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, February 1st, 2021"
+                    aria-label="Choose domingo, 31 de enero de 2021"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lunes, 1 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2936,7 +2946,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    aria-label="Choose martes, 2 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2945,7 +2955,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    aria-label="Choose miércoles, 3 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2954,7 +2964,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, February 4th, 2021"
+                    aria-label="Choose jueves, 4 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2963,7 +2973,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, February 5th, 2021"
+                    aria-label="Choose viernes, 5 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -2972,21 +2982,12 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, February 6th, 2021"
+                    aria-label="Choose sábado, 6 de febrero de 2021"
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
                   >
                     6
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, February 7th, 2021"
-                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    7
                   </div>
                 </div>
               </div>
@@ -3406,7 +3407,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
       <div
         class="react-datepicker-popper"
         data-placement="bottom-start"
-        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -3414,6 +3415,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
           >
             <div
               class="react-datepicker__triangle"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"
@@ -3466,6 +3468,11 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     class="react-datepicker__day-name"
                   >
+                    di
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
                     lu
                   </div>
                   <div
@@ -3493,11 +3500,6 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   >
                     sa
                   </div>
-                  <div
-                    class="react-datepicker__day-name"
-                  >
-                    di
-                  </div>
                 </div>
               </div>
               <div
@@ -3509,7 +3511,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, December 28th, 2020"
+                    aria-label="Choose dimanche 27 décembre 2020"
+                    class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 28 décembre 2020"
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3518,7 +3529,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, December 29th, 2020"
+                    aria-label="Choose mardi 29 décembre 2020"
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3527,7 +3538,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, December 30th, 2020"
+                    aria-label="Choose mercredi 30 décembre 2020"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3536,7 +3547,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, December 31st, 2020"
+                    aria-label="Choose jeudi 31 décembre 2020"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3545,7 +3556,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 1st, 2021"
+                    aria-label="Choose vendredi 1 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
                     role="button"
                     tabindex="0"
@@ -3554,21 +3565,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 2nd, 2021"
+                    aria-label="Choose samedi 2 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     2
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 3rd, 2021"
-                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    3
                   </div>
                 </div>
                 <div
@@ -3576,7 +3578,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 4th, 2021"
+                    aria-label="Choose dimanche 3 janvier 2021"
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 4 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--004"
                     role="button"
                     tabindex="-1"
@@ -3585,7 +3596,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 5th, 2021"
+                    aria-label="Choose mardi 5 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--005"
                     role="button"
                     tabindex="-1"
@@ -3594,7 +3605,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 6th, 2021"
+                    aria-label="Choose mercredi 6 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--006"
                     role="button"
                     tabindex="-1"
@@ -3603,7 +3614,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 7th, 2021"
+                    aria-label="Choose jeudi 7 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--007"
                     role="button"
                     tabindex="-1"
@@ -3612,7 +3623,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 8th, 2021"
+                    aria-label="Choose vendredi 8 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--008"
                     role="button"
                     tabindex="-1"
@@ -3621,21 +3632,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 9th, 2021"
+                    aria-label="Choose samedi 9 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     9
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 10th, 2021"
-                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    10
                   </div>
                 </div>
                 <div
@@ -3643,7 +3645,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 11th, 2021"
+                    aria-label="Choose dimanche 10 janvier 2021"
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 11 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--011"
                     role="button"
                     tabindex="-1"
@@ -3652,7 +3663,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 12th, 2021"
+                    aria-label="Choose mardi 12 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--012"
                     role="button"
                     tabindex="-1"
@@ -3661,7 +3672,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 13th, 2021"
+                    aria-label="Choose mercredi 13 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--013"
                     role="button"
                     tabindex="-1"
@@ -3670,7 +3681,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 14th, 2021"
+                    aria-label="Choose jeudi 14 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--014"
                     role="button"
                     tabindex="-1"
@@ -3679,7 +3690,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 15th, 2021"
+                    aria-label="Choose vendredi 15 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--015"
                     role="button"
                     tabindex="-1"
@@ -3688,21 +3699,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 16th, 2021"
+                    aria-label="Choose samedi 16 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     16
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 17th, 2021"
-                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    17
                   </div>
                 </div>
                 <div
@@ -3710,7 +3712,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 18th, 2021"
+                    aria-label="Choose dimanche 17 janvier 2021"
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 18 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--018"
                     role="button"
                     tabindex="-1"
@@ -3719,7 +3730,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 19th, 2021"
+                    aria-label="Choose mardi 19 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--019"
                     role="button"
                     tabindex="-1"
@@ -3728,7 +3739,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 20th, 2021"
+                    aria-label="Choose mercredi 20 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--020"
                     role="button"
                     tabindex="-1"
@@ -3737,7 +3748,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 21st, 2021"
+                    aria-label="Choose jeudi 21 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--021"
                     role="button"
                     tabindex="-1"
@@ -3746,7 +3757,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 22nd, 2021"
+                    aria-label="Choose vendredi 22 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--022"
                     role="button"
                     tabindex="-1"
@@ -3755,21 +3766,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 23rd, 2021"
+                    aria-label="Choose samedi 23 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     23
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 24th, 2021"
-                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    24
                   </div>
                 </div>
                 <div
@@ -3777,7 +3779,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 25th, 2021"
+                    aria-label="Choose dimanche 24 janvier 2021"
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 25 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--025"
                     role="button"
                     tabindex="-1"
@@ -3786,7 +3797,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 26th, 2021"
+                    aria-label="Choose mardi 26 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--026"
                     role="button"
                     tabindex="-1"
@@ -3795,7 +3806,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 27th, 2021"
+                    aria-label="Choose mercredi 27 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--027"
                     role="button"
                     tabindex="-1"
@@ -3804,7 +3815,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 28th, 2021"
+                    aria-label="Choose jeudi 28 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--028"
                     role="button"
                     tabindex="-1"
@@ -3813,7 +3824,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 29th, 2021"
+                    aria-label="Choose vendredi 29 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--029"
                     role="button"
                     tabindex="-1"
@@ -3822,21 +3833,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 30th, 2021"
+                    aria-label="Choose samedi 30 janvier 2021"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     30
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 31st, 2021"
-                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    31
                   </div>
                 </div>
                 <div
@@ -3844,7 +3846,16 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, February 1st, 2021"
+                    aria-label="Choose dimanche 31 janvier 2021"
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose lundi 1 février 2021"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3853,7 +3864,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    aria-label="Choose mardi 2 février 2021"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3862,7 +3873,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    aria-label="Choose mercredi 3 février 2021"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3871,7 +3882,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, February 4th, 2021"
+                    aria-label="Choose jeudi 4 février 2021"
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3880,7 +3891,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, February 5th, 2021"
+                    aria-label="Choose vendredi 5 février 2021"
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -3889,21 +3900,12 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, February 6th, 2021"
+                    aria-label="Choose samedi 6 février 2021"
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
                   >
                     6
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, February 7th, 2021"
-                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    7
                   </div>
                 </div>
               </div>
@@ -4323,7 +4325,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
       <div
         class="react-datepicker-popper"
         data-placement="bottom-start"
-        style="position: absolute; top: 0px; left: 0px; transform: translate3d(NaNpx, NaNpx, 0); will-change: transform;"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -4331,6 +4333,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
           >
             <div
               class="react-datepicker__triangle"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"
@@ -4383,6 +4386,11 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     class="react-datepicker__day-name"
                   >
+                    вс
+                  </div>
+                  <div
+                    class="react-datepicker__day-name"
+                  >
                     пн
                   </div>
                   <div
@@ -4410,11 +4418,6 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   >
                     сб
                   </div>
-                  <div
-                    class="react-datepicker__day-name"
-                  >
-                    вс
-                  </div>
                 </div>
               </div>
               <div
@@ -4426,7 +4429,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, December 28th, 2020"
+                    aria-label="Choose воскресенье, 27 декабря 2020 г."
+                    class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--weekend react-datepicker__day--outside-month"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    27
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 28 декабря 2020 г."
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4435,7 +4447,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, December 29th, 2020"
+                    aria-label="Choose вторник, 29 декабря 2020 г."
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4444,7 +4456,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, December 30th, 2020"
+                    aria-label="Choose среда, 30 декабря 2020 г."
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4453,7 +4465,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, December 31st, 2020"
+                    aria-label="Choose четверг, 31 декабря 2020 г."
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4462,7 +4474,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 1st, 2021"
+                    aria-label="Choose пятница, 1 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
                     role="button"
                     tabindex="0"
@@ -4471,21 +4483,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 2nd, 2021"
+                    aria-label="Choose суббота, 2 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     2
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 3rd, 2021"
-                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    3
                   </div>
                 </div>
                 <div
@@ -4493,7 +4496,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 4th, 2021"
+                    aria-label="Choose воскресенье, 3 января 2021 г."
+                    class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    3
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 4 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--004"
                     role="button"
                     tabindex="-1"
@@ -4502,7 +4514,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 5th, 2021"
+                    aria-label="Choose вторник, 5 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--005"
                     role="button"
                     tabindex="-1"
@@ -4511,7 +4523,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 6th, 2021"
+                    aria-label="Choose среда, 6 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--006"
                     role="button"
                     tabindex="-1"
@@ -4520,7 +4532,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 7th, 2021"
+                    aria-label="Choose четверг, 7 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--007"
                     role="button"
                     tabindex="-1"
@@ -4529,7 +4541,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 8th, 2021"
+                    aria-label="Choose пятница, 8 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--008"
                     role="button"
                     tabindex="-1"
@@ -4538,21 +4550,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 9th, 2021"
+                    aria-label="Choose суббота, 9 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     9
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 10th, 2021"
-                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    10
                   </div>
                 </div>
                 <div
@@ -4560,7 +4563,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 11th, 2021"
+                    aria-label="Choose воскресенье, 10 января 2021 г."
+                    class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    10
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 11 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--011"
                     role="button"
                     tabindex="-1"
@@ -4569,7 +4581,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 12th, 2021"
+                    aria-label="Choose вторник, 12 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--012"
                     role="button"
                     tabindex="-1"
@@ -4578,7 +4590,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 13th, 2021"
+                    aria-label="Choose среда, 13 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--013"
                     role="button"
                     tabindex="-1"
@@ -4587,7 +4599,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 14th, 2021"
+                    aria-label="Choose четверг, 14 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--014"
                     role="button"
                     tabindex="-1"
@@ -4596,7 +4608,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 15th, 2021"
+                    aria-label="Choose пятница, 15 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--015"
                     role="button"
                     tabindex="-1"
@@ -4605,21 +4617,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 16th, 2021"
+                    aria-label="Choose суббота, 16 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     16
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 17th, 2021"
-                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    17
                   </div>
                 </div>
                 <div
@@ -4627,7 +4630,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 18th, 2021"
+                    aria-label="Choose воскресенье, 17 января 2021 г."
+                    class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    17
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 18 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--018"
                     role="button"
                     tabindex="-1"
@@ -4636,7 +4648,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 19th, 2021"
+                    aria-label="Choose вторник, 19 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--019"
                     role="button"
                     tabindex="-1"
@@ -4645,7 +4657,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 20th, 2021"
+                    aria-label="Choose среда, 20 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--020"
                     role="button"
                     tabindex="-1"
@@ -4654,7 +4666,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 21st, 2021"
+                    aria-label="Choose четверг, 21 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--021"
                     role="button"
                     tabindex="-1"
@@ -4663,7 +4675,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 22nd, 2021"
+                    aria-label="Choose пятница, 22 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--022"
                     role="button"
                     tabindex="-1"
@@ -4672,21 +4684,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 23rd, 2021"
+                    aria-label="Choose суббота, 23 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     23
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 24th, 2021"
-                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    24
                   </div>
                 </div>
                 <div
@@ -4694,7 +4697,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, January 25th, 2021"
+                    aria-label="Choose воскресенье, 24 января 2021 г."
+                    class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    24
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 25 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--025"
                     role="button"
                     tabindex="-1"
@@ -4703,7 +4715,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, January 26th, 2021"
+                    aria-label="Choose вторник, 26 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--026"
                     role="button"
                     tabindex="-1"
@@ -4712,7 +4724,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, January 27th, 2021"
+                    aria-label="Choose среда, 27 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--027"
                     role="button"
                     tabindex="-1"
@@ -4721,7 +4733,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, January 28th, 2021"
+                    aria-label="Choose четверг, 28 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--028"
                     role="button"
                     tabindex="-1"
@@ -4730,7 +4742,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, January 29th, 2021"
+                    aria-label="Choose пятница, 29 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--029"
                     role="button"
                     tabindex="-1"
@@ -4739,21 +4751,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, January 30th, 2021"
+                    aria-label="Choose суббота, 30 января 2021 г."
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
                     role="button"
                     tabindex="-1"
                   >
                     30
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, January 31st, 2021"
-                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    31
                   </div>
                 </div>
                 <div
@@ -4761,7 +4764,16 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Monday, February 1st, 2021"
+                    aria-label="Choose воскресенье, 31 января 2021 г."
+                    class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    31
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-label="Choose понедельник, 1 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4770,7 +4782,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Tuesday, February 2nd, 2021"
+                    aria-label="Choose вторник, 2 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4779,7 +4791,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Wednesday, February 3rd, 2021"
+                    aria-label="Choose среда, 3 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4788,7 +4800,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Thursday, February 4th, 2021"
+                    aria-label="Choose четверг, 4 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4797,7 +4809,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Friday, February 5th, 2021"
+                    aria-label="Choose пятница, 5 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
@@ -4806,21 +4818,12 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </div>
                   <div
                     aria-disabled="false"
-                    aria-label="Choose Saturday, February 6th, 2021"
+                    aria-label="Choose суббота, 6 февраля 2021 г."
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
                     role="button"
                     tabindex="-1"
                   >
                     6
-                  </div>
-                  <div
-                    aria-disabled="false"
-                    aria-label="Choose Sunday, February 7th, 2021"
-                    class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="button"
-                    tabindex="-1"
-                  >
-                    7
                   </div>
                 </div>
               </div>
