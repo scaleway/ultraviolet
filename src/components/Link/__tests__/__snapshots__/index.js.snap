@@ -48,7 +48,6 @@ exports[`Link render correctly with target blank 1`] = `
 }
 
 .emotion-4 {
-  vertical-align: top;
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -56,6 +55,10 @@ exports[`Link render correctly with target blank 1`] = `
   min-height: 1em;
   padding-left: 2px;
   opacity: 0.5;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: top;
 }
 
 <a

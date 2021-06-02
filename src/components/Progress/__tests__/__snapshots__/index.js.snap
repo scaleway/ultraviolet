@@ -15,7 +15,6 @@ exports[`Progress renders correctly 1`] = `
 }
 
 .emotion-3 {
-  z-index: 3;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,8 +45,11 @@ exports[`Progress renders correctly 1`] = `
   border-color: #fff;
 }
 
+.emotion-3.emotion-3 {
+  z-index: 3;
+}
+
 .emotion-5 {
-  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,12 +81,15 @@ exports[`Progress renders correctly 1`] = `
   border-color: #fff;
 }
 
+.emotion-5.emotion-5 {
+  z-index: 2;
+}
+
 .emotion-5:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
 .emotion-7 {
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,6 +118,10 @@ exports[`Progress renders correctly 1`] = `
   background-color: #fff;
   color: #b2b6c3;
   border-color: #d4dae7;
+}
+
+.emotion-7.emotion-7 {
+  z-index: 1;
 }
 
 .emotion-7:focus {
@@ -156,7 +165,6 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
 }
 
 .emotion-3 {
-  z-index: 3;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,12 +196,15 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   cursor: pointer;
 }
 
+.emotion-3.emotion-3 {
+  z-index: 3;
+}
+
 .emotion-3:focus {
   box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
 }
 
 .emotion-5 {
-  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,8 +236,11 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   border-color: #fff;
 }
 
+.emotion-5.emotion-5 {
+  z-index: 2;
+}
+
 .emotion-7 {
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -255,6 +269,10 @@ exports[`Progress renders correctly when one children is clickable 1`] = `
   background-color: #4f0599;
   color: #fff;
   border-color: #fff;
+}
+
+.emotion-7.emotion-7 {
+  z-index: 1;
 }
 
 .emotion-7:focus {
@@ -298,7 +316,6 @@ exports[`Progress renders correctly when one children is empty 1`] = `
 }
 
 .emotion-3 {
-  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -329,8 +346,11 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   border-color: #fff;
 }
 
+.emotion-3.emotion-3 {
+  z-index: 2;
+}
+
 .emotion-5 {
-  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -359,6 +379,10 @@ exports[`Progress renders correctly when one children is empty 1`] = `
   background-color: #4f0599;
   color: #fff;
   border-color: #fff;
+}
+
+.emotion-5.emotion-5 {
+  z-index: 1;
 }
 
 .emotion-5:focus {
