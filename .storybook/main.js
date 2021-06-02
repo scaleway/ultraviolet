@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
   ],
   webpackFinal: config => {
     const cwd = process.cwd()
@@ -25,6 +26,11 @@ module.exports = {
         'styled',
       ),
       'emotion-theming': path.join(cwd, 'node_modules', '@emotion', 'react'),
+    }
+
+    config.resolve.fallback = {
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
     }
 
     return config

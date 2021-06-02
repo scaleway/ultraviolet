@@ -5,16 +5,44 @@ import { css, ThemeProvider } from '@emotion/react'
 import theme from '../src/theme'
 import { GlobalStyle } from '../src'
 
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  viewMode: 'docs',
-  previewTabs: { canvas: { hidden: true } },
-  options: {
-    storySort: {
-      order: ['Home', 'Theme', 'Components'],
+const STORY_SORT = {
+  order: ['Home', 'Theme', 'Components'],
+}
+
+const ENV_PARAMETERS = {
+  development: {
+    actions: { disable: true, argTypesRegex: '^on[A-Z].*' },
+    backgrounds: {
+      disable: true,
+      grid: {
+        disable: true,
+      },
+    },
+    controls: {
+      disable: true,
+    },
+    viewMode: 'docs',
+    previewTabs: {
+      'storybook/docs/panel': { index: -1 },
+    },
+    viewport: {
+      viewports: {},
+    },
+    options: {
+      storySort: STORY_SORT,
+    },
+  },
+  production: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    viewMode: 'docs',
+    previewTabs: { canvas: { hidden: true } },
+    options: {
+      storySort: STORY_SORT,
     },
   },
 }
+export const parameters =
+  ENV_PARAMETERS[process.env.STORYBOOK_ENVIRONMENT] || ENV_PARAMETERS.production
 
 const adjustedTheme = ancestorTheme => ({
   ...ancestorTheme,
