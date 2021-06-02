@@ -1,9 +1,10 @@
-import { css, keyframes } from '@emotion/react'
+import { css, keyframes, useTheme } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '../Box'
+import { CircularProgressbar } from 'react-circular-progressbar'
 
-const spinAnimation = keyframes`
+const spin = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -13,61 +14,81 @@ const spinAnimation = keyframes`
   }
 `
 
-const spinnerStyle = css`
-  display: flex;
-  animation: ${spinAnimation} 0.75s linear infinite;
+const StyledProgressbar = styled(CircularProgressbar)`
+  ${({ size }) => css`
+    height: ${size}px;
+    width: ${size}px;
+  `}
+
+  ${({ active }) =>
+    active &&
+    css`
+      animation: ${spin} 0.75s linear infinite;
+    `}
 `
 
-const Spinner = ({ children, style }) => (
-  <div css={spinnerStyle} style={style}>
-    {children}
-  </div>
-)
+const ActivityIndicator = ({
+  percentage,
+  text,
+  size,
+  strokeWidth,
+  color,
+  trailColor,
+  active,
+}) => {
+  const theme = useTheme()
 
-Spinner.propTypes = {
-  children: PropTypes.node.isRequired,
-  style: PropTypes.shape({}).isRequired,
+  const percent = active && !percentage ? 20 : percentage
+
+  return (
+    <StyledProgressbar
+      value={percent}
+      text={text}
+      strokeWidth={strokeWidth}
+      active={active}
+      size={size}
+      styles={{
+        path: {
+          stroke: theme.colors[color] || color,
+          strokeLinecap: 'round',
+        },
+        root: {},
+        text: {
+          dominantBaseline: 'middle',
+          fill: theme.colors.primary,
+          fontSize: '26px',
+          textAnchor: 'middle',
+        },
+        trail: {
+          stroke: theme.colors[trailColor] || trailColor,
+          strokeLinecap: 'round',
+        },
+      }}
+    />
+  )
 }
-
-const Circle = ({ style }) => (
-  <circle cx="16" cy="16" fill="none" r="14" strokeWidth="4" style={style} />
-)
-
-Circle.propTypes = {
-  style: PropTypes.shape({}).isRequired,
-}
-
-const ActivityIndicator = ({ size, color, ...props }) => (
-  <Box
-    role="progressbar"
-    aria-valuemax={1}
-    aria-valuemin={0}
-    color={color}
-    {...props}
-  >
-    <Spinner style={{ height: size, width: size }}>
-      <svg viewBox="0 0 32 32" height="100%" width="100%">
-        <Circle style={{ opacity: 0.2, stroke: 'currentColor' }} />
-        <Circle
-          style={{
-            stroke: 'currentColor',
-            strokeDasharray: 80,
-            strokeDashoffset: 60,
-          }}
-        />
-      </svg>
-    </Spinner>
-  </Box>
-)
 
 ActivityIndicator.propTypes = {
+  active: PropTypes.bool,
   color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  percentage: PropTypes.number,
+  size: PropTypes.number,
+  strokeWidth: PropTypes.number,
+  /**
+   * Text is placed in center of ProgressCircle.
+   */
+  text: PropTypes.string,
+  trailColor: PropTypes.string,
 }
 
 ActivityIndicator.defaultProps = {
+  active: false,
   color: 'primary',
-  size: 10,
+  percentage: 0,
+  size: 40,
+  strokeWidth: 16,
+  text: undefined,
+  trailColor: 'gray350',
 }
 
 export default ActivityIndicator
