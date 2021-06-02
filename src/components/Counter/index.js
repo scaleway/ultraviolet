@@ -33,7 +33,13 @@ const Counter = ({ end, onEnd }) => {
 }
 
 Counter.propTypes = {
+  /**
+   * Value to which counter will go. Can be negative or positive number.
+   */
   end: PropTypes.number.isRequired,
+  /**
+   * Triggered function when counter animation is finished.
+   */
   onEnd: PropTypes.func,
 }
 

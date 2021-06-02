@@ -67,6 +67,24 @@ const Container = ({
   </StyledContainer>
 )
 
+Container.propTypes = {
+  boxStyle: PropTypes.shape({}),
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  edition: PropTypes.bool,
+  /**
+   * Header can be a string but also a component.
+   */
+  header: PropTypes.node,
+  /**
+   * Right title can be a string but also a component, like header properties does.
+   */
+  rightTitle: PropTypes.node,
+  small: PropTypes.bool,
+  subtitle: PropTypes.string,
+  title: PropTypes.string,
+}
+
 Container.defaultProps = {
   boxStyle: undefined,
   disabled: false,
@@ -76,18 +94,6 @@ Container.defaultProps = {
   small: false,
   subtitle: undefined,
   title: undefined,
-}
-
-Container.propTypes = {
-  boxStyle: PropTypes.shape({}),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  edition: PropTypes.bool,
-  header: PropTypes.node,
-  rightTitle: PropTypes.node,
-  small: PropTypes.bool,
-  subtitle: PropTypes.string,
-  title: PropTypes.string,
 }
 
 export default Container

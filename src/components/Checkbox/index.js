@@ -93,7 +93,9 @@ const Checkbox = ({
           {...checkbox}
           hasChildren={hasChildren}
           size={size}
-          onChange={onChange}
+          onChange={e => {
+            if (!progress) onChange(e)
+          }}
           onFocus={onFocus}
           onBlur={onBlur}
           disabled={disabled}

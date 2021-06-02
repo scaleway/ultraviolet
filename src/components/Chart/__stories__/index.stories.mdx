@@ -1,13 +1,19 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Chart from '..'
 
 <Meta title="Components/Chart" />
 
 # Chart
 
-## Variants
-
-### Donut
+<Description>
+  Chart is a graphic component to show data and associated with a value.
+</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -17,129 +23,129 @@ import Chart from '..'
         {
           color: '#4F1A81',
           percent: 50,
-          product: 'compute',
+          product: 'Chocolate',
         },
         {
           color: '#F4306C',
           percent: 50,
-          product: 'gpu',
+          product: 'Strawberry',
         },
       ]}
     />
   </Story>
 </Canvas>
 
-### Donut with content
+## Content
 
 <Canvas>
-  <Story name="With Content">
+  <Story name="Content">
     <Chart
       variant="donut"
       data={[
         {
           color: '#4F1A81',
           percent: 50,
-          product: 'compute',
+          product: 'Chocolate',
         },
         {
           color: '#F4306C',
           percent: 50,
-          product: 'gpu',
+          product: 'Strawberry',
         },
       ]}
-      content="40"
+      content="€20"
     />
   </Story>
 </Canvas>
 
-### Donut With Empty Legend Placeholder
+## Legends
 
 <Canvas>
-  <Story name="With Empty Legend Placeholder">
+  <Story name="Legends">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          color: '#4F1A81',
+          name: 'Chocolate',
+          percent: 50,
+          product: 'chocolate',
+          value: '€10',
+        },
+        {
+          color: '#F4306C',
+          name: 'Strawberry',
+          percent: 50,
+          product: 'strawberry',
+          value: '€10',
+        },
+      ]}
+      content="€20"
+      hasLegend
+    />
+  </Story>
+</Canvas>
+
+## Popper details
+
+<Canvas>
+  <Story name="Popper details">
+    <Chart
+      variant="donut"
+      data={[
+        {
+          color: '#4F1A81',
+          details: [
+            {
+              name: '500g black chocolate',
+              value: '€5',
+            },
+            {
+              name: '500g white chocolate',
+              value: '€5',
+            },
+          ],
+          name: 'Chocolate',
+          percent: 50,
+          product: 'chocolate',
+          value: '€10',
+        },
+        {
+          color: '#F4306C',
+          details: [
+            {
+              name: '500g Strawberry from Spain',
+              value: '€5',
+            },
+            {
+              name: '500g Strawberry from France',
+              value: '€5',
+            },
+          ],
+          name: 'Strawberry',
+          percent: 50,
+          product: 'strawberry',
+          value: '€10',
+        },
+      ]}
+      content="€20"
+      hasLegend
+    />
+  </Story>
+</Canvas>
+
+## Empty Legend
+
+<Canvas>
+  <Story name="Empty Legend">
     <Chart variant="donut" emptyLegend="I'm alone in the dark" hasLegend />
   </Story>
 </Canvas>
 
-## With Legends
+## Strikethrough
 
 <Canvas>
-  <Story name="With Legends">
-    <Chart
-      variant="donut"
-      data={[
-        {
-          color: '#4F1A81',
-          name: 'Compute',
-          percent: 50,
-          product: 'compute',
-          value: '20',
-        },
-        {
-          color: '#F4306C',
-          name: 'GPU Instances',
-          percent: 50,
-          product: 'gpu',
-          value: '20',
-        },
-      ]}
-      content="40"
-      hasLegend
-    />
-  </Story>
-</Canvas>
-
-### Legends with Popper details
-
-<Canvas>
-  <Story name="With Popper">
-    <Chart
-      variant="donut"
-      data={[
-        {
-          color: '#4F1A81',
-          details: [
-            {
-              name: 'Start-1S',
-              value: '€10',
-            },
-            {
-              name: 'Start-2L',
-              value: '€10',
-            },
-          ],
-          name: 'Compute',
-          percent: 50,
-          product: 'compute',
-          value: '20',
-        },
-        {
-          color: '#F4306C',
-          details: [
-            {
-              name: 'Start-1S',
-              value: '€10',
-            },
-            {
-              name: 'Start-2L',
-              value: '€10',
-            },
-          ],
-          name: 'GPU Instances',
-          percent: 50,
-          product: 'gpu',
-          value: '20',
-        },
-      ]}
-      content="40"
-      hasLegend
-    />
-  </Story>
-</Canvas>
-
-### Donut with discount
-
-<Canvas>
-  <Story name="With Discount">
+  <Story name="Strikethrough">
     <Chart
       variant="donut"
       hasLegend
@@ -148,21 +154,26 @@ import Chart from '..'
           color: '#F4306C',
           details: [
             {
-              name: 'Start-1S',
+              name: 'New user discount',
               value: '€10',
             },
             {
-              name: 'Start-2L',
+              name: 'Summer discount',
               value: '€10',
             },
           ],
-          name: 'GPU Instances',
+          name: 'Discount',
           needPattern: true,
           percent: 100,
           product: 'discount',
-          value: '20',
+          value: '€20',
         },
       ]}
+      content="€0"
     />
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={Chart} />

@@ -14,38 +14,44 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 # Checkbox
 
-<Description>Checkbox control, it acts like a real checkbox.</Description>
-
-## Basic
+<Description>
+  Checkbox component is used to select or unselect items.
+</Description>
 
 <Canvas>
   <Story name="Basic">
-    {() => {
-      const [checked, setChecked] = useState(false)
-      const handleChange = useCallback(
-        event => setChecked(event.target.checked),
-        [],
-      )
-      return (
-        <Boxer my={1}>
-          <Checkbox checked={checked} onChange={handleChange}>
-            Basic checkbox
-          </Checkbox>
-          <Checkbox checked disabled onChange={() => {}}>
-            Basic disabled checkbox
-          </Checkbox>
-          <Checkbox checked={false} disabled onChange={() => {}}>
-            Basic disabled checkbox not checked
-          </Checkbox>
-        </Boxer>
-      )
-    }}
+    <Boxer my={1}>
+      <Checkbox onChange={() => {}}>Basic unchecked checkbox</Checkbox>
+      <Checkbox checked onChange={() => {}}>
+        Basic checked checkbox
+      </Checkbox>
+    </Boxer>
+  </Story>
+</Canvas>
+
+## Size
+
+<Description>Set size using `size` property.</Description>
+
+<Canvas>
+  <Story name="Size">
+    <Boxer my={1}>
+      <Checkbox size={10} onChange={() => {}}>
+        Small checkbox
+      </Checkbox>
+      <Checkbox size={20} onChange={() => {}}>
+        Medium checkbox
+      </Checkbox>
+      <Checkbox size={30} onChange={() => {}}>
+        Big checkbox
+      </Checkbox>
+    </Boxer>
   </Story>
 </Canvas>
 
 ## Validation
 
-<Description>Set validation using `valid` property.</Description>
+<Description>Set validation using `valid` boolean property.</Description>
 
 <Canvas>
   <Story name="Validation">
@@ -53,7 +59,7 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
       <Checkbox valid={false} onChange={() => {}}>
         Invalid checkbox
       </Checkbox>
-      <Checkbox valid onChange={() => {}}>
+      <Checkbox valid onChange={() => {}} checked>
         Valid checkbox
       </Checkbox>
     </Boxer>
@@ -70,31 +76,17 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
   <Story name="Error">
     <Boxer my={1}>
       <ErrorTransition
-        error="An Error"
+        error="An Error occurred, your checkbox is invalid"
         Component={Checkbox}
         onChange={() => {}}
       >
         Checkbox on Error with transition
       </ErrorTransition>
-      <Checkbox error="An Error" onChange={() => {}}>
+      <Checkbox
+        error="An Error occurred, your checkbox is invalid"
+        onChange={() => {}}
+      >
         Checkbox on Error
-      </Checkbox>
-    </Boxer>
-  </Story>
-</Canvas>
-
-## Size
-
-<Description>Set size using `size` property.</Description>
-
-<Canvas>
-  <Story name="Size">
-    <Boxer my={1}>
-      <Checkbox size={10} onChange={() => {}}>
-        Small checkbox
-      </Checkbox>
-      <Checkbox size={30} onChange={() => {}}>
-        Big checkbox
       </Checkbox>
     </Boxer>
   </Story>
@@ -106,9 +98,44 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 <Canvas>
   <Story name="Progress">
+    {() => {
+      const [checked, setChecked] = useState(false)
+      const handleChange = useCallback(event => {
+        setChecked(event.target.checked)
+        setTimeout(() => {
+          setChecked(false)
+        }, 2000)
+      }, [])
+      return (
+        <Boxer my={1}>
+          <Checkbox
+            progress={checked}
+            checked={checked}
+            onChange={handleChange}
+          >
+            Check me
+          </Checkbox>
+        </Boxer>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Typography variant
+
+<Description>Set value using `typographyVariant` property.</Description>
+
+<Canvas>
+  <Story name="Typography variant">
     <Boxer my={1}>
-      <Checkbox progress onChange={() => {}}>
-        Progress checkbox
+      <Checkbox typographyVariant="tiny" onChange={() => {}}>
+        tiny variant
+      </Checkbox>
+      <Checkbox typographyVariant="description" onChange={() => {}}>
+        description variant
+      </Checkbox>
+      <Checkbox typographyVariant="title" onChange={() => {}}>
+        title variant
       </Checkbox>
     </Boxer>
   </Story>
@@ -134,24 +161,6 @@ import ErrorTransition from '../../../__stories__/components/ErrorTransition'
   </Story>
 </Canvas>
 
-## Typography variant
-
-<Description>Set value using `value` property.</Description>
-
-<Canvas>
-  <Story name="Typography variant">
-    <Boxer my={1}>
-      <Checkbox typographyVariant="tiny" onChange={() => {}}>
-        tiny variant
-      </Checkbox>
-      <Checkbox typographyVariant="description" onChange={() => {}}>
-        description variant
-      </Checkbox>
-      <Checkbox typographyVariant="title" onChange={() => {}}>
-        title variant
-      </Checkbox>
-    </Boxer>
-  </Story>
-</Canvas>
+## API
 
 <ArgsTable of={Checkbox} />

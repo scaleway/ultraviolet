@@ -65,6 +65,9 @@ Chart.defaultProps = {
 
 Chart.propTypes = {
   chartId: PropTypes.string,
+  /**
+   * Content will be displayed in the center of the chart, it can be text, number or any other component.
+   */
   content: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
