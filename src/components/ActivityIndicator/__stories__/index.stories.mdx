@@ -140,7 +140,6 @@ import ActivityIndicator from '../index'
           percentage={percentage}
           text={`${percentage}%`}
           display="inline-flex"
-          marginRight={1}
         />
       </div>
     ))}
@@ -160,12 +159,7 @@ import ActivityIndicator from '../index'
   <Story name="Active">
     {[10, 20, 30, 40, 50, 100].map(size => (
       <div style={{ display: 'inline-flex', marginRight: 8 }}>
-        <ActivityIndicator
-          key={`active-${size}`}
-          marginRight={1}
-          size={size}
-          active
-        />
+        <ActivityIndicator key={`active-${size}`} size={size} active />
       </div>
     ))}
   </Story>
