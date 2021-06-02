@@ -1,3 +1,20 @@
+## [0.82.0](https://github.com/scaleway/scaleway-ui/compare/v0.81.1...v0.82.0) (2021-06-02)
+
+
+### :white_check_mark: Test
+
+* correct shouldMatchEmotionSnapshot usage ([#402](https://github.com/scaleway/scaleway-ui/issues/402)) ([b521d52](https://github.com/scaleway/scaleway-ui/commit/b521d528d35f469b1fa1b8fc32e1cba47dbfcd12))
+
+
+### :memo: Documentation
+
+* improves documentation for components from l to n CNS-3985 ([#386](https://github.com/scaleway/scaleway-ui/issues/386)) ([da268da](https://github.com/scaleway/scaleway-ui/commit/da268da9fe0b5f8e5167710f7a320b704032acc4))
+
+
+### :gear: Features
+
+* **accessibility:** enable storybook accessibility ([#385](https://github.com/scaleway/scaleway-ui/issues/385)) ([6e74d15](https://github.com/scaleway/scaleway-ui/commit/6e74d151af9cc46e22ae931a4e8c5eb67d110071))
+
 ### [0.81.1](https://github.com/scaleway/scaleway-ui/compare/v0.81.0...v0.81.1) (2021-05-31)
 
 
