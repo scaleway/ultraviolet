@@ -1,11 +1,17 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import BulletList from '..'
 
 <Meta title="Components/BulletList" />
 
 # BulletList
 
-## Basic
+<Description>Make a list with sub components in it.</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -16,5 +22,7 @@ import BulletList from '..'
     </BulletList>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={BulletList} />

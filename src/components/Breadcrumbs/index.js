@@ -152,7 +152,12 @@ const StyledItemBox = styled.li`
   ${({ variant, theme }) => variants[variant]?.(theme)}
 `
 
-Breadcrumbs.Item = ({ to, children, variant, 'aria-current': ariaCurrent }) => (
+export const Item = ({
+  to,
+  children,
+  variant,
+  'aria-current': ariaCurrent,
+}) => (
   <StyledItemBox variant={variant} aria-current={ariaCurrent}>
     {to ? (
       <Link variant="primary" to={to}>
@@ -164,17 +169,19 @@ Breadcrumbs.Item = ({ to, children, variant, 'aria-current': ariaCurrent }) => (
   </StyledItemBox>
 )
 
-Breadcrumbs.Item.propTypes = {
+Item.propTypes = {
   'aria-current': PropTypes.string,
   children: PropTypes.node.isRequired,
   to: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(breadcrumbsVariants),
 }
 
-Breadcrumbs.Item.defaultProps = {
+Item.defaultProps = {
   'aria-current': undefined,
   to: null,
   variant: 'link',
 }
+
+Breadcrumbs.Item = Item
 
 export default Breadcrumbs

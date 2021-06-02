@@ -41,6 +41,9 @@ const BulletList = ({ children, keyPrefix }) => (
 
 BulletList.propTypes = {
   children: PropTypes.node.isRequired,
+  /**
+   * Add a prefix if you have multiple BulletList in a same page.
+   */
   keyPrefix: PropTypes.string,
 }
 

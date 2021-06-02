@@ -5,10 +5,8 @@ import BorderedBox from '..'
 
 # BorderedBox
 
-## Basic
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <BorderedBox>Basic BorderedBox</BorderedBox>
   </Story>
 </Canvas>
@@ -26,7 +24,7 @@ Set a custom base component using `as` prop.
 ## Link
 
 <Canvas>
-  <Story name="As link">
+  <Story name="Link">
     <BorderedBox href="#" m={1}>
       Href Link
     </BorderedBox>
@@ -39,16 +37,14 @@ Set a custom base component using `as` prop.
 ## Variants
 
 <Canvas>
-  <Story name="Horizontal">
-    <BorderedBox variant="horizontal">Horizontal</BorderedBox>
-  </Story>
-  <Story name="Vertical">
+  <Story name="Variants">
+    <BorderedBox variant="horizontal" mb={2}>
+      Horizontal
+    </BorderedBox>
     <BorderedBox variant="vertical">Vertical</BorderedBox>
   </Story>
 </Canvas>
 
 ## API
-
-### BorderedBox
 
 <ArgsTable of={BorderedBox} />

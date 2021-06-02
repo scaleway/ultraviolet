@@ -51,6 +51,9 @@ const BorderedBox = ({ children, variant, to, href, as, ...props }) => (
 )
 
 BorderedBox.propTypes = {
+  /**
+   * Allow you to use a different HTML tag or a different custom component but keep all the styling
+   */
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
   href: PropTypes.string,

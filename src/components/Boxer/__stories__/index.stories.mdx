@@ -11,17 +11,17 @@ import Boxer from '..'
 
 # Boxer
 
-<Description>
-  Wraps in a `Box` all children. All `Box` props are supported.
-</Description>
+<Description>Wraps its children into `Box` component.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Boxer mx={5} display="inline-block">
-      <div>A</div>
-      <div>B</div>
+      <div>Children 1 - I'm in a box component</div>
+      <span>Children 2 - I'm in a box component too</span>
     </Boxer>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Boxer} />

@@ -268,7 +268,6 @@ function FwdButton({
   iconPosition,
   children,
   extend,
-  displayProgressOnly,
   type: elementType,
   innerRef,
   to,
@@ -282,6 +281,8 @@ function FwdButton({
 
     return 'button'
   }, [to, href, download])
+
+  const displayProgressOnly = !children
 
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
@@ -338,7 +339,6 @@ function FwdButton({
 const defaultProps = {
   children: null,
   disabled: false,
-  displayProgressOnly: false,
   download: undefined,
   extend: undefined,
   href: undefined,
@@ -360,13 +360,18 @@ const propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]),
   disabled: PropTypes.bool,
-  displayProgressOnly: PropTypes.bool,
   download: PropTypes.string,
   extend: PropTypes.bool,
   href: PropTypes.string,
+  /**
+   * Name of the icon. All [icons](/?path=/docs/components-icon) are supported.
+   */
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   innerRef: PropTypes.func,
+  /**
+   * Use this properties to associate ref to button component.
+   */
   progress: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(['left', 'right']),
