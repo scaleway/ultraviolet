@@ -194,7 +194,7 @@ const Tags = ({
                 : 'base'
             }
             disabled={disabled}
-            key={`${tag.label}-${tag.index}`}
+            key={tag.index}
             isLoading={status[tag.index] === 'loading'}
             onClose={e => {
               e.stopPropagation()

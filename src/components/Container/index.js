@@ -9,9 +9,7 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledBorderedBox = styled(BorderedBox, {
-  shouldForwardProp: prop => !['edition', 'small'].includes(prop),
-})`
+const StyledBorderedBox = styled(BorderedBox)`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
@@ -43,22 +41,20 @@ const Container = ({
   ...props
 }) => (
   <StyledContainer {...props}>
-    {(title || subtitle || rightTitle) && (
-      <Box display="flex" justifyContent="space-between">
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="flex-start"
-          mb={1}
-        >
-          <Typography variant="lead" my={0} mr={2}>
-            {title}
-          </Typography>
-          {subtitle}
-        </Box>
-        <div>{rightTitle}</div>
+    <Box display="flex" justifyContent="space-between">
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-start"
+        mb={1}
+      >
+        <Typography variant="lead" my={0} mr={2}>
+          {title}
+        </Typography>
+        {subtitle}
       </Box>
-    )}
+      <div>{rightTitle}</div>
+    </Box>
     {header}
     <StyledBorderedBox
       css={boxStyle}

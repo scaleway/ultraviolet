@@ -12,7 +12,7 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -20,6 +20,10 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 }
 
 .emotion-1 {
+  min-height: 200px;
+}
+
+.emotion-1.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -28,8 +32,9 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 100%;
-  min-height: 200px;
+  -webkit-flex: 0 0 undefined;
+  -ms-flex: 0 0 undefined;
+  flex: 0 0 undefined;
 }
 
 .emotion-2 {
@@ -54,7 +59,7 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   border-radius: 4px;
 }
 
-.emotion-3 {
+.emotion-3.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,8 +87,6 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 }
 
 .emotion-7 {
-  margin-top: 8px;
-  margin-bottom: 8px;
   margin: 0;
   border: 0;
   width: auto;
@@ -92,6 +95,11 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   background-color: #eeeeff;
+}
+
+.emotion-7.emotion-7 {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .emotion-16 {
@@ -180,7 +188,7 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -462,7 +470,7 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -470,19 +478,6 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 }
 
 .emotion-1 {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-  margin-left: 8px;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -501,6 +496,24 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
   border: 1px solid #dce1eb;
 }
 
+.emotion-1.emotion-1 {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  margin-left: 8px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex: 0 0 undefined;
+  -ms-flex: 0 0 undefined;
+  flex: 0 0 undefined;
+}
+
 .emotion-2 {
   width: 8.333333333333334px;
   height: 8.333333333333334px;
@@ -509,12 +522,15 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
 }
 
 .emotion-3 {
-  width: 12.5px;
-  margin-top: 24px;
   height: 12px;
   width: 12.5px;
   border-radius: 10px;
   background-color: #dce1eb;
+}
+
+.emotion-3.emotion-3 {
+  width: 12.5px;
+  margin-top: 24px;
 }
 
 .emotion-4 {
@@ -569,7 +585,7 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -577,6 +593,13 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -585,11 +608,9 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-flex: 0 0 undefined;
+  -ms-flex: 0 0 undefined;
+  flex: 0 0 undefined;
 }
 
 .emotion-2 {
@@ -726,7 +747,7 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -734,6 +755,13 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
 }
 
 .emotion-1 {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #dce1eb;
+}
+
+.emotion-1.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -742,11 +770,9 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 100%;
-  height: 12px;
-  width: 120px;
-  border-radius: 10px;
-  background-color: #dce1eb;
+  -webkit-flex: 0 0 undefined;
+  -ms-flex: 0 0 undefined;
+  flex: 0 0 undefined;
 }
 
 .emotion-2 {
@@ -794,7 +820,7 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -913,7 +939,7 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-0.emotion-0 {
   width: 100%;
   position: relative;
   display: block;
@@ -921,6 +947,15 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
 }
 
 .emotion-1 {
+  height: 277px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.emotion-1.emotion-1 {
   box-sizing: border-box;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
@@ -929,13 +964,9 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 100%;
-  height: 277px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: auto;
+  -webkit-flex: 0 0 undefined;
+  -ms-flex: 0 0 undefined;
+  flex: 0 0 undefined;
 }
 
 .emotion-2 {
