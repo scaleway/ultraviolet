@@ -1,3 +1,27 @@
+### [0.82.2](https://github.com/scaleway/scaleway-ui/compare/v0.82.1...v0.82.2) (2021-06-07)
+
+
+### :memo: Documentation
+
+* updated all B components doc ([#383](https://github.com/scaleway/scaleway-ui/issues/383)) ([27b6065](https://github.com/scaleway/scaleway-ui/commit/27b606548580f4d54dd012e1ec574a977fb0dba3))
+* updated all C components doc ([#387](https://github.com/scaleway/scaleway-ui/issues/387)) ([e34b610](https://github.com/scaleway/scaleway-ui/commit/e34b610c81149aa74aafb5a02acc887f6b6d5d66))
+
+
+### :package: Chore
+
+* **deps:** bump react-datepicker from 3.8.0 to 4.1.0 ([#397](https://github.com/scaleway/scaleway-ui/issues/397)) ([c16bae2](https://github.com/scaleway/scaleway-ui/commit/c16bae25a6fc5fb5ccba8b7be35d892eaa85ddff))
+* **deps-dev:** bump @testing-library/jest-dom from 5.12.0 to 5.13.0 ([#409](https://github.com/scaleway/scaleway-ui/issues/409)) ([34be24e](https://github.com/scaleway/scaleway-ui/commit/34be24e0a7e1531fbf73df61f248dc19ebf94cde))
+* **deps-dev:** bump jest from 27.0.3 to 27.0.4 ([#410](https://github.com/scaleway/scaleway-ui/issues/410)) ([c9a4923](https://github.com/scaleway/scaleway-ui/commit/c9a492343b9f2bc9db9ea98f612f70f3dbe536bc))
+* remove unused Select component ([#405](https://github.com/scaleway/scaleway-ui/issues/405)) ([fff04dc](https://github.com/scaleway/scaleway-ui/commit/fff04dca8b05aac12df9464f96f957821d482833))
+* **deps:** bump react-datepicker from 4.1.0 to 4.1.1 ([#408](https://github.com/scaleway/scaleway-ui/issues/408)) ([e0b0452](https://github.com/scaleway/scaleway-ui/commit/e0b0452a8929eaed3b6459d71e2cf4186f536ff0))
+* **deps-dev:** bump jest from 26.6.3 to 27.0.3 ([#394](https://github.com/scaleway/scaleway-ui/issues/394)) ([39ddc0e](https://github.com/scaleway/scaleway-ui/commit/39ddc0e13f44bab688899fc14e85629604ab65b9))
+* **deps-dev:** bump rollup from 2.50.5 to 2.50.6 ([#407](https://github.com/scaleway/scaleway-ui/issues/407)) ([ed9bb12](https://github.com/scaleway/scaleway-ui/commit/ed9bb12fc90f9633f904ab1f1c92b3553e91ca3f))
+
+
+### :bug: Bug Fixes
+
+* richselect innerRef ([#411](https://github.com/scaleway/scaleway-ui/issues/411)) ([7fbe049](https://github.com/scaleway/scaleway-ui/commit/7fbe049967d7df437ac01be78cf832a2a7ec5130))
+
 ### [0.82.1](https://github.com/scaleway/scaleway-ui/compare/v0.82.0...v0.82.1) (2021-06-02)
 
 ## [0.82.0](https://github.com/scaleway/scaleway-ui/compare/v0.81.1...v0.82.0) (2021-06-02)
