@@ -1,15 +1,32 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Placeholder from '..'
 
 <Meta title="Components/Placeholder" />
 
 # Placeholder
 
+<Description>
+  Placeholder will display empty blocks with animation. It can be used for
+  loading screen or loading components.
+</Description>
+
+<Canvas isColumn>
+  <Story name="Basic">
+    <Placeholder />
+  </Story>
+</Canvas>
+
 ## Block
 
 <Canvas isColumn>
   <Story name="Block">
-    <Placeholder type="block" />
+    <Placeholder variant="block" />
   </Story>
 </Canvas>
 
@@ -17,20 +34,20 @@ import Placeholder from '..'
 
 <Canvas isColumn>
   <Story name="Blocks">
-    <Placeholder type="blocks" />
+    <Placeholder variant="blocks" />
   </Story>
 </Canvas>
 
 ## Box
 
 <Canvas>
-  <Story name="BoxWIthIcon">
+  <Story name="Box">
     <Placeholder
       display="flex"
       height={130}
       width={180}
       length={4}
-      type="box"
+      variant="box"
     />
   </Story>
 </Canvas>
@@ -39,7 +56,7 @@ import Placeholder from '..'
 
 <Canvas isColumn>
   <Story name="Donut">
-    <Placeholder type="donut" />
+    <Placeholder variant="donut" />
   </Story>
 </Canvas>
 
@@ -47,7 +64,7 @@ import Placeholder from '..'
 
 <Canvas isColumn>
   <Story name="Line">
-    <Placeholder type="line" />
+    <Placeholder variant="line" />
   </Story>
 </Canvas>
 
@@ -55,7 +72,7 @@ import Placeholder from '..'
 
 <Canvas isColumn>
   <Story name="Slider">
-    <Placeholder type="slider" />
+    <Placeholder variant="slider" />
   </Story>
 </Canvas>
 
@@ -63,10 +80,10 @@ import Placeholder from '..'
 
 <Canvas isColumn>
   <Story name="List">
-    <Placeholder type="list" />
+    <Placeholder variant="list" />
   </Story>
 </Canvas>
 
-## Props
+## API
 
 <ArgsTable of={Placeholder} />

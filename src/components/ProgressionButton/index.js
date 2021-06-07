@@ -79,7 +79,13 @@ ProgressionButton.defaultProps = {
 ProgressionButton.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
+  /**
+   * Indicates the starting time of the progression.
+   */
   creation: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
+  /**
+   * Indicates an approximation of the progression duration in seconds.
+   */
   duration: PropTypes.number,
 }
 

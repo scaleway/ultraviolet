@@ -15,9 +15,9 @@ import Icon from '../../Icon'
 
 # Popper
 
-## Basic
-
-<Description>Popper //:TODO</Description>
+<Description>
+  Popper can be used to display content over main content.
+</Description>
 
 <Canvas>
   <Story name="Basic" parameters={{ layout: 'centered' }}>
@@ -210,7 +210,7 @@ import Icon from '../../Icon'
 ## Without portal
 
 <Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="Without modal/portal" parameters={{ layout: 'centered' }}>
+  <Story name="Without portal" parameters={{ layout: 'centered' }}>
     <Popper
       aria-label="Custom popover with buttom"
       disclosure={() => <Button>Test</Button>}
@@ -221,5 +221,7 @@ import Icon from '../../Icon'
     </Popper>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Popper} />

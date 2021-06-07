@@ -13,15 +13,13 @@ import ProgressionButton from '..'
 
 <Description>An horizontal progress bar.</Description>
 
-## Basic
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <ProgressionButton height={40}>Progressing…</ProgressionButton>
   </Story>
 </Canvas>
 
-## Custom component
+## Custom
 
 <Description>
   The `creation` props indicates the starting time of the progression, by
@@ -36,28 +34,26 @@ import ProgressionButton from '..'
 </Description>
 
 <Canvas isColumn>
-  <Story name="custom-not-started">
+  <Story name="Custom">
     <ProgressionButton
       creation={new Date(new Date().setSeconds(new Date().getSeconds() + 10))}
       duration={20}
       color="beta"
       height={40}
+      mb={2}
     >
       I&apos;m going to start in 10 seconds and take 20 seconds to complete
     </ProgressionButton>
-  </Story>
-  <Story name="custom-slow">
     <ProgressionButton
       creation={new Date(new Date().setSeconds(new Date().getSeconds() - 60))}
       duration={90}
       color="primary"
       height={40}
+      mb={2}
     >
       I was supposed to start one minute ago and take 90 seconds (meaning I only
       have 30s left and start at 66%)
     </ProgressionButton>
-  </Story>
-  <Story name="custom-already-done">
     <ProgressionButton
       creation={new Date(new Date().setSeconds(new Date().getSeconds() - 90))}
       duration={90}
@@ -69,5 +65,7 @@ import ProgressionButton from '..'
     </ProgressionButton>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={ProgressionButton} />

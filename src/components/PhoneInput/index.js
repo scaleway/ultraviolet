@@ -157,9 +157,15 @@ const PhoneInput = ({
 }
 
 PhoneInput.propTypes = {
+  /**
+   * Will disable or not flag dropdown.
+   */
   disableDropdown: PropTypes.bool,
   // eslint-disable-next-line react/sort-prop-types
   disabled: PropTypes.bool,
+  /**
+   * You can set input properties trough this prop.
+   */
   inputProps: PropTypes.shape({
     'data-testid': PropTypes.string,
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

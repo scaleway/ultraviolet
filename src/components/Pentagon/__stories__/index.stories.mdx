@@ -7,30 +7,46 @@ import {
 } from '@storybook/addon-docs/blocks'
 import Pentagon from '..'
 import { colors } from '../../../theme'
+import { Box } from '../../index'
 
 <Meta title="Components/Pentagon" component={Pentagon} />
 
 # Pentagon
 
-## Basic
-
-<Description>Pentagon //:TODO</Description>
+<Description>Simple pentagon with different sizes and colors.</Description>
 
 <Canvas>
-  <Story name="basic" parameters={{ layout: 'centered' }}>
+  <Story name="Basic">
     <Pentagon />
   </Story>
-  <Story name="children">
-    <Pentagon>X</Pentagon>
-  </Story>
-  <Story name="color">
-    <Pentagon color={colors.zumthor}>X</Pentagon>
-  </Story>
-  <Story name="size">
-    <Pentagon color={colors.serenade} size="200px">
-      X
-    </Pentagon>
+</Canvas>
+
+## Color
+
+<Canvas>
+  <Story name="Color">
+    <Box display="inline-flex">
+      <Pentagon color={colors.zumthor} />
+      <Pentagon color={colors.foam} />
+      <Pentagon color={colors.serenade} />
+      <Pentagon color={colors.pippin} />
+    </Box>
   </Story>
 </Canvas>
+
+## Size
+
+<Canvas>
+  <Story name="Size">
+    <Box display="inline-flex">
+      <Pentagon size="50px" />
+      <Pentagon size="100px" />
+      <Pentagon size="150px" />
+      <Pentagon size="200px" />
+    </Box>
+  </Story>
+</Canvas>
+
+## API
 
 <ArgsTable of={Pentagon} />

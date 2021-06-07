@@ -68,7 +68,7 @@ const StyledPopover = styled(Popover, {
 const Popper = memo(
   ({
     animated,
-    backgroudColor,
+    backgroundColor,
     baseId,
     children,
     disclosure,
@@ -103,7 +103,7 @@ const Popper = memo(
           {...props}
         >
           {hasArrow && (
-            <PopoverArrow {...popover} style={{ fill: backgroudColor }} />
+            <PopoverArrow {...popover} style={{ fill: backgroundColor }} />
           )}
           {typeof children === 'function' ? children({ ...popover }) : children}
         </StyledPopover>
@@ -114,10 +114,13 @@ const Popper = memo(
 
 Popper.propTypes = {
   animated: PropTypes.number,
-  backgroudColor: PropTypes.string,
+  backgroundColor: PropTypes.string,
   baseId: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   disclosure: PropTypes.func,
+  /**
+   * Determine if an arrow is added on the direction of main content.
+   */
   hasArrow: PropTypes.bool,
   hideOnClickOutside: PropTypes.bool,
   modal: PropTypes.bool,
@@ -138,6 +141,9 @@ Popper.propTypes = {
     'left',
     'left-start',
   ]),
+  /**
+   * Block main content / body scroll when popper is opened.
+   */
   preventBodyScroll: PropTypes.bool,
   variant: PropTypes.oneOf(Object.keys(variants)),
   visible: PropTypes.bool,
@@ -145,7 +151,7 @@ Popper.propTypes = {
 
 Popper.defaultProps = {
   animated: 100,
-  backgroudColor: undefined,
+  backgroundColor: undefined,
   baseId: '',
   disclosure: undefined,
   hasArrow: true,

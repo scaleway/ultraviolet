@@ -42,6 +42,10 @@ function PasswordCheck({ rules }) {
 }
 
 PasswordCheck.propTypes = {
+  /**
+   * Is an array of object that contains password rules. `name` is the name of the rule, `text` the text associated
+   * with the rule and `valid` is a boolean that determine if the rule is respected or not.
+   */
   rules: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
