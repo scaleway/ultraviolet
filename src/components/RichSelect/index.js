@@ -622,6 +622,7 @@ function RichSelect({
       inputId={inputId}
       labelId={labelId}
       noTopLabel={noTopLabel}
+      innerRef={innerRef}
       {...props}
     />
   )
