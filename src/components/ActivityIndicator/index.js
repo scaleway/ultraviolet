@@ -38,11 +38,9 @@ const ActivityIndicator = ({
 }) => {
   const theme = useTheme()
 
-  const percent = active && !percentage ? 20 : percentage
-
   return (
     <StyledProgressbar
-      value={percent}
+      value={percentage}
       text={text}
       strokeWidth={strokeWidth}
       active={active}
@@ -84,7 +82,7 @@ ActivityIndicator.propTypes = {
 ActivityIndicator.defaultProps = {
   active: false,
   color: 'primary',
-  percentage: 0,
+  percentage: 20,
   size: 40,
   strokeWidth: 16,
   text: undefined,
