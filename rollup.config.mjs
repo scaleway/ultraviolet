@@ -28,20 +28,25 @@ export default async () => {
     ].find(dep => new RegExp(dep).test(id))
 
   return {
+    external,
     input: './src/index.js',
+    output: {
+      file: 'dist/module.js',
+      format: 'es',
+    },
     plugins: [
       babel({
         babelHelpers: 'runtime',
         babelrc: false,
         exclude: 'node_modules/**',
-        presets: [
-          ['@babel/env', { modules: false, targets, loose: true }],
-          '@babel/preset-react',
-          ['@emotion/babel-preset-css-prop', { sourceMap: false }],
-        ],
         plugins: [
           'babel-plugin-annotate-pure-calls',
           '@babel/plugin-transform-runtime',
+        ],
+        presets: [
+          ['@babel/env', { loose: true, modules: false, targets }],
+          '@babel/preset-react',
+          ['@emotion/babel-preset-css-prop', { sourceMap: false }],
         ],
       }),
       postcss({
@@ -56,16 +61,11 @@ export default async () => {
       svgr.default({ memo: true }),
       PROFILE &&
         visualizer({
-          gzipSize: true,
           brotliSize: true,
+          filename: '.reports/index.html',
+          gzipSize: true,
           open: true,
-          filename: '.reports/report.html',
         }),
     ].filter(Boolean),
-    external,
-    output: {
-      format: 'es',
-      file: 'dist/module.js',
-    },
   }
 }
