@@ -314,7 +314,12 @@ function FwdButton({
           position={children ? 'left' : ''}
         >
           {progress ? (
-            <ActivityIndicator color="currentColor" size="1em" />
+            <ActivityIndicator
+              active
+              trailColor="transparent"
+              color="currentColor"
+              size="1em"
+            />
           ) : (
             <SmartIcon />
           )}
@@ -326,7 +331,12 @@ function FwdButton({
       {progress === 'right' || (icon && iconPosition === 'right') ? (
         <StyledIconContainer margin={iconMargin} position="right">
           {progress ? (
-            <ActivityIndicator color="currentColor" size="1em" />
+            <ActivityIndicator
+              active
+              trailColor="transparent"
+              color="currentColor"
+              size="1em"
+            />
           ) : (
             <SmartIcon />
           )}

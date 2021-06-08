@@ -93,7 +93,7 @@ const Tag = ({
         disabled={disabled}
       >
         {isLoading ? (
-          <ActivityIndicator size={16} />
+          <ActivityIndicator active size={16} />
         ) : (
           <Icon name="close" size={16} color="gray550" />
         )}

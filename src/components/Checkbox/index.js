@@ -104,7 +104,9 @@ const Checkbox = ({
           autoFocus={autoFocus}
         />
         {progress ? (
-          <ActivityIndicator size={size} mr={hasChildren ? 1 : 0} />
+          <Box display="flex" mr={hasChildren ? 1 : 0}>
+            <ActivityIndicator active size={size} />
+          </Box>
         ) : (
           <StyledIcon
             mr={hasChildren ? '10px' : 0}
