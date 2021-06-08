@@ -34,6 +34,13 @@ describe('Button', () => {
   test(`should render correctly when acting as Link`, () =>
     shouldMatchEmotionSnapshot(<Button to="/">Hello</Button>))
 
+  test(`should render correctly when acting as Link with disabled props`, () =>
+    shouldMatchEmotionSnapshot(
+      <Button to="/" disabled>
+        Hello
+      </Button>,
+    ))
+
   test(`should render correctly when acting as dom link`, () =>
     shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>))
 

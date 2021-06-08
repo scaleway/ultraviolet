@@ -276,11 +276,12 @@ function FwdButton({
   ...props
 }) {
   const as = useMemo(() => {
+    if (disabled) return 'button'
     if (to) return UniversalLink
     if (href || download) return 'a'
 
     return 'button'
-  }, [to, href, download])
+  }, [disabled, to, href, download])
 
   const displayProgressOnly = !children
 

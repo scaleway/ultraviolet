@@ -6,7 +6,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { Box, Button, Modal } from '../..'
+import { Box, Button, Modal, Switch } from '../..'
 import { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '../index'
 
 <Meta title="Components/Modal" component={Modal} />
@@ -22,6 +22,20 @@ import { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '../index'
 <Canvas>
   <Story name="Basic">
     <Modal disclosure={() => <Button>Open Modal</Button>}>
+      <Box p={4}>Content should be present in center of the modal</Box>
+    </Modal>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="switch">
+    <Modal
+      disclosure={() => (
+        <Box>
+          <Switch>Open Modal</Switch>
+        </Box>
+      )}
+    >
       <Box p={4}>Content should be present in center of the modal</Box>
     </Modal>
   </Story>
