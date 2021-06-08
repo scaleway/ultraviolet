@@ -1,3 +1,15 @@
+### [0.83.1](https://github.com/scaleway/scaleway-ui/compare/v0.83.0...v0.83.1) (2021-06-08)
+
+
+### :package: Chore
+
+* **lint:** sort keys ont rollup config file ([#415](https://github.com/scaleway/scaleway-ui/issues/415)) ([889da59](https://github.com/scaleway/scaleway-ui/commit/889da593d9535faa20df39aa9f3379d007c4bd48))
+
+
+### :bug: Bug Fixes
+
+* **button:** button with as link doesn't forward disabled property correctly ([#416](https://github.com/scaleway/scaleway-ui/issues/416)) ([0f50197](https://github.com/scaleway/scaleway-ui/commit/0f50197163c6c83a8d3cfd560a5e145709465880))
+
 ## [0.83.0](https://github.com/scaleway/scaleway-ui/compare/v0.82.2...v0.83.0) (2021-06-08)
 
 
