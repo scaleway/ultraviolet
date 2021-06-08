@@ -1,3 +1,23 @@
+## [0.83.0](https://github.com/scaleway/scaleway-ui/compare/v0.82.2...v0.83.0) (2021-06-08)
+
+
+### :memo: Documentation
+
+* updated all P components doc ([#395](https://github.com/scaleway/scaleway-ui/issues/395)) ([c5d9211](https://github.com/scaleway/scaleway-ui/commit/c5d9211597869615408a114019c0d160b09621d4))
+
+
+### :package: Chore
+
+* **deps-dev:** bump eslint from 7.27.0 to 7.28.0 ([#414](https://github.com/scaleway/scaleway-ui/issues/414)) ([ab5e318](https://github.com/scaleway/scaleway-ui/commit/ab5e3183a115eec05614a1ef845a994593a221f7))
+* **deps-dev:** bump prettier from 2.3.0 to 2.3.1 ([#413](https://github.com/scaleway/scaleway-ui/issues/413)) ([e3a9aa2](https://github.com/scaleway/scaleway-ui/commit/e3a9aa28ba4a6b453f15315e75f3a5b859da72d0))
+* **deps-dev:** bump rollup from 2.50.6 to 2.51.0 ([#412](https://github.com/scaleway/scaleway-ui/issues/412)) ([6174780](https://github.com/scaleway/scaleway-ui/commit/61747804e9f1c38df1548d183f95b07539e26144))
+* **deps-dev:** bump rollup from 2.51.0 to 2.51.1 ([#417](https://github.com/scaleway/scaleway-ui/issues/417)) ([604ba31](https://github.com/scaleway/scaleway-ui/commit/604ba31047b6653ac102d4c3ce03b734ecb5ab86))
+
+
+### :gear: Features
+
+* merge ProgressCircle into ActivityIndicator ([#403](https://github.com/scaleway/scaleway-ui/issues/403)) ([f5bdf21](https://github.com/scaleway/scaleway-ui/commit/f5bdf2152ea7868d6feec002fc734a96a25775d6))
+
 ### [0.82.2](https://github.com/scaleway/scaleway-ui/compare/v0.82.1...v0.82.2) (2021-06-07)
 
 
