@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import SwitchButton from '..'
-import { BorderedBox, Col, Grid, Row } from '../..'
+import { Box, Col, Grid, Row } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/SwitchButton" component={SwitchButton} />
@@ -99,7 +99,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
         <Grid>
           <Row width={320}>
             <Col pr={0}>
-              <BorderedBox p="4px">
+              <Box bordered p="4px">
                 <Row>
                   <Col xsmall={6} pr={0}>
                     <SwitchButton
@@ -124,7 +124,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
                     </SwitchButton>
                   </Col>
                 </Row>
-              </BorderedBox>
+              </Box>
             </Col>
           </Row>
         </Grid>
