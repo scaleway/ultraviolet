@@ -22,7 +22,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -33,7 +33,7 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   flex-direction: row;
 }
 
-.emotion-4 {
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -44,18 +44,18 @@ exports[`Information should render correctly with a custom backgroundColor 1`] =
   color: #4f0599;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   color: #4f0599;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2"
+      class="emotion-3 emotion-2"
     >
       <p
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6 emotion-2"
       >
         Hello
       </p>
@@ -86,7 +86,7 @@ exports[`Information should render correctly with a custom color 1`] = `
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -97,7 +97,7 @@ exports[`Information should render correctly with a custom color 1`] = `
   flex-direction: row;
 }
 
-.emotion-4 {
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -108,18 +108,18 @@ exports[`Information should render correctly with a custom color 1`] = `
   color: #45d6b5;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   color: #45d6b5;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2"
+      class="emotion-3 emotion-2"
     >
       <p
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6 emotion-2"
       >
         Hello
       </p>
@@ -150,7 +150,7 @@ exports[`Information should render correctly with an children 1`] = `
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -162,10 +162,10 @@ exports[`Information should render correctly with an children 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2"
+      class="emotion-3 emotion-2"
     >
       <div>
         Testing component
@@ -197,7 +197,7 @@ exports[`Information should render correctly with an heading 1`] = `
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -206,22 +206,6 @@ exports[`Information should render correctly with an heading 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-.emotion-4 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4f0599;
-}
-
-.emotion-4.emotion-4 {
-  color: #4f0599;
-  font-weight: 500;
 }
 
 .emotion-6 {
@@ -237,21 +221,37 @@ exports[`Information should render correctly with an heading 1`] = `
 
 .emotion-6.emotion-6 {
   color: #4f0599;
+  font-weight: 500;
+}
+
+.emotion-9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f0599;
+}
+
+.emotion-9.emotion-9 {
+  color: #4f0599;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2"
+      class="emotion-3 emotion-2"
     >
       <p
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6 emotion-2"
       >
         Bonjour
       </p>
       <p
-        class="emotion-3 emotion-6"
+        class="emotion-5 emotion-9 emotion-2"
       >
         Hello
       </p>
@@ -282,7 +282,7 @@ exports[`Information should render correctly with an icon 1`] = `
   align-items: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: #45d6b5;
   height: 24px;
   width: 24px;
@@ -290,12 +290,12 @@ exports[`Information should render correctly with an icon 1`] = `
   min-height: 24px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-4.emotion-4 {
   vertical-align: middle;
   margin-right: 16px;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -306,7 +306,7 @@ exports[`Information should render correctly with an icon 1`] = `
   flex-direction: row;
 }
 
-.emotion-6 {
+.emotion-9 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -317,15 +317,15 @@ exports[`Information should render correctly with an icon 1`] = `
   color: #4f0599;
 }
 
-.emotion-6.emotion-6 {
+.emotion-9.emotion-9 {
   color: #4f0599;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <svg
-      class="sc-ui-icon emotion-2 emotion-3"
+      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
       viewBox="0 0 24 24"
     >
       <path
@@ -333,10 +333,10 @@ exports[`Information should render correctly with an icon 1`] = `
       />
     </svg>
     <div
-      class="emotion-4"
+      class="emotion-6 emotion-2"
     >
       <p
-        class="emotion-5 emotion-6"
+        class="emotion-8 emotion-9 emotion-2"
       >
         Hello
       </p>
@@ -367,13 +367,13 @@ exports[`Information should render correctly with an image 1`] = `
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 24px;
   height: 24px;
   margin-right: 24px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-5.emotion-5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -384,7 +384,7 @@ exports[`Information should render correctly with an image 1`] = `
   flex-direction: row;
 }
 
-.emotion-5 {
+.emotion-8 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -395,22 +395,22 @@ exports[`Information should render correctly with an image 1`] = `
   color: #4f0599;
 }
 
-.emotion-5.emotion-5 {
+.emotion-8.emotion-8 {
   color: #4f0599;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <img
-      class="emotion-2"
+      class="emotion-3 emotion-2"
       src="//img.jpg"
     />
     <div
-      class="emotion-3"
+      class="emotion-5 emotion-2"
     >
       <p
-        class="emotion-4 emotion-5"
+        class="emotion-7 emotion-8 emotion-2"
       >
         Hello
       </p>
@@ -441,7 +441,7 @@ exports[`Information should render correctly with default props 1`] = `
   align-items: center;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -452,7 +452,7 @@ exports[`Information should render correctly with default props 1`] = `
   flex-direction: row;
 }
 
-.emotion-4 {
+.emotion-6 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -463,18 +463,18 @@ exports[`Information should render correctly with default props 1`] = `
   color: #4f0599;
 }
 
-.emotion-4.emotion-4 {
+.emotion-6.emotion-6 {
   color: #4f0599;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2"
+      class="emotion-3 emotion-2"
     >
       <p
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6 emotion-2"
       >
         Hello
       </p>

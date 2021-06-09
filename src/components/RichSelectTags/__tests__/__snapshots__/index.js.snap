@@ -24,7 +24,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   flex: 1;
 }
 
-.emotion-4 {
+.emotion-5 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -36,7 +36,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   white-space: nowrap;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -73,28 +73,28 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   animation: none;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-5:focus-within {
+.emotion-6:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-5:focus-within svg {
+.emotion-6:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   border-color: #4f0599;
 }
 
-.emotion-5:hover svg {
+.emotion-6:hover svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -118,7 +118,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   height: 100%;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -142,7 +142,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   opacity: 1;
 }
 
-.emotion-9 {
+.emotion-11 {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -161,7 +161,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   padding-left: 0;
 }
 
-.emotion-10 {
+.emotion-12 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -175,12 +175,12 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   margin-left: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   padding-top: 11px;
   margin-left: 0px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -199,7 +199,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   max-height: 48px;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -211,7 +211,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   display: none;
 }
 
-.emotion-14 {
+.emotion-16 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,11 +223,11 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   box-sizing: border-box;
 }
 
-.emotion-14:hover {
+.emotion-16:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-16 {
+.emotion-18 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -235,12 +235,12 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   min-height: 11px;
 }
 
-.emotion-16.emotion-16 {
+.emotion-18.emotion-18 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-17 {
+.emotion-20 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -250,17 +250,17 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   margin-top: 0;
 }
 
-.emotion-17.emotion-17 {
+.emotion-20.emotion-20 {
   overflow: hidden;
 }
 
-.emotion-18.emotion-18 {
+.emotion-22.emotion-22 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-20 {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -297,28 +297,28 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   padding: 8px 16px;
 }
 
-.emotion-20.emotion-20 {
+.emotion-25.emotion-25 {
   min-width: 144px;
   margin-left: 16px;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   color: #4a4f62;
   background-color: #e9e7ec;
 }
 
-.emotion-20:focus {
+.emotion-25:focus {
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
 }
 
-.emotion-21 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -338,39 +338,39 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
     class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-2 emotion-3"
+      class=" emotion-2 emotion-3 emotion-4"
       data-testid="rich-select-richselect-options"
     >
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="emotion-4"
+        class="emotion-5"
       />
       <div
-        class=" emotion-5"
+        class=" emotion-6"
       >
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           <label
             aria-live="assertive"
-            class="emotion-7 emotion-8"
+            class="emotion-8 emotion-9 emotion-4"
             for="input-6c756c756c756c756c756c756c756c75"
             id="label-6c756c756c756c756c756c756c756c75"
           >
             Select an option in the list
           </label>
           <div
-            class=" emotion-9"
+            class=" emotion-11"
           >
             Three
           </div>
           <div
-            class="emotion-10"
+            class="emotion-12"
           >
             <div
-              class="emotion-11"
+              class="emotion-13"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -393,17 +393,17 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
           </div>
         </div>
         <div
-          class=" emotion-12"
+          class=" emotion-14"
         >
           <span
-            class=" emotion-13"
+            class=" emotion-15"
           />
           <div
             aria-hidden="true"
-            class=" emotion-14"
+            class=" emotion-16"
           >
             <svg
-              class="sc-ui-icon emotion-15 emotion-16"
+              class="sc-ui-icon emotion-17 emotion-18 emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -419,21 +419,21 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
         value="three"
       />
       <div
-        class="emotion-17"
+        class="emotion-20 emotion-4"
       >
         <div
-          class="emotion-18"
+          class="emotion-22 emotion-4"
         />
       </div>
     </div>
     <button
       aria-disabled="false"
-      class="emotion-19 emotion-20"
+      class="emotion-24 emotion-25 emotion-4"
       data-testid="rich-select-tags-add"
       type="button"
     >
       <div
-        class="emotion-21 emotion-22"
+        class="emotion-27 emotion-28"
       >
         Add
       </div>
@@ -478,7 +478,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   border: 1px solid #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -490,7 +490,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-7 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -523,17 +523,17 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   height: 32px;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: #eeeeff;
 }
 
-.emotion-6:hover svg,
-.emotion-6:focus svg {
+.emotion-7:hover svg,
+.emotion-7:focus svg {
   fill: #4f0599;
 }
 
-.emotion-8 {
+.emotion-10 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -541,7 +541,7 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
   min-height: 16px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   vertical-align: middle;
 }
 
@@ -549,20 +549,20 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
     class="emotion-0"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1 emotion-2 emotion-3"
     >
       <span
         aria-disabled="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         One
       </span>
       <button
-        class="emotion-5 emotion-6"
+        class="emotion-6 emotion-7 emotion-3"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-7 emotion-8"
+          class="sc-ui-icon emotion-9 emotion-10 emotion-3"
           viewBox="0 0 24 24"
         >
           <path
@@ -572,20 +572,20 @@ exports[`RichSelectTags renders correctly when tags are removed then added 1`] =
       </button>
     </div>
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1 emotion-2 emotion-3"
     >
       <span
         aria-disabled="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         Three
       </span>
       <button
-        class="emotion-5 emotion-6"
+        class="emotion-6 emotion-7 emotion-3"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-7 emotion-8"
+          class="sc-ui-icon emotion-9 emotion-10 emotion-3"
           viewBox="0 0 24 24"
         >
           <path
@@ -622,7 +622,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   flex: 1;
 }
 
-.emotion-4 {
+.emotion-5 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -634,7 +634,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   white-space: nowrap;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -671,28 +671,28 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   animation: none;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-5:focus-within {
+.emotion-6:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-5:focus-within svg {
+.emotion-6:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-5:hover {
+.emotion-6:hover {
   border-color: #4f0599;
 }
 
-.emotion-5:hover svg {
+.emotion-6:hover svg {
   fill: #4f0599;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -716,7 +716,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   height: 100%;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -731,7 +731,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   opacity: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -744,7 +744,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-10 {
+.emotion-12 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -758,12 +758,12 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   margin-left: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   padding-top: 0px;
   margin-left: 0px;
 }
 
-.emotion-12 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -782,7 +782,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   max-height: 48px;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -794,7 +794,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   display: none;
 }
 
-.emotion-14 {
+.emotion-16 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -806,11 +806,11 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-14:hover {
+.emotion-16:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-16 {
+.emotion-18 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -818,12 +818,12 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   min-height: 11px;
 }
 
-.emotion-16.emotion-16 {
+.emotion-18.emotion-18 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-17 {
+.emotion-20 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -833,17 +833,17 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   margin-top: 0;
 }
 
-.emotion-17.emotion-17 {
+.emotion-20.emotion-20 {
   overflow: hidden;
 }
 
-.emotion-18.emotion-18 {
+.emotion-22.emotion-22 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-20 {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -880,28 +880,28 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   padding: 8px 16px;
 }
 
-.emotion-20.emotion-20 {
+.emotion-25.emotion-25 {
   min-width: 144px;
   margin-left: 16px;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-20:hover,
-.emotion-20:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   color: #4a4f62;
   background-color: #e9e7ec;
 }
 
-.emotion-20:focus {
+.emotion-25:focus {
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
 }
 
-.emotion-21 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -921,39 +921,39 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
     class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-2 emotion-3"
+      class=" emotion-2 emotion-3 emotion-4"
       data-testid="rich-select-richselect-options"
     >
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="emotion-4"
+        class="emotion-5"
       />
       <div
-        class=" emotion-5"
+        class=" emotion-6"
       >
         <div
-          class=" emotion-6"
+          class=" emotion-7"
         >
           <label
             aria-live="assertive"
-            class="emotion-7 emotion-8"
+            class="emotion-8 emotion-9 emotion-4"
             for="input-6c756c756c756c756c756c756c756c75"
             id="label-6c756c756c756c756c756c756c756c75"
           >
             Select an option in the list
           </label>
           <div
-            class=" emotion-9"
+            class=" emotion-11"
           >
             Select an option in the list
           </div>
           <div
-            class="emotion-10"
+            class="emotion-12"
           >
             <div
-              class="emotion-11"
+              class="emotion-13"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -976,17 +976,17 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-12"
+          class=" emotion-14"
         >
           <span
-            class=" emotion-13"
+            class=" emotion-15"
           />
           <div
             aria-hidden="true"
-            class=" emotion-14"
+            class=" emotion-16"
           >
             <svg
-              class="sc-ui-icon emotion-15 emotion-16"
+              class="sc-ui-icon emotion-17 emotion-18 emotion-4"
               viewBox="0 0 24 24"
             >
               <path
@@ -1002,21 +1002,21 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
         value=""
       />
       <div
-        class="emotion-17"
+        class="emotion-20 emotion-4"
       >
         <div
-          class="emotion-18"
+          class="emotion-22 emotion-4"
         />
       </div>
     </div>
     <button
       aria-disabled="false"
-      class="emotion-19 emotion-20"
+      class="emotion-24 emotion-25 emotion-4"
       data-testid="rich-select-tags-add"
       type="button"
     >
       <div
-        class="emotion-21 emotion-22"
+        class="emotion-27 emotion-28"
       >
         Add
       </div>
@@ -1061,7 +1061,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   border: 1px solid #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1073,7 +1073,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-7 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1106,17 +1106,17 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   height: 32px;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: #eeeeff;
 }
 
-.emotion-6:hover svg,
-.emotion-6:focus svg {
+.emotion-7:hover svg,
+.emotion-7:focus svg {
   fill: #4f0599;
 }
 
-.emotion-8 {
+.emotion-10 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1124,7 +1124,7 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
   min-height: 16px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   vertical-align: middle;
 }
 
@@ -1132,20 +1132,20 @@ exports[`RichSelectTags renders correctly with default values 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1 emotion-2 emotion-3"
     >
       <span
         aria-disabled="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         One
       </span>
       <button
-        class="emotion-5 emotion-6"
+        class="emotion-6 emotion-7 emotion-3"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-7 emotion-8"
+          class="sc-ui-icon emotion-9 emotion-10 emotion-3"
           viewBox="0 0 24 24"
         >
           <path
@@ -1205,7 +1205,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   flex: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1217,7 +1217,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   white-space: nowrap;
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1254,28 +1254,28 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   animation: none;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-9:focus-within svg {
+.emotion-10:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   border-color: #4f0599;
 }
 
-.emotion-9:hover svg {
+.emotion-10:hover svg {
   fill: #4f0599;
 }
 
-.emotion-10 {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1299,7 +1299,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -1314,7 +1314,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   opacity: 0;
 }
 
-.emotion-13 {
+.emotion-15 {
   color: #b2b6c3;
   margin-left: 2px;
   margin-right: 2px;
@@ -1327,7 +1327,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-14 {
+.emotion-16 {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -1341,12 +1341,12 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   margin-left: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   padding-top: 0px;
   margin-left: 0px;
 }
 
-.emotion-16 {
+.emotion-18 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1365,7 +1365,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   max-height: 48px;
 }
 
-.emotion-17 {
+.emotion-19 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1377,7 +1377,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   display: none;
 }
 
-.emotion-18 {
+.emotion-20 {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1389,11 +1389,11 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-18:hover {
+.emotion-20:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-20 {
+.emotion-22 {
   fill: #d4dae7;
   height: 11px;
   width: 11px;
@@ -1401,12 +1401,12 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   min-height: 11px;
 }
 
-.emotion-20.emotion-20 {
+.emotion-22.emotion-22 {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-21 {
+.emotion-24 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1416,17 +1416,17 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   margin-top: 0;
 }
 
-.emotion-21.emotion-21 {
+.emotion-24.emotion-24 {
   overflow: hidden;
 }
 
-.emotion-22.emotion-22 {
+.emotion-26.emotion-26 {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
-.emotion-24 {
+.emotion-29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1463,28 +1463,28 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   padding: 8px 16px;
 }
 
-.emotion-24.emotion-24 {
+.emotion-29.emotion-29 {
   min-width: 144px;
   margin-left: 16px;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-29:hover,
+.emotion-29:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-29:hover,
+.emotion-29:focus {
   color: #4a4f62;
   background-color: #e9e7ec;
 }
 
-.emotion-24:focus {
+.emotion-29:focus {
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
 }
 
-.emotion-25 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1513,39 +1513,39 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
       />
     </div>
     <div
-      class=" emotion-6 emotion-7"
+      class=" emotion-6 emotion-7 emotion-8"
       data-testid="rich-select-richselect-options"
     >
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="emotion-8"
+        class="emotion-9"
       />
       <div
-        class=" emotion-9"
+        class=" emotion-10"
       >
         <div
-          class=" emotion-10"
+          class=" emotion-11"
         >
           <label
             aria-live="assertive"
-            class="emotion-11 emotion-12"
+            class="emotion-12 emotion-13 emotion-8"
             for="input-6c756c756c756c756c756c756c756c75"
             id="label-6c756c756c756c756c756c756c756c75"
           >
             Select an option in the list
           </label>
           <div
-            class=" emotion-13"
+            class=" emotion-15"
           >
             Select an option in the list
           </div>
           <div
-            class="emotion-14"
+            class="emotion-16"
           >
             <div
-              class="emotion-15"
+              class="emotion-17"
               style="caret-color: transparent; display: inline-block;"
             >
               <input
@@ -1568,17 +1568,17 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
           </div>
         </div>
         <div
-          class=" emotion-16"
+          class=" emotion-18"
         >
           <span
-            class=" emotion-17"
+            class=" emotion-19"
           />
           <div
             aria-hidden="true"
-            class=" emotion-18"
+            class=" emotion-20"
           >
             <svg
-              class="sc-ui-icon emotion-19 emotion-20"
+              class="sc-ui-icon emotion-21 emotion-22 emotion-8"
               viewBox="0 0 24 24"
             >
               <path
@@ -1594,21 +1594,21 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
         value=""
       />
       <div
-        class="emotion-21"
+        class="emotion-24 emotion-8"
       >
         <div
-          class="emotion-22"
+          class="emotion-26 emotion-8"
         />
       </div>
     </div>
     <button
       aria-disabled="false"
-      class="emotion-23 emotion-24"
+      class="emotion-28 emotion-29 emotion-8"
       data-testid="rich-select-tags-add"
       type="button"
     >
       <div
-        class="emotion-25 emotion-26"
+        class="emotion-31 emotion-32"
       >
         Add
       </div>
@@ -1653,7 +1653,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   border: 1px solid #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -1665,7 +1665,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-7 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1698,17 +1698,17 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   height: 32px;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: #eeeeff;
 }
 
-.emotion-6:hover svg,
-.emotion-6:focus svg {
+.emotion-7:hover svg,
+.emotion-7:focus svg {
   fill: #4f0599;
 }
 
-.emotion-8 {
+.emotion-10 {
   fill: #b2b6c3;
   height: 16px;
   width: 16px;
@@ -1716,7 +1716,7 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
   min-height: 16px;
 }
 
-.emotion-8.emotion-8 {
+.emotion-10.emotion-10 {
   vertical-align: middle;
 }
 
@@ -1724,20 +1724,20 @@ exports[`RichSelectTags renders correctly with icon 1`] = `
     class="emotion-0"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-1 emotion-2 emotion-3"
     >
       <span
         aria-disabled="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         One
       </span>
       <button
-        class="emotion-5 emotion-6"
+        class="emotion-6 emotion-7 emotion-3"
         type="button"
       >
         <svg
-          class="sc-ui-icon emotion-7 emotion-8"
+          class="sc-ui-icon emotion-9 emotion-10 emotion-3"
           viewBox="0 0 24 24"
         >
           <path

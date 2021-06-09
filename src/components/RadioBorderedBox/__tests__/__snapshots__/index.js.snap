@@ -2,17 +2,11 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-}
-
-.emotion-2.emotion-2 {
+  .emotion-1.emotion-1 {
   display: block;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   cursor: pointer;
 }
 
@@ -28,7 +22,7 @@ exports[`Radio renders correctly 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -45,22 +39,22 @@ exports[`Radio renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 4px;
 }
 
-.emotion-5:hover .emotion-6,
-.emotion-5:focus .emotion-6 {
+.emotion-6:hover .emotion-8,
+.emotion-6:focus .emotion-8 {
   background-color: rgba(220,225,235,0.25);
   border-radius: 50%;
 }
 
-.emotion-5:hover .emotion-6>.emotion-8,
-.emotion-5:focus .emotion-6>.emotion-8 {
+.emotion-6:hover .emotion-8>.emotion-11,
+.emotion-6:focus .emotion-8>.emotion-11 {
   fill: #4f0599;
 }
 
-.emotion-7 {
+.emotion-9 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -79,7 +73,7 @@ exports[`Radio renders correctly 1`] = `
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-13 {
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -87,11 +81,11 @@ exports[`Radio renders correctly 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-13.emotion-13 {
   vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -99,16 +93,16 @@ exports[`Radio renders correctly 1`] = `
   color: #151a2d;
 }
 
-.emotion-12.emotion-12 {
+.emotion-16.emotion-16 {
   color: #151a2d;
 }
 
-.emotion-13 {
+.emotion-18 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-20.emotion-20 {
   margin-right: 8px;
 }
 
@@ -116,17 +110,17 @@ exports[`Radio renders correctly 1`] = `
     class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-3"
+      class="emotion-3 emotion-2"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6 emotion-2"
         for="radio-choice"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9 emotion-2"
         >
           <svg
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-11 emotion-12 emotion-13 emotion-2"
             viewBox="0 0 24 24"
           >
             <path
@@ -135,13 +129,13 @@ exports[`Radio renders correctly 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-15 emotion-16 emotion-2"
         >
           Choice
         </div>
         <input
           aria-checked="false"
-          class="emotion-13 emotion-14"
+          class="emotion-18 emotion-19"
           id="radio-choice"
           name="radio"
           tabindex="0"
@@ -150,11 +144,11 @@ exports[`Radio renders correctly 1`] = `
         />
       </label>
       <span
-        class="emotion-15"
+        class="emotion-20 emotion-2"
       />
     </div>
     <div
-      class="emotion-16"
+      class="emotion-22 emotion-2"
     >
       Choice description
     </div>
@@ -164,19 +158,16 @@ exports[`Radio renders correctly 1`] = `
 
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
+  .emotion-1 {
   border: 1px solid #4f0599!important;
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   display: block;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   cursor: pointer;
 }
 
@@ -192,7 +183,7 @@ exports[`Radio renders correctly when checked 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -209,22 +200,22 @@ exports[`Radio renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 4px;
 }
 
-.emotion-5:hover .emotion-6,
-.emotion-5:focus .emotion-6 {
+.emotion-6:hover .emotion-8,
+.emotion-6:focus .emotion-8 {
   background-color: rgba(220,225,235,0.25);
   border-radius: 50%;
 }
 
-.emotion-5:hover .emotion-6>.emotion-8,
-.emotion-5:focus .emotion-6>.emotion-8 {
+.emotion-6:hover .emotion-8>.emotion-11,
+.emotion-6:focus .emotion-8>.emotion-11 {
   fill: #4f0599;
 }
 
-.emotion-7 {
+.emotion-9 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -243,7 +234,7 @@ exports[`Radio renders correctly when checked 1`] = `
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-13 {
   fill: #4f0599;
   height: 24px;
   width: 24px;
@@ -251,11 +242,11 @@ exports[`Radio renders correctly when checked 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-13.emotion-13 {
   vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -263,16 +254,16 @@ exports[`Radio renders correctly when checked 1`] = `
   color: #151a2d;
 }
 
-.emotion-12.emotion-12 {
+.emotion-16.emotion-16 {
   color: #151a2d;
 }
 
-.emotion-13 {
+.emotion-18 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-20.emotion-20 {
   margin-right: 8px;
 }
 
@@ -280,17 +271,17 @@ exports[`Radio renders correctly when checked 1`] = `
     class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-3"
+      class="emotion-3 emotion-2"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6 emotion-2"
         for="radio-choice"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9 emotion-2"
         >
           <svg
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-11 emotion-12 emotion-13 emotion-2"
             viewBox="0 0 24 24"
           >
             <path
@@ -299,14 +290,14 @@ exports[`Radio renders correctly when checked 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-15 emotion-16 emotion-2"
         >
           Choice
         </div>
         <input
           aria-checked="true"
           checked=""
-          class="emotion-13 emotion-14"
+          class="emotion-18 emotion-19"
           id="radio-choice"
           name="radio"
           tabindex="0"
@@ -315,11 +306,11 @@ exports[`Radio renders correctly when checked 1`] = `
         />
       </label>
       <span
-        class="emotion-15"
+        class="emotion-20 emotion-2"
       />
     </div>
     <div
-      class="emotion-16"
+      class="emotion-22 emotion-2"
     >
       Choice description
     </div>
@@ -329,19 +320,16 @@ exports[`Radio renders correctly when checked 1`] = `
 
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
+  .emotion-1 {
   cursor: not-allowed!important;
   color: #dce1eb;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   display: block;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   cursor: pointer;
 }
 
@@ -357,7 +345,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -376,11 +364,11 @@ exports[`Radio renders correctly when disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 4px;
 }
 
-.emotion-7 {
+.emotion-9 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -399,7 +387,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-13 {
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -407,11 +395,11 @@ exports[`Radio renders correctly when disabled 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-13.emotion-13 {
   vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -419,16 +407,16 @@ exports[`Radio renders correctly when disabled 1`] = `
   color: #151a2d;
 }
 
-.emotion-12.emotion-12 {
+.emotion-16.emotion-16 {
   color: #151a2d;
 }
 
-.emotion-13 {
+.emotion-18 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-20.emotion-20 {
   margin-right: 8px;
 }
 
@@ -437,18 +425,18 @@ exports[`Radio renders correctly when disabled 1`] = `
     disabled=""
   >
     <div
-      class="emotion-3"
+      class="emotion-3 emotion-2"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6 emotion-2"
         disabled=""
         for="radio-choice"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9 emotion-2"
         >
           <svg
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-11 emotion-12 emotion-13 emotion-2"
             viewBox="0 0 24 24"
           >
             <path
@@ -457,14 +445,14 @@ exports[`Radio renders correctly when disabled 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-15 emotion-16 emotion-2"
         >
           Choice
         </div>
         <input
           aria-checked="false"
           aria-disabled="true"
-          class="emotion-13 emotion-14"
+          class="emotion-18 emotion-19"
           disabled=""
           id="radio-choice"
           name="radio"
@@ -474,11 +462,11 @@ exports[`Radio renders correctly when disabled 1`] = `
         />
       </label>
       <span
-        class="emotion-15"
+        class="emotion-20 emotion-2"
       />
     </div>
     <div
-      class="emotion-16"
+      class="emotion-22 emotion-2"
     >
       Choice description
     </div>
@@ -488,19 +476,16 @@ exports[`Radio renders correctly when disabled 1`] = `
 
 exports[`Radio renders correctly with label desc and badge 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
+  .emotion-1 {
   cursor: not-allowed!important;
   color: #dce1eb;
 }
 
-.emotion-2.emotion-2 {
+.emotion-1.emotion-1 {
   display: block;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   cursor: pointer;
 }
 
@@ -516,7 +501,7 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   margin-bottom: 8px;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,11 +520,11 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   margin-right: 4px;
 }
 
-.emotion-7 {
+.emotion-9 {
   min-width: 32px;
   width: 32px;
   height: 32px;
@@ -558,7 +543,7 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   margin-right: 8px;
 }
 
-.emotion-10 {
+.emotion-13 {
   fill: #dce1eb;
   height: 24px;
   width: 24px;
@@ -566,11 +551,11 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   min-height: 24px;
 }
 
-.emotion-10.emotion-10 {
+.emotion-13.emotion-13 {
   vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-16 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -578,20 +563,20 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
   color: #151a2d;
 }
 
-.emotion-12.emotion-12 {
+.emotion-16.emotion-16 {
   color: #151a2d;
 }
 
-.emotion-13 {
+.emotion-18 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-15.emotion-15 {
+.emotion-20.emotion-20 {
   margin-right: 8px;
 }
 
-.emotion-17 {
+.emotion-23 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -622,18 +607,18 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
     disabled=""
   >
     <div
-      class="emotion-3"
+      class="emotion-3 emotion-2"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-5 emotion-6 emotion-2"
         disabled=""
         for="radio-choice"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9 emotion-2"
         >
           <svg
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-11 emotion-12 emotion-13 emotion-2"
             viewBox="0 0 24 24"
           >
             <path
@@ -642,14 +627,14 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-11 emotion-12"
+          class="emotion-15 emotion-16 emotion-2"
         >
           Choice
         </div>
         <input
           aria-checked="false"
           aria-disabled="true"
-          class="emotion-13 emotion-14"
+          class="emotion-18 emotion-19"
           disabled=""
           id="radio-choice"
           name="radio"
@@ -659,18 +644,18 @@ exports[`Radio renders correctly with label desc and badge 1`] = `
         />
       </label>
       <span
-        class="emotion-15"
+        class="emotion-20 emotion-2"
       >
         (something)
       </span>
       <span
-        class="emotion-16 emotion-17"
+        class="emotion-22 emotion-23 emotion-2"
       >
         Badge
       </span>
     </div>
     <div
-      class="emotion-18"
+      class="emotion-25 emotion-2"
     >
       Choice description
     </div>

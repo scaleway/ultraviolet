@@ -8,45 +8,45 @@ exports[`Description renders correctly 1`] = `
   margin: 0;
 }
 
-.emotion-1>.emotion-2 {
+.emotion-1>.emotion-3 {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-1>.emotion-2:after {
+.emotion-1>.emotion-3:after {
   content: ':';
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-1 .emotion-4+.emotion-2 {
+.emotion-1 .emotion-6+.emotion-3 {
   margin-top: 16px;
 }
 
 <dl
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Name
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       Big instance
     </dd>
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Size
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       125 GB
     </dd>
@@ -62,59 +62,59 @@ exports[`Description renders correctly inline 1`] = `
   margin: 0;
 }
 
-.emotion-1>.emotion-2 {
+.emotion-1>.emotion-3 {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-1>.emotion-2:after {
+.emotion-1>.emotion-3:after {
   content: ':';
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-1 .emotion-4+.emotion-2 {
+.emotion-1 .emotion-6+.emotion-3 {
   margin-top: 16px;
 }
 
-.emotion-1>.emotion-2 {
+.emotion-1>.emotion-3 {
   float: left;
   clear: left;
   margin-right: 8px;
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   margin-top: 0;
 }
 
-.emotion-1 .emotion-4+.emotion-2+.emotion-4 {
+.emotion-1 .emotion-6+.emotion-3+.emotion-6 {
   margin-top: 16px;
 }
 
 <dl
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Name
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       Big instance
     </dd>
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Size
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       125 GB
     </dd>
@@ -130,71 +130,71 @@ exports[`Description renders correctly seletable 1`] = `
   margin: 0;
 }
 
-.emotion-1>.emotion-2 {
+.emotion-1>.emotion-3 {
   font-weight: 500;
   color: #151a2d;
 }
 
-.emotion-1>.emotion-2:after {
+.emotion-1>.emotion-3:after {
   content: ':';
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   color: #4a4f62;
   margin: 0;
   margin-top: 8px;
 }
 
-.emotion-1 .emotion-4+.emotion-2 {
+.emotion-1 .emotion-6+.emotion-3 {
   margin-top: 16px;
 }
 
-.emotion-1>.emotion-2 {
+.emotion-1>.emotion-3 {
   float: left;
   clear: left;
   margin-right: 8px;
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   margin-top: 0;
 }
 
-.emotion-1 .emotion-4+.emotion-2+.emotion-4 {
+.emotion-1 .emotion-6+.emotion-3+.emotion-6 {
   margin-top: 16px;
 }
 
-.emotion-1>.emotion-4 {
+.emotion-1>.emotion-6 {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
 }
 
-.emotion-1>.emotion-4::selection {
+.emotion-1>.emotion-6::selection {
   color: #eeeeff;
   background: #4f0599;
 }
 
 <dl
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Name
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       Big instance
     </dd>
     <dt
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4 emotion-2"
     >
       Size
     </dt>
     <dd
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7 emotion-2"
     >
       125 GB
     </dd>

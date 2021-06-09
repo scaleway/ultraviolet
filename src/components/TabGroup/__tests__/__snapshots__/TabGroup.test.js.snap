@@ -6,7 +6,7 @@ exports[`TabGroup renders correctly 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@ exports[`TabGroup renders correctly 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -33,14 +33,14 @@ exports[`TabGroup renders correctly 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     />
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       style="left: 0px; width: 0px;"
     />
   </div>
@@ -53,7 +53,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,7 +69,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,29 +103,29 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   transition: color 0.2s;
 }
 
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-4:hover,
+.emotion-4:active,
+.emotion-4:focus {
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   color: #4f0599;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-3[aria-disabled='true']:hover,
-.emotion-3[aria-disabled='true']:focus {
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
   color: #b2b6c3;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -136,16 +136,16 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     >
       <span
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -154,7 +154,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
       <span
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -163,7 +163,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
       <span
         aria-disabled="true"
         aria-selected="true"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -171,7 +171,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
       </span>
     </div>
     <div
-      class="emotion-9 emotion-10"
+      class="emotion-10 emotion-11"
       style="left: 0px; width: 0px;"
     />
   </div>
@@ -184,7 +184,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,7 +200,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -234,29 +234,29 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   transition: color 0.2s;
 }
 
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-4:hover,
+.emotion-4:active,
+.emotion-4:focus {
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   color: #4f0599;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-3[aria-disabled='true']:hover,
-.emotion-3[aria-disabled='true']:focus {
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
   color: #b2b6c3;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -267,17 +267,17 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     >
       <span
         aria-disabled="false"
         aria-label="first"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -287,7 +287,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
         aria-disabled="false"
         aria-label="second"
         aria-selected="true"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -297,7 +297,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
         aria-disabled="true"
         aria-label="three"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -305,7 +305,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
       </span>
     </div>
     <div
-      class="emotion-9 emotion-10"
+      class="emotion-10 emotion-11"
       style="left: 0px; width: 0px;"
     />
   </div>
@@ -318,7 +318,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -334,7 +334,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,29 +368,29 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
   transition: color 0.2s;
 }
 
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-4:hover,
+.emotion-4:active,
+.emotion-4:focus {
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   color: #4f0599;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-3[aria-disabled='true']:hover,
-.emotion-3[aria-disabled='true']:focus {
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
   color: #b2b6c3;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -401,16 +401,16 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     >
       <span
         aria-disabled="false"
         aria-selected="true"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -419,7 +419,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
       <span
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -428,7 +428,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
       <span
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -436,7 +436,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
       </span>
     </div>
     <div
-      class="emotion-9 emotion-10"
+      class="emotion-10 emotion-11"
       style="left: 0px; width: 0px;"
     />
   </div>
@@ -449,7 +449,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,7 +465,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -499,85 +499,85 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   transition: color 0.2s;
 }
 
-.emotion-3:hover,
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-4:hover,
+.emotion-4:active,
+.emotion-4:focus {
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-3[aria-selected='true'] {
+.emotion-4[aria-selected='true'] {
   color: #4f0599;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.emotion-3[aria-disabled='true']:hover,
-.emotion-3[aria-disabled='true']:focus {
-  color: #b2b6c3;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 12px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  color: #b2b6c3;
-  font-weight: 500;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.emotion-8:hover,
-.emotion-8:active,
-.emotion-8:focus {
-  color: #4f0599;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8[aria-selected='true'] {
-  color: #4f0599;
-}
-
-.emotion-8[aria-disabled='true'] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.emotion-8[aria-disabled='true']:hover,
-.emotion-8[aria-disabled='true']:focus {
+.emotion-4[aria-disabled='true']:hover,
+.emotion-4[aria-disabled='true']:focus {
   color: #b2b6c3;
 }
 
 .emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b2b6c3;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.emotion-9:hover,
+.emotion-9:active,
+.emotion-9:focus {
+  color: #4f0599;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9[aria-selected='true'] {
+  color: #4f0599;
+}
+
+.emotion-9[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.emotion-9[aria-disabled='true']:hover,
+.emotion-9[aria-disabled='true']:focus {
+  color: #b2b6c3;
+}
+
+.emotion-11 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -588,16 +588,16 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     >
       <div
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -606,7 +606,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
       <a
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
         role="tab"
         tabindex="0"
       >
@@ -615,7 +615,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
       <div
         aria-disabled="true"
         aria-selected="false"
-        class="emotion-4 emotion-8"
+        class="emotion-5 emotion-9 emotion-1"
         role="tab"
         tabindex="0"
       >
@@ -623,7 +623,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
       </div>
     </div>
     <div
-      class="emotion-9 emotion-10"
+      class="emotion-11 emotion-12"
       style="left: 0px;"
     />
   </div>
@@ -636,7 +636,7 @@ exports[`TabGroup renders correctly with variant default 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -652,7 +652,7 @@ exports[`TabGroup renders correctly with variant default 1`] = `
   border-bottom-color: #d4dae7;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: absolute;
   display: block;
   background-color: #4f0599;
@@ -663,15 +663,15 @@ exports[`TabGroup renders correctly with variant default 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
     variant="default"
   >
     <div
-      class=" emotion-1 emotion-2"
+      class=" emotion-2 emotion-3"
       role="tablist"
     />
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-4 emotion-5"
       style="left: 0px; width: 0px;"
     />
   </div>

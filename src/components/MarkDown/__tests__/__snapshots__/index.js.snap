@@ -3,19 +3,19 @@
 exports[`MarkDown render html without escaing it 1`] = `
 <DocumentFragment>
   <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <p
-      class="emotion-1"
+      class="emotion-2 emotion-1"
     >
       <span
-        class="emotion-1"
+        class="emotion-2 emotion-1"
       >
         Hello
       </span>
       <br />
       <span
-        class="emotion-1"
+        class="emotion-2 emotion-1"
       >
         World
       </span>
@@ -31,22 +31,22 @@ exports[`MarkDown render paragraph inline 1`] = `
 }
 
 <span
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <p
-      class="emotion-1"
+      class="emotion-2 emotion-1"
     >
       <span
-        class="emotion-1"
+        class="emotion-2 emotion-1"
       >
         I am a paragraph.
       </span>
     </p>
     <p
-      class="emotion-1"
+      class="emotion-2 emotion-1"
     >
       <span
-        class="emotion-1"
+        class="emotion-2 emotion-1"
       >
         And a second one
       </span>
@@ -57,7 +57,7 @@ exports[`MarkDown render paragraph inline 1`] = `
 
 exports[`MarkDown render simple string 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -70,11 +70,11 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 48px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   margin-top: 0;
 }
 
-.emotion-14 {
+.emotion-26 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -83,18 +83,18 @@ exports[`MarkDown render simple string 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-26:hover,
+.emotion-26:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-26:hover,
+.emotion-26:focus {
   color: #1e4293;
 }
 
-.emotion-22 {
+.emotion-41 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
@@ -103,106 +103,106 @@ exports[`MarkDown render simple string 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-22.emotion-22 {
+.emotion-41.emotion-41 {
   padding: 8px;
   background-color: #f6f5f7;
   color: #4a4f62;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <h2
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a Markdown H1
       </span>
     </h2>
     <h2>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a Markdown H2
       </span>
     </h2>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a simple markdown with 
       </span>
       <strong>
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           strong
         </span>
       </strong>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
          
       </span>
       <em>
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           italic
         </span>
       </em>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
          content
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         You can find the complete reference 
       </span>
       <a
-        class="emotion-13 emotion-14"
+        class="emotion-25 emotion-26 emotion-1"
         href="https://commonmark.org/help/"
       >
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           here
         </span>
       </a>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         Invalid 
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I can also render code
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-21 emotion-22"
+        class="emotion-40 emotion-41 emotion-1"
       >
         const example = 1 // Inline code
       </span>
@@ -218,7 +218,7 @@ exports[`MarkDown render simple string 1`] = `
 
 exports[`MarkDown render simple string with target blank 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-3 {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -231,11 +231,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 48px;
 }
 
-.emotion-2.emotion-2 {
+.emotion-3.emotion-3 {
   margin-top: 0;
 }
 
-.emotion-14 {
+.emotion-26 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -244,18 +244,18 @@ exports[`MarkDown render simple string with target blank 1`] = `
   color: #3f6ed8;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-26:hover,
+.emotion-26:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-26:hover,
+.emotion-26:focus {
   color: #1e4293;
 }
 
-.emotion-18 {
+.emotion-32 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -265,11 +265,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
   opacity: 0.5;
 }
 
-.emotion-18.emotion-18 {
+.emotion-32.emotion-32 {
   vertical-align: top;
 }
 
-.emotion-25 {
+.emotion-45 {
   font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
   font-size: 13px;
   font-weight: 500;
@@ -278,85 +278,85 @@ exports[`MarkDown render simple string with target blank 1`] = `
   background-color: #f6f5f7;
 }
 
-.emotion-25.emotion-25 {
+.emotion-45.emotion-45 {
   padding: 8px;
   background-color: #f6f5f7;
   color: #4a4f62;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <h2
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a Markdown H1
       </span>
     </h2>
     <h2>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a Markdown H2
       </span>
     </h2>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I am a simple markdown with 
       </span>
       <strong>
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           strong
         </span>
       </strong>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
          
       </span>
       <em>
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           italic
         </span>
       </em>
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
          content
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         You can find the complete reference 
       </span>
       <a
-        class="emotion-13 emotion-14"
+        class="emotion-25 emotion-26 emotion-1"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
       >
         <span
-          class="emotion-3"
+          class="emotion-5 emotion-1"
         >
           here
         </span>
         <svg
-          class="emotion-16 emotion-17 emotion-18"
+          class="emotion-30 emotion-31 emotion-32 emotion-1"
           viewBox="0 0 24 24"
         >
           <path
@@ -366,28 +366,28 @@ exports[`MarkDown render simple string with target blank 1`] = `
       </a>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         Invalid 
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-3"
+        class="emotion-5 emotion-1"
       >
         I can also render code
       </span>
     </p>
     <p
-      class="emotion-3"
+      class="emotion-5 emotion-1"
     >
       <span
-        class="emotion-24 emotion-25"
+        class="emotion-44 emotion-45 emotion-1"
       >
         const example = 1 // Inline code
       </span>
