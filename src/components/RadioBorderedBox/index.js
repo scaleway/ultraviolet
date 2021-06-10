@@ -7,9 +7,7 @@ import Box from '../Box'
 import Radio from '../Radio'
 import Typography from '../Typography'
 
-const StyledBox = styled(Box, {
-  shouldForwardProp: prop => !['bordered'].includes(prop),
-})`
+const StyledBox = styled(Box)`
   &:hover {
     cursor: pointer;
   }
