@@ -79,7 +79,7 @@ describe('Button', () => {
 
   test(`should render correctly with a tooltip`, () =>
     shouldMatchEmotionSnapshot(
-      <Button icon="check" tooltip="world">
+      <Button icon="check" tooltip="world" aria-describedby="test">
         Hello
       </Button>,
     ))
