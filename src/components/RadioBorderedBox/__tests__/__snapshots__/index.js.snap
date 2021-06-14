@@ -2,7 +2,13 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-1.emotion-1 {
+  .emotion-1 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.emotion-1.emotion-1 {
   display: block;
 }
 
@@ -159,6 +165,9 @@ exports[`Radio renders correctly 1`] = `
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
   border: 1px solid #4f0599!important;
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
@@ -321,6 +330,9 @@ exports[`Radio renders correctly when checked 1`] = `
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
   cursor: not-allowed!important;
   color: #dce1eb;
 }
@@ -477,6 +489,9 @@ exports[`Radio renders correctly when disabled 1`] = `
 exports[`Radio renders correctly with label desc and badge 1`] = `
 <DocumentFragment>
   .emotion-1 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
   cursor: not-allowed!important;
   color: #dce1eb;
 }
