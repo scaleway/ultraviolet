@@ -6,6 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import Button, { buttonSizes, buttonVariants } from '..'
+import { icons as iconsList } from '../../Icon'
 
 <Meta title="Components/Button" component={Button} />
 
@@ -104,19 +105,6 @@ import Button, { buttonSizes, buttonVariants } from '..'
   </Story>
 </Canvas>
 
-## Progress Only
-
-<Description>
-  Add `displayProgressOnly` if you want your button to have only a progress
-  circle in it.
-</Description>
-
-<Canvas>
-  <Story name="Progress Only">
-    <Button displayProgressOnly progress="right" m={2} />
-  </Story>
-</Canvas>
-
 ## Icons
 
 <Description>
@@ -130,6 +118,51 @@ import Button, { buttonSizes, buttonVariants } from '..'
     <Button icon="lock" m={2}>
       With text
     </Button>
+  </Story>
+</Canvas>
+
+## Icon size
+
+<Description>Set size using `size` prop.</Description>
+
+<Canvas>
+  <Story name="Icon Size">
+    {[10, 18, 24, 32].map(size => (
+      <React.Fragment key={size}>
+        <Button icon="lock" iconSize={size} mr={2} />
+        <Button icon="lock" iconSize={size} mr={2}>
+          With text
+        </Button>
+      </React.Fragment>
+    ))}
+  </Story>
+</Canvas>
+
+## Action
+
+<Description>Action button is a icon only button with no padding</Description>
+
+<Canvas>
+  <Story name="Action">
+    {iconsList.map(icon => (
+      <Button action key={icon} icon={icon} mr={2} mb={2} />
+    ))}
+  </Story>
+  <Story name="Action with variant">
+    {buttonVariants.map(variant => (
+      <Button action icon="lock" key={variant} variant={variant} mr={2} />
+    ))}
+  </Story>
+  <Story name="Action rounded">
+    {buttonVariants.map(variant => (
+      <Button
+        action="rounded"
+        icon="lock"
+        key={variant}
+        variant={variant}
+        mr={2}
+      />
+    ))}
   </Story>
 </Canvas>
 
@@ -200,6 +233,22 @@ import Button, { buttonSizes, buttonVariants } from '..'
   <Story name="Link delegation with disabled">
     <Button to="https://scaleway.com" target="_blank" disabled>
       Scaleway
+    </Button>
+  </Story>
+</Canvas>
+
+## Tooltip
+
+<Description>
+  You can also add a tooltip text by providing a string in the `tooltip` props
+</Description>
+
+<Canvas>
+  <Story name="Tooltip">
+    <Button m={2} action icon="lock" variant="primary" tooltip="I am locked" />
+    <Button m={2} icon="lock" variant="primary" tooltip="I am locked" />
+    <Button m={2} icon="lock" variant="primary" tooltip="I am locked">
+      Hover Me
     </Button>
   </Story>
 </Canvas>
