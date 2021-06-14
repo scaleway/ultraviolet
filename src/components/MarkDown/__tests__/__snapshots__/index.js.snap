@@ -94,19 +94,18 @@ exports[`MarkDown render simple string 1`] = `
   color: #1e4293;
 }
 
-.emotion-41 {
-  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
+.emotion-22 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Lucida Console',Monaco,'Courier New',Courier,monospace;
   font-size: 13px;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #4a4f62;
   background-color: #f6f5f7;
-}
-
-.emotion-41.emotion-41 {
   padding: 8px;
-  background-color: #f6f5f7;
-  color: #4a4f62;
 }
 
 <div
@@ -134,7 +133,7 @@ exports[`MarkDown render simple string 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        I am a simple markdown with 
+        I am a simple markdown with
       </span>
       <strong>
         <span
@@ -146,7 +145,7 @@ exports[`MarkDown render simple string 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-         
+
       </span>
       <em>
         <span
@@ -167,7 +166,7 @@ exports[`MarkDown render simple string 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        You can find the complete reference 
+        You can find the complete reference
       </span>
       <a
         class="emotion-25 emotion-26 emotion-1"
@@ -186,7 +185,7 @@ exports[`MarkDown render simple string 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        Invalid 
+        Invalid
       </span>
     </p>
     <p
@@ -201,11 +200,11 @@ exports[`MarkDown render simple string 1`] = `
     <p
       class="emotion-5 emotion-1"
     >
-      <span
-        class="emotion-40 emotion-41 emotion-1"
+      <code
+        class="emotion-1 emotion-22"
       >
         const example = 1 // Inline code
-      </span>
+      </code>
     </p>
     <pre>
       <code>
@@ -269,19 +268,18 @@ exports[`MarkDown render simple string with target blank 1`] = `
   vertical-align: top;
 }
 
-.emotion-45 {
-  font-family: 'Lucida Console','Monaco','Courier New','Courier',monospace;
+.emotion-25 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Lucida Console',Monaco,'Courier New',Courier,monospace;
   font-size: 13px;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 4px;
   color: #4a4f62;
   background-color: #f6f5f7;
-}
-
-.emotion-45.emotion-45 {
   padding: 8px;
-  background-color: #f6f5f7;
-  color: #4a4f62;
 }
 
 <div
@@ -309,7 +307,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        I am a simple markdown with 
+        I am a simple markdown with
       </span>
       <strong>
         <span
@@ -321,7 +319,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-         
+
       </span>
       <em>
         <span
@@ -342,7 +340,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        You can find the complete reference 
+        You can find the complete reference
       </span>
       <a
         class="emotion-25 emotion-26 emotion-1"
@@ -371,7 +369,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
       <span
         class="emotion-5 emotion-1"
       >
-        Invalid 
+        Invalid
       </span>
     </p>
     <p
@@ -386,11 +384,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
     <p
       class="emotion-5 emotion-1"
     >
-      <span
-        class="emotion-44 emotion-45 emotion-1"
+      <code
+        class="emotion-1 emotion-25"
       >
         const example = 1 // Inline code
-      </span>
+      </code>
     </p>
     <pre>
       <code>
