@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import BorderedBox from '../BorderedBox'
 import Box from '../Box'
 import Typography from '../Typography'
 
@@ -9,7 +8,7 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledBorderedBox = styled(BorderedBox)`
+const StyledBox = styled(Box)`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
@@ -56,14 +55,15 @@ const Container = ({
       <div>{rightTitle}</div>
     </Box>
     {header}
-    <StyledBorderedBox
+    <StyledBox
+      bordered
       css={boxStyle}
       small={small}
       edition={edition}
       disabled={disabled}
     >
       {children}
-    </StyledBorderedBox>
+    </StyledBox>
   </StyledContainer>
 )
 

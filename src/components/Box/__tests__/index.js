@@ -9,4 +9,10 @@ describe('Box', () => {
     shouldMatchEmotionSnapshot(
       <Box backgroundColor="primary" height={100} mx="auto" p={2} />,
     ))
+
+  test('Box renders with bordered', () =>
+    shouldMatchEmotionSnapshot(<Box bordered />))
+
+  test('Box renders with as property', () =>
+    shouldMatchEmotionSnapshot(<Box bordered as="p" />))
 })

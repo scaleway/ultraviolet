@@ -71,7 +71,7 @@ exports[`Button should render correctly loading 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,14 +80,14 @@ exports[`Button should render correctly loading 1`] = `
   pointer-events: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   height: 1em;
   width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,14 +105,14 @@ exports[`Button should render correctly loading 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="CircularProgressbar  emotion-4 emotion-5"
+        class="CircularProgressbar  emotion-5 emotion-6"
         data-test-id="CircularProgressbar"
         viewBox="0 0 100 100"
       >
@@ -143,7 +143,7 @@ exports[`Button should render correctly loading 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-7 emotion-8"
     >
       Hello
     </div>
@@ -222,7 +222,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,14 +231,14 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   height: 1em;
   width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,7 +254,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,14 +265,14 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="CircularProgressbar  emotion-4 emotion-5"
+        class="CircularProgressbar  emotion-5 emotion-6"
         data-test-id="CircularProgressbar"
         viewBox="0 0 100 100"
       >
@@ -303,15 +303,15 @@ exports[`Button should render correctly loading with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-7 emotion-8"
     >
       Hello
     </div>
     <div
-      class="emotion-8 emotion-3"
+      class="emotion-9 emotion-4"
     >
       <svg
-        class="CircularProgressbar  emotion-4 emotion-5"
+        class="CircularProgressbar  emotion-5 emotion-6"
         data-test-id="CircularProgressbar"
         viewBox="0 0 100 100"
       >
@@ -347,7 +347,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -384,23 +384,23 @@ exports[`Button should render correctly when acting as Link 1`] = `
   padding: 8px 16px;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   color: #fff;
   background-color: #420480;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -418,11 +418,11 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 <a
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2 emotion-1"
     href="/"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-4 emotion-5"
     >
       Hello
     </div>
@@ -491,7 +491,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -509,13 +509,13 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 <button
     aria-disabled="true"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     disabled=""
     to="/"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -578,7 +578,7 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -596,11 +596,11 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 <a
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     href="/"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -669,7 +669,7 @@ exports[`Button should render correctly when disabled 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -687,12 +687,12 @@ exports[`Button should render correctly when disabled 1`] = `
 
 <button
     aria-disabled="true"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     disabled=""
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -759,7 +759,7 @@ exports[`Button should render correctly when extendable 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-1 .emotion-3 {
+.emotion-1 .emotion-4 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -768,14 +768,14 @@ exports[`Button should render correctly when extendable 1`] = `
   overflow: hidden;
 }
 
-.emotion-1:focus .emotion-3,
-.emotion-1:hover .emotion-3 {
+.emotion-1:focus .emotion-4,
+.emotion-1:hover .emotion-4 {
   max-width: 275px;
   margin-right: 8px;
   padding-left: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -793,11 +793,11 @@ exports[`Button should render correctly when extendable 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -864,7 +864,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-1 .emotion-7 {
+.emotion-1 .emotion-9 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -873,14 +873,14 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   overflow: hidden;
 }
 
-.emotion-1:focus .emotion-7,
-.emotion-1:hover .emotion-7 {
+.emotion-1:focus .emotion-9,
+.emotion-1:hover .emotion-9 {
   max-width: 275px;
   margin-right: 8px;
   padding-right: 8x;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -889,7 +889,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   pointer-events: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -897,11 +897,11 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   vertical-align: middle;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -919,14 +919,14 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="sc-ui-icon emotion-5 emotion-6 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -935,7 +935,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-8 emotion-9"
     >
       Hello
     </div>
@@ -998,7 +998,7 @@ exports[`Button should render correctly with a custom Icon 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1008,11 +1008,11 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       IconMock
     </div>
@@ -1075,7 +1075,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1091,7 +1091,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   pointer-events: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1100,7 +1100,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   pointer-events: none;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1108,25 +1108,25 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   min-height: 1em;
 }
 
-.emotion-7.emotion-7 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-5 emotion-6"
     >
       <svg
-        class="sc-ui-icon emotion-6 emotion-7"
+        class="sc-ui-icon emotion-7 emotion-8 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -1195,7 +1195,7 @@ exports[`Button should render correctly without a children 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   />
 </DocumentFragment>
@@ -1256,7 +1256,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1264,7 +1264,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   pointer-events: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1272,20 +1272,20 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   vertical-align: middle;
 }
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="sc-ui-icon emotion-5 emotion-6 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -1352,7 +1352,7 @@ exports[`Button size render large 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1370,11 +1370,11 @@ exports[`Button size render large 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1436,7 +1436,7 @@ exports[`Button size render medium 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1454,11 +1454,11 @@ exports[`Button size render medium 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1520,7 +1520,7 @@ exports[`Button size render small 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1538,11 +1538,11 @@ exports[`Button size render small 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1604,7 +1604,7 @@ exports[`Button size render xsmall 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1622,11 +1622,11 @@ exports[`Button size render xsmall 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1686,7 +1686,7 @@ exports[`Button size render xxsmall 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1704,11 +1704,11 @@ exports[`Button size render xxsmall 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1771,7 +1771,7 @@ exports[`Button variant render info 1`] = `
   box-shadow: 0 0 0 2px rgba(228,237,255,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1789,11 +1789,11 @@ exports[`Button variant render info 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1868,7 +1868,7 @@ exports[`Button variant render info-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(63,110,216,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1886,11 +1886,11 @@ exports[`Button variant render info-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -1952,7 +1952,7 @@ exports[`Button variant render link 1`] = `
   text-decoration: underline;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1970,11 +1970,11 @@ exports[`Button variant render link 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2037,7 +2037,7 @@ exports[`Button variant render primary 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2055,11 +2055,11 @@ exports[`Button variant render primary 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2134,7 +2134,7 @@ exports[`Button variant render primary-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2152,11 +2152,11 @@ exports[`Button variant render primary-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2231,7 +2231,7 @@ exports[`Button variant render primary-soft-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2249,11 +2249,11 @@ exports[`Button variant render primary-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2316,7 +2316,7 @@ exports[`Button variant render secondary 1`] = `
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2334,11 +2334,11 @@ exports[`Button variant render secondary 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2413,7 +2413,7 @@ exports[`Button variant render secondary-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2431,11 +2431,11 @@ exports[`Button variant render secondary-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2498,7 +2498,7 @@ exports[`Button variant render success 1`] = `
   box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2516,11 +2516,11 @@ exports[`Button variant render success 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2595,7 +2595,7 @@ exports[`Button variant render success-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2613,11 +2613,11 @@ exports[`Button variant render success-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2692,7 +2692,7 @@ exports[`Button variant render success-soft-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(69,214,181,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2710,11 +2710,11 @@ exports[`Button variant render success-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2767,7 +2767,7 @@ exports[`Button variant render transparent 1`] = `
   text-decoration: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2785,11 +2785,11 @@ exports[`Button variant render transparent 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2852,7 +2852,7 @@ exports[`Button variant render warning 1`] = `
   box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2870,11 +2870,11 @@ exports[`Button variant render warning 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -2949,7 +2949,7 @@ exports[`Button variant render warning-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2967,11 +2967,11 @@ exports[`Button variant render warning-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>
@@ -3046,7 +3046,7 @@ exports[`Button variant render warning-soft-bordered 1`] = `
   box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3064,11 +3064,11 @@ exports[`Button variant render warning-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       Hello
     </div>

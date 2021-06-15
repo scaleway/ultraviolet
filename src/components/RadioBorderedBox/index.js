@@ -3,12 +3,11 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Badge from '../Badge'
-import BorderedBox from '../BorderedBox'
 import Box from '../Box'
 import Radio from '../Radio'
 import Typography from '../Typography'
 
-const StyledBorderedBox = styled(BorderedBox)`
+const StyledBox = styled(Box)`
   &:hover {
     cursor: pointer;
   }
@@ -46,7 +45,8 @@ const RadioBorderedBox = ({
   children,
   ...props
 }) => (
-  <StyledBorderedBox
+  <StyledBox
+    bordered
     as="label"
     display="block"
     disabled={disabled}
@@ -77,7 +77,7 @@ const RadioBorderedBox = ({
       )}
     </Box>
     <Box>{children}</Box>
-  </StyledBorderedBox>
+  </StyledBox>
 )
 
 RadioBorderedBox.propTypes = {

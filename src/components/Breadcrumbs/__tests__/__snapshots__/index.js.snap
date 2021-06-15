@@ -2,7 +2,7 @@
 
 exports[`Breadcrumbs renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-2 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,20 +12,20 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: inline;
 }
 
-.emotion-3[aria-current='page'] {
+.emotion-4[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.emotion-3:not(:last-child)::after {
+.emotion-4:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,39 +34,39 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   color: #4f0599;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   color: #4f0599;
 }
 
 <nav
     aria-label="Breadcrumb"
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <ol
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       <li
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-1"
           href="/step1"
         >
           Step 1
         </a>
       </li>
       <li
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-1"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -74,7 +74,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-current="page"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         Step 3
       </li>
@@ -85,7 +85,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
 
 exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .emotion-2 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -95,7 +95,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   display: flex;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -128,77 +128,77 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   border-color: #fff;
 }
 
-.emotion-3:first-child {
+.emotion-4:first-child {
   padding-left: 24px;
   margin-left: 0;
   margin-right: -24px;
 }
 
-.emotion-3:last-child {
+.emotion-4:last-child {
   margin-right: 0;
 }
 
-.emotion-3[aria-current='page'] {
+.emotion-4[aria-current='page'] {
   background-color: #4f0599;
   color: #fff;
   border-color: #fff;
 }
 
-.emotion-3[aria-current='page']:focus {
+.emotion-4[aria-current='page']:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-3[aria-current='page']~.emotion-3 {
+.emotion-4[aria-current='page']~.emotion-4 {
   background-color: #fff;
   color: #b2b6c3;
   border-color: #d4dae7;
 }
 
-.emotion-3[aria-current='page']~.emotion-3:focus {
+.emotion-4[aria-current='page']~.emotion-4:focus {
   box-shadow: 0 0 0 2px rgba(178,182,195,0.25);
 }
 
-.emotion-3:nth-child(1) {
+.emotion-4:nth-child(1) {
   z-index: 10;
 }
 
-.emotion-3:nth-child(2) {
+.emotion-4:nth-child(2) {
   z-index: 9;
 }
 
-.emotion-3:nth-child(3) {
+.emotion-4:nth-child(3) {
   z-index: 8;
 }
 
-.emotion-3:nth-child(4) {
+.emotion-4:nth-child(4) {
   z-index: 7;
 }
 
-.emotion-3:nth-child(5) {
+.emotion-4:nth-child(5) {
   z-index: 6;
 }
 
-.emotion-3:nth-child(6) {
+.emotion-4:nth-child(6) {
   z-index: 5;
 }
 
-.emotion-3:nth-child(7) {
+.emotion-4:nth-child(7) {
   z-index: 4;
 }
 
-.emotion-3:nth-child(8) {
+.emotion-4:nth-child(8) {
   z-index: 3;
 }
 
-.emotion-3:nth-child(9) {
+.emotion-4:nth-child(9) {
   z-index: 2;
 }
 
-.emotion-3:nth-child(10) {
+.emotion-4:nth-child(10) {
   z-index: 1;
 }
 
-.emotion-6 {
+.emotion-7 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -207,39 +207,39 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   color: #4f0599;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   color: #4f0599;
 }
 
 <nav
     aria-label="Breadcrumb"
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <ol
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       <li
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-1"
           href="/step1"
         >
           Step 1
         </a>
       </li>
       <li
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         <a
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7 emotion-1"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -247,7 +247,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       </li>
       <li
         aria-current="page"
-        class="emotion-3 emotion-4"
+        class="emotion-4 emotion-5"
       >
         Step 3
       </li>

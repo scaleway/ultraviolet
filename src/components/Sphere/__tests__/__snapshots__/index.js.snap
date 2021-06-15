@@ -31,7 +31,7 @@ exports[`Sphere renders correctly when halved 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   />
 </DocumentFragment>
 `;
@@ -67,7 +67,7 @@ exports[`Sphere renders correctly with default values 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   />
 </DocumentFragment>
 `;
@@ -102,16 +102,16 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   position: relative;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #fff;
   font-size: 10px;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       ★
     </div>

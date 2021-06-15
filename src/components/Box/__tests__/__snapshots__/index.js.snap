@@ -3,7 +3,35 @@
 exports[`Box Box renders correctly  1`] = `
 <DocumentFragment>
   <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
+  />
+</DocumentFragment>
+`;
+
+exports[`Box Box renders with as property 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+<p
+    class="emotion-0 emotion-1"
+  />
+</DocumentFragment>
+`;
+
+exports[`Box Box renders with bordered 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+<div
+    class="emotion-0 emotion-1"
   />
 </DocumentFragment>
 `;
@@ -19,7 +47,7 @@ exports[`Box Box renders with system 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   />
 </DocumentFragment>
 `;

@@ -8,17 +8,17 @@ exports[`Avatar renders correctly with default props 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   height: 100%;
   width: 100%;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <img
       alt=""
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
       src="test-file-stub"
     />
   </div>
@@ -33,7 +33,7 @@ exports[`Avatar renders correctly with lock 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -54,7 +54,7 @@ exports[`Avatar renders correctly with lock 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #b2b6c3;
   height: 1em;
   width: 1em;
@@ -62,18 +62,18 @@ exports[`Avatar renders correctly with lock 1`] = `
   min-height: 1em;
 }
 
-.emotion-4.emotion-4 {
+.emotion-5.emotion-5 {
   vertical-align: middle;
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       <svg
-        class="sc-ui-icon emotion-3 emotion-4"
+        class="sc-ui-icon emotion-4 emotion-5 emotion-1"
         viewBox="0 0 24 24"
       >
         <path
@@ -93,7 +93,7 @@ exports[`Avatar renders correctly with sentence 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -115,10 +115,10 @@ exports[`Avatar renders correctly with sentence 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       HW
     </div>
@@ -134,7 +134,7 @@ exports[`Avatar renders correctly with small text 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -156,10 +156,10 @@ exports[`Avatar renders correctly with small text 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       HW
     </div>
@@ -175,7 +175,7 @@ exports[`Avatar renders correctly with text 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -197,10 +197,10 @@ exports[`Avatar renders correctly with text 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       HE
     </div>
@@ -216,7 +216,7 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
   position: relative;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -238,10 +238,10 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3"
     >
       HW
     </div>

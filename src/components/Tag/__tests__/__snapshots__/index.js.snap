@@ -18,7 +18,7 @@ exports[`Tag renders correctly 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -31,11 +31,11 @@ exports[`Tag renders correctly 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <span
       aria-disabled="false"
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       test
     </span>
@@ -59,7 +59,7 @@ exports[`Tag renders correctly bordered 1`] = `
   border: 1px solid #d4dae7;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #4a4f62;
   font-size: 14px;
   -webkit-align-self: center;
@@ -72,11 +72,11 @@ exports[`Tag renders correctly bordered 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <span
       aria-disabled="false"
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       test
     </span>
@@ -103,7 +103,7 @@ exports[`Tag renders correctly disabled 1`] = `
   padding-right: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   opacity: 0.5;
   color: #4a4f62;
   font-size: 14px;
@@ -117,11 +117,11 @@ exports[`Tag renders correctly disabled 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <span
       aria-disabled="true"
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       test
     </span>
