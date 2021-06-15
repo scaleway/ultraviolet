@@ -1,6 +1,6 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
 import Information from '..'
-import { Box, Button, Typography } from '../..'
+import { Button, Typography } from '../..'
 
 <Meta title="Components/Information" component={Information} />
 
@@ -94,10 +94,10 @@ import { Box, Button, Typography } from '../..'
       icon="information-outline"
       mb={1}
     >
-      <Box>
+      <div>
         <Typography mb={1}>Welcome in a more complex children</Typography>
         <Button variant="primary-bordered">I have a button</Button>
-      </Box>
+      </div>
     </Information>
   </Story>
 </Canvas>

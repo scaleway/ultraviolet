@@ -16,11 +16,11 @@ const IconMessage = ({ variant, icon, children, ...props }) => (
     <Box mr={2}>
       <Icon name={icon} size={40} color={variant} />
     </Box>
-    <Box>
+    <div>
       <Typography as="div" color={variant} fontWeight={700}>
         {children}
       </Typography>
-    </Box>
+    </div>
   </Box>
 )
 

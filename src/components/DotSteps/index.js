@@ -1,11 +1,11 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '../Box'
 import Dot from '../Dot'
+import FlexBox from '../FlexBox'
 
 const DotSteps = ({ steps, step, setStep }) => (
-  <Box display="flex" justifyContent="center">
+  <FlexBox justifyContent="center">
     {Array.from({ length: steps }, (_, i) => (
       <Dot
         key={`dot-step-${i + 1}`}
@@ -17,7 +17,7 @@ const DotSteps = ({ steps, step, setStep }) => (
         `}
       />
     ))}
-  </Box>
+  </FlexBox>
 )
 
 DotSteps.propTypes = {

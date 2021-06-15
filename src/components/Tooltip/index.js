@@ -103,7 +103,7 @@ const Tooltip = ({
   }
 
   return (
-    <Box>
+    <div>
       <TooltipReference {...tooltip} ref={children.ref}>
         {finalChildren}
       </TooltipReference>
@@ -113,7 +113,7 @@ const Tooltip = ({
           {text}
         </StyledTooltip>
       </ReakitTooltip>
-    </Box>
+    </div>
   )
 }
 

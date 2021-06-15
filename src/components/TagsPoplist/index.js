@@ -9,6 +9,7 @@ import {
   useTooltipState,
 } from 'reakit/Tooltip'
 import Box from '../Box'
+import FlexBox from '../FlexBox'
 import Tag from '../Tag'
 
 const textStyle = maxTagWidth => css`
@@ -51,7 +52,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
   }
 
   return (
-    <Box display="flex">
+    <FlexBox>
       <Box display="flex" alignItems="center" color="gray700" {...props}>
         {tags.slice(0, visibleTagsCount).map((tag, i) => (
           <Tag
@@ -95,7 +96,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
           </Tooltip>
         </>
       )}
-    </Box>
+    </FlexBox>
   )
 }
 

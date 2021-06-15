@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { Box } from '..'
+import { Box, FlexBox } from '..'
 import { colors } from '../theme'
 
 <Meta title="Theme" />
@@ -16,7 +16,7 @@ Here are all colors that we use in Scaleway UI. You can customize them in your c
   {Object.keys(colors).map(
     color =>
       color !== 'colors' && (
-        <Box display="flex" justifyContent="center" key={color}>
+        <FlexBox justifyContent="center" key={color}>
           <Box
             textAlign="center"
             width={100}
@@ -53,7 +53,7 @@ Here are all colors that we use in Scaleway UI. You can customize them in your c
           >
             <p style={{ color: 'black' }}>{color}</p>
           </Box>
-        </Box>
+        </FlexBox>
       ),
   )}
 </div>

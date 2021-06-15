@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useEffect, useState } from 'react'
 import RichSelect from '..'
-import { ActivityIndicator, Badge, Box, Button } from '../..'
+import { ActivityIndicator, Badge, Box, Button, FlexBox } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -69,12 +69,12 @@ import * as animations from '../../../utils/animations'
       <RichSelect name="disabled">
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">
-          <Box display="flex" alignItems="center">
+          <FlexBox alignItems="center">
             Option B
             <Badge size="rounded" ml={1}>
               Awesome badge
             </Badge>
-          </Box>
+          </FlexBox>
         </RichSelect.Option>
       </RichSelect>
     </Box>
@@ -160,11 +160,11 @@ of RichSelect with an external way (check example with button).
 
 <ControlValue>
   {() => (
-    <Box>
+    <div>
       {Object.keys(animations).map(animation => (
         <code key={animation}>{animation}</code>
       ))}
-    </Box>
+    </div>
   )}
 </ControlValue>
 
@@ -275,12 +275,12 @@ of RichSelect with an external way (check example with button).
 
 <Canvas>
   <Story name="Demo Loading" height="175px">
-    <Box>
+    <div>
       <RichSelect name="loading" isLoading>
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>
-    </Box>
+    </div>
   </Story>
 </Canvas>
 
@@ -300,7 +300,7 @@ of RichSelect with an external way (check example with button).
         return () => clearTimeout(timeout)
       }, [isLoading])
       return (
-        <Box>
+        <div>
           <Button size="small" mb={2} onClick={() => setIsLoading(true)}>
             Load data
           </Button>
@@ -316,7 +316,7 @@ of RichSelect with an external way (check example with button).
               <RichSelect.Option value="b">Option B</RichSelect.Option>
             )}
           </RichSelect>
-        </Box>
+        </div>
       )
     }}
   </Story>
