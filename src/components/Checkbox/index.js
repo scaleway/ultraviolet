@@ -90,11 +90,13 @@ const Checkbox = ({
         aria-disabled={disabled}
       >
         <StyledReakitCheckbox
-          {...checkbox}
+          aria-checked={checkbox.state}
+          checked={checkbox.state}
           hasChildren={hasChildren}
           size={size}
           onChange={e => {
             if (!progress) onChange(e)
+            setState(e.target.checked)
           }}
           onFocus={onFocus}
           onBlur={onBlur}
