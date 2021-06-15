@@ -1,3 +1,43 @@
+## [0.84.0](https://github.com/scaleway/scaleway-ui/compare/v0.83.1...v0.84.0) (2021-06-15)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.14.0 to 7.14.5 ([#426](https://github.com/scaleway/scaleway-ui/issues/426)) ([5a37683](https://github.com/scaleway/scaleway-ui/commit/5a37683768ada11dfce6336ba0d1771e7fcababe))
+* **deps:** bump @babel/runtime from 7.14.5 to 7.14.6 ([#439](https://github.com/scaleway/scaleway-ui/issues/439)) ([b2d0af3](https://github.com/scaleway/scaleway-ui/commit/b2d0af38fe3d659adf4c8a166f51accb575d9ab7))
+* **deps:** bump bobheadxi/deployments from 0.5.2 to 0.6.0 ([#434](https://github.com/scaleway/scaleway-ui/issues/434)) ([17c1297](https://github.com/scaleway/scaleway-ui/commit/17c1297d050d8aaf08e9d03f3abbfc5e875c3f5e))
+* **deps:** bump codecov/codecov-action from 1.5.0 to 1.5.2 ([#418](https://github.com/scaleway/scaleway-ui/issues/418)) ([8425edf](https://github.com/scaleway/scaleway-ui/commit/8425edf520272f5895c91fc510080a369606c464))
+* **deps-dev:** bump @babel/core from 7.14.3 to 7.14.5 ([#424](https://github.com/scaleway/scaleway-ui/issues/424)) ([885b791](https://github.com/scaleway/scaleway-ui/commit/885b7911f0c53097d08f64787789215d3bf9e5ff))
+* **deps-dev:** bump @babel/core from 7.14.5 to 7.14.6 ([#438](https://github.com/scaleway/scaleway-ui/issues/438)) ([ae20572](https://github.com/scaleway/scaleway-ui/commit/ae205721c8db566e6d07dd33a512ad5a8c56c8a9))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.4 to 7.14.5 ([#422](https://github.com/scaleway/scaleway-ui/issues/422)) ([4320f95](https://github.com/scaleway/scaleway-ui/commit/4320f9540b9fd16ebd0aaebaf8b47588d4b4d0aa))
+* **deps-dev:** bump @babel/plugin-proposal-class-properties ([#423](https://github.com/scaleway/scaleway-ui/issues/423)) ([3674cc9](https://github.com/scaleway/scaleway-ui/commit/3674cc91de7f71622309bf70fcac85a90e9e09ad))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#429](https://github.com/scaleway/scaleway-ui/issues/429)) ([4d6b68a](https://github.com/scaleway/scaleway-ui/commit/4d6b68abd5e7fead85c2964e13dd749a00ad736d))
+* **deps-dev:** bump @babel/preset-env from 7.14.4 to 7.14.5 ([#428](https://github.com/scaleway/scaleway-ui/issues/428)) ([ba347c7](https://github.com/scaleway/scaleway-ui/commit/ba347c70eaffcb2001717230501e4a921bb21cf4))
+* **deps-dev:** bump @babel/preset-react from 7.13.13 to 7.14.5 ([#430](https://github.com/scaleway/scaleway-ui/issues/430)) ([c9a8dcc](https://github.com/scaleway/scaleway-ui/commit/c9a8dcc6ad127ae58bae97d9e4cbc25f82994163))
+* **deps-dev:** bump @semantic-release/release-notes-generator ([#433](https://github.com/scaleway/scaleway-ui/issues/433)) ([f369aaa](https://github.com/scaleway/scaleway-ui/commit/f369aaa9ac7e7e03deeb1721747d2cc6fd19f614))
+* **deps-dev:** bump @testing-library/jest-dom from 5.13.0 to 5.14.1 ([#436](https://github.com/scaleway/scaleway-ui/issues/436)) ([b1d1500](https://github.com/scaleway/scaleway-ui/commit/b1d15000d722a2e2380368a3a2bd7f2d75f83fa2))
+* **deps-dev:** bump jest-junit from 12.1.0 to 12.2.0 ([#425](https://github.com/scaleway/scaleway-ui/issues/425)) ([ec3ebb9](https://github.com/scaleway/scaleway-ui/commit/ec3ebb98f4fdb4d6ca11a60435298c83491cd2dc))
+* **deps-dev:** bump postcss from 8.3.0 to 8.3.1 ([#427](https://github.com/scaleway/scaleway-ui/issues/427)) ([93c004e](https://github.com/scaleway/scaleway-ui/commit/93c004ec5fe47b09ff8c793b7e487f5df5cd5e53))
+* **deps-dev:** bump postcss from 8.3.1 to 8.3.2 ([#432](https://github.com/scaleway/scaleway-ui/issues/432)) ([67a8aed](https://github.com/scaleway/scaleway-ui/commit/67a8aed6acfb25d6c94d8f30ab5d6f12efb47d73))
+* **deps-dev:** bump postcss from 8.3.2 to 8.3.3 ([#435](https://github.com/scaleway/scaleway-ui/issues/435)) ([b8649f3](https://github.com/scaleway/scaleway-ui/commit/b8649f3e879547c6c6e0f62362eb76dd6b801083))
+* **deps-dev:** bump postcss from 8.3.3 to 8.3.4 ([#440](https://github.com/scaleway/scaleway-ui/issues/440)) ([c541b99](https://github.com/scaleway/scaleway-ui/commit/c541b99142984012fab8022e2c154e207689eb28))
+* **deps-dev:** bump rollup from 2.51.1 to 2.51.2 ([#431](https://github.com/scaleway/scaleway-ui/issues/431)) ([26683ee](https://github.com/scaleway/scaleway-ui/commit/26683ee58684b815a8f5f61bdeb0a9a477271a4b))
+
+
+### :zap: Refactor
+
+* **box:** merge box and borderedbox ([#421](https://github.com/scaleway/scaleway-ui/issues/421)) ([097e722](https://github.com/scaleway/scaleway-ui/commit/097e722be60e5c676fa3221ca2676eba6dede548))
+
+
+### :gear: Features
+
+* **menu:** add menu component ([#420](https://github.com/scaleway/scaleway-ui/issues/420)) ([9d2af8e](https://github.com/scaleway/scaleway-ui/commit/9d2af8ea00f20fe1ca04e3ac2d34181e25fe8e1b))
+
+
+### :bug: Bug Fixes
+
+* **separator:** add role and aria-orientation ([#442](https://github.com/scaleway/scaleway-ui/issues/442)) ([1298143](https://github.com/scaleway/scaleway-ui/commit/1298143daa4f130ec4950de8f62d19c3b3eea11c))
+
 ### [0.83.1](https://github.com/scaleway/scaleway-ui/compare/v0.83.0...v0.83.1) (2021-06-08)
 
 
