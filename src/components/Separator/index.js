@@ -30,7 +30,12 @@ const StyledHr = styled(Box.withComponent('hr'), {
 
 const Separator = ({ direction, thickness, color, icon, ...props }) =>
   icon ? (
-    <StyledIcon direction={direction} {...props}>
+    <StyledIcon
+      role="separator"
+      aria-orientation={direction}
+      direction={direction}
+      {...props}
+    >
       <StyledHr
         direction={direction}
         thickness={thickness}
@@ -47,6 +52,8 @@ const Separator = ({ direction, thickness, color, icon, ...props }) =>
     </StyledIcon>
   ) : (
     <StyledHr
+      role="separator"
+      aria-orientation={direction}
       direction={direction}
       thickness={thickness}
       color={color}

@@ -19,7 +19,9 @@ exports[`Separator renders correctly horizontally 1`] = `
 }
 
 <hr
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
@@ -38,7 +40,9 @@ exports[`Separator renders correctly vertically 1`] = `
 }
 
 <hr
+    aria-orientation="vertical"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
@@ -57,7 +61,9 @@ exports[`Separator renders correctly with custom color 1`] = `
 }
 
 <hr
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
@@ -107,7 +113,9 @@ exports[`Separator renders correctly with custom icon 1`] = `
 }
 
 <div
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   >
     <hr
       class="emotion-3 emotion-4 emotion-2"
@@ -178,7 +186,9 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
 }
 
 <div
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   >
     <hr
       class="emotion-3 emotion-4 emotion-2"
@@ -244,7 +254,9 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
 }
 
 <div
+    aria-orientation="vertical"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   >
     <hr
       class="emotion-3 emotion-4 emotion-2"
@@ -279,7 +291,9 @@ exports[`Separator renders correctly with custom thickness 1`] = `
 }
 
 <hr
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
@@ -298,7 +312,9 @@ exports[`Separator renders correctly with default props 1`] = `
 }
 
 <hr
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
@@ -317,7 +333,9 @@ exports[`Separator renders correctly with raw color 1`] = `
 }
 
 <hr
+    aria-orientation="horizontal"
     class="emotion-0 emotion-1 emotion-2"
+    role="separator"
   />
 </DocumentFragment>
 `;
