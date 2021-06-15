@@ -1,10 +1,25 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
 import Menu from '..'
 import { Box, Button, Icon, Modal, Touchable } from '../..'
 
 <Meta title="Components/Menu" component={Menu} />
 
 # Menu
+
+<Description>
+  A menu is a widget that offers a list of choices to the user, such as a set of
+  actions or functions. A menu is usually opened, or made visible, by activating
+  a menu button, choosing an item in a menu that opens a sub menu, or by
+  invoking a command, such as Shift + F10 on Windows, that opens a context
+  specific menu. When a user activates a choice in a menu, the menu usually
+  closes unless the choice opened a submenu.
+</Description>
 
 <Canvas>
   <Story name="Basic" height="300px">
@@ -24,6 +39,12 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 </Canvas>
 
 ## Variants
+
+<Description>
+  A set of variant you can add on MenuItem (danger, nav). You can use either
+  props on MenuItem : - `onClick` to define menu actions. - `to` to define as a
+  `React Router Link`. - `href` to define as a native link `a`.
+</Description>
 
 <Canvas>
   <Story name="Variant" height="300px">
@@ -50,6 +71,10 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 </Canvas>
 
 ## Borderless
+
+<Description>
+  Property `borderless` avoids a bottom border on MenuItem
+</Description>
 
 <Canvas>
   <Story name="Borderless" height="300px">
@@ -91,6 +116,8 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 
 ## Modal
 
+<Description>This show how to use a modal on MenuItem.</Description>
+
 <Canvas>
   <Story name="Modal" height="300px">
     <Menu
@@ -117,6 +144,8 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 </Canvas>
 
 ## Advanced ( Work In Progress )
+
+<Description>Still Work In Progress. Add a sub menu item.</Description>
 
 <Canvas>
   <Story name="Advanced" height="350px">
