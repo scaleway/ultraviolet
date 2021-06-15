@@ -25,7 +25,8 @@ export const foam = '#cdfcf1'
 export const serenade = '#ffefe6'
 export const pippin = '#ffe1e7'
 export const shadow = '#a5a5cd'
-export const gold = '#FFD536'
+export const gold = '#ffd536'
+export const crimson = '#cf0f34'
 
 // System colors
 export const primary = violet
