@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import ReactMarkDown from 'react-markdown'
 import Box from '../Box'
-import Command from '../Command'
 import Link from '../Link'
 import Typography from '../Typography'
 
@@ -20,7 +19,9 @@ const headingRenderer = ({ node, children, ...props }) => {
   return <Heading {...props}>{children}</Heading>
 }
 
-const inlineCodeRenderer = props => <Command>{props.children}</Command>
+const inlineCodeRenderer = props => (
+  <Typography variant="command">{props.children}</Typography>
+)
 const textRenderer = props => <Box as="span">{props.children}</Box>
 const paragraphRenderer = props => <Box as="p">{props.children}</Box>
 const linkRenderer = ({ children, node, ...props }) => {

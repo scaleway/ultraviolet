@@ -52,7 +52,7 @@ const styles = {
     border-radius: ${theme.radii.default};
     color: ${theme.colors.gray700};
     background-color: ${theme.colors.gray100};
-    padding: 3px 5px;
+    padding: 8px;
   `,
   description: ({ theme }) => css`
     color: ${theme.colors.gray950};

@@ -6,12 +6,22 @@ import { Box, Boxer } from '../..'
 
 # Typography
 
-# Variants
+<Description>
+  Typography allows you to style your texts using some existing standards.
+</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <Typography>This is a basic Typography</Typography>
+  </Story>
+</Canvas>
+
+## Variants
 
 <Description>Set variant using `variant` property.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Variants">
     <Boxer my={1}>
       {typographyVariants.map(variant => (
         <Typography key={variant} variant={variant}>
@@ -29,7 +39,7 @@ import { Box, Boxer } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="ellipsis">
+  <Story name="Ellipsis">
     <strong>Without ellipsis</strong>
     <Box width={500} mt={1} mb={2}>
       <Typography>
@@ -56,7 +66,7 @@ import { Box, Boxer } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="maxlines">
+  <Story name="Max Lines">
     <Typography width={300} maxLines={2}>
       This text is quite long. Lorem ipsum dolor sit amet, consectetur
       adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -65,24 +75,33 @@ import { Box, Boxer } from '../..'
   </Story>
 </Canvas>
 
-## Align
+## Alignment
 
 <Description>Set the textAlign css with `align` props</Description>
 
 <Canvas isColumn>
-  <Story name="align-left">
-    <Typography align="left">
-      Lorem ipsum dolor sit amet, consectetu adipisicing elit
-    </Typography>
+  <Story name="Alignment">
+    <Typography align="left">Text aligned to the left</Typography>
+    <Typography align="center">Text center aligned</Typography>
+    <Typography align="right">Text aligned to the right</Typography>
   </Story>
-  <Story name="align-center">
-    <Typography align="center">
-      Lorem ipsum dolor sit amet, consectetu adipisicing elit
-    </Typography>
-  </Story>
-  <Story name="align-right">
-    <Typography align="right">
-      Lorem ipsum dolor sit amet, consectetu adipisicing elit
+</Canvas>
+
+## Colored Command
+
+<Description>
+  Set the `color` and `backgroundColor` props to color `command` variant
+</Description>
+
+<Canvas isColumn>
+  <Story name="Colored Command">
+    <Typography
+      variant="command"
+      color="blue"
+      backgroundColor="lightBlue"
+      align="left"
+    >
+      I'm a colored command
     </Typography>
   </Story>
 </Canvas>
