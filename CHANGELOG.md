@@ -1,3 +1,20 @@
+## [0.85.0](https://github.com/scaleway/scaleway-ui/compare/v0.84.0...v0.85.0) (2021-06-15)
+
+
+### :zap: Refactor
+
+* adds extra color into SWUI ([a635624](https://github.com/scaleway/scaleway-ui/commit/a6356247534a34fbacdc2d8bf3ab89667e177287))
+
+
+### :memo: Documentation
+
+* **menu):** add description ([#443](https://github.com/scaleway/scaleway-ui/issues/443)) ([bbf69e9](https://github.com/scaleway/scaleway-ui/commit/bbf69e9c5fcd96c350f8dacd40962622b3136ec8))
+
+
+### :gear: Features
+
+* migrate command into typography CNS-4040 ([#444](https://github.com/scaleway/scaleway-ui/issues/444)) ([3adc5a8](https://github.com/scaleway/scaleway-ui/commit/3adc5a86fcc9f7c098682995dd483df2e7aecd48))
+
 ## [0.84.0](https://github.com/scaleway/scaleway-ui/compare/v0.83.1...v0.84.0) (2021-06-15)
 
 
