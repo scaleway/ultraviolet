@@ -1086,7 +1086,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
   pointer-events: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1094,7 +1094,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
   pointer-events: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1102,20 +1102,20 @@ exports[`Button should render correctly with a rounded action button 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   vertical-align: middle;
 }
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="sc-ui-icon emotion-5 emotion-6 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
@@ -1129,7 +1129,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 
 exports[`Button should render correctly with a tooltip 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1166,23 +1166,23 @@ exports[`Button should render correctly with a tooltip 1`] = `
   padding: 8px 16px;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-3:hover,
+.emotion-3:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-3:hover,
+.emotion-3:focus {
   color: #fff;
   background-color: #420480;
 }
 
-.emotion-2:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1191,7 +1191,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
   pointer-events: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1199,11 +1199,11 @@ exports[`Button should render correctly with a tooltip 1`] = `
   min-height: 1em;
 }
 
-.emotion-6.emotion-6 {
+.emotion-8.emotion-8 {
   vertical-align: middle;
 }
 
-.emotion-7 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1220,20 +1220,20 @@ exports[`Button should render correctly with a tooltip 1`] = `
 }
 
 <div
-    class="emotion-0"
+    class="emotion-0 emotion-1"
   >
     <button
       aria-describedby="test"
       aria-disabled="false"
-      class="emotion-1 emotion-2"
+      class="emotion-2 emotion-3 emotion-1"
       tabindex="0"
       type="button"
     >
       <div
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6"
       >
         <svg
-          class="sc-ui-icon emotion-5 emotion-6"
+          class="sc-ui-icon emotion-7 emotion-8 emotion-1"
           viewBox="0 0 24 24"
         >
           <path
@@ -1242,7 +1242,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-7 emotion-8"
+        class="emotion-10 emotion-11"
       >
         Hello
       </div>
@@ -1316,7 +1316,7 @@ exports[`Button should render correctly with an action button 1`] = `
   pointer-events: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1324,7 +1324,7 @@ exports[`Button should render correctly with an action button 1`] = `
   pointer-events: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1332,20 +1332,20 @@ exports[`Button should render correctly with an action button 1`] = `
   min-height: 1em;
 }
 
-.emotion-5.emotion-5 {
+.emotion-6.emotion-6 {
   vertical-align: middle;
 }
 
 <button
     aria-disabled="false"
-    class="emotion-0 emotion-1"
+    class="emotion-0 emotion-1 emotion-2"
     type="button"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <svg
-        class="sc-ui-icon emotion-4 emotion-5"
+        class="sc-ui-icon emotion-5 emotion-6 emotion-2"
         viewBox="0 0 24 24"
       >
         <path
