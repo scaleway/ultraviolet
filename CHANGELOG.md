@@ -1,3 +1,10 @@
+### [0.87.1](https://github.com/scaleway/scaleway-ui/compare/v0.87.0...v0.87.1) (2021-06-17)
+
+
+### :bug: Bug Fixes
+
+* **menu:** item color ([#450](https://github.com/scaleway/scaleway-ui/issues/450)) ([20df304](https://github.com/scaleway/scaleway-ui/commit/20df304ebd3faf7255b1c72066900eb671967eef))
+
 ## [0.87.0](https://github.com/scaleway/scaleway-ui/compare/v0.86.0...v0.87.0) (2021-06-17)
 
 
