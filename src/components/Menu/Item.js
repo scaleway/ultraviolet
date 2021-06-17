@@ -38,6 +38,7 @@ const styles = {
     display: block;
     font-size: 14px;
     line-height: 22px;
+    font-weight: inherit;
     padding: 4px 8px;
     color: ${theme.colors.gray700};
     border: 0;
