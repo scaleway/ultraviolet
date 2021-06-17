@@ -1,3 +1,15 @@
+## [0.87.0](https://github.com/scaleway/scaleway-ui/compare/v0.86.0...v0.87.0) (2021-06-17)
+
+
+### :gear: Features
+
+* add FlexBox component ([#391](https://github.com/scaleway/scaleway-ui/issues/391)) ([be5a714](https://github.com/scaleway/scaleway-ui/commit/be5a71435851ca49b898ad3f77dbb2b95f622d08))
+
+
+### :white_check_mark: Test
+
+* update snaps ([d0d578b](https://github.com/scaleway/scaleway-ui/commit/d0d578bd2be25a830ef2e2d851d771deea512b8c))
+
 ## [0.86.0](https://github.com/scaleway/scaleway-ui/compare/v0.85.1...v0.86.0) (2021-06-17)
 
 
