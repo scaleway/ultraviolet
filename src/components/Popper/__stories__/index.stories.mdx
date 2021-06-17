@@ -21,7 +21,7 @@ import Icon from '../../Icon'
 
 <Canvas>
   <Story name="Basic" parameters={{ layout: 'centered' }}>
-    <Box>
+    <div>
       <Popper
         aria-label="Custom popover"
         disclosure={({ placement, visible }) => (
@@ -38,7 +38,7 @@ import Icon from '../../Icon'
       >
         {({ placement }) => <Box p={2}> placement:{placement}</Box>}
       </Popper>
-    </Box>
+    </div>
   </Story>
 </Canvas>
 
@@ -66,7 +66,7 @@ import Icon from '../../Icon'
 
 <Canvas>
   <Story name="Complex children" parameters={{ layout: 'centered' }}>
-    <Box>
+    <div>
       <Popper
         variant="black"
         aria-label="Custom popover"
@@ -85,7 +85,7 @@ import Icon from '../../Icon'
           </Box>
         )}
       </Popper>
-    </Box>
+    </div>
   </Story>
 </Canvas>
 
@@ -95,7 +95,7 @@ import Icon from '../../Icon'
 
 <Canvas>
   <Story height="100px" name="Placement" parameters={{ layout: 'centered' }}>
-    <Box>
+    <div>
       <Box display="flex" flexDirection="column">
         <Popper
           placement="left-start"
@@ -122,7 +122,7 @@ import Icon from '../../Icon'
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
       </Box>
-      <Box>
+      <div>
         <Popper
           placement="top-start"
           variant="black"
@@ -150,7 +150,7 @@ import Icon from '../../Icon'
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
-      </Box>
+      </div>
       <Box display="flex" flexDirection="column">
         <Popper
           placement="right-start"
@@ -177,7 +177,7 @@ import Icon from '../../Icon'
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
       </Box>
-      <Box>
+      <div>
         <Popper
           placement="bottom-start"
           variant="black"
@@ -202,8 +202,8 @@ import Icon from '../../Icon'
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
-      </Box>
-    </Box>
+      </div>
+    </div>
   </Story>
 </Canvas>
 

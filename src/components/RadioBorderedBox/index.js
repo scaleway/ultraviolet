@@ -76,7 +76,7 @@ const RadioBorderedBox = ({
         </Badge>
       )}
     </Box>
-    <Box>{children}</Box>
+    <div>{children}</div>
   </StyledBox>
 )
 

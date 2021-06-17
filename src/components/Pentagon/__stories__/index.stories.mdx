@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import Pentagon from '..'
 import { colors } from '../../../theme'
-import { Box } from '../../index'
+import { FlexBox } from '../../index'
 
 <Meta title="Components/Pentagon" component={Pentagon} />
 
@@ -25,12 +25,12 @@ import { Box } from '../../index'
 
 <Canvas>
   <Story name="Color">
-    <Box display="inline-flex">
+    <FlexBox inline>
       <Pentagon color={colors.zumthor} />
       <Pentagon color={colors.foam} />
       <Pentagon color={colors.serenade} />
       <Pentagon color={colors.pippin} />
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 
@@ -38,12 +38,12 @@ import { Box } from '../../index'
 
 <Canvas>
   <Story name="Size">
-    <Box display="inline-flex">
+    <FlexBox inline>
       <Pentagon size="50px" />
       <Pentagon size="100px" />
       <Pentagon size="150px" />
       <Pentagon size="200px" />
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 

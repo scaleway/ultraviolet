@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { useState } from 'react'
 import Counter from '..'
-import { Box, Button, Icon } from '../../index'
+import { Button, FlexBox, Icon } from '../../index'
 
 <Meta
   title="Components/Counter"
@@ -58,7 +58,7 @@ import { Box, Button, Icon } from '../../index'
       const [isShown, setIsShown] = useState(false)
       const [reset, setReset] = useState(true)
       return (
-        <Box display="flex" alignItems="center">
+        <FlexBox alignItems="center">
           {reset && (
             <>
               <Counter end={1000} onEnd={() => setIsShown(true)} />
@@ -78,7 +78,7 @@ import { Box, Button, Icon } from '../../index'
               </Button>
             </>
           )}
-        </Box>
+        </FlexBox>
       )
     }}
   </Story>

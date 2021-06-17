@@ -6,7 +6,7 @@ import RadioBorderedBox from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import theme from '../../../theme'
 
-describe('Radio', () => {
+describe('RadioBorderedBox', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox

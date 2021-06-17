@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Box from '../Box'
+import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
 const StyledContainer = styled(Box)`
@@ -40,7 +41,7 @@ const Container = ({
   ...props
 }) => (
   <StyledContainer {...props}>
-    <Box display="flex" justifyContent="space-between">
+    <FlexBox justifyContent="space-between">
       <Box
         display="flex"
         alignItems="center"
@@ -53,7 +54,7 @@ const Container = ({
         {subtitle}
       </Box>
       <div>{rightTitle}</div>
-    </Box>
+    </FlexBox>
     {header}
     <StyledBox
       bordered

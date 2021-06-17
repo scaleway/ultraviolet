@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks'
 import MenuIcon, { availableIcons } from '..'
-import Box from '../../Box'
+import FlexBox from '../../FlexBox'
 
 <Meta title="Components/MenuIcon" component={MenuIcon} />
 
@@ -19,10 +19,10 @@ import Box from '../../Box'
 <Canvas>
   <Story name="Basic">
     {availableIcons.map(icon => (
-      <Box key={icon} display="flex" alignItems="center">
+      <FlexBox key={icon} alignItems="center">
         <MenuIcon name={icon} />
         {icon}
-      </Box>
+      </FlexBox>
     ))}
   </Story>
 </Canvas>
@@ -33,10 +33,10 @@ import Box from '../../Box'
 
 <Canvas>
   <Story name="Color">
-    <Box display="flex" alignItems="center">
+    <FlexBox alignItems="center">
       <MenuIcon name="billing" color="red" />
       Red icon
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 
@@ -46,10 +46,10 @@ import Box from '../../Box'
 
 <Canvas>
   <Story name="Size">
-    <Box display="flex" alignItems="center">
+    <FlexBox alignItems="center">
       <MenuIcon name="billing" size={40} />
       Bigger icon
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 
@@ -61,10 +61,10 @@ import Box from '../../Box'
 
 <Canvas>
   <Story name="isButton">
-    <Box display="flex" alignItems="center">
+    <FlexBox alignItems="center">
       <MenuIcon name="billing" isButton />
       Button icon
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 

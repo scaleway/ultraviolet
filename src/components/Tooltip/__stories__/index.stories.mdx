@@ -1,6 +1,6 @@
 import { Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks'
 import Tooltip from '..'
-import { Box, Button } from '../..'
+import { Box, Button, FlexBox } from '../..'
 
 <Meta title="Components/Tooltip" component={Tooltip} />
 
@@ -33,7 +33,7 @@ import { Box, Button } from '../..'
   <Story name="function">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip">
-        {referenceProps => <Box {...referenceProps}>I&apos;m a function</Box>}
+        {referenceProps => <div {...referenceProps}>I&apos;m a function</div>}
       </Tooltip>
     </Box>
   </Story>
@@ -56,9 +56,9 @@ import { Box, Button } from '../..'
   <Story name="nested">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip">
-        <Box>
+        <div>
           <div>I&apos;m a nested element</div>
-        </Box>
+        </div>
       </Tooltip>
     </Box>
   </Story>
@@ -66,9 +66,9 @@ import { Box, Button } from '../..'
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip">
         {referenceProps => (
-          <Box {...referenceProps}>
+          <div {...referenceProps}>
             I&apos;m a nested function, with naked string children
-          </Box>
+          </div>
         )}
       </Tooltip>
     </Box>
@@ -76,7 +76,7 @@ import { Box, Button } from '../..'
   <Story name="customized">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip" backgroundColor="red">
-        <Box>I&apos;m a customized tooltip</Box>
+        <div>I&apos;m a customized tooltip</div>
       </Tooltip>
     </Box>
   </Story>
@@ -86,14 +86,14 @@ import { Box, Button } from '../..'
         width={150}
         text="I have a very very very very very very very very very very very very very very long text"
       >
-        <Box>I&apos;m a long tooltip</Box>
+        <div>I&apos;m a long tooltip</div>
       </Tooltip>
     </Box>
   </Story>
   <Story name="empty-div">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="empty div">
-        <Box style={{ backgroundColor: 'red', height: 10, width: 10 }} />
+        <div style={{ backgroundColor: 'red', height: 10, width: 10 }} />
       </Tooltip>
     </Box>
   </Story>
@@ -101,12 +101,12 @@ import { Box, Button } from '../..'
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip" backgroundColor="red">
         <>
-          <Box>I&apos;m the first children</Box>
-          <Box>I&apos;m the second children</Box>
-          <Box>
+          <div>I&apos;m the first children</div>
+          <div>I&apos;m the second children</div>
+          <div>
             Tooltip can only have one children, not an array of children. Do not
             forget to wrap it with fragment
-          </Box>
+          </div>
         </>
       </Tooltip>
     </Box>
@@ -119,7 +119,7 @@ import { Box, Button } from '../..'
 
 <Canvas>
   <Story name="placement">
-    <Box display="flex" justifyContent="space-evenly">
+    <FlexBox justifyContent="space-evenly">
       {['left', 'top', 'bottom', 'right'].map(placement => (
         <Box key={placement} p={2}>
           <Tooltip text="tooltip" placement={placement}>
@@ -127,7 +127,7 @@ import { Box, Button } from '../..'
           </Tooltip>
         </Box>
       ))}
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
 
@@ -141,7 +141,7 @@ import { Box, Button } from '../..'
     parameters={{ layout: 'centered' }}
     height="100px"
   >
-    <Box display="flex" justifyContent="space-evenly">
+    <FlexBox justifyContent="space-evenly">
       {['left', 'top', 'bottom', 'right'].map(placement => (
         <Box key={placement} p={2} color="white">
           <Tooltip text="tooltip" variant="white" placement={placement}>
@@ -149,6 +149,6 @@ import { Box, Button } from '../..'
           </Tooltip>
         </Box>
       ))}
-    </Box>
+    </FlexBox>
   </Story>
 </Canvas>
