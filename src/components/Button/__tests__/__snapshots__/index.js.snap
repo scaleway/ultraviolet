@@ -1129,7 +1129,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 
 exports[`Button should render correctly with a tooltip 1`] = `
 <DocumentFragment>
-  .emotion-3 {
+  .emotion-1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1166,23 +1166,23 @@ exports[`Button should render correctly with a tooltip 1`] = `
   padding: 8px 16px;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-1:hover,
+.emotion-1:focus {
   color: #fff;
   background-color: #420480;
 }
 
-.emotion-3:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1191,7 +1191,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
   pointer-events: none;
 }
 
-.emotion-8 {
+.emotion-6 {
   fill: currentColor;
   height: 1em;
   width: 1em;
@@ -1199,11 +1199,11 @@ exports[`Button should render correctly with a tooltip 1`] = `
   min-height: 1em;
 }
 
-.emotion-8.emotion-8 {
+.emotion-6.emotion-6 {
   vertical-align: middle;
 }
 
-.emotion-10 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1219,21 +1219,19 @@ exports[`Button should render correctly with a tooltip 1`] = `
   pointer-events: none;
 }
 
-<div
-    class="emotion-0 emotion-1"
-  >
+<div>
     <button
       aria-describedby="test"
       aria-disabled="false"
-      class="emotion-2 emotion-3 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
       tabindex="0"
       type="button"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
       >
         <svg
-          class="sc-ui-icon emotion-7 emotion-8 emotion-1"
+          class="sc-ui-icon emotion-5 emotion-6 emotion-2"
           viewBox="0 0 24 24"
         >
           <path
@@ -1242,7 +1240,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
         </svg>
       </div>
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
       >
         Hello
       </div>
