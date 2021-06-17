@@ -3,10 +3,6 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useRef, useState } from 'react'
 import Box from '../Box'
 
-const blankImg = {}
-blankImg.src =
-  'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-
 const StyledWrapper = styled(Box)`
   position: relative;
   margin-left: -100px;
@@ -134,6 +130,10 @@ const Slider = ({ children, ...props }) => {
           setDragStartX(e.pageX)
         }}
         onDragStart={e => {
+          const blankImg = new Image()
+          blankImg.src =
+            'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+
           e.dataTransfer.setDragImage(blankImg, 0, 0)
           setDragStartX(e.clientX)
         }}
