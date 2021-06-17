@@ -1,3 +1,10 @@
+## [0.86.0](https://github.com/scaleway/scaleway-ui/compare/v0.85.1...v0.86.0) (2021-06-17)
+
+
+### :gear: Features
+
+* merge Action into Button ([#437](https://github.com/scaleway/scaleway-ui/issues/437)) ([fe5f789](https://github.com/scaleway/scaleway-ui/commit/fe5f78946d467c336234aab1403951e053a0d269))
+
 ### [0.85.1](https://github.com/scaleway/scaleway-ui/compare/v0.85.0...v0.85.1) (2021-06-17)
 
 
