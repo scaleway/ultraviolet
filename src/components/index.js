@@ -1,5 +1,4 @@
 export * from './Grid'
-export { default as Action } from './Action'
 export { default as ActionBar } from './ActionBar'
 export { default as ActivityIndicator } from './ActivityIndicator'
 export { default as Alert } from './Alert'

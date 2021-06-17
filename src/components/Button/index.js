@@ -5,6 +5,7 @@ import React, { useMemo } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Icon from '../Icon'
+import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
 
 const borderedVariant = ({ theme: { colors }, color, bgColor, hoverColor }) => {
@@ -187,7 +188,8 @@ const StyledContent = styled.div`
 `
 
 const StyledButton = styled(Box, {
-  shouldForwardProp: prop => !['variant', 'extend', 'icon'].includes(prop),
+  shouldForwardProp: prop =>
+    !['action', 'variant', 'extend', 'icon', 'download'].includes(prop),
 })`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};
@@ -248,6 +250,21 @@ const StyledButton = styled(Box, {
       ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
     }
   `}
+
+  ${({ action }) =>
+    action &&
+    `
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    flex-shrink: 0;
+    > svg {
+      // safari issue prevent event propgation
+      pointer-events: none;
+    }
+
+    ${action === 'rounded' && `border-radius: 16px;`}
+  `}
 `
 
 const StyledIconContainer = styled('div', {
@@ -266,6 +283,7 @@ function FwdButton({
   size,
   icon,
   iconPosition,
+  iconSize,
   children,
   extend,
   type: elementType,
@@ -273,6 +291,7 @@ function FwdButton({
   to,
   href,
   download,
+  tooltip,
   ...props
 }) {
   const as = useMemo(() => {
@@ -289,81 +308,72 @@ function FwdButton({
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
 
   const SmartIcon = () =>
-    icon && typeof icon === 'string' ? <Icon name={icon} /> : icon
+    icon && typeof icon === 'string' ? (
+      <Icon name={icon} size={iconSize} />
+    ) : (
+      icon
+    )
 
   return (
-    <StyledButton
-      {...props}
-      href={href}
-      to={to}
-      download={download}
-      ref={innerRef}
-      type={type}
-      as={as}
-      disabled={as === 'button' && disabled}
-      aria-disabled={disabled}
-      variant={variant}
-      size={size}
-      extend={extend}
-      icon={icon}
-    >
-      {progress === true ||
-      progress === 'left' ||
-      (icon && iconPosition === 'left') ? (
-        <StyledIconContainer
-          margin={iconMargin}
-          position={children ? 'left' : ''}
-        >
-          {progress ? (
-            <ActivityIndicator
-              active
-              trailColor="transparent"
-              color="currentColor"
-              size="1em"
-            />
-          ) : (
-            <SmartIcon />
-          )}
-        </StyledIconContainer>
-      ) : null}
-      {(!progress || !displayProgressOnly) && children && (
-        <StyledContent>{children}</StyledContent>
-      )}
-      {progress === 'right' || (icon && iconPosition === 'right') ? (
-        <StyledIconContainer margin={iconMargin} position="right">
-          {progress ? (
-            <ActivityIndicator
-              active
-              trailColor="transparent"
-              color="currentColor"
-              size="1em"
-            />
-          ) : (
-            <SmartIcon />
-          )}
-        </StyledIconContainer>
-      ) : null}
-    </StyledButton>
+    <Tooltip text={tooltip}>
+      <StyledButton
+        {...props}
+        href={href}
+        to={to}
+        download={download}
+        ref={innerRef}
+        type={type}
+        as={as}
+        disabled={as === 'button' && disabled}
+        aria-disabled={disabled}
+        variant={variant}
+        size={size}
+        extend={extend}
+        icon={icon}
+      >
+        {progress === true ||
+        progress === 'left' ||
+        (icon && iconPosition === 'left') ? (
+          <StyledIconContainer
+            margin={iconMargin}
+            position={children ? 'left' : ''}
+          >
+            {progress ? (
+              <ActivityIndicator
+                active
+                trailColor="transparent"
+                color="currentColor"
+                size="1em"
+              />
+            ) : (
+              <SmartIcon />
+            )}
+          </StyledIconContainer>
+        ) : null}
+        {(!progress || !displayProgressOnly) && children && (
+          <StyledContent>{children}</StyledContent>
+        )}
+        {progress === 'right' || (icon && iconPosition === 'right') ? (
+          <StyledIconContainer margin={iconMargin} position="right">
+            {progress ? (
+              <ActivityIndicator
+                active
+                trailColor="transparent"
+                color="currentColor"
+                size="1em"
+              />
+            ) : (
+              <SmartIcon />
+            )}
+          </StyledIconContainer>
+        ) : null}
+      </StyledButton>
+    </Tooltip>
   )
 }
 
-const defaultProps = {
-  children: null,
-  disabled: false,
-  download: undefined,
-  extend: undefined,
-  href: undefined,
-  icon: undefined,
-  iconPosition: 'left',
-  innerRef: undefined,
-  progress: undefined,
-  size: 'large',
-  to: undefined,
-  type: 'button',
-  variant: 'primary',
-}
-
 const propTypes = {
+  action: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['rounded'])]),
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
@@ -371,7 +381,7 @@ const propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]),
   disabled: PropTypes.bool,
-  download: PropTypes.string,
+  download: PropTypes.bool,
   extend: PropTypes.bool,
   href: PropTypes.string,
   /**
@@ -379,6 +389,7 @@ const propTypes = {
    */
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconSize: PropTypes.number,
   innerRef: PropTypes.func,
   /**
    * Use this properties to associate ref to button component.
@@ -389,8 +400,28 @@ const propTypes = {
   ]),
   size: PropTypes.oneOf(buttonSizes),
   to: PropTypes.string,
+  tooltip: PropTypes.string,
   type: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants),
+}
+
+const defaultProps = {
+  action: undefined,
+  children: null,
+  disabled: false,
+  download: undefined,
+  extend: undefined,
+  href: undefined,
+  icon: undefined,
+  iconPosition: 'left',
+  iconSize: undefined,
+  innerRef: undefined,
+  progress: undefined,
+  size: 'large',
+  to: undefined,
+  tooltip: undefined,
+  type: 'button',
+  variant: 'primary',
 }
 
 FwdButton.defaultProps = defaultProps

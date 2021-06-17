@@ -70,4 +70,17 @@ describe('Button', () => {
         Hello
       </Button>,
     ))
+
+  test(`should render correctly with an action button`, () =>
+    shouldMatchEmotionSnapshot(<Button action icon="check" />))
+
+  test(`should render correctly with a rounded action button`, () =>
+    shouldMatchEmotionSnapshot(<Button action="rounded" icon="check" />))
+
+  test(`should render correctly with a tooltip`, () =>
+    shouldMatchEmotionSnapshot(
+      <Button icon="check" tooltip="world" aria-describedby="test">
+        Hello
+      </Button>,
+    ))
 })
