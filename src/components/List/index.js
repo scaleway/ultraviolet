@@ -3,6 +3,7 @@ import React, {
   forwardRef,
   useCallback,
   useContext,
+  useEffect,
   useImperativeHandle,
   useMemo,
   useRef,
@@ -11,6 +12,8 @@ import React, {
 import orderBy from '../../utils/orderBy'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
+import Pagination, { usePagination } from '../Pagination'
+import Placeholder from '../Placeholder'
 import Typography from '../Typography'
 import Cell from './Cell'
 import SelectBar from './SelectBar'
@@ -28,6 +31,7 @@ const variants = {
 const Body = ({ children, emptyListText, ...props }) => {
   const { data, idKey, setRowState, rowsState, customLoader, isLoading } =
     useContext(ListContext)
+
   if (isLoading === true) {
     return (
       customLoader ?? (
@@ -70,6 +74,40 @@ Body.propTypes = {
 Body.defaultProps = {
   emptyListText: 'This list is empty.',
 }
+const PaginatedBody = ({ children, emptyListText, ...props }) => {
+  const { idKey, setRowState, rowsState } = useContext(ListContext)
+  const { pageData, perPage } = usePagination()
+
+  return (
+    <Box {...props} role="list">
+      {pageData.length === 0 ? (
+        <Placeholder length={perPage} variant="list" />
+      ) : null}
+      {pageData.map((rowData, index) => (
+        <React.Fragment key={rowData[idKey] || index}>
+          {children({
+            index,
+            rowData,
+            rowState: rowsState[rowData[idKey]] ?? {},
+            setRowState,
+          })}
+        </React.Fragment>
+      ))}
+    </Box>
+  )
+}
+
+PaginatedBody.propTypes = {
+  children: PropTypes.func.isRequired,
+  /**
+   * Text to display when having no data or empty data
+   */
+  emptyListText: PropTypes.string,
+}
+
+PaginatedBody.defaultProps = {
+  emptyListText: 'This list is empty.',
+}
 
 const List = forwardRef(
   (
@@ -85,13 +123,22 @@ const List = forwardRef(
       selectable,
       autoClose,
       notSelectableText,
+      perPage,
+      page,
+      pageCount,
+      onLoadPage,
+      onSortClick,
       ...props
     },
     ref,
   ) => {
+    const paginationRef = useRef(null)
     // Used to make listRef methods available outside
     const listRef = useRef(null)
     useImperativeHandle(ref, () => listRef.current)
+
+    // Used to handle List with page loading
+    const onLoadPageRef = useRef(onLoadPage)
 
     // Define which row/item are selectable
     const selectableItems = useMemo(() => {
@@ -148,9 +195,9 @@ const List = forwardRef(
       prop: defaultSortCol?.sort,
     })
 
-    const onSort = useMemo(
-      () => columnIndex => {
-        setSort({
+    const onSort = useCallback(
+      columnIndex => {
+        const newSort = {
           index: columnIndex,
           onSort: columns[columnIndex].onSort,
           order:
@@ -158,9 +205,21 @@ const List = forwardRef(
               ? 'desc'
               : 'asc',
           prop: columns[columnIndex].sort,
+        }
+        onSortClick?.({
+          field: newSort.prop,
+          order: newSort.order,
+          page: paginationRef.current?.page,
+          pagination: paginationRef.current,
+          perPage,
         })
+        if (onLoadPageRef.current && pageCount) {
+          paginationRef.current?.goToFirstPage()
+          paginationRef.current?.setPaginatedData({})
+        }
+        setSort(newSort)
       },
-      [columns, sort.order, sort.prop],
+      [columns, sort.order, sort.prop, onSortClick, perPage, pageCount],
     )
 
     const sortedData = useMemo(
@@ -171,11 +230,16 @@ const List = forwardRef(
                 orderBy(sort.prop, sort.order),
             )
           : data,
-      [sort, data],
+      [data, sort],
     )
     //
     // END: Data Sorting
     //
+
+    const handleLoadPage = useCallback(
+      params => onLoadPageRef.current?.({ ...params, sort }),
+      [sort],
+    )
 
     /**
      * Unselect all row (only with mutliselect enabled)
@@ -228,10 +292,15 @@ const List = forwardRef(
           item => rowsState[item[idKey]] && rowsState[item[idKey]].selected,
         )
 
+    useEffect(() => {
+      onLoadPageRef.current = onLoadPage
+    }, [onLoadPage])
+
     const value = useMemo(() => {
       listRef.current = {
         hasAllSelected,
         hasSelectedItems,
+        paginationRef,
         selectAll,
         selectableItems,
         selectedItems,
@@ -249,6 +318,10 @@ const List = forwardRef(
         multiselect,
         notSelectableText,
         onSort,
+        page,
+        pageCount,
+        paginationRef,
+        perPage,
         rowsState,
         selectAll,
         selectableItems,
@@ -261,7 +334,6 @@ const List = forwardRef(
     }, [
       columns,
       customLoader,
-      sortedData,
       hasAllSelected,
       hasSelectedItems,
       idKey,
@@ -269,15 +341,53 @@ const List = forwardRef(
       multiselect,
       notSelectableText,
       onSort,
+      page,
+      pageCount,
+      perPage,
       rowsState,
       selectAll,
       selectableItems,
       selectedItems,
       setRowState,
-      sort.index,
       sort.order,
+      sort.index,
+      sortedData,
       unselectAll,
     ])
+
+    if (perPage) {
+      return (
+        <ListContext.Provider value={value}>
+          <Pagination
+            data={onLoadPage ? undefined : sortedData}
+            ref={paginationRef}
+            perPage={perPage}
+            pageCount={pageCount}
+            page={page}
+            onLoadPage={handleLoadPage}
+            canLoadMore={!!onLoadPage}
+            LoaderComponent={() =>
+              customLoader ?? (
+                <>
+                  <Placeholder length={perPage} variant="list" />
+                  <SelectBar />
+                </>
+              )
+            }
+          >
+            <Box {...props}>
+              {children({
+                Body: PaginatedBody,
+                Cell,
+                SelectBar,
+                data,
+                ...variants[variant],
+              })}
+            </Box>
+          </Pagination>
+        </ListContext.Provider>
+      )
+    }
 
     return (
       <ListContext.Provider value={value}>
@@ -286,7 +396,7 @@ const List = forwardRef(
             Body,
             Cell,
             SelectBar,
-            data: sortedData,
+            data,
             ...variants[variant],
           })}
         </Box>
@@ -303,6 +413,11 @@ List.defaultProps = {
   isLoading: false,
   multiselect: false,
   notSelectableText: "This row can't be selected",
+  onLoadPage: undefined,
+  onSortClick: undefined,
+  page: undefined,
+  pageCount: undefined,
+  perPage: undefined,
   selectable: undefined,
   variant: 'product',
 }
@@ -358,6 +473,27 @@ List.propTypes = {
    * Text to display in a tooltip on rows that can't be selected
    */
   notSelectableText: PropTypes.string,
+  /**
+   * @param {{page, perPage, sort, order}} params The params to load the page
+   * @returns {*} The array or object to store in the page
+   */
+  onLoadPage: PropTypes.func,
+  /**
+   * @param {{page, perPage, sort, order}} params The params to sort the list
+   */
+  onSortClick: PropTypes.func,
+  /**
+   * Initial page (needs perPage)
+   */
+  page: PropTypes.number,
+  /**
+   * If you known the page you have (needs perPage)
+   */
+  pageCount: PropTypes.number,
+  /**
+   * Number of item per page
+   */
+  perPage: PropTypes.number,
   /**
    * @param {Array} data The list of all items
    * @returns {Array} The list of items that can be selected

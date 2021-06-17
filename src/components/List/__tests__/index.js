@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import List from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import { generateData } from '../../../mocks/list'
+import { getUUID } from '../../../utils'
 
 describe('List', () => {
   test('should render correctly', () =>
@@ -297,6 +298,58 @@ describe('List', () => {
               )}
             </list.Body>
             <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
+          </>
+        )}
+      </List>,
+      {
+        transform: async node => {
+          expect(node.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = node.getAllByRole('checkbox', {
+            hidden: true,
+          })
+          expect(checkboxes[0].name).toBe('select-rows')
+          expect(checkboxes[0].value).toBe('all')
+          userEvent.click(checkboxes[0])
+          userEvent.click(checkboxes[0])
+          expect(checkboxes[1].name).toBe('select-rows')
+          expect(checkboxes[1].value).toBe('0')
+          userEvent.click(checkboxes[1])
+          expect(node.getByText('item selected'))
+          userEvent.click(checkboxes[2])
+          expect(node.getByText('items selected'))
+        },
+      },
+    ))
+
+  test('should render correctly multiselect and with click and not functional SelectBar children', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        multiselect
+        idKey="id"
+        data={generateData(5)}
+        columns={[
+          { label: 'Name' },
+          { label: 'Description', width: '15%' },
+          { label: 'Department', width: '64px' },
+          { label: 'Reference', sort: 'reference', width: '64px' },
+          { justifyContent: 'center', width: '128px' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                  <list.Cell>{rowData.reference}</list.Cell>
+                  <list.Cell>actions</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+            <list.SelectBar>Test SelectBar</list.SelectBar>
           </>
         )}
       </List>,
@@ -1480,5 +1533,127 @@ describe('List', () => {
           </>
         )}
       </List>,
+    ))
+
+  test('should render correctly with pagination', async () => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+    await shouldMatchEmotionSnapshot(
+      <List
+        perPage={5}
+        onLoadPage={({ perPage }) =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              const newData = generateData(perPage, getUUID())
+              resolve(newData)
+            }, 300)
+          })
+        }
+        multiselect
+        idKey="id"
+        data={generateData(20)}
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+          </>
+        )}
+      </List>,
+    )
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
+  test('should render correctly with pagination and bad idKey', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        perPage={5}
+        idKey="badKey"
+        data={generateData(20)}
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+        customLoader={<div>Loading...</div>}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+          </>
+        )}
+      </List>,
+    ))
+
+  test('should render correctly with pagination and page loading', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        perPage={5}
+        pageCount={10}
+        onLoadPage={({ perPage }) =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              const newData = generateData(perPage, getUUID())
+              resolve(newData)
+            }, 300)
+          })
+        }
+        idKey="id"
+        data={generateData(20)}
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+        customLoader={<div>Loading...</div>}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+          </>
+        )}
+      </List>,
+      {
+        transform: async node => {
+          await node.findByRole('button', {
+            name: 'sort Name',
+          })
+          const nameHeader = node.getByRole('button', {
+            name: 'sort Name',
+          })
+          userEvent.click(nameHeader)
+          userEvent.click(nameHeader)
+        },
+      },
     ))
 })
