@@ -1,3 +1,18 @@
+### [0.85.1](https://github.com/scaleway/scaleway-ui/compare/v0.85.0...v0.85.1) (2021-06-17)
+
+
+### :package: Chore
+
+* **deps-dev:** bump postcss from 8.3.4 to 8.3.5 ([#452](https://github.com/scaleway/scaleway-ui/issues/452)) ([d721787](https://github.com/scaleway/scaleway-ui/commit/d7217874018a45cc5a5a0a51c0c08e0221ddb4f0))
+* **deps-dev:** bump rollup from 2.51.2 to 2.52.0 ([#446](https://github.com/scaleway/scaleway-ui/issues/446)) ([c4daea1](https://github.com/scaleway/scaleway-ui/commit/c4daea1c0a38fb32d54dead181b04b914a7d477d))
+* **deps-dev:** bump rollup from 2.52.0 to 2.52.1 ([#451](https://github.com/scaleway/scaleway-ui/issues/451)) ([0d733e6](https://github.com/scaleway/scaleway-ui/commit/0d733e6609da9a56dcdba88e5d3ab67992878081))
+* **deps-dev:** bump semantic-release from 17.4.3 to 17.4.4 ([#445](https://github.com/scaleway/scaleway-ui/issues/445)) ([c9c1725](https://github.com/scaleway/scaleway-ui/commit/c9c172534b337b57013a7c8652d1077c391acac9))
+
+
+### :bug: Bug Fixes
+
+* **Slider:** correct drag image object ([#447](https://github.com/scaleway/scaleway-ui/issues/447)) ([f744408](https://github.com/scaleway/scaleway-ui/commit/f744408468343c9080fd556e0efb8253ebb28cdf))
+
 ## [0.85.0](https://github.com/scaleway/scaleway-ui/compare/v0.84.0...v0.85.0) (2021-06-15)
 
 
