@@ -1,3 +1,10 @@
+## [0.88.0](https://github.com/scaleway/scaleway-ui/compare/v0.87.1...v0.88.0) (2021-06-18)
+
+
+### :gear: Features
+
+* **icons:** added sun - moon and github svg icons ([#453](https://github.com/scaleway/scaleway-ui/issues/453)) ([4bfc4cf](https://github.com/scaleway/scaleway-ui/commit/4bfc4cf700c9ec0eb76e63bb8b1fafa4dc094946))
+
 ### [0.87.1](https://github.com/scaleway/scaleway-ui/compare/v0.87.0...v0.87.1) (2021-06-17)
 
 
