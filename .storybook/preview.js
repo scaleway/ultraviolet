@@ -6,7 +6,7 @@ import theme from '../src/theme'
 import { GlobalStyle } from '../src'
 
 const STORY_SORT = {
-  order: ['Home', 'Theme', 'Components'],
+  order: ['Home', 'Testing', 'Theme', 'Components'],
 }
 
 const ENV_PARAMETERS = {
