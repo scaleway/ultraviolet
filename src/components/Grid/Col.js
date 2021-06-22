@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import React from 'react'
 import { screens, space } from '../../theme'
 import { up } from '../../utils'
 import Box from '../Box'
@@ -10,7 +11,7 @@ const getSizeWidth = (size, nbColumns) =>
   `${Math.round((size / nbColumns) * 10 ** 6) / 10 ** 4}%`
 const query = (brk, style) => (screens[brk] === 0 ? style : up(brk, style))
 
-const Col = styled(Box, {
+const StyledCol = styled(Box, {
   shouldForwardProp: prop =>
     ![...Object.keys(screens), 'gutter'].includes(prop),
 })`
@@ -64,6 +65,8 @@ const Col = styled(Box, {
         )
       })}
 `
+
+const Col = props => <StyledCol {...props} />
 
 const PropTypesBreakpoint = PropTypes.oneOfType([
   PropTypes.bool,
