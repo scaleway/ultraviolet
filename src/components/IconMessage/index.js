@@ -31,8 +31,17 @@ IconMessage.defaultProps = {
 }
 
 IconMessage.propTypes = {
+  /**
+   * The component to display in Typography
+   */
   children: PropTypes.node,
+  /**
+   * The icon wanted
+   */
   icon: PropTypes.string,
+  /**
+   * The color to apply on the icon and the text
+   */
   variant: PropTypes.string,
 }
 

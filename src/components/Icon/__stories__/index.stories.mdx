@@ -12,12 +12,20 @@ import { Box, Boxer } from '../..'
 
 # Icon
 
-## Basic
+<Description>Allow you to display an svg icon</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <Icon name="auto-fix" size={32} color="primary" />
+  </Story>
+</Canvas>
+
+## Name
 
 <Description>Set desired icon using `name` property.</Description>
 
 <Canvas>
-  <Story name="Basic">
+  <Story name="Name">
     {icons.map(name => (
       <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
         <Icon name={name} /> {name}

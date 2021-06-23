@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import Image from '..'
 import logo from './scaleway-text.png'
 
@@ -6,11 +12,14 @@ import logo from './scaleway-text.png'
 
 # Image
 
-## Basic
+<Description>
+  A native img html tag. You can pass props that you used to pass to the native
+  element
+</Description>
 
 <Canvas>
-  <Story name="basic">
-    <Image src={logo} />
+  <Story name="Basic">
+    <Image src={logo} alt="Scaleway logo" />
   </Story>
 </Canvas>
 
