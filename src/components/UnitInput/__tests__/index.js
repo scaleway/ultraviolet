@@ -100,6 +100,6 @@ test(`renders with TextBox update`, async () => {
   await waitFor(() => expect(input.value).toBe('110'))
   userEvent.type(input, '{selectall}{del}')
   await waitFor(() => expect(input.value).toBe('1'))
-  userEvent.type(input, '{selectall}{del}00000')
+  userEvent.type(input, '{selectall}{del}111111111')
   await waitFor(() => expect(input.value).toBe('99999'))
 })
