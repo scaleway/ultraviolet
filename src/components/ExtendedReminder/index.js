@@ -117,12 +117,27 @@ const ExtendedReminder = ({
 }
 
 ExtendedReminder.propTypes = {
+  /**
+   * The text to be placed in the top badge
+   */
   badgeText: PropTypes.string.isRequired,
+  /**
+   * The icon to use in the badge
+   */
   icon: PropTypes.string.isRequired,
+  /**
+   * The link text to display at the end
+   */
   linkText: PropTypes.string,
+  /**
+   * MouseEvent listener on the component
+   */
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  /**
+   * The link that linkText prop need to redirect to.
+   */
   to: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(variants)),
 }

@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import React from 'react'
 import { space } from '../../theme'
 import Box from '../Box'
 
-const Row = styled(Box, {
+const StyledRow = styled(Box, {
   shouldForwardProp: prop => !['gutter'].includes(prop),
 })`
   box-sizing: border-box;
@@ -14,7 +15,10 @@ const Row = styled(Box, {
   margin-right: ${({ gutter }) => `-${space[gutter]}`};
 `
 
+const Row = props => <StyledRow {...props} />
+
 Row.defaultProps = {
+  children: null,
   gutter: 1,
 }
 

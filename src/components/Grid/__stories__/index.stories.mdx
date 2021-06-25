@@ -12,19 +12,16 @@ import ColWithBackground from './ColWithBackground'
 
 <Meta title="Components/Grid" component={Grid} />
 
-# Grid
+# Grid, Row, Col
 
-<Description>
-  `Grid`, `Row` and `Col` behaves the same as the one from Smooth UI. [original
-  ref](https://smooth-ui-v10.smooth-code.com/docs-basics-grid)
-</Description>
+These three component are built to organize your content
 
-<Description>Resize the window to see the responsive properties</Description>
-
-## Simple usage
+- `Grid` allow you to create a container with some padding.
+- `Row` is a flex container that allow you to create a row with some margin left and right.
+- `Col` allow you to create a col where you can place your content.
 
 <Canvas>
-  <Story name="simple">
+  <Story name="Basic">
     <Grid>
       <Row>
         <ColWithBackground>One</ColWithBackground>
@@ -35,7 +32,7 @@ import ColWithBackground from './ColWithBackground'
   </Story>
 </Canvas>
 
-## fixed vs fluid width
+## Fluid
 
 <Description>
   If you pass the `fluid` prop the grid will take the full width of its
@@ -43,19 +40,7 @@ import ColWithBackground from './ColWithBackground'
 </Description>
 
 <Canvas>
-  <Story name="fixed width">
-    <Grid>
-      <Row>
-        <ColWithBackground>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-    </Grid>
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="fluid width">
+  <Story name="Fluid">
     <Grid fluid>
       <Row>
         <ColWithBackground>One</ColWithBackground>
@@ -66,10 +51,38 @@ import ColWithBackground from './ColWithBackground'
   </Story>
 </Canvas>
 
+## Gutter
+
+<Description>
+  If you pass the `gutter` prop the component will have more padding and margin
+</Description>
+
+<Canvas>
+  <Story name="Gutter">
+    <Grid fluid gutter={2}>
+      <Row>
+        <ColWithBackground>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+      <Row gutter={2}>
+        <ColWithBackground>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+      <Row>
+        <ColWithBackground gutter={2}>One</ColWithBackground>
+        <ColWithBackground>Two</ColWithBackground>
+        <ColWithBackground>Three</ColWithBackground>
+      </Row>
+    </Grid>
+  </Story>
+</Canvas>
+
 ## Complex responsive example
 
 <Canvas>
-  <Story name="complex responsive">
+  <Story name="Complex responsive">
     <Grid>
       <Row>
         <ColWithBackground
@@ -100,6 +113,16 @@ import ColWithBackground from './ColWithBackground'
   </Story>
 </Canvas>
 
+## API
+
+### Grid
+
 <ArgsTable of={Grid} />
-<ArgsTable of={Col} />
+
+### Row
+
 <ArgsTable of={Row} />
+
+### Col
+
+<ArgsTable of={Col} />
