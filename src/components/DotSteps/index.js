@@ -21,8 +21,18 @@ const DotSteps = ({ steps, step, setStep }) => (
 )
 
 DotSteps.propTypes = {
+  /**
+   * Change the step when clicking on the dot
+   * @param {number} clickedStep The clicked step
+   */
   setStep: PropTypes.func.isRequired,
+  /**
+   * Current step
+   */
   step: PropTypes.number,
+  /**
+   * Total steps length
+   */
   steps: PropTypes.number,
 }
 
