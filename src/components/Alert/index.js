@@ -37,7 +37,7 @@ const StyledContainer = styled(Box, {
   align-items: center;
   border-radius: ${({ theme }) => theme.radii.default};
   color: ${({ theme }) => theme.colors.white};
-  padding: 12px;
+  padding: ${({ hasBackground }) => (hasBackground ? '12px' : '0')};
   ${variantStyles}
   ${({ hasBackground }) => !hasBackground && 'background-color: transparent'}
 `
@@ -88,7 +88,7 @@ Title.propTypes = {
 Alert.defaultProps = {
   hasBackground: true,
   icon: 'alert',
-  iconSize: 24,
+  iconSize: 32,
   title: undefined,
   variant: 'warning',
 }
