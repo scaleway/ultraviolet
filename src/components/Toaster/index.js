@@ -6,8 +6,8 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
+import Alert from '../Alert'
 import Icon from '../Icon'
-import NotificationBar from '../NotificationBar'
 
 const PREFIX = '.Toastify'
 
@@ -72,20 +72,17 @@ CloseButton.defaultProps = {
   closeToast: () => {},
 }
 
-const SanitizedNotificationBar = ({
-  closeToast,
-  toastProps,
-  children,
-  ...props
-}) => <NotificationBar {...props}>{children}</NotificationBar>
+const SanitizedAlertBar = ({ closeToast, toastProps, children, ...props }) => (
+  <Alert {...props}>{children}</Alert>
+)
 
-SanitizedNotificationBar.propTypes = {
+SanitizedAlertBar.propTypes = {
   children: PropTypes.node,
   closeToast: PropTypes.func,
   toastProps: PropTypes.shape({}),
 }
 
-SanitizedNotificationBar.defaultProps = {
+SanitizedAlertBar.defaultProps = {
   children: null,
   closeToast: undefined,
   toastProps: undefined,
@@ -94,30 +91,30 @@ SanitizedNotificationBar.defaultProps = {
 const toast = {
   error: (children, options) =>
     baseToast.error(
-      <SanitizedNotificationBar variant="warning" p={0}>
+      <SanitizedAlertBar variant="warning" p={0}>
         {children}
-      </SanitizedNotificationBar>,
+      </SanitizedAlertBar>,
       options,
     ),
   info: (children, options) =>
     baseToast.info(
-      <SanitizedNotificationBar variant="info" p={0}>
+      <SanitizedAlertBar variant="info" p={0}>
         {children}
-      </SanitizedNotificationBar>,
+      </SanitizedAlertBar>,
       options,
     ),
   success: (children, options) =>
     baseToast.success(
-      <SanitizedNotificationBar variant="success" p={0}>
+      <SanitizedAlertBar variant="success" p={0}>
         {children}
-      </SanitizedNotificationBar>,
+      </SanitizedAlertBar>,
       options,
     ),
   warn: (children, options) =>
     baseToast.warn(
-      <SanitizedNotificationBar variant="warning" p={0}>
+      <SanitizedAlertBar variant="warning" p={0}>
         {children}
-      </SanitizedNotificationBar>,
+      </SanitizedAlertBar>,
       options,
     ),
 }

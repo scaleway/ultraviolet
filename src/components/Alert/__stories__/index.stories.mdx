@@ -1,0 +1,98 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import Alert, { AlertVariants } from '..'
+import { Box } from '../..'
+
+<Meta title="Components/Alert" component={Alert} />
+
+# Alert
+
+<Description>Displays a notice with an icon.</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <Alert>This is a notification bar with its default props.</Alert>
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>
+  Using `variant` prop you can change the look of the component.
+</Description>
+
+<Canvas>
+  <Story name="Variants">
+    {AlertVariants.map(variant => (
+      <Box key={variant} my={1}>
+        <Alert variant={variant}>
+          This is a notification bar with the {variant} variant.
+        </Alert>
+      </Box>
+    ))}
+  </Story>
+</Canvas>
+
+## Title
+
+<Description>
+  Using `title` prop you can add a custom title to the notification.
+</Description>
+
+<Canvas>
+  <Story name="Title">
+    <Alert icon="information-outline" variant="info" title="Information">
+      This is a notification bar with a custom title.
+    </Alert>
+  </Story>
+</Canvas>
+
+## No background
+
+<Description>
+  Setting `hasBackground` to `false` will remove background color to only keep
+  texts and icon.
+</Description>
+
+<Canvas>
+  <Story name="No background">
+    <Alert icon="information-outline" variant="info" hasBackground={false}>
+      This is a notification bar without background.
+    </Alert>
+  </Story>
+</Canvas>
+
+## Icon
+
+<Description>
+  Using `icon` prop you can add a custom icon to the notification.
+</Description>
+
+<Canvas>
+  <Story name="Icon">
+    <Alert icon="clock-outline" variant="beta">
+      This is a notification bar with a custom icon.
+    </Alert>
+  </Story>
+</Canvas>
+
+## Icon size
+
+<Description>Using `iconSize` prop you can change the icon size.</Description>
+
+<Canvas>
+  <Story name="Icon size">
+    <Alert iconSize={40}>
+      This is a notification bar with a custom icon size.
+    </Alert>
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={Alert} />
