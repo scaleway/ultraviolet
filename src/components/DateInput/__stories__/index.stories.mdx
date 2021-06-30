@@ -3,11 +3,20 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
 import { es, fr, ru } from 'date-fns/locale'
 import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import Box from '../../Box'
 import RichSelect from '../../RichSelect'
 
 <Meta title="Components/DateInput" />
 
 # DateInput
+
+A date input based on `react-datepicker`.
+
+<Canvas>
+  <Story name="Basic" height="360px">
+    <DateInput label="Date" />
+  </Story>
+</Canvas>
 
 ## Uncontrolled
 
@@ -21,7 +30,7 @@ DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
 
 ## Controlled
 
-Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components).
+Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components). By passing `value` and `onChange` prop you can control it.
 
 <Canvas>
   <Story name="Controlled" height="360px">
@@ -34,6 +43,8 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 </Canvas>
 
 ## Error
+
+Use `error` prop to style the input when the field is invalid.
 
 <Canvas>
   <Story name="Error" height="380px">
@@ -59,25 +70,23 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 ## Localized
 
+You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.
+
 <Canvas>
-  <Story name="Localized fr" height="360px">
-    <DateInput label="fr-FR" locale={fr} m={2} />
+  <Story name="Localized" height="360px">
+    <Box mb={2}>
+      <DateInput label="fr-FR" locale={fr} />
+    </Box>
+    <Box mb={2}>
+      <DateInput label="es-ES" locale={es} />
+    </Box>
+    <DateInput label="ru-RU" locale={ru} />
   </Story>
 </Canvas>
 
-<Canvas>
-  <Story name="Localized es" height="360px">
-    <DateInput label="es-ES" locale={es} m={2} />
-  </Story>
-</Canvas>
+## Example with i18n Provider
 
-<Canvas>
-  <Story name="Localized ru" height="360px">
-    <DateInput label="ru-RU" locale={ru} m={2} />
-  </Story>
-</Canvas>
-
-## Localized with i18n Provider
+If you use our `useI18n` hook you can easily handle localization change on the input by getting `currentLocale` returned by the hook.
 
 <Canvas>
   <Story name="i18n provider" height="360px">
@@ -111,6 +120,8 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
 
 ## Min Max
 
+With `minDate` and `maxDate` you can define limits of the input
+
 <Canvas>
   <Story name="Min-Max" height="360px">
     <DateInput
@@ -121,5 +132,7 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
     />
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={DateInput} />

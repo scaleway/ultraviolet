@@ -64,7 +64,13 @@ const Description = ({ inline, selectable, ...props }) => (
 )
 
 Description.propTypes = {
+  /**
+   * Display description inline
+   */
   inline: PropTypes.bool,
+  /**
+   * Select all `Description.Desc` content by default
+   */
   selectable: PropTypes.bool,
 }
 

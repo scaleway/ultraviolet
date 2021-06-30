@@ -1,4 +1,5 @@
 import {
+  ArgsTable,
   Canvas,
   Meta,
   Story,
@@ -10,12 +11,12 @@ import Description from '..'
 
 # Description
 
-<StorybookDescription>Terms and descriptions.</StorybookDescription>
-
-## Basic
+<StorybookDescription>
+  Terms and descriptions with `dl`, `dt` and `dd` native html tag.
+</StorybookDescription>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Description>
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
@@ -32,7 +33,7 @@ import Description from '..'
 </StorybookDescription>
 
 <Canvas>
-  <Story name="inline">
+  <Story name="Inline">
     <Description inline>
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
@@ -49,7 +50,7 @@ import Description from '..'
 </StorybookDescription>
 
 <Canvas>
-  <Story name="selectable">
+  <Story name="Selectable">
     <Description inline selectable>
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
@@ -58,3 +59,7 @@ import Description from '..'
     </Description>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={Description} />

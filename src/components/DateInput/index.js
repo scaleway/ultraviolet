@@ -132,7 +132,6 @@ const DateInput = ({
   onChange,
   onFocus,
   required,
-  type,
   value,
 }) => {
   if (locale) {
@@ -152,7 +151,6 @@ const DateInput = ({
           onChange={onChange}
           onFocus={onFocus}
           selected={value}
-          type={type}
           customInput={
             <div>
               <TextBox
@@ -227,23 +225,43 @@ const DateInput = ({
 }
 
 DateInput.propTypes = {
+  /**
+   * If set to `true` the input will be focused by default
+   */
   autoFocus: PropTypes.bool,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  /**
+   *
+   */
   format: PropTypes.func,
+  /**
+   * Label of the field
+   */
   label: PropTypes.string,
+  /**
+   * Locale provided by `date-fns/locales` package
+   */
   locale: PropTypes.shape({
     code: PropTypes.string,
   }),
+  /**
+   * Max date that are allowed
+   */
   maxDate: PropTypes.instanceOf(Date),
+  /**
+   * Min data that are allowed
+   */
   minDate: PropTypes.instanceOf(Date),
+  /**
+   * Input name
+   */
   name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   required: PropTypes.bool,
-  type: PropTypes.string,
-  value: PropTypes.shape(Date.prototype),
+  value: PropTypes.instanceOf(Date),
 }
 
 DateInput.defaultProps = {
@@ -260,7 +278,6 @@ DateInput.defaultProps = {
   onChange: () => {},
   onFocus: () => {},
   required: false,
-  type: undefined,
   value: undefined,
 }
 

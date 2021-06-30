@@ -1,25 +1,21 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import { useState } from 'react'
 import DotSteps from '..'
 
-<Meta
-  title="Components/DotSteps"
-  component={DotSteps}
-  argTypes={{
-    steps: {
-      control: {
-        type: 'number',
-      },
-    },
-  }}
-/>
+<Meta title="Components/DotSteps" component={DotSteps} />
 
 # DotSteps
 
 <Description>Dot Steps control, to switch between pages/steps.</Description>
 
 <Canvas>
-  <Story name="default" args={{ steps: 2 }}>
+  <Story name="Basic" args={{ steps: 2 }}>
     {() => {
       const [step, setStep] = useState(1)
       return (
@@ -32,3 +28,7 @@ import DotSteps from '..'
     }}
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={DotSteps} />

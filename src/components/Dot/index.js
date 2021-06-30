@@ -13,24 +13,17 @@ const StyledDot = styled(Box, {
   background-color: ${({ theme: { colors }, color }) => colors[color] ?? color};
 `
 
-function FwdDot({ color, innerRef, ...props }) {
-  return <StyledDot color={color} ref={innerRef} {...props} />
-}
+const Dot = props => <StyledDot {...props} />
 
-FwdDot.propTypes = {
+Dot.propTypes = {
+  /**
+   * The dot color
+   */
   color: PropTypes.string,
-  innerRef: PropTypes.func,
 }
-FwdDot.defaultProps = {
+
+Dot.defaultProps = {
   color: 'primary',
-  innerRef: undefined,
 }
-
-function forwardRef(props, ref) {
-  return <FwdDot {...props} innerRef={ref} />
-}
-
-const Dot = React.forwardRef(forwardRef)
-Dot.displayName = 'fwd(Dot)'
 
 export default Dot
