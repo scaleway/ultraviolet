@@ -1,3 +1,43 @@
+## [0.89.0](https://github.com/scaleway/scaleway-ui/compare/v0.88.0...v0.89.0) (2021-06-30)
+
+
+### :memo: Documentation
+
+* add documentation about testing ([#448](https://github.com/scaleway/scaleway-ui/issues/448)) ([dacb58e](https://github.com/scaleway/scaleway-ui/commit/dacb58e896116e3c8d2335c98724bfc441a6d642))
+* add e and g documentation ([#459](https://github.com/scaleway/scaleway-ui/issues/459)) ([a4328bc](https://github.com/scaleway/scaleway-ui/commit/a4328bc1ddd928d53e5c4b1ed0db28a64822399e))
+* add i documentation ([#461](https://github.com/scaleway/scaleway-ui/issues/461)) ([b69c11b](https://github.com/scaleway/scaleway-ui/commit/b69c11bb1ca4f0196e0408824423e30ca367ad3b))
+
+
+### :zap: Refactor
+
+* merge icon, menuicon and categoryicon ([#467](https://github.com/scaleway/scaleway-ui/issues/467)) ([bf16ce6](https://github.com/scaleway/scaleway-ui/commit/bf16ce621d8662646fd7afeac872c8dba3b954b1))
+
+
+### :gear: Features
+
+* add d components documentation ([#471](https://github.com/scaleway/scaleway-ui/issues/471)) ([e3907fc](https://github.com/scaleway/scaleway-ui/commit/e3907fc7983f6d6bc3e648bc20fadfa1f3be25c4))
+
+
+### :package: Chore
+
+* **deps:** bump docker/login-action from 1.9.0 to 1.10.0 ([#462](https://github.com/scaleway/scaleway-ui/issues/462)) ([c64f880](https://github.com/scaleway/scaleway-ui/commit/c64f8805e44aac35adf4a8799eca82997c3a0ef1))
+* **deps:** bump docker/setup-buildx-action from 1.3.0 to 1.4.1 ([#481](https://github.com/scaleway/scaleway-ui/issues/481)) ([fc42c55](https://github.com/scaleway/scaleway-ui/commit/fc42c55060a759c8558cd40431a593763aec7504))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.5 to 7.14.7 ([#457](https://github.com/scaleway/scaleway-ui/issues/457)) ([0264b87](https://github.com/scaleway/scaleway-ui/commit/0264b87f14ada8329bf6bf5ac4f88c5a390661df))
+* **deps-dev:** bump @babel/preset-env from 7.14.5 to 7.14.7 ([#458](https://github.com/scaleway/scaleway-ui/issues/458)) ([55be097](https://github.com/scaleway/scaleway-ui/commit/55be0975b08d48ff66485a7a3d6b7ffad0dcde4f))
+* **deps-dev:** bump @storybook/addon-links from 6.2.9 to 6.3.0 ([#463](https://github.com/scaleway/scaleway-ui/issues/463)) ([9118dab](https://github.com/scaleway/scaleway-ui/commit/9118dab259383109eebf4d2ef028b32f76c541f7))
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.3.0 to 6.3.1 ([#474](https://github.com/scaleway/scaleway-ui/issues/474)) ([1dfaa5f](https://github.com/scaleway/scaleway-ui/commit/1dfaa5fd3d53130c20defe8f905a45962741cb3e))
+* **deps-dev:** bump @storybook/manager-webpack5 from 6.3.0 to 6.3.1 ([#478](https://github.com/scaleway/scaleway-ui/issues/478)) ([7a815e3](https://github.com/scaleway/scaleway-ui/commit/7a815e3805d637016d9f7d9c26b133491d912249))
+* **deps-dev:** bump @testing-library/react from 11.2.7 to 12.0.0 ([#468](https://github.com/scaleway/scaleway-ui/issues/468)) ([9a446a5](https://github.com/scaleway/scaleway-ui/commit/9a446a5f7f73f9285a9f43578b83d1ee6a495701))
+* **deps-dev:** bump @testing-library/user-event from 13.1.2 to 13.1.9 ([#366](https://github.com/scaleway/scaleway-ui/issues/366)) ([d60cdf2](https://github.com/scaleway/scaleway-ui/commit/d60cdf2753dc817f3ee8ff0e369b46b5e0a40771))
+* **deps-dev:** bump eslint from 7.28.0 to 7.29.0 ([#456](https://github.com/scaleway/scaleway-ui/issues/456)) ([1538285](https://github.com/scaleway/scaleway-ui/commit/153828590c58babc65839e5a9966f73c60783c08))
+* **deps-dev:** bump jest from 27.0.4 to 27.0.5 ([#460](https://github.com/scaleway/scaleway-ui/issues/460)) ([f61c9e9](https://github.com/scaleway/scaleway-ui/commit/f61c9e96287f9f871e28eef0624e752ae9fbb49b))
+* **deps-dev:** bump jest from 27.0.5 to 27.0.6 ([#480](https://github.com/scaleway/scaleway-ui/issues/480)) ([d1a0be0](https://github.com/scaleway/scaleway-ui/commit/d1a0be0a4d2c9bd70f032fdbe6fd55144a3dccd0))
+* **deps-dev:** bump prettier from 2.3.1 to 2.3.2 ([#470](https://github.com/scaleway/scaleway-ui/issues/470)) ([b3ff59f](https://github.com/scaleway/scaleway-ui/commit/b3ff59f287c1dc3d5cf34387d70e93379050ae39))
+* **deps-dev:** bump rollup from 2.52.1 to 2.52.2 ([#455](https://github.com/scaleway/scaleway-ui/issues/455)) ([fd3962c](https://github.com/scaleway/scaleway-ui/commit/fd3962ca54160474b398e8768d6620caa161d9f3))
+* **deps-dev:** bump rollup from 2.52.2 to 2.52.3 ([#469](https://github.com/scaleway/scaleway-ui/issues/469)) ([288b4fb](https://github.com/scaleway/scaleway-ui/commit/288b4fb74f7ffb7509cd362cc3b6c57e48fb68d7))
+* **deps-dev:** bump rollup from 2.52.3 to 2.52.4 ([#482](https://github.com/scaleway/scaleway-ui/issues/482)) ([12238da](https://github.com/scaleway/scaleway-ui/commit/12238da4bf79acfcba4086c38ffd2b47b838bb24))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.5.0 to 5.5.1 ([#484](https://github.com/scaleway/scaleway-ui/issues/484)) ([abac7e6](https://github.com/scaleway/scaleway-ui/commit/abac7e6ccae187ff44b2ab64916e5bc9617c08c2))
+
 ## [0.88.0](https://github.com/scaleway/scaleway-ui/compare/v0.87.1...v0.88.0) (2021-06-18)
 
 
