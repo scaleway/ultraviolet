@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import Alert, { AlertVariants } from '..'
+import Alert, { alertVariants } from '..'
 import { Box } from '../..'
 
 <Meta title="Components/Alert" component={Alert} />
@@ -28,7 +28,7 @@ import { Box } from '../..'
 
 <Canvas>
   <Story name="Variants">
-    {AlertVariants.map(variant => (
+    {alertVariants.map(variant => (
       <Box key={variant} my={1}>
         <Alert variant={variant}>
           This is a notification bar with the {variant} variant.

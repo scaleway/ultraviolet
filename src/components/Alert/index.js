@@ -25,7 +25,14 @@ const variants = {
   `,
 }
 
-export const AlertVariants = Object.keys(variants)
+const variantsDefaultIcons = {
+  beta: 'alert',
+  info: 'information-outline',
+  success: 'checkbox-marked-circle-outline',
+  warning: 'alert',
+}
+
+export const alertVariants = Object.keys(variants)
 
 const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
 
@@ -67,7 +74,11 @@ const Alert = ({
 
   return (
     <StyledContainer variant={variant} hasBackground={hasBackground} {...props}>
-      <Icon color={color} name={icon} size={iconSize} />
+      <Icon
+        color={color}
+        name={icon || variantsDefaultIcons[variant]}
+        size={iconSize}
+      />
       <StyledBox>
         {title && <Title color={color} text={title} />}
         <Typography variant="bodyA" color={color} ml={2}>
@@ -78,8 +89,6 @@ const Alert = ({
   )
 }
 
-export const notificationVariants = Object.keys(variants)
-
 Title.propTypes = {
   color: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
@@ -87,7 +96,7 @@ Title.propTypes = {
 
 Alert.defaultProps = {
   hasBackground: true,
-  icon: 'alert',
+  icon: undefined,
   iconSize: 32,
   title: undefined,
   variant: 'warning',
@@ -105,7 +114,7 @@ Alert.propTypes = {
    * Add a title at the top of your alert.
    */
   title: PropTypes.string,
-  variant: PropTypes.oneOf(notificationVariants),
+  variant: PropTypes.oneOf(alertVariants),
 }
 
 export default Alert
