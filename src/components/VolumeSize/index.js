@@ -220,15 +220,36 @@ const VolumeSize = ({
 }
 
 VolumeSize.propTypes = {
+  /**
+   * maximum label below the maxSize
+   */
   maxLabel: PropTypes.string,
   maxSize: PropTypes.number,
+  /**
+   * minimum label below the minSize
+   */
   minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
+  /**
+   * required label below the required size (only when minSize is set and maxSize are not)
+   */
   requiredLabel: PropTypes.string,
   size: PropTypes.oneOf(Object.keys(sizes)),
+  /**
+   * The title to place above
+   */
   title: PropTypes.string,
+  /**
+   * The message to display when the value is greather than maxSize
+   */
   tooBigMessage: PropTypes.string,
+  /**
+   * The message to display when the value is lower than minSize
+   */
   tooSmallMessage: PropTypes.string,
+  /**
+   * The text to display next to the value, minSize, maxSize
+   */
   unit: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
 }

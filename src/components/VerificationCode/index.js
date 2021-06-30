@@ -205,14 +205,26 @@ const VerificationCode = ({
 VerificationCode.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
+  /**
+   * Amount of field you want
+   */
   fields: PropTypes.number,
   initialValue: PropTypes.string,
   inputId: PropTypes.string,
   inputStyle: PropTypes.string,
+  /**
+   * Triggered when a field change
+   */
   onChange: PropTypes.func,
+  /**
+   * Triggered when all fields are completed
+   */
   onComplete: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
+  /**
+   * Type of the fields
+   */
   type: PropTypes.oneOf(['text', 'number']),
 }
 

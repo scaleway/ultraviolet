@@ -25,8 +25,6 @@ UnitInput provide data as follows:
 }
 ```
 
-## Basic
-
 <Canvas isColumn>
   <Story name="Basic" height="225px">
     <UnitInput name="test" />
@@ -34,8 +32,6 @@ UnitInput provide data as follows:
 </Canvas>
 
 ## Custom Options
-
-### Description
 
 You can customize options by passing an array of object. Be careful objects should have following structure:
 
@@ -77,6 +73,8 @@ Where label is text shown in RichSelect component and value the value that will 
 
 ## Sizes
 
+You can change the original size with the `size` prop. It allow the following values : `small`, `medium`, `large`
+
 <Canvas isColumn>
   <Story name="Sizes" height="400px">
     {['small', 'medium', 'large'].map(size => (
@@ -89,6 +87,8 @@ Where label is text shown in RichSelect component and value the value that will 
 </Canvas>
 
 ## Disabled
+
+You can disable the input by passing `disabled` prop.
 
 <Canvas isColumn>
   <Story name="Disabled">

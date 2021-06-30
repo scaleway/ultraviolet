@@ -6,20 +6,22 @@ import UniversalLink from '..'
 
 # UniversalLink
 
-## Basic
+A basic link component to display beautiful links.
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <UniversalLink href="/?path=/docs/components-universallink--basic#basic">
       href
     </UniversalLink>
   </Story>
 </Canvas>
 
-## With react router dom
+## Custom Link Component
+
+Use `to` prop to use the linkComponent that come from the `ThemeProvider`. If you don't set it in your theme you can use `as` prop the change the component that will be rendered.
 
 <Canvas>
-  <Story name="react-router-dom">
+  <Story name="Custom Link Component">
     <BrowserRouter>
       <UniversalLink
         to="?path=/docs/components-universallink--basic#with-react-router"
@@ -30,5 +32,7 @@ import UniversalLink from '..'
     </BrowserRouter>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={UniversalLink} />
