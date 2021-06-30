@@ -1,0 +1,471 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks'
+import { useRef, useState } from 'react'
+import List from '..'
+import { generateData } from '../../../mocks/list'
+import { getUUID } from '../../../utils/ids'
+import Button from '../../Button'
+
+<Meta title="Components/List" />
+
+# List
+
+Display a list of your data.
+
+<Canvas>
+  <Story name="Basic">
+    <List
+      data={generateData(10)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '50%' },
+        { label: 'Department', sort: 'department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row animated id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## AutoClose
+
+<Canvas>
+  <Story name="AutoClose">
+    <List
+      autoClose
+      idKey="id"
+      data={generateData(10)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '50%' },
+        { label: 'Department', sort: 'department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row animated id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Sorting
+
+<Description>
+  Use `sort` in columns to make them sortable in combination with `defaultSort`
+  (Allow `asc` or `desc` value) to make it the default sort column.
+</Description>
+
+<Canvas>
+  <Story name="Sorting">
+    <List
+      idKey="id"
+      data={generateData(10)}
+      columns={[
+        { defaultSort: 'desc', label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '50%' },
+        { label: 'Department', sort: 'department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row animated id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Multiselect
+
+<Canvas>
+  <Story name="Multiselect">
+    <List
+      idKey="id"
+      data={generateData(10)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '25%' },
+        { label: 'Department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+      multiselect
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+          <list.SelectBar>{() => <>Hello SelectBar</>}</list.SelectBar>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Loading
+
+By put `loader` prop to `true` in `list.Body` tag you can display an `ActivityIndicator`
+
+<Canvas>
+  <Story name="Loading">
+    <List
+      isLoading
+      idKey="id"
+      data={generateData(10)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '25%' },
+        { label: 'Department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+      multiselect
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+          <list.SelectBar>{() => <>Hello SelectBar</>}</list.SelectBar>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Table variant
+
+<Canvas>
+  <Story name="Table variant">
+    <List
+      idKey="id"
+      variant="table"
+      data={generateData(10)}
+      columns={[
+        { label: 'Name', sort: 'name', width: '50%' },
+        { label: 'Description', sort: 'description', width: '25%' },
+        { label: 'Department', width: '120px' },
+        { justifyContent: 'flex-end' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Explorer variant
+
+<Canvas>
+  <Story name="Explorer">
+    <List
+      idKey="id"
+      variant="explorer"
+      data={generateData(10)}
+      columns={[
+        { label: 'Name' },
+        { label: 'Description' },
+        { label: 'Department' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+## Ref
+
+By passing a `ref` prop it will be hydrated with :
+
+- hasSelectedItems : Return true if at least one row is selected
+- selectAll() : Select all rows
+- selectableItems : List of all rows that can be selected
+- selectedItems : Return selected items
+- unselectAll() : Unselect all rows
+- hasAllSelected: True if all rows are selected
+
+<Canvas>
+  <Story name="Ref">
+    {() => {
+      const ref = useRef()
+      const handleClick = () => {
+        ref.current.unselectAll()
+      }
+      return (
+        <>
+          <Button onClick={handleClick}>Reset selected</Button>
+          <List
+            multiselect
+            ref={ref}
+            idKey="id"
+            data={generateData(10)}
+            columns={[
+              { label: 'Name' },
+              { label: 'Description' },
+              { label: 'Department' },
+            ]}
+          >
+            {list => (
+              <>
+                <list.Header />
+                <list.Body>
+                  {({ rowData }) => (
+                    <list.Row id={rowData.id}>
+                      <list.Cell>{rowData.name}</list.Cell>
+                      <list.Cell>{rowData.description}</list.Cell>
+                      <list.Cell>{rowData.department}</list.Cell>
+                    </list.Row>
+                  )}
+                </list.Body>
+              </>
+            )}
+          </List>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Pagination
+
+### With prefetched data
+
+<Canvas>
+  <Story name="Pagination">
+    <List
+      perPage={5}
+      multiselect
+      idKey="id"
+      data={generateData(30)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description' },
+        { label: 'Department' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+### With loading
+
+<Canvas>
+  <Story name="Pagination with loading">
+    {() => {
+      const [data, setData] = useState(generateData(30))
+      return (
+        <List
+          perPage={5}
+          onLoadPage={({ perPage }) =>
+            new Promise(resolve => {
+              setTimeout(() => {
+                const newData = generateData(perPage, getUUID())
+                setData([...data, ...newData])
+                resolve(newData)
+              }, 3000)
+            })
+          }
+          multiselect
+          idKey="id"
+          data={data}
+          columns={[
+            { label: 'Name', sort: 'name' },
+            { label: 'Description' },
+            { label: 'Department' },
+          ]}
+        >
+          {list => (
+            <>
+              <list.Header />
+              <list.Body>
+                {({ rowData }) => (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )}
+              </list.Body>
+            </>
+          )}
+        </List>
+      )
+    }}
+  </Story>
+</Canvas>
+
+### With loading and pageCount
+
+<Canvas>
+  <Story name="Pagination with loading and pageCount">
+    {() => {
+      const [data, setData] = useState(generateData(30))
+      return (
+        <List
+          perPage={5}
+          onLoadPage={({ page, perPage, sort }) =>
+            new Promise(resolve => {
+              setTimeout(() => {
+                console.log(
+                  `Get data ${
+                    sort.prop
+                      ? `sorted by ${sort.prop} order ${sort.order}`
+                      : ''
+                  } for page ${page} and with a size of ${perPage}`,
+                )
+                const newData = generateData(perPage, getUUID())
+                setData([...data, ...newData])
+                resolve(newData)
+              }, 3000)
+            })
+          }
+          pageCount={20}
+          multiselect
+          idKey="id"
+          data={data}
+          columns={[
+            { label: 'Name', sort: 'name' },
+            { label: 'Description' },
+            { label: 'Department' },
+          ]}
+        >
+          {list => (
+            <>
+              <list.Header />
+              <list.Body>
+                {({ rowData }) => (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )}
+              </list.Body>
+              <list.SelectBar>{() => null}</list.SelectBar>
+            </>
+          )}
+        </List>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## API
+
+### `<List />`
+
+<ArgsTable of={List} />
