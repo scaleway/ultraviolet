@@ -1,3 +1,15 @@
+## [0.90.0](https://github.com/scaleway/scaleway-ui/compare/v0.89.0...v0.90.0) (2021-06-30)
+
+
+### :zap: Refactor
+
+* remove RichSelectTags ([#472](https://github.com/scaleway/scaleway-ui/issues/472)) ([dc2fa3f](https://github.com/scaleway/scaleway-ui/commit/dc2fa3f08ea38722e801537a1dbf050a0e92eb2f))
+
+
+### :gear: Features
+
+* add list and pagination component ([#419](https://github.com/scaleway/scaleway-ui/issues/419)) ([#449](https://github.com/scaleway/scaleway-ui/issues/449)) ([8c5ccca](https://github.com/scaleway/scaleway-ui/commit/8c5ccca12a7f162fddb587d6b114c07f3699b9c6)), closes [#454](https://github.com/scaleway/scaleway-ui/issues/454)
+
 ## [0.89.0](https://github.com/scaleway/scaleway-ui/compare/v0.88.0...v0.89.0) (2021-06-30)
 
 
