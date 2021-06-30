@@ -47,7 +47,9 @@ const SelectBar = ({ children, text, ...props }) => {
           {typeof text === 'function' ? text(selectedItems.length) : text}
         </Typography>
         <Box display="flex" flex={1} justifyContent="flex-end">
-          {children({ selectedItems, unselectAll })}
+          {typeof children === 'function'
+            ? children({ selectedItems, unselectAll })
+            : children}
         </Box>
       </ActionBar>
     )
@@ -55,11 +57,12 @@ const SelectBar = ({ children, text, ...props }) => {
 }
 
 SelectBar.propTypes = {
-  children: PropTypes.func.isRequired,
-  text: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
+  text: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 }
 
 SelectBar.defaultProps = {
+  children: null,
   text: count => (count === 1 ? 'item selected' : `items selected`),
 }
 

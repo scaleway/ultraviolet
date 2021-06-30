@@ -5,9 +5,10 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import List from '..'
 import { generateData } from '../../../mocks/list'
+import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
 
 <Meta title="Components/List" />
@@ -320,6 +321,144 @@ By passing a `ref` prop it will be hydrated with :
             )}
           </List>
         </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Pagination
+
+### With prefetched data
+
+<Canvas>
+  <Story name="Pagination">
+    <List
+      perPage={5}
+      multiselect
+      idKey="id"
+      data={generateData(30)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description' },
+        { label: 'Department' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  </Story>
+</Canvas>
+
+### With loading
+
+<Canvas>
+  <Story name="Pagination with loading">
+    {() => {
+      const [data, setData] = useState(generateData(30))
+      return (
+        <List
+          perPage={5}
+          onLoadPage={({ perPage }) =>
+            new Promise(resolve => {
+              setTimeout(() => {
+                const newData = generateData(perPage, getUUID())
+                setData([...data, ...newData])
+                resolve(newData)
+              }, 3000)
+            })
+          }
+          multiselect
+          idKey="id"
+          data={data}
+          columns={[
+            { label: 'Name', sort: 'name' },
+            { label: 'Description' },
+            { label: 'Department' },
+          ]}
+        >
+          {list => (
+            <>
+              <list.Header />
+              <list.Body>
+                {({ rowData }) => (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )}
+              </list.Body>
+            </>
+          )}
+        </List>
+      )
+    }}
+  </Story>
+</Canvas>
+
+### With loading and pageCount
+
+<Canvas>
+  <Story name="Pagination with loading and pageCount">
+    {() => {
+      const [data, setData] = useState(generateData(30))
+      return (
+        <List
+          perPage={5}
+          onLoadPage={({ page, perPage, sort }) =>
+            new Promise(resolve => {
+              setTimeout(() => {
+                console.log(
+                  `Get data ${
+                    sort.prop
+                      ? `sorted by ${sort.prop} order ${sort.order}`
+                      : ''
+                  } for page ${page} and with a size of ${perPage}`,
+                )
+                const newData = generateData(perPage, getUUID())
+                setData([...data, ...newData])
+                resolve(newData)
+              }, 3000)
+            })
+          }
+          pageCount={20}
+          multiselect
+          idKey="id"
+          data={data}
+          columns={[
+            { label: 'Name', sort: 'name' },
+            { label: 'Description' },
+            { label: 'Department' },
+          ]}
+        >
+          {list => (
+            <>
+              <list.Header />
+              <list.Body>
+                {({ rowData }) => (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )}
+              </list.Body>
+              <list.SelectBar>{() => null}</list.SelectBar>
+            </>
+          )}
+        </List>
       )
     }}
   </Story>
