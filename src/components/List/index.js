@@ -128,6 +128,7 @@ const List = forwardRef(
       pageCount,
       onLoadPage,
       onSortClick,
+      paginationProps,
       ...props
     },
     ref,
@@ -364,8 +365,7 @@ const List = forwardRef(
             perPage={perPage}
             pageCount={pageCount}
             page={page}
-            onLoadPage={handleLoadPage}
-            canLoadMore={!!onLoadPage}
+            onLoadPage={onLoadPageRef.current ? handleLoadPage : undefined}
             LoaderComponent={() =>
               customLoader ?? (
                 <>
@@ -374,6 +374,7 @@ const List = forwardRef(
                 </>
               )
             }
+            {...paginationProps}
           >
             <Box {...props}>
               {children({
@@ -417,6 +418,7 @@ List.defaultProps = {
   onSortClick: undefined,
   page: undefined,
   pageCount: undefined,
+  paginationProps: {},
   perPage: undefined,
   selectable: undefined,
   variant: 'product',
@@ -490,6 +492,10 @@ List.propTypes = {
    * If you known the page you have (needs perPage)
    */
   pageCount: PropTypes.number,
+  /**
+   * Additional props to pass to the Pagination component
+   */
+  paginationProps: PropTypes.shape(Pagination.propTypes),
   /**
    * Number of item per page
    */

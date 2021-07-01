@@ -21,7 +21,10 @@ exports[`Pagination should render correctly component 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -533,7 +536,10 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1021,7 +1027,10 @@ exports[`Pagination should render correctly customComponents 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1147,7 +1156,10 @@ exports[`Pagination should render correctly function 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1659,7 +1671,10 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -2113,7 +2128,10 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -2625,7 +2643,10 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3137,7 +3158,10 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3479,7 +3503,10 @@ exports[`Pagination should render correctly with empty data 1`] = `
   <ul />
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3821,7 +3848,10 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   <ul />
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -4179,7 +4209,10 @@ exports[`Pagination should render correctly with page greater than max and no Lo
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -4697,7 +4730,10 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -5144,7 +5180,10 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -5662,7 +5701,10 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -6234,7 +6276,10 @@ exports[`Pagination should render correctly with ref 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -6704,7 +6749,10 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   </button>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -7224,7 +7272,10 @@ exports[`Pagination should render correctly with wrong page change 1`] = `
   </button>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -7285,7 +7336,7 @@ exports[`Pagination should render correctly with wrong page change 1`] = `
       class="emotion-6 emotion-7"
     >
       <div>
-        Current : 1
+        Current : 2
       </div>
     </div>
   </div>
