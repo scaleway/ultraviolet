@@ -15,18 +15,17 @@ exports[`Alert renders correctly variant beta 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
-  background-color: #ffefe6;
-  color: #ff8c69;
+  background-color: #ffe1e7;
+  color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #ff8c69;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -43,6 +42,10 @@ exports[`Alert renders correctly variant beta 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -51,12 +54,98 @@ exports[`Alert renders correctly variant beta 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #ff8c69;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #ff8c69;
+  color: inherit;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    <svg
+      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <div
+      class="emotion-6 emotion-7 emotion-2"
+    >
+      <p
+        class="emotion-9 emotion-10 emotion-2"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders correctly variant filled 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #ef5774;
+  color: #fff;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
+.emotion-10 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.emotion-10.emotion-10 {
+  margin-left: 16px;
+  color: inherit;
 }
 
 <div
@@ -98,18 +187,17 @@ exports[`Alert renders correctly variant info 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
-  background-color: #e4edff;
-  color: #3f6ed8;
+  background-color: #ffe1e7;
+  color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #3f6ed8;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -126,6 +214,10 @@ exports[`Alert renders correctly variant info 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -134,12 +226,184 @@ exports[`Alert renders correctly variant info 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #3f6ed8;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #3f6ed8;
+  color: inherit;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    <svg
+      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <div
+      class="emotion-6 emotion-7 emotion-2"
+    >
+      <p
+        class="emotion-9 emotion-10 emotion-2"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders correctly variant outlined 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #ef5774;
+  color: #ef5774;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
+.emotion-10 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.emotion-10.emotion-10 {
+  margin-left: 16px;
+  color: inherit;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    <svg
+      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <div
+      class="emotion-6 emotion-7 emotion-2"
+    >
+      <p
+        class="emotion-9 emotion-10 emotion-2"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders correctly variant standard 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #ffe1e7;
+  color: #ef5774;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
+.emotion-10 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.emotion-10.emotion-10 {
+  margin-left: 16px;
+  color: inherit;
 }
 
 <div
@@ -181,18 +445,17 @@ exports[`Alert renders correctly variant success 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
-  background-color: #cdfcf1;
-  color: #45d6b5;
+  background-color: #ffe1e7;
+  color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #45d6b5;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -209,6 +472,10 @@ exports[`Alert renders correctly variant success 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -217,12 +484,99 @@ exports[`Alert renders correctly variant success 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #45d6b5;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #45d6b5;
+  color: inherit;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    <svg
+      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <div
+      class="emotion-6 emotion-7 emotion-2"
+    >
+      <p
+        class="emotion-9 emotion-10 emotion-2"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders correctly variant transparent 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: transparent;
+  color: #ef5774;
+  padding: 12px 0;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.emotion-4.emotion-4 {
+  vertical-align: middle;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
+.emotion-10 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.emotion-10.emotion-10 {
+  margin-left: 16px;
+  color: inherit;
 }
 
 <div
@@ -264,18 +618,17 @@ exports[`Alert renders correctly variant warning 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #ef5774;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -292,6 +645,10 @@ exports[`Alert renders correctly variant warning 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -300,12 +657,12 @@ exports[`Alert renders correctly variant warning 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #ef5774;
+  color: inherit;
 }
 
 <div
@@ -347,18 +704,17 @@ exports[`Alert renders correctly with custom icon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #ef5774;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -375,6 +731,10 @@ exports[`Alert renders correctly with custom icon 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -383,12 +743,12 @@ exports[`Alert renders correctly with custom icon 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #ef5774;
+  color: inherit;
 }
 
 <div
@@ -430,18 +790,17 @@ exports[`Alert renders correctly with default values 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #ef5774;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -458,6 +817,10 @@ exports[`Alert renders correctly with default values 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -466,12 +829,12 @@ exports[`Alert renders correctly with default values 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #ef5774;
+  color: inherit;
 }
 
 <div
@@ -513,18 +876,17 @@ exports[`Alert renders correctly with title 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
   padding: 12px;
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
 .emotion-4 {
-  fill: #ef5774;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 .emotion-4.emotion-4 {
@@ -541,6 +903,10 @@ exports[`Alert renders correctly with title 1`] = `
   flex-direction: column;
 }
 
+.emotion-7.emotion-7 {
+  color: inherit;
+}
+
 .emotion-10 {
   color: #4a4f62;
   font-weight: 400;
@@ -550,12 +916,12 @@ exports[`Alert renders correctly with title 1`] = `
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-10.emotion-10 {
   margin-left: 16px;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-13 {
@@ -566,12 +932,12 @@ exports[`Alert renders correctly with title 1`] = `
   color: #4a4f62;
   font-size: 16px;
   line-height: 24px;
-  color: #ef5774;
+  color: inherit;
 }
 
 .emotion-13.emotion-13 {
   margin-left: 16px;
-  color: #ef5774;
+  color: inherit;
 }
 
 <div
@@ -595,90 +961,6 @@ exports[`Alert renders correctly with title 1`] = `
       </p>
       <p
         class="emotion-9 emotion-13 emotion-2"
-      >
-        Sample Alert
-      </p>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Alert renders correctly without background 1`] = `
-<DocumentFragment>
-  .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 4px;
-  color: #fff;
-  padding: 12px;
-  background-color: #ffe1e7;
-  color: #ef5774;
-  background-color: transparent;
-}
-
-.emotion-4 {
-  fill: #ef5774;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.emotion-4.emotion-4 {
-  vertical-align: middle;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-10 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ef5774;
-}
-
-.emotion-10.emotion-10 {
-  margin-left: 16px;
-  color: #ef5774;
-}
-
-<div
-    class="emotion-0 emotion-1 emotion-2"
-  >
-    <svg
-      class="sc-ui-icon emotion-3 emotion-4 emotion-2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-      />
-    </svg>
-    <div
-      class="emotion-6 emotion-7 emotion-2"
-    >
-      <p
-        class="emotion-9 emotion-10 emotion-2"
       >
         Sample Alert
       </p>

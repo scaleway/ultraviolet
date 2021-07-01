@@ -91,28 +91,28 @@ SanitizedAlertBar.defaultProps = {
 const toast = {
   error: (children, options) =>
     baseToast.error(
-      <SanitizedAlertBar variant="warning" p={0}>
+      <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
   info: (children, options) =>
     baseToast.info(
-      <SanitizedAlertBar variant="info" p={0}>
+      <SanitizedAlertBar type="info" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
   success: (children, options) =>
     baseToast.success(
-      <SanitizedAlertBar variant="success" p={0}>
+      <SanitizedAlertBar type="success" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
   warn: (children, options) =>
     baseToast.warn(
-      <SanitizedAlertBar variant="warning" p={0}>
+      <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
