@@ -1,14 +1,23 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import ScrollView from '..'
 
 <Meta title="Components/ScrollView" component={ScrollView} />
 
 # ScrollView
 
-## Basic
+<Description>
+  A component that will add a scroll bar on the left when text overpass box
+  height.
+</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <ScrollView height="300px">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel
       sem fermentum, blandit lacus et, eleifend velit. Donec semper sem eu risus
@@ -94,5 +103,7 @@ import ScrollView from '..'
     </ScrollView>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={ScrollView} />

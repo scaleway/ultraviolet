@@ -11,20 +11,23 @@ import Sphere from '..'
 
 # Sphere
 
-## Basic
-
-<Description>Sphere //:TODO</Description>
+<Description>Circle filled with color and, or text.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Sphere />
   </Story>
 </Canvas>
 
 ## Halved
 
+<Description>
+  Easily add two different colors inside of Sphere component by adding them into
+  `bgColors` property.
+</Description>
+
 <Canvas>
-  <Story name="halved">
+  <Story name="Halved">
     <Sphere bgColors={['#333', '#666']} />
   </Story>
 </Canvas>
@@ -32,7 +35,7 @@ import Sphere from '..'
 ## With one char and smaller
 
 <Canvas>
-  <Story name="with-char">
+  <Story name="Text">
     <Sphere
       text="★"
       bgColors={['#000']}
@@ -42,5 +45,7 @@ import Sphere from '..'
     />
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Sphere} />

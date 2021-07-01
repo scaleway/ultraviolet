@@ -269,7 +269,13 @@ Stepper.propTypes = {
   onMaxCrossed: PropTypes.func,
   onMinCrossed: PropTypes.func,
   size: PropTypes.string,
+  /**
+   * Define how much will stepper increase / decrease each time you click on + / - button.
+   */
   step: PropTypes.number,
+  /**
+   * Text displayed into component at the right of number value.
+   */
   text: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
