@@ -25,6 +25,7 @@ const Notification = styled(Box, {
   shouldForwardProp: prop => !['variant', 'bordered'].includes(prop),
 })`
   height: 28px;
+  width: max-content;
   display: flex;
   align-items: center;
   cursor: pointer;
