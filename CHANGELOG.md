@@ -1,3 +1,20 @@
+### [0.90.1](https://github.com/scaleway/scaleway-ui/compare/v0.90.0...v0.90.1) (2021-07-01)
+
+
+### :memo: Documentation
+
+* group components by design system kinds ([#485](https://github.com/scaleway/scaleway-ui/issues/485)) ([ae40369](https://github.com/scaleway/scaleway-ui/commit/ae4036984bb019d6e1e9f2b3cb9a2b10017cdf6a))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.3.1 to 6.3.2 ([#487](https://github.com/scaleway/scaleway-ui/issues/487)) ([3828de5](https://github.com/scaleway/scaleway-ui/commit/3828de5a907bdc143e254847d692e3e5b425e2c9))
+
+
+### :bug: Bug Fixes
+
+* export of pagination and list ([#495](https://github.com/scaleway/scaleway-ui/issues/495)) ([8083410](https://github.com/scaleway/scaleway-ui/commit/80834106f0fccc5feaa8d8dc32e642b80b6a1d14))
+
 ## [0.90.0](https://github.com/scaleway/scaleway-ui/compare/v0.89.0...v0.90.0) (2021-06-30)
 
 
