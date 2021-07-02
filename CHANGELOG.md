@@ -1,3 +1,15 @@
+### [0.90.2](https://github.com/scaleway/scaleway-ui/compare/v0.90.1...v0.90.2) (2021-07-02)
+
+
+### :package: Chore
+
+* **deps-dev:** bump rollup from 2.52.4 to 2.52.6 ([#492](https://github.com/scaleway/scaleway-ui/issues/492)) ([e960cba](https://github.com/scaleway/scaleway-ui/commit/e960cbafe2272c65830cd8af5e60f68f35d146fd))
+
+
+### :bug: Bug Fixes
+
+* list and pagination integration ([#496](https://github.com/scaleway/scaleway-ui/issues/496)) ([6f07922](https://github.com/scaleway/scaleway-ui/commit/6f07922a1c34443f9d320ab017265232e9acb4db))
+
 ### [0.90.1](https://github.com/scaleway/scaleway-ui/compare/v0.90.0...v0.90.1) (2021-07-01)
 
 
