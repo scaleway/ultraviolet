@@ -1,3 +1,10 @@
+### [0.91.1](https://github.com/scaleway/scaleway-ui/compare/v0.91.0...v0.91.1) (2021-07-02)
+
+
+### :bug: Bug Fixes
+
+* **merge:** merged NotificationBar, IconMessage, Information into Alert ([#473](https://github.com/scaleway/scaleway-ui/issues/473)) ([2347942](https://github.com/scaleway/scaleway-ui/commit/23479428cfa3c5d4d0af7f1353cfc18a157e45e2))
+
 ## [0.91.0](https://github.com/scaleway/scaleway-ui/compare/v0.90.2...v0.91.0) (2021-07-02)
 
 
