@@ -181,7 +181,7 @@ const Pagination = forwardRef(
 
     const onChangePageRef = useRef(onChangePage)
     const [canLoadMore, setCanLoadMore] = useState(!!onLoadPage)
-    const [page, setPage] = useState(initialPage)
+    const [page, setPage] = useState(pageProp ?? initialPage)
     const { paginatedData, setPageData, loadPageData, setPaginatedData } =
       usePaginatedData({
         data,
@@ -200,23 +200,24 @@ const Pagination = forwardRef(
 
     const goToPage = useCallback(
       wantedPage => {
-        setPage(current => {
-          if (wantedPage === current) {
-            return current
-          }
-          let futurePage = wantedPage
-          if (futurePage > maxPage && !canLoadMore) {
-            futurePage = maxPage
-          }
-          if (futurePage < 1) {
-            futurePage = 1
-          }
-          onChangePageRef.current?.(futurePage)
+        if (!pageProp)
+          setPage(current => {
+            if (wantedPage === current) {
+              return current
+            }
+            let futurePage = wantedPage
+            if (futurePage > maxPage && !canLoadMore) {
+              futurePage = maxPage
+            }
+            if (futurePage < 1) {
+              futurePage = 1
+            }
 
-          return futurePage
-        })
+            return futurePage
+          })
+        else onChangePageRef.current?.(wantedPage)
       },
-      [maxPage, canLoadMore],
+      [maxPage, canLoadMore, pageProp],
     )
 
     const goToFirstPage = useCallback(() => {
@@ -267,7 +268,7 @@ const Pagination = forwardRef(
 
     useEffect(() => {
       if (pageProp && pageProp !== page) {
-        goToPage(pageProp)
+        setPage(pageProp)
       }
     }, [pageProp, page, goToPage])
 
