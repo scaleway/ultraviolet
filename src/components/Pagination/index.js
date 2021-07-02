@@ -162,7 +162,8 @@ const Pagination = forwardRef(
       children,
       data,
       initialData,
-      page: initialPage,
+      initialPage,
+      page: pageProp,
       pageCount,
       onLoadPage,
       onChangePage,
@@ -264,6 +265,12 @@ const Pagination = forwardRef(
       onChangePageRef.current = onChangePage
     }, [onChangePage])
 
+    useEffect(() => {
+      if (pageProp && pageProp !== page) {
+        goToPage(pageProp)
+      }
+    }, [pageProp, page, goToPage])
+
     const value = useMemo(() => {
       paginationRef.current = {
         canLoadMore,
@@ -329,11 +336,13 @@ const Pagination = forwardRef(
     return (
       <PaginationContext.Provider value={value}>
         {isLoadingPage ? LoaderComponentToRender : null}
-        {typeof children === 'function' && !isLoadingPage
+        {children && typeof children === 'function' && !isLoadingPage
           ? children(value)
           : null}
-        {typeof children !== 'function' && !isLoadingPage ? children : null}
-        <StyledMainContainer>
+        {children && typeof children !== 'function' && !isLoadingPage
+          ? children
+          : null}
+        <StyledMainContainer role="navigation">
           <StyledLeftContainer>{LeftComponentToRender}</StyledLeftContainer>
           <StyledMiddleContainer>
             {MiddleComponentToRender}
@@ -350,10 +359,10 @@ Pagination.propTypes = {
   LoaderComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   MiddleComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   RightComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  canLoadMore: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   data: PropTypes.arrayOf(PropTypes.any),
   initialData: PropTypes.arrayOf(PropTypes.any),
+  initialPage: PropTypes.number,
   onChangePage: PropTypes.func,
   onLoadPage: PropTypes.func,
   page: PropTypes.number,
@@ -370,12 +379,13 @@ Pagination.defaultProps = {
   LoaderComponent: DefaultLoaderComponent,
   MiddleComponent: DefaultMiddleComponent,
   RightComponent: DefaultRightComponent,
-  canLoadMore: false,
+  children: undefined,
   data: undefined,
   initialData: [],
+  initialPage: 1,
   onChangePage: undefined,
   onLoadPage: undefined,
-  page: 1,
+  page: undefined,
   pageCount: undefined,
   pageTabCount: 5,
   perPage: 25,

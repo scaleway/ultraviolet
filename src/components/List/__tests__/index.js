@@ -908,6 +908,7 @@ describe('List', () => {
   test('should render correctly with no data', () =>
     shouldMatchEmotionSnapshot(
       <List
+        emptyListComponent="Test"
         multiselect
         idKey="id"
         columns={[
