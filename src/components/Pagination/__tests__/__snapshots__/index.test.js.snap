@@ -21,7 +21,10 @@ exports[`Pagination should render correctly component 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -533,7 +536,10 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1021,7 +1027,10 @@ exports[`Pagination should render correctly customComponents 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1126,6 +1135,106 @@ exports[`Pagination should render correctly customComponents 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Pagination should render correctly customComponents 2 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      Item 0
+    </li>
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+    <li>
+      Item 4
+    </li>
+  </ul>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div>
+        I am a custom left component
+      </div>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div>
+        I am the middle one
+      </div>
+    </div>
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <div>
+        I am a custom right component
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Pagination should render correctly function 1`] = `
 <DocumentFragment>
   <ul>
@@ -1147,7 +1256,10 @@ exports[`Pagination should render correctly function 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -1638,6 +1750,841 @@ exports[`Pagination should render correctly function 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Pagination should render correctly loadable with no data and initial page 1 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0.emotion-0 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  height: 40px;
+  width: 40px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <svg
+      class="CircularProgressbar  emotion-2 emotion-3"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-7.emotion-7 {
+  margin-right: 8px;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-7:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-18:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-28 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-28:hover,
+.emotion-28:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-28:hover,
+.emotion-28:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-28:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div>
+        <button
+          aria-disabled="true"
+          aria-label="First"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            First
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Back"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Back
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Page 1"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            1
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Next"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Next
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Last"
+          class="emotion-6 emotion-28 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Last
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-32 emotion-33"
+    >
+      <div>
+        Current : 1
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Pagination should render correctly loadable with no data and initial page 3 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0.emotion-0 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  height: 40px;
+  width: 40px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <svg
+      class="CircularProgressbar  emotion-2 emotion-3"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-7.emotion-7 {
+  margin-right: 8px;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-7:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-18:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-28 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-28:hover,
+.emotion-28:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-28:hover,
+.emotion-28:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-28:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div>
+        <button
+          aria-disabled="true"
+          aria-label="First"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            First
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Back"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Back
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Page 1"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            1
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Next"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Next
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Last"
+          class="emotion-6 emotion-28 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Last
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-32 emotion-33"
+    >
+      <div>
+        Current : 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Pagination should render correctly loadable with pageClick 1`] = `
 <DocumentFragment>
   <ul>
@@ -1659,7 +2606,10 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -2113,7 +3063,10 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -2625,7 +3578,10 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3137,7 +4093,10 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3479,7 +4438,10 @@ exports[`Pagination should render correctly with empty data 1`] = `
   <ul />
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -3821,7 +4783,10 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   <ul />
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -4158,7 +5123,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly with page greater than max and no Load 1`] = `
+exports[`Pagination should render correctly with initial page greater than max and no Load 1`] = `
 <DocumentFragment>
   <ul>
     <li>
@@ -4179,7 +5144,10 @@ exports[`Pagination should render correctly with page greater than max and no Lo
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -4676,6 +5644,521 @@ exports[`Pagination should render correctly with page greater than max and no Lo
 </DocumentFragment>
 `;
 
+exports[`Pagination should render correctly with initial page less than 1 and no Load 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      Item 0
+    </li>
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+    <li>
+      Item 4
+    </li>
+  </ul>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
+}
+
+.emotion-7.emotion-7 {
+  margin-right: 8px;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-7:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-18:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-24 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-24.emotion-24 {
+  margin-right: 8px;
+}
+
+.emotion-24:hover,
+.emotion-24:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-24:hover,
+.emotion-24:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-24:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-47 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-47.emotion-47 {
+  margin-right: 8px;
+}
+
+.emotion-47:hover,
+.emotion-47:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-47:hover,
+.emotion-47:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-47:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-52 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-52:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div>
+        <button
+          aria-disabled="true"
+          aria-label="First"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            First
+          </div>
+        </button>
+        <button
+          aria-disabled="true"
+          aria-label="Back"
+          class="emotion-6 emotion-7 emotion-8"
+          disabled=""
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Back
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 1"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            1
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 2"
+          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            2
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 3"
+          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            3
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 4"
+          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            4
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 5"
+          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            5
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Next"
+          class="emotion-6 emotion-47 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Next
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Last"
+          class="emotion-6 emotion-52 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Last
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-56 emotion-57"
+    >
+      <div>
+        Current : 1
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Pagination should render correctly with pageClick 1`] = `
 <DocumentFragment>
   <ul>
@@ -4697,7 +6180,10 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -5144,7 +6630,10 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -5643,26 +7132,13 @@ exports[`Pagination should render correctly with pageClick and load and empty re
 
 exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
 <DocumentFragment>
-  <ul>
-    <li>
-      Item 0
-    </li>
-    <li>
-      Item 1
-    </li>
-    <li>
-      Item 2
-    </li>
-    <li>
-      Item 3
-    </li>
-    <li>
-      Item 4
-    </li>
-  </ul>
+  <ul />
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -5730,12 +7206,6 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  cursor: default;
-  pointer-events: none;
-  color: #d4dae7;
-  background-color: #fafafb;
-  border-color: #fafafb;
-  box-shadow: none;
 }
 
 .emotion-7.emotion-7 {
@@ -5809,8 +7279,6 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .emotion-18.emotion-18 {
@@ -5833,12 +7301,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
 }
 
-.emotion-18:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-24 {
+.emotion-42 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5873,26 +7336,33 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-.emotion-24.emotion-24 {
+.emotion-42.emotion-42 {
   margin-right: 8px;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-42:hover,
+.emotion-42:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-42:hover,
+.emotion-42:focus {
   color: #4a4f62;
   background-color: #e9e7ec;
 }
 
-.emotion-24:focus {
+.emotion-42:focus {
   box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-42:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-47 {
@@ -5930,6 +7400,12 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
 }
 
 .emotion-47.emotion-47 {
@@ -5987,6 +7463,12 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
 }
 
 .emotion-52:hover,
@@ -6031,10 +7513,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
     >
       <div>
         <button
-          aria-disabled="true"
+          aria-disabled="false"
           aria-label="First"
           class="emotion-6 emotion-7 emotion-8"
-          disabled=""
           type="button"
         >
           <div
@@ -6044,10 +7525,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           </div>
         </button>
         <button
-          aria-disabled="true"
+          aria-disabled="false"
           aria-label="Back"
           class="emotion-6 emotion-7 emotion-8"
-          disabled=""
           type="button"
         >
           <div
@@ -6058,68 +7538,69 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
         </button>
         <button
           aria-disabled="false"
-          aria-label="Page 1"
+          aria-label="Page 46"
           class="emotion-16 emotion-6 emotion-18 emotion-8"
           type="button"
         >
           <div
             class="emotion-9 emotion-10"
           >
-            1
+            46
           </div>
         </button>
         <button
           aria-disabled="false"
-          aria-label="Page 2"
-          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          aria-label="Page 47"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
           type="button"
         >
           <div
             class="emotion-9 emotion-10"
           >
-            2
+            47
           </div>
         </button>
         <button
           aria-disabled="false"
-          aria-label="Page 3"
-          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          aria-label="Page 48"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
           type="button"
         >
           <div
             class="emotion-9 emotion-10"
           >
-            3
+            48
           </div>
         </button>
         <button
           aria-disabled="false"
-          aria-label="Page 4"
-          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          aria-label="Page 49"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
           type="button"
         >
           <div
             class="emotion-9 emotion-10"
           >
-            4
+            49
           </div>
         </button>
         <button
           aria-disabled="false"
-          aria-label="Page 5"
-          class="emotion-16 emotion-6 emotion-24 emotion-8"
+          aria-label="Page 50"
+          class="emotion-16 emotion-6 emotion-42 emotion-8"
           type="button"
         >
           <div
             class="emotion-9 emotion-10"
           >
-            5
+            50
           </div>
         </button>
         <button
-          aria-disabled="false"
+          aria-disabled="true"
           aria-label="Next"
           class="emotion-6 emotion-47 emotion-8"
+          disabled=""
           type="button"
         >
           <div
@@ -6129,9 +7610,10 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           </div>
         </button>
         <button
-          aria-disabled="false"
+          aria-disabled="true"
           aria-label="Last"
           class="emotion-6 emotion-52 emotion-8"
+          disabled=""
           type="button"
         >
           <div
@@ -6146,7 +7628,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
       class="emotion-56 emotion-57"
     >
       <div>
-        Current : 1
+        Current : 50
       </div>
     </div>
   </div>
@@ -6234,7 +7716,10 @@ exports[`Pagination should render correctly with ref 1`] = `
   </ul>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -6704,7 +8189,10 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   </button>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -7224,7 +8712,10 @@ exports[`Pagination should render correctly with wrong page change 1`] = `
   </button>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -7285,7 +8776,7 @@ exports[`Pagination should render correctly with wrong page change 1`] = `
       class="emotion-6 emotion-7"
     >
       <div>
-        Current : 1
+        Current : 50
       </div>
     </div>
   </div>

@@ -159,6 +159,23 @@ describe('Pagination', () => {
       </Pagination>,
     ))
 
+  test('should render correctly customComponents 2', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        perPage={5}
+        onLoadPage={loadMore}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+        LoaderComponent={<div>Loading</div>}
+        RightComponent={<div>I am a custom right component</div>}
+        LeftComponent={<div>I am a custom left component</div>}
+        MiddleComponent={<div>I am the middle one</div>}
+      >
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
   test('should render correctly with pageClick', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
@@ -186,6 +203,35 @@ describe('Pagination', () => {
           userEvent.click(page4Button)
         },
       },
+    ))
+
+  test('should render correctly loadable with no data and initial page 1', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        onLoadPage={async () =>
+          new Promise(resolve => {
+            setTimeout(() => resolve([]), 300)
+          })
+        }
+        perPage={5}
+      >
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
+  test('should render correctly loadable with no data and initial page 3', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        page={3}
+        onLoadPage={async () =>
+          new Promise(resolve => {
+            setTimeout(() => resolve([]), 300)
+          })
+        }
+        perPage={5}
+      >
+        <ExampleChildren />
+      </Pagination>,
     ))
 
   test('should render correctly loadable with pageClick', async () =>
@@ -269,15 +315,16 @@ describe('Pagination', () => {
       {
         transform: async node => {
           act(() => {
+            userEvent.click(node.getByRole('button', { name: 'Next' }))
             userEvent.click(node.getByRole('button', { name: 'Previous' }))
+            userEvent.click(node.getByRole('button', { name: 'Last' }))
             userEvent.click(node.getByRole('button', { name: '-1' }))
             userEvent.click(node.getByRole('button', { name: '100' }))
-            userEvent.click(node.getByRole('button', { name: 'Last' }))
-            userEvent.click(node.getByRole('button', { name: 'Next' }))
           })
         },
       },
     ))
+
   test('should render correctly with pageClick and load and empty response', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
@@ -309,10 +356,23 @@ describe('Pagination', () => {
       },
     ))
 
-  test('should render correctly with page greater than max and no Load', async () =>
+  test('should render correctly with initial page greater than max and no Load', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
         page={50}
+        perPage={5}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+      >
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
+  test('should render correctly with initial page less than 1 and no Load', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        page={0}
         perPage={5}
         initialData={Array.from({ length: 50 }, (_, index) => index).map(
           value => `Item ${value}`,

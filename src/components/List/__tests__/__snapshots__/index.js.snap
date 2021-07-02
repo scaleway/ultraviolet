@@ -24508,7 +24508,10 @@ exports[`List should render correctly with pagination 1`] = `
   </div>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -25308,7 +25311,10 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   </div>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -25806,7 +25812,10 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   </div>
   .emotion-0 {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
