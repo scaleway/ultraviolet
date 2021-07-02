@@ -1,3 +1,17 @@
+## [0.91.0](https://github.com/scaleway/scaleway-ui/compare/v0.90.2...v0.91.0) (2021-07-02)
+
+
+### :package: Chore
+
+* **deps:** bump actions/setup-node from 2.1.5 to 2.2.0 ([#486](https://github.com/scaleway/scaleway-ui/issues/486)) ([32a03a7](https://github.com/scaleway/scaleway-ui/commit/32a03a79b144c941d956100be01aad65df797bf3))
+* **deps:** bump docker/build-push-action from 2.5.0 to 2.6.1 ([#498](https://github.com/scaleway/scaleway-ui/issues/498)) ([7652ec5](https://github.com/scaleway/scaleway-ui/commit/7652ec58c83c9191456eabfe0c336dce35f7a581))
+* **deps-dev:** bump rollup from 2.52.6 to 2.52.7 ([#499](https://github.com/scaleway/scaleway-ui/issues/499)) ([f8fc987](https://github.com/scaleway/scaleway-ui/commit/f8fc98759a29b2a0c4eb0cf836bd77ccca61b340))
+
+
+### :gear: Features
+
+* add some accessibility, customization on list and pagination ([#500](https://github.com/scaleway/scaleway-ui/issues/500)) ([da1b8a5](https://github.com/scaleway/scaleway-ui/commit/da1b8a553e52594d4b7f5fc22b208ecfd4eec80e))
+
 ### [0.90.2](https://github.com/scaleway/scaleway-ui/compare/v0.90.1...v0.90.2) (2021-07-02)
 
 
