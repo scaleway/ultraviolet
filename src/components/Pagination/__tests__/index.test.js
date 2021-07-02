@@ -222,7 +222,7 @@ describe('Pagination', () => {
   test('should render correctly loadable with no data and initial page 3', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
-        page={3}
+        initialPage={3}
         onLoadPage={async () =>
           new Promise(resolve => {
             setTimeout(() => resolve([]), 300)
@@ -359,7 +359,7 @@ describe('Pagination', () => {
   test('should render correctly with initial page greater than max and no Load', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
-        page={50}
+        initialPage={50}
         perPage={5}
         initialData={Array.from({ length: 50 }, (_, index) => index).map(
           value => `Item ${value}`,
@@ -372,7 +372,7 @@ describe('Pagination', () => {
   test('should render correctly with initial page less than 1 and no Load', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
-        page={0}
+        initialPage={0}
         perPage={5}
         initialData={Array.from({ length: 50 }, (_, index) => index).map(
           value => `Item ${value}`,
@@ -425,6 +425,19 @@ describe('Pagination', () => {
   test('should render correctly with empty data', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination data={[]}>
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
+  test('should render correctly controlled with page', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+        perPage={10}
+        page={3}
+      >
         <ExampleChildren />
       </Pagination>,
     ))

@@ -28,9 +28,16 @@ const variants = {
   table: variantTable,
 }
 
-const Body = ({ children, emptyListText, ...props }) => {
-  const { data, idKey, setRowState, rowsState, customLoader, isLoading } =
-    useContext(ListContext)
+const Body = ({ children, ...props }) => {
+  const {
+    data,
+    idKey,
+    setRowState,
+    rowsState,
+    customLoader,
+    isLoading,
+    emptyListComponent,
+  } = useContext(ListContext)
 
   if (isLoading === true) {
     return (
@@ -44,11 +51,7 @@ const Body = ({ children, emptyListText, ...props }) => {
 
   return (
     <Box {...props} role="list">
-      {data.length === 0 ? (
-        <Typography variant="bodyA" m={2} textAlign="center">
-          {emptyListText}
-        </Typography>
-      ) : null}
+      {data.length === 0 ? emptyListComponent : null}
       {data.map((rowData, index) => (
         <React.Fragment key={rowData[idKey] || index}>
           {children({
@@ -65,24 +68,16 @@ const Body = ({ children, emptyListText, ...props }) => {
 
 Body.propTypes = {
   children: PropTypes.func.isRequired,
-  /**
-   * Text to display when having no data or empty data
-   */
-  emptyListText: PropTypes.string,
 }
 
-Body.defaultProps = {
-  emptyListText: 'This list is empty.',
-}
-const PaginatedBody = ({ children, emptyListText, ...props }) => {
-  const { idKey, setRowState, rowsState } = useContext(ListContext)
-  const { pageData, perPage } = usePagination()
+const PaginatedBody = ({ children, ...props }) => {
+  const { idKey, setRowState, rowsState, emptyListComponent } =
+    useContext(ListContext)
+  const { pageData } = usePagination()
 
   return (
     <Box {...props} role="list">
-      {pageData.length === 0 ? (
-        <Placeholder length={perPage} variant="list" />
-      ) : null}
+      {pageData.length === 0 ? emptyListComponent : null}
       {pageData.map((rowData, index) => (
         <React.Fragment key={rowData[idKey] || index}>
           {children({
@@ -99,14 +94,6 @@ const PaginatedBody = ({ children, emptyListText, ...props }) => {
 
 PaginatedBody.propTypes = {
   children: PropTypes.func.isRequired,
-  /**
-   * Text to display when having no data or empty data
-   */
-  emptyListText: PropTypes.string,
-}
-
-PaginatedBody.defaultProps = {
-  emptyListText: 'This list is empty.',
 }
 
 const List = forwardRef(
@@ -115,6 +102,7 @@ const List = forwardRef(
       idKey,
       isLoading,
       data,
+      emptyListComponent,
       columns,
       multiselect,
       children,
@@ -137,6 +125,19 @@ const List = forwardRef(
     // Used to make listRef methods available outside
     const listRef = useRef(null)
     useImperativeHandle(ref, () => listRef.current)
+
+    // Empty List component
+    const emptyListComponentToRender = useMemo(() => {
+      if (emptyListComponent) return emptyListComponent
+
+      return perPage ? (
+        <Placeholder length={perPage} variant="list" />
+      ) : (
+        <Typography variant="bodyA" m={2} textAlign="center">
+          This list is empty.
+        </Typography>
+      )
+    }, [emptyListComponent, perPage])
 
     // Used to handle List with page loading
     const onLoadPageRef = useRef(onLoadPage)
@@ -312,6 +313,7 @@ const List = forwardRef(
         columns,
         customLoader,
         data: sortedData,
+        emptyListComponent: emptyListComponentToRender,
         hasAllSelected,
         hasSelectedItems,
         idKey,
@@ -335,6 +337,7 @@ const List = forwardRef(
     }, [
       columns,
       customLoader,
+      emptyListComponentToRender,
       hasAllSelected,
       hasSelectedItems,
       idKey,
@@ -364,7 +367,7 @@ const List = forwardRef(
             ref={paginationRef}
             perPage={perPage}
             pageCount={pageCount}
-            page={page}
+            initialPage={page}
             onLoadPage={onLoadPageRef.current ? handleLoadPage : undefined}
             LoaderComponent={() =>
               customLoader ?? (
@@ -410,6 +413,7 @@ List.defaultProps = {
   autoClose: false,
   customLoader: undefined,
   data: [],
+  emptyListComponent: undefined,
   idKey: 'id',
   isLoading: false,
   multiselect: false,
@@ -459,6 +463,10 @@ List.propTypes = {
    */
   customLoader: PropTypes.node,
   data: PropTypes.arrayOf(PropTypes.shape({})),
+  /**
+   * Custom empty list component
+   */
+  emptyListComponent: PropTypes.node,
   /**
    * Used to manage row state. Enter an unique property of your row
    */

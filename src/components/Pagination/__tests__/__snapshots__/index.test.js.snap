@@ -384,6 +384,7 @@ exports[`Pagination should render correctly component 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -899,6 +900,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -1006,6 +1008,472 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Pagination should render correctly controlled with page 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      Item 20
+    </li>
+    <li>
+      Item 21
+    </li>
+    <li>
+      Item 22
+    </li>
+    <li>
+      Item 23
+    </li>
+    <li>
+      Item 24
+    </li>
+    <li>
+      Item 25
+    </li>
+    <li>
+      Item 26
+    </li>
+    <li>
+      Item 27
+    </li>
+    <li>
+      Item 28
+    </li>
+    <li>
+      Item 29
+    </li>
+  </ul>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-7.emotion-7 {
+  margin-right: 8px;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-7:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-18.emotion-18 {
+  margin-right: 8px;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18:hover,
+.emotion-18:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-18:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-30 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #f6f5f7;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-30.emotion-30 {
+  margin-right: 8px;
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  color: #4a4f62;
+  background-color: #e9e7ec;
+}
+
+.emotion-30:focus {
+  box-shadow: 0 0 0 2px rgba(246,245,247,0.25);
+}
+
+.emotion-30:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-52 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #4f0599;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  color: #fff;
+  background-color: #420480;
+}
+
+.emotion-52:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div>
+        <button
+          aria-disabled="false"
+          aria-label="First"
+          class="emotion-6 emotion-7 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            First
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Back"
+          class="emotion-6 emotion-7 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Back
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 1"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            1
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 2"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            2
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 3"
+          class="emotion-16 emotion-6 emotion-30 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            3
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 4"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            4
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Page 5"
+          class="emotion-16 emotion-6 emotion-18 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            5
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Next"
+          class="emotion-6 emotion-7 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Next
+          </div>
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="Last"
+          class="emotion-6 emotion-52 emotion-8"
+          type="button"
+        >
+          <div
+            class="emotion-9 emotion-10"
+          >
+            Last
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="emotion-56 emotion-57"
+    >
+      <div>
+        Current : 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Pagination should render correctly customComponents 1`] = `
 <DocumentFragment>
   <ul>
@@ -1080,6 +1548,7 @@ exports[`Pagination should render correctly customComponents 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -1209,6 +1678,7 @@ exports[`Pagination should render correctly customComponents 2 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -1619,6 +2089,7 @@ exports[`Pagination should render correctly function 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -2085,6 +2556,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -2499,6 +2971,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -2912,6 +3385,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -3426,6 +3900,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -3941,6 +4416,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -4348,6 +4824,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -4693,6 +5170,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -5038,6 +5516,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -5513,6 +5992,7 @@ exports[`Pagination should render correctly with initial page greater than max a
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -6028,6 +6508,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -6480,6 +6961,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -6999,6 +7481,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -7504,6 +7987,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -8085,6 +8569,7 @@ exports[`Pagination should render correctly with ref 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -8552,6 +9037,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
@@ -8765,6 +9251,7 @@ exports[`Pagination should render correctly with wrong page change 1`] = `
 
 <div
     class="emotion-0 emotion-1"
+    role="navigation"
   >
     <div
       class="emotion-2 emotion-3"
