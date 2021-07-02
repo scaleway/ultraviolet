@@ -4,47 +4,69 @@ import {
   Description,
   Meta,
   Story,
-} from '@storybook/addon-docs'
-import Alert from '..'
+} from '@storybook/addon-docs/blocks'
+import Alert, { alertTypes, alertVariants } from '..'
+import { Box } from '../..'
 
 <Meta title="Components/Feedback/Alert" component={Alert} />
 
 # Alert
 
-<Description>Display a colored message with an icon</Description>
+<Description>Displays a notice with an icon.</Description>
 
 <Canvas>
   <Story name="Basic">
-    <Alert>
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </Alert>
+    <Alert>This is a notification bar with its default props.</Alert>
   </Story>
 </Canvas>
 
-## Variant
+## Types
 
 <Description>
-  You can choose the look of the `Alert` by using the `variant` prop.
+  Using `type` prop you can change the type of the component. Each type has a
+  default icon set.
 </Description>
 
 <Canvas>
-  <Story name="Variant">
-    <Alert variant="success">
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </Alert>
-    <Alert variant="warning">
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-    </Alert>
-    <Alert variant="info">
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+  <Story name="Types">
+    {alertTypes.map(type => (
+      <Box key={type} my={1}>
+        <Alert type={type}>
+          This is a notification bar with the <b>{type}</b> variant.
+        </Alert>
+      </Box>
+    ))}
+  </Story>
+</Canvas>
+
+## Variants
+
+<Description>
+  Using `variant` prop you can change the style of the component.
+</Description>
+
+<Canvas>
+  <Story name="Variants">
+    {alertVariants.map(variant => (
+      <Box key={variant} my={1}>
+        <Alert type="info" variant={variant}>
+          This is a notification bar with the <b>{variant}</b> variant.
+        </Alert>
+      </Box>
+    ))}
+  </Story>
+</Canvas>
+
+## Title
+
+<Description>
+  Using `title` prop you can add a custom title to the notification.
+</Description>
+
+<Canvas>
+  <Story name="Title">
+    <Alert icon="information-outline" type="info" title="Information">
+      This is a notification bar with a custom title.
     </Alert>
   </Story>
 </Canvas>
@@ -52,34 +74,32 @@ import Alert from '..'
 ## Icon
 
 <Description>
-  You can change the default icon of a variant by using `icon` prop. All
-  [icons](/docs/components-icon) are supported.
+  Using `icon` prop you can add a custom icon to the notification.
 </Description>
 
 <Canvas>
   <Story name="Icon">
-    <Alert icon="lock">
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+    <Alert icon="clock-outline" type="beta">
+      This is a notification bar with a custom icon.
     </Alert>
   </Story>
 </Canvas>
 
-## Icon Size
+## Icon size
 
-<Description>
-  You can change the default icon size by using `iconSize` prop.
-</Description>
+<Description>Using `iconSize` prop you can change the icon size.</Description>
 
 <Canvas>
   <Story name="Icon size">
-    <Alert iconSize={64}>
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur
-      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
+    <Alert iconSize={24} mb={2}>
+      This is a notification bar with a custom icon size.
+    </Alert>
+    <Alert iconSize={40} type="info">
+      This is a notification bar with a custom icon size.
     </Alert>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Alert} />

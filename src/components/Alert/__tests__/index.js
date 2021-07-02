@@ -1,35 +1,24 @@
 import React from 'react'
-import Alert from '..'
+import Alert, { alertTypes, alertVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Alert', () => {
-  test('renders correctly ', () =>
-    shouldMatchEmotionSnapshot(<Alert> This text is quite long. </Alert>))
+  test('renders correctly with default values', () =>
+    shouldMatchEmotionSnapshot(<Alert>Sample Alert</Alert>))
 
-  test('renders with variant success', () =>
-    shouldMatchEmotionSnapshot(
-      <Alert variant="success"> This text is quite long.</Alert>,
-    ))
+  test('renders correctly with custom icon', () =>
+    shouldMatchEmotionSnapshot(<Alert icon="eye">Sample Alert</Alert>))
 
-  test('renders with variant warning', () =>
-    shouldMatchEmotionSnapshot(
-      <Alert variant="warning"> This text is quite long.</Alert>,
-    ))
+  test('renders correctly with title', () =>
+    shouldMatchEmotionSnapshot(<Alert title="title">Sample Alert</Alert>))
 
-  test('renders with variant info', () =>
-    shouldMatchEmotionSnapshot(
-      <Alert variant="info"> This text is quite long.</Alert>,
-    ))
+  alertVariants.forEach(variant => {
+    test(`renders correctly variant ${variant}`, () =>
+      shouldMatchEmotionSnapshot(<Alert variant={variant}>Sample Alert</Alert>))
+  })
 
-  test('renders with different icon size', () =>
-    shouldMatchEmotionSnapshot(
-      <Alert iconSize={32}> This text is quite long.</Alert>,
-    ))
-
-  test('renders with variant success & icon lock', () =>
-    shouldMatchEmotionSnapshot(
-      <Alert variant="info" icon="lock">
-        This text is quite long.
-      </Alert>,
-    ))
+  alertTypes.forEach(variant => {
+    test(`renders correctly variant ${variant}`, () =>
+      shouldMatchEmotionSnapshot(<Alert variant={variant}>Sample Alert</Alert>))
+  })
 })
