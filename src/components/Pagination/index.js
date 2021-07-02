@@ -234,16 +234,17 @@ const Pagination = forwardRef(
       goToPage(page - 1)
     }, [goToPage, page])
 
-    useEffect(() => {
-      const loadPage = async () => {
-        setIsLoadingPage(true)
-        const res = await loadPageData(page)
-        if (!res) {
-          setPage(currentPage => currentPage - 1)
-          setCanLoadMore(false)
-        }
-        setIsLoadingPage(false)
+    const loadPage = useCallback(async () => {
+      setIsLoadingPage(true)
+      const res = await loadPageData(page)
+      if (!res || (Array.isArray(res) && res.length === 0)) {
+        setPage(page > 1 ? page - 1 : 1)
+        setCanLoadMore(false)
       }
+      setIsLoadingPage(false)
+    }, [loadPageData, page])
+
+    useEffect(() => {
       // If it is possible to load a page and not already loading one
       if (!isLoadingPage && canLoadMore && !paginatedData[page]?.length) {
         loadPage()
@@ -253,20 +254,11 @@ const Pagination = forwardRef(
         if (page > maxPage) {
           setPage(maxPage)
         }
-        if (page <= maxPage && !paginatedData[page]?.length) {
+        if (page <= 0) {
           setPage(1)
         }
       }
-    }, [
-      maxPage,
-      page,
-      paginatedData,
-      perPage,
-      canLoadMore,
-      isLoadingPage,
-      setPageData,
-      loadPageData,
-    ])
+    }, [canLoadMore, isLoadingPage, loadPage, maxPage, page, paginatedData])
 
     useEffect(() => {
       onChangePageRef.current = onChangePage
@@ -286,6 +278,7 @@ const Pagination = forwardRef(
         pageData: paginatedData[page] || [],
         paginatedData,
         perPage,
+        reloadPage: loadPage,
         setPageData,
         setPaginatedData,
       }
@@ -305,6 +298,7 @@ const Pagination = forwardRef(
       goToPreviousPage,
       setPageData,
       setPaginatedData,
+      loadPage,
     ])
 
     const LeftComponentToRender =
@@ -325,10 +319,16 @@ const Pagination = forwardRef(
       ) : (
         <RightComponent {...value} pageTabCount={pageTabCount} />
       )
+    const LoaderComponentToRender =
+      !LoaderComponent || React.isValidElement(LoaderComponent) ? (
+        LoaderComponent
+      ) : (
+        <LoaderComponent {...value} pageTabCount={pageTabCount} />
+      )
 
     return (
       <PaginationContext.Provider value={value}>
-        {isLoadingPage ? <LoaderComponent {...value} /> : null}
+        {isLoadingPage ? LoaderComponentToRender : null}
         {typeof children === 'function' && !isLoadingPage
           ? children(value)
           : null}
