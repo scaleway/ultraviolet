@@ -1,3 +1,17 @@
+### [0.91.2](https://github.com/scaleway/scaleway-ui/compare/v0.91.1...v0.91.2) (2021-07-05)
+
+
+### :bug: Bug Fixes
+
+* pagination control infinite rendering ([#501](https://github.com/scaleway/scaleway-ui/issues/501)) ([24324aa](https://github.com/scaleway/scaleway-ui/commit/24324aa190aa8fad46cd5b7964bea592e5d61e60))
+
+
+### :package: Chore
+
+* **deps:** bump docker/setup-buildx-action from 1.4.1 to 1.5.0 ([#502](https://github.com/scaleway/scaleway-ui/issues/502)) ([aabdfb2](https://github.com/scaleway/scaleway-ui/commit/aabdfb2496d3eb8cfca5a4a2a4e9b04872489364))
+* **deps:** bump react-countup from 4.3.3 to 4.4.0 ([#483](https://github.com/scaleway/scaleway-ui/issues/483)) ([c7e8ba5](https://github.com/scaleway/scaleway-ui/commit/c7e8ba5680d924cd1cb33f002a553d6afa954952))
+* **deps-dev:** bump eslint from 7.29.0 to 7.30.0 ([#503](https://github.com/scaleway/scaleway-ui/issues/503)) ([05f3f77](https://github.com/scaleway/scaleway-ui/commit/05f3f77c6a3970d2c737f316b035ee618790fa1f))
+
 ### [0.91.1](https://github.com/scaleway/scaleway-ui/compare/v0.91.0...v0.91.1) (2021-07-02)
 
 
