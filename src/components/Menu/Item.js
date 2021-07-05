@@ -80,6 +80,7 @@ const Item = ({ borderless, disabled, onClick, variant, ...props }) => (
   <Button
     variant="transparent"
     role="menuitem"
+    disabled={disabled}
     onClick={onClick}
     {...props}
     css={[

@@ -429,6 +429,12 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
   display: block;
   font-size: 14px;
   line-height: 22px;
@@ -531,6 +537,12 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
   display: block;
   font-size: 14px;
   line-height: 22px;
@@ -599,8 +611,9 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
 }
 
 <button
-    aria-disabled="false"
+    aria-disabled="true"
     class="emotion-0 emotion-1 emotion-2"
+    disabled=""
     role="menuitem"
     type="button"
   >
@@ -3759,6 +3772,12 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
   display: block;
   font-size: 14px;
   line-height: 22px;
@@ -3824,92 +3843,6 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   pointer-events: none;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  background-color: transparent;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  display: block;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #f6f5f7;
-  cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  min-width: 110px;
-  background-color: transparent;
-  cursor: not-allowed;
-  color: #d4dae7;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  color: #4f0599;
-}
-
-.emotion-10:hover svg,
-.emotion-10:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #4f0599;
-}
-
-.emotion-10:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  color: #d4dae7;
-  background-color: #fff;
-}
-
-.emotion-10:hover svg,
-.emotion-10:focus svg {
-  fill: #b2b6c3;
 }
 
 .emotion-0 {
@@ -4022,6 +3955,12 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
+  cursor: default;
+  pointer-events: none;
+  color: #d4dae7;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  box-shadow: none;
   display: block;
   font-size: 14px;
   line-height: 22px;
@@ -4089,92 +4028,6 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   pointer-events: none;
 }
 
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  background-color: transparent;
-  color: #4a4f62;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  display: block;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #f6f5f7;
-  cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  min-width: 110px;
-  background-color: transparent;
-  cursor: not-allowed;
-  color: #d4dae7;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  color: #4f0599;
-}
-
-.emotion-10:hover svg,
-.emotion-10:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #4f0599;
-}
-
-.emotion-10:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.emotion-10:hover,
-.emotion-10:focus {
-  color: #d4dae7;
-  background-color: #fff;
-}
-
-.emotion-10:hover svg,
-.emotion-10:focus svg {
-  fill: #b2b6c3;
-}
-
 <div
     aria-label="menu"
     class="emotion-0 emotion-1"
@@ -4191,8 +4044,9 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       role="menu"
     >
       <button
-        aria-disabled="false"
+        aria-disabled="true"
         class="emotion-3 emotion-4 emotion-5"
+        disabled=""
         role="menuitem"
         type="button"
       >
@@ -4202,30 +4056,34 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
           Menu.Item disabled
         </div>
       </button>
-      <a
-        aria-disabled="false"
-        class="emotion-3 emotion-5 emotion-10 emotion-5"
-        href="/link"
+      <button
+        aria-disabled="true"
+        class="emotion-3 emotion-4 emotion-5"
+        disabled=""
         role="menuitem"
+        to="/link"
+        type="button"
       >
         <div
           class="emotion-6 emotion-7"
         >
           Menu.Item Link disabled
         </div>
-      </a>
-      <a
-        aria-disabled="false"
+      </button>
+      <button
+        aria-disabled="true"
         class="emotion-3 emotion-4 emotion-5"
+        disabled=""
         href="https://link"
         role="menuitem"
+        type="button"
       >
         <div
           class="emotion-6 emotion-7"
         >
           Menu.Item Link disabled
         </div>
-      </a>
+      </button>
     </div>
   </div>
 </DocumentFragment>
