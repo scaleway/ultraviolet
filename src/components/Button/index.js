@@ -292,6 +292,7 @@ function FwdButton({
   href,
   download,
   tooltip,
+  tooltipBaseId,
   ...props
 }) {
   const as = useMemo(() => {
@@ -315,7 +316,7 @@ function FwdButton({
     )
 
   return (
-    <Tooltip text={tooltip}>
+    <Tooltip baseId={tooltipBaseId} text={tooltip}>
       <StyledButton
         {...props}
         href={href}
@@ -401,6 +402,7 @@ const propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   to: PropTypes.string,
   tooltip: PropTypes.string,
+  tooltipBaseId: PropTypes.string,
   type: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants),
 }
@@ -420,6 +422,7 @@ const defaultProps = {
   size: 'large',
   to: undefined,
   tooltip: undefined,
+  tooltipBaseId: undefined,
   type: 'button',
   variant: 'primary',
 }

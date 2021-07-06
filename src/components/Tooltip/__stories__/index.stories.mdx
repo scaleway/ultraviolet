@@ -30,13 +30,6 @@ import { Box, Button, FlexBox } from '../..'
       </Box>
     </Tooltip>
   </Story>
-  <Story name="function">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip text="tooltip">
-        {referenceProps => <div {...referenceProps}>I&apos;m a function</div>}
-      </Tooltip>
-    </Box>
-  </Story>
   <Story name="on-click">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip">
@@ -59,17 +52,6 @@ import { Box, Button, FlexBox } from '../..'
         <div>
           <div>I&apos;m a nested element</div>
         </div>
-      </Tooltip>
-    </Box>
-  </Story>
-  <Story name="nested-function">
-    <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
-      <Tooltip text="tooltip">
-        {referenceProps => (
-          <div {...referenceProps}>
-            I&apos;m a nested function, with naked string children
-          </div>
-        )}
       </Tooltip>
     </Box>
   </Story>
@@ -100,14 +82,9 @@ import { Box, Button, FlexBox } from '../..'
   <Story name="multiple-children">
     <Box borderRadius={20} border="2px solid #333" p={4} width="max-content">
       <Tooltip text="tooltip" backgroundColor="red">
-        <>
-          <div>I&apos;m the first children</div>
-          <div>I&apos;m the second children</div>
-          <div>
-            Tooltip can only have one children, not an array of children. Do not
-            forget to wrap it with fragment
-          </div>
-        </>
+        <div>I&apos;m the first children</div>
+        <div>I&apos;m the second children</div>
+        <div>I&apos;m the third children</div>
       </Tooltip>
     </Box>
   </Story>
@@ -149,6 +126,27 @@ import { Box, Button, FlexBox } from '../..'
           </Tooltip>
         </Box>
       ))}
+    </FlexBox>
+  </Story>
+</Canvas>
+
+## Empty text
+
+<Description>
+  With an empty text it will show only the children and no tooltip.
+</Description>
+
+<Canvas>
+  <Story name="Empty text">
+    <Box pb={2}>
+      <Tooltip text="">
+        Here you should not see a tooltip because text is empty
+      </Tooltip>
+    </Box>
+    <FlexBox>
+      <Tooltip text="You see me">
+        Here you should see it because there a text
+      </Tooltip>
     </FlexBox>
   </Story>
 </Canvas>
