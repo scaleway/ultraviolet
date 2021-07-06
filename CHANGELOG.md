@@ -1,3 +1,10 @@
+### [0.91.4](https://github.com/scaleway/scaleway-ui/compare/v0.91.3...v0.91.4) (2021-07-06)
+
+
+### :bug: Bug Fixes
+
+* tooltip display ([#508](https://github.com/scaleway/scaleway-ui/issues/508)) ([06b71f9](https://github.com/scaleway/scaleway-ui/commit/06b71f929455fa93f3051acd7498e0cd9af4a83f))
+
 ### [0.91.3](https://github.com/scaleway/scaleway-ui/compare/v0.91.2...v0.91.3) (2021-07-06)
 
 
