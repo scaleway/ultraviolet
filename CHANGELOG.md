@@ -1,3 +1,22 @@
+### [0.91.3](https://github.com/scaleway/scaleway-ui/compare/v0.91.2...v0.91.3) (2021-07-06)
+
+
+### :white_check_mark: Test
+
+* add u and v components ([#491](https://github.com/scaleway/scaleway-ui/issues/491)) ([7f05701](https://github.com/scaleway/scaleway-ui/commit/7f05701b75f19a31fe450ef4c5cf04d61bd0764d))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/eslint-config-react from 1.5.0 to 2.0.0 ([#507](https://github.com/scaleway/scaleway-ui/issues/507)) ([925aefe](https://github.com/scaleway/scaleway-ui/commit/925aefe3ddc4c22d3c10005fc8a031328ab5b9d3))
+* **deps-dev:** bump @scaleway/use-i18n from 2.1.3 to 2.1.4 ([#506](https://github.com/scaleway/scaleway-ui/issues/506)) ([7079a3b](https://github.com/scaleway/scaleway-ui/commit/7079a3bdf3a60f8e128f409915c68b5eb90de35f))
+* **deps-dev:** bump husky from 6.0.0 to 7.0.0 ([#493](https://github.com/scaleway/scaleway-ui/issues/493)) ([32b154c](https://github.com/scaleway/scaleway-ui/commit/32b154c9d6969a574e518c0f6e45ed966a83df36))
+
+
+### :bug: Bug Fixes
+
+* **menu:** disabled props wasn't forward to component ([#504](https://github.com/scaleway/scaleway-ui/issues/504)) ([44d4d5e](https://github.com/scaleway/scaleway-ui/commit/44d4d5ed3a8bb064bcdff7d5314cdf9102708496))
+
 ### [0.91.2](https://github.com/scaleway/scaleway-ui/compare/v0.91.1...v0.91.2) (2021-07-05)
 
 
