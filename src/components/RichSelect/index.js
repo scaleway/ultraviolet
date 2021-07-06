@@ -90,15 +90,15 @@ const getSelectStyles = ({
       ? `${animationDuration}ms ${animations[animation]}`
       : 'none',
   }),
+  indicatorsContainer: provided => ({
+    ...provided,
+    maxHeight: '48px',
+  }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
     backgroundColor: theme.colors.gray200,
     display: state.selectProps.time ? 'flex' : 'none',
     ...((customStyle(state) || {}).indicatorSeparator || {}),
-  }),
-  indicatorsContainer: provided => ({
-    ...provided,
-    maxHeight: '48px',
   }),
   input: provided => ({
     ...provided,

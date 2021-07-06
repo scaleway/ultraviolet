@@ -356,14 +356,13 @@ const Pagination = forwardRef(
 )
 
 Pagination.propTypes = {
-  LeftComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  LoaderComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  MiddleComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  RightComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   data: PropTypes.arrayOf(PropTypes.any),
   initialData: PropTypes.arrayOf(PropTypes.any),
   initialPage: PropTypes.number,
+  LeftComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  LoaderComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  MiddleComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onChangePage: PropTypes.func,
   onLoadPage: PropTypes.func,
   page: PropTypes.number,
@@ -373,23 +372,24 @@ Pagination.propTypes = {
    */
   pageTabCount: PropTypes.number,
   perPage: PropTypes.number,
+  RightComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 }
 
 Pagination.defaultProps = {
-  LeftComponent: DefaultLeftComponent,
-  LoaderComponent: DefaultLoaderComponent,
-  MiddleComponent: DefaultMiddleComponent,
-  RightComponent: DefaultRightComponent,
   children: undefined,
   data: undefined,
   initialData: [],
   initialPage: 1,
+  LeftComponent: DefaultLeftComponent,
+  LoaderComponent: DefaultLoaderComponent,
+  MiddleComponent: DefaultMiddleComponent,
   onChangePage: undefined,
   onLoadPage: undefined,
   page: undefined,
   pageCount: undefined,
   pageTabCount: 5,
   perPage: 25,
+  RightComponent: DefaultRightComponent,
 }
 
 export default Pagination

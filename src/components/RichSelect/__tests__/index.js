@@ -6,8 +6,8 @@ import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEm
 
 const customStyles = {
   control: () => ({}),
-  indicatorSeparator: () => ({}),
   indicatorsContainer: () => ({}),
+  indicatorSeparator: () => ({}),
   menu: () => ({}),
   menuList: () => ({}),
   menuPortal: () => ({}),
