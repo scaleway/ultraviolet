@@ -1,5 +1,9 @@
 {
   "root": true,
+  "env": {
+    "browser": true,
+    "jest": true
+  },
   "parser": "@babel/eslint-parser",
   "extends": ["@scaleway/react", "plugin:mdx/recommended"],
   "plugins": ["@emotion"],

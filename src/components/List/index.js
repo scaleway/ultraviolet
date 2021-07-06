@@ -303,8 +303,8 @@ const List = forwardRef(
         hasAllSelected,
         hasSelectedItems,
         paginationRef,
-        selectAll,
         selectableItems,
+        selectAll,
         selectedItems,
         unselectAll,
       }
@@ -326,12 +326,12 @@ const List = forwardRef(
         paginationRef,
         perPage,
         rowsState,
-        selectAll,
         selectableItems,
+        selectAll,
         selectedItems,
         setRowState,
-        sortOrder: sort.order,
         sortedIndex: sort.index,
+        sortOrder: sort.order,
         unselectAll,
       }
     }, [
@@ -383,8 +383,8 @@ const List = forwardRef(
               {children({
                 Body: PaginatedBody,
                 Cell,
-                SelectBar,
                 data,
+                SelectBar,
                 ...variants[variant],
               })}
             </Box>
@@ -399,8 +399,8 @@ const List = forwardRef(
           {children({
             Body,
             Cell,
-            SelectBar,
             data,
+            SelectBar,
             ...variants[variant],
           })}
         </Box>
