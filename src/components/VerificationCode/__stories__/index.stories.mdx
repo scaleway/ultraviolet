@@ -10,10 +10,18 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 # VerificationCode
 
-## With initial value
+A Small component to enter some text or numbers one by one.
 
 <Canvas>
-  <Story name="initial">
+  <Story name="Basic">
+    <VerificationCode initialValue="1337" inputId="verification-code-input" />
+  </Story>
+</Canvas>
+
+## Initial value
+
+<Canvas>
+  <Story name="Initial value">
     <VerificationCode initialValue="1337" inputId="verification-code-input" />
   </Story>
 </Canvas>
@@ -21,7 +29,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 ## Controlled
 
 <Canvas>
-  <Story name="controlled">
+  <Story name="Controlled">
     <ControlValue>
       {({ value, onChange }) => (
         <>
@@ -38,10 +46,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## With Completed action
+## OnComplete
 
 <Canvas>
-  <Story name="on-complete">
+  <Story name="OnComplete">
     {() => {
       const [displayComplete, setDisplayComplete] = useState(false)
       return (
@@ -63,10 +71,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## With no initial value and placeholder
+## Placeholder
 
 <Canvas>
-  <Story name="no-initial">
+  <Story name="Placeholder">
     <VerificationCode
       placeholder="0000"
       inputId="verification-code-input-no-value"
@@ -74,10 +82,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## With incomplete initial value and placeholder
+## Incomplete initial value and placeholder
 
 <Canvas>
-  <Story name="incomplete">
+  <Story name="Incomplete initial value and placeholder">
     <VerificationCode
       fields={6}
       initialValue="13"
@@ -87,18 +95,18 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## Error state
+## Error
 
 <Canvas>
-  <Story name="error">
+  <Story name="Error">
     <VerificationCode inputId="error" initialValue="13" error />
   </Story>
 </Canvas>
 
-## Type text
+## Type
 
 <Canvas>
-  <Story name="type-text">
+  <Story name="Type">
     <VerificationCode type="text" initialValue="13" />
   </Story>
 </Canvas>

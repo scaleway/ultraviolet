@@ -123,16 +123,28 @@ const defaultOptionValues = [
 ]
 
 UnitInput.propTypes = {
+  /**
+   * The default selected option in the RichSelect
+   */
   defaultOption: PropTypes.shape({
     label: PropTypes.string,
     value: PropTypes.string,
   }),
+  /**
+   * The default value in the TextInput
+   */
   defaultValue: PropTypes.number,
   disabled: PropTypes.bool,
   maxValue: PropTypes.number,
   minValue: PropTypes.number,
   name: PropTypes.string.isRequired,
+  /**
+   * @param {{value, unit}} currentValue The value containing the unit select and the value in the TextInput
+   */
   onChange: PropTypes.func,
+  /**
+   * Possible RichSelect options
+   */
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
