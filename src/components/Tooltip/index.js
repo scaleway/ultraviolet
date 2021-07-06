@@ -10,6 +10,7 @@ import {
   useTooltipState,
 } from 'reakit/Tooltip'
 import Box from '../Box'
+import FlexBox from '../FlexBox'
 
 const variants = {
   black: ({ theme }) => css`
@@ -67,45 +68,16 @@ const Tooltip = ({
   const { setVisible } = tooltip
   useEffect(() => setVisible(visible), [setVisible, visible])
 
-  if (!children) return null
-  if (Array.isArray(children)) {
-    // eslint-disable-next-line no-console
-    console.error(
-      "ScalewayUI - Tooltip: children of Tooltip component can't be an array.",
-    )
-
+  if (!text) {
     return children
-  }
-  // If children is a function, we return it with the Tooltip system
-  // event is it's has no text because it can have a complex logic
-  // and need to have the Tooltip system at anytime
-  if (!text && typeof children !== 'function') {
-    return children
-  }
-
-  const finalChildren = referenceProps => {
-    if (typeof children === 'function') {
-      return children(referenceProps)
-    }
-    if (typeof children === 'string') {
-      return <div {...referenceProps}>{children}</div>
-    }
-    const childProps = (children || {}).props || {}
-
-    if (childProps.disabled) {
-      return <div {...referenceProps}>{children}</div>
-    }
-
-    return React.cloneElement(children, {
-      ...referenceProps,
-      ...childProps,
-    })
   }
 
   return (
-    <div>
-      <TooltipReference {...tooltip} ref={children.ref}>
-        {finalChildren}
+    <FlexBox>
+      <TooltipReference {...tooltip}>
+        {typeof children === 'function'
+          ? referenceProps => children(referenceProps)
+          : children}
       </TooltipReference>
       <ReakitTooltip {...tooltip} style={{ zIndex }}>
         <StyledTooltip variant={variant} {...props}>
@@ -113,7 +85,7 @@ const Tooltip = ({
           {text}
         </StyledTooltip>
       </ReakitTooltip>
-    </div>
+    </FlexBox>
   )
 }
 
@@ -124,7 +96,7 @@ Tooltip.propTypes = {
     PropTypes.string,
     PropTypes.node,
     PropTypes.func,
-  ]),
+  ]).isRequired,
   placement: PropTypes.string,
   text: PropTypes.node,
   variant: PropTypes.string,
@@ -135,7 +107,6 @@ Tooltip.propTypes = {
 Tooltip.defaultProps = {
   animated: 150,
   baseId: undefined,
-  children: null,
   placement: 'top',
   text: '',
   variant: 'black',

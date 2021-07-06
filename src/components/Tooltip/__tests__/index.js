@@ -3,8 +3,6 @@ import Tooltip from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 describe('Tooltip', () => {
-  test(`renders null when there is no children`, () =>
-    shouldMatchEmotionSnapshotWithPortal(<Tooltip baseId="test" />))
   test(`renders when tooltip is just a pass through`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Tooltip baseId="test">
@@ -54,6 +52,15 @@ describe('Tooltip', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Tooltip visible text="test" baseId="test">
         <button disabled type="button" aria-describedby="test">
+          Test
+        </button>
+      </Tooltip>,
+    ))
+
+  test(`render variant white`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Tooltip variant="white" text="test" baseId="test">
+        <button type="button" aria-describedby="test">
           Test
         </button>
       </Tooltip>,
