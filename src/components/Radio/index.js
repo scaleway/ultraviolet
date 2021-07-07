@@ -57,7 +57,6 @@ const StyledRadio = styled(ReakitRadio)`
 `
 
 const Radio = ({
-  defaultChecked,
   checked,
   onChange,
   onFocus,
@@ -85,6 +84,7 @@ const Radio = ({
     {children}
     <StyledRadio
       type="radio"
+      aria-checked={checked}
       id={`${name}-${value}`}
       checked={checked}
       onChange={onChange}
@@ -93,29 +93,33 @@ const Radio = ({
       value={value}
       disabled={disabled}
       name={name}
-      defaultChecked={defaultChecked}
     />
   </StyledBox>
 )
 
 Radio.propTypes = {
   checked: PropTypes.bool,
+  /**
+   * Component near the radio button
+   */
   children: PropTypes.node.isRequired,
-  defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onFocus: PropTypes.func,
+  /**
+   * Size of the button
+   */
   size: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 Radio.defaultProps = {
   checked: undefined,
-  defaultChecked: undefined,
   disabled: false,
   onBlur: null,
+  onChange: undefined,
   onFocus: null,
   size: 24,
 }

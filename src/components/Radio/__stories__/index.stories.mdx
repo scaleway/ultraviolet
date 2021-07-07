@@ -1,4 +1,10 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import Radio from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -7,14 +13,24 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 # Radio
 
 <Description>
-  Radio only work as [controlled
+  A radio button that only work as [controlled
   component](https://reactjs.org/docs/forms.html).
 </Description>
 
+<Canvas>
+  <Story name="Basic">
+    <Radio name="basic" value="choice-1" checked>
+      Choice 1
+    </Radio>
+  </Story>
+</Canvas>
+
 ## Controlled
 
+Radio only work as a controlled component. You need to pass `onChange` callback to control it.
+
 <Canvas>
-  <Story name="basic">
+  <Story name="Controlled">
     <ControlValue value="choice-1">
       {({ value, onChange }) => (
         <>
@@ -45,7 +61,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 Set size using `size` property.
 
 <Canvas>
-  <Story name="size">
+  <Story name="Size">
     <ControlValue value="big">
       {({ value, onChange }) => (
         <>
@@ -75,10 +91,16 @@ Set size using `size` property.
 
 ## Disabled
 
+Disable the input by using `disabled` prop
+
 <Canvas>
-  <Story name="disabled">
-    <Radio value="disabled" name="radio-size" disabled onChange={() => {}}>
+  <Story name="Disabled">
+    <Radio value="disabled" name="radio-size" disabled>
       Disabled radio
     </Radio>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={Radio} />

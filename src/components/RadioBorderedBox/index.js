@@ -5,7 +5,6 @@ import React from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Radio from '../Radio'
-import Typography from '../Typography'
 
 const StyledBox = styled(Box)`
   &:hover {
@@ -65,7 +64,7 @@ const RadioBorderedBox = ({
         size={size}
         mr="4px"
       >
-        <Typography color="gray950">{label}</Typography>
+        {label}
       </Radio>
       <Box as="span" mr={1}>
         {labelDescription}
@@ -81,18 +80,36 @@ const RadioBorderedBox = ({
 )
 
 RadioBorderedBox.propTypes = {
+  /**
+   * See API of `Badge` component
+   */
   badgeSize: PropTypes.string,
+  /**
+   * Add a badge next to the label
+   */
   badgeText: PropTypes.string,
+  /**
+   * See API of `Badge` component
+   */
   badgeVariant: PropTypes.string,
   checked: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  /**
+   * Label next to the radio button
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * Description next to the label
+   */
   labelDescription: PropTypes.string,
   name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onFocus: PropTypes.func,
+  /**
+   * Size of the radio button
+   */
   size: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
@@ -105,6 +122,7 @@ RadioBorderedBox.defaultProps = {
   disabled: false,
   labelDescription: undefined,
   onBlur: null,
+  onChange: undefined,
   onFocus: null,
   size: 24,
 }

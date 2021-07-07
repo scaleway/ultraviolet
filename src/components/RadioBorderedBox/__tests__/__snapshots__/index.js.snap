@@ -91,24 +91,12 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-16.emotion-16 {
-  color: #151a2d;
-}
-
-.emotion-18 {
+.emotion-15 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-20.emotion-20 {
+.emotion-17.emotion-17 {
   margin-right: 8px;
 }
 
@@ -134,14 +122,10 @@ exports[`RadioBorderedBox renders correctly 1`] = `
             />
           </svg>
         </div>
-        <div
-          class="emotion-15 emotion-16 emotion-2"
-        >
-          Choice
-        </div>
+        Choice
         <input
           aria-checked="false"
-          class="emotion-18 emotion-19"
+          class="emotion-15 emotion-16"
           id="radio-choice"
           name="radio"
           tabindex="0"
@@ -150,7 +134,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
         />
       </label>
       <span
-        class="emotion-20 emotion-2"
+        class="emotion-17 emotion-2"
       />
     </div>
     <div>
@@ -253,24 +237,12 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-16.emotion-16 {
-  color: #151a2d;
-}
-
-.emotion-18 {
+.emotion-15 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-20.emotion-20 {
+.emotion-17.emotion-17 {
   margin-right: 8px;
 }
 
@@ -296,15 +268,11 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
             />
           </svg>
         </div>
-        <div
-          class="emotion-15 emotion-16 emotion-2"
-        >
-          Choice
-        </div>
+        Choice
         <input
           aria-checked="true"
           checked=""
-          class="emotion-18 emotion-19"
+          class="emotion-15 emotion-16"
           id="radio-choice"
           name="radio"
           tabindex="0"
@@ -313,7 +281,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
         />
       </label>
       <span
-        class="emotion-20 emotion-2"
+        class="emotion-17 emotion-2"
       />
     </div>
     <div>
@@ -407,24 +375,12 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-16.emotion-16 {
-  color: #151a2d;
-}
-
-.emotion-18 {
+.emotion-15 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-20.emotion-20 {
+.emotion-17.emotion-17 {
   margin-right: 8px;
 }
 
@@ -452,15 +408,11 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
             />
           </svg>
         </div>
-        <div
-          class="emotion-15 emotion-16 emotion-2"
-        >
-          Choice
-        </div>
+        Choice
         <input
           aria-checked="false"
           aria-disabled="true"
-          class="emotion-18 emotion-19"
+          class="emotion-15 emotion-16"
           disabled=""
           id="radio-choice"
           name="radio"
@@ -470,7 +422,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
         />
       </label>
       <span
-        class="emotion-20 emotion-2"
+        class="emotion-17 emotion-2"
       />
     </div>
     <div>
@@ -564,28 +516,16 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #151a2d;
-}
-
-.emotion-16.emotion-16 {
-  color: #151a2d;
-}
-
-.emotion-18 {
+.emotion-15 {
   position: absolute;
   opacity: 0.01;
 }
 
-.emotion-20.emotion-20 {
+.emotion-17.emotion-17 {
   margin-right: 8px;
 }
 
-.emotion-23 {
+.emotion-20 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -635,15 +575,11 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
             />
           </svg>
         </div>
-        <div
-          class="emotion-15 emotion-16 emotion-2"
-        >
-          Choice
-        </div>
+        Choice
         <input
           aria-checked="false"
           aria-disabled="true"
-          class="emotion-18 emotion-19"
+          class="emotion-15 emotion-16"
           disabled=""
           id="radio-choice"
           name="radio"
@@ -653,12 +589,12 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
         />
       </label>
       <span
-        class="emotion-20 emotion-2"
+        class="emotion-17 emotion-2"
       >
         (something)
       </span>
       <span
-        class="emotion-22 emotion-23 emotion-2"
+        class="emotion-19 emotion-20 emotion-2"
       >
         Badge
       </span>

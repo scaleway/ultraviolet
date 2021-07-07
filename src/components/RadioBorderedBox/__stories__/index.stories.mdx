@@ -20,17 +20,35 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   component](https://reactjs.org/docs/forms.html).
 </Description>
 
+<Canvas>
+  <Story name="Basic">
+    <RadioBorderedBox
+      name="choice-1"
+      checked
+      value="choice-1"
+      label="Choice 1"
+      labelDescription="(choice details)"
+      badgeText="Badge"
+      mb={1}
+    >
+      Description content
+    </RadioBorderedBox>
+  </Story>
+</Canvas>
+
 ## Controlled
 
+Control the component using `onChange` callback.
+
 <Canvas>
-  <Story name="basic">
-    <ControlValue value="choice-1">
+  <Story name="Controlled">
+    <ControlValue value="basic-1">
       {({ value, onChange }) => (
         <>
           <RadioBorderedBox
-            name="choice-1"
-            checked={value === 'choice-1' ? true : undefined}
-            value="choice-1"
+            name="basic-1"
+            checked={value === 'basic-1' ? true : undefined}
+            value="basic-1"
             onChange={e => onChange(e.currentTarget.value)}
             label="Choice 1"
             labelDescription="(choice details)"
@@ -40,9 +58,9 @@ import ControlValue from '../../../__stories__/components/ControlValue'
             Description content
           </RadioBorderedBox>
           <RadioBorderedBox
-            name="choice-2"
-            checked={value === 'choice-2' ? true : undefined}
-            value="choice-2"
+            name="basic-2"
+            checked={value === 'basic-2' ? true : undefined}
+            value="basic-2"
             onChange={e => onChange(e.currentTarget.value)}
             label="Choice 2"
           >
@@ -56,8 +74,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Disabled
 
+Disable the component by using `disabled` prop.
+
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <RadioBorderedBox
       value="disabled"
       name="radio-disabled"
@@ -70,8 +90,85 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## API
+## Label
 
-### BorderedBox
+Set the content at the right of the button with `label` prop. You can set the content at the right of the label with `labelDescription`.
+
+<Canvas>
+  <Story name="Label and Description">
+    <RadioBorderedBox
+      value="label"
+      name="radio-label"
+      label="Lorem Ipsum"
+      labelDescription="Do nostrud labore aliquip nostrud excepteur laboris laborum. 🤔"
+    >
+      <div>
+        Fugiat nulla Lorem elit Lorem labore exercitation ipsum et. Excepteur
+        incididunt nulla non enim duis cillum deserunt. Sint voluptate deserunt
+        labore consequat duis qui. Anim consequat laborum velit officia.
+        Deserunt in Lorem est laborum officia culpa laboris pariatur nulla Lorem
+        occaecat ex id. Non excepteur occaecat nisi eiusmod qui excepteur esse
+        id.
+      </div>
+    </RadioBorderedBox>
+  </Story>
+</Canvas>
+
+## Badge
+
+You can add a badge next to the label by using `badgeText`, `badgeVariant` and `badgeSize`.
+
+<Canvas>
+  <Story name="Badge">
+    <ControlValue value="badge-1">
+      {({ value, onChange }) => (
+        <>
+          <RadioBorderedBox
+            name="badge-1"
+            checked={value === 'badge-1'}
+            onChange={e => onChange(e.currentTarget.value)}
+            value="badge-1"
+            label="Choice 1"
+            labelDescription="(details)"
+            badgeText="Badge"
+            badgeVariant="warning"
+            badgeSize="medium"
+            mb={1}
+          >
+            All Badge props
+          </RadioBorderedBox>
+          <RadioBorderedBox
+            name="badge-2"
+            checked={value === 'badge-2'}
+            onChange={e => onChange(e.currentTarget.value)}
+            value="badge-2"
+            label="Choice 2"
+            labelDescription="(details)"
+            badgeText="Badge"
+            badgeSize="medium"
+            mb={1}
+          >
+            Badge Text and Size
+          </RadioBorderedBox>
+          <RadioBorderedBox
+            name="badge-3"
+            checked={value === 'badge-3'}
+            onChange={e => onChange(e.currentTarget.value)}
+            value="badge-3"
+            label="Choice 3"
+            labelDescription="(details)"
+            badgeText="Badge"
+            badgeVariant="success"
+            mb={1}
+          >
+            Badge Text and Variant
+          </RadioBorderedBox>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## API
 
 <ArgsTable of={RadioBorderedBox} />

@@ -14,20 +14,20 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 ## Controlled
 
-<Description>Range //:TODO</Description>
+<Description>A range bar </Description>
 
 Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
 <Canvas>
-  <Story name="default controlled" height="150px">
-    <ControlValue value={[]}>{() => <Range />}</ControlValue>
+  <Story name="Basic" height="200px">
+    <Range />
   </Story>
 </Canvas>
 
 ## Single value
 
 <Canvas>
-  <Story name="single controlled" height="150px">
+  <Story name="Single value" height="150px">
     <ControlValue value={[3]}>
       {({ value, onChange }) => (
         <Range value={value} min={0} max={10} onChange={onChange} />
@@ -41,7 +41,7 @@ Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 For now, Range component will work with max two values.
 
 <Canvas>
-  <Story name="two value controlled" height="150px">
+  <Story name="Two values" height="150px">
     <ControlValue value={[3, 8]}>
       {({ value, onChange }) => (
         <Range value={value} min={0} max={15} onChange={onChange} />
@@ -49,5 +49,7 @@ For now, Range component will work with max two values.
     </ControlValue>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Range} />

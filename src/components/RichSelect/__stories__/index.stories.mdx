@@ -19,9 +19,22 @@ import * as animations from '../../../utils/animations'
   RichSelect is a component used to select a value between different options.
 </Description>
 
-## Basic
+<Canvas>
+  <Story name="Basic" height="175px">
+    <Box m={2}>
+      <RichSelect
+        isClearable
+        name="basic"
+        value={{ label: 'Option A', value: 'a' }}
+      >
+        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <RichSelect.Option value="b">Option B</RichSelect.Option>
+      </RichSelect>
+    </Box>
+  </Story>
+</Canvas>
 
-### Uncontrolled
+## Uncontrolled
 
 <Canvas>
   <Story name="Uncontrolled" height="175px">
@@ -39,7 +52,7 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Controlled
+## Controlled
 
 <Canvas>
   <Story name="Controlled" height="175px">
@@ -56,7 +69,7 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Custom Option
+## Custom Option
 
 <Description>
   You can customize options in a RichSelect by adding component inside of it.
@@ -81,7 +94,9 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### No Label
+## No Label
+
+Use `noTopLabel` to hide the label.
 
 <Canvas>
   <Story name="No Label" height="175px">
@@ -94,7 +109,9 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Searchable
+## Searchable
+
+Use `isSearchable` prop to make option searchable.
 
 <Canvas>
   <Story name="Searchable" height="175px">
@@ -107,7 +124,9 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Required
+## Required
+
+Use `required` to make this input mandatory
 
 <Canvas>
   <Story name="Required" height="175px">
@@ -120,7 +139,9 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Disabled
+## Disabled
+
+Use `disabled` to disable this input
 
 <Canvas>
   <Story name="Disabled" height="100px">
@@ -133,7 +154,9 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Option Disabled
+## Option Disabled
+
+Use `disabled` on `RichSelect.Option` component to disable a specific option.
 
 <Canvas>
   <Story name="Option Disabled" height="175px">
@@ -148,15 +171,15 @@ import * as animations from '../../../utils/animations'
   </Story>
 </Canvas>
 
-### Animated
+## Animated
 
-#### Description
+### Description
 
 You can easily add an animation to your RichSelect using `animationOnChange`, `animation` and `animationDuration` properties.<br/>
 The animation will be played when the value changes. Animation start when you select new value but also if you change the value
 of RichSelect with an external way (check example with button).
 
-#### Available animations
+### Available animations
 
 <ControlValue>
   {() => (
@@ -206,6 +229,8 @@ of RichSelect with an external way (check example with button).
 
 ## Multi
 
+Add `isMulti` prop to transform this input to a multi-select.
+
 ### Normal
 
 <Canvas>
@@ -243,6 +268,8 @@ of RichSelect with an external way (check example with button).
 
 ## Time
 
+Use `time` prop to transform the select into a time input
+
 ### Normal
 
 <Canvas>
@@ -270,6 +297,8 @@ of RichSelect with an external way (check example with button).
 </Canvas>
 
 ## Loading
+
+Use `isLoading` prop to display a loader on the right of the component.
 
 ### Demo
 
@@ -332,6 +361,6 @@ of RichSelect with an external way (check example with button).
   memoized `children`
 </Description>
 
-## Properties
+## API
 
 <ArgsTable of={RichSelect} />

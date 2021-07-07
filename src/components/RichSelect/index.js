@@ -659,14 +659,26 @@ RichSelectWithRef.defaultProps = {
 
 RichSelectWithRef.propTypes = {
   animation: PropTypes.oneOf(Object.keys(animations)),
+  /**
+   * Time of the animation
+   */
   animationDuration: PropTypes.number,
+  /**
+   * Play the animation when the value change
+   */
   animationOnChange: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   className: PropTypes.string,
+  /**
+   * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
+   */
   customComponents: PropTypes.shape({}),
+  /**
+   * Custom styles of the RichSelect. See [React select documentation](https://react-select.com/styles)
+   */
   customStyle: PropTypes.func,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
@@ -676,6 +688,9 @@ RichSelectWithRef.propTypes = {
   isSearchable: PropTypes.bool,
   labelId: PropTypes.string,
   name: PropTypes.string.isRequired,
+  /**
+   * Show/hide the label inside the component
+   */
   noTopLabel: PropTypes.bool,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
