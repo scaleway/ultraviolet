@@ -111,13 +111,6 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -127,13 +120,13 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   color: #4f0599;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -144,7 +137,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   animation: animation-0 linear 1500ms infinite;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,7 +151,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   align-items: baseline;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -166,13 +159,13 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   font-weight: 500;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-28 {
+.emotion-26 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -183,12 +176,12 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   width: 100%;
 }
 
-.emotion-30 {
+.emotion-28 {
   margin-left: 6px;
   font-weight: 500;
 }
 
-.emotion-34 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,7 +195,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   color: #4a4f62;
 }
 
-.emotion-38 {
+.emotion-34 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -211,7 +204,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   background: #F4306C;
 }
 
-.emotion-42 {
+.emotion-38 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -219,7 +212,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   font-weight: 400;
 }
 
-.emotion-46 {
+.emotion-42 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -230,7 +223,7 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
   width: 0%;
 }
 
-.emotion-48 {
+.emotion-44 {
   margin-left: 6px;
   font-weight: 400;
 }
@@ -279,88 +272,80 @@ exports[`Chart renders correctly when chart is hovered 1`] = `
       class="emotion-12 emotion-13"
     >
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-compute"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-compute"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-compute"
+          />
+          <div
+            class="emotion-18 emotion-19"
+            color="#4F1A81"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-compute"
-            />
-            <div
-              class="emotion-20 emotion-21"
-              color="#4F1A81"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                Compute
-              </span>
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-gpu"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-gpu"
-          tabindex="0"
+        <li
+          class="emotion-30 emotion-15"
         >
-          <li
-            class="emotion-34 emotion-17"
+          <div
+            class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-gpu"
+          />
+          <div
+            class="emotion-34 emotion-19"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-gpu"
-            />
-            <div
-              class="emotion-38 emotion-21"
-              color="#F4306C"
-            />
-            <div
-              class="emotion-22 emotion-23"
+            <span
+              class="emotion-38 emotion-23"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
             >
               <span
-                class="emotion-42 emotion-25"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-46 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-48 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+                class="emotion-42 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-44 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>
@@ -478,13 +463,6 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -494,13 +472,13 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   color: #4f0599;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -511,7 +489,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   animation: animation-0 linear 1500ms infinite;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -525,7 +503,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   align-items: baseline;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -533,13 +511,13 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   font-weight: 500;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-28 {
+.emotion-26 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -550,12 +528,12 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   width: 100%;
 }
 
-.emotion-30 {
+.emotion-28 {
   margin-left: 6px;
   font-weight: 500;
 }
 
-.emotion-34 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -569,7 +547,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   color: #4a4f62;
 }
 
-.emotion-38 {
+.emotion-34 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -578,7 +556,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   background: #F4306C;
 }
 
-.emotion-42 {
+.emotion-38 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -586,7 +564,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   font-weight: 400;
 }
 
-.emotion-46 {
+.emotion-42 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -597,7 +575,7 @@ exports[`Chart renders correctly when legend is focused 1`] = `
   width: 0%;
 }
 
-.emotion-48 {
+.emotion-44 {
   margin-left: 6px;
   font-weight: 400;
 }
@@ -646,88 +624,80 @@ exports[`Chart renders correctly when legend is focused 1`] = `
       class="emotion-12 emotion-13"
     >
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-compute"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-compute"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-compute"
+          />
+          <div
+            class="emotion-18 emotion-19"
+            color="#4F1A81"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-compute"
-            />
-            <div
-              class="emotion-20 emotion-21"
-              color="#4F1A81"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                Compute
-              </span>
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-gpu"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-gpu"
-          tabindex="0"
+        <li
+          class="emotion-30 emotion-15"
         >
-          <li
-            class="emotion-34 emotion-17"
+          <div
+            class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-gpu"
+          />
+          <div
+            class="emotion-34 emotion-19"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-gpu"
-            />
-            <div
-              class="emotion-38 emotion-21"
-              color="#F4306C"
-            />
-            <div
-              class="emotion-22 emotion-23"
+            <span
+              class="emotion-38 emotion-23"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
             >
               <span
-                class="emotion-42 emotion-25"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-46 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-48 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+                class="emotion-42 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-44 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>
@@ -845,13 +815,6 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -861,13 +824,13 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   color: #4f0599;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -878,7 +841,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   animation: animation-0 linear 1500ms infinite;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -892,7 +855,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   align-items: baseline;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -900,13 +863,13 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   font-weight: 500;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-28 {
+.emotion-26 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -917,12 +880,12 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   width: 100%;
 }
 
-.emotion-30 {
+.emotion-28 {
   margin-left: 6px;
   font-weight: 500;
 }
 
-.emotion-34 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -936,7 +899,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   color: #4a4f62;
 }
 
-.emotion-38 {
+.emotion-34 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -945,7 +908,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   background: #F4306C;
 }
 
-.emotion-42 {
+.emotion-38 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -953,7 +916,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   font-weight: 400;
 }
 
-.emotion-46 {
+.emotion-42 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -964,7 +927,7 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
   width: 0%;
 }
 
-.emotion-48 {
+.emotion-44 {
   margin-left: 6px;
   font-weight: 400;
 }
@@ -1013,88 +976,80 @@ exports[`Chart renders correctly when legend is hovered 1`] = `
       class="emotion-12 emotion-13"
     >
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-compute"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-compute"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-compute"
+          />
+          <div
+            class="emotion-18 emotion-19"
+            color="#4F1A81"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-compute"
-            />
-            <div
-              class="emotion-20 emotion-21"
-              color="#4F1A81"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                Compute
-              </span>
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="test-chart-chart-tooltip-gpu"
+        tabindex="0"
       >
-        <div
-          aria-describedby="test-chart-chart-tooltip-gpu"
-          tabindex="0"
+        <li
+          class="emotion-30 emotion-15"
         >
-          <li
-            class="emotion-34 emotion-17"
+          <div
+            class="emotion-16 emotion-17"
+            data-testid="test-chart-chart-tooltip-gpu"
+          />
+          <div
+            class="emotion-34 emotion-19"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="test-chart-chart-tooltip-gpu"
-            />
-            <div
-              class="emotion-38 emotion-21"
-              color="#F4306C"
-            />
-            <div
-              class="emotion-22 emotion-23"
+            <span
+              class="emotion-38 emotion-23"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
             >
               <span
-                class="emotion-42 emotion-25"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-46 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-48 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+                class="emotion-42 emotion-27"
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-44 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>
@@ -1543,13 +1498,6 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1559,13 +1507,13 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   color: #4a4f62;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -1574,7 +1522,7 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   background: #4F1A81;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1588,7 +1536,7 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   align-items: baseline;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -1596,13 +1544,13 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   font-weight: 400;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-28 {
+.emotion-26 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -1613,12 +1561,12 @@ exports[`Chart renders correctly with detailed legend 1`] = `
   width: 0%;
 }
 
-.emotion-30 {
+.emotion-28 {
   margin-left: 6px;
   font-weight: 400;
 }
 
-.emotion-38 {
+.emotion-34 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -1671,88 +1619,80 @@ exports[`Chart renders correctly with detailed legend 1`] = `
       class="emotion-12 emotion-13"
     >
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="chart-tooltip-compute"
+        tabindex="0"
       >
-        <div
-          aria-describedby="chart-tooltip-compute"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="chart-tooltip-compute"
+          />
+          <div
+            class="emotion-18 emotion-19"
+            color="#4F1A81"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="chart-tooltip-compute"
-            />
-            <div
-              class="emotion-20 emotion-21"
-              color="#4F1A81"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                Compute
-              </span>
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="chart-tooltip-gpu"
+        tabindex="0"
       >
-        <div
-          aria-describedby="chart-tooltip-gpu"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="chart-tooltip-gpu"
+          />
+          <div
+            class="emotion-34 emotion-19"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="chart-tooltip-gpu"
-            />
-            <div
-              class="emotion-38 emotion-21"
-              color="#F4306C"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                GPU Instances
-              </span>
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>
@@ -1855,13 +1795,6 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1871,13 +1804,13 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   color: #4a4f62;
 }
 
-.emotion-16 {
+.emotion-14 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-18 {
+.emotion-16 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -1897,7 +1830,7 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
     );
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1911,7 +1844,7 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   align-items: baseline;
 }
 
-.emotion-22 {
+.emotion-20 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -1919,13 +1852,13 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   font-weight: 400;
 }
 
-.emotion-24 {
+.emotion-22 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -1936,7 +1869,7 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
   width: 0%;
 }
 
-.emotion-28 {
+.emotion-26 {
   margin-left: 6px;
   font-weight: 400;
 }
@@ -2001,46 +1934,42 @@ exports[`Chart renders correctly with detailed legend and discount 1`] = `
       class="emotion-10 emotion-11"
     >
       <div
-        class="emotion-12 emotion-13"
+        aria-describedby="chart-tooltip-discount"
+        tabindex="0"
       >
-        <div
-          aria-describedby="chart-tooltip-discount"
-          tabindex="0"
+        <li
+          class="emotion-12 emotion-13"
         >
-          <li
+          <div
             class="emotion-14 emotion-15"
+            data-testid="chart-tooltip-discount"
+          />
+          <div
+            class="emotion-16 emotion-17"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-18 emotion-19"
           >
-            <div
-              class="emotion-16 emotion-17"
-              data-testid="chart-tooltip-discount"
-            />
-            <div
-              class="emotion-18 emotion-19"
-              color="#F4306C"
-            />
-            <div
+            <span
               class="emotion-20 emotion-21"
             >
-              <span
-                class="emotion-22 emotion-23"
-              >
-                GPU Instances
-              </span>
+              GPU Instances
+            </span>
+            <span
+              class="emotion-22 emotion-23"
+            >
               <span
                 class="emotion-24 emotion-25"
-              >
-                <span
-                  class="emotion-26 emotion-27"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-28 emotion-29"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-26 emotion-27"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>
@@ -2274,13 +2203,6 @@ exports[`Chart renders correctly with legend 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2290,13 +2212,13 @@ exports[`Chart renders correctly with legend 1`] = `
   color: #4a4f62;
 }
 
-.emotion-18 {
+.emotion-16 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -2305,7 +2227,7 @@ exports[`Chart renders correctly with legend 1`] = `
   background: #4F1A81;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2319,7 +2241,7 @@ exports[`Chart renders correctly with legend 1`] = `
   align-items: baseline;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -2327,13 +2249,13 @@ exports[`Chart renders correctly with legend 1`] = `
   font-weight: 400;
 }
 
-.emotion-26 {
+.emotion-24 {
   border-bottom: 1px solid #dce1eb;
   position: relative;
   width: 100%;
 }
 
-.emotion-28 {
+.emotion-26 {
   border-bottom: 1px solid #4f0599;
   position: absolute;
   left: 0;
@@ -2344,12 +2266,12 @@ exports[`Chart renders correctly with legend 1`] = `
   width: 0%;
 }
 
-.emotion-30 {
+.emotion-28 {
   margin-left: 6px;
   font-weight: 400;
 }
 
-.emotion-38 {
+.emotion-34 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
@@ -2402,88 +2324,80 @@ exports[`Chart renders correctly with legend 1`] = `
       class="emotion-12 emotion-13"
     >
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="chart-tooltip-compute"
+        tabindex="0"
       >
-        <div
-          aria-describedby="chart-tooltip-compute"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="chart-tooltip-compute"
+          />
+          <div
+            class="emotion-18 emotion-19"
+            color="#4F1A81"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="chart-tooltip-compute"
-            />
-            <div
-              class="emotion-20 emotion-21"
-              color="#4F1A81"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                Compute
-              </span>
+              Compute
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
       <div
-        class="emotion-14 emotion-15"
+        aria-describedby="chart-tooltip-gpu"
+        tabindex="0"
       >
-        <div
-          aria-describedby="chart-tooltip-gpu"
-          tabindex="0"
+        <li
+          class="emotion-14 emotion-15"
         >
-          <li
+          <div
             class="emotion-16 emotion-17"
+            data-testid="chart-tooltip-gpu"
+          />
+          <div
+            class="emotion-34 emotion-19"
+            color="#F4306C"
+          />
+          <div
+            class="emotion-20 emotion-21"
           >
-            <div
-              class="emotion-18 emotion-19"
-              data-testid="chart-tooltip-gpu"
-            />
-            <div
-              class="emotion-38 emotion-21"
-              color="#F4306C"
-            />
-            <div
+            <span
               class="emotion-22 emotion-23"
             >
-              <span
-                class="emotion-24 emotion-25"
-              >
-                GPU Instances
-              </span>
+              GPU Instances
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+            >
               <span
                 class="emotion-26 emotion-27"
-              >
-                <span
-                  class="emotion-28 emotion-29"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-30 emotion-31"
-            >
-              20
-            </div>
-          </li>
-        </div>
+              />
+            </span>
+          </div>
+          <div
+            class="emotion-28 emotion-29"
+          >
+            20
+          </div>
+        </li>
       </div>
     </ul>
   </div>

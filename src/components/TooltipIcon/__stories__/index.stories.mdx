@@ -1,5 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs'
 import TooltipIcon from '..'
+import Box from '../../Box'
 
 <Meta title="Components/Feedback/TooltipIcon" component={TooltipIcon} />
 
@@ -9,7 +10,9 @@ import TooltipIcon from '..'
 
 <Canvas>
   <Story name="basic">
-    <TooltipIcon tooltip="Saloute" />
+    <Box display="flex">
+      <TooltipIcon tooltip="Saloute" />
+    </Box>
   </Story>
 </Canvas>
 
@@ -17,9 +20,15 @@ import TooltipIcon from '..'
 
 <Canvas>
   <Story name="colors">
-    <TooltipIcon color="primary" tooltip="Scaleway is great" />
-    <TooltipIcon color="red" tooltip="Pay attention" />
-    <TooltipIcon color="green" tooltip="Go ahead" />
+    <Box display="flex">
+      <TooltipIcon color="primary" tooltip="Scaleway is great" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon color="red" tooltip="Pay attention" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon color="green" tooltip="Go ahead" />
+    </Box>
   </Story>
 </Canvas>
 
@@ -27,9 +36,15 @@ import TooltipIcon from '..'
 
 <Canvas>
   <Story name="size">
-    <TooltipIcon size={10} tooltip="I'm Joe" />
-    <TooltipIcon size={30} tooltip="I'm Jack" />
-    <TooltipIcon size={40} tooltip="I'm Averell" />
+    <Box display="flex">
+      <TooltipIcon size={10} tooltip="I'm Joe" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon size={30} tooltip="I'm Jack" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon size={40} tooltip="I'm Averell" />
+    </Box>
   </Story>
 </Canvas>
 
@@ -37,8 +52,14 @@ import TooltipIcon from '..'
 
 <Canvas>
   <Story name="name">
-    <TooltipIcon name="calculator" tooltip="1 + 1" />
-    <TooltipIcon name="eye" tooltip="I see you" />
-    <TooltipIcon name="delete" tooltip="Nooo don't remove me" />
+    <Box display="flex">
+      <TooltipIcon name="calculator" tooltip="1 + 1" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon name="eye" tooltip="I see you" />
+    </Box>
+    <Box display="flex">
+      <TooltipIcon name="delete" tooltip="Nooo don't remove me" />
+    </Box>
   </Story>
 </Canvas>

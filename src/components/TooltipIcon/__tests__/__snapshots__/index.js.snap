@@ -2,14 +2,7 @@
 
 exports[`TooltipIcon renders with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-3 {
+  .emotion-1 {
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
@@ -17,26 +10,22 @@ exports[`TooltipIcon renders with default props 1`] = `
   min-height: 20px;
 }
 
-.emotion-3.emotion-3 {
+.emotion-1.emotion-1 {
   vertical-align: middle;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    aria-describedby="test"
+    tabindex="0"
   >
-    <div
-      aria-describedby="test"
-      tabindex="0"
+    <svg
+      class="sc-ui-icon emotion-0 emotion-1 emotion-2"
+      viewBox="0 0 24 24"
     >
-      <svg
-        class="sc-ui-icon emotion-2 emotion-3 emotion-4"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z"
-        />
-      </svg>
-    </div>
+      <path
+        d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z"
+      />
+    </svg>
   </div>
   .emotion-1 {
   border-radius: 4px;
@@ -58,12 +47,6 @@ exports[`TooltipIcon renders with default props 1`] = `
   color: #fff;
   fill: #000;
   box-shadow: 0 2px 5px 5px rgba(165,165,205,0.3);
-}
-
-.emotion-1.emotion-1 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 [data-enter] .emotion-1 {

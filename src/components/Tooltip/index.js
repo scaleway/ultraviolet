@@ -10,7 +10,6 @@ import {
   useTooltipState,
 } from 'reakit/Tooltip'
 import Box from '../Box'
-import FlexBox from '../FlexBox'
 
 const variants = {
   black: ({ theme }) => css`
@@ -73,7 +72,7 @@ const Tooltip = ({
   }
 
   return (
-    <FlexBox>
+    <>
       <TooltipReference {...tooltip}>
         {typeof children === 'function'
           ? referenceProps => children(referenceProps)
@@ -85,7 +84,7 @@ const Tooltip = ({
           {text}
         </StyledTooltip>
       </ReakitTooltip>
-    </FlexBox>
+    </>
   )
 }
 
