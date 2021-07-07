@@ -349,8 +349,8 @@ const List = forwardRef(
       pageCount,
       perPage,
       rowsState,
-      selectAll,
       selectableItems,
+      selectAll,
       selectedItems,
       setRowState,
       sort.order,
@@ -384,6 +384,7 @@ const List = forwardRef(
                 Body: PaginatedBody,
                 Cell,
                 data,
+                pagination: paginationRef.current,
                 SelectBar,
                 ...variants[variant],
               })}
