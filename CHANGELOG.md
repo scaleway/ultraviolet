@@ -1,3 +1,21 @@
+## [0.92.0](https://github.com/scaleway/scaleway-ui/compare/v0.91.4...v0.92.0) (2021-07-07)
+
+
+### :package: Chore
+
+* **deps-dev:** bump husky from 7.0.0 to 7.0.1 ([#510](https://github.com/scaleway/scaleway-ui/issues/510)) ([31fd300](https://github.com/scaleway/scaleway-ui/commit/31fd3006bd3c94821da32fc49bca3c98192f82ac))
+* **deps-dev:** bump rollup from 2.52.7 to 2.52.8 ([#509](https://github.com/scaleway/scaleway-ui/issues/509)) ([334adcd](https://github.com/scaleway/scaleway-ui/commit/334adcdebb150ec3ac934b80fc6ddad234da760f))
+
+
+### :memo: Documentation
+
+* r components ([#494](https://github.com/scaleway/scaleway-ui/issues/494)) ([1f4452f](https://github.com/scaleway/scaleway-ui/commit/1f4452f82c635bfdaf94c5b0d326574e467e620a))
+
+
+### :gear: Features
+
+* access pagination from list render props ([#511](https://github.com/scaleway/scaleway-ui/issues/511)) ([57ca1da](https://github.com/scaleway/scaleway-ui/commit/57ca1da2001cd5346c32bdac40778fa657a53a95))
+
 ### [0.91.4](https://github.com/scaleway/scaleway-ui/compare/v0.91.3...v0.91.4) (2021-07-06)
 
 
