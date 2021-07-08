@@ -8,8 +8,8 @@ build({
   loader: {
     '.css': 'text',
     '.js': 'jsx',
-    '.png': 'base64',
-    '.svg': 'base64',
+    '.png': 'dataurl',
+    '.svg': 'dataurl',
   },
   outfile: 'dist/index.js',
   plugins: [
@@ -17,6 +17,7 @@ build({
       allowList: [
         'react-datepicker/dist/react-datepicker.min.css',
         'react-toastify/dist/ReactToastify.min.css',
+        'intl-tel-input/build/css/intlTelInput.css',
       ],
     }),
     dtsPlugin(),
