@@ -456,16 +456,9 @@ By passing a `ref` prop it will be hydrated with :
       return (
         <List
           perPage={5}
-          onLoadPage={({ page, perPage, sort }) =>
+          onLoadPage={({ perPage }) =>
             new Promise(resolve => {
               setTimeout(() => {
-                console.log(
-                  `Get data ${
-                    sort.prop
-                      ? `sorted by ${sort.prop} order ${sort.order}`
-                      : ''
-                  } for page ${page} and with a size of ${perPage}`,
-                )
                 const newData = generateData(perPage, getUUID())
                 setData([...data, ...newData])
                 resolve(newData)
@@ -475,7 +468,7 @@ By passing a `ref` prop it will be hydrated with :
           pageCount={20}
           multiselect
           idKey="id"
-          data={data}
+          initialData={data}
           columns={[
             { label: 'Name', sort: 'name' },
             { label: 'Description' },

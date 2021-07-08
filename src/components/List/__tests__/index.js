@@ -1551,6 +1551,7 @@ describe('List', () => {
         }
         multiselect
         idKey="id"
+        notSelectableText="Can't select"
         data={generateData(20)}
         columns={[
           { label: 'Name', sort: 'name' },
@@ -1621,7 +1622,6 @@ describe('List', () => {
           })
         }
         idKey="id"
-        data={generateData(20)}
         columns={[
           { label: 'Name', sort: 'name' },
           { label: 'Description' },
@@ -1653,7 +1653,18 @@ describe('List', () => {
             name: 'sort Name',
           })
           userEvent.click(nameHeader)
-          userEvent.click(nameHeader)
+          await waitFor(() =>
+            expect(
+              node.getByRole('button', {
+                name: 'Next',
+              }).disabled,
+            ).toBeFalsy(),
+          )
+          userEvent.click(
+            node.getByRole('button', {
+              name: 'Next',
+            }),
+          )
         },
       },
     ))
