@@ -47,7 +47,7 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="Variant" height="300px">
+  <Story name="Variant" height="350px">
     <Menu
       disclosure={() => (
         <Touchable title="menu" name="menu" ml={8}>
@@ -63,8 +63,22 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
       <Menu.Item variant="danger" to="/?path=/docs/components-menu--basic">
         Link Danger
       </Menu.Item>
+      <Menu.Item
+        variant="danger"
+        to="/?path=/docs/components-menu--basic"
+        disabled
+      >
+        Link Danger Disabled
+      </Menu.Item>
       <Menu.Item variant="nav" to="/?path=/docs/components-menu--basic">
         Link Nav
+      </Menu.Item>
+      <Menu.Item
+        variant="nav"
+        to="/?path=/docs/components-menu--basic"
+        disabled
+      >
+        Link Nav disabled
       </Menu.Item>
     </Menu>
   </Story>
@@ -110,6 +124,48 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
       >
         Link Nav
       </Menu.Item>
+    </Menu>
+  </Story>
+</Canvas>
+
+## Children Props
+
+<Description>
+  Use children props : - `toggle` to toggle menu with action
+</Description>
+
+<Canvas>
+  <Story name="Children Props" height="250px">
+    <Menu
+      disclosure={() => (
+        <Touchable title="menu" name="menu" ml={8}>
+          <Icon name="dots-horizontal" color="gray550" size={24} />
+        </Touchable>
+      )}
+    >
+      {({ toggle }) => (
+        <>
+          <Menu.Item>default</Menu.Item>
+          <Menu.Item onClick={toggle} variant="danger">
+            Danger
+          </Menu.Item>
+          <Menu.Item onClick={toggle} variant="nav">
+            Nav
+          </Menu.Item>
+          <Menu.Item onClick={toggle} variant="nav" disabled>
+            Nav disabled
+          </Menu.Item>
+          <Menu.Item onClick={toggle} variant="nav" disabled borderless>
+            Nav disabled borderless
+          </Menu.Item>
+          <Menu.Item
+            to="/?path=/docs/components-menu--disclosure"
+            onClick={toggle}
+          >
+            Menu Item Link
+          </Menu.Item>
+        </>
+      )}
     </Menu>
   </Story>
 </Canvas>
@@ -182,7 +238,3 @@ import { Box, Button, Icon, Modal, Touchable } from '../..'
 ## Menu.Item
 
 <ArgsTable of={Menu.Item} />
-
-## Menu.ItemLink
-
-<ArgsTable of={Menu.ItemLink} />

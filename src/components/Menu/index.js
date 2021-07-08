@@ -147,7 +147,7 @@ const Menu = ({
     name={name}
     placement={placement}
   >
-    {({ placement: localPlacement }) => (
+    {({ placement: localPlacement, toggle }) => (
       <div
         role="menu"
         css={[
@@ -156,7 +156,9 @@ const Menu = ({
           styles.align(align),
         ]}
       >
-        {children}
+        {typeof children === 'function'
+          ? children({ placement: localPlacement, toggle })
+          : children}
       </div>
     )}
   </Popper>
@@ -179,7 +181,7 @@ Menu.propTypes = {
   }),
   ariaLabel: PropTypes.string,
   baseId: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   disclosure: PropTypes.func.isRequired,
   hasArrow: PropTypes.bool,
   modal: PropTypes.bool,
