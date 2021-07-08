@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "strict": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "preserve",
+      "declaration": true,
+      "declarationDir": "./dist",
+    },
+    "include": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
