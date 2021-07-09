@@ -1,3 +1,18 @@
+### [0.92.1](https://github.com/scaleway/scaleway-ui/compare/v0.92.0...v0.92.1) (2021-07-09)
+
+
+### :bug: Bug Fixes
+
+* tooltip flexbox drop ([#512](https://github.com/scaleway/scaleway-ui/issues/512)) ([0ba8fe6](https://github.com/scaleway/scaleway-ui/commit/0ba8fe6b3b59f5279b6c71a62393407448f29fd9))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @storybook/addon-essentials from 6.3.3 to 6.3.4 ([#522](https://github.com/scaleway/scaleway-ui/issues/522)) ([9f679bb](https://github.com/scaleway/scaleway-ui/commit/9f679bbafbf23c86b7048e4a0677cd2b6568b790))
+* **deps-dev:** bump @storybook/builder-webpack5 from 6.3.2 to 6.3.3 ([#515](https://github.com/scaleway/scaleway-ui/issues/515)) ([11e06fd](https://github.com/scaleway/scaleway-ui/commit/11e06fdda5330abc4ccfdb1272930effd57990e1))
+* **deps-dev:** bump rollup from 2.52.8 to 2.53.0 ([#526](https://github.com/scaleway/scaleway-ui/issues/526)) ([8a99d40](https://github.com/scaleway/scaleway-ui/commit/8a99d40293d3d10180d0d4ee0bdeb66069c463b8))
+* **deps-dev:** bump rollup-plugin-visualizer from 5.5.1 to 5.5.2 ([#523](https://github.com/scaleway/scaleway-ui/issues/523)) ([9ff715a](https://github.com/scaleway/scaleway-ui/commit/9ff715a0d80079110aa45a4aefce4de2aa280c64))
+
 ## [0.92.0](https://github.com/scaleway/scaleway-ui/compare/v0.91.4...v0.92.0) (2021-07-07)
 
 
