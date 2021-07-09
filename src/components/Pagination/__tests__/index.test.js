@@ -1,12 +1,14 @@
-import { act, waitFor } from '@testing-library/react'
+import { ThemeProvider } from '@emotion/react'
+import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import Pagination, { usePagination } from '..'
+import Pagination, { usePaginationContext } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import theme from '../../../theme'
 import getPageNumbers from '../getPageNumbers'
 
 const ExampleChildren = () => {
-  const { pageData } = usePagination()
+  const { pageData } = usePaginationContext()
 
   return (
     <ul>
@@ -112,13 +114,15 @@ describe('Pagination', () => {
         RightComponent={() => "I'm a custom right component"}
         LeftComponent={() => "I'm a custom left component"}
         MiddleComponent={({
-          isLoadingPage,
-          page,
-          maxPage,
-          canLoadMore,
-          goToNextPage,
-          goToPage,
-          goToPreviousPage,
+          paginationState: {
+            isLoadingPage,
+            page,
+            maxPage,
+            canLoadMore,
+            goToNextPage,
+            goToPage,
+            goToPreviousPage,
+          },
         }) => {
           const pageNumbersToDisplay = getPageNumbers(page, maxPage, 5)
           const handlePageClick = pageNumber => () => {
@@ -336,7 +340,7 @@ describe('Pagination', () => {
           new Promise(resolve => {
             setTimeout(() => {
               resolve(false)
-            }, 300)
+            }, 500)
           })
         }
       >
@@ -348,10 +352,27 @@ describe('Pagination', () => {
           const nextButton = node.getByRole('button', { name: 'Next' })
           userEvent.click(nextButton)
           await node.findByText('Current : 11')
-          await waitFor(() =>
-            expect(nextButton.getAttribute('aria-disabled')).toBe('true'),
-          )
-          await node.findByText('Current : 10')
+        },
+      },
+    ))
+
+  test('should render correctly with pageClick and load and no emtpy response', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        perPage={5}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+        onLoadPage={loadMore}
+      >
+        <ExampleChildren />
+      </Pagination>,
+      {
+        transform: async node => {
+          userEvent.click(node.getByRole('button', { name: 'Last' }))
+          const nextButton = node.getByRole('button', { name: 'Next' })
+          userEvent.click(nextButton)
+          await node.findByText('Current : 11')
         },
       },
     ))
@@ -457,9 +478,60 @@ describe('Pagination', () => {
         transform: async () => {
           act(() => {
             ref.current.goToLastPage()
+            ref.current.reloadPage()
           })
         },
       },
+    )
+  })
+
+  test('should render correctly with controlled', async () => {
+    const fn = jest.fn()
+    await shouldMatchEmotionSnapshot(
+      <Pagination
+        page={1}
+        onChangePage={fn}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+      >
+        <ExampleChildren />
+      </Pagination>,
+      {
+        transform: async node => {
+          userEvent.click(node.getByRole('button', { name: 'Last' }))
+          const nextButton = node.getByRole('button', { name: 'Next' })
+          userEvent.click(nextButton)
+        },
+      },
+    )
+  })
+
+  test('should render correctly with props change', () => {
+    const { rerender } = render(
+      <ThemeProvider theme={theme}>
+        <Pagination
+          page={1}
+          initialData={Array.from({ length: 50 }, (_, index) => index).map(
+            value => `Item ${value}`,
+          )}
+        >
+          <ExampleChildren />
+        </Pagination>
+        ,
+      </ThemeProvider>,
+    )
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Pagination
+          page={2}
+          initialData={Array.from({ length: 50 }, (_, index) => index).map(
+            value => `Item ${value}`,
+          )}
+        >
+          <ExampleChildren />
+        </Pagination>
+      </ThemeProvider>,
     )
   })
 })

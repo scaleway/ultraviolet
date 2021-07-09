@@ -1,8 +1,8 @@
 import React from 'react'
-import { usePagination } from '..'
+import { usePaginationContext } from '..'
 
 const ExampleChildren = () => {
-  const { pageData } = usePagination()
+  const { pageData } = usePaginationContext()
 
   return (
     <ul>

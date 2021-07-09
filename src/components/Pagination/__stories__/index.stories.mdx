@@ -191,15 +191,16 @@ import ExampleChildren from './ExampleChildren'
           )}
           RightComponent={() => "I'm a custom right component"}
           LeftComponent={() => "I'm a custom left component"}
-          MiddleComponent={({
-            isLoadingPage,
-            page,
-            maxPage,
-            canLoadMore,
-            goToNextPage,
-            goToPage,
-            goToPreviousPage,
-          }) => {
+          MiddleComponent={({ paginationState }) => {
+            const {
+              isLoadingPage,
+              page,
+              maxPage,
+              canLoadMore,
+              goToNextPage,
+              goToPage,
+              goToPreviousPage,
+            } = paginationState
             const pageNumbersToDisplay = getPageNumbers(page, maxPage, 5)
             const handlePageClick = pageNumber => () => {
               goToPage(pageNumber)
