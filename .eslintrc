@@ -47,7 +47,8 @@
       "files": ["**/__stories__/**/*.mdx"],
       "parser": "eslint-mdx",
       "rules": {
-        "padding-line-between-statements": "off"
+        "padding-line-between-statements": "off",
+        "react/no-unescaped-entities": "off"
       }
     }
   ]
