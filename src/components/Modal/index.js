@@ -197,7 +197,7 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-const Modal = memo(
+const MemoModal = memo(
   ({
     animated,
     animation,
@@ -271,7 +271,9 @@ const Modal = memo(
   },
 )
 
-Modal.propTypes = {
+const Modal = props => <MemoModal {...props} />
+
+const modalPropTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   animation: PropTypes.oneOf(Object.keys(MODAL_ANIMATION)),
   ariaLabel: PropTypes.string,
@@ -293,7 +295,7 @@ Modal.propTypes = {
   width: PropTypes.oneOf(Object.keys(MODAL_WIDTH)),
 }
 
-Modal.defaultProps = {
+const defaultModalProp = {
   animated: false,
   animation: 'zoom',
   ariaLabel: 'modal',
@@ -313,5 +315,11 @@ Modal.defaultProps = {
   preventBodyScroll: true,
   width: 'small',
 }
+
+Modal.propTypes = modalPropTypes
+MemoModal.propTypes = modalPropTypes
+
+Modal.defaultProps = defaultModalProp
+MemoModal.defaultProps = defaultModalProp
 
 export default Modal
