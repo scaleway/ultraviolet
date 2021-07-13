@@ -2239,11 +2239,12 @@
     docker-names "^1.1.1"
 
 "@scaleway/use-i18n@^2.0.0":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@scaleway/use-i18n/-/use-i18n-2.1.4.tgz#bcbf6c544ed15d4001852d110e21d31b49e2a11f"
-  integrity sha512-pxsjORFamVPyvl+VU745V3pD4SQkUV9xj3n9nekVBdEu5AdUN9ES8Ewkmr113ByQO8HITYz/YGElu5O74/RlOQ==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@scaleway/use-i18n/-/use-i18n-2.2.0.tgz#3dccd56ae7783cfefe5d395f1859a7d449fbd1f3"
+  integrity sha512-5ZFD6zgi33Y5O+vNtHr+hgN9K4VQCJARJSvLpPaVknvPX2TtwNk0aMFKVesuac0I9jVSaz5Wr9R7tg4HKzCyIg==
   dependencies:
     date-fns "^2.19.0"
+    filesize "^6.4.0"
     intl-format-cache "^4.3.1"
     intl-messageformat "^9.5.3"
     intl-pluralrules "^1.2.2"
@@ -7869,6 +7870,11 @@ filesize@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.1.0.tgz#e81bdaa780e2451d714d71c0d7a4f3238d37ad00"
   integrity sha512-LpCHtPQ3sFx67z+uh2HnSyWSLLu5Jxo21795uRDuar/EOuYWXib5EmPaGIBuSnRqH2IODiKA2k5re/K9OnN/Yg==
+
+filesize@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.4.0.tgz#914f50471dd66fdca3cefe628bd0cde4ef769bcd"
+  integrity sha512-mjFIpOHC4jbfcTfoh4rkWpI31mF7viw9ikj/JyLoKzqlwG/YsefKfvYlYhdYdg/9mtK2z1AzgN/0LvVQ3zdlSQ==
 
 fill-range@^4.0.0:
   version "4.0.0"
