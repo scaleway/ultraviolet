@@ -676,8 +676,8 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
   transition: color 300ms;
   min-width: 110px;
   background-color: transparent;
-  color: #ef5774;
   display: inline-block;
+  color: #ef5774;
 }
 
 .emotion-1:hover,
@@ -701,6 +701,16 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 .emotion-1:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  color: #cf0f34;
+}
+
+.emotion-1:hover svg,
+.emotion-1:focus svg {
+  fill: #cf0f34;
 }
 
 .emotion-1 svg {
@@ -771,8 +781,8 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
   transition: color 300ms;
   min-width: 110px;
   background-color: transparent;
-  color: #ef5774;
   display: inline-block;
+  color: #ef5774;
 }
 
 .emotion-1:hover,
@@ -796,6 +806,16 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 .emotion-1:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  color: #cf0f34;
+}
+
+.emotion-1:hover svg,
+.emotion-1:focus svg {
+  fill: #cf0f34;
 }
 
 .emotion-1 svg {

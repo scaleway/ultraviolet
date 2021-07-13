@@ -8,13 +8,13 @@ const styles = {
     border: 0;
   `,
   danger: theme => css`
-    color: ${theme.colors.red};
     display: inline-block;
+    color: ${theme.colors.red};
     &:hover,
     &:focus {
-      color: ${theme.colors.darkRed};
+      color: ${theme.colors.crimson};
       svg {
-        fill: ${theme.colors.darkRed};
+        fill: ${theme.colors.crimson};
       }
     }
     svg {
