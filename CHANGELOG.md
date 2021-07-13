@@ -1,3 +1,18 @@
+### [0.93.1](https://github.com/scaleway/scaleway-ui/compare/v0.93.0...v0.93.1) (2021-07-13)
+
+
+### :package: Chore
+
+* **deps:** bump docker/setup-buildx-action from 1.5.0 to 1.5.1 ([#533](https://github.com/scaleway/scaleway-ui/issues/533)) ([6756c29](https://github.com/scaleway/scaleway-ui/commit/6756c293dab4729ff29a302837da35ea7d3f738f))
+* **deps-dev:** bump @scaleway/use-i18n from 2.1.4 to 2.2.0 ([#530](https://github.com/scaleway/scaleway-ui/issues/530)) ([5d5d0b1](https://github.com/scaleway/scaleway-ui/commit/5d5d0b1ae77e72ada8a97acf934c5a125294624f))
+* upgrade eslint-mdx ([#529](https://github.com/scaleway/scaleway-ui/issues/529)) ([8d7909d](https://github.com/scaleway/scaleway-ui/commit/8d7909d228a64e663ec5e1a21ebff301b7aa79e8))
+* **deps-dev:** bump rollup from 2.53.0 to 2.53.1 ([#531](https://github.com/scaleway/scaleway-ui/issues/531)) ([588edac](https://github.com/scaleway/scaleway-ui/commit/588edac3758616e9d80e91f2aaca11876d0cfffe))
+
+
+### :bug: Bug Fixes
+
+* **menu:** allow toggle props ([#521](https://github.com/scaleway/scaleway-ui/issues/521)) ([aa29f30](https://github.com/scaleway/scaleway-ui/commit/aa29f30fe7a5945816e0b0c18749999df10e1abb))
+
 ## [0.93.0](https://github.com/scaleway/scaleway-ui/compare/v0.92.1...v0.93.0) (2021-07-09)
 
 
