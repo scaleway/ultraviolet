@@ -46,13 +46,14 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
 }
 
 <nav
-    aria-label="Breadcrumb"
+    aria-label="breadcrumb"
     class="emotion-0 emotion-1"
   >
     <ol
       class="emotion-2 emotion-3"
     >
       <li
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         <a
@@ -63,6 +64,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
         </a>
       </li>
       <li
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         <a
@@ -74,6 +76,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-current="page"
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         Step 3
@@ -219,13 +222,15 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
 }
 
 <nav
-    aria-label="Breadcrumb"
+    activeindex="2"
+    aria-label="breadcrumb"
     class="emotion-0 emotion-1"
   >
     <ol
       class="emotion-2 emotion-3"
     >
       <li
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         <a
@@ -236,6 +241,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
         </a>
       </li>
       <li
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         <a
@@ -247,6 +253,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       </li>
       <li
         aria-current="page"
+        aria-disabled="false"
         class="emotion-4 emotion-5"
       >
         Step 3

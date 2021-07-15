@@ -6,13 +6,17 @@ import {
   Story,
 } from '@storybook/addon-docs'
 import Breadcrumbs, { Item } from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
 
 <Meta title="Components/Navigation/Breadcrumbs" component={Breadcrumbs} />
 
 # Breadcrumbs
 
 <Description>Creates a Breadcrumbs of hierarchical pages.</Description>
-<Description>Link are automatically supported with `to` prop.</Description>
+<Description>
+  Link are automatically supported with `to` prop using the `linkComponent` from
+  your theme configuration.
+</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -29,14 +33,14 @@ import Breadcrumbs, { Item } from '..'
 <Canvas>
   <Story name="Variants">
     <b>Bubble:</b>
-    <Breadcrumbs activeIndex={1} variant="bubble">
+    <Breadcrumbs selected={1} variant="bubble">
       <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
     </Breadcrumbs>
     <br />
     <b>Link:</b>
-    <Breadcrumbs activeIndex={1} variant="link">
+    <Breadcrumbs selected={1} variant="link">
       <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
@@ -44,20 +48,65 @@ import Breadcrumbs, { Item } from '..'
   </Story>
 </Canvas>
 
-## Active index
+## Selected
 
 <Description>
-  Active index is automatically determined as the last element. One can be
-  specified using `activeIndex` prop.
+  Selected is automatically determined as the last element. One can be specified
+  using `selected` prop.
 </Description>
 
 <Canvas>
-  <Story name="Active Index">
-    <Breadcrumbs activeIndex={1} variant="bubble">
+  <Story name="Selected">
+    <Breadcrumbs selected={1} variant="bubble">
       <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
       <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
     </Breadcrumbs>
+  </Story>
+</Canvas>
+
+## To
+
+<Description>
+  You can make `Breadcrumbs.Item` content be render as `a` tag with `to` prop.
+  For relative url the `linkComponent` from your theme configuration is used.
+</Description>
+
+<Canvas>
+  <Story name="To">
+    <Breadcrumbs variant="link">
+      <Breadcrumbs.Item to="/">Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item to="/">Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item to="/">Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+  </Story>
+</Canvas>
+
+## OnClick
+
+<Description>
+  You can make `Breadcrumbs.Item` clickable with `onClick` handler which pass
+  `(event, stepClicked)` params. You can also disabled the onClick handler by
+  using `disabled` prop
+</Description>
+
+<Canvas>
+  <Story name="OnClick">
+    <ControlValue value={1}>
+      {({ value, onChange }) => (
+        <Breadcrumbs variant="bubble" selected={value}>
+          <Breadcrumbs.Item onClick={(event, step) => onChange(step)}>
+            Step 1
+          </Breadcrumbs.Item>
+          <Breadcrumbs.Item onClick={(event, step) => onChange(step)}>
+            Step 2
+          </Breadcrumbs.Item>
+          <Breadcrumbs.Item disabled onClick={(event, step) => onChange(step)}>
+            Step 3
+          </Breadcrumbs.Item>
+        </Breadcrumbs>
+      )}
+    </ControlValue>
   </Story>
 </Canvas>
 
