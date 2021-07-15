@@ -1,3 +1,15 @@
+## [0.94.0](https://github.com/scaleway/scaleway-ui/compare/v0.93.1...v0.94.0) (2021-07-15)
+
+
+### :package: Chore
+
+* **deps-dev:** bump lint-staged from 11.0.0 to 11.0.1 ([#535](https://github.com/scaleway/scaleway-ui/issues/535)) ([7a5a55d](https://github.com/scaleway/scaleway-ui/commit/7a5a55dee6c8fd3b2b39d4a58ab69ae0dec6509c))
+
+
+### :gear: Features
+
+* merge progressbar into breadcrumbs ([#505](https://github.com/scaleway/scaleway-ui/issues/505)) ([0ffd177](https://github.com/scaleway/scaleway-ui/commit/0ffd17795aee9b5e08ed9c25b4b9e3302925eba6))
+
 ### [0.93.1](https://github.com/scaleway/scaleway-ui/compare/v0.93.0...v0.93.1) (2021-07-13)
 
 
