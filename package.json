@@ -25,9 +25,10 @@
     "linux"
   ],
   "sideEffects": false,
-  "main": "dist/module.js",
-  "module": "dist/module.js",
-  "jsnext:main": "dist/module.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "build:profile": "cross-env PROFILE=true yarn run build",
@@ -63,7 +64,7 @@
   },
   "size-limit": [
     {
-      "path": "dist/module.js",
+      "path": "dist/index.js",
       "import": "{ Box }",
       "webpack": false,
       "limit": "200 kB"
@@ -113,6 +114,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
     "@emotion/babel-preset-css-prop": "^11.0.0",
@@ -122,7 +124,7 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@rollup/plugin-babel": "^5.2.3",
-    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.1",
     "@rollup/plugin-url": "^6.0.0",
     "@scaleway/eslint-config-react": "^2.0.0",
     "@scaleway/use-i18n": "^2.0.0",
@@ -171,12 +173,16 @@
     "read-pkg": "^6.0.0",
     "regenerator-runtime": "^0.13.7",
     "rollup": "^2.38.0",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.5.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-visualizer": "^5.3.0",
     "semantic-release": "^17.3.7",
     "shx": "^0.3.3",
     "size-limit": "^5.0.1",
     "timekeeper": "^2.2.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.44.0",
     "zxcvbn": "^4.4.2"
   },
   "dependencies": {
