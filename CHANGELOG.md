@@ -1,3 +1,10 @@
+### [0.94.1](https://github.com/scaleway/scaleway-ui/compare/v0.94.0...v0.94.1) (2021-07-15)
+
+
+### :rocket: Performance
+
+* **size:** adding size script and workflow ([#536](https://github.com/scaleway/scaleway-ui/issues/536)) ([469580e](https://github.com/scaleway/scaleway-ui/commit/469580e4f4d46e09563482cd23287a52d349b21e))
+
 ## [0.94.0](https://github.com/scaleway/scaleway-ui/compare/v0.93.1...v0.94.0) (2021-07-15)
 
 
