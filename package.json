@@ -43,7 +43,8 @@
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "size": "yarn build && size-limit"
   },
   "lint-staged": {
     "*.js": [
@@ -60,6 +61,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "size-limit": [
+    {
+      "path": "dist/module.js",
+      "import": "{ Box }",
+      "webpack": false,
+      "limit": "200 kB"
+    }
+  ],
   "jest": {
     "testEnvironment": "jsdom",
     "collectCoverageFrom": [
@@ -123,6 +132,8 @@
     "@semantic-release/github": "^7.2.0",
     "@semantic-release/npm": "^7.0.10",
     "@semantic-release/release-notes-generator": "^9.0.1",
+    "@size-limit/file": "^5.0.1",
+    "@size-limit/preset-big-lib": "^5.0.1",
     "@storybook/addon-a11y": "^6.3.4",
     "@storybook/addon-actions": "^6.3.3",
     "@storybook/addon-docs": "^6.3.3",
@@ -164,6 +175,7 @@
     "rollup-plugin-visualizer": "^5.3.0",
     "semantic-release": "^17.3.7",
     "shx": "^0.3.3",
+    "size-limit": "^5.0.1",
     "timekeeper": "^2.2.0",
     "zxcvbn": "^4.4.2"
   },
