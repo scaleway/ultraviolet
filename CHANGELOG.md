@@ -1,3 +1,20 @@
+### [0.94.2](https://github.com/scaleway/scaleway-ui/compare/v0.94.1...v0.94.2) (2021-07-19)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @rollup/plugin-node-resolve from 13.0.1 to 13.0.2 ([#538](https://github.com/scaleway/scaleway-ui/issues/538)) ([2259cce](https://github.com/scaleway/scaleway-ui/commit/2259ccef47696d4439a74518c52a8af45f489142))
+* **deps-dev:** bump @scaleway/use-i18n from 2.2.0 to 2.2.1 ([#534](https://github.com/scaleway/scaleway-ui/issues/534)) ([dec1498](https://github.com/scaleway/scaleway-ui/commit/dec1498fa863901923b098d576e3376bd5b78510))
+* **deps-dev:** bump @testing-library/user-event from 13.1.9 to 13.2.0 ([#540](https://github.com/scaleway/scaleway-ui/issues/540)) ([0fab03a](https://github.com/scaleway/scaleway-ui/commit/0fab03a1f4e3eb075c057c5f3a0a20a707380e49))
+* **deps-dev:** bump eslint from 7.30.0 to 7.31.0 ([#539](https://github.com/scaleway/scaleway-ui/issues/539)) ([0217a58](https://github.com/scaleway/scaleway-ui/commit/0217a589ada479db4cd9d58f5c946a232d5e2880))
+* **deps-dev:** bump rollup from 2.53.1 to 2.53.2 ([#537](https://github.com/scaleway/scaleway-ui/issues/537)) ([d074545](https://github.com/scaleway/scaleway-ui/commit/d074545603c30e99ea4a35e45e3e4a2d7940ec2a))
+* **deps-dev:** bump webpack from 5.44.0 to 5.45.1 ([#541](https://github.com/scaleway/scaleway-ui/issues/541)) ([0ecfbf4](https://github.com/scaleway/scaleway-ui/commit/0ecfbf477d781b1437c174b76a0cc2ca3d5b0113))
+
+
+### :bug: Bug Fixes
+
+* list empty component ([#542](https://github.com/scaleway/scaleway-ui/issues/542)) ([cf2be4d](https://github.com/scaleway/scaleway-ui/commit/cf2be4db223d139183661d2ae5d99faacaf96b8d))
+
 ### [0.94.1](https://github.com/scaleway/scaleway-ui/compare/v0.94.0...v0.94.1) (2021-07-15)
 
 
