@@ -38,16 +38,23 @@ const Body = ({ children, ...props }) => {
     customLoader,
     isLoading,
     emptyListComponent,
+    perPage,
   } = useContext(ListContext)
 
-  if (isLoading === true) {
+  const defaultLoader = useMemo(() => {
+    if (perPage) {
+      return <Placeholder length={perPage} variant="list" />
+    }
+
     return (
-      customLoader ?? (
-        <Box display="flex" my={2} justifyContent="center" {...props}>
-          <ActivityIndicator active size={50} />
-        </Box>
-      )
+      <Box display="flex" my={2} justifyContent="center">
+        <ActivityIndicator active size={50} />
+      </Box>
     )
+  }, [perPage])
+
+  if (isLoading === true) {
+    return customLoader ?? defaultLoader
   }
 
   return (
@@ -291,14 +298,12 @@ const List = forwardRef(
     const emptyListComponentToRender = useMemo(() => {
       if (emptyListComponent) return emptyListComponent
 
-      return perPage ? (
-        <Placeholder length={perPage} variant="list" />
-      ) : (
+      return (
         <Typography variant="bodyA" m={2} textAlign="center">
           This list is empty.
         </Typography>
       )
-    }, [emptyListComponent, perPage])
+    }, [emptyListComponent])
 
     useEffect(() => {
       onLoadPageRef.current = onLoadPage
