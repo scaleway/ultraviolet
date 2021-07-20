@@ -35,7 +35,7 @@ jobs:
         cache: 'yarn'
     - run: yarn
     - run: yarn run test:coverage
-    - uses: codecov/codecov-action@v1.5.2
+    - uses: codecov/codecov-action@v2.0.1
   build:
     strategy:
       matrix:
