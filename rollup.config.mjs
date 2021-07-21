@@ -16,6 +16,7 @@ const targets = `
   last 2 versions,
   not IE > 0,
   not IE_Mob > 0
+  node > 14
 `
 
 const external = id =>
