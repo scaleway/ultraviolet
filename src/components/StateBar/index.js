@@ -5,7 +5,7 @@ import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import Typography from '../Typography'
 
-const State = ({ label, children, ...props }) => (
+export const State = ({ label, children, ...props }) => (
   <Typography
     as="div"
     variant="bodyA"
@@ -38,7 +38,7 @@ const line = css`
   margin-top: 12px;
 `
 
-const Bar = ({ unlimited, value, ...props }) => {
+export const Bar = ({ unlimited, value, ...props }) => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
     if (value >= 90) return 'warning'

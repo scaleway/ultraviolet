@@ -158,14 +158,16 @@ const Slider = ({ children, ...props }) => {
   )
 }
 
-Slider.Item = ({ as, ...props }) => (
+export const Item = ({ as, ...props }) => (
   <StyledBorderWrapper as={as} {...props} draggable="true" />
 )
 
-Slider.Item.propTypes = {
+Slider.Item = Item
+
+Item.propTypes = {
   as: PropTypes.string,
 }
-Slider.Item.defaultProps = {
+Item.defaultProps = {
   as: undefined,
 }
 

@@ -14,38 +14,50 @@ import StatusIndicator from '..'
 
 # StatusIndicator
 
-## Basic
-
-<Description>StatusIndicator</Description>
+<Description>Colorful circle that can be used to indicated state.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <StatusIndicator status="available" />
   </Story>
-  <Story name="unavailable">
-    <StatusIndicator status="unavailable" />
+</Canvas>
+
+## Status
+
+<Description>
+  Status prop can be used to show different state types and color.
+</Description>
+
+<Canvas>
+  <Story name="Status">
+    <StatusIndicator status="available" mr={1} />
+    <StatusIndicator status="unavailable" mr={1} />
+    <StatusIndicator status="available" mr={1} />
+    <StatusIndicator status="starting" mr={1} />
+    <StatusIndicator status="stopped_in_place" mr={1} />
   </Story>
-  <Story name="with-tooltip">
-    <StatusIndicator status="available" tooltip="Available" />
-  </Story>
-  <Story name="loading">
-    <StatusIndicator status="starting" tooltip="Starting" />
-  </Story>
-  <Story name="stopped_in_place">
-    <StatusIndicator status="stopped_in_place" tooltip="Stopped in place" />
-  </Story>
-  <Story name="animated">
+</Canvas>
+
+## Animated
+
+<Description>
+  Animated prop will make StatusIndicator blink. This prop is usually used for
+  temporary or "in progress" state.
+</Description>
+
+<Canvas>
+  <Story name="Animated">
     <StatusIndicator status="starting" tooltip="Starting animated" animated />
   </Story>
 </Canvas>
 
-## With custom status
+## Custom status
 
 <Canvas>
-  <Story name="custom-basic">
+  <Story name="Custom status">
     {() => {
       const statuses = {
-        fake_status: 'yellow',
+        fake_status: 'purple',
       }
       return <StatusIndicator status="fake_status" statuses={statuses} />
     }}

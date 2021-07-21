@@ -1,5 +1,11 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import StateBar from '..'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import StateBar, { Bar, State } from '..'
 
 <Meta title="Components/Data Display/StateBar" component={StateBar} />
 
@@ -7,10 +13,8 @@ import StateBar from '..'
 
 <Description>A description of a progress bar.</Description>
 
-## Basic
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <StateBar my={2}>
       <StateBar.State label="Label">your value</StateBar.State>
       <StateBar.Bar value={50} />
@@ -29,7 +33,7 @@ import StateBar from '..'
 </Description>
 
 <Canvas>
-  <Story name="unlimited">
+  <Story name="Unlimited">
     <StateBar my={2}>
       <StateBar.State label="Unlimited" />
       <StateBar.Bar unlimited />
@@ -40,10 +44,24 @@ import StateBar from '..'
 ## Progress
 
 <Canvas>
-  <Story name="progress">
+  <Story name="Progress">
     <StateBar my={2}>
       <StateBar.State label="Progress" />
       <StateBar.Bar progress />
     </StateBar>
   </Story>
 </Canvas>
+
+## API
+
+### `StateBar`
+
+<ArgsTable of={StateBar} />
+
+### `StateBar.State`
+
+<ArgsTable of={State} />
+
+### `StateBar.Bar`
+
+<ArgsTable of={Bar} />

@@ -7,8 +7,6 @@ import Box from '../../Box'
 
 # Stepper
 
-## Basic
-
 <Canvas>
   <Story name="Basic">
     {() => {
@@ -26,10 +24,10 @@ import Box from '../../Box'
   </Story>
 </Canvas>
 
-## With text
+## Text
 
 <Canvas>
-  <Story name="With Text">
+  <Story name="Text">
     {() => {
       const [value, setValue] = useState(0)
       return (
@@ -125,5 +123,7 @@ You can change step size of your `Stepper` component. If you set it to 10 for ex
     />
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Stepper} />
