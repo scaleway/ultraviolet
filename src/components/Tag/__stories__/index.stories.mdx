@@ -11,36 +11,43 @@ import Tag from '..'
 
 # Tag
 
-## Basic
-
-<Description>Tag</Description>
+<Description>Compact element to display information inside a box.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Tag>Basic</Tag>
   </Story>
 </Canvas>
 
-## Variant Bordered
+## Bordered
 
 <Canvas>
-  <Story name="bordered">
-    <Tag variant="bordered">Smoth</Tag>
+  <Story name="Bordered">
+    <Tag variant="bordered">Smooth</Tag>
   </Story>
 </Canvas>
 
-## With onClose
+## Close
+
+<Description>
+  Use `onClose` prop to execute an action when close button is pressed.
+</Description>
 
 <Canvas>
-  <Story name="on-close">
+  <Story name="Close">
     <Tag onClose={() => alert('closed')}>Close Me</Tag>
   </Story>
 </Canvas>
 
-## With onClose and isLoading
+## Loading
+
+<Description>
+  Use `isLoading` prop to display a loading component. If you also added
+  `onClose` prop, the loading component will override closing button.
+</Description>
 
 <Canvas>
-  <Story name="on-close-is-loading">
+  <Story name="Loading">
     <Tag onClose={() => alert('closed')} isLoading>
       You can&apos;t close me
     </Tag>
@@ -54,5 +61,7 @@ import Tag from '..'
     <Tag disabled>Can&apos;t touch this</Tag>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Tag} />

@@ -1,14 +1,22 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import Touchable from '..'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import Touchable, { BaseTouchable } from '..'
 
 <Meta title="Components/Touchable" component={Touchable} />
 
 # Touchable
 
-## Basic
+<Description>
+  Simple clickable component to execute action when clicked.
+</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Touchable>Basic touchable</Touchable>
   </Story>
 </Canvas>
@@ -18,7 +26,11 @@ import Touchable from '..'
 <Description>Disable using `disabled` prop.</Description>
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <Touchable disabled>Touchable</Touchable>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={BaseTouchable} />

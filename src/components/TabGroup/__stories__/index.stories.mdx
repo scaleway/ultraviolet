@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import TabGroup from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -6,10 +12,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 # TabGroup
 
-## Basic
+<Description>TabGroup gives a navigation made out of tabs.</Description>
 
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <ControlValue value={0}>
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
@@ -22,12 +28,12 @@ import ControlValue from '../../../__stories__/components/ControlValue'
   </Story>
 </Canvas>
 
-## Named tabs
+## Named
 
 Every `Tab` can have a `name` prop set, like this the selected tab will not be the index of the tab but it&apos;s name
 
 <Canvas>
-  <Story name="named">
+  <Story name="Named">
     <ControlValue value="first">
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
@@ -45,7 +51,7 @@ Every `Tab` can have a `name` prop set, like this the selected tab will not be t
 You can disable a `Tab` using the `disabled` prop
 
 <Canvas>
-  <Story name="disabled">
+  <Story name="Disabled">
     <ControlValue value={1}>
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
@@ -58,12 +64,12 @@ You can disable a `Tab` using the `disabled` prop
   </Story>
 </Canvas>
 
-## Custom tab component
+## Custom
 
 You can change the component used for the `Tab` using the `as` prop
 
 <Canvas>
-  <Story name="as">
+  <Story name="Custom">
     <ControlValue value={1}>
       {({ value, onChange }) => (
         <TabGroup onChange={onChange} selected={value}>
@@ -77,5 +83,7 @@ You can change the component used for the `Tab` using the `as` prop
     </ControlValue>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={TabGroup} />

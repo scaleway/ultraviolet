@@ -22,7 +22,7 @@ const styles = {
   `,
 }
 
-const BaseTouchable = ({
+export const BaseTouchable = ({
   innerRef,
   disabled,
   activeOpacity,

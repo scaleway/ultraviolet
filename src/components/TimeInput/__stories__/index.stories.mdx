@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import TimeInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -6,7 +12,21 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 # TimeInput
 
-## TimeInput Uncontrolled
+<Description>A simple input to choose a time in a list.</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <div style={{ height: '300px' }}>
+      <TimeInput
+        name="timeinput-test-basic"
+        placeholder="Time"
+        value={{ label: '03:30', value: '03:30' }}
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## Uncontrolled
 
 TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).
 
@@ -25,11 +45,13 @@ TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
     <div style={{ marginBottom: '16px' }}>
       <TimeInput name="timeinput-test-2" placeholder="Time" required />
     </div>
-    <TimeInput name="timeinput-test-3" placeholder="Time" error />
+    <div style={{ height: '300px' }}>
+      <TimeInput name="timeinput-test-3" placeholder="Time" error />
+    </div>
   </Story>
 </Canvas>
 
-## TimeInput Controlled
+## Controlled
 
 Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).
 
@@ -47,20 +69,22 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
         )}
       </ControlValue>
     </div>
-    <ControlValue value={{ label: '04:30', value: '04:30' }} mb={2}>
-      {({ value, onChange }) => (
-        <TimeInput
-          name="timeinput-test-5"
-          onChange={onChange}
-          placeholder="Time"
-          value={value}
-        />
-      )}
-    </ControlValue>
+    <div style={{ height: '300px' }}>
+      <ControlValue value={{ label: '04:30', value: '04:30' }} mb={2}>
+        {({ value, onChange }) => (
+          <TimeInput
+            name="timeinput-test-5"
+            onChange={onChange}
+            placeholder="Time"
+            value={value}
+          />
+        )}
+      </ControlValue>
+    </div>
   </Story>
 </Canvas>
 
-## TimeInput schedule
+## Schedule
 
 You can adjust the time between options with the `schedule` props.
 
@@ -96,17 +120,21 @@ By default, the `hours` option is selected.
         )}
       </ControlValue>
     </div>
-    <ControlValue value={{ label: '10:00', value: '10:00' }}>
-      {({ value, onChange }) => (
-        <TimeInput
-          name="timeinput-test-8"
-          placeholder="Time"
-          value={value}
-          onChange={onChange}
-        />
-      )}
-    </ControlValue>
+    <div style={{ height: '300px' }}>
+      <ControlValue value={{ label: '10:00', value: '10:00' }}>
+        {({ value, onChange }) => (
+          <TimeInput
+            name="timeinput-test-8"
+            placeholder="Time"
+            value={value}
+            onChange={onChange}
+          />
+        )}
+      </ControlValue>
+    </div>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={TimeInput} />

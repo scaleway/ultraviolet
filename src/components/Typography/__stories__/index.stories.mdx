@@ -1,5 +1,11 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import Typography, { typographyVariants } from '..'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import Typography, { OriginalTypography, typographyVariants } from '..'
 import { Box, Boxer } from '../..'
 
 <Meta title="Components/Foundation/Typography" component={Typography} />
@@ -35,7 +41,8 @@ import { Box, Boxer } from '../..'
 ## Ellipsis
 
 <Description>
-  Force the text on a single line using `ellipsis` prop.
+  `ellipsis` prop will force text to be display on a single line by adding `...`
+  after cropped text and will display a tooltip with full text when hovered.
 </Description>
 
 <Canvas>
@@ -62,7 +69,7 @@ import { Box, Boxer } from '../..'
 ## Max Lines
 
 <Description>
-  Force the text to not be more than n lines with the `maxLines` prop
+  Force the text to be less than n lines with the `maxLines` prop.
 </Description>
 
 <Canvas>
@@ -105,3 +112,7 @@ import { Box, Boxer } from '../..'
     </Typography>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={OriginalTypography} />

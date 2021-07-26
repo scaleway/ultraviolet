@@ -1,5 +1,11 @@
-import { Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import Table from '..'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import Table, { Body, BodyCell, Head, HeadCell, Row } from '..'
 import { Button } from '../..'
 
 <Meta title="Components/Data Display/Table" component={Table} />
@@ -8,10 +14,8 @@ import { Button } from '../..'
 
 <Description>A simple table component.</Description>
 
-## Basic
-
 <Canvas>
-  <Story name="basic">
+  <Story name="Basic">
     <Table>
       <Table.Head>
         <Table.Row>
@@ -36,7 +40,7 @@ import { Button } from '../..'
   </Story>
 </Canvas>
 
-## Hoverable row
+## Hoverable
 
 <Description>
   `Table.Tr` are hoverable and can make things appear when hovered. Add
@@ -45,7 +49,7 @@ import { Button } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="hoverable">
+  <Story name="Hoverable">
     <Table>
       <Table.Head>
         <Table.Row>
@@ -82,7 +86,7 @@ import { Button } from '../..'
 </Description>
 
 <Canvas>
-  <Story name="loader">
+  <Story name="Loader">
     <Table>
       <Table.Head>
         <Table.Row>
@@ -99,3 +103,29 @@ import { Button } from '../..'
     </Table>
   </Story>
 </Canvas>
+
+## API
+
+### `Table`
+
+<ArgsTable of={Table} />
+
+### `Table.Head`
+
+<ArgsTable of={Head} />
+
+### `Table.Row`
+
+<ArgsTable of={Row} />
+
+### `Table.HeadCell`
+
+<ArgsTable of={HeadCell} />
+
+### `Table.Body`
+
+<ArgsTable of={Body} />
+
+### `Table.BodyCell`
+
+<ArgsTable of={BodyCell} />
