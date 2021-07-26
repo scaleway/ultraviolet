@@ -6,7 +6,17 @@ import theme from '../src/theme'
 import { GlobalStyle } from '../src'
 
 const STORY_SORT = {
-  order: ['Home', 'Testing', 'Theme', 'Components'],
+  method: 'alphabetical',
+  locales: 'en-US',
+  includeName: false,
+  order: [
+    'Home',
+    'Documentation Guidelines',
+    'Testing',
+    'Theme',
+    'Components',
+    'Responsive',
+  ],
 }
 
 const ENV_PARAMETERS = {
