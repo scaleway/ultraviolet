@@ -65,7 +65,7 @@ const StyledPopover = styled(Popover, {
   border-radius: 4px;
   ${variantStyles}
 `
-const Popper = memo(
+const MemoPopper = memo(
   ({
     animated,
     backgroundColor,
@@ -112,7 +112,9 @@ const Popper = memo(
   },
 )
 
-Popper.propTypes = {
+const Popper = props => <MemoPopper {...props} />
+
+const popperPropTypes = {
   animated: PropTypes.number,
   backgroundColor: PropTypes.string,
   baseId: PropTypes.string,
@@ -149,7 +151,7 @@ Popper.propTypes = {
   visible: PropTypes.bool,
 }
 
-Popper.defaultProps = {
+const defaultPopperProps = {
   animated: 100,
   backgroundColor: undefined,
   baseId: '',
@@ -162,5 +164,11 @@ Popper.defaultProps = {
   variant: 'white',
   visible: false,
 }
+
+Popper.propTypes = popperPropTypes
+MemoPopper.propTypes = popperPropTypes
+
+Popper.defaultProps = defaultPopperProps
+MemoPopper.defaultProps = defaultPopperProps
 
 export default Popper

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-const Child = styled('div', {
+const StyledChild = styled('div', {
   shouldForwardProp: prop =>
     !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(prop),
 })`
@@ -12,6 +13,8 @@ const Child = styled('div', {
   ${({ flex }) => (flex ? `flex: ${flex};` : '')}
   ${({ order }) => (order ? `order: ${order};` : '')}
 `
+
+const Child = props => <StyledChild {...props} />
 
 Child.propTypes = {
   alignSelf: PropTypes.oneOf([
@@ -28,7 +31,16 @@ Child.propTypes = {
   shrink: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
-const FlexBox = styled(Child, {
+Child.defaultProps = {
+  alignSelf: undefined,
+  basis: undefined,
+  flex: undefined,
+  grow: undefined,
+  order: undefined,
+  shrink: undefined,
+}
+
+const StyledFlexBox = styled(Child, {
   shouldForwardProp: prop =>
     ![
       'inline',
@@ -49,6 +61,8 @@ const FlexBox = styled(Child, {
     justifyContent ? `justify-content: ${justifyContent};` : ''}
   ${({ wrap }) => (wrap ? `flex-wrap: ${wrap};` : '')}
 `
+
+const FlexBox = props => <StyledFlexBox {...props} />
 
 FlexBox.propTypes = {
   alignContent: PropTypes.oneOf([
@@ -82,6 +96,15 @@ FlexBox.propTypes = {
   ]),
   wrap: PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
   ...Child.propTypes,
+}
+
+FlexBox.defaultProps = {
+  alignContent: undefined,
+  alignItems: undefined,
+  direction: undefined,
+  inline: undefined,
+  justifyContent: undefined,
+  wrap: undefined,
 }
 
 FlexBox.Child = Child

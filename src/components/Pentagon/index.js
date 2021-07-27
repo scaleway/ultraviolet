@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-const Pentagon = styled('div', {
+const StyledPentagon = styled('div', {
   shouldForwardProp: prop => !['color', 'size'].includes(prop),
 })`
   display: flex;
@@ -15,6 +16,8 @@ const Pentagon = styled('div', {
     background-color: ${theme.colors[color] ?? color};
   `}
 `
+
+const Pentagon = props => <StyledPentagon {...props} />
 
 Pentagon.propTypes = {
   color: PropTypes.string,
