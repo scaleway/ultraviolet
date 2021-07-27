@@ -238,7 +238,7 @@ TextWithTooltip.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const OriginalTypography = forwardRef((props, ref) => {
+const Typography = forwardRef((props, ref) => {
   const Component = props.ellipsis ? TextWithTooltip : Text
 
   return <Component ref={ref} {...props} />
@@ -246,7 +246,7 @@ export const OriginalTypography = forwardRef((props, ref) => {
 
 export const typographyVariants = Object.keys(variantTags)
 
-OriginalTypography.propTypes = {
+const propTypes = {
   align: PropTypes.string,
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
@@ -260,9 +260,8 @@ OriginalTypography.propTypes = {
   tooltipProps: PropTypes.shape({}),
   variant: PropTypes.oneOf(typographyVariants),
 }
-Text.propTypes = OriginalTypography.propTypes
 
-OriginalTypography.defaultProps = {
+const defaultProps = {
   align: null,
   as: null,
   color: null,
@@ -276,8 +275,16 @@ OriginalTypography.defaultProps = {
   variant: 'default',
 }
 
-OriginalTypography.defaultProps = Text.defaultProps
+Typography.propTypes = propTypes
+Text.propTypes = Typography.propTypes
 
-const MemoizedTypography = memo(OriginalTypography)
+Typography.defaultProps = defaultProps
+
+Typography.defaultProps = Text.defaultProps
+
+const MemoizedTypography = memo(Typography)
+
+MemoizedTypography.propTypes = propTypes
+MemoizedTypography.defaultProps = defaultProps
 
 export default MemoizedTypography
