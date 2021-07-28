@@ -112,6 +112,7 @@ const getSelectStyles = ({
   }),
   menuList: (provided, state) => ({
     ...provided,
+    backgroundColor: theme.colors.white,
     maxHeight: '225px',
     ...((customStyle(state) || {}).menuList || {}),
   }),
