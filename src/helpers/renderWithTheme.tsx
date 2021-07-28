@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import createCache from '@emotion/cache'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
-import { render } from '@testing-library/react'
-import React from 'react'
+import { RenderOptions, render } from '@testing-library/react'
+import React, { ReactNode } from 'react'
 import defaultTheme from '../theme'
 
 const emotionCache = createCache({
@@ -11,7 +11,11 @@ const emotionCache = createCache({
 
 emotionCache.compat = true
 
-export default (component, options, theme = defaultTheme) =>
+export default (
+  component: ReactNode,
+  options: RenderOptions,
+  theme: typeof defaultTheme = defaultTheme,
+): ReturnType<typeof render> =>
   render(
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>{component}</ThemeProvider>
