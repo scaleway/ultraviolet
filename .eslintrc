@@ -32,9 +32,28 @@
     "@emotion/styled-import": "error",
     "@emotion/no-vanilla": "error",
     "@emotion/import-from-emotion": "error",
-    "@emotion/syntax-preference": ["error", "string"]
+    "@emotion/syntax-preference": ["error", "string"],
+
+    // This is temporary while we mix js/ts code. Can be removed once the migration is complete
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   },
   "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["tsconfig.json"]
+      },
+      "extends": ["@scaleway/react/typescript"]
+    },
     {
       "files": ["**/__stories__/*", "**/__tests__/*"],
       "rules": {
@@ -51,5 +70,13 @@
         "react/no-unescaped-entities": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    // This is temporary while we mix js/ts code. Can be removed once the migration is complete
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx", ".d.ts"]
+      }
+    }
+  }
 }

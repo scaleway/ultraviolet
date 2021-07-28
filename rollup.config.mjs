@@ -40,6 +40,7 @@ export default [{
       babelHelpers: 'runtime',
       babelrc: false,
       exclude: 'node_modules/**',
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.es', '.mjs'],
       plugins: [
         'babel-plugin-annotate-pure-calls',
         '@babel/plugin-transform-runtime',
@@ -56,6 +57,7 @@ export default [{
     }),
     nodeResolve({
       preferBuiltins: true,
+      extensions: [ '.mjs', '.js', '.json', '.ts', '.tsx' ],
     }),
     url({
       limit: 63488,
