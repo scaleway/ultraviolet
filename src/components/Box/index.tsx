@@ -21,22 +21,24 @@ const StyledBox = styled(x.div, {
   ${({ bordered }) => (bordered ? borderedStyles : null)}
 `
 
-type Props = {
+type BoxProps = {
   bordered?: boolean
   width?: number | string
   height?: number | string
   children?: ReactNode
-} & XStyledProps
+} & XStyledProps &
+  React.HTMLAttributes<HTMLElement>
 
-const forwardType = forwardRef<Element, Props>(() => null)
+const forwardType = forwardRef<Element, BoxProps>(() => null)
 
 type BoxType = typeof forwardType & {
-  withComponent?: (
+  withComponent: (
     element: string | ElementType<unknown>,
-  ) => FunctionComponent<Record<string, unknown>>
+  ) => FunctionComponent<BoxProps>
 }
 
-const Box: BoxType = forwardRef<Element, Props>(
+// @ts-expect-error We add withComponent just below
+const Box: BoxType = forwardRef<Element, BoxProps>(
   ({ width, height, bordered = false, ...props }, ref) => (
     // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
     <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
@@ -44,8 +46,8 @@ const Box: BoxType = forwardRef<Element, Props>(
 )
 
 Box.withComponent =
-  (element: string | ElementType<unknown>): FunctionComponent =>
-  (props: Record<string, unknown>) =>
+  (element: string | ElementType<unknown>): FunctionComponent<BoxProps> =>
+  props =>
     <Box as={element} {...props} />
 
 Box.propTypes = {

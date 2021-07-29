@@ -2,7 +2,9 @@ import React from 'react'
 import shouldMatchEmotionSnapshot from '../../helpers/shouldMatchEmotionSnapshot'
 import { getUUID, useUUID } from '../ids'
 
-const Component = ({ prefix = undefined } = {}) => useUUID(prefix)
+const Component = ({ prefix }: { prefix?: string } = {}) => (
+  <>{useUUID(prefix)}</>
+)
 
 describe('ids', () => {
   beforeAll(() => {
