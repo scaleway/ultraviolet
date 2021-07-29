@@ -109,9 +109,14 @@ const getSelectStyles = ({
   menu: (provided, state) => ({
     ...provided,
     ...((customStyle(state) || {}).menu || {}),
+    boxShadow: `0 0 0 1px ${transparentize(
+      0.9,
+      theme.colors.black,
+    )}, 0 4px 11px ${transparentize(0.9, theme.colors.black)}`,
   }),
   menuList: (provided, state) => ({
     ...provided,
+    backgroundColor: theme.colors.white,
     maxHeight: '225px',
     ...((customStyle(state) || {}).menuList || {}),
   }),
