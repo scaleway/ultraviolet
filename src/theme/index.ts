@@ -1,5 +1,5 @@
 /* eslint-disable sort-keys */
-import * as colors from './colors'
+import colors from './colors'
 
 const radii = {
   none: '0',
@@ -36,12 +36,15 @@ const fonts = {
   sansSerif: 'Asap, System, sans-serif',
 }
 
-export default {
+const theme = {
   colors,
   fonts,
-  radii,
-  screens,
   space,
+  screens,
+  radii,
 }
+
+export type SCWUITheme = typeof theme
+export default theme
 
 export { colors, space, radii, fonts, screens }

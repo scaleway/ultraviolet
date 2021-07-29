@@ -52,7 +52,11 @@
       "parserOptions": {
         "project": ["tsconfig.json"]
       },
-      "extends": ["@scaleway/react/typescript"]
+      "extends": ["@scaleway/react/typescript"],
+      "rules": {
+        "react/require-default-props": ["warn", {"ignoreFunctionalComponents": true}],
+        "react/jsx-props-no-spreading": "warn"
+      }
     },
     {
       "files": ["**/__stories__/*", "**/__tests__/*"],

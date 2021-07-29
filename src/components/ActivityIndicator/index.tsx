@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
+import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
+import { Color } from '../../theme/colors'
 
 const spin = keyframes`
   from {
@@ -14,7 +16,9 @@ const spin = keyframes`
   }
 `
 
-const StyledProgressbar = styled(CircularProgressbar)`
+const StyledProgressbar = styled(CircularProgressbar)<
+  Partial<CircularProgressbarProps> & { size: number | string; active: boolean }
+>`
   ${({ size }) => css`
     height: ${typeof size === 'string' ? size : `${size}px`};
     width: ${typeof size === 'string' ? size : `${size}px`};
@@ -27,15 +31,28 @@ const StyledProgressbar = styled(CircularProgressbar)`
     `}
 `
 
+type ActivityIndicatorProps = {
+  active?: boolean
+  color?: string
+  percentage?: number
+  size?: number | string
+  strokeWidth?: number
+  /**
+   * Text is placed in center of ProgressCircle.
+   */
+  text?: string
+  trailColor?: string
+}
+
 const ActivityIndicator = ({
-  percentage,
-  text,
-  size,
-  strokeWidth,
-  color,
-  trailColor,
-  active,
-}) => {
+  percentage = 20,
+  text = undefined,
+  size = 40,
+  strokeWidth = 16,
+  color = 'primary',
+  trailColor = 'gray350',
+  active = false,
+}: ActivityIndicatorProps): JSX.Element => {
   const theme = useTheme()
 
   return (
@@ -47,7 +64,7 @@ const ActivityIndicator = ({
       size={size}
       styles={{
         path: {
-          stroke: theme.colors[color] || color,
+          stroke: theme.colors[color as Color] || color,
           strokeLinecap: 'round',
         },
         root: {},
@@ -58,7 +75,7 @@ const ActivityIndicator = ({
           textAnchor: 'middle',
         },
         trail: {
-          stroke: theme.colors[trailColor] || trailColor,
+          stroke: theme.colors[trailColor as Color] || trailColor,
           strokeLinecap: 'round',
         },
       }}
@@ -77,16 +94,6 @@ ActivityIndicator.propTypes = {
    */
   text: PropTypes.string,
   trailColor: PropTypes.string,
-}
-
-ActivityIndicator.defaultProps = {
-  active: false,
-  color: 'primary',
-  percentage: 20,
-  size: 40,
-  strokeWidth: 16,
-  text: undefined,
-  trailColor: 'gray350',
 }
 
 export default ActivityIndicator
