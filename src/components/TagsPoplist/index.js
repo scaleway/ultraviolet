@@ -108,9 +108,18 @@ TagsPoplist.defaultProps = {
 }
 
 TagsPoplist.propTypes = {
+  /**
+   * This property define maximum characters length of all tags until it hide tags into tooltip.
+   */
   maxLength: PropTypes.number,
+  /**
+   * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
+   */
   maxTagWidth: PropTypes.number,
   tags: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * This property define number of tags to display before hiding them in tooltip.
+   */
   threshold: PropTypes.number,
 }
 

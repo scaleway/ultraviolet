@@ -52,7 +52,7 @@ const BaseTouchable = ({
   />
 )
 
-BaseTouchable.propTypes = {
+const propTypes = {
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   as: PropTypes.string,
   disabled: PropTypes.bool,
@@ -61,7 +61,7 @@ BaseTouchable.propTypes = {
   type: PropTypes.string,
 }
 
-BaseTouchable.defaultProps = {
+const defaultProps = {
   activeOpacity: null,
   as: 'button',
   disabled: false,
@@ -70,8 +70,15 @@ BaseTouchable.defaultProps = {
   type: null,
 }
 
+BaseTouchable.propTypes = propTypes
+
+BaseTouchable.defaultProps = defaultProps
+
 const forwardRef = (props, ref) => <BaseTouchable {...props} innerRef={ref} />
 const Touchable = React.forwardRef(forwardRef)
 Touchable.displayName = 'fwd(Touchable)'
+
+Touchable.propTypes = propTypes
+Touchable.defaultProps = defaultProps
 
 export default Touchable

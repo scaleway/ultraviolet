@@ -7,6 +7,7 @@ import {
 } from '@storybook/addon-docs'
 import Tags from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import Box from '../../Box'
 import Button from '../../Button'
 import Typography from '../../Typography'
 
@@ -14,9 +15,7 @@ import Typography from '../../Typography'
 
 # Tags
 
-## Basic
-
-<Description>Open your console to check onChange event</Description>
+<Description>Text input with multiple tag component in a row.</Description>
 
 <Canvas>
   <Story name="Basic">
@@ -30,45 +29,33 @@ import Typography from '../../Typography'
 
 ## Variants
 
-### Base
-
-This is the default variant when you don't override `variant` prop or set it to `base`.
-
 <Canvas>
-  <Story name="Variant base">
-    <div style={{ marginBottom: '16px' }}>
-      <Tags name="base" tags={['Scaleway', 'ui']} />
-    </div>
-    <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
+  <Story name="Variants">
+    <Box mb={2}>
+      <Typography variant="description" mb={1}>
+        base
+      </Typography>
+      <Tags name="base" variant="base" tags={['Scaleway', 'ui']} />
+    </Box>
+    <Box mb={2}>
+      <Typography variant="description" mb={1}>
+        no-border
+      </Typography>
+      <Tags name="noBorder" variant="no-border" tags={['Scaleway', 'ui']} />
+    </Box>
+    <Box mb={2}>
+      <Typography variant="description">bordered</Typography>
+      <Tags
+        name="bordered"
+        variant="bordered"
+        onChange={tags => console.log(tags)}
+        tags={['Scaleway', 'ui']}
+      />
+    </Box>
   </Story>
 </Canvas>
 
-### No Border
-
-By setting `variant` prop to `no-border` you can get this variant.
-
-<Canvas>
-  <Story name="Variant no-border">
-    <Tags name="noBorder" variant="no-border" tags={['Scaleway', 'ui']} />
-  </Story>
-</Canvas>
-
-### Bordered
-
-To obtain this you need to set the `variant` prop to `bordered`
-
-<Canvas>
-  <Story name="Variant bordered">
-    <Tags
-      name="bordered"
-      variant="bordered"
-      onChange={tags => console.log(tags)}
-      tags={['Scaleway', 'ui']}
-    />
-  </Story>
-</Canvas>
-
-## Custom placeholder
+## Placeholder
 
 <Canvas>
   <Story name="Placeholder">
@@ -80,7 +67,7 @@ To obtain this you need to set the `variant` prop to `bordered`
   </Story>
 </Canvas>
 
-## With a custom error handler
+## Error handler
 
 <Canvas>
   <Story name="Error handler">
@@ -115,7 +102,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ### String tag
 
 <Canvas>
-  <Story name="Controlled">
+  <Story name="Controlled String">
     <ControlValue value={['Scaleway', 'ui']}>
       {({ value, onChange }) => (
         <>
@@ -133,7 +120,7 @@ To obtain this you need to set the `variant` prop to `bordered`
 ### Object tag
 
 <Canvas>
-  <Story name="Controlled object">
+  <Story name="Controlled Object">
     <ControlValue value={[{ label: 'Scaleway' }, { label: 'ui' }]}>
       {({ value, onChange }) => (
         <>
@@ -152,5 +139,7 @@ To obtain this you need to set the `variant` prop to `bordered`
     </ControlValue>
   </Story>
 </Canvas>
+
+## API
 
 <ArgsTable of={Tags} />

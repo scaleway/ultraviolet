@@ -5,20 +5,24 @@ import React from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 
-const Table = styled(Box.withComponent('table'))`
+const StyledTable = styled(Box.withComponent('table'))`
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 `
 
-const Head = styled(Box.withComponent('thead'))`
+const Table = props => <StyledTable {...props} />
+
+const StyledHead = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.gray350};
   border-style: solid;
 `
 
-const Row = styled(Box.withComponent('tr'), {
+export const Head = props => <StyledHead {...props} />
+
+const StyledRow = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => !['highlight'].includes(prop),
 })`
   color: ${({ theme }) => theme.colors.gray700};
@@ -56,6 +60,8 @@ const Row = styled(Box.withComponent('tr'), {
   }
 `
 
+export const Row = props => <StyledRow {...props} />
+
 Row.propTypes = {
   highlight: PropTypes.bool,
 }
@@ -70,7 +76,7 @@ const cellStyle = css`
   line-height: 24px;
 `
 
-const HeadCell = styled(Box.withComponent('th'))`
+const StyledHeadCell = styled(Box.withComponent('th'))`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -80,11 +86,15 @@ const HeadCell = styled(Box.withComponent('th'))`
   ${cellStyle};
 `
 
-const BodyCell = styled(Box.withComponent('td'))`
+export const HeadCell = props => <StyledHeadCell {...props} />
+
+const StyledBodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
   white-space: nowrap;
   ${cellStyle};
 `
+
+export const BodyCell = props => <StyledBodyCell {...props} />
 
 const TBody = Box.withComponent('tbody')
 
@@ -100,7 +110,7 @@ const BodyLoader = props => (
   </TBody>
 )
 
-const Body = ({ loading, colSpan, ...props }) =>
+export const Body = ({ loading, colSpan, ...props }) =>
   loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />
 
 Body.propTypes = {

@@ -1,4 +1,10 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs'
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
 import ToastContainer, { toast } from '..'
 import { Boxer, Button } from '../..'
 
@@ -6,24 +12,60 @@ import { Boxer, Button } from '../..'
 
 # Toaster
 
-## Basic
+<Description>
+  Display short information about an event that happen in the interface in a
+  floating alert.
+</Description>
 
 <Canvas>
-  <Story name="default">
+  <Story name="Basic">
     <ToastContainer />
     <Boxer>
-      <Button mb={1} onClick={() => toast.success('This is success')}>
+      <Button
+        variant="success"
+        mb={1}
+        onClick={() => toast.success('This is success')}
+      >
         Success
       </Button>
-      <Button mb={1} onClick={() => toast.info('This is info')}>
+    </Boxer>
+  </Story>
+</Canvas>
+
+## Variants
+
+<Canvas>
+  <Story name="Variants">
+    <ToastContainer />
+    <Boxer>
+      <Button
+        variant="success"
+        mb={1}
+        onClick={() => toast.success('This is success')}
+      >
+        Success
+      </Button>
+      <Button variant="info" mb={1} onClick={() => toast.info('This is info')}>
         Info
       </Button>
-      <Button mb={1} onClick={() => toast.warn('This is warn')}>
-        Warn
+      <Button
+        variant="warning"
+        mb={1}
+        onClick={() => toast.warn('This is warning')}
+      >
+        Warning
       </Button>
-      <Button mb={1} onClick={() => toast.error('This is error')}>
+      <Button
+        variant="warning"
+        mb={1}
+        onClick={() => toast.error('This is error')}
+      >
         Error
       </Button>
     </Boxer>
   </Story>
 </Canvas>
+
+## API
+
+<ArgsTable of={ToastContainer} />

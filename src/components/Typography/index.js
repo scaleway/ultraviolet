@@ -246,7 +246,7 @@ const Typography = forwardRef((props, ref) => {
 
 export const typographyVariants = Object.keys(variantTags)
 
-Typography.propTypes = {
+const propTypes = {
   align: PropTypes.string,
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
@@ -260,9 +260,8 @@ Typography.propTypes = {
   tooltipProps: PropTypes.shape({}),
   variant: PropTypes.oneOf(typographyVariants),
 }
-Text.propTypes = Typography.propTypes
 
-Typography.defaultProps = {
+const defaultProps = {
   align: null,
   as: null,
   color: null,
@@ -276,8 +275,16 @@ Typography.defaultProps = {
   variant: 'default',
 }
 
+Typography.propTypes = propTypes
+Text.propTypes = Typography.propTypes
+
+Typography.defaultProps = defaultProps
+
 Typography.defaultProps = Text.defaultProps
 
 const MemoizedTypography = memo(Typography)
+
+MemoizedTypography.propTypes = propTypes
+MemoizedTypography.defaultProps = defaultProps
 
 export default MemoizedTypography
