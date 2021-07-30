@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Responsive utilities down should return null when unknown size 1`] = `null`;
+exports[`Responsive utilities down should return null when unknown size 1`] = `""`;
 
 exports[`Responsive utilities down works with large 1`] = `"@media (max-width: 992px) { border: 1px solid red; }"`;
 
@@ -12,7 +12,7 @@ exports[`Responsive utilities down works with xlarge 1`] = `"@media (max-width: 
 
 exports[`Responsive utilities down works with xsmall 1`] = `"@media (max-width: 0px) { border: 1px solid red; }"`;
 
-exports[`Responsive utilities up should return null when unknown size 1`] = `null`;
+exports[`Responsive utilities up should return null when unknown size 1`] = `""`;
 
 exports[`Responsive utilities up works with large 1`] = `"@media (min-width: 992px) { border: 1px solid red; }"`;
 
