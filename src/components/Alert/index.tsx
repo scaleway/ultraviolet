@@ -125,7 +125,7 @@ const Alert: FunctionComponent<AlertProps> = ({
   title,
   type = 'warning',
   ...props
-}) => (
+}: AlertProps): JSX.Element => (
   <StyledContainer type={type} variant={variant} {...props}>
     <Icon name={icon || typesDefaultIcons[type]} size={iconSize} />
     <StyledBox color="inherit">
