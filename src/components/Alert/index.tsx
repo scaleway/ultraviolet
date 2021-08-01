@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -6,7 +6,19 @@ import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
-const typesColors = theme => ({
+export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
+export const alertVariants = [
+  'filled',
+  'standard',
+  'outlined',
+  'transparent',
+] as const
+type AlertType = typeof alertTypes[number]
+type AlertVariant = typeof alertVariants[number]
+
+const typesColors = (
+  theme: Theme,
+): Record<AlertType, { primary: string; secondary: string }> => ({
   beta: {
     primary: theme.colors.beta,
     secondary: theme.colors.serenade,
@@ -25,7 +37,13 @@ const typesColors = theme => ({
   },
 })
 
-const variants = ({ type, theme }) => {
+const variants = ({
+  type,
+  theme,
+}: {
+  theme: Theme
+  type: AlertType
+}): Record<AlertVariant, SerializedStyles> => {
   const primary = typesColors(theme)[type]?.primary || theme.colors.warning
   const secondary = typesColors(theme)[type]?.secondary || theme.colors.pippin
 
@@ -50,13 +68,14 @@ const variants = ({ type, theme }) => {
   }
 }
 
-const variantStyles = ({ variant, ...props }) =>
+type ContainerProps = { variant: AlertVariant; type: AlertType }
+const variantStyles = ({
+  variant,
+  ...props
+}: ContainerProps & { theme: Theme }) =>
   variants(props)[variant] || variants(props).standard
 
-export const alertTypes = ['beta', 'info', 'success', 'warning']
-export const alertVariants = ['filled', 'standard', 'outlined', 'transparent']
-
-const typesDefaultIcons = {
+const typesDefaultIcons: Record<AlertType, string> = {
   beta: 'alert',
   info: 'information-outline',
   success: 'checkbox-marked-circle-outline',
@@ -64,8 +83,8 @@ const typesDefaultIcons = {
 }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['type', 'variant'].includes(prop),
-})`
+  shouldForwardProp: prop => !['type', 'variant'].includes(prop.toString()),
+})<ContainerProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -74,26 +93,39 @@ const StyledContainer = styled(Box, {
   ${variantStyles}
 `
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(Box)<{ color: string }>`
   display: flex;
   flex-direction: column;
 `
 
-const Title = ({ color, text }) => (
+type TitleProps = {
+  color: string
+  text: string
+}
+const Title = ({ color, text }: TitleProps) => (
   <Typography variant="description" color={color} ml={2}>
     {text}
   </Typography>
 )
 
+type AlertProps = {
+  variant?: AlertVariant
+  children: React.ReactNode
+  iconSize?: number
+  icon?: string
+  title?: string
+  type?: AlertType
+}
+
 const Alert = ({
-  variant,
+  variant = 'standard',
   children,
-  iconSize,
+  iconSize = 32,
   icon,
   title,
-  type,
+  type = 'warning',
   ...props
-}) => (
+}: AlertProps): JSX.Element => (
   <StyledContainer type={type} variant={variant} {...props}>
     <Icon name={icon || typesDefaultIcons[type]} size={iconSize} />
     <StyledBox color="inherit">
@@ -126,8 +158,8 @@ Alert.propTypes = {
    * Add a title at the top of your alert.
    */
   title: PropTypes.string,
-  type: PropTypes.oneOf(alertTypes),
-  variant: PropTypes.oneOf(alertVariants),
+  type: PropTypes.oneOf<AlertType>(alertTypes),
+  variant: PropTypes.oneOf<AlertVariant>(alertVariants),
 }
 
 export default Alert

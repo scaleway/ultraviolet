@@ -1,4 +1,5 @@
 export type XStyledProps = {
+  as?: string | unknown
   align?: string
   color?: string
   fontWeight?: number
@@ -7,5 +8,6 @@ export type XStyledProps = {
   mr?: string | number
   mt?: string | number
   mb?: string | number
+  verticalAlign?: string
   width?: string | number
 }
