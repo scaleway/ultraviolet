@@ -156,7 +156,7 @@ exports[`ActivityIndicator renders default props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color gray50 1`] = `
+exports[`ActivityIndicator renders with color beta 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -190,13 +190,13 @@ exports[`ActivityIndicator renders with color gray50 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #fafafb; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
     />
   </svg>
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color gray100 1`] = `
+exports[`ActivityIndicator renders with color black 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -230,13 +230,13 @@ exports[`ActivityIndicator renders with color gray100 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #f6f5f7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
     />
   </svg>
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color gray200 1`] = `
+exports[`ActivityIndicator renders with color blue 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -270,13 +270,13 @@ exports[`ActivityIndicator renders with color gray200 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #eeeeff; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
     />
   </svg>
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color gray300 1`] = `
+exports[`ActivityIndicator renders with color crimson 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -310,13 +310,13 @@ exports[`ActivityIndicator renders with color gray300 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #dce1eb; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      style="stroke: #cf0f34; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
     />
   </svg>
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color white 1`] = `
+exports[`ActivityIndicator renders with color darkBlue 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -350,7 +350,47 @@ exports[`ActivityIndicator renders with color white 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #fff; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      style="stroke: #2f52a1; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`ActivityIndicator renders with custom size 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  height: 100px;
+  width: 100px;
+}
+
+<svg
+    class="CircularProgressbar  emotion-0 emotion-1"
+    data-test-id="CircularProgressbar"
+    viewBox="0 0 100 100"
+  >
+    <path
+      class="CircularProgressbar-trail"
+      d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+      fill-opacity="0"
+      stroke-width="16"
+      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+    />
+    <path
+      class="CircularProgressbar-path"
+      d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+      fill-opacity="0"
+      stroke-width="16"
+      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
     />
   </svg>
 </DocumentFragment>
@@ -582,7 +622,7 @@ exports[`ActivityIndicator renders with text 100% 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with trailColor gray50 1`] = `
+exports[`ActivityIndicator renders with trailColor beta 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -604,7 +644,7 @@ exports[`ActivityIndicator renders with trailColor gray50 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #fafafb; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
     />
     <path
       class="CircularProgressbar-path"
@@ -622,7 +662,7 @@ exports[`ActivityIndicator renders with trailColor gray50 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with trailColor gray100 1`] = `
+exports[`ActivityIndicator renders with trailColor black 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -644,7 +684,7 @@ exports[`ActivityIndicator renders with trailColor gray100 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #f6f5f7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
     />
     <path
       class="CircularProgressbar-path"
@@ -662,7 +702,7 @@ exports[`ActivityIndicator renders with trailColor gray100 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with trailColor gray200 1`] = `
+exports[`ActivityIndicator renders with trailColor blue 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -684,7 +724,7 @@ exports[`ActivityIndicator renders with trailColor gray200 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #eeeeff; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
     />
     <path
       class="CircularProgressbar-path"
@@ -702,7 +742,7 @@ exports[`ActivityIndicator renders with trailColor gray200 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with trailColor gray300 1`] = `
+exports[`ActivityIndicator renders with trailColor crimson 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -724,7 +764,7 @@ exports[`ActivityIndicator renders with trailColor gray300 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #dce1eb; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      style="stroke: #cf0f34; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
     />
     <path
       class="CircularProgressbar-path"
@@ -742,7 +782,7 @@ exports[`ActivityIndicator renders with trailColor gray300 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with trailColor white 1`] = `
+exports[`ActivityIndicator renders with trailColor darkBlue 1`] = `
 <DocumentFragment>
   .emotion-0 {
   height: 40px;
@@ -764,7 +804,7 @@ exports[`ActivityIndicator renders with trailColor white 1`] = `
     "
       fill-opacity="0"
       stroke-width="16"
-      style="stroke: #fff; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      style="stroke: #2f52a1; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
     />
     <path
       class="CircularProgressbar-path"

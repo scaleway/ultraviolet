@@ -41,4 +41,7 @@ describe('ActivityIndicator', () => {
 
   test(`renders with text 100%`, () =>
     shouldMatchEmotionSnapshot(<ActivityIndicator text="100%" />))
+
+  test(`renders with custom size`, () =>
+    shouldMatchEmotionSnapshot(<ActivityIndicator size="100px" />))
 })

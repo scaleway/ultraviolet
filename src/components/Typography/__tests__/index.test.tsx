@@ -3,20 +3,29 @@ import ReactDOM from 'react-dom'
 import Typography, { typographyVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
+// TODO: Remove any but IDK what we can put here
 jest.mock(
   '../../Tooltip',
   () =>
-    ({ children, ...props }) =>
+    ({
+      children,
+      ...props
+    }: {
+      [x: string]: unknown
+      children: (props: { [x: string]: unknown }) => unknown
+    }) =>
       children(props),
 )
 
 describe('Typography', () => {
   beforeEach(() => {
-    ReactDOM.createPortal = jest.fn(element => element)
+    ;(ReactDOM.createPortal as unknown) = jest.fn(
+      element => element as unknown,
+    ) as unknown
   })
 
   afterEach(() => {
-    ReactDOM.createPortal.mockClear()
+    ;(ReactDOM.createPortal as jest.Mock).mockClear()
   })
 
   typographyVariants.forEach(variant => {

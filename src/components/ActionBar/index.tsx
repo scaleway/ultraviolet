@@ -7,7 +7,7 @@ import Box from '../Box'
 const HEIGHT = 56
 const SPACING = 20
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(Box)<{ rank: number }>`
   align-items: center;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.gray300};
@@ -25,7 +25,19 @@ const StyledBox = styled(Box)`
   z-index: 2;
 `
 
-const ActionBar = ({ children, rank, ...props }) => (
+type ActionBarProps = {
+  children: React.ReactNode
+  /**
+   * The position of the bar (start at 0)
+   */
+  rank?: number
+}
+
+const ActionBar = ({
+  children,
+  rank = 0,
+  ...props
+}: ActionBarProps): JSX.Element => (
   <StyledBox rank={rank} {...props}>
     {children}
   </StyledBox>
@@ -33,14 +45,7 @@ const ActionBar = ({ children, rank, ...props }) => (
 
 ActionBar.propTypes = {
   children: PropTypes.node.isRequired,
-  /**
-   * The position of the bar (start at 0)
-   */
   rank: PropTypes.number,
-}
-
-ActionBar.defaultProps = {
-  rank: 0,
 }
 
 export default ActionBar
