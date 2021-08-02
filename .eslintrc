@@ -54,7 +54,7 @@
       },
       "extends": ["@scaleway/react/typescript"],
       "rules": {
-        "react/require-default-props": ["warn", {"ignoreFunctionalComponents": true}],
+        "react/require-default-props": "off",
         "react/jsx-props-no-spreading": "warn"
       }
     },
