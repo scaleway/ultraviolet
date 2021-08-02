@@ -47,3 +47,5 @@ const theme = {
 
 export type SCWUITheme = typeof theme
 export default theme
+
+export { colors, space, radii, fonts, screens }

@@ -1,7 +1,7 @@
 import React from 'react'
 import ActivityIndicator from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import theme from '../../../theme'
+import { colors } from '../../../theme'
 
 describe('ActivityIndicator', () => {
   test(`renders default props`, () =>
@@ -16,7 +16,7 @@ describe('ActivityIndicator', () => {
   test(`renders with percentage 75`, () =>
     shouldMatchEmotionSnapshot(<ActivityIndicator active percentage={75} />))
 
-  Object.keys(theme.colors)
+  Object.keys(colors)
     .slice(0, 5)
     .forEach(color => {
       test(`renders with color ${color}`, () =>
@@ -26,7 +26,7 @@ describe('ActivityIndicator', () => {
   test(`renders with inlined color`, () =>
     shouldMatchEmotionSnapshot(<ActivityIndicator color="#ff0000" />))
 
-  Object.keys(theme.colors)
+  Object.keys(colors)
     .slice(0, 5)
     .forEach(color => {
       test(`renders with trailColor ${color}`, () =>

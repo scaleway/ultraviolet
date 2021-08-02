@@ -1,5 +1,6 @@
 import '@emotion/react'
-import { SCWUITheme } from './theme'
+import '@emotion/serialize'
+import { SCWUITheme } from '../src/theme'
 
 declare module '@emotion/react' {
   // https://emotion.sh/docs/typescript#define-a-theme
