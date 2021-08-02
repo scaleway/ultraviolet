@@ -1,3 +1,22 @@
+## [0.95.0](https://github.com/scaleway/scaleway-ui/compare/v0.94.3...v0.95.0) (2021-08-02)
+
+
+### :gear: Features
+
+* migration utils and theme to typescript ([#593](https://github.com/scaleway/scaleway-ui/issues/593)) ([66601c3](https://github.com/scaleway/scaleway-ui/commit/66601c34f354d4e0a2cbf80e1c267d807b2b1b6c))
+
+
+### :package: Chore
+
+* **deps-dev:** bump webpack from 5.47.1 to 5.48.0 ([#599](https://github.com/scaleway/scaleway-ui/issues/599)) ([4aea856](https://github.com/scaleway/scaleway-ui/commit/4aea856215c3bf10f7061dad0bc4ed6bdd9f399b))
+* start migration to typescript ([#589](https://github.com/scaleway/scaleway-ui/issues/589)) ([918fa8c](https://github.com/scaleway/scaleway-ui/commit/918fa8c88c74cec083b82adc693ba66245c14d87))
+* **deps:** bump react-countup from 5.1.0 to 5.2.0 ([#592](https://github.com/scaleway/scaleway-ui/issues/592)) ([37bbb8f](https://github.com/scaleway/scaleway-ui/commit/37bbb8f6340919f82f6eb38520de244a78d39eb3))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.7 to 7.14.9 ([#596](https://github.com/scaleway/scaleway-ui/issues/596)) ([a1a9853](https://github.com/scaleway/scaleway-ui/commit/a1a9853d6cceb6d5a6b367c28a26e538a04505c6))
+* **deps-dev:** bump @babel/preset-env from 7.14.8 to 7.14.9 ([#597](https://github.com/scaleway/scaleway-ui/issues/597)) ([279af0c](https://github.com/scaleway/scaleway-ui/commit/279af0ceb51aee67b438a7072510110ed428294d))
+* **deps-dev:** bump eslint from 7.31.0 to 7.32.0 ([#598](https://github.com/scaleway/scaleway-ui/issues/598)) ([1b60bd2](https://github.com/scaleway/scaleway-ui/commit/1b60bd28975c396d1459955af42fc6032b92ce4e))
+* **deps-dev:** bump rollup from 2.55.0 to 2.55.1 ([#591](https://github.com/scaleway/scaleway-ui/issues/591)) ([6d99cd0](https://github.com/scaleway/scaleway-ui/commit/6d99cd00508a5c046ab3bc47cb581da59d525afe))
+* **deps-dev:** bump webpack from 5.47.0 to 5.47.1 ([#590](https://github.com/scaleway/scaleway-ui/issues/590)) ([aadf293](https://github.com/scaleway/scaleway-ui/commit/aadf293372b35bc5fb35d828dca7e346ab37af15))
+
 ### [0.94.3](https://github.com/scaleway/scaleway-ui/compare/v0.94.2...v0.94.3) (2021-07-29)
 
 
