@@ -30,6 +30,7 @@ const screens = {
   large: 992,
   xlarge: 1200,
 }
+export type ScreenSize = keyof typeof screens
 
 const fonts = {
   monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
