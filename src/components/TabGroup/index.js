@@ -66,9 +66,29 @@ const TabGroup = ({ children, selected, onChange, className, ...props }) => {
 
   const [width, left] = computeBarProperties(tabsWidth, currentTabIndex)
 
+  const navigateWithArrow = ({ currentTarget, key }) => {
+    const activeTab = '[role="tab"]:focus'
+    const enabledTab = '[role="tab"]:not([aria-disabled="true"]'
+    if (key === 'ArrowLeft') {
+      const previousTab =
+        currentTarget.querySelector(activeTab)?.previousElementSibling ||
+        [...currentTarget.querySelectorAll(enabledTab)].pop()
+      previousTab?.focus()
+    } else if (key === 'ArrowRight') {
+      const nextTab =
+        currentTarget.querySelector(`${activeTab} ~ ${enabledTab}`) ||
+        currentTarget.querySelector(enabledTab)
+      nextTab?.focus()
+    }
+  }
+
   return (
     <Box {...props} position="relative">
-      <StyledTabs role="tablist" className={className}>
+      <StyledTabs
+        role="tablist"
+        className={className}
+        onKeyDown={navigateWithArrow}
+      >
         {flattenedChildren.map((child, index) => {
           const isSelected = child.props.name
             ? child.props.name === selected
