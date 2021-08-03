@@ -93,7 +93,6 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -109,6 +108,11 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-4:focus-visible {
+  outline: auto;
 }
 
 .emotion-4[aria-selected='true'] {
@@ -147,7 +151,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         First
       </span>
@@ -156,7 +160,7 @@ exports[`TabGroup renders correctly with Tabs and last disabled 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Second
       </span>
@@ -224,7 +228,6 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -240,6 +243,11 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-4:focus-visible {
+  outline: auto;
 }
 
 .emotion-4[aria-selected='true'] {
@@ -279,7 +287,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         First
       </span>
@@ -299,7 +307,7 @@ exports[`TabGroup renders correctly with Tabs name 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Very long tab name
       </span>
@@ -358,7 +366,6 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -374,6 +381,11 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-4:focus-visible {
+  outline: auto;
 }
 
 .emotion-4[aria-selected='true'] {
@@ -421,7 +433,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Second
       </span>
@@ -430,7 +442,7 @@ exports[`TabGroup renders correctly with Tabs with prop 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Very long tab name
       </span>
@@ -489,7 +501,6 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -505,6 +516,11 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-4:focus-visible {
+  outline: auto;
 }
 
 .emotion-4[aria-selected='true'] {
@@ -545,7 +561,6 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -561,6 +576,11 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-9:focus-visible {
+  outline: auto;
 }
 
 .emotion-9[aria-selected='true'] {
@@ -599,7 +619,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         First
       </div>
@@ -608,7 +628,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
         aria-selected="false"
         class="emotion-4 emotion-5"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Second
       </a>
@@ -617,7 +637,7 @@ exports[`TabGroup renders correctly with custom Tabs component 1`] = `
         aria-selected="false"
         class="emotion-5 emotion-9 emotion-1"
         role="tab"
-        tabindex="0"
+        tabindex="-1"
       >
         Very long tab name
       </div>

@@ -26,7 +26,6 @@ exports[`Tab renders correctly 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -42,6 +41,11 @@ exports[`Tab renders correctly 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -63,7 +67,7 @@ exports[`Tab renders correctly 1`] = `
     aria-selected="false"
     class="emotion-0 emotion-1"
     role="tab"
-    tabindex="0"
+    tabindex="-1"
   >
     Test tab
   </span>
@@ -96,7 +100,6 @@ exports[`Tab renders correctly when as component 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -112,6 +115,11 @@ exports[`Tab renders correctly when as component 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -134,7 +142,7 @@ exports[`Tab renders correctly when as component 1`] = `
     aria-selected="false"
     class="emotion-0 emotion-1"
     role="tab"
-    tabindex="0"
+    tabindex="-1"
   >
     Test tab
   </a>
@@ -167,7 +175,6 @@ exports[`Tab renders correctly when disabled 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -183,6 +190,11 @@ exports[`Tab renders correctly when disabled 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -205,7 +217,7 @@ exports[`Tab renders correctly when disabled 1`] = `
     aria-selected="false"
     class="emotion-0 emotion-1"
     role="tab"
-    tabindex="0"
+    tabindex="-1"
   >
     Test tab
   </span>
@@ -238,7 +250,6 @@ exports[`Tab renders correctly when selected 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -254,6 +265,11 @@ exports[`Tab renders correctly when selected 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -309,7 +325,6 @@ exports[`Tab renders correctly with variant default 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -325,6 +340,11 @@ exports[`Tab renders correctly with variant default 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -347,7 +367,7 @@ exports[`Tab renders correctly with variant default 1`] = `
     aria-selected="false"
     class="emotion-0 emotion-1"
     role="tab"
-    tabindex="0"
+    tabindex="-1"
   >
     Test tab
   </span>
@@ -380,7 +400,6 @@ exports[`Tab renders correctly with variant primary 1`] = `
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -396,6 +415,11 @@ exports[`Tab renders correctly with variant primary 1`] = `
   color: #4f0599;
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
+}
+
+.emotion-0:focus-visible {
+  outline: auto;
 }
 
 .emotion-0[aria-selected='true'] {
@@ -418,7 +442,7 @@ exports[`Tab renders correctly with variant primary 1`] = `
     aria-selected="false"
     class="emotion-0 emotion-1"
     role="tab"
-    tabindex="0"
+    tabindex="-1"
   >
     Test tab
   </span>
