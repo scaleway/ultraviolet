@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Typography, { typographyVariants } from '..'
