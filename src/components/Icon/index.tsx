@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import { Color } from '../../theme/colors'
-import { XStyledProps } from '../../types'
 import Box from '../Box'
 
 // Non Material Design icons: 'send',
