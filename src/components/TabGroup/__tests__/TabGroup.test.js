@@ -1,6 +1,9 @@
+import { ThemeProvider } from '@emotion/react'
+import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
 import TabGroup from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import theme from '../../../theme'
 import Box from '../../Box'
 
 describe('TabGroup', () => {
@@ -48,4 +51,26 @@ describe('TabGroup', () => {
         </TabGroup.Tab>
       </TabGroup>,
     ))
+  test('allows arrow navigation', () => {
+    const { getByRole, getByText } = render(
+      <ThemeProvider theme={theme}>
+        <TabGroup>
+          <TabGroup.Tab>First</TabGroup.Tab>
+          <TabGroup.Tab>Second</TabGroup.Tab>
+          <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
+        </TabGroup>
+      </ThemeProvider>,
+    )
+    const tablist = getByRole('tablist')
+    fireEvent.keyDown(tablist, { key: 'ArrowRight' })
+    expect(getByText('First')).toBe(document.activeElement)
+    fireEvent.keyDown(tablist, { key: 'ArrowRight' })
+    expect(getByText('Second')).toBe(document.activeElement)
+    fireEvent.keyDown(tablist, { key: 'ArrowRight' }) // skip disabled tab & cycle
+    expect(getByText('First')).toBe(document.activeElement)
+    fireEvent.keyDown(tablist, { key: 'ArrowLeft' }) // cycle && skip disabled tab
+    expect(getByText('Second')).toBe(document.activeElement)
+    fireEvent.keyDown(tablist, { key: 'ArrowLeft' })
+    expect(getByText('First')).toBe(document.activeElement)
+  })
 })
