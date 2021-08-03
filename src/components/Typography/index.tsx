@@ -12,7 +12,6 @@ import React, {
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color } from '../../theme/colors'
-import { XStyledProps } from '../../types'
 import Box from '../Box'
 import Tooltip, { TooltipProps } from '../Tooltip'
 
@@ -69,49 +68,41 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
           `
         : '',
     command: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            font-family: ${theme.fonts.monospace};
-            font-size: 13px;
-            font-weight: 500;
-            border-radius: ${theme.radii.default};
-            color: ${theme.colors.gray700};
-            background-color: ${theme.colors.gray100};
-            padding: 8px;
-          `
-        : '',
+      css`
+        font-family: ${theme?.fonts.monospace};
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: ${theme?.radii.default};
+        color: ${theme?.colors.gray700};
+        background-color: ${theme?.colors.gray100};
+        padding: 8px;
+      `,
     description: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            color: ${theme.colors.gray950};
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-          `
-        : '',
+      css`
+        color: ${theme?.colors.gray950};
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      `,
     ellipsis: () => css`
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     `,
     hero: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            color: ${theme.colors.gray950};
-            font-size: 35px;
-            line-height: 41px;
-            margin-bottom: 72px;
-          `
-        : '',
+      css`
+        color: ${theme?.colors.gray950};
+        font-size: 35px;
+        line-height: 41px;
+        margin-bottom: 72px;
+      `,
     lead: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            color: ${theme.colors.gray950};
-            font-size: 25px;
-            line-height: 25px;
-            margin-bottom: 0;
-          `
-        : '',
+      css`
+        color: ${theme?.colors.gray950};
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 0;
+      `,
     'lead-block': () => css`
       margin-bottom: 16px;
       margin-top: 48px;
@@ -126,36 +117,30 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
       }
     `,
     samplecode: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            background-color: ${theme.colors.gray100};
-            color: ${theme.colors.gray700};
-            font-size: 12px;
-            line-height: 16px;
-            padding: 4px;
-          `
-        : '',
+      css`
+        background-color: ${theme?.colors.gray100};
+        color: ${theme?.colors.gray700};
+        font-size: 12px;
+        line-height: 16px;
+        padding: 4px;
+      `,
     tiny: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            color: ${theme.colors.gray550};
-            font-size: 12px;
-            line-height: 16px;
-          `
-        : '',
+      css`
+        color: ${theme?.colors.gray550};
+        font-size: 12px;
+        line-height: 16px;
+      `,
     title: ({ theme }: StyleProps) =>
-      theme
-        ? css`
-            color: ${theme.colors.gray950};
-            font-size: 21px;
-            line-height: 24px;
-          `
-        : '',
+      css`
+        color: ${theme?.colors.gray950};
+        font-size: 21px;
+        line-height: 24px;
+      `,
   }
 
 type TypographyVariant = keyof typeof styles
 
-const variantTags: Record<string, string> = {
+const variantTags = {
   bodyA: 'p',
   bodyB: 'p',
   bodyC: 'p',
@@ -209,7 +194,7 @@ const StyledText = styled(Box, {
   shouldForwardProp: prop =>
     !['ellipsis', 'variant', 'maxLines', 'text'].includes(prop.toString()),
 })<StyledTextProps>`
-  color: ${({ theme }) => theme.colors.gray700};
+  color: ${({ theme }) => theme?.colors.gray700};
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
@@ -257,7 +242,12 @@ const Text = forwardRef(
       {...tooltipProps}
       {...props}
       width={width}
-      as={as || (variant ? variantTags[variant] : undefined)}
+      as={
+        as ||
+        (variant && variant in variantTags
+          ? variantTags[variant as keyof typeof variantTags]
+          : undefined)
+      }
       color={color}
       variant={variant}
       align={align}
