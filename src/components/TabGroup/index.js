@@ -66,15 +66,15 @@ const TabGroup = ({ children, selected, onChange, className, ...props }) => {
 
   const [width, left] = computeBarProperties(tabsWidth, currentTabIndex)
 
-  const navigateWithArrow = ({ currentTarget, key }) => {
+  const navigateWithArrow = ({ currentTarget, code }) => {
     const activeTab = '[role="tab"]:focus'
     const enabledTab = '[role="tab"]:not([aria-disabled="true"]'
-    if (key === 'ArrowLeft') {
+    if (code === 'ArrowLeft') {
       const previousTab =
         currentTarget.querySelector(activeTab)?.previousElementSibling ||
         [...currentTarget.querySelectorAll(enabledTab)].pop()
       previousTab?.focus()
-    } else if (key === 'ArrowRight') {
+    } else if (code === 'ArrowRight') {
       const nextTab =
         currentTarget.querySelector(`${activeTab} ~ ${enabledTab}`) ||
         currentTarget.querySelector(enabledTab)
