@@ -535,11 +535,4 @@ Icon.propTypes = {
   verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
 }
 
-Icon.defaultProps = {
-  color: 'currentColor',
-  name: 'circle',
-  size: '1em',
-  verticalAlign: 'middle',
-}
-
 export default Icon

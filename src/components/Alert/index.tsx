@@ -142,14 +142,6 @@ Title.propTypes = {
   text: PropTypes.string.isRequired,
 }
 
-Alert.defaultProps = {
-  icon: undefined,
-  iconSize: 32,
-  title: undefined,
-  type: 'warning',
-  variant: 'standard',
-}
-
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.string,
