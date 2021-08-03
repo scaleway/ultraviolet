@@ -81,18 +81,18 @@ $ yarn global add yalc # Make sure to have the yalc binary
 
 ```bash
 $ cd scaleway-ui
-$ yarn run build # Build the package
-$ yalc publish
+$ yarn build && yalc publish
 $ # Now it's ready to install in your project
 $ cd ../project-something
 $ yalc add @scaleway/ui --yarn
+$ cd ../scaleway-ui
 $ # If you do some changes into your package
-$ cd scaleway-ui
-$ yarn run build
-$ yalc publish --push # --push will automatically update the package on projects where it have been added
+$ yarn build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
 ```
 
-> :warning: `yalc` create a `yalc.lock` and updates the `package.json` in the target project. Make sure to not commit these changes
+> :warning: since [1.0.0.pre.51 (2021-04-23)](https://github.com/wclr/yalc/blob/master/CHANGELOG.md#100pre51-2021-04-23), `yalc publish` needs the `--sig` option to trigger webpack module actual update.
+
+> :warning: `yalc` create a `yalc.lock` and updates the `package.json` in the target project. **Make sure to not commit these changes**
 
 ---
 
