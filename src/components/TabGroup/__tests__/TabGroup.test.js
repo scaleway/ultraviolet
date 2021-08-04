@@ -1,9 +1,8 @@
-import { ThemeProvider } from '@emotion/react'
-import { fireEvent, render } from '@testing-library/react'
+import { fireEvent } from '@testing-library/react'
 import React from 'react'
 import TabGroup from '..'
+import renderWithTheme from '../../../helpers/renderWithTheme'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import theme from '../../../theme'
 import Box from '../../Box'
 
 describe('TabGroup', () => {
@@ -55,14 +54,12 @@ describe('TabGroup', () => {
   test('updates tab index on click', () => {
     const onChange = jest.fn()
     const onFirstTabClick = jest.fn()
-    const { getByText } = render(
-      <ThemeProvider theme={theme}>
-        <TabGroup onChange={onChange}>
-          <TabGroup.Tab onClick={onFirstTabClick}>First</TabGroup.Tab>
-          <TabGroup.Tab>Second</TabGroup.Tab>
-          <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
-        </TabGroup>
-      </ThemeProvider>,
+    const { getByText } = renderWithTheme(
+      <TabGroup onChange={onChange}>
+        <TabGroup.Tab onClick={onFirstTabClick}>First</TabGroup.Tab>
+        <TabGroup.Tab>Second</TabGroup.Tab>
+        <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
+      </TabGroup>,
     )
     fireEvent.click(getByText('First'))
     expect(onChange).toHaveBeenLastCalledWith(0)
@@ -77,16 +74,14 @@ describe('TabGroup', () => {
   test('updates tab name on click', () => {
     const onChange = jest.fn()
     const onFirstTabClick = jest.fn()
-    const { getByText } = render(
-      <ThemeProvider theme={theme}>
-        <TabGroup onChange={onChange}>
-          <TabGroup.Tab name="first" onClick={onFirstTabClick}>
-            First
-          </TabGroup.Tab>
-          <TabGroup.Tab name="second">Second</TabGroup.Tab>
-          <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
-        </TabGroup>
-      </ThemeProvider>,
+    const { getByText } = renderWithTheme(
+      <TabGroup onChange={onChange}>
+        <TabGroup.Tab name="first" onClick={onFirstTabClick}>
+          First
+        </TabGroup.Tab>
+        <TabGroup.Tab name="second">Second</TabGroup.Tab>
+        <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
+      </TabGroup>,
     )
     fireEvent.click(getByText('First'))
     expect(onChange).toHaveBeenLastCalledWith('first')
@@ -100,14 +95,12 @@ describe('TabGroup', () => {
 
   test('allows arrow navigation', () => {
     const onChange = jest.fn()
-    const { getByRole, getByText } = render(
-      <ThemeProvider theme={theme}>
-        <TabGroup onChange={onChange}>
-          <TabGroup.Tab>First</TabGroup.Tab>
-          <TabGroup.Tab>Second</TabGroup.Tab>
-          <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
-        </TabGroup>
-      </ThemeProvider>,
+    const { getByRole, getByText } = renderWithTheme(
+      <TabGroup onChange={onChange}>
+        <TabGroup.Tab>First</TabGroup.Tab>
+        <TabGroup.Tab>Second</TabGroup.Tab>
+        <TabGroup.Tab disabled>Disabled</TabGroup.Tab>
+      </TabGroup>,
     )
     const tablist = getByRole('tablist')
     fireEvent.keyDown(tablist, { code: 'ArrowRight' })
