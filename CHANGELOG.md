@@ -1,3 +1,15 @@
+## [0.96.0](https://github.com/scaleway/scaleway-ui/compare/v0.95.0...v0.96.0) (2021-08-04)
+
+
+### :package: Chore
+
+* **deps:** bump actions/setup-node from 2.3.0 to 2.3.1 ([#601](https://github.com/scaleway/scaleway-ui/issues/601)) ([09b2662](https://github.com/scaleway/scaleway-ui/commit/09b2662ec1f7d44f414d5e47f9932375f727dafa))
+
+
+### :gear: Features
+
+* **a11y:** add tabs arrow navigation ([#600](https://github.com/scaleway/scaleway-ui/issues/600)) ([82bd0d3](https://github.com/scaleway/scaleway-ui/commit/82bd0d3eb8d91097907c9485e434e9883fbd8a90))
+
 ## [0.95.0](https://github.com/scaleway/scaleway-ui/compare/v0.94.3...v0.95.0) (2021-08-02)
 
 
