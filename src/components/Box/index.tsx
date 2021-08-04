@@ -37,7 +37,7 @@ type BoxType = typeof forwardType & {
 }
 
 const Box: BoxType = forwardRef<Element, Props>(
-  ({ width, height, bordered, ...props }, ref) => (
+  ({ width, height, bordered = false, ...props }, ref) => (
     // @ts-expect-error yolo
     <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
   ),
@@ -47,12 +47,6 @@ Box.withComponent =
   (element: string | ElementType<unknown>): FunctionComponent =>
   (props: Record<string, unknown>) =>
     <Box as={element} {...props} />
-
-Box.defaultProps = {
-  bordered: false,
-  height: undefined,
-  width: undefined,
-}
 
 Box.propTypes = {
   bordered: PropTypes.bool,
