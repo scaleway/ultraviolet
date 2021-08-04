@@ -5,7 +5,6 @@ import React, {
   AriaAttributes,
   Children,
   FunctionComponent,
-  MouseEvent,
   ReactNode,
   cloneElement,
   isValidElement,
@@ -158,7 +157,7 @@ interface ItemProps {
   variant?: Variants
   step?: number
   onClick?: (
-    event: MouseEvent<HTMLLIElement, MouseEvent>,
+    event: React.MouseEvent<HTMLLIElement, MouseEvent>,
     step?: number,
   ) => void
 }
