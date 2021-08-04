@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import {
   Tooltip as ReakitTooltip,
   TooltipArrow,
@@ -80,10 +80,10 @@ const StyledTooltip = styled(Box, {
 export type TooltipProps = {
   animated?: number | boolean
   baseId?: string
-  children: React.ReactNode
+  children: ReactNode
   maxWidth?: number
   placement?: TooltipPlacement
-  text?: React.ReactNode
+  text?: ReactNode
   variant?: keyof typeof variants
   visible?: boolean
   zIndex?: number

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useMemo } from 'react'
+import React, { Ref, forwardRef, useMemo } from 'react'
 import { Color } from '../../theme/colors'
 import Box from '../Box'
 
@@ -491,7 +491,7 @@ type IconProps = {
   name?: IconName
 } & XStyledProps
 
-const Icon = React.forwardRef(
+const Icon = forwardRef<SVGElement, IconProps>(
   (
     {
       name = 'circle',
@@ -499,7 +499,7 @@ const Icon = React.forwardRef(
       size = '1em',
       verticalAlign = 'middle',
       ...props
-    }: IconProps,
+    },
     ref,
   ) => {
     const render = ICONS[name] || ICONS.circle
@@ -514,7 +514,7 @@ const Icon = React.forwardRef(
     return (
       <StyledIcon
         as="svg"
-        ref={ref}
+        ref={ref as Ref<SVGElement>}
         className="sc-ui-icon"
         color={color}
         size={size}

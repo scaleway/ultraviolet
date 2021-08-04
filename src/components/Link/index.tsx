@@ -1,19 +1,20 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import { Color } from '../../theme/colors'
 import Icon from '../Icon'
 import UniversalLink from '../UniversalLink'
 
 const generateVariant =
-  color =>
-  ({ theme }) =>
+  (color: Color | string) =>
+  ({ theme }: { theme: Theme }) =>
     css`
-      color: ${theme.colors[color] ?? color};
+      color: ${theme.colors[color as Color] ?? color};
       &:hover,
       &:focus {
-        color: ${darken(0.2, theme.colors[color] ?? color)};
+        color: ${darken(0.2, theme.colors[color as Color] ?? color)};
       }
     `
 
@@ -21,7 +22,7 @@ const variants = {
   blue: generateVariant('blue'),
   gray: generateVariant('gray550'),
   grey: generateVariant('gray550'), // TODO: deprecated, to be removed soon
-  inherit: css`
+  inherit: () => css`
     color: inherit;
     &:hover,
     &:focus {
@@ -29,7 +30,7 @@ const variants = {
       text-decoration: none;
     }
   `,
-  primary: ({ theme }) => css`
+  primary: ({ theme }: { theme: Theme }) => css`
     color: ${theme.colors.primary};
     &:hover,
     &:focus {
@@ -39,14 +40,23 @@ const variants = {
   white: generateVariant('white'),
 }
 
-export const linkVariants = Object.keys(variants)
+type Variants = keyof typeof variants
+export const linkVariants = Object.keys(variants) as Variants[]
 
-const variantStyles = ({ variant }) =>
-  Object.keys(variants).includes(variant) ? variants[variant] : undefined
+const variantStyles = ({ variant }: { variant?: Variants }) =>
+  variant && Object.keys(variants).includes(variant)
+    ? variants[variant]
+    : undefined
+
+type LinkProps = {
+  children: ReactNode
+  variant?: Variants
+  target?: string
+} & ComponentProps<typeof UniversalLink>
 
 const StyledLink = styled(UniversalLink, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})`
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+})<LinkProps>`
   cursor: pointer;
   text-decoration: none;
   transition: color 200ms ease;
@@ -61,7 +71,13 @@ const StyledIcon = styled(Icon)`
   padding-left: 2px;
   opacity: 0.5;
 `
-const Link = ({ variant, children, target, ...props }) => (
+
+const Link: FunctionComponent<LinkProps> = ({
+  variant,
+  children,
+  target,
+  ...props
+}) => (
   <StyledLink variant={variant} target={target} {...props}>
     {children}
     {target === '_blank' && (
@@ -70,15 +86,10 @@ const Link = ({ variant, children, target, ...props }) => (
   </StyledLink>
 )
 
-Link.defaultProps = {
-  target: undefined,
-  variant: undefined,
-}
-
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   target: PropTypes.string,
-  variant: PropTypes.oneOf(linkVariants),
+  variant: PropTypes.oneOf<Variants>(linkVariants),
 }
 
 export default Link

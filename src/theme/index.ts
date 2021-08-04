@@ -1,4 +1,5 @@
 /* eslint-disable sort-keys */
+import { ReactElement } from 'react'
 import colors from './colors'
 
 const radii = {
@@ -45,7 +46,10 @@ const theme = {
   radii,
 }
 
-export type SCWUITheme = typeof theme
+export type SCWUITheme = typeof theme & {
+  linkComponent?: unknown
+}
+
 export default theme
 
 export { colors, space, radii, fonts, screens }

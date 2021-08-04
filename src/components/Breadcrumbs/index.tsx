@@ -1,8 +1,16 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { cloneElement, useMemo } from 'react'
-import flattenChildren from 'react-flatten-children'
+import React, {
+  AriaAttributes,
+  Children,
+  FunctionComponent,
+  MouseEvent,
+  ReactNode,
+  cloneElement,
+  isValidElement,
+  useMemo,
+} from 'react'
 import Box from '../Box'
 import Link from '../Link'
 
@@ -19,7 +27,7 @@ function reverseZIndexes() {
   )
 }
 
-function contractString(str) {
+const contractString = (str: ReactNode): ReactNode => {
   if (typeof str === 'string' && str.length > 30) {
     return `${str.slice(0, 15)}...${str.slice(-15)}`
   }
@@ -33,39 +41,6 @@ const StyledOl = styled.ol`
   padding: 0;
   display: flex;
 `
-
-const Breadcrumbs = ({
-  children,
-  variant,
-  selected: selectedProp,
-  ...props
-}) => {
-  const flatChildren = flattenChildren(children)
-  const selected =
-    selectedProp !== undefined ? selectedProp : flatChildren.length - 1
-
-  return (
-    <Box as="nav" aria-label="breadcrumb" {...props}>
-      <StyledOl>
-        {flatChildren.map((child, index) => {
-          if (!child) return null
-
-          const active = selected === index
-
-          return (
-            <React.Fragment key={child.key}>
-              {cloneElement(child, {
-                'aria-current': active ? 'page' : undefined,
-                step: index,
-                variant,
-              })}
-            </React.Fragment>
-          )
-        })}
-      </StyledOl>
-    </Box>
-  )
-}
 
 const BubbleVariant = styled.li`
   display: flex;
@@ -164,19 +139,43 @@ const variants = {
   bubble: BubbleVariant,
   link: LinkVariant,
 }
+type Variants = keyof typeof variants
+export const breadcrumbsVariants = Object.keys(variants) as Variants[]
 
-export const breadcrumbsVariants = Object.keys(variants)
+interface ItemProps {
+  children: ReactNode
+  'aria-current'?:
+    | boolean
+    | 'false'
+    | 'true'
+    | 'page'
+    | 'step'
+    | 'location'
+    | 'date'
+    | 'time'
+  to?: string
+  disabled?: boolean
+  variant?: Variants
+  step?: number
+  onClick?: (
+    event: MouseEvent<HTMLLIElement, MouseEvent>,
+    step?: number,
+  ) => void
+}
 
-export const Item = ({
+export const Item: FunctionComponent<ItemProps> = ({
   to,
   children,
-  disabled,
-  variant,
+  disabled = false,
+  variant = 'link',
   'aria-current': ariaCurrent,
   onClick,
   step,
 }) => {
-  const VariantComponent = useMemo(() => variants[variant], [variant])
+  const VariantComponent = useMemo(
+    () => variants[variant] ?? variants.link,
+    [variant],
+  )
 
   return (
     <VariantComponent
@@ -195,19 +194,18 @@ export const Item = ({
   )
 }
 
-Breadcrumbs.propTypes = {
-  children: PropTypes.node.isRequired,
-  selected: PropTypes.number,
-  variant: PropTypes.oneOf(breadcrumbsVariants),
-}
-
-Breadcrumbs.defaultProps = {
-  selected: undefined,
-  variant: 'link',
-}
-
 Item.propTypes = {
-  'aria-current': PropTypes.string,
+  'aria-current': PropTypes.oneOf<AriaAttributes['aria-current']>([
+    true,
+    false,
+    'false',
+    'true',
+    'page',
+    'step',
+    'location',
+    'date',
+    'time',
+  ]),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
@@ -222,16 +220,53 @@ Item.propTypes = {
   /**
    * Will be automatically injected by Breadcrumbs parent tag
    */
-  variant: PropTypes.oneOf(breadcrumbsVariants),
+  variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
 }
 
-Item.defaultProps = {
-  'aria-current': undefined,
-  disabled: false,
-  onClick: undefined,
-  step: undefined,
-  to: null,
-  variant: 'link',
+interface BreadcrumbsProps {
+  variant?: Variants
+  selected?: number
+  children: ReactNode
+}
+
+type BreadcrumbsType = FunctionComponent<BreadcrumbsProps> & {
+  Item: typeof Item
+}
+
+const Breadcrumbs: BreadcrumbsType = ({
+  children,
+  variant = 'link',
+  selected: selectedProp,
+  ...props
+}) => {
+  const selected =
+    selectedProp !== undefined ? selectedProp : Children.count(children) - 1
+
+  return (
+    <Box as="nav" aria-label="breadcrumb" {...props}>
+      <StyledOl>
+        {Children.map(children, (child, index) => {
+          if (!isValidElement<ItemProps>(child)) {
+            return child
+          }
+
+          const active = selected === index
+
+          return cloneElement(child, {
+            'aria-current': active ? 'page' : undefined,
+            step: index,
+            variant,
+          })
+        })}
+      </StyledOl>
+    </Box>
+  )
+}
+
+Breadcrumbs.propTypes = {
+  children: PropTypes.node.isRequired,
+  selected: PropTypes.number,
+  variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
 }
 
 Breadcrumbs.Item = Item

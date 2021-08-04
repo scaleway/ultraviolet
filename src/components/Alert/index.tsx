@@ -1,7 +1,7 @@
 import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -110,14 +110,14 @@ const Title = ({ color, text }: TitleProps) => (
 
 type AlertProps = {
   variant?: AlertVariant
-  children: React.ReactNode
+  children: ReactNode
   iconSize?: number
   icon?: string
   title?: string
   type?: AlertType
 }
 
-const Alert = ({
+const Alert: FunctionComponent<AlertProps> = ({
   variant = 'standard',
   children,
   iconSize = 32,
@@ -125,7 +125,7 @@ const Alert = ({
   title,
   type = 'warning',
   ...props
-}: AlertProps): JSX.Element => (
+}) => (
   <StyledContainer type={type} variant={variant} {...props}>
     <Icon name={icon || typesDefaultIcons[type]} size={iconSize} />
     <StyledBox color="inherit">

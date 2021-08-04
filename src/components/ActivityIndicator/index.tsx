@@ -1,7 +1,7 @@
 import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
 import { Color } from '../../theme/colors'
@@ -44,7 +44,7 @@ type ActivityIndicatorProps = {
   trailColor?: string
 }
 
-const ActivityIndicator = ({
+const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   percentage = 20,
   text = undefined,
   size = 40,
@@ -52,7 +52,7 @@ const ActivityIndicator = ({
   color = 'primary',
   trailColor = 'gray350',
   active = false,
-}: ActivityIndicatorProps): JSX.Element => {
+}) => {
   const theme = useTheme()
 
   return (

@@ -5,6 +5,8 @@ import React, {
   ElementType,
   FocusEvent,
   MouseEvent,
+  ReactNode,
+  Ref,
   forwardRef,
   useCallback,
 } from 'react'
@@ -208,7 +210,7 @@ export const typographyVariants = Object.keys(variantTags)
 
 type TypographyProps = {
   as?: string | ElementType<unknown>
-  children: React.ReactNode
+  children: ReactNode
   ellipsis?: boolean
   maxLines?: number
   onFocus?: (event: FocusEvent) => void
@@ -238,7 +240,7 @@ const Text = forwardRef(
     ref,
   ) => (
     <StyledText
-      ref={ref}
+      ref={ref as Ref<Element>}
       onMouseEnter={onMouseEnter}
       onFocus={onFocus}
       {...tooltipProps}

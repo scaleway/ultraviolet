@@ -11,7 +11,7 @@ describe('Link', () => {
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link to="/" variant={variant}>
+          <Link to="/" variant={variant as keyof typeof linkVariants}>
             Hello
           </Link>,
         ),
