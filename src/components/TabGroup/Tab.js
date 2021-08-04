@@ -14,16 +14,20 @@ export const StyledTab = styled.span`
   color: ${({ theme: { colors } }) => colors.gray550};
   font-weight: 500;
   text-decoration: none;
-  outline: none;
   user-select: none;
   touch-action: manipulation;
-
   transition: color 0.2s;
+
   &:hover,
   &:active,
   &:focus {
     color: ${({ theme: { colors } }) => colors.primary};
     text-decoration: none;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: auto;
   }
 
   &[aria-selected='true'] {
@@ -67,7 +71,7 @@ const Tab = ({
       aria-label={name}
       ref={ref}
       role="tab"
-      tabIndex={0}
+      tabIndex={isSelected ? 0 : -1}
       onKeyDown={event => {
         if (['Enter', 'Space'].includes(event.code) && onClick) {
           onClick(event)
