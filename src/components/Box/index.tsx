@@ -38,7 +38,7 @@ type BoxType = typeof forwardType & {
 
 const Box: BoxType = forwardRef<Element, Props>(
   ({ width, height, bordered = false, ...props }, ref) => (
-    // @ts-expect-error yolo
+    // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
     <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
   ),
 )
