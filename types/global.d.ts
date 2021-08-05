@@ -10,6 +10,7 @@ declare global {
     alignItems?: string
     color?: string
     display?: string
+    fontSize?: number
     fontWeight?: number
     lineHeight?: string | number
     mb?: string | number

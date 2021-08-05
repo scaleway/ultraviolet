@@ -1,7 +1,8 @@
+import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useMemo } from 'react'
-import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
+import React, { ComponentProps, FunctionComponent, ReactNode, Ref, useEffect, useMemo } from 'react'
+import { Checkbox as ReakitCheckbox, CheckboxProps as ReakitCheckboxProps, useCheckboxState } from 'reakit/Checkbox'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Expandable from '../Expandable'
@@ -18,7 +19,7 @@ const StyledCheckBoxContainer = styled(Typography)`
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
   shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop),
-})`
+})<{hasChildren: boolean, theme: Theme}>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
@@ -49,21 +50,37 @@ const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })``
 
-const Checkbox = ({
-  checked,
+type CheckboxProps = {
+  checked?: boolean,
+  children: ReactNode,
+  valid: boolean,
+  error: string | ReactNode,
+  name?: string,
+  value?: string,
+  size?: number,
+  progress?: boolean,
+  disabled?: boolean,
+  autoFocus?: boolean,
+  typographyVariant?: string,
+} & ComponentProps<ReakitCheckboxProps> & {
+  ref?: Ref<Element>
+} & XStyledProps
+
+const Checkbox: FunctionComponent<CheckboxProps> = ({
+  checked = false,
   onChange,
   onFocus,
   onBlur,
   valid,
   error,
-  name,
+  name = 'checkbox',
   value,
-  size,
+  size= 24,
   children,
-  progress,
-  disabled,
-  autoFocus,
-  typographyVariant,
+  progress = false,
+  disabled= false,
+  autoFocus = false,
+  typographyVariant = 'default',
   ...props
 }) => {
   const hasChildren = !!children
