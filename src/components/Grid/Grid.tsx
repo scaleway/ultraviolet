@@ -42,11 +42,6 @@ const StyledGrid = styled(Box, {
 
 const Grid: FunctionComponent<GridProps> = props => <StyledGrid {...props} />
 
-Grid.defaultProps = {
-  fluid: false,
-  gutter: 1,
-}
-
 Grid.propTypes = {
   children: PropTypes.node.isRequired,
   /**

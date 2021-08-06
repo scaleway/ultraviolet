@@ -95,8 +95,4 @@ Col.propTypes = {
   xsmall: PropTypesBreakpoint,
 }
 
-Col.defaultProps = {
-  children: null,
-}
-
 export default Col
