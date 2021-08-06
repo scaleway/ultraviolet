@@ -17,8 +17,8 @@ describe('Alert', () => {
       shouldMatchEmotionSnapshot(<Alert variant={variant}>Sample Alert</Alert>))
   })
 
-  alertTypes.forEach(variant => {
-    test(`renders correctly variant ${variant}`, () =>
-      shouldMatchEmotionSnapshot(<Alert variant={variant}>Sample Alert</Alert>))
+  alertTypes.forEach(type => {
+    test(`renders correctly variant ${type}`, () =>
+      shouldMatchEmotionSnapshot(<Alert type={type}>Sample Alert</Alert>))
   })
 })
