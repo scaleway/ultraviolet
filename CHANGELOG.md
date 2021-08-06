@@ -1,3 +1,23 @@
+## [0.97.0](https://github.com/scaleway/scaleway-ui/compare/v0.96.0...v0.97.0) (2021-08-06)
+
+
+### :package: Chore
+
+* **deps:** bump actions/setup-node from 2.3.1 to 2.3.2 ([#602](https://github.com/scaleway/scaleway-ui/issues/602)) ([b58321f](https://github.com/scaleway/scaleway-ui/commit/b58321f87c7e5daca8006bf428482627f0a78631))
+* **deps:** bump actions/setup-node from 2.3.2 to 2.4.0 ([#610](https://github.com/scaleway/scaleway-ui/issues/610)) ([f7a773d](https://github.com/scaleway/scaleway-ui/commit/f7a773d47b7b8f5c9d76b4cf35fc7e3229259e12))
+* **deps-dev:** bump @babel/core from 7.14.8 to 7.15.0 ([#606](https://github.com/scaleway/scaleway-ui/issues/606)) ([c85c665](https://github.com/scaleway/scaleway-ui/commit/c85c665a23b2a75de9e50ceab252fa963227acdd))
+* **deps-dev:** bump @babel/eslint-parser from 7.14.9 to 7.15.0 ([#608](https://github.com/scaleway/scaleway-ui/issues/608)) ([af8f2d2](https://github.com/scaleway/scaleway-ui/commit/af8f2d2f093a061d211bab37dc822c4973a03a5e))
+* **deps-dev:** bump @babel/plugin-transform-runtime ([#605](https://github.com/scaleway/scaleway-ui/issues/605)) ([d54a2eb](https://github.com/scaleway/scaleway-ui/commit/d54a2eb8ee55d5c7a9e51ba9a9804763a12bcdc3))
+* **deps-dev:** bump @babel/preset-env from 7.14.9 to 7.15.0 ([#607](https://github.com/scaleway/scaleway-ui/issues/607)) ([ad6fff2](https://github.com/scaleway/scaleway-ui/commit/ad6fff20ac8b39e921672bf2063e30389d01273c))
+* **deps-dev:** bump @babel/preset-typescript from 7.14.5 to 7.15.0 ([#603](https://github.com/scaleway/scaleway-ui/issues/603)) ([f7d6644](https://github.com/scaleway/scaleway-ui/commit/f7d66442e50dc2ec64e794da4f08b79a9fd8bcc3))
+* **deps-dev:** bump lint-staged from 11.1.1 to 11.1.2 ([#611](https://github.com/scaleway/scaleway-ui/issues/611)) ([e307865](https://github.com/scaleway/scaleway-ui/commit/e3078655c0421103f09bbe7163787d8b3c753ecf))
+* **deps-dev:** bump rollup from 2.55.1 to 2.56.0 ([#604](https://github.com/scaleway/scaleway-ui/issues/604)) ([3c48104](https://github.com/scaleway/scaleway-ui/commit/3c4810442833836356f4c0d9184e9bd813a1bcb4))
+
+
+### :gear: Features
+
+* typescript migration of alert and icon ([#595](https://github.com/scaleway/scaleway-ui/issues/595)) ([3edc43b](https://github.com/scaleway/scaleway-ui/commit/3edc43ba4af733ee6f662adf01973eaadbc6d2c1))
+
 ## [0.96.0](https://github.com/scaleway/scaleway-ui/compare/v0.95.0...v0.96.0) (2021-08-04)
 
 
