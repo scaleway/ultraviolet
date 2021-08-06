@@ -17,7 +17,7 @@ describe('Breadcrumbs', () => {
 
   test('renders correctly with variant bubble', () =>
     shouldMatchEmotionSnapshot(
-      <Breadcrumbs variant="bubble" activeIndex={2}>
+      <Breadcrumbs variant="bubble">
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item to="/step1/step2">
           I&apos;m a very long long long long long long long long long long long

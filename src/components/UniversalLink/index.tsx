@@ -1,13 +1,19 @@
 import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, {
+  ComponentProps,
+  ElementType,
+  FunctionComponent,
+  ReactNode,
+  Ref,
+} from 'react'
 import Box from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
 const TEL_LINK_REGEXP = /^tel:/
 const MAILTO_LINK_REGEXP = /^mailto:/
 
-const needNativeLink = url => {
+const needNativeLink = (url?: string) => {
   if (!url) return false
   const isAbsolute = ABSOLUTE_LINK_REGEXP.test(url)
   const isTelLink = TEL_LINK_REGEXP.test(url)
@@ -17,7 +23,14 @@ const needNativeLink = url => {
   return isAbsolute || isTelLink || isMailToLink || isAnchor
 }
 
-const UniversalLink = ({
+type UniversalLinkProps = {
+  children: ReactNode
+  to?: string
+} & ComponentProps<'a'> & {
+    ref?: Ref<Element>
+  } & XStyledProps
+
+const UniversalLink: FunctionComponent<UniversalLinkProps> = ({
   children,
   target,
   rel: propsRel,
@@ -30,7 +43,11 @@ const UniversalLink = ({
   const isBlank = target === '_blank'
   const rel = propsRel || (isBlank ? 'noopener noreferrer' : undefined)
   const href = to || propsHref
-  const asValue = propsAs || (needNativeLink(href) ? 'a' : linkComponent)
+  const asValue =
+    propsAs ||
+    (needNativeLink(href)
+      ? 'a'
+      : (linkComponent  as ElementType<unknown>))
   const parameter = asValue === 'a' ? 'href' : 'to'
 
   return (
@@ -47,20 +64,12 @@ const UniversalLink = ({
 }
 
 UniversalLink.propTypes = {
-  as: PropTypes.node,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  as: PropTypes.string,
+  children: PropTypes.node.isRequired,
   href: PropTypes.string,
   rel: PropTypes.string,
   target: PropTypes.string,
   to: PropTypes.string,
-}
-
-UniversalLink.defaultProps = {
-  as: null,
-  href: null,
-  rel: undefined,
-  target: undefined,
-  to: null,
 }
 
 export default UniversalLink

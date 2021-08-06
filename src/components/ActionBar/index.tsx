@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import Box from '../Box'
 
 const HEIGHT = 56
@@ -26,18 +26,18 @@ const StyledBox = styled(Box)<{ rank: number }>`
 `
 
 type ActionBarProps = {
-  children: React.ReactNode
+  children: ReactNode
   /**
    * The position of the bar (start at 0)
    */
   rank?: number
 }
 
-const ActionBar = ({
+const ActionBar: FunctionComponent<ActionBarProps> = ({
   children,
   rank = 0,
   ...props
-}: ActionBarProps): JSX.Element => (
+}) => (
   <StyledBox rank={rank} {...props}>
     {children}
   </StyledBox>

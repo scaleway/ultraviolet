@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Icon from '../Icon'
 import avatar from './avatar.svg'
 
-const formatTextToAvatar = text => {
+const formatTextToAvatar = (text: string): string => {
   if (text.length <= 2) {
     return text.toUpperCase()
   }
@@ -19,12 +20,20 @@ const formatTextToAvatar = text => {
   return text.substring(0, 2).toUpperCase()
 }
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{
+  lock?: boolean
+  textBgColor?: string
+  textColor: string
+  textSize: number
+}>`
   align-items: center;
   background-color: ${({ lock, theme, textBgColor }) =>
-    lock ? theme.colors.gray50 : theme.colors[textBgColor] || textBgColor};
+    lock
+      ? theme.colors.gray50
+      : theme.colors[textBgColor as Color] || textBgColor};
   border-radius: 50%;
-  color: ${({ theme, textColor }) => theme.colors[textColor] || textColor};
+  color: ${({ theme, textColor }) =>
+    theme.colors[textColor as Color] || textColor};
   font-size: ${({ textSize }) => textSize}px;
   display: flex;
   height: 100%;
@@ -37,14 +46,24 @@ const StyledImg = styled.img`
   width: 100%;
 `
 
-const Avatar = ({
-  image,
-  size,
+interface AvatarProps {
+  image?: string
+  size?: number
+  text?: string
+  textBgColor?: string
+  textColor?: string
+  textSize?: number
+  lock?: boolean
+}
+
+const Avatar: FunctionComponent<AvatarProps> = ({
+  image = avatar,
+  size = 32,
   text,
-  textBgColor,
-  textColor,
-  textSize,
-  lock,
+  textBgColor = 'lightViolet',
+  textColor = 'white',
+  textSize = 10,
+  lock = false,
   ...props
 }) => (
   <Box width={size} height={size} position="relative" {...props}>
@@ -62,16 +81,6 @@ const Avatar = ({
     )}
   </Box>
 )
-
-Avatar.defaultProps = {
-  image: avatar,
-  lock: false,
-  size: 32,
-  text: null,
-  textBgColor: 'lightViolet',
-  textColor: 'white',
-  textSize: 10,
-}
 
 Avatar.propTypes = {
   image: PropTypes.string,

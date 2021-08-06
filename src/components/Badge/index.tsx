@@ -1,89 +1,89 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Box from '../Box'
 
 const variants = {
-  beta: ({ theme: { colors } }) => css`
+  beta: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.beta};
     color: ${colors.white};
   `,
-  error: ({ theme: { colors } }) => css`
+  error: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.red};
     color: ${colors.white};
   `,
-  info: ({ theme: { colors } }) => css`
+  info: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.info};
     color: ${colors.white};
   `,
-  'light-beta': ({ theme: { colors } }) => css`
+  'light-beta': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.beta};
     background-color: ${colors.serenade};
   `,
-  'light-error': ({ theme: { colors } }) => css`
+  'light-error': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.red};
     background-color: ${colors.pippin};
   `,
-  'light-info': ({ theme: { colors } }) => css`
+  'light-info': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.info};
     background-color: ${colors.zumthor};
   `,
-  'light-neutral': ({ theme: { colors } }) => css`
+  'light-neutral': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.gray550};
     background-color: ${colors.gray100};
   `,
-  'light-primary': ({ theme: { colors } }) => css`
+  'light-primary': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.primary};
     background-color: ${colors.gray200};
   `,
-  'light-success': ({ theme: { colors } }) => css`
+  'light-success': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.success};
     background-color: ${colors.foam};
   `,
-  neutral: ({ theme: { colors } }) => css`
+  neutral: ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.gray700};
     background-color: ${colors.gray350};
   `,
-  primary: ({ theme: { colors } }) => css`
+  primary: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.primary};
     color: ${colors.white};
   `,
-  success: ({ theme: { colors } }) => css`
+  success: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.success};
     color: ${colors.white};
   `,
-  warning: ({ theme: { colors } }) => css`
+  warning: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.warning};
     color: ${colors.white};
   `,
 }
 
 const sizes = {
-  medium: ({ theme: { space } }) => css`
+  medium: ({ theme: { space } }: { theme: Theme }) => css`
     font-size: 14px;
     line-height: ${space['4']};
     height: ${space['4']};
   `,
-  rounded: ({ theme: { space, radii } }) => css`
+  rounded: ({ theme: { space, radii } }: { theme: Theme }) => css`
     border-radius: ${radii.large};
     font-size: 10px;
     height: ${space['2']};
     padding: ${space['0.25']} ${space['0.75']};
     text-transform: uppercase;
   `,
-  small: ({ theme: { space } }) => css`
+  small: ({ theme: { space } }: { theme: Theme }) => css`
     font-size: 12px;
     line-height: ${space['3']};
     height: ${space['3']};
   `,
-  xsmall: ({ theme: { space, radii } }) => css`
+  xsmall: ({ theme: { space, radii } }: { theme: Theme }) => css`
     border-radius: ${radii.default};
     font-size: 12px;
     line-height: ${space['2.25']};
     height: ${space['2.25']};
   `,
-  xxsmall: ({ theme: { space, radii } }) => css`
+  xxsmall: ({ theme: { space, radii } }: { theme: Theme }) => css`
     border-radius: ${radii.default};
     font-size: 10px;
     line-height: ${space['2']};
@@ -92,12 +92,30 @@ const sizes = {
   `,
 }
 
-const sizesStyle = ({ size, ...props }) => sizes[size]?.(props)
-const variantsStyle = ({ variant, ...props }) => variants[variant]?.(props)
+type Variants = keyof typeof variants
+type Sizes = keyof typeof sizes
+
+export const badgeVariants = Object.keys(variants) as Variants[]
+export const badgeSizes = Object.keys(sizes) as Sizes[]
+
+const sizesStyle = ({ size, ...props }: { size?: Sizes; theme: Theme }) =>
+  sizes[size as Sizes]?.(props)
+const variantsStyle = ({
+  variant,
+  ...props
+}: {
+  variant?: Variants
+  theme: Theme
+}) => variants[variant as Variants]?.(props)
+
+type BadgeProps = {
+  variant?: Variants
+  size?: Sizes
+} & XStyledProps
 
 const StyledBox = styled(Box, {
-  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['variant', 'size'].includes(prop.toString()),
+})<BadgeProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,21 +128,15 @@ const StyledBox = styled(Box, {
   ${sizesStyle}
 `
 
-const Badge = ({ variant, size, ...props }) => (
-  <StyledBox as="span" variant={variant} size={size} {...props} />
-)
-
-export const badgeVariants = Object.keys(variants)
-export const badgeSizes = Object.keys(sizes)
+const Badge: FunctionComponent<BadgeProps> = ({
+  variant = 'neutral',
+  size = 'medium',
+  ...props
+}) => <StyledBox as="span" variant={variant} size={size} {...props} />
 
 Badge.propTypes = {
-  size: PropTypes.oneOf(badgeSizes),
+  size: PropTypes.oneOf<Sizes>(badgeSizes),
   variant: PropTypes.oneOf(badgeVariants),
-}
-
-Badge.defaultProps = {
-  size: 'medium',
-  variant: 'neutral',
 }
 
 export default Badge

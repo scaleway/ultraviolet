@@ -1,7 +1,9 @@
-import React from 'react'
+import { Theme } from '@emotion/react'
+import React, { ElementType, ReactElement } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import UniversalLink from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import baseTheme from '../../../theme'
 
 describe('UniversalLink', () => {
   test.each`
@@ -15,19 +17,32 @@ describe('UniversalLink', () => {
     ${'renders correctly with as a'}            | ${'https://react.ui.scaleway.com'} | ${undefined}                | ${undefined} | ${'a'}
     ${'renders correctly with a tel link'}      | ${undefined}                       | ${'tel:+33666666'}          | ${'_blank'}  | ${undefined}
     ${'renders correctly with a mailto link'}   | ${undefined}                       | ${'mailto:test@test.com'}   | ${'_blank'}  | ${undefined}
-  `('$test', ({ href, to, target, as }) =>
-    shouldMatchEmotionSnapshot(
-      <BrowserRouter>
-        <UniversalLink href={href} to={to} target={target} as={as}>
-          This is a link
-        </UniversalLink>
-      </BrowserRouter>,
-    ),
+  `(
+    '$test',
+    ({
+      href,
+      to,
+      target,
+      as,
+    }: {
+      href?: string
+      to?: string
+      target?: string
+      as?: string | ElementType<unknown>
+    }) =>
+      shouldMatchEmotionSnapshot(
+        <BrowserRouter>
+          <UniversalLink href={href} to={to} target={target} as={as}>
+            This is a link
+          </UniversalLink>
+        </BrowserRouter>,
+      ),
   )
 
   test('renders correctly with modify Link on theme from react-router-dom', async () => {
-    const theme = {
+    const theme: Theme = {
       linkComponent: Link,
+      ...baseTheme,
     }
     await shouldMatchEmotionSnapshot(
       <BrowserRouter>
