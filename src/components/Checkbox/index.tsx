@@ -118,7 +118,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
           size={size}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             if (!progress) onChange(e)
-            setState(e.target.checked || false)
+            setState(e.target.checked)
           }}
           onFocus={onFocus}
           onBlur={onBlur}
