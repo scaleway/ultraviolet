@@ -17,7 +17,8 @@ const StyledDot = styled(Box, {
 
 type Props = {
   color?: string
-}
+  onClick?: () => unknown
+} & XStyledProps
 
 const Dot: FunctionComponent<Props> = ({ color = 'primary', ...props }) => (
   <StyledDot color={color} {...props} />
