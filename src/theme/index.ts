@@ -23,6 +23,7 @@ const space = {
   8: '64px',
   9: '72px',
 }
+export type Spaces = keyof typeof space
 
 const screens = {
   xsmall: 0,

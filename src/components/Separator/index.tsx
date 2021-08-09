@@ -1,34 +1,53 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Icon, { icons } from '../Icon'
 
+type Direction = 'horizontal' | 'vertical'
+
 const StyledIcon = styled(Box, {
-  shouldForwardProp: prop => !['direction'].includes(prop),
-})`
+  shouldForwardProp: prop => !['direction'].includes(prop.toString()),
+})<{ direction: Direction }>`
   display: flex;
   flex-direction: ${({ direction }) =>
     direction === 'vertical' ? 'column' : 'row'};
   align-items: center;
 `
 
+type HorizontalSeparatorProps = {
+  direction?: Direction
+  thickness?: number
+  color?: Color | string
+  flex?: string
+} & XStyledProps
+
 const StyledHr = styled(Box.withComponent('hr'), {
   shouldForwardProp: prop =>
-    !['direction', 'thickness', 'color', 'flex'].includes(prop),
-})`
+    !['direction', 'thickness', 'color', 'flex'].includes(prop.toString()),
+})<HorizontalSeparatorProps>`
   margin: 0;
   border: 0;
-  width: ${({ direction, thickness }) =>
+  width: ${({ direction, thickness = 1 }) =>
     direction === 'vertical' ? `${thickness}px` : 'auto'};
-  height: ${({ direction, thickness }) =>
+  height: ${({ direction, thickness = 1 }) =>
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
-  background-color: ${({ theme, color }) => theme.colors[color] ?? color};
+  background-color: ${({ theme, color }) =>
+    theme.colors[color as Color] ?? color};
   ${({ flex }) => flex && `flex: ${flex};`}
 `
 
-const Separator = ({ direction, thickness, color, icon, ...props }) =>
+const Separator: FunctionComponent<
+  HorizontalSeparatorProps & { icon?: string }
+> = ({
+  direction = 'horizontal',
+  thickness = 1,
+  color = 'gray200',
+  icon,
+  ...props
+}) =>
   icon ? (
     <StyledIcon
       role="separator"
@@ -66,13 +85,6 @@ Separator.propTypes = {
   direction: PropTypes.oneOf(['horizontal', 'vertical']),
   icon: PropTypes.oneOf(icons),
   thickness: PropTypes.number,
-}
-
-Separator.defaultProps = {
-  color: 'gray200',
-  direction: 'horizontal',
-  icon: null,
-  thickness: 1,
 }
 
 export default Separator

@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react'
-import React, { ElementType, ReactElement } from 'react'
+import React, { ElementType } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import UniversalLink from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
