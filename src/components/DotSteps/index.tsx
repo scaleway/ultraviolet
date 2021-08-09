@@ -1,10 +1,16 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 
-const DotSteps = ({ steps, step, setStep }) => (
+type Props = {
+  setStep(...args: unknown[]): unknown,
+  step?: number,
+  steps?: number,
+}
+
+const DotSteps: FunctionComponent<Props> = ({ steps = 2, step = 1, setStep }) => (
   <FlexBox justifyContent="center">
     {Array.from({ length: steps }, (_, i) => (
       <Dot
@@ -34,11 +40,6 @@ DotSteps.propTypes = {
    * Total steps length
    */
   steps: PropTypes.number,
-}
-
-DotSteps.defaultProps = {
-  step: 1,
-  steps: 2,
 }
 
 export default DotSteps

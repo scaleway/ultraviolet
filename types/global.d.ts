@@ -8,7 +8,9 @@ declare global {
     as?: string | React.ElementType<unknown>
     align?: string
     alignItems?: string
+    justifyContent?: string
     color?: string
+    css?: Record<string, unknown>
     display?: string
     fontSize?: number
     fontWeight?: number

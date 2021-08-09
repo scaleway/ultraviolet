@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Box from '../Box'
 
 const StyledDot = styled(Box, {
-  shouldForwardProp: prop => !['color'].includes(prop),
+  shouldForwardProp: (prop: string) => !['color'].includes(prop),
 })`
   display: inline-block;
   border-radius: 50%;
@@ -13,17 +13,17 @@ const StyledDot = styled(Box, {
   background-color: ${({ theme: { colors }, color }) => colors[color] ?? color};
 `
 
-const Dot = props => <StyledDot {...props} />
+type Props = {
+  color?: string,
+}
+
+const Dot: FunctionComponent<Props> = ({ color = 'primary', ...props }) => <StyledDot color={color} {...props} />
 
 Dot.propTypes = {
   /**
    * The dot color
    */
   color: PropTypes.string,
-}
-
-Dot.defaultProps = {
-  color: 'primary',
 }
 
 export default Dot

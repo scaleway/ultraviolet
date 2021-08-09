@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
@@ -9,7 +9,7 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(Box)<{ small?: boolean; edition?: boolean, disabled?: boolean }>`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
@@ -28,16 +28,28 @@ const StyledBox = styled(Box)`
   }
 `
 
-const Container = ({
-  title,
-  subtitle,
-  header,
-  rightTitle,
-  disabled,
-  edition,
-  small,
+type ContainerProps = {
+  boxStyle?: Record<string, unknown>,
+  children: ReactNode,
+  disabled?: boolean,
+  edition?: boolean,
+  header?: ReactNode,
+  rightTitle?: ReactNode,
+  small?: boolean,
+  subtitle?: string,
+  title?: string,
+}
+
+const Container: FunctionComponent<ContainerProps> = ({
+  title = undefined,
+  subtitle = undefined,
+  header = undefined,
+  rightTitle = undefined,
+  disabled = false,
+  edition = false,
+  small = false,
   children,
-  boxStyle,
+  boxStyle = undefined,
   ...props
 }) => (
   <StyledContainer {...props}>
@@ -84,17 +96,6 @@ Container.propTypes = {
   small: PropTypes.bool,
   subtitle: PropTypes.string,
   title: PropTypes.string,
-}
-
-Container.defaultProps = {
-  boxStyle: undefined,
-  disabled: false,
-  edition: false,
-  header: undefined,
-  rightTitle: undefined,
-  small: false,
-  subtitle: undefined,
-  title: undefined,
 }
 
 export default Container

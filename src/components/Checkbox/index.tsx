@@ -30,7 +30,7 @@ const StyledCheckBoxContainer = styled(Typography)`
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
   shouldForwardProp: (prop: string) => !['hasChildren', 'size'].includes(prop),
-})<ReakitCheckboxProps & { hasChildren: boolean; theme: Theme }>`
+})<{ hasChildren: boolean; theme: Theme }>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;

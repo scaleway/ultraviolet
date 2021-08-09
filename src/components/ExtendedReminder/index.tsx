@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
@@ -28,7 +28,7 @@ const variants = {
 }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
+  shouldForwardProp: (prop: string) => !['variant'].includes(prop),
 })`
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ const StyledBadgeContainer = styled(Box)`
 `
 
 const StyledTitle = styled(Typography, {
-  shouldForwardProp: prop => !['color'].includes(prop),
+  shouldForwardProp: (prop: string) => !['color'].includes(prop),
 })`
   font-weight: 600;
   text-transform: uppercase;
@@ -68,15 +68,26 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
-const ExtendedReminder = ({
+type Props = {
+  badgeText: string,
+  icon: string,
+  linkText?: string,
+  onClick?(...args: unknown[]): unknown,
+  text: string,
+  title: string,
+  to?: string
+  variant: 'error' | 'info' | 'success' | 'warning'
+};
+
+const ExtendedReminder: FunctionComponent<Props> = ({
   badgeText,
   icon,
-  linkText,
-  onClick,
+  linkText = null,
+  onClick = () => undefined,
   text,
   title,
-  to,
-  variant,
+  to = undefined,
+  variant = 'info',
   ...props
 }) => {
   const theme = useTheme()
@@ -140,13 +151,6 @@ ExtendedReminder.propTypes = {
    */
   to: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(variants)),
-}
-
-ExtendedReminder.defaultProps = {
-  linkText: null,
-  onClick: null,
-  to: null,
-  variant: 'info',
 }
 
 export default ExtendedReminder

@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
 const StyledChild = styled('div', {
-  shouldForwardProp: prop =>
+  shouldForwardProp: (prop: string) =>
     !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(prop),
-})`
+})<ChildProps>`
   ${({ alignSelf }) => (alignSelf ? `align-self: ${alignSelf};` : '')}
   ${({ basis }) => (basis ? `flex-basis: ${basis};` : '')}
   ${({ grow }) => (grow ? `flex-grow: ${grow};` : '')}
@@ -14,7 +14,16 @@ const StyledChild = styled('div', {
   ${({ order }) => (order ? `order: ${order};` : '')}
 `
 
-const Child = props => <StyledChild {...props} />
+type ChildProps = {
+  alignSelf?: "baseline" | "center" | "flex-end" | "flex-start" | "stretch",
+  basis?: string | number,
+  flex?: string | number,
+  grow?: string | number,
+  order?: number,
+  shrink?: string | number
+};
+
+const Child: FunctionComponent<ChildProps> = props => <StyledChild {...props} />
 
 Child.propTypes = {
   alignSelf: PropTypes.oneOf([
@@ -41,7 +50,7 @@ Child.defaultProps = {
 }
 
 const StyledFlexBox = styled(Child, {
-  shouldForwardProp: prop =>
+  shouldForwardProp: (prop: string) =>
     ![
       'inline',
       'alignContent',
@@ -50,7 +59,7 @@ const StyledFlexBox = styled(Child, {
       'justifyContent',
       'wrap',
     ].includes(prop),
-})`
+})<FlexBoxProps>`
   display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
 
   ${({ alignContent }) =>
@@ -62,7 +71,16 @@ const StyledFlexBox = styled(Child, {
   ${({ wrap }) => (wrap ? `flex-wrap: ${wrap};` : '')}
 `
 
-const FlexBox = props => <StyledFlexBox {...props} />
+type FlexBoxProps = {
+  alignContent?: "center" | "flex-end" | "flex-start" | "space-around" | "space-between" | "stretch",
+  alignItems?: "baseline" | "center" | "flex-end" | "flex-start" | "stretch",
+  direction?: "column-reverse" | "column" | "row-reverse" | "row",
+  inline?: boolean,
+  justifyContent?: "center" | "flex-end" | "flex-start" | "space-around" | "space-between",
+  wrap?: "nowrap" | "wrap-reverse" | "wrap"
+}
+
+const FlexBox: FunctionComponent<FlexBoxProps> = props => <StyledFlexBox {...props} />
 
 FlexBox.propTypes = {
   alignContent: PropTypes.oneOf([
