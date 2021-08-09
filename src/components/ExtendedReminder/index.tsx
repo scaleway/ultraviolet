@@ -1,4 +1,4 @@
-import { useTheme } from '@emotion/react'
+import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
@@ -9,19 +9,19 @@ import Icon from '../Icon'
 import Typography from '../Typography'
 
 const variants = {
-  error: ({ colors }) => ({
+  error: ({ colors }: Theme) => ({
     background: colors.pippin,
     main: colors.red,
   }),
-  info: ({ colors }) => ({
+  info: ({ colors }: Theme) => ({
     background: colors.zumthor,
     main: colors.blue,
   }),
-  success: ({ colors }) => ({
+  success: ({ colors }: Theme) => ({
     background: colors.foam,
     main: colors.gray700,
   }),
-  warning: ({ colors }) => ({
+  warning: ({ colors }: Theme) => ({
     background: colors.serenade,
     main: colors.orange,
   }),
@@ -29,7 +29,7 @@ const variants = {
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: (prop: string) => !['variant'].includes(prop),
-})`
+})<{ variant: Variants }>`
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -49,7 +49,7 @@ const StyledBadgeContainer = styled(Box)`
 
 const StyledTitle = styled(Typography, {
   shouldForwardProp: (prop: string) => !['color'].includes(prop),
-})`
+})<{ color: Variants }>`
   font-weight: 600;
   text-transform: uppercase;
   color: ${({ theme, color }) => variants[color]?.(theme).main};
@@ -68,16 +68,18 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
+type Variants = keyof typeof variants
+
 type Props = {
-  badgeText: string,
-  icon: string,
-  linkText?: string,
-  onClick?(...args: unknown[]): unknown,
-  text: string,
-  title: string,
+  badgeText: string
+  icon: string
+  linkText?: string
+  onClick?(...args: unknown[]): unknown
+  text: string
+  title: string
   to?: string
-  variant: 'error' | 'info' | 'success' | 'warning'
-};
+  variant?: Variants
+}
 
 const ExtendedReminder: FunctionComponent<Props> = ({
   badgeText,
@@ -96,7 +98,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
     info: 'info',
     success: 'success',
     warning: 'beta',
-  }
+  } as const
 
   return (
     <StyledContainer variant={variant} {...props}>
@@ -150,7 +152,7 @@ ExtendedReminder.propTypes = {
    * The link that linkText prop need to redirect to.
    */
   to: PropTypes.string,
-  variant: PropTypes.oneOf(Object.keys(variants)),
+  variant: PropTypes.oneOf(Object.keys(variants) as Variants[]),
 }
 
 export default ExtendedReminder

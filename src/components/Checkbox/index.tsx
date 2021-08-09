@@ -1,11 +1,9 @@
-import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
   ReactNode,
   Ref,
-  SyntheticEvent,
   useEffect,
   useMemo,
 } from 'react'
@@ -30,7 +28,7 @@ const StyledCheckBoxContainer = styled(Typography)`
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
   shouldForwardProp: (prop: string) => !['hasChildren', 'size'].includes(prop),
-})<{ hasChildren: boolean; theme: Theme }>`
+})<{ hasChildren: boolean }>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
@@ -114,13 +112,13 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
         aria-disabled={disabled}
       >
         <StyledReakitCheckbox
-          aria-checked={checkbox.state}
-          checked={checkbox.state}
+          state={checkbox.state}
+          setState={checkbox.setState}
           hasChildren={hasChildren}
           size={size}
-          onChange={(e: SyntheticEvent<EventTarget>) => {
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             if (!progress) onChange(e)
-            setState(e?.target?.checked || false)
+            setState(e.target.checked || false)
           }}
           onFocus={onFocus}
           onBlur={onBlur}

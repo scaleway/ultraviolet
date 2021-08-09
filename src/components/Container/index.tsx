@@ -1,3 +1,4 @@
+import { Interpolation, Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
@@ -9,7 +10,11 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledBox = styled(Box)<{ small?: boolean; edition?: boolean, disabled?: boolean }>`
+const StyledBox = styled(Box)<{
+  small?: boolean
+  edition?: boolean
+  disabled?: boolean
+}>`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
@@ -29,15 +34,15 @@ const StyledBox = styled(Box)<{ small?: boolean; edition?: boolean, disabled?: b
 `
 
 type ContainerProps = {
-  boxStyle?: Record<string, unknown>,
-  children: ReactNode,
-  disabled?: boolean,
-  edition?: boolean,
-  header?: ReactNode,
-  rightTitle?: ReactNode,
-  small?: boolean,
-  subtitle?: string,
-  title?: string,
+  boxStyle?: Interpolation<Theme>
+  children: ReactNode
+  disabled?: boolean
+  edition?: boolean
+  header?: ReactNode
+  rightTitle?: ReactNode
+  small?: boolean
+  subtitle?: string
+  title?: string
 }
 
 const Container: FunctionComponent<ContainerProps> = ({

@@ -15,13 +15,13 @@ const StyledChild = styled('div', {
 `
 
 type ChildProps = {
-  alignSelf?: "baseline" | "center" | "flex-end" | "flex-start" | "stretch",
-  basis?: string | number,
-  flex?: string | number,
-  grow?: string | number,
-  order?: number,
+  alignSelf?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
+  basis?: string | number
+  flex?: string | number
+  grow?: string | number
+  order?: number
   shrink?: string | number
-};
+}
 
 const Child: FunctionComponent<ChildProps> = props => <StyledChild {...props} />
 
@@ -72,15 +72,30 @@ const StyledFlexBox = styled(Child, {
 `
 
 type FlexBoxProps = {
-  alignContent?: "center" | "flex-end" | "flex-start" | "space-around" | "space-between" | "stretch",
-  alignItems?: "baseline" | "center" | "flex-end" | "flex-start" | "stretch",
-  direction?: "column-reverse" | "column" | "row-reverse" | "row",
-  inline?: boolean,
-  justifyContent?: "center" | "flex-end" | "flex-start" | "space-around" | "space-between",
-  wrap?: "nowrap" | "wrap-reverse" | "wrap"
+  alignContent?:
+    | 'center'
+    | 'flex-end'
+    | 'flex-start'
+    | 'space-around'
+    | 'space-between'
+    | 'stretch'
+  alignItems?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
+  direction?: 'column-reverse' | 'column' | 'row-reverse' | 'row'
+  inline?: boolean
+  justifyContent?:
+    | 'center'
+    | 'flex-end'
+    | 'flex-start'
+    | 'space-around'
+    | 'space-between'
+  wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
 }
 
-const FlexBox: FunctionComponent<FlexBoxProps> = props => <StyledFlexBox {...props} />
+type FlexBoxType = FunctionComponent<FlexBoxProps> & {
+  Child: typeof Child
+}
+
+const FlexBox: FlexBoxType = props => <StyledFlexBox {...props} />
 
 FlexBox.propTypes = {
   alignContent: PropTypes.oneOf([

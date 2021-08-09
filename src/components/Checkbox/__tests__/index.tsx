@@ -74,11 +74,12 @@ describe('Checkbox', () => {
       </>,
     ))
 
-  test('renders with click event', async () => {
+  test('renders with click event', () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test">
         Checkbox Label
       </Checkbox>,
+      {},
     )
 
     const input = node.getByRole('checkbox')
@@ -86,11 +87,12 @@ describe('Checkbox', () => {
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
 
-  test('renders with click event with progress', async () => {
+  test('renders with click event with progress', () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test" progress>
         Checkbox Label
       </Checkbox>,
+      {},
     )
 
     const input = node.getByRole('checkbox')
