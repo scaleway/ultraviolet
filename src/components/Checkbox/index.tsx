@@ -1,8 +1,19 @@
 import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode, Ref, useEffect, useMemo } from 'react'
-import { Checkbox as ReakitCheckbox, CheckboxProps as ReakitCheckboxProps, useCheckboxState } from 'reakit/Checkbox'
+import React, {
+  FunctionComponent,
+  ReactNode,
+  Ref,
+  SyntheticEvent,
+  useEffect,
+  useMemo,
+} from 'react'
+import {
+  Checkbox as ReakitCheckbox,
+  CheckboxProps as ReakitCheckboxProps,
+  useCheckboxState,
+} from 'reakit/Checkbox'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Expandable from '../Expandable'
@@ -18,8 +29,8 @@ const StyledCheckBoxContainer = styled(Typography)`
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
-  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop),
-})<{hasChildren: boolean, theme: Theme}>`
+  shouldForwardProp: (prop: string) => !['hasChildren', 'size'].includes(prop),
+})<ReakitCheckboxProps & { hasChildren: boolean; theme: Theme }>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
@@ -47,38 +58,34 @@ const StyledIcon = styled(Icon)`
 `
 
 const StyledChildrenContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
+  shouldForwardProp: (prop: string) => !['size'].includes(prop),
 })``
 
 type CheckboxProps = {
-  checked?: boolean,
-  children: ReactNode,
-  valid: boolean,
-  error: string | ReactNode,
-  name?: string,
-  value?: string,
-  size?: number,
-  progress?: boolean,
-  disabled?: boolean,
-  autoFocus?: boolean,
-  typographyVariant?: string,
-} & ComponentProps<ReakitCheckboxProps> & {
-  ref?: Ref<Element>
-} & XStyledProps
+  children: ReactNode
+  valid: boolean | undefined
+  error: string | ReactNode
+  size?: number
+  progress?: boolean
+  disabled?: boolean
+  typographyVariant?: string
+} & ReakitCheckboxProps & {
+    ref?: Ref<Element>
+  } & XStyledProps
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
   checked = false,
-  onChange,
-  onFocus,
-  onBlur,
-  valid,
+  onChange = () => undefined,
+  onFocus = () => undefined,
+  onBlur = () => undefined,
+  valid = undefined,
   error,
   name = 'checkbox',
-  value,
-  size= 24,
+  value = undefined,
+  size = 24,
   children,
   progress = false,
-  disabled= false,
+  disabled = false,
   autoFocus = false,
   typographyVariant = 'default',
   ...props
@@ -111,9 +118,9 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
           checked={checkbox.state}
           hasChildren={hasChildren}
           size={size}
-          onChange={e => {
+          onChange={(e: SyntheticEvent<EventTarget>) => {
             if (!progress) onChange(e)
-            setState(e.target.checked)
+            setState(e?.target?.checked || false)
           }}
           onFocus={onFocus}
           onBlur={onBlur}
@@ -152,22 +159,6 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   )
 }
 
-Checkbox.defaultProps = {
-  autoFocus: false,
-  checked: false,
-  children: '',
-  disabled: false,
-  error: undefined,
-  name: 'checkbox',
-  onBlur: undefined,
-  onFocus: undefined,
-  progress: false,
-  size: 24,
-  typographyVariant: 'default',
-  valid: undefined,
-  value: undefined,
-}
-
 Checkbox.propTypes = {
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
@@ -182,11 +173,7 @@ Checkbox.propTypes = {
   size: PropTypes.number,
   typographyVariant: PropTypes.oneOf(typographyVariants),
   valid: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default Checkbox
