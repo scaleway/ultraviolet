@@ -2,7 +2,7 @@
 
 exports[`Breadcrumbs renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .cache-v28fi1 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,20 +12,20 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.emotion-4 {
+.cache-r8ul2r {
   display: inline;
 }
 
-.emotion-4[aria-current='page'] {
+.cache-r8ul2r[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.emotion-4:not(:last-child)::after {
+.cache-r8ul2r:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.emotion-7 {
+.cache-eeofzd {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,30 +34,30 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   color: #4f0599;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+.cache-eeofzd:hover,
+.cache-eeofzd:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+.cache-eeofzd:hover,
+.cache-eeofzd:focus {
   color: #4f0599;
 }
 
 <nav
     aria-label="breadcrumb"
-    class="emotion-0 emotion-1"
+    class="cache-11djngs e7ah3bn0"
   >
     <ol
-      class="emotion-2 emotion-3"
+      class="cache-v28fi1 e1081fv12"
     >
       <li
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-r8ul2r e1081fv10"
       >
         <a
-          class="emotion-6 emotion-7 emotion-1"
+          class="e4bq1r51 cache-eeofzd e7ah3bn0"
           href="/step1"
         >
           Step 1
@@ -65,10 +65,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-r8ul2r e1081fv10"
       >
         <a
-          class="emotion-6 emotion-7 emotion-1"
+          class="e4bq1r51 cache-eeofzd e7ah3bn0"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -77,7 +77,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-r8ul2r e1081fv10"
       >
         Step 3
       </li>
@@ -88,7 +88,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
 
 exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .cache-v28fi1 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -98,7 +98,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   display: flex;
 }
 
-.emotion-4 {
+.cache-148fe26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,77 +131,77 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   border-color: #fff;
 }
 
-.emotion-4:first-child {
+.cache-148fe26:first-child {
   padding-left: 24px;
   margin-left: 0;
   margin-right: -24px;
 }
 
-.emotion-4:last-child {
+.cache-148fe26:last-child {
   margin-right: 0;
 }
 
-.emotion-4[aria-current='page'] {
+.cache-148fe26[aria-current='page'] {
   background-color: #4f0599;
   color: #fff;
   border-color: #fff;
 }
 
-.emotion-4[aria-current='page']:focus {
+.cache-148fe26[aria-current='page']:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.emotion-4[aria-current='page']~.emotion-4 {
+.cache-148fe26[aria-current='page']~.cache-148fe26 {
   background-color: #fff;
   color: #b2b6c3;
   border-color: #d4dae7;
 }
 
-.emotion-4[aria-current='page']~.emotion-4:focus {
+.cache-148fe26[aria-current='page']~.cache-148fe26:focus {
   box-shadow: 0 0 0 2px rgba(178,182,195,0.25);
 }
 
-.emotion-4:nth-child(1) {
+.cache-148fe26:nth-child(1) {
   z-index: 10;
 }
 
-.emotion-4:nth-child(2) {
+.cache-148fe26:nth-child(2) {
   z-index: 9;
 }
 
-.emotion-4:nth-child(3) {
+.cache-148fe26:nth-child(3) {
   z-index: 8;
 }
 
-.emotion-4:nth-child(4) {
+.cache-148fe26:nth-child(4) {
   z-index: 7;
 }
 
-.emotion-4:nth-child(5) {
+.cache-148fe26:nth-child(5) {
   z-index: 6;
 }
 
-.emotion-4:nth-child(6) {
+.cache-148fe26:nth-child(6) {
   z-index: 5;
 }
 
-.emotion-4:nth-child(7) {
+.cache-148fe26:nth-child(7) {
   z-index: 4;
 }
 
-.emotion-4:nth-child(8) {
+.cache-148fe26:nth-child(8) {
   z-index: 3;
 }
 
-.emotion-4:nth-child(9) {
+.cache-148fe26:nth-child(9) {
   z-index: 2;
 }
 
-.emotion-4:nth-child(10) {
+.cache-148fe26:nth-child(10) {
   z-index: 1;
 }
 
-.emotion-7 {
+.cache-eeofzd {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -210,30 +210,30 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   color: #4f0599;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+.cache-eeofzd:hover,
+.cache-eeofzd:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+.cache-eeofzd:hover,
+.cache-eeofzd:focus {
   color: #4f0599;
 }
 
 <nav
     aria-label="breadcrumb"
-    class="emotion-0 emotion-1"
+    class="cache-11djngs e7ah3bn0"
   >
     <ol
-      class="emotion-2 emotion-3"
+      class="cache-v28fi1 e1081fv12"
     >
       <li
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-148fe26 e1081fv11"
       >
         <a
-          class="emotion-6 emotion-7 emotion-1"
+          class="e4bq1r51 cache-eeofzd e7ah3bn0"
           href="/step1"
         >
           Step 1
@@ -241,10 +241,10 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-148fe26 e1081fv11"
       >
         <a
-          class="emotion-6 emotion-7 emotion-1"
+          class="e4bq1r51 cache-eeofzd e7ah3bn0"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -253,7 +253,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="emotion-4 emotion-5"
+        class="cache-148fe26 e1081fv11"
       >
         Step 3
       </li>

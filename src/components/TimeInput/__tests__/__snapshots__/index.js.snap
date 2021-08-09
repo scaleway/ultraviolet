@@ -2,13 +2,13 @@
 
 exports[`TimeInput renders correctly with base props 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .cache-70ccc7-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.emotion-3 {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -20,7 +20,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.emotion-4 {
+.cache-1p9qdtk-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,28 +57,28 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.emotion-4:hover {
+.cache-1p9qdtk-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.emotion-4:focus-within {
+.cache-1p9qdtk-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-4:focus-within svg {
+.cache-1p9qdtk-control:focus-within svg {
   fill: #4f0599;
 }
 
-.emotion-4:hover {
+.cache-1p9qdtk-control:hover {
   border-color: #4f0599;
 }
 
-.emotion-4:hover svg {
+.cache-1p9qdtk-control:hover svg {
   fill: #4f0599;
 }
 
-.emotion-5 {
+.cache-1ycj452-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -102,7 +102,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   height: 100%;
 }
 
-.emotion-7 {
+.cache-1ot4w4y {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -126,7 +126,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.emotion-9 {
+.cache-163tydu-singleValue {
   color: #4a4f62;
   margin-left: 0;
   margin-right: 0;
@@ -145,7 +145,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-left: 0;
 }
 
-.emotion-10 {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -159,12 +159,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-left: 0;
 }
 
-.emotion-11 {
+.cache-1oagfds-Input {
   padding-top: 11px;
   margin-left: 0px;
 }
 
-.emotion-12 {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -183,7 +183,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.emotion-13 {
+.cache-1oac2d5-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -198,7 +198,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: flex;
 }
 
-.emotion-14 {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -210,11 +210,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-14:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.emotion-16 {
+.cache-hf2mcf {
   fill: #d4dae7;
   height: 24px;
   width: 24px;
@@ -222,12 +222,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.emotion-16.emotion-16 {
+.cache-hf2mcf.cache-hf2mcf {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.emotion-19 {
+.cache-10t73lc {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -237,51 +237,51 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
-.emotion-19.emotion-19 {
+.cache-10t73lc.cache-10t73lc {
   height: 56px;
   overflow: hidden;
 }
 
-.emotion-21.emotion-21 {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
   color: #ef5774;
   padding-top: 2px;
 }
 
 <div
-    class=" emotion-0 emotion-1 emotion-2"
+    class=" emneda41 cache-70ccc7-container e7ah3bn0"
     data-testid="rich-select-timeinput-test-0"
   >
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="emotion-3"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" emotion-4"
+      class=" cache-1p9qdtk-control"
     >
       <div
-        class=" emotion-5"
+        class=" cache-1ycj452-ValueContainer"
       >
         <label
           aria-live="assertive"
-          class="emotion-6 emotion-7 emotion-2"
+          class="emneda40 cache-1ot4w4y e7ah3bn0"
           for="test"
           id="test-label"
         >
           Select...
         </label>
         <div
-          class=" emotion-9"
+          class=" cache-163tydu-singleValue"
         >
           00:00
         </div>
         <div
-          class="emotion-10"
+          class="cache-1mkawrf-Input"
         >
           <div
-            class="emotion-11"
+            class="cache-1oagfds-Input"
             style="caret-color: transparent; display: inline-block;"
           >
             <input
@@ -304,17 +304,17 @@ exports[`TimeInput renders correctly with base props 1`] = `
         </div>
       </div>
       <div
-        class=" emotion-12"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" emotion-13"
+          class=" cache-1oac2d5-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" emotion-14"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
-            class="sc-ui-icon emotion-15 emotion-16 emotion-2"
+            class="sc-ui-icon etwatq50 cache-hf2mcf e7ah3bn0"
             viewBox="0 0 24 24"
           >
             <path
@@ -330,10 +330,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
-      class="emotion-18 emotion-19 emotion-2"
+      class="e14o3tsk0 cache-10t73lc e7ah3bn0"
     >
       <div
-        class="emotion-21 emotion-2"
+        class="cache-1jgvrmi e7ah3bn0"
       />
     </div>
   </div>

@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .cache-dlv2kp {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,41 +38,41 @@ exports[`SwitchButton renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-dlv2kp[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.cache-dlv2kp:hover,
+.cache-dlv2kp:focus {
   color: #b2b6c3;
   border-color: #4f0599;
 }
 
-.emotion-1:hover {
+.cache-dlv2kp:hover {
   box-shadow: 0 0 8px 2px #eeeeff;
 }
 
-.emotion-1:focus {
+.cache-dlv2kp:focus {
   box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-3 {
+.cache-cujed6 {
   position: absolute;
   opacity: 0.01;
 }
 
 <label
     aria-checked="false"
-    class="emotion-0 emotion-1 emotion-2"
+    class="e1y8bjsj1 cache-dlv2kp e7ah3bn0"
     for="radio-choice"
     variant="default"
   >
     Choice
     <input
       aria-checked="false"
-      class="emotion-3 emotion-4"
+      class="cache-cujed6 e1y8bjsj0"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -85,7 +85,7 @@ exports[`SwitchButton renders correctly 1`] = `
 
 exports[`SwitchButton renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .cache-1izil9v {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,25 +126,25 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   pointer-events: none;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-1izil9v[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-1izil9v[aria-checked='true'] {
   color: #d4dae7;
   border-color: #d4dae7;
 }
 
-.emotion-3 {
+.cache-cujed6 {
   position: absolute;
   opacity: 0.01;
 }
 
 <label
     aria-checked="false"
-    class="emotion-0 emotion-1 emotion-2"
+    class="e1y8bjsj1 cache-1izil9v e7ah3bn0"
     disabled=""
     for="radio-choice"
     variant="default"
@@ -153,7 +153,7 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
     <input
       aria-checked="false"
       aria-disabled="true"
-      class="emotion-3 emotion-4"
+      class="cache-cujed6 e1y8bjsj0"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -167,7 +167,7 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 
 exports[`SwitchButton renders correctly with complex child 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .cache-1izil9v {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,25 +208,25 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   pointer-events: none;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-1izil9v[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-1izil9v[aria-checked='true'] {
   color: #d4dae7;
   border-color: #d4dae7;
 }
 
-.emotion-3 {
+.cache-cujed6 {
   position: absolute;
   opacity: 0.01;
 }
 
 <label
     aria-checked="true"
-    class="emotion-0 emotion-1 emotion-2"
+    class="e1y8bjsj1 cache-1izil9v e7ah3bn0"
     disabled=""
     for="radio-choice"
     variant="default"
@@ -236,7 +236,7 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
       aria-checked="true"
       aria-disabled="true"
       checked=""
-      class="emotion-3 emotion-4"
+      class="cache-cujed6 e1y8bjsj0"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -250,7 +250,7 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 
 exports[`SwitchButton renders correctly with variant segment 1`] = `
 <DocumentFragment>
-  .emotion-1 {
+  .cache-8sw23u {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -292,70 +292,70 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   box-shadow: none;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-8sw23u[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.cache-8sw23u:hover,
+.cache-8sw23u:focus {
   color: #b2b6c3;
   border-color: #4f0599;
 }
 
-.emotion-1:hover {
+.cache-8sw23u:hover {
   box-shadow: 0 0 8px 2px #eeeeff;
 }
 
-.emotion-1:focus {
+.cache-8sw23u:focus {
   box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.cache-8sw23u:hover,
+.cache-8sw23u:focus {
   box-shadow: none;
   border-color: transparent;
   color: #4a4f62;
 }
 
-.emotion-1[aria-checked='true'] {
+.cache-8sw23u[aria-checked='true'] {
   background-color: #4f0599;
   color: #fff;
 }
 
-.emotion-1[aria-checked='true']:hover {
+.cache-8sw23u[aria-checked='true']:hover {
   color: #fff;
 }
 
-.emotion-1[aria-checked='false'] {
+.cache-8sw23u[aria-checked='false'] {
   background-color: white;
   color: #4a4f62;
   border-color: transparent;
 }
 
-.emotion-1[aria-checked='false']:hover,
-.emotion-1[aria-checked='false']:focus {
+.cache-8sw23u[aria-checked='false']:hover,
+.cache-8sw23u[aria-checked='false']:focus {
   color: #4a4f62;
   border-color: transparent;
   box-shadow: none;
 }
 
-.emotion-3 {
+.cache-cujed6 {
   position: absolute;
   opacity: 0.01;
 }
 
 <label
     aria-checked="false"
-    class="emotion-0 emotion-1 emotion-2"
+    class="e1y8bjsj1 cache-8sw23u e7ah3bn0"
     for="radio-choice"
     variant="segment"
   >
     Choice
     <input
       aria-checked="false"
-      class="emotion-3 emotion-4"
+      class="cache-cujed6 e1y8bjsj0"
       id="radio-choice"
       name="radio"
       tabindex="0"
