@@ -1,3 +1,10 @@
+### [0.98.1](https://github.com/scaleway/scaleway-ui/compare/v0.98.0...v0.98.1) (2021-08-09)
+
+
+### :bug: Bug Fixes
+
+* correct Alert tests ([#613](https://github.com/scaleway/scaleway-ui/issues/613)) ([92508b9](https://github.com/scaleway/scaleway-ui/commit/92508b9430e05dbc2e901b071f1334d5ac4a8b7f))
+
 ## [0.98.0](https://github.com/scaleway/scaleway-ui/compare/v0.97.0...v0.98.0) (2021-08-09)
 
 
