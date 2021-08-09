@@ -1,3 +1,17 @@
+## [0.98.0](https://github.com/scaleway/scaleway-ui/compare/v0.97.0...v0.98.0) (2021-08-09)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @emotion/react from 11.4.0 to 11.4.1 ([#617](https://github.com/scaleway/scaleway-ui/issues/617)) ([6ed77c1](https://github.com/scaleway/scaleway-ui/commit/6ed77c1b9e2061c105a1e9ef03d2b95bd7f5935b))
+* **deps-dev:** bump rollup from 2.56.0 to 2.56.1 ([#615](https://github.com/scaleway/scaleway-ui/issues/615)) ([8b7fb3b](https://github.com/scaleway/scaleway-ui/commit/8b7fb3bdf7267596cb5752792c5e081717c2e894))
+* **deps-dev:** bump webpack from 5.48.0 to 5.49.0 ([#614](https://github.com/scaleway/scaleway-ui/issues/614)) ([901957a](https://github.com/scaleway/scaleway-ui/commit/901957a87dedfa058e2a8717a226c9f303eec089))
+
+
+### :gear: Features
+
+* migrate highly depended on components to typescript ([#612](https://github.com/scaleway/scaleway-ui/issues/612)) ([fe40190](https://github.com/scaleway/scaleway-ui/commit/fe40190bbb4369ecafb7306c86a4df3bb04adabe))
+
 ## [0.97.0](https://github.com/scaleway/scaleway-ui/compare/v0.96.0...v0.97.0) (2021-08-06)
 
 
