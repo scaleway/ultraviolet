@@ -39,9 +39,9 @@ interface StealthCopiableProps {
 
 const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
   children,
-  side,
-  copyText,
-  copiedText,
+  side = 'right',
+  copyText = 'Copy',
+  copiedText = 'Copied',
 }) => {
   const string = recursivelyGetChildrenString(children)
 
@@ -60,12 +60,6 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
       {side === 'left' && children}
     </StyledContainer>
   )
-}
-
-StealthCopiable.defaultProps = {
-  copiedText: 'Copied',
-  copyText: 'Copy',
-  side: 'right',
 }
 
 StealthCopiable.propTypes = {

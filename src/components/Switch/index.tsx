@@ -320,6 +320,4 @@ Switch.propTypes = {
   width: PropTypes.number,
 }
 
-Switch.defaultProps = {}
-
 export default Switch

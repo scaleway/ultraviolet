@@ -90,9 +90,6 @@ export const Item: FunctionComponent<{ as?: string | ElementType<unknown> }> =
 Item.propTypes = {
   as: PropTypes.string,
 }
-Item.defaultProps = {
-  as: undefined,
-}
 
 type SliderType = FunctionComponent & {
   Item: typeof Item
