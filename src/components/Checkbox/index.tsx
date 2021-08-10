@@ -61,8 +61,8 @@ const StyledChildrenContainer = styled('div', {
 
 type CheckboxProps = {
   children: ReactNode
-  valid: boolean | undefined
-  error: string | ReactNode
+  valid?: boolean
+  error?: string | ReactNode
   size?: number
   progress?: boolean
   disabled?: boolean
@@ -164,7 +164,7 @@ Checkbox.propTypes = {
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   name: PropTypes.string,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   progress: PropTypes.bool,
   size: PropTypes.number,
