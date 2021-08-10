@@ -21,7 +21,7 @@ const StyledBox = styled(x.div, {
   ${({ bordered }) => (bordered ? borderedStyles : null)}
 `
 
-type BoxProps = {
+export type BoxProps = {
   bordered?: boolean
   children?: ReactNode
   height?: number | string

@@ -1,7 +1,7 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -12,6 +12,17 @@ const sizes = {
   small: 0.7,
   xlarge: 1.5,
   xsmall: 0.5,
+}
+
+type Sizes = keyof typeof sizes
+
+type StyleProps = {
+  hasError?: boolean
+  size?: Sizes
+  percentUsed?: number
+  isMaxSize?: boolean
+  hasMaxSize?: boolean
+  type?: 'min' | 'max'
 }
 
 const widthGrow = keyframes`
@@ -32,41 +43,42 @@ const StyledTitle = styled.span`
 `
 
 const StyledValue = styled('span', {
-  shouldForwardProp: prop => !['hasError'].includes(prop),
-})`
+  shouldForwardProp: prop => !['hasError'].includes(prop.toString()),
+})<{ hasError?: boolean }>`
   font-weight: 800;
   color: ${({ hasError, theme }) =>
     hasError ? theme.colors.orange : theme.colors.gray950};
 `
 
 const StyledContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})<{ size?: Sizes }>`
   display: flex;
   align-items: center;
   position: relative;
 
-  height: ${({ size }) => (sizes[size] || 1) * 15}px;
+  height: ${({ size = 'medium' }) => (sizes[size] || 1) * 15}px;
   width: 100%;
 `
 
 const StyledVolumeContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})<StyleProps>`
   background-color: ${({ theme }) => theme.colors.gray200};
   border-radius: 3px;
   position: relative;
 
-  height: ${({ size }) => (sizes[size] || 1) * 6}px;
+  height: ${({ size = 'medium' }) => (sizes[size] || 1) * 6}px;
   width: 100%;
 `
 
 const StyledVolume = styled('span', {
-  shouldForwardProp: prop => !['percentUsed', 'hasError'].includes(prop),
-})`
+  shouldForwardProp: prop =>
+    !['percentUsed', 'hasError'].includes(prop.toString()),
+})<StyleProps>`
   background-color: ${({ hasError, theme }) =>
     hasError ? theme.colors.orange : theme.colors.green};
-  border-radius: ${({ percentUsed }) =>
+  border-radius: ${({ percentUsed = 0 }) =>
     percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
   position: absolute;
   left: 0;
@@ -81,12 +93,12 @@ const StyledVolume = styled('span', {
 
 const StyledCursor = styled('div', {
   shouldForwardProp: prop =>
-    !['size', 'hasMaxSize', 'isMaxSize'].includes(prop),
-})`
+    !['size', 'hasMaxSize', 'isMaxSize'].includes(prop.toString()),
+})<StyleProps>`
   background-color: ${({ theme }) => theme.colors.gray950};
   position: absolute;
-  height: ${({ size }) => (sizes[size] || 1) * 15}px;
-  width: ${({ size }) => (sizes[size] || 1) * 3}px;
+  height: ${({ size = 'medium' }) => (sizes[size] || 1) * 15}px;
+  width: ${({ size = 'medium' }) => (sizes[size] || 1) * 3}px;
   ${({ isMaxSize, hasMaxSize }) =>
     isMaxSize
       ? `right: 10%;`
@@ -97,13 +109,13 @@ const StyledCursor = styled('div', {
 `
 
 const StyledLabelContainer = styled('div', {
-  shouldForwardProp: prop => !['size', 'type'].includes(prop),
-})`
+  shouldForwardProp: prop => !['size', 'type'].includes(prop.toString()),
+})<StyleProps>`
   display: flex;
   flex-direction: column;
   white-space: nowrap;
   font-weight: 500;
-  line-height: ${({ size }) => (sizes[size] || 1) * 8}px;
+  line-height: ${({ size = 'medium' }) => (sizes[size] || 1) * 8}px;
 
   position: absolute;
   top: 32px;
@@ -111,23 +123,40 @@ const StyledLabelContainer = styled('div', {
 `
 
 const StyledLabel = styled('div', {
-  shouldForwardProp: prop => !['type'].includes(prop),
-})`
+  shouldForwardProp: prop => !['type'].includes(prop.toString()),
+})<StyleProps>`
   text-align: ${({ type }) => (type === 'min' ? 'left' : 'right')};
 `
 
-const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
+const StyledBox = styled(Box)`
+  display: flex;
+  align-items: center;
+`
+
+const getPercentUsed = ({
+  minSize,
+  maxSize,
+  value,
+  isTooBig,
+  isTooSmall,
+}: {
+  minSize: number
+  maxSize?: number
+  value: number
+  isTooBig?: boolean
+  isTooSmall?: boolean
+}): number => {
   const validMinSize = minSize === 0 ? 1 : minSize
   if (!maxSize) {
-    return parseInt((value / validMinSize) * 50, 10)
+    return (value / validMinSize) * 50
   }
 
   if (isTooSmall) {
-    return parseInt((value / validMinSize) * 10, 10)
+    return (value / validMinSize) * 10
   }
 
   if (isTooBig) {
-    return parseInt(90 + ((value - maxSize) / validMinSize) * 10, 10)
+    return 90 + ((value - maxSize) / validMinSize) * 10
   }
 
   if (value === minSize) {
@@ -138,22 +167,54 @@ const getPercentUsed = ({ minSize, maxSize, value, isTooBig, isTooSmall }) => {
     return 90
   }
 
-  return parseInt(
-    10 + ((value - validMinSize) / (maxSize - validMinSize)) * 80,
-    10,
-  )
+  return 10 + ((value - validMinSize) / (maxSize - validMinSize)) * 80
 }
 
-const VolumeSize = ({
-  maxLabel,
+type VolumeSizeProps = {
+  /**
+   * maximum label below the maxSize
+   */
+  maxLabel?: string
+  maxSize?: number
+  /**
+   * minimum label below the minSize
+   */
+  minLabel?: string
+  minSize: number
+  /**
+   * required label below the required size (only when minSize is set and maxSize are not)
+   */
+  requiredLabel?: string
+  size?: Sizes
+  /**
+   * The title to place above
+   */
+  title?: string
+  /**
+   * The message to display when the value is greather than maxSize
+   */
+  tooBigMessage?: string
+  /**
+   * The message to display when the value is lower than minSize
+   */
+  tooSmallMessage?: string
+  /**
+   * The text to display next to the value, minSize, maxSize
+   */
+  unit: string
+  value: number
+}
+
+const VolumeSize: FunctionComponent<VolumeSizeProps> = ({
+  maxLabel = 'maximum',
   maxSize,
-  minLabel,
+  minLabel = 'minimum',
   minSize,
-  requiredLabel,
-  size,
+  requiredLabel = 'required',
+  size = 'medium',
   title,
-  tooBigMessage,
-  tooSmallMessage,
+  tooBigMessage = 'Volume capacity exceeded',
+  tooSmallMessage = 'Not enough volume allocated',
   unit,
   value,
 }) => {
@@ -163,7 +224,7 @@ const VolumeSize = ({
 
   return (
     <Box mb={5}>
-      <Box display="flex" alignItems="center" mb={1}>
+      <StyledBox mb={1}>
         <Typography variant="bodyA" mr={2} fontWeight={500}>
           <StyledTitle>{title}</StyledTitle>
           <StyledValue hasError={hasError}>
@@ -180,7 +241,7 @@ const VolumeSize = ({
             {isTooBig ? tooBigMessage : tooSmallMessage}
           </Typography>
         )}
-      </Box>
+      </StyledBox>
       <StyledContainer size={size}>
         <StyledVolumeContainer size={size}>
           <StyledVolume
@@ -220,49 +281,17 @@ const VolumeSize = ({
 }
 
 VolumeSize.propTypes = {
-  /**
-   * maximum label below the maxSize
-   */
   maxLabel: PropTypes.string,
   maxSize: PropTypes.number,
-  /**
-   * minimum label below the minSize
-   */
   minLabel: PropTypes.string,
   minSize: PropTypes.number.isRequired,
-  /**
-   * required label below the required size (only when minSize is set and maxSize are not)
-   */
   requiredLabel: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-  /**
-   * The title to place above
-   */
+  size: PropTypes.oneOf<Sizes>(Object.keys(sizes) as Sizes[]),
   title: PropTypes.string,
-  /**
-   * The message to display when the value is greather than maxSize
-   */
   tooBigMessage: PropTypes.string,
-  /**
-   * The message to display when the value is lower than minSize
-   */
   tooSmallMessage: PropTypes.string,
-  /**
-   * The text to display next to the value, minSize, maxSize
-   */
   unit: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
-}
-
-VolumeSize.defaultProps = {
-  maxLabel: 'maximum',
-  maxSize: undefined,
-  minLabel: 'minimum',
-  requiredLabel: 'required',
-  size: 'medium',
-  title: undefined,
-  tooBigMessage: 'Volume capacity exceeded',
-  tooSmallMessage: 'Not enough volume allocated',
 }
 
 export default VolumeSize

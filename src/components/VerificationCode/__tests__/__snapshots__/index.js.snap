@@ -244,7 +244,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="3"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -254,7 +254,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="4"
+      value=""
     />
   </div>
 </DocumentFragment>
@@ -321,7 +321,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       id="verification-code-2"
       placeholder=""
       type="text"
-      value="2"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -330,7 +330,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       id="verification-code-3"
       placeholder=""
       type="text"
-      value="3"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -339,7 +339,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       id="verification-code-4"
       placeholder=""
       type="text"
-      value="a"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -348,7 +348,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
       id="verification-code-5"
       placeholder=""
       type="text"
-      value="*"
+      value=""
     />
   </div>
 </DocumentFragment>
@@ -408,7 +408,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="2"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -418,7 +418,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="3"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -428,7 +428,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="4"
+      value=""
     />
   </div>
 </DocumentFragment>
@@ -498,7 +498,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="3"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -508,7 +508,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="4"
+      value=""
     />
   </div>
 </DocumentFragment>
@@ -578,7 +578,7 @@ exports[`VerificationCode should handle paste with overflowing values at differe
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="2"
+      value=""
     />
     <input
       aria-invalid="false"
@@ -588,7 +588,7 @@ exports[`VerificationCode should handle paste with overflowing values at differe
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value="3"
+      value=""
     />
   </div>
 </DocumentFragment>

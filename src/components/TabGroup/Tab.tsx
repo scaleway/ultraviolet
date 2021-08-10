@@ -1,6 +1,14 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef } from 'react'
+import React, {
+  ElementType,
+  FunctionComponent,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  useEffect,
+  useRef,
+} from 'react'
 
 export const StyledTab = styled.span`
   display: flex;
@@ -44,25 +52,38 @@ export const StyledTab = styled.span`
   }
 `
 
-const Tab = ({
-  children,
-  disabled,
-  isSelected,
-  setInternTabsWidth,
-  isTabsWidthSet,
-  index,
+export type TabProps = {
+  as?: ElementType<unknown>
+  children?: ReactNode
+  disabled?: boolean
+  hasEndedCount?: boolean
+  index?: number
+  isSelected?: boolean
+  isTabsWidthSet?: boolean
+  name?: string
+  onClick?: (
+    event: MouseEvent<HTMLSpanElement> | KeyboardEvent<HTMLSpanElement>,
+  ) => void
+  setInternTabsWidth?: (width: number, index: number) => void
+}
+
+const Tab: FunctionComponent<TabProps> = ({
+  children = null,
+  disabled = false,
+  isSelected = false,
+  setInternTabsWidth = () => {},
+  isTabsWidthSet = false,
+  index = 0,
   name,
-  onClick,
-  hasEndedCount,
+  onClick = () => {},
+  hasEndedCount = false,
   as,
   ...props
 }) => {
-  const ref = useRef({})
+  const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    if (ref && ref.current) {
-      setInternTabsWidth(ref.current.offsetWidth, index)
-    }
+    setInternTabsWidth(ref?.current?.offsetWidth || 0, index)
   }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
 
   return (
@@ -88,7 +109,7 @@ const Tab = ({
 }
 
 Tab.propTypes = {
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  as: PropTypes.func,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   hasEndedCount: PropTypes.bool,
@@ -98,19 +119,6 @@ Tab.propTypes = {
   name: PropTypes.string,
   onClick: PropTypes.func,
   setInternTabsWidth: PropTypes.func,
-}
-
-Tab.defaultProps = {
-  as: undefined,
-  children: null,
-  disabled: false,
-  hasEndedCount: false,
-  index: 0,
-  isSelected: false,
-  isTabsWidthSet: false,
-  name: undefined,
-  onClick: () => {},
-  setInternTabsWidth: () => {},
 }
 
 export default Tab
