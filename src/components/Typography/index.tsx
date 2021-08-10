@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ElementType,
-  FocusEvent,
-  MouseEvent,
+  FocusEventHandler,
+  MouseEventHandler,
   ReactNode,
   Ref,
   forwardRef,
@@ -19,6 +19,7 @@ type StyleProps = {
   theme?: Theme
   maxLines?: number
 }
+
 const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
   {
     badge: ({ theme }: StyleProps) =>
@@ -185,8 +186,8 @@ type StyledTextProps = {
   maxLines?: number
   variant: TypographyVariant
   as?: string | ElementType<unknown>
-  onFocus?: (event: FocusEvent) => void
-  onMouseEnter?: (event: MouseEvent) => void
+  onFocus?: FocusEventHandler
+  onMouseEnter?: MouseEventHandler
 } & XStyledProps
 
 const StyledText = styled(Box, {
@@ -208,16 +209,11 @@ const StyledText = styled(Box, {
 
 export const typographyVariants = Object.keys(variantTags)
 
-type TypographyProps = {
-  as?: string | ElementType<unknown>
+type TypographyProps = Omit<StyledTextProps, 'variant'> & {
   children: ReactNode
-  ellipsis?: boolean
-  maxLines?: number
-  onFocus?: (event: FocusEvent) => void
-  onMouseEnter?: (event: MouseEvent) => void
   tooltipProps?: Partial<TooltipProps>
   variant?: TypographyVariant
-} & XStyledProps
+}
 
 const Text = forwardRef(
   (
@@ -265,8 +261,6 @@ const Text = forwardRef(
   ),
 )
 
-type EventHandler<T> = (ev: T) => void
-
 const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
   const isTruncated = useCallback((target = {}) => {
     // If the text is really truncated
@@ -287,17 +281,17 @@ const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
         onFocus = () => {},
         ...tooltipProps
       }: {
-        onMouseEnter: EventHandler<MouseEvent>
-        onFocus: EventHandler<FocusEvent>
+        onMouseEnter: MouseEventHandler<Element>
+        onFocus: FocusEventHandler<Element>
       }) => (
         <Text
           {...props}
-          onMouseEnter={(ev: MouseEvent) => {
+          onMouseEnter={ev => {
             if (isTruncated(ev.currentTarget)) {
               onMouseEnter(ev)
             }
           }}
-          onFocus={(ev: FocusEvent) => {
+          onFocus={ev => {
             if (isTruncated(ev.currentTarget)) {
               onFocus(ev)
             }
