@@ -27,7 +27,7 @@ const StyledCheckBoxContainer = styled(Typography)`
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
-  shouldForwardProp: (prop: string) => !['hasChildren', 'size'].includes(prop),
+  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop.toString()),
 })<{ hasChildren: boolean }>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
@@ -56,7 +56,7 @@ const StyledIcon = styled(Icon)`
 `
 
 const StyledChildrenContainer = styled('div', {
-  shouldForwardProp: (prop: string) => !['size'].includes(prop),
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
 type CheckboxProps = {

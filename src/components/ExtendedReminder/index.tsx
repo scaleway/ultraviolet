@@ -28,7 +28,7 @@ const variants = {
 }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: (prop: string) => !['variant'].includes(prop),
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
 })<{ variant: Variants }>`
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ const StyledBadgeContainer = styled(Box)`
 `
 
 const StyledTitle = styled(Typography, {
-  shouldForwardProp: (prop: string) => !['color'].includes(prop),
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
 })<{ color: Variants }>`
   font-weight: 600;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ import { Color } from '../../theme/colors'
 import Box from '../Box'
 
 const StyledDot = styled(Box, {
-  shouldForwardProp: (prop: string) => !['color'].includes(prop),
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
 })`
   display: inline-block;
   border-radius: 50%;

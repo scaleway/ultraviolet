@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 
 const StyledChild = styled('div', {
-  shouldForwardProp: (prop: string) =>
-    !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(prop),
+  shouldForwardProp: prop =>
+    !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(
+      prop.toString(),
+    ),
 })<ChildProps>`
   ${({ alignSelf }) => (alignSelf ? `align-self: ${alignSelf};` : '')}
   ${({ basis }) => (basis ? `flex-basis: ${basis};` : '')}
@@ -50,7 +52,7 @@ Child.defaultProps = {
 }
 
 const StyledFlexBox = styled(Child, {
-  shouldForwardProp: (prop: string) =>
+  shouldForwardProp: prop =>
     ![
       'inline',
       'alignContent',
@@ -58,7 +60,7 @@ const StyledFlexBox = styled(Child, {
       'direction',
       'justifyContent',
       'wrap',
-    ].includes(prop),
+    ].includes(prop.toString()),
 })<FlexBoxProps>`
   display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
 
