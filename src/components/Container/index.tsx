@@ -46,15 +46,15 @@ type ContainerProps = {
 }
 
 const Container: FunctionComponent<ContainerProps> = ({
-  title = undefined,
-  subtitle = undefined,
-  header = undefined,
-  rightTitle = undefined,
+  title,
+  subtitle,
+  header,
+  rightTitle,
   disabled = false,
   edition = false,
   small = false,
   children,
-  boxStyle = undefined,
+  boxStyle,
   ...props
 }) => (
   <StyledContainer {...props}>
