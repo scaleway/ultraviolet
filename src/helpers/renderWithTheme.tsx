@@ -13,7 +13,7 @@ emotionCache.compat = true
 
 export default (
   component: ReactNode,
-  options: RenderOptions,
+  options?: RenderOptions,
   theme: typeof defaultTheme = defaultTheme,
 ): ReturnType<typeof render> =>
   render(

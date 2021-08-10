@@ -9,9 +9,10 @@ describe('StealthCopiable', () => {
   beforeAll(() => {
     let data = ''
 
+    // @ts-expect-error we are voluntarily based on an older browser spec
     window.clipboardData = {
       getData: jest.fn(() => data),
-      setData: jest.fn((_, val) => {
+      setData: jest.fn((_, val: string) => {
         data = val
       }),
     }
@@ -31,6 +32,8 @@ describe('StealthCopiable', () => {
       {
         transform: ({ getByText }) => {
           fireEvent.click(getByText('Copy'))
+          // @ts-expect-error we are voluntarily based on an older browser spec
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           expect(window.clipboardData.getData()).toBe('Hello')
         },
       },
@@ -46,6 +49,8 @@ describe('StealthCopiable', () => {
       {
         transform: ({ getByText }) => {
           fireEvent.click(getByText('Copy'))
+          // @ts-expect-error we are voluntarily based on an older browser spec
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           expect(window.clipboardData.getData()).toBe('Hello')
         },
       },

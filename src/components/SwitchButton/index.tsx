@@ -1,14 +1,20 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, {
+  ChangeEventHandler,
+  FocusEventHandler,
+  FunctionComponent,
+  LabelHTMLAttributes,
+  ReactNode,
+} from 'react'
 import { Radio } from 'reakit'
 import Box from '../Box'
 import Tooltip from '../Tooltip'
 
 const variants = {
-  segment: ({ theme }) => css`
+  segment: ({ theme }: { theme: Theme }) => css`
     font-size: 14;
     height: 40px;
     transition: none;
@@ -42,9 +48,13 @@ const variants = {
       }
     }
   `,
-}
+} as const
 
-const active = ({ theme }) => css`
+type Variants = keyof typeof variants
+
+const switchButtonVariants = Object.keys(variants) as Variants[]
+
+const active = ({ theme }: { theme: Theme }) => css`
   &:hover,
   &:focus {
     color: ${theme.colors.gray550};
@@ -60,7 +70,7 @@ const active = ({ theme }) => css`
   }
 `
 
-const disabledClass = ({ theme }) => css`
+const disabledClass = ({ theme }: { theme: Theme }) => css`
   cursor: not-allowed;
   color: ${theme.colors.gray350};
   background-color: ${theme.colors.gray50};
@@ -73,7 +83,15 @@ const disabledClass = ({ theme }) => css`
   }
 `
 
-const StyledSwitch = styled(Box)`
+type StyledSwitchProps = {
+  checked?: boolean
+  disabled?: boolean
+  variant?: Variants
+} & LabelHTMLAttributes<HTMLLabelElement>
+
+const StyledSwitch = styled(Box, {
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+})<StyledSwitchProps>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -109,15 +127,32 @@ const StyledRadio = styled(Radio)`
   opacity: 0.01;
 `
 
-const SwitchButton = ({
-  checked,
-  disabled,
+type SwitchButtonProps = StyledSwitchProps & {
+  children:
+    | ReactNode
+    | (({
+        checked,
+        disabled,
+      }: {
+        checked: boolean
+        disabled: boolean
+      }) => JSX.Element)
+  name: string
+  onBlur?: FocusEventHandler
+  onChange: ChangeEventHandler
+  onFocus?: FocusEventHandler
+  tooltip?: string
+  value: string
+}
+
+const SwitchButton: FunctionComponent<SwitchButtonProps> = ({
+  checked = false,
+  disabled = false,
   onChange,
   onFocus,
   onBlur,
   name,
   value,
-  size,
   children,
   tooltip,
   variant,
@@ -151,16 +186,6 @@ const SwitchButton = ({
   </Tooltip>
 )
 
-SwitchButton.defaultProps = {
-  checked: false,
-  disabled: false,
-  onBlur: null,
-  onFocus: null,
-  size: 24,
-  tooltip: null,
-  variant: 'default',
-}
-
 SwitchButton.propTypes = {
   checked: PropTypes.bool,
   children: PropTypes.oneOfType([
@@ -173,10 +198,9 @@ SwitchButton.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
-  size: PropTypes.number,
   tooltip: PropTypes.string,
   value: PropTypes.string.isRequired,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(switchButtonVariants),
 }
 
 export default SwitchButton

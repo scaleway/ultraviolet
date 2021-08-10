@@ -38,7 +38,9 @@ describe('SwitchButton', () => {
         disabled
         checked
       >
-        {({ checked, disabled }) => `${checked} ${disabled}`}
+        {({ checked, disabled }) =>
+          `${checked.toString()} ${disabled.toString()}`
+        }
       </SwitchButton>,
     ))
 })
