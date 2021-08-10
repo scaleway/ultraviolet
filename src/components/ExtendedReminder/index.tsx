@@ -88,7 +88,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
   onClick = () => undefined,
   text,
   title,
-  to = undefined,
+  to,
   variant = 'info',
   ...props
 }) => {
