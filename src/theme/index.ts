@@ -1,5 +1,4 @@
 /* eslint-disable sort-keys */
-import { ReactElement } from 'react'
 import colors from './colors'
 
 const radii = {

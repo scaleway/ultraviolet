@@ -265,6 +265,8 @@ const Text = forwardRef(
   ),
 )
 
+type EventHandler<T> = (ev: T) => void
+
 const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
   const isTruncated = useCallback((target = {}) => {
     // If the text is really truncated
@@ -280,17 +282,24 @@ const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
 
   return (
     <Tooltip text={finalStringChildren}>
-      {({ onMouseEnter = () => {}, onFocus = () => {}, ...tooltipProps }) => (
+      {({
+        onMouseEnter = () => {},
+        onFocus = () => {},
+        ...tooltipProps
+      }: {
+        onMouseEnter: EventHandler<MouseEvent>
+        onFocus: EventHandler<FocusEvent>
+      }) => (
         <Text
           {...props}
           onMouseEnter={(ev: MouseEvent) => {
             if (isTruncated(ev.currentTarget)) {
-              onMouseEnter()
+              onMouseEnter(ev)
             }
           }}
           onFocus={(ev: FocusEvent) => {
             if (isTruncated(ev.currentTarget)) {
-              onFocus()
+              onFocus(ev)
             }
           }}
           tooltipProps={tooltipProps}
