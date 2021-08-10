@@ -1,3 +1,15 @@
+### [0.98.2](https://github.com/scaleway/scaleway-ui/compare/v0.98.1...v0.98.2) (2021-08-10)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.1 to 3.1.2 ([#619](https://github.com/scaleway/scaleway-ui/issues/619)) ([06d08de](https://github.com/scaleway/scaleway-ui/commit/06d08de891f07d59a54b6e24950fe3f0f4529cd6))
+
+
+### :bug: Bug Fixes
+
+* correct BreadCrumbs export ([#620](https://github.com/scaleway/scaleway-ui/issues/620)) ([b828c95](https://github.com/scaleway/scaleway-ui/commit/b828c9513ff86eee731ae6fe94ea0ab846856458))
+
 ### [0.98.1](https://github.com/scaleway/scaleway-ui/compare/v0.98.0...v0.98.1) (2021-08-09)
 
 
