@@ -5,12 +5,16 @@ import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 
 type Props = {
-  setStep(...args: unknown[]): unknown,
-  step?: number,
-  steps?: number,
+  setStep(index: number): void
+  step?: number
+  steps?: number
 }
 
-const DotSteps: FunctionComponent<Props> = ({ steps = 2, step = 1, setStep }) => (
+const DotSteps: FunctionComponent<Props> = ({
+  steps = 2,
+  step = 1,
+  setStep,
+}) => (
   <FlexBox justifyContent="center">
     {Array.from({ length: steps }, (_, i) => (
       <Dot

@@ -91,7 +91,7 @@ type FlexBoxProps = {
     | 'space-around'
     | 'space-between'
   wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
-}
+} & ChildProps
 
 type FlexBoxType = FunctionComponent<FlexBoxProps> & {
   Child: typeof Child

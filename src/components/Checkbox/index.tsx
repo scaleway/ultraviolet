@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
+  ChangeEvent,
   FunctionComponent,
   ReactNode,
-  Ref,
   useEffect,
   useMemo,
 } from 'react'
@@ -67,19 +67,18 @@ type CheckboxProps = {
   progress?: boolean
   disabled?: boolean
   typographyVariant?: string
-} & ReakitCheckboxProps & {
-    ref?: Ref<Element>
-  } & XStyledProps
+} & ReakitCheckboxProps &
+  XStyledProps
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
   checked = false,
   onChange = () => undefined,
   onFocus = () => undefined,
   onBlur = () => undefined,
-  valid = undefined,
+  valid,
   error,
   name = 'checkbox',
-  value = undefined,
+  value,
   size = 24,
   children,
   progress = false,
@@ -116,7 +115,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
           setState={checkbox.setState}
           hasChildren={hasChildren}
           size={size}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
             if (!progress) onChange(e)
             setState(e.target.checked)
           }}
