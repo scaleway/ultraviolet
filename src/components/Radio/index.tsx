@@ -79,7 +79,7 @@ const Radio: FunctionComponent<RadioProps> = ({
   <StyledBox
     as="label"
     htmlFor={`${name}-${value}`}
-    disabled={disabled}
+    disabled={disabled ?? false}
     {...props}
   >
     <IconContainer>

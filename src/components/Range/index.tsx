@@ -50,7 +50,7 @@ const canMove = (value: number, values: number[] = [], valueIndex: number) => {
   return tmp.some(cb)
 }
 
-const StyledContainer = styled(Box)`
+const StyledContainer = styled(Box)<XStyledProps>`
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -78,7 +78,7 @@ const StyledLimit = styled(Box, {
   font-size: 12px;
   color: ${({ theme }) => theme.colors.gray950};
   font-weight: 500;
-  top: ${({ offsetTop }) => offsetTop + 8}px;
+  top: ${({ offsetTop }) => offsetTop ?? 0 + 8}px;
 
   ::before {
     content: '';
@@ -153,7 +153,7 @@ const StyledCursor = styled(Box, {
     !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
 })<{ grabbed: boolean; offsetTop: number; width: string | number }>`
   position: absolute;
-  top: ${({ offsetTop }) => offsetTop + -6}px;
+  top: ${({ offsetTop }) => offsetTop ?? 0 + -6}px;
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
