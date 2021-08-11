@@ -4,7 +4,12 @@ import intlTelInput from 'intl-tel-input'
 import style from 'intl-tel-input/build/css/intlTelInput.css'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef } from 'react'
+import React, {
+  ChangeEvent,
+  VoidFunctionComponent,
+  useEffect,
+  useRef,
+} from 'react'
 import 'intl-tel-input/build/js/utils'
 import flags from './flags.png'
 import flags2x from './flags@2x.png'
@@ -18,7 +23,12 @@ const StyledSpan = styled.span`
   background-color: ${({ theme: { colors } }) => colors.white};
 `
 
-const StyledLabel = styled.label`
+interface PhoneInputLabelProps {
+  disabled?: boolean
+  disableDropdown?: boolean
+}
+
+const StyledLabel = styled.label<PhoneInputLabelProps>`
   position: relative;
   display: flex;
   border-radius: 4px;
@@ -87,15 +97,33 @@ const StyledInput = styled.input`
   }
 `
 
-const PhoneInput = ({
-  disabled,
-  disableDropdown,
-  inputProps: { name, id, placeholder, ...inputProps },
+interface InputProps {
+  name?: string | null
+  id?: string | null
+  placeholder?: string | null
+  'data-testid'?: string | null
+}
+
+type PhoneInputProps = PhoneInputLabelProps & {
+  inputProps?: InputProps
+  onChange?: (
+    event: ChangeEvent<HTMLInputElement>,
+    iti: intlTelInput.Plugin,
+  ) => void
+  value?: string
+  label?: string
+}
+
+const PhoneInput: VoidFunctionComponent<PhoneInputProps> = ({
+  disabled = false,
+  disableDropdown = false,
+  inputProps: { name, id, placeholder, 'data-testid': dataTestId } = {},
   onChange,
   value,
-  label,
+  label = 'Phone',
 }) => {
-  const inputRef = useRef()
+  const inputRef =
+    useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>
 
   const formatIntlTelInput = () => {
     const { intlTelInputUtils, intlTelInputGlobals } = window
@@ -116,6 +144,7 @@ const PhoneInput = ({
     if (inputElement) {
       intlTelInput(inputElement, {
         autoPlaceholder: 'aggressive',
+        // @ts-expect-error https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55079
         customContainer: 'input__tel__container',
         formatOnDisplay: true,
         initialCountry: 'US',
@@ -144,12 +173,12 @@ const PhoneInput = ({
           type="tel"
           ref={inputRef}
           value={value}
-          name={name}
-          id={id}
+          name={name ?? undefined}
+          id={id ?? undefined}
           maxLength={50}
           disabled={disabled}
-          placeholder={placeholder}
-          data-testid={inputProps['data-testid']}
+          placeholder={placeholder ?? undefined}
+          data-testid={dataTestId}
         />
       </StyledLabel>
     </>
@@ -167,22 +196,13 @@ PhoneInput.propTypes = {
    */
   inputProps: PropTypes.shape({
     'data-testid': PropTypes.string,
-    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    id: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
   }),
   label: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
-}
-
-PhoneInput.defaultProps = {
-  disabled: false,
-  disableDropdown: false,
-  inputProps: {},
-  label: 'Phone',
-  onChange: undefined,
-  value: undefined,
 }
 
 export default PhoneInput

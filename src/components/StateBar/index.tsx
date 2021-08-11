@@ -1,11 +1,25 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { useMemo } from 'react'
+import React, {
+  FunctionComponent,
+  ReactNode,
+  VoidFunctionComponent,
+  useMemo,
+} from 'react'
 import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import Typography from '../Typography'
 
-export const State = ({ label, children, ...props }) => (
+interface StateBarStateProps {
+  children?: ReactNode
+  label?: string
+}
+
+export const State: FunctionComponent<StateBarStateProps> = ({
+  label = '',
+  children,
+  ...props
+}) => (
   <Typography
     as="div"
     variant="bodyA"
@@ -28,17 +42,21 @@ State.propTypes = {
   label: PropTypes.string,
 }
 
-State.defaultProps = {
-  children: null,
-  label: '',
-}
-
 const line = css`
   flex: 1;
   margin-top: 12px;
 `
 
-export const Bar = ({ unlimited, value, ...props }) => {
+interface StateBarBarProps {
+  unlimited?: boolean
+  value?: number
+}
+
+export const Bar: VoidFunctionComponent<StateBarBarProps> = ({
+  unlimited = false,
+  value = 0,
+  ...props
+}) => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
     if (value >= 90) return 'warning'
@@ -61,12 +79,13 @@ Bar.propTypes = {
   value: PropTypes.number,
 }
 
-Bar.defaultProps = {
-  unlimited: false,
-  value: 0,
+type StateBarType = typeof Box & {
+  Bar?: typeof Bar
+  State?: typeof State
 }
 
-const StateBar = Box
+const StateBar: StateBarType = Box
+
 StateBar.Bar = Bar
 StateBar.State = State
 

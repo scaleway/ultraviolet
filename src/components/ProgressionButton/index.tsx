@@ -2,7 +2,8 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 
 const progressionAnimation = keyframes`
@@ -41,8 +42,15 @@ const ProgressionContainer = styled(Box)`
   }
 `
 
-const Progression = styled.div`
-  background-color: ${({ theme, color }) => theme.colors[color] ?? color};
+interface ProgressionProps {
+  duration: number
+  delay: number
+  color: string
+}
+
+const Progression = styled.div<ProgressionProps>`
+  background-color: ${({ theme, color }) =>
+    theme.colors[color as Color] ?? color};
   position: absolute;
   z-index: -1;
   top: 0;
@@ -52,11 +60,18 @@ const Progression = styled.div`
     ${({ duration, delay }) => `${duration}s linear ${-delay}s`} forwards;
 `
 
-const ProgressionButton = ({
+type ProgressionButtonProps = Partial<Omit<ProgressionProps, 'delay'>> & {
+  children: ReactNode
+  color?: string
+  creation?: string | Date
+  duration?: number
+}
+
+const ProgressionButton: FunctionComponent<ProgressionButtonProps> = ({
   children,
-  color,
-  creation, // Supposed start time of the progression
-  duration, // Approximation of the progression's duration (in seconds)
+  color = 'green',
+  creation = new Date(), // Supposed start time of the progression
+  duration = 120, // Approximation of the progression's duration (in seconds)
   ...props
 }) => {
   const createdAt = typeof creation === 'string' ? new Date(creation) : creation
@@ -68,12 +83,6 @@ const ProgressionButton = ({
       {children}
     </ProgressionContainer>
   )
-}
-
-ProgressionButton.defaultProps = {
-  color: 'green',
-  creation: new Date(),
-  duration: 120,
 }
 
 ProgressionButton.propTypes = {
