@@ -1,3 +1,10 @@
+### [0.98.4](https://github.com/scaleway/scaleway-ui/compare/v0.98.3...v0.98.4) (2021-08-11)
+
+
+### :bug: Bug Fixes
+
+* **Expandable:** do not forward height to Box ([#633](https://github.com/scaleway/scaleway-ui/issues/633)) ([9610f69](https://github.com/scaleway/scaleway-ui/commit/9610f69517615290fe83ff08bf6cc2913a239936))
+
 ### [0.98.3](https://github.com/scaleway/scaleway-ui/compare/v0.98.2...v0.98.3) (2021-08-11)
 
 
