@@ -8,7 +8,7 @@ interface ExpandableProps {
 }
 
 const Expandable = styled(Box, {
-  shouldForwardProp: prop => !['opened'].includes(prop.toString()),
+  shouldForwardProp: prop => !['opened', 'height'].includes(prop.toString()),
 })<ExpandableProps>`
   transition: max-height 300ms ease-out, opacity 300ms ease-out;
   max-height: 0;
