@@ -267,6 +267,18 @@ const StyledButton = styled(Box, {
   `}
 `
 
+const SmartIcon = ({ icon, iconSize }) =>
+  icon && typeof icon === 'string' ? <Icon name={icon} size={iconSize} /> : icon
+
+SmartIcon.propTypes = {
+  icon: PropTypes.node.isRequired,
+  iconSize: PropTypes.number,
+}
+
+SmartIcon.defaultProps = {
+  iconSize: undefined,
+}
+
 const StyledIconContainer = styled('div', {
   shouldForwardProp: prop => !['margin', 'position'].includes(prop),
 })`
@@ -308,13 +320,6 @@ function FwdButton({
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
 
-  const SmartIcon = () =>
-    icon && typeof icon === 'string' ? (
-      <Icon name={icon} size={iconSize} />
-    ) : (
-      icon
-    )
-
   return (
     <Tooltip baseId={tooltipBaseId} text={tooltip}>
       <StyledButton
@@ -347,7 +352,7 @@ function FwdButton({
                 size="1em"
               />
             ) : (
-              <SmartIcon />
+              <SmartIcon icon={icon} iconSize={iconSize} />
             )}
           </StyledIconContainer>
         ) : null}
@@ -364,7 +369,7 @@ function FwdButton({
                 size="1em"
               />
             ) : (
-              <SmartIcon />
+              <SmartIcon icon={icon} iconSize={iconSize} />
             )}
           </StyledIconContainer>
         ) : null}
