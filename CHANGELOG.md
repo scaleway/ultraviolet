@@ -1,3 +1,20 @@
+### [0.98.3](https://github.com/scaleway/scaleway-ui/compare/v0.98.2...v0.98.3) (2021-08-11)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.14.8 to 7.15.3 ([#629](https://github.com/scaleway/scaleway-ui/issues/629)) ([3e793f1](https://github.com/scaleway/scaleway-ui/commit/3e793f104ebfb988db3830c4d4602bf4e1d1ab81))
+* **deps:** bump react-datepicker from 4.1.1 to 4.2.0 ([#616](https://github.com/scaleway/scaleway-ui/issues/616)) ([32029eb](https://github.com/scaleway/scaleway-ui/commit/32029ebcdea0f30fc3a8b86012cd9bffd2baaeeb))
+* **deps-dev:** bump @scaleway/eslint-config-react from 2.0.0 to 2.1.0 ([#630](https://github.com/scaleway/scaleway-ui/issues/630)) ([9b4ef98](https://github.com/scaleway/scaleway-ui/commit/9b4ef9883a64063cddf77b99724026eacc358112))
+* **deps-dev:** bump @storybook/react from 6.3.6 to 6.3.7 ([#624](https://github.com/scaleway/scaleway-ui/issues/624)) ([eeeb195](https://github.com/scaleway/scaleway-ui/commit/eeeb1951a8aac9ac1c09574cc10233860764ca47))
+* **deps-dev:** bump rollup from 2.56.1 to 2.56.2 ([#627](https://github.com/scaleway/scaleway-ui/issues/627)) ([a0303f6](https://github.com/scaleway/scaleway-ui/commit/a0303f6d80c51bb3b7ab52772639f53e0015af1a))
+* **deps-dev:** bump webpack from 5.49.0 to 5.50.0 ([#628](https://github.com/scaleway/scaleway-ui/issues/628)) ([4249d4a](https://github.com/scaleway/scaleway-ui/commit/4249d4aa7deb21ca9fa85efb4df655e01f95ff4f))
+
+
+### :bug: Bug Fixes
+
+* **Typography:** correct missing event in reakit event handlers ([#625](https://github.com/scaleway/scaleway-ui/issues/625)) ([41e0e6e](https://github.com/scaleway/scaleway-ui/commit/41e0e6efd74b931f28233285a4011849548cf4a1))
+
 ### [0.98.2](https://github.com/scaleway/scaleway-ui/compare/v0.98.1...v0.98.2) (2021-08-10)
 
 
