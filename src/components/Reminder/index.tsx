@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent} from 'react'
 import Box from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'
@@ -22,8 +22,8 @@ const variants = {
 }
 
 const Notification = styled(Box, {
-  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop),
-})`
+  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
+})<{ variant?: "error" | "warning" | "info", bordered?: boolean }>`
   height: 28px;
   width: max-content;
   display: flex;
@@ -42,7 +42,7 @@ const Notification = styled(Box, {
     background-color: ${
       bordered
         ? theme.colors.transparent
-        : theme.colors[variants[variant].background]
+        : theme.colors[variants[variant as keyof typeof variants].background]
     };
     border: 1px solid ${
       bordered ? theme.colors.gray300 : theme.colors.transparent
@@ -62,7 +62,20 @@ const Notification = styled(Box, {
   }
 `
 
-const Reminder = ({ text, variant, bordered, to, ...props }) => (
+type Props = {
+  bordered?: boolean,
+  text: string,
+  to?: string,
+  variant?: "error" | "warning" | "info"
+};
+
+const Reminder: FunctionComponent<Props> = ({
+  text,
+  variant = 'info',
+  bordered = false,
+  to,
+  ...props
+}) => (
   <Notification
     as={to ? UniversalLink : 'a'}
     type={to ? null : 'button'}
@@ -86,12 +99,6 @@ Reminder.propTypes = {
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
   variant: PropTypes.oneOf(['error', 'warning', 'info']),
-}
-
-Reminder.defaultProps = {
-  bordered: false,
-  to: undefined,
-  variant: 'info',
 }
 
 export default Reminder

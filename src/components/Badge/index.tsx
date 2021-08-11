@@ -92,8 +92,8 @@ const sizes = {
   `,
 }
 
-type Variants = keyof typeof variants
-type Sizes = keyof typeof sizes
+export type Variants = keyof typeof variants
+export type Sizes = keyof typeof sizes
 
 export const badgeVariants = Object.keys(variants) as Variants[]
 export const badgeSizes = Object.keys(sizes) as Sizes[]

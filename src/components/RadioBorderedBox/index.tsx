@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
-import Badge from '../Badge'
+import React, { FunctionComponent } from 'react'
+import Badge, { Sizes, Variants, badgeSizes, badgeVariants } from '../Badge'
 import Box from '../Box'
 import Radio from '../Radio'
 
@@ -27,23 +27,40 @@ const StyledBox = styled(Box)`
   }}
 `
 
-const RadioBorderedBox = ({
+type Props = {
+  badgeSize?: Sizes,
+  badgeText?: string,
+  badgeVariant?: Variants,
+  checked?: boolean,
+  children: React.ReactNode,
+  disabled?: boolean,
+  label: string,
+  labelDescription?: string,
+  name: string,
+  onBlur?(...args: unknown[]): unknown,
+  onChange?(...args: unknown[]): unknown,
+  onFocus?(...args: unknown[]): unknown,
+  size?: number,
+  value: string | number
+};
+
+const RadioBorderedBox: FunctionComponent<Props> = ({
   label,
   labelDescription,
   badgeText,
-  badgeSize,
-  badgeVariant,
-  checked,
-  onChange,
-  onFocus,
-  onBlur,
-  disabled,
+  badgeSize = 'xsmall',
+  badgeVariant= 'info',
+  checked = false,
+  onChange = () => undefined,
+  onFocus = () => undefined,
+  onBlur = () => undefined,
+  disabled = false,
   name,
   value,
-  size,
+  size = 24,
   children,
   ...props
-}) => (
+}: Props) => (
   <StyledBox
     bordered
     as="label"
@@ -83,7 +100,8 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-  badgeSize: PropTypes.string,
+   badgeSize: PropTypes.oneOf<Sizes>(badgeSizes),
+
   /**
    * Add a badge next to the label
    */
@@ -91,7 +109,7 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-  badgeVariant: PropTypes.string,
+  badgeVariant: PropTypes.oneOf(badgeVariants),
   checked: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
@@ -112,19 +130,6 @@ RadioBorderedBox.propTypes = {
    */
   size: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-}
-
-RadioBorderedBox.defaultProps = {
-  badgeSize: 'xsmall',
-  badgeText: undefined,
-  badgeVariant: 'info',
-  checked: false,
-  disabled: false,
-  labelDescription: undefined,
-  onBlur: null,
-  onChange: undefined,
-  onFocus: null,
-  size: 24,
 }
 
 export default RadioBorderedBox

@@ -1,8 +1,8 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -19,12 +19,12 @@ const IconContainer = styled(Box)`
   margin-right: 8px;
 `
 
-const disabledClass = ({ theme }) => css`
+const disabledClass = ({ theme }: { theme: Theme }) => css`
   color: ${theme.colors.gray300};
   cursor: not-allowed;
 `
 
-const activeFocusClass = ({ theme }) => css`
+const activeFocusClass = ({ theme }: { theme: Theme }) => css`
   :hover,
   :focus {
     ${IconContainer} {
@@ -38,7 +38,7 @@ const activeFocusClass = ({ theme }) => css`
   }
 `
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(Box)<{ disabled: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
@@ -56,22 +56,34 @@ const StyledRadio = styled(ReakitRadio)`
   opacity: 0.01;
 `
 
-const Radio = ({
+type Props = {
+  checked?: boolean,
+  children: React.ReactNode,
+  disabled?: boolean,
+  name: string,
+  onBlur?(...args: unknown[]): unknown,
+  onChange?(...args: unknown[]): unknown,
+  onFocus?(...args: unknown[]): unknown,
+  size?: number,
+  value: string | number
+} & XStyledProps
+
+const Radio: FunctionComponent<Props> = ({
   checked,
-  onChange,
-  onFocus,
-  onBlur,
-  disabled,
+  onChange = () => undefined,
+  onFocus = () => undefined,
+  onBlur = () => undefined,
+  disabled = false,
   name,
   value,
-  size,
+  size = 24,
   children,
   ...props
 }) => (
   <StyledBox
     as="label"
     htmlFor={`${name}-${value}`}
-    disabled={disabled}
+    disabled={disabled ?? false}
     {...props}
   >
     <IconContainer>
@@ -113,15 +125,6 @@ Radio.propTypes = {
    */
   size: PropTypes.number,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-}
-
-Radio.defaultProps = {
-  checked: undefined,
-  disabled: false,
-  onBlur: null,
-  onChange: undefined,
-  onFocus: null,
-  size: 24,
 }
 
 export default Radio
