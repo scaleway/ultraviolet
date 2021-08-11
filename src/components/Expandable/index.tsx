@@ -7,7 +7,7 @@ type ExpandableProps = {
   children: ReactNode
   opened?: boolean
   height?: number
-}
+} & XStyledProps
 
 const StyledExpandable = styled(Box, {
   shouldForwardProp: prop => !['opened', 'height'].includes(prop.toString()),

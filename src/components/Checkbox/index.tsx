@@ -111,8 +111,16 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
         aria-disabled={disabled}
       >
         <StyledReakitCheckbox
-          state={checkbox.state}
-          setState={checkbox.setState}
+          aria-checked={
+            checkbox.state === 'indeterminate'
+              ? 'mixed'
+              : (checkbox.state as boolean)
+          }
+          checked={
+            checkbox.state === 'indeterminate'
+              ? false
+              : (checkbox.state as boolean)
+          }
           hasChildren={hasChildren}
           size={size}
           onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -156,6 +164,22 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   )
 }
 
+Checkbox.defaultProps = {
+  autoFocus: false,
+  checked: false,
+  children: '',
+  disabled: false,
+  error: undefined,
+  name: 'checkbox',
+  onBlur: undefined,
+  onFocus: undefined,
+  progress: false,
+  size: 24,
+  typographyVariant: 'default',
+  valid: undefined,
+  value: undefined,
+}
+
 Checkbox.propTypes = {
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
@@ -164,7 +188,7 @@ Checkbox.propTypes = {
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   name: PropTypes.string,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
   progress: PropTypes.bool,
   size: PropTypes.number,
