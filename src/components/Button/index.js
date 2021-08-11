@@ -308,12 +308,15 @@ function FwdButton({
   const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
 
-  const SmartIcon = () =>
-    icon && typeof icon === 'string' ? (
-      <Icon name={icon} size={iconSize} />
-    ) : (
-      icon
-    )
+  const SmartIcon = useMemo(
+    () =>
+      icon && typeof icon === 'string' ? (
+        <Icon name={icon} size={iconSize} />
+      ) : (
+        icon
+      ),
+    [icon, iconSize],
+  )
 
   return (
     <Tooltip baseId={tooltipBaseId} text={tooltip}>
