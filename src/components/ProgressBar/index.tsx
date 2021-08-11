@@ -101,6 +101,4 @@ ProgressBar.propTypes = {
   variant: PropTypes.oneOf(progressBarVariants),
 }
 
-ProgressBar.defaultProps = {}
-
 export default ProgressBar
