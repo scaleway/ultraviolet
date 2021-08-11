@@ -306,13 +306,22 @@ Switch.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   id: PropTypes.string,
+  /**
+   * Left and right will be outside of switch button in the contrary of inside value.
+   */
   labeled: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.oneOf(labelPositions),
   ]),
   name: PropTypes.string.isRequired,
+  /**
+   * Text or node shown in switch button when its state if off
+   */
   offLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   onChange: PropTypes.func.isRequired,
+  /**
+   * Text or node shown in switch button when its state if on
+   */
   onLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   size: PropTypes.oneOf(switchSizes),
   tooltip: PropTypes.string,

@@ -101,18 +101,18 @@ const Slider: SliderType = ({ children, ...props }) => {
   let intervalRight: ReturnType<typeof setInterval>
 
   const handleScrollRight = () => {
-    if (scrollRef.current?.scrollTo) {
-      intervalRight = setInterval(() => {
-        scrollRef.current?.scrollTo?.(scrollRef.current?.scrollLeft - 25, 0)
-      }, 30)
-    }
+    intervalRight = setInterval(() => {
+      if (scrollRef.current?.scrollTo) {
+        scrollRef.current.scrollTo?.(scrollRef.current?.scrollLeft - 25, 0)
+      }
+    }, 30)
   }
   const handleScrollLeft = () => {
-    if (scrollRef.current?.scrollTo) {
-      intervalLeft = setInterval(() => {
-        scrollRef.current?.scrollTo(scrollRef.current?.scrollLeft + 25, 0)
-      }, 30)
-    }
+    intervalLeft = setInterval(() => {
+      if (scrollRef.current?.scrollTo) {
+        scrollRef.current.scrollTo(scrollRef.current?.scrollLeft + 25, 0)
+      }
+    }, 30)
   }
 
   const handleScrollX = (scrollX = 25) => {
