@@ -28,28 +28,28 @@ const StyledBox = styled(Box)`
 `
 
 type Props = {
-  badgeSize?: Sizes,
-  badgeText?: string,
-  badgeVariant?: Variants,
-  checked?: boolean,
-  children: React.ReactNode,
-  disabled?: boolean,
-  label: string,
-  labelDescription?: string,
-  name: string,
-  onBlur?(...args: unknown[]): unknown,
-  onChange?(...args: unknown[]): unknown,
-  onFocus?(...args: unknown[]): unknown,
-  size?: number,
+  badgeSize?: Sizes
+  badgeText?: string
+  badgeVariant?: Variants
+  checked?: boolean
+  children: React.ReactNode
+  disabled?: boolean
+  label: string
+  labelDescription?: string
+  name: string
+  onBlur?(...args: unknown[]): unknown
+  onChange?(...args: unknown[]): unknown
+  onFocus?(...args: unknown[]): unknown
+  size?: number
   value: string | number
-};
+}
 
 const RadioBorderedBox: FunctionComponent<Props> = ({
   label,
   labelDescription,
   badgeText,
   badgeSize = 'xsmall',
-  badgeVariant= 'info',
+  badgeVariant = 'info',
   checked = false,
   onChange = () => undefined,
   onFocus = () => undefined,
@@ -100,7 +100,7 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-   badgeSize: PropTypes.oneOf<Sizes>(badgeSizes),
+  badgeSize: PropTypes.oneOf<Sizes>(badgeSizes),
 
   /**
    * Add a badge next to the label
@@ -109,7 +109,7 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-  badgeVariant: PropTypes.oneOf(badgeVariants),
+  badgeVariant: PropTypes.oneOf<Variants>(badgeVariants),
   checked: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
