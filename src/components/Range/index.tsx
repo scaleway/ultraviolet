@@ -234,12 +234,10 @@ const Range: FunctionComponent<RangeProps> = ({
   ...props
 }) => {
   const [internValues, setInternValues] = useState(values)
-  console.log(values)
 
   const container = useRef<HTMLElement>(null)
   const cursorsLinkRef = useRef<HTMLDivElement>(null)
   const cursorsRef = values.map(useRef) as RefObject<HTMLElement>[]
-  console.log('values 2', cursorsRef)
   const [grabbedCursor, grabCursor] = useState<number>()
 
   const hasCursorsLink = values.length > 1
