@@ -152,7 +152,7 @@ const StyledCursor = styled(Box, {
     !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
 })<{ grabbed: boolean; offsetTop: string | number; width: string | number }>`
   position: absolute;
-  top: ${({ offsetTop }) => offsetTop ?? 0 + -6}px;
+  top: ${({ offsetTop }) => parseIntOr(offsetTop.toString(), 0) + -6}px;
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
