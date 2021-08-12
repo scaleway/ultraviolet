@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexBox Child renders correctly with alignSelf 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: flex-end;
+  align-self: flex-end;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Sample FlexBox.Child
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Child renders correctly with default values 1`] = `
+<DocumentFragment>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    This should act as a regular div
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Child renders correctly with explicit basis, grow and shrink 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-flex-basis: 1;
+  -ms-flex-preferred-size: 1;
+  flex-basis: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: auto;
+  -ms-flex-negative: auto;
+  flex-shrink: auto;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Sample FlexBox.Child
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Child renders correctly with flex as a number 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Sample FlexBox.Child
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Child renders correctly with flex as string 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Sample FlexBox.Child
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Child renders correctly with order 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-order: 6;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    Sample FlexBox.Child
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with align properties 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with children properties 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with custom direction 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with custom wrap 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with default values 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with inline flex 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FlexBox Parent renders correctly with justifyContent 1`] = `
+<DocumentFragment>
+  .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<div
+    class="emotion-0 emotion-1 emotion-2"
+  >
+    Sample FlexBox
+  </div>
+</DocumentFragment>
+`;

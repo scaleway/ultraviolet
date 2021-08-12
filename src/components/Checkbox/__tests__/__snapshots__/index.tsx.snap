@@ -1,0 +1,1534 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #dce1eb;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly checked 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #4f0599;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="true"
+        checked=""
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly checked and disabled 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #f6f5f7;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="true"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="true"
+        aria-disabled="true"
+        checked=""
+        class="emotion-6 emotion-7"
+        disabled=""
+        name="checkbox"
+        style="pointer-events: none;"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #f6f5f7;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="true"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        aria-disabled="true"
+        class="emotion-6 emotion-7"
+        disabled=""
+        name="checkbox"
+        style="pointer-events: none;"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly no child 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 0;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #dce1eb;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 0;
+  padding: 2px;
+}
+
+.emotion-13 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-13.emotion-13 {
+  overflow: hidden;
+}
+
+.emotion-15.emotion-15 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+    </label>
+    <div
+      class="emotion-12 emotion-13 emotion-1"
+    >
+      <div
+        class="emotion-15 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with a value 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #dce1eb;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+        value="test"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with an error 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #ef5774;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  max-height: 56px;
+  opacity: 1;
+  overflow: visible;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      >
+        test error
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with progress 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  height: 24px;
+  width: 24px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <div
+        class="emotion-8 emotion-1"
+      >
+        <svg
+          class="CircularProgressbar  emotion-10 emotion-11"
+          data-test-id="CircularProgressbar"
+          viewBox="0 0 100 100"
+        >
+          <path
+            class="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+          />
+          <path
+            class="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with progress and no child 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 0;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  height: 24px;
+  width: 24px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-13 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-13.emotion-13 {
+  overflow: hidden;
+}
+
+.emotion-15.emotion-15 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <div
+        class="emotion-8 emotion-1"
+      >
+        <svg
+          class="CircularProgressbar  emotion-10 emotion-11"
+          data-test-id="CircularProgressbar"
+          viewBox="0 0 100 100"
+        >
+          <path
+            class="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+          />
+          <path
+            class="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+          />
+        </svg>
+      </div>
+    </label>
+    <div
+      class="emotion-12 emotion-13 emotion-1"
+    >
+      <div
+        class="emotion-15 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with sizes 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #dce1eb;
+  height: 37px;
+  width: 37px;
+  min-width: 37px;
+  min-height: 37px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+        value="test"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-8.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+}
+
+.emotion-10 {
+  height: 37px;
+  width: 37px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+        value="test"
+      />
+      <div
+        class="emotion-8 emotion-1"
+      >
+        <svg
+          class="CircularProgressbar  emotion-10 emotion-11"
+          data-test-id="CircularProgressbar"
+          viewBox="0 0 100 100"
+        >
+          <path
+            class="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+          />
+          <path
+            class="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+          />
+        </svg>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with valid 1`] = `
+<DocumentFragment>
+  .emotion-4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.emotion-6:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.emotion-6:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.emotion-10 {
+  fill: #45d6b5;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.emotion-10.emotion-10 {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.emotion-15 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.emotion-15.emotion-15 {
+  overflow: hidden;
+}
+
+.emotion-17.emotion-17 {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-2 emotion-3 emotion-4 emotion-1"
+    >
+      <input
+        aria-checked="false"
+        class="emotion-6 emotion-7"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="emotion-8 emotion-9 emotion-10 emotion-1"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+        />
+      </svg>
+      <div
+        class="emotion-12 emotion-13"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="emotion-14 emotion-15 emotion-1"
+    >
+      <div
+        class="emotion-17 emotion-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
