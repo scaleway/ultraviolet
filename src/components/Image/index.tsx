@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, ImgHTMLAttributes } from 'react'
 import Box from '../Box'
 
-const Image: FunctionComponent<HTMLImageElement & XStyledProps> = ({
+const Image: FunctionComponent<
+  ImgHTMLAttributes<HTMLImageElement> & XStyledProps
+> = ({
   src,
   ...props
   // @ts-expect-error Box expose Element, not ImgElement
