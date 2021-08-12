@@ -6,7 +6,6 @@ import React, {
   FunctionComponent,
   InputHTMLAttributes,
   KeyboardEvent,
-  MouseEventHandler,
   RefObject,
   useCallback,
   useEffect,
@@ -333,8 +332,8 @@ const Range: FunctionComponent<RangeProps> = ({
     grabCursor(index)
   }, [])
 
-  const onMouseMove: MouseEventHandler<HTMLElement> = useCallback(
-    ev => {
+  const onMouseMove = useCallback(
+    (ev: MouseEvent) => {
       if ((ev.target as HTMLElement).tagName === 'INPUT') return
 
       let cursor
@@ -512,10 +511,7 @@ Range.propTypes = {
   name: PropTypes.string,
   offsetTop: PropTypes.number,
   onChange: PropTypes.func,
-  value: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.number),
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.number.isRequired)]),
 }
 
 export default Range
