@@ -330,8 +330,8 @@ const Range: VoidFunctionComponent<RangeProps> = ({
     grabCursor(index)
   }, [])
 
-  const onMouseMove: MouseEventHandler<HTMLElement> = useCallback(
-    ev => {
+  const onMouseMove = useCallback(
+    (ev: MouseEvent) => {
       if ((ev.target as HTMLElement).tagName === 'INPUT') return
 
       let cursor
