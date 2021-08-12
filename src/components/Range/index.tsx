@@ -231,7 +231,6 @@ const Range: VoidFunctionComponent<RangeProps> = ({
   ...props
 }) => {
   const [internValues, setInternValues] = useState(values)
-  console.log(values)
 
   const container = useRef<HTMLElement>(null)
   const cursorsLinkRef = useRef<HTMLDivElement>(null)
