@@ -33,6 +33,13 @@ exports[`Range should render correctly 1`] = `
   font-weight: 500;
   top: 24px;
   left: 8px;
+<<<<<<< HEAD
+=======
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-48yrhd::before {
@@ -45,6 +52,7 @@ exports[`Range should render correctly 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-48yrhd::before {
   left: 16px;
   right: unset;
@@ -74,7 +82,46 @@ exports[`Range should render correctly 1`] = `
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-1f8pz1b {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-12 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 10px;
   height: 16px;
@@ -115,7 +162,15 @@ exports[`Range should render correctly 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       5 (max)
     </div>
@@ -189,7 +244,15 @@ exports[`Range should render correctly with input change 1`] = `
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+<<<<<<< HEAD
   right: 8px;
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-1aec7k7::before {
@@ -202,12 +265,52 @@ exports[`Range should render correctly with input change 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-1aec7k7::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-1f8pz1b {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-12 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 10px;
   height: 16px;
@@ -248,7 +351,15 @@ exports[`Range should render correctly with input change 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
@@ -322,10 +433,20 @@ exports[`Range should render correctly with min max 1`] = `
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+<<<<<<< HEAD
   right: 8px;
 }
 
 .cache-1aec7k7::before {
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+}
+
+.emotion-6::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -335,12 +456,57 @@ exports[`Range should render correctly with min max 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+.cache-sqntd1::before {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+<<<<<<< HEAD
 .cache-1aec7k7::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-e9rypl {
+=======
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-11 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 16px;
   height: 4px;
@@ -394,7 +560,15 @@ exports[`Range should render correctly with min max 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
@@ -482,7 +656,15 @@ exports[`Range should render correctly with min max 2`] = `
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+<<<<<<< HEAD
   right: 8px;
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-1aec7k7::before {
@@ -495,12 +677,52 @@ exports[`Range should render correctly with min max 2`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-1aec7k7::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-1f8pz1b {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-12 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 10px;
   height: 16px;
@@ -541,7 +763,15 @@ exports[`Range should render correctly with min max 2`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
@@ -592,9 +822,18 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   font-weight: 500;
   top: 24px;
   left: 8px;
+<<<<<<< HEAD
 }
 
 .cache-48yrhd::before {
+=======
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+}
+
+.emotion-6::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -604,6 +843,40 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   border-radius: 4px;
 }
 
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+.cache-sqntd1::before {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+<<<<<<< HEAD
 .cache-48yrhd::before {
   left: 16px;
   right: unset;
@@ -633,7 +906,18 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-e9rypl {
+=======
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-11 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 16px;
   height: 4px;
@@ -687,7 +971,15 @@ exports[`Range should render correctly with min max and out of range value 1`] =
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
@@ -752,6 +1044,13 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   font-weight: 500;
   top: 24px;
   left: 8px;
+<<<<<<< HEAD
+=======
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-48yrhd::before {
@@ -764,6 +1063,7 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-48yrhd::before {
   left: 16px;
   right: unset;
@@ -793,7 +1093,46 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-1f8pz1b {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-12 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 10px;
   height: 16px;
@@ -834,7 +1173,15 @@ exports[`Range should render correctly with min max and out of range value 2`] =
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       10 (max)
     </div>
@@ -908,7 +1255,15 @@ exports[`Range should render correctly with one value 1`] = `
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+<<<<<<< HEAD
   right: 8px;
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-1aec7k7::before {
@@ -921,12 +1276,52 @@ exports[`Range should render correctly with one value 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-1aec7k7::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-1f8pz1b {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-12 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 10px;
   height: 16px;
@@ -967,7 +1362,15 @@ exports[`Range should render correctly with one value 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       5 (max)
     </div>
@@ -1041,10 +1444,20 @@ exports[`Range should render correctly with props 1`] = `
   color: #151a2d;
   font-weight: 500;
   top: 128px;
+<<<<<<< HEAD
   right: 8px;
 }
 
 .cache-ls5coq::before {
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+}
+
+.emotion-6::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -1054,12 +1467,57 @@ exports[`Range should render correctly with props 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+.cache-ytsswk::before {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 128px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+<<<<<<< HEAD
 .cache-ls5coq::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-150a4lh {
+=======
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-11 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 120px;
   height: 4px;
@@ -1113,7 +1571,15 @@ exports[`Range should render correctly with props 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-ls5coq e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-ytsswk e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
@@ -1201,7 +1667,15 @@ exports[`Range should render correctly with two values 1`] = `
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+<<<<<<< HEAD
   right: 8px;
+=======
+  left: 8px;
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+>>>>>>> fix: adds tests
 }
 
 .cache-1aec7k7::before {
@@ -1214,12 +1688,52 @@ exports[`Range should render correctly with two values 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 .cache-1aec7k7::before {
   right: 16px;
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-e9rypl {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-11 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 16px;
   height: 4px;
@@ -1273,7 +1787,15 @@ exports[`Range should render correctly with two values 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       5 (max)
     </div>
@@ -1338,9 +1860,18 @@ exports[`Range should render correctly with two values input change 1`] = `
   font-weight: 500;
   top: 24px;
   left: 8px;
+<<<<<<< HEAD
 }
 
 .cache-48yrhd::before {
+=======
+}
+
+.emotion-6.emotion-6 {
+  position: left;
+}
+
+.emotion-6::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -1350,6 +1881,40 @@ exports[`Range should render correctly with two values input change 1`] = `
   border-radius: 4px;
 }
 
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+.cache-sqntd1::before {
+=======
+.emotion-6::before {
+  left: 16px;
+  right: unset;
+}
+
+.emotion-9 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.emotion-9.emotion-9 {
+  position: right;
+}
+
+.emotion-9::before {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+<<<<<<< HEAD
 .cache-48yrhd::before {
   left: 16px;
   right: unset;
@@ -1379,7 +1944,18 @@ exports[`Range should render correctly with two values input change 1`] = `
   left: unset;
 }
 
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+>>>>>>> fix: adds tests
 .cache-e9rypl {
+=======
+.emotion-9::before {
+  right: 16px;
+  left: unset;
+}
+
+.emotion-11 {
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
   position: absolute;
   top: 16px;
   height: 4px;
@@ -1433,7 +2009,15 @@ exports[`Range should render correctly with two values input change 1`] = `
       0 (min)
     </div>
     <div
+<<<<<<< HEAD
       class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
+=======
+<<<<<<< HEAD:src/components/Range/__tests__/__snapshots__/index.tsx.snap
+      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+=======
+      class="emotion-5 emotion-9 emotion-2"
+>>>>>>> fix: adds tests:src/components/Range/__tests__/__snapshots__/index.js.snap
+>>>>>>> fix: adds tests
     >
       20 (max)
     </div>
