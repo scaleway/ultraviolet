@@ -78,7 +78,7 @@ const StyledLimit = styled(Box, {
   font-size: 12px;
   color: ${({ theme }) => theme.colors.gray950};
   font-weight: 500;
-  top: ${({ offsetTop }) => offsetTop ?? 0 + 8}px;
+  top: ${({ offsetTop }) => offsetTop + 8}px;
 
   ::before {
     content: '';
@@ -231,6 +231,7 @@ const Range: VoidFunctionComponent<RangeProps> = ({
   ...props
 }) => {
   const [internValues, setInternValues] = useState(values)
+  console.log(values)
 
   const container = useRef<HTMLElement>(null)
   const cursorsLinkRef = useRef<HTMLDivElement>(null)
@@ -330,8 +331,8 @@ const Range: VoidFunctionComponent<RangeProps> = ({
     grabCursor(index)
   }, [])
 
-  const onMouseMove = useCallback(
-    (ev: MouseEvent) => {
+  const onMouseMove: MouseEventHandler<HTMLElement> = useCallback(
+    ev => {
       if ((ev.target as HTMLElement).tagName === 'INPUT') return
 
       let cursor
