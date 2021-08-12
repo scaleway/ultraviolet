@@ -84,8 +84,8 @@ type Props = {
 const ExtendedReminder: FunctionComponent<Props> = ({
   badgeText,
   icon,
-  linkText = null,
-  onClick = () => undefined,
+  linkText,
+  onClick,
   text,
   title,
   to,

@@ -68,13 +68,14 @@ type CheckboxProps = {
   disabled?: boolean
   typographyVariant?: string
 } & ReakitCheckboxProps &
+  Required<Pick<ReakitCheckboxProps, 'onChange'>> &
   XStyledProps
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
   checked = false,
-  onChange = () => undefined,
-  onFocus = () => undefined,
-  onBlur = () => undefined,
+  onChange,
+  onFocus,
+  onBlur,
   valid,
   error,
   name = 'checkbox',
@@ -164,22 +165,6 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   )
 }
 
-Checkbox.defaultProps = {
-  autoFocus: false,
-  checked: false,
-  children: '',
-  disabled: false,
-  error: undefined,
-  name: 'checkbox',
-  onBlur: undefined,
-  onFocus: undefined,
-  progress: false,
-  size: 24,
-  typographyVariant: 'default',
-  valid: undefined,
-  value: undefined,
-}
-
 Checkbox.propTypes = {
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
@@ -187,9 +172,9 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   name: PropTypes.string,
-  onBlur: PropTypes.func,
+  onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
+  onFocus: PropTypes.func.isRequired,
   progress: PropTypes.bool,
   size: PropTypes.number,
   typographyVariant: PropTypes.oneOf(typographyVariants),
