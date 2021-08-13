@@ -1,5 +1,5 @@
 import { Theme, css } from '@emotion/react'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import Separator from '../Separator'
 import Line from './Line'
@@ -30,7 +30,7 @@ const styles = {
   `,
 }
 
-const Block: React.VoidFunctionComponent = props => (
+const Block: VoidFunctionComponent = props => (
   <Box {...props} css={styles.container}>
     <div css={styles.block}>
       {Array.from({ length: 3 }, (_, i) => (

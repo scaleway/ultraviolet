@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import { Col, Grid, Row } from '../Grid'
 import Line from './Line'
@@ -29,23 +29,26 @@ const styles = {
   `,
 }
 
-const Blocks: React.VoidFunctionComponent<{ col?: number; length?: number }> =
-  ({ col = 4, length = 8, ...props }) => (
-    <Box {...props} css={styles.container({ length })}>
-      <Grid gutter={0}>
-        <Row>
-          {Array.from({ length }, (_, i) => (
-            <Col xsmall={12 / col} key={`placeholder-block-${i}`}>
-              <div css={styles.block}>
-                <div css={styles.icon} />
-                <Line />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Grid>
-    </Box>
-  )
+const Blocks: VoidFunctionComponent<{ col?: number; length?: number }> = ({
+  col = 4,
+  length = 8,
+  ...props
+}) => (
+  <Box {...props} css={styles.container({ length })}>
+    <Grid gutter={0}>
+      <Row>
+        {Array.from({ length }, (_, i) => (
+          <Col xsmall={12 / col} key={`placeholder-block-${i}`}>
+            <div css={styles.block}>
+              <div css={styles.icon} />
+              <Line />
+            </div>
+          </Col>
+        ))}
+      </Row>
+    </Grid>
+  </Box>
+)
 
 Blocks.propTypes = {
   col: PropTypes.number,

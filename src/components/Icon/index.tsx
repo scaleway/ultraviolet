@@ -432,7 +432,7 @@ const ICONS = {
   ),
 } as const
 
-export const icons = Object.keys(ICONS)
+export const icons = Object.keys(ICONS) as IconName[]
 
 const customViewBoxes = [
   {
@@ -530,7 +530,7 @@ const Icon = forwardRef<SVGElement, IconProps>(
 
 Icon.propTypes = {
   color: PropTypes.string,
-  name: PropTypes.oneOf(Object.keys(ICONS) as IconName[]),
+  name: PropTypes.oneOf(icons),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
 }

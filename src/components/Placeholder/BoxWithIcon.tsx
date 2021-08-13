@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import Line from './Line'
 
@@ -20,7 +20,7 @@ const boxStyled = (theme: Theme) => css`
   border: 1px solid ${theme.colors.gray300};
 `
 
-const BoxWithIcon: React.FunctionComponent<{
+const BoxWithIcon: VoidFunctionComponent<{
   length?: number
   height?: number
   width?: number

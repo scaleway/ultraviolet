@@ -1,8 +1,16 @@
-import { Theme } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, isValidElement, useMemo, VoidFunctionComponent } from 'react'
+import React, {
+  FocusEventHandler,
+  FunctionComponent,
+  MouseEventHandler,
+  ReactNode,
+  VoidFunctionComponent,
+  isValidElement,
+  useMemo,
+} from 'react'
 import { Color } from '../../theme/colors'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
@@ -210,16 +218,10 @@ const variantStyles = ({
 const sizeStyles = ({ size }: { size: ButtonSize }) => sizes[size]
 
 const SmartIcon: VoidFunctionComponent<{
-  icon: React.ReactNode | IconName
+  icon: ReactNode | string
   iconSize?: number
-}> = ({
-  icon,
-  iconSize,
-}) =>
-  isValidElement(icon) ? icon : (
-    <Icon name={icon as IconName} size={iconSize} />
-  )
-
+}> = ({ icon, iconSize }) =>
+  isValidElement(icon) ? icon : <Icon name={icon as IconName} size={iconSize} />
 
 SmartIcon.propTypes = {
   icon: PropTypes.node.isRequired,
@@ -232,7 +234,7 @@ type StyledIcon = {
 
 const StyledIconContainer = styled('div', {
   shouldForwardProp: prop => !['margin', 'position'].includes(prop.toString()),
-}) <StyledIcon>`
+})<StyledIcon>`
   display: flex;
   ${({ margin, position }) => `
     ${position === 'left' ? `margin-right: ${margin}px;` : ``}
@@ -252,7 +254,7 @@ type StyledButtonProps = {
   download?: boolean
   extend?: boolean
   href?: string
-  icon?: IconName | JSX.Element
+  icon?: string | JSX.Element
   iconPosition?: 'left' | 'right'
   progress?: boolean | 'left' | 'right'
   iconSize?: number
@@ -260,9 +262,10 @@ type StyledButtonProps = {
   to?: string
   tooltip?: string
   tooltipBaseId?: string
+  type?: 'button' | 'reset' | 'submit'
   variant: ButtonVariant
-  onFocus?: React.FocusEventHandler
-  onMouseEnter?: React.MouseEventHandler
+  onFocus?: FocusEventHandler
+  onMouseEnter?: MouseEventHandler
 } & XStyledProps
 
 const StyledButton = styled(Box, {
@@ -270,7 +273,7 @@ const StyledButton = styled(Box, {
     !['action', 'variant', 'extend', 'icon', 'download'].includes(
       props.toString(),
     ),
-}) <StyledButtonProps>`
+})<StyledButtonProps>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};
   border-width: 0;
@@ -313,38 +316,36 @@ const StyledButton = styled(Box, {
 
   ${({ extend, icon }) =>
     extend &&
-    `
-    display: inline-flex;
-    & ${StyledContent} {
-      transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
-      max-width: 0;
-      margin-right: 0;
-      ${icon ? 'padding-right: 0;' : 'padding-left: 0;'};
-      overflow: hidden;
-    }
+    css`
+      display: inline-flex;
+      & ${StyledContent} {
+        transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
+        max-width: 0;
+        margin-right: 0;
+        ${icon ? 'padding-right: 0;' : 'padding-left: 0;'};
+        overflow: hidden;
+      }
 
-    &:focus ${StyledContent},
-    &:hover ${StyledContent} {
-      max-width: 275px;
-      margin-right: 8px;
-      ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
-    }
-  `}
+      &:focus ${StyledContent}, &:hover ${StyledContent} {
+        max-width: 275px;
+        margin-right: 8px;
+        ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
+      }
+    `}
 
   ${({ action }) =>
     action &&
-    `
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    flex-shrink: 0;
-    > svg {
-      // safari issue prevent event propgation
-      pointer-events: none;
-    }
-
-    ${action === 'rounded' && `border-radius: 16px;`}
-  `}
+    css`
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      flex-shrink: 0;
+      ${action === 'rounded' && `border-radius: 16px;`}
+      > svg {
+        // safari issue prevent event propgation
+        pointer-events: none;
+      }
+    `}
 `
 
 type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
@@ -369,6 +370,7 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
   to,
   tooltip,
   tooltipBaseId,
+  type: elementType = 'button',
   variant = 'primary',
   ...props
 }) => {
@@ -383,6 +385,7 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
   const displayProgressOnly = !children
 
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
+  const type = as === 'button' ? elementType : undefined
 
   return (
     <Tooltip baseId={tooltipBaseId} text={tooltip}>
@@ -399,10 +402,11 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
         size={size}
         extend={extend}
         icon={icon}
+        type={type}
       >
         {progress === true ||
-          progress === 'left' ||
-          (icon && iconPosition === 'left') ? (
+        progress === 'left' ||
+        (icon && iconPosition === 'left') ? (
           <StyledIconContainer
             margin={iconMargin}
             position={children ? 'left' : ''}
@@ -463,9 +467,7 @@ FwdButton.propTypes = {
   /**
    * Use this properties to associate ref to button component.
    */
-  progress: PropTypes.oneOf([
-    true, false, 'left', 'right',
-  ]),
+  progress: PropTypes.oneOf([true, false, 'left', 'right']),
   size: PropTypes.oneOf(buttonSizes as [ButtonSize]),
   to: PropTypes.string,
   tooltip: PropTypes.string,

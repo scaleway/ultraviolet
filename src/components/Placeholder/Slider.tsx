@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 
 const styles = {
@@ -26,7 +26,7 @@ const styles = {
   `,
 }
 
-const Slider: React.VoidFunctionComponent<{
+const Slider: VoidFunctionComponent<{
   length?: number
 }> = ({ length = 4, ...props }) => (
   <Box css={styles.container} {...props}>

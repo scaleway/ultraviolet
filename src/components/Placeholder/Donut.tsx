@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import Line from './Line'
 
@@ -31,38 +31,41 @@ const styles = {
   `,
 }
 
-const Donut: React.VoidFunctionComponent<{ height?: number; width?: number }> =
-  ({ height = 206, width = 206, ...props }) => (
-    <Box css={styles.container} {...props}>
-      <div css={styles.circleContainer(height)}>
-        <svg
-          style={{
-            height,
-            minHeight: height,
-            minWidth: width,
-            transform: 'rotate(-90deg)',
-            width,
-          }}
-        >
-          <circle css={styles.circle} cx={width / 2} cy={height / 2} r="90" />
-        </svg>
-      </div>
-      <ul css={styles.linesContainer}>
-        <li css={styles.line}>
-          <Line />
-        </li>
-        <li css={styles.line}>
-          <Line />
-        </li>
-        <li css={styles.line}>
-          <Line />
-        </li>
-        <li css={styles.line}>
-          <Line />
-        </li>
-      </ul>
-    </Box>
-  )
+const Donut: VoidFunctionComponent<{ height?: number; width?: number }> = ({
+  height = 206,
+  width = 206,
+  ...props
+}) => (
+  <Box css={styles.container} {...props}>
+    <div css={styles.circleContainer(height)}>
+      <svg
+        style={{
+          height,
+          minHeight: height,
+          minWidth: width,
+          transform: 'rotate(-90deg)',
+          width,
+        }}
+      >
+        <circle css={styles.circle} cx={width / 2} cy={height / 2} r="90" />
+      </svg>
+    </div>
+    <ul css={styles.linesContainer}>
+      <li css={styles.line}>
+        <Line />
+      </li>
+      <li css={styles.line}>
+        <Line />
+      </li>
+      <li css={styles.line}>
+        <Line />
+      </li>
+      <li css={styles.line}>
+        <Line />
+      </li>
+    </ul>
+  </Box>
+)
 
 Donut.propTypes = {
   height: PropTypes.number,
