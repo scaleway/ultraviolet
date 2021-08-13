@@ -1,4 +1,5 @@
 import { css, keyframes } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Box from '../Box'
@@ -19,7 +20,7 @@ const shineAnimation = keyframes`
   }
 `
 
-const style = css`
+const StyledDiv = styled.div`
   position: absolute;
   top: 0;
   height: 100%;
@@ -47,7 +48,15 @@ const variants = {
   slider: Slider,
 }
 
-const Placeholder = ({ variant, length, width, height, col, ...props }) => {
+type PlaceholderVariant = keyof typeof variants
+
+const Placeholder: React.VoidFunctionComponent<{
+  variant?: PlaceholderVariant
+  length?: number
+  width?: number
+  height?: number
+  col?: number
+}> = ({ variant = 'blocks', length, width, height, col, ...props }) => {
   const Component = variants[variant]
 
   return (
@@ -60,7 +69,7 @@ const Placeholder = ({ variant, length, width, height, col, ...props }) => {
     >
       <Component length={length} width={width} height={height} col={col} />
 
-      <div css={style} />
+      <StyledDiv />
     </Box>
   )
 }
@@ -71,16 +80,12 @@ Placeholder.propTypes = {
   col: PropTypes.number,
   height: PropTypes.number,
   length: PropTypes.number,
-  variant: PropTypes.oneOf(placeholderTypes),
+  variant: PropTypes.oneOf(placeholderTypes as [PlaceholderVariant]),
   width: PropTypes.number,
 }
 
 Placeholder.defaultProps = {
-  col: undefined,
-  height: undefined,
-  length: undefined,
   variant: 'blocks',
-  width: undefined,
 }
 
 export default Placeholder

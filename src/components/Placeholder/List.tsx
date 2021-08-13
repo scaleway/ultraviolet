@@ -20,7 +20,7 @@ const StyledList = styled.ul`
   }
 `
 
-const Item = () => (
+const Item: React.VoidFunctionComponent = () => (
   <StyledItem>
     <div style={{ width: '240px' }}>
       <Line />
@@ -31,7 +31,9 @@ const Item = () => (
   </StyledItem>
 )
 
-const List = ({ length }) => (
+const List: React.VoidFunctionComponent<{ length?: number }> = ({
+  length = 2,
+}) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
       <Item key={`placeholder-list-${i}`} />
@@ -41,10 +43,6 @@ const List = ({ length }) => (
 
 List.propTypes = {
   length: PropTypes.number,
-}
-
-List.defaultProps = {
-  length: 2,
 }
 
 export default List

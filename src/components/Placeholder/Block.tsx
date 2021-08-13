@@ -1,11 +1,11 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import React from 'react'
 import Box from '../Box'
 import Separator from '../Separator'
 import Line from './Line'
 
 const styles = {
-  block: theme => css`
+  block: (theme: Theme) => css`
     width: 100%;
     height: 100%;
     display: flex;
@@ -21,7 +21,7 @@ const styles = {
   container: css`
     min-height: 200px;
   `,
-  icon: theme => css`
+  icon: (theme: Theme) => css`
     margin-right: 8px;
     width: 32px;
     height: 32px;
@@ -30,7 +30,7 @@ const styles = {
   `,
 }
 
-const Block = props => (
+const Block: React.VoidFunctionComponent = props => (
   <Box {...props} css={styles.container}>
     <div css={styles.block}>
       {Array.from({ length: 3 }, (_, i) => (

@@ -7,25 +7,28 @@ declare global {
     backgroundColor?: string
     as?: string | React.ElementType<unknown>
     align?: string
+    alignItems?: string
     color?: string
+    display?: string
     fontWeight?: number
     lineHeight?: string | number
+    mb?: string | number
     ml?: string | number
     mr?: string | number
     mt?: string | number
-    mb?: string | number
     mx?: string | number
     my?: string | number
+    overflow?: string
     p?: string | number
+    pb?: string | number
     pl?: string | number
+    position?: string
     pr?: string | number
     pt?: string | number
-    pb?: string | number
     px?: string | number
     py?: string | number
     verticalAlign?: string
     width?: string | number
-    position?: string
 
     // HTMLAnchorElement.rel
     rel?: string

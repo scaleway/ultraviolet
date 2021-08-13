@@ -1,14 +1,26 @@
 import styled from '@emotion/styled'
+import { Theme } from '@emotion/react'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useMemo } from 'react'
+import React, { useMemo, FunctionComponent } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
-import Icon from '../Icon'
+import Icon, { IconName } from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
+import { Color } from '../../theme/colors'
 
-const borderedVariant = ({ theme: { colors }, color, bgColor, hoverColor }) => {
+const borderedVariant = ({
+  theme: { colors },
+  color,
+  bgColor,
+  hoverColor,
+}: {
+  theme: Theme
+  color: Color
+  bgColor: Color
+  hoverColor: Color
+}) => {
   const colorValue = colors[color]
   const bgColorValue = colors[bgColor]
   const hoverColorValue = colors[hoverColor]
@@ -41,7 +53,15 @@ const borderedVariant = ({ theme: { colors }, color, bgColor, hoverColor }) => {
   `
 }
 
-const plainVariant = ({ theme: { colors }, bgColor, textColor }) => {
+const plainVariant = ({
+  theme: { colors },
+  bgColor,
+  textColor,
+}: {
+  theme: Theme
+  bgColor: Color
+  textColor: Color
+}) => {
   const bgColorValue = colors[bgColor]
   const textColorValue = colors[textColor]
 
@@ -62,16 +82,16 @@ const plainVariant = ({ theme: { colors }, bgColor, textColor }) => {
 }
 
 const variants = {
-  info: ({ theme }) =>
+  info: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'zumthor', textColor: 'blue', theme }),
-  'info-bordered': ({ theme }) =>
+  'info-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'blue',
       hoverColor: 'blue',
       theme,
     }),
-  link: ({ theme: { colors } }) => `
+  link: ({ theme: { colors } }: { theme: Theme }) => `
     background-color: ${colors.white};
     color: ${colors.blue};
     vertical-align: baseline;
@@ -83,61 +103,61 @@ const variants = {
       text-decoration: underline;
     }
   `,
-  primary: ({ theme }) =>
+  primary: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'primary', textColor: 'white', theme }),
-  'primary-bordered': ({ theme }) =>
+  'primary-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'primary',
       hoverColor: 'primary',
       theme,
     }),
-  'primary-soft-bordered': ({ theme }) =>
+  'primary-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'gray350',
       hoverColor: 'primary',
       theme,
     }),
-  secondary: ({ theme }) =>
+  secondary: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'gray100', textColor: 'gray700', theme }),
-  'secondary-bordered': ({ theme }) =>
+  'secondary-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'gray550',
       hoverColor: 'primary',
       theme,
     }),
-  success: ({ theme }) =>
+  success: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'success', textColor: 'white', theme }),
-  'success-bordered': ({ theme }) =>
+  'success-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'success',
       hoverColor: 'success',
       theme,
     }),
-  'success-soft-bordered': ({ theme }) =>
+  'success-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'gray350',
       hoverColor: 'success',
       theme,
     }),
-  transparent: ({ theme: { colors } }) => `
+  transparent: ({ theme: { colors } }: { theme: Theme }) => `
     background-color: transparent;
     color: ${colors.gray700};
   `,
-  warning: ({ theme }) =>
+  warning: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'warning', textColor: 'white', theme }),
-  'warning-bordered': ({ theme }) =>
+  'warning-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'warning',
       hoverColor: 'warning',
       theme,
     }),
-  'warning-soft-bordered': ({ theme }) =>
+  'warning-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColor: 'white',
       color: 'gray350',
@@ -147,6 +167,7 @@ const variants = {
 }
 
 export const buttonVariants = Object.keys(variants)
+type ButtonVariant = keyof typeof variants
 
 const sizes = {
   large: `
@@ -176,9 +197,48 @@ const sizes = {
 }
 
 export const buttonSizes = Object.keys(sizes)
+type ButtonSize = keyof typeof sizes
 
-const variantStyles = ({ variant, ...props }) => variants[variant]?.(props)
-const sizeStyles = ({ size }) => sizes[size]
+const variantStyles = ({
+  variant,
+  theme,
+  ...props
+}: {
+  variant: ButtonVariant
+  theme: Theme
+}) => variants[variant]?.({ theme, ...props })
+const sizeStyles = ({ size }: { size: ButtonSize }) => sizes[size]
+
+const SmartIcon = ({
+  icon,
+  iconSize,
+}: {
+  icon: IconName | React.ReactNode
+  iconSize?: number
+}) =>
+  icon && typeof icon === 'string' ? (
+    <Icon name={icon} size={iconSize} />
+  ) : <>{icon}</>
+
+
+SmartIcon.propTypes = {
+  icon: PropTypes.node.isRequired,
+  iconSize: PropTypes.number,
+}
+
+type StyledIcon = {
+  margin: number
+} & XStyledProps
+
+const StyledIconContainer = styled('div', {
+  shouldForwardProp: prop => !['margin', 'position'].includes(prop.toString()),
+}) <StyledIcon>`
+  display: flex;
+  ${({ margin, position }) => `
+    ${position === 'left' ? `margin-right: ${margin}px;` : ``}
+    ${position === 'right' ? `margin-left: ${margin}px;` : ``}
+    pointer-events: none;`}
+`
 
 const StyledContent = styled.div`
   display: flex;
@@ -186,11 +246,31 @@ const StyledContent = styled.div`
   justify-content: center;
   pointer-events: none;
 `
+type StyledButtonProps = {
+  action?: boolean | 'rounded'
+  disabled?: boolean
+  download?: boolean
+  extend?: boolean
+  href?: string
+  icon?: IconName | JSX.Element
+  iconPosition?: 'left' | 'right'
+  progress?: boolean | 'left' | 'right'
+  iconSize?: number
+  size: ButtonSize
+  to?: string
+  tooltip?: string
+  tooltipBaseId?: string
+  variant: ButtonVariant
+  onFocus?: React.FocusEventHandler
+  onMouseEnter?: React.MouseEventHandler
+} & XStyledProps
 
 const StyledButton = styled(Box, {
-  shouldForwardProp: prop =>
-    !['action', 'variant', 'extend', 'icon', 'download'].includes(prop),
-})`
+  shouldForwardProp: props =>
+    !['action', 'variant', 'extend', 'icon', 'download'].includes(
+      props.toString(),
+    ),
+}) <StyledButtonProps>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};
   border-width: 0;
@@ -267,49 +347,34 @@ const StyledButton = styled(Box, {
   `}
 `
 
-const SmartIcon = ({ icon, iconSize }) =>
-  icon && typeof icon === 'string' ? <Icon name={icon} size={iconSize} /> : icon
-
-SmartIcon.propTypes = {
-  icon: PropTypes.node.isRequired,
-  iconSize: PropTypes.number,
+type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
+  children: React.ReactNode
+  variant?: ButtonVariant
+  innerRef: React.Ref<Element>
+  size?: ButtonSize
 }
 
-SmartIcon.defaultProps = {
-  iconSize: undefined,
-}
-
-const StyledIconContainer = styled('div', {
-  shouldForwardProp: prop => !['margin', 'position'].includes(prop),
-})`
-  display: flex;
-  ${({ margin, position }) => `
-    ${position === 'left' ? `margin-right: ${margin}px;` : ``}
-    ${position === 'right' ? `margin-left: ${margin}px;` : ``}
-    pointer-events: none;`}
-`
-function FwdButton({
-  progress,
-  disabled,
-  variant,
-  size,
-  icon,
-  iconPosition,
-  iconSize,
+const FwdButton: FunctionComponent<ButtonProps> = ({
   children,
-  extend,
-  type: elementType,
-  innerRef,
-  to,
-  href,
+  disabled = false,
   download,
+  extend,
+  href,
+  icon,
+  iconPosition = 'left',
+  iconSize,
+  innerRef,
+  progress,
+  size = 'large',
+  to,
   tooltip,
   tooltipBaseId,
+  variant = 'primary',
   ...props
-}) {
+}) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
-    if (to) return UniversalLink
+    if (to) return UniversalLink as React.ElementType
     if (href || download) return 'a'
 
     return 'button'
@@ -317,7 +382,6 @@ function FwdButton({
 
   const displayProgressOnly = !children
 
-  const type = as === 'button' ? elementType : null
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
 
   return (
@@ -328,7 +392,6 @@ function FwdButton({
         to={to}
         download={download}
         ref={innerRef}
-        type={type}
         as={as}
         disabled={as === 'button' && disabled}
         aria-disabled={disabled}
@@ -338,8 +401,8 @@ function FwdButton({
         icon={icon}
       >
         {progress === true ||
-        progress === 'left' ||
-        (icon && iconPosition === 'left') ? (
+          progress === 'left' ||
+          (icon && iconPosition === 'left') ? (
           <StyledIconContainer
             margin={iconMargin}
             position={children ? 'left' : ''}
@@ -378,8 +441,8 @@ function FwdButton({
   )
 }
 
-const propTypes = {
-  action: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['rounded'])]),
+FwdButton.propTypes = {
+  action: PropTypes.oneOf([true, false, 'rounded']),
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.node,
@@ -393,56 +456,28 @@ const propTypes = {
   /**
    * Name of the icon. All [icons](/?path=/docs/components-icon) are supported.
    */
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.func]),
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconSize: PropTypes.number,
   innerRef: PropTypes.func,
   /**
    * Use this properties to associate ref to button component.
    */
-  progress: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.oneOf(['left', 'right']),
+  progress: PropTypes.oneOf([
+    true, false, 'left', 'right',
   ]),
-  size: PropTypes.oneOf(buttonSizes),
+  size: PropTypes.oneOf(buttonSizes as [ButtonSize]),
   to: PropTypes.string,
   tooltip: PropTypes.string,
   tooltipBaseId: PropTypes.string,
-  type: PropTypes.string,
-  variant: PropTypes.oneOf(buttonVariants),
+  variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),
 }
 
-const defaultProps = {
-  action: undefined,
-  children: null,
-  disabled: false,
-  download: undefined,
-  extend: undefined,
-  href: undefined,
-  icon: undefined,
-  iconPosition: 'left',
-  iconSize: undefined,
-  innerRef: undefined,
-  progress: undefined,
-  size: 'large',
-  to: undefined,
-  tooltip: undefined,
-  tooltipBaseId: undefined,
-  type: 'button',
-  variant: 'primary',
-}
+const Button = React.forwardRef<Element, ButtonProps>((props, ref) => (
+  <FwdButton {...props} innerRef={ref} />
+))
 
-FwdButton.defaultProps = defaultProps
-
-FwdButton.propTypes = propTypes
-
-function forwardRef(props, ref) {
-  return <FwdButton {...props} innerRef={ref} />
-}
-
-const Button = React.forwardRef(forwardRef)
-Button.defaultProps = defaultProps
-Button.propTypes = propTypes
+Button.propTypes = FwdButton.propTypes
 
 Button.displayName = 'fwd(Button)'
 
