@@ -1,12 +1,23 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 
-const bordersStyles = ({ size, bgColors, theme }) => {
+const bordersStyles = ({
+  size,
+  bgColors,
+  theme,
+}: {
+  size: number
+  bgColors: string[]
+  theme: Theme
+}) => {
   const isHalved = bgColors.length > 1
-  const finalColors = bgColors?.map(bgColor => theme.colors[bgColor] ?? bgColor)
+  const finalColors = bgColors?.map(
+    bgColor => theme.colors[bgColor as Color] ?? bgColor,
+  )
 
   return css`
     border-left: ${size / 2}px solid ${finalColors[0]};
@@ -20,8 +31,8 @@ const bordersStyles = ({ size, bgColors, theme }) => {
 }
 
 const StyledSphere = styled(Box, {
-  shouldForwardProp: prop => !['size', 'bgColors'].includes(prop),
-})`
+  shouldForwardProp: prop => !['size', 'bgColors'].includes(prop.toString()),
+})<{ size: number; bgColors: string[] }>`
   align-items: center;
   display: flex;
   height: 100%;
@@ -31,18 +42,26 @@ const StyledSphere = styled(Box, {
 `
 
 const StyledTextSphere = styled('div', {
-  shouldForwardProp: prop => !['color', 'fontSize'].includes(prop),
-})`
-  color: ${({ theme, color }) => theme.colors[color] ?? color};
+  shouldForwardProp: prop => !['color', 'fontSize'].includes(prop.toString()),
+})<{ color: string; fontSize?: number }>`
+  color: ${({ theme, color }) => theme.colors[color as Color] ?? color};
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 
-const Sphere = ({
-  size,
-  bgColors,
+interface SphereProps {
+  size?: number
+  bgColors?: string[]
+  text?: string
+  textColor?: string
+  textSize?: number
+}
+
+const Sphere: VoidFunctionComponent<SphereProps> = ({
+  size = 32,
+  bgColors = ['violet'],
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
-  textColor,
-  textSize,
+  textColor = 'white',
+  textSize = 16,
   ...props
 }) => (
   <StyledSphere
@@ -61,16 +80,8 @@ const Sphere = ({
   </StyledSphere>
 )
 
-Sphere.defaultProps = {
-  bgColors: ['violet'],
-  size: 32,
-  text: undefined,
-  textColor: 'white',
-  textSize: 16,
-}
-
 Sphere.propTypes = {
-  bgColors: PropTypes.arrayOf(PropTypes.string),
+  bgColors: PropTypes.arrayOf(PropTypes.string.isRequired),
   size: PropTypes.number,
   text: PropTypes.string,
   textColor: PropTypes.string,

@@ -1,6 +1,12 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef, useState } from 'react'
+import React, {
+  ElementType,
+  FunctionComponent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import Box from '../Box'
 
 const StyledWrapper = styled(Box)`
@@ -76,36 +82,41 @@ const StyledBorderWrapper = styled(Box)`
   }
 `
 
-const Slider = ({ children, ...props }) => {
-  const scrollRef = useRef(null)
-  let intervalLeft
-  let intervalRight
+export const Item: FunctionComponent<{ as?: string | ElementType<unknown> }> =
+  ({ as, ...props }) => (
+    <StyledBorderWrapper as={as} {...props} draggable="true" />
+  )
+
+Item.propTypes = {
+  as: PropTypes.string,
+}
+
+type SliderType = FunctionComponent & {
+  Item: typeof Item
+}
+
+const Slider: SliderType = ({ children, ...props }) => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  let intervalLeft: ReturnType<typeof setInterval>
+  let intervalRight: ReturnType<typeof setInterval>
 
   const handleScrollRight = () => {
-    if (scrollRef.current) {
-      if (scrollRef.current.scrollTo) {
-        intervalRight = setInterval(() => {
-          scrollRef.current.scrollTo(scrollRef.current.scrollLeft - 25, 0)
-        }, 30)
+    intervalRight = setInterval(() => {
+      if (scrollRef.current?.scrollTo) {
+        scrollRef.current.scrollTo?.(scrollRef.current?.scrollLeft - 25, 0)
       }
-    }
+    }, 30)
   }
   const handleScrollLeft = () => {
-    if (scrollRef.current) {
-      if (scrollRef.current.scrollTo) {
-        intervalLeft = setInterval(() => {
-          scrollRef.current.scrollTo(scrollRef.current.scrollLeft + 25, 0)
-        }, 30)
+    intervalLeft = setInterval(() => {
+      if (scrollRef.current?.scrollTo) {
+        scrollRef.current.scrollTo(scrollRef.current?.scrollLeft + 25, 0)
       }
-    }
+    }, 30)
   }
 
   const handleScrollX = (scrollX = 25) => {
-    if (scrollRef.current) {
-      if (scrollRef.current.scrollTo) {
-        scrollRef.current.scrollTo(scrollRef.current.scrollLeft + scrollX, 0)
-      }
-    }
+    scrollRef.current?.scrollTo?.(scrollRef.current?.scrollLeft + scrollX, 0)
   }
 
   const cleanUp = () => {
@@ -158,18 +169,7 @@ const Slider = ({ children, ...props }) => {
   )
 }
 
-export const Item = ({ as, ...props }) => (
-  <StyledBorderWrapper as={as} {...props} draggable="true" />
-)
-
 Slider.Item = Item
-
-Item.propTypes = {
-  as: PropTypes.string,
-}
-Item.defaultProps = {
-  as: undefined,
-}
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,

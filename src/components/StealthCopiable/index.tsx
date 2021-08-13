@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import Unselectable from '../Unselectable'
@@ -30,7 +30,19 @@ const StyledContainer = styled.div`
   }
 `
 
-const StealthCopiable = ({ children, side, copyText, copiedText }) => {
+interface StealthCopiableProps {
+  children: ReactNode
+  side?: 'left' | 'right'
+  copyText?: string
+  copiedText?: string
+}
+
+const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
+  children,
+  side = 'right',
+  copyText = 'Copy',
+  copiedText = 'Copied',
+}) => {
   const string = recursivelyGetChildrenString(children)
 
   const [isCopied, setCopied] = useClipboard(string, {
@@ -41,19 +53,13 @@ const StealthCopiable = ({ children, side, copyText, copiedText }) => {
     <StyledContainer>
       {side === 'right' && children}
       <Unselectable as="span">
-        <CopyButton onClick={setCopied} tabIndex="0" type="button">
+        <CopyButton onClick={setCopied} tabIndex={0} type="button">
           {isCopied ? copiedText : copyText}
         </CopyButton>
       </Unselectable>
       {side === 'left' && children}
     </StyledContainer>
   )
-}
-
-StealthCopiable.defaultProps = {
-  copiedText: 'Copied',
-  copyText: 'Copy',
-  side: 'right',
 }
 
 StealthCopiable.propTypes = {

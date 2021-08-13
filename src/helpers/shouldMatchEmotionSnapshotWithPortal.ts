@@ -10,7 +10,7 @@ expect.addSnapshotSerializer(createSerializer())
 interface Options {
   options?: RenderOptions
   theme?: typeof defaultTheme
-  transform?: (node: ReturnType<typeof render>) => Promise<void>
+  transform?: (node: ReturnType<typeof render>) => Promise<void> | void
 }
 
 export default async (

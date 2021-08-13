@@ -1,8 +1,14 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, {
+  ChangeEventHandler,
+  HTMLAttributes,
+  ReactNode,
+  VoidFunctionComponent,
+} from 'react'
 import { Checkbox } from 'reakit'
+import { Color } from '../../theme/colors'
 import Tooltip from '../Tooltip'
 
 const PADDING = 6
@@ -18,7 +24,10 @@ const SIZES = {
     height: 24,
     width: 40,
   },
-}
+} as const
+
+type Sizes = keyof typeof SIZES
+const switchSizes = Object.keys(SIZES) as Sizes[]
 
 const COLORS = {
   disabled: 'gray300',
@@ -26,16 +35,38 @@ const COLORS = {
   inactiveBigBallColor: 'gray700',
   inactiveLabelColor: 'gray700',
   smallBallColor: 'gray100',
+} as const
+
+interface LabelProps {
+  size?: Sizes
+  onLabel?: string | ReactNode
+  offLabel?: string | ReactNode
+  labeled?: boolean | LabelPositions
 }
 
 // Multiplies the max number of chars between labels by a "magic" number representing the average number of pixel per char
 // The goal is to stick as much as possible to real label size
 // number 10 has been chosen using letter O
-const labelSize = (onLabel, offLabel) =>
-  Math.max(onLabel.length, offLabel.length) * 10
+const labelSize = (
+  onLabel: string | ReactNode,
+  offLabel: string | ReactNode,
+) => {
+  if (typeof onLabel === 'string' && typeof offLabel === 'string') {
+    return Math.max(onLabel.length, offLabel.length) * 10
+  }
 
-const getSwitchWidth = ({ width, onLabel, offLabel, size, labeled }) => {
+  return 0
+}
+
+const getSwitchWidth = ({
+  width,
+  onLabel,
+  offLabel,
+  size,
+  labeled,
+}: LabelProps & { width?: number }) => {
   if (width) return width
+  if (!size) return 0
 
   if (
     typeof onLabel === 'string' &&
@@ -49,7 +80,7 @@ const getSwitchWidth = ({ width, onLabel, offLabel, size, labeled }) => {
   return SIZES[size].width
 }
 
-const SwitchBall = styled.span`
+const SwitchBall = styled.span<{ size: Sizes }>`
   display: block;
   position: relative;
   border-radius: 34px;
@@ -67,24 +98,24 @@ const SwitchBall = styled.span`
 
 const StyledSpan = styled('span', {
   shouldForwardProp: prop =>
-    !['onLabel', 'offLabel', 'labeled', 'size', 'width'].includes(prop),
-})`
+    !['onLabel', 'offLabel', 'labeled', 'size'].includes(prop.toString()),
+})<LabelProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   ${({ labeled, onLabel, offLabel, size }) => {
-    const spanWidth = labelSize(onLabel, offLabel) - 2
+    const spanWidth = labelSize(onLabel, offLabel)
     switch (labeled) {
       case 'left':
         return `
         margin-right: 10px;
-        width: ${spanWidth}px;
+        ${spanWidth ? `width: ${spanWidth - 2}px;` : ''}
         text-align: right;
         `
       case 'right':
         return `
         margin-left: 10px;
-        width: ${spanWidth}px;
+        ${spanWidth ? `width: ${spanWidth - 2}px;` : ''}
         `
       case 'inside':
       default:
@@ -92,16 +123,30 @@ const StyledSpan = styled('span', {
           font-weight: 700;
           font-size: 16px;
           position: absolute;
-          line-height: ${SIZES[size].ball}px;
-          width: calc(100% - ${SIZES[size].ball}px);
+          line-height: ${SIZES[size as Sizes]?.ball}px;
+          width: calc(100% - ${SIZES[size as Sizes]?.ball}px);
           `
     }
   }}
 `
 
+const labelPositions = ['left', 'right', 'inside'] as const
+type LabelPositions = typeof labelPositions[number]
+
+type VariantProps = LabelProps & {
+  width?: number
+}
+
 const buildVariants =
-  ({ bgColor, activeBigBallColor, activeLabelColor }) =>
-  ({ theme, width, onLabel, offLabel, labeled, size }) =>
+  ({ bgColor, activeBigBallColor, activeLabelColor }: Record<string, Color>) =>
+  ({
+    theme,
+    width,
+    onLabel,
+    offLabel,
+    labeled,
+    size,
+  }: VariantProps & { theme: Theme }) =>
     css`
       &[aria-checked='true'] {
         background-color: ${theme.colors[bgColor] ?? bgColor};
@@ -146,16 +191,26 @@ const variants = {
     activeLabelColor: 'success',
     bgColor: 'foam',
   }),
-}
+} as const
+
+type Variants = keyof typeof variants
+
+const switchVariants = Object.keys(variants) as Variants[]
+
+type StyledSwitchProps = HTMLAttributes<HTMLElement> &
+  VariantProps & {
+    variant?: Variants
+    disabled?: boolean
+  }
 
 const StyledSwitch = styled('span', {
   shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop),
-})`
+    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop.toString()),
+})<StyledSwitchProps>`
   overflow: hidden;
   outline: none;
   width: ${getSwitchWidth}px;
-  height: ${({ size }) => SIZES[size].height}px;
+  height: ${({ size }) => SIZES[size as Sizes]?.height}px;
   display: inline-flex;
   align-items: center;
   background-color: ${({ disabled, theme }) =>
@@ -169,7 +224,7 @@ const StyledSwitch = styled('span', {
 
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
-  ${({ variant }) => variants[variant]}
+  ${({ variant }) => variants?.[variant as Variants]}
 `
 
 const StyledCheckbox = styled(Checkbox)`
@@ -177,24 +232,31 @@ const StyledCheckbox = styled(Checkbox)`
   opacity: 0.01;
 `
 
-const StyledLabel = styled.label`
+const StyledLabel = styled.label<{ disabled?: boolean }>`
   display: flex;
   align-items: center;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `
 
-const Switch = ({
-  checked,
-  disabled,
+type SwitchProps = StyledSwitchProps & {
+  id?: string
+  checked?: boolean
+  name: string
+  tooltip?: string
+}
+
+const Switch: VoidFunctionComponent<SwitchProps> = ({
+  checked = false,
+  disabled = false,
   id,
   name,
   onChange,
-  size,
+  size = 'medium',
   tooltip,
-  labeled,
-  onLabel,
-  offLabel,
-  variant,
+  labeled = false,
+  onLabel = 'ON',
+  offLabel = 'OFF',
+  variant = 'primary',
   width,
 }) => {
   const renderLabel = () => (
@@ -203,7 +265,6 @@ const Switch = ({
       onLabel={onLabel}
       offLabel={offLabel}
       size={size}
-      width={width}
     >
       {checked ? onLabel : offLabel}
     </StyledSpan>
@@ -250,7 +311,7 @@ Switch.propTypes = {
    */
   labeled: PropTypes.oneOfType([
     PropTypes.bool,
-    PropTypes.oneOf(['inside', 'left', 'right']),
+    PropTypes.oneOf(labelPositions),
   ]),
   name: PropTypes.string.isRequired,
   /**
@@ -262,23 +323,10 @@ Switch.propTypes = {
    * Text or node shown in switch button when its state if on
    */
   onLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  size: PropTypes.oneOf(Object.keys(SIZES)),
+  size: PropTypes.oneOf(switchSizes),
   tooltip: PropTypes.string,
-  variant: PropTypes.oneOf(Object.keys(variants)),
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-}
-
-Switch.defaultProps = {
-  checked: false,
-  disabled: false,
-  id: undefined,
-  labeled: false,
-  offLabel: 'OFF',
-  onLabel: 'ON',
-  size: 'medium',
-  tooltip: undefined,
-  variant: 'primary',
-  width: undefined,
+  variant: PropTypes.oneOf(switchVariants),
+  width: PropTypes.number,
 }
 
 export default Switch
