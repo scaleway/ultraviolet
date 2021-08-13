@@ -82,13 +82,13 @@ const StyledBorderWrapper = styled(Box)`
   }
 `
 
-export const Item: FunctionComponent<{ as?: string | ElementType<unknown> }> =
-  ({ as, ...props }) => (
-    <StyledBorderWrapper as={as} {...props} draggable="true" />
-  )
+export const Item: FunctionComponent<{ as?: ElementType }> = ({
+  as,
+  ...props
+}) => <StyledBorderWrapper as={as} {...props} draggable="true" />
 
 Item.propTypes = {
-  as: PropTypes.string,
+  as: PropTypes.oneOf([PropTypes.string, PropTypes.element]),
 }
 
 type SliderType = FunctionComponent & {
