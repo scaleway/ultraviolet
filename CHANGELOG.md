@@ -1,3 +1,15 @@
+## [0.99.0](https://github.com/scaleway/scaleway-ui/compare/v0.98.4...v0.99.0) (2021-08-13)
+
+
+### :package: Chore
+
+* **deps-dev:** bump rollup-plugin-postcss from 4.0.0 to 4.0.1 ([#636](https://github.com/scaleway/scaleway-ui/issues/636)) ([ddf00ce](https://github.com/scaleway/scaleway-ui/commit/ddf00cee1a933fb9cc8ecbfbe992f76487168631))
+
+
+### :gear: Features
+
+* migrate Slider, Sphere, StealthCopiable, Switch and SwitchButton to typescript ([#626](https://github.com/scaleway/scaleway-ui/issues/626)) ([241fd58](https://github.com/scaleway/scaleway-ui/commit/241fd582cb360f69b234584107e89f206d287f06))
+
 ### [0.98.4](https://github.com/scaleway/scaleway-ui/compare/v0.98.3...v0.98.4) (2021-08-11)
 
 
