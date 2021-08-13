@@ -1,14 +1,14 @@
-import styled from '@emotion/styled'
 import { Theme } from '@emotion/react'
+import styled from '@emotion/styled'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useMemo, FunctionComponent } from 'react'
+import React, { FunctionComponent, isValidElement, useMemo, VoidFunctionComponent } from 'react'
+import { Color } from '../../theme/colors'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Icon, { IconName } from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
-import { Color } from '../../theme/colors'
 
 const borderedVariant = ({
   theme: { colors },
@@ -209,16 +209,16 @@ const variantStyles = ({
 }) => variants[variant]?.({ theme, ...props })
 const sizeStyles = ({ size }: { size: ButtonSize }) => sizes[size]
 
-const SmartIcon = ({
+const SmartIcon: VoidFunctionComponent<{
+  icon: React.ReactNode | IconName
+  iconSize?: number
+}> = ({
   icon,
   iconSize,
-}: {
-  icon: IconName | React.ReactNode
-  iconSize?: number
 }) =>
-  icon && typeof icon === 'string' ? (
-    <Icon name={icon} size={iconSize} />
-  ) : <>{icon}</>
+  isValidElement(icon) ? icon : (
+    <Icon name={icon as IconName} size={iconSize} />
+  )
 
 
 SmartIcon.propTypes = {
