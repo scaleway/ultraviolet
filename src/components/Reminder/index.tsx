@@ -27,7 +27,13 @@ const reminderVariants = Object.keys(variants) as Variants[]
 
 const Notification = styled(Box, {
   shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
-})<{ variant: Variants; bordered: boolean }>`
+})<{
+  variant: Variants
+  bordered: boolean
+  type: string | null
+  icon: string
+  to?: string
+}>`
   height: 28px;
   width: max-content;
   display: flex;
@@ -83,7 +89,7 @@ const Reminder: FunctionComponent<Props> = ({
   ...props
 }) => (
   <Notification
-    as={to ? UniversalLink : 'a'}
+    as={to ? (UniversalLink as React.ElementType) : 'a'}
     type={to ? null : 'button'}
     icon="east"
     style={{}}

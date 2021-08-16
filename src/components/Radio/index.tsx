@@ -38,7 +38,7 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
   }
 `
 
-const StyledBox = styled(Box)<{ disabled: boolean }>`
+const StyledBox = styled(Box)<{ disabled: boolean; htmlFor: string }>`
   position: relative;
   display: flex;
   align-items: center;
@@ -57,14 +57,14 @@ const StyledRadio = styled(ReakitRadio)`
 `
 
 type Props = {
-  checked?: boolean,
-  children: React.ReactNode,
-  disabled?: boolean,
-  name: string,
-  onBlur?(...args: unknown[]): unknown,
-  onChange?(...args: unknown[]): unknown,
-  onFocus?(...args: unknown[]): unknown,
-  size?: number,
+  checked?: boolean
+  children: React.ReactNode
+  disabled?: boolean
+  name: string
+  onBlur?(...args: unknown[]): unknown
+  onChange?(...args: unknown[]): unknown
+  onFocus?(...args: unknown[]): unknown
+  size?: number
   value: string | number
 } & XStyledProps
 
