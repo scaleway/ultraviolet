@@ -9,6 +9,6 @@ const StyledLabel = styled.label`
   margin-bottom: 8px;
 `
 
-const Label: FunctionComponent = props => <StyledLabel {...props} />
+const Label: FunctionComponent<LabelHTMLAttributes<HTMLLabelElement>> = props => <StyledLabel {...props} />
 
 export default Label
