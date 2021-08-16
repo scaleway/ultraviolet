@@ -30,7 +30,7 @@ const Notification = styled(Box, {
 })<{
   variant: Variants
   bordered: boolean
-  type: string | null
+  type?: string
   icon: string
   to?: string
 }>`
