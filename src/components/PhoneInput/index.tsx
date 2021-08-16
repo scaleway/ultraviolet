@@ -6,6 +6,8 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
+  InputHTMLAttributes,
+  MutableRefObject,
   VoidFunctionComponent,
   useEffect,
   useRef,
@@ -97,10 +99,9 @@ const StyledInput = styled.input`
   }
 `
 
-interface InputProps {
-  name?: string | null
-  id?: string | null
-  placeholder?: string | null
+type InputProps = Partial<
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'name' | 'id' | 'placeholder'>
+> & {
   'data-testid'?: string | null
 }
 
@@ -123,7 +124,7 @@ const PhoneInput: VoidFunctionComponent<PhoneInputProps> = ({
   label = 'Phone',
 }) => {
   const inputRef =
-    useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>
+    useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
 
   const formatIntlTelInput = () => {
     const { intlTelInputUtils, intlTelInputGlobals } = window
@@ -173,11 +174,11 @@ const PhoneInput: VoidFunctionComponent<PhoneInputProps> = ({
           type="tel"
           ref={inputRef}
           value={value}
-          name={name ?? undefined}
-          id={id ?? undefined}
+          name={name}
+          id={id}
           maxLength={50}
           disabled={disabled}
-          placeholder={placeholder ?? undefined}
+          placeholder={placeholder}
           data-testid={dataTestId}
         />
       </StyledLabel>
@@ -195,10 +196,10 @@ PhoneInput.propTypes = {
    * You can set input properties trough this prop.
    */
   inputProps: PropTypes.shape({
-    'data-testid': PropTypes.string,
-    id: PropTypes.string,
-    name: PropTypes.string,
-    placeholder: PropTypes.string,
+    'data-testid': PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
   }),
   label: PropTypes.string,
   onChange: PropTypes.func,
