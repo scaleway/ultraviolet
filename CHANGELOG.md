@@ -1,3 +1,23 @@
+## [0.100.0](https://github.com/scaleway/scaleway-ui/compare/v0.99.0...v0.100.0) (2021-08-16)
+
+
+### :zap: Refactor
+
+* **typescript:** popper, button & placeholder components ([#635](https://github.com/scaleway/scaleway-ui/issues/635)) ([073e117](https://github.com/scaleway/scaleway-ui/commit/073e1170822bc9f50352d943a52ec52412b771c3))
+
+
+### :package: Chore
+
+* **deps-dev:** bump read-pkg from 6.0.0 to 7.0.0 ([#639](https://github.com/scaleway/scaleway-ui/issues/639)) ([7951e1d](https://github.com/scaleway/scaleway-ui/commit/7951e1d1b864ff037322012df1c2fcb918c24359))
+* typescript migration checkbox container flexbox dot dotsteps extendedreminder ([#609](https://github.com/scaleway/scaleway-ui/issues/609)) ([315fd93](https://github.com/scaleway/scaleway-ui/commit/315fd93f869639a581d33b264c3615422b28f8ac))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.2 to 3.1.3 ([#638](https://github.com/scaleway/scaleway-ui/issues/638)) ([ab496d8](https://github.com/scaleway/scaleway-ui/commit/ab496d8795510a7d5d21e13f854f66418a8f6181))
+* **deps-dev:** bump semantic-release from 17.4.4 to 17.4.5 ([#640](https://github.com/scaleway/scaleway-ui/issues/640)) ([e6b4c01](https://github.com/scaleway/scaleway-ui/commit/e6b4c01ca8dfdded6fdf8edf9d743590bd3b6dc1))
+
+
+### :gear: Features
+
+* migrate some components to typescript ([#632](https://github.com/scaleway/scaleway-ui/issues/632)) ([a719a5d](https://github.com/scaleway/scaleway-ui/commit/a719a5dd52a66dd9672ba99d7abb5f37c980ceb1))
+
 ## [0.99.0](https://github.com/scaleway/scaleway-ui/compare/v0.98.4...v0.99.0) (2021-08-13)
 
 
