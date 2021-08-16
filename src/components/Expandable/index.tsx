@@ -4,9 +4,18 @@ import React, { FunctionComponent, ReactNode } from 'react'
 import Box from '../Box'
 
 type ExpandableProps = {
+  /**
+   * The content to display
+   */
   children: ReactNode
-  opened?: boolean
+  /**
+   * The maxHeight of the content to make the opening and closing animation
+   */
   height?: number
+  /**
+   * To display or not the content
+   */
+  opened?: boolean
 } & XStyledProps
 
 const StyledExpandable = styled(Box, {
@@ -34,17 +43,8 @@ const Expandable: FunctionComponent<ExpandableProps> = props => (
 )
 
 Expandable.propTypes = {
-  /**
-   * The content to display
-   */
   children: PropTypes.node.isRequired,
-  /**
-   * The maxHeight of the content to make the opening and closing animation
-   */
   height: PropTypes.number,
-  /**
-   * To display or not the content
-   */
   opened: PropTypes.bool,
 }
 

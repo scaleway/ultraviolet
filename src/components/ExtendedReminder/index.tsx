@@ -71,12 +71,27 @@ const StyledButtonLink = styled(Button)`
 type Variants = keyof typeof variants
 
 type Props = {
+  /**
+   * The text to be placed in the top badge
+   */
   badgeText: string
+  /**
+   * The icon to use in the badge
+   */
   icon: string
+  /**
+   * The link text to display at the end
+   */
   linkText?: string
+  /**
+   * MouseEvent listener on the component
+   */
   onClick?(...args: unknown[]): unknown
   text: string
   title: string
+  /**
+   * The link that linkText prop need to redirect to.
+   */
   to?: string
   variant?: Variants
 }
@@ -130,27 +145,12 @@ const ExtendedReminder: FunctionComponent<Props> = ({
 }
 
 ExtendedReminder.propTypes = {
-  /**
-   * The text to be placed in the top badge
-   */
   badgeText: PropTypes.string.isRequired,
-  /**
-   * The icon to use in the badge
-   */
   icon: PropTypes.string.isRequired,
-  /**
-   * The link text to display at the end
-   */
   linkText: PropTypes.string,
-  /**
-   * MouseEvent listener on the component
-   */
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  /**
-   * The link that linkText prop need to redirect to.
-   */
   to: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(variants) as Variants[]),
 }
