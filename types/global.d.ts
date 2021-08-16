@@ -8,8 +8,10 @@ declare global {
     as?: string | React.ElementType<unknown>
     align?: string
     alignItems?: string
+    justifyContent?: string
     color?: string
     display?: string
+    fontSize?: number
     fontWeight?: number
     lineHeight?: string | number
     mb?: string | number

@@ -4,6 +4,10 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  typescript: {
+    // also valid 'react-docgen-typescript' | false
+    reactDocgen: 'react-docgen',
+  },
   stories: ['../src/**/__stories__/*.stories.mdx'],
   addons: [
     '@storybook/addon-docs',

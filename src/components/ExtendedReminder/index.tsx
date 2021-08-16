@@ -1,35 +1,37 @@
-import { useTheme } from '@emotion/react'
+import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, MouseEventHandler } from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
-import Icon from '../Icon'
+import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
 const variants = {
-  error: ({ colors }) => ({
+  error: ({ colors }: Theme) => ({
     background: colors.pippin,
     main: colors.red,
   }),
-  info: ({ colors }) => ({
+  info: ({ colors }: Theme) => ({
     background: colors.zumthor,
     main: colors.blue,
   }),
-  success: ({ colors }) => ({
+  success: ({ colors }: Theme) => ({
     background: colors.foam,
     main: colors.gray700,
   }),
-  warning: ({ colors }) => ({
+  warning: ({ colors }: Theme) => ({
     background: colors.serenade,
     main: colors.orange,
   }),
 }
 
+type Variants = keyof typeof variants
+
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})`
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+})<{ variant: Variants }>`
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -48,8 +50,8 @@ const StyledBadgeContainer = styled(Box)`
 `
 
 const StyledTitle = styled(Typography, {
-  shouldForwardProp: prop => !['color'].includes(prop),
-})`
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+})<{ color: Variants }>`
   font-weight: 600;
   text-transform: uppercase;
   color: ${({ theme, color }) => variants[color]?.(theme).main};
@@ -68,7 +70,33 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
-const ExtendedReminder = ({
+type Props = {
+  /**
+   * The text to be placed in the top badge
+   */
+  badgeText: string
+  /**
+   * The icon to use in the badge
+   */
+  icon: IconName
+  /**
+   * The link text to display at the end
+   */
+  linkText?: string
+  /**
+   * MouseEvent listener on the component
+   */
+  onClick?: MouseEventHandler
+  text: string
+  title: string
+  /**
+   * The link that linkText prop need to redirect to.
+   */
+  to?: string
+  variant?: Variants
+}
+
+const ExtendedReminder: FunctionComponent<Props> = ({
   badgeText,
   icon,
   linkText,
@@ -76,7 +104,7 @@ const ExtendedReminder = ({
   text,
   title,
   to,
-  variant,
+  variant = 'info',
   ...props
 }) => {
   const theme = useTheme()
@@ -85,7 +113,7 @@ const ExtendedReminder = ({
     info: 'info',
     success: 'success',
     warning: 'beta',
-  }
+  } as const
 
   return (
     <StyledContainer variant={variant} {...props}>
@@ -117,36 +145,14 @@ const ExtendedReminder = ({
 }
 
 ExtendedReminder.propTypes = {
-  /**
-   * The text to be placed in the top badge
-   */
   badgeText: PropTypes.string.isRequired,
-  /**
-   * The icon to use in the badge
-   */
-  icon: PropTypes.string.isRequired,
-  /**
-   * The link text to display at the end
-   */
+  icon: PropTypes.oneOf(icons).isRequired,
   linkText: PropTypes.string,
-  /**
-   * MouseEvent listener on the component
-   */
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  /**
-   * The link that linkText prop need to redirect to.
-   */
   to: PropTypes.string,
-  variant: PropTypes.oneOf(Object.keys(variants)),
-}
-
-ExtendedReminder.defaultProps = {
-  linkText: null,
-  onClick: null,
-  to: null,
-  variant: 'info',
+  variant: PropTypes.oneOf(Object.keys(variants) as Variants[]),
 }
 
 export default ExtendedReminder

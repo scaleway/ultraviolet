@@ -1,4 +1,4 @@
-import { Theme, css } from '@emotion/react'
+import { Interpolation, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { x } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
@@ -28,6 +28,9 @@ type BoxProps = {
   width?: number | string
 } & XStyledProps &
   React.HTMLAttributes<HTMLElement>
+  & {
+    css?: Interpolation<Theme>
+  }
 
 const forwardType = forwardRef<Element, BoxProps>(() => null)
 

@@ -210,6 +210,7 @@ const StyledText = styled(Box, {
 export const typographyVariants = Object.keys(variantTags)
 
 type TypographyProps = Omit<StyledTextProps, 'variant'> & {
+  'aria-disabled'?: boolean
   children: ReactNode
   tooltipProps?: Partial<TooltipProps>
   variant?: TypographyVariant

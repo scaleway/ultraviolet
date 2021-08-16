@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
+  ButtonHTMLAttributes,
   FocusEventHandler,
   FunctionComponent,
   MouseEventHandler,
@@ -266,7 +267,8 @@ type StyledButtonProps = {
   variant: ButtonVariant
   onFocus?: FocusEventHandler
   onMouseEnter?: MouseEventHandler
-} & XStyledProps
+} & XStyledProps &
+  ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled(Box, {
   shouldForwardProp: props =>
@@ -475,9 +477,9 @@ FwdButton.propTypes = {
   variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),
 }
 
-const Button = React.forwardRef<Element, ButtonProps>((props, ref) => (
-  <FwdButton {...props} innerRef={ref} />
-))
+const Button = React.forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
+  (props, ref) => <FwdButton {...props} innerRef={ref} />,
+)
 
 Button.propTypes = FwdButton.propTypes
 

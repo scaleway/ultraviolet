@@ -46,7 +46,7 @@ type ActivityIndicatorProps = {
 
 const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   percentage = 20,
-  text = undefined,
+  text,
   size = 40,
   strokeWidth = 16,
   color = 'primary',

@@ -1,7 +1,17 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useMemo } from 'react'
-import { Checkbox as ReakitCheckbox, useCheckboxState } from 'reakit/Checkbox'
+import React, {
+  ChangeEvent,
+  FunctionComponent,
+  ReactNode,
+  useEffect,
+  useMemo,
+} from 'react'
+import {
+  Checkbox as ReakitCheckbox,
+  CheckboxProps as ReakitCheckboxProps,
+  useCheckboxState,
+} from 'reakit/Checkbox'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Expandable from '../Expandable'
@@ -17,8 +27,8 @@ const StyledCheckBoxContainer = styled(Typography)`
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
-  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop.toString()),
+})<{ hasChildren: boolean }>`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
@@ -46,24 +56,36 @@ const StyledIcon = styled(Icon)`
 `
 
 const StyledChildrenContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
-const Checkbox = ({
-  checked,
+type CheckboxProps = {
+  children?: ReactNode
+  valid?: boolean
+  error?: string | ReactNode
+  size?: number
+  progress?: boolean
+  disabled?: boolean
+  typographyVariant?: string
+} & ReakitCheckboxProps &
+  Required<Pick<ReakitCheckboxProps, 'onChange'>> &
+  XStyledProps
+
+const Checkbox: FunctionComponent<CheckboxProps> = ({
+  checked = false,
   onChange,
   onFocus,
   onBlur,
   valid,
   error,
-  name,
+  name = 'checkbox',
   value,
-  size,
+  size = 24,
   children,
-  progress,
-  disabled,
-  autoFocus,
-  typographyVariant,
+  progress = false,
+  disabled = false,
+  autoFocus = false,
+  typographyVariant = 'default',
   ...props
 }) => {
   const hasChildren = !!children
@@ -90,11 +112,19 @@ const Checkbox = ({
         aria-disabled={disabled}
       >
         <StyledReakitCheckbox
-          aria-checked={checkbox.state}
-          checked={checkbox.state}
+          aria-checked={
+            checkbox.state === 'indeterminate'
+              ? 'mixed'
+              : (checkbox.state as boolean)
+          }
+          checked={
+            checkbox.state === 'indeterminate'
+              ? false
+              : (checkbox.state as boolean)
+          }
           hasChildren={hasChildren}
           size={size}
-          onChange={e => {
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
             if (!progress) onChange(e)
             setState(e.target.checked)
           }}
@@ -135,22 +165,6 @@ const Checkbox = ({
   )
 }
 
-Checkbox.defaultProps = {
-  autoFocus: false,
-  checked: false,
-  children: '',
-  disabled: false,
-  error: undefined,
-  name: 'checkbox',
-  onBlur: undefined,
-  onFocus: undefined,
-  progress: false,
-  size: 24,
-  typographyVariant: 'default',
-  valid: undefined,
-  value: undefined,
-}
-
 Checkbox.propTypes = {
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
@@ -165,11 +179,7 @@ Checkbox.propTypes = {
   size: PropTypes.number,
   typographyVariant: PropTypes.oneOf(typographyVariants),
   valid: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-    PropTypes.number,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default Checkbox
