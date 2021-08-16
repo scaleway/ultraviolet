@@ -10,7 +10,6 @@ declare global {
     alignItems?: string
     justifyContent?: string
     color?: string
-    css?: Record<string, unknown>
     display?: string
     fontSize?: number
     fontWeight?: number
