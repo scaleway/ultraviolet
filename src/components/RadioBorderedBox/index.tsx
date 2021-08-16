@@ -56,7 +56,7 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   size = 24,
   children,
   ...props
-}: Props) => (
+}) => (
   <StyledBox
     bordered
     as="label"
