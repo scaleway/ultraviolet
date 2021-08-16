@@ -79,7 +79,6 @@ describe('Checkbox', () => {
       <Checkbox onChange={() => {}} size={37} value="test">
         Checkbox Label
       </Checkbox>,
-      {},
     )
 
     const input = node.getByRole('checkbox')
@@ -92,7 +91,6 @@ describe('Checkbox', () => {
       <Checkbox onChange={() => {}} size={37} value="test" progress>
         Checkbox Label
       </Checkbox>,
-      {},
     )
 
     const input = node.getByRole('checkbox')

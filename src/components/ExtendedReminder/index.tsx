@@ -1,11 +1,11 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, MouseEventHandler } from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
-import Icon from '../Icon'
+import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
 const variants = {
@@ -26,6 +26,8 @@ const variants = {
     main: colors.orange,
   }),
 }
+
+type Variants = keyof typeof variants
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
@@ -68,8 +70,6 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
-type Variants = keyof typeof variants
-
 type Props = {
   /**
    * The text to be placed in the top badge
@@ -78,7 +78,7 @@ type Props = {
   /**
    * The icon to use in the badge
    */
-  icon: string
+  icon: IconName
   /**
    * The link text to display at the end
    */
@@ -86,7 +86,7 @@ type Props = {
   /**
    * MouseEvent listener on the component
    */
-  onClick?(...args: unknown[]): unknown
+  onClick?: MouseEventHandler
   text: string
   title: string
   /**
@@ -146,7 +146,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
 
 ExtendedReminder.propTypes = {
   badgeText: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.oneOf(icons).isRequired,
   linkText: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,

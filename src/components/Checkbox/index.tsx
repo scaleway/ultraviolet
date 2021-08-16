@@ -60,7 +60,7 @@ const StyledChildrenContainer = styled('div', {
 })``
 
 type CheckboxProps = {
-  children: ReactNode
+  children?: ReactNode
   valid?: boolean
   error?: string | ReactNode
   size?: number
