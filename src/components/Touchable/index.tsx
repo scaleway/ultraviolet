@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Box from '../Box'
 
 const styles = {
@@ -22,12 +22,23 @@ const styles = {
   `,
 }
 
-const BaseTouchable = ({
-  innerRef,
-  disabled,
+type TouchableProps = {
+  innerRef: React.Ref<Element>
+  children?: React.ReactNode
+  disabled?: boolean
+  activeOpacity?: number | string
+  hasFocus?: boolean
+  as?: string
+  type?: string
+}
+
+const FwdTouchable: FunctionComponent<TouchableProps> = ({
   activeOpacity,
-  hasFocus,
-  as,
+  as = 'button',
+  children,
+  disabled = false,
+  hasFocus = false,
+  innerRef,
   type,
   ...props
 }) => (
@@ -49,36 +60,26 @@ const BaseTouchable = ({
     type={as === 'button' ? 'button' : type}
     disabled={disabled}
     tabIndex={hasFocus ? 0 : undefined}
-  />
+  >
+    {children}
+  </Box>
 )
 
-const propTypes = {
+FwdTouchable.propTypes = {
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   as: PropTypes.string,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({})]),
+  innerRef: PropTypes.func,
   type: PropTypes.string,
 }
 
-const defaultProps = {
-  activeOpacity: null,
-  as: 'button',
-  disabled: false,
-  hasFocus: false,
-  innerRef: null,
-  type: null,
-}
-
-BaseTouchable.propTypes = propTypes
-
-BaseTouchable.defaultProps = defaultProps
-
-const forwardRef = (props, ref) => <BaseTouchable {...props} innerRef={ref} />
-const Touchable = React.forwardRef(forwardRef)
+const Touchable = React.forwardRef<Element, Omit<TouchableProps, 'innerRef'>>(
+  (props, ref) => <FwdTouchable {...props} innerRef={ref} />,
+)
 Touchable.displayName = 'fwd(Touchable)'
 
-Touchable.propTypes = propTypes
-Touchable.defaultProps = defaultProps
+Touchable.propTypes = FwdTouchable.propTypes
 
 export default Touchable
