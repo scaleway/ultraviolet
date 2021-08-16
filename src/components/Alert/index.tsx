@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import Box from '../Box'
-import Icon from '../Icon'
+import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
 export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
@@ -75,7 +75,7 @@ const variantStyles = ({
 }: ContainerProps & { theme: Theme }) =>
   variants(props)[variant] || variants(props).standard
 
-const typesDefaultIcons: Record<AlertType, string> = {
+const typesDefaultIcons: Record<AlertType, IconName> = {
   beta: 'alert',
   info: 'information-outline',
   success: 'checkbox-marked-circle-outline',
@@ -112,7 +112,7 @@ type AlertProps = {
   variant?: AlertVariant
   children: ReactNode
   iconSize?: number
-  icon?: string
+  icon?: IconName
   title?: string
   type?: AlertType
 }
@@ -144,7 +144,7 @@ Title.propTypes = {
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(icons),
   iconSize: PropTypes.number,
   /**
    * Add a title at the top of your alert.

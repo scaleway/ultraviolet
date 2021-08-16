@@ -23,9 +23,9 @@ const StyledBox = styled(x.div, {
 
 type BoxProps = {
   bordered?: boolean
-  width?: number | string
-  height?: number | string
   children?: ReactNode
+  height?: number | string
+  width?: number | string
 } & XStyledProps &
   React.HTMLAttributes<HTMLElement>
 

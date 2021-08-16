@@ -1,8 +1,7 @@
 name: 'size'
 on:
   pull_request:
-    branches:
-      - master
+    types: ['opened', 'edited', 'reopened', 'synchronize']
 jobs:
   size:
     runs-on: ubuntu-latest

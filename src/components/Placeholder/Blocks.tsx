@@ -1,12 +1,12 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import { Col, Grid, Row } from '../Grid'
 import Line from './Line'
 
 const styles = {
-  block: theme => css`
+  block: (theme: Theme) => css`
     width: 100%;
     display: flex;
     align-items: center;
@@ -17,10 +17,10 @@ const styles = {
     border-color: ${theme.colors.gray300};
     border-radius: 4px;
   `,
-  container: ({ length }) => css`
+  container: ({ length }: { length: number }) => css`
     min-height: ${length * 200} px;
   `,
-  icon: theme => css`
+  icon: (theme: Theme) => css`
     margin-right: 8px;
     width: 32px;
     height: 32px;
@@ -29,7 +29,11 @@ const styles = {
   `,
 }
 
-const Blocks = ({ col, length, ...props }) => (
+const Blocks: VoidFunctionComponent<{ col?: number; length?: number }> = ({
+  col = 4,
+  length = 8,
+  ...props
+}) => (
   <Box {...props} css={styles.container({ length })}>
     <Grid gutter={0}>
       <Row>
@@ -49,11 +53,6 @@ const Blocks = ({ col, length, ...props }) => (
 Blocks.propTypes = {
   col: PropTypes.number,
   length: PropTypes.number,
-}
-
-Blocks.defaultProps = {
-  col: 4,
-  length: 8,
 }
 
 export default Blocks

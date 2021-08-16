@@ -1,18 +1,18 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import Line from './Line'
 
 const styles = {
-  circle: theme => css`
+  circle: (theme: Theme) => css`
     transform-origin: 50% 50%;
     stroke: ${theme.colors.gray300};
     stroke-width: 18;
     stroke-linecap: butt;
     fill: none;
   `,
-  circleContainer: height => css`
+  circleContainer: (height: number) => css`
     position: relative;
     height: ${height}px;
   `,
@@ -31,7 +31,11 @@ const styles = {
   `,
 }
 
-const Donut = ({ height, width, ...props }) => (
+const Donut: VoidFunctionComponent<{ height?: number; width?: number }> = ({
+  height = 206,
+  width = 206,
+  ...props
+}) => (
   <Box css={styles.container} {...props}>
     <div css={styles.circleContainer(height)}>
       <svg
@@ -66,11 +70,6 @@ const Donut = ({ height, width, ...props }) => (
 Donut.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
-}
-
-Donut.defaultProps = {
-  height: 206,
-  width: 206,
 }
 
 export default Donut

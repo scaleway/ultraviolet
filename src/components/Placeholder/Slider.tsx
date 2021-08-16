@@ -1,10 +1,10 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 
 const styles = {
-  card: theme => css`
+  card: (theme: Theme) => css`
     border: 1px solid ${theme.colors.gray300};
     border-radius: 4px;
     width: 240px;
@@ -16,7 +16,7 @@ const styles = {
     display: flex;
     overflow: auto;
   `,
-  img: theme => css`
+  img: (theme: Theme) => css`
     border: 1px solid ${theme.colors.gray300};
     background-color: ${theme.colors.gray300};
     border-top-right-radius: 4px;
@@ -26,7 +26,9 @@ const styles = {
   `,
 }
 
-const Slider = ({ length, ...props }) => (
+const Slider: VoidFunctionComponent<{
+  length?: number
+}> = ({ length = 4, ...props }) => (
   <Box css={styles.container} {...props}>
     {Array.from({ length }, (_, i) => (
       <div key={`placeholder-slider-card-${i}`} css={styles.card}>
@@ -38,10 +40,6 @@ const Slider = ({ length, ...props }) => (
 
 Slider.propTypes = {
   length: PropTypes.number,
-}
-
-Slider.defaultProps = {
-  length: 4,
 }
 
 export default Slider

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
 import Box from '../Box'
-import Icon, { icons } from '../Icon'
+import Icon, { IconName, icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
@@ -40,7 +40,7 @@ const StyledHr = styled(Box.withComponent('hr'), {
 `
 
 const Separator: FunctionComponent<
-  HorizontalSeparatorProps & { icon?: string }
+  HorizontalSeparatorProps & { icon?: IconName }
 > = ({
   direction = 'horizontal',
   thickness = 1,
