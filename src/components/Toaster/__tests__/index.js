@@ -4,7 +4,10 @@ import React from 'react'
 import ToastContainer, { toast } from '..'
 import renderWithTheme from '../../../helpers/renderWithTheme'
 
-expect.addSnapshotSerializer(createSerializer())
+// use only class hash (generated from css style content)
+expect.addSnapshotSerializer(
+  createSerializer({ classNameReplacer: className => className }),
+)
 
 describe('Toaster', () => {
   beforeEach(() => {
