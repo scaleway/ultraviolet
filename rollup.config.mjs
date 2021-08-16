@@ -2,14 +2,14 @@ import { babel } from '@rollup/plugin-babel'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
-import { readPackageAsync } from 'read-pkg'
+import { readPackage } from 'read-pkg'
+import dts from "rollup-plugin-dts"
 import postcss from 'rollup-plugin-postcss'
 import { visualizer } from 'rollup-plugin-visualizer'
-import dts from "rollup-plugin-dts"
 
 const PROFILE = !!process.env.PROFILE
 
-const pkg = await readPackageAsync()
+const pkg = await readPackage()
 
 const targets = `
   > 1%,
@@ -56,8 +56,8 @@ export default [{
       inject: false,
     }),
     nodeResolve({
-      preferBuiltins: true,
       extensions: [ '.mjs', '.js', '.json', '.ts', '.tsx' ],
+      preferBuiltins: true,
     }),
     url({
       limit: 63488,
