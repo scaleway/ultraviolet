@@ -74,14 +74,14 @@ const Notification = styled(Box, {
   }
 `
 
-type Props = {
+type ReminderProps = {
   bordered?: boolean
   text: string
   to?: string
   variant?: Variants
 }
 
-const Reminder: FunctionComponent<Props> = ({
+const Reminder: FunctionComponent<ReminderProps> = ({
   text,
   variant = 'info',
   bordered = false,

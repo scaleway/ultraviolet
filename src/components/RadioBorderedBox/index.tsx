@@ -28,7 +28,7 @@ const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
   }}
 `
 
-type Props = {
+type RadioBorderedBoxProps = {
   badgeSize?: Sizes
   badgeText?: string
   badgeVariant?: Variants
@@ -42,7 +42,7 @@ type Props = {
   value: string | number
 } & HTMLAttributes<HTMLInputElement>
 
-const RadioBorderedBox: FunctionComponent<Props> = ({
+const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   label,
   labelDescription,
   badgeText,
@@ -58,7 +58,7 @@ const RadioBorderedBox: FunctionComponent<Props> = ({
   size = 24,
   children,
   ...props
-}: Props) => (
+}) => (
   <StyledBox
     bordered
     as="label"

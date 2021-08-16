@@ -56,7 +56,7 @@ const StyledRadio = styled(ReakitRadio)`
   opacity: 0.01;
 `
 
-type Props = {
+type RadioProps = {
   checked?: boolean
   children: React.ReactNode
   disabled?: boolean
@@ -68,7 +68,7 @@ type Props = {
   value: string | number
 } & XStyledProps
 
-const Radio: FunctionComponent<Props> = ({
+const Radio: FunctionComponent<RadioProps> = ({
   checked,
   onChange = () => undefined,
   onFocus = () => undefined,
