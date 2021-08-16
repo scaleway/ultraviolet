@@ -4,6 +4,23 @@ import React from 'react'
 import PhoneInput from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
+const Controlled = () => {
+  const [state, setState] = React.useState('+33')
+
+  return (
+    <PhoneInput
+      value={state}
+      onChange={event => setState(event.currentTarget.value)}
+      label="Phone number"
+      inputProps={{
+        id: 'tel-id',
+        name: 'phone-number',
+        placeholder: '+33 6 01 02 03 04',
+      }}
+    />
+  )
+}
+
 describe('PhoneInput', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<PhoneInput onChange={() => {}} />))
@@ -26,25 +43,15 @@ describe('PhoneInput', () => {
         }}
       />,
     ))
+
   test('renders correctly with change', async () => {
-    shouldMatchEmotionSnapshot(
-      <PhoneInput
-        value="+33"
-        onChange={() => {}}
-        label="Phone number"
-        inputProps={{
-          id: 'tel-id',
-          name: 'phone-number',
-          placeholder: '+33 6 01 02 03 04',
-        }}
-      />,
-      {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('textbox')
-          userEvent.type(input, '+33102030405')
-          await waitFor(() => expect(input.value).toBe('+33 1 02 03 04 05'))
-        },
+    await shouldMatchEmotionSnapshot(<Controlled />, {
+      transform: async ({ getByRole }) => {
+        const input = getByRole('textbox') as HTMLInputElement
+        userEvent.clear(input)
+        userEvent.type(input, '+33102030405')
+        await waitFor(() => expect(input.value).toBe('+33 1 02 03 04 05'))
       },
-    )
+    })
   })
 })

@@ -1,7 +1,8 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 
 const shineAnimation = keyframes`
@@ -17,15 +18,15 @@ const shineAnimation = keyframes`
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
 const StyledBox = styled(Box, {
-  shouldForwardProp: prop => !['backgroundColor'].includes(prop),
-})`
+  shouldForwardProp: prop => !['backgroundColor'].includes(prop.toString()),
+})<{ backgroundColor: string }>`
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 2px;
   background-color: ${({ theme, backgroundColor }) =>
-    theme.colors[backgroundColor] ?? backgroundColor};
+    theme.colors[backgroundColor as Color] ?? backgroundColor};
 `
 
 const StyledProgress = styled.div`
@@ -47,31 +48,38 @@ const StyledProgress = styled.div`
 `
 
 const StyledFilled = styled('div', {
-  shouldForwardProp: prop => !['variant', 'value'].includes(prop),
-})`
+  shouldForwardProp: prop => !['variant', 'value'].includes(prop.toString()),
+})<{ variant: string; value: number }>`
   border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   background-color: ${({ theme, variant }) =>
-    theme.colors[variant] ?? 'inherit'};
+    theme.colors[variant as Color] ?? 'inherit'};
   transition: 0.3s width;
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `
 
-const ProgressBar = ({
-  variant,
-  backgroundColor,
-  value,
-  progress,
+interface ProgressBarProps {
+  variant?: string
+  backgroundColor?: string
+  value?: number
+  progress?: boolean
+}
+
+const ProgressBar: VoidFunctionComponent<ProgressBarProps> = ({
+  backgroundColor = 'gray300',
+  progress = false,
+  value = 0,
+  variant = 'primary',
   ...props
 }) => (
   <StyledBox
     role="progressbar"
     aria-valuenow={value}
-    aria-valuemin="0"
-    aria-valuemax="100"
+    aria-valuemin={0}
+    aria-valuemax={100}
     backgroundColor={backgroundColor}
     {...props}
   >
@@ -91,13 +99,6 @@ ProgressBar.propTypes = {
   progress: PropTypes.bool,
   value: PropTypes.number,
   variant: PropTypes.oneOf(progressBarVariants),
-}
-
-ProgressBar.defaultProps = {
-  backgroundColor: 'gray300',
-  progress: false,
-  value: 0,
-  variant: 'primary',
 }
 
 export default ProgressBar
