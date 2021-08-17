@@ -33,6 +33,7 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
         cache: 'yarn'
+    - run: locale
     - run: yarn
     - run: yarn run test:coverage
     - uses: codecov/codecov-action@v2.0.2
