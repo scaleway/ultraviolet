@@ -90,7 +90,7 @@ const Reminder: FunctionComponent<ReminderProps> = ({
 }) => (
   <Notification
     as={to ? (UniversalLink as React.ElementType) : 'a'}
-    type={to ? null : 'button'}
+    type={to ? undefined : 'button'}
     icon="east"
     style={{}}
     fontSize={12}
