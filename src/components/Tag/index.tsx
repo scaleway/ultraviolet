@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { Interpolation, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -12,24 +12,32 @@ const disabledStyles = css`
 `
 
 export const variantsContainer = {
-  base: ({ theme }) => css`
+  base: ({ theme }: { theme: Theme }) => css`
     background-color: ${theme.colors.gray100};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
   `,
-  bordered: ({ theme }) => css`
+  bordered: ({ theme }: { theme: Theme }) => css`
     padding: 8px;
     border: 1px solid ${theme.colors.gray350};
   `,
 }
 
-const variantStyles = ({ variant, ...props }) =>
-  variantsContainer[variant]?.(props)
+type TagVariant = keyof typeof variantsContainer
+
+const variantStyles = ({
+  variant,
+  ...props
+}: {
+  variant: TagVariant
+  theme: Theme
+}) => variantsContainer[variant]?.(props)
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['disabled', 'variant'].includes(prop),
-})`
+  shouldForwardProp: props =>
+    !['disabled', 'variant'].includes(props.toString()),
+})<{ disabled: boolean; variant: TagVariant }>`
   ${({ disabled }) => disabled && disabledStyles}
   border-radius: 4px;
   justify-content: center;
@@ -49,8 +57,8 @@ const StyledText = styled('span')`
 `
 
 const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})`
+  shouldForwardProp: props => !['variant'].includes(props.toString()),
+})<{ variant: TagVariant }>`
   margin-left: 16px;
   display: flex;
   align-items: center;
@@ -72,13 +80,23 @@ const StyledTouchable = styled(Touchable, {
   height: 32px;
 `}
 `
-const Tag = ({
+
+type TagsProps = {
+  children: React.ReactNode
+  disabled?: boolean
+  isLoading?: boolean
+  onClose?: React.MouseEventHandler<HTMLButtonElement>
+  textStyle?: Interpolation<Theme>
+  variant?: TagVariant
+}
+
+const Tag: React.FunctionComponent<TagsProps> = ({
   children,
-  isLoading,
+  isLoading = false,
   onClose,
-  textStyle,
-  disabled,
-  variant,
+  textStyle = {},
+  disabled = false,
+  variant = 'base',
   ...props
 }) => (
   <StyledContainer {...props} disabled={disabled} variant={variant}>
@@ -108,13 +126,11 @@ Tag.propTypes = {
   isLoading: PropTypes.bool,
   onClose: PropTypes.func,
   textStyle: PropTypes.shape({}),
-  variant: PropTypes.oneOf(Object.keys(variantsContainer)),
+  variant: PropTypes.oneOf(Object.keys(variantsContainer) as [TagVariant]),
 }
 
 Tag.defaultProps = {
   children: undefined,
-  disabled: false,
-  isLoading: false,
   onClose: undefined,
   textStyle: {},
   variant: 'base',

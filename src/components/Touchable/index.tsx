@@ -30,6 +30,7 @@ type TouchableProps = {
   hasFocus?: boolean
   as?: string
   type?: string
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLDivElement>
 }
 
 const FwdTouchable: FunctionComponent<TouchableProps> = ({
@@ -40,6 +41,7 @@ const FwdTouchable: FunctionComponent<TouchableProps> = ({
   hasFocus = false,
   innerRef,
   type,
+  onClick,
   ...props
 }) => (
   <Box
@@ -60,6 +62,7 @@ const FwdTouchable: FunctionComponent<TouchableProps> = ({
     type={as === 'button' ? 'button' : type}
     disabled={disabled}
     tabIndex={hasFocus ? 0 : undefined}
+    onClick={onClick}
   >
     {children}
   </Box>
