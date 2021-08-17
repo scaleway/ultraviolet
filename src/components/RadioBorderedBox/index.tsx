@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, HTMLAttributes } from 'react'
+import React, { FunctionComponent, InputHTMLAttributes } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import type { Sizes, Variants } from '../Badge'
 import Box from '../Box'
@@ -32,15 +32,13 @@ type RadioBorderedBoxProps = {
   badgeSize?: Sizes
   badgeText?: string
   badgeVariant?: Variants
-  checked?: boolean
   children: React.ReactNode
-  disabled?: boolean
   label: string
   labelDescription?: string
   name: string
   size?: number
   value: string | number
-} & HTMLAttributes<HTMLInputElement>
+} & InputHTMLAttributes<HTMLInputElement>
 
 const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   label,

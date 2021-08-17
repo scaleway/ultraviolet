@@ -179,16 +179,13 @@ const StyledInput = styled.input`
 `
 
 type InputProps = {
-  onBlur?(...args: unknown[]): unknown
-  onChange?(...args: unknown[]): unknown
-  onKeyPress?(...args: unknown[]): unknown
   value?: number
 } & InputHTMLAttributes<HTMLInputElement>
 
 const Input: FunctionComponent<InputProps> = ({
-  onChange = () => {},
-  onKeyPress = () => {},
-  onBlur = () => {},
+  onChange,
+  onKeyPress,
+  onBlur,
   value = 0,
   ...props
 }) => (
