@@ -43,17 +43,18 @@ const StyledRow = styled(Box.withComponent('tr'), {
     background-color: ${({ theme }) => theme.colors.gray50};
   }
 
-  ${({ highlight, theme }) =>
+  ${({ highlight = true, theme }) =>
     highlight &&
-    `
-    &:hover {
-      color: ${theme.colors.primary};
+    css`
+      &:hover {
+        color: ${theme.colors.primary};
 
-      td:first-of-type {
-        font-weight: 500;
-        text-decoration: underline;
+        td:first-of-type {
+          font-weight: 500;
+          text-decoration: underline;
+        }
       }
-    }`}
+    `}
 
   [data-visibility='hover'] {
     transition: opacity 150ms;

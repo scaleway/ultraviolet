@@ -8,9 +8,6 @@ import Box from '../../Box'
 describe('TabGroup', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<TabGroup />))
 
-  test('renders correctly with variant default', () =>
-    shouldMatchEmotionSnapshot(<TabGroup variant="default" />))
-
   test('renders correctly with Tabs with prop', () =>
     shouldMatchEmotionSnapshot(
       <TabGroup selected={0} onChange={() => {}}>

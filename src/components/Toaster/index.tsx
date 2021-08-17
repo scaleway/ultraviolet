@@ -94,28 +94,28 @@ SanitizedAlertBar.propTypes = {
 }
 
 const toast = {
-  error: (children: ReactNode, options: ToastOptions): number | string =>
+  error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(
       <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  info: (children: ReactNode, options: ToastOptions): number | string =>
+  info: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.info(
       <SanitizedAlertBar type="info" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  success: (children: ReactNode, options: ToastOptions): number | string =>
+  success: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.success(
       <SanitizedAlertBar type="success" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  warn: (children: ReactNode, options: ToastOptions): number | string =>
+  warn: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.warn(
       <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}

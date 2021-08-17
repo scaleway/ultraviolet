@@ -6,16 +6,9 @@ describe('Tab', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<Tab>Test tab</Tab>))
 
-  test('renders correctly with variant default', () =>
+  test('renders correctly with children', () =>
     shouldMatchEmotionSnapshot(
-      <Tab name="test" variant="default" onClick={() => {}}>
-        Test tab
-      </Tab>,
-    ))
-
-  test('renders correctly with variant primary', () =>
-    shouldMatchEmotionSnapshot(
-      <Tab name="test" variant="default" onClick={() => {}}>
+      <Tab name="test" onClick={() => {}}>
         Test tab
       </Tab>,
     ))

@@ -155,7 +155,7 @@ const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
             })
           }
 
-          return []
+          return null
         })}
       </StyledTabs>
 

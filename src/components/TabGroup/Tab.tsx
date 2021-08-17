@@ -53,7 +53,7 @@ export const StyledTab = styled.span`
 `
 
 export type TabProps = {
-  as?: ElementType<unknown>
+  as?: ElementType
   children?: ReactNode
   disabled?: boolean
   hasEndedCount?: boolean
@@ -68,14 +68,14 @@ export type TabProps = {
 }
 
 const Tab: FunctionComponent<TabProps> = ({
-  children = null,
+  children,
   disabled = false,
   isSelected = false,
-  setInternTabsWidth = () => {},
+  setInternTabsWidth,
   isTabsWidthSet = false,
   index = 0,
   name,
-  onClick = () => {},
+  onClick,
   hasEndedCount = false,
   as,
   ...props
@@ -83,7 +83,7 @@ const Tab: FunctionComponent<TabProps> = ({
   const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    setInternTabsWidth(ref?.current?.offsetWidth || 0, index)
+    setInternTabsWidth?.(ref?.current?.offsetWidth || 0, index)
   }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
 
   return (
@@ -94,8 +94,8 @@ const Tab: FunctionComponent<TabProps> = ({
       role="tab"
       tabIndex={isSelected ? 0 : -1}
       onKeyDown={event => {
-        if (['Enter', 'Space'].includes(event.code) && onClick) {
-          onClick(event)
+        if (['Enter', 'Space'].includes(event.code)) {
+          onClick?.(event)
         }
       }}
       aria-selected={isSelected}
