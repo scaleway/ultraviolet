@@ -5,7 +5,10 @@ import { ReactNode } from 'react'
 import defaultTheme from '../theme'
 import renderWithTheme from './renderWithTheme'
 
-expect.addSnapshotSerializer(createSerializer())
+// use only class hash (generated from css style content)
+expect.addSnapshotSerializer(
+  createSerializer({ classNameReplacer: className => className }),
+)
 
 interface Options {
   options?: RenderOptions
