@@ -145,7 +145,6 @@ const PhoneInput: VoidFunctionComponent<PhoneInputProps> = ({
     if (inputElement) {
       intlTelInput(inputElement, {
         autoPlaceholder: 'aggressive',
-        // @ts-expect-error https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55079
         customContainer: 'input__tel__container',
         formatOnDisplay: true,
         initialCountry: 'US',
