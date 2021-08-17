@@ -7,6 +7,7 @@ import {
 } from '@storybook/addon-docs'
 import Range from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import Box from '../../Box'
 
 <Meta title="Components/Data Entry/Range" component={Range} />
 
@@ -20,7 +21,9 @@ Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
 <Canvas>
   <Story name="Basic" height="200px">
-    <Range mt={3} />
+    <Box mt={3}>
+      <Range />
+    </Box>
   </Story>
 </Canvas>
 
@@ -28,11 +31,13 @@ Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
 <Canvas>
   <Story name="Single value" height="150px">
-    <ControlValue value={[3]}>
-      {({ value, onChange }) => (
-        <Range mt={3} value={value} min={0} max={10} onChange={onChange} />
-      )}
-    </ControlValue>
+    <Box mt={3}>
+      <ControlValue value={[3]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={10} onChange={onChange} />
+        )}
+      </ControlValue>
+    </Box>
   </Story>
 </Canvas>
 
@@ -42,11 +47,13 @@ For now, Range component will work with max two values.
 
 <Canvas>
   <Story name="Two values" height="150px">
-    <ControlValue value={[3, 8]}>
-      {({ value, onChange }) => (
-        <Range mt={3} value={value} min={0} max={15} onChange={onChange} />
-      )}
-    </ControlValue>
+    <Box mt={3}>
+      <ControlValue value={[3, 8]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={15} onChange={onChange} />
+        )}
+      </ControlValue>
+    </Box>
   </Story>
 </Canvas>
 

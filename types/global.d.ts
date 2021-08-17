@@ -31,7 +31,6 @@ declare global {
     py?: string | number
     verticalAlign?: string
     width?: string | number
-    offsetTop?: string | number
 
     // HTMLAnchorElement.rel
     rel?: string

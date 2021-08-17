@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, HTMLAttributes } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -66,13 +66,14 @@ type RadioProps = {
   onFocus?(...args: unknown[]): unknown
   size?: number
   value: string | number
-} & XStyledProps
+} & XStyledProps &
+  HTMLAttributes<HTMLInputElement>
 
 const Radio: FunctionComponent<RadioProps> = ({
   checked,
-  onChange = () => undefined,
-  onFocus = () => undefined,
-  onBlur = () => undefined,
+  onChange,
+  onFocus,
+  onBlur,
   disabled = false,
   name,
   value,
@@ -83,7 +84,7 @@ const Radio: FunctionComponent<RadioProps> = ({
   <StyledBox
     as="label"
     htmlFor={`${name}-${value}`}
-    disabled={disabled ?? false}
+    disabled={disabled}
     {...props}
   >
     <IconContainer>
