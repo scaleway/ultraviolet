@@ -12,9 +12,7 @@ import React, {
 } from 'react'
 import Box from '../Box'
 
-const StyledInput = styled('input', {
-  shouldForwardProp: prop => !['css'].includes(prop.toString()),
-})`
+const StyledInput = styled.input`
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
       error ? theme.colors.red : theme.colors.gray300};
@@ -109,12 +107,14 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
     const index = parseInt(String(event.target.dataset.id), 10)
     let { value } = event.target
     if (type === 'number') {
-      // eslint-disable-next-line no-param-reassign
       value = event.target.value.replace(/[^\d]/gi, '')
     }
     const newValues = [...values]
 
-    if (value === '' || (type === 'number' && !event.target.validity.valid)) {
+    if (
+      value === '' ||
+      (type === 'number' && !new RegExp(event.target.pattern).test(value))
+    ) {
       newValues[index] = ''
       setValues(newValues)
 

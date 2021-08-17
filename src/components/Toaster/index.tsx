@@ -83,7 +83,7 @@ type SanitizedAlertBarProps = {
 const SanitizedAlertBar: FunctionComponent<SanitizedAlertBarProps> = ({
   closeToast,
   toastProps,
-  children = null,
+  children,
   ...props
 }) => <Alert {...props}>{children}</Alert>
 
