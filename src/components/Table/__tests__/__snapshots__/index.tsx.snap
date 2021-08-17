@@ -15,19 +15,29 @@ exports[`Table renders correctly 1`] = `
   border-style: solid;
 }
 
-.cache-15k01ue {
+.cache-10bpldg {
   color: #4a4f62;
 }
 
-.cache-15k01ue a {
+.cache-10bpldg a {
   color: inherit;
 }
 
-.cache-15k01ue tr:nth-of-type(even) {
+.cache-10bpldg tr:nth-of-type(even) {
   background-color: #fafafb;
 }
 
-.cache-15k01ue [data-visibility='hover'] {
+.cache-10bpldg:hover {
+  color: #4f0599;
+}
+
+.cache-10bpldg:hover td:first-of-type {
+  font-weight: 500;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-10bpldg [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -35,7 +45,7 @@ exports[`Table renders correctly 1`] = `
   visibility: hidden;
 }
 
-.cache-15k01ue:hover [data-visibility='hover'] {
+.cache-10bpldg:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -68,7 +78,7 @@ exports[`Table renders correctly 1`] = `
       class="efhaznt4 cache-mmq153 e7ah3bn0"
     >
       <tr
-        class="efhaznt3 cache-15k01ue e7ah3bn0"
+        class="efhaznt3 cache-10bpldg e7ah3bn0"
       >
         <th
           class="efhaznt2 cache-1f6fkt e7ah3bn0"
@@ -91,7 +101,7 @@ exports[`Table renders correctly 1`] = `
       class="cache-11djngs e7ah3bn0"
     >
       <tr
-        class="efhaznt3 cache-15k01ue e7ah3bn0"
+        class="efhaznt3 cache-10bpldg e7ah3bn0"
       >
         <td
           class="efhaznt1 cache-30dau7 e7ah3bn0"
@@ -110,7 +120,7 @@ exports[`Table renders correctly 1`] = `
         </td>
       </tr>
       <tr
-        class="efhaznt3 cache-15k01ue e7ah3bn0"
+        class="efhaznt3 cache-10bpldg e7ah3bn0"
       >
         <td
           class="efhaznt1 cache-30dau7 e7ah3bn0"
@@ -164,19 +174,29 @@ exports[`Table renders correctly while loading 1`] = `
   border-style: solid;
 }
 
-.cache-15k01ue {
+.cache-10bpldg {
   color: #4a4f62;
 }
 
-.cache-15k01ue a {
+.cache-10bpldg a {
   color: inherit;
 }
 
-.cache-15k01ue tr:nth-of-type(even) {
+.cache-10bpldg tr:nth-of-type(even) {
   background-color: #fafafb;
 }
 
-.cache-15k01ue [data-visibility='hover'] {
+.cache-10bpldg:hover {
+  color: #4f0599;
+}
+
+.cache-10bpldg:hover td:first-of-type {
+  font-weight: 500;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-10bpldg [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -184,7 +204,7 @@ exports[`Table renders correctly while loading 1`] = `
   visibility: hidden;
 }
 
-.cache-15k01ue:hover [data-visibility='hover'] {
+.cache-10bpldg:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -235,7 +255,7 @@ exports[`Table renders correctly while loading 1`] = `
       class="efhaznt4 cache-mmq153 e7ah3bn0"
     >
       <tr
-        class="efhaznt3 cache-15k01ue e7ah3bn0"
+        class="efhaznt3 cache-10bpldg e7ah3bn0"
       >
         <th
           class="efhaznt2 cache-1f6fkt e7ah3bn0"
@@ -253,7 +273,7 @@ exports[`Table renders correctly while loading 1`] = `
       class="cache-11djngs e7ah3bn0"
     >
       <tr
-        class="efhaznt3 cache-15k01ue e7ah3bn0"
+        class="efhaznt3 cache-10bpldg e7ah3bn0"
       >
         <td
           class="efhaznt1 cache-oeudqs e7ah3bn0"
