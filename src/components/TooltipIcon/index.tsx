@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
-import Icon from '../Icon'
+import Icon, { IconName, icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
 type TooltipIconProps = {
   baseId?: string
   color?: string
-  name?: string
+  name?: IconName
   size?: number
   tooltip: string
 }
@@ -26,7 +26,7 @@ const TooltipIcon: FunctionComponent<TooltipIconProps> = ({
 TooltipIcon.propTypes = {
   baseId: PropTypes.string,
   color: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.oneOf(icons),
   size: PropTypes.number,
   tooltip: PropTypes.string.isRequired,
 }
