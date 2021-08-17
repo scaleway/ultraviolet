@@ -31,7 +31,7 @@ export const Head: FunctionComponent<BoxProps> = props => (
 )
 
 const StyledRow = styled(Box.withComponent('tr'), {
-  shouldForwardProp: prop => !['highlight'].includes(prop.toString()),
+  shouldForwardProp: prop => prop !== 'highlight',
 })<{ highlight?: boolean }>`
   color: ${({ theme }) => theme.colors.gray700};
 

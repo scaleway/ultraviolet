@@ -490,7 +490,7 @@ type IconProps = {
   size?: number | string
   name?: IconName
 } & XStyledProps &
-  React.DOMAttributes<HTMLElement>
+  React.SVGAttributes<HTMLOrSVGElement>
 
 const Icon = forwardRef<SVGElement, IconProps>(
   (

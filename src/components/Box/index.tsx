@@ -27,8 +27,7 @@ export type BoxProps = {
   height?: number | string
   width?: number | string
 } & XStyledProps &
-  React.HTMLAttributes<HTMLElement>
-  & {
+  React.HTMLAttributes<HTMLElement> & {
     css?: Interpolation<Theme>
   }
 

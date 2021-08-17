@@ -43,7 +43,7 @@ const StyledTitle = styled.span`
 `
 
 const StyledValue = styled('span', {
-  shouldForwardProp: prop => !['hasError'].includes(prop.toString()),
+  shouldForwardProp: prop => prop !== 'hasError',
 })<{ hasError?: boolean }>`
   font-weight: 800;
   color: ${({ hasError, theme }) =>

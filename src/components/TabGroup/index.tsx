@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
   HTMLAttributes,
-  KeyboardEvent,
   KeyboardEventHandler,
-  MouseEvent,
   ReactChild,
   ReactFragment,
   ReactPortal,
@@ -139,18 +137,13 @@ const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
               isSelected,
               isTabsWidthSet,
               key: child.props.name || index,
-              onClick: (
-                event:
-                  | MouseEvent<HTMLSpanElement>
-                  | KeyboardEvent<HTMLSpanElement>,
-              ) => {
-                if (!child.props.disabled && onChange) {
-                  onChange(child.props.name || index)
-                }
-                if (child.props.onClick) {
-                  child.props.onClick(event)
+              onChangeTab: () => {
+                if (!child.props.disabled) {
+                  onChange?.(child.props.name || index)
                 }
               },
+              onClick: child.props.onClick,
+              onKeyDown: child.props.onKeyDown,
               setInternTabsWidth,
             })
           }

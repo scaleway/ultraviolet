@@ -53,7 +53,7 @@ export const StyledTab = styled.span`
 `
 
 export type TabProps = {
-  as?: ElementType
+  as?: ElementType | string
   children?: ReactNode
   disabled?: boolean
   hasEndedCount?: boolean
@@ -61,9 +61,9 @@ export type TabProps = {
   isSelected?: boolean
   isTabsWidthSet?: boolean
   name?: string
-  onClick?: (
-    event: MouseEvent<HTMLSpanElement> | KeyboardEvent<HTMLSpanElement>,
-  ) => void
+  onClick?: (event: MouseEvent<HTMLElement>) => void
+  onKeyDown?: (event: KeyboardEvent<HTMLElement>) => void
+  onChangeTab?: (nameOrIndex: string | number) => void
   setInternTabsWidth?: (width: number, index: number) => void
 }
 
@@ -76,11 +76,13 @@ const Tab: FunctionComponent<TabProps> = ({
   index = 0,
   name,
   onClick,
+  onChangeTab,
+  onKeyDown,
   hasEndedCount = false,
   as,
   ...props
 }) => {
-  const ref = useRef<HTMLSpanElement>(null)
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
     setInternTabsWidth?.(ref?.current?.offsetWidth || 0, index)
@@ -88,19 +90,23 @@ const Tab: FunctionComponent<TabProps> = ({
 
   return (
     <StyledTab
-      as={as}
+      as={as as ElementType}
       aria-label={name}
       ref={ref}
       role="tab"
       tabIndex={isSelected ? 0 : -1}
       onKeyDown={event => {
         if (['Enter', 'Space'].includes(event.code)) {
-          onClick?.(event)
+          onChangeTab?.(name || index)
         }
+        onKeyDown?.(event)
       }}
       aria-selected={isSelected}
       aria-disabled={disabled}
-      onClick={onClick}
+      onClick={event => {
+        onChangeTab?.(name || index)
+        onClick?.(event)
+      }}
       {...props}
     >
       {children}
@@ -109,7 +115,7 @@ const Tab: FunctionComponent<TabProps> = ({
 }
 
 Tab.propTypes = {
-  as: PropTypes.func,
+  as: PropTypes.elementType,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   hasEndedCount: PropTypes.bool,
@@ -117,7 +123,9 @@ Tab.propTypes = {
   isSelected: PropTypes.bool,
   isTabsWidthSet: PropTypes.bool,
   name: PropTypes.string,
+  onChangeTab: PropTypes.func,
   onClick: PropTypes.func,
+  onKeyDown: PropTypes.func,
   setInternTabsWidth: PropTypes.func,
 }
 

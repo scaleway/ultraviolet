@@ -7,7 +7,6 @@ import React, {
   FunctionComponent,
   KeyboardEvent,
   KeyboardEventHandler,
-  RefObject,
   useState,
 } from 'react'
 import Box from '../Box'
@@ -88,10 +87,9 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
   )
   const [values, setValues] = useState(valuesArray)
 
-  const inputRefs: RefObject<HTMLInputElement>[] = Array.from(
-    Array(fields),
-    React.createRef,
-  ) as RefObject<HTMLInputElement>[]
+  const inputRefs = Array.from({ length: fields }, () =>
+    React.createRef<HTMLInputElement>(),
+  )
 
   const triggerChange = (inputValues: string[]) => {
     const stringValue = inputValues.join('')
@@ -132,14 +130,8 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
     triggerChange(newValues)
   }
 
-  const inputOnKeyDown: KeyboardEventHandler<HTMLInputElement> = (
-    event: KeyboardEvent,
-  ) => {
-    if (!event || !(event.target instanceof HTMLInputElement)) {
-      return
-    }
-
-    const index = parseInt(event.target.dataset.id as string, 10)
+  const inputOnKeyDown: KeyboardEventHandler<HTMLInputElement> = event => {
+    const index = Number(event.currentTarget.dataset.id)
     const prevIndex = index - 1
     const nextIndex = index + 1
     const first = inputRefs[0]
@@ -157,34 +149,26 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
           triggerChange(vals)
         } else if (prev) {
           vals[prevIndex] = ''
-          prev.current?.focus()
+          prev?.current?.focus()
           setValues(vals)
           triggerChange(vals)
         }
         break
       case KEY_CODE.left:
         event.preventDefault()
-        if (prev) {
-          prev.current?.focus()
-        }
+        prev?.current?.focus()
         break
       case KEY_CODE.right:
         event.preventDefault()
-        if (next) {
-          next.current?.focus()
-        }
+        next?.current?.focus()
         break
       case KEY_CODE.up:
         event.preventDefault()
-        if (first) {
-          first.current?.focus()
-        }
+        first?.current?.focus()
         break
       case KEY_CODE.down:
         event.preventDefault()
-        if (last) {
-          last.current?.focus()
-        }
+        last?.current?.focus()
         break
       default:
         break
@@ -192,15 +176,11 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
   }
 
   const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
-    event.target?.select()
+    event.target.select()
 
   const inputOnPaste: ClipboardEventHandler<HTMLInputElement> = event => {
-    if (!event || !(event.target instanceof HTMLInputElement)) {
-      return
-    }
-
     event.preventDefault()
-    const currentIndex = parseInt(event.target.dataset.id as string, 10)
+    const currentIndex = Number(event.currentTarget.dataset.id as string)
     const pastedValue = [...event.clipboardData.getData('Text').split('')].map(
       (copiedValue: string) =>
         // Replace non number char with empty char when type is number
