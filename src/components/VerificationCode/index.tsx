@@ -12,13 +12,9 @@ import React, {
 } from 'react'
 import Box from '../Box'
 
-type StyledInputProps = {
-  css?: string[]
-}
-
 const StyledInput = styled('input', {
   shouldForwardProp: prop => !['css'].includes(prop.toString()),
-})<StyledInputProps>`
+})`
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
       error ? theme.colors.red : theme.colors.gray300};
@@ -38,8 +34,6 @@ const StyledInput = styled('input', {
   &::placeholder {
     color: ${({ theme }) => theme.colors.gray300};
   }
-
-  ${({ css }) => css?.map(style => style)};
 `
 
 const KEY_CODE = {
@@ -113,23 +107,20 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
 
   const inputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const index = parseInt(String(event.target.dataset.id), 10)
+    let { value } = event.target
     if (type === 'number') {
       // eslint-disable-next-line no-param-reassign
-      event.target.value = event.target.value.replace(/[^\d]/gi, '')
+      value = event.target.value.replace(/[^\d]/gi, '')
     }
     const newValues = [...values]
 
-    if (
-      event.target.value === '' ||
-      (type === 'number' && !event.target.validity.valid)
-    ) {
+    if (value === '' || (type === 'number' && !event.target.validity.valid)) {
       newValues[index] = ''
       setValues(newValues)
 
       return
     }
 
-    const { value } = event.target
     const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
     newValues[index] = sanitizedValue
     setValues(newValues)
@@ -210,7 +201,7 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
 
     event.preventDefault()
     const currentIndex = parseInt(event.target.dataset.id as string, 10)
-    const pastedValue = [event.clipboardData.getData('Text')].map(
+    const pastedValue = [...event.clipboardData.getData('Text').split('')].map(
       (copiedValue: string) =>
         // Replace non number char with empty char when type is number
         type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
