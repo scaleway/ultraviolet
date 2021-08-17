@@ -1,7 +1,7 @@
 import { Interpolation, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -82,15 +82,15 @@ const StyledTouchable = styled(Touchable, {
 `
 
 type TagsProps = {
-  children: React.ReactNode
+  children: ReactNode
   disabled?: boolean
   isLoading?: boolean
-  onClose?: React.MouseEventHandler<HTMLButtonElement>
+  onClose?: MouseEventHandler<HTMLButtonElement>
   textStyle?: Interpolation<Theme>
   variant?: TagVariant
 }
 
-const Tag: React.FunctionComponent<TagsProps> = ({
+const Tag: FunctionComponent<TagsProps> = ({
   children,
   isLoading = false,
   onClose,
@@ -126,7 +126,9 @@ Tag.propTypes = {
   isLoading: PropTypes.bool,
   onClose: PropTypes.func,
   textStyle: PropTypes.shape({}),
-  variant: PropTypes.oneOf(Object.keys(variantsContainer) as [TagVariant]),
+  variant: PropTypes.oneOf<TagVariant>(
+    Object.keys(variantsContainer) as TagVariant[],
+  ),
 }
 
 Tag.defaultProps = {

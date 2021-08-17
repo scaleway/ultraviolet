@@ -13,7 +13,6 @@ describe('TextBox', () => {
         label="Test"
         value="test"
         placeholder="type..."
-        onChange={() => {}}
         type="text"
       />,
     ))
@@ -110,7 +109,7 @@ describe('TextBox', () => {
         onFocus={() => {}}
       />,
       {
-        transform: async node => {
+        transform: node => {
           const input = node.getByLabelText('Test')
           input.focus()
         },

@@ -4,11 +4,7 @@ import Box, { XStyledProps } from '../Box'
 
 const Image: FunctionComponent<
   ImgHTMLAttributes<HTMLImageElement> & XStyledProps
-> = ({
-  src,
-  ...props
-  // @ts-expect-error Box expose Element, not ImgElement
-}) => <Box as="img" src={src} {...props} />
+> = ({ src, ...props }) => <Box as="img" src={src} {...props} />
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,

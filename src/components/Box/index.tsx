@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { x } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
 import React, {
+  AllHTMLAttributes,
   ElementType,
   FunctionComponent,
   HTMLAttributes,
@@ -11,15 +12,16 @@ import React, {
 } from 'react'
 
 export interface XStyledProps {
-  backgroundColor?: string
-  as?: string | React.ElementType<unknown>
   align?: string
   alignItems?: string
-  justifyContent?: string
+  alignSelf?: string
+  as?: string | React.ElementType<unknown>
+  backgroundColor?: string
   color?: string
   display?: string
   fontSize?: number
   fontWeight?: number
+  justifyContent?: string
   lineHeight?: string | number
   mb?: string | number
   ml?: string | number
@@ -62,8 +64,8 @@ export type BoxProps = {
   children?: ReactNode
   height?: number | string
   width?: number | string
-} & XStyledProps &
-  HTMLAttributes<HTMLElement> & {
+} & Omit<AllHTMLAttributes<HTMLElement>, 'as' | 'size' | 'action'> &
+  XStyledProps & {
     css?: Interpolation<Theme>
   }
 
@@ -76,12 +78,13 @@ type BoxType = typeof forwardType & {
 }
 
 // @ts-expect-error We add withComponent just below
-const Box: BoxType = forwardRef<Element, BoxProps>(
-  ({ width, height, bordered = false, ...props }, ref) => (
-    // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
-    <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
-  ),
-)
+const Box: BoxType = forwardRef<
+  Element | HTMLInputElement | HTMLButtonElement,
+  BoxProps
+>(({ width, height, bordered = false, ...props }, ref) => (
+  // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
+  <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
+))
 
 Box.withComponent =
   (element: string | ElementType<unknown>): FunctionComponent<BoxProps> =>

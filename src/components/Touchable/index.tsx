@@ -1,6 +1,13 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, {
+  ButtonHTMLAttributes,
+  InputHTMLAttributes,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode,
+  forwardRef,
+} from 'react'
 import Box from '../Box'
 
 const styles = {
@@ -23,66 +30,76 @@ const styles = {
 }
 
 type TouchableProps = {
-  innerRef: React.Ref<Element>
-  children?: React.ReactNode
-  disabled?: boolean
   activeOpacity?: number | string
-  hasFocus?: boolean
   as?: string
-  type?: string
-  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLDivElement>
-}
-
-const FwdTouchable: FunctionComponent<TouchableProps> = ({
-  activeOpacity,
-  as = 'button',
-  children,
-  disabled = false,
-  hasFocus = false,
-  innerRef,
-  type,
-  onClick,
-  ...props
-}) => (
-  <Box
-    ref={innerRef}
-    css={[
-      styles.root,
-      !disabled && styles.actionable,
-      !disabled &&
-        css`
-          &:active {
-            opacity: ${activeOpacity};
-          }
-        `,
-      disabled && styles.disabled,
-    ]}
-    {...props}
-    as={as}
-    type={as === 'button' ? 'button' : type}
-    disabled={disabled}
-    tabIndex={hasFocus ? 0 : undefined}
-    onClick={onClick}
-  >
-    {children}
-  </Box>
+  children?: ReactNode
+  disabled?: boolean
+  hasFocus?: boolean
+  onClick?: MouseEventHandler<HTMLButtonElement | HTMLDivElement>
+  onKeyDown?: KeyboardEventHandler<HTMLButtonElement | HTMLDivElement>
+  title?: string
+} & (
+  | ButtonHTMLAttributes<HTMLButtonElement>
+  | InputHTMLAttributes<HTMLInputElement>
 )
 
-FwdTouchable.propTypes = {
+const Touchable = forwardRef<Element, TouchableProps>(
+  (
+    {
+      activeOpacity,
+      as = 'button',
+      children,
+      disabled = false,
+      hasFocus = false,
+      type,
+      title,
+      onClick,
+      onKeyDown,
+      ...props
+    },
+    ref,
+  ) => {
+    const typeProperty = as === 'button' ? 'button' : type
+
+    return (
+      <Box
+        ref={ref}
+        css={[
+          styles.root,
+          !disabled && styles.actionable,
+          !disabled &&
+            css`
+              &:active {
+                opacity: ${activeOpacity};
+              }
+            `,
+          disabled && styles.disabled,
+        ]}
+        {...props}
+        as={as}
+        title={title}
+        type={typeProperty}
+        disabled={disabled}
+        tabIndex={hasFocus ? 0 : undefined}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+      >
+        {children}
+      </Box>
+    )
+  },
+)
+
+Touchable.propTypes = {
   activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   as: PropTypes.string,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
-  innerRef: PropTypes.func,
+  onClick: PropTypes.func,
+  onKeyDown: PropTypes.func,
+  title: PropTypes.string,
   type: PropTypes.string,
 }
-
-const Touchable = React.forwardRef<Element, Omit<TouchableProps, 'innerRef'>>(
-  (props, ref) => <FwdTouchable {...props} innerRef={ref} />,
-)
-Touchable.displayName = 'fwd(Touchable)'
-
-Touchable.propTypes = FwdTouchable.propTypes
 
 export default Touchable
