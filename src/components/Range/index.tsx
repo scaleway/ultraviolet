@@ -7,6 +7,7 @@ import React, {
   InputHTMLAttributes,
   KeyboardEvent,
   RefObject,
+  VoidFunctionComponent,
   useCallback,
   useEffect,
   useLayoutEffect,
@@ -49,7 +50,7 @@ const canMove = (value: number, values: number[] = [], valueIndex: number) => {
   return tmp.some(cb)
 }
 
-const StyledContainer = styled(Box)<XStyledProps>`
+const StyledContainer = styled(Box)`
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -71,7 +72,7 @@ const StyledBar = styled('div', {
 
 const StyledLimit = styled(Box, {
   shouldForwardProp: prop =>
-    !['offsetTop', 'postion'].includes(prop.toString()),
+    !['offsetTop', 'position'].includes(prop.toString()),
 })<{ offsetTop: number }>`
   position: absolute;
   font-size: 12px;
@@ -137,9 +138,9 @@ Limit.propTypes = {
 
 const StyledCursorLink = styled('div', {
   shouldForwardProp: prop => !['offsetTop'].includes(prop.toString()),
-})<{ offsetTop: number | string }>`
+})<{ offsetTop: number }>`
   position: absolute;
-  top: ${({ offsetTop }) => offsetTop ?? 0 + 0}px;
+  top: ${({ offsetTop = 0 }) => offsetTop + 0}px;
   height: 4px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.violet};
@@ -150,9 +151,9 @@ const StyledCursorLink = styled('div', {
 const StyledCursor = styled(Box, {
   shouldForwardProp: prop =>
     !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
-})<{ grabbed: boolean; offsetTop: string | number; width: string | number }>`
+})<{ grabbed: boolean; offsetTop: number; width: string | number }>`
   position: absolute;
-  top: ${({ offsetTop }) => parseIntOr(offsetTop.toString(), 0) + -6}px;
+  top: ${({ offsetTop }) => offsetTop + -6}px;
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
@@ -217,7 +218,7 @@ type RangeProps = {
   value?: number[]
 }
 
-const Range: FunctionComponent<RangeProps> = ({
+const Range: VoidFunctionComponent<RangeProps> = ({
   min = 0,
   max = 5,
   value: values = [3],
