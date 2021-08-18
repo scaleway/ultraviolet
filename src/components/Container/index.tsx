@@ -10,7 +10,9 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledBox = styled(Box)<{
+const StyledBox = styled(Box, {
+  shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
+})<{
   small?: boolean
   edition?: boolean
   disabled?: boolean
