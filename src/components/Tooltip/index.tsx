@@ -86,6 +86,7 @@ export type TooltipProps = {
   text?: ReactNode
   variant?: keyof typeof variants
   visible?: boolean
+  unstable_portal?: boolean
   zIndex?: number
 }
 
@@ -98,6 +99,7 @@ const Tooltip = ({
   variant = 'black',
   baseId,
   zIndex,
+  unstable_portal = true,
   ...props
 }: TooltipProps): JSX.Element => {
   const tooltip = useTooltipState({
@@ -106,6 +108,7 @@ const Tooltip = ({
     placement,
     visible,
   })
+
   const { setVisible } = tooltip
   useEffect(() => setVisible(visible), [setVisible, visible])
 
@@ -120,7 +123,11 @@ const Tooltip = ({
           ? referenceProps => children(referenceProps) as JSX.Element
           : children}
       </TooltipReference>
-      <ReakitTooltip {...tooltip} style={{ zIndex }}>
+      <ReakitTooltip
+        {...tooltip}
+        style={{ zIndex }}
+        unstable_portal={unstable_portal}
+      >
         <StyledTooltip variant={variant} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
