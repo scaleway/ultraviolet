@@ -50,7 +50,7 @@ const canMove = (value: number, values: number[] = [], valueIndex: number) => {
   return tmp.some(cb)
 }
 
-const StyledContainer = styled(Box)<XStyledProps>`
+const StyledContainer = styled(Box)`
   height: 36px;
   margin-bottom: 8px;
   width: 100%;
@@ -153,7 +153,7 @@ const StyledCursor = styled(Box, {
     !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
 })<{ grabbed: boolean; offsetTop: number; width: string | number }>`
   position: absolute;
-  top: ${({ offsetTop }) => parseIntOr(offsetTop.toString(), 0) + -6}px;
+  top: ${({ offsetTop }) => offsetTop + -6}px;
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
