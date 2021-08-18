@@ -43,8 +43,8 @@
     "prebuild": "shx rm -rf dist",
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
-    "test:update": "LC_ALL=fr_FR.UTF-8 yarn test --updateSnapshot",
-    "test": "jest",
+    "test:update": "yarn run test --updateSnapshot",
+    "test": "LC_ALL=en_US.UTF-8 jest",
     "prepare": "husky install",
     "size": "yarn build && size-limit"
   },
