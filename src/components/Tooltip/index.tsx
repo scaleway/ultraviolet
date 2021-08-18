@@ -99,7 +99,7 @@ const Tooltip = ({
   variant = 'black',
   baseId,
   zIndex,
-  unstable_portal = false,
+  unstable_portal = true,
   ...props
 }: TooltipProps): JSX.Element => {
   const tooltip = useTooltipState({
