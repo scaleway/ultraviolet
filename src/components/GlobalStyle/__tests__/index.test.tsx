@@ -5,7 +5,7 @@ import renderWithTheme from '../../../helpers/renderWithTheme'
 
 describe('GlobalStyle', () => {
   test('renders correctly with default values', async () => {
-    renderWithTheme(<GlobalStyle />, { container: document.html })
+    renderWithTheme(<GlobalStyle />)
 
     await waitFor(
       () => {

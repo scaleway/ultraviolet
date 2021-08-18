@@ -1,6 +1,12 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, {
+  ChangeEvent,
+  FunctionComponent,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 import Box from '../Box'
 import Typography from '../Typography'
 
@@ -28,25 +34,56 @@ const StyledMeter = styled.div`
   transition: all 0.5s;
 `
 
-const PasswordStrengthMeter = ({
-  password,
+type Strength = {
+  /**
+   * Color to display
+   */
+  color: string
+  /**
+   * Text to display
+   */
+  t: string
+}
+
+type PasswordStrengthMeterProps = {
+  /**
+   * A function that should return a score based on password (index of strength array). The higher score is the stronger password is.
+   */
+  estimate?: (passwordToTest: string, userInputs: string[]) => { score: number }
+  onChange?: (event: ChangeEvent) => unknown
+  password?: string
+  /**
+   * Strength is used for defining different color and text associated with it.
+   */
+  strength: Strength[]
+  title: string
+  /**
+   * An array of string that defines what word shouldn't be used in the password.
+   */
+  userInputs?: string[]
+}
+
+const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
+  password = '',
   onChange,
   strength,
   title,
-  estimate,
-  userInputs,
+  estimate = () => ({ score: 0 }),
+  userInputs = [],
   ...props
 }) => {
-  const [score, setScore] = useState(0)
-  const [backgroundColor, setBackgroundColor] = useState(strength[0].color)
-  const [width, setWidth] = useState(0)
+  const [score, setScore] = useState<number>(0)
+  const [backgroundColor, setBackgroundColor] = useState<string>(
+    strength[0].color,
+  )
+  const [width, setWidth] = useState<number | string>(0)
 
   const getScore = useCallback(
-    passwordToTest => estimate(passwordToTest || '', userInputs).score || 0,
+    passwordToTest => estimate(passwordToTest || '', userInputs)?.score || 0,
     [estimate, userInputs],
   )
 
-  const handleChange = useCallback(e => onChange(e), [onChange])
+  const handleChange = useCallback(e => onChange?.(e), [onChange])
 
   useEffect(() => {
     setBackgroundColor(strength[score].color)
@@ -91,22 +128,15 @@ PasswordStrengthMeter.propTypes = {
    */
   strength: PropTypes.arrayOf(
     PropTypes.shape({
-      color: PropTypes.string,
-      t: PropTypes.string,
-    }),
+      color: PropTypes.string.isRequired,
+      t: PropTypes.string.isRequired,
+    }).isRequired,
   ).isRequired,
   title: PropTypes.string.isRequired,
   /**
    * An array of string that defines what word shouldn't be used in the password.
    */
-  userInputs: PropTypes.arrayOf(PropTypes.string),
-}
-
-PasswordStrengthMeter.defaultProps = {
-  estimate: () => ({ score: 0 }),
-  onChange: () => null,
-  password: '',
-  userInputs: [],
+  userInputs: PropTypes.arrayOf<string>(PropTypes.string.isRequired),
 }
 
 export default PasswordStrengthMeter

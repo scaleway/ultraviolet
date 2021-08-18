@@ -1,9 +1,9 @@
-import { Global, css } from '@emotion/react'
+import { Global, Interpolation, Theme, css } from '@emotion/react'
 import { normalize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
-const globalStyles = theme => css`
+const globalStyles = (theme: Theme) => css`
   ${normalize()}
 
   /* Fallback system fonts */
@@ -101,16 +101,22 @@ const globalStyles = theme => css`
   }
 `
 
-const GlobalStyle = ({ additionalStyles }) => (
-  <Global styles={[globalStyles, ...additionalStyles]} />
-)
-
-GlobalStyle.propTypes = {
-  additionalStyles: PropTypes.arrayOf(PropTypes.object),
+export type GlobalStyleProps = {
+  additionalStyles?: Interpolation<Theme>[]
 }
 
-GlobalStyle.defaultProps = {
-  additionalStyles: [],
+const GlobalStyle: FunctionComponent<GlobalStyleProps> = ({
+  additionalStyles = [],
+}) => <Global styles={[globalStyles, ...additionalStyles]} />
+
+GlobalStyle.propTypes = {
+  additionalStyles: PropTypes.arrayOf<Interpolation<Theme>>(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func,
+      PropTypes.shape({}),
+    ]),
+  ),
 }
 
 export default GlobalStyle

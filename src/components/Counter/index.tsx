@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef } from 'react'
+import React, { VoidFunctionComponent, useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
 
 const styles = {
@@ -16,8 +16,22 @@ const styles = {
   `,
 }
 
-const Counter = ({ end, onEnd }) => {
-  const start = useRef(0)
+type CounterProps = {
+  /**
+   * Value to which counter will go. Can be negative or positive number.
+   */
+  end: number
+  /**
+   * Triggered function when counter animation is finished.
+   */
+  onEnd?: () => void
+}
+
+const Counter: VoidFunctionComponent<CounterProps> = ({
+  end,
+  onEnd = () => {},
+}) => {
+  const start = useRef<number>(0)
   useEffect(() => {
     start.current = end
   })
@@ -33,18 +47,8 @@ const Counter = ({ end, onEnd }) => {
 }
 
 Counter.propTypes = {
-  /**
-   * Value to which counter will go. Can be negative or positive number.
-   */
   end: PropTypes.number.isRequired,
-  /**
-   * Triggered function when counter animation is finished.
-   */
   onEnd: PropTypes.func,
-}
-
-Counter.defaultProps = {
-  onEnd: () => {},
 }
 
 export default Counter
