@@ -1,3 +1,19 @@
+### [0.100.1](https://github.com/scaleway/scaleway-ui/compare/v0.100.0...v0.100.1) (2021-08-18)
+
+
+### :package: Chore
+
+* ensure consistents emotion css classNames ([#641](https://github.com/scaleway/scaleway-ui/issues/641)) ([be8d9d4](https://github.com/scaleway/scaleway-ui/commit/be8d9d47f134f2bce76f9deb8c9a180088b8185f))
+* force english lang for tests scripts ([#646](https://github.com/scaleway/scaleway-ui/issues/646)) ([5ba9d0d](https://github.com/scaleway/scaleway-ui/commit/5ba9d0d47abb7f732df3a80e7d1776e875a16760))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.3 to 3.1.4 ([#644](https://github.com/scaleway/scaleway-ui/issues/644)) ([b641a0c](https://github.com/scaleway/scaleway-ui/commit/b641a0cf490bdfbfd295004230c42644120b4ee0))
+* **deps-dev:** bump @types/intl-tel-input from 17.0.3 to 17.0.4 ([#643](https://github.com/scaleway/scaleway-ui/issues/643)) ([b11ee95](https://github.com/scaleway/scaleway-ui/commit/b11ee957793c427a1d1ac54fcb72d3d7a7a5203e))
+
+
+### :bug: Bug Fixes
+
+* **container:** some props was forward to the DOM ([#648](https://github.com/scaleway/scaleway-ui/issues/648)) ([9a80689](https://github.com/scaleway/scaleway-ui/commit/9a806899ca5a99b17e30d2ea9d8996e5a1a07d0b))
+* **tooltip:** using unstable portal and set it to false ([#647](https://github.com/scaleway/scaleway-ui/issues/647)) ([e08bb87](https://github.com/scaleway/scaleway-ui/commit/e08bb87a09153d2d013f882b64d527846a0c4be6))
+
 ## [0.100.0](https://github.com/scaleway/scaleway-ui/compare/v0.99.0...v0.100.0) (2021-08-16)
 
 
