@@ -5,8 +5,9 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 
 const pasteEventWithValue = (selector, value) => {
   userEvent.paste(selector, value, {
+    // @ts-expect-error we mock, don't care oabout the other values
     clipboardData: {
-      getData: () => value,
+      getData: () => value as string,
     },
   })
 }

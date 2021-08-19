@@ -1,18 +1,19 @@
-import { ClassNames, Global, css, useTheme } from '@emotion/react'
+import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
+  ToastOptions,
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import Alert from '../Alert'
+import Alert, { AlertProps } from '../Alert'
 import Icon from '../Icon'
 
 const PREFIX = '.Toastify'
 
 const styles = {
-  toast: theme => css`
+  toast: (theme: Theme) => css`
     border-radius: 4px;
     box-shadow: none;
     min-height: 0;
@@ -60,7 +61,11 @@ const styles = {
   `,
 }
 
-const CloseButton = ({ closeToast }) => (
+type CloseButtonProps = {
+  closeToast?: () => void
+}
+
+const CloseButton: FunctionComponent<CloseButtonProps> = ({ closeToast }) => (
   <Icon name="close" size={18} ml={1} onClick={closeToast} />
 )
 
@@ -68,13 +73,19 @@ CloseButton.propTypes = {
   closeToast: PropTypes.func,
 }
 
-CloseButton.defaultProps = {
-  closeToast: () => {},
-}
+type SanitizedAlertBarProps = {
+  closeToast?: () => void
+  toastProps?: Record<string, unknown>
+  children?: ReactNode
+} & AlertProps &
+  XStyledProps
 
-const SanitizedAlertBar = ({ closeToast, toastProps, children, ...props }) => (
-  <Alert {...props}>{children}</Alert>
-)
+const SanitizedAlertBar: FunctionComponent<SanitizedAlertBarProps> = ({
+  closeToast,
+  toastProps,
+  children,
+  ...props
+}) => <Alert {...props}>{children}</Alert>
 
 SanitizedAlertBar.propTypes = {
   children: PropTypes.node,
@@ -82,35 +93,29 @@ SanitizedAlertBar.propTypes = {
   toastProps: PropTypes.shape({}),
 }
 
-SanitizedAlertBar.defaultProps = {
-  children: null,
-  closeToast: undefined,
-  toastProps: undefined,
-}
-
 const toast = {
-  error: (children, options) =>
+  error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(
       <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  info: (children, options) =>
+  info: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.info(
       <SanitizedAlertBar type="info" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  success: (children, options) =>
+  success: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.success(
       <SanitizedAlertBar type="success" iconSize={24} p={0}>
         {children}
       </SanitizedAlertBar>,
       options,
     ),
-  warn: (children, options) =>
+  warn: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.warn(
       <SanitizedAlertBar type="warning" iconSize={24} p={0}>
         {children}
@@ -119,7 +124,7 @@ const toast = {
     ),
 }
 
-const ToastContainer = props => {
+const ToastContainer: FunctionComponent = props => {
   const theme = useTheme()
 
   return (

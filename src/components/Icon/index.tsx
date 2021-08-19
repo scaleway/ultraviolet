@@ -489,7 +489,8 @@ export type IconName = keyof typeof ICONS
 type IconProps = {
   size?: number | string
   name?: IconName
-} & XStyledProps
+} & XStyledProps &
+  React.SVGAttributes<HTMLOrSVGElement>
 
 const Icon = forwardRef<SVGElement, IconProps>(
   (

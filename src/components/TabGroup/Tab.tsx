@@ -1,6 +1,14 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef } from 'react'
+import React, {
+  ElementType,
+  FunctionComponent,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  useEffect,
+  useRef,
+} from 'react'
 
 export const StyledTab = styled.span`
   display: flex;
@@ -44,42 +52,61 @@ export const StyledTab = styled.span`
   }
 `
 
-const Tab = ({
+export type TabProps = {
+  as?: ElementType | string
+  children?: ReactNode
+  disabled?: boolean
+  hasEndedCount?: boolean
+  index?: number
+  isSelected?: boolean
+  isTabsWidthSet?: boolean
+  name?: string
+  onClick?: (event: MouseEvent<HTMLElement>) => void
+  onKeyDown?: (event: KeyboardEvent<HTMLElement>) => void
+  onChangeTab?: (nameOrIndex: string | number) => void
+  setInternTabsWidth?: (width: number, index: number) => void
+}
+
+const Tab: FunctionComponent<TabProps> = ({
   children,
-  disabled,
-  isSelected,
+  disabled = false,
+  isSelected = false,
   setInternTabsWidth,
-  isTabsWidthSet,
-  index,
+  isTabsWidthSet = false,
+  index = 0,
   name,
   onClick,
-  hasEndedCount,
+  onChangeTab,
+  onKeyDown,
+  hasEndedCount = false,
   as,
   ...props
 }) => {
-  const ref = useRef({})
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    if (ref && ref.current) {
-      setInternTabsWidth(ref.current.offsetWidth, index)
-    }
+    setInternTabsWidth?.(ref?.current?.offsetWidth || 0, index)
   }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
 
   return (
     <StyledTab
-      as={as}
+      as={as as ElementType}
       aria-label={name}
       ref={ref}
       role="tab"
       tabIndex={isSelected ? 0 : -1}
       onKeyDown={event => {
-        if (['Enter', 'Space'].includes(event.code) && onClick) {
-          onClick(event)
+        if (['Enter', 'Space'].includes(event.code)) {
+          onChangeTab?.(name || index)
         }
+        onKeyDown?.(event)
       }}
       aria-selected={isSelected}
       aria-disabled={disabled}
-      onClick={onClick}
+      onClick={event => {
+        onChangeTab?.(name || index)
+        onClick?.(event)
+      }}
       {...props}
     >
       {children}
@@ -88,7 +115,7 @@ const Tab = ({
 }
 
 Tab.propTypes = {
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  as: PropTypes.elementType,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   hasEndedCount: PropTypes.bool,
@@ -96,21 +123,10 @@ Tab.propTypes = {
   isSelected: PropTypes.bool,
   isTabsWidthSet: PropTypes.bool,
   name: PropTypes.string,
+  onChangeTab: PropTypes.func,
   onClick: PropTypes.func,
+  onKeyDown: PropTypes.func,
   setInternTabsWidth: PropTypes.func,
-}
-
-Tab.defaultProps = {
-  as: undefined,
-  children: null,
-  disabled: false,
-  hasEndedCount: false,
-  index: 0,
-  isSelected: false,
-  isTabsWidthSet: false,
-  name: undefined,
-  onClick: () => {},
-  setInternTabsWidth: () => {},
 }
 
 export default Tab

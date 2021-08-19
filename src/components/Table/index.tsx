@@ -1,9 +1,9 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const StyledTable = styled(Box.withComponent('table'))`
   table-layout: fixed;
@@ -11,7 +11,13 @@ const StyledTable = styled(Box.withComponent('table'))`
   border-collapse: collapse;
 `
 
-const Table = props => <StyledTable {...props} />
+const Table: FunctionComponent<BoxProps> & {
+  Head: typeof Head
+  Body: typeof Body
+  Row: typeof Row
+  HeadCell: typeof HeadCell
+  BodyCell: typeof BodyCell
+} = props => <StyledTable {...props} />
 
 const StyledHead = styled(Box.withComponent('thead'))`
   border: 0;
@@ -20,11 +26,13 @@ const StyledHead = styled(Box.withComponent('thead'))`
   border-style: solid;
 `
 
-export const Head = props => <StyledHead {...props} />
+export const Head: FunctionComponent<BoxProps> = props => (
+  <StyledHead {...props} />
+)
 
 const StyledRow = styled(Box.withComponent('tr'), {
-  shouldForwardProp: prop => !['highlight'].includes(prop),
-})`
+  shouldForwardProp: prop => prop !== 'highlight',
+})<{ highlight?: boolean }>`
   color: ${({ theme }) => theme.colors.gray700};
 
   a {
@@ -35,17 +43,18 @@ const StyledRow = styled(Box.withComponent('tr'), {
     background-color: ${({ theme }) => theme.colors.gray50};
   }
 
-  ${({ highlight, theme }) =>
+  ${({ highlight = true, theme }) =>
     highlight &&
-    `
-    &:hover {
-      color: ${theme.colors.primary};
+    css`
+      &:hover {
+        color: ${theme.colors.primary};
 
-      td:first-of-type {
-        font-weight: 500;
-        text-decoration: underline;
+        td:first-of-type {
+          font-weight: 500;
+          text-decoration: underline;
+        }
       }
-    }`}
+    `}
 
   [data-visibility='hover'] {
     transition: opacity 150ms;
@@ -60,14 +69,16 @@ const StyledRow = styled(Box.withComponent('tr'), {
   }
 `
 
-export const Row = props => <StyledRow {...props} />
+type RowProps = {
+  highlight?: boolean
+} & BoxProps
+
+export const Row: FunctionComponent<RowProps> = props => (
+  <StyledRow {...props} />
+)
 
 Row.propTypes = {
   highlight: PropTypes.bool,
-}
-
-Row.defaultProps = {
-  highlight: true,
 }
 
 const cellStyle = css`
@@ -86,7 +97,9 @@ const StyledHeadCell = styled(Box.withComponent('th'))`
   ${cellStyle};
 `
 
-export const HeadCell = props => <StyledHeadCell {...props} />
+export const HeadCell: FunctionComponent<BoxProps> = props => (
+  <StyledHeadCell {...props} />
+)
 
 const StyledBodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
@@ -94,33 +107,44 @@ const StyledBodyCell = styled(Box.withComponent('td'))`
   ${cellStyle};
 `
 
-export const BodyCell = props => <StyledBodyCell {...props} />
+export const BodyCell: FunctionComponent<BoxProps> = props => (
+  <StyledBodyCell {...props} />
+)
 
 const TBody = Box.withComponent('tbody')
 
-const BodyLoader = props => (
+const StyledBox = styled(Box)`
+  position: absolute;
+  top: 16px;
+  left: 50%;
+`
+
+const BodyLoader: FunctionComponent<BoxProps & BodyProps> = props => (
   <TBody>
     <Row>
       <BodyCell height={80} position="relative" {...props}>
-        <Box position="absolute" top={16} left="50%">
+        <StyledBox>
           <ActivityIndicator active size={40} />
-        </Box>
+        </StyledBox>
       </BodyCell>
     </Row>
   </TBody>
 )
 
-export const Body = ({ loading, colSpan, ...props }) =>
-  loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />
+type BodyProps = {
+  loading?: boolean
+  colSpan?: number
+}
+
+export const Body: FunctionComponent<BodyProps> = ({
+  loading = false,
+  colSpan = 1,
+  ...props
+}) => (loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />)
 
 Body.propTypes = {
   colSpan: PropTypes.number,
   loading: PropTypes.bool,
-}
-
-Body.defaultProps = {
-  colSpan: 1,
-  loading: false,
 }
 
 Table.Head = Head

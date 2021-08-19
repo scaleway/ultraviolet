@@ -108,7 +108,7 @@ const Title = ({ color, text }: TitleProps) => (
   </Typography>
 )
 
-type AlertProps = {
+export type AlertProps = {
   variant?: AlertVariant
   children: ReactNode
   iconSize?: number

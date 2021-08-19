@@ -1,6 +1,14 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
+import React, {
+  ChangeEvent,
+  ClipboardEventHandler,
+  FocusEventHandler,
+  FunctionComponent,
+  KeyboardEvent,
+  KeyboardEventHandler,
+  useState,
+} from 'react'
 import Box from '../Box'
 
 const StyledInput = styled.input`
@@ -33,18 +41,44 @@ const KEY_CODE = {
   up: 38,
 }
 
-const VerificationCode = ({
-  disabled,
-  error,
-  fields,
-  initialValue,
-  inputId,
-  inputStyle,
-  onChange,
-  onComplete,
-  placeholder,
-  required,
-  type,
+type VerificationCodeProps = {
+  disabled?: boolean
+  error?: boolean
+  /**
+   * Amount of field you want
+   */
+  fields?: number
+  initialValue?: string
+  inputId?: string
+  inputStyle?: string
+  /**
+   * Triggered when a field change
+   */
+  onChange?: (data: unknown) => void
+  /**
+   * Triggered when all fields are completed
+   */
+  onComplete?: (data: unknown) => void
+  placeholder?: string
+  required?: boolean
+  /**
+   * Type of the fields
+   */
+  type?: 'text' | 'number'
+}
+
+const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
+  disabled = false,
+  error = false,
+  fields = 4,
+  initialValue = '',
+  inputId = 'verification-code',
+  inputStyle = '',
+  onChange = () => {},
+  onComplete = () => {},
+  placeholder = '',
+  required = false,
+  type = 'number',
   ...props
 }) => {
   const valuesArray = Object.assign(
@@ -53,9 +87,11 @@ const VerificationCode = ({
   )
   const [values, setValues] = useState(valuesArray)
 
-  const inputRefs = Array.from(Array(fields), React.createRef)
+  const inputRefs = Array.from({ length: fields }, () =>
+    React.createRef<HTMLInputElement>(),
+  )
 
-  const triggerChange = inputValues => {
+  const triggerChange = (inputValues: string[]) => {
     const stringValue = inputValues.join('')
     if (onChange) {
       onChange(stringValue)
@@ -65,16 +101,17 @@ const VerificationCode = ({
     }
   }
 
-  const inputOnChange = e => {
-    const index = parseInt(e.target.dataset.id, 10)
+  const inputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const index = parseInt(String(event.target.dataset.id), 10)
+    let { value } = event.target
     if (type === 'number') {
-      e.target.value = e.target.value.replace(/[^\d]/gi, '')
+      value = event.target.value.replace(/[^\d]/gi, '')
     }
     const newValues = [...values]
 
     if (
-      e.target.value === '' ||
-      (type === 'number' && !e.target.validity.valid)
+      value === '' ||
+      (type === 'number' && !new RegExp(event.target.pattern).test(value))
     ) {
       newValues[index] = ''
       setValues(newValues)
@@ -82,22 +119,19 @@ const VerificationCode = ({
       return
     }
 
-    const { value } = e.target
     const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
     newValues[index] = sanitizedValue
     setValues(newValues)
     const nextIndex = Math.min(index + 1, fields - 1)
     const next = inputRefs[nextIndex]
 
-    if (next) {
-      next.current.focus()
-    }
+    next?.current?.focus()
 
     triggerChange(newValues)
   }
 
-  const inputOnKeyDown = e => {
-    const index = parseInt(e.target.dataset.id, 10)
+  const inputOnKeyDown: KeyboardEventHandler<HTMLInputElement> = event => {
+    const index = Number(event.currentTarget.dataset.id)
     const prevIndex = index - 1
     const nextIndex = index + 1
     const first = inputRefs[0]
@@ -105,59 +139,52 @@ const VerificationCode = ({
     const prev = inputRefs[prevIndex]
     const next = inputRefs[nextIndex]
     const vals = [...values]
-    switch (e.keyCode) {
+
+    switch (event.keyCode) {
       case KEY_CODE.backspace:
-        e.preventDefault()
+        event.preventDefault()
         if (values[index]) {
           vals[index] = ''
           setValues(vals)
           triggerChange(vals)
         } else if (prev) {
           vals[prevIndex] = ''
-          prev.current.focus()
+          prev?.current?.focus()
           setValues(vals)
           triggerChange(vals)
         }
         break
       case KEY_CODE.left:
-        e.preventDefault()
-        if (prev) {
-          prev.current.focus()
-        }
+        event.preventDefault()
+        prev?.current?.focus()
         break
       case KEY_CODE.right:
-        e.preventDefault()
-        if (next) {
-          next.current.focus()
-        }
+        event.preventDefault()
+        next?.current?.focus()
         break
       case KEY_CODE.up:
-        e.preventDefault()
-        if (first) {
-          first.current.focus()
-        }
+        event.preventDefault()
+        first?.current?.focus()
         break
       case KEY_CODE.down:
-        e.preventDefault()
-        if (last) {
-          last.current.focus()
-        }
+        event.preventDefault()
+        last?.current?.focus()
         break
       default:
         break
     }
   }
 
-  const inputOnFocus = e => {
-    e.target.select(e)
-  }
+  const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
+    event.target.select()
 
-  const inputOnPaste = e => {
-    e.preventDefault()
-    const currentIndex = parseInt(e.target.dataset.id, 10)
-    const pastedValue = [...e.clipboardData.getData('Text')].map(c =>
-      // Replace non number char with empty char when type is number
-      type === 'number' ? c.replace(/[^\d]/gi, '') : c,
+  const inputOnPaste: ClipboardEventHandler<HTMLInputElement> = event => {
+    event.preventDefault()
+    const currentIndex = Number(event.currentTarget.dataset.id as string)
+    const pastedValue = [...event.clipboardData.getData('Text').split('')].map(
+      (copiedValue: string) =>
+        // Replace non number char with empty char when type is number
+        type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
     )
 
     // Trim array to avoid array overflow
@@ -167,7 +194,7 @@ const VerificationCode = ({
         : pastedValue.length,
     )
 
-    setValues(vals => {
+    setValues((vals: string[]) => {
       const newArray = vals.slice()
       newArray.splice(currentIndex, pastedValue.length, ...pastedValue)
 
@@ -177,17 +204,17 @@ const VerificationCode = ({
 
   return (
     <Box {...props}>
-      {values.map((value, index) => (
+      {values.map((value: string, index) => (
         <StyledInput
           css={[inputStyle]}
           aria-invalid={error}
           type={type === 'number' ? 'tel' : type}
-          pattern={type === 'number' ? '[0-9]*' : null}
+          pattern={type === 'number' ? '[0-9]*' : undefined}
           // eslint-disable-next-line react/no-array-index-key
           key={`${inputId}-${index}`}
           data-id={index}
           value={value}
-          id={inputId ? `${inputId}-${index}` : null}
+          id={inputId ? `${inputId}-${index}` : undefined}
           ref={inputRefs[index]}
           onChange={inputOnChange}
           onKeyDown={inputOnKeyDown}
@@ -205,41 +232,15 @@ const VerificationCode = ({
 VerificationCode.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
-  /**
-   * Amount of field you want
-   */
   fields: PropTypes.number,
   initialValue: PropTypes.string,
   inputId: PropTypes.string,
   inputStyle: PropTypes.string,
-  /**
-   * Triggered when a field change
-   */
   onChange: PropTypes.func,
-  /**
-   * Triggered when all fields are completed
-   */
   onComplete: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  /**
-   * Type of the fields
-   */
   type: PropTypes.oneOf(['text', 'number']),
-}
-
-VerificationCode.defaultProps = {
-  disabled: false,
-  error: false,
-  fields: 4,
-  initialValue: '',
-  inputId: 'verification-code',
-  inputStyle: '',
-  onChange: () => {},
-  onComplete: () => {},
-  placeholder: '',
-  required: false,
-  type: 'number',
 }
 
 export default VerificationCode
