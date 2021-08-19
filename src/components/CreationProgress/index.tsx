@@ -1,11 +1,18 @@
-import { css, keyframes } from '@emotion/react'
+import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, {
+  FunctionComponent,
+  ReactElement,
+  ReactNode,
+  ReactNodeArray,
+} from 'react'
 import flattenChildren from 'react-flatten-children'
 import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
+
+type Temporal = 'future' | 'past' | 'current'
 
 const sizes = {
   large: {
@@ -45,6 +52,8 @@ const sizes = {
   },
 }
 
+type Size = keyof typeof sizes
+
 const loadingAnimation = keyframes`
   from {
     width: 0;
@@ -62,7 +71,13 @@ const StyledStepContainer = styled.div`
   justify-content: flex-start;
 `
 
-const temporalStepStyles = ({ temporal, theme }) =>
+const temporalStepStyles = ({
+  temporal,
+  theme,
+}: {
+  temporal: Temporal
+  theme: Theme
+}) =>
   temporal !== 'future'
     ? css`
         background-color: ${theme.colors.success};
@@ -74,8 +89,8 @@ const temporalStepStyles = ({ temporal, theme }) =>
       `
 
 const StyledStep = styled('div', {
-  shouldForwardProp: prop => !['temporal'].includes(prop),
-})`
+  shouldForwardProp: prop => !['temporal'].includes(prop.toString()),
+})<{ temporal: Temporal }>`
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -101,7 +116,7 @@ const loadingStyle = css`
   animation: ${loadingAnimation} 1s linear infinite;
 `
 
-const StyledLine = styled.div`
+const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: 2px;
   flex-grow: 1;
   border-radius: 2px;
@@ -122,7 +137,7 @@ const StyledLine = styled.div`
   }
 `
 
-const StyledContainer = styled(Box)`
+const StyledContainer = styled(Box)<{ size: Size }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -161,15 +176,27 @@ const StyledContainer = styled(Box)`
   }
 `
 
-const CreationProgress = ({
+type CreationProgressProps = {
+  animated?: boolean
+  isStepsNumber?: boolean
+  selected?: number
+  size?: Size
+  children: ReactNodeArray
+}
+
+type CreationProgressComponent = FunctionComponent<CreationProgressProps> & {
+  Step: FunctionComponent<CreationProgressProps>
+}
+
+const CreationProgress: CreationProgressComponent = ({
   children,
-  selected,
-  animated,
-  isStepsNumber,
-  size,
+  selected = 0,
+  animated = true,
+  isStepsNumber = false,
+  size = 'xlarge',
   ...props
 }) => {
-  const lastStep = children.length - 1
+  const lastStep = React.Children.count(children) - 1
 
   return (
     <StyledContainer size={size} {...props}>
@@ -210,7 +237,16 @@ const CreationProgress = ({
             <StyledStepContainer>
               <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 
-              <StyledText>{child.props.children}</StyledText>
+              <StyledText>
+                {
+                  (
+                    child as ReactElement<{
+                      [x: string]: unknown
+                      children: ReactNode
+                    }>
+                  ).props.children
+                }
+              </StyledText>
             </StyledStepContainer>
 
             {isNotLast && (
@@ -225,20 +261,14 @@ const CreationProgress = ({
 
 const Step = () => null
 CreationProgress.Step = Step
+CreationProgress.Step.displayName = 'CreationProgress.Step'
 
 CreationProgress.propTypes = {
   animated: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   isStepsNumber: PropTypes.bool,
   selected: PropTypes.number,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-}
-
-CreationProgress.defaultProps = {
-  animated: true,
-  isStepsNumber: false,
-  selected: 0,
-  size: 'xlarge',
+  size: PropTypes.oneOf<NonNullable<Size>>(Object.keys(sizes) as Size[]),
 }
 
 export default CreationProgress

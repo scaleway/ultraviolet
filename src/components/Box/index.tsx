@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import React, {
   ElementType,
   FunctionComponent,
+  HTMLAttributes,
   ReactNode,
   forwardRef,
 } from 'react'
@@ -27,7 +28,7 @@ export type BoxProps = {
   height?: number | string
   width?: number | string
 } & XStyledProps &
-  React.HTMLAttributes<HTMLElement> & {
+  HTMLAttributes<HTMLElement> & {
     css?: Interpolation<Theme>
   }
 
