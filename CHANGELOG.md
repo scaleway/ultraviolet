@@ -1,3 +1,20 @@
+## [0.101.0](https://github.com/scaleway/scaleway-ui/compare/v0.100.1...v0.101.0) (2021-08-19)
+
+
+### :zap: Refactor
+
+* **typescript:** migrate VolumeSize, VerificationCode, TooltipIcon, Toaster, Table, TabGroup ([#631](https://github.com/scaleway/scaleway-ui/issues/631)) ([cc425a1](https://github.com/scaleway/scaleway-ui/commit/cc425a135224286d339ba2afae48166973296908))
+
+
+### :package: Chore
+
+* **deps:** bump react-datepicker from 4.2.0 to 4.2.1 ([#650](https://github.com/scaleway/scaleway-ui/issues/650)) ([99779a7](https://github.com/scaleway/scaleway-ui/commit/99779a7549c25b8812b696ebcc944a02bca4accf))
+
+
+### :gear: Features
+
+* migrate some components to typescript again ([#649](https://github.com/scaleway/scaleway-ui/issues/649)) ([98da359](https://github.com/scaleway/scaleway-ui/commit/98da359b67291e45f0b5290db8fe73a73839a35f))
+
 ### [0.100.1](https://github.com/scaleway/scaleway-ui/compare/v0.100.0...v0.100.1) (2021-08-18)
 
 
