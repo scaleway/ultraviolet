@@ -87,7 +87,6 @@ export type TooltipProps = {
   variant?: keyof typeof variants
   visible?: boolean
   unstable_portal?: boolean
-  zIndex?: number
 }
 
 const Tooltip = ({
@@ -98,7 +97,6 @@ const Tooltip = ({
   visible = false,
   variant = 'black',
   baseId,
-  zIndex,
   unstable_portal = true,
   ...props
 }: TooltipProps): JSX.Element => {
@@ -123,11 +121,7 @@ const Tooltip = ({
           ? referenceProps => children(referenceProps) as JSX.Element
           : children}
       </TooltipReference>
-      <ReakitTooltip
-        {...tooltip}
-        style={{ zIndex }}
-        unstable_portal={unstable_portal}
-      >
+      <ReakitTooltip {...tooltip} unstable_portal={unstable_portal}>
         <StyledTooltip variant={variant} {...props}>
           <TooltipArrow {...tooltip} />
           {text}
@@ -149,7 +143,6 @@ Tooltip.propTypes = {
   text: PropTypes.node,
   variant: PropTypes.string,
   visible: PropTypes.bool,
-  zIndex: PropTypes.number,
 }
 
 export default Tooltip
