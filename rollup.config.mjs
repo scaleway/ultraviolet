@@ -32,8 +32,10 @@ export default [{
   external,
   input: './src/index.ts',
   output: {
-    file: 'dist/index.js',
+    dir: 'dist',
     format: 'es',
+    preserveModules: true,
+    preserveModulesRoot: 'node_modules'
   },
   plugins: [
     babel({
