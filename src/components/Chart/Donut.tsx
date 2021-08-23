@@ -44,8 +44,6 @@ const Circle = styled.circle<{ fillMustBeAnimated?: boolean, patternName?: strin
   stroke-linecap: butt;
   fill: none;
   cursor: pointer;
-
-  ${circleFill}
 `
 
 Circle.defaultProps = {
@@ -87,10 +85,10 @@ type DonutProps = {
   content?: React.ReactNode,
   data: {
     color: string,
-    name?: string,
+    name?: string | null,
     percent: number,
     product: string,
-    value?: string
+    value?: string | null
   }[],
   focused?: number,
   height?: number,
@@ -178,7 +176,7 @@ Donut.propTypes = {
       percent: PropTypes.number.isRequired,
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
-    }),
+    }).isRequired,
   ).isRequired,
   focused: PropTypes.number,
   height: PropTypes.number,

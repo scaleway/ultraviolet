@@ -23,17 +23,17 @@ const EmptyLegend = styled.div`
 `
 
 type Details = {
-  name?: string,
-  value?: string
+  name?: string | null,
+  value?: string | null
 }
 
 type Data = {
+  details?: Details[] | null,
   color: string,
-  details?: (Details | undefined)[],
-  name?: string,
+  name?: string | null,
   percent: number,
   product: string,
-  value?: string
+  value?: string | null
 }
 
 type ChartProps = {
@@ -42,7 +42,7 @@ type ChartProps = {
    * Content will be displayed in the center of the chart, it can be text, number or any other component.
    */
   content?: React.ReactNode,
-  data?: (Data | undefined)[],
+  data?: Data[],
   emptyLegend?: string,
   hasLegend?: boolean,
   variant?: Variants
@@ -99,13 +99,13 @@ Chart.propTypes = {
         PropTypes.shape({
           name: PropTypes.string,
           value: PropTypes.string,
-        }),
+        }).isRequired,
       ),
       name: PropTypes.string,
       percent: PropTypes.number.isRequired,
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
-    }),
+    }).isRequired,
   ),
   emptyLegend: PropTypes.string,
   hasLegend: PropTypes.bool,
