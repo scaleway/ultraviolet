@@ -22,23 +22,27 @@ const EmptyLegend = styled.div`
   margin-left: 20px;
 `
 
+type Details = {
+  name?: string,
+  value?: string
+}
+
+type Data = {
+  color: string,
+  details?: (Details | undefined)[],
+  name?: string,
+  percent: number,
+  product: string,
+  value?: string
+}
+
 type ChartProps = {
   chartId?: string,
   /**
    * Content will be displayed in the center of the chart, it can be text, number or any other component.
    */
   content?: React.ReactNode,
-  data?: {
-    color: string,
-    details?: {
-      name?: string,
-      value?: string
-    }[],
-    name?: string,
-    percent: number,
-    product: string,
-    value?: string
-  }[],
+  data?: (Data | undefined)[],
   emptyLegend?: string,
   hasLegend?: boolean,
   variant?: Variants
