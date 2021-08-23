@@ -1,13 +1,14 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useRef } from 'react'
+import React, { VoidFunctionComponent, useRef } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import patternVariants from './patterns'
 
 const CIRCUM = 566
 
-const fillAndRotateCircleAnim = (lengthSegment, rotationSegment) => keyframes`
+const fillAndRotateCircleAnim = (lengthSegment: number, rotationSegment: number) => keyframes`
   from {
     stroke-dasharray: 3 ${CIRCUM} 10 0;
     transform: rotate(0deg);
@@ -18,7 +19,7 @@ const fillAndRotateCircleAnim = (lengthSegment, rotationSegment) => keyframes`
   }
 `
 
-const circleFill = ({ lengthSegment, rotationSegment, fillMustBeAnimated }) =>
+const circleFill = ({ lengthSegment, rotationSegment, fillMustBeAnimated }: { lengthSegment: number, rotationSegment: number, fillMustBeAnimated: boolean }) =>
   fillMustBeAnimated
     ? css`
         ${fillAndRotateCircleAnim(lengthSegment, rotationSegment).styles}
@@ -30,15 +31,15 @@ const circleFill = ({ lengthSegment, rotationSegment, fillMustBeAnimated }) =>
         transform: rotate(${rotationSegment}deg);
       `
 
-const getValueFromPercent = percent => (percent * CIRCUM) / 100
+const getValueFromPercent = (percent: number) => (percent * CIRCUM) / 100
 
-const getRotationFormPercent = percent => (percent / CIRCUM) * 360
+const getRotationFormPercent = (percent: number) => (percent / CIRCUM) * 360
 
-const Circle = styled.circle`
+const Circle = styled.circle<{ fillMustBeAnimated?: boolean, patternName?: string, color?: string, isFocused?: boolean }>`
   transform-origin: 50% 50%;
   transition: stroke-width 500ms ease;
   stroke: ${({ patternName, color, theme }) =>
-    patternName ? `url(#${patternName})` : theme.colors[color] ?? color};
+    patternName ? `url(#${patternName})` : theme.colors[color as Color] ?? color};
   stroke-width: ${({ isFocused }) => (isFocused ? 23 : 18)};
   stroke-linecap: butt;
   fill: none;
@@ -81,14 +82,30 @@ const StyledContent = styled.div`
   vertical-align: middle;
 `
 
-const Donut = ({
-  height,
-  width,
+type DonutProps = {
+  chartId?: string,
+  content?: React.ReactNode,
+  data: {
+    color: string,
+    name?: string,
+    percent: number,
+    product: string,
+    value?: string
+  }[],
+  focused?: number,
+  height?: number,
+  onFocusChange?(...args: unknown[]): unknown,
+  width?: number
+};
+
+const Donut: VoidFunctionComponent<DonutProps> = ({
+  height = 206,
+  width = 206,
   content,
   data,
   focused,
   onFocusChange,
-  chartId,
+  chartId
 }) => {
   const previousSegmentLength = useRef(0)
   const fillMustBeAnimated = !previousSegmentLength.current

@@ -1,7 +1,7 @@
-import { css } from '@emotion/react'
-import React from 'react'
+import { SerializedStyles, css } from '@emotion/react'
+import React, { ReactElement } from 'react'
 
-const DiscountPattern = color => (
+const DiscountPattern = (color: string): ReactElement => (
   <pattern
     key="pattern-discount"
     id="discount"
@@ -21,7 +21,7 @@ const DiscountPattern = color => (
     />
   </pattern>
 )
-const discountDot = color => css`
+const discountDot = (color: string): SerializedStyles => css`
   opacity: 0.6;
   border: 0.3px solid ${color};
   background-size: 10px;
