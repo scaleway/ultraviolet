@@ -32,10 +32,10 @@ const cssAnimation = css`
 `
 
 interface StatusIndicatorProps {
-  animated?: boolean;
-  status?: keyof typeof defaultStatuses;
-  statuses?: Record<string, string>;
-  tooltip?: string;
+  animated?: boolean
+  status?: keyof typeof defaultStatuses
+  statuses?: Record<string, string>
+  tooltip?: string
 }
 
 const StatusIndicator: VoidFunctionComponent<StatusIndicatorProps> = ({
@@ -47,7 +47,7 @@ const StatusIndicator: VoidFunctionComponent<StatusIndicatorProps> = ({
 }) => (
   <Tooltip text={tooltip}>
     <Dot
-      color={{ ...defaultStatuses, ...statuses }[status] as Color || 'blue'}
+      color={({ ...defaultStatuses, ...statuses }[status] as Color) || 'blue'}
       css={animated && cssAnimation}
       {...props}
     />
@@ -75,7 +75,7 @@ StatusIndicator.propTypes = {
 
     return null
   },
-  statuses: PropTypes.objectOf(PropTypes.string),
+  statuses: PropTypes.shape({}),
   tooltip: PropTypes.string,
 }
 

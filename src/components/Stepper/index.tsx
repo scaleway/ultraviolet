@@ -1,18 +1,36 @@
-import { Theme } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { ChangeEventHandler, FocusEventHandler, InputHTMLAttributes, KeyboardEventHandler, VoidFunctionComponent, useEffect, useRef, useState } from 'react'
+import React, {
+  ChangeEventHandler,
+  FocusEventHandler,
+  InputHTMLAttributes,
+  KeyboardEventHandler,
+  MutableRefObject,
+  VoidFunctionComponent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
 import Touchable from '../Touchable'
 
-const bounded = (value: number, min: number, max: number) => Math.max(min, Math.min(value, max))
+const bounded = (value: number, min: number, max: number) =>
+  Math.max(min, Math.min(value, max))
 
-const roundStep = (value: number, step: number) => Math.ceil(value / step) * step
+const roundStep = (value: number, step: number) =>
+  Math.ceil(value / step) * step
 
-const disabledStyles = ({ disabled, theme }: {disabled: boolean, theme: Theme }) =>
+const disabledStyles = ({
+  disabled,
+  theme,
+}: {
+  disabled: boolean
+  theme: Theme
+}) =>
   disabled &&
   `
     background-color: ${theme.colors.gray100};
@@ -28,6 +46,9 @@ const containerSizes = {
   small: 32,
 }
 
+type ContainerSizesType = keyof typeof containerSizes
+const containerSizesKeys = Object.keys(containerSizes) as ContainerSizesType[]
+
 const iconSizes = {
   large: 26,
   medium: 24,
@@ -38,7 +59,7 @@ const StyledIcon = styled(Icon)``
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop.toString()),
-})<{ size: keyof typeof containerSizes }>`
+})<{ size: ContainerSizesType }>`
   justify-content: center;
   align-items: center;
   height: calc(100% - 8px);
@@ -57,7 +78,7 @@ const StyledTouchable = styled(Touchable, {
   margin: 0 4px;
 `
 
-const StyledCenterTouchable = styled(Touchable)<{size: keyof typeof containerSizes }>`
+const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
   flex: 1;
   flex-direction: row;
   height: calc(100% - 8px);
@@ -93,7 +114,7 @@ const StyledInput = styled.input`
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
-})<{ disabled: boolean, size: keyof typeof containerSizes }>`
+})<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
     disabled ? theme.colors.gray100 : theme.colors.white};
   display: flex;
@@ -105,12 +126,13 @@ const StyledContainer = styled(Box, {
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: 4px;
   ${({ disabled, theme }) =>
-    disabled &&
-    `
-    > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
-      ${disabledStyles({ disabled, theme })}
-    }
-  `}
+    disabled
+      ? css`
+          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
+            ${disabledStyles({ disabled, theme })}
+          }
+        `
+      : ''}
 `
 
 type StepperProps = {
@@ -121,11 +143,10 @@ type StepperProps = {
   onChange?(data: unknown): void
   onMaxCrossed?(...args: unknown[]): unknown
   onMinCrossed?(...args: unknown[]): unknown
-  size?: keyof typeof containerSizes
+  size?: ContainerSizesType
   step?: number
   text?: string
-  value?: string
-} & InputHTMLAttributes<HTMLInputElement>
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
 const Stepper: VoidFunctionComponent<StepperProps> = ({
   disabled = false,
@@ -143,8 +164,11 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   value,
   ...props
 }) => {
-  const inputRef = useRef()
-  const [inputValue, setInputValue] = useState(parseIntOr(value, minValue))
+  const inputRef =
+    useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
+  const [inputValue, setInputValue] = useState(
+    parseIntOr(value as string, minValue),
+  )
 
   useEffect(() => {
     if (onChange) {
@@ -283,7 +307,7 @@ Stepper.propTypes = {
   onFocus: PropTypes.func,
   onMaxCrossed: PropTypes.func,
   onMinCrossed: PropTypes.func,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(containerSizesKeys),
   /**
    * Define how much will stepper increase / decrease each time you click on + / - button.
    */
