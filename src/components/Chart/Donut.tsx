@@ -44,6 +44,8 @@ const Circle = styled.circle<{ fillMustBeAnimated?: boolean, patternName?: strin
   stroke-linecap: butt;
   fill: none;
   cursor: pointer;
+
+  ${circleFill}
 `
 
 Circle.defaultProps = {
