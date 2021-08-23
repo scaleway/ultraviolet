@@ -118,12 +118,12 @@ type LimitProps = {
   value?: number
 }
 
-const Limit = ({
+const Limit: VoidFunctionComponent<LimitProps> = ({
   value = 0,
   label = '',
   position,
   offsetTop = 0,
-}: LimitProps) => (
+}) => (
   <StyledLimit position={position} offsetTop={offsetTop}>
     {value} {label}
   </StyledLimit>
