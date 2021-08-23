@@ -31,7 +31,6 @@ const Notification = styled(Box, {
   variant: Variants
   bordered: boolean
   type?: string
-  icon: string
   to?: string
 }>`
   height: 28px;
@@ -91,7 +90,6 @@ const Reminder: FunctionComponent<ReminderProps> = ({
   <Notification
     as={to ? (UniversalLink as React.ElementType) : 'a'}
     type={to ? undefined : 'button'}
-    icon="east"
     style={{}}
     fontSize={12}
     px={1}
