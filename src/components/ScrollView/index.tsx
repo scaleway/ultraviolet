@@ -1,15 +1,14 @@
 import styled from '@emotion/styled'
-import React, { FunctionComponent } from 'react'
-import Box from '../Box'
+import React, { FunctionComponent, HTMLAttributes } from 'react'
 
-const StyledScrollView = styled(Box)`
+const StyledScrollView = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   overflow-y: auto;
 `
 
-const ScrollView: FunctionComponent<XStyledProps> = props => (
+const ScrollView: FunctionComponent<HTMLAttributes<HTMLDivElement>> = props => (
   <StyledScrollView {...props} />
 )
 
