@@ -65,10 +65,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/index.js",
-      "import": "{ Box }",
+      "path": "dist/**/*.js",
+      "limit": "220 kB",
       "webpack": false,
-      "limit": "200 kB"
+      "brotli": true,
+      "running": false
     }
   ],
   "jest": {
