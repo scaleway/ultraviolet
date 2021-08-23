@@ -1,6 +1,13 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
+  ChangeEvent,
+  FocusEvent,
+  FunctionComponent,
+  InputHTMLAttributes,
+  KeyboardEvent,
+  RefObject,
+  VoidFunctionComponent,
   useCallback,
   useEffect,
   useLayoutEffect,
@@ -11,12 +18,15 @@ import onKeyOnlyNumbers from '../../helpers/keycode'
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 
-const getPercent = (min, max, v) => (v - min) / (max - min)
+const getPercent = (min: number, max: number, v: number): number =>
+  (v - min) / (max - min)
 
-const getCursorLinkWidth = cursorsRef => {
-  const cursorsX = []
-  cursorsRef.forEach((cursor, index) => {
-    const { x } = cursor.current.getBoundingClientRect()
+const getCursorLinkWidth = (cursorsRef: RefObject<HTMLElement>[]) => {
+  const cursorsX: number[] = []
+  cursorsRef.forEach((cursor: RefObject<HTMLElement>, index: number) => {
+    const { x }: { x: number } = cursor.current?.getBoundingClientRect() || {
+      x: 0,
+    }
     // Only need the width of the first and last one
     if (index === 0 || index === cursorsRef.length - 1) {
       cursorsX.push(x)
@@ -26,14 +36,14 @@ const getCursorLinkWidth = cursorsRef => {
   return cursorsX[1] - cursorsX[0]
 }
 
-const canMove = (value, values = [], valueIndex) => {
+const canMove = (value: number, values: number[] = [], valueIndex: number) => {
   // Range with single value can always move
   if (values.length === 1) return true
 
   const tmp = [...values]
   tmp.splice(valueIndex, 1)
-  const isSmallest = otherValue => value < otherValue
-  const isBiggest = otherValue => value > otherValue
+  const isSmallest = (otherValue: number) => value < otherValue
+  const isBiggest = (otherValue: number) => value > otherValue
 
   const cb = valueIndex === 0 ? isSmallest : isBiggest
 
@@ -49,8 +59,8 @@ const StyledContainer = styled(Box)`
 `
 
 const StyledBar = styled('div', {
-  shouldForwardProp: prop => !['offsetTop'].includes(prop),
-})`
+  shouldForwardProp: prop => !['offsetTop'].includes(prop.toString()),
+})<{ offsetTop: number }>`
   position: absolute;
   height: 4px;
   width: 100%;
@@ -61,8 +71,9 @@ const StyledBar = styled('div', {
 `
 
 const StyledLimit = styled(Box, {
-  shouldForwardProp: prop => !['offsetTop', 'postion'].includes(prop),
-})`
+  shouldForwardProp: prop =>
+    !['offsetTop', 'position'].includes(prop.toString()),
+})<{ offsetTop: number }>`
   position: absolute;
   font-size: 12px;
   color: ${({ theme }) => theme.colors.gray950};
@@ -100,18 +111,23 @@ const StyledLimit = styled(Box, {
   `}
 `
 
-const Limit = ({ value, label, position, offsetTop }) => (
+type LimitProps = {
+  label?: string
+  offsetTop?: number
+  position?: 'left' | 'right'
+  value?: number
+}
+
+const Limit: VoidFunctionComponent<LimitProps> = ({
+  value = 0,
+  label = '',
+  position,
+  offsetTop = 0,
+}) => (
   <StyledLimit position={position} offsetTop={offsetTop}>
     {value} {label}
   </StyledLimit>
 )
-
-Limit.defaultProps = {
-  label: '',
-  offsetTop: 0,
-  position: undefined,
-  value: 0,
-}
 
 Limit.propTypes = {
   label: PropTypes.string,
@@ -121,10 +137,10 @@ Limit.propTypes = {
 }
 
 const StyledCursorLink = styled('div', {
-  shouldForwardProp: prop => !['offsetTop'].includes(prop),
-})`
+  shouldForwardProp: prop => !['offsetTop'].includes(prop.toString()),
+})<{ offsetTop: number }>`
   position: absolute;
-  top: ${({ offsetTop }) => offsetTop + 0}px;
+  top: ${({ offsetTop = 0 }) => offsetTop + 0}px;
   height: 4px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.violet};
@@ -133,8 +149,9 @@ const StyledCursorLink = styled('div', {
 `
 
 const StyledCursor = styled(Box, {
-  shouldForwardProp: prop => !['offsetTop', 'width', 'grabbed'].includes(prop),
-})`
+  shouldForwardProp: prop =>
+    !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
+})<{ grabbed: boolean; offsetTop: number; width: string | number }>`
   position: absolute;
   top: ${({ offsetTop }) => offsetTop + -6}px;
   height: 16px;
@@ -162,7 +179,17 @@ const StyledInput = styled.input`
   left: -15px;
 `
 
-const Input = ({ onChange, onKeyPress, onBlur, value, ...props }) => (
+type InputProps = {
+  value?: number
+} & InputHTMLAttributes<HTMLInputElement>
+
+const Input: FunctionComponent<InputProps> = ({
+  onChange,
+  onKeyPress,
+  onBlur,
+  value = 0,
+  ...props
+}) => (
   <StyledInput
     {...props}
     onChange={onChange}
@@ -172,13 +199,6 @@ const Input = ({ onChange, onKeyPress, onBlur, value, ...props }) => (
   />
 )
 
-Input.defaultProps = {
-  onBlur: () => {},
-  onChange: () => {},
-  onKeyPress: () => {},
-  value: 0,
-}
-
 Input.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -186,29 +206,41 @@ Input.propTypes = {
   value: PropTypes.number,
 }
 
-const Range = ({
-  min,
-  max,
-  value: values,
-  onChange,
-  name,
-  cursorWidth,
-  halfCursorWidth,
-  limitOffset,
-  offsetTop,
+type RangeProps = {
+  cursorWidth?: number
+  halfCursorWidth?: number
+  limitOffset?: number
+  max?: number
+  min?: number
+  name?: string
+  offsetTop?: number
+  onChange?(data: unknown): void
+  value?: number[]
+}
+
+const Range: VoidFunctionComponent<RangeProps> = ({
+  min = 0,
+  max = 5,
+  value: values = [3],
+  onChange = () => {},
+  name = 'rangeInput',
+  cursorWidth = 16,
+  halfCursorWidth = 8,
+  limitOffset = 24,
+  offsetTop = 16,
   ...props
 }) => {
   const [internValues, setInternValues] = useState(values)
 
-  const container = useRef()
-  const cursorsLinkRef = useRef()
-  const cursorsRef = values.map(useRef)
-  const [grabbedCursor, grabCursor] = useState()
+  const container = useRef<HTMLElement>(null)
+  const cursorsLinkRef = useRef<HTMLDivElement>(null)
+  const cursorsRef = values.map(useRef) as RefObject<HTMLElement>[]
+  const [grabbedCursor, grabCursor] = useState<number>()
 
   const hasCursorsLink = values.length > 1
 
   const getNextValues = useCallback(
-    (value, index) => {
+    (value: number, index: number) => {
       const nextValues = [...values]
       nextValues[index] = value
 
@@ -217,7 +249,7 @@ const Range = ({
     [values],
   )
   const ceil = useCallback(
-    (value, index) => {
+    (value: number, index: number) => {
       const isFirst = index === 0
       const isLast = index === values.length - 1
       const next = values[index + 1]
@@ -257,7 +289,7 @@ const Range = ({
   )
 
   const handleInputChange = useCallback(
-    (ev, index) => {
+    (ev: ChangeEvent<HTMLInputElement>, index: number) => {
       const value = parseIntOr(ev.currentTarget.value, -1)
       if (values[index] !== value) {
         onChange(getNextValues(value, index))
@@ -266,7 +298,7 @@ const Range = ({
     [onChange, getNextValues, values],
   )
   const handleInputKeyPress = useCallback(
-    (ev, index) => {
+    (ev: KeyboardEvent<HTMLInputElement>, index: number) => {
       onKeyOnlyNumbers(ev)
       if (ev.key.charCodeAt(0) === 69) {
         const value = parseIntOr(ev.currentTarget.value, 0)
@@ -280,8 +312,11 @@ const Range = ({
     [ceil, onChange, setInternValues, getNextValues],
   )
   const handleInputBlur = useCallback(
-    (ev, index) => {
-      const value = parseIntOr(ev.currentTarget.value, 0)
+    (ev: FocusEvent<HTMLInputElement>, index) => {
+      const value: number = parseIntOr(
+        (ev.currentTarget as HTMLInputElement).value,
+        0,
+      )
       const ceiledValue = ceil(value, index)
       const nextValues = getNextValues(ceiledValue, index)
 
@@ -291,15 +326,20 @@ const Range = ({
     [ceil, onChange, setInternValues, getNextValues],
   )
 
-  const onMouseDown = useCallback(index => {
+  const onMouseDown = useCallback((index: number) => {
     grabCursor(index)
   }, [])
 
   const onMouseMove = useCallback(
-    ev => {
-      if (ev.target.tagName === 'INPUT') return
-      const cursor = cursorsRef[grabbedCursor].current
-      if (cursor) {
+    (ev: MouseEvent) => {
+      if ((ev.target as HTMLElement).tagName === 'INPUT') return
+
+      let cursor
+      if (grabbedCursor !== undefined) {
+        cursor = cursorsRef?.[grabbedCursor]?.current
+      }
+
+      if (cursor && container.current) {
         const { x } = container.current.getBoundingClientRect()
 
         const minX = x + limitOffset
@@ -314,13 +354,16 @@ const Range = ({
         const percent = getPercent(minX, maxX, tresholdedValue)
         const valueFromPercentage = Math.round(percent * (max - min) + min)
 
-        if (canMove(valueFromPercentage, values, grabbedCursor)) {
+        if (
+          grabbedCursor !== undefined &&
+          canMove(valueFromPercentage, values, grabbedCursor)
+        ) {
           cursor.style.transform = `translate3d(${
             tresholdedValue - minX + cursorWidth
           }px, 0, 0)`
 
           // Move the cursors link
-          if (hasCursorsLink) {
+          if (hasCursorsLink && cursorsLinkRef.current) {
             // If the cursor moved is the smallest, translate the cursors link
             if (grabbedCursor === 0) {
               cursorsLinkRef.current.style.transform = `translate3d(${
@@ -361,33 +404,37 @@ const Range = ({
   )
 
   const onMouseUp = useCallback(() => {
-    container.current.removeEventListener('mousemove', onMouseMove)
-    grabCursor()
+    if (container.current) {
+      container.current.removeEventListener('mousemove', onMouseMove)
+      grabCursor(undefined)
+    }
   }, [container, onMouseMove])
 
   useEffect(() => {
-    const initialCursorsTranslate = []
+    const initialCursorsTranslate: number[] = []
 
     // Set initial cursors position
     cursorsRef.forEach((cursor, index) => {
       const cursorCurrent = cursor.current
-      const percent = getPercent(min, max, internValues[index])
-      const translate =
-        (container.current.offsetWidth - limitOffset * 2) * percent
+      if (cursorCurrent && container.current) {
+        const percent = getPercent(min, max, internValues[index])
+        const translate =
+          (container.current.offsetWidth - limitOffset * 2) * percent
 
-      const tresholdedTranslate = translate + limitOffset - halfCursorWidth
+        const tresholdedTranslate = translate + limitOffset - halfCursorWidth
 
-      cursorCurrent.style.transform = `translate3d(${tresholdedTranslate}px, 0, 0)`
+        cursorCurrent.style.transform = `translate3d(${tresholdedTranslate}px, 0, 0)`
 
-      if (hasCursorsLink) {
-        if (index === 0 || index === cursorsRef.length - 1) {
-          initialCursorsTranslate.push(tresholdedTranslate)
+        if (hasCursorsLink) {
+          if (index === 0 || index === cursorsRef.length - 1) {
+            initialCursorsTranslate.push(tresholdedTranslate)
+          }
         }
       }
     })
 
     // Set initial cursors links position
-    if (hasCursorsLink) {
+    if (hasCursorsLink && cursorsLinkRef.current) {
       const [firstCursorTranslate = 0, lastCursorTranslate = 0] =
         initialCursorsTranslate
       cursorsLinkRef.current.style.width = `${
@@ -404,7 +451,7 @@ const Range = ({
   }, [internValues])
 
   useLayoutEffect(() => {
-    if (grabbedCursor !== undefined) {
+    if (grabbedCursor !== undefined && container.current) {
       container.current.addEventListener('mousemove', onMouseMove)
     }
   }, [cursorsRef, grabbedCursor, onMouseMove, values])
@@ -418,12 +465,12 @@ const Range = ({
       {...props}
     >
       <StyledBar offsetTop={offsetTop} />
-      <Limit postion="left" offsetTop={offsetTop} value={min} label="(min)" />
-      <Limit postion="right" offsetTop={offsetTop} value={max} label="(max)" />
+      <Limit position="left" offsetTop={offsetTop} value={min} label="(min)" />
+      <Limit position="right" offsetTop={offsetTop} value={max} label="(max)" />
       {hasCursorsLink && (
         <StyledCursorLink offsetTop={offsetTop} ref={cursorsLinkRef} />
       )}
-      {values.map((value, index) => (
+      {values.map((value: number, index: number) => (
         <StyledCursor
           as="span"
           offsetTop={offsetTop}
@@ -436,10 +483,16 @@ const Range = ({
         >
           <Input
             name={`${name}-${index}`}
-            value={values[index] === -1 ? '' : value}
-            onChange={ev => handleInputChange(ev, index)}
-            onKeyPress={ev => handleInputKeyPress(ev, index)}
-            onBlur={ev => handleInputBlur(ev, index)}
+            value={values[index] === -1 ? undefined : value}
+            onChange={(ev: ChangeEvent<HTMLInputElement>) =>
+              handleInputChange(ev, index)
+            }
+            onKeyPress={(ev: KeyboardEvent<HTMLInputElement>) =>
+              handleInputKeyPress(ev, index)
+            }
+            onBlur={(ev: FocusEvent<HTMLInputElement>) =>
+              handleInputBlur(ev, index)
+            }
           />
         </StyledCursor>
       ))}
@@ -456,22 +509,7 @@ Range.propTypes = {
   name: PropTypes.string,
   offsetTop: PropTypes.number,
   onChange: PropTypes.func,
-  value: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.number),
-    PropTypes.number,
-  ]),
-}
-
-Range.defaultProps = {
-  cursorWidth: 16,
-  halfCursorWidth: 8,
-  limitOffset: 24,
-  max: 5,
-  min: 0,
-  name: 'rangeInput',
-  offsetTop: 16,
-  onChange: () => {},
-  value: [3],
+  value: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.number.isRequired)]),
 }
 
 export default Range

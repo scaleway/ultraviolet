@@ -20,7 +20,9 @@ Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
 <Canvas>
   <Story name="Basic" height="200px">
-    <Range />
+    <div style={{ marginTop: 24 }}>
+      <Range />
+    </div>
   </Story>
 </Canvas>
 
@@ -28,11 +30,13 @@ Range only work as [controlled component](https://reactjs.org/docs/forms.html).
 
 <Canvas>
   <Story name="Single value" height="150px">
-    <ControlValue value={[3]}>
-      {({ value, onChange }) => (
-        <Range value={value} min={0} max={10} onChange={onChange} />
-      )}
-    </ControlValue>
+    <div style={{ marginTop: 24 }}>
+      <ControlValue value={[3]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={10} onChange={onChange} />
+        )}
+      </ControlValue>
+    </div>
   </Story>
 </Canvas>
 
@@ -42,11 +46,13 @@ For now, Range component will work with max two values.
 
 <Canvas>
   <Story name="Two values" height="150px">
-    <ControlValue value={[3, 8]}>
-      {({ value, onChange }) => (
-        <Range value={value} min={0} max={15} onChange={onChange} />
-      )}
-    </ControlValue>
+    <div style={{ marginTop: 24 }}>
+      <ControlValue value={[3, 8]}>
+        {({ value, onChange }) => (
+          <Range value={value} min={0} max={15} onChange={onChange} />
+        )}
+      </ControlValue>
+    </div>
   </Story>
 </Canvas>
 

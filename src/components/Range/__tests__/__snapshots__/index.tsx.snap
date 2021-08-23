@@ -26,15 +26,16 @@ exports[`Range should render correctly 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -42,6 +43,35 @@ exports[`Range should render correctly 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-1f8pz1b {
@@ -74,27 +104,27 @@ exports[`Range should render correctly 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       5 (max)
     </div>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-12.799999999999997px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="3"
       />
@@ -129,15 +159,16 @@ exports[`Range should render correctly with input change 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -145,6 +176,35 @@ exports[`Range should render correctly with input change 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-1f8pz1b {
@@ -177,27 +237,27 @@ exports[`Range should render correctly with input change 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       20 (max)
     </div>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="test-0"
         value="5"
       />
@@ -232,15 +292,16 @@ exports[`Range should render correctly with min max 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -248,6 +309,35 @@ exports[`Range should render correctly with min max 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-e9rypl {
@@ -293,41 +383,41 @@ exports[`Range should render correctly with min max 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       20 (max)
     </div>
     <div
-      class="cache-e9rypl e10m6u6t2"
+      class="cache-e9rypl e1tqrz512"
       style="width: -12px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-8px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-1"
         value="10"
       />
@@ -362,15 +452,16 @@ exports[`Range should render correctly with min max 2`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -378,6 +469,35 @@ exports[`Range should render correctly with min max 2`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-1f8pz1b {
@@ -410,27 +530,27 @@ exports[`Range should render correctly with min max 2`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       20 (max)
     </div>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="5"
       />
@@ -465,15 +585,16 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -481,6 +602,35 @@ exports[`Range should render correctly with min max and out of range value 1`] =
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-e9rypl {
@@ -526,41 +676,41 @@ exports[`Range should render correctly with min max and out of range value 1`] =
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       20 (max)
     </div>
     <div
-      class="cache-e9rypl e10m6u6t2"
+      class="cache-e9rypl e1tqrz512"
       style="width: -60px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-56px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-1"
         value="30"
       />
@@ -595,15 +745,16 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -611,6 +762,35 @@ exports[`Range should render correctly with min max and out of range value 2`] =
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-1f8pz1b {
@@ -643,27 +823,27 @@ exports[`Range should render correctly with min max and out of range value 2`] =
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       10 (max)
     </div>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-56px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="15"
       />
@@ -698,15 +878,16 @@ exports[`Range should render correctly with one value 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -714,6 +895,35 @@ exports[`Range should render correctly with one value 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-1f8pz1b {
@@ -746,27 +956,27 @@ exports[`Range should render correctly with one value 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       5 (max)
     </div>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-32px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="5"
       />
@@ -801,15 +1011,16 @@ exports[`Range should render correctly with props 1`] = `
   top: 120px;
 }
 
-.cache-ytsswk {
+.cache-122y96x {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 128px;
+  left: 8px;
 }
 
-.cache-ytsswk::before {
+.cache-122y96x::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -817,6 +1028,35 @@ exports[`Range should render correctly with props 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-122y96x::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-ls5coq {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 128px;
+  right: 8px;
+}
+
+.cache-ls5coq::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-ls5coq::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-150a4lh {
@@ -862,41 +1102,41 @@ exports[`Range should render correctly with props 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-1b1tpo3 e10m6u6t4"
+      class="cache-1b1tpo3 e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-ytsswk e7ah3bn0"
+      class="e1tqrz513 cache-122y96x e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-ytsswk e7ah3bn0"
+      class="e1tqrz513 cache-ls5coq e7ah3bn0"
     >
       20 (max)
     </div>
     <div
-      class="cache-150a4lh e10m6u6t2"
+      class="cache-150a4lh e1tqrz512"
       style="width: -225px; transform: translate3d(45px, 0, 0);"
     />
     <span
-      class="e10m6u6t1 cache-114adej e7ah3bn0"
+      class="e1tqrz511 cache-114adej e7ah3bn0"
       style="transform: translate3d(25px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="test-0"
         value="5"
       />
     </span>
     <span
-      class="e10m6u6t1 cache-114adej e7ah3bn0"
+      class="e1tqrz511 cache-114adej e7ah3bn0"
       style="transform: translate3d(-200px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="test-1"
         value="30"
       />
@@ -931,15 +1171,16 @@ exports[`Range should render correctly with two values 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -947,6 +1188,35 @@ exports[`Range should render correctly with two values 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-e9rypl {
@@ -992,41 +1262,41 @@ exports[`Range should render correctly with two values 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       5 (max)
     </div>
     <div
-      class="cache-e9rypl e10m6u6t2"
+      class="cache-e9rypl e1tqrz512"
       style="width: -48px; transform: translate3d(-24px, 0, 0);"
     />
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-32px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-0"
         value="5"
       />
     </span>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-80px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="rangeInput-1"
         value="10"
       />
@@ -1061,15 +1331,16 @@ exports[`Range should render correctly with two values input change 1`] = `
   top: 16px;
 }
 
-.cache-sqntd1 {
+.cache-48yrhd {
   position: absolute;
   font-size: 12px;
   color: #151a2d;
   font-weight: 500;
   top: 24px;
+  left: 8px;
 }
 
-.cache-sqntd1::before {
+.cache-48yrhd::before {
   content: '';
   background-color: #151a2d;
   width: 2px;
@@ -1077,6 +1348,35 @@ exports[`Range should render correctly with two values input change 1`] = `
   height: 10px;
   top: -11px;
   border-radius: 4px;
+}
+
+.cache-48yrhd::before {
+  left: 16px;
+  right: unset;
+}
+
+.cache-1aec7k7 {
+  position: absolute;
+  font-size: 12px;
+  color: #151a2d;
+  font-weight: 500;
+  top: 24px;
+  right: 8px;
+}
+
+.cache-1aec7k7::before {
+  content: '';
+  background-color: #151a2d;
+  width: 2px;
+  position: absolute;
+  height: 10px;
+  top: -11px;
+  border-radius: 4px;
+}
+
+.cache-1aec7k7::before {
+  right: 16px;
+  left: unset;
 }
 
 .cache-e9rypl {
@@ -1122,41 +1422,41 @@ exports[`Range should render correctly with two values input change 1`] = `
 }
 
 <div
-    class="e10m6u6t5 cache-2wc9ag e7ah3bn0"
+    class="e1tqrz515 cache-2wc9ag e7ah3bn0"
   >
     <div
-      class="cache-8vavbz e10m6u6t4"
+      class="cache-8vavbz e1tqrz514"
     />
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-48yrhd e7ah3bn0"
     >
       0 (min)
     </div>
     <div
-      class="e10m6u6t3 cache-sqntd1 e7ah3bn0"
+      class="e1tqrz513 cache-1aec7k7 e7ah3bn0"
     >
       20 (max)
     </div>
     <div
-      class="cache-e9rypl e10m6u6t2"
+      class="cache-e9rypl e1tqrz512"
       style="width: -12px; transform: translate3d(12px, 0, 0);"
     />
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(4px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="test-0"
         value="5"
       />
     </span>
     <span
-      class="e10m6u6t1 cache-1f8pz1b e7ah3bn0"
+      class="e1tqrz511 cache-1f8pz1b e7ah3bn0"
       style="transform: translate3d(-8px, 0, 0);"
     >
       <input
-        class="cache-vdae5l e10m6u6t0"
+        class="cache-vdae5l e1tqrz510"
         name="test-1"
         value="10"
       />
