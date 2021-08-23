@@ -1,3 +1,18 @@
+## [0.102.0](https://github.com/scaleway/scaleway-ui/compare/v0.101.0...v0.102.0) (2021-08-23)
+
+
+### :package: Chore
+
+* **deps:** bump docker/build-push-action from 2.6.1 to 2.7.0 ([#655](https://github.com/scaleway/scaleway-ui/issues/655)) ([bd14a8b](https://github.com/scaleway/scaleway-ui/commit/bd14a8b50e6de0d80923aceea51a8c743b067f83))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.4 to 3.1.5 ([#656](https://github.com/scaleway/scaleway-ui/issues/656)) ([0d5676c](https://github.com/scaleway/scaleway-ui/commit/0d5676cad84d49d8a014be1f1422c69a8950fe0e))
+* **deps-dev:** bump rollup from 2.56.2 to 2.56.3 ([#657](https://github.com/scaleway/scaleway-ui/issues/657)) ([ce243ac](https://github.com/scaleway/scaleway-ui/commit/ce243ac4424e7d9528592ed63c9cea1dcfb31ba9))
+* **deps-dev:** bump webpack from 5.50.0 to 5.51.1 ([#653](https://github.com/scaleway/scaleway-ui/issues/653)) ([353a17c](https://github.com/scaleway/scaleway-ui/commit/353a17cca6b5feb2f0fa84e8313ded946d36f563))
+
+
+### :gear: Features
+
+* scrollView reminder range radio radioBorderedBox to typescript ([#634](https://github.com/scaleway/scaleway-ui/issues/634)) ([1a741b8](https://github.com/scaleway/scaleway-ui/commit/1a741b87ea61df3f5a4bbb78e2a8ecb4ba459c3e))
+
 ## [0.101.0](https://github.com/scaleway/scaleway-ui/compare/v0.100.1...v0.101.0) (2021-08-19)
 
 
