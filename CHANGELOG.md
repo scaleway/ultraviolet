@@ -1,3 +1,17 @@
+### [0.102.1](https://github.com/scaleway/scaleway-ui/compare/v0.102.0...v0.102.1) (2021-08-24)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/eslint-config-react from 2.1.0 to 2.1.1 ([#659](https://github.com/scaleway/scaleway-ui/issues/659)) ([507545a](https://github.com/scaleway/scaleway-ui/commit/507545ab17940e2ba5965c92f82d586307c350f6))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.5 to 3.1.6 ([#658](https://github.com/scaleway/scaleway-ui/issues/658)) ([76dd766](https://github.com/scaleway/scaleway-ui/commit/76dd766d67e1526dd43674f8709f56e44f65c98e))
+* **deps-dev:** bump semantic-release from 17.4.5 to 17.4.6 ([#661](https://github.com/scaleway/scaleway-ui/issues/661)) ([36e419a](https://github.com/scaleway/scaleway-ui/commit/36e419a3ae25696dbe330a685215bffcbb00c7c1))
+
+
+### :bug: Bug Fixes
+
+* removes zindex from tooltip component ([#651](https://github.com/scaleway/scaleway-ui/issues/651)) ([2a0fb7f](https://github.com/scaleway/scaleway-ui/commit/2a0fb7f0c2c9419603991a2d4f2d53bb72326ed8))
+
 ## [0.102.0](https://github.com/scaleway/scaleway-ui/compare/v0.101.0...v0.102.0) (2021-08-23)
 
 
