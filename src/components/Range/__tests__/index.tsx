@@ -43,11 +43,12 @@ describe('Range', () => {
         transform: node => {
           const input = node.getByRole('textbox')
           userEvent.click(input)
-          userEvent.click(input.parentElement, {
-            movementX: 200,
-            pageX: 0,
-            view: window,
-          })
+          if (input.parentElement) {
+            userEvent.click(input.parentElement, {
+              movementX: 200,
+              view: window,
+            })
+          }
           input.blur()
           userEvent.type(input, '{space}')
           userEvent.type(input, 'ABCDE')
@@ -65,11 +66,12 @@ describe('Range', () => {
           const input2 = node.getByDisplayValue('10')
           userEvent.click(input)
           userEvent.click(input2)
-          userEvent.click(input.parentElement, {
-            movementX: 200,
-            pageX: 0,
-            view: window,
-          })
+          if (input.parentElement) {
+            userEvent.click(input.parentElement, {
+              movementX: 200,
+              view: window,
+            })
+          }
           userEvent.type(input, '{space}')
           userEvent.type(input, 'ABCDE')
           userEvent.type(input, '10')

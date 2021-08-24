@@ -7,7 +7,7 @@ import React, {
   ReactNode,
   Ref,
 } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
 const TEL_LINK_REGEXP = /^tel:/
@@ -45,9 +45,7 @@ const UniversalLink: FunctionComponent<UniversalLinkProps> = ({
   const href = to || propsHref
   const asValue =
     propsAs ||
-    (needNativeLink(href)
-      ? 'a'
-      : (linkComponent  as ElementType<unknown>))
+    (needNativeLink(href) ? 'a' : (linkComponent as ElementType<unknown>))
   const parameter = asValue === 'a' ? 'href' : 'to'
 
   return (

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ImgHTMLAttributes } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const Image: FunctionComponent<
   ImgHTMLAttributes<HTMLImageElement> & XStyledProps

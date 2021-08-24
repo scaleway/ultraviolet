@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const StyledDot = styled(Box, {
   shouldForwardProp: prop => !['color'].includes(prop.toString()),

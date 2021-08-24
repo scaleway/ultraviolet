@@ -12,7 +12,7 @@ import React, {
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Tooltip, { TooltipProps } from '../Tooltip'
 
 type StyleProps = {

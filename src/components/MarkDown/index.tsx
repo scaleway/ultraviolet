@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Link from '../Link'
 import Typography from '../Typography'
 

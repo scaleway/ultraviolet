@@ -46,7 +46,7 @@ const variants = {
   line: Line,
   list: List,
   slider: Slider,
-}
+} as const
 
 type PlaceholderVariant = keyof typeof variants
 
@@ -74,13 +74,13 @@ const Placeholder: React.VoidFunctionComponent<{
   )
 }
 
-export const placeholderTypes = Object.keys(variants)
+export const placeholderTypes = Object.keys(variants) as PlaceholderVariant[]
 
 Placeholder.propTypes = {
   col: PropTypes.number,
   height: PropTypes.number,
   length: PropTypes.number,
-  variant: PropTypes.oneOf(placeholderTypes as [PlaceholderVariant]),
+  variant: PropTypes.oneOf(placeholderTypes),
   width: PropTypes.number,
 }
 

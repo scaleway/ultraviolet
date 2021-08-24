@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const variants = {
   beta: ({ theme: { colors } }: { theme: Theme }) => css`

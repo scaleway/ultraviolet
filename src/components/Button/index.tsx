@@ -14,7 +14,7 @@ import React, {
 } from 'react'
 import { Color } from '../../theme/colors'
 import ActivityIndicator from '../ActivityIndicator'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Icon, { IconName } from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
@@ -173,10 +173,10 @@ const variants = {
       hoverColor: 'warning',
       theme,
     }),
-}
+} as const
 
-export const buttonVariants = Object.keys(variants)
 type ButtonVariant = keyof typeof variants
+export const buttonVariants = Object.keys(variants) as ButtonVariant[]
 
 const sizes = {
   large: `
@@ -203,10 +203,10 @@ const sizes = {
   xxsmall: `
     font-size: 12px;
   `,
-}
+} as const
 
-export const buttonSizes = Object.keys(sizes)
 type ButtonSize = keyof typeof sizes
+export const buttonSizes = Object.keys(sizes) as ButtonSize[]
 
 const variantStyles = ({
   variant,

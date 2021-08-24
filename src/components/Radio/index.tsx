@@ -4,7 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, InputHTMLAttributes } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Icon from '../Icon'
 
 const StyledIcon = styled(Icon)``

@@ -40,17 +40,17 @@ const variants = {
   white: generateVariant('white'),
 }
 
-type Variants = keyof typeof variants
-export const linkVariants = Object.keys(variants) as Variants[]
+export type Variant = keyof typeof variants
+export const linkVariants = Object.keys(variants) as Variant[]
 
-const variantStyles = ({ variant }: { variant?: Variants }) =>
+const variantStyles = ({ variant }: { variant?: Variant }) =>
   variant && Object.keys(variants).includes(variant)
     ? variants[variant]
     : undefined
 
 type LinkProps = {
   children: ReactNode
-  variant?: Variants
+  variant?: Variant
   target?: string
 } & ComponentProps<typeof UniversalLink>
 
@@ -89,7 +89,7 @@ const Link: FunctionComponent<LinkProps> = ({
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   target: PropTypes.string,
-  variant: PropTypes.oneOf<Variants>(linkVariants),
+  variant: PropTypes.oneOf<Variant>(linkVariants),
 }
 
 export default Link

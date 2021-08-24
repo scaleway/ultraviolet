@@ -1,12 +1,7 @@
 import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  ReactElement,
-  ReactNode,
-  ReactNodeArray,
-} from 'react'
+import React, { FunctionComponent, ReactNodeArray } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -185,7 +180,7 @@ type CreationProgressProps = {
 }
 
 type CreationProgressComponent = FunctionComponent<CreationProgressProps> & {
-  Step: FunctionComponent<CreationProgressProps>
+  Step: FunctionComponent
 }
 
 const CreationProgress: CreationProgressComponent = ({
@@ -237,16 +232,7 @@ const CreationProgress: CreationProgressComponent = ({
             <StyledStepContainer>
               <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 
-              <StyledText>
-                {
-                  (
-                    child as ReactElement<{
-                      [x: string]: unknown
-                      children: ReactNode
-                    }>
-                  ).props.children
-                }
-              </StyledText>
+              <StyledText>{child}</StyledText>
             </StyledStepContainer>
 
             {isNotLast && (
@@ -259,7 +245,8 @@ const CreationProgress: CreationProgressComponent = ({
   )
 }
 
-const Step = () => null
+const Step: FunctionComponent = ({ children }) => children as JSX.Element
+
 CreationProgress.Step = Step
 CreationProgress.Step.displayName = 'CreationProgress.Step'
 

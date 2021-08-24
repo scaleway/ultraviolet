@@ -50,6 +50,12 @@ export type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
+declare module '@emotion/react' {
+  // https://emotion.sh/docs/typescript#define-a-theme
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends SCWUITheme {}
+}
+
 export default theme
 
 export { colors, space, radii, fonts, screens }

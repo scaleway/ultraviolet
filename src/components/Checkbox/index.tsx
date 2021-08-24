@@ -13,7 +13,7 @@ import {
   useCheckboxState,
 } from 'reakit/Checkbox'
 import ActivityIndicator from '../ActivityIndicator'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Typography, { typographyVariants } from '../Typography'

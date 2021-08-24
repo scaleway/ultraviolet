@@ -80,11 +80,11 @@ Bar.propTypes = {
 }
 
 type StateBarType = typeof Box & {
-  Bar?: typeof Bar
-  State?: typeof State
+  Bar: typeof Bar
+  State: typeof State
 }
 
-const StateBar: StateBarType = Box
+const StateBar: StateBarType = Box as StateBarType
 
 StateBar.Bar = Bar
 StateBar.State = State
