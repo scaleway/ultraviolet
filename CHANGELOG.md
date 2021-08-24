@@ -1,3 +1,10 @@
+### [0.102.2](https://github.com/scaleway/scaleway-ui/compare/v0.102.1...v0.102.2) (2021-08-24)
+
+
+### :bug: Bug Fixes
+
+* correct generated types + some tests ([#662](https://github.com/scaleway/scaleway-ui/issues/662)) ([f07cd07](https://github.com/scaleway/scaleway-ui/commit/f07cd07ae2dcde77e1bee12913446447c7037c8a))
+
 ### [0.102.1](https://github.com/scaleway/scaleway-ui/compare/v0.102.0...v0.102.1) (2021-08-24)
 
 
