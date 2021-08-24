@@ -93,9 +93,6 @@ const dataWithLegendsDetailsAndDiscount = [
 ]
 
 describe('Chart', () => {
-  test('renders correctly with no props', () =>
-    shouldMatchEmotionSnapshot(<Chart />))
-
   test('renders correctly with data', () =>
     shouldMatchEmotionSnapshot(<Chart data={data} />))
 
@@ -116,16 +113,18 @@ describe('Chart', () => {
     ))
 
   test('renders correctly with empty legend placeholder', () =>
-    shouldMatchEmotionSnapshot(<Chart hasLegend emptyLegend="I am a legend" />))
+    shouldMatchEmotionSnapshot(
+      <Chart data={[]} hasLegend emptyLegend="I am a legend" />,
+    ))
 
   test('renders correctly when chart is hovered', () =>
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-donut-${dataWithLegendsAndDetails[0].product}`
-          await userEvent.unhover(getByTestId(id))
-          await userEvent.hover(getByTestId(id))
+          userEvent.unhover(getByTestId(id))
+          userEvent.hover(getByTestId(id))
         },
       },
     ))
@@ -134,10 +133,10 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-chart-tooltip-${dataWithLegendsAndDetails[0].product}`
-          await userEvent.unhover(getByTestId(id))
-          await userEvent.hover(getByTestId(id))
+          userEvent.unhover(getByTestId(id))
+          userEvent.hover(getByTestId(id))
         },
       },
     ))
@@ -146,10 +145,10 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-chart-tooltip-${dataWithLegendsAndDetails[0].product}`
-          await fireEvent.blur(getByTestId(id))
-          await fireEvent.focus(getByTestId(id))
+          fireEvent.blur(getByTestId(id))
+          fireEvent.focus(getByTestId(id))
         },
       },
     ))
