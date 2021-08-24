@@ -2,7 +2,7 @@ import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
@@ -115,7 +115,7 @@ export type AlertProps = {
   icon?: IconName
   title?: string
   type?: AlertType
-}
+} & XStyledProps
 
 const Alert: FunctionComponent<AlertProps> = ({
   variant = 'standard',

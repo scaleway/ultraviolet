@@ -1,5 +1,5 @@
 import React from 'react'
-import Link, { linkVariants } from '..'
+import Link, { Variant, linkVariants } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
 describe('Link', () => {
@@ -11,7 +11,7 @@ describe('Link', () => {
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link to="/" variant={variant as keyof typeof linkVariants}>
+          <Link to="/" variant={variant as Variant}>
             Hello
           </Link>,
         ),

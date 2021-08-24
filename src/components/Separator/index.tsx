@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Icon, { IconName, icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'

@@ -77,8 +77,7 @@ type SanitizedAlertBarProps = {
   closeToast?: () => void
   toastProps?: Record<string, unknown>
   children?: ReactNode
-} & AlertProps &
-  XStyledProps
+} & AlertProps
 
 const SanitizedAlertBar: FunctionComponent<SanitizedAlertBarProps> = ({
   closeToast,
