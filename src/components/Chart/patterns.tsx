@@ -34,7 +34,9 @@ const discountDot = (color: string): SerializedStyles => css`
   );
 `
 
-export default {
+const patterns = {
   discount: DiscountPattern,
   'discount-dot': discountDot,
-}
+} as const
+
+export default patterns

@@ -5,6 +5,7 @@ import Breakpoint from '../../utils/responsive/Breakpoint'
 import Typography from '../Typography'
 import Donut from './Donut'
 import Legends from './Legends'
+import { Data } from './types'
 
 const variants = {
   donut: Donut,
@@ -22,42 +23,28 @@ const EmptyLegend = styled.div`
   margin-left: 20px;
 `
 
-type Details = {
-  name?: string | null,
-  value?: string | null
-}
-
-type Data = {
-  details?: Details[] | null,
-  color: string,
-  name?: string | null,
-  percent: number,
-  product: string,
-  value?: string | null
-}
-
 type ChartProps = {
-  chartId?: string,
+  chartId?: string
   /**
    * Content will be displayed in the center of the chart, it can be text, number or any other component.
    */
-  content?: React.ReactNode,
-  data?: Data[],
-  emptyLegend?: string,
-  hasLegend?: boolean,
+  content?: React.ReactNode
+  data: Data[]
+  emptyLegend?: string
+  hasLegend?: boolean
   variant?: Variants
-};
+}
 
 const Chart: VoidFunctionComponent<ChartProps> = ({
   chartId,
-  data = [],
+  data,
   content,
   emptyLegend,
   hasLegend = false,
-  variant = "donut"
+  variant = 'donut',
 }) => {
   const ChartVariant = variants[variant as Variants]
-  const [currentFocusIndex, setCurrentFocusIndex] = useState()
+  const [currentFocusIndex, setCurrentFocusIndex] = useState<number>()
 
   return (
     <Container>
@@ -95,18 +82,13 @@ Chart.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
-      details: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string,
-          value: PropTypes.string,
-        }).isRequired,
-      ),
       name: PropTypes.string,
+      needPattern: PropTypes.bool,
       percent: PropTypes.number.isRequired,
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
     }).isRequired,
-  ),
+  ).isRequired,
   emptyLegend: PropTypes.string,
   hasLegend: PropTypes.bool,
   variant: PropTypes.oneOf(['donut']),

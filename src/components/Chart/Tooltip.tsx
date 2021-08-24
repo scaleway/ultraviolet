@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
 import Typography from '../Typography'
+import { Data } from './types'
 
 const StyledList = styled.ul`
   padding: 0 8px 8px 8px;
@@ -24,18 +25,18 @@ const Space = styled.span`
 
 type TooltipProps = {
   data: {
-    details?: {
-      name?: string,
-      value?: string
-    }[],
-    name?: string,
-    value?: string
+    name?: string | null
+    value?: string | null
+    details?:
+      | {
+          name?: string | null
+          value?: string | null
+        }[]
+      | null
   }
-};
+}
 
-const Tooltip: VoidFunctionComponent<TooltipProps> = ({
-  data
-}) => (
+const Tooltip: VoidFunctionComponent<TooltipProps> = ({ data }) => (
   <div tabIndex={-1} role="tooltip">
     <StyledList>
       <StyledItem>
@@ -65,7 +66,7 @@ Tooltip.propTypes = {
       PropTypes.shape({
         name: PropTypes.string,
         value: PropTypes.string,
-      }),
+      }).isRequired,
     ),
     name: PropTypes.string,
     value: PropTypes.string,
