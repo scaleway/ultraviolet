@@ -1,3 +1,10 @@
+## [0.103.0](https://github.com/scaleway/scaleway-ui/compare/v0.102.2...v0.103.0) (2021-08-24)
+
+
+### :gear: Features
+
+* correct es module tree shaking by preserving modules on output ([#654](https://github.com/scaleway/scaleway-ui/issues/654)) ([69bc517](https://github.com/scaleway/scaleway-ui/commit/69bc51781ab88abcc927cd2ba7894961d77bd1be))
+
 ### [0.102.2](https://github.com/scaleway/scaleway-ui/compare/v0.102.1...v0.102.2) (2021-08-24)
 
 
