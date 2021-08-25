@@ -103,7 +103,7 @@ type DonutProps = {
   data: Data[]
   focused?: number
   height?: number
-  onFocusChange(...args: unknown[]): unknown
+  onFocusChange(index?: number): void
   width?: number
 }
 
