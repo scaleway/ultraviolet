@@ -100,7 +100,7 @@ const StyledContent = styled.div`
 type DonutProps = {
   chartId?: string
   content?: React.ReactNode
-  data: Data[]
+  data?: Data[]
   focused?: number
   height?: number
   onFocusChange(index?: number): void
@@ -121,7 +121,7 @@ const Donut: VoidFunctionComponent<DonutProps> = ({
   if (!fillMustBeAnimated) {
     previousSegmentLength.current = 0
   }
-  const patterns = data.map((item: Data) =>
+  const patterns = data?.map((item: Data) =>
     item.needPattern
       ? patternVariants[item.product as keyof typeof patternVariants]?.(
           item.color,
@@ -144,7 +144,7 @@ const Donut: VoidFunctionComponent<DonutProps> = ({
         />
 
         {/* Colored Segmented circles */}
-        {data.map((item, index) => {
+        {data?.map((item, index) => {
           const isFocused = focused !== undefined && index === focused
           const segmentValueFromPercent = getValueFromPercent(item.percent)
           const sumPreviousValues = previousSegmentLength.current || 0
@@ -193,7 +193,7 @@ Donut.propTypes = {
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
     }).isRequired,
-  ).isRequired,
+  ),
   focused: PropTypes.number,
   height: PropTypes.number,
   onFocusChange: PropTypes.func.isRequired,

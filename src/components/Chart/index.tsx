@@ -29,7 +29,7 @@ type ChartProps = {
    * Content will be displayed in the center of the chart, it can be text, number or any other component.
    */
   content?: React.ReactNode
-  data: Data[]
+  data?: Data[]
   emptyLegend?: string
   hasLegend?: boolean
   variant?: Variants
@@ -58,7 +58,7 @@ const Chart: VoidFunctionComponent<ChartProps> = ({
         />
       </Breakpoint>
       {hasLegend &&
-        (!data.length ? (
+        (!data?.length ? (
           emptyLegend && (
             <EmptyLegend>
               <Typography variant="bodyA">{emptyLegend}</Typography>
@@ -88,7 +88,7 @@ Chart.propTypes = {
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
     }).isRequired,
-  ).isRequired,
+  ),
   emptyLegend: PropTypes.string,
   hasLegend: PropTypes.bool,
   variant: PropTypes.oneOf(['donut']),

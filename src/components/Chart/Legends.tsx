@@ -113,7 +113,7 @@ const ProgressiveLine = styled.span<{ isFocused: boolean }>`
 
 type LegendsProps = {
   chartId?: string
-  data: Data[]
+  data?: Data[]
   focused?: number
   onFocusChange(...args: unknown[]): unknown
 }
@@ -125,7 +125,7 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
   chartId,
 }) => (
   <List>
-    {data.map((item, index) => {
+    {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && index === focused
 
       const id = `${chartId ? `${chartId}-` : ''}chart-tooltip-${item.product}`
@@ -182,7 +182,7 @@ Legends.propTypes = {
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
     }).isRequired,
-  ).isRequired,
+  ),
   focused: PropTypes.number,
   onFocusChange: PropTypes.func.isRequired,
 }
