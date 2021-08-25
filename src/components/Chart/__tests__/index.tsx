@@ -93,6 +93,9 @@ const dataWithLegendsDetailsAndDiscount = [
 ]
 
 describe('Chart', () => {
+  test('renders correctly with no props', () =>
+    shouldMatchEmotionSnapshot(<Chart />))
+
   test('renders correctly with data', () =>
     shouldMatchEmotionSnapshot(<Chart data={data} />))
 
@@ -113,9 +116,7 @@ describe('Chart', () => {
     ))
 
   test('renders correctly with empty legend placeholder', () =>
-    shouldMatchEmotionSnapshot(
-      <Chart data={[]} hasLegend emptyLegend="I am a legend" />,
-    ))
+    shouldMatchEmotionSnapshot(<Chart hasLegend emptyLegend="I am a legend" />))
 
   test('renders correctly when chart is hovered', () =>
     shouldMatchEmotionSnapshot(

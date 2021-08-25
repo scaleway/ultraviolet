@@ -2403,3 +2403,72 @@ exports[`Chart renders correctly with legend 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Chart renders correctly with no props 1`] = `
+<DocumentFragment>
+  .cache-zjik7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1pk1k4u {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .cache-1pk1k4u {
+    display: block;
+  }
+}
+
+.cache-jvd5z6.cache-jvd5z6 {
+  width: 206px;
+  height: 206px;
+  position: relative;
+}
+
+.cache-18kvg86 {
+  transform-origin: 50% 50%;
+  -webkit-transition: stroke-width 500ms ease;
+  transition: stroke-width 500ms ease;
+  stroke: #dce1eb;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+  cursor: pointer;
+  stroke-dasharray: 566 566 10 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+<div
+    class="cache-zjik7 emdn0ly1"
+  >
+    <div
+      class="cache-1pk1k4u e18983st0"
+    >
+      <div
+        class="cache-jvd5z6 e7ah3bn0"
+      >
+        <svg
+          style="height: 206px; transform: rotate(-90deg); width: 206px;"
+        >
+          <defs />
+          <circle
+            class="cache-18kvg86 e1tz6nb31"
+            color="gray300"
+            cx="103"
+            cy="103"
+            r="90"
+            style="cursor: default;"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
