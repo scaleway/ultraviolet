@@ -17,12 +17,17 @@ export interface XStyledProps {
   alignSelf?: string
   as?: string | React.ElementType<unknown>
   backgroundColor?: string
+  borderRadius?: string | number
+  boxShadow?: string
   color?: string
   display?: string
+  flexWrap?: string
   fontSize?: number
   fontWeight?: number
   justifyContent?: string
   lineHeight?: string | number
+  maxWidth?: string | number
+  m?: string | number
   mb?: string | number
   ml?: string | number
   mr?: string | number
