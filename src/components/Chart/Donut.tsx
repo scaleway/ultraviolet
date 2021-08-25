@@ -10,8 +10,8 @@ import { Data } from './types'
 const CIRCUM = 566
 
 const fillAndRotateCircleAnim = (
-  lengthSegment?: number,
-  rotationSegment?: number,
+  lengthSegment = CIRCUM,
+  rotationSegment = 0,
 ) => keyframes`
   from {
     stroke-dasharray: 3 ${CIRCUM} 10 0;

@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
 import Typography from '../Typography'
-import { Data } from './types'
 
 const StyledList = styled.ul`
   padding: 0 8px 8px 8px;

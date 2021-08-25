@@ -140,9 +140,9 @@ type StepperProps = {
   maxValue?: number
   minValue?: number
   name?: string
-  onChange?(data: unknown): void
-  onMaxCrossed?(...args: unknown[]): unknown
-  onMinCrossed?(...args: unknown[]): unknown
+  onChange?(input: number): void
+  onMaxCrossed?(): void
+  onMinCrossed?(): void
   size?: ContainerSizesType
   step?: number
   text?: string
