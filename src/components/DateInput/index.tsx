@@ -1,8 +1,11 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
-import DatePicker, { registerLocale } from 'react-datepicker'
+import React, { VoidFunctionComponent } from 'react'
+import DatePicker, {
+  ReactDatePickerProps,
+  registerLocale,
+} from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import Box from '../Box'
 import Icon from '../Icon'
@@ -117,12 +120,18 @@ const TopHeaderDiv = styled.div`
   display: inline-block;
   background-color: ${({ theme: { colors } }) => colors.white};
 `
+type DateInputProps = Omit<ReactDatePickerProps, 'value'> & {
+  error?: string
+  format?: (value?: Date | string) => string | undefined
+  label?: string
+  value?: Date | string
+}
 
-const DateInput = ({
-  autoFocus,
-  disabled,
+const DateInput: VoidFunctionComponent<DateInputProps> = ({
+  autoFocus = false,
+  disabled = false,
   error,
-  format,
+  format = value => (value instanceof Date ? value?.toISOString() : value),
   label,
   locale,
   maxDate,
@@ -131,11 +140,14 @@ const DateInput = ({
   onBlur,
   onChange,
   onFocus,
-  required,
+  required = false,
   value,
 }) => {
-  if (locale) {
-    registerLocale(locale?.code, locale)
+  const localeCode =
+    (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
+
+  if (typeof locale === 'object') {
+    registerLocale(localeCode, locale)
   }
 
   return (
@@ -146,11 +158,11 @@ const DateInput = ({
           autoFocus={autoFocus}
           fixedHeight
           name={name}
-          locale={locale?.code || 'en-GB'}
+          locale={localeCode}
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
-          selected={value}
+          selected={value ? new Date(value) : undefined}
           customInput={
             <div>
               <TextBox
@@ -194,7 +206,7 @@ const DateInput = ({
             <>
               <TopHeaderDiv>
                 <Typography variant="bodyA" mr={1} textTransform="capitalize">
-                  {new Date(date).toLocaleString(locale?.code || 'en-GB', {
+                  {new Date(date).toLocaleString(localeCode, {
                     month: 'long',
                     year: 'numeric',
                   })}
@@ -230,7 +242,7 @@ DateInput.propTypes = {
    */
   autoFocus: PropTypes.bool,
   disabled: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.string,
   /**
    *
    */
@@ -242,9 +254,12 @@ DateInput.propTypes = {
   /**
    * Locale provided by `date-fns/locales` package
    */
-  locale: PropTypes.shape({
-    code: PropTypes.string,
-  }),
+  locale: PropTypes.oneOfType([
+    PropTypes.shape({
+      code: PropTypes.string.isRequired,
+    }),
+    PropTypes.string,
+  ]),
   /**
    * Max date that are allowed
    */
@@ -258,27 +273,10 @@ DateInput.propTypes = {
    */
   name: PropTypes.string,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
   required: PropTypes.bool,
-  value: PropTypes.instanceOf(Date),
-}
-
-DateInput.defaultProps = {
-  autoFocus: false,
-  disabled: false,
-  error: false,
-  format: value => value?.toISOString(),
-  label: undefined,
-  locale: undefined,
-  maxDate: undefined,
-  minDate: undefined,
-  name: undefined,
-  onBlur: () => {},
-  onChange: () => {},
-  onFocus: () => {},
-  required: false,
-  value: undefined,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
 }
 
 export default DateInput

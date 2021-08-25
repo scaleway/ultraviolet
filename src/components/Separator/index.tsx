@@ -7,9 +7,13 @@ import Icon, { IconName, icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
+type SytledIconProps = {
+  direction: Direction
+} & XStyledProps
+
 const StyledIcon = styled(Box, {
   shouldForwardProp: prop => !['direction'].includes(prop.toString()),
-})<{ direction: Direction }>`
+})<SytledIconProps>`
   display: flex;
   flex-direction: ${({ direction }) =>
     direction === 'vertical' ? 'column' : 'row'};
@@ -40,7 +44,7 @@ const StyledHr = styled(Box.withComponent('hr'), {
 `
 
 const Separator: FunctionComponent<
-  HorizontalSeparatorProps & { icon?: IconName }
+  HorizontalSeparatorProps & XStyledProps & { icon?: IconName }
 > = ({
   direction = 'horizontal',
   thickness = 1,
