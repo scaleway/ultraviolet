@@ -470,7 +470,7 @@ FwdButton.propTypes = {
    * Use this properties to associate ref to button component.
    */
   progress: PropTypes.oneOf([true, false, 'left', 'right']),
-  size: PropTypes.oneOf(buttonSizes as [ButtonSize]),
+  size: PropTypes.oneOf<ButtonSize>(buttonSizes),
   to: PropTypes.string,
   tooltip: PropTypes.string,
   tooltipBaseId: PropTypes.string,
