@@ -146,6 +146,7 @@ type StepperProps = {
   size?: ContainerSizesType
   step?: number
   text?: string
+  value?: string | number
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
 const Stepper: VoidFunctionComponent<StepperProps> = ({
@@ -167,7 +168,7 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
   const [inputValue, setInputValue] = useState(
-    parseIntOr(value as string, minValue),
+    typeof value === 'number' ? value : parseIntOr(value, minValue),
   )
 
   useEffect(() => {
@@ -247,7 +248,6 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
       <StyledTouchable
         onClick={offsetFn(-1)}
         size={size}
-        position="left"
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
@@ -285,7 +285,6 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
       </StyledCenterTouchable>
 
       <StyledTouchable
-        position="right"
         size={size}
         onClick={offsetFn(1)}
         disabled={isPlusDisabled}
