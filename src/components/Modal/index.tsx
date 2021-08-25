@@ -1,12 +1,22 @@
-import { css } from '@emotion/react'
+import { Interpolation, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { memo, useEffect, useRef } from 'react'
+import React, {
+  FunctionComponent,
+  ReactElement,
+  VoidFunctionComponent,
+  memo,
+  useEffect,
+  useRef,
+} from 'react'
 import {
   Dialog,
   DialogBackdrop,
   DialogDisclosure,
+  DialogProps,
+  DialogState,
+  DialogStateReturn,
   useDialogState,
 } from 'reakit/Dialog'
 import * as animations from '../../utils'
@@ -20,6 +30,8 @@ export const MODAL_WIDTH = {
   xsmall: 400,
   xxsmall: 360,
 }
+
+type ModalWidth = keyof typeof MODAL_WIDTH
 
 export const MODAL_PLACEMENT = {
   bottom: `
@@ -63,6 +75,8 @@ export const MODAL_PLACEMENT = {
   `,
 }
 
+type ModalPlacement = keyof typeof MODAL_PLACEMENT
+
 export const MODAL_ANIMATION = {
   fold: {
     enter: animations.unfoldIn,
@@ -102,6 +116,8 @@ export const MODAL_ANIMATION = {
   },
 }
 
+type ModalAnimation = keyof typeof MODAL_ANIMATION
+
 const backdropAnimatedStyle = `
   opacity: 0;
   transition: opacity 250ms ease-in-out;
@@ -115,7 +131,11 @@ const backdropAnimatedStyle = `
   }
 `
 
-const dialogAnimatedStyle = ({ animation }) => css`
+const dialogAnimatedStyle = ({
+  animation,
+}: {
+  animation: ModalAnimation
+}) => css`
   opacity: 0;
   &[data-enter] {
     opacity: 1;
@@ -131,22 +151,33 @@ const dialogAnimatedStyle = ({ animation }) => css`
   }
 `
 
-const Disclosure = memo(({ disclosure, dialog }) => {
-  const innerRef = useRef(disclosure(dialog))
+type DisclosureProps = {
+  disclosure: (dialog?: Partial<DialogStateReturn>) => ReactElement
+  dialog: Partial<DialogStateReturn>
+}
+const Disclosure: VoidFunctionComponent<DisclosureProps> = ({
+  disclosure,
+  dialog,
+}) => {
+  const innerRef = useRef(
+    disclosure(dialog),
+  ) as unknown as React.RefObject<HTMLButtonElement>
 
   return (
-    <DialogDisclosure {...dialog} ref={innerRef} {...disclosure.props}>
+    <DialogDisclosure {...dialog} ref={innerRef}>
       {disclosureProps =>
         React.cloneElement(disclosure(dialog), disclosureProps)
       }
     </DialogDisclosure>
   )
-})
+}
 
 Disclosure.propTypes = {
   dialog: PropTypes.shape({}).isRequired,
   disclosure: PropTypes.func.isRequired,
 }
+
+const MemoDisclosure = memo(Disclosure)
 
 const StyledDialogBackdrop = styled(DialogBackdrop)`
   display: flex;
@@ -163,10 +194,20 @@ const StyledDialogBackdrop = styled(DialogBackdrop)`
   ${({ animated }) => animated && backdropAnimatedStyle}
 `
 
+type StyledDialogProps = {
+  animation: ModalAnimation
+  placement: ModalPlacement
+  bordered: boolean
+  width: ModalWidth
+  height: string
+}
+
 const StyledDialog = styled(Dialog, {
-  shouldForwardProp: prop =>
-    !['animation', 'placement', 'width', 'height', 'bordered'].includes(prop),
-})`
+  shouldForwardProp: props =>
+    !['animation', 'placement', 'width', 'height', 'bordered'].includes(
+      props.toString(),
+    ),
+})<StyledDialogProps>`
   background-color: ${({ theme }) => theme.colors.white};
   position: relative;
   border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
@@ -197,85 +238,98 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-const MemoModal = memo(
-  ({
+type ModalProps = Partial<DialogProps> &
+  Partial<DialogState> & {
+    animation?: ModalAnimation
+    ariaLabel?: string
+    bordered?: boolean
+    customDialogBackdropStyles?: Interpolation<Theme>
+    customDialogStyles?: Interpolation<Theme>
+    disclosure?: (dialog?: Partial<DialogStateReturn>) => ReactElement
+    height?: string
+    isClosable?: boolean
+    modal?: boolean
+    onClose?: () => void
+    opened?: boolean
+    placement?: ModalPlacement
+    width?: ModalWidth
+  }
+
+const Modal: FunctionComponent<ModalProps> = ({
+  animated = false,
+  animation = 'zoom',
+  ariaLabel = 'modal',
+  baseId = 'modal',
+  bordered = true,
+  children,
+  customDialogBackdropStyles = {},
+  customDialogStyles = {},
+  disclosure,
+  height = 'initial',
+  hideOnClickOutside = true,
+  hideOnEsc = true,
+  isClosable = true,
+  modal = true,
+  onClose,
+  opened = false,
+  placement = 'center',
+  preventBodyScroll = true,
+  width = 'small',
+}) => {
+  const dialog = useDialogState({
     animated,
-    animation,
-    ariaLabel,
     baseId,
-    bordered,
-    children,
-    customDialogBackdropStyles,
-    customDialogStyles,
-    disclosure,
-    height,
-    hideOnClickOutside,
-    hideOnEsc,
-    isClosable,
     modal,
-    onClose,
-    opened,
-    placement,
-    preventBodyScroll,
-    width,
-  }) => {
-    const dialog = useDialogState({
-      animated,
-      baseId,
-      modal,
-      visible: opened,
-    })
+    visible: opened,
+  })
 
-    const { setVisible } = dialog
-    useEffect(() => setVisible(opened), [setVisible, opened])
+  const { setVisible } = dialog
+  useEffect(() => setVisible(opened), [setVisible, opened])
 
-    return (
-      <>
-        {disclosure && <Disclosure dialog={dialog} disclosure={disclosure} />}
-        <StyledDialogBackdrop {...dialog} css={[customDialogBackdropStyles]}>
-          <StyledDialog
-            aria-label={ariaLabel}
-            role="dialog"
-            animation={animation}
-            bordered={bordered}
-            height={height}
-            placement={placement}
-            width={width}
-            css={[customDialogStyles]}
-            hideOnClickOutside={hideOnClickOutside}
-            hideOnEsc={hideOnEsc}
-            preventBodyScroll={preventBodyScroll}
-            {...dialog}
-            hide={onClose || dialog.toggle}
-          >
-            <>
-              <StyledContainer>
-                {isClosable && (
-                  <Touchable
-                    onClick={onClose || dialog.toggle}
-                    alignSelf="center"
-                    title="close"
-                    mb={0}
-                  >
-                    <Icon name="close" size={20} color="gray550" />
-                  </Touchable>
-                )}
-              </StyledContainer>
-              {dialog.visible &&
-                (typeof children === 'function' ? children(dialog) : children)}
-            </>
-          </StyledDialog>
-        </StyledDialogBackdrop>
-      </>
-    )
-  },
-)
+  return (
+    <>
+      {disclosure && <MemoDisclosure dialog={dialog} disclosure={disclosure} />}
+      <StyledDialogBackdrop {...dialog} css={[customDialogBackdropStyles]}>
+        <StyledDialog
+          aria-label={ariaLabel}
+          role="dialog"
+          animation={animation}
+          bordered={bordered}
+          height={height}
+          placement={placement}
+          width={width}
+          css={[customDialogStyles]}
+          hideOnClickOutside={hideOnClickOutside}
+          hideOnEsc={hideOnEsc}
+          preventBodyScroll={preventBodyScroll}
+          {...dialog}
+          hide={onClose || dialog.toggle}
+        >
+          <>
+            <StyledContainer>
+              {isClosable && (
+                <Touchable
+                  onClick={onClose || dialog.toggle}
+                  alignSelf="center"
+                  title="close"
+                  mb={0}
+                >
+                  <Icon name="close" size={20} color="gray550" />
+                </Touchable>
+              )}
+            </StyledContainer>
+            {dialog.visible &&
+              (typeof children === 'function' ? children(dialog) : children)}
+          </>
+        </StyledDialog>
+      </StyledDialogBackdrop>
+    </>
+  )
+}
 
-const Modal = props => <MemoModal {...props} />
-
-const modalPropTypes = {
+Modal.propTypes = {
   animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-  animation: PropTypes.oneOf(Object.keys(MODAL_ANIMATION)),
+  animation: PropTypes.oneOf(Object.keys(MODAL_ANIMATION) as ModalAnimation[]),
   ariaLabel: PropTypes.string,
   baseId: PropTypes.string,
   bordered: PropTypes.bool,
@@ -290,36 +344,9 @@ const modalPropTypes = {
   modal: PropTypes.bool,
   onClose: PropTypes.func,
   opened: PropTypes.bool,
-  placement: PropTypes.oneOf(Object.keys(MODAL_PLACEMENT)),
+  placement: PropTypes.oneOf(Object.keys(MODAL_PLACEMENT) as ModalPlacement[]),
   preventBodyScroll: PropTypes.bool,
-  width: PropTypes.oneOf(Object.keys(MODAL_WIDTH)),
+  width: PropTypes.oneOf(Object.keys(MODAL_WIDTH) as ModalWidth[]),
 }
 
-const defaultModalProp = {
-  animated: false,
-  animation: 'zoom',
-  ariaLabel: 'modal',
-  baseId: 'modal',
-  bordered: true,
-  customDialogBackdropStyles: {},
-  customDialogStyles: {},
-  disclosure: undefined,
-  height: 'initial',
-  hideOnClickOutside: true,
-  hideOnEsc: true,
-  isClosable: true,
-  modal: true,
-  onClose: undefined,
-  opened: false,
-  placement: 'center',
-  preventBodyScroll: true,
-  width: 'small',
-}
-
-Modal.propTypes = modalPropTypes
-MemoModal.propTypes = modalPropTypes
-
-Modal.defaultProps = defaultModalProp
-MemoModal.defaultProps = defaultModalProp
-
-export default Modal
+export default memo(Modal)
