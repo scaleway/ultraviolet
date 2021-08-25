@@ -24,8 +24,8 @@ const fillAndRotateCircleAnim = (
 `
 
 const circleFill = ({
-  lengthSegment,
-  rotationSegment,
+  lengthSegment = CIRCUM,
+  rotationSegment = 0,
   fillMustBeAnimated = false,
 }: {
   lengthSegment?: number
