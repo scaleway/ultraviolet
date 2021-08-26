@@ -115,7 +115,7 @@ type LegendsProps = {
   chartId?: string
   data?: Data[]
   focused?: number
-  onFocusChange(...args: unknown[]): unknown
+  onFocusChange(index?: number): void
 }
 
 const Legends: VoidFunctionComponent<LegendsProps> = ({
