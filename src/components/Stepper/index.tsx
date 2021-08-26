@@ -180,11 +180,7 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   const offsetFn = (direction: number) => () => {
     setInputValue(currentValue => {
       const newValue = currentValue + step * direction
-      const boundedValue = bounded(
-        newValue,
-        parseInt(minValue.toString(), 10),
-        parseInt(maxValue.toString(), 10),
-      )
+      const boundedValue = bounded(newValue, minValue, maxValue)
 
       return boundedValue
     })
