@@ -1,13 +1,10 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
-import Button from '../Button'
+import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
+import Button, { ButtonProps } from '../Button'
 
-const styles = {
-  borderless: css`
-    border: 0;
-  `,
-  danger: theme => css`
+const variantStyle = {
+  danger: (theme: Theme) => css`
     display: inline-block;
     color: ${theme.colors.red};
     &:hover,
@@ -21,7 +18,25 @@ const styles = {
       fill: ${theme.colors.red};
     }
   `,
-  disabled: theme => css`
+  nav: (theme: Theme) => css`
+    font-size: 16px;
+    line-height: 24px;
+    color: ${theme.colors.gray550};
+    &:hover,
+    &:focus {
+      color: ${theme.colors.primary};
+      svg {
+        fill: ${theme.colors.primary};
+      }
+    }
+  `,
+} as const
+
+const styles = {
+  borderless: css`
+    border: 0;
+  `,
+  disabled: (theme: Theme) => css`
     cursor: not-allowed;
     color: ${theme.colors.gray350};
 
@@ -34,7 +49,7 @@ const styles = {
       }
     }
   `,
-  item: theme => css`
+  item: (theme: Theme) => css`
     display: block;
     font-size: 14px;
     line-height: 22px;
@@ -61,22 +76,22 @@ const styles = {
       border-radius: 0 0 4px 4px;
     }
   `,
+} as const
 
-  nav: theme => css`
-    font-size: 16px;
-    line-height: 24px;
-    color: ${theme.colors.gray550};
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary};
-      svg {
-        fill: ${theme.colors.primary};
-      }
-    }
-  `,
+type VariantItem = keyof typeof variantStyle
+
+type ItemProps = Omit<ButtonProps, 'variant' | 'innerRef'> & {
+  borderless?: boolean
+  variant?: VariantItem
 }
 
-const Item = ({ borderless, disabled, onClick, variant, ...props }) => (
+const Item: FunctionComponent<ItemProps> = ({
+  borderless = false,
+  disabled = false,
+  onClick,
+  variant,
+  ...props
+}) => (
   <Button
     variant="transparent"
     role="menuitem"
@@ -85,7 +100,8 @@ const Item = ({ borderless, disabled, onClick, variant, ...props }) => (
     {...props}
     css={[
       styles.item,
-      styles[disabled ? 'disabled' : variant],
+      variant && variantStyle[variant],
+      disabled && styles.disabled,
       borderless && styles.borderless,
     ]}
   />
@@ -93,17 +109,9 @@ const Item = ({ borderless, disabled, onClick, variant, ...props }) => (
 
 Item.propTypes = {
   borderless: PropTypes.bool,
-  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   variant: PropTypes.oneOf(['danger', 'nav']),
-}
-
-Item.defaultProps = {
-  borderless: false,
-  disabled: false,
-  onClick: undefined,
-  variant: undefined,
 }
 
 export default Item

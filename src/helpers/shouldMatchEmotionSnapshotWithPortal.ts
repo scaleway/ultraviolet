@@ -22,7 +22,7 @@ export default async (
 ): Promise<void> => {
   // Save the instance of console (disable warning about adding element directly to document.body which is necessary when testing portal components)
   const { console } = global
-  global.console = { error: jest.fn() }
+  global.console = { ...console, error: jest.fn() }
 
   const node = renderWithTheme(
     component,

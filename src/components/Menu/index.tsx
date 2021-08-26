@@ -1,11 +1,11 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React from 'react'
-import Popper from '../Popper'
+import React, { FunctionComponent, ReactNode } from 'react'
+import Popper, { PopperProps } from '../Popper'
 import Item from './Item'
 
-const bottomStyles = theme => css`
+const bottomStyles = (theme: Theme) => css`
   box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.shadow)};
   &:after,
   &:before {
@@ -18,7 +18,7 @@ const bottomStyles = theme => css`
     border-bottom-color: rgba(165, 165, 205, 0.4);
   }
 `
-const topStyles = theme => css`
+const topStyles = (theme: Theme) => css`
   box-shadow: 0 1px 5px 3px ${transparentize(0.85, theme.colors.shadow)};
   &:after,
   &:before {
@@ -61,43 +61,52 @@ const centerStyles = css`
 `
 
 const arrowPlacementStyles = {
-  bottom: theme => css`
+  bottom: (theme: Theme) => css`
     ${centerStyles};
     ${bottomStyles(theme)};
   `,
-  'bottom-end': theme => css`
+  'bottom-end': (theme: Theme) => css`
     ${endStyles};
     ${bottomStyles(theme)};
   `,
-  'bottom-start': theme => css`
+  'bottom-start': (theme: Theme) => css`
     ${startStyles};
     ${bottomStyles(theme)};
   `,
-  top: theme => css`
+  top: (theme: Theme) => css`
     ${centerStyles};
     ${topStyles(theme)};
   `,
-  'top-end': theme => css`
+  'top-end': (theme: Theme) => css`
     ${endStyles};
     ${topStyles(theme)};
   `,
-  'top-start': theme => css`
+  'top-start': (theme: Theme) => css`
     ${startStyles};
     ${topStyles(theme)};
   `,
+} as const
+
+type ArrowPlacement = keyof typeof arrowPlacementStyles
+
+export const arrowPlacements = Object.keys(
+  arrowPlacementStyles,
+) as ArrowPlacement[]
+
+type AlignStyle = {
+  left?: string | null
+  right?: string | null
 }
 
-export const arrowPlacements = Object.keys(arrowPlacementStyles)
-
 const styles = {
-  align: align => css`
+  align: (align: AlignStyle) => css`
     &:after,
     &:before {
       left: ${align.left};
       right: ${align.right};
     }
   `,
-  menu: theme => css`
+  menu: (theme: Theme) => css`
     background-color: ${theme.colors.white};
     display: flex;
     flex-direction: column;
@@ -127,16 +136,30 @@ const styles = {
   `,
 }
 
-const Menu = ({
-  align,
-  baseId,
+interface ChildrenProps {
+  placement: PopperProps['placement']
+  toggle: () => void
+}
+
+export type MenuProps = Omit<PopperProps, 'children'> & {
+  align?: AlignStyle
+  ariaLabel?: string
+  placement?: ArrowPlacement
+  children?: ((props: ChildrenProps) => ReactNode) | ReactNode
+}
+
+type MenuType = FunctionComponent<MenuProps> & { Item: typeof Item }
+
+const Menu: MenuType = ({
+  align = { left: '50%', right: 'inherit' },
+  ariaLabel = 'menu',
+  baseId = '',
   children,
-  ariaLabel,
-  modal,
-  hasArrow,
-  name,
-  placement,
   disclosure,
+  hasArrow = true,
+  modal = false,
+  name = 'menu',
+  placement = 'bottom',
 }) => (
   <Popper
     aria-label={ariaLabel}
@@ -152,7 +175,7 @@ const Menu = ({
         role="menu"
         css={[
           styles.menu,
-          hasArrow && arrowPlacementStyles[localPlacement],
+          hasArrow && arrowPlacementStyles[localPlacement as ArrowPlacement],
           styles.align(align),
         ]}
       >
@@ -163,16 +186,6 @@ const Menu = ({
     )}
   </Popper>
 )
-
-Menu.defaultProps = {
-  align: { left: '50%', right: 'inherit' },
-  ariaLabel: 'menu',
-  baseId: '',
-  hasArrow: true,
-  modal: false,
-  name: 'menu',
-  placement: 'bottom',
-}
 
 Menu.propTypes = {
   align: PropTypes.shape({
@@ -186,7 +199,7 @@ Menu.propTypes = {
   hasArrow: PropTypes.bool,
   modal: PropTypes.bool,
   name: PropTypes.string,
-  placement: PropTypes.oneOf(arrowPlacements),
+  placement: PropTypes.oneOf<ArrowPlacement>(arrowPlacements),
 }
 
 Menu.Item = Item

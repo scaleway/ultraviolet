@@ -1,12 +1,16 @@
 import React from 'react'
-import Popper from '..'
+import Popper, { popperVariants } from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 describe('Popper', () => {
-  // portals are not supported in test
   test(`renders with modal=false`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Popper aria-label="test" modal={false} baseId="popover-test-1">
+      <Popper
+        aria-label="test"
+        modal={false}
+        baseId="popover-test-1"
+        disclosure={() => <button type="button">modal=false</button>}
+      >
         {() => <div>test</div>}
       </Popper>,
     ))
@@ -23,4 +27,17 @@ describe('Popper', () => {
         {({ placement }) => <div> {placement}</div>}
       </Popper>,
     ))
+
+  test.each(popperVariants)('renders correctly with type="%s"', variant =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Popper
+        aria-label={variant}
+        variant={variant}
+        baseId={`popover-test-${variant}`}
+        disclosure={() => <button type="button">{variant}</button>}
+      >
+        {() => <div>{variant}</div>}
+      </Popper>,
+    ),
+  )
 })
