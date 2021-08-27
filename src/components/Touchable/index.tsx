@@ -8,7 +8,7 @@ import React, {
   ReactNode,
   forwardRef,
 } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const styles = {
   actionable: css`
@@ -41,7 +41,8 @@ type TouchableProps = {
 } & (
   | ButtonHTMLAttributes<HTMLButtonElement>
   | InputHTMLAttributes<HTMLInputElement>
-)
+) &
+  XStyledProps
 
 const Touchable = forwardRef<Element, TouchableProps>(
   (
