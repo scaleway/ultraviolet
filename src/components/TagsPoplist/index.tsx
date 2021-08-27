@@ -1,7 +1,7 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import {
   Tooltip,
   TooltipArrow,
@@ -12,7 +12,7 @@ import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
 
-const textStyle = maxTagWidth => css`
+const textStyle = (maxTagWidth: number) => css`
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: ${maxTagWidth}px;
@@ -29,13 +29,27 @@ const StyledTooltipReference = styled(TooltipReference)`
   white-space: pre;
   text-overflow: ellipsis;
   background-color: transparent;
+  padding-left: 8px;
+  padding-right: 8px;
 `
+type TagsPoplistProps = {
+  maxLength?: number
+  maxTagWidth?: number
+  tags?: string[]
+  threshold?: number
+}
 
-const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
+const TagsPoplist: FunctionComponent<TagsPoplistProps> = ({
+  maxLength = 600,
+  maxTagWidth = 115,
+  tags = [],
+  threshold = 1,
+  ...props
+}) => {
   const theme = useTheme()
   let tmpThreshold = threshold
   if (
-    tags.length &&
+    tags?.length > 0 &&
     tags.slice(0, tmpThreshold).reduce((_, tag) => _ + tag).length > maxLength
   ) {
     // If total tags length in characters is above maxLength,
@@ -54,12 +68,13 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
   return (
     <FlexBox>
       <Box display="flex" alignItems="center" color="gray700" {...props}>
-        {tags.slice(0, visibleTagsCount).map((tag, i) => (
+        {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
+            // useful when two tags are identical `${tag}-${index}`
             // eslint-disable-next-line react/no-array-index-key
-            key={`${tag}-${i}`}
+            key={`${tag}-${index}`}
             textStyle={textStyle(maxTagWidth)}
-            mr={i + 1 !== visibleTagsCount ? 1 : 0}
+            mr={index + 1 !== visibleTagsCount ? 1 : 0}
           >
             {tag}
           </Tag>
@@ -67,7 +82,7 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
       </Box>
       {hasManyTags && (
         <>
-          <StyledTooltipReference {...tooltip} as={Box} px={1}>
+          <StyledTooltipReference {...tooltip}>
             +{tags.length - tmpThreshold}
           </StyledTooltipReference>
           <Tooltip {...tooltip}>
@@ -81,14 +96,18 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
               py="4px"
               display="flex"
               alignItems="center"
-              backgroundColor="white"
-              borderRadius="4px"
+              backgroundColor={theme.colors.white}
+              borderRadius={theme.radii.default}
               maxWidth="80vw"
               flexWrap="wrap"
             >
               {tags.slice(visibleTagsCount).map((tag, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <Tag m="4px" key={`${tag}-${index}`}>
+                // useful when two tags are identical `${tag}-${index}`
+                <Tag
+                  m="4px"
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${tag}-${index}`}
+                >
                   {tag}
                 </Tag>
               ))}
@@ -100,13 +119,6 @@ const TagsPoplist = ({ tags, threshold, maxLength, maxTagWidth, ...props }) => {
   )
 }
 
-TagsPoplist.defaultProps = {
-  maxLength: 600,
-  maxTagWidth: 115,
-  tags: [],
-  threshold: 1,
-}
-
 TagsPoplist.propTypes = {
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
@@ -116,7 +128,7 @@ TagsPoplist.propTypes = {
    * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
    */
   maxTagWidth: PropTypes.number,
-  tags: PropTypes.arrayOf(PropTypes.string),
+  tags: PropTypes.arrayOf(PropTypes.string.isRequired),
   /**
    * This property define number of tags to display before hiding them in tooltip.
    */
