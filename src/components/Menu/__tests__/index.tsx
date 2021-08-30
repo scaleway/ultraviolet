@@ -52,9 +52,7 @@ describe('Menu', () => {
     ))
 
   describe('placement', () => {
-    test.each(
-      arrowPlacements.map(placement => [`render ${placement}`, placement]),
-    )('%s', (_, placement) =>
+    test.each(arrowPlacements)('renders "%s"', placement =>
       shouldMatchEmotionSnapshot(
         <Menu
           baseId={placement}

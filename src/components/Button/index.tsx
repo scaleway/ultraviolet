@@ -4,11 +4,14 @@ import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ButtonHTMLAttributes,
+  ElementType,
   FocusEventHandler,
   FunctionComponent,
   MouseEventHandler,
   ReactNode,
+  Ref,
   VoidFunctionComponent,
+  forwardRef,
   isValidElement,
   useMemo,
 } from 'react'
@@ -350,10 +353,10 @@ const StyledButton = styled(Box, {
     `}
 `
 
-type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
-  children: React.ReactNode
+export type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
+  children: ReactNode
   variant?: ButtonVariant
-  innerRef: React.Ref<Element>
+  innerRef: Ref<Element>
   size?: ButtonSize
 }
 
@@ -378,7 +381,7 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
 }) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
-    if (to) return UniversalLink as React.ElementType
+    if (to) return UniversalLink as ElementType
     if (href || download) return 'a'
 
     return 'button'
@@ -477,7 +480,7 @@ FwdButton.propTypes = {
   variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),
 }
 
-const Button = React.forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
+const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
   (props, ref) => <FwdButton {...props} innerRef={ref} />,
 )
 

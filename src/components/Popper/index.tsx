@@ -2,13 +2,21 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { ReactElement, ReactNode, memo, useEffect, useRef } from 'react'
+import React, {
+  FunctionComponent,
+  ReactElement,
+  ReactNode,
+  RefObject,
+  VoidFunctionComponent,
+  memo,
+  useEffect,
+  useRef,
+} from 'react'
 import {
   Popover,
   PopoverArrow,
   PopoverDisclosure,
   PopoverProps,
-  PopoverState,
   PopoverStateReturn,
   usePopoverState,
 } from 'reakit/Popover'
@@ -47,11 +55,11 @@ const variants = {
     fill: 'white',
     shadow: 'shadow',
   }),
-}
+} as const
 
 type PopoverVariant = keyof typeof variants
 
-export const popperVariants = Object.keys(variants)
+export const popperVariants = Object.keys(variants) as PopoverVariant[]
 
 const variantStyles = ({
   variant,
@@ -65,13 +73,13 @@ type DisclosureProps = {
   popover: Partial<PopoverStateReturn>
 }
 
-const Disclosure: React.VoidFunctionComponent<DisclosureProps> = ({
+const Disclosure: VoidFunctionComponent<DisclosureProps> = ({
   disclosure,
   popover,
 }) => {
   const innerRef = useRef(
     disclosure(popover),
-  ) as unknown as React.RefObject<HTMLButtonElement>
+  ) as unknown as RefObject<HTMLButtonElement>
 
   return (
     <PopoverDisclosure {...popover} ref={innerRef}>
@@ -91,20 +99,22 @@ const MemoDisclosure = memo(Disclosure)
 
 const StyledPopover = styled(Popover, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
-})<{ variant: PopoverVariant }>`
+})<{ variant: PopoverVariant; name?: string }>`
   border-radius: 4px;
   ${variantStyles}
 `
 
-type PopperProps = Partial<PopoverProps> &
-  Partial<Pick<PopoverState, 'placement'>> & {
+export type PopperProps = Partial<PopoverProps> &
+  Partial<Pick<PopoverStateReturn, 'placement'>> & {
     backgroundColor?: string
     disclosure: (popover?: Partial<PopoverStateReturn>) => ReactElement
     hasArrow?: boolean
     variant?: PopoverVariant
+    name?: string
+    children?: ((popover: PopoverStateReturn) => ReactNode) | ReactNode
   }
 
-const Popper: React.FunctionComponent<PopperProps> = ({
+const Popper: FunctionComponent<PopperProps> = ({
   animated = 100,
   backgroundColor,
   baseId = '',
@@ -113,6 +123,7 @@ const Popper: React.FunctionComponent<PopperProps> = ({
   hasArrow = true,
   hideOnClickOutside = true,
   modal = true,
+  name,
   placement = 'auto',
   preventBodyScroll = false,
   variant = 'white',
@@ -136,6 +147,8 @@ const Popper: React.FunctionComponent<PopperProps> = ({
         <MemoDisclosure popover={popover} disclosure={disclosure} />
       )}
       <StyledPopover
+        name={name}
+        aria-label={name}
         variant={variant}
         hideOnClickOutside={hideOnClickOutside}
         preventBodyScroll={preventBodyScroll}
@@ -163,6 +176,7 @@ Popper.propTypes = {
   hasArrow: PropTypes.bool,
   hideOnClickOutside: PropTypes.bool,
   modal: PropTypes.bool,
+  name: PropTypes.string,
   placement: PropTypes.oneOf([
     'auto-start',
     'auto',
@@ -184,7 +198,9 @@ Popper.propTypes = {
    * Block main content / body scroll when popper is opened.
    */
   preventBodyScroll: PropTypes.bool,
-  variant: PropTypes.oneOf(Object.keys(variants) as [PopoverVariant]),
+  variant: PropTypes.oneOf<PopoverVariant>(
+    Object.keys(variants) as PopoverVariant[],
+  ),
   visible: PropTypes.bool,
 }
 

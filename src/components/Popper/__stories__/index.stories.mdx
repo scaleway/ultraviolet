@@ -222,6 +222,21 @@ import Icon from '../../Icon'
   </Story>
 </Canvas>
 
+## Without disclosure
+
+<Canvas>
+  <Story name="Without disclosure" parameters={{ layout: 'centered' }}>
+    <Popper
+      aria-label="Custom popover with buttom"
+      placement="auto"
+      modal={false}
+      visible
+    >
+      {({ placement }) => <Button> {placement}</Button>}
+    </Popper>
+  </Story>
+</Canvas>
+
 ## API
 
 <ArgsTable of={Popper} />
