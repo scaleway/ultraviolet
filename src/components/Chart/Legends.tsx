@@ -1,10 +1,12 @@
-import { keyframes } from '@emotion/react'
+import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { VoidFunctionComponent, isValidElement } from 'react'
+import { Color } from '../../theme/colors'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
 import patternVariants from './patterns'
+import { Data } from './types'
 
 const bulletFlashAnim = keyframes`
   0% {
@@ -18,12 +20,13 @@ const bulletFlashAnim = keyframes`
   }
 `
 
-const animationFlash = isFocused =>
-  isFocused &&
-  `
-    ${bulletFlashAnim.styles}
-    animation: ${bulletFlashAnim.name} linear 1500ms infinite;
-  `
+const animationFlash = (isFocused: boolean) =>
+  isFocused
+    ? css`
+        ${bulletFlashAnim.styles}
+        animation: ${bulletFlashAnim.name} linear 1500ms infinite;
+      `
+    : ''
 
 const List = styled.ul`
   font-size: 14px;
@@ -35,7 +38,7 @@ const List = styled.ul`
   height: min-content;
 `
 
-const ListItem = styled.li`
+const ListItem = styled.li<{ isFocused: boolean }>`
   display: flex;
   align-items: center;
   margin-top: 8px;
@@ -44,17 +47,27 @@ const ListItem = styled.li`
     isFocused ? theme.colors.primary : theme.colors.gray700};
 `
 
-const Bullet = styled.div`
+const Bullet = styled.div<{
+  needPattern?: boolean | null
+  isFocused: boolean
+  product: string
+}>`
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   margin: 0 8px;
-  background: ${({ color, theme }) => theme.colors[color] ?? color};
+  background: ${({ color, theme }) => theme.colors[color as Color] ?? color};
 
-  ${({ needPattern, color, theme, product }) =>
-    needPattern &&
-    patternVariants[`${product}-dot`](theme.colors[color] ?? color)};
+  ${({ needPattern, color, theme, product }) => {
+    if (!needPattern) return null
+
+    const pattern = patternVariants?.[
+      `${product}-dot` as keyof typeof patternVariants
+    ]?.(theme.colors[color as Color] ?? color)
+
+    return isValidElement(pattern) ? null : pattern
+  }}
 
   ${({ isFocused }) => animationFlash(isFocused)}
 `
@@ -65,12 +78,12 @@ const Label = styled.div`
   align-items: baseline;
 `
 
-const Value = styled.div`
+const Value = styled.div<{ isFocused: boolean }>`
   margin-left: 6px;
   font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
 `
 
-const Text = styled.span`
+const Text = styled.span<{ isFocused: boolean }>`
   flex: none;
   margin-right: 6px;
   font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
@@ -88,7 +101,7 @@ const Line = styled.span`
   width: 100%;
 `
 
-const ProgressiveLine = styled.span`
+const ProgressiveLine = styled.span<{ isFocused: boolean }>`
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
   position: absolute;
   left: 0;
@@ -98,9 +111,21 @@ const ProgressiveLine = styled.span`
   width: ${({ isFocused }) => (isFocused ? 100 : 0)}%;
 `
 
-const Legends = ({ focused, data, onFocusChange, chartId }) => (
+type LegendsProps = {
+  chartId?: string
+  data?: Data[]
+  focused?: number
+  onFocusChange(index?: number): void
+}
+
+const Legends: VoidFunctionComponent<LegendsProps> = ({
+  focused,
+  data,
+  onFocusChange,
+  chartId,
+}) => (
   <List>
-    {data.map((item, index) => {
+    {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && index === focused
 
       const id = `${chartId ? `${chartId}-` : ''}chart-tooltip-${item.product}`
@@ -156,8 +181,8 @@ Legends.propTypes = {
       percent: PropTypes.number.isRequired,
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
-    }),
-  ).isRequired,
+    }).isRequired,
+  ),
   focused: PropTypes.number,
   onFocusChange: PropTypes.func.isRequired,
 }

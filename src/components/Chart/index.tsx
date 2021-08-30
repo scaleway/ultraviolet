@@ -1,14 +1,17 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
+import React, { VoidFunctionComponent, useState } from 'react'
 import Breakpoint from '../../utils/responsive/Breakpoint'
 import Typography from '../Typography'
 import Donut from './Donut'
 import Legends from './Legends'
+import { Data } from './types'
 
 const variants = {
   donut: Donut,
 }
+
+type Variants = keyof typeof variants
 
 const Container = styled.div`
   display: flex;
@@ -20,9 +23,28 @@ const EmptyLegend = styled.div`
   margin-left: 20px;
 `
 
-const Chart = ({ chartId, data, content, emptyLegend, hasLegend, variant }) => {
-  const ChartVariant = variants[variant]
-  const [currentFocusIndex, setCurrentFocusIndex] = useState()
+type ChartProps = {
+  chartId?: string
+  /**
+   * Content will be displayed in the center of the chart, it can be text, number or any other component.
+   */
+  content?: React.ReactNode
+  data?: Data[]
+  emptyLegend?: string
+  hasLegend?: boolean
+  variant?: Variants
+}
+
+const Chart: VoidFunctionComponent<ChartProps> = ({
+  chartId,
+  data,
+  content,
+  emptyLegend,
+  hasLegend = false,
+  variant = 'donut',
+}) => {
+  const ChartVariant = variants[variant as Variants]
+  const [currentFocusIndex, setCurrentFocusIndex] = useState<number>()
 
   return (
     <Container>
@@ -36,7 +58,7 @@ const Chart = ({ chartId, data, content, emptyLegend, hasLegend, variant }) => {
         />
       </Breakpoint>
       {hasLegend &&
-        (!data.length ? (
+        (!data?.length ? (
           emptyLegend && (
             <EmptyLegend>
               <Typography variant="bodyA">{emptyLegend}</Typography>
@@ -54,35 +76,18 @@ const Chart = ({ chartId, data, content, emptyLegend, hasLegend, variant }) => {
   )
 }
 
-Chart.defaultProps = {
-  chartId: undefined,
-  content: undefined,
-  data: [],
-  emptyLegend: undefined,
-  hasLegend: false,
-  variant: 'donut',
-}
-
 Chart.propTypes = {
   chartId: PropTypes.string,
-  /**
-   * Content will be displayed in the center of the chart, it can be text, number or any other component.
-   */
   content: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
-      details: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string,
-          value: PropTypes.string,
-        }),
-      ),
       name: PropTypes.string,
+      needPattern: PropTypes.bool,
       percent: PropTypes.number.isRequired,
       product: PropTypes.string.isRequired,
       value: PropTypes.string,
-    }),
+    }).isRequired,
   ),
   emptyLegend: PropTypes.string,
   hasLegend: PropTypes.bool,

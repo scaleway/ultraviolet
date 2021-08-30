@@ -122,10 +122,10 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-donut-${dataWithLegendsAndDetails[0].product}`
-          await userEvent.unhover(getByTestId(id))
-          await userEvent.hover(getByTestId(id))
+          userEvent.unhover(getByTestId(id))
+          userEvent.hover(getByTestId(id))
         },
       },
     ))
@@ -134,10 +134,10 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-chart-tooltip-${dataWithLegendsAndDetails[0].product}`
-          await userEvent.unhover(getByTestId(id))
-          await userEvent.hover(getByTestId(id))
+          userEvent.unhover(getByTestId(id))
+          userEvent.hover(getByTestId(id))
         },
       },
     ))
@@ -146,10 +146,10 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(
       <Chart chartId="test-chart" data={dataWithLegendsAndDetails} hasLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: ({ getByTestId }) => {
           const id = `test-chart-chart-tooltip-${dataWithLegendsAndDetails[0].product}`
-          await fireEvent.blur(getByTestId(id))
-          await fireEvent.focus(getByTestId(id))
+          fireEvent.blur(getByTestId(id))
+          fireEvent.focus(getByTestId(id))
         },
       },
     ))

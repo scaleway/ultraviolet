@@ -1,17 +1,36 @@
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useEffect, useRef, useState } from 'react'
+import React, {
+  ChangeEventHandler,
+  FocusEventHandler,
+  InputHTMLAttributes,
+  KeyboardEventHandler,
+  MutableRefObject,
+  VoidFunctionComponent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
 import Touchable from '../Touchable'
 
-const bounded = (value, min, max) => Math.max(min, Math.min(value, max))
+const bounded = (value: number, min: number, max: number) =>
+  Math.max(min, Math.min(value, max))
 
-const roundStep = (value, step) => Math.ceil(value / step) * step
+const roundStep = (value: number, step: number) =>
+  Math.ceil(value / step) * step
 
-const disabledStyles = ({ disabled, theme }) =>
+const disabledStyles = ({
+  disabled,
+  theme,
+}: {
+  disabled: boolean
+  theme: Theme
+}) =>
   disabled &&
   `
     background-color: ${theme.colors.gray100};
@@ -27,6 +46,9 @@ const containerSizes = {
   small: 32,
 }
 
+type ContainerSizesType = keyof typeof containerSizes
+const containerSizesKeys = Object.keys(containerSizes) as ContainerSizesType[]
+
 const iconSizes = {
   large: 26,
   medium: 24,
@@ -36,8 +58,8 @@ const iconSizes = {
 const StyledIcon = styled(Icon)``
 
 const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: prop => !['position', 'size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['position', 'size'].includes(prop.toString()),
+})<{ size: ContainerSizesType }>`
   justify-content: center;
   align-items: center;
   height: calc(100% - 8px);
@@ -56,7 +78,7 @@ const StyledTouchable = styled(Touchable, {
   margin: 0 4px;
 `
 
-const StyledCenterTouchable = styled(Touchable)`
+const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
   flex: 1;
   flex-direction: row;
   height: calc(100% - 8px);
@@ -91,8 +113,8 @@ const StyledInput = styled.input`
 `
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
     disabled ? theme.colors.gray100 : theme.colors.white};
   display: flex;
@@ -104,32 +126,50 @@ const StyledContainer = styled(Box, {
   border: 1px solid ${({ theme }) => theme.colors.gray300};
   border-radius: 4px;
   ${({ disabled, theme }) =>
-    disabled &&
-    `
-    > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
-      ${disabledStyles({ disabled, theme })}
-    }
-  `}
+    disabled
+      ? css`
+          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
+            ${disabledStyles({ disabled, theme })}
+          }
+        `
+      : ''}
 `
 
-const Stepper = ({
-  disabled,
-  maxValue,
-  minValue,
-  name,
-  onBlur,
+type StepperProps = {
+  disabled?: boolean
+  maxValue?: number
+  minValue?: number
+  name?: string
+  onChange?(input: number): void
+  onMaxCrossed?(): void
+  onMinCrossed?(): void
+  size?: ContainerSizesType
+  step?: number
+  text?: string
+  value?: string | number
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
+
+const Stepper: VoidFunctionComponent<StepperProps> = ({
+  disabled = false,
+  maxValue = 100,
+  minValue = 0,
+  name = 'stepper',
   onChange,
   onFocus,
+  onBlur,
   onMaxCrossed,
   onMinCrossed,
-  size,
-  step,
-  text,
+  size = 'large',
+  step = 1,
+  text = '',
   value,
   ...props
 }) => {
-  const inputRef = useRef()
-  const [inputValue, setInputValue] = useState(parseIntOr(value, minValue))
+  const inputRef =
+    useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
+  const [inputValue, setInputValue] = useState(
+    typeof value === 'number' ? value : parseIntOr(value, minValue),
+  )
 
   useEffect(() => {
     if (onChange) {
@@ -137,29 +177,25 @@ const Stepper = ({
     }
   }, [inputValue, onChange])
 
-  const offsetFn = direction => () => {
+  const offsetFn = (direction: number) => () => {
     setInputValue(currentValue => {
       const newValue = currentValue + step * direction
-      const boundedValue = bounded(
-        newValue,
-        parseInt(minValue, 10),
-        parseInt(maxValue, 10),
-      )
+      const boundedValue = bounded(newValue, minValue, maxValue)
 
       return boundedValue
     })
   }
 
-  const handleChange = event => {
+  const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
     event.stopPropagation()
     setInputValue(parseIntOr(event.currentTarget.value, 0))
   }
 
-  const handleOnFocus = event => {
+  const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
     if (onFocus) onFocus(event)
   }
 
-  const handleOnBlur = event => {
+  const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
     setInputValue(currentValue => {
       const properVal = roundStep(currentValue, step)
       if (properVal < minValue) {
@@ -180,7 +216,7 @@ const Stepper = ({
     if (onBlur) onBlur(event)
   }
 
-  const onKeyDown = e => {
+  const onKeyDown: KeyboardEventHandler = e => {
     // Arrow Up
     if (e.keyCode === 38) {
       e.stopPropagation()
@@ -208,7 +244,6 @@ const Stepper = ({
       <StyledTouchable
         onClick={offsetFn(-1)}
         size={size}
-        position="left"
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
@@ -246,7 +281,6 @@ const Stepper = ({
       </StyledCenterTouchable>
 
       <StyledTouchable
-        position="right"
         size={size}
         onClick={offsetFn(1)}
         disabled={isPlusDisabled}
@@ -268,7 +302,7 @@ Stepper.propTypes = {
   onFocus: PropTypes.func,
   onMaxCrossed: PropTypes.func,
   onMinCrossed: PropTypes.func,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(containerSizesKeys),
   /**
    * Define how much will stepper increase / decrease each time you click on + / - button.
    */
@@ -278,22 +312,6 @@ Stepper.propTypes = {
    */
   text: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-}
-
-Stepper.defaultProps = {
-  disabled: false,
-  maxValue: 100,
-  minValue: 0,
-  name: 'stepper',
-  onBlur: null,
-  onChange: null,
-  onFocus: null,
-  onMaxCrossed: null,
-  onMinCrossed: null,
-  size: 'large',
-  step: 1,
-  text: '',
-  value: null,
 }
 
 export default Stepper
