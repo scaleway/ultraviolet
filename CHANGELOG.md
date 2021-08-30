@@ -1,3 +1,30 @@
+## [0.104.0](https://github.com/scaleway/scaleway-ui/compare/v0.103.0...v0.104.0) (2021-08-30)
+
+
+### :package: Chore
+
+* **deps:** bump codecov/codecov-action from 2.0.2 to 2.0.3 ([#663](https://github.com/scaleway/scaleway-ui/issues/663)) ([7afa62a](https://github.com/scaleway/scaleway-ui/commit/7afa62a4959ea4ebe7717c33c6801287811d2e46))
+* **deps-dev:** bump @scaleway/eslint-config-react from 2.1.1 to 2.1.2 ([#669](https://github.com/scaleway/scaleway-ui/issues/669)) ([f946194](https://github.com/scaleway/scaleway-ui/commit/f9461945bcc4c1bd7dd7e439955a26bfef6467bf))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.6 to 3.1.7 ([#676](https://github.com/scaleway/scaleway-ui/issues/676)) ([4bbd3e0](https://github.com/scaleway/scaleway-ui/commit/4bbd3e03c66216407fc274d84a8ce549e31d9f12))
+* **deps-dev:** bump husky from 7.0.1 to 7.0.2 ([#664](https://github.com/scaleway/scaleway-ui/issues/664)) ([f0f4d33](https://github.com/scaleway/scaleway-ui/commit/f0f4d3302a2314fed3aed679005100c6dd6a8600))
+* **deps-dev:** bump jest from 27.0.6 to 27.1.0 ([#678](https://github.com/scaleway/scaleway-ui/issues/678)) ([8028f43](https://github.com/scaleway/scaleway-ui/commit/8028f436d72546267c2a7acda23a0478075fa579))
+* **deps-dev:** bump react-router-dom from 5.2.0 to 5.2.1 ([#677](https://github.com/scaleway/scaleway-ui/issues/677)) ([daf6a34](https://github.com/scaleway/scaleway-ui/commit/daf6a34f2cffc5815a9f88792d997239bdf17202))
+* **deps-dev:** bump semantic-release from 17.4.6 to 17.4.7 ([#668](https://github.com/scaleway/scaleway-ui/issues/668)) ([262c624](https://github.com/scaleway/scaleway-ui/commit/262c624b7c86a4d4fc26fb2e068750c17bf7fa90))
+* **deps-dev:** bump typescript from 4.3.5 to 4.4.2 ([#671](https://github.com/scaleway/scaleway-ui/issues/671)) ([4700694](https://github.com/scaleway/scaleway-ui/commit/47006943f8bbf2785b105440d7ddd09f004b97ad))
+
+
+### :zap: Refactor
+
+* **menu:** migration typescript ([#670](https://github.com/scaleway/scaleway-ui/issues/670)) ([f330464](https://github.com/scaleway/scaleway-ui/commit/f330464543ca42f27d4784f2dc50b1293a503b6b))
+* **modal:** migration typescript ([#665](https://github.com/scaleway/scaleway-ui/issues/665)) ([f2f8c2c](https://github.com/scaleway/scaleway-ui/commit/f2f8c2cbf60cf0fc9e0d09a05d40d6d8e44636f5))
+* **tagspoplist:** migration typescript ([#667](https://github.com/scaleway/scaleway-ui/issues/667)) ([8ba8a21](https://github.com/scaleway/scaleway-ui/commit/8ba8a2110093008cac7acc2f82ebbe0d633473ca))
+* **typescript:** touchable, textbox, tag components ([#642](https://github.com/scaleway/scaleway-ui/issues/642)) ([7646df9](https://github.com/scaleway/scaleway-ui/commit/7646df9af73d753cb6dedf0850155a6c5f0cee79))
+
+
+### :gear: Features
+
+* migration typescript chart stepper statusindicator ([#660](https://github.com/scaleway/scaleway-ui/issues/660)) ([7a3db37](https://github.com/scaleway/scaleway-ui/commit/7a3db37242b3de80cdbb7623c30181276efdbcc9))
+
 ## [0.103.0](https://github.com/scaleway/scaleway-ui/compare/v0.102.2...v0.103.0) (2021-08-24)
 
 
