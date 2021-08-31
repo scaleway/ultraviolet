@@ -1,3 +1,15 @@
+## [0.105.0](https://github.com/scaleway/scaleway-ui/compare/v0.104.0...v0.105.0) (2021-08-31)
+
+
+### :package: Chore
+
+* **deps-dev:** bump rollup-plugin-dts from 3.0.2 to 4.0.0 ([#680](https://github.com/scaleway/scaleway-ui/issues/680)) ([cebb5eb](https://github.com/scaleway/scaleway-ui/commit/cebb5eb12e3b3c1d902f38855db3e39407a3862a))
+
+
+### :gear: Features
+
+* add rocket icon ([#682](https://github.com/scaleway/scaleway-ui/issues/682)) ([301cce6](https://github.com/scaleway/scaleway-ui/commit/301cce6d617182f6f630d15301a0552bba942ce3))
+
 ## [0.104.0](https://github.com/scaleway/scaleway-ui/compare/v0.103.0...v0.104.0) (2021-08-30)
 
 
