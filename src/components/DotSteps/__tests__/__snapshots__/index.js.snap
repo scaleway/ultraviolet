@@ -2,51 +2,76 @@
 
 exports[`DotSteps renders correctly 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-5xvs9d {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
 }
 
-.cache-55b8qa {
+.cache-1ksroj2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
+  color: #4f0599;
   cursor: pointer;
+  position: relative;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-1ksroj2::before,
+.cache-1ksroj2::after {
+  position: absolute;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
+.cache-1ksroj2::after {
+  content: '';
+  width: 18px;
+  height: 18px;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-1ksroj2[aria-selected="true"] {
+  background-color: transparent;
+}
+
+.cache-1ksroj2[aria-selected="true"]::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+}
+
+.cache-1ksroj2[aria-selected="true"]::after {
+  border: 1px solid currentColor;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1l6meh00 cache-5xvs9d e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
@@ -54,88 +79,108 @@ exports[`DotSteps renders correctly 1`] = `
 
 exports[`DotSteps renders correctly useState function 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-5xvs9d {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
 }
 
-.cache-1p3mpkn {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
-}
-
-.cache-1p3mpkn.cache-1p3mpkn {
-  margin-right: 8px;
-}
-
-.cache-55b8qa {
+.cache-1ksroj2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
+  color: #4f0599;
   cursor: pointer;
+  position: relative;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-1ksroj2::before,
+.cache-1ksroj2::after {
+  position: absolute;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
+.cache-1ksroj2::after {
+  content: '';
+  width: 18px;
+  height: 18px;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-1ksroj2[aria-selected="true"] {
+  background-color: transparent;
+}
+
+.cache-1ksroj2[aria-selected="true"]::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+}
+
+.cache-1ksroj2[aria-selected="true"]::after {
+  border: 1px solid currentColor;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1l6meh00 cache-5xvs9d e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
@@ -143,88 +188,108 @@ exports[`DotSteps renders correctly useState function 1`] = `
 
 exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-5xvs9d {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
 }
 
-.cache-1p3mpkn {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
-}
-
-.cache-1p3mpkn.cache-1p3mpkn {
-  margin-right: 8px;
-}
-
-.cache-55b8qa {
+.cache-1ksroj2 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
+  color: #4f0599;
   cursor: pointer;
+  position: relative;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-1ksroj2::before,
+.cache-1ksroj2::after {
+  position: absolute;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
+.cache-1ksroj2::after {
+  content: '';
+  width: 18px;
+  height: 18px;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-1ksroj2[aria-selected="true"] {
+  background-color: transparent;
+}
+
+.cache-1ksroj2[aria-selected="true"]::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+}
+
+.cache-1ksroj2[aria-selected="true"]::after {
+  border: 1px solid currentColor;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1l6meh00 cache-5xvs9d e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k70 e6t57f80 cache-1ksroj2 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
