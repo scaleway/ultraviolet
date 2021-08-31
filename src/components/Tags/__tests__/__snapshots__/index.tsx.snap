@@ -211,6 +211,194 @@ exports[`Tags add tag from input 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Tags add tag from input with error 1`] = `
+<DocumentFragment>
+  .cache-qibkhh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.cache-qibkhh:focus-within {
+  border: 1px solid #4f0599;
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+}
+
+.cache-qibkhh>* {
+  margin: 6px;
+}
+
+.cache-13tat4f {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.cache-ne18sh-Tag {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.cache-onp1k0 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-onp1k0:hover,
+.cache-onp1k0:focus {
+  background-color: #eeeeff;
+}
+
+.cache-onp1k0:hover svg,
+.cache-onp1k0:focus svg {
+  fill: #4f0599;
+}
+
+.cache-1957tn4 {
+  fill: #b2b6c3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1957tn4.cache-1957tn4 {
+  vertical-align: middle;
+}
+
+.cache-1qk78jd {
+  font-size: 16px;
+  color: #4a4f62;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.cache-1qk78jd::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::placeholder {
+  color: #b2b6c3;
+}
+
+<div
+    class="cache-qibkhh"
+  >
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        hello
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        world
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <input
+      class="cache-1qk78jd"
+      id="test"
+      name="radio"
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Tags add tag on paste 1`] = `
 <DocumentFragment>
   .cache-qibkhh {
@@ -395,6 +583,194 @@ exports[`Tags add tag on paste 1`] = `
         class="cache-ne18sh-Tag e1vt8sjg1"
       >
         test
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <input
+      class="cache-1qk78jd"
+      id="test"
+      name="radio"
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tags add tag on paste with error 1`] = `
+<DocumentFragment>
+  .cache-qibkhh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.cache-qibkhh:focus-within {
+  border: 1px solid #4f0599;
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+}
+
+.cache-qibkhh>* {
+  margin: 6px;
+}
+
+.cache-13tat4f {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.cache-ne18sh-Tag {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.cache-onp1k0 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-onp1k0:hover,
+.cache-onp1k0:focus {
+  background-color: #eeeeff;
+}
+
+.cache-onp1k0:hover svg,
+.cache-onp1k0:focus svg {
+  fill: #4f0599;
+}
+
+.cache-1957tn4 {
+  fill: #b2b6c3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1957tn4.cache-1957tn4 {
+  vertical-align: middle;
+}
+
+.cache-1qk78jd {
+  font-size: 16px;
+  color: #4a4f62;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.cache-1qk78jd::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::placeholder {
+  color: #b2b6c3;
+}
+
+<div
+    class="cache-qibkhh"
+  >
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        hello
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        world
       </span>
       <button
         class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
@@ -736,6 +1112,239 @@ exports[`Tags delete tag with backspace 1`] = `
         >
           <path
             d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <input
+      class="cache-1qk78jd"
+      id="test"
+      name="radio"
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tags delete tag with error 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-qibkhh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.cache-qibkhh:focus-within {
+  border: 1px solid #4f0599;
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+}
+
+.cache-qibkhh>* {
+  margin: 6px;
+}
+
+.cache-13tat4f {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.cache-ne18sh-Tag {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.cache-onp1k0 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-onp1k0:hover,
+.cache-onp1k0:focus {
+  background-color: #eeeeff;
+}
+
+.cache-onp1k0:hover svg,
+.cache-onp1k0:focus svg {
+  fill: #4f0599;
+}
+
+.cache-1957tn4 {
+  fill: #b2b6c3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1957tn4.cache-1957tn4 {
+  vertical-align: middle;
+}
+
+.cache-1233ma1 {
+  height: 16px;
+  width: 16px;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-1qk78jd {
+  font-size: 16px;
+  color: #4a4f62;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.cache-1qk78jd::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::placeholder {
+  color: #b2b6c3;
+}
+
+<div
+    class="cache-qibkhh"
+  >
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        throw
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        error
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="CircularProgressbar  cache-1233ma1 e7dhm9i0"
+          data-test-id="CircularProgressbar"
+          viewBox="0 0 100 100"
+        >
+          <path
+            class="CircularProgressbar-trail"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+          />
+          <path
+            class="CircularProgressbar-path"
+            d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+            fill-opacity="0"
+            stroke-width="16"
+            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
           />
         </svg>
       </button>
@@ -2068,6 +2677,193 @@ exports[`Tags renders correctly with some tags 2`] = `
 `;
 
 exports[`Tags renders correctly with some tags as objects 1`] = `
+<DocumentFragment>
+  .cache-qibkhh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+.cache-qibkhh:focus-within {
+  border: 1px solid #4f0599;
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+}
+
+.cache-qibkhh>* {
+  margin: 6px;
+}
+
+.cache-13tat4f {
+  border-radius: 4px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f5f7;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.cache-ne18sh-Tag {
+  color: #4a4f62;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.cache-onp1k0 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-onp1k0:hover,
+.cache-onp1k0:focus {
+  background-color: #eeeeff;
+}
+
+.cache-onp1k0:hover svg,
+.cache-onp1k0:focus svg {
+  fill: #4f0599;
+}
+
+.cache-1957tn4 {
+  fill: #b2b6c3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1957tn4.cache-1957tn4 {
+  vertical-align: middle;
+}
+
+.cache-1qk78jd {
+  font-size: 16px;
+  color: #4a4f62;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.cache-1qk78jd::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1qk78jd::placeholder {
+  color: #b2b6c3;
+}
+
+<div
+    class="cache-qibkhh"
+  >
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        hello
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="e1vt8sjg2 cache-13tat4f e7ah3bn0"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-ne18sh-Tag e1vt8sjg1"
+      >
+        world
+      </span>
+      <button
+        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        type="button"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1957tn4 e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <input
+      class="cache-1qk78jd"
+      name="radio"
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tags renders correctly with some tags objects 1`] = `
 <DocumentFragment>
   .cache-qibkhh {
   display: -webkit-box;
