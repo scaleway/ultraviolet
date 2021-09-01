@@ -1,0 +1,155 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import NavigationStepper from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
+import Button from '../../Button'
+
+<Meta
+  title="Components/Navigation/NavigationStepper"
+  component={NavigationStepper}
+/>
+
+# NavigationStepper
+
+<Description>NavigationStepper display a navigation with steps</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <NavigationStepper step={2}>
+      <NavigationStepper.Step>First</NavigationStepper.Step>
+      <NavigationStepper.Step>Second</NavigationStepper.Step>
+      <NavigationStepper.Step>Third</NavigationStepper.Step>
+    </NavigationStepper>
+  </Story>
+</Canvas>
+
+## Long text
+
+<Canvas>
+  <Story name="Long Text">
+    <NavigationStepper step={2}>
+      <NavigationStepper.Step>
+        Elit adipisicing anim aliquip velit.
+      </NavigationStepper.Step>
+      <NavigationStepper.Step>
+        Excepteur sit et do cupidatat exercitation.
+      </NavigationStepper.Step>
+      <NavigationStepper.Step>
+        Duis nisi id ipsum sint non aute ea sit est consectetur amet.
+      </NavigationStepper.Step>
+    </NavigationStepper>
+  </Story>
+</Canvas>
+
+## Loading step
+
+You can put `isLoading` on a step to display an ActivityIndicator on current step.
+
+<Canvas>
+  <Story name="Loading">
+    <NavigationStepper step={2}>
+      <NavigationStepper.Step isLoading>
+        Elit adipisicing anim aliquip velit.
+      </NavigationStepper.Step>
+      <NavigationStepper.Step isLoading>
+        Excepteur sit et do cupidatat exercitation.
+      </NavigationStepper.Step>
+      <NavigationStepper.Step isLoading>
+        Duis nisi id ipsum sint non aute ea sit est consectetur amet.
+      </NavigationStepper.Step>
+    </NavigationStepper>
+  </Story>
+</Canvas>
+
+## Controlled
+
+To make all steps checked you need to pass a step greater than your steps number.
+
+<Canvas>
+  <Story name="Controlled">
+    <ControlValue value={1}>
+      {({ value, onChange }) => (
+        <>
+          <NavigationStepper step={value}>
+            <NavigationStepper.Step>
+              Elit adipisicing anim aliquip velit.
+            </NavigationStepper.Step>
+            <NavigationStepper.Step>
+              Excepteur sit et do cupidatat exercitation.
+            </NavigationStepper.Step>
+            <NavigationStepper.Step isLoading>
+              Duis nisi id ipsum sint non aute ea sit est consectetur amet.
+            </NavigationStepper.Step>
+          </NavigationStepper>
+          <Button
+            onClick={() => onChange(value > 1 ? value - 1 : value)}
+            disabled={value === 1}
+            mr={1}
+          >
+            Previous
+          </Button>
+          <Button
+            onClick={() => onChange(value > 3 ? value : value + 1)}
+            disabled={value > 3}
+          >
+            Next
+          </Button>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## Condensed
+
+.
+
+<Canvas>
+  <Story name="Condensed">
+    <ControlValue value={1}>
+      {({ value, onChange }) => (
+        <>
+          <NavigationStepper condensed step={value}>
+            <NavigationStepper.Step>
+              Elit adipisicing anim aliquip velit.
+            </NavigationStepper.Step>
+            <NavigationStepper.Step>
+              Excepteur sit et do cupidatat exercitation.
+            </NavigationStepper.Step>
+            <NavigationStepper.Step isLoading>
+              Duis nisi id ipsum sint non aute ea sit est consectetur amet.
+            </NavigationStepper.Step>
+          </NavigationStepper>
+          <Button
+            onClick={() => onChange(value > 1 ? value - 1 : value)}
+            disabled={value === 1}
+            mr={1}
+          >
+            Previous
+          </Button>
+          <Button
+            onClick={() => onChange(value > 3 ? value : value + 1)}
+            disabled={value > 3}
+          >
+            Next
+          </Button>
+        </>
+      )}
+    </ControlValue>
+  </Story>
+</Canvas>
+
+## API
+
+### NavigationStepper
+
+<ArgsTable of={NavigationStepper} />
+
+### NavigationStepper.Step
+
+<ArgsTable of={NavigationStepper.Step} />

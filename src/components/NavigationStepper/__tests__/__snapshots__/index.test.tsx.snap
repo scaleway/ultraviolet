@@ -1,0 +1,1421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationStepper should render correctly 1`] = `
+<DocumentFragment>
+  .cache-z9xsvn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cache-z9xsvn .eccy81h1 {
+  place-self: center;
+}
+
+.cache-z9xsvn .eccy81h1:first-child {
+  place-self: start;
+}
+
+.cache-z9xsvn .eccy81h1:last-child {
+  place-self: end;
+}
+
+.cache-wydfc5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-wydfc5 .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-wydfc5[aria-current='true'] {
+  color: #4f0599;
+}
+
+.cache-wydfc5[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+<ul
+    class="cache-z9xsvn eccy81h0"
+  >
+    <li
+      aria-current="true"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        1
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with bad child 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-q2a1ff {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-q2a1ff .eccy81h1 {
+  margin-right: 8px;
+}
+
+.cache-q2a1ff .eccy81h1:last-child {
+  margin-right: 0;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-ijsx3x {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-ijsx3x .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-ijsx3x[aria-current='true'] {
+  color: #4f0599;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cache-ijsx3x[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+.cache-8blmi3 {
+  height: calc(100% + calc(4px * 4));
+  width: calc(100% + calc(4px * 4));
+  position: absolute;
+}
+
+.cache-25qc29 {
+  height: 100%;
+  width: 100%;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<ul
+    class="cache-q2a1ff eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <span
+          class="cache-8blmi3 eccy81h2"
+        >
+          <svg
+            class="CircularProgressbar  cache-25qc29 e7dhm9i0"
+            data-test-id="CircularProgressbar"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="CircularProgressbar-trail"
+              d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+              fill-opacity="0"
+              stroke-width="8"
+              style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 0px;"
+            />
+            <path
+              class="CircularProgressbar-path"
+              d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+              fill-opacity="0"
+              stroke-width="8"
+              style="stroke: #45d6b5; stroke-linecap: round; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 231.22121930420877px;"
+            />
+          </svg>
+        </span>
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with bad child 2`] = `
+<DocumentFragment>
+  .cache-q2a1ff {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-q2a1ff .eccy81h1 {
+  margin-right: 8px;
+}
+
+.cache-q2a1ff .eccy81h1:last-child {
+  margin-right: 0;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-ijsx3x {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-ijsx3x .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-ijsx3x[aria-current='true'] {
+  color: #4f0599;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cache-ijsx3x[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+<ul
+    class="cache-q2a1ff eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      />
+    </li>
+    <li
+      aria-current="false"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      />
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with condensed 1`] = `
+<DocumentFragment>
+  .cache-q2a1ff {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-q2a1ff .eccy81h1 {
+  margin-right: 8px;
+}
+
+.cache-q2a1ff .eccy81h1:last-child {
+  margin-right: 0;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-ijsx3x {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-ijsx3x .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-ijsx3x[aria-current='true'] {
+  color: #4f0599;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cache-ijsx3x[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+<ul
+    class="cache-q2a1ff eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with default condensed 1`] = `
+<DocumentFragment>
+  .cache-q2a1ff {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-q2a1ff .eccy81h1 {
+  margin-right: 8px;
+}
+
+.cache-q2a1ff .eccy81h1:last-child {
+  margin-right: 0;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-ijsx3x {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-ijsx3x .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-ijsx3x[aria-current='true'] {
+  color: #4f0599;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cache-ijsx3x[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+<ul
+    class="cache-q2a1ff eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-ijsx3x eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="true"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with isLoading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-z9xsvn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cache-z9xsvn .eccy81h1 {
+  place-self: center;
+}
+
+.cache-z9xsvn .eccy81h1:first-child {
+  place-self: start;
+}
+
+.cache-z9xsvn .eccy81h1:last-child {
+  place-self: end;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-wydfc5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-wydfc5 .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-wydfc5[aria-current='true'] {
+  color: #4f0599;
+}
+
+.cache-wydfc5[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+.cache-8blmi3 {
+  height: calc(100% + calc(4px * 4));
+  width: calc(100% + calc(4px * 4));
+  position: absolute;
+}
+
+.cache-25qc29 {
+  height: 100%;
+  width: 100%;
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+<ul
+    class="cache-z9xsvn eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <span
+          class="cache-8blmi3 eccy81h2"
+        >
+          <svg
+            class="CircularProgressbar  cache-25qc29 e7dhm9i0"
+            data-test-id="CircularProgressbar"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="CircularProgressbar-trail"
+              d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+              fill-opacity="0"
+              stroke-width="8"
+              style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 0px;"
+            />
+            <path
+              class="CircularProgressbar-path"
+              d="
+      M 50,50
+      m 0,-46
+      a 46,46 0 1 1 0,92
+      a 46,46 0 1 1 0,-92
+    "
+              fill-opacity="0"
+              stroke-width="8"
+              style="stroke: #45d6b5; stroke-linecap: round; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 231.22121930420877px;"
+            />
+          </svg>
+        </span>
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with only bad children 1`] = `
+<DocumentFragment>
+  .cache-q2a1ff {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-q2a1ff .eccy81h1 {
+  margin-right: 8px;
+}
+
+.cache-q2a1ff .eccy81h1:last-child {
+  margin-right: 0;
+}
+
+<ul
+    class="cache-q2a1ff eccy81h0"
+  />
+</DocumentFragment>
+`;
+
+exports[`NavigationStepper should render correctly with step prop 1`] = `
+<DocumentFragment>
+  .cache-z9xsvn {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cache-z9xsvn .eccy81h1 {
+  place-self: center;
+}
+
+.cache-z9xsvn .eccy81h1:first-child {
+  place-self: start;
+}
+
+.cache-z9xsvn .eccy81h1:last-child {
+  place-self: end;
+}
+
+.cache-lgs440 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #45d6b5;
+}
+
+.cache-lgs440 .eccy81h4 {
+  background-color: #45d6b5;
+  color: #fff;
+}
+
+.cache-h56arn {
+  position: relative;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1b3m1ox {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1b3m1ox.cache-1b3m1ox {
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.cache-84l6nl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cache-84l6nl[aria-hidden='true'] {
+  overflow: hidden;
+  max-width: 0;
+  white-space: nowrap;
+}
+
+.cache-wydfc5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #b2b6c3;
+}
+
+.cache-wydfc5 .eccy81h4 {
+  border: 4px solid #b2b6c3;
+}
+
+.cache-wydfc5[aria-current='true'] {
+  color: #4f0599;
+}
+
+.cache-wydfc5[aria-current='true'] .eccy81h4 {
+  border-color: #4f0599;
+  color: #fff;
+  background-color: #4f0599;
+}
+
+<ul
+    class="cache-z9xsvn eccy81h0"
+  >
+    <li
+      aria-current="false"
+      class="cache-lgs440 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-1b3m1ox e7ah3bn0"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        First
+      </div>
+    </li>
+    <li
+      aria-current="true"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        2
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Second
+      </div>
+    </li>
+    <li
+      aria-current="false"
+      class="cache-wydfc5 eccy81h1"
+    >
+      <div
+        class="cache-h56arn eccy81h4"
+      >
+        3
+      </div>
+      <div
+        aria-hidden="false"
+        class="cache-84l6nl eccy81h3"
+      >
+        Third
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
