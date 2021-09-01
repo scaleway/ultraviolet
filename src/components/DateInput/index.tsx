@@ -120,7 +120,19 @@ const TopHeaderDiv = styled.div`
   display: inline-block;
   background-color: ${({ theme: { colors } }) => colors.white};
 `
-type DateInputProps = Omit<ReactDatePickerProps, 'value'> & {
+type DateInputProps = Pick<
+  ReactDatePickerProps<unknown>,
+  | 'autoFocus'
+  | 'disabled'
+  | 'locale'
+  | 'maxDate'
+  | 'minDate'
+  | 'name'
+  | 'onBlur'
+  | 'onChange'
+  | 'onFocus'
+  | 'required'
+> & {
   error?: string
   format?: (value?: Date | string) => string | undefined
   label?: string
