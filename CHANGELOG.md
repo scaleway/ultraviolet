@@ -1,3 +1,15 @@
+## [0.106.0](https://github.com/scaleway/scaleway-ui/compare/v0.105.0...v0.106.0) (2021-09-01)
+
+
+### :zap: Refactor
+
+* **tags:** migration typescript ([#674](https://github.com/scaleway/scaleway-ui/issues/674)) ([5432238](https://github.com/scaleway/scaleway-ui/commit/54322388db203372dd926af78c64979bd38f27e9))
+
+
+### :gear: Features
+
+* navigationstepper ([#675](https://github.com/scaleway/scaleway-ui/issues/675)) ([001b00f](https://github.com/scaleway/scaleway-ui/commit/001b00fbaaa551e222f776fd02187ed91cc3d1f0))
+
 ## [0.105.0](https://github.com/scaleway/scaleway-ui/compare/v0.104.0...v0.105.0) (2021-08-31)
 
 
