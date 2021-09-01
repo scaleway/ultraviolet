@@ -6,7 +6,6 @@ import React, {
   AllHTMLAttributes,
   ElementType,
   FunctionComponent,
-  HTMLAttributes,
   ReactNode,
   forwardRef,
 } from 'react'
@@ -24,6 +23,7 @@ export interface XStyledProps {
   flexWrap?: string
   fontSize?: number
   fontWeight?: number
+  height?: string | number
   justifyContent?: string
   lineHeight?: string | number
   maxWidth?: string | number
@@ -43,6 +43,9 @@ export interface XStyledProps {
   pt?: string | number
   px?: string | number
   py?: string | number
+  right?: number
+  textTransform?: string
+  top?: number
   verticalAlign?: string
   width?: string | number
 
