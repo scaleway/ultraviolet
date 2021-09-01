@@ -1,39 +1,62 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 
+const dotSize = 10
 const DotStep = styled(Dot)`
   margin: ${({ theme }) => theme.space[1]};
-  color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   position: relative;
+  background-color: transparent;
   &::before,
   &::after {
+    content: '';
     position: absolute;
     border-radius: inherit;
+    box-sizing: border-box;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+  }
+  &::before {
+    width: ${dotSize}px;
+    height: ${dotSize}px;
+    margin: ${-dotSize / 2}px;
+    background-color: ${({ theme }) => theme.colors.primary};
   }
   &::after {
-    content: '';
-    width: 18px;
-    height: 18px;
+    width: ${dotSize * 2}px;
+    height: ${dotSize * 2}px;
+    margin: -${dotSize}px;
   }
   &[aria-selected='true'] {
-    background-color: transparent;
     &::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      background-color: currentColor;
-    }
-    &::after {
-      border: 1px solid currentColor;
+      transform: scale(0.5);
     }
   }
+  &:last-child::after {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+`
+const selectedStepPosition = (length: number, width: number) =>
+  Array.from(
+    { length },
+    (_, i) => css`
+      ${DotStep}:nth-of-type(${length -
+      i})[aria-selected='true'] ~ ${DotStep}:last-child:after {
+        transform: translateX(-${i * width}px);
+      }
+    `,
+  )
+
+const DotWrapper = styled(FlexBox, {
+  shouldForwardProp: prop => prop !== 'steps',
+})<{ steps: number }>`
+  ${({ theme, steps }) =>
+    selectedStepPosition(steps, dotSize + 2 * parseInt(theme.space[1], 10))}
 `
 
 type Props = {
@@ -47,7 +70,7 @@ const DotSteps: FunctionComponent<Props> = ({
   step = 1,
   setStep,
 }) => (
-  <FlexBox justifyContent="center">
+  <DotWrapper justifyContent="center" steps={steps}>
     {Array.from({ length: steps }, (_, i) => (
       <DotStep
         key={`dot-step-${i + 1}`}
@@ -55,7 +78,7 @@ const DotSteps: FunctionComponent<Props> = ({
         onClick={() => setStep(i + 1)}
       />
     ))}
-  </FlexBox>
+  </DotWrapper>
 )
 
 DotSteps.propTypes = {
