@@ -1,3 +1,20 @@
+## [0.107.0](https://github.com/scaleway/scaleway-ui/compare/v0.106.0...v0.107.0) (2021-09-02)
+
+
+### :zap: Refactor
+
+* **date-input:** migration typescript ([#666](https://github.com/scaleway/scaleway-ui/issues/666)) ([7ad703d](https://github.com/scaleway/scaleway-ui/commit/7ad703d7764d1b84db071e956bcad7f5396ee367))
+
+
+### :package: Chore
+
+* **deps:** bump @types/react-datepicker from 4.1.4 to 4.1.5 ([#684](https://github.com/scaleway/scaleway-ui/issues/684)) ([4758b1b](https://github.com/scaleway/scaleway-ui/commit/4758b1bb794d04b142532e90c47db0878094e045))
+
+
+### :gear: Features
+
+* **DotSteps:** update component dots style ([#683](https://github.com/scaleway/scaleway-ui/issues/683)) ([2e1427e](https://github.com/scaleway/scaleway-ui/commit/2e1427e4036d10608e5fcae1a8a945361b2eccf6))
+
 ## [0.106.0](https://github.com/scaleway/scaleway-ui/compare/v0.105.0...v0.106.0) (2021-09-01)
 
 
