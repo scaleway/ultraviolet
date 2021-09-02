@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
+exports[`Dot renders correctly 1`] = `
 <DocumentFragment>
   .cache-4jq4bd {
   display: inline-block;
@@ -12,6 +12,24 @@ exports[`Button renders correctly 1`] = `
 
 <div
     class="e6t57f80 cache-4jq4bd e7ah3bn0"
+  >
+    This is a dot.
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Dot renders with color 1`] = `
+<DocumentFragment>
+  .cache-b8noj2 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: hotpink;
+}
+
+<div
+    class="e6t57f80 cache-b8noj2 e7ah3bn0"
   >
     This is hotpink.
   </div>
