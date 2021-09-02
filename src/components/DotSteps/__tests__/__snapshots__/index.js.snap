@@ -2,7 +2,7 @@
 
 exports[`DotSteps renders correctly 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-16zi2u0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,40 +13,78 @@ exports[`DotSteps renders correctly 1`] = `
   justify-content: center;
 }
 
-.cache-55b8qa {
+.cache-16zi2u0 .e1cog6k71:nth-of-type(2)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-0px);
+  -moz-transform: translateX(-0px);
+  -ms-transform: translateX(-0px);
+  transform: translateX(-0px);
+}
+
+.cache-16zi2u0 .e1cog6k71:nth-of-type(1)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-26px);
+  -moz-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+}
+
+.cache-13opnl5 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
   cursor: pointer;
+  position: relative;
+  background-color: transparent;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-13opnl5::before,
+.cache-13opnl5::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
+.cache-13opnl5::before {
   width: 10px;
   height: 10px;
-  background-color: gray;
-  cursor: pointer;
+  margin: -5px;
+  background-color: #4f0599;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-13opnl5::after {
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+}
+
+.cache-13opnl5[aria-selected='true']::before {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.cache-13opnl5:last-child::after {
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1cog6k70 e1l6meh00 cache-16zi2u0 e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
@@ -54,7 +92,7 @@ exports[`DotSteps renders correctly 1`] = `
 
 exports[`DotSteps renders correctly useState function 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-14geho4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,77 +103,166 @@ exports[`DotSteps renders correctly useState function 1`] = `
   justify-content: center;
 }
 
-.cache-1p3mpkn {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
+.cache-14geho4 .e1cog6k71:nth-of-type(10)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-0px);
+  -moz-transform: translateX(-0px);
+  -ms-transform: translateX(-0px);
+  transform: translateX(-0px);
 }
 
-.cache-1p3mpkn.cache-1p3mpkn {
-  margin-right: 8px;
+.cache-14geho4 .e1cog6k71:nth-of-type(9)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-26px);
+  -moz-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
 }
 
-.cache-55b8qa {
+.cache-14geho4 .e1cog6k71:nth-of-type(8)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-52px);
+  -moz-transform: translateX(-52px);
+  -ms-transform: translateX(-52px);
+  transform: translateX(-52px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(7)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-78px);
+  -moz-transform: translateX(-78px);
+  -ms-transform: translateX(-78px);
+  transform: translateX(-78px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(6)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-104px);
+  -moz-transform: translateX(-104px);
+  -ms-transform: translateX(-104px);
+  transform: translateX(-104px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(5)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-130px);
+  -moz-transform: translateX(-130px);
+  -ms-transform: translateX(-130px);
+  transform: translateX(-130px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(4)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-156px);
+  -moz-transform: translateX(-156px);
+  -ms-transform: translateX(-156px);
+  transform: translateX(-156px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(3)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-182px);
+  -moz-transform: translateX(-182px);
+  -ms-transform: translateX(-182px);
+  transform: translateX(-182px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(2)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-208px);
+  -moz-transform: translateX(-208px);
+  -ms-transform: translateX(-208px);
+  transform: translateX(-208px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(1)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-234px);
+  -moz-transform: translateX(-234px);
+  -ms-transform: translateX(-234px);
+  transform: translateX(-234px);
+}
+
+.cache-13opnl5 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
   cursor: pointer;
+  position: relative;
+  background-color: transparent;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-13opnl5::before,
+.cache-13opnl5::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
+.cache-13opnl5::before {
   width: 10px;
   height: 10px;
-  background-color: gray;
-  cursor: pointer;
+  margin: -5px;
+  background-color: #4f0599;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-13opnl5::after {
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+}
+
+.cache-13opnl5[aria-selected='true']::before {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.cache-13opnl5:last-child::after {
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1cog6k70 e1l6meh00 cache-14geho4 e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
@@ -143,7 +270,7 @@ exports[`DotSteps renders correctly useState function 1`] = `
 
 exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
 <DocumentFragment>
-  .cache-zvjxz1 {
+  .cache-14geho4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,77 +281,166 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   justify-content: center;
 }
 
-.cache-1p3mpkn {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  cursor: pointer;
+.cache-14geho4 .e1cog6k71:nth-of-type(10)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-0px);
+  -moz-transform: translateX(-0px);
+  -ms-transform: translateX(-0px);
+  transform: translateX(-0px);
 }
 
-.cache-1p3mpkn.cache-1p3mpkn {
-  margin-right: 8px;
+.cache-14geho4 .e1cog6k71:nth-of-type(9)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-26px);
+  -moz-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
 }
 
-.cache-55b8qa {
+.cache-14geho4 .e1cog6k71:nth-of-type(8)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-52px);
+  -moz-transform: translateX(-52px);
+  -ms-transform: translateX(-52px);
+  transform: translateX(-52px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(7)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-78px);
+  -moz-transform: translateX(-78px);
+  -ms-transform: translateX(-78px);
+  transform: translateX(-78px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(6)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-104px);
+  -moz-transform: translateX(-104px);
+  -ms-transform: translateX(-104px);
+  transform: translateX(-104px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(5)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-130px);
+  -moz-transform: translateX(-130px);
+  -ms-transform: translateX(-130px);
+  transform: translateX(-130px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(4)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-156px);
+  -moz-transform: translateX(-156px);
+  -ms-transform: translateX(-156px);
+  transform: translateX(-156px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(3)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-182px);
+  -moz-transform: translateX(-182px);
+  -ms-transform: translateX(-182px);
+  transform: translateX(-182px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(2)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-208px);
+  -moz-transform: translateX(-208px);
+  -ms-transform: translateX(-208px);
+  transform: translateX(-208px);
+}
+
+.cache-14geho4 .e1cog6k71:nth-of-type(1)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-234px);
+  -moz-transform: translateX(-234px);
+  -ms-transform: translateX(-234px);
+  transform: translateX(-234px);
+}
+
+.cache-13opnl5 {
   display: inline-block;
   border-radius: 50%;
   width: 10px;
   height: 10px;
   background-color: #4f0599;
+  margin: 8px;
   cursor: pointer;
+  position: relative;
+  background-color: transparent;
 }
 
-.cache-55b8qa.cache-55b8qa {
-  margin-right: 8px;
+.cache-13opnl5::before,
+.cache-13opnl5::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
-.cache-710495 {
-  display: inline-block;
-  border-radius: 50%;
+.cache-13opnl5::before {
   width: 10px;
   height: 10px;
-  background-color: gray;
-  cursor: pointer;
+  margin: -5px;
+  background-color: #4f0599;
 }
 
-.cache-710495.cache-710495 {
-  margin-right: 0;
+.cache-13opnl5::after {
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+}
+
+.cache-13opnl5[aria-selected='true']::before {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.cache-13opnl5:last-child::after {
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="e1l6meh00 cache-zvjxz1 e1l6meh01"
+    class="e1cog6k70 e1l6meh00 cache-14geho4 e1l6meh01"
   >
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-55b8qa e7ah3bn0"
+      aria-selected="true"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-1p3mpkn e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
     <div
-      class="e6t57f80 cache-710495 e7ah3bn0"
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-13opnl5 e7ah3bn0"
     />
   </div>
 </DocumentFragment>
