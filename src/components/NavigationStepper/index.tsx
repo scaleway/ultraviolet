@@ -140,6 +140,7 @@ type NavigationStepperProps = {
   step?: number
   children: ReactNodeArray
   condensed?: boolean
+  className?: string
 }
 
 type NavigationStepperType = FunctionComponent<NavigationStepperProps> & {
@@ -148,6 +149,7 @@ type NavigationStepperType = FunctionComponent<NavigationStepperProps> & {
 
 const NavigationStepper: NavigationStepperType = ({
   condensed,
+  className,
   children,
   step = 1,
 }) => {
@@ -201,7 +203,11 @@ const NavigationStepper: NavigationStepperType = ({
   ) as ReactNode[]
 
   return (
-    <StyledUl condensed={computedCondensed} count={steps.length}>
+    <StyledUl
+      className={className}
+      condensed={computedCondensed}
+      count={steps.length}
+    >
       {steps}
     </StyledUl>
   )
@@ -211,6 +217,7 @@ NavigationStepper.Step = Step
 
 NavigationStepper.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  className: PropTypes.string,
   condensed: PropTypes.bool,
   step: PropTypes.number,
 }
