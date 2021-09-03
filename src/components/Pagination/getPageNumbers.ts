@@ -1,4 +1,15 @@
-export default function getPageNumbers(currentPage, pageCount, range = 5) {
+/**
+ * Regturn a list of page numbers around the currentPage
+ * @param currentPage The current page
+ * @param pageCount The last page number
+ * @param range The number of pages wanted
+ * @returns List of page numbers around currentPage
+ */
+export default function getPageNumbers(
+  currentPage: number,
+  pageCount: number,
+  range = 5,
+): number[] {
   const gap = Math.floor(range / 2)
   let end = currentPage + gap
   let remaining = 0
