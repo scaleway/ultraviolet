@@ -250,6 +250,7 @@ type ModalProps = Partial<DialogProps> &
     isClosable?: boolean
     modal?: boolean
     onClose?: () => void
+    onBeforeClose?: () => void
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
@@ -271,6 +272,7 @@ const Modal: FunctionComponent<ModalProps> = ({
   isClosable = true,
   modal = true,
   onClose,
+  onBeforeClose,
   opened = false,
   placement = 'center',
   preventBodyScroll = true,
@@ -303,7 +305,7 @@ const Modal: FunctionComponent<ModalProps> = ({
           hideOnEsc={hideOnEsc}
           preventBodyScroll={preventBodyScroll}
           {...dialog}
-          hide={onClose || dialog.toggle}
+          hide={onClose || (() => onBeforeClose?.() && dialog.toggle)}
         >
           <>
             <StyledContainer>
@@ -342,6 +344,7 @@ Modal.propTypes = {
   hideOnEsc: PropTypes.bool,
   isClosable: PropTypes.bool,
   modal: PropTypes.bool,
+  onBeforeClose: PropTypes.func,
   onClose: PropTypes.func,
   opened: PropTypes.bool,
   placement: PropTypes.oneOf(Object.keys(MODAL_PLACEMENT) as ModalPlacement[]),
