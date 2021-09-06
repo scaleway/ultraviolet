@@ -35,6 +35,33 @@ const App = () => (
 );
 ```
 
+N.B. To allow typescript theme typings with `@emotion/styled` components,
+you'll have to define the `@emotion/react` module `Theme` interface in your project.
+
+Example, in a `global.d.ts` file:
+
+- Declaration to use the default Scaleway theme
+```ts
+declare module '@emotion/react' {
+  import type { SCWUITheme } from '@scaleway/ui'
+  // https://emotion.sh/docs/typescript#define-a-theme
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends SCWUITheme {}
+}
+
+```
+-  Declaration to use your custom theme
+```ts
+import type { MyTheme } from './src/theme'
+
+declare module '@emotion/react' {
+  // https://emotion.sh/docs/typescript#define-a-theme
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends MyTheme {}
+}
+
+```
+
 ## Development
 
 ### Storybook
