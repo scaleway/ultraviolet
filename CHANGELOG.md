@@ -1,3 +1,20 @@
+### [0.107.1](https://github.com/scaleway/scaleway-ui/compare/v0.107.0...v0.107.1) (2021-09-06)
+
+
+### :package: Chore
+
+* **deps:** bump @babel/runtime from 7.15.3 to 7.15.4 ([#689](https://github.com/scaleway/scaleway-ui/issues/689)) ([3ccc292](https://github.com/scaleway/scaleway-ui/commit/3ccc2927ba5edf4292f014d32dd348ccc5ef96bc))
+* **deps:** bump docker/setup-buildx-action from 1.5.1 to 1.6.0 ([#693](https://github.com/scaleway/scaleway-ui/issues/693)) ([a91d81b](https://github.com/scaleway/scaleway-ui/commit/a91d81b1fa2f1a4ff15fb9b83d4ef8023fa7b131))
+* **deps-dev:** bump @babel/core from 7.15.0 to 7.15.5 ([#694](https://github.com/scaleway/scaleway-ui/issues/694)) ([2d180da](https://github.com/scaleway/scaleway-ui/commit/2d180da4fc7c8169b67992ba7878250a54bfb7a6))
+* **deps-dev:** bump @babel/eslint-parser from 7.15.0 to 7.15.4 ([#690](https://github.com/scaleway/scaleway-ui/issues/690)) ([32c4a2a](https://github.com/scaleway/scaleway-ui/commit/32c4a2aeed5344e32674c8be8a6c47a125b05188))
+* **deps-dev:** bump @scaleway/use-i18n from 3.1.7 to 3.1.8 ([#685](https://github.com/scaleway/scaleway-ui/issues/685)) ([728cf78](https://github.com/scaleway/scaleway-ui/commit/728cf785451f94428607539265c5aff829a848a3))
+* **deps-dev:** bump webpack from 5.51.1 to 5.52.0 ([#695](https://github.com/scaleway/scaleway-ui/issues/695)) ([7a509ed](https://github.com/scaleway/scaleway-ui/commit/7a509ed85b7a26dc018ea0419fb802df22091b30))
+
+
+### :bug: Bug Fixes
+
+* add ability to pass className to NavigationStepper ([#686](https://github.com/scaleway/scaleway-ui/issues/686)) ([6aa8ff6](https://github.com/scaleway/scaleway-ui/commit/6aa8ff6064228fbd2982b9e57d61460d7b0d7ea1))
+
 ## [0.107.0](https://github.com/scaleway/scaleway-ui/compare/v0.106.0...v0.107.0) (2021-09-02)
 
 
