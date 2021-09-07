@@ -332,7 +332,10 @@ type TextBoxProps = {
   valid?: boolean
   value?: string | number
   wrap?: string
-}
+} & (
+  | InputHTMLAttributes<HTMLInputElement>
+  | TextareaHTMLAttributes<HTMLTextAreaElement>
+)
 
 const TextBox = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
