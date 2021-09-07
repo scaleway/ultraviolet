@@ -305,13 +305,25 @@ const Modal: FunctionComponent<ModalProps> = ({
           hideOnEsc={hideOnEsc}
           preventBodyScroll={preventBodyScroll}
           {...dialog}
-          hide={onClose || (() => onBeforeClose?.() && dialog.toggle)}
+          hide={
+            onClose ||
+            (() => {
+              onBeforeClose?.()
+              dialog.toggle()
+            })
+          }
         >
           <>
             <StyledContainer>
               {isClosable && (
                 <Touchable
-                  onClick={onClose || dialog.toggle}
+                  onClick={
+                    onClose ||
+                    (() => {
+                      onBeforeClose?.()
+                      dialog.toggle()
+                    })
+                  }
                   alignSelf="center"
                   title="close"
                   mb={0}

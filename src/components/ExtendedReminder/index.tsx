@@ -1,7 +1,7 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, MouseEventHandler } from 'react'
+import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
@@ -94,6 +94,10 @@ type Props = {
    */
   to?: string
   variant?: Variants
+  /**
+   * Custom link component
+   */
+  CustomLink?: ReactNode
 }
 
 const ExtendedReminder: FunctionComponent<Props> = ({
@@ -105,6 +109,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
   title,
   to,
   variant = 'info',
+  CustomLink,
   ...props
 }) => {
   const theme = useTheme()
@@ -129,23 +134,25 @@ const ExtendedReminder: FunctionComponent<Props> = ({
       <Typography mb={1} variant="bodyD">
         {text}
       </Typography>
-      {linkText && (
-        <StyledButtonLink
-          variant="link"
-          to={to}
-          onClick={onClick}
-          size="xsmall"
-          icon="east"
-        >
-          {linkText}
-        </StyledButtonLink>
-      )}
+      {CustomLink ||
+        (linkText && (
+          <StyledButtonLink
+            variant="link"
+            to={to}
+            onClick={onClick}
+            size="xsmall"
+            icon="east"
+          >
+            {linkText}
+          </StyledButtonLink>
+        ))}
     </StyledContainer>
   )
 }
 
 ExtendedReminder.propTypes = {
   badgeText: PropTypes.string.isRequired,
+  CustomLink: PropTypes.node,
   icon: PropTypes.oneOf(icons).isRequired,
   linkText: PropTypes.string,
   onClick: PropTypes.func,
