@@ -1,3 +1,10 @@
+### [0.107.3](https://github.com/scaleway/scaleway-ui/compare/v0.107.2...v0.107.3) (2021-09-07)
+
+
+### :bug: Bug Fixes
+
+* avoid to declare emotion Theme typings ([#704](https://github.com/scaleway/scaleway-ui/issues/704)) ([bd01bed](https://github.com/scaleway/scaleway-ui/commit/bd01bed7bddff1c69c65ad6633f1c89178e3bc25))
+
 ### [0.107.2](https://github.com/scaleway/scaleway-ui/compare/v0.107.1...v0.107.2) (2021-09-07)
 
 
