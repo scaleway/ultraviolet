@@ -1,3 +1,10 @@
+### [0.107.5](https://github.com/scaleway/scaleway-ui/compare/v0.107.4...v0.107.5) (2021-09-07)
+
+
+### :bug: Bug Fixes
+
+* adds correct types to textbox ([#707](https://github.com/scaleway/scaleway-ui/issues/707)) ([280d249](https://github.com/scaleway/scaleway-ui/commit/280d249ed4fc41ed15e5825fb5814847b72b5093))
+
 ### [0.107.4](https://github.com/scaleway/scaleway-ui/compare/v0.107.3...v0.107.4) (2021-09-07)
 
 
