@@ -21,7 +21,7 @@ const space = {
   7: '56px',
   8: '64px',
   9: '72px',
-}
+} as const
 export type Spaces = keyof typeof space
 
 const screens = {
@@ -30,13 +30,13 @@ const screens = {
   medium: 768,
   large: 992,
   xlarge: 1200,
-}
+} as const
 export type ScreenSize = keyof typeof screens
 
 const fonts = {
   monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
   sansSerif: 'Asap, System, sans-serif',
-}
+} as const
 
 const theme = {
   colors,
