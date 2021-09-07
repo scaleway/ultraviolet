@@ -250,7 +250,7 @@ type ModalProps = Partial<DialogProps> &
     isClosable?: boolean
     modal?: boolean
     onClose?: () => void
-    onBeforeClose?: () => void
+    onBeforeClose?: () => Promise<unknown>
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
@@ -307,8 +307,8 @@ const Modal: FunctionComponent<ModalProps> = ({
           {...dialog}
           hide={
             onClose ||
-            (() => {
-              onBeforeClose?.()
+            (async () => {
+              await onBeforeClose?.()
               dialog.toggle()
             })
           }
@@ -319,8 +319,8 @@ const Modal: FunctionComponent<ModalProps> = ({
                 <Touchable
                   onClick={
                     onClose ||
-                    (() => {
-                      onBeforeClose?.()
+                    (async () => {
+                      await onBeforeClose?.()
                       dialog.toggle()
                     })
                   }
