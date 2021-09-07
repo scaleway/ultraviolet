@@ -438,6 +438,153 @@ exports[`Modal renders with disclosure 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Modal renders with disclosure and onBeforeClose 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="modal-test"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    type="button"
+  >
+    Test
+  </button>
+  .cache-5vl9c-Modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  overflow: auto;
+  padding: 16px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+  background-color: rgba(74,79,98,0.2);
+}
+
+.cache-wh6zpw-Modal {
+  background-color: #fff;
+  position: relative;
+  border-radius: 4px;
+  border: 0;
+  padding: 32px;
+  margin: auto;
+  width: 616px;
+  min-height: initial;
+  box-shadow: 0 0 12px 18px rgba(165,165,205,0.2);
+  opacity: 1;
+}
+
+.cache-wh6zpw-Modal::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+}
+
+.cache-et21s3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+}
+
+.cache-1x1qiw9 {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1x1qiw9.cache-1x1qiw9 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.cache-byq9xb {
+  fill: #b2b6c3;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.cache-byq9xb.cache-byq9xb {
+  vertical-align: middle;
+}
+
+<div
+    class="__reakit-portal"
+  >
+    <div
+      class="cache-5vl9c-Modal e1x6rvve2"
+      data-dialog-ref="modal-test"
+      hidden=""
+      style="display: none;"
+    >
+      <div
+        aria-label="modal-test"
+        aria-modal="true"
+        class="cache-wh6zpw-Modal e1x6rvve1"
+        data-dialog="true"
+        hidden=""
+        id="modal-test"
+        role="dialog"
+        style="display: none;"
+        tabindex="-1"
+      >
+        <div
+          class="cache-et21s3 e1x6rvve0"
+        >
+          <button
+            class="cache-1x1qiw9 e7ah3bn0"
+            title="close"
+            type="button"
+          >
+            <svg
+              class="sc-ui-icon etwatq50 cache-byq9xb e7ah3bn0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Modal renders with opened={true} 1`] = `
 <DocumentFragment>
   <div

@@ -38,4 +38,16 @@ describe('ExtendedReminder', () => {
         text="Enter the code we send to your bank account to validate your payment method."
       />,
     ))
+
+  test('renders correctly with custom link', () =>
+    shouldMatchEmotionSnapshot(
+      <ExtendedReminder
+        variant="warning"
+        icon="alert"
+        badgeText="10 days remaining"
+        title="Verify your credit card"
+        text="Enter the code we send to your bank account to validate your payment method."
+        CustomLink={<div>Custom Link</div>}
+      />,
+    ))
 })

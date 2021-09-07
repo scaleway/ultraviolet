@@ -1,5 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ExtendedReminder renders correctly with custom link 1`] = `
+<DocumentFragment>
+  .cache-ca5rh {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: #ffefe6;
+}
+
+.cache-1c2oc0x {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cache-12kyav8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ff8c69;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+}
+
+.cache-16gvrqr {
+  fill: #fff;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-16gvrqr.cache-16gvrqr {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.cache-c2d62p {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ff8c69;
+}
+
+.cache-c2d62p.cache-c2d62p {
+  margin-bottom: 8px;
+}
+
+.cache-aixvht {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cache-aixvht.cache-aixvht {
+  margin-bottom: 8px;
+}
+
+<div
+    class="edgwu7l3 cache-ca5rh e7ah3bn0"
+  >
+    <div
+      class="edgwu7l2 cache-1c2oc0x e7ah3bn0"
+    >
+      <span
+        class="egvl2gp0 cache-12kyav8 e7ah3bn0"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-16gvrqr e7ah3bn0"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          />
+        </svg>
+        10 days remaining
+      </span>
+    </div>
+    <p
+      class="edgwu7l1 e1g1zfwd0 cache-c2d62p e7ah3bn0"
+    >
+      Verify your credit card
+    </p>
+    <p
+      class="e1g1zfwd0 cache-aixvht e7ah3bn0"
+    >
+      Enter the code we send to your bank account to validate your payment method.
+    </p>
+    <div>
+      Custom Link
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ExtendedReminder renders correctly with default values 1`] = `
 <DocumentFragment>
   .cache-11ukj9a {

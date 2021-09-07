@@ -46,6 +46,19 @@ describe('Modal', () => {
         <div>modal</div>
       </Modal>,
     ))
+
+  test(`renders with disclosure and onBeforeClose`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal
+        ariaLabel="modal-test"
+        baseId="modal-test"
+        disclosure={() => <button type="button">Test</button>}
+        onBeforeClose={() => console.log('onBeforeClose triggered')}
+      >
+        <div>modal</div>
+      </Modal>,
+    ))
+
   test(`renders with portal node (modal=false)`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal ariaLabel="modal-test" baseId="modal-test" modal={false}>
