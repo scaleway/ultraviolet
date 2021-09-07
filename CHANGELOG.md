@@ -1,3 +1,20 @@
+### [0.107.2](https://github.com/scaleway/scaleway-ui/compare/v0.107.1...v0.107.2) (2021-09-07)
+
+
+### :package: Chore
+
+* **deps:** bump @types/react-datepicker from 4.1.5 to 4.1.6 ([#702](https://github.com/scaleway/scaleway-ui/issues/702)) ([4e61638](https://github.com/scaleway/scaleway-ui/commit/4e61638db7143577f058408575c0856588d41b40))
+* **deps:** bump reakit from 1.3.8 to 1.3.9 ([#697](https://github.com/scaleway/scaleway-ui/issues/697)) ([fc092fa](https://github.com/scaleway/scaleway-ui/commit/fc092fa7a9cad21747cdae23f47b35a0d372c193))
+* **deps-dev:** bump @babel/preset-env from 7.15.0 to 7.15.4 ([#701](https://github.com/scaleway/scaleway-ui/issues/701)) ([a56e2b0](https://github.com/scaleway/scaleway-ui/commit/a56e2b0f157f716b1c67d8808cda3dae97db1909))
+* **deps-dev:** bump @semantic-release/git from 9.0.0 to 9.0.1 ([#703](https://github.com/scaleway/scaleway-ui/issues/703)) ([a8b2a51](https://github.com/scaleway/scaleway-ui/commit/a8b2a5137c1f624edbf04dc7383e77822822cd01))
+* **deps-dev:** bump @storybook/addon-essentials from 6.3.7 to 6.3.8 ([#698](https://github.com/scaleway/scaleway-ui/issues/698)) ([ce9ab32](https://github.com/scaleway/scaleway-ui/commit/ce9ab320317521fcd834e9a0f2f3b07df6c37c4f))
+* **deps-dev:** bump react-router-dom from 5.2.1 to 5.3.0 ([#696](https://github.com/scaleway/scaleway-ui/issues/696)) ([91474a8](https://github.com/scaleway/scaleway-ui/commit/91474a872b126f8937d647d75fa13a5044a838a9))
+
+
+### :bug: Bug Fixes
+
+* correct css 1px gap when using responsive utilities ([#700](https://github.com/scaleway/scaleway-ui/issues/700)) ([3a2e83e](https://github.com/scaleway/scaleway-ui/commit/3a2e83eab8775a1f0f7b71fb3ce8ee561c626d3b))
+
 ### [0.107.1](https://github.com/scaleway/scaleway-ui/compare/v0.107.0...v0.107.1) (2021-09-06)
 
 
