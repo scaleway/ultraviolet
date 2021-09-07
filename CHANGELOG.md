@@ -1,3 +1,10 @@
+### [0.107.4](https://github.com/scaleway/scaleway-ui/compare/v0.107.3...v0.107.4) (2021-09-07)
+
+
+### :bug: Bug Fixes
+
+* **theme:** allow theme constants inspection in typescript ([#706](https://github.com/scaleway/scaleway-ui/issues/706)) ([fd904cf](https://github.com/scaleway/scaleway-ui/commit/fd904cfb805eb2babe26d958aa2e7f8698fdc305))
+
 ### [0.107.3](https://github.com/scaleway/scaleway-ui/compare/v0.107.2...v0.107.3) (2021-09-07)
 
 
