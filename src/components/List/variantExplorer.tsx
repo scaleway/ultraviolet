@@ -1,17 +1,25 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { memo, useCallback } from 'react'
+import React, {
+  FunctionComponent,
+  KeyboardEvent,
+  MouseEvent,
+  VoidFunctionComponent,
+  useCallback,
+} from 'react'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
 import SortIcon from './SortIcon'
 import { useListContext } from './context'
+import { ListRowProps } from './types'
 
 export const Cell = styled(BaseCell)``
 const StyledRow = styled(Box, {
-  shouldForwardProp: prop => !['selected', 'highlighted'].includes(prop),
-})`
+  shouldForwardProp: prop =>
+    !['selected', 'highlighted'].includes(prop.toString()),
+})<{ selected?: boolean; highlighted?: boolean }>`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -64,7 +72,7 @@ const StyledCheckbox = styled(Checkbox)`
   align-self: center;
 `
 
-export const Header = () => {
+export const Header: VoidFunctionComponent = () => {
   const {
     columns,
     isLoading,
@@ -78,7 +86,7 @@ export const Header = () => {
   } = useListContext()
 
   const onSortEvent = useCallback(
-    (event, sort, index) => {
+    (event: MouseEvent | KeyboardEvent, sort, index) => {
       event.preventDefault()
       if (sort) {
         onSort(index)
@@ -87,24 +95,26 @@ export const Header = () => {
     [onSort],
   )
 
+  const handleSelectAll = useCallback(() => {
+    if (hasAllSelected) {
+      unselectAll()
+    } else {
+      selectAll()
+    }
+  }, [hasAllSelected, selectAll, unselectAll])
+
   return (
     <StyledHeader>
-      {multiselect && (
+      {multiselect ? (
         <StyledCheckbox
           name="select-rows"
           value="all"
           checked={hasAllSelected}
           size={20}
           disabled={isLoading}
-          onChange={() => {
-            if (hasAllSelected) {
-              unselectAll()
-            } else {
-              selectAll()
-            }
-          }}
+          onChange={handleSelectAll}
         />
-      )}
+      ) : null}
       {columns.map(({ label, sort, width }, index) => (
         <Cell
           key={label ?? index}
@@ -116,22 +126,27 @@ export const Header = () => {
           onKeyPress={e => onSortEvent(e, sort, index)}
           style={{
             cursor: sort ? 'pointer' : 'default',
-            width,
+            width: width ?? undefined,
           }}
         >
           <Box as="span" color={sortedIndex === index ? 'primary' : undefined}>
             {label}
           </Box>
-          {sort && (
+          {sort ? (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
-          )}
+          ) : null}
         </Cell>
       ))}
     </StyledHeader>
   )
 }
 
-export const Row = memo(({ id, children, tooltip, ...props }) => {
+export const Row: FunctionComponent<ListRowProps> = ({
+  id,
+  children,
+  tooltip,
+  ...props
+}) => {
   const { multiselect, rowsState, setRowState, hasSelectedItems } =
     useListContext()
 
@@ -146,7 +161,7 @@ export const Row = memo(({ id, children, tooltip, ...props }) => {
         selected={selected}
         highlighted={highlighted}
       >
-        {multiselect && (
+        {multiselect ? (
           <StyledCheckbox
             data-visibility={hasSelectedItems ? '' : 'hover'}
             checked={selected}
@@ -157,20 +172,19 @@ export const Row = memo(({ id, children, tooltip, ...props }) => {
               setRowState(id, { selected: !selected })
             }}
           />
-        )}
+        ) : null}
         {children}
       </StyledRow>
     </Tooltip>
   )
-})
+}
 
 Row.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   tooltip: PropTypes.string,
 }
 
 Row.defaultProps = {
-  id: undefined,
   tooltip: undefined,
 }

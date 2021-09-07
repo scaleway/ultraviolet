@@ -48,7 +48,7 @@ const StyledPageButton = styled(Button, {
       : ''}
 `
 
-type PaginationComponentProps<T = unknown> = {
+export type PaginationComponentProps<T = unknown> = {
   pageTabCount?: number
   paginationState: PaginationState<T>
 }

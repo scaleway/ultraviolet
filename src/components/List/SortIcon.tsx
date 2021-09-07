@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Icon from '../Icon'
+import { ListOrder } from './types'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -21,8 +22,13 @@ const DownIcon = styled(Icon)`
   bottom: 0;
 `
 
-const SortIcon = ({ active, order }) => {
-  let ariaSort = 'none'
+type AriaSortType = 'none' | 'descending' | 'ascending' | 'other' | undefined
+
+const SortIcon: FunctionComponent<{ active?: boolean; order?: ListOrder }> = ({
+  active = false,
+  order,
+}) => {
+  let ariaSort: AriaSortType = 'none'
   if (active) {
     ariaSort = order === 'desc' ? 'descending' : 'ascending'
   }
@@ -30,16 +36,16 @@ const SortIcon = ({ active, order }) => {
   return (
     <StyledContainer aria-sort={ariaSort}>
       <UpIcon
+        title="ascending"
         color={active && order === 'asc' ? 'primary' : 'gray550'}
         size={10}
         name="arrow-up"
-        title="ascending"
       />
       <DownIcon
+        title="descending"
         color={active && order === 'desc' ? 'primary' : 'gray550'}
         size={10}
         name="arrow-down"
-        title="descending"
       />
     </StyledContainer>
   )
@@ -48,11 +54,6 @@ const SortIcon = ({ active, order }) => {
 SortIcon.propTypes = {
   active: PropTypes.bool,
   order: PropTypes.oneOf(['asc', 'desc']),
-}
-
-SortIcon.defaultProps = {
-  active: false,
-  order: undefined,
 }
 
 export default SortIcon

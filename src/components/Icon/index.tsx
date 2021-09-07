@@ -512,6 +512,7 @@ export type IconName = keyof typeof ICONS
 type IconProps = {
   size?: number | string
   name?: IconName
+  title?: string
 } & XStyledProps &
   React.SVGAttributes<HTMLOrSVGElement>
 
@@ -556,6 +557,7 @@ Icon.propTypes = {
   color: PropTypes.string,
   name: PropTypes.oneOf(icons),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
   verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
 }
 

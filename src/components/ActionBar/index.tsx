@@ -31,6 +31,7 @@ type ActionBarProps = {
    * The position of the bar (start at 0)
    */
   rank?: number
+  role?: string
 }
 
 const ActionBar: FunctionComponent<ActionBarProps> = ({
