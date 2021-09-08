@@ -551,4 +551,39 @@ describe('Pagination', () => {
       </ThemeProvider>,
     )
   })
+
+  test('should render correctly perPage 0', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        perPage={0}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+      >
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
+  test('should render correctly PaginationContainer', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination.PaginationContainer
+        paginationState={{
+          canLoadMore: false,
+          goToFirstPage: jest.fn(),
+          goToLastPage: jest.fn(),
+          goToNextPage: jest.fn(),
+          goToPage: jest.fn(),
+          goToPreviousPage: jest.fn(),
+          isLoadingPage: false,
+          maxPage: 2,
+          page: 1,
+          pageData: [],
+          paginatedData: {},
+          perPage: undefined,
+          reloadPage: jest.fn(),
+          setPageData: jest.fn(),
+          setPaginatedData: jest.fn(),
+        }}
+      />,
+    ))
 })
