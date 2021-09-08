@@ -7,6 +7,7 @@ import React, {
   ReactElement,
   VoidFunctionComponent,
   memo,
+  useCallback,
   useEffect,
   useRef,
 } from 'react'
@@ -288,6 +289,11 @@ const Modal: FunctionComponent<ModalProps> = ({
   const { setVisible } = dialog
   useEffect(() => setVisible(opened), [setVisible, opened])
 
+  const onCloseCallBack = useCallback(async () => {
+    await onBeforeClose?.()
+    dialog.toggle()
+  }, [dialog, onBeforeClose])
+
   return (
     <>
       {disclosure && <MemoDisclosure dialog={dialog} disclosure={disclosure} />}
@@ -305,25 +311,13 @@ const Modal: FunctionComponent<ModalProps> = ({
           hideOnEsc={hideOnEsc}
           preventBodyScroll={preventBodyScroll}
           {...dialog}
-          hide={
-            onClose ||
-            (async () => {
-              await onBeforeClose?.()
-              dialog.toggle()
-            })
-          }
+          hide={onClose || onCloseCallBack}
         >
           <>
             <StyledContainer>
               {isClosable && (
                 <Touchable
-                  onClick={
-                    onClose ||
-                    (async () => {
-                      await onBeforeClose?.()
-                      dialog.toggle()
-                    })
-                  }
+                  onClick={onClose || onCloseCallBack}
                   alignSelf="center"
                   title="close"
                   mb={0}
