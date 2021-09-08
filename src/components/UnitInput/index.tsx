@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import RichSelect from '../RichSelect'
+import RichSelect, { RichSelectProps, SelectOption, WithSelectProps } from '../RichSelect'
 import TextBox from '../TextBox'
 
-export const sizesHeight = {
+export const sizesHeight: Record<string, string> = {
   large: '48px',
   medium: '40px',
   small: '32px',
@@ -35,7 +35,7 @@ const CustomRichSelect = styled(RichSelect)`
   }
 `
 
-const customSelectStyle = state => ({
+const customSelectStyle = (state: WithSelectProps) => ({
   control: {
     borderBottomLeftRadius: 0,
     borderTopLeftRadius: 0,
@@ -48,62 +48,7 @@ const customSelectStyle = state => ({
   },
 })
 
-const UnitInput = ({
-  name,
-  maxValue,
-  minValue,
-  defaultValue,
-  size,
-  placeholder,
-  onChange,
-  textBoxWidth,
-  richSelectWidth,
-  disabled,
-  options,
-  defaultOption,
-}) => {
-  const [value, setValue] = useState({
-    unit: defaultOption?.value || options?.[0]?.value,
-    value: defaultValue.toString(),
-  })
-  useEffect(() => onChange(value), [onChange, value])
-
-  return (
-    <div style={{ display: 'flex' }}>
-      <CustomTextBox
-        height={sizesHeight[size]}
-        width={textBoxWidth}
-        type="number"
-        name={`${name}-value`}
-        value={value?.value < maxValue ? value.value : maxValue}
-        placeholder={placeholder}
-        onChange={textValue => {
-          setValue(current => ({
-            ...current,
-            value: textValue < minValue ? minValue.toString() : textValue,
-          }))
-        }}
-        disabled={disabled}
-      />
-      <CustomRichSelect
-        width={richSelectWidth}
-        noTopLabel
-        height={sizesHeight[size]}
-        id={`${name}-unit`}
-        name={`${name}-unit`}
-        onChange={unitValue => {
-          setValue(current => ({ ...current, unit: unitValue.value }))
-        }}
-        value={options.find(option => option.value === value.unit)}
-        options={options}
-        customStyle={customSelectStyle}
-        disabled={disabled}
-      />
-    </div>
-  )
-}
-
-const defaultOptionValues = [
+const defaultOptionValues: SelectOption[] = [
   {
     label: 'Hours',
     value: 'hours',
@@ -121,6 +66,82 @@ const defaultOptionValues = [
     value: 'years',
   },
 ]
+
+type UnitInputValue = {
+  unit: string
+  value: number
+}
+
+type UnitInputProps = Omit<RichSelectProps, 'defaultValue'> & {
+  name?: string
+  defaultValue?: number
+  disabled?: boolean
+  maxValue?: number
+  minValue?: number
+  onChange?: (value: UnitInputValue) => void
+  options?: SelectOption[]
+  placeholder?: string
+  richSelectWidth?: number
+  size?: string
+  textBoxWidth?: number
+  defaultOption?: SelectOption
+}
+
+const UnitInput = ({
+  name = '',
+  maxValue = 99999,
+  minValue = 1,
+  defaultValue = 1,
+  size = 'medium',
+  placeholder = '0',
+  onChange,
+  textBoxWidth = 100,
+  richSelectWidth = 200,
+  disabled = false,
+  options = defaultOptionValues,
+  defaultOption,
+}: UnitInputProps): JSX.Element => {
+  const [value, setValue] = useState({
+    unit: defaultOption?.value || options?.[0]?.value,
+    value: defaultValue,
+  })
+  useEffect(() => onChange?.(value), [onChange, value])
+
+  return (
+    <div style={{ display: 'flex' }}>
+      <CustomTextBox
+        height={sizesHeight[size]}
+        width={textBoxWidth}
+        type="number"
+        name={`${name}-value`}
+        value={value.value < maxValue ? value.value : maxValue}
+        placeholder={placeholder}
+        onChange={(event: string) => {
+          const numericValue = Number(event)
+          setValue(current => ({
+            ...current,
+            value: numericValue < minValue ? minValue : numericValue,
+          }))
+        }}
+        disabled={disabled}
+      />
+      <CustomRichSelect
+        width={richSelectWidth}
+        noTopLabel
+        height={sizesHeight[size]}
+        id={`${name}-unit`}
+        name={`${name}-unit`}
+        onChange={(unitValue: SelectOption) => {
+          setValue(current => ({ ...current, unit: unitValue.value }))
+        }}
+        value={options.find(option => option.value === value.unit)}
+        options={options}
+        customStyle={customSelectStyle}
+        disabled={disabled}
+      />
+    </div>
+  )
+}
 
 UnitInput.propTypes = {
   /**
@@ -155,20 +176,6 @@ UnitInput.propTypes = {
   richSelectWidth: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(sizesHeight)),
   textBoxWidth: PropTypes.number,
-}
-
-UnitInput.defaultProps = {
-  defaultOption: undefined,
-  defaultValue: 1,
-  disabled: false,
-  maxValue: 99999,
-  minValue: 1,
-  onChange: () => null,
-  options: defaultOptionValues,
-  placeholder: '0',
-  richSelectWidth: 200,
-  size: 'medium',
-  textBoxWidth: 100,
 }
 
 export default UnitInput

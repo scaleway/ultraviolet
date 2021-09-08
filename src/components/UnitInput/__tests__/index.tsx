@@ -76,7 +76,7 @@ describe('UnitInput', () => {
     const node = renderWithTheme(<UnitInput name="test" />)
 
     // Role textbox is only for the searchable input
-    const valueContainer = node.getByRole('textbox')
+    const valueContainer = node.getByRole('textbox') as HTMLInputElement
     userEvent.click(valueContainer)
     userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
@@ -85,15 +85,15 @@ describe('UnitInput', () => {
     // Real rich select value is inside a hidden input with the name put in RichSelect props.
     const richSelectInputHidden = richSelect.querySelector(
       'input[type="hidden"]',
-    )
-    await waitFor(() => expect(richSelectInputHidden.value).toBe('weeks'))
+    ) as HTMLInputElement
+    await waitFor(() => expect(richSelectInputHidden?.value).toBe('weeks'))
   })
 })
 
 test(`renders with TextBox update`, async () => {
   const node = renderWithTheme(<UnitInput name="test" />)
 
-  const input = node.getByRole('spinbutton')
+  const input = node.getByRole('spinbutton') as HTMLInputElement
   await waitFor(() => expect(input.value).toBe('1'))
   userEvent.click(input)
   userEvent.type(input, '10')

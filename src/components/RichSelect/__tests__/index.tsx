@@ -1,10 +1,10 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import RichSelect from '..'
+import RichSelect, { SelectStyleMap } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
-const customStyles = {
+const customStyles: SelectStyleMap = {
   control: () => ({}),
   indicatorsContainer: () => ({}),
   indicatorSeparator: () => ({}),
@@ -28,7 +28,7 @@ describe('RichSelect', () => {
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
       {
-        transform: async node => {
+        transform: node => {
           const input = node.getByRole('textbox')
           userEvent.click(input)
         },

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import RichSelect from '../RichSelect'
+import RichSelect, { RichSelectProps, SelectOption } from '../RichSelect'
 
 const hours = [
   '00:00',
@@ -184,13 +184,25 @@ const schedules = {
   quarter,
 }
 
-const options = schedule =>
+type ScheduleType = keyof typeof schedules
+
+const options = (schedule: ScheduleType) =>
   schedules[schedule].map(hour => ({
     label: hour,
     value: hour,
   }))
 
-const TimeInput = ({ value, schedule, ...props }) => (
+
+const defaultValue = {
+  label: '00:00',
+  value: '00:00',
+}
+
+type TimeInputProps = RichSelectProps & {
+  schedule?: ScheduleType,
+  value?: SelectOption,
+}
+const TimeInput = ({ value = defaultValue, schedule = 'hours', ...props }: TimeInputProps = {}): JSX.Element => (
   <RichSelect {...props} time value={value} options={options(schedule)} />
 )
 
@@ -201,14 +213,6 @@ TimeInput.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
   }),
-}
-
-TimeInput.defaultProps = {
-  schedule: 'hours',
-  value: {
-    label: '00:00',
-    value: '00:00',
-  },
 }
 
 TimeInput.options = options

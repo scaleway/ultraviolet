@@ -2,10 +2,14 @@
 
 exports[`TimeInput renders correctly with base props 1`] = `
 <DocumentFragment>
-  .cache-70ccc7-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
+}
+
+.cache-1gkajv1-container.cache-1gkajv1-container {
+  margin-top: 0;
 }
 
 .cache-1f43avz-a11yText-A11yText {
@@ -159,9 +163,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-left: 0;
 }
 
-.cache-1oagfds-Input {
+.cache-1xege3a-Input {
   padding-top: 11px;
   margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -248,7 +253,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 <div
-    class=" emneda41 cache-70ccc7-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-timeinput-test-0"
   >
     <span
@@ -265,7 +270,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
       >
         <label
           aria-live="assertive"
-          class="emneda40 cache-1ot4w4y e7ah3bn0"
+          class="e1lzna4r0 cache-1ot4w4y e7ah3bn0"
           for="test"
           id="test-label"
         >
@@ -280,8 +285,8 @@ exports[`TimeInput renders correctly with base props 1`] = `
           class="cache-1mkawrf-Input"
         >
           <div
-            class="cache-1oagfds-Input"
-            style="caret-color: transparent; display: inline-block;"
+            class="cache-1xege3a-Input"
+            style="display: inline-block;"
           >
             <input
               aria-autocomplete="list"
