@@ -135,7 +135,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
         {text}
       </Typography>
       {CustomLink ||
-        (linkText && (
+        (linkText ? (
           <StyledButtonLink
             variant="link"
             to={to}
@@ -145,7 +145,7 @@ const ExtendedReminder: FunctionComponent<Props> = ({
           >
             {linkText}
           </StyledButtonLink>
-        ))}
+        ) : null)}
     </StyledContainer>
   )
 }
