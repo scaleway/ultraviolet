@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, InputHTMLAttributes } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import type { Sizes, Variants } from '../Badge'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Radio from '../Radio'
 
 const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
@@ -38,7 +38,8 @@ type RadioBorderedBoxProps = {
   name: string
   size?: number
   value: string | number
-} & InputHTMLAttributes<HTMLInputElement>
+} & InputHTMLAttributes<HTMLInputElement> &
+  XStyledProps
 
 const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   label,
