@@ -1,3 +1,10 @@
+## [0.108.0](https://github.com/scaleway/scaleway-ui/compare/v0.107.7...v0.108.0) (2021-09-10)
+
+
+### :gear: Features
+
+* **CNS-4317:** add AI category icon ([#692](https://github.com/scaleway/scaleway-ui/issues/692)) ([8870768](https://github.com/scaleway/scaleway-ui/commit/8870768993b8907cbb337c338f30372e13e2cc1e))
+
 ### [0.107.7](https://github.com/scaleway/scaleway-ui/compare/v0.107.6...v0.107.7) (2021-09-10)
 
 
