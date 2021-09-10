@@ -1,3 +1,22 @@
+### [0.107.6](https://github.com/scaleway/scaleway-ui/compare/v0.107.5...v0.107.6) (2021-09-10)
+
+
+### :repeat: CI
+
+* downgrade test/jest node version ([#711](https://github.com/scaleway/scaleway-ui/issues/711)) ([e653018](https://github.com/scaleway/scaleway-ui/commit/e65301862a571ea5c6bbf5c3b973420bf5f17625))
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/preset-env from 7.15.4 to 7.15.6 ([#714](https://github.com/scaleway/scaleway-ui/issues/714)) ([c75d073](https://github.com/scaleway/scaleway-ui/commit/c75d073ce6a3e09423536e749894a18a841c1c16))
+* **deps-dev:** bump jest from 27.1.0 to 27.1.1 ([#710](https://github.com/scaleway/scaleway-ui/issues/710)) ([cb762eb](https://github.com/scaleway/scaleway-ui/commit/cb762ebaff91766813318b60ba2a7a2d87bcb398))
+* **deps-dev:** bump prettier from 2.3.2 to 2.4.0 ([#715](https://github.com/scaleway/scaleway-ui/issues/715)) ([413e0cf](https://github.com/scaleway/scaleway-ui/commit/413e0cf09036dff69d2a2ec5737cd5dfef7f95d4))
+
+
+### :bug: Bug Fixes
+
+* radioborderedbox add xstyledprops ([#712](https://github.com/scaleway/scaleway-ui/issues/712)) ([8747875](https://github.com/scaleway/scaleway-ui/commit/874787536635e1ace5126c2075d180add28401f5))
+
 ### [0.107.5](https://github.com/scaleway/scaleway-ui/compare/v0.107.4...v0.107.5) (2021-09-07)
 
 
