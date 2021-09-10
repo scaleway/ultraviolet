@@ -1,3 +1,15 @@
+### [0.107.7](https://github.com/scaleway/scaleway-ui/compare/v0.107.6...v0.107.7) (2021-09-10)
+
+
+### :package: Chore
+
+* **deps-dev:** bump webpack from 5.52.0 to 5.52.1 ([#716](https://github.com/scaleway/scaleway-ui/issues/716)) ([f671faf](https://github.com/scaleway/scaleway-ui/commit/f671faf6ce55906d0af01092b0cd11e0bcbadd15))
+
+
+### :bug: Bug Fixes
+
+* **modal:** onBeforeClose & ExtendReminder CustomLink ([#705](https://github.com/scaleway/scaleway-ui/issues/705)) ([1e154c9](https://github.com/scaleway/scaleway-ui/commit/1e154c9e70a3cd5fe0a4f76b7ad4748955ffe827))
+
 ### [0.107.6](https://github.com/scaleway/scaleway-ui/compare/v0.107.5...v0.107.6) (2021-09-10)
 
 
