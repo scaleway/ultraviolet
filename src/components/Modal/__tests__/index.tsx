@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Modal from '..'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
@@ -46,10 +47,36 @@ describe('Modal', () => {
         <div>modal</div>
       </Modal>,
     ))
+
+  test(`renders with disclosure and onBeforeClose`, () => {
+    let count = 0
+
+    return shouldMatchEmotionSnapshotWithPortal(
+      <Modal
+        ariaLabel="modal-test"
+        baseId="modal-test"
+        disclosure={() => <button type="button">Test</button>}
+        /* eslint-disable-next-line @typescript-eslint/require-await */
+        onBeforeClose={async () => {
+          count += 1
+        }}
+      >
+        <div>modal</div>
+      </Modal>,
+      {
+        transform: node => {
+          const closeButton = node.getByTitle('close')
+          userEvent.click(closeButton)
+          expect(count).toBe(1)
+        },
+      },
+    )
+  })
+
   test(`renders with portal node (modal=false)`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal ariaLabel="modal-test" baseId="modal-test" modal={false}>
-        <div> test </div>
+        <div> test</div>
       </Modal>,
     ))
 })
