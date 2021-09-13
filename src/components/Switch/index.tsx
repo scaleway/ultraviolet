@@ -1,12 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  ChangeEventHandler,
-  HTMLAttributes,
-  ReactNode,
-  VoidFunctionComponent,
-} from 'react'
+import React, { HTMLAttributes, ReactNode, VoidFunctionComponent } from 'react'
 import { Checkbox } from 'reakit'
 import { Color } from '../../theme/colors'
 import Tooltip from '../Tooltip'
