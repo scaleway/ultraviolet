@@ -1,3 +1,18 @@
+## [0.109.0](https://github.com/scaleway/scaleway-ui/compare/v0.108.0...v0.109.0) (2021-09-13)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/eslint-config-react from 2.1.2 to 2.2.0 ([#713](https://github.com/scaleway/scaleway-ui/issues/713)) ([9160889](https://github.com/scaleway/scaleway-ui/commit/9160889aeb275e5ab72e52920c85314e98e63fda))
+* **deps-dev:** bump @testing-library/react from 12.0.0 to 12.1.0 ([#717](https://github.com/scaleway/scaleway-ui/issues/717)) ([83be4cd](https://github.com/scaleway/scaleway-ui/commit/83be4cdfb49eb3c5d2f41deddc0cd28316ece081))
+* **deps-dev:** bump jest from 27.1.1 to 27.2.0 ([#720](https://github.com/scaleway/scaleway-ui/issues/720)) ([0ac2633](https://github.com/scaleway/scaleway-ui/commit/0ac2633feb6a9d2b2e121afd6f4837b941cfcb3c))
+* **deps-dev:** bump typescript from 4.4.2 to 4.4.3 ([#719](https://github.com/scaleway/scaleway-ui/issues/719)) ([2f92b4c](https://github.com/scaleway/scaleway-ui/commit/2f92b4c45371bf1e0ebd1013c60b6cb148dbb209))
+
+
+### :gear: Features
+
+* pagination to typescript ([#691](https://github.com/scaleway/scaleway-ui/issues/691)) ([37a1749](https://github.com/scaleway/scaleway-ui/commit/37a1749be0c086722874bb5ca1c61f637d8812e6))
+
 ## [0.108.0](https://github.com/scaleway/scaleway-ui/compare/v0.107.7...v0.108.0) (2021-09-10)
 
 
