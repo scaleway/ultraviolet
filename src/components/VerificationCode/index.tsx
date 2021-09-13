@@ -5,7 +5,6 @@ import React, {
   ClipboardEventHandler,
   FocusEventHandler,
   FunctionComponent,
-  KeyboardEvent,
   KeyboardEventHandler,
   useState,
 } from 'react'

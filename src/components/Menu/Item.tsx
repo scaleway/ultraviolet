@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
+import React, { FunctionComponent } from 'react'
 import Button, { ButtonProps } from '../Button'
 
 const variantStyle = {
