@@ -1652,7 +1652,7 @@ describe('List', () => {
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
           })
-          userEvent.click(nameHeader)
+          userEvent.click(nameHeader.parentElement)
           await waitFor(() =>
             expect(
               node.getByRole('button', {

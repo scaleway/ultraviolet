@@ -1,14 +1,15 @@
 import { ThemeProvider } from '@emotion/react'
 import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
-import Pagination, { usePaginationContext } from '..'
+import React, { FunctionComponent } from 'react'
+import Pagination, { PaginationState, usePaginationContext } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import theme from '../../../theme'
 import getPageNumbers from '../getPageNumbers'
+import { UsePaginationReturn } from '../usePagination'
 
 const ExampleChildren = () => {
-  const { pageData } = usePaginationContext()
+  const { pageData } = usePaginationContext<string>()
 
   return (
     <ul>
@@ -19,7 +20,13 @@ const ExampleChildren = () => {
   )
 }
 
-const loadMore = async ({ page, perPage }) => {
+const loadMore = async ({
+  page,
+  perPage = 0,
+}: {
+  page: number
+  perPage?: number
+}) => {
   const additionalData = Array.from(
     { length: perPage },
     (_, index) => index,
@@ -41,7 +48,7 @@ describe('Pagination', () => {
           value => `Item ${value}`,
         )}
       >
-        {({ pageData }) => (
+        {({ pageData }: { pageData: string[] }) => (
           <ul>
             {pageData.map(item => (
               <li key={item}>{item}</li>
@@ -50,6 +57,7 @@ describe('Pagination', () => {
         )}
       </Pagination>,
     ))
+
   test('should render correctly component', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination
@@ -111,8 +119,12 @@ describe('Pagination', () => {
           value => `Item ${value}`,
         )}
         LoaderComponent={() => <div>Loading</div>}
-        RightComponent={() => "I'm a custom right component"}
-        LeftComponent={() => "I'm a custom left component"}
+        RightComponent={
+          (() => <>I&apos;m a custom right component</>) as FunctionComponent
+        }
+        LeftComponent={
+          (() => <>I&apos;m a custom left component</>) as FunctionComponent
+        }
         MiddleComponent={({
           paginationState: {
             isLoadingPage,
@@ -125,7 +137,7 @@ describe('Pagination', () => {
           },
         }) => {
           const pageNumbersToDisplay = getPageNumbers(page, maxPage, 5)
-          const handlePageClick = pageNumber => () => {
+          const handlePageClick = (pageNumber: number) => () => {
             goToPage(pageNumber)
           }
 
@@ -171,10 +183,10 @@ describe('Pagination', () => {
         initialData={Array.from({ length: 50 }, (_, index) => index).map(
           value => `Item ${value}`,
         )}
-        LoaderComponent={<div>Loading</div>}
-        RightComponent={<div>I am a custom right component</div>}
-        LeftComponent={<div>I am a custom left component</div>}
-        MiddleComponent={<div>I am the middle one</div>}
+        LoaderComponent={() => <div>Loading</div>}
+        RightComponent={() => <div>I am a custom right component</div>}
+        LeftComponent={() => <div>I am a custom left component</div>}
+        MiddleComponent={() => <div>I am the middle one</div>}
       >
         <ExampleChildren />
       </Pagination>,
@@ -191,7 +203,7 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
+        transform: node => {
           const nextButton = node.getByRole('button', { name: 'Next' })
           const backButton = node.getByRole('button', { name: 'Back' })
           const firstButton = node.getByRole('button', { name: 'First' })
@@ -278,7 +290,7 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
+        transform: node => {
           act(() => {
             userEvent.click(node.getByRole('button', { name: 'Last' }))
           })
@@ -296,7 +308,12 @@ describe('Pagination', () => {
         )}
         MiddleComponent={() => null}
       >
-        {({ goToPage, goToLastPage, goToNextPage, goToPreviousPage }) => (
+        {({
+          goToPage,
+          goToLastPage,
+          goToNextPage,
+          goToPreviousPage,
+        }: UsePaginationReturn<string>) => (
           <>
             <button type="button" onClick={() => goToPage(100)}>
               100
@@ -304,20 +321,20 @@ describe('Pagination', () => {
             <button type="button" onClick={() => goToPage(-1)}>
               -1
             </button>
-            <button type="button" onClick={() => goToLastPage()}>
+            <button type="button" onClick={goToLastPage}>
               Last
             </button>
-            <button type="button" onClick={() => goToNextPage()}>
+            <button type="button" onClick={goToNextPage}>
               Next
             </button>
-            <button type="button" onClick={() => goToPreviousPage()}>
+            <button type="button" onClick={goToPreviousPage}>
               Previous
             </button>
           </>
         )}
       </Pagination>,
       {
-        transform: async node => {
+        transform: node => {
           act(() => {
             userEvent.click(node.getByRole('button', { name: 'Next' }))
             userEvent.click(node.getByRole('button', { name: 'Previous' }))
@@ -423,14 +440,14 @@ describe('Pagination', () => {
           value => `Item ${value}`,
         )}
       >
-        {({ setPageData }) => (
+        {({ setPageData }: UsePaginationReturn<string>) => (
           <button type="button" onClick={() => setPageData(10, ['test'])}>
             Set Page Data
           </button>
         )}
       </Pagination>,
       {
-        transform: async node => {
+        transform: node => {
           userEvent.click(node.getByRole('button', { name: 'Set Page Data' }))
         },
       },
@@ -464,7 +481,7 @@ describe('Pagination', () => {
     ))
 
   test('should render correctly with ref', async () => {
-    const ref = React.createRef()
+    const ref = React.createRef<PaginationState>()
     await shouldMatchEmotionSnapshot(
       <Pagination
         ref={ref}
@@ -475,10 +492,10 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async () => {
+        transform: () => {
           act(() => {
-            ref.current.goToLastPage()
-            ref.current.reloadPage()
+            ref.current?.goToLastPage()
+            ref.current?.reloadPage()
           })
         },
       },
@@ -498,7 +515,7 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
+        transform: node => {
           userEvent.click(node.getByRole('button', { name: 'Last' }))
           const nextButton = node.getByRole('button', { name: 'Next' })
           userEvent.click(nextButton)
@@ -534,4 +551,39 @@ describe('Pagination', () => {
       </ThemeProvider>,
     )
   })
+
+  test('should render correctly perPage 0', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination
+        perPage={0}
+        initialData={Array.from({ length: 50 }, (_, index) => index).map(
+          value => `Item ${value}`,
+        )}
+      >
+        <ExampleChildren />
+      </Pagination>,
+    ))
+
+  test('should render correctly PaginationContainer', async () =>
+    shouldMatchEmotionSnapshot(
+      <Pagination.PaginationContainer
+        paginationState={{
+          canLoadMore: false,
+          goToFirstPage: jest.fn(),
+          goToLastPage: jest.fn(),
+          goToNextPage: jest.fn(),
+          goToPage: jest.fn(),
+          goToPreviousPage: jest.fn(),
+          isLoadingPage: false,
+          maxPage: 2,
+          page: 1,
+          pageData: [],
+          paginatedData: {},
+          perPage: undefined,
+          reloadPage: jest.fn(),
+          setPageData: jest.fn(),
+          setPaginatedData: jest.fn(),
+        }}
+      />,
+    ))
 })

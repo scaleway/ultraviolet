@@ -1,17 +1,56 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 
-const usePagination = ({
+export type UsePaginationParams<T> = {
+  data: T[]
+  page: number
+  pageCount?: number
+  onLoadPage?: (params: {
+    page: number
+    perPage?: number
+  }) => Promise<void | T | T[]>
+  onChangePage?: (newPage: number) => void
+  perPage?: number
+}
+
+export type UsePaginationReturn<T> = {
+  goToFirstPage: () => void
+  goToLastPage: () => void
+  goToNextPage: () => void
+  goToPage: (newPage: number) => void
+  goToPreviousPage: () => void
+  isLoadingPage: boolean
+  maxPage: number
+  page: number
+  pageData: T[]
+  paginatedData: Record<number, T[]>
+  perPage?: number | null
+  reloadPage: () => void
+  setPageData: (pageToUpdate: number, data: T[]) => void
+  setPaginatedData: Dispatch<SetStateAction<Record<number, T[]>>>
+}
+
+const usePagination = <T>({
   data,
   page,
   pageCount,
   onLoadPage,
   onChangePage,
   perPage,
-}) => {
+}: UsePaginationParams<T>): UsePaginationReturn<T> => {
   const onChangePageRef = useRef(onChangePage)
   const onLoadPageRef = useRef(onLoadPage)
-  const [isLoadingPage, setIsLoadingPage] = useState(false)
-  const [paginatedData, setPaginatedData] = useState(
+  const isMounted = useRef(false)
+  const [isLoadingPage, setIsLoadingPage] = useState<boolean>(false)
+  const [paginatedData, setPaginatedData] = useState<Record<number, T[]>>(
     perPage
       ? Array.from(
           { length: Math.ceil(data.length / perPage) || 1 },
@@ -29,7 +68,9 @@ const usePagination = ({
 
   const maxPage = useMemo(() => {
     if (pageCount) return pageCount
-    const pageDataCount = Math.max(...Object.keys(paginatedData))
+    const pageDataCount = Math.max(
+      ...Object.keys(paginatedData).map(value => parseInt(value, 10)),
+    )
 
     return pageDataCount
   }, [pageCount, paginatedData])
@@ -66,10 +107,13 @@ const usePagination = ({
   }, [goToPage, page])
 
   const loadPageData = useCallback(
-    async pageToLoad => {
+    (pageToLoad: number) => {
       setIsLoadingPage(true)
-      await onLoadPageRef.current?.({ page: pageToLoad, perPage })
-      setIsLoadingPage(false)
+      onLoadPageRef.current?.({ page: pageToLoad, perPage }).finally(() => {
+        if (isMounted.current) {
+          setIsLoadingPage(false)
+        }
+      })
     },
     [perPage],
   )
@@ -94,12 +138,15 @@ const usePagination = ({
     }
   }, [maxPage, page, perPage, paginatedData, isLoadingPage, loadPageData])
 
-  const setPageData = useCallback((pageToUpdate, additionalData) => {
-    setPaginatedData(current => ({
-      ...current,
-      [pageToUpdate]: additionalData,
-    }))
-  }, [])
+  const setPageData = useCallback(
+    (pageToUpdate: number, additionalData: T[]) => {
+      setPaginatedData(current => ({
+        ...current,
+        [pageToUpdate]: additionalData,
+      }))
+    },
+    [],
+  )
 
   useEffect(() => {
     setPaginatedData(
@@ -126,6 +173,14 @@ const usePagination = ({
   useEffect(() => {
     onChangePageRef.current = onChangePage
   }, [onChangePage])
+
+  useLayoutEffect(() => {
+    isMounted.current = true
+
+    return () => {
+      isMounted.current = false
+    }
+  }, [])
 
   return {
     goToFirstPage,

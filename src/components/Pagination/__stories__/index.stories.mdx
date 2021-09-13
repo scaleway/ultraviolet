@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs'
 import { useState } from 'react'
-import Pagination from '..'
+import Pagination, { PaginationForwardFn } from '..'
 import Box from '../../Box'
 import Button from '../../Button'
 import Placeholder from '../../Placeholder'
@@ -245,4 +245,4 @@ import ExampleChildren from './ExampleChildren'
 
 ## API
 
-<ArgsTable of={Pagination} />
+<ArgsTable of={PaginationForwardFn} />
