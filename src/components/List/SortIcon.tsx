@@ -25,7 +25,7 @@ const DownIcon = styled(Icon)`
 type AriaSortType = 'none' | 'descending' | 'ascending' | 'other' | undefined
 
 const SortIcon: FunctionComponent<{ active?: boolean; order?: ListOrder }> = ({
-  active = false,
+  active,
   order,
 }) => {
   let ariaSort: AriaSortType = 'none'

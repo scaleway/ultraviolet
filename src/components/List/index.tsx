@@ -171,7 +171,7 @@ const List = forwardRef<ListRefType, ListProps>(
       isLoading = false,
       data: dataProp,
       initialData = [],
-      emptyListComponent = "This row can't be selected",
+      emptyListComponent,
       columns,
       multiselect = false,
       children,
@@ -179,7 +179,7 @@ const List = forwardRef<ListRefType, ListProps>(
       variant = 'product',
       selectable,
       autoClose,
-      notSelectableText,
+      notSelectableText = "This row can't be selected",
       perPage,
       page: pageProp,
       pageCount,
@@ -221,8 +221,8 @@ const List = forwardRef<ListRefType, ListProps>(
       () =>
         sort.prop
           ? [...data].sort(
-              sort.onSort?.(sort.prop, sort.order || 'asc') ||
-                orderBy(sort.prop, sort.order || 'asc'),
+              sort.onSort?.(sort.prop, sort.order as 'asc' | 'desc') ||
+                orderBy(sort.prop, sort.order as 'asc' | 'desc'),
             )
           : data,
       [data, sort],
@@ -503,7 +503,7 @@ const List = forwardRef<ListRefType, ListProps>(
         Body,
         SelectBar,
         ...variantFinded,
-        Cell: variantFinded.Cell ?? Cell,
+        Cell: variantFinded.Cell,
         ExpendableContent:
           (variantFinded as typeof variantProduct).ExpendableContent ??
           (() => null),

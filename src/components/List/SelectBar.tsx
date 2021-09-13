@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactElement, ReactNode } from 'react'
 import ActionBar from '../ActionBar'
-import Box from '../Box'
 import Checkbox from '../Checkbox'
+import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 import { useListContext } from './context'
 
@@ -59,11 +59,11 @@ const SelectBar: FunctionComponent<ListSelectBarProps> = ({
       <Typography color="primary" fontWeight={500} ml={1}>
         {typeof text === 'function' ? text(selectedItems.length) : text}
       </Typography>
-      <Box display="flex" flex={1} justifyContent="flex-end">
+      <FlexBox flex={1} justifyContent="flex-end">
         {typeof children === 'function'
           ? children({ selectedItems, unselectAll })
           : children}
-      </Box>
+      </FlexBox>
     </ActionBar>
   ) : null
 }

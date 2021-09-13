@@ -11,6 +11,7 @@ import React, {
   isValidElement,
   useCallback,
 } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -80,6 +81,7 @@ const StyledRow = styled('details', {
       'isHoverable',
       'multiselect',
       'id',
+      'as',
     ].includes(prop.toString()),
 })<
   Partial<ListRowProps> & {
@@ -187,6 +189,13 @@ const StyledSummary = styled.summary`
     display: none;
   }
 `
+
+const StyledSpan = styled.span<{ color?: Color }>`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+`
+
 export const Header: FunctionComponent = props => {
   const {
     columns,
@@ -248,14 +257,9 @@ export const Header: FunctionComponent = props => {
             width: width ?? undefined,
           }}
         >
-          <Box
-            overflow="hidden"
-            textOverflow="ellipsis"
-            as="span"
-            color={sortedIndex === index ? 'primary' : undefined}
-          >
+          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
             {label}
-          </Box>
+          </StyledSpan>
           {sort && (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
           )}
@@ -277,7 +281,7 @@ type ExpandedContentProps = {
 export const ExpendableContent: FunctionComponent<ExpandedContentProps> = ({
   children,
   id,
-  rowsState = {},
+  rowsState,
   isToggled,
   ...props
 }) => (
@@ -285,7 +289,7 @@ export const ExpendableContent: FunctionComponent<ExpandedContentProps> = ({
     {typeof children === 'function'
       ? children({
           id,
-          isToggled: rowsState[id as keyof typeof rowsState]?.opened || false,
+          isToggled: rowsState?.[id as keyof typeof rowsState]?.opened || false,
         })
       : children}
   </Box>
@@ -296,12 +300,6 @@ ExpendableContent.propTypes = {
   id: PropTypes.string,
   isToggled: PropTypes.bool,
   rowsState: PropTypes.shape({}),
-}
-
-ExpendableContent.defaultProps = {
-  id: undefined,
-  isToggled: false,
-  rowsState: {},
 }
 
 export const Row: FunctionComponent<ListRowProps> = ({

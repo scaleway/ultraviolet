@@ -7,6 +7,7 @@ import React, {
   VoidFunctionComponent,
   useCallback,
 } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -72,6 +73,10 @@ const StyledCheckbox = styled(Checkbox)`
   align-self: center;
 `
 
+const StyledSpan = styled.span<{ color?: Color }>`
+  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+`
+
 export const Header: VoidFunctionComponent = () => {
   const {
     columns,
@@ -129,9 +134,9 @@ export const Header: VoidFunctionComponent = () => {
             width: width ?? undefined,
           }}
         >
-          <Box as="span" color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
             {label}
-          </Box>
+          </StyledSpan>
           {sort ? (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
           ) : null}

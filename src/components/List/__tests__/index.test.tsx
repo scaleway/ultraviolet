@@ -78,6 +78,7 @@ describe('List', () => {
                     <list.Cell>{rowData.department}</list.Cell>
                     <list.Cell>{rowData.reference}</list.Cell>
                     <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>actions</list.ExpendableContent>
                   </list.Row>
                 )
               }}
@@ -358,11 +359,15 @@ describe('List', () => {
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           userEvent.click(checkboxes[0])
+          expect(node.getByText('items selected'))
           userEvent.click(checkboxes[0])
+
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           userEvent.click(checkboxes[1])
+
           expect(node.getByText('item selected'))
+
           userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
         },
@@ -1818,16 +1823,17 @@ describe('List', () => {
           })
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
-          })
-          userEvent.click(nameHeader.parentElement as HTMLElement)
+          }) as HTMLButtonElement
+
+          await waitFor(() => userEvent.click(nameHeader))
           await waitFor(() =>
             expect(
-              node
-                .getByRole('button', {
+              (
+                node.getByRole('button', {
                   name: 'Next',
-                })
-                .getAttribute('disabled'),
-            ).toBeFalsy(),
+                }) as HTMLButtonElement
+              ).disabled,
+            ).toBe(false),
           )
           userEvent.click(
             node.getByRole('button', {

@@ -7,6 +7,7 @@ import React, {
   MouseEvent,
   useCallback,
 } from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -67,13 +68,14 @@ const StyledRow = styled(Box, {
       'animated',
       'disabled',
       'selected',
+      'highlighted',
       'locked',
       'isEditable',
       'isHoverable',
       'edition',
       'customStyle',
     ].includes(prop.toString()),
-})<{ animated?: boolean; disabled?: boolean }>`
+})<{ animated?: boolean; disabled?: boolean; highlighted?: boolean }>`
   ${({ animated }) =>
     animated
       ? css`
@@ -114,6 +116,10 @@ const StyledCheckbox = styled(Checkbox)`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const StyledSpan = styled.span<{ color?: Color }>`
+  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
 `
 
 export const Header: FunctionComponent = () => {
@@ -173,9 +179,9 @@ export const Header: FunctionComponent = () => {
             width: width ?? undefined,
           }}
         >
-          <Box as="span" color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
             {label}
-          </Box>
+          </StyledSpan>
           {sort ? (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
           ) : null}
@@ -201,7 +207,7 @@ export const Row: FunctionComponent<ListRowProps> = ({
     selectableItems,
     notSelectableText,
   } = useListContext()
-  const { selected = false } = rowsState[id] || {}
+  const { selected = false, highlighted = false } = rowsState[id] || {}
 
   const isSelectable = !!selectableItems[id as keyof typeof selectableItems]
 
@@ -212,6 +218,8 @@ export const Row: FunctionComponent<ListRowProps> = ({
         role="listitem"
         disabled={disabled}
         animated={animated}
+        selected={selected}
+        highlighted={highlighted}
         data-testid={`row-${id}`}
       >
         {multiselect && (
