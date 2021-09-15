@@ -1,5 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Avatar renders correctly with custom background color 1`] = `
+<DocumentFragment>
+  .cache-ua3jbc.cache-ua3jbc {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cache-t4e693 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+<div
+    class="cache-ua3jbc e7ah3bn0"
+  >
+    <div
+      class="cache-t4e693 e1frqeh81"
+    >
+      HW
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar renders correctly with custom text color 1`] = `
+<DocumentFragment>
+  .cache-ua3jbc.cache-ua3jbc {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cache-lme662 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #a365f6;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+<div
+    class="cache-ua3jbc e7ah3bn0"
+  >
+    <div
+      class="cache-lme662 e1frqeh81"
+    >
+      HW
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Avatar renders correctly with default props 1`] = `
 <DocumentFragment>
   .cache-ua3jbc.cache-ua3jbc {
