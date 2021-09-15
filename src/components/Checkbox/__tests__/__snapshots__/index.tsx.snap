@@ -819,6 +819,122 @@ exports[`Checkbox renders correctly with an error 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Checkbox renders correctly with indeterminate state 1`] = `
+<DocumentFragment>
+  .cache-2p9kfb {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-13dvzl1 {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 2px;
+  pointer-events: auto;
+}
+
+.cache-13dvzl1:hover svg {
+  border-radius: 4px;
+  background-color: #f6f5f7;
+  fill: #4f0599;
+  -webkit-transition: fill 300ms;
+  transition: fill 300ms;
+}
+
+.cache-13dvzl1:focus+svg {
+  outline: 1px #b2b6c3 dotted;
+}
+
+.cache-n0qasr {
+  fill: #4f0599;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  box-sizing: content-box;
+}
+
+.cache-n0qasr.cache-n0qasr {
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.cache-1w6vxon {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
+  overflow: hidden;
+}
+
+.cache-5yrm0v.cache-5yrm0v {
+  font-size: 12px;
+  color: #ef5774;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+<div
+    class="cache-11djngs e7ah3bn0"
+  >
+    <label
+      aria-disabled="false"
+      class="eu28k4m3 e1g1zfwd0 cache-2p9kfb e7ah3bn0"
+    >
+      <input
+        aria-checked="mixed"
+        class="cache-13dvzl1 eu28k4m2"
+        name="checkbox"
+        type="checkbox"
+      />
+      <svg
+        class="eu28k4m1 etwatq50 cache-n0qasr e7ah3bn0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+        />
+      </svg>
+      <div
+        class="cache-0 eu28k4m0"
+      >
+        Checkbox Label
+      </div>
+    </label>
+    <div
+      class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
+    >
+      <div
+        class="cache-5yrm0v e7ah3bn0"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Checkbox renders correctly with progress 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {

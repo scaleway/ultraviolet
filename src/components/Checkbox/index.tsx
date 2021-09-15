@@ -73,6 +73,7 @@ type CheckboxProps = {
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
   checked = false,
+  state,
   onChange,
   onFocus,
   onBlur,
@@ -103,6 +104,10 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   useEffect(() => {
     setState(checked)
   }, [checked, setState])
+
+  useEffect(() => {
+    if (state !== undefined) setState(state)
+  }, [state, setState])
 
   return (
     <Box {...props}>
