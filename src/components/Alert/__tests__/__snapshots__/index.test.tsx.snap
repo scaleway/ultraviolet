@@ -1,5 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Alert renders correctly unknow theme type and fallback to defaults 1`] = `
+<DocumentFragment>
+  .cache-1i3p2kd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #ffe1e7;
+  color: #ef5774;
+}
+
+.cache-njjnbl {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.cache-njjnbl.cache-njjnbl {
+  vertical-align: middle;
+}
+
+.cache-79qxbt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cache-79qxbt.cache-79qxbt {
+  color: inherit;
+}
+
+.cache-1849seg {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.cache-1849seg.cache-1849seg {
+  margin-left: 16px;
+  color: inherit;
+}
+
+<div
+    class="eenhiht1 cache-1i3p2kd e7ah3bn0"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-njjnbl e7ah3bn0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+      />
+    </svg>
+    <div
+      class="eenhiht0 cache-79qxbt e7ah3bn0"
+    >
+      <p
+        class="e1g1zfwd0 cache-1849seg e7ah3bn0"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert renders correctly unknow variant and fallback to standard 1`] = `
+<DocumentFragment>
+  .cache-1i3p2kd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 12px;
+  background-color: #ffe1e7;
+  color: #ef5774;
+}
+
+.cache-njjnbl {
+  fill: currentColor;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.cache-njjnbl.cache-njjnbl {
+  vertical-align: middle;
+}
+
+.cache-79qxbt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cache-79qxbt.cache-79qxbt {
+  color: inherit;
+}
+
+.cache-1849seg {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.cache-1849seg.cache-1849seg {
+  margin-left: 16px;
+  color: inherit;
+}
+
+<div
+    class="eenhiht1 cache-1i3p2kd e7ah3bn0"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-njjnbl e7ah3bn0"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+      />
+    </svg>
+    <div
+      class="eenhiht0 cache-79qxbt e7ah3bn0"
+    >
+      <p
+        class="e1g1zfwd0 cache-1849seg e7ah3bn0"
+      >
+        Sample Alert
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Alert renders correctly variant beta 1`] = `
 <DocumentFragment>
   .cache-121xbfc {
