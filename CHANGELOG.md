@@ -1,3 +1,10 @@
+## [0.111.0](https://github.com/scaleway/scaleway-ui/compare/v0.110.0...v0.111.0) (2021-09-16)
+
+
+### :gear: Features
+
+* fix codecov errors ([#723](https://github.com/scaleway/scaleway-ui/issues/723)) ([c39cdba](https://github.com/scaleway/scaleway-ui/commit/c39cdbab14c142ee7b9729edd9a46b3421d23487))
+
 ## [0.110.0](https://github.com/scaleway/scaleway-ui/compare/v0.109.0...v0.110.0) (2021-09-16)
 
 
