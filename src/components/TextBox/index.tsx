@@ -177,6 +177,7 @@ type StyledInputProps = {
   fillAvailable?: boolean
   hasLabel?: boolean
   hasRightElement?: boolean
+  rightElementPadding?: number
   isPlaceholderVisible?: boolean
   multiline?: boolean
   resizable?: boolean
@@ -198,6 +199,7 @@ const StyledInput = styled('input', {
       'multiline',
       'resizable',
       'inputSize',
+      'rightElementPadding',
     ].includes(props.toString()),
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -288,10 +290,10 @@ const StyledInput = styled('input', {
     padding-top: 8px;
   `}
 
-  ${({ hasRightElement }) =>
+  ${({ hasRightElement, rightElementPadding }) =>
     hasRightElement &&
     `
-    padding-right: 32px;
+    padding-right: ${rightElementPadding || 32}px;
   `}
 `
 type TextBoxProps = {
@@ -471,6 +473,14 @@ const TextBox = forwardRef<
     const hasRightElement =
       valid || required || isPassToggleable || random || unit
 
+    const getRightElementPadding = () => {
+      if (required && hasRightElement) {
+        return 22
+      }
+
+      return undefined
+    }
+
     const getType = () => {
       if (isPassToggleable) {
         return passwordVisible || generated ? 'text' : 'password'
@@ -550,6 +560,7 @@ const TextBox = forwardRef<
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
             hasRightElement={!!hasRightElement}
+            rightElementPadding={getRightElementPadding()}
             id={id}
             inputSize={inputSize}
             isPlaceholderVisible={isPlaceholderVisible}
