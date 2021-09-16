@@ -76,7 +76,7 @@ describe('Checkbox', () => {
 
   test('renders correctly with indeterminate state', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} state="indeterminate">
+      <Checkbox onChange={() => {}} checked="indeterminate">
         Checkbox Label
       </Checkbox>,
     ))
