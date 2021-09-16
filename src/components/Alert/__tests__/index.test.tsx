@@ -23,7 +23,8 @@ describe('Alert', () => {
   })
 
   test(`renders correctly unknow variant and fallback to standard`, () =>
-    // @ts-ignore
+    // @ts-expect-error "unknow" isn't part of the `variant` type but we need to test
+    // the fallback to the `standart` variant in this case.
     shouldMatchEmotionSnapshot(<Alert variant="unknow">Sample Alert</Alert>))
 
   alertTypes.forEach(type => {
@@ -32,6 +33,7 @@ describe('Alert', () => {
   })
 
   test(`renders correctly unknow theme type and fallback to defaults`, () =>
-    // @ts-ignore
+    // @ts-expect-error "unknow" isn't part of the `type` type but we need to test
+    // the fallback to the `theme.colors` colors in this case.
     shouldMatchEmotionSnapshot(<Alert type="unknow">Sample Alert</Alert>))
 })
