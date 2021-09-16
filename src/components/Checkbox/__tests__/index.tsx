@@ -74,6 +74,13 @@ describe('Checkbox', () => {
       </>,
     ))
 
+  test('renders correctly with indeterminate state', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} checked="indeterminate">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders with click event', () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test">

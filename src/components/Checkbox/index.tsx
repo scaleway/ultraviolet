@@ -59,7 +59,7 @@ const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
-type CheckboxProps = {
+type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
   valid?: boolean
   error?: string | ReactNode
@@ -67,8 +67,8 @@ type CheckboxProps = {
   progress?: boolean
   disabled?: boolean
   typographyVariant?: string
-} & ReakitCheckboxProps &
-  Required<Pick<ReakitCheckboxProps, 'onChange'>> &
+  checked?: boolean | 'indeterminate'
+} & Required<Pick<ReakitCheckboxProps, 'onChange'>> &
   XStyledProps
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
@@ -167,7 +167,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
 
 Checkbox.propTypes = {
   autoFocus: PropTypes.bool,
-  checked: PropTypes.bool,
+  checked: PropTypes.oneOf([true, false, 'indeterminate']),
   children: PropTypes.node,
   disabled: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

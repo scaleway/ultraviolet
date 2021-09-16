@@ -22,4 +22,10 @@ describe('Avatar', () => {
     shouldMatchEmotionSnapshot(
       <Avatar text="HW" textBgColor="red" textColor="white" textSize={14} />,
     ))
+
+  it('renders correctly with custom text color', () =>
+    shouldMatchEmotionSnapshot(<Avatar text="HW" textColor="#FFFFFF" />))
+
+  it('renders correctly with custom background color', () =>
+    shouldMatchEmotionSnapshot(<Avatar text="HW" textBgColor="#FFFFFF" />))
 })
