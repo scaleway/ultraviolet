@@ -187,6 +187,11 @@ type StyledInputProps = {
   | TextareaHTMLAttributes<HTMLTextAreaElement>
 )
 
+type InputProps = Omit<
+  Exclude<StyledInputProps, TextareaHTMLAttributes<HTMLTextAreaElement>>,
+  'inputSize'
+>
+
 const StyledInput = styled('input', {
   shouldForwardProp: props =>
     ![
@@ -334,6 +339,7 @@ type TextBoxProps = {
   valid?: boolean
   value?: string | number
   wrap?: string
+  inputProps?: InputProps
 } & (
   | InputHTMLAttributes<HTMLInputElement>
   | TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -380,6 +386,7 @@ const TextBox = forwardRef<
       valid,
       value,
       wrap,
+      inputProps,
       ...props
     },
     ref,
@@ -579,6 +586,7 @@ const TextBox = forwardRef<
             type={getType()}
             value={value}
             wrap={wrap}
+            {...inputProps}
           />
           {hasLabel && (
             <StyledLabel
@@ -629,6 +637,7 @@ TextBox.propTypes = {
   generated: PropTypes.bool,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   id: PropTypes.string,
+  inputProps: PropTypes.objectOf(PropTypes.any),
   label: PropTypes.string,
   multiline: PropTypes.bool,
   name: PropTypes.string,
