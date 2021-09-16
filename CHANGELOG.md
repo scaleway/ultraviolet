@@ -1,3 +1,17 @@
+## [0.110.0](https://github.com/scaleway/scaleway-ui/compare/v0.109.0...v0.110.0) (2021-09-16)
+
+
+### :package: Chore
+
+* **deps:** bump codecov/codecov-action from 2.0.3 to 2.1.0 ([#721](https://github.com/scaleway/scaleway-ui/issues/721)) ([acd38fe](https://github.com/scaleway/scaleway-ui/commit/acd38fe652b2da858f9116474c3a0754c0968be3))
+* **deps-dev:** bump @types/react-router-dom from 5.1.8 to 5.1.9 ([#722](https://github.com/scaleway/scaleway-ui/issues/722)) ([aca2ffb](https://github.com/scaleway/scaleway-ui/commit/aca2ffb032f9b0230387ef3a3cc34afbd84fb428))
+* **deps-dev:** bump prettier from 2.4.0 to 2.4.1 ([#724](https://github.com/scaleway/scaleway-ui/issues/724)) ([aa0e491](https://github.com/scaleway/scaleway-ui/commit/aa0e4913e4923202be7865ba0d4fff40f098c2ad))
+
+
+### :gear: Features
+
+* migrate list to typescript ([#708](https://github.com/scaleway/scaleway-ui/issues/708)) ([3e73d7a](https://github.com/scaleway/scaleway-ui/commit/3e73d7a8fa0603626910ae3df384019686979ede))
+
 ## [0.109.0](https://github.com/scaleway/scaleway-ui/compare/v0.108.0...v0.109.0) (2021-09-13)
 
 
