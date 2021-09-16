@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import React, {
+  FunctionComponent,
+  ReactElement,
+  ReactNode,
+  WeakValidationMap,
   forwardRef,
   useCallback,
-  useContext,
   useEffect,
   useImperativeHandle,
   useMemo,
@@ -12,13 +15,23 @@ import React, {
 import orderBy from '../../utils/orderBy'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
-import Pagination from '../Pagination'
-import usePagination from '../Pagination/usePagination'
+import Pagination, {
+  PaginationComponentProps,
+  PaginationProps,
+} from '../Pagination'
+import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Placeholder from '../Placeholder'
 import Typography from '../Typography'
 import Cell from './Cell'
-import SelectBar from './SelectBar'
-import ListContext from './context'
+import SelectBar, { ListSelectBarProps } from './SelectBar'
+import ListContext, { useListContext } from './context'
+import {
+  ListColumn,
+  ListOrder,
+  ListRowProps,
+  ListRowState,
+  ListSort,
+} from './types'
 import * as variantExplorer from './variantExplorer'
 import * as variantProduct from './variantProduct'
 import * as variantTable from './variantTable'
@@ -28,8 +41,38 @@ const variants = {
   product: variantProduct,
   table: variantTable,
 }
+type ListVariant = keyof typeof variants
 
-const Body = ({ children, ...props }) => {
+type ListData<T = unknown> = Record<string, T>
+type ListRowStates = Record<string, ListRowState>
+
+export type ListRefType<T = ListData> = {
+  hasAllSelected: boolean
+  hasSelectedItems: boolean
+  pagination: UsePaginationReturn<T>
+  selectableItems: { [x: string]: boolean }
+  selectAll: () => void
+  selectedItems: []
+  unselectAll: () => void
+}
+
+export type ListBodyRenderProps<T = unknown> = {
+  index: number
+  rowData: T
+  rowState: ListRowState
+  setRowState: (localIdKey: string, state: ListRowState) => void
+}
+
+const TypedPaginationContainer =
+  Pagination.PaginationContainer as FunctionComponent<
+    PaginationComponentProps<ListData>
+  >
+
+type BodyProps = {
+  children: (props: ListBodyRenderProps) => JSX.Element
+}
+
+const Body: FunctionComponent<BodyProps> = ({ children, ...props }) => {
   const {
     pageData,
     idKey,
@@ -39,7 +82,7 @@ const Body = ({ children, ...props }) => {
     isLoading,
     emptyListComponent,
     perPage,
-  } = useContext(ListContext)
+  } = useListContext()
 
   const defaultLoader = useMemo(() => {
     if (perPage) {
@@ -53,21 +96,21 @@ const Body = ({ children, ...props }) => {
     )
   }, [perPage])
 
-  if (isLoading === true) {
-    return customLoader ?? defaultLoader
+  if (isLoading) {
+    return (customLoader as JSX.Element) ?? defaultLoader
   }
 
   return (
     <Box {...props} role="list">
       {pageData.length === 0 ? emptyListComponent : null}
       {pageData.map((rowData, index) => (
-        <React.Fragment key={rowData[idKey] || index}>
+        <React.Fragment key={(rowData[idKey] as string) || index}>
           {children({
             index,
             rowData,
-            rowState: rowsState[rowData[idKey]] ?? {},
+            rowState: rowsState[rowData[idKey] as keyof typeof rowsState] ?? {},
             setRowState,
-          })}
+          } as ListBodyRenderProps)}
         </React.Fragment>
       ))}
     </Box>
@@ -78,48 +121,99 @@ Body.propTypes = {
   children: PropTypes.func.isRequired,
 }
 
-const List = forwardRef(
+type ListProps<T = ListData> = {
+  idKey?: string
+  isLoading?: boolean
+  data?: T[]
+  initialData?: T[]
+  emptyListComponent?: ReactNode
+  columns: ListColumn[]
+  multiselect?: boolean
+  children: (props: {
+    Body: FunctionComponent<BodyProps>
+    Cell: FunctionComponent
+    data: T[]
+    SelectBar: FunctionComponent<ListSelectBarProps>
+    Header: FunctionComponent
+    Row: FunctionComponent<ListRowProps>
+    ExpendableContent: FunctionComponent
+  }) => ReactElement
+  customLoader?: ReactNode
+  variant?: ListVariant
+  selectable?: (data: T[]) => T[]
+  autoClose?: boolean
+  notSelectableText?: string
+  perPage?: number
+  page?: number
+  pageCount?: number
+  onLoadPage?: (params: {
+    page: number
+    perPage?: number
+    sort: ListSort
+  }) => Promise<void | unknown[]>
+  onChangePage?: (newPage: number) => void
+  onSortClick?: (params: {
+    field?: string | ((item: unknown) => string) | null
+    order: ListOrder
+    page: number
+    // TODO Change this when Pagination migration is merged
+    pagination: unknown
+    perPage?: number
+  }) => void
+  // TODO Change this when Pagination migration is merged
+  paginationProps?: Partial<PaginationProps<T>>
+}
+
+const List = forwardRef<ListRefType, ListProps>(
   (
     {
-      idKey,
-      isLoading,
+      idKey = 'id',
+      isLoading = false,
       data: dataProp,
-      initialData,
+      initialData = [],
       emptyListComponent,
       columns,
-      multiselect,
+      multiselect = false,
       children,
       customLoader,
-      variant,
+      variant = 'product',
       selectable,
       autoClose,
-      notSelectableText,
+      notSelectableText = "This row can't be selected",
       perPage,
       page: pageProp,
       pageCount,
       onLoadPage,
       onChangePage,
       onSortClick,
-      paginationProps,
+      paginationProps = {
+        LeftComponent: Pagination.LeftComponent,
+        MiddleComponent: Pagination.MiddleComponent,
+        pageTabCount: 5,
+        RightComponent: Pagination.RightComponent,
+      },
       ...props
     },
     ref,
   ) => {
     const [data, setData] = useState(dataProp ?? initialData)
     const [page, setPage] = useState(pageProp || 1)
-    const [rowsState, setRowsState] = useState({})
-    const listRef = useRef({})
+    const [rowsState, setRowsState] = useState({} as ListRowStates)
+    const listRef = useRef({} as ListRefType)
     useImperativeHandle(ref, () => listRef.current)
     const onLoadPageRef = useRef(onLoadPage)
-    const [sort, setSort] = useState(() => {
+    const [sort, setSort] = useState<ListSort>(() => {
       const defaultSortCol = columns.find(col => col.defaultSort)
-      const indexOfDefaultSort = columns.indexOf(defaultSortCol)
+      let indexOfDefaultSort = -1
+      if (defaultSortCol) {
+        indexOfDefaultSort = columns.indexOf(defaultSortCol)
+      }
 
       return {
-        index: indexOfDefaultSort > -1 ? indexOfDefaultSort : undefined,
+        index: indexOfDefaultSort,
         onSort: defaultSortCol?.onSort,
-        order: defaultSortCol?.defaultSort,
-        prop: defaultSortCol?.sort,
+        order: defaultSortCol?.defaultSort || undefined,
+        prop: defaultSortCol?.sort || undefined,
       }
     })
 
@@ -127,16 +221,16 @@ const List = forwardRef(
       () =>
         sort.prop
           ? [...data].sort(
-              sort.onSort?.(sort.prop, sort.order) ||
-                orderBy(sort.prop, sort.order),
+              sort.onSort?.(sort.prop, sort.order as 'asc' | 'desc') ||
+                orderBy(sort.prop, sort.order as 'asc' | 'desc'),
             )
           : data,
       [data, sort],
     )
 
     const handleLoadPage = useCallback(
-      async params => {
-        const res = await onLoadPage({ ...params, sort })
+      async (params: { page: number; perPage?: number }) => {
+        const res = (await onLoadPage?.({ ...params, sort })) as ListData[]
         listRef.current?.pagination.setPageData(params.page, res)
       },
       [sort, onLoadPage],
@@ -152,15 +246,18 @@ const List = forwardRef(
     })
 
     const setRowState = useCallback(
-      (localIdKey, state) => {
+      (localIdKey: string, state: ListRowState) => {
         // Close other rows if autoClose is enabled
-        setRowsState(current => {
+        setRowsState((current: ListRowStates) => {
           if (autoClose && state.opened) {
-            const updateRowsState = Object.keys(current).reduce((acc, id) => {
-              acc[id] = { ...current[id], opened: false }
+            const updateRowsState = Object.keys(current).reduce<ListRowStates>(
+              (acc, id) => {
+                acc[id] = { ...current[id], opened: false }
 
-              return acc
-            }, {})
+                return acc
+              },
+              {},
+            )
 
             return {
               ...updateRowsState,
@@ -178,7 +275,7 @@ const List = forwardRef(
     )
 
     const onSort = useCallback(
-      columnIndex => {
+      (columnIndex: number) => {
         const newSort = {
           index: columnIndex,
           onSort: columns[columnIndex].onSort,
@@ -190,7 +287,7 @@ const List = forwardRef(
         }
         onSortClick?.({
           field: newSort.prop,
-          order: newSort.order,
+          order: newSort.order as ListOrder,
           page,
           pagination,
           perPage,
@@ -199,7 +296,7 @@ const List = forwardRef(
           pagination.goToFirstPage()
           pagination.setPaginatedData({})
         }
-        setSort(newSort)
+        setSort(newSort as ListSort)
       },
       [
         columns,
@@ -215,27 +312,33 @@ const List = forwardRef(
     )
 
     // Define which row are selectable
-    const selectableItems = useMemo(() => {
+    const selectableItems = useMemo<{
+      [x: string]: boolean
+    }>(() => {
       if (isLoading) {
         return {}
       }
       const filteredItems = selectable ? selectable(data) : data
 
       return filteredItems.reduce((acc, item) => {
-        acc[item[idKey]] = true
+        acc[item[idKey] as string] = true
 
         return acc
-      }, {})
+      }, {}) as {
+        [x: string]: boolean
+      }
     }, [data, idKey, selectable, isLoading])
 
     /**
      * Unselect all rows in current page
      */
     const unselectAll = useCallback(() => {
-      setRowsState(current => {
+      setRowsState((current: ListRowStates) => {
         const updateRowsState = Object.keys(current)
-          .filter(id => pagination.pageData.find(item => item[idKey] === id))
-          .reduce((acc, id) => {
+          .filter(id =>
+            (pagination.pageData as []).find(item => item[idKey] === id),
+          )
+          .reduce((acc: ListRowStates, id) => {
             acc[id] = { ...current[id], selected: false }
 
             return acc
@@ -249,14 +352,21 @@ const List = forwardRef(
      * Select all rows in current page
      */
     const selectAll = useCallback(() => {
-      setRowsState(current => {
+      setRowsState((current: ListRowStates) => {
         const updateRowsState = pagination.pageData
-          .filter(item => selectableItems[item[idKey]] === true)
+          .filter(
+            item =>
+              selectableItems[item[idKey] as keyof typeof selectableItems] ===
+              true,
+          )
           .reduce((acc, item) => {
-            acc[item[idKey]] = { ...current[item[idKey]], selected: true }
+            acc[item[idKey] as keyof typeof acc] = {
+              ...current[item[idKey] as string],
+              selected: true,
+            }
 
             return acc
-          }, {})
+          }, {}) as ListRowStates
 
         return { ...current, ...updateRowsState }
       })
@@ -265,30 +375,41 @@ const List = forwardRef(
     /**
      * All rows selected in pages
      */
-    const selectedItems =
-      !!Object.keys(selectableItems).length &&
-      data
-        .filter(item => !!selectableItems[item[idKey]])
-        .every(item => rowsState[item[idKey]]?.selected)
+    const selectedItems = useMemo<ListData[]>(
+      () =>
+        Object.keys(selectableItems).length > 0
+          ? data.filter(
+              item =>
+                !!selectableItems[item[idKey] as string] &&
+                rowsState[item[idKey] as string]?.selected,
+            )
+          : [],
+      [data, idKey, rowsState, selectableItems],
+    )
+
     /**
      * Has a row selected in a page
      */
     const hasSelectedItems = useMemo(
       () =>
         multiselect &&
-        !!pagination.pageData.find(item => rowsState[item.id]?.selected),
-      [multiselect, pagination.pageData, rowsState],
+        !!(pagination.pageData as []).find(
+          item => rowsState[item[idKey] as string]?.selected,
+        ),
+      [multiselect, pagination.pageData, rowsState, idKey],
     )
     /**
      * Is all rows selected in current page
      */
     const hasAllSelected = useMemo(
       () =>
-        !!Object.keys(selectableItems).length &&
-        pagination.pageData
-          .filter(item => selectableItems[item[idKey]] === true)
+        Object.keys(selectableItems).length > 0 &&
+        (pagination.pageData as [])
+          .filter(item => selectableItems[item[idKey] as string] === true)
           .every(
-            item => rowsState[item[idKey]] && rowsState[item[idKey]].selected,
+            item =>
+              rowsState[item[idKey] as string] &&
+              rowsState[item[idKey] as string].selected,
           ),
       [selectableItems, idKey, rowsState, pagination.pageData],
     )
@@ -320,11 +441,12 @@ const List = forwardRef(
         pagination,
         selectableItems,
         selectAll,
-        selectedItems,
+        selectedItems: selectedItems as [],
         unselectAll,
       }
 
       return {
+        ...pagination,
         columns,
         customLoader,
         data: sortedData,
@@ -337,8 +459,7 @@ const List = forwardRef(
         notSelectableText,
         onSort,
         page,
-        pageCount,
-        ...pagination,
+        pageCount: pageCount ?? 1,
         perPage,
         rowsState,
         selectableItems,
@@ -375,18 +496,29 @@ const List = forwardRef(
       unselectAll,
     ])
 
+    const childrenProps = useMemo(() => {
+      const variantFinded = variants[variant]
+
+      return {
+        Body,
+        SelectBar,
+        ...variantFinded,
+        Cell: variantFinded.Cell,
+        ExpendableContent:
+          (variantFinded as typeof variantProduct).ExpendableContent ??
+          (() => null),
+      }
+    }, [variant])
+
     return (
       <ListContext.Provider value={value}>
         <Box {...props}>
           {children({
-            Body,
-            Cell,
-            data: pagination.pageData,
-            SelectBar,
-            ...variants[variant],
+            data: pagination.pageData as [],
+            ...childrenProps,
           })}
           {pagination.maxPage > 1 ? (
-            <Pagination.PaginationContainer
+            <TypedPaginationContainer
               {...paginationProps}
               paginationState={{ ...pagination, canLoadMore: !!onLoadPage }}
             />
@@ -396,32 +528,6 @@ const List = forwardRef(
     )
   },
 )
-
-List.defaultProps = {
-  autoClose: false,
-  customLoader: undefined,
-  data: undefined,
-  emptyListComponent: undefined,
-  idKey: 'id',
-  initialData: [],
-  isLoading: false,
-  multiselect: false,
-  notSelectableText: "This row can't be selected",
-  onChangePage: undefined,
-  onLoadPage: undefined,
-  onSortClick: undefined,
-  page: undefined,
-  pageCount: undefined,
-  paginationProps: {
-    LeftComponent: Pagination.LeftComponent,
-    MiddleComponent: Pagination.MiddleComponent,
-    pageTabCount: 5,
-    RightComponent: Pagination.RightComponent,
-  },
-  perPage: undefined,
-  selectable: undefined,
-  variant: 'product',
-}
 
 List.propTypes = {
   /**
@@ -451,7 +557,7 @@ List.propTypes = {
       padding: PropTypes.string,
       sort: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
       width: PropTypes.string,
-    }),
+    }).isRequired,
   ).isRequired,
   /**
    * Custom Loader to display when isLoading is true
@@ -460,7 +566,8 @@ List.propTypes = {
   /**
    * For a controlled List
    */
-  data: PropTypes.arrayOf(PropTypes.shape({})),
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.array,
   /**
    * Custom empty list component
    */
@@ -472,7 +579,8 @@ List.propTypes = {
   /**
    * For an uncontrolled List
    */
-  initialData: PropTypes.arrayOf(PropTypes.shape({})),
+  // eslint-disable-next-line react/forbid-prop-types
+  initialData: PropTypes.array,
   /**
    * Display a Loader
    */
@@ -509,7 +617,9 @@ List.propTypes = {
   /**
    * Additional props to pass to the Pagination component
    */
-  paginationProps: PropTypes.shape(Pagination.propTypes),
+  paginationProps: PropTypes.shape(
+    Pagination.propTypes as WeakValidationMap<PaginationProps>,
+  ),
   /**
    * Number of item per page
    */

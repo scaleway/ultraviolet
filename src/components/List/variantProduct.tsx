@@ -1,18 +1,38 @@
-import { css, keyframes } from '@emotion/react'
+import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { useCallback } from 'react'
+import React, {
+  ChangeEvent,
+  FunctionComponent,
+  KeyboardEvent,
+  MouseEvent,
+  ReactNode,
+  isValidElement,
+  useCallback,
+} from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
 import SortIcon from './SortIcon'
 import { useListContext } from './context'
+import { ListRowProps, ListRowState } from './types'
 
 export const BORDER_THICKNESS = 1
 
-const getBorderColor = ({ alert, highlighted, selected, theme }) => {
+const getBorderColor = ({
+  alert,
+  highlighted,
+  selected,
+  theme,
+}: {
+  alert?: boolean
+  highlighted?: boolean
+  selected?: boolean
+  theme: Theme
+}) => {
   if (alert) return theme.colors.orange
   if (selected || highlighted) return theme.colors.primary
 
@@ -32,8 +52,8 @@ const fadeInAnimation = keyframes`
 export const Cell = styled(BaseCell)``
 
 const StyledExpendableContainer = styled('div', {
-  shouldForwardProp: prop => !['multiselect'].includes(prop),
-})`
+  shouldForwardProp: prop => !['multiselect'].includes(prop.toString()),
+})<{ multiselect?: boolean }>`
   flex: 0 0 100%;
 
   [data-expandable] {
@@ -51,7 +71,7 @@ const StyledExpendableContainer = styled('div', {
   }
 `
 
-const StyledRow = styled(Box, {
+const StyledRow = styled('details', {
   shouldForwardProp: prop =>
     ![
       'animated',
@@ -61,9 +81,15 @@ const StyledRow = styled(Box, {
       'isHoverable',
       'multiselect',
       'id',
-      'selected',
-    ].includes(prop),
-})`
+      'as',
+    ].includes(prop.toString()),
+})<
+  Partial<ListRowProps> & {
+    openable?: boolean
+    highlighted?: boolean
+    multiselect?: boolean
+  }
+>`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -79,7 +105,8 @@ const StyledRow = styled(Box, {
   margin-bottom: 16px;
   padding: 8px 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
-  background-color: ${({ alert, theme }) => alert && theme.colors.lightOrange};
+  background-color: ${({ alert, theme }) =>
+    alert ? theme.colors.pippin : `initial`};
 
   cursor: ${({ openable }) => (openable ? 'pointer' : 'auto')};
   color: ${({ alert, theme }) => (alert ? theme.colors.orange : 'inherit')};
@@ -124,8 +151,8 @@ const StyledContainerSummary = styled.div`
 `
 
 const StyledHeader = styled('div', {
-  shouldForwardProp: prop => !['multiselect'].includes(prop),
-})`
+  shouldForwardProp: prop => !['multiselect'].includes(prop.toString()),
+})<{ multiselect?: boolean }>`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -162,7 +189,14 @@ const StyledSummary = styled.summary`
     display: none;
   }
 `
-export const Header = props => {
+
+const StyledSpan = styled.span<{ color?: Color }>`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+`
+
+export const Header: FunctionComponent = props => {
   const {
     columns,
     isLoading,
@@ -176,7 +210,7 @@ export const Header = props => {
   } = useListContext()
 
   const onSortEvent = useCallback(
-    (event, sort, index) => {
+    (event: MouseEvent | KeyboardEvent, sort, index) => {
       event.preventDefault()
       if (sort) {
         onSort(index)
@@ -220,17 +254,12 @@ export const Header = props => {
           style={{
             alignItems: 'center',
             cursor: sort ? 'pointer' : 'default',
-            width,
+            width: width ?? undefined,
           }}
         >
-          <Box
-            overflow="hidden"
-            textOverflow="ellipsis"
-            as="span"
-            color={sortedIndex === index ? 'primary' : undefined}
-          >
+          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
             {label}
-          </Box>
+          </StyledSpan>
           {sort && (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
           )}
@@ -240,7 +269,16 @@ export const Header = props => {
   )
 }
 
-export const ExpendableContent = ({
+type ExpandedContentProps = {
+  id?: string
+  isToggled?: boolean
+  rowsState?: { [x: string]: ListRowState }
+  children?:
+    | ReactNode
+    | ((props: { id?: string; isToggled: boolean }) => Element)
+}
+
+export const ExpendableContent: FunctionComponent<ExpandedContentProps> = ({
   children,
   id,
   rowsState,
@@ -251,7 +289,7 @@ export const ExpendableContent = ({
     {typeof children === 'function'
       ? children({
           id,
-          isToggled: rowsState[id]?.opened,
+          isToggled: rowsState?.[id as keyof typeof rowsState]?.opened || false,
         })
       : children}
   </Box>
@@ -264,13 +302,7 @@ ExpendableContent.propTypes = {
   rowsState: PropTypes.shape({}),
 }
 
-ExpendableContent.defaultProps = {
-  id: undefined,
-  isToggled: false,
-  rowsState: {},
-}
-
-export const Row = ({
+export const Row: FunctionComponent<ListRowProps> = ({
   id,
   children,
   animated,
@@ -300,7 +332,7 @@ export const Row = ({
   } = rowsState[id] || {}
 
   const finalChildren = React.Children.toArray(children).map(child =>
-    child.type === ExpendableContent
+    isValidElement(child) && child.type === ExpendableContent
       ? React.cloneElement(child, {
           id,
           isToggled: forceOpened || opened,
@@ -310,22 +342,22 @@ export const Row = ({
   )
 
   const expandable = !!finalChildren.find(
-    child => child.type === ExpendableContent,
+    child => isValidElement(child) && child.type === ExpendableContent,
   )
 
-  const isSelectable = !!selectableItems[id]
+  const isSelectable = !!selectableItems[id as keyof typeof selectableItems]
 
   const expendableContent = finalChildren.map(
-    child => child.type === ExpendableContent && child,
+    child => isValidElement(child) && child.type === ExpendableContent && child,
   )
   const content = finalChildren.map(
-    child => child.type !== ExpendableContent && child,
+    child => isValidElement(child) && child.type !== ExpendableContent && child,
   )
 
-  const handleToggle = event => {
+  const handleToggle = (event: MouseEvent<HTMLElement>) => {
     setRowState(id, {
-      opened: event.target.open,
-    })
+      opened: (event.target as HTMLDetailsElement).open,
+    } as ListRowState)
   }
 
   const hasExpandableContent = expendableContent.find(
@@ -344,7 +376,6 @@ export const Row = ({
       isHoverable={isHoverable && !isEditable && !alert}
       openable={expandable && !forceOpened}
       highlighted={highlighted}
-      selected={selected}
       multiselect={multiselect}
       alert={alert}
       css={[customStyle]}
@@ -371,7 +402,7 @@ export const Row = ({
                     disabled={!isSelectable}
                     size={20}
                     name="select-rows"
-                    onChange={e =>
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       setRowState(id, { selected: e.target.checked })
                     }
                   />
@@ -395,12 +426,11 @@ Row.propTypes = {
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   edition: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   isEditable: PropTypes.bool,
   isHoverable: PropTypes.bool,
   locked: PropTypes.bool,
   open: PropTypes.bool,
-  to: PropTypes.string,
 }
 
 Row.defaultProps = {
@@ -408,10 +438,8 @@ Row.defaultProps = {
   animated: undefined,
   customStyle: undefined,
   edition: false,
-  id: undefined,
   isEditable: false,
   isHoverable: true,
   locked: false,
   open: false,
-  to: undefined,
 }

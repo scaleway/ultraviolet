@@ -1,13 +1,20 @@
-import { css, keyframes } from '@emotion/react'
+import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useCallback } from 'react'
+import React, {
+  FunctionComponent,
+  KeyboardEvent,
+  MouseEvent,
+  useCallback,
+} from 'react'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
 import SortIcon from './SortIcon'
 import { useListContext } from './context'
+import { ListRowProps } from './types'
 
 export const Cell = styled(BaseCell)``
 
@@ -38,7 +45,17 @@ const StyledHeader = styled.div`
   }
 `
 
-const getRowColor = ({ disabled, highlighted, selected, theme }) => {
+const getRowColor = ({
+  disabled,
+  highlighted,
+  selected,
+  theme,
+}: {
+  disabled?: boolean
+  highlighted?: boolean
+  selected?: boolean
+  theme: Theme
+}) => {
   if (disabled) return theme.colors.gray550
   if (selected && highlighted) return theme.colors.primary
 
@@ -50,15 +67,15 @@ const StyledRow = styled(Box, {
     ![
       'animated',
       'disabled',
-      'highlighted',
       'selected',
+      'highlighted',
       'locked',
       'isEditable',
       'isHoverable',
       'edition',
       'customStyle',
-    ].includes(prop),
-})`
+    ].includes(prop.toString()),
+})<{ animated?: boolean; disabled?: boolean; highlighted?: boolean }>`
   ${({ animated }) =>
     animated
       ? css`
@@ -101,7 +118,11 @@ const StyledCheckbox = styled(Checkbox)`
   justify-content: center;
 `
 
-export const Header = () => {
+const StyledSpan = styled.span<{ color?: Color }>`
+  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+`
+
+export const Header: FunctionComponent = () => {
   const {
     columns,
     isLoading,
@@ -115,7 +136,7 @@ export const Header = () => {
   } = useListContext()
 
   const onSortEvent = useCallback(
-    (event, sort, index) => {
+    (event: MouseEvent | KeyboardEvent, sort, index) => {
       event.preventDefault()
       if (sort) {
         onSort(index)
@@ -124,24 +145,26 @@ export const Header = () => {
     [onSort],
   )
 
+  const handleSelectAll = useCallback(() => {
+    if (hasAllSelected) {
+      unselectAll()
+    } else {
+      selectAll()
+    }
+  }, [hasAllSelected, unselectAll, selectAll])
+
   return (
     <StyledHeader>
-      {multiselect && (
+      {multiselect ? (
         <StyledCheckbox
           name="select-rows"
           value="all"
           checked={hasAllSelected}
           size={20}
           disabled={isLoading}
-          onChange={() => {
-            if (hasAllSelected) {
-              unselectAll()
-            } else {
-              selectAll()
-            }
-          }}
+          onChange={handleSelectAll}
         />
-      )}
+      ) : null}
       {columns.map(({ sort, label, width }, index) => (
         <Cell
           key={label ?? index}
@@ -153,22 +176,22 @@ export const Header = () => {
           onKeyPress={e => onSortEvent(e, sort, index)}
           style={{
             cursor: sort ? 'pointer' : 'default',
-            width,
+            width: width ?? undefined,
           }}
         >
-          <Box as="span" color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
             {label}
-          </Box>
-          {sort && (
+          </StyledSpan>
+          {sort ? (
             <SortIcon active={sortedIndex === index} order={sortOrder} />
-          )}
+          ) : null}
         </Cell>
       ))}
     </StyledHeader>
   )
 }
 
-export const Row = ({
+export const Row: FunctionComponent<ListRowProps> = ({
   id,
   children,
   animated,
@@ -186,7 +209,7 @@ export const Row = ({
   } = useListContext()
   const { selected = false, highlighted = false } = rowsState[id] || {}
 
-  const isSelectable = !!selectableItems[id]
+  const isSelectable = !!selectableItems[id as keyof typeof selectableItems]
 
   return (
     <Tooltip key={id} text={tooltip}>
@@ -194,9 +217,9 @@ export const Row = ({
         {...props}
         role="listitem"
         disabled={disabled}
+        animated={animated}
         selected={selected}
         highlighted={highlighted}
-        animated={animated}
         data-testid={`row-${id}`}
       >
         {multiselect && (
@@ -228,13 +251,12 @@ Row.propTypes = {
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   disabled: PropTypes.bool,
   edition: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   isEditable: PropTypes.bool,
   isHoverable: PropTypes.bool,
   locked: PropTypes.bool,
   onClick: PropTypes.func,
   open: PropTypes.bool,
-  to: PropTypes.string,
   tooltip: PropTypes.string,
 }
 
@@ -244,12 +266,10 @@ Row.defaultProps = {
   customStyle: undefined,
   disabled: false,
   edition: false,
-  id: undefined,
   isEditable: false,
   isHoverable: false,
   locked: false,
   onClick: undefined,
   open: false,
-  to: undefined,
   tooltip: undefined,
 }

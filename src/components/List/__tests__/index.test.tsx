@@ -1,10 +1,18 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { useEffect } from 'react'
-import List from '..'
+import List, { ListBodyRenderProps, ListRefType } from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils'
+
+type ListRowData = {
+  id: string
+  name: string
+  description: string
+  department: string
+  reference: string
+}
 
 describe('List', () => {
   test('should render correctly', () =>
@@ -24,15 +32,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -56,15 +68,20 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>actions</list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -88,15 +105,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -120,15 +141,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -153,15 +178,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -186,15 +215,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -204,7 +237,9 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List
         multiselect
-        selectable={data => data.filter(({ name }) => name.includes('1'))}
+        selectable={data =>
+          data.filter(({ name }) => (name as string).includes('1'))
+        }
         idKey="id"
         data={generateData(5)}
         columns={[
@@ -219,15 +254,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -239,7 +278,9 @@ describe('List', () => {
       <List
         variant="table"
         multiselect
-        selectable={data => data.filter(({ name }) => name.includes('1'))}
+        selectable={data =>
+          data.filter(({ name }) => (name as string).includes('1'))
+        }
         idKey="id"
         data={generateData(5)}
         columns={[
@@ -254,15 +295,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -287,34 +332,42 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
             <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
-          })
+          }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           userEvent.click(checkboxes[0])
+          expect(node.getByText('items selected'))
           userEvent.click(checkboxes[0])
+
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           userEvent.click(checkboxes[1])
+
           expect(node.getByText('item selected'))
+
           userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
         },
@@ -339,26 +392,30 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
             <list.SelectBar>Test SelectBar</list.SelectBar>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
-          })
+          }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           userEvent.click(checkboxes[0])
@@ -391,26 +448,31 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0].parentElement
+          const iconContainer = node.getAllByTitle('ascending')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -445,7 +507,7 @@ describe('List', () => {
         idKey="id"
         data={generateData(5)}
         columns={[
-          { label: 'Name', sort: item => item.name },
+          { label: 'Name', sort: item => (item as ListRowData).name },
           { label: 'Description', sort: 'description', width: '15%' },
           { label: 'Department', width: '64px' },
           { label: 'Reference', sort: 'reference', width: '64px' },
@@ -456,21 +518,25 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
           })
@@ -499,26 +565,31 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0].parentElement
+          const iconContainer = node.getAllByTitle('ascending')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -564,26 +635,30 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
             <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
-          })
+          }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           userEvent.click(checkboxes[0])
@@ -617,26 +692,30 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
             <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
-          })
+          }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           userEvent.click(checkboxes[0])
@@ -679,26 +758,31 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0].parentElement
+          const iconContainer = node.getAllByTitle('ascending')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -744,15 +828,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -776,29 +864,36 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
         transform: node => {
-          const firstRow = node.getByTestId('row-0')
+          const firstRow = node.getByTestId('row-0') as HTMLDetailsElement
           expect(firstRow.open).toBeFalsy()
-          userEvent.click(firstRow.firstChild)
+
+          if (!firstRow.firstElementChild) throw new Error('No first child')
+
+          userEvent.click(firstRow.firstElementChild)
           expect(firstRow.open).toBeTruthy()
-          userEvent.click(firstRow.firstChild)
+          userEvent.click(firstRow.firstElementChild)
           expect(firstRow.open).toBeFalsy()
         },
       },
@@ -822,35 +917,39 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    ExpendableContent {rowData.id}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      ExpendableContent {rowData.id}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
       </List>,
       {
         transform: async node => {
-          const firstRow = node.getByTestId('row-0')
-          const secondRow = node.getByTestId('row-1')
+          const firstRow = node.getByTestId('row-0') as HTMLDetailsElement
+          const secondRow = node.getByTestId('row-1') as HTMLDetailsElement
           expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeFalsy()
           act(() => {
-            userEvent.click(firstRow.firstChild)
+            userEvent.click(firstRow.firstElementChild as Element)
           })
           expect(secondRow.open).toBeFalsy()
           expect(firstRow.open).toBeTruthy()
           act(() => {
-            userEvent.click(secondRow.firstChild)
+            userEvent.click(secondRow.firstElementChild as Element)
           })
           await waitFor(() => expect(firstRow.open).toBeFalsy())
           expect(secondRow.open).toBeTruthy()
@@ -875,29 +974,33 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
             <list.SelectBar text="Hello">{() => <>Test</>}</list.SelectBar>
           </>
         )}
       </List>,
       {
-        transform: async node => {
+        transform: node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
-          })
+          }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           userEvent.click(checkboxes[0])
           userEvent.click(checkboxes[0])
@@ -923,18 +1026,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -959,18 +1066,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -995,18 +1106,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1030,18 +1145,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1065,18 +1184,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row alert id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row alert id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1100,18 +1223,22 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row animated id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                  <list.ExpendableContent>
-                    {() => <>ExpendableContent {rowData.id}</>}
-                  </list.ExpendableContent>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row animated id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                    <list.ExpendableContent>
+                      {() => <>ExpendableContent {rowData.id}</>}
+                    </list.ExpendableContent>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1135,15 +1262,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row animated id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row animated id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1167,15 +1298,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row disabled id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row disabled id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1183,7 +1318,7 @@ describe('List', () => {
     ))
 
   test('should render correctly with disabled', () => {
-    const ref = React.createRef()
+    const ref = React.createRef<ListRefType>()
 
     return shouldMatchEmotionSnapshot(
       <List
@@ -1201,15 +1336,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row disabled id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row disabled id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1233,15 +1372,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row isHoverable id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row isHoverable id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1264,7 +1407,9 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1306,7 +1451,9 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1348,7 +1495,9 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1390,7 +1539,9 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1434,7 +1585,10 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
+
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1477,7 +1631,9 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData, setRowState, rowState }) => {
+              {props => {
+                const { rowData, setRowState, rowState } =
+                  props as ListBodyRenderProps<ListRowData>
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1521,15 +1677,19 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                  <list.Cell>{rowData.reference}</list.Cell>
-                  <list.Cell>actions</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1563,13 +1723,17 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1595,13 +1759,17 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1633,13 +1801,17 @@ describe('List', () => {
           <>
             <list.Header />
             <list.Body>
-              {({ rowData }) => (
-                <list.Row id={rowData.id}>
-                  <list.Cell>{rowData.name}</list.Cell>
-                  <list.Cell>{rowData.description}</list.Cell>
-                  <list.Cell>{rowData.department}</list.Cell>
-                </list.Row>
-              )}
+              {props => {
+                const { rowData } = props as ListBodyRenderProps<ListRowData>
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )
+              }}
             </list.Body>
           </>
         )}
@@ -1651,14 +1823,17 @@ describe('List', () => {
           })
           const nameHeader = node.getByRole('button', {
             name: 'sort Name',
-          })
-          userEvent.click(nameHeader.parentElement)
+          }) as HTMLButtonElement
+
+          await waitFor(() => userEvent.click(nameHeader))
           await waitFor(() =>
             expect(
-              node.getByRole('button', {
-                name: 'Next',
-              }).disabled,
-            ).toBeFalsy(),
+              (
+                node.getByRole('button', {
+                  name: 'Next',
+                }) as HTMLButtonElement
+              ).disabled,
+            ).toBe(false),
           )
           userEvent.click(
             node.getByRole('button', {
