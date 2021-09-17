@@ -1,3 +1,17 @@
+## [0.112.0](https://github.com/scaleway/scaleway-ui/compare/v0.111.0...v0.112.0) (2021-09-17)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @scaleway/eslint-config-react from 2.2.0 to 2.2.1 ([#725](https://github.com/scaleway/scaleway-ui/issues/725)) ([bcc6e2d](https://github.com/scaleway/scaleway-ui/commit/bcc6e2d6bde988e4ed1787bb2c04d690b27d92ca))
+* **deps-dev:** bump date-fns from 2.23.0 to 2.24.0 ([#727](https://github.com/scaleway/scaleway-ui/issues/727)) ([cbf01a9](https://github.com/scaleway/scaleway-ui/commit/cbf01a9cf164217cb1a8ca5e27790deab4795fe7))
+* **deps-dev:** bump webpack from 5.52.1 to 5.53.0 ([#728](https://github.com/scaleway/scaleway-ui/issues/728)) ([f205a8f](https://github.com/scaleway/scaleway-ui/commit/f205a8f1d54253f9fdf56b6048cd9e95038e7120))
+
+
+### :gear: Features
+
+* **textbox:** reduce padding & add `inputProps` ([#726](https://github.com/scaleway/scaleway-ui/issues/726)) ([e3c086e](https://github.com/scaleway/scaleway-ui/commit/e3c086e1eda0a7e21d636b83650c9d7f6c65f54a))
+
 ## [0.111.0](https://github.com/scaleway/scaleway-ui/compare/v0.110.0...v0.111.0) (2021-09-16)
 
 
