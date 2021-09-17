@@ -177,6 +177,7 @@ type StyledInputProps = {
   fillAvailable?: boolean
   hasLabel?: boolean
   hasRightElement?: boolean
+  rightElementPadding?: number
   isPlaceholderVisible?: boolean
   multiline?: boolean
   resizable?: boolean
@@ -185,6 +186,11 @@ type StyledInputProps = {
   | InputHTMLAttributes<HTMLInputElement>
   | TextareaHTMLAttributes<HTMLTextAreaElement>
 )
+
+type InputProps = Omit<
+  Exclude<StyledInputProps, TextareaHTMLAttributes<HTMLTextAreaElement>>,
+  'inputSize'
+>
 
 const StyledInput = styled('input', {
   shouldForwardProp: props =>
@@ -198,6 +204,7 @@ const StyledInput = styled('input', {
       'multiline',
       'resizable',
       'inputSize',
+      'rightElementPadding',
     ].includes(props.toString()),
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -288,10 +295,10 @@ const StyledInput = styled('input', {
     padding-top: 8px;
   `}
 
-  ${({ hasRightElement }) =>
+  ${({ hasRightElement, rightElementPadding }) =>
     hasRightElement &&
     `
-    padding-right: 32px;
+    padding-right: ${rightElementPadding || 32}px;
   `}
 `
 type TextBoxProps = {
@@ -332,6 +339,7 @@ type TextBoxProps = {
   valid?: boolean
   value?: string | number
   wrap?: string
+  inputProps?: InputProps
 } & (
   | InputHTMLAttributes<HTMLInputElement>
   | TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -378,6 +386,7 @@ const TextBox = forwardRef<
       valid,
       value,
       wrap,
+      inputProps,
       ...props
     },
     ref,
@@ -471,6 +480,11 @@ const TextBox = forwardRef<
     const hasRightElement =
       valid || required || isPassToggleable || random || unit
 
+    // Set the right padding to 22px when the TextBox is required. 22px allows
+    // keeping the required star icon centered, since it is smaller than valid or
+    // unit icons which have a right padding of 32px.
+    const rightElementPadding = required ? 22 : undefined
+
     const getType = () => {
       if (isPassToggleable) {
         return passwordVisible || generated ? 'text' : 'password'
@@ -550,6 +564,7 @@ const TextBox = forwardRef<
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
             hasRightElement={!!hasRightElement}
+            rightElementPadding={rightElementPadding}
             id={id}
             inputSize={inputSize}
             isPlaceholderVisible={isPlaceholderVisible}
@@ -568,6 +583,7 @@ const TextBox = forwardRef<
             type={getType()}
             value={value}
             wrap={wrap}
+            {...inputProps}
           />
           {hasLabel && (
             <StyledLabel
@@ -618,6 +634,7 @@ TextBox.propTypes = {
   generated: PropTypes.bool,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   id: PropTypes.string,
+  inputProps: PropTypes.objectOf(PropTypes.any),
   label: PropTypes.string,
   multiline: PropTypes.bool,
   name: PropTypes.string,
