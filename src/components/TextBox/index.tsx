@@ -480,13 +480,10 @@ const TextBox = forwardRef<
     const hasRightElement =
       valid || required || isPassToggleable || random || unit
 
-    const getRightElementPadding = () => {
-      if (required && hasRightElement) {
-        return 22
-      }
-
-      return undefined
-    }
+    // Set the right padding to 22px when the TextBox is required. 22px allows
+    // keeping the required star icon centered, since it is smaller than valid or
+    // unit icons which have a right padding of 32px.
+    const rightElementPadding = required ? 22 : undefined
 
     const getType = () => {
       if (isPassToggleable) {
@@ -567,7 +564,7 @@ const TextBox = forwardRef<
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
             hasRightElement={!!hasRightElement}
-            rightElementPadding={getRightElementPadding()}
+            rightElementPadding={rightElementPadding}
             id={id}
             inputSize={inputSize}
             isPlaceholderVisible={isPlaceholderVisible}
