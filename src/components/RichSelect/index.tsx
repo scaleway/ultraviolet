@@ -259,7 +259,7 @@ const getSelectStyles = ({
 })
 
 export interface WithSelectProps {
-  selectProps?: SelectProps
+  selectProps: SelectProps
 }
 
 type SelectProps = Props<SelectOption, boolean> &
@@ -525,7 +525,9 @@ Option.propTypes = {
 const DropdownIndicator = (
   props: IndicatorProps<SelectOption, boolean> & WithSelectProps,
 ) => {
-  const { selectProps: { isDisabled, error, time, required } = {} } = props
+  const {
+    selectProps: { isDisabled, error, time, required },
+  } = props
   const color = useMemo(() => {
     if (isDisabled) return 'gray300'
     if (error) return 'warning'
@@ -553,10 +555,12 @@ DropdownIndicator.propTypes = {
 }
 
 const ClearIndicator = ({
-  selectProps: { checked, error } = {},
+  selectProps: { checked, error },
   ...props
 }: IndicatorProps<SelectOption, boolean> & WithSelectProps) => {
-  const { innerProps: { ref, ...restInnerProps } = {} } = props
+  const {
+    innerProps: { ref, ...restInnerProps },
+  } = props
 
   return (
     <components.ClearIndicator {...props}>
