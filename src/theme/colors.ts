@@ -37,7 +37,7 @@ const info = blue
 
 const transparent = 'transparent'
 
-const colors = {
+const baseColors = {
   beta,
   black,
   blue,
@@ -71,6 +71,8 @@ const colors = {
   zumthor,
 }
 
-export type Color = keyof typeof colors
+export type Color = keyof typeof baseColors
+
+const colors: Record<Color, string> = baseColors
 
 export default colors
