@@ -69,7 +69,7 @@ const colors = {
   warning,
   white,
   zumthor,
-} as const
+}
 
 export type Color = keyof typeof colors
 
