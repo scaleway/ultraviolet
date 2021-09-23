@@ -1,3 +1,24 @@
+### [0.112.1](https://github.com/scaleway/scaleway-ui/compare/v0.112.0...v0.112.1) (2021-09-23)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @babel/eslint-parser from 7.15.4 to 7.15.7 ([#730](https://github.com/scaleway/scaleway-ui/issues/730)) ([c0affd1](https://github.com/scaleway/scaleway-ui/commit/c0affd115f66ca26b12a01d70c5ae83657b675cc))
+* **deps-dev:** bump @rollup/plugin-node-resolve from 13.0.4 to 13.0.5 ([#736](https://github.com/scaleway/scaleway-ui/issues/736)) ([e4e352a](https://github.com/scaleway/scaleway-ui/commit/e4e352a29399830aa7c2c0494efa0b05970cf463))
+* **deps-dev:** bump @types/react-router-dom from 5.1.9 to 5.3.0 ([#735](https://github.com/scaleway/scaleway-ui/issues/735)) ([b50fe65](https://github.com/scaleway/scaleway-ui/commit/b50fe651de1a035b7992cdee09fe84e817299422))
+* **deps-dev:** bump jest from 27.2.0 to 27.2.1 ([#731](https://github.com/scaleway/scaleway-ui/issues/731)) ([6c988d8](https://github.com/scaleway/scaleway-ui/commit/6c988d82ef633d4b4ad91c507431f09509216286))
+* **deps-dev:** bump jest-junit from 12.2.0 to 12.3.0 ([#738](https://github.com/scaleway/scaleway-ui/issues/738)) ([cf0cc69](https://github.com/scaleway/scaleway-ui/commit/cf0cc691ab80354033f81ad1f4509fe28a91477e))
+* **deps-dev:** bump postcss from 8.3.6 to 8.3.7 ([#737](https://github.com/scaleway/scaleway-ui/issues/737)) ([0a9febe](https://github.com/scaleway/scaleway-ui/commit/0a9febe5fad4a618702babe64ac382f7908e95fa))
+* **deps-dev:** bump rollup from 2.56.3 to 2.57.0 ([#733](https://github.com/scaleway/scaleway-ui/issues/733)) ([386e2f3](https://github.com/scaleway/scaleway-ui/commit/386e2f38552ee8920a5a1664b64aadbff976c4a3))
+* **deps-dev:** bump semantic-release, @semantic-release/changelog, @semantic-release/commit-analyzer, @semantic-release/git, @semantic-release/github, @semantic-release/npm and @semantic-release/release-notes-generator ([#734](https://github.com/scaleway/scaleway-ui/issues/734)) ([f3846de](https://github.com/scaleway/scaleway-ui/commit/f3846de75ff11972360234b21bf905ebabe957f8))
+* **deps:** bump react-countup from 5.2.0 to 6.0.0 ([#729](https://github.com/scaleway/scaleway-ui/issues/729)) ([61daa04](https://github.com/scaleway/scaleway-ui/commit/61daa042f3e8f2c2fadfac218903ed32cf1a6cdd))
+* **deps:** bump reakit from 1.3.9 to 1.3.10 ([#732](https://github.com/scaleway/scaleway-ui/issues/732)) ([b77dc9f](https://github.com/scaleway/scaleway-ui/commit/b77dc9f73319b091dc1130a1bed280b085b9edb6))
+
+
+### :bug: Bug Fixes
+
+* colors not const ([#740](https://github.com/scaleway/scaleway-ui/issues/740)) ([440f57c](https://github.com/scaleway/scaleway-ui/commit/440f57c4fc3b481bb3f4ed6a9ee964ecc21e4ecb))
+
 ## [0.112.0](https://github.com/scaleway/scaleway-ui/compare/v0.111.0...v0.112.0) (2021-09-17)
 
 
