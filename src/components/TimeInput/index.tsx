@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import RichSelect, { RichSelectProps, SelectOption } from '../RichSelect'
 
 const hours = [
@@ -192,27 +192,25 @@ const options = (schedule: ScheduleType) =>
     value: hour,
   }))
 
-
 const defaultValue = {
   label: '00:00',
   value: '00:00',
 }
 
 type TimeInputProps = RichSelectProps & {
-  schedule?: ScheduleType,
-  value?: SelectOption,
+  schedule?: ScheduleType
+  value?: SelectOption
 }
-const TimeInput = ({ value = defaultValue, schedule = 'hours', ...props }: TimeInputProps = {}): JSX.Element => (
+const TimeInput: FunctionComponent<TimeInputProps> & {
+  options: typeof options
+} = ({ value = defaultValue, schedule = 'hours', ...props } = {}) => (
   <RichSelect {...props} time value={value} options={options(schedule)} />
 )
+const scheduleType = Object.keys(schedules) as ScheduleType[]
 
 TimeInput.propTypes = {
   ...RichSelect.propTypes,
-  schedule: PropTypes.oneOf(Object.keys(schedules)),
-  value: PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-  }),
+  schedule: PropTypes.oneOf(scheduleType),
 }
 
 TimeInput.options = options

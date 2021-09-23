@@ -1,7 +1,11 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
-import RichSelect, { RichSelectProps, SelectOption, WithSelectProps } from '../RichSelect'
+import React, { FunctionComponent, useEffect, useState } from 'react'
+import RichSelect, {
+  RichSelectProps,
+  SelectOption,
+  WithSelectProps,
+} from '../RichSelect'
 import TextBox from '../TextBox'
 
 export const sizesHeight: Record<string, string> = {
@@ -87,7 +91,7 @@ type UnitInputProps = Omit<RichSelectProps, 'defaultValue'> & {
   defaultOption?: SelectOption
 }
 
-const UnitInput = ({
+const UnitInput: FunctionComponent<UnitInputProps> = ({
   name = '',
   maxValue = 99999,
   minValue = 1,
@@ -100,7 +104,7 @@ const UnitInput = ({
   disabled = false,
   options = defaultOptionValues,
   defaultOption,
-}: UnitInputProps): JSX.Element => {
+}) => {
   const [value, setValue] = useState({
     unit: defaultOption?.value || options?.[0]?.value,
     value: defaultValue,
@@ -148,8 +152,8 @@ UnitInput.propTypes = {
    * The default selected option in the RichSelect
    */
   defaultOption: PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
   }),
   /**
    * The default value in the TextInput
@@ -168,9 +172,9 @@ UnitInput.propTypes = {
    */
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string,
-    }),
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    }).isRequired,
   ),
   placeholder: PropTypes.string,
   richSelectWidth: PropTypes.number,
