@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
+import Box, { XStyledProps } from '../Box'
 
-const StyledChild = styled('div', {
+const StyledChild = styled(Box, {
   shouldForwardProp: prop =>
     !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(
       prop.toString(),
@@ -91,7 +92,8 @@ type FlexBoxProps = {
     | 'space-around'
     | 'space-between'
   wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
-} & ChildProps
+} & ChildProps &
+  XStyledProps
 
 type FlexBoxType = FunctionComponent<FlexBoxProps> & {
   Child: typeof Child
