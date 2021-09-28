@@ -1,3 +1,23 @@
+### [0.112.2](https://github.com/scaleway/scaleway-ui/compare/v0.112.1...v0.112.2) (2021-09-28)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @commitlint/cli from 13.1.0 to 13.2.0 ([#750](https://github.com/scaleway/scaleway-ui/issues/750)) ([39f2db9](https://github.com/scaleway/scaleway-ui/commit/39f2db9336b1f93848f82ea501967e40d157b5b0))
+* **deps-dev:** bump @commitlint/config-conventional ([#749](https://github.com/scaleway/scaleway-ui/issues/749)) ([472d83a](https://github.com/scaleway/scaleway-ui/commit/472d83ae8d3a45a9910504fb2e548b0694dc5f45))
+* **deps-dev:** bump @semantic-release/github from 8.0.0 to 8.0.1 ([#739](https://github.com/scaleway/scaleway-ui/issues/739)) ([bee9fe3](https://github.com/scaleway/scaleway-ui/commit/bee9fe3b3ef6cf20c572c5438687b206bcb1dc8c))
+* **deps-dev:** bump @testing-library/react from 12.1.0 to 12.1.1 ([#748](https://github.com/scaleway/scaleway-ui/issues/748)) ([531ee17](https://github.com/scaleway/scaleway-ui/commit/531ee175c0604f23d463c49e1c5dc6cfb189daae))
+* **deps-dev:** bump jest from 27.2.1 to 27.2.2 ([#742](https://github.com/scaleway/scaleway-ui/issues/742)) ([133cfd7](https://github.com/scaleway/scaleway-ui/commit/133cfd7a8277d291ac82db0f87e6bc6b3b8004c6))
+* **deps-dev:** bump postcss from 8.3.7 to 8.3.8 ([#743](https://github.com/scaleway/scaleway-ui/issues/743)) ([a2fd958](https://github.com/scaleway/scaleway-ui/commit/a2fd958745518635ce3d5af973513b2dfc78b05e))
+* **deps-dev:** bump webpack from 5.53.0 to 5.54.0 ([#745](https://github.com/scaleway/scaleway-ui/issues/745)) ([3d65fdf](https://github.com/scaleway/scaleway-ui/commit/3d65fdfa539a0485a67b7ce41c7e6cabb6dce713))
+* **deps:** bump @types/react-datepicker from 4.1.6 to 4.1.7 ([#718](https://github.com/scaleway/scaleway-ui/issues/718)) ([6174d9b](https://github.com/scaleway/scaleway-ui/commit/6174d9b21ccc64829202e0fbc01b1bc02225e702))
+* **deps:** bump actions/setup-node from 2.4.0 to 2.4.1 ([#747](https://github.com/scaleway/scaleway-ui/issues/747)) ([2a38711](https://github.com/scaleway/scaleway-ui/commit/2a38711ba2777e2c3d16f656132634a197fa8678))
+
+
+### :bug: Bug Fixes
+
+* **navigationstepper:** update border width according to feebacks ([#752](https://github.com/scaleway/scaleway-ui/issues/752)) ([259c776](https://github.com/scaleway/scaleway-ui/commit/259c7761d1609241eea3cf76c1a17175459130dc))
+
 ### [0.112.1](https://github.com/scaleway/scaleway-ui/compare/v0.112.0...v0.112.1) (2021-09-23)
 
 
