@@ -63,6 +63,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "commitlint": { "extends": ["@commitlint/config-conventional"] },
   "size-limit": [
     {
       "path": "dist/**/*.js",
