@@ -72,7 +72,7 @@ const StyledStep = styled('li', {
       : css`
           color: ${theme.colors.gray550};
           ${StyledStepNumber} {
-            border: ${theme.radii.default} solid ${theme.colors.gray550};
+            border: 3px solid ${theme.colors.gray550};
           }
 
           &[aria-current='true'] {
