@@ -139,6 +139,7 @@ const styles = {
 interface ChildrenProps {
   placement: PopperProps['placement']
   toggle: () => void
+  visible: boolean
 }
 
 export type MenuProps = Omit<PopperProps, 'children'> & {
@@ -160,6 +161,7 @@ const Menu: MenuType = ({
   modal = false,
   name = 'menu',
   placement = 'bottom',
+  visible = false,
 }) => (
   <Popper
     aria-label={ariaLabel}
@@ -169,21 +171,24 @@ const Menu: MenuType = ({
     modal={modal}
     name={name}
     placement={placement}
+    visible={visible}
   >
-    {({ placement: localPlacement, toggle }) => (
-      <div
-        role="menu"
-        css={[
-          styles.menu,
-          hasArrow && arrowPlacementStyles[localPlacement as ArrowPlacement],
-          styles.align(align),
-        ]}
-      >
-        {typeof children === 'function'
-          ? children({ placement: localPlacement, toggle })
-          : children}
-      </div>
-    )}
+    {({ placement: localPlacement, toggle, visible: isOpen }) =>
+      isOpen && (
+        <div
+          role="menu"
+          css={[
+            styles.menu,
+            hasArrow && arrowPlacementStyles[localPlacement as ArrowPlacement],
+            styles.align(align),
+          ]}
+        >
+          {typeof children === 'function'
+            ? children({ placement: localPlacement, toggle, visible })
+            : children}
+        </div>
+      )
+    }
   </Popper>
 )
 
@@ -200,6 +205,7 @@ Menu.propTypes = {
   modal: PropTypes.bool,
   name: PropTypes.string,
   placement: PropTypes.oneOf<ArrowPlacement>(arrowPlacements),
+  visible: PropTypes.bool,
 }
 
 Menu.Item = Item

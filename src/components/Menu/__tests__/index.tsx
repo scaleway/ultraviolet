@@ -4,9 +4,20 @@ import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnaps
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
 describe('Menu', () => {
+  test('renders with visible=false', () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Menu
+        visible={false}
+        baseId="menu"
+        disclosure={() => <button type="button">Menu is visible</button>}
+      >
+        <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
+      </Menu>,
+    ))
   test(`renders with Menu.Item`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
+        visible
         baseId="menu"
         disclosure={() => <button type="button">Menu</button>}
       >
@@ -17,6 +28,7 @@ describe('Menu', () => {
   test(`renders with Menu.ItemLink`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
+        visible
         baseId="menu-1"
         disclosure={() => <button type="button">Menu</button>}
       >
@@ -27,6 +39,7 @@ describe('Menu', () => {
   test(`renders with Menu.ItemLink & Menu.Item disabled`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
+        visible
         baseId="menu-1"
         disclosure={() => <button type="button">Menu</button>}
       >
@@ -43,6 +56,7 @@ describe('Menu', () => {
   test(`renders with modal={false}`, () =>
     shouldMatchEmotionSnapshot(
       <Menu
+        visible
         modal={false}
         baseId="menu-2"
         disclosure={() => <button type="button">Menu</button>}
@@ -55,6 +69,7 @@ describe('Menu', () => {
     test.each(arrowPlacements)('renders "%s"', placement =>
       shouldMatchEmotionSnapshot(
         <Menu
+          visible
           baseId={placement}
           placement={placement}
           disclosure={() => <button type="button">Menu</button>}
