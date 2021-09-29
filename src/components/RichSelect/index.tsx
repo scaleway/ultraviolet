@@ -3,10 +3,12 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
+  ForwardRefExoticComponent,
   ForwardedRef,
   FunctionComponent,
   LabelHTMLAttributes,
   ReactElement,
+  ReactNode,
   forwardRef,
   useEffect,
   useMemo,
@@ -14,14 +16,16 @@ import React, {
 } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Select, {
+  ClearIndicatorProps,
+  CommonProps,
   ContainerProps,
-  IndicatorProps,
+  DropdownIndicatorProps,
+  GroupBase,
   InputProps,
   MultiValueProps,
   OptionProps,
-  OptionTypeBase,
   Props,
-  ValueContainerProps as ValueContainerPropsBase,
+  ValueContainerProps,
   components,
 } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
@@ -31,14 +35,14 @@ import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
 
-export interface SelectOption extends OptionTypeBase {
+export interface SelectOption {
   value: string
   label: string
   disabled?: boolean
 }
 
 type SelectStyleGetterProps = {
-  state: SelectProps
+  state: SelectProps & OptionProps
   error?: string
   theme: Theme
 }
@@ -79,14 +83,16 @@ const getOptionColor = ({ state, theme }: SelectStyleGetterProps) => {
 
 type SelectStyleFactory = (
   provided: CSSObject,
-  state: SelectProps & WithSelectProps,
+  state: SelectProps & OptionProps & WithSelectProps,
 ) => CSSObject
 
 export type SelectStyleMap = Record<string, SelectStyleFactory>
 
 type SelectStyleProps = {
   error?: string
-  customStyle: (state: SelectProps) => CSSObject
+  customStyle: (
+    state: SelectProps & WithSelectProps,
+  ) => Record<string, CSSObject>
   animation?: string
   animationDuration: number
   noTopLabel?: boolean
@@ -136,7 +142,7 @@ const getSelectStyles = ({
         },
       },
     }),
-    ...((customStyle(state)?.control || {}) as CSSObject),
+    ...(customStyle(state)?.control || {}),
     animation: animation
       ? `${animationDuration}ms ${
           (animations as Record<string, ReturnType<typeof keyframes>>)[
@@ -153,17 +159,17 @@ const getSelectStyles = ({
     ...provided,
     backgroundColor: theme.colors.gray200,
     display: state.selectProps?.time ? 'flex' : 'none',
-    ...((customStyle(state)?.indicatorSeparator || {}) as CSSObject),
+    ...(customStyle(state)?.indicatorSeparator || {}),
   }),
   input: provided => ({
     ...provided,
     flexGrow: 1,
     marginLeft: 0,
-    paddingTop: 0,
+    paddingTop: noTopLabel ? 0 : 11,
   }),
   menu: (provided, state) => ({
     ...provided,
-    ...((customStyle(state)?.menu || {}) as CSSObject),
+    ...(customStyle(state)?.menu || {}),
     boxShadow: `0 0 0 1px ${transparentize(
       0.9,
       theme.colors.black,
@@ -173,12 +179,12 @@ const getSelectStyles = ({
     ...provided,
     backgroundColor: theme.colors.white,
     maxHeight: '225px',
-    ...((customStyle(state)?.menuList || {}) as CSSObject),
+    ...(customStyle(state)?.menuList || {}),
   }),
   menuPortal: (provided, state) => ({
     ...provided,
     zIndex: 10000,
-    ...((customStyle(state)?.menuPortal || {}) as CSSObject),
+    ...(customStyle(state)?.menuPortal || {}),
   }),
   multiValue: (provided, state) => ({
     ...provided,
@@ -192,7 +198,7 @@ const getSelectStyles = ({
     justifyContent: 'center',
     marginTop: '11px',
     textOverflow: 'ellipsis',
-    ...((customStyle(state)?.multiValue || {}) as CSSObject),
+    ...(customStyle(state)?.multiValue || {}),
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
@@ -200,7 +206,7 @@ const getSelectStyles = ({
     fontSize: '14px',
     fontWeight: 'normal',
     lineHeight: '20px',
-    ...((customStyle(state)?.multiValueLabel || {}) as CSSObject),
+    ...(customStyle(state)?.multiValueLabel || {}),
   }),
   multiValueRemove: (provided, state) => ({
     ...provided,
@@ -218,7 +224,7 @@ const getSelectStyles = ({
       cursor: state.isDisabled ? 'none' : 'pointer',
       pointerEvents: state.isDisabled ? 'none' : 'fill',
     },
-    ...((customStyle(state)?.multiValueRemove || {}) as CSSObject),
+    ...(customStyle(state)?.multiValueRemove || {}),
   }),
   option: (provided, state) => ({
     ...provided,
@@ -235,12 +241,12 @@ const getSelectStyles = ({
         : theme.colors.gray200,
       color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
     },
-    ...((customStyle(state)?.option || {}) as CSSObject),
+    ...(customStyle(state)?.option || {}),
   }),
   placeholder: (provided, state) => ({
     ...provided,
     color: getPlaceholderColor({ error, state, theme }),
-    ...((customStyle(state)?.placeholder || {}) as CSSObject),
+    ...(customStyle(state)?.placeholder || {}),
   }),
   singleValue: (provided, state) => ({
     ...provided,
@@ -249,13 +255,17 @@ const getSelectStyles = ({
     marginRight: state.hasValue ? 0 : undefined,
     marginTop: !state.hasValue || noTopLabel ? 0 : '5px',
     paddingLeft: state.hasValue ? 0 : undefined,
-    ...((customStyle(state)?.singleValue || {}) as CSSObject),
+    ...(customStyle(state)?.singleValue || {}),
   }),
   valueContainer: (provided, state) => ({
     ...provided,
-    ...((customStyle(state)?.valueContainer || {}) as CSSObject),
+    ...(customStyle(state)?.valueContainer || {}),
     cursor: state.isDisabled ? 'not-allowed' : undefined,
     height: '100%',
+    label: {
+      display: noTopLabel ? 'none' : 'initial',
+    },
+    paddingTop: 0,
   }),
 })
 
@@ -263,31 +273,35 @@ export interface WithSelectProps {
   selectProps: SelectProps
 }
 
-type SelectProps = {
-  inputId?: string | null
-  error?: string
-  labelId?: string
-  noTopLabel?: boolean
-  time?: number
-  required?: boolean
-  checked?: boolean
+export type SelectProps = StyledContainerProps &
+  Omit<Props<SelectOption>, 'value'> &
+  CommonProps<SelectOption, boolean, GroupBase<SelectOption>> &
+  XStyledProps & {
+    value?: string | SelectOption
+    checked?: boolean
+    error?: string
+    labelId?: string
+    required?: boolean
+    time?: boolean
+  }
+
+type StyledContainerProps = {
+  isDisabled?: boolean
   additionalStyles?: Parameters<typeof css>[0]
-} & Props<SelectOption, boolean> &
-  XStyledProps
+}
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop =>
     !['isDisabled', 'additionalStyles'].includes(prop.toString()),
-})<SelectProps>`
+})<StyledContainerProps>`
   width: 100%;
   ${({ isDisabled }) => isDisabled && `pointer-events: initial;`};
   ${({ additionalStyles }) => css(additionalStyles)}
 `
 
-type SelectContainerProps = ContainerProps<SelectOption, boolean> &
-  WithSelectProps
-
-const SelectContainer: FunctionComponent<SelectContainerProps> = props => {
+const SelectContainer: FunctionComponent<
+  ContainerProps<SelectOption> & WithSelectProps
+> = props => {
   const {
     children,
     getStyles,
@@ -356,6 +370,7 @@ SelectContainer.propTypes = {
   getStyles: PropTypes.func.isRequired,
   innerProps: PropTypes.shape({}).isRequired,
   isDisabled: PropTypes.bool.isRequired,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   selectProps: PropTypes.shape({
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -376,7 +391,7 @@ SelectContainer.propTypes = {
     px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     py: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }).isRequired,
+  }) as any,
 }
 
 type StyledPlaceholderProps = LabelHTMLAttributes<HTMLLabelElement> & {
@@ -418,27 +433,25 @@ const StyledPlaceholder = styled(Box, {
     hasValue && isDisabled ? 'opacity: 0.5' : ''}
 `
 
-type ValueContainerProps = ValueContainerPropsBase<SelectOption, boolean> &
-  WithSelectProps & {
-    isDisabled?: boolean
-  }
-
-const ValueContainer: FunctionComponent<ValueContainerProps> = ({
+const ValueContainer: FunctionComponent<
+  ValueContainerProps<SelectOption> & WithSelectProps
+> = ({
   isDisabled,
   children,
-  selectProps: { error, labelId, inputId, noTopLabel, ...selectProps },
+  selectProps: { error, labelId, inputId, ...selectProps },
   isMulti,
   hasValue,
   ...props
 }) => (
   <components.ValueContainer
     {...props}
-    selectProps={{ error, ...selectProps }}
+    selectProps={selectProps}
     isMulti={isMulti}
     hasValue={hasValue}
+    isDisabled={isDisabled}
   >
     <>
-      {selectProps.placeholder && !noTopLabel ? (
+      {selectProps.placeholder ? (
         <StyledPlaceholder
           as="label"
           id={labelId}
@@ -460,55 +473,43 @@ const ValueContainer: FunctionComponent<ValueContainerProps> = ({
 ValueContainer.propTypes = {
   children: PropTypes.node,
   hasValue: PropTypes.bool.isRequired,
-  isDisabled: PropTypes.bool,
+  isDisabled: PropTypes.bool.isRequired,
   isMulti: PropTypes.bool.isRequired,
-  selectProps:
-    SelectContainer.propTypes && SelectContainer.propTypes.selectProps,
+  selectProps: SelectContainer.propTypes?.selectProps,
 }
 
-const inputStyles = ({
-  isMulti,
-  hasValue,
-  noTopLabel,
-  placeholder,
-}: SelectProps) => css`
-  padding-top: ${(placeholder && hasValue) || noTopLabel ? 11 : 0}px;
+const inputStyles = ({ isMulti }: Partial<SelectProps>) => css`
   margin-left: 0px;
   ${!isMulti && 'caret-color: transparent'};
 `
 
-const Input: FunctionComponent<InputProps & SelectContainerProps> = ({
-  isMulti = false,
-  hasValue = false,
-  selectProps: {
-    inputId,
-    labelId,
-    noTopLabel,
-    placeholder,
-    ...selectProps
-  } = {},
+const Input: FunctionComponent<InputProps<SelectOption> & WithSelectProps> = ({
+  isMulti,
+  hasValue,
+  selectProps: { inputId, labelId, placeholder, ...selectProps } = {},
   ...props
 }) => (
   <components.Input
     {...props}
-    css={inputStyles({ hasValue, isMulti, noTopLabel, placeholder })}
+    css={inputStyles({ isMulti })}
     id={inputId}
     aria-controls={labelId}
-    selectProps={{ ...selectProps, placeholder }}
+    hasValue={hasValue}
+    isMulti={isMulti}
+    selectProps={
+      { ...selectProps, placeholder } as InputProps<SelectOption>['selectProps']
+    }
   />
 )
 
 Input.propTypes = {
   hasValue: PropTypes.bool.isRequired,
   isMulti: PropTypes.bool.isRequired,
-  selectProps:
-    SelectContainer.propTypes && SelectContainer.propTypes.selectProps,
+  selectProps: SelectContainer.propTypes?.selectProps,
   value: PropTypes.string,
 }
 
-type RichOptionProps = OptionProps<SelectOption, boolean> & SelectOption
-
-const Option: FunctionComponent<RichOptionProps> = ({
+const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
   selectProps,
   value,
   label,
@@ -525,21 +526,21 @@ const Option: FunctionComponent<RichOptionProps> = ({
 
 Option.propTypes = {
   label: PropTypes.string.isRequired,
-  selectProps:
-    SelectContainer.propTypes && SelectContainer.propTypes.selectProps,
+  selectProps: SelectContainer.propTypes?.selectProps,
   value: PropTypes.string.isRequired,
 }
 
 const DropdownIndicator: FunctionComponent<
-  IndicatorProps<SelectOption, boolean> & WithSelectProps
+  DropdownIndicatorProps<SelectOption> & WithSelectProps
 > = props => {
-  const { selectProps: { isDisabled, error, time, required } = {} } = props
+  const {
+    selectProps: { isDisabled, time, required },
+  } = props
   const color = useMemo(() => {
     if (isDisabled) return 'gray300'
-    if (error) return 'warning'
 
     return 'gray350'
-  }, [isDisabled, error])
+  }, [isDisabled])
 
   return (
     <components.DropdownIndicator {...props}>
@@ -555,14 +556,14 @@ const DropdownIndicator: FunctionComponent<
 }
 
 DropdownIndicator.propTypes = {
-  selectProps:
-    SelectContainer.propTypes && SelectContainer.propTypes.selectProps,
+  selectProps: SelectContainer.propTypes?.selectProps,
 }
 
 const ClearIndicator: FunctionComponent<
-  IndicatorProps<SelectOption, boolean> & WithSelectProps
-> = ({ selectProps: { checked, error }, ...props }) => {
+  ClearIndicatorProps<SelectOption> & WithSelectProps
+> = props => {
   const {
+    selectProps: { checked, error },
     innerProps: { ref, ...restInnerProps },
   } = props
 
@@ -580,11 +581,8 @@ const ClearIndicator: FunctionComponent<
 }
 
 ClearIndicator.propTypes = {
-  innerProps: PropTypes.shape({
-    ref: PropTypes.shape({}).isRequired,
-  }).isRequired,
-  selectProps:
-    SelectContainer.propTypes && SelectContainer.propTypes.selectProps,
+  innerProps: PropTypes.shape({}).isRequired,
+  selectProps: SelectContainer.propTypes?.selectProps,
 }
 
 const MultiValueContainer: FunctionComponent<MultiValueProps<SelectOption>> =
@@ -600,18 +598,22 @@ const MultiValueRemove: FunctionComponent<MultiValueProps<SelectOption>> =
     </components.MultiValueRemove>
   )
 
-type SelectComponents = typeof components
+type SelectComponents = SelectProps['components']
+
+type StateManagedSelect = typeof Select
 
 export type RichSelectProps = SelectProps &
-  Partial<SelectStyleProps> & {
+  SelectStyleProps & {
     animation?: string
+    animationOnChange?: boolean
     disabled?: boolean
     readOnly?: boolean
-    innerRef?: ForwardedRef<unknown>
-    customComponents?: Partial<SelectComponents>
+    innerRef?: ForwardedRef<StateManagedSelect>
+    customComponents?: SelectProps['components']
+    children: ReactNode
   }
 
-const RichSelect: FunctionComponent<RichSelectProps> = ({
+const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   animation = 'pulse',
   animationDuration = 1000,
   animationOnChange = false,
@@ -637,7 +639,6 @@ const RichSelect: FunctionComponent<RichSelectProps> = ({
   ...props
 }) => {
   const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
-  const labelId = useMemo(() => labelIdProp || getUUID('label'), [labelIdProp])
   const theme = useTheme()
   const [isAnimated, setIsAnimated] = useState(false)
 
@@ -676,7 +677,7 @@ const RichSelect: FunctionComponent<RichSelectProps> = ({
           SelectContainer,
           ValueContainer,
           ...customComponents,
-        } as Partial<SelectComponents>
+        } as SelectComponents
       }
       placeholder={placeholder}
       className={className}
@@ -696,32 +697,29 @@ const RichSelect: FunctionComponent<RichSelectProps> = ({
       isClearable={isClearable}
       isMulti={isMulti}
       onChange={onChange}
-      value={value}
+      value={value as SelectOption}
       maxMenuHeight={250}
-      error={error}
       inputId={inputId}
-      labelId={labelId}
-      noTopLabel={noTopLabel}
-      innerRef={innerRef}
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      ref={innerRef as any}
       {...props}
     />
   )
 }
 
-const RichSelectWithRef = Object.assign(
-  forwardRef((props: RichSelectProps, ref) => (
+const RichSelectWithRef = forwardRef(
+  (props: RichSelectProps, ref: ForwardedRef<StateManagedSelect>) => (
     <RichSelect innerRef={ref} {...props} />
-  )),
-  {
-    Option: ({ children }: Partial<RichOptionProps>) => children as JSX.Element,
-  },
-)
+  ),
+) as ForwardRefExoticComponent<Partial<RichSelectProps>> & {
+  Option: FunctionComponent<Partial<OptionProps<SelectOption> & SelectOption>>
+}
 
 RichSelectWithRef.propTypes = {
   /**
    * Name of the animation
    */
-  animation: PropTypes.string, // oneOf(Object.keys(animations)),
+  animation: PropTypes.oneOf(Object.keys(animations)),
   /**
    * Time of the animation
    */
@@ -744,13 +742,13 @@ RichSelectWithRef.propTypes = {
    */
   customStyle: PropTypes.func,
   disabled: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.string,
   inputId: PropTypes.string,
   isClearable: PropTypes.bool,
   isMulti: PropTypes.bool,
   isSearchable: PropTypes.bool,
   labelId: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   /**
    * Show/hide the label inside the component
    */
@@ -759,7 +757,13 @@ RichSelectWithRef.propTypes = {
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
   required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    }),
+  ]),
 }
 RichSelect.propTypes = RichSelectWithRef.propTypes
 

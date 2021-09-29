@@ -76,7 +76,7 @@ type UnitInputValue = {
   value: number
 }
 
-type UnitInputProps = Omit<RichSelectProps, 'defaultValue'> & {
+type UnitInputProps = Omit<Partial<RichSelectProps>, 'defaultValue'> & {
   name?: string
   defaultValue?: number
   disabled?: boolean
@@ -135,8 +135,11 @@ const UnitInput: FunctionComponent<UnitInputProps> = ({
         height={sizesHeight[size]}
         id={`${name}-unit`}
         name={`${name}-unit`}
-        onChange={(unitValue: SelectOption) => {
-          setValue(current => ({ ...current, unit: unitValue.value }))
+        onChange={unitValue => {
+          setValue(current => ({
+            ...current,
+            unit: (unitValue as SelectOption).value,
+          }))
         }}
         value={options.find(option => option.value === value.unit)}
         options={options}

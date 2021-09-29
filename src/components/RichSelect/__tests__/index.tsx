@@ -1,23 +1,24 @@
+import { CSSObject } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import RichSelect, { SelectStyleMap } from '..'
+import RichSelect from '..'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
 
-const customStyles: SelectStyleMap = {
-  control: () => ({}),
-  indicatorsContainer: () => ({}),
-  indicatorSeparator: () => ({}),
-  menu: () => ({}),
-  menuList: () => ({}),
-  menuPortal: () => ({}),
-  multiValue: () => ({}),
-  multiValueLabel: () => ({}),
-  multiValueRemove: () => ({}),
-  option: () => ({}),
-  placeholder: () => ({}),
-  singleValue: () => ({}),
-  valueContainer: () => ({}),
+const customStyles: Record<string, CSSObject> = {
+  control: {},
+  indicatorsContainer: {},
+  indicatorSeparator: {},
+  menu: {},
+  menuList: {},
+  menuPortal: {},
+  multiValue: {},
+  multiValueLabel: {},
+  multiValueRemove: {},
+  option: {},
+  placeholder: {},
+  singleValue: {},
+  valueContainer: {},
 }
 
 describe('RichSelect', () => {
@@ -29,7 +30,7 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const input = node.getByRole('textbox')
+          const input = node.getByRole('combobox')
           userEvent.click(input)
         },
       },
@@ -41,7 +42,7 @@ describe('RichSelect', () => {
         inputId="test"
         labelId="test-label"
         name="uncontrolled"
-        customStyles={customStyles}
+        customStyle={() => customStyles}
       >
         <RichSelect.Option value="a">Option A</RichSelect.Option>
         <RichSelect.Option value="b">Option B</RichSelect.Option>
@@ -106,7 +107,7 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const input = node.getByRole('textbox')
+          const input = node.getByRole('combobox')
           userEvent.click(input)
         },
       },
@@ -123,7 +124,7 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const input = node.getByRole('textbox')
+          const input = node.getByRole('combobox')
           userEvent.click(input)
         },
       },
@@ -144,7 +145,7 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const input = node.getByRole('textbox')
+          const input = node.getByRole('combobox')
           userEvent.click(input)
         },
       },
@@ -164,7 +165,7 @@ describe('RichSelect', () => {
       </RichSelect>,
       {
         transform: node => {
-          const input = node.getByRole('textbox')
+          const input = node.getByRole('combobox')
           userEvent.click(input)
         },
       },

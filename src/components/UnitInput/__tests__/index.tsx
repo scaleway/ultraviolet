@@ -76,7 +76,7 @@ describe('UnitInput', () => {
     const node = renderWithTheme(<UnitInput name="test" />)
 
     // Role textbox is only for the searchable input
-    const valueContainer = node.getByRole('textbox') as HTMLInputElement
+    const valueContainer = node.getByRole('combobox') as HTMLInputElement
     userEvent.click(valueContainer)
     userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
