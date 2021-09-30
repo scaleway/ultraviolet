@@ -7,7 +7,6 @@ describe('Menu', () => {
   test('renders with visible=false', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
-        visible={false}
         baseId="menu"
         disclosure={() => <button type="button">Menu is visible</button>}
       >
