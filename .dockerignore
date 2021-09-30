@@ -1,8 +1,28 @@
 .git
+
+# dependancies
+
 node_modules/
-dist/
-.idea/
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# we are using yarn here
+package-lock.json
+
+# misc
 .DS_Store
+.env
+/.vscode
+.idea/
 .eslintcache
+dist/
 coverage
 storybook-static
+.reports
+
+
