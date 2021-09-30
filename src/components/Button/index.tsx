@@ -354,7 +354,7 @@ const StyledButton = styled(Box, {
 `
 
 export type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
-  children: ReactNode
+  children?: ReactNode
   variant?: ButtonVariant
   innerRef: Ref<Element>
   size?: ButtonSize
