@@ -1,3 +1,19 @@
+### [0.112.3](https://github.com/scaleway/scaleway-ui/compare/v0.112.2...v0.112.3) (2021-09-30)
+
+
+### :package: Chore
+
+* **commitlint:** use new configuration ([#751](https://github.com/scaleway/scaleway-ui/issues/751)) ([8e1a59e](https://github.com/scaleway/scaleway-ui/commit/8e1a59ee2202f05efb1eef1f7b5b6b76a11e6a7e))
+* **deps-dev:** bump jest from 27.2.2 to 27.2.3 ([#753](https://github.com/scaleway/scaleway-ui/issues/753)) ([1557ebe](https://github.com/scaleway/scaleway-ui/commit/1557ebe6e3ccade542118c279b829b5e716d82c2))
+* **deps-dev:** bump jest from 27.2.3 to 27.2.4 ([#757](https://github.com/scaleway/scaleway-ui/issues/757)) ([24b184c](https://github.com/scaleway/scaleway-ui/commit/24b184c745605bb028cbea0fe2882e2311535fe2))
+* **deps-dev:** bump webpack from 5.54.0 to 5.55.0 ([#754](https://github.com/scaleway/scaleway-ui/issues/754)) ([4a6cd16](https://github.com/scaleway/scaleway-ui/commit/4a6cd169ecbb43dd43e7ae87aac1a74c5ec67186))
+* **deps-dev:** bump webpack from 5.55.0 to 5.55.1 ([#755](https://github.com/scaleway/scaleway-ui/issues/755)) ([b9d29e8](https://github.com/scaleway/scaleway-ui/commit/b9d29e846b66580ad9c8c3993fde7e2acb938a29))
+
+
+### :bug: Bug Fixes
+
+* **menu:** allow to not render inside menu when it s not necessary ([#756](https://github.com/scaleway/scaleway-ui/issues/756)) ([e0d199e](https://github.com/scaleway/scaleway-ui/commit/e0d199ecabf7e1bfb53e1531c15b7efe9e1e8cb2))
+
 ### [0.112.2](https://github.com/scaleway/scaleway-ui/compare/v0.112.1...v0.112.2) (2021-09-28)
 
 
