@@ -1,3 +1,10 @@
+### [0.112.4](https://github.com/scaleway/scaleway-ui/compare/v0.112.3...v0.112.4) (2021-09-30)
+
+
+### :bug: Bug Fixes
+
+* children is not mandatory for button component ([#759](https://github.com/scaleway/scaleway-ui/issues/759)) ([d71c36c](https://github.com/scaleway/scaleway-ui/commit/d71c36c46802b83bb7a39c573be43009f9fdef80))
+
 ### [0.112.3](https://github.com/scaleway/scaleway-ui/compare/v0.112.2...v0.112.3) (2021-09-30)
 
 
