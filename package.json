@@ -45,7 +45,7 @@
     "test:coverage": "yarn run test --coverage",
     "test:watch": "yarn run test --watch",
     "test:update": "yarn run test --updateSnapshot",
-    "test": "LC_ALL=en_US.UTF-8 jest",
+    "test": "LC_ALL=en_US.UTF-8 jest ./src/components",
     "test:a11y": "yarn test src/__tests__/a11y.test.tsx",
     "prepare": "husky install",
     "size": "yarn build && size-limit"

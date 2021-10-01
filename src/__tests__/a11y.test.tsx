@@ -47,7 +47,7 @@ describe('A11y', () => {
   })
 
   foundFiles.forEach((file, index) => {
-    test(`${file}`, async () => {
+    test(`${file.split('/')[2]}`, async () => {
       const module = await array[index]
       const components = composeStories(module)
 
