@@ -6,9 +6,12 @@ module.exports = {
   },
   typescript: {
     // also valid 'react-docgen-typescript' | false
-    reactDocgen: 'react-docgen',
+    reactDocgen: 'react-docgen-typescript',
   },
-  stories: ['../src/**/__stories__/*.stories.mdx'],
+  stories: [
+    '../src/**/__stories__/*.stories.mdx',
+    '../src/**/__stories__/*.stories.tsx',
+  ],
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-links',

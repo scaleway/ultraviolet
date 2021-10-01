@@ -19,11 +19,11 @@ const ENV_PARAMETERS = {
       },
     },
     controls: {
-      disable: true,
+      disable: false,
     },
-    viewMode: 'docs',
+    viewMode: 'canvas',
     previewTabs: {
-      'storybook/docs/panel': { index: -1 },
+      'storybook/docs/panel': { index: 1 },
     },
     viewport: {
       viewports: {},
