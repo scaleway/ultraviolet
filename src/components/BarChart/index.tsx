@@ -5,7 +5,7 @@ import {
   BarTooltipProps,
   ResponsiveBar,
 } from '@nivo/bar'
-import { DatumValue, ValueFormat } from '@nivo/core'
+import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, Validator, useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
@@ -13,18 +13,14 @@ import BarChartTooltip, { BarChartToolTipProps } from './Tooltip'
 
 type Formater = ValueFormat<DatumValue>
 
-type Shape<K extends string, T> = {
-  [P in K]?: T
-}
-
 type BarChartProps = {
   height?: string | number
-  margin?: Shape<'bottom' | 'left' | 'right' | 'top', number>
+  margin?: Box
   data: BarDatum[]
   withLegend?: boolean
-  axisFormatters?: Shape<'bottom' | 'left' | 'right' | 'top', Formater>
-  pointFormatters?: Shape<'x' | 'y', Formater>
-  tickValues?: Shape<'bottom' | 'left' | 'right' | 'top', number | string>
+  axisFormatters?: Record<'bottom' | 'left' | 'right' | 'top', Formater>
+  pointFormatters?: Record<'x' | 'y', Formater>
+  tickValues?: Box
   keys?: string[]
   tooltipFunction?: (props: BarTooltipProps<BarDatum>) => BarChartToolTipProps
   chartProps: Partial<BarSvgProps<BarDatum>>
@@ -64,7 +60,7 @@ const BarChart: FunctionComponent<BarChartProps> = ({
         },
       },
     },
-    fontFamily: 'Asap',
+    fontFamily: theme.fonts.sansSerif,
     fontSize: 12,
     textColor: theme.colors.gray550,
   }

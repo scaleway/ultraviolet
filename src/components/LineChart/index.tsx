@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react'
-import { DatumValue, ValueFormat } from '@nivo/core'
+import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, Validator, useState } from 'react'
@@ -8,22 +8,16 @@ import CustomLegend, { Transformer } from './CustomLegend'
 import LineChartTooltip from './Tooltip'
 import { getMaxChartValue, getMinChartValue } from './helpers'
 
-type Formater = ValueFormat<DatumValue>
-
-type Shape<K extends string, T> = {
-  [P in K]?: T
-}
-
 type LineChartProps = {
   height?: string | number
-  margin?: Shape<'bottom' | 'left' | 'right' | 'top', number>
+  margin?: Box
   xScale: LineSvgProps['xScale']
   yScale: LineSvgProps['yScale']
   data: LineSvgProps['data']
   withLegend?: boolean
-  axisFormatters?: Shape<'bottom' | 'left' | 'right' | 'top', Transformer>
-  pointFormatters?: Shape<'x' | 'y', Formater>
-  tickValues?: Shape<'bottom' | 'left' | 'right' | 'top', number | string>
+  axisFormatters?: Record<'bottom' | 'left' | 'right' | 'top', Transformer>
+  pointFormatters?: Record<'x' | 'y', ValueFormat<DatumValue>>
+  tickValues?: Box
   chartProps?: Partial<LineSvgProps>
 }
 
@@ -64,7 +58,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
         },
       },
     },
-    fontFamily: 'Asap',
+    fontFamily: theme.fonts.sansSerif,
     fontSize: 12,
     textColor: theme.colors.gray550,
   }

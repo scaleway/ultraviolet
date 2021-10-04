@@ -1,0 +1,67 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs'
+import PieChart from '..'
+import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
+
+<Meta title="Components/Data Display/Chart/PieChart" />
+
+# Chart
+
+<Description>
+  PieChart is a graphic component to show data and associated with a value.
+</Description>
+
+<Canvas>
+  <Story name="Basic">
+    <PieChart data={pieChartSimpleData} />
+  </Story>
+</Canvas>
+
+## Content
+
+<Canvas>
+  <Story name="Content">
+    <PieChart data={pieChartSimpleData} content="€20" />
+  </Story>
+</Canvas>
+
+## Legends
+
+<Canvas>
+  <Story name="Legends">
+    <PieChart data={pieChartSimpleData} content="€20" hasLegend />
+  </Story>
+</Canvas>
+
+## Popper details
+
+<Canvas>
+  <Story name="Popper details">
+    <PieChart data={pieChartSimpleData} content="€20" hasLegend />
+  </Story>
+</Canvas>
+
+## Empty Legend
+
+<Canvas>
+  <Story name="Empty Legend">
+    <PieChart emptyLegend="I'm alone in the dark" hasLegend />
+  </Story>
+</Canvas>
+
+## Strikethrough
+
+<Canvas>
+  <Story name="Strikethrough">
+    <PieChart hasLegend data={pieChartSimpleDiscountData} content="€0" />
+  </Story>
+</Canvas>
+
+## API
+
+<ArgsTable of={PieChart} />
