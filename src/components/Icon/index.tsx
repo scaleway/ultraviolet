@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { Ref, forwardRef, useMemo } from 'react'
+import React, { forwardRef, useMemo } from 'react'
 import { Color } from '../../theme/colors'
 import Box, { XStyledProps } from '../Box'
 
@@ -539,7 +539,7 @@ const Icon = forwardRef<SVGElement, IconProps>(
     return (
       <StyledIcon
         as="svg"
-        ref={ref as Ref<SVGElement>}
+        ref={ref}
         className="sc-ui-icon"
         color={color}
         size={size}
