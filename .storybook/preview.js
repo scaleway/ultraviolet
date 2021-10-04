@@ -18,9 +18,6 @@ const ENV_PARAMETERS = {
         disable: true,
       },
     },
-    controls: {
-      disable: false,
-    },
     viewMode: 'canvas',
     previewTabs: {
       'storybook/docs/panel': { index: 1 },

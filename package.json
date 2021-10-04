@@ -42,10 +42,11 @@
     "lint:fix": "yarn run lint --fix",
     "lint": "eslint --cache --ext js,ts,tsx,mdx .",
     "prebuild": "shx rm -rf dist",
-    "test:coverage": "yarn run test --coverage",
+    "test:unit:coverage": "yarn run test:unit --coverage",
     "test:watch": "yarn run test --watch",
     "test:update": "yarn run test --updateSnapshot",
-    "test": "LC_ALL=en_US.UTF-8 jest ./src/components",
+    "test": "LC_ALL=en_US.UTF-8 jest",
+    "test:unit": "yarn test --testPathIgnorePatterns='src/__tests__/a11y.test.tsx'",
     "test:a11y": "yarn test src/__tests__/a11y.test.tsx",
     "prepare": "husky install",
     "size": "yarn build && size-limit"
@@ -83,7 +84,8 @@
     "testEnvironment": "jsdom",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/__stories__/**/*.{js,ts,tsx,mdx}"
+      "!src/**/__stories__/**/*.{js,ts,tsx,mdx}",
+      "!src/__tests__/a11y.test.tsx"
     ],
     "coverageReporters": [
       "text",

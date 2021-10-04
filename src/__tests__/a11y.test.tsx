@@ -34,7 +34,7 @@ describe('A11y', () => {
     cleanup()
   })
 
-  const array: Promise<{
+  const moduleArray: Promise<{
     default: Meta
     __esModule?: boolean
   }>[] = []
@@ -42,13 +42,13 @@ describe('A11y', () => {
   beforeAll(async () => {
     for (const file of foundFiles) {
       // eslint-disable-next-line no-await-in-loop
-      array.push(await import(file))
+      moduleArray.push(await import(file))
     }
   })
 
   foundFiles.forEach((file, index) => {
     test(`${file.split('/')[2]}`, async () => {
-      const module = await array[index]
+      const module = await moduleArray[index]
       const components = composeStories(module)
 
       for (const componentName of Object.keys(components)) {

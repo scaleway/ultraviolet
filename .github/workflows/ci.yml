@@ -35,7 +35,7 @@ jobs:
         node-version: ${{ matrix.node }}
         cache: 'yarn'
     - run: yarn
-    - run: yarn run test:coverage
+    - run: yarn run test:unit:coverage
     - uses: codecov/codecov-action@v2.1.0
   accessibility:
     runs-on: ubuntu-20.04
@@ -54,7 +54,6 @@ jobs:
           cache: 'yarn'
       - run: yarn
       - run: yarn run test:a11y
-      - uses: codecov/codecov-action@v2.1.0
   build:
     strategy:
       matrix:
