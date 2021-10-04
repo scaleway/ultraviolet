@@ -2,18 +2,12 @@ import { Theme, css } from '@emotion/react'
 import { Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, memo } from 'react'
+import { getLegendColor } from '../../helpers/legend'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
-import {
-  getAverage,
-  getCurrent,
-  getLegendColor,
-  getMax,
-  getMin,
-  getSelected,
-} from './helpers'
+import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 
 const styles = {
   body: (theme: Theme) => css`

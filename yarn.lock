@@ -2575,6 +2575,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nivo/bar@npm:^0.73.1":
+  version: 0.73.1
+  resolution: "@nivo/bar@npm:0.73.1"
+  dependencies:
+    "@nivo/annotations": 0.73.0
+    "@nivo/axes": 0.73.0
+    "@nivo/colors": 0.73.0
+    "@nivo/legends": 0.73.0
+    "@nivo/recompose": 0.73.0
+    "@nivo/scales": 0.73.0
+    "@nivo/tooltip": 0.73.0
+    "@react-spring/web": 9.2.4
+    d3-scale: ^3.2.3
+    d3-shape: ^1.2.2
+    lodash: ^4.17.21
+  peerDependencies:
+    "@nivo/core": 0.73.0
+    react: ">= 16.14.0 < 18.0.0"
+  checksum: 3c9beb81b9bb3034884a56fca501c57fe2d5f4dcc13c3df0b73addc42ef24c9edc37f734708be250611aab7dcc690023fce11b31c4d1fb25aabaaaffda64fe6d
+  languageName: node
+  linkType: hard
+
 "@nivo/colors@npm:0.73.0":
   version: 0.73.0
   resolution: "@nivo/colors@npm:0.73.0"
@@ -3298,6 +3320,7 @@ __metadata:
     "@emotion/react": ^11.1.4
     "@emotion/serialize": ^1.0.2
     "@emotion/styled": ^11.0.0
+    "@nivo/bar": ^0.73.1
     "@nivo/core": ^0.73.0
     "@nivo/line": ^0.73.0
     "@rollup/plugin-babel": ^5.2.3
@@ -9153,7 +9176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-shape@npm:^1.3.5":
+"d3-shape@npm:^1.2.2, d3-shape@npm:^1.3.5":
   version: 1.3.7
   resolution: "d3-shape@npm:1.3.7"
   dependencies:

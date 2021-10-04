@@ -3,9 +3,10 @@ import { DatumValue, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, Validator, useState } from 'react'
+import { getLegendColor } from '../../helpers/legend'
 import CustomLegend, { Transformer } from './CustomLegend'
 import LineChartTooltip from './Tooltip'
-import { getLegendColor, getMaxChartValue, getMinChartValue } from './helpers'
+import { getMaxChartValue, getMinChartValue } from './helpers'
 
 type Formater = ValueFormat<DatumValue>
 
@@ -23,18 +24,25 @@ type LineChartProps = {
   axisFormatters?: Shape<'bottom' | 'left' | 'right' | 'top', Transformer>
   pointFormatters?: Shape<'x' | 'y', Formater>
   tickValues?: Shape<'bottom' | 'left' | 'right' | 'top', number | string>
+  chartProps?: Partial<LineSvgProps>
 }
 
 const LineChart: FunctionComponent<LineChartProps> = ({
-  height,
-  margin,
-  xScale,
-  yScale,
+  height = '537px', // to maintain aspect ratio based on our standard 1074px width
+  margin = { bottom: 50, left: 60, right: 25, top: 50 },
+  xScale = {
+    format: '%Y-%m-%dT%H:%M:%S%Z', // 2021-08-30T02:56:07Z
+    precision: 'minute',
+    type: 'time',
+    useUTC: false,
+  },
+  yScale = { type: 'linear' },
   data,
-  withLegend,
+  withLegend = false,
   axisFormatters,
   pointFormatters,
   tickValues,
+  chartProps = {},
 }) => {
   const theme = useTheme()
   const hasData = !data.some(d => !d.data.length)
@@ -105,6 +113,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
           theme={chartTheme}
           curve="monotoneX"
           tooltip={LineChartTooltip}
+          {...chartProps}
         />
       </div>
       {withLegend && (
@@ -126,6 +135,7 @@ LineChart.propTypes = {
     right: PropTypes.func,
     top: PropTypes.func,
   }) as Validator<LineChartProps['axisFormatters']>,
+  chartProps: PropTypes.shape({}),
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired as Validator<Serie[]>,
   height: PropTypes.number,
   margin: PropTypes.shape({
@@ -158,20 +168,4 @@ LineChart.propTypes = {
   }),
 }
 
-LineChart.defaultProps = {
-  axisFormatters: undefined,
-  height: '537px', // to maintain aspect ratio based on our standard 1074px width
-  margin: { bottom: 50, left: 60, right: 25, top: 50 },
-  pointFormatters: undefined,
-  withLegend: false,
-  xScale: {
-    format: '%Y-%m-%dT%H:%M:%S%Z', // 2021-08-30T02:56:07Z
-    precision: 'minute',
-    type: 'time',
-    useUTC: false,
-  },
-  yScale: {
-    type: 'linear',
-  },
-}
 export default LineChart
