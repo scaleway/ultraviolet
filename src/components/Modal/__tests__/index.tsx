@@ -55,7 +55,9 @@ describe('Modal', () => {
       <Modal
         ariaLabel="modal-test"
         baseId="modal-test"
-        disclosure={() => <button type="button">Test</button>}
+        disclosure={dialog => (
+          <button type="button">Test {dialog?.baseId}</button>
+        )}
         /* eslint-disable-next-line @typescript-eslint/require-await */
         onBeforeClose={async () => {
           count += 1
