@@ -18,12 +18,13 @@
   },
   "engines": {
     "node": ">=14.x",
-    "yarn": ">=1.22.x"
+    "yarn": ">=3.0.x"
   },
   "os": [
     "darwin",
     "linux"
   ],
+  "packageManager": "yarn@3.0.2",
   "sideEffects": false,
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",

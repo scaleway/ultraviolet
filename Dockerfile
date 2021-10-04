@@ -4,9 +4,11 @@
 FROM node:16.1-alpine as builder
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn ./.yarn
 
-RUN yarn --pure-lockfile
+
+RUN yarn --immutable --inline-builds
 
 COPY . .
 

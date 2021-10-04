@@ -49,7 +49,7 @@ jobs:
       uses: actions/setup-node@v2.4.1
       with:
         node-version: ${{ matrix.node }}
-    - run: yarn --pure-lockfile
+    - run: yarn install
     - run: yarn run build
   deploy:
     runs-on: ubuntu-20.04
@@ -68,7 +68,7 @@ jobs:
       uses: actions/setup-node@v2.4.1
       with:
         node-version: 16
-    - run: yarn --pure-lockfile
+    - run: yarn install
     - run: yarn run build
     - run: yarn run semantic-release
       env:
