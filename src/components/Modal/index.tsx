@@ -6,6 +6,7 @@ import React, {
   FunctionComponent,
   ReactElement,
   VoidFunctionComponent,
+  isValidElement,
   memo,
   useCallback,
   useEffect,
@@ -152,23 +153,27 @@ const dialogAnimatedStyle = ({
   }
 `
 
+type DisclosureParam =
+  | ((dialog?: Partial<DialogStateReturn>) => ReactElement)
+  | ReactElement
+
 type DisclosureProps = {
-  disclosure: (dialog?: Partial<DialogStateReturn>) => ReactElement
+  disclosure: DisclosureParam
   dialog: Partial<DialogStateReturn>
 }
 const Disclosure: VoidFunctionComponent<DisclosureProps> = ({
   disclosure,
   dialog,
 }) => {
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement(disclosure) ? disclosure : disclosure(dialog)
   const innerRef = useRef(
-    disclosure(dialog),
+    target,
   ) as unknown as React.RefObject<HTMLButtonElement>
 
   return (
     <DialogDisclosure {...dialog} ref={innerRef}>
-      {disclosureProps =>
-        React.cloneElement(disclosure(dialog), disclosureProps)
-      }
+      {disclosureProps => React.cloneElement(target, disclosureProps)}
     </DialogDisclosure>
   )
 }
@@ -246,7 +251,7 @@ type ModalProps = Partial<DialogProps> &
     bordered?: boolean
     customDialogBackdropStyles?: Interpolation<Theme>
     customDialogStyles?: Interpolation<Theme>
-    disclosure?: (dialog?: Partial<DialogStateReturn>) => ReactElement
+    disclosure?: DisclosureParam
     height?: string
     isClosable?: boolean
     modal?: boolean
@@ -344,7 +349,7 @@ Modal.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   customDialogBackdropStyles: PropTypes.shape({}),
   customDialogStyles: PropTypes.shape({}),
-  disclosure: PropTypes.func,
+  disclosure: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
   height: PropTypes.string,
   hideOnClickOutside: PropTypes.bool,
   hideOnEsc: PropTypes.bool,
