@@ -1,3 +1,10 @@
+### [0.113.1](https://github.com/scaleway/scaleway-ui/compare/v0.113.0...v0.113.1) (2021-10-05)
+
+
+### :bug: Bug Fixes
+
+* popper disclosure type ([#777](https://github.com/scaleway/scaleway-ui/issues/777)) ([e9ba992](https://github.com/scaleway/scaleway-ui/commit/e9ba992a235a915f0b24f6ef7323a320468b863d))
+
 ## [0.113.0](https://github.com/scaleway/scaleway-ui/compare/v0.112.4...v0.113.0) (2021-10-05)
 
 
