@@ -124,7 +124,7 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
     {data?.map(item => {
       const isSegmentFocused = focused !== undefined && item.id === focused
 
-      const id = `chart-tooltip-${item.id}`
+      const id = `chart-legend-${item.id}`
 
       return (
         <Tooltip
@@ -139,14 +139,14 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
               data-testid={id}
               onMouseOver={() => onFocusChange(item.id)}
               onFocus={() => onFocusChange(item.id)}
-              onMouseOut={() => onFocusChange(undefined)}
-              onBlur={() => onFocusChange(undefined)}
+              onMouseOut={() => onFocusChange()}
+              onBlur={() => onFocusChange()}
             />
             <Bullet
               color={item.color}
               isFocused={isSegmentFocused}
               needPattern={item.needPattern}
-              id={item.id}
+              id={`chart-legend-${item.id}`}
             />
             <Label>
               <Text isFocused={isSegmentFocused}>{item.name}</Text>

@@ -6,7 +6,12 @@ import {
   Story,
 } from '@storybook/addon-docs'
 import PieChart from '..'
-import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
+import {
+  data,
+  dataWithLegends,
+  dataWithLegendsAndDetails,
+  dataWithLegendsDetailsAndDiscount,
+} from './mockData'
 
 <Meta title="Components/Data Display/Chart/PieChart" />
 
@@ -18,7 +23,7 @@ import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
 
 <Canvas>
   <Story name="Basic">
-    <PieChart data={pieChartSimpleData} />
+    <PieChart data={data} />
   </Story>
 </Canvas>
 
@@ -26,7 +31,7 @@ import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
 
 <Canvas>
   <Story name="Content">
-    <PieChart data={pieChartSimpleData} content="€20" />
+    <PieChart data={data} content="€20" />
   </Story>
 </Canvas>
 
@@ -34,7 +39,7 @@ import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
 
 <Canvas>
   <Story name="Legends">
-    <PieChart data={pieChartSimpleData} content="€20" hasLegend />
+    <PieChart data={dataWithLegends} content="€20" hasLegend />
   </Story>
 </Canvas>
 
@@ -42,7 +47,7 @@ import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
 
 <Canvas>
   <Story name="Popper details">
-    <PieChart data={pieChartSimpleData} content="€20" hasLegend />
+    <PieChart data={dataWithLegendsAndDetails} content="€20" hasLegend />
   </Story>
 </Canvas>
 
@@ -58,7 +63,7 @@ import { pieChartSimpleData, pieChartSimpleDiscountData } from './mockData'
 
 <Canvas>
   <Story name="Strikethrough">
-    <PieChart hasLegend data={pieChartSimpleDiscountData} content="€0" />
+    <PieChart hasLegend data={dataWithLegendsDetailsAndDiscount} content="€0" />
   </Story>
 </Canvas>
 
