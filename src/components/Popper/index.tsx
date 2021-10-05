@@ -7,7 +7,7 @@ import React, {
   ReactElement,
   ReactNode,
   RefObject,
-  VoidFunctionComponent,
+  isValidElement,
   memo,
   useEffect,
   useRef,
@@ -68,24 +68,23 @@ const variantStyles = ({
   variant: PopoverVariant
 }) => variants[variant] ?? undefined
 
+type DisclosureParam =
+  | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
+  | ReactElement
+
 type DisclosureProps = {
-  disclosure: (popover?: Partial<PopoverStateReturn>) => ReactElement
+  disclosure: DisclosureParam
   popover: Partial<PopoverStateReturn>
 }
 
-const Disclosure: VoidFunctionComponent<DisclosureProps> = ({
-  disclosure,
-  popover,
-}) => {
-  const innerRef = useRef(
-    disclosure(popover),
-  ) as unknown as RefObject<HTMLButtonElement>
+const Disclosure = ({ disclosure, popover }: DisclosureProps): JSX.Element => {
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
+  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
 
   return (
     <PopoverDisclosure {...popover} ref={innerRef}>
-      {disclosureProps =>
-        React.cloneElement(disclosure(popover), disclosureProps)
-      }
+      {disclosureProps => React.cloneElement(target, disclosureProps)}
     </PopoverDisclosure>
   )
 }
@@ -107,7 +106,7 @@ const StyledPopover = styled(Popover, {
 export type PopperProps = Partial<PopoverProps> &
   Partial<Pick<PopoverStateReturn, 'placement'>> & {
     backgroundColor?: string
-    disclosure: (popover?: Partial<PopoverStateReturn>) => ReactElement
+    disclosure: DisclosureParam
     hasArrow?: boolean
     variant?: PopoverVariant
     name?: string
@@ -169,7 +168,8 @@ Popper.propTypes = {
   backgroundColor: PropTypes.string,
   baseId: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  disclosure: PropTypes.func.isRequired,
+  disclosure: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+    .isRequired,
   /**
    * Determine if an arrow is added on the direction of main content.
    */
