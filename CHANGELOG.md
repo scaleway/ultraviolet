@@ -1,3 +1,22 @@
+## [0.113.0](https://github.com/scaleway/scaleway-ui/compare/v0.112.4...v0.113.0) (2021-10-05)
+
+
+### :package: Chore
+
+* **deps-dev:** bump @storybook/addon-links from 6.3.8 to 6.3.9 ([#762](https://github.com/scaleway/scaleway-ui/issues/762)) ([764bbc0](https://github.com/scaleway/scaleway-ui/commit/764bbc0e2d92e9958983e87f60a885c82a3b7f0b))
+* **deps-dev:** bump @storybook/manager-webpack5 from 6.3.8 to 6.3.9 ([#763](https://github.com/scaleway/scaleway-ui/issues/763)) ([622161d](https://github.com/scaleway/scaleway-ui/commit/622161da54aa4f7c34b6496c858606ed677d7899))
+* **deps-dev:** bump @storybook/react from 6.3.8 to 6.3.9 ([#765](https://github.com/scaleway/scaleway-ui/issues/765)) ([26914e7](https://github.com/scaleway/scaleway-ui/commit/26914e7908cdb990f7eb77063f9f06e401e42a44))
+* **deps-dev:** bump @testing-library/react from 12.1.1 to 12.1.2 ([#761](https://github.com/scaleway/scaleway-ui/issues/761)) ([4f22187](https://github.com/scaleway/scaleway-ui/commit/4f22187124d69f05916ec36ed6fdcc87c0e7f0a1))
+* **deps-dev:** bump lint-staged from 11.1.4 to 11.2.0 ([#772](https://github.com/scaleway/scaleway-ui/issues/772)) ([b06dc24](https://github.com/scaleway/scaleway-ui/commit/b06dc24931746159255b892224bb89ffe17ab18d))
+* **deps-dev:** bump rollup from 2.57.0 to 2.58.0 ([#764](https://github.com/scaleway/scaleway-ui/issues/764)) ([52511de](https://github.com/scaleway/scaleway-ui/commit/52511de30b2b881039db996289e289c9fd59ca0a))
+* **deps-dev:** bump webpack from 5.55.1 to 5.56.1 ([#767](https://github.com/scaleway/scaleway-ui/issues/767)) ([6ef5a8a](https://github.com/scaleway/scaleway-ui/commit/6ef5a8a86b992241b2ef43f3112875f83b99e301))
+* **yarn:** upgrade yarn manager ([#758](https://github.com/scaleway/scaleway-ui/issues/758)) ([ddd859a](https://github.com/scaleway/scaleway-ui/commit/ddd859a1fad496a627e5b75b2c547470a18a9a37))
+
+
+### :gear: Features
+
+* **modal:** makes disclosure a react element if wanted ([#774](https://github.com/scaleway/scaleway-ui/issues/774)) ([1576ffe](https://github.com/scaleway/scaleway-ui/commit/1576ffe8befece708c204cd60ca8077cdc6a34b5))
+
 ### [0.112.4](https://github.com/scaleway/scaleway-ui/compare/v0.112.3...v0.112.4) (2021-09-30)
 
 
