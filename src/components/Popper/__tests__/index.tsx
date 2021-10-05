@@ -18,9 +18,9 @@ describe('Popper', () => {
   test(`renders with disclosure`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Popper
-        aria-label="Custom popover with buttom"
+        aria-label="Custom popover with button"
         baseId="popover-test-2"
-        disclosure={() => <button type="button">Test</button>}
+        disclosure={<button type="button">Test</button>}
         placement="auto"
         modal={false}
       >

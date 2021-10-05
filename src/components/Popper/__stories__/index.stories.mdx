@@ -100,7 +100,7 @@ import Icon from '../../Icon'
         <Popper
           placement="left-start"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -108,7 +108,7 @@ import Icon from '../../Icon'
         <Popper
           placement="left"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -116,7 +116,7 @@ import Icon from '../../Icon'
         <Popper
           placement="left-end"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -126,7 +126,7 @@ import Icon from '../../Icon'
         <Popper
           placement="top-start"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
           ml={2}
         >
@@ -135,7 +135,7 @@ import Icon from '../../Icon'
         <Popper
           placement="top"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
           ml={2}
         >
@@ -144,7 +144,7 @@ import Icon from '../../Icon'
         <Popper
           placement="top-end"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
           ml={2}
         >
@@ -155,7 +155,7 @@ import Icon from '../../Icon'
         <Popper
           placement="right-start"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -163,7 +163,7 @@ import Icon from '../../Icon'
         <Popper
           placement="right"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -171,7 +171,7 @@ import Icon from '../../Icon'
         <Popper
           placement="right-end"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -181,7 +181,7 @@ import Icon from '../../Icon'
         <Popper
           placement="bottom-start"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -189,7 +189,7 @@ import Icon from '../../Icon'
         <Popper
           placement="bottom"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -197,7 +197,7 @@ import Icon from '../../Icon'
         <Popper
           placement="bottom-end"
           variant="black"
-          aria-label="Custom popover with buttom"
+          aria-label="Custom popover with button"
           disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
@@ -212,10 +212,26 @@ import Icon from '../../Icon'
 <Canvas style={{ backgroundColor: 'black' }}>
   <Story name="Without portal" parameters={{ layout: 'centered' }}>
     <Popper
-      aria-label="Custom popover with buttom"
+      aria-label="Custom popover with button"
       disclosure={() => <Button>Test</Button>}
       placement="auto"
       modal={false}
+    >
+      {({ placement }) => <Button> {placement}</Button>}
+    </Popper>
+  </Story>
+</Canvas>
+
+## With element disclosure
+
+<Canvas>
+  <Story name="With element disclosure" parameters={{ layout: 'centered' }}>
+    <Popper
+      aria-label="Custom popover with button"
+      disclosure={<Button>Test</Button>}
+      placement="auto"
+      modal={false}
+      visible
     >
       {({ placement }) => <Button> {placement}</Button>}
     </Popper>
@@ -227,7 +243,7 @@ import Icon from '../../Icon'
 <Canvas>
   <Story name="Without disclosure" parameters={{ layout: 'centered' }}>
     <Popper
-      aria-label="Custom popover with buttom"
+      aria-label="Custom popover with button"
       placement="auto"
       modal={false}
       visible
