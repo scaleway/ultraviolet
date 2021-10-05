@@ -42,7 +42,7 @@ describe('Modal', () => {
       <Modal
         ariaLabel="modal-test"
         baseId="modal-test"
-        disclosure={() => <button type="button">Test</button>}
+        disclosure={<button type="button">Test</button>}
       >
         <div>modal</div>
       </Modal>,
