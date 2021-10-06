@@ -16,20 +16,21 @@ type Formater = ValueFormat<DatumValue>
 type BarChartProps = {
   height?: string | number
   margin?: Box
-  data: BarDatum[]
-  withLegend?: boolean
-  axisFormatters?: Record<'bottom' | 'left' | 'right' | 'top', Formater>
-  pointFormatters?: Record<'x' | 'y', Formater>
+  data?: BarDatum[]
+  axisFormatters?: Partial<
+    Record<'bottom' | 'left' | 'right' | 'top', Formater>
+  >
+  pointFormatters?: Partial<Record<'x' | 'y', Formater>>
   tickValues?: Box
   keys?: string[]
   tooltipFunction?: (props: BarTooltipProps<BarDatum>) => BarChartToolTipProps
-  chartProps: Partial<BarSvgProps<BarDatum>>
+  chartProps?: Partial<BarSvgProps<BarDatum>>
 }
 
 const BarChart: FunctionComponent<BarChartProps> = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width,
   margin = { bottom: 50, left: 60, right: 25, top: 50 },
-  data,
+  data = [],
   axisFormatters = {},
   tickValues,
   keys = ['value'],
@@ -37,7 +38,7 @@ const BarChart: FunctionComponent<BarChartProps> = ({
   chartProps,
 }) => {
   const theme = useTheme()
-  const dataset = data.map(d => {
+  const dataset = data?.map(d => {
     const colors = keys?.reduce<Record<string, string>>((acc, key, index) => {
       const colorKeyName = `${key}Color`
       acc[colorKeyName] = getLegendColor(index, theme)
@@ -120,7 +121,7 @@ BarChart.propTypes = {
     top: PropTypes.func,
   }) as Validator<BarChartProps['axisFormatters']>,
   chartProps: PropTypes.shape({}) as Validator<Partial<BarSvgProps<BarDatum>>>,
-  data: PropTypes.arrayOf({} as Validator<BarDatum>).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({}) as Validator<BarDatum>),
   height: PropTypes.number,
   keys: PropTypes.arrayOf(PropTypes.string.isRequired),
   margin: PropTypes.shape({
@@ -134,7 +135,7 @@ BarChart.propTypes = {
     left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }).isRequired as Validator<BarChartProps['tickValues']>,
+  }) as Validator<BarChartProps['tickValues']>,
   tooltipFunction: PropTypes.func,
 }
 

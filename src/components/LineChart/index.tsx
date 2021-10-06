@@ -11,12 +11,14 @@ import { getMaxChartValue, getMinChartValue } from './helpers'
 type LineChartProps = {
   height?: string | number
   margin?: Box
-  xScale: LineSvgProps['xScale']
-  yScale: LineSvgProps['yScale']
-  data: LineSvgProps['data']
+  xScale?: LineSvgProps['xScale']
+  yScale?: LineSvgProps['yScale']
+  data?: LineSvgProps['data']
   withLegend?: boolean
-  axisFormatters?: Record<'bottom' | 'left' | 'right' | 'top', Transformer>
-  pointFormatters?: Record<'x' | 'y', ValueFormat<DatumValue>>
+  axisFormatters?: Partial<
+    Record<'bottom' | 'left' | 'right' | 'top', Transformer>
+  >
+  pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<DatumValue>>>
   tickValues?: Box
   chartProps?: Partial<LineSvgProps>
 }
@@ -31,7 +33,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
     useUTC: false,
   },
   yScale = { type: 'linear' },
-  data,
+  data = [],
   withLegend = false,
   axisFormatters,
   pointFormatters,
@@ -39,10 +41,9 @@ const LineChart: FunctionComponent<LineChartProps> = ({
   chartProps = {},
 }) => {
   const theme = useTheme()
-  const hasData = !data.some(d => !d.data.length)
   const dataset = {
     datasets: data.map((d, i) => ({
-      data: hasData ? d.data : [],
+      data: d.data,
       id: d.id,
       label: d.label as string,
       serieColor: getLegendColor(i, theme),
@@ -75,7 +76,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
     <>
       <div style={{ height }}>
         <ResponsiveLine
-          colors={(point: Point) => point.serieColor || theme.colors.gray550}
+          colors={(point: Point) => point.serieColor}
           data={finalData}
           margin={margin}
           xScale={xScale}
@@ -130,7 +131,7 @@ LineChart.propTypes = {
     top: PropTypes.func,
   }) as Validator<LineChartProps['axisFormatters']>,
   chartProps: PropTypes.shape({}),
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired as Validator<Serie[]>,
+  data: PropTypes.arrayOf(PropTypes.shape({})) as Validator<Serie[]>,
   height: PropTypes.number,
   margin: PropTypes.shape({
     bottom: PropTypes.number,
@@ -150,16 +151,14 @@ LineChart.propTypes = {
   }) as Validator<LineChartProps['tickValues']>,
   withLegend: PropTypes.bool,
   xScale: PropTypes.shape({
-    format: PropTypes.string.isRequired,
-    precision: PropTypes.string as Validator<
-      'millisecond' | 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year'
-    >,
-    type: PropTypes.string as Validator<'time'>,
-    useUTC: PropTypes.bool.isRequired,
-  }),
+    format: PropTypes.string,
+    precision: PropTypes.string,
+    type: PropTypes.string,
+    useUTC: PropTypes.bool,
+  }) as Validator<LineChartProps['xScale']>,
   yScale: PropTypes.shape({
-    type: PropTypes.string as Validator<'time'>,
-  }),
+    type: PropTypes.string,
+  }) as Validator<LineChartProps['yScale']>,
 }
 
 export default LineChart

@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react'
+import { DatumValue } from '@nivo/core'
 import { Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, memo } from 'react'
@@ -46,7 +47,7 @@ const styles = {
 }
 
 type CellProps = {
-  value: string | number
+  value?: DatumValue
   variant?: string
 }
 
@@ -62,17 +63,13 @@ const Cell: FunctionComponent<CellProps> = memo(({ value, variant }) => (
 ))
 
 Cell.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   variant: PropTypes.string,
 }
 
-Cell.defaultProps = {
-  variant: undefined,
-}
+export type Transformer = (value: DatumValue) => string
 
-export type Transformer = (value: number) => number
-
-const noop: Transformer = (value: number): number => value
+const noop: Transformer = value => value.toString()
 
 type CustomLegendProps = {
   axisTransformer?: Transformer
@@ -99,21 +96,24 @@ const CustomLegend: FunctionComponent<CustomLegendProps> = ({
       {data?.map((row, index) => {
         const values = row.data.map(val => val.y as number)
         const labelIndexed = `${row.id}${index}`
+        const id = row.id.toString()
 
         return (
           <div key={labelIndexed} css={styles.row}>
             <FlexBox.Child flex="6">
               <Checkbox
                 checked={selected.indexOf(labelIndexed) > -1}
-                name={row.id.toString()}
+                name={id}
                 onChange={() =>
-                  setSelected([
-                    ...getSelected(row.id.toString(), index, selected),
-                  ])
+                  setSelected([...getSelected(id, index, selected)])
                 }
               >
                 <FlexBox direction="row" alignItems="center">
-                  <Typography variant="bodyB" color="gray700">
+                  <Typography
+                    variant="bodyB"
+                    color="gray700"
+                    data-testid={`label-${id}`}
+                  >
                     {row.label}
                   </Typography>
                   <div css={styles.legend(index)} />

@@ -12,7 +12,6 @@ const LineTooltipContainer = styled(FlexBox)`
   padding: 5px 9px;
   align-items: center;
 `
-
 const LineColorSquare = styled.span`
   display: block;
   width: 12px;
@@ -20,12 +19,14 @@ const LineColorSquare = styled.span`
   background: ${({ color }) => color};
   margin-right: 12px;
 `
-type LineTooltipProps = { point: Point }
+type LineChartTooltipProps = { point: Point }
 
-const LineTooltip: FunctionComponent<LineTooltipProps> = ({ point }) => (
+const LineChartTooltip: FunctionComponent<LineChartTooltipProps> = ({
+  point,
+}) => (
   <LineTooltipContainer>
     <div>
-      <LineColorSquare color={point.color} />
+      <LineColorSquare color={point.serieColor} />
     </div>
     <div>
       <Typography variant="bodyA" fontWeight={600} color="primary">
@@ -38,7 +39,7 @@ const LineTooltip: FunctionComponent<LineTooltipProps> = ({ point }) => (
   </LineTooltipContainer>
 )
 
-LineTooltip.propTypes = {
+LineChartTooltip.propTypes = {
   point: PropTypes.shape({
     color: PropTypes.string,
     data: PropTypes.shape({
@@ -48,4 +49,4 @@ LineTooltip.propTypes = {
   }).isRequired as Validator<Point>,
 }
 
-export default LineTooltip
+export default LineChartTooltip

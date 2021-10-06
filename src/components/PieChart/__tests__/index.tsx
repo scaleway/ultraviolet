@@ -10,7 +10,7 @@ import {
   dataWithLegendsDetailsAndDiscount,
 } from '../__stories__/mockData'
 
-describe('Chart', () => {
+describe('PieChart', () => {
   test('renders correctly with no props', () =>
     shouldMatchEmotionSnapshot(<PieChart />))
 
@@ -21,29 +21,30 @@ describe('Chart', () => {
     shouldMatchEmotionSnapshot(<PieChart data={data} content="Test" />))
 
   test('renders correctly with legend', () =>
-    shouldMatchEmotionSnapshot(<PieChart data={dataWithLegends} hasLegend />))
+    shouldMatchEmotionSnapshot(<PieChart data={dataWithLegends} withLegend />))
 
   test('renders correctly with detailed legend', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart data={dataWithLegendsAndDetails} hasLegend />,
+      <PieChart data={dataWithLegendsAndDetails} withLegend />,
     ))
 
   test('renders correctly with detailed legend and discount', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart data={dataWithLegendsDetailsAndDiscount} hasLegend />,
+      <PieChart data={dataWithLegendsDetailsAndDiscount} withLegend />,
     ))
 
   test('renders correctly with empty legend placeholder', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart hasLegend emptyLegend="I am a legend" />,
+      <PieChart withLegend emptyLegend="I am a legend" />,
     ))
 
   test('renders correctly when chart is hovered', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart data={dataWithLegendsAndDetails} hasLegend />,
+      <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
         transform: () => {
-          const slice = document.querySelector('svg g path')!
+          const slice = document.querySelector('svg g path')
+          if (!slice) throw new Error('PieChart slice path not found')
           userEvent.unhover(slice)
           userEvent.hover(slice)
         },
@@ -52,7 +53,7 @@ describe('Chart', () => {
 
   test('renders correctly when legend is hovered', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart data={dataWithLegendsAndDetails} hasLegend />,
+      <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
         transform: ({ getByTestId }) => {
           const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
@@ -64,7 +65,7 @@ describe('Chart', () => {
 
   test('renders correctly when legend is focused', () =>
     shouldMatchEmotionSnapshot(
-      <PieChart data={dataWithLegendsAndDetails} hasLegend />,
+      <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
         transform: ({ getByTestId }) => {
           const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`

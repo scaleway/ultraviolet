@@ -49,8 +49,8 @@ type PieChartProps = {
   height?: number
   width?: number
   emptyLegend?: string
-  content?: ReactNode | string
-  hasLegend?: boolean
+  content?: ReactNode
+  withLegend?: boolean
   margin?: Box
 }
 
@@ -59,8 +59,8 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
   width = 206,
   data = undefined,
   emptyLegend,
-  content = '',
-  hasLegend = false,
+  content,
+  withLegend = false,
   margin = { bottom: 10, left: 10, right: 10, top: 10 },
   chartProps = {},
 }) => {
@@ -150,14 +150,14 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
         />
         {content && <StyledContent>{content}</StyledContent>}
       </div>
-      {hasLegend && <LegendDisplayer />}
+      {withLegend && <LegendDisplayer />}
     </Container>
   )
 }
 
 PieChart.propTypes = {
   chartProps: PropTypes.shape({}),
-  content: PropTypes.oneOf([PropTypes.node, PropTypes.string]),
+  content: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
@@ -169,7 +169,6 @@ PieChart.propTypes = {
     }).isRequired,
   ),
   emptyLegend: PropTypes.string,
-  hasLegend: PropTypes.bool,
   height: PropTypes.number,
   margin: PropTypes.shape({
     bottom: PropTypes.number,
@@ -178,6 +177,7 @@ PieChart.propTypes = {
     top: PropTypes.number,
   }) as Validator<Box>,
   width: PropTypes.number,
+  withLegend: PropTypes.bool,
 }
 
 export default PieChart

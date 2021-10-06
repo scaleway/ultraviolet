@@ -18,7 +18,7 @@ interface Options {
 
 export default async (
   component: ReactNode,
-  { transform, options, theme }: Options = {},
+  { transform, options, theme = defaultTheme }: Options = {},
 ): Promise<void> => {
   const node = renderWithTheme(component, options, theme)
   if (transform) await transform(node)

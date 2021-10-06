@@ -71,6 +71,7 @@ const valuesFloatMix = [
   20.7, 38.82323, 72, 40.7, 30.3, 20.7, 30.1, 80.8, 70, 50.2, 63, 65.1, 68.22,
   65.3, 19.1,
 ]
+const valuesString = valuesFloatMix.map(x => x.toString())
 const emptyValues: never[] = []
 const errorValues = undefined
 
@@ -112,6 +113,9 @@ describe('Line Chart', () => {
     it('should return the smallest value of integer/float mix values', () => {
       expect(getMin(valuesFloatMix)).toBe(19.1)
     })
+    it('should return the smallest value of integer/float mix values as string', () => {
+      expect(getMin(valuesString)).toBe(19.1)
+    })
     it('should return 0 when there are no values', () => {
       expect(getMin(emptyValues)).toBe(0)
     })
@@ -124,18 +128,15 @@ describe('Line Chart', () => {
     it('should return the greatest value of integer values', () => {
       expect(getMax(values)).toBe(80)
     })
-  })
-  describe('getMax', () => {
     it('should return the greatest value integer/float mix values', () => {
       expect(getMax(valuesFloatMix)).toBe(80.8)
     })
-  })
-  describe('getMax', () => {
+    it('should return the greatest value integer/float mix values as string', () => {
+      expect(getMax(valuesString)).toBe(80.8)
+    })
     it('should return 0 when there are no values', () => {
       expect(getMax(emptyValues)).toBe(0)
     })
-  })
-  describe('getMax', () => {
     it('should return 0 when values are undefined', () => {
       expect(getMax(errorValues)).toBe(0)
     })
@@ -144,13 +145,12 @@ describe('Line Chart', () => {
     it('should return the average value', () => {
       expect(getAverage(values)).toBe(48.4)
     })
-  })
-  describe('getAverage', () => {
+    it('should return average when there are string values', () => {
+      expect(getAverage(valuesString)).toBe(49)
+    })
     it('should return 0 when there are no values', () => {
       expect(getAverage(emptyValues)).toBe(0)
     })
-  })
-  describe('getAverage', () => {
     it('should return 0 when values are undefined', () => {
       expect(getAverage(errorValues)).toBe(0)
     })
@@ -159,13 +159,9 @@ describe('Line Chart', () => {
     it('should return the last value', () => {
       expect(getCurrent(values)).toBe(20)
     })
-  })
-  describe('getCurrent', () => {
     it('should return 0 when there are no values', () => {
       expect(getCurrent(emptyValues)).toBe(0)
     })
-  })
-  describe('getCurrent', () => {
     it('should return 0 when values are undefined', () => {
       expect(getCurrent(errorValues)).toBe(0)
     })

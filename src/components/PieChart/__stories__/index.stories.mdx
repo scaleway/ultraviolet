@@ -39,7 +39,7 @@ import {
 
 <Canvas>
   <Story name="Legends">
-    <PieChart data={dataWithLegends} content="€20" hasLegend />
+    <PieChart data={dataWithLegends} content="€20" withLegend />
   </Story>
 </Canvas>
 
@@ -47,7 +47,7 @@ import {
 
 <Canvas>
   <Story name="Popper details">
-    <PieChart data={dataWithLegendsAndDetails} content="€20" hasLegend />
+    <PieChart data={dataWithLegendsAndDetails} content="€20" withLegend />
   </Story>
 </Canvas>
 
@@ -55,7 +55,7 @@ import {
 
 <Canvas>
   <Story name="Empty Legend">
-    <PieChart emptyLegend="I'm alone in the dark" hasLegend />
+    <PieChart emptyLegend="I'm alone in the dark" withLegend />
   </Story>
 </Canvas>
 
@@ -63,7 +63,11 @@ import {
 
 <Canvas>
   <Story name="Strikethrough">
-    <PieChart hasLegend data={dataWithLegendsDetailsAndDiscount} content="€0" />
+    <PieChart
+      withLegend
+      data={dataWithLegendsDetailsAndDiscount}
+      content="€0"
+    />
   </Story>
 </Canvas>
 
