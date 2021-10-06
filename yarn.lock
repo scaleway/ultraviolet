@@ -3110,7 +3110,6 @@ __metadata:
     "@testing-library/jest-dom": ^5.11.9
     "@testing-library/react": ^12.0.0
     "@testing-library/user-event": ^13.0.6
-    "@types/date-fns": ^2.6.0
     "@types/intl-tel-input": ^17.0.3
     "@types/jest-axe": ^3.5.3
     "@types/react-datepicker": ^4.1.4
@@ -4853,15 +4852,6 @@ __metadata:
   version: 1.1.1
   resolution: "@types/color-name@npm:1.1.1"
   checksum: b71fcad728cc68abcba1d405742134410c8f8eb3c2ef18113b047afca158ad23a4f2c229bcf71a38f4a818dead375c45b20db121d0e69259c2d81e97a740daa6
-  languageName: node
-  linkType: hard
-
-"@types/date-fns@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "@types/date-fns@npm:2.6.0"
-  dependencies:
-    date-fns: "*"
-  checksum: 6839db1d12d6586cd572e8aa77efc2ea88fd6566b7902641cf3efe2e22518aff067df2ba433539a275a3ab1169612b54d007ddcc2800d846be4f7e629cd7bfb3
   languageName: node
   linkType: hard
 
@@ -8893,10 +8883,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:*, date-fns@npm:^2.0.1, date-fns@npm:^2.19.0, date-fns@npm:^2.21.1":
-  version: 2.25.0
-  resolution: "date-fns@npm:2.25.0"
-  checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
+"date-fns@npm:^2.0.1, date-fns@npm:^2.19.0, date-fns@npm:^2.21.1":
+  version: 2.24.0
+  resolution: "date-fns@npm:2.24.0"
+  checksum: f930419e356cf6a6a02c7ed6c6e438df61b4011861002a3dc94a4efc83bc96a7f30ea3cc2e7231c421604c3d5131f9ffb097bf8e7f81a59d68f556864490664f
   languageName: node
   linkType: hard
 
