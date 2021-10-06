@@ -5,7 +5,6 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
-  ChangeEventHandler,
   FocusEventHandler,
   InputHTMLAttributes,
   KeyboardEventHandler,
@@ -321,9 +320,7 @@ type TextBoxProps = {
   notice?: string
   noTopLabel?: boolean
   onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onChange?: (
-    event: string | ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => void | ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onChange?: (value: string) => void
   onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
   placeholder?: string
   random?: string
@@ -341,8 +338,8 @@ type TextBoxProps = {
   wrap?: string
   inputProps?: InputProps
 } & (
-  | InputHTMLAttributes<HTMLInputElement>
-  | TextareaHTMLAttributes<HTMLTextAreaElement>
+  | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+  | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 )
 
 const TextBox = forwardRef<

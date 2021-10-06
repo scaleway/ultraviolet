@@ -2,10 +2,14 @@
 
 exports[`TimeInput renders correctly with base props 1`] = `
 <DocumentFragment>
-  .cache-70ccc7-container {
+  .cache-1eau8hy-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
+}
+
+.cache-1eau8hy-container.cache-1eau8hy-container {
+  margin-top: 0;
 }
 
 .cache-1f43avz-a11yText-A11yText {
@@ -78,15 +82,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   fill: #4f0599;
 }
 
-.cache-1ycj452-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -100,6 +101,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   overflow: hidden;
   box-sizing: border-box;
   height: 100%;
+  padding-top: 0;
+}
+
+.cache-evyzo2-ValueContainer label {
+  display: initial;
 }
 
 .cache-1ot4w4y {
@@ -126,42 +132,53 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.cache-163tydu-singleValue {
+.cache-fs070l-singleValue {
   color: #4a4f62;
+  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: calc(100% - 8px);
+  max-width: 100%;
   overflow: hidden;
-  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1mkawrf-Input {
+.cache-15psan7-Input {
   margin: 2px;
   padding-bottom: 2px;
-  padding-top: 0;
+  padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.cache-1oagfds-Input {
-  padding-top: 11px;
-  margin-left: 0px;
+.cache-15psan7-Input:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -248,9 +265,13 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 <div
-    class=" emneda41 cache-70ccc7-container e7ah3bn0"
+    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
     data-testid="rich-select-timeinput-test-0"
   >
+    <span
+      class="cache-1f43avz-a11yText-A11yText"
+      id="react-select-2-live-region"
+    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -261,45 +282,41 @@ exports[`TimeInput renders correctly with base props 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-1ycj452-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
-          class="emneda40 cache-1ot4w4y e7ah3bn0"
+          class="e1lzna4r0 cache-1ot4w4y e7ah3bn0"
           for="test"
-          id="test-label"
         >
           Select...
         </label>
         <div
-          class=" cache-163tydu-singleValue"
+          class=" cache-fs070l-singleValue"
         >
           00:00
         </div>
         <div
-          class="cache-1mkawrf-Input"
+          class="cache-15psan7-Input"
+          data-value=""
         >
-          <div
-            class="cache-1oagfds-Input"
-            style="caret-color: transparent; display: inline-block;"
-          >
-            <input
-              aria-autocomplete="list"
-              aria-controls="test-label"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              id="test"
-              spellcheck="false"
-              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
-            <div
-              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
-            />
-          </div>
+          <input
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-owns="react-select-2-listbox"
+            autocapitalize="none"
+            autocomplete="off"
+            autocorrect="off"
+            class=""
+            id="test"
+            role="combobox"
+            spellcheck="false"
+            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+            tabindex="0"
+            type="text"
+            value=""
+          />
         </div>
       </div>
       <div

@@ -20,7 +20,7 @@ export interface XStyledProps {
   boxShadow?: string
   color?: string
   display?: string
-  flex?: number | string
+  flex?: string | number
   flexWrap?: string
   fontSize?: number
   fontWeight?: number
