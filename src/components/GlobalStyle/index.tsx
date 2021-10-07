@@ -49,8 +49,7 @@ const globalStyles = (theme: Theme) => css`
 
   body {
     background-color: ${theme.colors.white};
-    /* TODO: Add me in theme; ps: I am hard coded in shire. */
-    color: #5c6275;
+    color: ${theme.colors.gray700};
     font-family: ${theme.fonts.sansSerif};
     overflow: hidden;
     height: 100%;
