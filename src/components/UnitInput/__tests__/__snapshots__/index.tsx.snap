@@ -120,20 +120,20 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -213,12 +213,15 @@ exports[`UnitInput renders with custom options 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -235,7 +238,7 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -263,53 +266,42 @@ exports[`UnitInput renders with custom options 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -400,13 +392,9 @@ exports[`UnitInput renders with custom options 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-3-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -417,7 +405,7 @@ exports[`UnitInput renders with custom options 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -427,31 +415,33 @@ exports[`UnitInput renders with custom options 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             KB
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-3-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -612,20 +602,20 @@ exports[`UnitInput renders with default props 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -705,12 +695,15 @@ exports[`UnitInput renders with default props 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -727,7 +720,7 @@ exports[`UnitInput renders with default props 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -755,53 +748,42 @@ exports[`UnitInput renders with default props 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -892,13 +874,9 @@ exports[`UnitInput renders with default props 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-2-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -909,7 +887,7 @@ exports[`UnitInput renders with default props 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -919,31 +897,33 @@ exports[`UnitInput renders with default props 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-2-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -1104,20 +1084,20 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -1197,12 +1177,15 @@ exports[`UnitInput renders with defaultOption 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1219,7 +1202,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -1247,53 +1230,42 @@ exports[`UnitInput renders with defaultOption 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -1384,13 +1356,9 @@ exports[`UnitInput renders with defaultOption 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-6-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -1401,7 +1369,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -1411,31 +1379,33 @@ exports[`UnitInput renders with defaultOption 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-6-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -1596,20 +1566,20 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -1689,12 +1659,15 @@ exports[`UnitInput renders with defaultValue 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1711,7 +1684,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -1739,53 +1712,42 @@ exports[`UnitInput renders with defaultValue 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -1876,13 +1838,9 @@ exports[`UnitInput renders with defaultValue 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-5-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -1893,7 +1851,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -1903,31 +1861,33 @@ exports[`UnitInput renders with defaultValue 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-5-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -2093,7 +2053,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-top: 2px;
 }
 
-.cache-5ug9qb-container {
+.cache-1xzdm2s-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -2101,14 +2061,14 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   box-sizing: border-box;
 }
 
-.cache-5ug9qb-container.cache-5ug9qb-container {
+.cache-1xzdm2s-container.cache-1xzdm2s-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-5ug9qb-container:hover,
-.cache-5ug9qb-container:focus {
+.cache-1xzdm2s-container:hover,
+.cache-1xzdm2s-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -2171,12 +2131,15 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-b2qn0l-ValueContainer {
+.cache-15poxzv-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2194,7 +2157,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-top: 0;
 }
 
-.cache-b2qn0l-ValueContainer label {
+.cache-15poxzv-ValueContainer label {
   display: none;
 }
 
@@ -2223,53 +2186,42 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   opacity: 0.5;
 }
 
-.cache-1gjh40w-singleValue {
+.cache-yjpdw5-singleValue {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-q64x7y-Input {
+.cache-imudgr-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-q64x7y-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -2361,13 +2313,9 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-5ug9qb-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-1xzdm2s-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-11-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -2378,7 +2326,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
         class=" cache-15ftxnd-control"
       >
         <div
-          class=" cache-b2qn0l-ValueContainer"
+          class=" cache-15poxzv-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -2388,32 +2336,34 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
             Select...
           </label>
           <div
-            class=" cache-1gjh40w-singleValue"
+            class=" cache-yjpdw5-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-q64x7y-Input"
-            data-value=""
+            class="cache-imudgr-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-11-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              disabled=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                disabled=""
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -2569,20 +2519,20 @@ exports[`UnitInput renders with min max 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -2662,12 +2612,15 @@ exports[`UnitInput renders with min max 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2684,7 +2637,7 @@ exports[`UnitInput renders with min max 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -2712,53 +2665,42 @@ exports[`UnitInput renders with min max 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -2849,13 +2791,9 @@ exports[`UnitInput renders with min max 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-4-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -2866,7 +2804,7 @@ exports[`UnitInput renders with min max 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -2876,31 +2814,33 @@ exports[`UnitInput renders with min max 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-4-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -3061,20 +3001,20 @@ exports[`UnitInput renders with size large 1`] = `
   padding-top: 2px;
 }
 
-.cache-1uiapxw-container {
+.cache-mebwkv-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1uiapxw-container.cache-1uiapxw-container {
+.cache-mebwkv-container.cache-mebwkv-container {
   width: 200px;
   height: 48px;
   margin-top: 0;
 }
 
-.cache-1uiapxw-container:hover,
-.cache-1uiapxw-container:focus {
+.cache-mebwkv-container:hover,
+.cache-mebwkv-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -3154,12 +3094,15 @@ exports[`UnitInput renders with size large 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3176,7 +3119,7 @@ exports[`UnitInput renders with size large 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -3204,53 +3147,42 @@ exports[`UnitInput renders with size large 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3341,13 +3273,9 @@ exports[`UnitInput renders with size large 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-1uiapxw-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-mebwkv-container e7ah3bn0"
       data-testid="rich-select-default-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-7-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -3358,7 +3286,7 @@ exports[`UnitInput renders with size large 1`] = `
         class=" cache-1z0eyba-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -3368,31 +3296,33 @@ exports[`UnitInput renders with size large 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-7-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -3553,20 +3483,20 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-top: 2px;
 }
 
-.cache-asqlsx-container {
+.cache-z656qp-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-asqlsx-container.cache-asqlsx-container {
+.cache-z656qp-container.cache-z656qp-container {
   width: 200px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-asqlsx-container:hover,
-.cache-asqlsx-container:focus {
+.cache-z656qp-container:hover,
+.cache-z656qp-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -3646,12 +3576,15 @@ exports[`UnitInput renders with size medium 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3668,7 +3601,7 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -3696,53 +3629,42 @@ exports[`UnitInput renders with size medium 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3833,13 +3755,9 @@ exports[`UnitInput renders with size medium 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-asqlsx-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-z656qp-container e7ah3bn0"
       data-testid="rich-select-default-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-8-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -3850,7 +3768,7 @@ exports[`UnitInput renders with size medium 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -3860,31 +3778,33 @@ exports[`UnitInput renders with size medium 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-8-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4045,20 +3965,20 @@ exports[`UnitInput renders with size small 1`] = `
   padding-top: 2px;
 }
 
-.cache-vglgrr-container {
+.cache-qbxbk4-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-vglgrr-container.cache-vglgrr-container {
+.cache-qbxbk4-container.cache-qbxbk4-container {
   width: 200px;
   height: 32px;
   margin-top: 0;
 }
 
-.cache-vglgrr-container:hover,
-.cache-vglgrr-container:focus {
+.cache-qbxbk4-container:hover,
+.cache-qbxbk4-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -4138,12 +4058,15 @@ exports[`UnitInput renders with size small 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4160,7 +4083,7 @@ exports[`UnitInput renders with size small 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -4188,53 +4111,42 @@ exports[`UnitInput renders with size small 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -4325,13 +4237,9 @@ exports[`UnitInput renders with size small 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-vglgrr-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-qbxbk4-container e7ah3bn0"
       data-testid="rich-select-default-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-9-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -4342,7 +4250,7 @@ exports[`UnitInput renders with size small 1`] = `
         class=" cache-1986ye9-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -4352,31 +4260,33 @@ exports[`UnitInput renders with size small 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-9-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4537,20 +4447,20 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-top: 2px;
 }
 
-.cache-fw38o9-container {
+.cache-5kb0eg-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-fw38o9-container.cache-fw38o9-container {
+.cache-5kb0eg-container.cache-5kb0eg-container {
   width: 100px;
   height: 40px;
   margin-top: 0;
 }
 
-.cache-fw38o9-container:hover,
-.cache-fw38o9-container:focus {
+.cache-5kb0eg-container:hover,
+.cache-5kb0eg-container:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-color: #4f0599;
@@ -4630,12 +4540,15 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   fill: #4f0599;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-12empvh-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4652,7 +4565,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-12empvh-ValueContainer label {
   display: none;
 }
 
@@ -4680,53 +4593,42 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
+.cache-62fj5j-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1ua1wb0-Input {
+.cache-1mkawrf-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1ua1wb0-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -4817,13 +4719,9 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
       </div>
     </div>
     <div
-      class="e1ixhdo10 e1lzna4r1 cache-fw38o9-container e7ah3bn0"
+      class="e1ixhdo10 e1lzna4r1 cache-5kb0eg-container e7ah3bn0"
       data-testid="rich-select-test-unit"
     >
-      <span
-        class="cache-1f43avz-a11yText-A11yText"
-        id="react-select-10-live-region"
-      />
       <span
         aria-atomic="false"
         aria-live="polite"
@@ -4834,7 +4732,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
         class=" cache-4804d0-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-12empvh-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -4844,31 +4742,33 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-62fj5j-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1ua1wb0-Input"
-            data-value=""
+            class="cache-1mkawrf-Input"
           >
-            <input
-              aria-autocomplete="list"
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-owns="react-select-10-listbox"
-              autocapitalize="none"
-              autocomplete="off"
-              autocorrect="off"
-              class=""
-              id="input-6c756c756c756c756c756c756c756c75"
-              role="combobox"
-              spellcheck="false"
-              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-              tabindex="0"
-              type="text"
-              value=""
-            />
+            <div
+              class="cache-cb6xa1-Input"
+              style="display: inline-block;"
+            >
+              <input
+                aria-autocomplete="list"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                id="input-6c756c756c756c756c756c756c756c75"
+                spellcheck="false"
+                style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+              />
+            </div>
           </div>
         </div>
         <div

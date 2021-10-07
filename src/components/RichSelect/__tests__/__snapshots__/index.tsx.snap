@@ -28,13 +28,13 @@ exports[`RichSelect renders correctly animated 1`] = `
   }
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -108,12 +108,15 @@ exports[`RichSelect renders correctly animated 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -130,7 +133,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -149,47 +152,36 @@ exports[`RichSelect renders correctly animated 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -298,13 +290,13 @@ exports[`RichSelect renders correctly animated 1`] = `
   }
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -378,12 +370,15 @@ exports[`RichSelect renders correctly animated 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -400,7 +395,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -419,47 +414,36 @@ exports[`RichSelect renders correctly animated 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -543,13 +527,9 @@ exports[`RichSelect renders correctly animated 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-animated"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-14-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -560,7 +540,7 @@ exports[`RichSelect renders correctly animated 1`] = `
       class=" cache-1qys4ww-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -570,33 +550,33 @@ exports[`RichSelect renders correctly animated 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-14-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-14-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-14-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -638,13 +618,13 @@ exports[`RichSelect renders correctly animated 1`] = `
 
 exports[`RichSelect renders correctly controlled 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -718,12 +698,15 @@ exports[`RichSelect renders correctly controlled 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -740,7 +723,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -759,47 +742,36 @@ exports[`RichSelect renders correctly controlled 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -882,13 +854,13 @@ exports[`RichSelect renders correctly controlled 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -962,12 +934,15 @@ exports[`RichSelect renders correctly controlled 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -984,7 +959,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -1003,47 +978,36 @@ exports[`RichSelect renders correctly controlled 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -1127,13 +1091,9 @@ exports[`RichSelect renders correctly controlled 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-controlled"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-4-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -1144,7 +1104,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -1154,33 +1114,33 @@ exports[`RichSelect renders correctly controlled 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-4-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-4-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-4-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -2000,7 +1960,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
 
 exports[`RichSelect renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-qisrsg-container {
+  .cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -2008,7 +1968,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -2065,12 +2025,15 @@ exports[`RichSelect renders correctly disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2088,7 +2051,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -2107,47 +2070,36 @@ exports[`RichSelect renders correctly disabled 1`] = `
   opacity: 0;
 }
 
-.cache-12mwja8-placeholder {
+.cache-1mt5lcy-placeholder {
   color: #dce1eb;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -2230,7 +2182,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   padding-top: 2px;
 }
 
-.cache-qisrsg-container {
+.cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -2238,7 +2190,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -2295,12 +2247,15 @@ exports[`RichSelect renders correctly disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2318,7 +2273,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -2337,47 +2292,36 @@ exports[`RichSelect renders correctly disabled 1`] = `
   opacity: 0;
 }
 
-.cache-12mwja8-placeholder {
+.cache-1mt5lcy-placeholder {
   color: #dce1eb;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -2461,13 +2405,9 @@ exports[`RichSelect renders correctly disabled 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-qisrsg-container e7ah3bn0"
+    class="e1lzna4r1 cache-80jhee-container e7ah3bn0"
     data-testid="rich-select-disabled"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-5-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -2478,7 +2418,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
       class=" cache-th60l3-control"
     >
       <div
-        class=" cache-1jfs5jc-ValueContainer"
+        class=" cache-abn5uu-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -2488,34 +2428,34 @@ exports[`RichSelect renders correctly disabled 1`] = `
           Select...
         </label>
         <div
-          class=" cache-12mwja8-placeholder"
-          id="react-select-5-placeholder"
+          class=" cache-1mt5lcy-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-1mghlx-Input"
-          data-value=""
+          class="cache-1tjweye-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-5-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-5-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            disabled=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              disabled=""
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -2552,7 +2492,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
 
 exports[`RichSelect renders correctly disabled with click 1`] = `
 <DocumentFragment>
-  .cache-qisrsg-container {
+  .cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -2560,7 +2500,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -2617,12 +2557,15 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2640,7 +2583,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -2659,47 +2602,36 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   opacity: 0;
 }
 
-.cache-12mwja8-placeholder {
+.cache-1mt5lcy-placeholder {
   color: #dce1eb;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -2782,7 +2714,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   padding-top: 2px;
 }
 
-.cache-qisrsg-container {
+.cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -2790,7 +2722,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -2847,12 +2779,15 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2870,7 +2805,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -2889,47 +2824,36 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   opacity: 0;
 }
 
-.cache-12mwja8-placeholder {
+.cache-1mt5lcy-placeholder {
   color: #dce1eb;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3013,13 +2937,9 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-qisrsg-container e7ah3bn0"
+    class="e1lzna4r1 cache-80jhee-container e7ah3bn0"
     data-testid="rich-select-test"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-12-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -3030,7 +2950,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
       class=" cache-th60l3-control"
     >
       <div
-        class=" cache-1jfs5jc-ValueContainer"
+        class=" cache-abn5uu-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -3040,34 +2960,34 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
           Select...
         </label>
         <div
-          class=" cache-12mwja8-placeholder"
-          id="react-select-12-placeholder"
+          class=" cache-1mt5lcy-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-1mghlx-Input"
-          data-value=""
+          class="cache-1tjweye-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-12-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-12-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            disabled=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              disabled=""
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -3104,13 +3024,13 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
 
 exports[`RichSelect renders correctly multi 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -3184,12 +3104,15 @@ exports[`RichSelect renders correctly multi 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3206,7 +3129,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -3225,46 +3148,35 @@ exports[`RichSelect renders correctly multi 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-h6c720-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
 }
 
-.cache-h6c720-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-ysvne1-Input {
+  margin-left: 0px;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3347,13 +3259,13 @@ exports[`RichSelect renders correctly multi 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -3427,12 +3339,15 @@ exports[`RichSelect renders correctly multi 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3449,7 +3364,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -3468,46 +3383,35 @@ exports[`RichSelect renders correctly multi 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-h6c720-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
 }
 
-.cache-h6c720-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-ysvne1-Input {
+  margin-left: 0px;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3591,13 +3495,9 @@ exports[`RichSelect renders correctly multi 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-multi"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-15-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -3608,7 +3508,7 @@ exports[`RichSelect renders correctly multi 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -3618,33 +3518,33 @@ exports[`RichSelect renders correctly multi 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-15-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-h6c720-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-15-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-15-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-ysvne1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -3687,7 +3587,7 @@ exports[`RichSelect renders correctly multi 1`] = `
 
 exports[`RichSelect renders correctly multi disabled 1`] = `
 <DocumentFragment>
-  .cache-qisrsg-container {
+  .cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -3695,7 +3595,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -3883,38 +3783,22 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   vertical-align: middle;
 }
 
-.cache-xj1oox-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
 }
 
-.cache-xj1oox-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-ysvne1-Input {
+  margin-left: 0px;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -3997,7 +3881,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   padding-top: 2px;
 }
 
-.cache-qisrsg-container {
+.cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -4005,7 +3889,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -4193,38 +4077,22 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   vertical-align: middle;
 }
 
-.cache-xj1oox-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
 }
 
-.cache-xj1oox-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-ysvne1-Input {
+  margin-left: 0px;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -4308,13 +4176,9 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-qisrsg-container e7ah3bn0"
+    class="e1lzna4r1 cache-80jhee-container e7ah3bn0"
     data-testid="rich-select-multi-disabled"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-16-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -4343,9 +4207,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
             Option A
           </div>
           <div
-            aria-label="Remove Option A"
             class="cache-riv7mo"
-            role="button"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-athdhl e7ah3bn0"
@@ -4358,27 +4220,29 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
           </div>
         </div>
         <div
-          class="cache-xj1oox-Input"
-          data-value=""
+          class="cache-1tjweye-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-16-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            disabled=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-ysvne1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              disabled=""
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -4415,13 +4279,13 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
 
 exports[`RichSelect renders correctly required 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -4495,12 +4359,15 @@ exports[`RichSelect renders correctly required 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4517,7 +4384,7 @@ exports[`RichSelect renders correctly required 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -4536,47 +4403,36 @@ exports[`RichSelect renders correctly required 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -4671,13 +4527,13 @@ exports[`RichSelect renders correctly required 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -4751,12 +4607,15 @@ exports[`RichSelect renders correctly required 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4773,7 +4632,7 @@ exports[`RichSelect renders correctly required 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -4792,47 +4651,36 @@ exports[`RichSelect renders correctly required 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -4928,13 +4776,9 @@ exports[`RichSelect renders correctly required 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-required"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-6-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -4945,7 +4789,7 @@ exports[`RichSelect renders correctly required 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -4955,33 +4799,33 @@ exports[`RichSelect renders correctly required 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-6-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-6-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-6-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -5031,13 +4875,13 @@ exports[`RichSelect renders correctly required 1`] = `
 
 exports[`RichSelect renders correctly timed 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -5111,12 +4955,15 @@ exports[`RichSelect renders correctly timed 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5133,7 +4980,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -5152,47 +4999,36 @@ exports[`RichSelect renders correctly timed 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -5278,13 +5114,13 @@ exports[`RichSelect renders correctly timed 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -5358,12 +5194,15 @@ exports[`RichSelect renders correctly timed 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5380,7 +5219,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -5399,47 +5238,36 @@ exports[`RichSelect renders correctly timed 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -5526,13 +5354,9 @@ exports[`RichSelect renders correctly timed 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-time"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-7-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -5543,7 +5367,7 @@ exports[`RichSelect renders correctly timed 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -5553,33 +5377,33 @@ exports[`RichSelect renders correctly timed 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-7-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-7-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-7-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -5621,13 +5445,13 @@ exports[`RichSelect renders correctly timed 1`] = `
 
 exports[`RichSelect renders correctly timed with error 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -5701,12 +5525,15 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   fill: #ef5774;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5723,7 +5550,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -5742,47 +5569,36 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   opacity: 0;
 }
 
-.cache-j7c2gm-placeholder {
+.cache-3xsi0s-placeholder {
   color: #ef5774;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -5868,13 +5684,13 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -5948,12 +5764,15 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   fill: #ef5774;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5970,7 +5789,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -5989,47 +5808,36 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   opacity: 0;
 }
 
-.cache-j7c2gm-placeholder {
+.cache-3xsi0s-placeholder {
   color: #ef5774;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -6116,13 +5924,9 @@ exports[`RichSelect renders correctly timed with error 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-time-error"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-8-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -6133,7 +5937,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
       class=" cache-1mbhz75-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -6143,33 +5947,33 @@ exports[`RichSelect renders correctly timed with error 1`] = `
           Select...
         </label>
         <div
-          class=" cache-j7c2gm-placeholder"
-          id="react-select-8-placeholder"
+          class=" cache-3xsi0s-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-8-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-8-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -9451,13 +9255,13 @@ exports[`RichSelect renders correctly with click and options 1`] = `
 
 exports[`RichSelect renders correctly with custom styles 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -9531,12 +9335,15 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -9553,7 +9360,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -9572,47 +9379,36 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -9695,13 +9491,13 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -9775,12 +9571,15 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -9797,7 +9596,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -9816,47 +9615,36 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -9940,13 +9728,9 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-uncontrolled"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-3-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -9957,7 +9741,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -9967,33 +9751,33 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-3-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-3-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-3-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -10035,13 +9819,13 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
 
 exports[`RichSelect should render correctly custom isLoading 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -10115,12 +9899,15 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10137,7 +9924,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -10156,47 +9943,36 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -10279,13 +10055,13 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -10359,12 +10135,15 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10381,7 +10160,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -10400,47 +10179,36 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -10524,13 +10292,9 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-test-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-24-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -10541,7 +10305,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -10551,33 +10315,33 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-24-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-24-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-24-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -10652,13 +10416,13 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   }
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -10732,12 +10496,15 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10754,7 +10521,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -10773,47 +10540,36 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -10855,7 +10611,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.cache-1xtdfmb-LoadingDot {
+.cache-1yvy2vo-LoadingDot {
   -webkit-animation: animation-0 1s ease-in-out 0ms infinite;
   animation: animation-0 1s ease-in-out 0ms infinite;
   background-color: currentColor;
@@ -10981,13 +10737,13 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   }
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -11061,12 +10817,15 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -11083,7 +10842,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -11102,47 +10861,36 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -11184,7 +10932,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.cache-1xtdfmb-LoadingDot {
+.cache-1yvy2vo-LoadingDot {
   -webkit-animation: animation-0 1s ease-in-out 0ms infinite;
   animation: animation-0 1s ease-in-out 0ms infinite;
   background-color: currentColor;
@@ -11281,13 +11029,9 @@ exports[`RichSelect should render correctly isLoading 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-21-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -11298,7 +11042,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -11308,33 +11052,33 @@ exports[`RichSelect should render correctly isLoading 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-21-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-21-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-21-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -11345,7 +11089,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
           class=" cache-at12u2-loadingIndicator"
         >
           <span
-            class="cache-1xtdfmb-LoadingDot"
+            class="cache-1yvy2vo-LoadingDot"
           />
           <span
             class="cache-zoievk-LoadingDot"
@@ -11390,13 +11134,13 @@ exports[`RichSelect should render correctly isLoading 1`] = `
 
 exports[`RichSelect should render correctly multi isClearable 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -11470,12 +11214,15 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -11492,7 +11239,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -11520,53 +11267,42 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
+.cache-163tydu-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -11662,13 +11398,13 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -11742,12 +11478,15 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -11764,7 +11503,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -11792,53 +11531,42 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
+.cache-163tydu-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -11935,13 +11663,9 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-17-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -11952,7 +11676,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -11962,31 +11686,33 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
           Select...
         </label>
         <div
-          class=" cache-fs070l-singleValue"
+          class=" cache-163tydu-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-17-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -12042,7 +11768,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
 
 exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
 <DocumentFragment>
-  .cache-qisrsg-container {
+  .cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -12050,7 +11776,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -12107,12 +11833,15 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -12130,7 +11859,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -12159,53 +11888,42 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   opacity: 0.5;
 }
 
-.cache-iil80v-singleValue {
+.cache-143vtrh-singleValue {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -12288,7 +12006,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding-top: 2px;
 }
 
-.cache-qisrsg-container {
+.cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -12296,7 +12014,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -12353,12 +12071,15 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -12376,7 +12097,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -12405,53 +12126,42 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   opacity: 0.5;
 }
 
-.cache-iil80v-singleValue {
+.cache-143vtrh-singleValue {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -12535,13 +12245,9 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-qisrsg-container e7ah3bn0"
+    class="e1lzna4r1 cache-80jhee-container e7ah3bn0"
     data-testid="rich-select-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-18-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -12552,7 +12258,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
       class=" cache-th60l3-control"
     >
       <div
-        class=" cache-1jfs5jc-ValueContainer"
+        class=" cache-abn5uu-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -12562,32 +12268,34 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
           Select...
         </label>
         <div
-          class=" cache-iil80v-singleValue"
+          class=" cache-143vtrh-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-1mghlx-Input"
-          data-value=""
+          class="cache-1tjweye-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-18-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            disabled=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              disabled=""
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -12624,13 +12332,13 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
 
 exports[`RichSelect should render correctly multi isSearchable 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -12704,12 +12412,15 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -12726,7 +12437,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -12754,53 +12465,42 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
+.cache-163tydu-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -12883,13 +12583,13 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -12963,12 +12663,15 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -12985,7 +12688,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -13013,53 +12716,42 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
+.cache-163tydu-singleValue {
   color: #4a4f62;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -13143,13 +12835,9 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-19-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -13160,7 +12848,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -13170,31 +12858,33 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
           Select...
         </label>
         <div
-          class=" cache-fs070l-singleValue"
+          class=" cache-163tydu-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-19-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -13236,7 +12926,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
 
 exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
 <DocumentFragment>
-  .cache-qisrsg-container {
+  .cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -13244,7 +12934,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -13301,12 +12991,15 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -13324,7 +13017,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -13353,53 +13046,42 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   opacity: 0.5;
 }
 
-.cache-iil80v-singleValue {
+.cache-143vtrh-singleValue {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -13482,7 +13164,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding-top: 2px;
 }
 
-.cache-qisrsg-container {
+.cache-80jhee-container {
   width: 100%;
   pointer-events: initial;
   pointer-events: none;
@@ -13490,7 +13172,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-qisrsg-container.cache-qisrsg-container {
+.cache-80jhee-container.cache-80jhee-container {
   margin-top: 0;
 }
 
@@ -13547,12 +13229,15 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1jfs5jc-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -13570,7 +13255,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding-top: 0;
 }
 
-.cache-1jfs5jc-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -13599,53 +13284,42 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   opacity: 0.5;
 }
 
-.cache-iil80v-singleValue {
+.cache-143vtrh-singleValue {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 0;
   margin-right: 0;
-  max-width: 100%;
+  max-width: calc(100% - 8px);
   overflow: hidden;
+  position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1mghlx-Input {
+.cache-1tjweye-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: hidden;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-1mghlx-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -13729,13 +13403,9 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-qisrsg-container e7ah3bn0"
+    class="e1lzna4r1 cache-80jhee-container e7ah3bn0"
     data-testid="rich-select-loading"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-20-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -13746,7 +13416,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
       class=" cache-th60l3-control"
     >
       <div
-        class=" cache-1jfs5jc-ValueContainer"
+        class=" cache-abn5uu-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -13756,32 +13426,34 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
           Select...
         </label>
         <div
-          class=" cache-iil80v-singleValue"
+          class=" cache-143vtrh-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-1mghlx-Input"
-          data-value=""
+          class="cache-1tjweye-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-20-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            disabled=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              disabled=""
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -13818,13 +13490,13 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
 
 exports[`RichSelect should render correctly with portal 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -13898,12 +13570,15 @@ exports[`RichSelect should render correctly with portal 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -13920,7 +13595,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -13939,47 +13614,36 @@ exports[`RichSelect should render correctly with portal 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -14062,13 +13726,13 @@ exports[`RichSelect should render correctly with portal 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -14142,12 +13806,15 @@ exports[`RichSelect should render correctly with portal 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -14164,7 +13831,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -14183,47 +13850,36 @@ exports[`RichSelect should render correctly with portal 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -14307,13 +13963,9 @@ exports[`RichSelect should render correctly with portal 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-test"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-22-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -14324,7 +13976,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -14334,33 +13986,33 @@ exports[`RichSelect should render correctly with portal 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-22-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-22-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-22-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -14405,13 +14057,13 @@ exports[`RichSelect should render correctly with portal 1`] = `
 
 exports[`RichSelect should render correctly without children 1`] = `
 <DocumentFragment>
-  .cache-1eau8hy-container {
+  .cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -14485,12 +14137,15 @@ exports[`RichSelect should render correctly without children 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -14507,7 +14162,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -14526,47 +14181,36 @@ exports[`RichSelect should render correctly without children 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -14649,13 +14293,13 @@ exports[`RichSelect should render correctly without children 1`] = `
   padding-top: 2px;
 }
 
-.cache-1eau8hy-container {
+.cache-1gkajv1-container {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1eau8hy-container.cache-1eau8hy-container {
+.cache-1gkajv1-container.cache-1gkajv1-container {
   margin-top: 0;
 }
 
@@ -14729,12 +14373,15 @@ exports[`RichSelect should render correctly without children 1`] = `
   fill: #4f0599;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-87o0rk-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -14751,7 +14398,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-87o0rk-ValueContainer label {
   display: initial;
 }
 
@@ -14770,47 +14417,36 @@ exports[`RichSelect should render correctly without children 1`] = `
   opacity: 0;
 }
 
-.cache-m44uhw-placeholder {
+.cache-1ahgp2u-placeholder {
   color: #b2b6c3;
-  grid-area: 1/1/2/3;
   margin-left: 2px;
   margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   box-sizing: border-box;
 }
 
-.cache-15psan7-Input {
+.cache-1j78plb-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
   visibility: visible;
   color: hsl(0, 0%, 20%);
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-grid;
-  grid-area: 1/1/2/3;
-  grid-template-columns: 0 min-content;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-15psan7-Input:after {
-  content: attr(data-value) " ";
-  visibility: hidden;
-  white-space: pre;
-  grid-area: 1/2;
-  font: inherit;
-  min-width: 2px;
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
 .cache-ralm3g-IndicatorsContainer {
@@ -14894,13 +14530,9 @@ exports[`RichSelect should render correctly without children 1`] = `
 }
 
 <div
-    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    class="e1lzna4r1 cache-1gkajv1-container e7ah3bn0"
     data-testid="rich-select-test"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-23-live-region"
-    />
     <span
       aria-atomic="false"
       aria-live="polite"
@@ -14911,7 +14543,7 @@ exports[`RichSelect should render correctly without children 1`] = `
       class=" cache-1p9qdtk-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-87o0rk-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -14921,33 +14553,33 @@ exports[`RichSelect should render correctly without children 1`] = `
           Select...
         </label>
         <div
-          class=" cache-m44uhw-placeholder"
-          id="react-select-23-placeholder"
+          class=" cache-1ahgp2u-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-15psan7-Input"
-          data-value=""
+          class="cache-1j78plb-Input"
         >
-          <input
-            aria-autocomplete="list"
-            aria-describedby="react-select-23-placeholder"
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-owns="react-select-23-listbox"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-cb6xa1-Input"
+            style="display: inline-block;"
+          >
+            <input
+              aria-autocomplete="list"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              id="test"
+              spellcheck="false"
+              style="box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+            />
+          </div>
         </div>
       </div>
       <div
