@@ -1,3 +1,27 @@
+## [0.114.0](https://github.com/scaleway/scaleway-ui/compare/v0.113.1...v0.114.0) (2021-10-08)
+
+
+### :zap: Refactor
+
+* convert RichSelect to typescript ([#709](https://github.com/scaleway/scaleway-ui/issues/709)) ([68dbbfb](https://github.com/scaleway/scaleway-ui/commit/68dbbfbd35927e5da47dfb9d56cefc528619c608))
+
+
+### :repeat: CI
+
+* **a11y:** added tests and ci ([#760](https://github.com/scaleway/scaleway-ui/issues/760)) ([e087e18](https://github.com/scaleway/scaleway-ui/commit/e087e187d79d4bbe4f0520ddfb85fca028fc3691))
+
+
+### :package: Chore
+
+* **babel-eslint:** remove useless package ([#773](https://github.com/scaleway/scaleway-ui/issues/773)) ([168a389](https://github.com/scaleway/scaleway-ui/commit/168a3893b5d372bf73c12eae71f376d50135b1af))
+* **deps-dev:** bump jest-junit from 12.3.0 to 13.0.0 ([#775](https://github.com/scaleway/scaleway-ui/issues/775)) ([ed7ecf7](https://github.com/scaleway/scaleway-ui/commit/ed7ecf76be074ea35d65a81953e32d339e3a4b74))
+* **package:** remove deprecated types date fns ([#779](https://github.com/scaleway/scaleway-ui/issues/779)) ([9e08356](https://github.com/scaleway/scaleway-ui/commit/9e083562799212a3113db521e3508cc6811b4645))
+
+
+### :gear: Features
+
+* **icon:** add vpc icon ([#786](https://github.com/scaleway/scaleway-ui/issues/786)) ([e69dad9](https://github.com/scaleway/scaleway-ui/commit/e69dad9da1435ba4eacacec9e63c34fc5ee84489))
+
 ### [0.113.1](https://github.com/scaleway/scaleway-ui/compare/v0.113.0...v0.113.1) (2021-10-05)
 
 
