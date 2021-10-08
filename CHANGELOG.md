@@ -1,3 +1,10 @@
+## [0.115.0](https://github.com/scaleway/scaleway-ui/compare/v0.114.0...v0.115.0) (2021-10-08)
+
+
+### :gear: Features
+
+* **theme:** use default color from theme ([#784](https://github.com/scaleway/scaleway-ui/issues/784)) ([3dff73e](https://github.com/scaleway/scaleway-ui/commit/3dff73e65efcb6b72f3b41d5a8ee1bbbf93bf0aa))
+
 ## [0.114.0](https://github.com/scaleway/scaleway-ui/compare/v0.113.1...v0.114.0) (2021-10-08)
 
 
