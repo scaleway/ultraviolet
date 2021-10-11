@@ -1,0 +1,2163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PieChart renders correctly when chart is hovered 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-1266m55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4f0599;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-1fum7c4 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #4F1A81;
+  -webkit-animation: animation-0 linear 1500ms infinite;
+  animation: animation-0 linear 1500ms infinite;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-o07ik5 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-1rp01lo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 100%;
+}
+
+.cache-bzjscf {
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+                style="cursor: pointer;"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+        <div
+          style="pointer-events: none; position: absolute; z-index: 10; top: 0px; left: 0px; transform: translate(0px, 0px);"
+        >
+          <span />
+        </div>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-compute"
+        tabindex="0"
+      >
+        <li
+          class="cache-1266m55 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-compute"
+          />
+          <div
+            class="cache-1fum7c4 enw618e6"
+            color="#4F1A81"
+            id="chart-legend-compute"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-o07ik5 enw618e3"
+            >
+              Compute
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-1rp01lo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-bzjscf enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-gpu"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-gpu"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-gpu"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly when legend is focused 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-1266m55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4f0599;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-1fum7c4 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #4F1A81;
+  -webkit-animation: animation-0 linear 1500ms infinite;
+  animation: animation-0 linear 1500ms infinite;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-o07ik5 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-1rp01lo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 100%;
+}
+
+.cache-bzjscf {
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-compute"
+        tabindex="0"
+      >
+        <li
+          class="cache-1266m55 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-compute"
+          />
+          <div
+            class="cache-1fum7c4 enw618e6"
+            color="#4F1A81"
+            id="chart-legend-compute"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-o07ik5 enw618e3"
+            >
+              Compute
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-1rp01lo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-bzjscf enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-gpu"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-gpu"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-gpu"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly when legend is hovered 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-1266m55 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4f0599;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-1fum7c4 {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #4F1A81;
+  -webkit-animation: animation-0 linear 1500ms infinite;
+  animation: animation-0 linear 1500ms infinite;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-o07ik5 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-1rp01lo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 100%;
+}
+
+.cache-bzjscf {
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-compute"
+        tabindex="0"
+      >
+        <li
+          class="cache-1266m55 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-compute"
+          />
+          <div
+            class="cache-1fum7c4 enw618e6"
+            color="#4F1A81"
+            id="chart-legend-compute"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-o07ik5 enw618e3"
+            >
+              Compute
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-1rp01lo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-bzjscf enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-gpu"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-gpu"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-gpu"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with data 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with data and content 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-qcd8cv {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 25px;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div
+        class="cache-qcd8cv e17m7c930"
+      >
+        Test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with detailed legend 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-1orotdq {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #4F1A81;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-compute"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-compute"
+          />
+          <div
+            class="cache-1orotdq enw618e6"
+            color="#4F1A81"
+            id="chart-legend-compute"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              Compute
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-gpu"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-gpu"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-gpu"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with detailed legend and discount 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+            <pattern
+              height="5"
+              id="lines.bg.#F4306C"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="#F4306C"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-5.241341614720486e-14,74.4A74.4,74.4,0,1,0,5.241341614720486e-14,-74.4Z"
+                fill="url(#lines.bg.#F4306C)"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-discount"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-discount"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-discount"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with empty legend placeholder 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-dwqz7h {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.cache-7vgu14 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-5.241341614720486e-14,74.4A74.4,74.4,0,1,0,5.241341614720486e-14,-74.4Z"
+                fill="#dce1eb"
+                opacity="1"
+                stroke="rgb(154, 158, 165)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div
+      class="cache-dwqz7h e17m7c931"
+    >
+      <p
+        class="e1g1zfwd0 cache-7vgu14 e7ah3bn0"
+      >
+        I am a legend
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with legend 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+.cache-esyp20 {
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.cache-v2j833 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  color: #4a4f62;
+}
+
+.cache-ki8u62 {
+  width: 250px;
+  height: 21px;
+  position: absolute;
+}
+
+.cache-1orotdq {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #4F1A81;
+}
+
+.cache-lvt6sf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.cache-cowp5h {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+.cache-1g4cu73 {
+  border-bottom: 1px solid #dce1eb;
+  position: relative;
+  width: 100%;
+}
+
+.cache-15dkpmo {
+  border-bottom: 1px solid #4f0599;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+  width: 0%;
+}
+
+.cache-11jdo8f {
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+.cache-18thr6o {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F4306C;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                fill="#4F1A81"
+                opacity="1"
+                stroke="rgb(55, 18, 90)"
+                stroke-width="0"
+              />
+              <path
+                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                fill="#F4306C"
+                opacity="1"
+                stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul
+      class="cache-esyp20 enw618e8"
+    >
+      <div
+        aria-describedby="chart-legend-compute"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-compute"
+          />
+          <div
+            class="cache-1orotdq enw618e6"
+            color="#4F1A81"
+            id="chart-legend-compute"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              Compute
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-gpu"
+        tabindex="0"
+      >
+        <li
+          class="cache-v2j833 enw618e7"
+        >
+          <div
+            class="cache-ki8u62 enw618e2"
+            data-testid="chart-legend-gpu"
+          />
+          <div
+            class="cache-18thr6o enw618e6"
+            color="#F4306C"
+            id="chart-legend-gpu"
+          />
+          <div
+            class="cache-lvt6sf enw618e5"
+          >
+            <span
+              class="cache-cowp5h enw618e3"
+            >
+              GPU Instances
+            </span>
+            <span
+              class="cache-1g4cu73 enw618e1"
+            >
+              <span
+                class="cache-15dkpmo enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-11jdo8f enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PieChart renders correctly with no props 1`] = `
+<DocumentFragment>
+  .cache-iejoyr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 206px;
+}
+
+<div
+    class="cache-iejoyr e17m7c932"
+    height="206"
+  >
+    <div
+      style="position: relative;"
+    >
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="206"
+          role="img"
+          width="206"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              height="5"
+              id="lines"
+              patternUnits="userSpaceOnUse"
+              width="5"
+            >
+              <rect
+                fill="inherit"
+                height="5"
+                stroke="rgba(255, 0, 0, 0.1)"
+                stroke-width="0"
+                width="5"
+              />
+              <path
+                d="
+                M 0 0 L 5 0
+                M 0 5 L 5 5
+            "
+                stroke="#fff"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </pattern>
+          </defs>
+          <rect
+            fill="transparent"
+            height="206"
+            width="206"
+          />
+          <g
+            transform="translate(10,10)"
+          >
+            <g
+              transform="translate(93,93)"
+            >
+              <path
+                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-5.241341614720486e-14,74.4A74.4,74.4,0,1,0,5.241341614720486e-14,-74.4Z"
+                fill="#dce1eb"
+                opacity="1"
+                stroke="rgb(154, 158, 165)"
+                stroke-width="0"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

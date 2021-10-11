@@ -26,10 +26,12 @@ type TooltipProps = {
   data: {
     name?: string | null
     value?: string | null
-    details?: {
-      name?: string | null
-      value?: string | null
-    }[] | null
+    details?:
+      | {
+          name?: string | null
+          value?: string | null
+        }[]
+      | null
   }
 }
 

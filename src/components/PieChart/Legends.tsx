@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent, isValidElement } from 'react'
+import React, { VoidFunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
@@ -49,8 +49,8 @@ const ListItem = styled.li<{ isFocused: boolean }>`
 
 const Bullet = styled.div<{
   needPattern?: boolean | null
+  id: string
   isFocused: boolean
-  product: string
 }>`
   display: inline-block;
   border-radius: 50%;
@@ -59,14 +59,12 @@ const Bullet = styled.div<{
   margin: 0 8px;
   background: ${({ color, theme }) => theme.colors[color as Color] ?? color};
 
-  ${({ needPattern, color, theme, product }) => {
+  ${({ needPattern, color, theme, id }) => {
     if (!needPattern) return null
 
-    const pattern = patternVariants?.[
-      `${product}-dot` as keyof typeof patternVariants
-    ]?.(theme.colors[color as Color] ?? color)
-
-    return isValidElement(pattern) ? null : pattern
+    return patternVariants?.[`${id}-dot` as keyof typeof patternVariants]?.(
+      theme.colors[color as Color] ?? color,
+    )
   }}
 
   ${({ isFocused }) => animationFlash(isFocused)}
@@ -112,27 +110,25 @@ const ProgressiveLine = styled.span<{ isFocused: boolean }>`
 `
 
 type LegendsProps = {
-  chartId?: string
   data?: Data[]
-  focused?: number
-  onFocusChange(index?: number): void
+  focused?: string
+  onFocusChange(index?: string): void
 }
 
 const Legends: VoidFunctionComponent<LegendsProps> = ({
   focused,
   data,
   onFocusChange,
-  chartId,
 }) => (
   <List>
-    {data?.map((item, index) => {
-      const isSegmentFocused = focused !== undefined && index === focused
+    {data?.map(item => {
+      const isSegmentFocused = focused !== undefined && item.id === focused
 
-      const id = `${chartId ? `${chartId}-` : ''}chart-tooltip-${item.product}`
+      const id = `chart-legend-${item.id}`
 
       return (
         <Tooltip
-          key={item.product}
+          key={item.id}
           visible={isSegmentFocused}
           variant="white"
           baseId={id}
@@ -141,8 +137,8 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
           <ListItem isFocused={isSegmentFocused}>
             <ToggleBox
               data-testid={id}
-              onMouseOver={() => onFocusChange(index)}
-              onFocus={() => onFocusChange(index)}
+              onMouseOver={() => onFocusChange(item.id)}
+              onFocus={() => onFocusChange(item.id)}
               onMouseOut={() => onFocusChange()}
               onBlur={() => onFocusChange()}
             />
@@ -150,7 +146,7 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
               color={item.color}
               isFocused={isSegmentFocused}
               needPattern={item.needPattern}
-              product={item.product}
+              id={`chart-legend-${item.id}`}
             />
             <Label>
               <Text isFocused={isSegmentFocused}>{item.name}</Text>
@@ -167,23 +163,21 @@ const Legends: VoidFunctionComponent<LegendsProps> = ({
 )
 
 Legends.defaultProps = {
-  chartId: undefined,
   focused: undefined,
 }
 
 Legends.propTypes = {
-  chartId: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
       name: PropTypes.string,
       needPattern: PropTypes.bool,
       percent: PropTypes.number.isRequired,
-      product: PropTypes.string.isRequired,
       value: PropTypes.string,
     }).isRequired,
-  ),
-  focused: PropTypes.number,
+  ).isRequired,
+  focused: PropTypes.string,
   onFocusChange: PropTypes.func.isRequired,
 }
 

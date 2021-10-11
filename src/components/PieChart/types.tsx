@@ -3,6 +3,6 @@ export type Data = {
   name?: string | null
   needPattern?: boolean | null
   percent: number
-  product: string
+  id: string
   value?: string | null
 }

@@ -86,9 +86,10 @@ type BoxType = typeof forwardType & {
   withComponent: (
     element: string | ElementType<unknown>,
   ) => FunctionComponent<BoxProps>
+  propTypes: FunctionComponent<BoxProps>['propTypes']
 }
 
-// @ts-expect-error We add withComponent just below
+// @ts-expect-error We add withComponent & propTypes just below
 const Box: BoxType = forwardRef<
   Element | HTMLInputElement | HTMLButtonElement,
   BoxProps
