@@ -1,3 +1,10 @@
+## [0.116.0](https://github.com/scaleway/scaleway-ui/compare/v0.115.0...v0.116.0) (2021-10-11)
+
+
+### :gear: Features
+
+*  Charts components ([#766](https://github.com/scaleway/scaleway-ui/issues/766)) ([fbee4aa](https://github.com/scaleway/scaleway-ui/commit/fbee4aa3085cfb5c03ef6cd948c8592b2eddb715))
+
 ## [0.115.0](https://github.com/scaleway/scaleway-ui/compare/v0.114.0...v0.115.0) (2021-10-08)
 
 
