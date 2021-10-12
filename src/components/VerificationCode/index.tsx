@@ -199,6 +199,8 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
 
       return newArray
     })
+
+    triggerChange(pastedValue)
   }
 
   return (

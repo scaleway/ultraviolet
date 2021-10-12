@@ -1,13 +1,14 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import VerificationCode from '..'
+import renderWithTheme from '../../../helpers/renderWithTheme'
 import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 
-const pasteEventWithValue = (selector, value) => {
+const pasteEventWithValue = (selector: HTMLElement, value: string) => {
   userEvent.paste(selector, value, {
-    // @ts-expect-error we mock, don't care oabout the other values
+    // @ts-expect-error we mock, don't care about the other values
     clipboardData: {
-      getData: () => value as string,
+      getData: () => value,
     },
   })
 }
@@ -70,4 +71,26 @@ describe('VerificationCode', () => {
         },
       },
     ))
+
+  test('should trigger onChange and onComplete after pasting values', () => {
+    const onChange = jest.fn()
+    const onComplete = jest.fn()
+    const { getByDisplayValue } = renderWithTheme(
+      <VerificationCode
+        type="number"
+        fields={4}
+        initialValue="1"
+        onChange={onChange}
+        onComplete={onComplete}
+      />,
+    )
+
+    pasteEventWithValue(getByDisplayValue('1'), '12')
+    expect(onChange).toHaveBeenLastCalledWith('12')
+    expect(onChange).toHaveBeenCalledTimes(2) // called twice because on paste event then triggers inputOnChange event too
+
+    pasteEventWithValue(getByDisplayValue('1'), '1234')
+    expect(onComplete).toHaveBeenLastCalledWith('1234')
+    expect(onComplete).toHaveBeenCalledTimes(2)
+  })
 })
