@@ -1,3 +1,10 @@
+### [0.117.1](https://github.com/scaleway/scaleway-ui/compare/v0.117.0...v0.117.1) (2021-10-12)
+
+
+### :bug: Bug Fixes
+
+* copy paste on verification code ([#788](https://github.com/scaleway/scaleway-ui/issues/788)) ([63e9de3](https://github.com/scaleway/scaleway-ui/commit/63e9de361ec94cba1739c0d605bb655be6b9ac49))
+
 ## [0.117.0](https://github.com/scaleway/scaleway-ui/compare/v0.116.0...v0.117.0) (2021-10-12)
 
 
