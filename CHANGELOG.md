@@ -1,3 +1,10 @@
+## [0.117.0](https://github.com/scaleway/scaleway-ui/compare/v0.116.0...v0.117.0) (2021-10-12)
+
+
+### :gear: Features
+
+* new component barstack ([#787](https://github.com/scaleway/scaleway-ui/issues/787)) ([35448ba](https://github.com/scaleway/scaleway-ui/commit/35448ba04e49bdb86cf62c23a500e39a26c39d3d))
+
 ## [0.116.0](https://github.com/scaleway/scaleway-ui/compare/v0.115.0...v0.116.0) (2021-10-11)
 
 
