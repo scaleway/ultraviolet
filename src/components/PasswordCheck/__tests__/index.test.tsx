@@ -1,6 +1,6 @@
 import React from 'react'
 import PasswordCheck from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('PasswordCheck', () => {
   test('render with custom values', () =>

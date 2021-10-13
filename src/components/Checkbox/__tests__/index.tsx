@@ -1,8 +1,10 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Checkbox from '..'
-import renderWithTheme from '../../../helpers/renderWithTheme'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 
 describe('Checkbox', () => {
   test('renders correctly', () =>

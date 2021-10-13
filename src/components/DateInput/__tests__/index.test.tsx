@@ -3,7 +3,7 @@ import { es, fr, ru } from 'date-fns/locale'
 import React from 'react'
 import tk from 'timekeeper'
 import DateInput from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 tk.freeze(new Date(1609503120000))
 

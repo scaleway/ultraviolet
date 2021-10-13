@@ -1,6 +1,6 @@
 import React from 'react'
 import PasswordStrengthMeter from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('PasswordStrengthMeter', () => {
   test('render with empty password', () =>

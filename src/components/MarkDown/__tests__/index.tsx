@@ -1,6 +1,6 @@
 import React from 'react'
 import MarkDown from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 export const simple = `
   # I am a Markdown H1

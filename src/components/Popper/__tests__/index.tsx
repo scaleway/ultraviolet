@@ -1,6 +1,6 @@
 import React from 'react'
 import Popper, { popperVariants } from '..'
-import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 
 describe('Popper', () => {
   test(`renders with modal=false`, () =>

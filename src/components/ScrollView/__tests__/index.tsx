@@ -1,6 +1,6 @@
 import React from 'react'
 import ScrollView from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('ScrollView', () => {
   it(`renders correctly`, () =>

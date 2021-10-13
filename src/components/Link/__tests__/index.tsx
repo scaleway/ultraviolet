@@ -1,6 +1,6 @@
 import React from 'react'
 import Link, { Variant, linkVariants } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Link', () => {
   test(`render correctly with no variant`, () =>

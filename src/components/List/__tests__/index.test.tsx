@@ -2,7 +2,7 @@ import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { useEffect } from 'react'
 import List, { ListBodyRenderProps, ListRefType } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import ProgressBar, { progressBarVariants } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('ProgressBar', () => {
   progressBarVariants.forEach(variant => {

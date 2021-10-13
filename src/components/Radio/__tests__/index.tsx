@@ -1,6 +1,6 @@
 import React from 'react'
 import Radio from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Radio', () => {
   test('renders correctly', () =>

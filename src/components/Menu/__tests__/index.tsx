@@ -1,7 +1,9 @@
 import React from 'react'
 import Menu, { arrowPlacements } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
+import {
+  shouldMatchEmotionSnapshot,
+  shouldMatchEmotionSnapshotWithPortal,
+} from '../../../helpers/jestHelpers'
 
 describe('Menu', () => {
   test('renders with visible=false', () =>

@@ -1,8 +1,10 @@
 import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import renderWithTheme from '../../../helpers/renderWithTheme'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {

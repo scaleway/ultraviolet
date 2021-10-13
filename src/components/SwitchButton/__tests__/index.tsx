@@ -1,6 +1,6 @@
 import React from 'react'
 import SwitchButton from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('SwitchButton', () => {
   test('renders correctly', () =>

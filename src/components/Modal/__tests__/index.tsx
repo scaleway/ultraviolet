@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Modal from '..'
-import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;

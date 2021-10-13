@@ -1,5 +1,5 @@
 import React from 'react'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import Tab from '../Tab'
 
 describe('Tab', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import VolumeSize from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('VolumeSize', () => {
   test('renders correctly with minimal props', () =>

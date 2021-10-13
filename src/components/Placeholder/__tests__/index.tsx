@@ -1,6 +1,6 @@
 import React from 'react'
 import Placeholder, { placeholderTypes } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Placeholder', () => {
   beforeAll(() => {

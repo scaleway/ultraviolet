@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Range from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Range', () => {
   test('should render correctly', () => shouldMatchEmotionSnapshot(<Range />))

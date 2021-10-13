@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Container', () => {
   test('renders correctly', () =>

@@ -2,7 +2,7 @@ import { createSerializer } from '@emotion/jest'
 import { act, screen } from '@testing-library/react'
 import React from 'react'
 import ToastContainer, { toast } from '..'
-import renderWithTheme from '../../../helpers/renderWithTheme'
+import { renderWithTheme } from '../../../helpers/jestHelpers'
 
 // use only class hash (generated from css style content)
 expect.addSnapshotSerializer(

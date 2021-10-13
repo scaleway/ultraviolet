@@ -1,6 +1,6 @@
 import React from 'react'
 import Tooltip from '..'
-import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 
 describe('Tooltip', () => {
   test(`renders when tooltip is just a pass through`, () =>
