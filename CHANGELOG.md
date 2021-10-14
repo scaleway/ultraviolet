@@ -1,3 +1,10 @@
+### [0.117.2](https://github.com/scaleway/scaleway-ui/compare/v0.117.1...v0.117.2) (2021-10-14)
+
+
+### :bug: Bug Fixes
+
+* avoid to retrigger animation on re-render & fix types ([#792](https://github.com/scaleway/scaleway-ui/issues/792)) ([72bff22](https://github.com/scaleway/scaleway-ui/commit/72bff22c27312f708a0c893d93112d8ad5485c47))
+
 ### [0.117.1](https://github.com/scaleway/scaleway-ui/compare/v0.117.0...v0.117.1) (2021-10-12)
 
 
