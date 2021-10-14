@@ -1,3 +1,10 @@
+### [0.117.3](https://github.com/scaleway/scaleway-ui/compare/v0.117.2...v0.117.3) (2021-10-14)
+
+
+### :bug: Bug Fixes
+
+* **radio-bordered-box:** avoid using multiple label ([#793](https://github.com/scaleway/scaleway-ui/issues/793)) ([be040c6](https://github.com/scaleway/scaleway-ui/commit/be040c63ceb310fc32e182eb026c69f355af7ce8))
+
 ### [0.117.2](https://github.com/scaleway/scaleway-ui/compare/v0.117.1...v0.117.2) (2021-10-14)
 
 
