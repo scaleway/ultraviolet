@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import BarStack from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 const fakeData = [
   { id: '1', text: 'Hello', value: 20 },
