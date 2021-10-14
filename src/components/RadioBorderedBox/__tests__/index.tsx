@@ -82,6 +82,6 @@ describe('RadioBorderedBox', () => {
     )
     const box = document.getElementById('radiotest')
     userEvent.click(box as Element)
-    await waitFor(() => expect(choice).toBe('choice1'))
+    await waitFor(() => expect(choice).not.toBe('choice1'))
   })
 })

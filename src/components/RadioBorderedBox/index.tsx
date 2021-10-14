@@ -60,7 +60,6 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
 }) => (
   <StyledBox
     bordered
-    as="label"
     display="block"
     disabled={disabled}
     checked={checked}
