@@ -3320,9 +3320,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/jest-helpers@file:.yalc/@scaleway/jest-helpers::locator=%40scaleway%2Fui%40workspace%3A.":
-  version: 1.0.0
-  resolution: "@scaleway/jest-helpers@file:.yalc/@scaleway/jest-helpers#.yalc/@scaleway/jest-helpers::hash=5831da&locator=%40scaleway%2Fui%40workspace%3A."
+"@scaleway/jest-helpers@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@scaleway/jest-helpers@npm:1.1.0"
   dependencies:
     "@emotion/cache": ^11.1.3
     "@emotion/jest": ^11.3.0
@@ -3330,7 +3330,7 @@ __metadata:
     "@testing-library/react": ^12.1.2
   peerDependencies:
     react: ^17.0.1
-  checksum: 837109da355d39626d9748c9e05f2238bc46a29c1c1016878596a7942a1ed996accf6d151c75061b6f5428a8afa6bd9888b506a659d5c66af0e92def9b2cd896
+  checksum: e0be3808bdc51a1ace5c2a8066a9622562f96d44445785fd4338e4f8bd31999b85fe0937afd5de04d95be48341601b2ed432dc797842f1b30a64ea308e38ae6a
   languageName: node
   linkType: hard
 
@@ -3372,7 +3372,7 @@ __metadata:
     "@rollup/plugin-node-resolve": ^13.0.1
     "@rollup/plugin-url": ^6.0.0
     "@scaleway/eslint-config-react": ^2.2.0
-    "@scaleway/jest-helpers": "file:.yalc/@scaleway/jest-helpers"
+    "@scaleway/jest-helpers": ^1.1.0
     "@scaleway/random-name": ^2.0.0
     "@scaleway/use-i18n": ^3.0.0
     "@semantic-release/changelog": ^6.0.0
