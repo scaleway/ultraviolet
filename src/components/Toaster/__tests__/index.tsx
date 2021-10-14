@@ -1,13 +1,7 @@
-import { createSerializer } from '@emotion/jest'
 import { act, screen } from '@testing-library/react'
 import React from 'react'
 import ToastContainer, { toast } from '..'
-import { renderWithTheme } from '../../../helpers/jestHelpers'
-
-// use only class hash (generated from css style content)
-expect.addSnapshotSerializer(
-  createSerializer({ classNameReplacer: className => className }),
-)
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 
 describe('Toaster', () => {
   beforeEach(() => {
@@ -19,15 +13,19 @@ describe('Toaster', () => {
   })
 
   test('renders correctly with all kind of toast', async () => {
-    renderWithTheme(<ToastContainer />)
-    toast.info('This is an info')
-    toast.success('This is a success')
-    toast.warn('This is a warning')
-    toast.error('This is an error')
+    await shouldMatchEmotionSnapshotWithPortal(<ToastContainer />, {
+      transform: async () => {
+        toast.info('This is an info')
+        toast.success('This is a success')
+        toast.warn('This is a warning')
+        toast.error('This is an error')
 
-    act(() => {
-      jest.runAllTimers()
+        act(() => {
+          jest.runAllTimers()
+        })
+
+        expect(await screen.findAllByRole('alert')).toMatchSnapshot()
+      },
     })
-    expect(await screen.findAllByRole('alert')).toMatchSnapshot()
   })
 })
