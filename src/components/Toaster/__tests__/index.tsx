@@ -15,10 +15,18 @@ describe('Toaster', () => {
   test('renders correctly with all kind of toast', async () => {
     await shouldMatchEmotionSnapshotWithPortal(<ToastContainer />, {
       transform: async () => {
-        toast.info('This is an info')
-        toast.success('This is a success')
-        toast.warn('This is a warning')
-        toast.error('This is an error')
+        toast.info('This is an info', {
+          toastId: 'info',
+        })
+        toast.success('This is a success', {
+          toastId: 'success',
+        })
+        toast.warn('This is a warning', {
+          toastId: 'warn',
+        })
+        toast.error('This is an error', {
+          toastId: 'error',
+        })
 
         act(() => {
           jest.runAllTimers()
