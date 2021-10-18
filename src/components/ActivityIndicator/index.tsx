@@ -31,7 +31,7 @@ const StyledProgressbar = styled(CircularProgressbar)<
     `}
 `
 
-type ActivityIndicatorProps = {
+export type ActivityIndicatorProps = {
   active?: boolean
   color?: string
   percentage?: number
