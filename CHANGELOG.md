@@ -1,3 +1,10 @@
+### [0.117.5](https://github.com/scaleway/scaleway-ui/compare/v0.117.4...v0.117.5) (2021-10-18)
+
+
+### :bug: Bug Fixes
+
+* **radio-bordered-box:** cursor is only available on label ([#795](https://github.com/scaleway/scaleway-ui/issues/795)) ([2453729](https://github.com/scaleway/scaleway-ui/commit/24537298c1f3c4d7e47385f1ade6c9fda8247ac0))
+
 ### [0.117.4](https://github.com/scaleway/scaleway-ui/compare/v0.117.3...v0.117.4) (2021-10-18)
 
 
