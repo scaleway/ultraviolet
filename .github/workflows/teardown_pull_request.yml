@@ -10,7 +10,7 @@ jobs:
     env:
       REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.3.5
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v3.x
       - name: Export custom variables
