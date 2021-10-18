@@ -211,7 +211,7 @@ Item.propTypes = {
   /**
    * Id of the step, automatically injected by Breadcrumbs parent tag
    */
-  step: PropTypes.number.isRequired,
+  step: PropTypes.number,
   /**
    * Make the component act a `Link` tag
    */
