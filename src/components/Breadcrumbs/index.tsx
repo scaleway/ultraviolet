@@ -158,7 +158,7 @@ interface ItemProps {
   step?: number
   onClick?: (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>,
-    step?: number,
+    step: number,
   ) => void
 }
 
@@ -179,7 +179,7 @@ export const Item: FunctionComponent<ItemProps> = ({
   return (
     <VariantComponent
       aria-disabled={disabled}
-      onClick={onClick ? event => onClick(event, step) : undefined}
+      onClick={onClick ? event => onClick(event, step ?? -1) : undefined}
       aria-current={ariaCurrent}
     >
       {to ? (
@@ -211,7 +211,7 @@ Item.propTypes = {
   /**
    * Id of the step, automatically injected by Breadcrumbs parent tag
    */
-  step: PropTypes.number,
+  step: PropTypes.number.isRequired,
   /**
    * Make the component act a `Link` tag
    */
@@ -222,7 +222,7 @@ Item.propTypes = {
   variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
 }
 
-interface BreadcrumbsProps {
+export interface BreadcrumbsProps {
   variant?: Variants
   selected?: number
   children: ReactNode
@@ -244,7 +244,7 @@ const Breadcrumbs: BreadcrumbsType = ({
   return (
     <Box as="nav" aria-label="breadcrumb" {...props}>
       <StyledOl>
-        {Children.map(children, (child, index) => {
+        {Children.map(children, (child, index: number) => {
           if (!isValidElement<ItemProps>(child)) {
             return child
           }
