@@ -1,3 +1,15 @@
+### [0.117.4](https://github.com/scaleway/scaleway-ui/compare/v0.117.3...v0.117.4) (2021-10-18)
+
+
+### :package: Chore
+
+* **deps:** bump actions/checkout from 2.3.4 to 2.3.5 ([#799](https://github.com/scaleway/scaleway-ui/issues/799)) ([fbfcfdc](https://github.com/scaleway/scaleway-ui/commit/fbfcfdc60ba378d938c447992c5b07c1938648e2))
+
+
+### :bug: Bug Fixes
+
+* **package:** yarn version ([#796](https://github.com/scaleway/scaleway-ui/issues/796)) ([b52f084](https://github.com/scaleway/scaleway-ui/commit/b52f084cc334c3ada87c7a11e8a3c8b51665c308))
+
 ### [0.117.3](https://github.com/scaleway/scaleway-ui/compare/v0.117.2...v0.117.3) (2021-10-14)
 
 
