@@ -3367,7 +3367,7 @@ __metadata:
     "@semantic-release/github": 8.0.1
     "@semantic-release/npm": 8.0.1
     "@semantic-release/release-notes-generator": 10.0.2
-    "@size-limit/file": 5.0.5
+    "@size-limit/file": 6.0.3
     "@size-limit/preset-big-lib": 5.0.5
     "@storybook/addon-a11y": 6.3.12
     "@storybook/addon-actions": 6.3.12
@@ -3627,6 +3627,17 @@ __metadata:
   peerDependencies:
     size-limit: 5.0.5
   checksum: f9b371a5ce15a63cdddf3890e6053e1d338dc2d457b2443c41e5ce7b2978ffb9a616f898070eac603695bfa7d3a77c32880f30d693304cb2a40314d2326dffd5
+  languageName: node
+  linkType: hard
+
+"@size-limit/file@npm:6.0.3":
+  version: 6.0.3
+  resolution: "@size-limit/file@npm:6.0.3"
+  dependencies:
+    semver: 7.3.5
+  peerDependencies:
+    size-limit: 6.0.3
+  checksum: da52d67096f376f7d9f929690c7535f5e737744c5f77d6f4776055bdd79f1cd29d016bd3730b74e79e0a03b172abfcc62ea42c1ed9da26e63cf65147333a98a8
   languageName: node
   linkType: hard
 
