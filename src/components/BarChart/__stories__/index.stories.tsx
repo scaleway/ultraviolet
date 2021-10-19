@@ -1,33 +1,33 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks'
+import { Meta, Story } from '@storybook/react'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { format } from 'date-fns'
-import BarChart from '..'
+import React from 'react'
+import BarChart, { BarChartProps } from '..'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,
   barChartSimpleData,
 } from './mockData'
 
-<Meta title="Components/Data Display/Chart/BarChart" />
+export default {
+  component: BarChart,
+  title: 'Components/Data Display/Chart/BarChart',
+} as Meta
 
-# BarChart
+const Template: Story<BarChartProps> = () => (
+  <BarChart data={barChartSimpleData} />
+)
 
-## Basic example
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="basic">
-    <BarChart data={barChartSimpleData} />
-  </Story>
-</Canvas>
-
-## Formatted values and tooltip
-
-<Canvas>
-  <Story name="formatted values and tooltip">
+export const FormattedValuesAndTooltip = Template.bind({})
+FormattedValuesAndTooltip.decorators = [
+  () => (
     <BarChart
       data={barChartSimpleData}
       axisFormatters={{
         bottom: value => format(new Date(value), 'dd-MM-Y'),
-        left: value => `${value} kb`,
+        left: value => `${value.toString()} kb`,
       }}
       tooltipFunction={({ value, indexValue, ...props }) => ({
         ...props,
@@ -35,13 +35,12 @@ import {
         indexValue: format(new Date(indexValue), 'dd-MM-Y'),
       })}
     />
-  </Story>
-</Canvas>
+  ),
+]
 
-## Multi series
-
-<Canvas>
-  <Story name="multi series">
+export const MultiSeries = Template.bind({})
+MultiSeries.decorators = [
+  () => (
     <BarChart
       keys={['sent', 'received']}
       data={barChartMultiData}
@@ -53,13 +52,12 @@ import {
         indexValue: format(new Date(indexValue), 'dd-MM-Y'),
       })}
     />
-  </Story>
-</Canvas>
+  ),
+]
 
-## Positive/negative
-
-<Canvas>
-  <Story name="positive/negative">
+export const PositiveNegative = Template.bind({})
+PositiveNegative.decorators = [
+  () => (
     <BarChart
       height={200}
       data={barChartPositiveNegativeData}
@@ -68,6 +66,7 @@ import {
         left: value => {
           if (value === 1) return 'Active'
           if (value === -1) return 'Inactive'
+
           return ''
         },
       }}
@@ -86,7 +85,5 @@ import {
         minValue: -1,
       }}
     />
-  </Story>
-</Canvas>
-
-<ArgsTable of={BarChart} />
+  ),
+]

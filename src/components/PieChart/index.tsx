@@ -43,7 +43,7 @@ const StyledContent = styled.div`
   vertical-align: middle;
 `
 
-type PieChartProps = {
+export type PieChartProps = {
   chartProps?: Record<string, unknown>
   data?: Data[]
   height?: number
