@@ -1,3 +1,16 @@
+### [0.117.6](https://github.com/scaleway/scaleway-ui/compare/v0.117.5...v0.117.6) (2021-10-19)
+
+
+### :zap: Refactor
+
+* migrate actionbar, activityindicator, alert and avatar stories to tsx ([#802](https://github.com/scaleway/scaleway-ui/issues/802)) ([cce67ff](https://github.com/scaleway/scaleway-ui/commit/cce67ff66a6279742f429f14db2cda9e69824883))
+
+
+### :package: Chore
+
+* **deps:** pin dependencies ([#803](https://github.com/scaleway/scaleway-ui/issues/803)) ([109378c](https://github.com/scaleway/scaleway-ui/commit/109378c7b24d144ab51d50e0f54d30d64a7a72bc))
+* replace dependabot with renovate ([#789](https://github.com/scaleway/scaleway-ui/issues/789)) ([b7e9c2b](https://github.com/scaleway/scaleway-ui/commit/b7e9c2b521c640c989889fcf2beae17118f3c806))
+
 ### [0.117.5](https://github.com/scaleway/scaleway-ui/compare/v0.117.4...v0.117.5) (2021-10-18)
 
 
