@@ -35,7 +35,7 @@ const StyledBox = styled(Box, {
   }
 `
 
-type ContainerProps = {
+export type ContainerProps = {
   boxStyle?: Interpolation<Theme>
   children: ReactNode
   disabled?: boolean

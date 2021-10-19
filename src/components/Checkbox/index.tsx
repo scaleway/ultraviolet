@@ -59,7 +59,7 @@ const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
-type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
+export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
   valid?: boolean
   error?: string | ReactNode
