@@ -15,9 +15,15 @@
   "packageRules": [
     {
       "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"]
+    },
+    {
       "automerge": true,
       "automergeType": "branch",
-      "matchDepTypes": ["devDependencies"]
+      "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
     },
     {
       "automerge": false,
