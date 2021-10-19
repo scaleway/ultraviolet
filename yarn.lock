@@ -3422,7 +3422,7 @@ __metadata:
     rollup-plugin-visualizer: 5.5.2
     semantic-release: 18.0.0
     shx: 0.3.3
-    size-limit: 5.0.5
+    size-limit: 6.0.3
     timekeeper: 2.2.0
     typescript: 4.4.4
     use-media: 1.4.0
@@ -15796,15 +15796,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mico-spinner@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "mico-spinner@npm:1.3.0"
-  dependencies:
-    nanocolors: ^0.1.1
-  checksum: 311b002c0ea2563bd0d8f9e7158e3650273186decdc618e365eacee6e5513f1a76551e0da00cb48a21986a9bd82069ebb5027068131ced62dc1f9e5b6b52df8e
-  languageName: node
-  linkType: hard
-
 "microevent.ts@npm:~0.1.1":
   version: 0.1.1
   resolution: "microevent.ts@npm:0.1.1"
@@ -16201,7 +16192,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanocolors@npm:^0.1.1, nanocolors@npm:^0.1.12":
+"nanocolors@npm:^0.1.12":
   version: 0.1.12
   resolution: "nanocolors@npm:0.1.12"
   checksum: 2ce58f57006ddd1d2680d05fe21f54d858db8ba81bd13381598ddc546f7637e33c4407da2ea7da40ea1c96794250e7c14a4d00358b48eeae4d917d6a92bafe4c
@@ -16233,6 +16224,15 @@ fsevents@^1.2.7:
     snapdragon: ^0.8.1
     to-regex: ^3.0.1
   checksum: 54d4166d6ef08db41252eb4e96d4109ebcb8029f0374f9db873bd91a1f896c32ec780d2a2ea65c0b2d7caf1f28d5e1ea33746a470f32146ac8bba821d80d38d8
+  languageName: node
+  linkType: hard
+
+"nanospinner@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "nanospinner@npm:0.3.2"
+  dependencies:
+    picocolors: ^1.0.0
+  checksum: 98d9e3b4388397a7c38d95990d1de6273cc7f26299bca37fd7aacbe1612edf82d4016189f8ccef4d8e658e158967f1e4807a6b11bd6d449c3bb88111d469843b
   languageName: node
   linkType: hard
 
@@ -17511,17 +17511,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "picocolors@npm:0.1.0"
-  checksum: 82bc19bb3dcc90eac0dd8507d937a27abfa52396476ec34214f365f6b80e13351e8706f6e9c4dc5714a7cffe9f3f37f67f793041199aee4781a9c0e029f43f9c
-  languageName: node
-  linkType: hard
-
 "picocolors@npm:^0.2.1":
   version: 0.2.1
   resolution: "picocolors@npm:0.2.1"
   checksum: 3b0f441f0062def0c0f39e87b898ae7461c3a16ffc9f974f320b44c799418cabff17780ee647fda42b856a1dc45897e2c62047e1b546d94d6d5c6962f45427b2
+  languageName: node
+  linkType: hard
+
+"picocolors@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "picocolors@npm:1.0.0"
+  checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
   languageName: node
   linkType: hard
 
@@ -20419,20 +20419,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"size-limit@npm:5.0.5":
-  version: 5.0.5
-  resolution: "size-limit@npm:5.0.5"
+"size-limit@npm:6.0.3":
+  version: 6.0.3
+  resolution: "size-limit@npm:6.0.3"
   dependencies:
     bytes-iec: ^3.1.1
     chokidar: ^3.5.2
     ci-job-number: ^1.2.2
     globby: ^11.0.4
     lilconfig: ^2.0.3
-    mico-spinner: ^1.3.0
-    picocolors: ^0.1.0
+    nanospinner: ^0.3.0
+    picocolors: ^0.2.1
   bin:
     size-limit: bin.js
-  checksum: c2e0ea9decad4c5cbfb4a13496792d57740e0340c2d76fdf9047b6f35015e8b2fe854be39be7c1a7ffe219d69dcd341e3f2c505b792b37bad9d84af55b276389
+  checksum: 2dd873273cabe215f7c2e98bb924085269437dae8a93e44cf2fd25ddc78378569e092ed65e8acfb4cc16b2cce8b6fd47f86623886a478a1a83649b4b207ef0b4
   languageName: node
   linkType: hard
 
