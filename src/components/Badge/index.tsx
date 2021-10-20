@@ -108,7 +108,7 @@ const variantsStyle = ({
   theme: Theme
 }) => variants[variant as Variants]?.(props)
 
-type BadgeProps = {
+export type BadgeProps = {
   variant?: Variants
   size?: Sizes
 } & XStyledProps
