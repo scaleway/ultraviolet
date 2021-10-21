@@ -8,7 +8,7 @@ export default {
   title: 'Components/Data Display/Counter',
 } as Meta
 
-const Template: Story<CounterProps> = () => <Counter end={20} />
+const Template: Story<CounterProps> = args => <Counter end={20} {...args} />
 
 export const Default = Template.bind({})
 

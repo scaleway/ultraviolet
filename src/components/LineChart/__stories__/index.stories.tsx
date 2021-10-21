@@ -14,8 +14,8 @@ export default {
   title: 'Components/Data Display/Chart/LineChart',
 } as Meta
 
-const Template: Story<LineChartProps> = () => (
-  <LineChart data={lineChartData} xScale={{ type: 'linear' }} />
+const Template: Story<LineChartProps> = args => (
+  <LineChart data={lineChartData} xScale={{ type: 'linear' }} {...args} />
 )
 
 export const Default = Template.bind({})

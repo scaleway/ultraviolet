@@ -13,7 +13,9 @@ export default {
   title: 'Components/Data Display/Chart/PieChart',
 } as Meta
 
-const Template: Story<PieChartProps> = () => <PieChart data={data} />
+const Template: Story<PieChartProps> = args => (
+  <PieChart data={data} {...args} />
+)
 
 export const Default = Template.bind({})
 

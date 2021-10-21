@@ -7,8 +7,8 @@ export default {
   title: 'Components/Navigation/CreationProgress',
 } as Meta
 
-const Template: Story<CreationProgressProps> = () => (
-  <CreationProgress selected={0}>
+const Template: Story<CreationProgressProps> = args => (
+  <CreationProgress selected={0} {...args}>
     <CreationProgress.Step>Step 1</CreationProgress.Step>
     <CreationProgress.Step>Step 2</CreationProgress.Step>
     <CreationProgress.Step>Step 3</CreationProgress.Step>

@@ -8,7 +8,9 @@ export default {
   title: 'Components/Container/Container',
 } as Meta
 
-const Template: Story<ContainerProps> = () => <Container>Hello</Container>
+const Template: Story<ContainerProps> = args => (
+  <Container {...args}>Hello</Container>
+)
 
 export const Default = Template.bind({})
 

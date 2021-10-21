@@ -14,8 +14,8 @@ export default {
   title: 'Components/Data Display/Chart/BarChart',
 } as Meta
 
-const Template: Story<BarChartProps> = () => (
-  <BarChart data={barChartSimpleData} />
+const Template: Story<BarChartProps> = args => (
+  <BarChart data={barChartSimpleData} {...args} />
 )
 
 export const Default = Template.bind({})
