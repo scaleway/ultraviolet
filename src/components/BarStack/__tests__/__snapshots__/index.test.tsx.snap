@@ -2,15 +2,18 @@
 
 exports[`BarStack should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1ouhc6b {
+  .cache-6jzd6k {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 1px #dce1eb;
+  overflow: hidden;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+1) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+1) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
         #4f0599 25%, #4f0599 50%,
         rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #4f0599
@@ -20,7 +23,7 @@ exports[`BarStack should render correctly 1`] = `
   background-color: #4f0599;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+2) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+2) {
   background-color: #4f0599;
   background-image: linear-gradient(
           135deg,
@@ -46,7 +49,7 @@ exports[`BarStack should render correctly 1`] = `
   background-repeat: repeat;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+3) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+3) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
         #a365f6 25%, #a365f6 50%,
         rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #a365f6
@@ -56,7 +59,7 @@ exports[`BarStack should render correctly 1`] = `
   background-color: #6b0ee7;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+4) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+4) {
   background-color: #a365f6;
   background-image: linear-gradient(
           135deg,
@@ -82,7 +85,7 @@ exports[`BarStack should render correctly 1`] = `
   background-repeat: repeat;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+5) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+5) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%,
         #c095f9 25%, #c095f9 50%,
         rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, #c095f9
@@ -114,7 +117,7 @@ exports[`BarStack should render correctly 1`] = `
 }
 
 <div
-    class="cache-1ouhc6b e17nk4tl0"
+    class="cache-6jzd6k e17nk4tl0"
   >
     <div
       class="cache-1uiu596 e17nk4tl1"
@@ -150,15 +153,18 @@ exports[`BarStack should render correctly 1`] = `
 
 exports[`BarStack should render correctly with event handlers 1`] = `
 <DocumentFragment>
-  .cache-1ouhc6b {
+  .cache-6jzd6k {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 1px #dce1eb;
+  overflow: hidden;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+1) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+1) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
         #4f0599 25%, #4f0599 50%,
         rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #4f0599
@@ -168,7 +174,7 @@ exports[`BarStack should render correctly with event handlers 1`] = `
   background-color: #4f0599;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+2) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+2) {
   background-color: #4f0599;
   background-image: linear-gradient(
           135deg,
@@ -194,7 +200,7 @@ exports[`BarStack should render correctly with event handlers 1`] = `
   background-repeat: repeat;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+3) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+3) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
         #a365f6 25%, #a365f6 50%,
         rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #a365f6
@@ -204,7 +210,7 @@ exports[`BarStack should render correctly with event handlers 1`] = `
   background-color: #6b0ee7;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+4) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+4) {
   background-color: #a365f6;
   background-image: linear-gradient(
           135deg,
@@ -230,7 +236,7 @@ exports[`BarStack should render correctly with event handlers 1`] = `
   background-repeat: repeat;
 }
 
-.cache-1ouhc6b .e17nk4tl1:nth-child(5n+5) {
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+5) {
   background: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%,
         #c095f9 25%, #c095f9 50%,
         rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, #c095f9
@@ -262,13 +268,164 @@ exports[`BarStack should render correctly with event handlers 1`] = `
 }
 
 <div
-    class="cache-1ouhc6b e17nk4tl0"
+    class="cache-6jzd6k e17nk4tl0"
   >
     <div
       class="cache-1uiu596 e17nk4tl1"
       style="width: 100%;"
     >
       Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BarStack should render correctly with total 1`] = `
+<DocumentFragment>
+  .cache-6jzd6k {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 0px 1px #dce1eb;
+  overflow: hidden;
+}
+
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+1) {
+  background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
+        #4f0599 25%, #4f0599 50%,
+        rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #4f0599
+         75%);
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-color: #4f0599;
+}
+
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+2) {
+  background-color: #4f0599;
+  background-image: linear-gradient(
+          135deg,
+          rgba(255,255,255,0.25) 25%,
+          transparent 25%
+        ),linear-gradient(
+          225deg,
+          rgba(255,255,255,0.25) 25%,
+          transparent 25%
+        ),linear-gradient(
+          45deg,
+          rgba(255,255,255,0.25) 25%,
+          transparent 25%
+        ),linear-gradient(
+          315deg,
+          rgba(255,255,255,0.25) 25%,
+          #4f0599 25%
+        );
+  -webkit-background-position: 10px 0,10px 0,0 0,0 0;
+  background-position: 10px 0,10px 0,0 0,0 0;
+  -webkit-background-size: 10px 10px;
+  background-size: 10px 10px;
+  background-repeat: repeat;
+}
+
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+3) {
+  background: linear-gradient(-45deg, rgba(255,255,255,0.1) 25%,
+        #a365f6 25%, #a365f6 50%,
+        rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, #a365f6
+         75%);
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-color: #6b0ee7;
+}
+
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+4) {
+  background-color: #a365f6;
+  background-image: linear-gradient(
+          135deg,
+          rgba(255,255,255,0.2) 25%,
+          transparent 25%
+        ),linear-gradient(
+          225deg,
+          rgba(255,255,255,0.2) 25%,
+          transparent 25%
+        ),linear-gradient(
+          45deg,
+          rgba(255,255,255,0.2) 25%,
+          transparent 25%
+        ),linear-gradient(
+          315deg,
+          rgba(255,255,255,0.2) 25%,
+          #a365f6 25%
+        );
+  -webkit-background-position: 10px 0,10px 0,0 0,0 0;
+  background-position: 10px 0,10px 0,0 0,0 0;
+  -webkit-background-size: 10px 10px;
+  background-size: 10px 10px;
+  background-repeat: repeat;
+}
+
+.cache-6jzd6k .e17nk4tl1:nth-child(5n+5) {
+  background: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%,
+        #c095f9 25%, #c095f9 50%,
+        rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, #c095f9
+         75%);
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-color: #c095f9;
+}
+
+.cache-1uiu596 {
+  height: 50px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+  width: 0px;
+  text-shadow: -1px 0 rgba(0,0,0,0.3),0 1px rgba(0,0,0,0.3),1px 0 rgba(0,0,0,0.3),0 -1px rgba(0,0,0,0.3);
+}
+
+<div
+    class="cache-6jzd6k e17nk4tl0"
+  >
+    <div
+      class="cache-1uiu596 e17nk4tl1"
+      style="width: 2%;"
+    >
+      Hello
+    </div>
+    <div
+      class="cache-1uiu596 e17nk4tl1"
+      style="width: 4.2%;"
+    />
+    <div
+      class="cache-1uiu596 e17nk4tl1"
+      style="width: 4.2%;"
+    >
+      Encore
+    </div>
+    <div
+      class="cache-1uiu596 e17nk4tl1"
+      style="width: 4.2%;"
+    >
+      Next
+    </div>
+    <div
+      class="cache-1uiu596 e17nk4tl1"
+      style="width: 4.2%;"
+    >
+      Bye bye
     </div>
   </div>
 </DocumentFragment>

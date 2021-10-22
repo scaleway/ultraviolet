@@ -11,12 +11,19 @@ const fakeData = [
   { id: '6', text: 'Bye bye', value: 42 },
 ]
 
-const Template: Story<BarStackProps> = ({ data }) => <BarStack data={data} />
+const Template: Story<BarStackProps> = args => <BarStack {...args} />
 
 export const Basic = Template.bind({})
 
 Basic.args = {
   data: fakeData,
+}
+
+export const WithMax = Template.bind({})
+
+WithMax.args = {
+  data: fakeData,
+  total: 500,
 }
 
 export default {

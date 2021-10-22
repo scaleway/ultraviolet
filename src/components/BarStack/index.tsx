@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { darken, lighten, transparentize } from 'polished'
-import React, { MouseEventHandler } from 'react'
+import React, { MouseEventHandler, useMemo } from 'react'
 
 export interface BarProps {
   id: string
@@ -16,6 +16,7 @@ export interface BarProps {
 
 export interface BarStackProps {
   data: BarProps[]
+  total?: number
 }
 
 const StyledBar = styled('div', {
@@ -40,6 +41,10 @@ const StyledBar = styled('div', {
 const StyledContainer = styled.div`
   width: 100%;
   display: flex;
+  border-radius: ${({ theme }) => theme.radii.default};
+  box-shadow: inset 0px 0px 0px 1px ${({ theme }) => theme.colors.gray300};
+  overflow: hidden;
+
   ${StyledBar}:nth-child(5n+1) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.9,
@@ -145,8 +150,11 @@ const StyledContainer = styled.div`
   }
 `
 
-const BarStack = ({ data }: BarStackProps): JSX.Element => {
-  const total = data.reduce((acc, { value }) => acc + value, 0)
+const BarStack = ({ data, total }: BarStackProps): JSX.Element => {
+  const computedTotal = useMemo(
+    () => total ?? data.reduce((acc, { value }) => acc + value, 0),
+    [total, data],
+  )
 
   return (
     <StyledContainer>
@@ -164,7 +172,7 @@ const BarStack = ({ data }: BarStackProps): JSX.Element => {
         }) => (
           <StyledBar
             key={id}
-            style={{ width: `${(value / total) * 100}%` }}
+            style={{ width: `${(value / computedTotal) * 100}%` }}
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
             onClick={onClick}
