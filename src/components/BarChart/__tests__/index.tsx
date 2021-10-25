@@ -1,7 +1,7 @@
 import { ResponsiveWrapper } from '@nivo/core'
 import React, { ComponentProps } from 'react'
 import Barchart from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,

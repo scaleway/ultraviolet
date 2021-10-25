@@ -1,7 +1,7 @@
 import React from 'react'
 import NavigationStepper from '..'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import jestMockMatchMedia from '../../../helpers/jestMockMatchMedia'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
 import { screens } from '../../../theme'
 
 describe('NavigationStepper', () => {

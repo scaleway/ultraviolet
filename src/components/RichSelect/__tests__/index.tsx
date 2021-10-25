@@ -2,8 +2,10 @@ import { CSSObject } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import RichSelect from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
-import shouldMatchEmotionSnapshotWithPortal from '../../../helpers/shouldMatchEmotionSnapshotWithPortal'
+import {
+  shouldMatchEmotionSnapshot,
+  shouldMatchEmotionSnapshotWithPortal,
+} from '../../../helpers/jestHelpers'
 
 const customStyles: Record<string, CSSObject> = {
   control: {},

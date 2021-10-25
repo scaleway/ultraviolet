@@ -1,6 +1,6 @@
 import React from 'react'
 import Touchable from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Touchable', () => {
   test('renders correctly with defaults', () =>

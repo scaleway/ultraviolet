@@ -1,6 +1,6 @@
 import React from 'react'
 import ActivityIndicator from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { colors } from '../../../theme'
 
 describe('ActivityIndicator', () => {

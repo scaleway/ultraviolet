@@ -1,8 +1,10 @@
 import { fireEvent } from '@testing-library/react'
 import React from 'react'
 import TabGroup from '..'
-import renderWithTheme from '../../../helpers/renderWithTheme'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 import Box from '../../Box'
 
 describe('TabGroup', () => {

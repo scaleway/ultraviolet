@@ -1,6 +1,6 @@
 import React from 'react'
 import Badge, { badgeSizes, badgeVariants } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Badge', () => {
   test('renders correctly with default values', () =>

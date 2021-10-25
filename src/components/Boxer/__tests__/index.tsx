@@ -1,6 +1,6 @@
 import React from 'react'
 import Boxer from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Boxer', () => {
   test('renders correctly with one child', () =>

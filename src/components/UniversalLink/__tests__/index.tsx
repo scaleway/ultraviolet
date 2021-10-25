@@ -2,7 +2,7 @@ import { Theme } from '@emotion/react'
 import React, { ElementType } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import UniversalLink from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import baseTheme from '../../../theme'
 
 describe('UniversalLink', () => {

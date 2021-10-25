@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DotSteps from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 const DotStepsComponent = () => {
   const [step, setStep] = useState(2)

@@ -1,6 +1,6 @@
 import React from 'react'
 import TimeInput from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('TimeInput', () => {
   test('renders correctly with base props', () =>

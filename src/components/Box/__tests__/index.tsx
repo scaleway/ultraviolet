@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Box', () => {
   test('Box renders correctly ', () => shouldMatchEmotionSnapshot(<Box />))

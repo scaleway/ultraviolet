@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Grid, Row } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Grid', () => {
   describe('Grid', () => {

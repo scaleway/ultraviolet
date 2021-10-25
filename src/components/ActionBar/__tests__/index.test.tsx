@@ -1,6 +1,6 @@
 import React from 'react'
 import ActionBar from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('ActionBar', () => {
   test('renders correctly ', () =>

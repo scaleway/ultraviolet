@@ -1,6 +1,6 @@
 import React from 'react'
 import Icon, { icons } from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Icon', () => {
   icons.forEach(icon => {

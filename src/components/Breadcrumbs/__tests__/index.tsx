@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumbs from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Breadcrumbs', () => {
   test('renders correctly with default values', () =>

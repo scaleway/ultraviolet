@@ -1,5 +1,5 @@
 import React from 'react'
-import shouldMatchEmotionSnapshot from '../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../helpers/jestHelpers'
 import { getUUID, useUUID } from '../ids'
 
 const Component = ({ prefix }: { prefix?: string } = {}) => (

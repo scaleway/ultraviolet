@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Avatar', () => {
   it('renders correctly with default props', () =>

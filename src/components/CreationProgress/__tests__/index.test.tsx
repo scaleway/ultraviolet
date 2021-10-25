@@ -1,6 +1,6 @@
 import React from 'react'
 import CreationProgress from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('CreationProgress', () => {
   test('renders correctly with default props', () =>

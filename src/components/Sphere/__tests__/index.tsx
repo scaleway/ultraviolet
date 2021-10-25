@@ -1,6 +1,6 @@
 import React from 'react'
 import Sphere from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Sphere', () => {
   test('renders correctly with default values', () =>

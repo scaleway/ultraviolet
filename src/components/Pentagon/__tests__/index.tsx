@@ -1,6 +1,6 @@
 import React from 'react'
 import Pentagon from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Pentagon', () => {
   test(`renders with default props`, () =>

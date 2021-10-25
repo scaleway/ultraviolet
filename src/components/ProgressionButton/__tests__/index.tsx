@@ -1,6 +1,6 @@
 import React from 'react'
 import ProgressionButton from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('ProgressionButton', () => {
   it('renders correctly with default values', () =>

@@ -3,7 +3,7 @@ import { render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { ChangeEvent } from 'react'
 import RadioBorderedBox from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import theme from '../../../theme'
 
 describe('RadioBorderedBox', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Notice from '..'
-import shouldMatchEmotionSnapshot from '../../../helpers/shouldMatchEmotionSnapshot'
+import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Notice', () => {
   test(`renders correctly with default props`, () =>
