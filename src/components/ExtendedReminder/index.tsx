@@ -8,7 +8,7 @@ import Button from '../Button'
 import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
-const variants = {
+export const variants = {
   error: ({ colors }: Theme) => ({
     background: colors.pippin,
     main: colors.red,
@@ -27,7 +27,7 @@ const variants = {
   }),
 }
 
-type Variants = keyof typeof variants
+export type Variants = keyof typeof variants
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
@@ -70,7 +70,7 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
-type Props = {
+export type ExtendedReminderProps = {
   /**
    * The text to be placed in the top badge
    */
@@ -100,7 +100,7 @@ type Props = {
   CustomLink?: ReactNode
 }
 
-const ExtendedReminder: FunctionComponent<Props> = ({
+const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
   badgeText,
   icon,
   linkText,
