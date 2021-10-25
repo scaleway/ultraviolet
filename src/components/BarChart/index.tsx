@@ -13,7 +13,7 @@ import BarChartTooltip, { BarChartToolTipProps } from './Tooltip'
 
 type Formater = ValueFormat<DatumValue>
 
-type BarChartProps = {
+export type BarChartProps = {
   height?: string | number
   margin?: Box
   data?: BarDatum[]

@@ -8,7 +8,7 @@ import CustomLegend, { Transformer } from './CustomLegend'
 import LineChartTooltip from './Tooltip'
 import { getMaxChartValue, getMinChartValue } from './helpers'
 
-type LineChartProps = {
+export type LineChartProps = {
   height?: string | number
   margin?: Box
   xScale?: LineSvgProps['xScale']

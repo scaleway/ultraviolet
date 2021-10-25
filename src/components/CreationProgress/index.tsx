@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNodeArray } from 'react'
 import flattenChildren from 'react-flatten-children'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
@@ -47,7 +47,7 @@ const sizes = {
   },
 }
 
-type Size = keyof typeof sizes
+export type Size = keyof typeof sizes
 
 const loadingAnimation = keyframes`
   from {
@@ -171,13 +171,13 @@ const StyledContainer = styled(Box)<{ size: Size }>`
   }
 `
 
-type CreationProgressProps = {
+export type CreationProgressProps = {
   animated?: boolean
   isStepsNumber?: boolean
   selected?: number
   size?: Size
   children: ReactNodeArray
-}
+} & XStyledProps
 
 type CreationProgressComponent = FunctionComponent<CreationProgressProps> & {
   Step: FunctionComponent

@@ -16,7 +16,7 @@ const styles = {
   `,
 }
 
-type CounterProps = {
+export type CounterProps = {
   /**
    * Value to which counter will go. Can be negative or positive number.
    */
