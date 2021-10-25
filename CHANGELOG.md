@@ -1,3 +1,49 @@
+### [0.117.6](https://github.com/scaleway/scaleway-ui/compare/v0.117.5...v0.117.6) (2021-10-19)
+
+
+### :zap: Refactor
+
+* migrate actionbar, activityindicator, alert and avatar stories to tsx ([#802](https://github.com/scaleway/scaleway-ui/issues/802)) ([cce67ff](https://github.com/scaleway/scaleway-ui/commit/cce67ff66a6279742f429f14db2cda9e69824883))
+
+
+### :package: Chore
+
+* **deps:** pin dependencies ([#803](https://github.com/scaleway/scaleway-ui/issues/803)) ([109378c](https://github.com/scaleway/scaleway-ui/commit/109378c7b24d144ab51d50e0f54d30d64a7a72bc))
+* replace dependabot with renovate ([#789](https://github.com/scaleway/scaleway-ui/issues/789)) ([b7e9c2b](https://github.com/scaleway/scaleway-ui/commit/b7e9c2b521c640c989889fcf2beae17118f3c806))
+
+### [0.117.5](https://github.com/scaleway/scaleway-ui/compare/v0.117.4...v0.117.5) (2021-10-18)
+
+
+### :bug: Bug Fixes
+
+* **radio-bordered-box:** cursor is only available on label ([#795](https://github.com/scaleway/scaleway-ui/issues/795)) ([2453729](https://github.com/scaleway/scaleway-ui/commit/24537298c1f3c4d7e47385f1ade6c9fda8247ac0))
+
+### [0.117.4](https://github.com/scaleway/scaleway-ui/compare/v0.117.3...v0.117.4) (2021-10-18)
+
+
+### :package: Chore
+
+* **deps:** bump actions/checkout from 2.3.4 to 2.3.5 ([#799](https://github.com/scaleway/scaleway-ui/issues/799)) ([fbfcfdc](https://github.com/scaleway/scaleway-ui/commit/fbfcfdc60ba378d938c447992c5b07c1938648e2))
+
+
+### :bug: Bug Fixes
+
+* **package:** yarn version ([#796](https://github.com/scaleway/scaleway-ui/issues/796)) ([b52f084](https://github.com/scaleway/scaleway-ui/commit/b52f084cc334c3ada87c7a11e8a3c8b51665c308))
+
+### [0.117.3](https://github.com/scaleway/scaleway-ui/compare/v0.117.2...v0.117.3) (2021-10-14)
+
+
+### :bug: Bug Fixes
+
+* **radio-bordered-box:** avoid using multiple label ([#793](https://github.com/scaleway/scaleway-ui/issues/793)) ([be040c6](https://github.com/scaleway/scaleway-ui/commit/be040c63ceb310fc32e182eb026c69f355af7ce8))
+
+### [0.117.2](https://github.com/scaleway/scaleway-ui/compare/v0.117.1...v0.117.2) (2021-10-14)
+
+
+### :bug: Bug Fixes
+
+* avoid to retrigger animation on re-render & fix types ([#792](https://github.com/scaleway/scaleway-ui/issues/792)) ([72bff22](https://github.com/scaleway/scaleway-ui/commit/72bff22c27312f708a0c893d93112d8ad5485c47))
+
 ### [0.117.1](https://github.com/scaleway/scaleway-ui/compare/v0.117.0...v0.117.1) (2021-10-12)
 
 

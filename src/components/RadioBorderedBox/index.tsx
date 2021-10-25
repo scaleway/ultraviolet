@@ -8,10 +8,6 @@ import Box, { XStyledProps } from '../Box'
 import Radio from '../Radio'
 
 const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
-  &:hover {
-    cursor: pointer;
-  }
-
   ${({ disabled, checked, theme: { colors } }) => {
     if (disabled)
       return `
@@ -60,7 +56,6 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
 }) => (
   <StyledBox
     bordered
-    as="label"
     display="block"
     disabled={disabled}
     checked={checked}

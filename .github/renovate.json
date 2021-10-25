@@ -1,0 +1,50 @@
+{
+  "enabledManagers": ["dockerfile", "npm"],
+  "extends": [
+    "config:base",
+    ":combinePatchMinorReleases"
+  ],
+  "assignees": ["scaleway/console"],
+  "prHourlyLimit": 5,
+  "prConcurrentLimit": 10,
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "pin",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "packageRules": [
+    {
+      "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "automerge": true,
+      "automergeType": "branch",
+      "semanticCommitScope": "devDeps",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "automerge": false,
+      "matchPackagePatterns": ["^@scaleway/"],
+      "stabilityDays": 0,
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    },
+    {
+      "labels": ["UPDATE-MAJOR"],
+      "stabilityDays": 14,
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "labels": ["UPDATE-MINOR"],
+      "stabilityDays": 5,
+      "matchUpdateTypes": ["minor"]
+    },
+    {
+      "labels": ["UPDATE-PATCH"],
+      "stabilityDays": 1,
+      "matchUpdateTypes": ["patch"]
+    }
+  ]
+}

@@ -37,7 +37,7 @@ import Icon from '../Icon'
 
 export interface SelectOption {
   value: string
-  label: string
+  label: ReactNode
   disabled?: boolean
 }
 
@@ -641,6 +641,7 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
   const theme = useTheme()
   const [isAnimated, setIsAnimated] = useState(false)
+  const currentValue = (value as SelectOption)?.value
 
   // Options need to keep the same reference otherwise react-select doesn't focus the selected option
   const selectOptions = useMemo(
@@ -661,7 +662,7 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
       setIsAnimated(true)
       setTimeout(() => setIsAnimated(false), animationDuration)
     }
-  }, [setIsAnimated, animationOnChange, animationDuration, value])
+  }, [setIsAnimated, animationOnChange, animationDuration, currentValue])
 
   return (
     <Select
@@ -707,13 +708,19 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   )
 }
 
+type OptionComponent = FunctionComponent<
+  Partial<OptionProps<SelectOption> & SelectOption>
+>
+
 const RichSelectWithRef = forwardRef(
   (props: RichSelectProps, ref: ForwardedRef<StateManagedSelect>) => (
     <RichSelect innerRef={ref} {...props} />
   ),
 ) as ForwardRefExoticComponent<Partial<RichSelectProps>> & {
-  Option: FunctionComponent<Partial<OptionProps<SelectOption> & SelectOption>>
+  Option: OptionComponent
 }
+
+RichSelectWithRef.Option = Option as OptionComponent
 
 RichSelectWithRef.propTypes = {
   /**
