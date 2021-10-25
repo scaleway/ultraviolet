@@ -1,27 +1,25 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import Col from '../Col'
-import Grid from '../Grid'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import Grid, { GridProps } from '../Grid'
 import Row from '../Row'
 import ColWithBackground from './ColWithBackground'
 
-<Meta title="Components/Foundation/Grid" component={Grid} />
+export default {
+  component: Grid,
+  title: 'Components/Foundation/Grid',
+} as Meta
 
-# Grid, Row, Col
+const Template: Story<GridProps> = args => <Grid {...args} />
 
-These three component are built to organize your content
-
-- `Grid` allow you to create a container with some padding.
-- `Row` is a flex container that allow you to create a row with some margin left and right.
-- `Col` allow you to create a col where you can place your content.
-
-<Canvas>
-  <Story name="Basic">
+export const Default = Template.bind({})
+Default.parameters = {
+  docs: {
+    storyDescription:
+      'These three component are built to organize your content \n\n- `Grid` allow you to create a container with some padding.\n\n- `Row` is a flex container that allow you to create a row with some margin left and right.\n\n- `Col` allow you to create a col where you can place your content.',
+  },
+}
+Default.decorators = [
+  () => (
     <Grid>
       <Row>
         <ColWithBackground>One</ColWithBackground>
@@ -29,18 +27,18 @@ These three component are built to organize your content
         <ColWithBackground>Three</ColWithBackground>
       </Row>
     </Grid>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Fluid
-
-<Description>
-  If you pass the `fluid` prop the grid will take the full width of its
-  container
-</Description>
-
-<Canvas>
-  <Story name="Fluid">
+export const Fluid = Template.bind({})
+Fluid.parameters = {
+  docs: {
+    storyDescription:
+      'If you pass the `fluid` prop the grid will take the full width of its container',
+  },
+}
+Fluid.decorators = [
+  () => (
     <Grid fluid>
       <Row>
         <ColWithBackground>One</ColWithBackground>
@@ -48,17 +46,18 @@ These three component are built to organize your content
         <ColWithBackground>Three</ColWithBackground>
       </Row>
     </Grid>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Gutter
-
-<Description>
-  If you pass the `gutter` prop the component will have more padding and margin
-</Description>
-
-<Canvas>
-  <Story name="Gutter">
+export const Gutter = Template.bind({})
+Gutter.parameters = {
+  docs: {
+    storyDescription:
+      'If you pass the `gutter` prop the component will have more padding and margin',
+  },
+}
+Gutter.decorators = [
+  () => (
     <Grid fluid gutter={2}>
       <Row>
         <ColWithBackground>One</ColWithBackground>
@@ -76,13 +75,17 @@ These three component are built to organize your content
         <ColWithBackground>Three</ColWithBackground>
       </Row>
     </Grid>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Complex responsive example
-
-<Canvas>
-  <Story name="Complex responsive">
+export const Responsive = Template.bind({})
+Responsive.parameters = {
+  docs: {
+    storyDescription: 'A complex responsive example',
+  },
+}
+Responsive.decorators = [
+  () => (
     <Grid>
       <Row>
         <ColWithBackground
@@ -110,19 +113,5 @@ These three component are built to organize your content
         <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
       </Row>
     </Grid>
-  </Story>
-</Canvas>
-
-## API
-
-### Grid
-
-<ArgsTable of={Grid} />
-
-### Row
-
-<ArgsTable of={Row} />
-
-### Col
-
-<ArgsTable of={Col} />
+  ),
+]
