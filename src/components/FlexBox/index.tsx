@@ -73,7 +73,7 @@ const StyledFlexBox = styled(Child, {
   ${({ wrap }) => (wrap ? `flex-wrap: ${wrap};` : '')}
 `
 
-type FlexBoxProps = {
+export type FlexBoxProps = {
   alignContent?:
     | 'center'
     | 'flex-end'
