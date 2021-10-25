@@ -14,6 +14,10 @@
   "semanticCommitScope": "deps",
   "packageRules": [
     {
+      "matchDepTypes": ["engines", "peerDependencies"],
+      "versionStrategy": "widen"
+    },
+    {
       "semanticCommitScope": "devDeps",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"]
