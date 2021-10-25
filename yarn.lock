@@ -3329,12 +3329,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/random-name@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@scaleway/random-name@npm:2.1.0"
+"@scaleway/random-name@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@scaleway/random-name@npm:2.1.1"
   peerDependencies:
     react: ">=16.8"
-  checksum: 062825c94bb3a4a17ee2b8ff25e6a9ac3be4119e326fa4507818ee2ccf79bef60c450ce179fdadfbcbfa65a75ce48faf66270a778daec0ef321363df07b81503
+  checksum: ce7c081385a0ab789b3c4ab51bbd25059b565d52d62e3b309f7fb14051d0272a462021e7961cd79d05f8253156e55c3a8fc08b21f4daaeddfa9d92eff100223b
   languageName: node
   linkType: hard
 
@@ -3368,7 +3368,7 @@ __metadata:
     "@rollup/plugin-url": 6.1.0
     "@scaleway/eslint-config-react": 2.2.1
     "@scaleway/jest-helpers": 1.1.3
-    "@scaleway/random-name": 2.1.0
+    "@scaleway/random-name": 2.1.1
     "@scaleway/use-i18n": 3.1.12
     "@semantic-release/changelog": 6.0.0
     "@semantic-release/commit-analyzer": 9.0.1
@@ -3421,7 +3421,7 @@ __metadata:
     react: 17.0.2
     react-circular-progressbar: 2.0.4
     react-countup: 6.0.0
-    react-datepicker: 4.2.1
+    react-datepicker: 4.3.0
     react-dom: 17.0.2
     react-flatten-children: 1.1.2
     react-markdown: 5.0.3
@@ -9549,7 +9549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.25.0, date-fns@npm:^2.0.1":
+"date-fns@npm:2.25.0, date-fns@npm:^2.0.1, date-fns@npm:^2.24.0":
   version: 2.25.0
   resolution: "date-fns@npm:2.25.0"
   checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
@@ -18721,20 +18721,20 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-datepicker@npm:4.2.1":
-  version: 4.2.1
-  resolution: "react-datepicker@npm:4.2.1"
+"react-datepicker@npm:4.3.0":
+  version: 4.3.0
+  resolution: "react-datepicker@npm:4.3.0"
   dependencies:
     "@popperjs/core": ^2.9.2
     classnames: ^2.2.6
-    date-fns: ^2.0.1
+    date-fns: ^2.24.0
     prop-types: ^15.7.2
-    react-onclickoutside: ^6.10.0
+    react-onclickoutside: ^6.12.0
     react-popper: ^2.2.5
   peerDependencies:
     react: ^16.9.0 || ^17
     react-dom: ^16.9.0 || ^17
-  checksum: a8daef82bfffe9209d8d9d7becbd434ccc15495b86470b06e7d40e2fbbec14e9081634ee67aa6e52694195fa2daa7bfde18c5bc3842d3ffd675a7df5d02d8486
+  checksum: 5d14f24015c84bfa7feed74c94131f96372ad2a76f6d67a2675047587172719ce6b74b373134ee530a54939aa923945b80c7717028ac69bd58c33a316b50dd2c
   languageName: node
   linkType: hard
 
@@ -18943,7 +18943,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-onclickoutside@npm:^6.10.0":
+"react-onclickoutside@npm:^6.12.0":
   version: 6.12.0
   resolution: "react-onclickoutside@npm:6.12.0"
   peerDependencies:
