@@ -17,7 +17,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'
@@ -340,7 +340,7 @@ type TextBoxProps = {
 } & (
   | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
-)
+) & XStyledProps
 
 const TextBox = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,

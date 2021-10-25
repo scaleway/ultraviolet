@@ -105,7 +105,7 @@ const Tag: FunctionComponent<TagsProps> = ({
   ...props
 }) => (
   <StyledContainer {...props} disabled={disabled} variant={variant}>
-    <StyledText aria-disabled={disabled} css={[textStyle]}>
+    <StyledText aria-disabled={disabled} css={textStyle}>
       {children}
     </StyledText>
 
