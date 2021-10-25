@@ -10,6 +10,13 @@ import RichSelect from '../../RichSelect'
 
 export default {
   component: DateInput,
+  decorators: [
+    Children => (
+      <Box height="360">
+        <Children />
+      </Box>
+    ),
+  ],
   title: 'Components/Data Entry/DateInput',
 } as Meta
 

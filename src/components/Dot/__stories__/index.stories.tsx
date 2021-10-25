@@ -4,7 +4,7 @@ import Dot, { DotProps } from '..'
 
 export default {
   component: Dot,
-  title: 'Components/Data Display/dot',
+  title: 'Components/Data Display/Dot',
 } as Meta
 
 const Template: Story<DotProps> = args => <Dot {...args} />
