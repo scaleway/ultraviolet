@@ -3315,17 +3315,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/jest-helpers@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@scaleway/jest-helpers@npm:1.1.0"
+"@scaleway/jest-helpers@npm:1.1.3":
+  version: 1.1.3
+  resolution: "@scaleway/jest-helpers@npm:1.1.3"
   dependencies:
-    "@emotion/cache": ^11.1.3
-    "@emotion/jest": ^11.3.0
-    "@emotion/react": ^11.1.4
-    "@testing-library/react": ^12.1.2
+    "@emotion/cache": 11.5.0
+    "@emotion/jest": 11.5.0
+    "@emotion/react": 11.5.0
+    "@testing-library/react": 12.1.2
   peerDependencies:
     react: ^17.0.1
-  checksum: e0be3808bdc51a1ace5c2a8066a9622562f96d44445785fd4338e4f8bd31999b85fe0937afd5de04d95be48341601b2ed432dc797842f1b30a64ea308e38ae6a
+  checksum: ded2c5ecda3781915801fa16fe731f00f4011833975cde4d980210898739e33ac2b9a59011dc4b8ead9bc23d94f9ed15c8930d283b28c603f8f0716ebdd77da4
   languageName: node
   linkType: hard
 
@@ -3367,6 +3367,7 @@ __metadata:
     "@rollup/plugin-node-resolve": 13.0.6
     "@rollup/plugin-url": 6.1.0
     "@scaleway/eslint-config-react": 2.2.1
+    "@scaleway/jest-helpers": 1.1.3
     "@scaleway/random-name": 2.1.0
     "@scaleway/use-i18n": 3.1.11
     "@semantic-release/changelog": 6.0.0
