@@ -105,7 +105,7 @@ type InputProps = Partial<
   'data-testid'?: string | null
 }
 
-type PhoneInputProps = PhoneInputLabelProps & {
+export type PhoneInputProps = PhoneInputLabelProps & {
   inputProps?: InputProps
   onChange?: (
     event: ChangeEvent<HTMLInputElement>,
