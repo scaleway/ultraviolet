@@ -90,6 +90,11 @@ ComplexChildren.decorators = [
 ]
 
 export const Placement = Template.bind({})
+Placement.parameters = {
+  docs: {
+    storyDescription: 'Set placement using `placement` prop.',
+  },
+}
 Placement.decorators = [
   () => (
     <div>
