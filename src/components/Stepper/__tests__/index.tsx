@@ -37,7 +37,7 @@ describe('Stepper', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const inputButton = getByLabelText('Input')
-          const input = getByRole('textbox')
+          const input = getByRole('textbox') as HTMLTextAreaElement
 
           userEvent.click(inputButton)
           await waitFor(() => expect(input.value).toBe('10'))
@@ -51,7 +51,7 @@ describe('Stepper', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const minus = getByLabelText('Minus')
-          const input = getByRole('textbox')
+          const input = getByRole('textbox') as HTMLTextAreaElement
 
           userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('9'))
@@ -74,7 +74,7 @@ describe('Stepper', () => {
       {
         transform: async ({ getByLabelText, getByRole }) => {
           const plus = getByLabelText('Plus')
-          const input = getByRole('textbox')
+          const input = getByRole('textbox') as HTMLTextAreaElement
 
           userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
@@ -91,7 +91,7 @@ describe('Stepper', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const buttonContainer = getByLabelText('Input')
-          const input = getByRole('textbox')
+          const input = getByRole('textbox') as HTMLTextAreaElement
 
           userEvent.click(buttonContainer)
           await waitFor(() => expect(input).toHaveFocus())
@@ -114,8 +114,8 @@ describe('Stepper', () => {
       />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox')
-          userEvent.click(input.parentElement)
+          const input = getByRole('textbox') as HTMLTextAreaElement
+          if (input.parentElement) userEvent.click(input.parentElement)
           userEvent.clear(input)
           userEvent.type(input, '1')
           await waitFor(() => expect(input.value).toBe('1'))
@@ -135,8 +135,8 @@ describe('Stepper', () => {
       />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox')
-          userEvent.click(input.parentElement)
+          const input = getByRole('textbox') as HTMLTextAreaElement
+          if (input.parentElement) userEvent.click(input.parentElement)
           userEvent.clear(input)
           userEvent.type(input, '120')
           await waitFor(() => expect(input.value).toBe('120'))
@@ -151,8 +151,8 @@ describe('Stepper', () => {
       <Stepper minValue={10} maxValue={100} value={30} />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox')
-          userEvent.click(input.parentElement)
+          const input = getByRole('textbox') as HTMLTextAreaElement
+          if (input.parentElement) userEvent.click(input.parentElement)
           userEvent.type(input, '{arrowup}')
           await waitFor(() => expect(input.value).toBe('31'))
           userEvent.type(input, '{arrowdown}')

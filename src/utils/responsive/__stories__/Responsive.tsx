@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { down, up } from '../utilities'
 
 export const WithStyled = styled.div`
@@ -61,4 +61,4 @@ const responsiveClass = css`
   )}
 `
 
-export const WithCss = props => <div css={responsiveClass} {...props} />
+export const WithCss: FunctionComponent = (props) => <div css={responsiveClass} {...props} />
