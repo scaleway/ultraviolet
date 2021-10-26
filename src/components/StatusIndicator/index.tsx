@@ -58,8 +58,9 @@ export const statuses = Object.keys(defaultStatuses)
 
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
-  status: ({ statuses: propsStatuses, ...props }, propName, componentName) => {
+  status: ({ statuses: propsStatuses, ...props }: { [key: string]: string }, propName: string, componentName) => {
     const { [propName]: propsPropName } = props
+
     const availableStatuses = [
       ...statuses,
       ...(propsStatuses ? Object.keys(propsStatuses) : []),

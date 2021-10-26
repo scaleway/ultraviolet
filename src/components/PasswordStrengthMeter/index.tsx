@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
-  ChangeEvent,
   FunctionComponent,
   useCallback,
   useEffect,
@@ -50,7 +49,7 @@ export type PasswordStrengthMeterProps = {
    * A function that should return a score based on password (index of strength array). The higher score is the stronger password is.
    */
   estimate?: (passwordToTest: string, userInputs: string[]) => { score: number }
-  onChange?: (event: ChangeEvent) => unknown
+  onChange?: (score: number) => unknown
   password?: string
   /**
    * Strength is used for defining different color and text associated with it.
@@ -79,11 +78,11 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   const [width, setWidth] = useState<number | string>(0)
 
   const getScore = useCallback(
-    passwordToTest => estimate(passwordToTest || '', userInputs)?.score || 0,
+    (passwordToTest: string) => estimate(passwordToTest || '', userInputs)?.score || 0,
     [estimate, userInputs],
   )
 
-  const handleChange = useCallback(e => onChange?.(e), [onChange])
+  const handleChange = useCallback((e: number) => onChange?.(e), [onChange])
 
   useEffect(() => {
     setBackgroundColor(strength[score].color)

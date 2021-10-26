@@ -210,7 +210,7 @@ export const Header: FunctionComponent = props => {
   } = useListContext()
 
   const onSortEvent = useCallback(
-    (event: MouseEvent | KeyboardEvent, sort, index) => {
+    (event: MouseEvent | KeyboardEvent, sort, index: number) => {
       event.preventDefault()
       if (sort) {
         onSort(index)

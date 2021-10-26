@@ -312,7 +312,7 @@ const Range: VoidFunctionComponent<RangeProps> = ({
     [ceil, onChange, setInternValues, getNextValues],
   )
   const handleInputBlur = useCallback(
-    (ev: FocusEvent<HTMLInputElement>, index) => {
+    (ev: FocusEvent<HTMLInputElement>, index: number) => {
       const value: number = parseIntOr(
         (ev.currentTarget as HTMLInputElement).value,
         0,
