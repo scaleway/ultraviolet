@@ -121,7 +121,7 @@ Body.propTypes = {
   children: PropTypes.func.isRequired,
 }
 
-type ListProps<T = ListData> = {
+export type ListProps<T = ListData> = {
   idKey?: string
   isLoading?: boolean
   data?: T[]
