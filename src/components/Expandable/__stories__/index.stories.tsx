@@ -5,38 +5,37 @@ import Button from '../../Button'
 
 export default {
   component: Expandable,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An Expandable is a container that can hide or show its content',
+      },
+    },
+  },
   title: 'Components/Expandable',
 } as Meta
 
-const Template: Story<ExpandableProps> = args => <Expandable {...args} />
+const Template: Story<ExpandableProps> = args => {
+  const [toggled, onToggle] = useState(false)
+  const toggle = () => onToggle(state => !state)
+
+  return (
+    <>
+      <Button
+        icon={toggled ? 'minus-box-outline' : 'plus-box-outline'}
+        onClick={toggle}
+      >
+        Click me
+      </Button>
+      <Expandable height={24} opened={toggled} {...args}>
+        I&lsquo;m an Expandable content
+      </Expandable>
+    </>
+  )
+}
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'An Expandable is a container that can hide or show its content',
-  },
-}
-Default.decorators = [
-  () => {
-    const [toggled, onToggle] = useState(false)
-    const toggle = () => onToggle(state => !state)
-
-    return (
-      <>
-        <Button
-          icon={toggled ? 'minus-box-outline' : 'plus-box-outline'}
-          onClick={toggle}
-        >
-          Click me
-        </Button>
-        <Expandable height={24} opened={toggled}>
-          I&lsquo;m an Expandable content
-        </Expandable>
-      </>
-    )
-  },
-]
 
 export const Opened = Template.bind({})
 Opened.parameters = {

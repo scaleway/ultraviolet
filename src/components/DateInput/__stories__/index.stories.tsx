@@ -17,18 +17,19 @@ export default {
       </Box>
     ),
   ],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A date input based on `react-datepicker.`',
+      },
+    },
+  },
   title: 'Components/Data Entry/DateInput',
 } as Meta
 
 const Template: Story<DateInputProps> = args => <DateInput {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription: 'A date input based on `react-datepicker.`',
-  },
-}
-Default.decorators = [() => <DateInput label="Date" />]
 
 export const Uncontrolled = Template.bind({})
 Uncontrolled.parameters = {

@@ -4,6 +4,14 @@ import Description, { DescriptionProps } from '..'
 
 export default {
   component: Description,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Terms and descriptions with `dl`, `dt` and `dd` native html tag.',
+      },
+    },
+  },
   title: 'Components/Data Display/Description',
 } as Meta
 
