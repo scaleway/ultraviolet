@@ -5,26 +5,20 @@ import { Box, Boxer } from '../..'
 
 export default {
   component: Link,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An Expandable is a container that can hide or show its content',
+      },
+    },
+  },
   title: 'Components/Foundation/Link',
 } as Meta
 
-const Template: Story<LinkProps> = args => <Link {...args} />
+const Template: Story<LinkProps> = args => <Link {...args}>Basic Link</Link>
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription: 'Creates a styled link.',
-  },
-}
-Default.decorators = [
-  () => (
-    <Box p={2} backgroundColor="gray200">
-      <Boxer my={1}>
-        <Link href="localhost:6006">Basic link</Link>
-      </Boxer>
-    </Box>
-  ),
-]
 
 export const Variants = Template.bind({})
 Variants.parameters = {
@@ -56,13 +50,9 @@ Target.parameters = {
 }
 Target.decorators = [
   () => (
-    <Box p={2} backgroundColor="gray200">
-      <Boxer my={1}>
-        <Link href="localhost:6006" target="_blank">
-          Link opens in a new tab
-        </Link>
-      </Boxer>
-    </Box>
+    <Link href="localhost:6006" target="_blank">
+      Link opens in a new tab
+    </Link>
   ),
 ]
 
@@ -74,13 +64,7 @@ AbsoluteURLs.parameters = {
   },
 }
 AbsoluteURLs.decorators = [
-  () => (
-    <Box p={2} backgroundColor="gray200">
-      <Boxer my={1}>
-        <Link href="https://localhost:6006">Absolute URL</Link>
-      </Boxer>
-    </Box>
-  ),
+  () => <Link href="https://localhost:6006">Absolute URL</Link>,
 ]
 
 export const LinkComponent = Template.bind({})

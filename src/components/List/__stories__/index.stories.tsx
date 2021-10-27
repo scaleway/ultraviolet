@@ -8,49 +8,19 @@ import Button from '../../Button'
 
 export default {
   component: List,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Display a list of your data.',
+      },
+    },
+  },
   title: 'Components/List',
 } as Meta
 
 const Template: Story<ListProps> = args => <List {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription: 'Display a list of your data.',
-  },
-}
-Default.decorators = [
-  () => (
-    <List
-      data={generateData(10)}
-      columns={[
-        { label: 'Name', sort: 'name' },
-        { label: 'Description', sort: 'description', width: '50%' },
-        { label: 'Department', sort: 'department', width: '120px' },
-        { justifyContent: 'center', width: '128px' },
-      ]}
-    >
-      {list => (
-        <>
-          <list.Header />
-          <list.Body>
-            {({ rowData }) => (
-              <list.Row animated id={rowData.id}>
-                <list.Cell>{rowData.name}</list.Cell>
-                <list.Cell>{rowData.description}</list.Cell>
-                <list.Cell>{rowData.department}</list.Cell>
-                <list.Cell>actions</list.Cell>
-                <list.ExpendableContent>
-                  {() => <>ExpendableContent of {rowData.name}</>}
-                </list.ExpendableContent>
-              </list.Row>
-            )}
-          </list.Body>
-        </>
-      )}
-    </List>
-  ),
-]
 
 export const EmptyText = Template.bind({})
 EmptyText.decorators = [

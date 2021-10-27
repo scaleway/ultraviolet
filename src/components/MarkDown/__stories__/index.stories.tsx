@@ -5,19 +5,22 @@ import { html, simple, withMultipleParagraphs } from './markdown_example'
 
 export default {
   component: MarkDown,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'A wrapper for [react-markdown](https://github.com/remarkjs/react-markdown)',
+      },
+    },
+  },
   title: 'Components/MarkDown',
 } as Meta
 
-const Template: Story<MarkDownProps> = args => <MarkDown {...args} />
+const Template: Story<MarkDownProps> = args => (
+  <MarkDown source={simple} {...args} />
+)
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'A wrapper for [react-markdown](https://github.com/remarkjs/react-markdown)',
-  },
-}
-Default.decorators = [() => <MarkDown source={simple} linkTarget="_blank" />]
 
 export const Inline = Template.bind({})
 Inline.parameters = {
