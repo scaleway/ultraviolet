@@ -76,7 +76,7 @@ const usePagination = <T>({
   }, [pageCount, paginatedData])
 
   const goToPage = useCallback(
-    wantedPage => {
+    (wantedPage: number) => {
       if (wantedPage === page) {
         onChangePageRef.current?.(page)
       } else if (wantedPage > maxPage && !onLoadPageRef.current) {

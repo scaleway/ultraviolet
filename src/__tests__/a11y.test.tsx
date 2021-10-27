@@ -41,7 +41,7 @@ describe('A11y', () => {
 
   beforeAll(async () => {
     for (const file of foundFiles) {
-      // eslint-disable-next-line no-await-in-loop
+      // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-argument
       moduleArray.push(await import(file))
     }
   })

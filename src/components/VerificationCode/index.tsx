@@ -84,7 +84,7 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
     new Array(fields).fill(''),
     initialValue.substring(0, fields).split(''),
   )
-  const [values, setValues] = useState(valuesArray)
+  const [values, setValues] = useState<string[]>(valuesArray)
 
   const inputRefs = Array.from({ length: fields }, () =>
     React.createRef<HTMLInputElement>(),

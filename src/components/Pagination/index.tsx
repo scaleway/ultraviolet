@@ -73,7 +73,7 @@ const DefaultMiddleComponent: VoidFunctionComponent<PaginationComponentProps> =
     )
 
     const handlePageClick = useCallback(
-      pageNumber => () => {
+      (pageNumber: number) => () => {
         goToPage(pageNumber)
       },
       [goToPage],
@@ -276,7 +276,7 @@ export const PaginationForwardFn = forwardRef<PaginationState, PaginationProps>(
       [],
     )
 
-    const handleChangePage = useCallback(newPage => {
+    const handleChangePage = useCallback((newPage: number) => {
       if (onChangePageRef.current) {
         onChangePageRef.current(newPage)
       } else {
