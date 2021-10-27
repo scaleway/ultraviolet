@@ -4,22 +4,7 @@
     "config:base",
     ":combinePatchMinorReleases"
   ],
-  "assigneesSampleSize": 1,
-  "assignees": [
-    "DorianMaliszewski",
-    "matthprost",
-    "QuiiBz",
-    "vincentaudebert",
-    "chambo-e"
-  ],
-  "reviewersSampleSize": 2,
-  "reviewers": [
-    "DorianMaliszewski",
-    "matthprost",
-    "QuiiBz",
-    "vincentaudebert",
-    "chambo-e"
-  ],
+  "reviewers": ["team:scaleway/console"],
   "prHourlyLimit": 5,
   "prConcurrentLimit": 10,
   "postUpdateOptions": ["yarnDedupeHighest"],
