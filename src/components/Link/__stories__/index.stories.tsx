@@ -1,7 +1,9 @@
+import { ThemeProvider } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import Link, { LinkProps, linkVariants } from '..'
 import { Box, Boxer } from '../..'
+import theme from '../../../theme'
 
 export default {
   component: Link,
@@ -74,3 +76,10 @@ LinkComponent.parameters = {
       'By default link is a `a`. You can specify a custom component (like React Router Link) by changing the theme entry `linkComponent`.',
   },
 }
+LinkComponent.decorators = [
+  () => (
+    <ThemeProvider theme={{ ...theme, linkComponent: 'span' }}>
+      <Link href="localhost:6006">Link Component</Link>
+    </ThemeProvider>
+  ),
+]
