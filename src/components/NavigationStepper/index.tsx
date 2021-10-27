@@ -136,7 +136,7 @@ const StyledUl = styled('ul', {
         `}
 `
 
-type NavigationStepperProps = {
+export type NavigationStepperProps = {
   step?: number
   children: ReactNodeArray
   condensed?: boolean

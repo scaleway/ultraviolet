@@ -1,37 +1,34 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import NavigationStepper from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import NavigationStepper, { NavigationStepperProps } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Button from '../../Button'
 
-<Meta
-  title="Components/Navigation/NavigationStepper"
-  component={NavigationStepper}
-/>
+export default {
+  component: NavigationStepper,
+  parameters: {
+    docs: {
+      description: {
+        component: 'NavigationStepper display a navigation with steps',
+      },
+    },
+  },
+  title: 'Components/Navigation/NavigationStepper',
+} as Meta
 
-# NavigationStepper
+const Template: Story<NavigationStepperProps> = args => (
+  <NavigationStepper step={2} {...args}>
+    <NavigationStepper.Step>First</NavigationStepper.Step>
+    <NavigationStepper.Step>Second</NavigationStepper.Step>
+    <NavigationStepper.Step>Third</NavigationStepper.Step>
+  </NavigationStepper>
+)
 
-<Description>NavigationStepper display a navigation with steps</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <NavigationStepper step={2}>
-      <NavigationStepper.Step>First</NavigationStepper.Step>
-      <NavigationStepper.Step>Second</NavigationStepper.Step>
-      <NavigationStepper.Step>Third</NavigationStepper.Step>
-    </NavigationStepper>
-  </Story>
-</Canvas>
-
-## Long text
-
-<Canvas>
-  <Story name="Long Text">
+export const LongText = Template.bind({})
+LongText.decorators = [
+  () => (
     <NavigationStepper step={2}>
       <NavigationStepper.Step>
         Elit adipisicing anim aliquip velit.
@@ -43,15 +40,18 @@ import Button from '../../Button'
         Duis nisi id ipsum sint non aute ea sit est consectetur amet.
       </NavigationStepper.Step>
     </NavigationStepper>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Loading step
-
-You can put `isLoading` on a step to display an ActivityIndicator on current step.
-
-<Canvas>
-  <Story name="Loading">
+export const LoadingStep = Template.bind({})
+LoadingStep.parameters = {
+  docs: {
+    storyDescription:
+      'You can put `isLoading` on a step to display an ActivityIndicator on current step.',
+  },
+}
+LoadingStep.decorators = [
+  () => (
     <NavigationStepper step={2}>
       <NavigationStepper.Step isLoading>
         Elit adipisicing anim aliquip velit.
@@ -63,15 +63,18 @@ You can put `isLoading` on a step to display an ActivityIndicator on current ste
         Duis nisi id ipsum sint non aute ea sit est consectetur amet.
       </NavigationStepper.Step>
     </NavigationStepper>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Controlled
-
-To make all steps checked you need to pass a step greater than your steps number.
-
-<Canvas>
-  <Story name="Controlled">
+export const Controlled = Template.bind({})
+Controlled.parameters = {
+  docs: {
+    storyDescription:
+      'To make all steps checked you need to pass a step greater than your steps number.',
+  },
+}
+Controlled.decorators = [
+  () => (
     <ControlValue value={1}>
       {({ value, onChange }) => (
         <>
@@ -102,15 +105,12 @@ To make all steps checked you need to pass a step greater than your steps number
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Condensed
-
-.
-
-<Canvas>
-  <Story name="Condensed">
+export const Condensed = Template.bind({})
+Condensed.decorators = [
+  () => (
     <ControlValue value={1}>
       {({ value, onChange }) => (
         <>
@@ -141,15 +141,5 @@ To make all steps checked you need to pass a step greater than your steps number
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
-
-## API
-
-### NavigationStepper
-
-<ArgsTable of={NavigationStepper} />
-
-### NavigationStepper.Step
-
-<ArgsTable of={NavigationStepper.Step} />
+  ),
+]
