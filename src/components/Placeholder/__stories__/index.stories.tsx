@@ -5,18 +5,20 @@ import Typography from '../../Typography'
 
 export default {
   component: Placeholder,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Placeholder will display empty blocks with animation. It can be used for loading screen or loading components.',
+      },
+    },
+  },
   title: 'Components/Data Display/Placeholder',
 } as Meta
 
 const Template: Story<PlaceholderProps> = args => <Placeholder {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'Placeholder will display empty blocks with animation. It can be used for loading screen or loading components.',
-  },
-}
 
 export const Box = Template.bind({})
 Box.decorators = [
@@ -38,12 +40,12 @@ Variants.decorators = [
       {Object.keys(variants)
         .filter(variant => variant !== 'box')
         .map(variant => (
-          <>
+          <div key={variant}>
             <Typography mb={2}>{variant}</Typography>
             <Placeholder key={variant} variant={variant} mr={2} mb={2}>
               {variant}
             </Placeholder>
-          </>
+          </div>
         ))}
     </>
   ),

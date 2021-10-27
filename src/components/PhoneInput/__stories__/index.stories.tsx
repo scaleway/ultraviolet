@@ -13,27 +13,20 @@ export default {
       </Box>
     ),
   ],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An input specially made for phones with country flags and associated code.',
+      },
+    },
+  },
   title: 'Components/Data Entry/PhoneInput',
 } as Meta
 
 const Template: Story<PhoneInputProps> = args => <PhoneInput {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'An input specially made for phones with country flags and associated code.',
-  },
-}
-Default.decorators = [
-  () => (
-    <ControlValue value="">
-      {({ value, onChange }) => (
-        <PhoneInput value={value} onChange={onChange} />
-      )}
-    </ControlValue>
-  ),
-]
 
 export const PrefilledIndicator = Template.bind({})
 PrefilledIndicator.decorators = [

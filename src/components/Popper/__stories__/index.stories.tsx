@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import Popper, { PopperProps, popperVariants } from '..'
+import Popper, { DisclosureParam, PopperProps, popperVariants } from '..'
 import { getUUID } from '../../../utils'
 import Box from '../../Box'
 import Button from '../../Button'
@@ -8,40 +8,35 @@ import Icon from '../../Icon'
 
 export default {
   component: Popper,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Popper can be used to display content over main content.',
+      },
+    },
+  },
   title: 'Components/Popper',
 } as Meta
 
-const Template: Story<PopperProps> = args => <Popper {...args} />
+const disclosure: DisclosureParam = ({ placement, visible }) => (
+  <Button>
+    test {placement}:
+    <Icon
+      ml={2}
+      name={visible ? 'chevron-up' : 'chevron-down'}
+      color="white"
+      size={11}
+    />
+  </Button>
+)
+
+const Template: Story<PopperProps> = args => (
+  <Popper aria-label="Custom popover" disclosure={disclosure} {...args}>
+    {({ placement }) => <Box p={2}> placement:{placement}</Box>}
+  </Popper>
+)
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'Popper can be used to display content over main content.',
-  },
-}
-Default.decorators = [
-  () => (
-    <div>
-      <Popper
-        aria-label="Custom popover"
-        disclosure={({ placement, visible }) => (
-          <Button>
-            test {placement}:
-            <Icon
-              ml={2}
-              name={visible ? 'chevron-up' : 'chevron-down'}
-              color="white"
-              size={11}
-            />
-          </Button>
-        )}
-      >
-        {({ placement }) => <Box p={2}> placement:{placement}</Box>}
-      </Popper>
-    </div>
-  ),
-]
 
 export const Variants = Template.bind({})
 Variants.decorators = [

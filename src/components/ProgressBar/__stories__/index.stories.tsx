@@ -6,20 +6,21 @@ import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 export default {
   component: ProgressBar,
+  parameters: {
+    docs: {
+      description: {
+        component: 'An horizontal progress bar.',
+      },
+    },
+  },
   title: 'Components/Data Display/ProgressBar',
 } as Meta
 
-const Template: Story<ProgressBarProps> = args => <ProgressBar {...args} />
+const Template: Story<ProgressBarProps> = args => (
+  <ProgressBar value={40} {...args} />
+)
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription: 'An horizontal progress bar.',
-  },
-}
-Default.args = {
-  value: 40,
-}
 
 export const Variants = Template.bind({})
 Variants.parameters = {
