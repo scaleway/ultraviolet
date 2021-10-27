@@ -8,6 +8,14 @@ import ExtendedReminder, {
 
 export default {
   component: ExtendedReminder,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'ExtendedReminder is a component to display multiple information in a single container. To make it work you need to pass `title`, `badgeText` and `text` props at least.',
+      },
+    },
+  },
   title: 'Components/Feeback/ExtendedReminder',
 } as Meta
 
@@ -16,21 +24,6 @@ const Template: Story<ExtendedReminderProps> = args => (
 )
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'ExtendedReminder is a component to display multiple information in a single container. To make it work you need to pass `title`, `badgeText` and `text` props at least.',
-  },
-}
-Default.decorators = [
-  () => (
-    <ExtendedReminder
-      badgeText="10 days remaining"
-      title="Verify your credit card"
-      text="Enter the code we send to your bank account to validate your payment method."
-    />
-  ),
-]
 
 export const Variants = Template.bind({})
 Variants.parameters = {

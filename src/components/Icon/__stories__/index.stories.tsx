@@ -5,18 +5,19 @@ import { Box, Boxer } from '../..'
 
 export default {
   component: Icon,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow you to display an svg icon',
+      },
+    },
+  },
   title: 'Components/Token/Icon',
 } as Meta
 
 const Template: Story<IconProps> = args => <Icon {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription: 'Allow you to display an svg icon',
-  },
-}
-Default.decorators = [() => <Icon name="auto-fix" size={32} color="primary" />]
 
 export const Name = Template.bind({})
 Name.parameters = {

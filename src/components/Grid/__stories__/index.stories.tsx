@@ -6,29 +6,20 @@ import ColWithBackground from './ColWithBackground'
 
 export default {
   component: Grid,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'These three component are built to organize your content \n\n- `Grid` allow you to create a container with some padding.\n\n- `Row` is a flex container that allow you to create a row with some margin left and right.\n\n- `Col` allow you to create a col where you can place your content.',
+      },
+    },
+  },
   title: 'Components/Foundation/Grid',
 } as Meta
 
 const Template: Story<GridProps> = args => <Grid {...args} />
 
 export const Default = Template.bind({})
-Default.parameters = {
-  docs: {
-    storyDescription:
-      'These three component are built to organize your content \n\n- `Grid` allow you to create a container with some padding.\n\n- `Row` is a flex container that allow you to create a row with some margin left and right.\n\n- `Col` allow you to create a col where you can place your content.',
-  },
-}
-Default.decorators = [
-  () => (
-    <Grid>
-      <Row>
-        <ColWithBackground>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-    </Grid>
-  ),
-]
 
 export const Fluid = Template.bind({})
 Fluid.parameters = {
