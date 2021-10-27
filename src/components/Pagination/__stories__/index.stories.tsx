@@ -194,7 +194,7 @@ CustomComponents.decorators = [
             goToPreviousPage,
           } = paginationState
           const pageNumbersToDisplay = getPageNumbers(page, maxPage, 5)
-          const handlePageClick = pageNumber => () => {
+          const handlePageClick = (pageNumber: number) => () => {
             goToPage(pageNumber)
           }
 
