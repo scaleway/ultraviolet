@@ -1,3 +1,39 @@
+## [0.118.0](https://github.com/scaleway/scaleway-ui/compare/v0.117.7...v0.118.0) (2021-10-28)
+
+
+### :white_check_mark: Test
+
+* use jest-helpers ([#791](https://github.com/scaleway/scaleway-ui/issues/791)) ([7182b79](https://github.com/scaleway/scaleway-ui/commit/7182b797e3159f1bf72ccd7da5099319e151d428))
+
+
+### :zap: Refactor
+
+* **typescript:** migrate remaining files ([#849](https://github.com/scaleway/scaleway-ui/issues/849)) ([603cca5](https://github.com/scaleway/scaleway-ui/commit/603cca51f0e305613039b3c728f0392481cecfda)), closes [#848](https://github.com/scaleway/scaleway-ui/issues/848)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v2.3.0 ([#831](https://github.com/scaleway/scaleway-ui/issues/831)) ([eedc283](https://github.com/scaleway/scaleway-ui/commit/eedc283fa52b23b9336018e89ac9bed574d28b9a))
+* **devdeps:** update dependency @types/react-router-dom to v5.3.2 ([#856](https://github.com/scaleway/scaleway-ui/issues/856)) ([bbbb63c](https://github.com/scaleway/scaleway-ui/commit/bbbb63c9e163ecfa3cb199baf47e78cda3e024ad))
+* **devdeps:** update dependency eslint-mdx to v1.16.0 ([#844](https://github.com/scaleway/scaleway-ui/issues/844)) ([ed62601](https://github.com/scaleway/scaleway-ui/commit/ed6260132775357a003f66ecfff1ad39299a4418))
+* **devdeps:** update dependency eslint-plugin-mdx to v1.16.0 ([#845](https://github.com/scaleway/scaleway-ui/issues/845)) ([4833621](https://github.com/scaleway/scaleway-ui/commit/48336214d19cec5700a1a5c3282baa6281eebc40))
+* **devdeps:** update dependency lint-staged to v11.2.6 ([#860](https://github.com/scaleway/scaleway-ui/issues/860)) ([5e34972](https://github.com/scaleway/scaleway-ui/commit/5e34972ff0ef1afe297c93e3cab6637319e8139b))
+* **devdeps:** update dependency rollup to v2.58.3 ([#855](https://github.com/scaleway/scaleway-ui/issues/855)) ([125c39f](https://github.com/scaleway/scaleway-ui/commit/125c39fb49cccc38510f67b404deb18209a41b02))
+* **devdeps:** update node.js to v16.13 ([#861](https://github.com/scaleway/scaleway-ui/issues/861)) ([83a4eec](https://github.com/scaleway/scaleway-ui/commit/83a4eec71ac99020bf27d4bb181a628b085d3d21))
+* **devdeps:** widen node engines ([#852](https://github.com/scaleway/scaleway-ui/issues/852)) ([1f07ca9](https://github.com/scaleway/scaleway-ui/commit/1f07ca9461df070a663e166a212d5360202dfbe1))
+* **devdeps:** widen yarn engine version ([#848](https://github.com/scaleway/scaleway-ui/issues/848)) ([51d9d94](https://github.com/scaleway/scaleway-ui/commit/51d9d94a98ca4fae4016e7e42fdb2177f3a7ce55))
+
+
+### :repeat: CI
+
+* **renovate:** always widen engines and peerDeps ([#851](https://github.com/scaleway/scaleway-ui/issues/851)) ([92383f3](https://github.com/scaleway/scaleway-ui/commit/92383f3d385218b2ce21354a7fa4d52eeb6f291c))
+* **renovate:** correct reviewers team syntax ([#857](https://github.com/scaleway/scaleway-ui/issues/857)) ([e0cf58f](https://github.com/scaleway/scaleway-ui/commit/e0cf58f9e4f2e02e9b261ad71f82ad085df9edd4))
+
+
+### :gear: Features
+
+* improve barstack ([#834](https://github.com/scaleway/scaleway-ui/issues/834)) ([41f9a3f](https://github.com/scaleway/scaleway-ui/commit/41f9a3fc4bdf7d727ad83e9e9b6aa742f2bf474b))
+
 ### [0.117.7](https://github.com/scaleway/scaleway-ui/compare/v0.117.6...v0.117.7) (2021-10-25)
 
 
