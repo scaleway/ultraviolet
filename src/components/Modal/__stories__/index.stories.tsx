@@ -35,11 +35,11 @@ export const Switch = Template.bind({})
 Switch.decorators = [
   () => (
     <Modal
-      disclosure={
-        <Box>
-          <SWUISwitch name="switch">Open Modal</SWUISwitch>
-        </Box>
-      }
+      disclosure={dialog => (
+        <SWUISwitch name="switch" onChange={() => dialog?.toggle()}>
+          Open Modal
+        </SWUISwitch>
+      )}
     >
       <Box p={4}>Content should be present in center of the modal</Box>
     </Modal>

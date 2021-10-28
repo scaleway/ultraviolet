@@ -93,7 +93,7 @@ const StyledStep = styled('li', {
 `
 
 type StepProps = { children: ReactNode; isLoading?: boolean }
-const Step: FunctionComponent<StepProps> = ({ children }) =>
+export const Step: FunctionComponent<StepProps> = ({ children }) =>
   children as JSX.Element
 Step.displayName = 'NavigationStepper.Step'
 

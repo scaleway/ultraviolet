@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import NavigationStepper, { NavigationStepperProps } from '..'
+import NavigationStepper, { NavigationStepperProps, Step } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Button from '../../Button'
 
@@ -13,11 +13,12 @@ export default {
       },
     },
   },
+  subcomponents: { Step },
   title: 'Components/Navigation/NavigationStepper',
 } as Meta
 
 const Template: Story<NavigationStepperProps> = args => (
-  <NavigationStepper step={2} {...args}>
+  <NavigationStepper {...args}>
     <NavigationStepper.Step>First</NavigationStepper.Step>
     <NavigationStepper.Step>Second</NavigationStepper.Step>
     <NavigationStepper.Step>Third</NavigationStepper.Step>

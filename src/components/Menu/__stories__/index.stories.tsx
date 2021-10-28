@@ -2,9 +2,17 @@ import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import Menu, { MenuProps } from '..'
 import { Box, Icon, Modal as SWUIModal, Touchable } from '../..'
+import Item from '../Item'
 
 export default {
   component: Menu,
+  decorators: [
+    StoryComponent => (
+      <div style={{ marginBottom: '3em' }}>
+        <StoryComponent />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       description: {
@@ -13,6 +21,7 @@ export default {
       },
     },
   },
+  subcomponents: { Item },
   title: 'Components/Navigation/Menu',
 } as Meta
 
