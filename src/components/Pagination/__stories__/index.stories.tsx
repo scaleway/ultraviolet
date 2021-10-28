@@ -20,13 +20,7 @@ export default {
 } as Meta
 
 const Template: Story<PaginationProps> = args => (
-  <Pagination
-    perPage={5}
-    initialData={Array.from({ length: 50 }, (_, index) => index).map(
-      value => `Item ${value}`,
-    )}
-    {...args}
-  >
+  <Pagination {...args}>
     {({ pageData }: { pageData: string[] }) => (
       <ul>
         {pageData.map(item => (
@@ -38,6 +32,26 @@ const Template: Story<PaginationProps> = args => (
 )
 
 export const Default = Template.bind({})
+
+export const Basic = Template.bind({})
+Basic.decorators = [
+  () => (
+    <Pagination
+      perPage={5}
+      initialData={Array.from({ length: 50 }, (_, index) => index).map(
+        value => `Item ${value}`,
+      )}
+    >
+      {({ pageData }: { pageData: string[] }) => (
+        <ul>
+          {pageData.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </Pagination>
+  ),
+]
 
 export const ReactComponentChildren = Template.bind({})
 ReactComponentChildren.decorators = [

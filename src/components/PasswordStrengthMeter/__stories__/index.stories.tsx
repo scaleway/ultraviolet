@@ -17,27 +17,28 @@ export default {
 } as Meta
 
 const Template: Story<PasswordStrengthMeterProps> = args => (
-  <UncontrolledPasswordStrengthMeter
-    name="basic"
-    estimate={
-      zxcvbn as (
-        passwordToTest: string,
-        userInputs: string[],
-      ) => { score: number }
-    }
-    strength={[
-      { color: 'red', t: 'veryWeak' },
-      { color: 'orange', t: 'weak' },
-      { color: 'yellow', t: 'medium' },
-      { color: 'green', t: 'strong' },
-      { color: 'green', t: 'veryStrong' },
-    ]}
-    title="Password Strength"
-    {...args}
-  />
+  <UncontrolledPasswordStrengthMeter name="template" {...args} />
 )
 
 export const Default = Template.bind({})
+
+export const Strength = Template.bind({})
+Strength.decorators = [
+  () => (
+    <UncontrolledPasswordStrengthMeter
+      name="basic"
+      estimate={zxcvbn}
+      strength={[
+        { color: 'red', t: 'veryWeak' },
+        { color: 'orange', t: 'weak' },
+        { color: 'yellow', t: 'medium' },
+        { color: 'green', t: 'strong' },
+        { color: 'green', t: 'veryStrong' },
+      ]}
+      title="Password Strength"
+    />
+  ),
+]
 
 export const UserInputs = Template.bind({})
 UserInputs.parameters = {
@@ -51,12 +52,7 @@ UserInputs.decorators = [
   () => (
     <UncontrolledPasswordStrengthMeter
       name="user-inputs"
-      estimate={
-        zxcvbn as (
-          passwordToTest: string,
-          userInputs: string[],
-        ) => { score: number }
-      }
+      estimate={zxcvbn}
       strength={[
         { color: 'red', t: 'veryWeak' },
         { color: 'orange', t: 'weak' },
