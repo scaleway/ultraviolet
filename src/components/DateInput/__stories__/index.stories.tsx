@@ -117,7 +117,7 @@ I18n.decorators = [
             label: currentLocale,
             value: currentLocale,
           }}
-          onChange={({ value }) => switchLocale(value)}
+          onChange={({ value }: { value: string }) => switchLocale(value)}
           noTopLabel
           mb={3}
         >
