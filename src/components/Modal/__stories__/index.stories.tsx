@@ -171,7 +171,7 @@ PreventBodyScroll.decorators = [
   () => (
     <Modal
       disclosure={<Button>preventBodyScroll</Button>}
-      preventBodyScroll={false}
+      preventBodyScroll
     >
       <Box p={4}>
         Try to scroll on body ( outside of the Modal ) preventBodyScroll is
