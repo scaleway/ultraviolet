@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import Placeholder, { PlaceholderProps, variants } from '..'
-import Typography from '../../Typography'
+import Placeholder, { PlaceholderProps } from '..'
 
 export default {
   component: Placeholder,
@@ -20,6 +19,12 @@ const Template: Story<PlaceholderProps> = args => <Placeholder {...args} />
 
 export const Default = Template.bind({})
 
+export const Block = Template.bind({})
+Block.decorators = [() => <Placeholder variant="block" />]
+
+export const Blocks = Template.bind({})
+Blocks.decorators = [() => <Placeholder variant="blocks" />]
+
 export const Box = Template.bind({})
 Box.decorators = [
   () => (
@@ -33,20 +38,14 @@ Box.decorators = [
   ),
 ]
 
-export const Variants = Template.bind({})
-Variants.decorators = [
-  () => (
-    <>
-      {Object.keys(variants)
-        .filter(variant => variant !== 'box')
-        .map(variant => (
-          <div key={variant}>
-            <Typography mb={2}>{variant}</Typography>
-            <Placeholder key={variant} variant={variant} mr={2} mb={2}>
-              {variant}
-            </Placeholder>
-          </div>
-        ))}
-    </>
-  ),
-]
+export const Donut = Template.bind({})
+Donut.decorators = [() => <Placeholder variant="donut" />]
+
+export const Line = Template.bind({})
+Line.decorators = [() => <Placeholder variant="line" />]
+
+export const Slider = Template.bind({})
+Slider.decorators = [() => <Placeholder variant="slider" />]
+
+export const List = Template.bind({})
+List.decorators = [() => <Placeholder variant="list" />]
