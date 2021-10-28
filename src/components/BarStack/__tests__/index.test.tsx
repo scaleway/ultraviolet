@@ -15,6 +15,9 @@ describe('BarStack', () => {
   test('should render correctly', () =>
     shouldMatchEmotionSnapshot(<BarStack data={fakeData} />))
 
+  test('should render correctly with total', () =>
+    shouldMatchEmotionSnapshot(<BarStack data={fakeData} total={1000} />))
+
   test('should render correctly with event handlers', async () => {
     const [
       onClick,
