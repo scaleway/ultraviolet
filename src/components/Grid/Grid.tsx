@@ -16,7 +16,7 @@ const gridMaxWidths: Record<ScreenSize, string> = {
 const query = (brk: ScreenSize, style: string) =>
   screens[brk] === 0 ? style : up(brk, style)
 
-interface GridProps {
+export interface GridProps {
   children: ReactNode
   gutter?: Spaces
   fluid?: boolean
