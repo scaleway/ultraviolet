@@ -120,7 +120,7 @@ const TopHeaderDiv = styled.div`
   display: inline-block;
   background-color: ${({ theme: { colors } }) => colors.white};
 `
-type DateInputProps = Pick<
+export type DateInputProps = Pick<
   ReactDatePickerProps<string>,
   | 'autoFocus'
   | 'disabled'

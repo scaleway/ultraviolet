@@ -15,7 +15,7 @@ const StyledDot = styled(Box, {
     colors[color as Color] ?? color};
 `
 
-type Props = {
+export type DotProps = {
   /**
    * The dot color
    */
@@ -23,7 +23,7 @@ type Props = {
   onClick?: () => unknown
 } & XStyledProps
 
-const Dot: FunctionComponent<Props> = ({ color = 'primary', ...props }) => (
+const Dot: FunctionComponent<DotProps> = ({ color = 'primary', ...props }) => (
   <StyledDot color={color} {...props} />
 )
 
