@@ -3377,7 +3377,7 @@ __metadata:
     "@semantic-release/npm": 8.0.2
     "@semantic-release/release-notes-generator": 10.0.2
     "@size-limit/file": 6.0.3
-    "@size-limit/preset-big-lib": 6.0.3
+    "@size-limit/preset-big-lib": 6.0.4
     "@storybook/addon-a11y": 6.3.12
     "@storybook/addon-actions": 6.3.12
     "@storybook/addon-docs": 6.3.12
@@ -3639,46 +3639,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/preset-big-lib@npm:6.0.3":
-  version: 6.0.3
-  resolution: "@size-limit/preset-big-lib@npm:6.0.3"
+"@size-limit/file@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@size-limit/file@npm:6.0.4"
   dependencies:
-    "@size-limit/file": 6.0.3
-    "@size-limit/time": 6.0.3
-    "@size-limit/webpack": 6.0.3
+    semver: 7.3.5
   peerDependencies:
-    size-limit: 6.0.3
-  checksum: e2d2f709c94f4830e819ae56ef3e495ecf8cf3c5a7ce576175082ec3564e07a9abb17a952b2173e560bf0a9615b8a4d3649b86327d4030e195fa0d3f60514673
+    size-limit: 6.0.4
+  checksum: c2f0b1fc3059a62abaf856148a1c9cce1a735007dbbb740f8e9ceeba49385a203898b15e92a28bd9af3dfa3c1c178cbe7595a7cbfc272bd9b0ef72cd8147ef75
   languageName: node
   linkType: hard
 
-"@size-limit/time@npm:6.0.3":
-  version: 6.0.3
-  resolution: "@size-limit/time@npm:6.0.3"
+"@size-limit/preset-big-lib@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@size-limit/preset-big-lib@npm:6.0.4"
+  dependencies:
+    "@size-limit/file": 6.0.4
+    "@size-limit/time": 6.0.4
+    "@size-limit/webpack": 6.0.4
+  peerDependencies:
+    size-limit: 6.0.4
+  checksum: 712989e2e701a406eafcae139b5cfb120750652f4f3d624079f1b1ba494270b5f38ca9f574e5c8aaf5bf56afeecb331f84c11b4db46f5b11931833c9665eb23a
+  languageName: node
+  linkType: hard
+
+"@size-limit/time@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@size-limit/time@npm:6.0.4"
   dependencies:
     estimo: ^2.2.8
     react: ^17.0.2
   peerDependencies:
-    size-limit: 6.0.3
-  checksum: 0fade563f61061a5d92be788a6fd0a089cd860acb2b233c57b98c0e734395d2118a134cfffa1536c041763dfb3f3e71af0a41c2c8c14585e8335ccf4316720e4
+    size-limit: 6.0.4
+  checksum: 6606bf7b413577bad8b987749331e4ba65a6e0f5aece4469dc886fd67a8ab0736119f0b3b912439788c78a46bdf93ef9acd85905a9e63c1444c2508dff3ecbaf
   languageName: node
   linkType: hard
 
-"@size-limit/webpack@npm:6.0.3":
-  version: 6.0.3
-  resolution: "@size-limit/webpack@npm:6.0.3"
+"@size-limit/webpack@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@size-limit/webpack@npm:6.0.4"
   dependencies:
-    "@statoscope/webpack-plugin": ^5.13.1
-    css-loader: ^6.4.0
+    "@statoscope/webpack-plugin": ^5.17.0
+    css-loader: ^6.5.0
     css-minimizer-webpack-plugin: ^3.0.2
     escape-string-regexp: ^4.0.0
     mkdirp: ^1.0.4
-    nanoid: ^3.1.28
-    style-loader: ^3.3.0
-    webpack: ^5.56.0
+    nanoid: ^3.1.30
+    style-loader: ^3.3.1
+    webpack: ^5.61.0
   peerDependencies:
-    size-limit: 6.0.3
-  checksum: 07b6ac306ced0597ea031ac0ee19ad5c65db93f65a225ba69126b30f3727a5e9cf2c5e9be68a5927908bfa7b263c98fba678bdc022b3bea3f6f31fbdb6701272
+    size-limit: 6.0.4
+  checksum: be1dd656f1c195c5bec16513395759766547bfce216ba5ab1932c30f68790f707f6d6697eaaf89e7bdb1b4fea8592ea695cb7d33197503ecbe3a4ac7ca95304f
   languageName: node
   linkType: hard
 
@@ -3770,9 +3781,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@statoscope/webpack-model@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/webpack-model@npm:5.14.1"
+"@statoscope/webpack-model@npm:5.17.0":
+  version: 5.17.0
+  resolution: "@statoscope/webpack-model@npm:5.17.0"
   dependencies:
     "@statoscope/extensions": 5.14.1
     "@statoscope/helpers": 5.14.1
@@ -3786,13 +3797,13 @@ __metadata:
     "@types/webpack": ^5.0.0
     ajv: ^8.6.3
     md5: ^2.3.0
-  checksum: b0dac3a10cb3a06ff04631bdf68c46b5b6d39538ad5ef46584287158edc409ad75ffbe296afc7a2194f9772f1c4f0e8b41044dcc5b5b68809528a02a9264d491
+  checksum: 87866e2f1f097453a16628b068e3db596b164453df4eb178c22d5d1f47a5cfae841718442690d7afeba2d4b4b309ec1850a1dc94cbcd776c2e6be5d417c13f4a
   languageName: node
   linkType: hard
 
-"@statoscope/webpack-plugin@npm:^5.13.1":
-  version: 5.14.1
-  resolution: "@statoscope/webpack-plugin@npm:5.14.1"
+"@statoscope/webpack-plugin@npm:^5.17.0":
+  version: 5.17.0
+  resolution: "@statoscope/webpack-plugin@npm:5.17.0"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.5
     "@statoscope/report-writer": 5.14.1
@@ -3800,54 +3811,54 @@ __metadata:
     "@statoscope/stats-extension-compressed": 5.14.1
     "@statoscope/stats-extension-custom-reports": 5.14.1
     "@statoscope/types": 5.14.1
-    "@statoscope/webpack-model": 5.14.1
-    "@statoscope/webpack-stats-extension-compressed": 5.14.1
-    "@statoscope/webpack-stats-extension-package-info": 5.14.1
-    "@statoscope/webpack-ui": 5.14.1
+    "@statoscope/webpack-model": 5.17.0
+    "@statoscope/webpack-stats-extension-compressed": 5.17.0
+    "@statoscope/webpack-stats-extension-package-info": 5.17.0
+    "@statoscope/webpack-ui": 5.17.0
     "@types/node": ^12.20.15
     "@types/webpack": ^5.0.0
     open: ^8.2.1
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 6951e694f5872b090d864eacb6ccd7a2a36ec0089f03614613f049d17eb99bbeb63b28e555bd25588290d3747be7f328eb292dec4d296c00de5921d59231e192
+  checksum: 3a2cd1e53503f8d5fbd4e5480a2e8d6aeadff87c69e1edc99e90b159ab4194d17cfd1e62391bf2f22da22d39100ecf16f4af4c46bb051b65591dea3895cc4912
   languageName: node
   linkType: hard
 
-"@statoscope/webpack-stats-extension-compressed@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/webpack-stats-extension-compressed@npm:5.14.1"
+"@statoscope/webpack-stats-extension-compressed@npm:5.17.0":
+  version: 5.17.0
+  resolution: "@statoscope/webpack-stats-extension-compressed@npm:5.17.0"
   dependencies:
     "@statoscope/stats": 5.14.1
     "@statoscope/stats-extension-compressed": 5.14.1
-    "@statoscope/webpack-model": 5.14.1
+    "@statoscope/webpack-model": 5.17.0
     "@types/webpack": ^5.0.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 544f8592c29b51fee16057ef22e1d25478b8bec4e9921ad54b935d56d88684693e688cff0a3cf4b894856ba693ee0b6a34b7f0c017b6ef5ac0009950bd0d29ac
+  checksum: 6bd5b258c5d1616367281756482d140206910ec5c1d39efd7bdc63f69a93fb57364f3bcc550a5a681f57460af0c8fddf0487c75cad0b5c6d52ce9660d9249715
   languageName: node
   linkType: hard
 
-"@statoscope/webpack-stats-extension-package-info@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/webpack-stats-extension-package-info@npm:5.14.1"
+"@statoscope/webpack-stats-extension-package-info@npm:5.17.0":
+  version: 5.17.0
+  resolution: "@statoscope/webpack-stats-extension-package-info@npm:5.17.0"
   dependencies:
     "@statoscope/stats": 5.14.1
     "@statoscope/stats-extension-package-info": 5.14.1
-    "@statoscope/webpack-model": 5.14.1
+    "@statoscope/webpack-model": 5.17.0
     "@types/webpack": ^5.0.0
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
-  checksum: 80753b1a8e61b1279c7ed51b1df05c460f44fb1836ba2d4843ec204cb481b8fe8ad65a7e19def28122cff4430827a8f932b2cd1e5e9292f5825628bcc72e9dbd
+  checksum: e16460046f87e427f1944b70eaa000150d320f2002b2d1a4d929b7c1d9fedfe245dff917c7f07769acea7601c90fcaec68da290317187c0eb9692d00759a9d8c
   languageName: node
   linkType: hard
 
-"@statoscope/webpack-ui@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/webpack-ui@npm:5.14.1"
+"@statoscope/webpack-ui@npm:5.17.0":
+  version: 5.17.0
+  resolution: "@statoscope/webpack-ui@npm:5.17.0"
   dependencies:
     "@statoscope/types": 5.14.1
     highcharts: ^9.2.2
-  checksum: 912d58f9b12fbe7f85064e3a78818024341b23aef5824ef74f0fe09bc291273f0e94fe04c66876aba8a0152fbde6fe4279dbc18d015aa86d0b4a0b90659a234d
+  checksum: 6768c8a3e71cac1ff55fc858cdf8de72aa163ce97237ca8a6f2fb1e4085fc1d49225402dd46f0a1c7552a770cb65192c98780e215201f7f453f6e79759611b25
   languageName: node
   linkType: hard
 
@@ -9103,9 +9114,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "css-loader@npm:6.4.0"
+"css-loader@npm:^6.5.0":
+  version: 6.5.0
+  resolution: "css-loader@npm:6.5.0"
   dependencies:
     icss-utils: ^5.1.0
     postcss: ^8.2.15
@@ -9117,7 +9128,7 @@ __metadata:
     semver: ^7.3.5
   peerDependencies:
     webpack: ^5.0.0
-  checksum: e842905fce973517dab8ae1e1f6412691c9b4164fbaf94f10ef2ec073c9aa97b5cf9a753a45965fd44aab6528e068be85fd2f8437c6126a823399458dff04282
+  checksum: 4f3e7b93df79293dca910de41c741486155ea8248e048ea51a74fc5570d3acb962b5be0b6740f3ad8006b40eb4ef375124de4f9507aebf7a42f5ca7b8a7807d1
   languageName: node
   linkType: hard
 
@@ -16211,7 +16222,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.22, nanoid@npm:^3.1.23, nanoid@npm:^3.1.28, nanoid@npm:^3.1.30":
+"nanoid@npm:^3.1.22, nanoid@npm:^3.1.23, nanoid@npm:^3.1.30":
   version: 3.1.30
   resolution: "nanoid@npm:3.1.30"
   bin:
@@ -21172,12 +21183,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"style-loader@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "style-loader@npm:3.3.0"
+"style-loader@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "style-loader@npm:3.3.1"
   peerDependencies:
     webpack: ^5.0.0
-  checksum: edad553a1ae74af9afb4dd582774d484e8e4e5f8c9593a921b0f3f0e2cdb3a58c4b44a3afb43021956804042eaffd68d5dc4f956d4c5f633e7e67eda6a750042
+  checksum: 470feef680f59e2fce4d6601b5c55b88c01ad8d1dd693c528ffd591ff5fd7c01a4eff3bdbe62f26f847d6bd2430c9ab594be23307cfe7a3446ab236683f0d066
   languageName: node
   linkType: hard
 
@@ -22857,7 +22868,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.58.2, webpack@npm:^5, webpack@npm:^5.56.0, webpack@npm:^5.9.0":
+"webpack@npm:5.58.2":
   version: 5.58.2
   resolution: "webpack@npm:5.58.2"
   dependencies:
@@ -22891,6 +22902,43 @@ resolve@^2.0.0-next.3:
   bin:
     webpack: bin/webpack.js
   checksum: 775da3b72c181204ca3f5200c144dde874fec8e059ba6c08dc9596e33e8408fd55c9c21ab5996124fe4b65963a54817bd4dfbb79fb89f307c9bf6054d69eaef5
+  languageName: node
+  linkType: hard
+
+"webpack@npm:^5, webpack@npm:^5.61.0, webpack@npm:^5.9.0":
+  version: 5.61.0
+  resolution: "webpack@npm:5.61.0"
+  dependencies:
+    "@types/eslint-scope": ^3.7.0
+    "@types/estree": ^0.0.50
+    "@webassemblyjs/ast": 1.11.1
+    "@webassemblyjs/wasm-edit": 1.11.1
+    "@webassemblyjs/wasm-parser": 1.11.1
+    acorn: ^8.4.1
+    acorn-import-assertions: ^1.7.6
+    browserslist: ^4.14.5
+    chrome-trace-event: ^1.0.2
+    enhanced-resolve: ^5.8.3
+    es-module-lexer: ^0.9.0
+    eslint-scope: 5.1.1
+    events: ^3.2.0
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.2.4
+    json-parse-better-errors: ^1.0.2
+    loader-runner: ^4.2.0
+    mime-types: ^2.1.27
+    neo-async: ^2.6.2
+    schema-utils: ^3.1.0
+    tapable: ^2.1.1
+    terser-webpack-plugin: ^5.1.3
+    watchpack: ^2.2.0
+    webpack-sources: ^3.2.0
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 442958ec48645c9e612a2628a815c411cbc18289b5cc7b3d1b5d0f8e5b41606ed225decf4f3684edc365e6390867bded244d20387c70fbb630c0ac08443c34c8
   languageName: node
   linkType: hard
 
