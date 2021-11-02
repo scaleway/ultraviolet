@@ -244,7 +244,7 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-type ModalProps = Partial<DialogProps> &
+export type ModalProps = Partial<DialogProps> &
   Partial<DialogState> & {
     animation?: ModalAnimation
     ariaLabel?: string
