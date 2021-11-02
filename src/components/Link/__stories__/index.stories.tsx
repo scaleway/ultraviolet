@@ -2,7 +2,6 @@ import { ThemeProvider } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import Link, { LinkProps, linkVariants } from '..'
-import { Box, Boxer } from '../..'
 import theme from '../../../theme'
 
 export default {
@@ -31,15 +30,15 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <Box p={2} backgroundColor="gray200">
-      <Boxer my={1}>
-        {linkVariants.map(variant => (
+    <div style={{ backgroundColor: '#eeeeff' }}>
+      {linkVariants.map(variant => (
+        <div>
           <Link key={variant} href="localhost:6006" variant={variant}>
             {variant}
           </Link>
-        ))}
-      </Boxer>
-    </Box>
+        </div>
+      ))}
+    </div>
   ),
 ]
 
