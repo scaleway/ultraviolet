@@ -8,7 +8,7 @@ export default {
   component: Menu,
   decorators: [
     StoryComponent => (
-      <div style={{ marginBottom: '3em' }}>
+      <div style={{ marginBottom: '1em', marginLeft: '2em' }}>
         <StoryComponent />
       </div>
     ),
@@ -32,10 +32,14 @@ const Disclosure = (
 )
 
 const Template: Story<MenuProps> = args => (
-  <Menu disclosure={Disclosure} {...args}>
-    <Menu.Item>MenuItem</Menu.Item>
-    <Menu.Item to="/?path=/docs/components-menu--basic">MenuItemLink</Menu.Item>
-  </Menu>
+  <div style={{ height: '80px' }}>
+    <Menu disclosure={Disclosure} {...args}>
+      <Menu.Item>MenuItem</Menu.Item>
+      <Menu.Item to="/?path=/docs/components-menu--basic">
+        MenuItemLink
+      </Menu.Item>
+    </Menu>
+  </div>
 )
 
 export const Default = Template.bind({})
@@ -49,33 +53,35 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <Menu disclosure={Disclosure}>
-      <Menu.Item>default</Menu.Item>
-      <Menu.Item variant="danger">Danger</Menu.Item>
-      <Menu.Item variant="nav">Nav</Menu.Item>
-      <Menu.Item>default</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-menu--basic">Link</Menu.Item>
-      <Menu.Item variant="danger" to="/?path=/docs/components-menu--basic">
-        Link Danger
-      </Menu.Item>
-      <Menu.Item
-        variant="danger"
-        to="/?path=/docs/components-menu--basic"
-        disabled
-      >
-        Link Danger Disabled
-      </Menu.Item>
-      <Menu.Item variant="nav" to="/?path=/docs/components-menu--basic">
-        Link Nav
-      </Menu.Item>
-      <Menu.Item
-        variant="nav"
-        to="/?path=/docs/components-menu--basic"
-        disabled
-      >
-        Link Nav disabled
-      </Menu.Item>
-    </Menu>
+    <div style={{ height: '300px' }}>
+      <Menu disclosure={Disclosure}>
+        <Menu.Item>default</Menu.Item>
+        <Menu.Item variant="danger">Danger</Menu.Item>
+        <Menu.Item variant="nav">Nav</Menu.Item>
+        <Menu.Item>default</Menu.Item>
+        <Menu.Item to="/?path=/docs/components-menu--basic">Link</Menu.Item>
+        <Menu.Item variant="danger" to="/?path=/docs/components-menu--basic">
+          Link Danger
+        </Menu.Item>
+        <Menu.Item
+          variant="danger"
+          to="/?path=/docs/components-menu--basic"
+          disabled
+        >
+          Link Danger Disabled
+        </Menu.Item>
+        <Menu.Item variant="nav" to="/?path=/docs/components-menu--basic">
+          Link Nav
+        </Menu.Item>
+        <Menu.Item
+          variant="nav"
+          to="/?path=/docs/components-menu--basic"
+          disabled
+        >
+          Link Nav disabled
+        </Menu.Item>
+      </Menu>
+    </div>
   ),
 ]
 
@@ -88,33 +94,35 @@ Borderless.parameters = {
 }
 Borderless.decorators = [
   () => (
-    <Menu disclosure={Disclosure}>
-      <Menu.Item borderless>default</Menu.Item>
-      <Menu.Item variant="danger" borderless>
-        Danger
-      </Menu.Item>
-      <Menu.Item variant="nav" borderless>
-        Nav
-      </Menu.Item>
-      <Menu.Item borderless>default</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-menu--basic" borderless>
-        Link
-      </Menu.Item>
-      <Menu.Item
-        variant="danger"
-        to="/?path=/docs/components-menu--basic"
-        borderless
-      >
-        Link Danger
-      </Menu.Item>
-      <Menu.Item
-        variant="nav"
-        to="/?path=/docs/components-menu--basic"
-        borderless
-      >
-        Link Nav
-      </Menu.Item>
-    </Menu>
+    <div style={{ height: '250px' }}>
+      <Menu disclosure={Disclosure}>
+        <Menu.Item borderless>default</Menu.Item>
+        <Menu.Item variant="danger" borderless>
+          Danger
+        </Menu.Item>
+        <Menu.Item variant="nav" borderless>
+          Nav
+        </Menu.Item>
+        <Menu.Item borderless>default</Menu.Item>
+        <Menu.Item to="/?path=/docs/components-menu--basic" borderless>
+          Link
+        </Menu.Item>
+        <Menu.Item
+          variant="danger"
+          to="/?path=/docs/components-menu--basic"
+          borderless
+        >
+          Link Danger
+        </Menu.Item>
+        <Menu.Item
+          variant="nav"
+          to="/?path=/docs/components-menu--basic"
+          borderless
+        >
+          Link Nav
+        </Menu.Item>
+      </Menu>
+    </div>
   ),
 ]
 
@@ -127,31 +135,33 @@ ChildrenProps.parameters = {
 }
 ChildrenProps.decorators = [
   () => (
-    <Menu disclosure={Disclosure}>
-      {({ toggle }) => (
-        <>
-          <Menu.Item>default</Menu.Item>
-          <Menu.Item onClick={toggle} variant="danger">
-            Danger
-          </Menu.Item>
-          <Menu.Item onClick={toggle} variant="nav">
-            Nav
-          </Menu.Item>
-          <Menu.Item onClick={toggle} variant="nav" disabled>
-            Nav disabled
-          </Menu.Item>
-          <Menu.Item onClick={toggle} variant="nav" disabled borderless>
-            Nav disabled borderless
-          </Menu.Item>
-          <Menu.Item
-            to="/?path=/docs/components-menu--disclosure"
-            onClick={toggle}
-          >
-            Menu Item Link
-          </Menu.Item>
-        </>
-      )}
-    </Menu>
+    <div style={{ height: '250px' }}>
+      <Menu disclosure={Disclosure}>
+        {({ toggle }) => (
+          <>
+            <Menu.Item>default</Menu.Item>
+            <Menu.Item onClick={toggle} variant="danger">
+              Danger
+            </Menu.Item>
+            <Menu.Item onClick={toggle} variant="nav">
+              Nav
+            </Menu.Item>
+            <Menu.Item onClick={toggle} variant="nav" disabled>
+              Nav disabled
+            </Menu.Item>
+            <Menu.Item onClick={toggle} variant="nav" disabled borderless>
+              Nav disabled borderless
+            </Menu.Item>
+            <Menu.Item
+              to="/?path=/docs/components-menu--disclosure"
+              onClick={toggle}
+            >
+              Menu Item Link
+            </Menu.Item>
+          </>
+        )}
+      </Menu>
+    </div>
   ),
 ]
 
@@ -163,20 +173,22 @@ Modal.parameters = {
 }
 Modal.decorators = [
   () => (
-    <Menu disclosure={Disclosure}>
-      <Menu.Item>Menu Item</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-menu--disclosure">
-        Menu Item Link
-      </Menu.Item>
-      <SWUIModal
-        animated
-        animation="scaleUp"
-        disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}
-      >
-        <Box p={4}>Content should be present in center of the modal</Box>
-        <Box p={4}>Content should be present in center of the modal</Box>
-      </SWUIModal>
-    </Menu>
+    <div style={{ height: '100px' }}>
+      <Menu disclosure={Disclosure}>
+        <Menu.Item>Menu Item</Menu.Item>
+        <Menu.Item to="/?path=/docs/components-menu--disclosure">
+          Menu Item Link
+        </Menu.Item>
+        <SWUIModal
+          animated
+          animation="scaleUp"
+          disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}
+        >
+          <Box p={4}>Content should be present in center of the modal</Box>
+          <Box p={4}>Content should be present in center of the modal</Box>
+        </SWUIModal>
+      </Menu>
+    </div>
   ),
 ]
 
@@ -188,20 +200,25 @@ AdvancedWIP.parameters = {
 }
 AdvancedWIP.decorators = [
   () => (
-    <Menu disclosure={Disclosure}>
-      <Menu.Item>MenuItem</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-menu--basic">
-        Menu Item with React Router Link
-      </Menu.Item>
-      <Menu.Item href="https://react.ui.scaleway.com">
-        Menu Item with native a
-      </Menu.Item>
-      <Menu.Item>MenuItem</Menu.Item>
-      <Menu hasArrow={false} disclosure={() => <Menu.Item>Sub Menu</Menu.Item>}>
-        <Menu.Item>Sub</Menu.Item>
-        <Menu.Item>Sub 1</Menu.Item>
-        <Menu.Item>Sub 1</Menu.Item>
+    <div style={{ height: '300px' }}>
+      <Menu disclosure={Disclosure}>
+        <Menu.Item>MenuItem</Menu.Item>
+        <Menu.Item to="/?path=/docs/components-menu--basic">
+          Menu Item with React Router Link
+        </Menu.Item>
+        <Menu.Item href="https://react.ui.scaleway.com">
+          Menu Item with native a
+        </Menu.Item>
+        <Menu.Item>MenuItem</Menu.Item>
+        <Menu
+          hasArrow={false}
+          disclosure={() => <Menu.Item>Sub Menu</Menu.Item>}
+        >
+          <Menu.Item>Sub</Menu.Item>
+          <Menu.Item>Sub 1</Menu.Item>
+          <Menu.Item>Sub 1</Menu.Item>
+        </Menu>
       </Menu>
-    </Menu>
+    </div>
   ),
 ]
