@@ -1,3 +1,30 @@
+### [0.118.1](https://github.com/scaleway/scaleway-ui/compare/v0.118.0...v0.118.1) (2021-11-02)
+
+
+### :zap: Refactor
+
+* migrate menu modal navigationstepper and notice stories to tsx ([#859](https://github.com/scaleway/scaleway-ui/issues/859)) ([dcb38c4](https://github.com/scaleway/scaleway-ui/commit/dcb38c442d543a1b12dc045695bffc897a40d488))
+* migrate Pagination, PasswordCheck, PasswordStrengthMeter, Pentagon stories to tsx ([#858](https://github.com/scaleway/scaleway-ui/issues/858)) ([55b2b57](https://github.com/scaleway/scaleway-ui/commit/55b2b571ee4034e56d54ffcdb9a6877477b6deb5))
+* migrate stories to tsx for DateInput, Description, Dot, DotSteps, Expandable ([#846](https://github.com/scaleway/scaleway-ui/issues/846)) ([5f781c1](https://github.com/scaleway/scaleway-ui/commit/5f781c1db5a32588216acd1cf9eefcd2ce6641e3))
+* migrate stories to tsx for ExtendedReminder, FlexBox, Grid, Icon, Image ([#847](https://github.com/scaleway/scaleway-ui/issues/847)) ([f700fb1](https://github.com/scaleway/scaleway-ui/commit/f700fb1099b2d4c5a4da6350e5b63aab0918123d))
+* migrate stories to tsx for Label, Link, List, Markdown ([#853](https://github.com/scaleway/scaleway-ui/issues/853)) ([413b74a](https://github.com/scaleway/scaleway-ui/commit/413b74a1b3e7cb92352b761c5749d72f112020b4))
+* migrate stories to tsx for PhoneInput, Placeholder, Popper, ProgressBar ([#854](https://github.com/scaleway/scaleway-ui/issues/854)) ([a738b90](https://github.com/scaleway/scaleway-ui/commit/a738b90a8827c414b832b72d9db9a9e1dfbdb4c2))
+
+
+### :package: Chore
+
+* **devdeps:** pin dependency @types/zxcvbn to 4.4.1 ([#869](https://github.com/scaleway/scaleway-ui/issues/869)) ([472c1af](https://github.com/scaleway/scaleway-ui/commit/472c1af09c35058c46c3baa6d6e93de20aea3caf))
+* **devdeps:** update babel monorepo to v7.16.0 ([#862](https://github.com/scaleway/scaleway-ui/issues/862)) ([92a4e9e](https://github.com/scaleway/scaleway-ui/commit/92a4e9eb0e907b4cb08cc185d1373f07bcdacfe0))
+* **devdeps:** update dependency @size-limit/file to v6.0.4 ([#863](https://github.com/scaleway/scaleway-ui/issues/863)) ([931b539](https://github.com/scaleway/scaleway-ui/commit/931b539a5fe3f701c817d47a7bc1dd5672eb09a5))
+* **devdeps:** update dependency @size-limit/preset-big-lib to v6.0.4 ([#864](https://github.com/scaleway/scaleway-ui/issues/864)) ([0fce3c3](https://github.com/scaleway/scaleway-ui/commit/0fce3c36bb124d274a83323b10d07972e5cbd4cb))
+* **devdeps:** update dependency size-limit to v6.0.4 ([#865](https://github.com/scaleway/scaleway-ui/issues/865)) ([bb04b69](https://github.com/scaleway/scaleway-ui/commit/bb04b69ae8da9fbfc44d98f7db3f74bd88181b94))
+* **devdeps:** update semantic-release monorepo ([#866](https://github.com/scaleway/scaleway-ui/issues/866)) ([13463ba](https://github.com/scaleway/scaleway-ui/commit/13463bae6a12001fe393a63f188fba0e8ddf5424))
+
+
+### :bug: Bug Fixes
+
+* **list:** default template ([#871](https://github.com/scaleway/scaleway-ui/issues/871)) ([6e012c4](https://github.com/scaleway/scaleway-ui/commit/6e012c491cb6f90bf28d5d47a1c3a41a763bcd2a))
+
 ## [0.118.0](https://github.com/scaleway/scaleway-ui/compare/v0.117.7...v0.118.0) (2021-10-28)
 
 
