@@ -1,22 +1,31 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import PasswordCheck from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import PasswordCheck, { PasswordCheckProps } from '..'
 
-<Meta title="Components/Data Entry/PasswordCheck" component={PasswordCheck} />
+export default {
+  component: PasswordCheck,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Password checker shows what is missing into password to validate requirements.',
+      },
+    },
+  },
+  title: 'Components/Data Entry/PasswordCheck',
+} as Meta
 
-# PasswordCheck
+const Template: Story<PasswordCheckProps> = args => (
+  <PasswordCheck {...args} rules={[]}>
+    Button
+  </PasswordCheck>
+)
 
-<Description>
-  Password checker shows what is missing into password to validate requirements.
-</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
+export const Rules = Template.bind({})
+Rules.decorators = [
+  () => (
     <PasswordCheck
       rules={[
         {
@@ -50,10 +59,8 @@ import PasswordCheck from '..'
           valid: false,
         },
       ]}
-    />
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={PasswordCheck} />
+    >
+      Button
+    </PasswordCheck>
+  ),
+]

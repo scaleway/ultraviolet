@@ -24,7 +24,10 @@
     ],
 
     // React
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".mdx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".mdx"] }
+    ],
     "react/jsx-props-no-spreading": "warn",
     "react/sort-prop-types": "off",
 
@@ -64,7 +67,8 @@
         "no-console": "off",
         "no-alert": "off",
         "react/prop-types": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "import/no-extraneous-dependencies": "off"
       }
     },
     {
