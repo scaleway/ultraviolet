@@ -68,7 +68,7 @@ const variantStyles = ({
   variant: PopoverVariant
 }) => variants[variant] ?? undefined
 
-type DisclosureParam =
+export type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
   | ReactElement
 

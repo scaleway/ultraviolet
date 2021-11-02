@@ -1,51 +1,46 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import Popper, { popperVariants } from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import Popper, { DisclosureParam, PopperProps, popperVariants } from '..'
 import { getUUID } from '../../../utils'
 import Box from '../../Box'
 import Button from '../../Button'
 import Icon from '../../Icon'
 
-<Meta title="Components/Popper" component={Popper} />
+export default {
+  component: Popper,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Popper can be used to display content over main content.',
+      },
+    },
+  },
+  title: 'Components/Popper',
+} as Meta
 
-# Popper
+const disclosure: DisclosureParam = ({ placement, visible }) => (
+  <Button>
+    test {placement}:
+    <Icon
+      ml={2}
+      name={visible ? 'chevron-up' : 'chevron-down'}
+      color="white"
+      size={11}
+    />
+  </Button>
+)
 
-<Description>
-  Popper can be used to display content over main content.
-</Description>
+const Template: Story<PopperProps> = args => (
+  <Popper aria-label="Custom popover" disclosure={disclosure} {...args}>
+    {({ placement }) => <Box p={2}> placement:{placement}</Box>}
+  </Popper>
+)
 
-<Canvas>
-  <Story name="Basic" parameters={{ layout: 'centered' }}>
-    <div>
-      <Popper
-        aria-label="Custom popover"
-        disclosure={({ placement, visible }) => (
-          <Button>
-            test {placement}:
-            <Icon
-              ml={2}
-              name={visible ? 'chevron-up' : 'chevron-down'}
-              color="white"
-              size={11}
-            />
-          </Button>
-        )}
-      >
-        {({ placement }) => <Box p={2}> placement:{placement}</Box>}
-      </Popper>
-    </div>
-  </Story>
-</Canvas>
+export const Default = Template.bind({})
 
-## Variants
-
-<Canvas>
-  <Story name="Variants" parameters={{ layout: 'centered' }}>
+export const Variants = Template.bind({})
+Variants.decorators = [
+  () => (
     <Box display="flex">
       {popperVariants.map(variant => (
         <Box m={1}>
@@ -59,13 +54,12 @@ import Icon from '../../Icon'
         </Box>
       ))}
     </Box>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Complex children
-
-<Canvas>
-  <Story name="Complex children" parameters={{ layout: 'centered' }}>
+export const ComplexChildren = Template.bind({})
+ComplexChildren.decorators = [
+  () => (
     <div>
       <Popper
         variant="black"
@@ -76,6 +70,7 @@ import Icon from '../../Icon'
           <Box display="flex" flexDirection="column">
             {new Array(15).fill(0).map(() => {
               const uuid = getUUID()
+
               return (
                 <Box key={uuid} width={30} height={30} m={2}>
                   {uuid.substr(0, 3)}
@@ -86,15 +81,17 @@ import Icon from '../../Icon'
         )}
       </Popper>
     </div>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Placement
-
-<Description>Set placement using `placement` prop.</Description>
-
-<Canvas>
-  <Story height="100px" name="Placement" parameters={{ layout: 'centered' }}>
+export const Placement = Template.bind({})
+Placement.parameters = {
+  docs: {
+    storyDescription: 'Set placement using `placement` prop.',
+  },
+}
+Placement.decorators = [
+  () => (
     <div>
       <Box display="flex" flexDirection="column">
         <Popper
@@ -204,13 +201,12 @@ import Icon from '../../Icon'
         </Popper>
       </div>
     </div>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Without portal
-
-<Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="Without portal" parameters={{ layout: 'centered' }}>
+export const WithoutPortal = Template.bind({})
+WithoutPortal.decorators = [
+  () => (
     <Popper
       aria-label="Custom popover with button"
       disclosure={() => <Button>Test</Button>}
@@ -219,13 +215,12 @@ import Icon from '../../Icon'
     >
       {({ placement }) => <Button> {placement}</Button>}
     </Popper>
-  </Story>
-</Canvas>
+  ),
+]
 
-## With element disclosure
-
-<Canvas>
-  <Story name="With element disclosure" parameters={{ layout: 'centered' }}>
+export const WithElementDisclosure = Template.bind({})
+WithElementDisclosure.decorators = [
+  () => (
     <Popper
       aria-label="Custom popover with button"
       disclosure={<Button>Test</Button>}
@@ -235,13 +230,12 @@ import Icon from '../../Icon'
     >
       {({ placement }) => <Button> {placement}</Button>}
     </Popper>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Without disclosure
-
-<Canvas>
-  <Story name="Without disclosure" parameters={{ layout: 'centered' }}>
+export const WithoutDisclosure = Template.bind({})
+WithoutDisclosure.decorators = [
+  () => (
     <Popper
       aria-label="Custom popover with button"
       placement="auto"
@@ -250,9 +244,5 @@ import Icon from '../../Icon'
     >
       {({ placement }) => <Button> {placement}</Button>}
     </Popper>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={Popper} />
+  ),
+]

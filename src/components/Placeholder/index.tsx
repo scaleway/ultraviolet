@@ -38,7 +38,7 @@ const StyledDiv = styled.div`
   animation-direction: alternate;
 `
 
-const variants = {
+export const variants = {
   block: Block,
   blocks: Blocks,
   box: BoxWithIcon,
@@ -50,13 +50,22 @@ const variants = {
 
 type PlaceholderVariant = keyof typeof variants
 
-const Placeholder: React.VoidFunctionComponent<{
+export type PlaceholderProps = {
   variant?: PlaceholderVariant
   length?: number
   width?: number
   height?: number
   col?: number
-}> = ({ variant = 'blocks', length, width, height, col, ...props }) => {
+}
+
+const Placeholder: React.VoidFunctionComponent<PlaceholderProps> = ({
+  variant = 'blocks',
+  length,
+  width,
+  height,
+  col,
+  ...props
+}) => {
   const Component = variants[variant]
 
   return (
