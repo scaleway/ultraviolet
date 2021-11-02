@@ -48,7 +48,7 @@ const variantStyles = ({ variant }: { variant?: Variant }) =>
     ? variants[variant]
     : undefined
 
-type LinkProps = {
+export type LinkProps = {
   children: ReactNode
   variant?: Variant
   target?: string
