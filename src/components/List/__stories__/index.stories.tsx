@@ -18,7 +18,26 @@ export default {
   title: 'Components/List',
 } as Meta
 
-const Template: Story<ListProps> = args => <List {...args} />
+const Template: Story<ListProps> = args => (
+  <List data={[]} columns={[{ label: 'Name' }]} {...args}>
+    {list => (
+      <>
+        <list.Header />
+        <list.Body>
+          {({ rowData }) => (
+            <list.Row id={rowData.id}>
+              <list.Cell>{rowData.name}</list.Cell>
+              <list.Cell>actions</list.Cell>
+              <list.ExpendableContent>
+                {() => <>ExpendableContent of {rowData.name}</>}
+              </list.ExpendableContent>
+            </list.Row>
+          )}
+        </list.Body>
+      </>
+    )}
+  </List>
+)
 
 export const Default = Template.bind({})
 
