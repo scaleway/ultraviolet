@@ -24,7 +24,7 @@ const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
   }}
 `
 
-type RadioBorderedBoxProps = {
+export type RadioBorderedBoxProps = {
   badgeSize?: Sizes
   badgeText?: string
   badgeVariant?: Variants
