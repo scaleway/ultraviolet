@@ -4,6 +4,13 @@ import ProgressionButton, { ProgressionButtonProps } from '..'
 
 export default {
   component: ProgressionButton,
+  parameters: {
+    docs: {
+      description: {
+        component: 'An horizontal progress bar.',
+      },
+    },
+  },
   title: 'Components/Button/ProgressionButton',
 } as Meta
 
