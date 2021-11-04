@@ -7,7 +7,7 @@ import Icon from '../Icon'
 import MarkDown from '../MarkDown'
 import UniversalLink from '../UniversalLink'
 
-const variants = {
+export const variants = {
   error: {
     background: 'pippin',
     main: 'red',
@@ -73,7 +73,7 @@ const Notification = styled(Box, {
   }
 `
 
-type ReminderProps = {
+export type ReminderProps = {
   bordered?: boolean
   text: string
   to?: string
