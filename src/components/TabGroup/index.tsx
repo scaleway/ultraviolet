@@ -13,7 +13,7 @@ import React, {
   useState,
 } from 'react'
 import flattenChildren from 'react-flatten-children'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 import Tab, { TabProps } from './Tab'
 
 const StyledTabs = styled.div`
@@ -63,16 +63,17 @@ const computeBarProperties = (tabsWidth: number[], index: number) => {
   return [width, left]
 }
 
-type TabGroupProps = HTMLAttributes<HTMLElement> & {
+type TabGroupProps = {
   selected?: number | string
-  onChange?: (data: unknown) => void
-}
+  onChange?: (data?: unknown) => void
+} & Omit<HTMLAttributes<HTMLElement>, 'onChange'> &
+  Omit<BoxProps, 'selected'>
 
 const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
   children = null,
   selected,
   onChange = () => {},
-  className = '',
+  className,
   ...props
 }) => {
   const flattenedChildren = flattenChildren(children)

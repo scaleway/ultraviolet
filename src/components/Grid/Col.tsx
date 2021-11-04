@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const GRID_COLUMNS = 12
 
@@ -16,7 +16,8 @@ type ColProps = {
   children: ReactNode
   gutter?: Spaces
   fluid?: boolean
-} & Partial<Record<ScreenSize, number | string | boolean>>
+} & Partial<Record<ScreenSize, number | string | boolean>> &
+  BoxProps
 
 const StyledCol = styled(Box, {
   shouldForwardProp: prop =>

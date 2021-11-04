@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { HTMLAttributes, ReactNode, VoidFunctionComponent } from 'react'
-import { Checkbox } from 'reakit'
+import { Checkbox, CheckboxHTMLProps } from 'reakit'
 import { Color } from '../../theme/colors'
 import Tooltip from '../Tooltip'
 
@@ -238,6 +238,7 @@ type SwitchProps = StyledSwitchProps & {
   checked?: boolean
   name: string
   tooltip?: string
+  onChange?: CheckboxHTMLProps['onChange']
 }
 
 const Switch: VoidFunctionComponent<SwitchProps> = ({
