@@ -254,6 +254,7 @@ MultiDisabled.decorators = [
     </RichSelect>
   ),
 ]
+
 export const TimeNormal = Template.bind({})
 TimeNormal.parameters = {
   docs: {
@@ -281,13 +282,13 @@ TimeError.decorators = [
 ]
 
 export const LoadingDemo = Template.bind({})
-TimeNormal.parameters = {
+LoadingDemo.parameters = {
   docs: {
     storyDescription:
       'Use `isLoading` prop to display a loader on the right of the component.',
   },
 }
-TimeNormal.decorators = [
+LoadingDemo.decorators = [
   () => (
     <RichSelect name="loading" isLoading>
       <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -297,7 +298,7 @@ TimeNormal.decorators = [
 ]
 
 export const LoadingExample = Template.bind({})
-TimeError.decorators = [
+LoadingExample.decorators = [
   () => {
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
