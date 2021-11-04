@@ -3383,8 +3383,8 @@ __metadata:
     "@semantic-release/changelog": 6.0.1
     "@semantic-release/commit-analyzer": 9.0.1
     "@semantic-release/git": 10.0.1
-    "@semantic-release/github": 8.0.1
-    "@semantic-release/npm": 8.0.2
+    "@semantic-release/github": 8.0.2
+    "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
     "@size-limit/file": 6.0.4
     "@size-limit/preset-big-lib": 6.0.4
@@ -3543,9 +3543,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:8.0.1, @semantic-release/github@npm:^8.0.0":
-  version: 8.0.1
-  resolution: "@semantic-release/github@npm:8.0.1"
+"@semantic-release/github@npm:8.0.2, @semantic-release/github@npm:^8.0.0":
+  version: 8.0.2
+  resolution: "@semantic-release/github@npm:8.0.2"
   dependencies:
     "@octokit/rest": ^18.0.0
     "@semantic-release/error": ^2.2.0
@@ -3559,19 +3559,19 @@ __metadata:
     https-proxy-agent: ^5.0.0
     issue-parser: ^6.0.0
     lodash: ^4.17.4
-    mime: ^2.4.3
+    mime: ^3.0.0
     p-filter: ^2.0.0
     p-retry: ^4.0.0
     url-join: ^4.0.0
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: a3db06afa9712dc219116deba9f2f23287f1d2dd14dc09218db060e96761c4fff10548dd351ccd1ac6bd2bad1cae3812c90da4658d65582aeabda06e1cbe52b5
+  checksum: 260ecf3fc0aaf2dad87ba85aadf779083015b8c413f8526c28cf10a9cc0c0faa72ddc742ea1170c848985f33d5f3adfe67c2a171e658c13d3819253e701a9231
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:8.0.2, @semantic-release/npm@npm:^8.0.0":
-  version: 8.0.2
-  resolution: "@semantic-release/npm@npm:8.0.2"
+"@semantic-release/npm@npm:8.0.3, @semantic-release/npm@npm:^8.0.0":
+  version: 8.0.3
+  resolution: "@semantic-release/npm@npm:8.0.3"
   dependencies:
     "@semantic-release/error": ^3.0.0
     aggregate-error: ^3.0.0
@@ -3588,7 +3588,7 @@ __metadata:
     tempy: ^1.0.0
   peerDependencies:
     semantic-release: ">=18.0.0"
-  checksum: ade2226a85830df101248805b9254ced284fe3d024de100b1669ecda3499f9f9170ac701f88f22742dee9440f57a768215031a0e19e5d8899b27061d43e415b3
+  checksum: 6c1e178f0fdc1b6ab24d14f02fb012302c7220e64e192293be7d11346d309b00338bd5a42e076c7849af68a91745359e750c5a1d7c85c8f11e9941e4516bb413
   languageName: node
   linkType: hard
 
@@ -15911,12 +15911,21 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mime@npm:^2.4.3, mime@npm:^2.4.4, mime@npm:^2.4.6":
+"mime@npm:^2.4.4, mime@npm:^2.4.6":
   version: 2.5.2
   resolution: "mime@npm:2.5.2"
   bin:
     mime: cli.js
   checksum: dd3c93d433d41a09f6a1cfa969b653b769899f3bd573e7bfcea33bdc8b0cc4eba57daa2f95937369c2bd2b6d39d62389b11a4309fe40d1d3a1b736afdedad0ff
+  languageName: node
+  linkType: hard
+
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
+  bin:
+    mime: cli.js
+  checksum: f43f9b7bfa64534e6b05bd6062961681aeb406a5b53673b53b683f27fcc4e739989941836a355eef831f4478923651ecc739f4a5f6e20a76487b432bfd4db928
   languageName: node
   linkType: hard
 
