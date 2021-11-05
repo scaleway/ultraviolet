@@ -2,12 +2,12 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Spaces, space } from '../../theme'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
-interface RowProps {
+type RowProps = {
   children: ReactNode
   gutter?: Spaces
-}
+} & BoxProps
 
 const StyledRow = styled(Box, {
   shouldForwardProp: prop => !['gutter'].includes(prop.toString()),

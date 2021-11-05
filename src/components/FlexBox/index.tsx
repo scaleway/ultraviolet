@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { ComponentProps, FunctionComponent } from 'react'
 
 const StyledChild = styled('div', {
   shouldForwardProp: prop =>
@@ -25,7 +25,9 @@ type ChildProps = {
   shrink?: string | number
 }
 
-const Child: FunctionComponent<ChildProps> = props => <StyledChild {...props} />
+const Child: FunctionComponent<
+  ChildProps & ComponentProps<typeof StyledChild>
+> = props => <StyledChild {...props} />
 
 Child.propTypes = {
   alignSelf: PropTypes.oneOf([
@@ -91,9 +93,9 @@ export type FlexBoxProps = {
     | 'space-around'
     | 'space-between'
   wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
-} & ChildProps
+} & ComponentProps<typeof Child>
 
-type FlexBoxType = FunctionComponent<FlexBoxProps> & {
+type FlexBoxType = FunctionComponent<ComponentProps<typeof StyledFlexBox>> & {
   Child: typeof Child
 }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const gridMaxWidths: Record<ScreenSize, string> = {
   large: '960px',
@@ -16,11 +16,11 @@ const gridMaxWidths: Record<ScreenSize, string> = {
 const query = (brk: ScreenSize, style: string) =>
   screens[brk] === 0 ? style : up(brk, style)
 
-export interface GridProps {
+export type GridProps = {
   children: ReactNode
   gutter?: Spaces
   fluid?: boolean
-}
+} & BoxProps
 
 const StyledGrid = styled(Box, {
   shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop.toString()),
