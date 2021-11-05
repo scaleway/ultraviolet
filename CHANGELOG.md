@@ -1,3 +1,18 @@
+### [0.118.3](https://github.com/scaleway/scaleway-ui/compare/v0.118.2...v0.118.3) (2021-11-05)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.13 ([#872](https://github.com/scaleway/scaleway-ui/issues/872)) ([f6e1dbc](https://github.com/scaleway/scaleway-ui/commit/f6e1dbcc0cc296cc4ff67b5e49fc2e7c6019dc21))
+* **devdeps:** update dependency @types/react-dom to v17.0.11 ([#875](https://github.com/scaleway/scaleway-ui/issues/875)) ([fa26676](https://github.com/scaleway/scaleway-ui/commit/fa266761632e8d7e80f40dbcf101f3075b896851))
+* **devdeps:** update dependency webpack to v5.61.0 ([#873](https://github.com/scaleway/scaleway-ui/issues/873)) ([23f8fe4](https://github.com/scaleway/scaleway-ui/commit/23f8fe4ecd32403bb398ba1ec34ec1d0bc4ff5e9))
+* **devdeps:** update semantic-release monorepo ([#879](https://github.com/scaleway/scaleway-ui/issues/879)) ([33bb8c0](https://github.com/scaleway/scaleway-ui/commit/33bb8c08ec685299eb39f8b27ff0718473dd9e51))
+
+
+### :bug: Bug Fixes
+
+* correct some components types ([#878](https://github.com/scaleway/scaleway-ui/issues/878)) ([4ee78ec](https://github.com/scaleway/scaleway-ui/commit/4ee78ec174e4212a186be3b7c187e3690cd80072))
+
 ### [0.118.2](https://github.com/scaleway/scaleway-ui/compare/v0.118.1...v0.118.2) (2021-11-03)
 
 
