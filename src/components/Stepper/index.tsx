@@ -47,7 +47,9 @@ const containerSizes = {
 }
 
 type ContainerSizesType = keyof typeof containerSizes
-const containerSizesKeys = Object.keys(containerSizes) as ContainerSizesType[]
+export const containerSizesKeys = Object.keys(
+  containerSizes,
+) as ContainerSizesType[]
 
 const iconSizes = {
   large: 26,
@@ -135,7 +137,7 @@ const StyledContainer = styled(Box, {
       : ''}
 `
 
-type StepperProps = {
+export type StepperProps = {
   disabled?: boolean
   maxValue?: number
   minValue?: number
