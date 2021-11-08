@@ -24,7 +24,7 @@
     "darwin",
     "linux"
   ],
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.1.0",
   "sideEffects": false,
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
@@ -111,6 +111,11 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom"
     ]
+  },
+  "dependenciesMeta": {
+    "@react-spring/core": {
+      "built": false
+    }
   },
   "peerDependencies": {
     "@emotion/react": "11.5.0",
