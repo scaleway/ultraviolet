@@ -185,7 +185,7 @@ ${Object.keys(animations)
 Animated.decorators = [
   () => (
     <Box mx={8} my={2}>
-      <ControlValue value="">
+      <ControlValue value={{ label: '', value: '' }}>
         {({ value, onChange }) => {
           const [options] = useState(
             Object.keys(animations).map(animation => ({
@@ -205,7 +205,6 @@ Animated.decorators = [
               <RichSelect
                 name="animated"
                 animationOnChange
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                 animation={value.value}
                 animationDuration={1000}
                 value={value}
