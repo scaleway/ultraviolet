@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import Switch, { SwitchProps } from '..'
 import { Box, Icon } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
@@ -24,7 +22,7 @@ const Template: Story<SwitchProps> = args => (
       <Switch
         checked={value}
         name="switch-basic"
-        onChange={e => {
+        onChange={(e: ChangeEvent<HTMLInputElement>) => {
           onChange(e.target.checked)
         }}
         {...args}
@@ -46,24 +44,28 @@ Variants.decorators = [
   () => (
     <>
       <div style={{ marginBottom: '16px' }}>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               variant="primary"
               name="switch-variant-primary"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
       </div>
-      <ControlValue value>
+      <ControlValue<boolean> value>
         {({ value, onChange }) => (
           <Switch
             variant="success"
             name="switch-variant-success"
             checked={value}
-            onChange={e => onChange(e.target.checked)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
           />
         )}
       </ControlValue>
@@ -88,19 +90,23 @@ Disabled.decorators = [
               name="switch-disabled"
               checked={value}
               disabled
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
       </div>
-      <ControlValue value>
+      <ControlValue<boolean> value>
         {({ value, onChange }) => (
           <Switch
             variant="primary"
             name="switch-disabled-checked"
             checked={value}
             disabled
-            onChange={e => onChange(e.target.checked)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
           />
         )}
       </ControlValue>
@@ -126,7 +132,9 @@ Size.decorators = [
               name="switch-variant"
               size="small"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
@@ -140,7 +148,9 @@ Size.decorators = [
               size="small"
               width={65}
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
@@ -154,7 +164,9 @@ Size.decorators = [
               size="medium"
               width={120}
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
@@ -166,7 +178,9 @@ Size.decorators = [
             variant="primary"
             size="medium"
             checked={value}
-            onChange={e => onChange(e.target.checked)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
           />
         )}
       </ControlValue>
@@ -190,7 +204,9 @@ Labeled.decorators = [
           labeled
           variant="primary"
           checked={value}
-          onChange={e => onChange(e.target.checked)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.target.checked)
+          }
         />
       )}
     </ControlValue>
@@ -206,7 +222,7 @@ CustomOnOffTexts.parameters = {
 }
 CustomOnOffTexts.decorators = [
   () => (
-    <ControlValue value>
+    <ControlValue<boolean> value>
       {({ value, onChange }) => (
         <Switch
           name="switch-label-custom"
@@ -215,7 +231,9 @@ CustomOnOffTexts.decorators = [
           offLabel="NO"
           variant="primary"
           checked={value}
-          onChange={e => onChange(e.target.checked)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.target.checked)
+          }
         />
       )}
     </ControlValue>
@@ -233,7 +251,7 @@ LabelPlacement.decorators = [
   () => (
     <>
       <div style={{ marginBottom: '16px' }}>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               name="switch-label-right"
@@ -242,13 +260,15 @@ LabelPlacement.decorators = [
               onLabel="CHECKED"
               offLabel="NOT CHECKED"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
       </div>
       <div style={{ marginBottom: '16px' }}>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               name="switch-label-right"
@@ -258,13 +278,15 @@ LabelPlacement.decorators = [
               width={140}
               variant="primary"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               name="switch-label-left"
@@ -273,18 +295,22 @@ LabelPlacement.decorators = [
               offLabel="NOT CHECKED"
               variant="primary"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               name="switch-label-right"
               labeled="right"
               variant="primary"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
@@ -304,7 +330,7 @@ CustomLabelRender.decorators = [
   () => (
     <>
       <div style={{ marginBottom: '16px' }}>
-        <ControlValue value>
+        <ControlValue<boolean> value>
           {({ value, onChange }) => (
             <Switch
               name="switch-label-left"
@@ -313,12 +339,14 @@ CustomLabelRender.decorators = [
               offLabel={<Icon size={24} name="close-circle-outline" />}
               variant="primary"
               checked={value}
-              onChange={e => onChange(e.target.checked)}
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                onChange(e.target.checked)
+              }
             />
           )}
         </ControlValue>
       </div>
-      <ControlValue value>
+      <ControlValue<boolean> value>
         {({ value, onChange }) => (
           <Switch
             name="switch-label-left"
@@ -347,7 +375,9 @@ CustomLabelRender.decorators = [
             }
             variant="primary"
             checked={value}
-            onChange={e => onChange(e.target.checked)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
           />
         )}
       </ControlValue>
