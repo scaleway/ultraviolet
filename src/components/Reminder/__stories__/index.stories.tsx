@@ -37,10 +37,7 @@ Variants.decorators = [
   () => (
     <>
       {Object.keys(variants).map(variant => (
-        <>
-          {console.log(variant)}
-          <Reminder key={variant} variant={variant} mb={1} text={variant} />
-        </>
+        <Reminder key={variant} variant={variant} mb={1} text={variant} />
       ))}
     </>
   ),
