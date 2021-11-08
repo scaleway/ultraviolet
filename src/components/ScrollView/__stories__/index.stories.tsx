@@ -16,7 +16,7 @@ export default {
 } as Meta
 
 const Template: Story<ScrollViewProps> = args => (
-  <ScrollView height="300px" {...args}>
+  <ScrollView style={{ height: '300px' }} {...args}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem
     fermentum, blandit lacus et, eleifend velit. Donec semper sem eu risus
     pellentesque ullamcorper. Suspendisse eu varius urna. Suspendisse malesuada
