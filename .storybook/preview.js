@@ -99,7 +99,7 @@ const globalStyles = theme => css`
     background-color: ${theme.colors.white};
     color: ${theme.colors.gray700};
     font-family: ${theme.fonts.sansSerif};
-    overflow: hidden;
+    overflow: initial !important;
     height: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -142,12 +142,6 @@ const globalStyles = theme => css`
   }
 `
 
-const overflowStyle = css`
-  body {
-    overflow: initial !important;
-  }
-`
-
 export const decorators = [
   Story => (
     <I18n
@@ -161,7 +155,7 @@ export const decorators = [
       supportedLocales={['en', 'fr', 'es']}
     >
       <ThemeProvider theme={adjustedTheme}>
-        <Global styles={[globalStyles, overflowStyle]} />
+        <Global styles={[globalStyles]} />
         <Story />
       </ThemeProvider>
     </I18n>
