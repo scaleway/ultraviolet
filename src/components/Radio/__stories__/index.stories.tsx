@@ -1,36 +1,38 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import Radio from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import Radio, { RadioProps } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
-<Meta title="Components/Data Entry/Radio" component={Radio} />
+export default {
+  component: Radio,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'A radio button that only work as [controlled component](https://reactjs.org/docs/forms.html).',
+      },
+    },
+  },
+  title: 'Components/Data Entry/Radio',
+} as Meta
 
-# Radio
+const Template: Story<RadioProps> = args => (
+  <Radio name="basic" value="choice-1" checked {...args}>
+    Choice 1
+  </Radio>
+)
 
-<Description>
-  A radio button that only work as [controlled
-  component](https://reactjs.org/docs/forms.html).
-</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <Radio name="basic" value="choice-1" checked>
-      Choice 1
-    </Radio>
-  </Story>
-</Canvas>
-
-## Controlled
-
-Radio only work as a controlled component. You need to pass `onChange` callback to control it.
-
-<Canvas>
-  <Story name="Controlled">
+export const Controlled = Template.bind({})
+Controlled.parameters = {
+  docs: {
+    storyDescription:
+      'Radio only work as a controlled component. You need to pass `onChange` callback to control it.',
+  },
+}
+Controlled.decorators = [
+  () => (
     <ControlValue value="choice-1">
       {({ value, onChange }) => (
         <>
@@ -53,15 +55,17 @@ Radio only work as a controlled component. You need to pass `onChange` callback 
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Size
-
-Set size using `size` property.
-
-<Canvas>
-  <Story name="Size">
+export const Size = Template.bind({})
+Size.parameters = {
+  docs: {
+    storyDescription: 'Set size using `size` property.',
+  },
+}
+Size.decorators = [
+  () => (
     <ControlValue value="big">
       {({ value, onChange }) => (
         <>
@@ -86,21 +90,19 @@ Set size using `size` property.
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Disabled
-
-Disable the input by using `disabled` prop
-
-<Canvas>
-  <Story name="Disabled">
+export const Disabled = Template.bind({})
+Disabled.parameters = {
+  docs: {
+    storyDescription: 'Disable the input by using `disabled` prop',
+  },
+}
+Disabled.decorators = [
+  () => (
     <Radio value="disabled" name="radio-size" disabled>
       Disabled radio
     </Radio>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={Radio} />
+  ),
+]

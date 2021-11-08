@@ -1,47 +1,46 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import RadioBorderedBox from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import RadioBorderedBox, { RadioBorderedBoxProps } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
-<Meta
-  title="Components/Data Entry/RadioBorderedBox"
-  component={RadioBorderedBox}
-/>
+export default {
+  component: RadioBorderedBox,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'RadioBorderedBox only work as [controlled component](https://reactjs.org/docs/forms.html).',
+      },
+    },
+  },
+  title: 'Components/Data Entry/RadioBorderedBox',
+} as Meta
 
-# RadioBorderedBox
+const Template: Story<RadioBorderedBoxProps> = args => (
+  <RadioBorderedBox
+    name="choice-1"
+    checked
+    value="choice-1"
+    label="Choice 1"
+    labelDescription="(choice details)"
+    badgeText="Badge"
+    mb={1}
+    {...args}
+  >
+    Description content
+  </RadioBorderedBox>
+)
 
-<Description>
-  RadioBorderedBox only work as [controlled
-  component](https://reactjs.org/docs/forms.html).
-</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <RadioBorderedBox
-      name="choice-1"
-      checked
-      value="choice-1"
-      label="Choice 1"
-      labelDescription="(choice details)"
-      badgeText="Badge"
-      mb={1}
-    >
-      Description content
-    </RadioBorderedBox>
-  </Story>
-</Canvas>
-
-## Controlled
-
-Control the component using `onChange` callback.
-
-<Canvas>
-  <Story name="Controlled">
+export const Controlled = Template.bind({})
+Controlled.parameters = {
+  docs: {
+    storyDescription: 'Control the component using `onChange` callback.',
+  },
+}
+Controlled.decorators = [
+  () => (
     <ControlValue value="basic-1">
       {({ value, onChange }) => (
         <>
@@ -69,15 +68,17 @@ Control the component using `onChange` callback.
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Disabled
-
-Disable the component by using `disabled` prop.
-
-<Canvas>
-  <Story name="Disabled">
+export const Disabled = Template.bind({})
+Disabled.parameters = {
+  docs: {
+    storyDescription: 'Disable the component by using `disabled` prop',
+  },
+}
+Disabled.decorators = [
+  () => (
     <RadioBorderedBox
       value="disabled"
       name="radio-disabled"
@@ -87,15 +88,18 @@ Disable the component by using `disabled` prop.
     >
       Disabled radio
     </RadioBorderedBox>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Label
-
-Set the content at the right of the button with `label` prop. You can set the content at the right of the label with `labelDescription`.
-
-<Canvas>
-  <Story name="Label and Description">
+export const Label = Template.bind({})
+Label.parameters = {
+  docs: {
+    storyDescription:
+      'Set the content at the right of the button with `label` prop. You can set the content at the right of the label with `labelDescription`.',
+  },
+}
+Label.decorators = [
+  () => (
     <RadioBorderedBox
       value="label"
       name="radio-label"
@@ -111,15 +115,18 @@ Set the content at the right of the button with `label` prop. You can set the co
         id.
       </div>
     </RadioBorderedBox>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Badge
-
-You can add a badge next to the label by using `badgeText`, `badgeVariant` and `badgeSize`.
-
-<Canvas>
-  <Story name="Badge">
+export const Badge = Template.bind({})
+Badge.parameters = {
+  docs: {
+    storyDescription:
+      'You can add a badge next to the label by using `badgeText`, `badgeVariant` and `badgeSize`.',
+  },
+}
+Badge.decorators = [
+  () => (
     <ControlValue value="badge-1">
       {({ value, onChange }) => (
         <>
@@ -166,9 +173,5 @@ You can add a badge next to the label by using `badgeText`, `badgeVariant` and `
         </>
       )}
     </ControlValue>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={RadioBorderedBox} />
+  ),
+]

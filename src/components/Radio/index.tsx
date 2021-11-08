@@ -56,7 +56,7 @@ const StyledRadio = styled(ReakitRadio)`
   opacity: 0.01;
 `
 
-type RadioProps = {
+export type RadioProps = {
   children: React.ReactNode
   name: string
   size?: number

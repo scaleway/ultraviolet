@@ -60,7 +60,9 @@ const Progression = styled.div<ProgressionProps>`
     ${({ duration, delay }) => `${duration}s linear ${-delay}s`} forwards;
 `
 
-type ProgressionButtonProps = Partial<Omit<ProgressionProps, 'delay'>> & {
+export type ProgressionButtonProps = Partial<
+  Omit<ProgressionProps, 'delay'>
+> & {
   children: ReactNode
   color?: string
   creation?: string | Date
