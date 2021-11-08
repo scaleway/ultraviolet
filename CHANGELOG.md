@@ -1,3 +1,25 @@
+### [0.118.4](https://github.com/scaleway/scaleway-ui/compare/v0.118.3...v0.118.4) (2021-11-08)
+
+
+### :zap: Refactor
+
+* migrate ProgressionButton, Radio, RadioBorderedBox, Range stories to tsx ([#874](https://github.com/scaleway/scaleway-ui/issues/874)) ([4600c64](https://github.com/scaleway/scaleway-ui/commit/4600c64fe130f1f5c84f070fd28e76b339685180))
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v14 ([#867](https://github.com/scaleway/scaleway-ui/issues/867)) ([b69813d](https://github.com/scaleway/scaleway-ui/commit/b69813d1b1f804aa43e403852bac4d909beb10ef))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.14 ([#885](https://github.com/scaleway/scaleway-ui/issues/885)) ([faa2d6d](https://github.com/scaleway/scaleway-ui/commit/faa2d6d9f9053165170d5b1ed1e7beed6f65ddaf))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.15.0 ([#883](https://github.com/scaleway/scaleway-ui/issues/883)) ([cb68d05](https://github.com/scaleway/scaleway-ui/commit/cb68d059e94c4268c9165621d3be68055d817094))
+* **devdeps:** update dependency rollup to v2.59.0 ([#882](https://github.com/scaleway/scaleway-ui/issues/882)) ([8737f53](https://github.com/scaleway/scaleway-ui/commit/8737f538a5d6d40b7f87d5dc6e0d679f7def55bd))
+* **devdeps:** update dependency rollup-plugin-dts to v4.0.1 ([#881](https://github.com/scaleway/scaleway-ui/issues/881)) ([60d91bc](https://github.com/scaleway/scaleway-ui/commit/60d91bcf7f736a25feaf2e130f2ac0f6e94b6e1e))
+* **devdeps:** update yarn to v3.1.0 ([#870](https://github.com/scaleway/scaleway-ui/issues/870)) ([e0c774c](https://github.com/scaleway/scaleway-ui/commit/e0c774c1791757674aeae97f7d7fb57940c5583b))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-countup to v6.1.0 ([#884](https://github.com/scaleway/scaleway-ui/issues/884)) ([fa0a8a4](https://github.com/scaleway/scaleway-ui/commit/fa0a8a4bd604de4eb66ebf1fb0b5f0d05e0abfb5))
+
 ### [0.118.3](https://github.com/scaleway/scaleway-ui/compare/v0.118.2...v0.118.3) (2021-11-05)
 
 
