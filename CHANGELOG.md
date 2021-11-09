@@ -1,3 +1,24 @@
+## [0.119.0](https://github.com/scaleway/scaleway-ui/compare/v0.118.4...v0.119.0) (2021-11-09)
+
+
+### :zap: Refactor
+
+* migrate Reminder, RichSelect, ScrollView stories to tsx ([#877](https://github.com/scaleway/scaleway-ui/issues/877)) ([69c879b](https://github.com/scaleway/scaleway-ui/commit/69c879b7a8899473e7893353da92946ce1633bf5))
+* migrate StealthCopiable, Stepper, Switch stories to tsx ([#886](https://github.com/scaleway/scaleway-ui/issues/886)) ([6ed9cd9](https://github.com/scaleway/scaleway-ui/commit/6ed9cd9659f1291fae7901ac766d299fa21ab235))
+
+
+### :gear: Features
+
+* **global-style:** remove GlobalStyle component ([#887](https://github.com/scaleway/scaleway-ui/issues/887)) ([92f2ee7](https://github.com/scaleway/scaleway-ui/commit/92f2ee741e1ad301ecbaedce1af309c5e7feb725))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v2.3.1 ([#889](https://github.com/scaleway/scaleway-ui/issues/889)) ([fdf17df](https://github.com/scaleway/scaleway-ui/commit/fdf17dfef29eed21203aa9a05a2e47cfd6eb316e))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.18 ([#888](https://github.com/scaleway/scaleway-ui/issues/888)) ([438c379](https://github.com/scaleway/scaleway-ui/commit/438c3792e2b621ca0ccdbda788d672b7a9b6b25e))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.19 ([#890](https://github.com/scaleway/scaleway-ui/issues/890)) ([c5709f2](https://github.com/scaleway/scaleway-ui/commit/c5709f224aa445804f3a74f50329b9d29042f6cb))
+* **devdeps:** update dependency react-router-dom to v6 ([#880](https://github.com/scaleway/scaleway-ui/issues/880)) ([2c1107b](https://github.com/scaleway/scaleway-ui/commit/2c1107b09ccecd7574fcd666a55058918d785dff))
+
 ### [0.118.4](https://github.com/scaleway/scaleway-ui/compare/v0.118.3...v0.118.4) (2021-11-08)
 
 
