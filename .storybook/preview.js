@@ -84,61 +84,12 @@ const globalStyles = theme => css`
       local('.LucidaGrandeUI'), local('Segoe UI Bold'), local('Ubuntu Bold'),
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
   }
-  * {
-    box-sizing: border-box;
-  }
-  html {
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-size: 16px;
-    height: 100%;
-    -webkit-tap-highlight-color: transparent;
-    margin: 0;
-  }
   body {
     background-color: ${theme.colors.white};
-    color: ${theme.colors.gray700};
     font-family: ${theme.fonts.sansSerif};
-    overflow: initial !important;
-    height: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-  }
-  input,
-  textarea,
-  select,
-  button {
-    font-family: ${theme.fonts.sansSerif};
-  }
-  button,
-  html [type='button'],
-  [type='reset'],
-  [type='submit'] {
-    appearance: none;
-  }
-  img,
-  canvas,
-  iframe,
-  video,
-  svg,
-  select,
-  textarea {
-    max-width: 100%;
-  }
-  a {
-    color: ${theme.colors.blue};
-    text-decoration: none;
-  }
-  a:hover,
-  a:focus,
-  a:active {
-    color: ${theme.colors.darkBlue};
-    text-decoration: underline;
-  }
-  p {
-    margin: 0;
   }
 `
 
