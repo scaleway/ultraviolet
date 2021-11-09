@@ -18,7 +18,7 @@ Scaleway UI library.
 ## Quick Start
 
 ```sh
-$ yarn add @scaleway/ui @emotion/react
+$ yarn add @scaleway/ui @emotion/react @emotion/styled
 ```
 
 ```js
