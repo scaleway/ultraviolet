@@ -16,12 +16,7 @@ export default {
 } as Meta
 
 const Template: Story<ReminderProps> = args => (
-  <Reminder
-    display="flex"
-    mb={1}
-    text="Your credit card [has expired]"
-    {...args}
-  />
+  <Reminder text="Your credit card [has expired]" {...args} />
 )
 
 export const Default = Template.bind({})
