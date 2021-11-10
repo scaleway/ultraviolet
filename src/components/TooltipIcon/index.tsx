@@ -9,17 +9,19 @@ type TooltipIconProps = {
   name?: IconName
   size?: number
   tooltip: string
+  verticalAlign?: string
 }
 
 const TooltipIcon: FunctionComponent<TooltipIconProps> = ({
   color = 'gray550',
   name = 'help-circle-outline',
   size = 20,
+  verticalAlign = 'middle',
   tooltip,
   baseId,
 }) => (
   <Tooltip text={tooltip} baseId={baseId}>
-    <Icon color={color} name={name} size={size} />
+    <Icon color={color} name={name} size={size} verticalAlign={verticalAlign} />
   </Tooltip>
 )
 
@@ -29,6 +31,7 @@ TooltipIcon.propTypes = {
   name: PropTypes.oneOf(icons),
   size: PropTypes.number,
   tooltip: PropTypes.string.isRequired,
+  verticalAlign: PropTypes.string,
 }
 
 export default TooltipIcon
