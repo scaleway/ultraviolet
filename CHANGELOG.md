@@ -1,3 +1,22 @@
+### [0.119.1](https://github.com/scaleway/scaleway-ui/compare/v0.119.0...v0.119.1) (2021-11-10)
+
+
+### :memo: Documentation
+
+* add @emotion/styled to required deps ([#891](https://github.com/scaleway/scaleway-ui/issues/891)) ([c654a18](https://github.com/scaleway/scaleway-ui/commit/c654a18a7aac6146987866a21a2f94b819aed9b1))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.16.3 ([#893](https://github.com/scaleway/scaleway-ui/issues/893)) ([199af7f](https://github.com/scaleway/scaleway-ui/commit/199af7fb0a633b47ea284114f5ce615879bf20a1))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v2.3.2 ([#892](https://github.com/scaleway/scaleway-ui/issues/892)) ([ced3bd8](https://github.com/scaleway/scaleway-ui/commit/ced3bd8ae7bcf6a24cc85cd8d539fb780ba2cd6d))
+* **devdeps:** update dependency eslint to v8 ([#819](https://github.com/scaleway/scaleway-ui/issues/819)) ([20487f9](https://github.com/scaleway/scaleway-ui/commit/20487f901008bef4ff044c3f99e6415405c3bcb3))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.2.1 ([#868](https://github.com/scaleway/scaleway-ui/issues/868)) ([919621c](https://github.com/scaleway/scaleway-ui/commit/919621c3c833ed9f0b6eff189c567a0ea5579e55))
+
 ## [0.119.0](https://github.com/scaleway/scaleway-ui/compare/v0.118.4...v0.119.0) (2021-11-09)
 
 
