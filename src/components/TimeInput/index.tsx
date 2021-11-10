@@ -197,9 +197,10 @@ const defaultValue = {
   value: '00:00',
 }
 
-type TimeInputProps = Partial<RichSelectProps> & {
+export type TimeInputProps = Partial<RichSelectProps> & {
   schedule?: ScheduleType
 }
+
 const TimeInput: FunctionComponent<TimeInputProps> & {
   options: typeof options
 } = ({ value = defaultValue, schedule = 'hours', ...props } = {}) => (
