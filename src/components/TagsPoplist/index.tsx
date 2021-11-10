@@ -32,7 +32,8 @@ const StyledTooltipReference = styled(TooltipReference)`
   padding-left: 8px;
   padding-right: 8px;
 `
-type TagsPoplistProps = {
+
+export type TagsPoplistProps = {
   maxLength?: number
   maxTagWidth?: number
   tags?: string[]

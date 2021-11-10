@@ -1,37 +1,35 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import TagsPoplist from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import TagsPoplist, { TagsPoplistProps } from '..'
 
-<Meta title="Components/Data Display/TagsPoplist" component={TagsPoplist} />
+export default {
+  component: TagsPoplist,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'List of tags mixed with tooltip tags depending on configuration limit.',
+      },
+    },
+  },
+  title: 'Components/Data Display/TagsPopList',
+} as Meta
 
-# TagsPoplist
+const Template: Story<TagsPoplistProps> = args => (
+  <TagsPoplist tags={['smooth', 'code']} {...args} />
+)
 
-<Description>
-  List of tags mixed with tooltip tags depending on configuration limit.
-</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <div style={{ width: 250 }}>
-      <TagsPoplist tags={['smooth', 'code']} />
-    </div>
-  </Story>
-</Canvas>
-
-## Threshold
-
-<Description>
-  `threshold` prop defines the number of tags to display before hiding them into
-  a tooltip.
-</Description>
-
-<Canvas>
-  <Story name="Threshold">
+export const Threshold = Template.bind({})
+Threshold.parameters = {
+  docs: {
+    storyDescription:
+      '`threshold` prop defines the number of tags to display before hiding them into a tooltip.',
+  },
+}
+Threshold.decorators = [
+  () => (
     <div style={{ width: 350 }}>
       <TagsPoplist
         threshold={5}
@@ -94,18 +92,18 @@ import TagsPoplist from '..'
         ]}
       />
     </div>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Tag Width
-
-<Description>
-  `maxTagWidth` can be used for defining max width of each tags except the ones
-  in tooltip.
-</Description>
-
-<Canvas>
-  <Story name="Tag Width">
+export const TagWidth = Template.bind({})
+TagWidth.parameters = {
+  docs: {
+    storyDescription:
+      '`maxTagWidth` can be used for defining max width of each tags except the ones in tooltip.',
+  },
+}
+TagWidth.decorators = [
+  () => (
     <div style={{ width: 350 }}>
       <TagsPoplist
         threshold={5}
@@ -169,9 +167,5 @@ import TagsPoplist from '..'
         ]}
       />
     </div>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={TagsPoplist} />
+  ),
+]
