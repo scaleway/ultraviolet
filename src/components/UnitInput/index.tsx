@@ -76,7 +76,7 @@ type UnitInputValue = {
   value: number
 }
 
-type UnitInputProps = Omit<Partial<RichSelectProps>, 'defaultValue'> & {
+export type UnitInputProps = Omit<Partial<RichSelectProps>, 'defaultValue'> & {
   name?: string
   defaultValue?: number
   disabled?: boolean

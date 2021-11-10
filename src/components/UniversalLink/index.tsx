@@ -23,7 +23,7 @@ const needNativeLink = (url?: string) => {
   return isAbsolute || isTelLink || isMailToLink || isAnchor
 }
 
-type UniversalLinkProps = {
+export type UniversalLinkProps = {
   children: ReactNode
   to?: string
 } & ComponentProps<'a'> & {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import Unselectable from '../Unselectable'
 
 const CopyButton = styled.button`
   background-color: ${({ theme }) => theme.colors.transparent};
@@ -17,6 +16,10 @@ const CopyButton = styled.button`
   &:focus {
     opacity: 1;
   }
+`
+
+const UnselectableSpan = styled.span`
+  user-select: none;
 `
 
 const StyledContainer = styled.div`
@@ -52,11 +55,11 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
   return (
     <StyledContainer>
       {side === 'right' && children}
-      <Unselectable as="span">
+      <UnselectableSpan>
         <CopyButton onClick={setCopied} tabIndex={0} type="button">
           {isCopied ? copiedText : copyText}
         </CopyButton>
-      </Unselectable>
+      </UnselectableSpan>
       {side === 'left' && children}
     </StyledContainer>
   )
