@@ -1,38 +1,39 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import TextBox, { textBoxSizes } from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import TextBox, { TextBoxProps, textBoxSizes } from '..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 import Boxer from '../../Boxer'
 import UncontrolledTextBox from './UncontrolledTextBox'
 
-<Meta title="Components/Data Entry/TextBox" component={TextBox} />
+export default {
+  component: TextBox,
+  parameters: {
+    docs: {
+      description: {
+        component: 'An enhanced text box.',
+      },
+    },
+  },
+  title: 'Components/Data Entry/TextBox',
+} as Meta
 
-# TextBox
+const Template: Story<TextBoxProps> = args => (
+  <Boxer my={1}>
+    <UncontrolledTextBox label="First Name" {...args} />
+  </Boxer>
+)
 
-<Description>An enhanced text box.</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <Boxer my={1}>
-      <UncontrolledTextBox label="First Name" />
-    </Boxer>
-  </Story>
-</Canvas>
-
-## No label
-
-<Description>
-  You can hide the label and but it in `aria-label` attribute of the input by
-  passing `noTopLabel` to the component
-</Description>
-
-<Canvas>
-  <Story name="No Label">
+export const NoLabel = Template.bind({})
+NoLabel.parameters = {
+  docs: {
+    storyDescription:
+      'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
+  },
+}
+NoLabel.decorators = [
+  () => (
     <Boxer my={1}>
       <UncontrolledTextBox label="First Name" noTopLabel />
       <UncontrolledTextBox
@@ -41,29 +42,28 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         noTopLabel
       />
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Placeholder
+export const Placeholder = Template.bind({})
+Placeholder.parameters = {
+  docs: {
+    storyDescription:
+      'Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).',
+  },
+}
+Placeholder.decorators = [
+  () => <UncontrolledTextBox label="First Name" placeholder="Type your name" />,
+]
 
-<Description>
-  Set a placeholder using `placeholder` property. It is only visibled if the
-  `TextBox` has been visited (an input is considered as visited after the first
-  focus).
-</Description>
-
-<Canvas>
-  <Story name="Placeholder">
-    <UncontrolledTextBox label="First Name" placeholder="Type your name" />
-  </Story>
-</Canvas>
-
-## Size
-
-<Description>Set size using `size` property.</Description>
-
-<Canvas>
-  <Story name="Size">
+export const Size = Template.bind({})
+Size.parameters = {
+  docs: {
+    storyDescription: 'Set size using `size` property.',
+  },
+}
+Size.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -89,15 +89,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Disabled
-
-<Description>Mark `TextBox` as disabled using `disabled` property.</Description>
-
-<Canvas>
-  <Story name="Disabled">
+export const Disabled = Template.bind({})
+Disabled.parameters = {
+  docs: {
+    storyDescription: 'Mark `TextBox` as disabled using `disabled` property.',
+  },
+}
+Disabled.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -133,17 +135,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         random="textbox"
       />
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## ReadOnly
-
-<Description>
-  Mark `TextBox` as read only using `readOnly` property.
-</Description>
-
-<Canvas>
-  <Story name="Read only">
+export const ReadOnly = Template.bind({})
+ReadOnly.parameters = {
+  docs: {
+    storyDescription: 'Mark `TextBox` as read only using `readOnly` property.',
+  },
+}
+ReadOnly.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -172,15 +174,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Required
-
-<Description>Add a required mark using `required` property.</Description>
-
-<Canvas>
-  <Story name="Required">
+export const Required = Template.bind({})
+Required.parameters = {
+  docs: {
+    storyDescription: 'Add a required mark using `required` property.',
+  },
+}
+Required.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -209,15 +213,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Valid
-
-<Description>Add a check mark using `valid` property.</Description>
-
-<Canvas>
-  <Story name="Valid">
+export const Valid = Template.bind({})
+Valid.parameters = {
+  docs: {
+    storyDescription: 'Add a check mark using `valid` property.',
+  },
+}
+Valid.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -246,15 +252,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Error
-
-<Description>Fill `TextBox` error using `error` property.</Description>
-
-<Canvas>
-  <Story name="Error">
+export const Error = Template.bind({})
+Error.parameters = {
+  docs: {
+    storyDescription: 'Fill `TextBox` error using `error` property.',
+  },
+}
+Error.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <ErrorTransition
@@ -286,17 +294,18 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Notice
-
-<Description>
-  Display an information under `TextBox` using `notice` property.
-</Description>
-
-<Canvas>
-  <Story name="Notice">
+export const Notice = Template.bind({})
+Notice.parameters = {
+  docs: {
+    storyDescription:
+      'Display an information under `TextBox` using `notice` property.',
+  },
+}
+Notice.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -325,19 +334,18 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Toggleable password
-
-<Description>
-  Set type to `toggleable-password` adds a eye toggle to display typed password.
-  **This behaviour is dangerous, use it only when the user fills a new
-  password.**
-</Description>
-
-<Canvas>
-  <Story name="Toggleable">
+export const ToggleablePassword = Template.bind({})
+ToggleablePassword.parameters = {
+  docs: {
+    storyDescription:
+      'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
+  },
+}
+ToggleablePassword.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -366,15 +374,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Unit
-
-<Description>Specify a unit using `unit` prop.</Description>
-
-<Canvas>
-  <Story name="Unit">
+export const Unit = Template.bind({})
+Unit.parameters = {
+  docs: {
+    storyDescription: 'Specify a unit using `unit` prop.',
+  },
+}
+Unit.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -403,15 +413,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Randomize
-
-<Description>Set `random` prop adds a randomize button.</Description>
-
-<Canvas>
-  <Story name="Randomize">
+export const Randomize = Template.bind({})
+Randomize.parameters = {
+  docs: {
+    storyDescription: 'Set `random` prop adds a randomize button.',
+  },
+}
+Randomize.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -440,18 +452,18 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Force edit mode
-
-<Description>
-  It is possible to force edit mode (label at the top) using `edit` property.
-  The principal use-case is to be compatible with browser autocomplete.
-</Description>
-
-<Canvas>
-  <Story name="Force">
+export const ForceEditMode = Template.bind({})
+ForceEditMode.parameters = {
+  docs: {
+    storyDescription:
+      'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
+  },
+}
+ForceEditMode.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -480,15 +492,17 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Multiline
-
-<Description>Enable multiline mode using `multiline` property.</Description>
-
-<Canvas>
-  <Story name="Multiline">
+export const Multiline = Template.bind({})
+Multiline.parameters = {
+  docs: {
+    storyDescription: 'Enable multiline mode using `multiline` property.',
+  },
+}
+Multiline.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -517,17 +531,18 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-### Disable resize
-
-<Description>
-  Disable resize in multiline mode using `resizable` prop.
-</Description>
-
-<Canvas>
-  <Story name="Disable resize">
+export const DisableResize = Template.bind({})
+DisableResize.parameters = {
+  docs: {
+    storyDescription:
+      'Disable resize in multiline mode using `resizable` prop.',
+  },
+}
+DisableResize.decorators = [
+  () => (
     <Boxer my={1}>
       {textBoxSizes.map(size => (
         <UncontrolledTextBox
@@ -559,17 +574,18 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         />
       ))}
     </Boxer>
-  </Story>
-</Canvas>
+  ),
+]
 
-## Tabindex
-
-<Description>
-  Can disable tabulation on field with `tabIndex=&quot;-1&quot;`
-</Description>
-
-<Canvas>
-  <Story name="Tab index">
+export const TabIndex = Template.bind({})
+TabIndex.parameters = {
+  docs: {
+    storyDescription:
+      'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
+  },
+}
+TabIndex.decorators = [
+  () => (
     <Boxer my={1}>
       <UncontrolledTextBox
         label="First Name"
@@ -585,9 +601,5 @@ import UncontrolledTextBox from './UncontrolledTextBox'
         defaultValue="Tabulation is ok here"
       />
     </Boxer>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={TextBox} />
+  ),
+]
