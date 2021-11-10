@@ -11,9 +11,9 @@ import RichSelect from '../../RichSelect'
 export default {
   component: DateInput,
   decorators: [
-    Children => (
+    Stories => (
       <Box height="360">
-        <Children />
+        <Stories />
       </Box>
     ),
   ],

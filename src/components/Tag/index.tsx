@@ -86,7 +86,7 @@ const StyledTouchable = styled(Touchable, {
 `}
 `
 
-export type TagsProps = {
+export type TagProps = {
   children: ReactNode
   disabled?: boolean
   isLoading?: boolean
@@ -95,7 +95,7 @@ export type TagsProps = {
   variant?: TagVariant
 } & XStyledProps
 
-const Tag: FunctionComponent<TagsProps> = ({
+const Tag: FunctionComponent<TagProps> = ({
   children,
   isLoading = false,
   onClose,
@@ -136,11 +136,5 @@ Tag.propTypes = {
   ),
 }
 
-Tag.defaultProps = {
-  children: undefined,
-  onClose: undefined,
-  textStyle: {},
-  variant: 'base',
-}
 
 export default Tag

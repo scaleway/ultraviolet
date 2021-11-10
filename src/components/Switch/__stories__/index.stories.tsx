@@ -5,6 +5,90 @@ import { Box, Icon } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
+  args: {
+    checked: false,
+    disabled: false,
+    labeled: false,
+    offLabel: 'NO',
+    onLabel: 'YES',
+    size: 'small',
+    variant: 'primary',
+  },
+  argTypes: {
+    checked: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+      description: 'checked',
+      name: 'checked',
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'boolean' },
+      },
+      type: { name: 'boolean' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+      description: 'disabled',
+      name: 'disabled',
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'boolean' },
+      },
+      type: { name: 'boolean' },
+    },
+    labeled: {
+      control: { type: 'select' },
+      defaultValue: false,
+      description: 'labeled',
+      name: 'labeled',
+      options: [false, true, 'left', 'right', 'inside'],
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'boolean | left | right | inside' },
+      },
+      type: { name: 'select' },
+    },
+    offLabel: {
+      defaultValue: 'NO',
+      name: 'offLabel',
+      table: {
+        defaultValue: { summary: 'NO' },
+        type: { summary: 'string' },
+      },
+      type: { name: 'string', required: true },
+    },
+    onLabel: {
+      defaultValue: 'YES',
+      name: 'offLabel',
+      table: {
+        defaultValue: { summary: 'YES' },
+        type: { summary: 'string' },
+      },
+      type: { name: 'string', required: true },
+    },
+    size: {
+      control: {
+        type: 'select',
+      },
+      defaultValue: 'medium',
+      name: 'size',
+      options: ['small', 'medium'],
+      table: {
+        defaultValue: { summary: 'small' },
+        type: { required: true, summary: 'select' },
+      },
+    },
+    variant: {
+      description: `you have the possibility between "primary | success"`,
+      name: 'variant',
+      options: ['primary', 'success'],
+      table: {
+        defaultValue: { summary: 'primary' },
+        type: { summary: 'select' },
+      },
+    },
+  },
   component: Switch,
   parameters: {
     docs: {
@@ -16,314 +100,18 @@ export default {
   title: 'Components/Data Entry/Switch',
 } as Meta
 
-const Template: Story<SwitchProps> = args => (
-  <ControlValue value={false}>
-    {({ value, onChange }) => (
-      <Switch
-        checked={value}
-        name="switch-basic"
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          onChange(e.target.checked)
-        }}
-        {...args}
-      />
-    )}
-  </ControlValue>
-)
+const Template: Story<SwitchProps> = args => <Switch {...args} />
 
 export const Default = Template.bind({})
 
-export const Variants = Template.bind({})
-Variants.parameters = {
-  docs: {
-    storyDescription:
-      'Set variant using `variant` prop. Available variants: `primary`, `success`',
-  },
-}
-Variants.decorators = [
-  () => (
-    <>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              variant="primary"
-              name="switch-variant-primary"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <ControlValue<boolean> value>
-        {({ value, onChange }) => (
-          <Switch
-            variant="success"
-            name="switch-variant-success"
-            checked={value}
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              onChange(e.target.checked)
-            }
-          />
-        )}
-      </ControlValue>
-    </>
-  ),
-]
-
-export const Disabled = Template.bind({})
-Disabled.parameters = {
-  docs: {
-    storyDescription: 'Set disabled using `disabled` prop.',
-  },
-}
-Disabled.decorators = [
-  () => (
-    <>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue value={false}>
-          {({ value, onChange }) => (
-            <Switch
-              variant="primary"
-              name="switch-disabled"
-              checked={value}
-              disabled
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <ControlValue<boolean> value>
-        {({ value, onChange }) => (
-          <Switch
-            variant="primary"
-            name="switch-disabled-checked"
-            checked={value}
-            disabled
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              onChange(e.target.checked)
-            }
-          />
-        )}
-      </ControlValue>
-    </>
-  ),
-]
-
-export const Size = Template.bind({})
-Size.parameters = {
-  docs: {
-    storyDescription:
-      '`Switch` has two sizes, modifying slightly his design. Use the prop `size` with `small` or `medium`. You can also customize its on/off labels using the `onLabel`, `offLabel` props and the `width` prop to adjust it with the text.',
-  },
-}
-Size.decorators = [
-  () => (
-    <>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue value={false}>
-          {({ value, onChange }) => (
-            <Switch
-              variant="primary"
-              name="switch-variant"
-              size="small"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue value={false}>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-variant-width"
-              variant="primary"
-              size="small"
-              width={65}
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue value={false}>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-variant-medium"
-              variant="primary"
-              size="medium"
-              width={120}
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <ControlValue value={false}>
-        {({ value, onChange }) => (
-          <Switch
-            name="switch-variant-medium-width"
-            variant="primary"
-            size="medium"
-            checked={value}
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              onChange(e.target.checked)
-            }
-          />
-        )}
-      </ControlValue>
-    </>
-  ),
-]
-
-export const Labeled = Template.bind({})
-Labeled.parameters = {
-  docs: {
-    storyDescription:
-      "Add the `labeled` prop you can choose where you want to put the label in the Switch. Possible positions are `left`, `right` or `inside` (it's the default label position when labeled is `true`). The width is automatically calculated. But you can override it by passing the `width` prop.",
-  },
-}
-Labeled.decorators = [
-  () => (
-    <ControlValue value={false}>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label"
-          labeled
-          variant="primary"
-          checked={value}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onChange(e.target.checked)
-          }
-        />
-      )}
-    </ControlValue>
-  ),
-]
-
-export const CustomOnOffTexts = Template.bind({})
-CustomOnOffTexts.parameters = {
-  docs: {
-    storyDescription:
-      'Default label placement is inside the Switch. you can customize the text with `onLabel` and `offLabel`props.',
-  },
-}
-CustomOnOffTexts.decorators = [
-  () => (
-    <ControlValue<boolean> value>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label-custom"
-          labeled
-          onLabel="YES"
-          offLabel="NO"
-          variant="primary"
-          checked={value}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onChange(e.target.checked)
-          }
-        />
-      )}
-    </ControlValue>
-  ),
-]
-
-export const LabelPlacement = Template.bind({})
-LabelPlacement.parameters = {
-  docs: {
-    storyDescription:
-      'By setting the `labelPlacement` prop you can choose where you want to put the label. By setting the label on `left` or `right` the width is automatically calculated.',
-  },
-}
-LabelPlacement.decorators = [
-  () => (
-    <>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-label-right"
-              labeled
-              variant="primary"
-              onLabel="CHECKED"
-              offLabel="NOT CHECKED"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-label-right"
-              labeled="inside"
-              onLabel="CHECKED"
-              offLabel="NOT CHECKED"
-              width={140}
-              variant="primary"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-label-left"
-              labeled="left"
-              onLabel="CHECKED"
-              offLabel="NOT CHECKED"
-              variant="primary"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-label-right"
-              labeled="right"
-              variant="primary"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
-    </>
-  ),
-]
 
 export const CustomLabelRender = Template.bind({})
 CustomLabelRender.parameters = {
   docs: {
-    storyDescription:
-      'If you choose to place label near the Switch component with `labeled` you can set a custom element for the label with the `onLabel` and `offLabel` props.',
+    story: {
+      description:
+        'If you choose to place label near the Switch component with `labeled` you can set a custom element for the label with the `onLabel` and `offLabel` props.',
+    },
   },
 }
 CustomLabelRender.decorators = [

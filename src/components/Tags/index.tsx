@@ -105,7 +105,7 @@ type TagsProp = (
   | null
 )[]
 
-interface TagsProps {
+export type TagsProps = {
   disabled?: boolean
   id?: string
   manualInput?: boolean

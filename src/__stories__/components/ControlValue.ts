@@ -1,6 +1,9 @@
 import { ChangeEvent, useState } from 'react'
 
-const isEvent = <T>(valueOrEvent: ChangeEvent<HTMLInputElement> | T): valueOrEvent is ChangeEvent<HTMLInputElement> => !!(valueOrEvent as ChangeEvent)?.currentTarget
+const isEvent = <T>(
+  valueOrEvent: ChangeEvent<HTMLInputElement> | T,
+): valueOrEvent is ChangeEvent<HTMLInputElement> =>
+  !!(valueOrEvent as ChangeEvent)?.currentTarget
 
 const getNewValue = <T>(valueOrEvent: ChangeEvent<HTMLInputElement> | T): T => {
   if (isEvent<T>(valueOrEvent)) {
@@ -18,7 +21,13 @@ const getNewValue = <T>(valueOrEvent: ChangeEvent<HTMLInputElement> | T): T => {
 
 interface ControlProps<T> {
   value: T
-  children: ({ onChange, value }: { onChange: (valueOrEvent: ChangeEvent<HTMLInputElement> | T) => void, value: T }) => JSX.Element
+  children: ({
+    onChange,
+    value,
+  }: {
+    onChange: (valueOrEvent: ChangeEvent<HTMLInputElement> | T) => void
+    value: T
+  }) => JSX.Element
 }
 
 const ControlValue = <T>({ value, children }: ControlProps<T>): JSX.Element => {
