@@ -1,8 +1,9 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { Color } from '../../theme/colors'
 import { flash } from '../../utils/animations'
+import { XStyledProps } from '../Box'
 import Dot from '../Dot'
 import Tooltip from '../Tooltip'
 
@@ -31,20 +32,20 @@ const cssAnimation = css`
   animation: ${flash} linear 1s infinite;
 `
 
-interface StatusIndicatorProps {
+export type StatusIndicatorProps = XStyledProps & {
   animated?: boolean
-  status?: keyof typeof defaultStatuses
   statuses?: Record<string, string>
+  status?: string
   tooltip?: string
 }
 
-const StatusIndicator: VoidFunctionComponent<StatusIndicatorProps> = ({
+const StatusIndicator = ({
   tooltip,
   status = 'unavailable',
-  statuses = {},
+  statuses = defaultStatuses,
   animated = false,
   ...props
-}) => (
+}: StatusIndicatorProps): JSX.Element => (
   <Tooltip text={tooltip}>
     <Dot
       color={({ ...defaultStatuses, ...statuses }[status] as Color) || 'blue'}
@@ -58,7 +59,11 @@ export const statuses = Object.keys(defaultStatuses)
 
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
-  status: ({ statuses: propsStatuses, ...props }: { [key: string]: string }, propName: string, componentName) => {
+  status: (
+    { statuses: propsStatuses, ...props }: { [key: string]: string },
+    propName: string,
+    componentName: string,
+  ) => {
     const { [propName]: propsPropName } = props
 
     const availableStatuses = [

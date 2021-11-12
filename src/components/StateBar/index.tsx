@@ -1,25 +1,20 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  ReactNode,
-  VoidFunctionComponent,
-  useMemo,
-} from 'react'
+import React, { ReactNode, useMemo } from 'react'
 import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import Typography from '../Typography'
 
-interface StateBarStateProps {
+export interface StateBarStateProps {
   children?: ReactNode
   label?: string
 }
 
-export const State: FunctionComponent<StateBarStateProps> = ({
+export const StateBarState = ({
   label = '',
   children,
   ...props
-}) => (
+}: StateBarStateProps): JSX.Element => (
   <Typography
     as="div"
     variant="bodyA"
@@ -37,7 +32,7 @@ export const State: FunctionComponent<StateBarStateProps> = ({
   </Typography>
 )
 
-State.propTypes = {
+StateBarState.propTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
 }
@@ -47,16 +42,17 @@ const line = css`
   margin-top: 12px;
 `
 
-interface StateBarBarProps {
+export interface StateBarBarProps {
   unlimited?: boolean
   value?: number
+  progress?: boolean
 }
 
-export const Bar: VoidFunctionComponent<StateBarBarProps> = ({
+export const StateBarBar = ({
   unlimited = false,
   value = 0,
   ...props
-}) => {
+}: StateBarBarProps): JSX.Element => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
     if (value >= 90) return 'warning'
@@ -74,19 +70,19 @@ export const Bar: VoidFunctionComponent<StateBarBarProps> = ({
   )
 }
 
-Bar.propTypes = {
+StateBarBar.propTypes = {
   unlimited: PropTypes.bool,
   value: PropTypes.number,
 }
 
 type StateBarType = typeof Box & {
-  Bar: typeof Bar
-  State: typeof State
+  Bar: (props: StateBarBarProps) => JSX.Element
+  State: (props: StateBarStateProps) => JSX.Element
 }
 
 const StateBar: StateBarType = Box as StateBarType
 
-StateBar.Bar = Bar
-StateBar.State = State
+StateBar.Bar = StateBarBar
+StateBar.State = StateBarState
 
 export default StateBar
