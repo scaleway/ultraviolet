@@ -142,7 +142,7 @@ const UnitInput = ({
           }))
         }}
         value={options.find(
-          option => (option as SelectOption).value === value.unit,
+          (option: SelectOption) => option.value === value.unit,
         )}
         options={options}
         customStyle={customSelectStyle}
