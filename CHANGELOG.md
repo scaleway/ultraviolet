@@ -1,3 +1,16 @@
+### [0.119.2](https://github.com/scaleway/scaleway-ui/compare/v0.119.1...v0.119.2) (2021-11-15)
+
+
+### :package: Chore
+
+* **ci:** upgrade node version ci ([#895](https://github.com/scaleway/scaleway-ui/issues/895)) ([e57fb2d](https://github.com/scaleway/scaleway-ui/commit/e57fb2db8a87fa2237b696a8655a85c98b80b5cd))
+* **devdeps:** update dependency react-router-dom to v6.0.2 ([#898](https://github.com/scaleway/scaleway-ui/issues/898)) ([496107e](https://github.com/scaleway/scaleway-ui/commit/496107e4bd98a076002567f94af81ceb220180c1))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.3.0 ([#901](https://github.com/scaleway/scaleway-ui/issues/901)) ([8e5d1d2](https://github.com/scaleway/scaleway-ui/commit/8e5d1d27c308d90a56c867c65f121af4b4af2b8c))
+
 ### [0.119.1](https://github.com/scaleway/scaleway-ui/compare/v0.119.0...v0.119.1) (2021-11-10)
 
 
