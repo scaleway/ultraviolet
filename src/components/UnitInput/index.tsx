@@ -141,7 +141,9 @@ const UnitInput = ({
             unit: (unitValue as SelectOption).value,
           }))
         }}
-        value={options.find(option => option.value === value.unit)}
+        value={options.find(
+          option => (option as SelectOption).value === value.unit,
+        )}
         options={options}
         customStyle={customSelectStyle}
         disabled={disabled}
