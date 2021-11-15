@@ -92,6 +92,7 @@ export type FlexBoxProps = {
     | 'flex-start'
     | 'space-around'
     | 'space-between'
+    | 'space-evenly'
   wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
 } & ComponentProps<typeof Child>
 
@@ -130,6 +131,7 @@ FlexBox.propTypes = {
     'flex-start',
     'space-around',
     'space-between',
+    'space-evenly',
   ]),
   wrap: PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
   ...Child.propTypes,

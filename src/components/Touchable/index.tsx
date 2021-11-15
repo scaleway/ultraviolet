@@ -29,7 +29,7 @@ const styles = {
   `,
 }
 
-type TouchableProps = {
+export type TouchableProps = {
   activeOpacity?: number | string
   as?: string
   children?: ReactNode

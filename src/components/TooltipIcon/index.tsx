@@ -3,7 +3,7 @@ import React, { FunctionComponent } from 'react'
 import Icon, { IconName, icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
-type TooltipIconProps = {
+export type TooltipIconProps = {
   baseId?: string
   color?: string
   name?: IconName

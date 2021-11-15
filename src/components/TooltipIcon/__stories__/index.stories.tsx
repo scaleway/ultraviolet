@@ -1,0 +1,51 @@
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import TooltipIcon, { TooltipIconProps } from '..'
+import FlexBox from '../../FlexBox'
+
+export default {
+  component: TooltipIcon,
+  parameters: {
+    docs: {
+      description: {
+        component: 'An icon with tooltip when hovered.',
+      },
+    },
+  },
+  title: 'Components/Feedback/TooltipIcon',
+} as Meta
+
+const Template: Story<TooltipIconProps> = args => <TooltipIcon {...args} />
+
+export const Default = Template.bind({})
+Default.args = {
+  tooltip: 'Hello there',
+}
+
+export const Colors: Story = () => (
+  <>
+    <FlexBox>
+      <TooltipIcon color="primary" tooltip="Scaleway is great" />
+    </FlexBox>
+    <FlexBox>
+      <TooltipIcon color="red" tooltip="Pay attention" />
+    </FlexBox>
+    <FlexBox>
+      <TooltipIcon color="green" tooltip="Go ahead" />
+    </FlexBox>
+  </>
+)
+
+export const Sizes: Story = () => (
+  <>
+    <FlexBox>
+      <TooltipIcon size={10} tooltip="I'm Joe" />
+    </FlexBox>
+    <FlexBox>
+      <TooltipIcon size={30} tooltip="I'm Jack" />
+    </FlexBox>
+    <FlexBox>
+      <TooltipIcon size={40} tooltip="I'm Averell" />
+    </FlexBox>
+  </>
+)

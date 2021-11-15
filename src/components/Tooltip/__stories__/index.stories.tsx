@@ -1,36 +1,32 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import Tooltip from '..'
-import { Box, Button, FlexBox } from '../..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import Tooltip, { TooltipPlacement, TooltipProps } from '..'
+import Box from '../../Box'
+import Button from '../../Button'
+import FlexBox from '../../FlexBox'
 
-<Meta title="Components/Feedback/Tooltip" component={Tooltip} />
+export default {
+  component: Tooltip,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Displays a tooltip on mouse hover.',
+      },
+    },
+  },
+  title: 'Components/Feedback/Tooltip',
+} as Meta
 
-# Tooltip
+const Template: Story<TooltipProps> = args => <Tooltip {...args} />
 
-<Description>Displays a tooltip on mouse hover.</Description>
+export const Default = Template.bind({})
+Default.args = {
+  children: 'Hover Me',
+  text: 'Hello there',
+}
 
-<Canvas>
-  <Story name="Basic">
-    <Box width="max-content">
-      <Tooltip text="Hello there">Hover me</Tooltip>
-    </Box>
-  </Story>
-</Canvas>
-
-## Children
-
-<Description>
-  Here is a set of examples so you see different type of components having a
-  tooltip.
-</Description>
-
-<Canvas>
-  <Story name="Children">
+export const Children: Story = () => (
+  <>
     <Box
       borderRadius={20}
       border="2px solid #333"
@@ -127,51 +123,56 @@ import { Box, Button, FlexBox } from '../..'
         <div>I&apos;m the third children</div>
       </Tooltip>
     </Box>
-  </Story>
-</Canvas>
+  </>
+)
 
-## Placement
+Children.parameters = {
+  docs: {
+    description: {
+      story:
+        ' Here is a set of examples so you see different type of components having a tooltip.',
+    },
+  },
+}
 
-<Description>Set placement using `placement` prop.</Description>
+export const Placement: Story = () => (
+  <FlexBox justifyContent="space-evenly">
+    {['left', 'top', 'bottom', 'right'].map(placement => (
+      <Box key={placement} p={2}>
+        <Tooltip text="tooltip" placement={placement as TooltipPlacement}>
+          {placement}
+        </Tooltip>
+      </Box>
+    ))}
+  </FlexBox>
+)
 
-<Canvas>
-  <Story name="Placement">
-    <FlexBox justifyContent="space-evenly">
-      {['left', 'top', 'bottom', 'right'].map(placement => (
-        <Box key={placement} p={2}>
-          <Tooltip text="tooltip" placement={placement}>
-            {placement}
-          </Tooltip>
-        </Box>
-      ))}
-    </FlexBox>
-  </Story>
-</Canvas>
+Placement.parameters = {
+  docs: {
+    description: {
+      story: 'Set placement using `placement` prop.',
+    },
+  },
+}
 
-## Variants
+export const Variants: Story = () => (
+  <FlexBox justifyContent="space-evenly">
+    {['left', 'top', 'bottom', 'right'].map(placement => (
+      <Box key={placement} p={2} color="white">
+        <Tooltip
+          text="tooltip"
+          variant="white"
+          placement={placement as TooltipPlacement}
+        >
+          {placement}
+        </Tooltip>
+      </Box>
+    ))}
+  </FlexBox>
+)
 
-<Canvas style={{ backgroundColor: 'black' }}>
-  <Story name="with button inside">
-    <FlexBox justifyContent="space-evenly">
-      {['left', 'top', 'bottom', 'right'].map(placement => (
-        <Box key={placement} p={2} color="white">
-          <Tooltip text="tooltip" variant="white" placement={placement}>
-            {placement}
-          </Tooltip>
-        </Box>
-      ))}
-    </FlexBox>
-  </Story>
-</Canvas>
-
-## Empty text
-
-<Description>
-  With an empty text it will only show children and no tooltip.
-</Description>
-
-<Canvas>
-  <Story name="Empty text">
+export const EmptyText: Story = () => (
+  <>
     <Box pb={2}>
       <Tooltip text="">
         Here you should not see a tooltip because text is empty
@@ -182,9 +183,13 @@ import { Box, Button, FlexBox } from '../..'
         Here you should see it because there a text
       </Tooltip>
     </FlexBox>
-  </Story>
-</Canvas>
+  </>
+)
 
-## API
-
-<ArgsTable of={Tooltip} />
+EmptyText.parameters = {
+  docs: {
+    description: {
+      story: 'With an empty text it will only show children and no tooltip.',
+    },
+  },
+}
