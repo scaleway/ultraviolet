@@ -1,3 +1,10 @@
+## [0.120.0](https://github.com/scaleway/scaleway-ui/compare/v0.119.2...v0.120.0) (2021-11-15)
+
+
+### :gear: Features
+
+* add expand icon ([#905](https://github.com/scaleway/scaleway-ui/issues/905)) ([777a2ae](https://github.com/scaleway/scaleway-ui/commit/777a2ae0f27b59bf4a6736c602ade4f009fbd50e))
+
 ### [0.119.2](https://github.com/scaleway/scaleway-ui/compare/v0.119.1...v0.119.2) (2021-11-15)
 
 
