@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RichSelect, {
   RichSelectProps,
   SelectOption,
@@ -91,7 +91,7 @@ export type UnitInputProps = Omit<Partial<RichSelectProps>, 'defaultValue'> & {
   defaultOption?: SelectOption
 }
 
-const UnitInput: FunctionComponent<UnitInputProps> = ({
+const UnitInput = ({
   name = '',
   maxValue = 99999,
   minValue = 1,
@@ -104,7 +104,7 @@ const UnitInput: FunctionComponent<UnitInputProps> = ({
   disabled = false,
   options = defaultOptionValues,
   defaultOption,
-}) => {
+}: UnitInputProps): JSX.Element => {
   const [value, setValue] = useState({
     unit: defaultOption?.value || options?.[0]?.value,
     value: defaultValue,

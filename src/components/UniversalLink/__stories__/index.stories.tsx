@@ -20,26 +20,27 @@ const Template: Story<UniversalLinkProps> = args => (
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    storyDescription: `A basic link component to display beautiful links.`,
+    story: {
+      description: `A basic link component to display beautiful links.`,
+    },
   },
 }
 
-export const CustomLink = Template.bind({})
+export const CustomLink: Story = () => (
+  <BrowserRouter>
+    <UniversalLink
+      to="/?path=/story/components-universallink--custom-link"
+      as={Link}
+    >
+      to
+    </UniversalLink>
+  </BrowserRouter>
+)
 CustomLink.parameters = {
   docs: {
-    storyDescription:
-      "Use `to` prop to use the linkComponent that come from the `ThemeProvider`. If you don't set it in your theme you can use `as` prop the change the component that will be rendered.",
+    story: {
+      description:
+        "Use `to` prop to use the linkComponent that come from the `ThemeProvider`. If you don't set it in your theme you can use `as` prop the change the component that will be rendered.",
+    },
   },
 }
-CustomLink.decorators = [
-  () => (
-    <BrowserRouter>
-      <UniversalLink
-        to="/?path=/story/components-universallink--custom-link"
-        as={Link}
-      >
-        to
-      </UniversalLink>
-    </BrowserRouter>
-  ),
-]
