@@ -21,7 +21,8 @@ const Template: Story<UnitInputProps> = args => (
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    storyDescription: `UnitInput provide data as follows:
+    story: {
+      description: `UnitInput provide data as follows:
 
 \`\`\`js
 {
@@ -29,13 +30,15 @@ Default.parameters = {
     value: [string]
 }
 \`\`\``,
+    },
   },
 }
 
 export const CustomOptions = Template.bind({})
 CustomOptions.parameters = {
   docs: {
-    storyDescription: `You can customize options by passing an array of object. Be careful objects should have following structure:
+    story: {
+      description: `You can customize options by passing an array of object. Be careful objects should have following structure:
 
 \`\`\`js
 {
@@ -45,6 +48,7 @@ CustomOptions.parameters = {
 \`\`\`
 
 Where label is text shown in RichSelect component and value the value that will be given back by component in the name \`unit\`.`,
+    },
   },
 }
 CustomOptions.args = {
