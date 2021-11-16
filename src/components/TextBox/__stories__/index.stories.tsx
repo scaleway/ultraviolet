@@ -38,8 +38,8 @@ export const NoLabel: Story = () => (
 
 NoLabel.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
     },
   },
@@ -48,8 +48,8 @@ NoLabel.parameters = {
 export const Placeholder = Template.bind({})
 Placeholder.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).',
     },
   },
@@ -90,8 +90,8 @@ export const Size: Story = () => (
 
 Size.parameters = {
   docs: {
-    story: {
-      description: 'Set size using `size` property.',
+    description: {
+      story: 'Set size using `size` property.',
     },
   },
 }
@@ -136,8 +136,8 @@ export const Disabled: Story = () => (
 
 Disabled.parameters = {
   docs: {
-    story: {
-      description: 'Mark `TextBox` as disabled using `disabled` property.',
+    description: {
+      story: 'Mark `TextBox` as disabled using `disabled` property.',
     },
   },
 }
@@ -175,8 +175,8 @@ export const ReadOnly: Story = () => (
 
 ReadOnly.parameters = {
   docs: {
-    story: {
-      description: 'Mark `TextBox` as read only using `readOnly` property.',
+    description: {
+      story: 'Mark `TextBox` as read only using `readOnly` property.',
     },
   },
 }
@@ -214,8 +214,8 @@ export const Required: Story = () => (
 
 Required.parameters = {
   docs: {
-    story: {
-      description: 'Add a required mark using `required` property.',
+    description: {
+      story: 'Add a required mark using `required` property.',
     },
   },
 }
@@ -253,8 +253,8 @@ export const Valid: Story = () => (
 
 Valid.parameters = {
   docs: {
-    story: {
-      description: 'Add a check mark using `valid` property.',
+    description: {
+      story: 'Add a check mark using `valid` property.',
     },
   },
 }
@@ -295,8 +295,8 @@ export const Error: Story = () => (
 
 Error.parameters = {
   docs: {
-    story: {
-      description: 'Fill `TextBox` error using `error` property.',
+    description: {
+      story: 'Fill `TextBox` error using `error` property.',
     },
   },
 }
@@ -334,9 +334,8 @@ export const Notice: Story = () => (
 
 Notice.parameters = {
   docs: {
-    story: {
-      description:
-        'Display an information under `TextBox` using `notice` property.',
+    description: {
+      story: 'Display an information under `TextBox` using `notice` property.',
     },
   },
 }
@@ -374,8 +373,8 @@ export const ToggleablePassword: Story = () => (
 
 ToggleablePassword.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
     },
   },
@@ -414,8 +413,8 @@ export const Unit: Story = () => (
 
 Unit.parameters = {
   docs: {
-    story: {
-      description: 'Specify a unit using `unit` prop.',
+    description: {
+      story: 'Specify a unit using `unit` prop.',
     },
   },
 }
@@ -453,8 +452,8 @@ export const Randomize: Story = () => (
 
 Randomize.parameters = {
   docs: {
-    story: {
-      description: 'Set `random` prop adds a randomize button.',
+    description: {
+      story: 'Set `random` prop adds a randomize button.',
     },
   },
 }
@@ -492,8 +491,8 @@ export const ForceEditMode: Story = () => (
 
 ForceEditMode.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
     },
   },
@@ -532,8 +531,8 @@ export const Multiline: Story = () => (
 
 Multiline.parameters = {
   docs: {
-    storyDescription: {
-      description: 'Enable multiline mode using `multiline` property.',
+    description: {
+      story: 'Enable multiline mode using `multiline` property.',
     },
   },
 }
@@ -574,8 +573,8 @@ export const DisableResize: Story = () => (
 
 DisableResize.parameters = {
   docs: {
-    story: {
-      description: 'Disable resize in multiline mode using `resizable` prop.',
+    description: {
+      story: 'Disable resize in multiline mode using `resizable` prop.',
     },
   },
 }
@@ -600,9 +599,8 @@ export const TabIndex: Story = () => (
 
 TabIndex.parameters = {
   docs: {
-    story: {
-      description:
-        'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
+    description: {
+      story: 'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
     },
   },
 }

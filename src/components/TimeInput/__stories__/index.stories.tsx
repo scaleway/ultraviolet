@@ -51,8 +51,8 @@ export const Uncontrolled: Story = () => (
 
 Uncontrolled.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).',
     },
   },
@@ -89,8 +89,8 @@ export const Controlled: Story = () => (
 
 Controlled.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
     },
   },
@@ -141,8 +141,8 @@ export const Schedule: Story = () => (
 
 Schedule.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'You can adjust the time between options with the `schedule` props. `hours`, `half` and `quarter` are available. By default, the `hours` option is selected.',
     },
   },
