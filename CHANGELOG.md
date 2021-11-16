@@ -1,3 +1,15 @@
+### [0.120.1](https://github.com/scaleway/scaleway-ui/compare/v0.120.0...v0.120.1) (2021-11-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.20 ([#906](https://github.com/scaleway/scaleway-ui/issues/906)) ([85ab1eb](https://github.com/scaleway/scaleway-ui/commit/85ab1eb43eccef0a05acc842691f598ebd19fe69))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.3.1 ([#907](https://github.com/scaleway/scaleway-ui/issues/907)) ([dc19d52](https://github.com/scaleway/scaleway-ui/commit/dc19d528f666bdb42fae3a0c974950763ea2e9af))
+
 ## [0.120.0](https://github.com/scaleway/scaleway-ui/compare/v0.119.2...v0.120.0) (2021-11-15)
 
 
