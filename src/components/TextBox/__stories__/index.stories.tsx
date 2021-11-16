@@ -25,25 +25,23 @@ const Template: Story<TextBoxProps> = args => (
 
 export const Default = Template.bind({})
 
-export const NoLabel = Template.bind({})
+export const NoLabel: Story = () => (
+  <Boxer my={1}>
+    <UncontrolledTextBox label="First Name" noTopLabel />
+    <UncontrolledTextBox
+      label="First Name"
+      defaultValue="James Bond"
+      noTopLabel
+    />
+  </Boxer>
+)
+
 NoLabel.parameters = {
   docs: {
     storyDescription:
       'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
   },
 }
-NoLabel.decorators = [
-  () => (
-    <Boxer my={1}>
-      <UncontrolledTextBox label="First Name" noTopLabel />
-      <UncontrolledTextBox
-        label="First Name"
-        defaultValue="James Bond"
-        noTopLabel
-      />
-    </Boxer>
-  ),
-]
 
 export const Placeholder = Template.bind({})
 Placeholder.parameters = {
@@ -52,554 +50,528 @@ Placeholder.parameters = {
       'Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).',
   },
 }
-Placeholder.decorators = [
-  () => <UncontrolledTextBox label="First Name" placeholder="Type your name" />,
-]
 
-export const Size = Template.bind({})
+Placeholder.args = {
+  label: 'First Name',
+  placeholder: 'Type your name',
+}
+
+export const Size: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        placeholder={`Size ${size}`}
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Size.parameters = {
   docs: {
     storyDescription: 'Set size using `size` property.',
   },
 }
-Size.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          placeholder={`Size ${size}`}
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Disabled = Template.bind({})
+export const Disabled: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        disabled
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        disabled
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        disabled
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+    <UncontrolledTextBox
+      size="medium"
+      disabled
+      defaultValue="Default value"
+      label="Label"
+      random="textbox"
+    />
+  </Boxer>
+)
+
 Disabled.parameters = {
   docs: {
     storyDescription: 'Mark `TextBox` as disabled using `disabled` property.',
   },
 }
-Disabled.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          disabled
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          disabled
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          disabled
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
+
+export const ReadOnly: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
       <UncontrolledTextBox
-        size="medium"
-        disabled
+        key={size}
+        size={size}
+        readOnly
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        readOnly
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        readOnly
         defaultValue="Default value"
         label="Label"
-        random="textbox"
       />
-    </Boxer>
-  ),
-]
+    ))}
+  </Boxer>
+)
 
-export const ReadOnly = Template.bind({})
 ReadOnly.parameters = {
   docs: {
     storyDescription: 'Mark `TextBox` as read only using `readOnly` property.',
   },
 }
-ReadOnly.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          readOnly
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          readOnly
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          readOnly
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Required = Template.bind({})
+export const Required: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        required
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        required
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        required
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Required.parameters = {
   docs: {
     storyDescription: 'Add a required mark using `required` property.',
   },
 }
-Required.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          required
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          required
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          required
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Valid = Template.bind({})
+export const Valid: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        valid
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        valid
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        valid
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Valid.parameters = {
   docs: {
     storyDescription: 'Add a check mark using `valid` property.',
   },
 }
-Valid.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          valid
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          valid
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          valid
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Error = Template.bind({})
+export const Error: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <ErrorTransition
+        key={size}
+        size={size}
+        error="An error"
+        placeholder="Placeholder"
+        Component={UncontrolledTextBox}
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <ErrorTransition
+        key={size}
+        size={size}
+        error="An error"
+        placeholder="Placeholder"
+        label="Label"
+        Component={UncontrolledTextBox}
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <ErrorTransition
+        key={size}
+        size={size}
+        error="An error"
+        defaultValue="Default value"
+        label="Label"
+        Component={UncontrolledTextBox}
+      />
+    ))}
+  </Boxer>
+)
+
 Error.parameters = {
   docs: {
     storyDescription: 'Fill `TextBox` error using `error` property.',
   },
 }
-Error.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <ErrorTransition
-          key={size}
-          size={size}
-          error="An error"
-          placeholder="Placeholder"
-          Component={UncontrolledTextBox}
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <ErrorTransition
-          key={size}
-          size={size}
-          error="An error"
-          placeholder="Placeholder"
-          label="Label"
-          Component={UncontrolledTextBox}
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <ErrorTransition
-          key={size}
-          size={size}
-          error="An error"
-          defaultValue="Default value"
-          label="Label"
-          Component={UncontrolledTextBox}
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Notice = Template.bind({})
+export const Notice: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        notice="A notice"
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        notice="A notice"
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        notice="A notice"
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Notice.parameters = {
   docs: {
     storyDescription:
       'Display an information under `TextBox` using `notice` property.',
   },
 }
-Notice.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          notice="A notice"
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          notice="A notice"
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          notice="A notice"
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const ToggleablePassword = Template.bind({})
+export const ToggleablePassword: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        type="toggleable-password"
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        type="toggleable-password"
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        type="toggleable-password"
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 ToggleablePassword.parameters = {
   docs: {
     storyDescription:
       'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
   },
 }
-ToggleablePassword.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          type="toggleable-password"
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          type="toggleable-password"
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          type="toggleable-password"
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Unit = Template.bind({})
+export const Unit: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        unit="px"
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        unit="px"
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        unit="px"
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Unit.parameters = {
   docs: {
     storyDescription: 'Specify a unit using `unit` prop.',
   },
 }
-Unit.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          unit="px"
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          unit="px"
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          unit="px"
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Randomize = Template.bind({})
+export const Randomize: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        random="prefix"
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        random="prefix"
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        random="prefix"
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Randomize.parameters = {
   docs: {
     storyDescription: 'Set `random` prop adds a randomize button.',
   },
 }
-Randomize.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          random="prefix"
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          random="prefix"
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          random="prefix"
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const ForceEditMode = Template.bind({})
+export const ForceEditMode: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        edit
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        edit
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        edit
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 ForceEditMode.parameters = {
   docs: {
     storyDescription:
       'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
   },
 }
-ForceEditMode.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          edit
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          edit
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          edit
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const Multiline = Template.bind({})
+export const Multiline: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 Multiline.parameters = {
   docs: {
     storyDescription: 'Enable multiline mode using `multiline` property.',
   },
 }
-Multiline.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const DisableResize = Template.bind({})
+export const DisableResize: Story = () => (
+  <Boxer my={1}>
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        resizable={false}
+        placeholder="Placeholder"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        resizable={false}
+        placeholder="Placeholder"
+        label="Label"
+      />
+    ))}
+    {textBoxSizes.map(size => (
+      <UncontrolledTextBox
+        key={size}
+        size={size}
+        multiline
+        resizable={false}
+        defaultValue="Default value"
+        label="Label"
+      />
+    ))}
+  </Boxer>
+)
+
 DisableResize.parameters = {
   docs: {
     storyDescription:
       'Disable resize in multiline mode using `resizable` prop.',
   },
 }
-DisableResize.decorators = [
-  () => (
-    <Boxer my={1}>
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          resizable={false}
-          placeholder="Placeholder"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          resizable={false}
-          placeholder="Placeholder"
-          label="Label"
-        />
-      ))}
-      {textBoxSizes.map(size => (
-        <UncontrolledTextBox
-          key={size}
-          size={size}
-          multiline
-          resizable={false}
-          defaultValue="Default value"
-          label="Label"
-        />
-      ))}
-    </Boxer>
-  ),
-]
 
-export const TabIndex = Template.bind({})
+export const TabIndex: Story = () => (
+  <Boxer my={1}>
+    <UncontrolledTextBox
+      label="First Name"
+      defaultValue="Tabulation is ok here"
+    />
+    <UncontrolledTextBox
+      label="No name"
+      tabIndex={-1}
+      defaultValue="No tabulation in this field"
+    />
+    <UncontrolledTextBox
+      label="Last Name"
+      defaultValue="Tabulation is ok here"
+    />
+  </Boxer>
+)
+
 TabIndex.parameters = {
   docs: {
     storyDescription:
       'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
   },
 }
-TabIndex.decorators = [
-  () => (
-    <Boxer my={1}>
-      <UncontrolledTextBox
-        label="First Name"
-        defaultValue="Tabulation is ok here"
-      />
-      <UncontrolledTextBox
-        label="No name"
-        tabIndex={-1}
-        defaultValue="No tabulation in this field"
-      />
-      <UncontrolledTextBox
-        label="Last Name"
-        defaultValue="Tabulation is ok here"
-      />
-    </Boxer>
-  ),
-]

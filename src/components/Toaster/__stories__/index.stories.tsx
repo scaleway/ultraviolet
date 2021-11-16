@@ -33,41 +33,34 @@ const Template: Story = args => (
 
 export const Default = Template.bind({})
 
-export const Variants = Template.bind({})
-Variants.decorators = [
-  () => (
-    <>
-      <ToastContainer />
-      <Boxer>
-        <Button
-          variant="success"
-          mb={1}
-          onClick={() => toast.success('This is success')}
-        >
-          Success
-        </Button>
-        <Button
-          variant="info"
-          mb={1}
-          onClick={() => toast.info('This is info')}
-        >
-          Info
-        </Button>
-        <Button
-          variant="warning"
-          mb={1}
-          onClick={() => toast.warn('This is warning')}
-        >
-          Warning
-        </Button>
-        <Button
-          variant="warning"
-          mb={1}
-          onClick={() => toast.error('This is error')}
-        >
-          Error
-        </Button>
-      </Boxer>
-    </>
-  ),
-]
+export const Variants: Story = () => (
+  <>
+    <ToastContainer />
+    <Boxer>
+      <Button
+        variant="success"
+        mb={1}
+        onClick={() => toast.success('This is success')}
+      >
+        Success
+      </Button>
+      <Button variant="info" mb={1} onClick={() => toast.info('This is info')}>
+        Info
+      </Button>
+      <Button
+        variant="warning"
+        mb={1}
+        onClick={() => toast.warn('This is warning')}
+      >
+        Warning
+      </Button>
+      <Button
+        variant="warning"
+        mb={1}
+        onClick={() => toast.error('This is error')}
+      >
+        Error
+      </Button>
+    </Boxer>
+  </>
+)
