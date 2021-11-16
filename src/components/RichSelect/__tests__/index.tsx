@@ -315,4 +315,18 @@ describe('RichSelect', () => {
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
     ))
+  test('should render correctly description and inlineDescription', () =>
+    shouldMatchEmotionSnapshot(
+      <RichSelect inputId="test" labelId="test-label" name="test-loading">
+        <RichSelect.Option
+          value="a"
+          inlineDescription="This is an inline description"
+        >
+          Option A
+        </RichSelect.Option>
+        <RichSelect.Option value="b" description="This is a description">
+          Option B
+        </RichSelect.Option>
+      </RichSelect>,
+    ))
 })
