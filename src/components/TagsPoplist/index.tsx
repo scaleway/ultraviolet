@@ -1,7 +1,7 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import {
   Tooltip,
   TooltipArrow,
@@ -40,13 +40,13 @@ export type TagsPoplistProps = {
   threshold?: number
 }
 
-const TagsPoplist: FunctionComponent<TagsPoplistProps> = ({
+const TagsPoplist = ({
   maxLength = 600,
   maxTagWidth = 115,
   tags = [],
   threshold = 1,
   ...props
-}) => {
+}: TagsPoplistProps): JSX.Element | null => {
   const theme = useTheme()
   let tmpThreshold = threshold
   if (

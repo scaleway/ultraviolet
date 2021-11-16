@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
+  ToastContainerProps,
   ToastOptions,
   toast as baseToast,
 } from 'react-toastify'
@@ -123,7 +124,7 @@ const toast = {
     ),
 }
 
-const ToastContainer: FunctionComponent = props => {
+const ToastContainer = (props: ToastContainerProps): JSX.Element => {
   const theme = useTheme()
 
   return (

@@ -389,7 +389,7 @@ const TextBox = forwardRef<
       ...props
     },
     ref,
-  ) => {
+  ): JSX.Element => {
     const controlRef = useRef<HTMLInputElement>(null)
 
     const [visited, setVisited] = useState(false)
