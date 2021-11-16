@@ -15,8 +15,8 @@ const Template: Story<VerificationCodeProps> = args => (
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    story: {
-      description: `A Small component to enter some text or numbers one by one.`,
+    description: {
+      story: `A Small component to enter some text or numbers one by one.`,
     },
   },
 }

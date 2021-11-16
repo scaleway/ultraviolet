@@ -20,8 +20,8 @@ const Template: Story<UniversalLinkProps> = args => (
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    story: {
-      description: `A basic link component to display beautiful links.`,
+    description: {
+      story: `A basic link component to display beautiful links.`,
     },
   },
 }
@@ -38,8 +38,8 @@ export const CustomLink: Story = () => (
 )
 CustomLink.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         "Use `to` prop to use the linkComponent that come from the `ThemeProvider`. If you don't set it in your theme you can use `as` prop the change the component that will be rendered.",
     },
   },

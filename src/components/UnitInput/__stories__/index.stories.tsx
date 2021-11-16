@@ -21,8 +21,8 @@ const Template: Story<UnitInputProps> = args => (
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    story: {
-      description: `UnitInput provide data as follows:
+    description: {
+      story: `UnitInput provide data as follows:
 
 \`\`\`js
 {
@@ -37,8 +37,8 @@ Default.parameters = {
 export const CustomOptions = Template.bind({})
 CustomOptions.parameters = {
   docs: {
-    story: {
-      description: `You can customize options by passing an array of object. Be careful objects should have following structure:
+    description: {
+      story: `You can customize options by passing an array of object. Be careful objects should have following structure:
 
 \`\`\`js
 {
@@ -86,8 +86,8 @@ export const Sizes: Story = () => (
 
 Sizes.parameters = {
   docs: {
-    story: {
-      description:
+    description: {
+      story:
         'You can change the original size with the `size` prop. It allow the following values : `small`, `medium`, `large`',
     },
   },
@@ -96,8 +96,8 @@ Sizes.parameters = {
 export const Disabled = Template.bind({})
 Disabled.parameters = {
   docs: {
-    stor: {
-      description: 'You can disable the input by passing `disabled` prop.',
+    description: {
+      story: 'You can disable the input by passing `disabled` prop.',
     },
   },
 }

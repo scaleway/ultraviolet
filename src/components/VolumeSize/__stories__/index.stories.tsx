@@ -12,8 +12,8 @@ const Template: Story<VolumeSizeProps> = args => <VolumeSize {...args} />
 export const Default = Template.bind({})
 Default.parameters = {
   docs: {
-    story: {
-      description: `A beautiful component to show a bar with limits`,
+    description: {
+      story: `A beautiful component to show a bar with limits`,
     },
   },
 }
@@ -21,8 +21,8 @@ Default.parameters = {
 export const MinMaxSize = Template.bind({})
 MinMaxSize.parameters = {
   docs: {
-    story: {
-      description: 'You can set max and min size with `maxSize` and `minSize`.',
+    description: {
+      story: 'You can set max and min size with `maxSize` and `minSize`.',
     },
   },
 }
@@ -58,8 +58,8 @@ export const Sizes: Story = () => (
 
 Sizes.parameters = {
   docs: {
-    story: {
-      description: 'You can choose the component size by using `size` prop.',
+    description: {
+      story: 'You can choose the component size by using `size` prop.',
     },
   },
 }
