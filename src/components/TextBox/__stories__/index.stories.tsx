@@ -38,16 +38,20 @@ export const NoLabel: Story = () => (
 
 NoLabel.parameters = {
   docs: {
-    storyDescription:
-      'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
+    story: {
+      description:
+        'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
+    },
   },
 }
 
 export const Placeholder = Template.bind({})
 Placeholder.parameters = {
   docs: {
-    storyDescription:
-      'Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).',
+    story: {
+      description:
+        'Set a placeholder using `placeholder` property. It is only visibled if the `TextBox` has been visited (an input is considered as visited after the first focus).',
+    },
   },
 }
 
@@ -86,7 +90,9 @@ export const Size: Story = () => (
 
 Size.parameters = {
   docs: {
-    storyDescription: 'Set size using `size` property.',
+    story: {
+      description: 'Set size using `size` property.',
+    },
   },
 }
 
@@ -130,7 +136,9 @@ export const Disabled: Story = () => (
 
 Disabled.parameters = {
   docs: {
-    storyDescription: 'Mark `TextBox` as disabled using `disabled` property.',
+    story: {
+      description: 'Mark `TextBox` as disabled using `disabled` property.',
+    },
   },
 }
 
@@ -167,7 +175,9 @@ export const ReadOnly: Story = () => (
 
 ReadOnly.parameters = {
   docs: {
-    storyDescription: 'Mark `TextBox` as read only using `readOnly` property.',
+    story: {
+      description: 'Mark `TextBox` as read only using `readOnly` property.',
+    },
   },
 }
 
@@ -204,7 +214,9 @@ export const Required: Story = () => (
 
 Required.parameters = {
   docs: {
-    storyDescription: 'Add a required mark using `required` property.',
+    story: {
+      description: 'Add a required mark using `required` property.',
+    },
   },
 }
 
@@ -241,7 +253,9 @@ export const Valid: Story = () => (
 
 Valid.parameters = {
   docs: {
-    storyDescription: 'Add a check mark using `valid` property.',
+    story: {
+      description: 'Add a check mark using `valid` property.',
+    },
   },
 }
 
@@ -281,7 +295,9 @@ export const Error: Story = () => (
 
 Error.parameters = {
   docs: {
-    storyDescription: 'Fill `TextBox` error using `error` property.',
+    story: {
+      description: 'Fill `TextBox` error using `error` property.',
+    },
   },
 }
 
@@ -318,8 +334,10 @@ export const Notice: Story = () => (
 
 Notice.parameters = {
   docs: {
-    storyDescription:
-      'Display an information under `TextBox` using `notice` property.',
+    story: {
+      description:
+        'Display an information under `TextBox` using `notice` property.',
+    },
   },
 }
 
@@ -356,8 +374,10 @@ export const ToggleablePassword: Story = () => (
 
 ToggleablePassword.parameters = {
   docs: {
-    storyDescription:
-      'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
+    story: {
+      description:
+        'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
+    },
   },
 }
 
@@ -394,7 +414,9 @@ export const Unit: Story = () => (
 
 Unit.parameters = {
   docs: {
-    storyDescription: 'Specify a unit using `unit` prop.',
+    story: {
+      description: 'Specify a unit using `unit` prop.',
+    },
   },
 }
 
@@ -431,7 +453,9 @@ export const Randomize: Story = () => (
 
 Randomize.parameters = {
   docs: {
-    storyDescription: 'Set `random` prop adds a randomize button.',
+    story: {
+      description: 'Set `random` prop adds a randomize button.',
+    },
   },
 }
 
@@ -468,8 +492,10 @@ export const ForceEditMode: Story = () => (
 
 ForceEditMode.parameters = {
   docs: {
-    storyDescription:
-      'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
+    story: {
+      description:
+        'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
+    },
   },
 }
 
@@ -506,7 +532,9 @@ export const Multiline: Story = () => (
 
 Multiline.parameters = {
   docs: {
-    storyDescription: 'Enable multiline mode using `multiline` property.',
+    storyDescription: {
+      description: 'Enable multiline mode using `multiline` property.',
+    },
   },
 }
 
@@ -546,8 +574,9 @@ export const DisableResize: Story = () => (
 
 DisableResize.parameters = {
   docs: {
-    storyDescription:
-      'Disable resize in multiline mode using `resizable` prop.',
+    story: {
+      description: 'Disable resize in multiline mode using `resizable` prop.',
+    },
   },
 }
 
@@ -571,7 +600,9 @@ export const TabIndex: Story = () => (
 
 TabIndex.parameters = {
   docs: {
-    storyDescription:
-      'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
+    story: {
+      description:
+        'Can disable tabulation on field with `tabIndex=&quot;-1&quot;`',
+    },
   },
 }

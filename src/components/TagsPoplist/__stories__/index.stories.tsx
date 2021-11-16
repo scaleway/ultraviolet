@@ -24,8 +24,10 @@ export const Default = Template.bind({})
 export const Threshold = Template.bind({})
 Threshold.parameters = {
   docs: {
-    storyDescription:
-      '`threshold` prop defines the number of tags to display before hiding them into a tooltip.',
+    story: {
+      description:
+        '`threshold` prop defines the number of tags to display before hiding them into a tooltip.',
+    },
   },
 }
 
@@ -93,8 +95,10 @@ Threshold.args = {
 export const TagWidth = Template.bind({})
 TagWidth.parameters = {
   docs: {
-    storyDescription:
-      '`maxTagWidth` can be used for defining max width of each tags except the ones in tooltip.',
+    story: {
+      description:
+        '`maxTagWidth` can be used for defining max width of each tags except the ones in tooltip.',
+    },
   },
 }
 
