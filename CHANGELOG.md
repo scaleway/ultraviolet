@@ -1,3 +1,16 @@
+### [0.120.2](https://github.com/scaleway/scaleway-ui/compare/v0.120.1...v0.120.2) (2021-11-17)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency lint-staged to v12 ([#902](https://github.com/scaleway/scaleway-ui/issues/902)) ([b3b353d](https://github.com/scaleway/scaleway-ui/commit/b3b353d2dc4141874e3e3256d46a0f8f8243694e))
+* **devdeps:** update dependency rollup to v2.60.0 ([#911](https://github.com/scaleway/scaleway-ui/issues/911)) ([8f35c6e](https://github.com/scaleway/scaleway-ui/commit/8f35c6e69f2375af0b91936e5df7ce7fb6b7e4a8))
+
+
+### :bug: Bug Fixes
+
+* **tooltip-icon:** fixed vertical align ([#894](https://github.com/scaleway/scaleway-ui/issues/894)) ([f0cdabb](https://github.com/scaleway/scaleway-ui/commit/f0cdabb2e7d919b03694e930d4df78ca8b60f978))
+
 ### [0.120.1](https://github.com/scaleway/scaleway-ui/compare/v0.120.0...v0.120.1) (2021-11-16)
 
 
