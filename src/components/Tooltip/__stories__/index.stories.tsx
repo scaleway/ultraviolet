@@ -12,6 +12,9 @@ export default {
       description: {
         component: 'Displays a tooltip on mouse hover.',
       },
+      source: {
+        excludeDecorators: true,
+      },
     },
   },
   title: 'Components/Feedback/Tooltip',
@@ -24,6 +27,14 @@ Default.args = {
   children: 'Hover Me',
   text: 'Hello there',
 }
+
+Default.decorators = [
+  DefaultStory => (
+    <FlexBox>
+      <DefaultStory />
+    </FlexBox>
+  ),
+]
 
 export const Children: Story = () => (
   <>
@@ -130,7 +141,7 @@ Children.parameters = {
   docs: {
     description: {
       story:
-        ' Here is a set of examples so you see different type of components having a tooltip.',
+        'Here is a set of examples so you see different type of components having a tooltip.',
     },
   },
 }
@@ -156,7 +167,7 @@ Placement.parameters = {
 }
 
 export const Variants: Story = () => (
-  <FlexBox justifyContent="space-evenly">
+  <Box display="flex" backgroundColor="black" justifyContent="space-evenly">
     {['left', 'top', 'bottom', 'right'].map(placement => (
       <Box key={placement} p={2} color="white">
         <Tooltip
@@ -168,7 +179,7 @@ export const Variants: Story = () => (
         </Tooltip>
       </Box>
     ))}
-  </FlexBox>
+  </Box>
 )
 
 export const EmptyText: Story = () => (

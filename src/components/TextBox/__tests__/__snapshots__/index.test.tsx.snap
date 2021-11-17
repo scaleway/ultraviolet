@@ -112,7 +112,7 @@ exports[`TextBox should handle events on random button 1`] = `
   box-shadow: none!important;
 }
 
-.cache-12xt7c8 {
+.cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -123,6 +123,14 @@ exports[`TextBox should handle events on random button 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -176,7 +184,8 @@ exports[`TextBox should handle events on random button 1`] = `
         class="cache-3ej5ou e18bmnpq2"
       >
         <button
-          class="cache-12xt7c8 e7ah3bn0"
+          aria-disabled="false"
+          class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
           title="Randomize"
           type="button"
         >
@@ -314,7 +323,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-12xt7c8 {
+.cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -325,6 +334,14 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -378,7 +395,8 @@ exports[`TextBox should handle events on toggleable password 1`] = `
         class="cache-3ej5ou e18bmnpq2"
       >
         <button
-          class="cache-12xt7c8 e7ah3bn0"
+          aria-disabled="false"
+          class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
           title="Hide"
           type="button"
         >
@@ -4419,7 +4437,7 @@ exports[`TextBox should render random 1`] = `
   box-shadow: none!important;
 }
 
-.cache-12xt7c8 {
+.cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -4430,6 +4448,14 @@ exports[`TextBox should render random 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -4483,7 +4509,8 @@ exports[`TextBox should render random 1`] = `
         class="cache-3ej5ou e18bmnpq2"
       >
         <button
-          class="cache-12xt7c8 e7ah3bn0"
+          aria-disabled="false"
+          class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
           title="Randomize"
           type="button"
         >
@@ -4633,7 +4660,7 @@ exports[`TextBox should render random 2`] = `
   box-shadow: none!important;
 }
 
-.cache-4s20uj {
+.cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -4644,7 +4671,16 @@ exports[`TextBox should render random 2`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
   opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-1xppsrc {
@@ -4704,7 +4740,8 @@ exports[`TextBox should render random 2`] = `
         class="cache-3ej5ou e18bmnpq2"
       >
         <button
-          class="cache-4s20uj e7ah3bn0"
+          aria-disabled="true"
+          class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
           disabled=""
           title="Randomize"
           type="button"
@@ -4843,7 +4880,7 @@ exports[`TextBox should render toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-12xt7c8 {
+.cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -4854,6 +4891,14 @@ exports[`TextBox should render toggleable password 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -4907,7 +4952,8 @@ exports[`TextBox should render toggleable password 1`] = `
         class="cache-3ej5ou e18bmnpq2"
       >
         <button
-          class="cache-12xt7c8 e7ah3bn0"
+          aria-disabled="false"
+          class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
           title="Show"
           type="button"
         >

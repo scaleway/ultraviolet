@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ButtonHTMLAttributes,
@@ -8,26 +8,34 @@ import React, {
   ReactNode,
   forwardRef,
 } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps, XStyledProps } from '../Box'
 
-const styles = {
-  actionable: css`
+const StyledTouchable = styled(Box)<
+  BoxProps & { activeOpacity?: number | string }
+>`
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &[aria-disabled="false"] {
     cursor: pointer;
     touch-action: manipulation;
-  `,
-  disabled: css`
-    opacity: 0.5;
-  `,
-  root: css`
-    border: 0;
-    transition-property: opacity;
-    transition-duration: 0.15s;
-    user-select: none;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-  `,
-}
+  }
+
+  &[aria-disabled="false"]:active {
+      opacity: ${({ activeOpacity }) => activeOpacity};
+    }
+  }
+`
 
 export type TouchableProps = {
   activeOpacity?: number | string
@@ -63,30 +71,21 @@ const Touchable = forwardRef<Element, TouchableProps>(
     const typeProperty = as === 'button' ? 'button' : type
 
     return (
-      <Box
+      <StyledTouchable
+        activeOpacity={activeOpacity}
         ref={ref}
-        css={[
-          styles.root,
-          !disabled && styles.actionable,
-          !disabled &&
-            css`
-              &:active {
-                opacity: ${activeOpacity};
-              }
-            `,
-          disabled && styles.disabled,
-        ]}
         {...props}
         as={as}
         title={title}
         type={typeProperty}
+        aria-disabled={disabled}
         disabled={disabled}
         tabIndex={hasFocus ? 0 : undefined}
         onClick={onClick}
         onKeyDown={onKeyDown}
       >
         {children}
-      </Box>
+      </StyledTouchable>
     )
   },
 )

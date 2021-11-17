@@ -2,7 +2,7 @@
 
 exports[`Touchable renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-4s20uj {
+  .cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -13,11 +13,21 @@ exports[`Touchable renders correctly disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
   opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 <button
-    class="cache-4s20uj e7ah3bn0"
+    aria-disabled="true"
+    class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
     disabled=""
     type="button"
   >
@@ -28,7 +38,7 @@ exports[`Touchable renders correctly disabled 1`] = `
 
 exports[`Touchable renders correctly on focus 1`] = `
 <DocumentFragment>
-  .cache-1qpufvt {
+  .cache-8q9l4t {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -39,16 +49,29 @@ exports[`Touchable renders correctly on focus 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-8q9l4t.cache-8q9l4t:active {
+  opacity: 0.7;
+}
+
+.cache-8q9l4t[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-8q9l4t[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-1qpufvt:active {
+.cache-8q9l4t[aria-disabled="false"]:active {
   opacity: 0.7;
 }
 
 <button
-    class="cache-1qpufvt e7ah3bn0"
+    aria-disabled="false"
+    class="e1kgqxfn0 cache-8q9l4t e7ah3bn0"
     tabindex="0"
     type="button"
   >
@@ -59,7 +82,7 @@ exports[`Touchable renders correctly on focus 1`] = `
 
 exports[`Touchable renders correctly with a non default as and type 1`] = `
 <DocumentFragment>
-  .cache-12xt7c8 {
+  .cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -70,12 +93,21 @@ exports[`Touchable renders correctly with a non default as and type 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
 <div
-    class="cache-12xt7c8 e7ah3bn0"
+    aria-disabled="false"
+    class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
     type="button"
   >
     Button Touchable
@@ -85,7 +117,7 @@ exports[`Touchable renders correctly with a non default as and type 1`] = `
 
 exports[`Touchable renders correctly with defaults 1`] = `
 <DocumentFragment>
-  .cache-12xt7c8 {
+  .cache-cq3faf {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -96,12 +128,21 @@ exports[`Touchable renders correctly with defaults 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+.cache-cq3faf[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-cq3faf[aria-disabled="false"] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
 <button
-    class="cache-12xt7c8 e7ah3bn0"
+    aria-disabled="false"
+    class="e1kgqxfn0 cache-cq3faf e7ah3bn0"
     type="button"
   >
     Basic Touchable

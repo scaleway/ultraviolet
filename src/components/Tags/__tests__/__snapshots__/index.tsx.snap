@@ -53,7 +53,7 @@ exports[`Tags add tag from input 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -64,8 +64,6 @@ exports[`Tags add tag from input 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,13 +79,23 @@ exports[`Tags add tag from input 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -140,7 +148,8 @@ exports[`Tags add tag from input 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -163,7 +172,8 @@ exports[`Tags add tag from input 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -186,7 +196,8 @@ exports[`Tags add tag from input 1`] = `
         test
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -264,7 +275,7 @@ exports[`Tags add tag from input with error 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -275,8 +286,6 @@ exports[`Tags add tag from input with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -292,13 +301,23 @@ exports[`Tags add tag from input with error 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -351,7 +370,8 @@ exports[`Tags add tag from input with error 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -374,7 +394,8 @@ exports[`Tags add tag from input with error 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -452,7 +473,7 @@ exports[`Tags add tag on paste 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -463,8 +484,6 @@ exports[`Tags add tag on paste 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -480,13 +499,23 @@ exports[`Tags add tag on paste 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -539,7 +568,8 @@ exports[`Tags add tag on paste 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -562,7 +592,8 @@ exports[`Tags add tag on paste 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -585,7 +616,8 @@ exports[`Tags add tag on paste 1`] = `
         test
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -663,7 +695,7 @@ exports[`Tags add tag on paste with error 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -674,8 +706,6 @@ exports[`Tags add tag on paste with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -691,13 +721,23 @@ exports[`Tags add tag on paste with error 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -750,7 +790,8 @@ exports[`Tags add tag on paste with error 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -773,7 +814,8 @@ exports[`Tags add tag on paste with error 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -851,7 +893,7 @@ exports[`Tags delete tag 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -862,8 +904,6 @@ exports[`Tags delete tag 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -879,13 +919,23 @@ exports[`Tags delete tag 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -938,7 +988,8 @@ exports[`Tags delete tag 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1016,7 +1067,7 @@ exports[`Tags delete tag with backspace 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1027,8 +1078,6 @@ exports[`Tags delete tag with backspace 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1044,13 +1093,23 @@ exports[`Tags delete tag with backspace 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -1103,7 +1162,8 @@ exports[`Tags delete tag with backspace 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1197,7 +1257,7 @@ exports[`Tags delete tag with error 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1208,8 +1268,6 @@ exports[`Tags delete tag with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1225,13 +1283,23 @@ exports[`Tags delete tag with error 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -1291,7 +1359,8 @@ exports[`Tags delete tag with error 1`] = `
         throw
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1314,7 +1383,8 @@ exports[`Tags delete tag with error 1`] = `
         error
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1416,7 +1486,7 @@ exports[`Tags renders correctly when disabled 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-1hea4fe {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1427,7 +1497,6 @@ exports[`Tags renders correctly when disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1443,13 +1512,23 @@ exports[`Tags renders correctly when disabled 1`] = `
   justify-content: center;
 }
 
-.cache-1hea4fe:hover,
-.cache-1hea4fe:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-1hea4fe:hover svg,
-.cache-1hea4fe:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -1478,7 +1557,8 @@ exports[`Tags renders correctly when disabled 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-1hea4fe e7ah3bn0"
+        aria-disabled="true"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         disabled=""
         type="button"
       >
@@ -1502,7 +1582,8 @@ exports[`Tags renders correctly when disabled 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-1hea4fe e7ah3bn0"
+        aria-disabled="true"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         disabled=""
         type="button"
       >
@@ -1573,7 +1654,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1584,8 +1665,6 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1601,13 +1680,23 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -1636,7 +1725,8 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1659,7 +1749,8 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1729,7 +1820,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1740,8 +1831,6 @@ exports[`Tags renders correctly when variant = base 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1757,13 +1846,23 @@ exports[`Tags renders correctly when variant = base 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -1816,7 +1915,8 @@ exports[`Tags renders correctly when variant = base 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1839,7 +1939,8 @@ exports[`Tags renders correctly when variant = base 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -1916,7 +2017,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-1c39xlg {
+.cache-1i36juy {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1927,8 +2028,6 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1949,13 +2048,23 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   height: 32px;
 }
 
-.cache-1c39xlg:hover,
-.cache-1c39xlg:focus {
+.cache-1i36juy[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1i36juy[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1i36juy:hover,
+.cache-1i36juy:focus {
   background-color: #eeeeff;
 }
 
-.cache-1c39xlg:hover svg,
-.cache-1c39xlg:focus svg {
+.cache-1i36juy:hover svg,
+.cache-1i36juy:focus svg {
   fill: #4f0599;
 }
 
@@ -2008,7 +2117,8 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-1c39xlg e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1i36juy e7ah3bn0"
         type="button"
       >
         <svg
@@ -2031,7 +2141,8 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-1c39xlg e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1i36juy e7ah3bn0"
         type="button"
       >
         <svg
@@ -2105,7 +2216,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2116,8 +2227,6 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2133,13 +2242,23 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -2192,7 +2311,8 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2215,7 +2335,8 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2355,7 +2476,7 @@ exports[`Tags renders correctly with some tags 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2366,8 +2487,6 @@ exports[`Tags renders correctly with some tags 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2383,13 +2502,23 @@ exports[`Tags renders correctly with some tags 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -2442,7 +2571,8 @@ exports[`Tags renders correctly with some tags 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2465,7 +2595,8 @@ exports[`Tags renders correctly with some tags 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2542,7 +2673,7 @@ exports[`Tags renders correctly with some tags 2`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2553,8 +2684,6 @@ exports[`Tags renders correctly with some tags 2`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2570,13 +2699,23 @@ exports[`Tags renders correctly with some tags 2`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -2629,7 +2768,8 @@ exports[`Tags renders correctly with some tags 2`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2652,7 +2792,8 @@ exports[`Tags renders correctly with some tags 2`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2729,7 +2870,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2740,8 +2881,6 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2757,13 +2896,23 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -2816,7 +2965,8 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2839,7 +2989,8 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -2916,7 +3067,7 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-onp1k0 {
+.cache-k15tc5 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2927,8 +3078,6 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2944,13 +3093,23 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   justify-content: center;
 }
 
-.cache-onp1k0:hover,
-.cache-onp1k0:focus {
+.cache-k15tc5[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-k15tc5[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-k15tc5:hover,
+.cache-k15tc5:focus {
   background-color: #eeeeff;
 }
 
-.cache-onp1k0:hover svg,
-.cache-onp1k0:focus svg {
+.cache-k15tc5:hover svg,
+.cache-k15tc5:focus svg {
   fill: #4f0599;
 }
 
@@ -3003,7 +3162,8 @@ exports[`Tags renders correctly with some tags objects 1`] = `
         hello
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg
@@ -3026,7 +3186,8 @@ exports[`Tags renders correctly with some tags objects 1`] = `
         world
       </span>
       <button
-        class="e1vt8sjg0 cache-onp1k0 e7ah3bn0"
+        aria-disabled="false"
+        class="e1vt8sjg0 e1kgqxfn0 cache-k15tc5 e7ah3bn0"
         type="button"
       >
         <svg

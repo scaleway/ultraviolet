@@ -10,6 +10,9 @@ export default {
       description: {
         component: 'An icon with tooltip when hovered.',
       },
+      source: {
+        excludeDecorators: true,
+      },
     },
   },
   title: 'Components/Feedback/TooltipIcon',
@@ -18,6 +21,13 @@ export default {
 const Template: Story<TooltipIconProps> = args => <TooltipIcon {...args} />
 
 export const Default = Template.bind({})
+Default.decorators = [
+  DefaultStory => (
+    <FlexBox>
+      <DefaultStory />
+    </FlexBox>
+  ),
+]
 Default.args = {
   tooltip: 'Hello there',
 }

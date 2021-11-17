@@ -69,7 +69,7 @@ exports[`Modal renders with customStyle 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -80,15 +80,23 @@ exports[`Modal renders with customStyle 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -123,7 +131,8 @@ exports[`Modal renders with customStyle 1`] = `
           class="cache-et21s3 e1x6rvve0"
         >
           <button
-            class="cache-1x1qiw9 e7ah3bn0"
+            aria-disabled="false"
+            class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
             title="close"
             type="button"
           >
@@ -213,7 +222,7 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -224,15 +233,23 @@ exports[`Modal renders with default Props 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -271,7 +288,8 @@ exports[`Modal renders with default Props 1`] = `
           class="cache-et21s3 e1x6rvve0"
         >
           <button
-            class="cache-1x1qiw9 e7ah3bn0"
+            aria-disabled="false"
+            class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
             title="close"
             type="button"
           >
@@ -360,7 +378,7 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -371,15 +389,23 @@ exports[`Modal renders with disclosure 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -418,7 +444,8 @@ exports[`Modal renders with disclosure 1`] = `
           class="cache-et21s3 e1x6rvve0"
         >
           <button
-            class="cache-1x1qiw9 e7ah3bn0"
+            aria-disabled="false"
+            class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
             title="close"
             type="button"
           >
@@ -507,7 +534,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -518,15 +545,23 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -563,7 +598,8 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
           class="cache-et21s3 e1x6rvve0"
         >
           <button
-            class="cache-1x1qiw9 e7ah3bn0"
+            aria-disabled="false"
+            class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
             title="close"
             type="button"
           >
@@ -653,7 +689,7 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -664,15 +700,23 @@ exports[`Modal renders with opened={true} 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -707,7 +751,8 @@ exports[`Modal renders with opened={true} 1`] = `
           class="cache-et21s3 e1x6rvve0"
         >
           <button
-            class="cache-1x1qiw9 e7ah3bn0"
+            aria-disabled="false"
+            class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
             title="close"
             type="button"
           >
@@ -797,7 +842,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.cache-1x1qiw9 {
+.cache-oyjnw6 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -808,15 +853,23 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-1x1qiw9.cache-1x1qiw9 {
+.cache-oyjnw6.cache-oyjnw6 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 0;
+}
+
+.cache-oyjnw6[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-oyjnw6[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-byq9xb {
@@ -851,7 +904,8 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
         class="cache-et21s3 e1x6rvve0"
       >
         <button
-          class="cache-1x1qiw9 e7ah3bn0"
+          aria-disabled="false"
+          class="e1kgqxfn0 cache-oyjnw6 e7ah3bn0"
           title="close"
           type="button"
         >
