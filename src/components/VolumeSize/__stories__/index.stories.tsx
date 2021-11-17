@@ -7,7 +7,9 @@ export default {
   title: 'Components/Data Display/VolumeSize',
 } as Meta
 
-const Template: Story<VolumeSizeProps> = args => <VolumeSize {...args} />
+const Template: Story<VolumeSizeProps> = args => (
+  <VolumeSize maxSize={30} minSize={10} value={20} unit="KB" {...args} />
+)
 
 export const Default = Template.bind({})
 Default.parameters = {
