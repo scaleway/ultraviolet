@@ -1,12 +1,6 @@
 import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  ElementType,
-  FunctionComponent,
-  ReactNode,
-  Ref,
-} from 'react'
+import React, { ComponentProps, ElementType, ReactNode, Ref } from 'react'
 import Box, { XStyledProps } from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
@@ -23,14 +17,14 @@ const needNativeLink = (url?: string) => {
   return isAbsolute || isTelLink || isMailToLink || isAnchor
 }
 
-type UniversalLinkProps = {
+export type UniversalLinkProps = {
   children: ReactNode
   to?: string
 } & ComponentProps<'a'> & {
     ref?: Ref<Element>
   } & XStyledProps
 
-const UniversalLink: FunctionComponent<UniversalLinkProps> = ({
+const UniversalLink = ({
   children,
   target,
   rel: propsRel,
@@ -38,7 +32,7 @@ const UniversalLink: FunctionComponent<UniversalLinkProps> = ({
   as: propsAs,
   href: propsHref,
   ...props
-}) => {
+}: UniversalLinkProps): JSX.Element => {
   const { linkComponent = 'a' } = useTheme()
   const isBlank = target === '_blank'
   const rel = propsRel || (isBlank ? 'noopener noreferrer' : undefined)

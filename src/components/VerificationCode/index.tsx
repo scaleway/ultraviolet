@@ -4,7 +4,6 @@ import React, {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
-  FunctionComponent,
   KeyboardEventHandler,
   useState,
 } from 'react'
@@ -40,7 +39,7 @@ const KEY_CODE = {
   up: 38,
 }
 
-type VerificationCodeProps = {
+export type VerificationCodeProps = {
   disabled?: boolean
   error?: boolean
   /**
@@ -66,7 +65,7 @@ type VerificationCodeProps = {
   type?: 'text' | 'number'
 }
 
-const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
+const VerificationCode = ({
   disabled = false,
   error = false,
   fields = 4,
@@ -79,7 +78,7 @@ const VerificationCode: FunctionComponent<VerificationCodeProps> = ({
   required = false,
   type = 'number',
   ...props
-}) => {
+}: VerificationCodeProps): JSX.Element => {
   const valuesArray = Object.assign(
     new Array(fields).fill(''),
     initialValue.substring(0, fields).split(''),

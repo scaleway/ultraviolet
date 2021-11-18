@@ -1,7 +1,7 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -14,7 +14,7 @@ const sizes = {
   xsmall: 0.5,
 }
 
-type Sizes = keyof typeof sizes
+export type Sizes = keyof typeof sizes
 
 type StyleProps = {
   hasError?: boolean
@@ -170,7 +170,7 @@ const getPercentUsed = ({
   return 10 + ((value - validMinSize) / (maxSize - validMinSize)) * 80
 }
 
-type VolumeSizeProps = {
+export type VolumeSizeProps = {
   /**
    * maximum label below the maxSize
    */
@@ -205,7 +205,7 @@ type VolumeSizeProps = {
   value: number
 }
 
-const VolumeSize: FunctionComponent<VolumeSizeProps> = ({
+const VolumeSize = ({
   maxLabel = 'maximum',
   maxSize,
   minLabel = 'minimum',
@@ -217,7 +217,7 @@ const VolumeSize: FunctionComponent<VolumeSizeProps> = ({
   tooSmallMessage = 'Not enough volume allocated',
   unit,
   value,
-}) => {
+}: VolumeSizeProps): JSX.Element => {
   const isTooBig = maxSize ? value > maxSize : false
   const isTooSmall = minSize ? value < minSize : false
   const hasError = isTooBig || isTooSmall
