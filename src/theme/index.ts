@@ -10,6 +10,7 @@ const radii = {
 const space = {
   0: '0',
   0.25: '2px',
+  0.5: '4px',
   0.75: '6px',
   1: '8px',
   2: '16px',

@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ImgHTMLAttributes } from 'react'
-import Box, { XStyledProps } from '../Box'
 
-export type ImageProps = ImgHTMLAttributes<HTMLImageElement> & XStyledProps
+export type ImageProps = ImgHTMLAttributes<HTMLImageElement>
 
-const Image: FunctionComponent<ImageProps> = ({ src, ...props }) => (
-  <Box as="img" src={src} {...props} />
+const Image: FunctionComponent<ImageProps> = ({ alt, src, ...props }) => (
+  <img alt={alt} src={src} {...props} />
 )
 
 Image.propTypes = {
+  alt: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
 }
 

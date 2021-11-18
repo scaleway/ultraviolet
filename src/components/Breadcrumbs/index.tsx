@@ -10,7 +10,6 @@ import React, {
   isValidElement,
   useMemo,
 } from 'react'
-import Box from '../Box'
 import Link from '../Link'
 
 function reverseZIndexes() {
@@ -236,13 +235,12 @@ const Breadcrumbs: BreadcrumbsType = ({
   children,
   variant = 'link',
   selected: selectedProp,
-  ...props
 }) => {
   const selected =
     selectedProp !== undefined ? selectedProp : Children.count(children) - 1
 
   return (
-    <Box as="nav" aria-label="breadcrumb" {...props}>
+    <nav aria-label="breadcrumb">
       <StyledOl>
         {Children.map(children, (child, index: number) => {
           if (!isValidElement<ItemProps>(child)) {
@@ -258,7 +256,7 @@ const Breadcrumbs: BreadcrumbsType = ({
           })
         })}
       </StyledOl>
-    </Box>
+    </nav>
   )
 }
 

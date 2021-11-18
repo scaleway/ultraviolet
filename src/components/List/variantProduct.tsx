@@ -12,7 +12,6 @@ import React, {
   useCallback,
 } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
@@ -271,7 +270,6 @@ export const Header: FunctionComponent = props => {
 
 type ExpandedContentProps = {
   id?: string
-  isToggled?: boolean
   rowsState?: { [x: string]: ListRowState }
   children?:
     | ReactNode
@@ -282,23 +280,20 @@ export const ExpendableContent: FunctionComponent<ExpandedContentProps> = ({
   children,
   id,
   rowsState,
-  isToggled,
-  ...props
 }) => (
-  <Box data-expandable {...props}>
+  <div data-expandable>
     {typeof children === 'function'
       ? children({
           id,
           isToggled: rowsState?.[id as keyof typeof rowsState]?.opened || false,
         })
       : children}
-  </Box>
+  </div>
 )
 
 ExpendableContent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired,
   id: PropTypes.string,
-  isToggled: PropTypes.bool,
   rowsState: PropTypes.shape({}),
 }
 

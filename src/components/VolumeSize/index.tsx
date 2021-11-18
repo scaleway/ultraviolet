@@ -2,7 +2,6 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
@@ -128,9 +127,14 @@ const StyledLabel = styled('div', {
   text-align: ${({ type }) => (type === 'min' ? 'left' : 'right')};
 `
 
-const StyledBox = styled(Box)`
+const StyledBox = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.space['1']};
+`
+
+const StyledComponentContainer = styled.div`
+  margin-bottom: ${({ theme }) => theme.space['5']};
 `
 
 const getPercentUsed = ({
@@ -223,8 +227,8 @@ const VolumeSize = ({
   const hasError = isTooBig || isTooSmall
 
   return (
-    <Box mb={5}>
-      <StyledBox mb={1}>
+    <StyledComponentContainer>
+      <StyledBox>
         <Typography variant="bodyA" mr={2} fontWeight={500}>
           <StyledTitle>{title}</StyledTitle>
           <StyledValue hasError={hasError}>
@@ -276,7 +280,7 @@ const VolumeSize = ({
           </StyledCursor>
         )}
       </StyledContainer>
-    </Box>
+    </StyledComponentContainer>
   )
 }
 

@@ -8,7 +8,6 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
 
@@ -33,11 +32,32 @@ const StyledTooltipReference = styled(TooltipReference)`
   padding-right: 8px;
 `
 
+const StyledTagContainer = styled('div', {
+  shouldForwardProp: prop => !['css'].includes(prop.toString()),
+})<{ cssProp: string | undefined }>`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.gray700};
+  ${({ cssProp }) => cssProp}
+`
+
+const StyledManyTagsContainer = styled.div`
+  box-shadow: 0 -1px 5px 3px rgba(165, 165, 205, 0.15);
+  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+  display: flex;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.radii.default};
+  max-width: '80vw';
+  flex-wrap: wrap;
+`
+
 export type TagsPoplistProps = {
   maxLength?: number
   maxTagWidth?: number
   tags?: string[]
   threshold?: number
+  css: string | undefined
 }
 
 const TagsPoplist = ({
@@ -45,7 +65,7 @@ const TagsPoplist = ({
   maxTagWidth = 115,
   tags = [],
   threshold = 1,
-  ...props
+  css: cssProp,
 }: TagsPoplistProps): JSX.Element | null => {
   const theme = useTheme()
   let tmpThreshold = threshold
@@ -68,7 +88,7 @@ const TagsPoplist = ({
 
   return (
     <FlexBox>
-      <Box display="flex" alignItems="center" color="gray700" {...props}>
+      <StyledTagContainer cssProp={cssProp}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
             // useful when two tags are identical `${tag}-${index}`
@@ -80,7 +100,7 @@ const TagsPoplist = ({
             {tag}
           </Tag>
         ))}
-      </Box>
+      </StyledTagContainer>
       {hasManyTags && (
         <>
           <StyledTooltipReference {...tooltip}>
@@ -91,17 +111,7 @@ const TagsPoplist = ({
               {...tooltip}
               style={{ fill: theme.colors.white, top: '93%' }}
             />
-            <Box
-              boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
-              px={1}
-              py="4px"
-              display="flex"
-              alignItems="center"
-              backgroundColor={theme.colors.white}
-              borderRadius={theme.radii.default}
-              maxWidth="80vw"
-              flexWrap="wrap"
-            >
+            <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
                 <Tag
@@ -112,7 +122,7 @@ const TagsPoplist = ({
                   {tag}
                 </Tag>
               ))}
-            </Box>
+            </StyledManyTagsContainer>
           </Tooltip>
         </>
       )}
@@ -121,6 +131,7 @@ const TagsPoplist = ({
 }
 
 TagsPoplist.propTypes = {
+  css: PropTypes.string,
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
    */

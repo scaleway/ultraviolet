@@ -24,6 +24,12 @@ const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
   }}
 `
 
+const StyledRadioContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: ${({ theme }) => theme.space['1']};
+`
+
 export type RadioBorderedBoxProps = {
   badgeSize?: Sizes
   badgeText?: string
@@ -61,7 +67,7 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
     checked={checked}
     {...props}
   >
-    <Box display="flex" alignItems="center" mb={1}>
+    <StyledRadioContainer>
       <Radio
         name={name}
         checked={checked}
@@ -75,15 +81,16 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
       >
         {label}
       </Radio>
-      <Box as="span" mr={1}>
-        {labelDescription}
-      </Box>
+      <span>{labelDescription}</span>
       {badgeText && (
-        <Badge size={badgeSize} variant={badgeVariant}>
-          {badgeText}
-        </Badge>
+        <>
+          &nbsp;
+          <Badge size={badgeSize} variant={badgeVariant}>
+            {badgeText}
+          </Badge>
+        </>
       )}
-    </Box>
+    </StyledRadioContainer>
     <div>{children}</div>
   </StyledBox>
 )

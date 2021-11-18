@@ -59,6 +59,21 @@ const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
+const StyledActivityContainer = styled(ReakitCheckbox, {
+  shouldForwardProp: prop => !['hasChildren'].includes(prop.toString()),
+})<{ hasChildren: boolean }>`
+  display: flex;
+  margin-right: ${({ theme, hasChildren }) =>
+    hasChildren ? theme.space['1'] : 0};
+`
+
+const StyledError = styled.div`
+  font-size: '12px';
+  color: ${({ theme }) => theme.colors.warning};
+  padding-left: 4px;
+  padding-right: 4px;
+`
+
 export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
   valid?: boolean
@@ -136,9 +151,9 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
           autoFocus={autoFocus}
         />
         {progress ? (
-          <Box display="flex" mr={hasChildren ? 1 : 0}>
+          <StyledActivityContainer hasChildren={hasChildren}>
             <ActivityIndicator active size={size} />
-          </Box>
+          </StyledActivityContainer>
         ) : (
           <StyledIcon
             mr={hasChildren ? '10px' : 0}
@@ -157,9 +172,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
         )}
       </StyledCheckBoxContainer>
       <Expandable height={56} overflow="hidden" opened={!!error}>
-        <Box fontSize={12} color="warning" px="4px">
-          {error}
-        </Box>
+        <StyledError>{error}</StyledError>
       </Expandable>
     </Box>
   )

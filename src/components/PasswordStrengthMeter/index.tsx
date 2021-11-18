@@ -69,7 +69,6 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   title,
   estimate = () => ({ score: 0 }),
   userInputs = [],
-  ...props
 }) => {
   const [score, setScore] = useState<number>(0)
   const [backgroundColor, setBackgroundColor] = useState<string>(
@@ -95,7 +94,7 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   }, [getScore, handleChange, password, score, strength])
 
   return (
-    <Box {...props} title={title} role="alert" aria-live="polite">
+    <div title={title} role="alert" aria-live="polite">
       <StyledTitle variant="bodyB" color="gray700">
         {title}
       </StyledTitle>
@@ -112,7 +111,7 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
           }}
         />
       </StyledWrapper>
-    </Box>
+    </div>
   )
 }
 

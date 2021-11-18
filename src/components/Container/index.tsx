@@ -10,6 +10,13 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
+const StyledTitleContainer = styled(Box)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: ${({ theme }) => theme.space['1']};
+`
+
 const StyledBox = styled(Box, {
   shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
 })<{
@@ -61,17 +68,12 @@ const Container: FunctionComponent<ContainerProps> = ({
 }) => (
   <StyledContainer {...props}>
     <FlexBox justifyContent="space-between">
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="flex-start"
-        mb={1}
-      >
+      <StyledTitleContainer>
         <Typography variant="lead" my={0} mr={2}>
           {title}
         </Typography>
         {subtitle}
-      </Box>
+      </StyledTitleContainer>
       <div>{rightTitle}</div>
     </FlexBox>
     {header}
