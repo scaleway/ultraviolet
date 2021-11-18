@@ -28,6 +28,9 @@ export interface XStyledProps {
   height?: string | number
   justifyContent?: string
   lineHeight?: string | number
+  minHeight?: string | number
+  maxHeight?: string | number
+  minWidth?: string | number
   maxWidth?: string | number
   m?: string | number
   mb?: string | number
