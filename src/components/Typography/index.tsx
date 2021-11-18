@@ -209,12 +209,12 @@ const StyledText = styled(Box, {
 
 export const typographyVariants = Object.keys(variantTags)
 
-type TypographyProps = Omit<StyledTextProps, 'variant'> & {
+export type TypographyProps = {
   'aria-disabled'?: boolean
   children: ReactNode
   tooltipProps?: Partial<TooltipProps>
   variant?: TypographyVariant
-}
+} & Omit<StyledTextProps, 'variant'>
 
 const Text = forwardRef(
   (
@@ -235,7 +235,7 @@ const Text = forwardRef(
       ...props
     }: TypographyProps,
     ref,
-  ) => (
+  ): JSX.Element => (
     <StyledText
       ref={ref as Ref<Element>}
       onMouseEnter={onMouseEnter}
@@ -262,7 +262,10 @@ const Text = forwardRef(
   ),
 )
 
-const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
+const TextWithTooltip = ({
+  children,
+  ...props
+}: TypographyProps): JSX.Element => {
   const isTruncated = useCallback((target = {}) => {
     // If the text is really truncated
     const { offsetWidth, scrollWidth } = target as {
@@ -306,7 +309,7 @@ const TextWithTooltip = ({ children, ...props }: TypographyProps) => {
   )
 }
 
-const Typography = forwardRef((props: TypographyProps, ref) => {
+const Typography = forwardRef((props: TypographyProps, ref): JSX.Element => {
   const Component = props.ellipsis ? TextWithTooltip : Text
 
   return <Component ref={ref} {...props} />
@@ -326,5 +329,7 @@ Typography.propTypes = {
   tooltipProps: PropTypes.shape({}),
   variant: PropTypes.oneOf(typographyVariants),
 }
+
+TextWithTooltip.propTypes = Typography.propTypes
 
 export default Typography

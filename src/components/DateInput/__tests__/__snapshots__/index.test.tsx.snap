@@ -2399,7 +2399,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   top: 16px;
 }
 
-.cache-mb0c0d {
+.cache-14yfqya {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2410,13 +2410,21 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-mb0c0d.cache-mb0c0d {
+.cache-14yfqya.cache-14yfqya {
   margin-right: 8px;
   margin-left: 8px;
+}
+
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-11bkkrh {
@@ -2532,7 +2540,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg
@@ -2545,7 +2554,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                     </svg>
                   </button>
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg
@@ -3319,7 +3329,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   top: 16px;
 }
 
-.cache-mb0c0d {
+.cache-14yfqya {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -3330,13 +3340,21 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-mb0c0d.cache-mb0c0d {
+.cache-14yfqya.cache-14yfqya {
   margin-right: 8px;
   margin-left: 8px;
+}
+
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-11bkkrh {
@@ -3452,7 +3470,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg
@@ -3465,7 +3484,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                     </svg>
                   </button>
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg
@@ -4239,7 +4259,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   top: 16px;
 }
 
-.cache-mb0c0d {
+.cache-14yfqya {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -4250,13 +4270,21 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
 }
 
-.cache-mb0c0d.cache-mb0c0d {
+.cache-14yfqya.cache-14yfqya {
   margin-right: 8px;
   margin-left: 8px;
+}
+
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .cache-11bkkrh {
@@ -4372,7 +4400,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg
@@ -4385,7 +4414,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                     </svg>
                   </button>
                   <button
-                    class="cache-mb0c0d e7ah3bn0"
+                    aria-disabled="false"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
                     <svg

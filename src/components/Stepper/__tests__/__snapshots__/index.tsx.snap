@@ -24,7 +24,7 @@ exports[`Stepper should click on center button 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -35,8 +35,6 @@ exports[`Stepper should click on center button 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -52,11 +50,21 @@ exports[`Stepper should click on center button 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -72,7 +80,7 @@ exports[`Stepper should click on center button 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -83,8 +91,6 @@ exports[`Stepper should click on center button 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -106,15 +112,29 @@ exports[`Stepper should click on center button 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -149,8 +169,9 @@ exports[`Stepper should click on center button 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -163,8 +184,9 @@ exports[`Stepper should click on center button 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -178,8 +200,9 @@ exports[`Stepper should click on center button 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -219,7 +242,7 @@ exports[`Stepper should click on min button 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -230,8 +253,6 @@ exports[`Stepper should click on min button 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -247,11 +268,21 @@ exports[`Stepper should click on min button 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -267,7 +298,7 @@ exports[`Stepper should click on min button 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -278,8 +309,6 @@ exports[`Stepper should click on min button 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -301,15 +330,29 @@ exports[`Stepper should click on min button 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -344,8 +387,9 @@ exports[`Stepper should click on min button 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -358,8 +402,9 @@ exports[`Stepper should click on min button 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -373,8 +418,9 @@ exports[`Stepper should click on min button 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -414,7 +460,7 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -425,8 +471,6 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -442,11 +486,21 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -462,7 +516,7 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -473,8 +527,6 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -496,15 +548,29 @@ exports[`Stepper should click on plus button with a step value 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -539,8 +605,9 @@ exports[`Stepper should click on plus button with a step value 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -553,8 +620,9 @@ exports[`Stepper should click on plus button with a step value 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -568,8 +636,9 @@ exports[`Stepper should click on plus button with a step value 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -609,7 +678,7 @@ exports[`Stepper should focus input and modify value 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -620,8 +689,6 @@ exports[`Stepper should focus input and modify value 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -637,11 +704,21 @@ exports[`Stepper should focus input and modify value 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -657,7 +734,7 @@ exports[`Stepper should focus input and modify value 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -668,8 +745,6 @@ exports[`Stepper should focus input and modify value 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -691,15 +766,29 @@ exports[`Stepper should focus input and modify value 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -734,8 +823,9 @@ exports[`Stepper should focus input and modify value 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -748,8 +838,9 @@ exports[`Stepper should focus input and modify value 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -764,8 +855,9 @@ exports[`Stepper should focus input and modify value 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -805,7 +897,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -816,8 +908,6 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -833,11 +923,21 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -853,7 +953,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -864,8 +964,6 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -887,15 +985,29 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -914,7 +1026,7 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   text-align: center;
 }
 
-.cache-1rxkyfo {
+.cache-1esk5pk {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -925,7 +1037,6 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -941,7 +1052,17 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
   margin: 0 4px;
 }
 
-.cache-1rxkyfo:hover:not([disabled]) {
+.cache-1esk5pk[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1esk5pk[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1esk5pk:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -961,8 +1082,9 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -975,8 +1097,9 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -991,8 +1114,9 @@ exports[`Stepper should focus input and modify value onMaxCrossed 1`] = `
       />
     </button>
     <button
+      aria-disabled="true"
       aria-label="Plus"
-      class="etyrq8m3 cache-1rxkyfo e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1esk5pk e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1033,7 +1157,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-1rxkyfo {
+.cache-1esk5pk {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1044,7 +1168,6 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1060,7 +1183,17 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   margin: 0 4px;
 }
 
-.cache-1rxkyfo:hover:not([disabled]) {
+.cache-1esk5pk[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1esk5pk[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1esk5pk:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1076,7 +1209,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1087,8 +1220,6 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1110,15 +1241,29 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -1137,7 +1282,7 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   text-align: center;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1148,8 +1293,6 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1165,11 +1308,21 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1189,8 +1342,9 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="true"
       aria-label="Minus"
-      class="etyrq8m3 cache-1rxkyfo e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1esk5pk e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1204,8 +1358,9 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -1220,8 +1375,9 @@ exports[`Stepper should focus input and modify value onMinCrossed 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -1261,7 +1417,7 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1272,8 +1428,6 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1289,11 +1443,21 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1309,7 +1473,7 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1320,8 +1484,6 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1343,15 +1505,29 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -1370,7 +1546,7 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   text-align: center;
 }
 
-.cache-1rxkyfo {
+.cache-1esk5pk {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1381,7 +1557,6 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1397,7 +1572,17 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
   margin: 0 4px;
 }
 
-.cache-1rxkyfo:hover:not([disabled]) {
+.cache-1esk5pk[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1esk5pk[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1esk5pk:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1417,8 +1602,9 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -1431,8 +1617,9 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -1447,8 +1634,9 @@ exports[`Stepper should increase and decrease input with arrow up and down 1`] =
       />
     </button>
     <button
+      aria-disabled="true"
       aria-label="Plus"
-      class="etyrq8m3 cache-1rxkyfo e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1esk5pk e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1489,7 +1677,7 @@ exports[`Stepper should renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1500,8 +1688,6 @@ exports[`Stepper should renders correctly 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1517,11 +1703,21 @@ exports[`Stepper should renders correctly 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1537,7 +1733,7 @@ exports[`Stepper should renders correctly 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1548,8 +1744,6 @@ exports[`Stepper should renders correctly 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1571,15 +1765,29 @@ exports[`Stepper should renders correctly 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -1614,8 +1822,9 @@ exports[`Stepper should renders correctly 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -1628,8 +1837,9 @@ exports[`Stepper should renders correctly 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -1645,8 +1855,9 @@ exports[`Stepper should renders correctly 1`] = `
       </span>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -1696,7 +1907,7 @@ exports[`Stepper should renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.cache-1rxkyfo {
+.cache-1esk5pk {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1707,7 +1918,6 @@ exports[`Stepper should renders correctly disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1723,7 +1933,17 @@ exports[`Stepper should renders correctly disabled 1`] = `
   margin: 0 4px;
 }
 
-.cache-1rxkyfo:hover:not([disabled]) {
+.cache-1esk5pk[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1esk5pk[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1esk5pk:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1739,7 +1959,7 @@ exports[`Stepper should renders correctly disabled 1`] = `
   vertical-align: middle;
 }
 
-.cache-1nh35ua {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1750,7 +1970,6 @@ exports[`Stepper should renders correctly disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  opacity: 0.5;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1772,11 +1991,29 @@ exports[`Stepper should renders correctly disabled 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-1nh35ua:hover:not([disabled], :focus) {
+.cache-1nmwva1.cache-1nmwva1:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-1nh35ua:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -1812,8 +2049,9 @@ exports[`Stepper should renders correctly disabled 1`] = `
     disabled=""
   >
     <button
+      aria-disabled="true"
       aria-label="Minus"
-      class="etyrq8m3 cache-1rxkyfo e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1esk5pk e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1827,8 +2065,9 @@ exports[`Stepper should renders correctly disabled 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="true"
       aria-label="Input"
-      class="etyrq8m2 cache-1nh35ua e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1847,8 +2086,9 @@ exports[`Stepper should renders correctly disabled 1`] = `
       </span>
     </button>
     <button
+      aria-disabled="true"
       aria-label="Plus"
-      class="etyrq8m3 cache-1rxkyfo e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1esk5pk e7ah3bn0"
       disabled=""
       type="button"
     >
@@ -1889,7 +2129,7 @@ exports[`Stepper should renders large size 1`] = `
   border-radius: 4px;
 }
 
-.cache-5ejlv {
+.cache-qge7nr {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1900,8 +2140,6 @@ exports[`Stepper should renders large size 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1917,11 +2155,21 @@ exports[`Stepper should renders large size 1`] = `
   margin: 0 4px;
 }
 
-.cache-5ejlv>.etyrq8m4 {
+.cache-qge7nr[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-qge7nr[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-qge7nr>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-5ejlv:hover:not([disabled]) {
+.cache-qge7nr:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -1937,7 +2185,7 @@ exports[`Stepper should renders large size 1`] = `
   vertical-align: middle;
 }
 
-.cache-10rrj0t {
+.cache-1nmwva1 {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1948,8 +2196,6 @@ exports[`Stepper should renders large size 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1971,15 +2217,29 @@ exports[`Stepper should renders large size 1`] = `
   max-width: calc(100% - 96px);
 }
 
-.cache-10rrj0t:active {
+.cache-1nmwva1.cache-1nmwva1:active {
   opacity: 0.5;
 }
 
-.cache-10rrj0t:hover:not([disabled], :focus) {
+.cache-1nmwva1[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1nmwva1[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1nmwva1[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-1nmwva1:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-10rrj0t:focus-within:not([disabled]) {
+.cache-1nmwva1:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -2014,8 +2274,9 @@ exports[`Stepper should renders large size 1`] = `
     class="etyrq8m0 cache-vibxio e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -2028,8 +2289,9 @@ exports[`Stepper should renders large size 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-10rrj0t e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-1nmwva1 e7ah3bn0"
       type="button"
     >
       <input
@@ -2043,8 +2305,9 @@ exports[`Stepper should renders large size 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-5ejlv e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-qge7nr e7ah3bn0"
       type="button"
     >
       <svg
@@ -2084,7 +2347,7 @@ exports[`Stepper should renders small size 1`] = `
   border-radius: 4px;
 }
 
-.cache-9q1w2g {
+.cache-1jwsekx {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2095,8 +2358,6 @@ exports[`Stepper should renders small size 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2112,11 +2373,21 @@ exports[`Stepper should renders small size 1`] = `
   margin: 0 4px;
 }
 
-.cache-9q1w2g>.etyrq8m4 {
+.cache-1jwsekx[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1jwsekx[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1jwsekx>.etyrq8m4 {
   fill: #4f0599;
 }
 
-.cache-9q1w2g:hover:not([disabled]) {
+.cache-1jwsekx:hover:not([disabled]) {
   background: #eeeeff;
 }
 
@@ -2132,7 +2403,7 @@ exports[`Stepper should renders small size 1`] = `
   vertical-align: middle;
 }
 
-.cache-12m5znf {
+.cache-27krjg {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2143,8 +2414,6 @@ exports[`Stepper should renders small size 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  cursor: pointer;
-  touch-action: manipulation;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2166,15 +2435,29 @@ exports[`Stepper should renders small size 1`] = `
   max-width: calc(100% - 64px);
 }
 
-.cache-12m5znf:active {
+.cache-27krjg.cache-27krjg:active {
   opacity: 0.5;
 }
 
-.cache-12m5znf:hover:not([disabled], :focus) {
+.cache-27krjg[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-27krjg[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-27krjg[aria-disabled="false"]:active {
+  opacity: 0.5;
+}
+
+.cache-27krjg:hover:not([disabled], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-12m5znf:focus-within:not([disabled]) {
+.cache-27krjg:focus-within:not([disabled]) {
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.3);
   border: 1px solid #4f0599;
 }
@@ -2209,8 +2492,9 @@ exports[`Stepper should renders small size 1`] = `
     class="etyrq8m0 cache-587ul8 e7ah3bn0"
   >
     <button
+      aria-disabled="false"
       aria-label="Minus"
-      class="etyrq8m3 cache-9q1w2g e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1jwsekx e7ah3bn0"
       type="button"
     >
       <svg
@@ -2223,8 +2507,9 @@ exports[`Stepper should renders small size 1`] = `
       </svg>
     </button>
     <button
+      aria-disabled="false"
       aria-label="Input"
-      class="etyrq8m2 cache-12m5znf e7ah3bn0"
+      class="etyrq8m2 e1kgqxfn0 cache-27krjg e7ah3bn0"
       type="button"
     >
       <input
@@ -2238,8 +2523,9 @@ exports[`Stepper should renders small size 1`] = `
       />
     </button>
     <button
+      aria-disabled="false"
       aria-label="Plus"
-      class="etyrq8m3 cache-9q1w2g e7ah3bn0"
+      class="etyrq8m3 e1kgqxfn0 cache-1jwsekx e7ah3bn0"
       type="button"
     >
       <svg

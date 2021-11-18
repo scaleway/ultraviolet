@@ -16,6 +16,7 @@ export interface XStyledProps {
   alignSelf?: string
   as?: string | React.ElementType<unknown>
   backgroundColor?: string
+  border?: string
   borderRadius?: string | number
   boxShadow?: string
   color?: string
