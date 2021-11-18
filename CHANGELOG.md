@@ -1,3 +1,21 @@
+## [0.121.0](https://github.com/scaleway/scaleway-ui/compare/v0.120.2...v0.121.0) (2021-11-18)
+
+
+### :gear: Features
+
+* migrate stories of Tooltip, TooltipIcon, Touchable, Typography ([#904](https://github.com/scaleway/scaleway-ui/issues/904)) ([b1e641b](https://github.com/scaleway/scaleway-ui/commit/b1e641b15a3d4b979ec7b22f470f59854d6c7f35))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.16.4 ([#914](https://github.com/scaleway/scaleway-ui/issues/914)) ([a5fc830](https://github.com/scaleway/scaleway-ui/commit/a5fc830bce8fd56f2c1c08edc28d6948f4d79732))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.21 ([#909](https://github.com/scaleway/scaleway-ui/issues/909)) ([e09d51b](https://github.com/scaleway/scaleway-ui/commit/e09d51b1814c6cc11193d3f2f8139a389fa1316a))
+
+
+### :bug: Bug Fixes
+
+* add some missing props on XStyled type ([#913](https://github.com/scaleway/scaleway-ui/issues/913)) ([0d0eff6](https://github.com/scaleway/scaleway-ui/commit/0d0eff6571c5bcc9ce925011174d6461eeabcdfe))
+
 ### [0.120.2](https://github.com/scaleway/scaleway-ui/compare/v0.120.1...v0.120.2) (2021-11-17)
 
 
