@@ -1,3 +1,15 @@
+## [0.122.0](https://github.com/scaleway/scaleway-ui/compare/v0.121.1...v0.122.0) (2021-11-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.22 ([#920](https://github.com/scaleway/scaleway-ui/issues/920)) ([e910152](https://github.com/scaleway/scaleway-ui/commit/e910152e917f188958b7a614920d6d7f842d1128))
+
+
+### :gear: Features
+
+* **rich-select:** description and inline description ([#908](https://github.com/scaleway/scaleway-ui/issues/908)) ([302fc51](https://github.com/scaleway/scaleway-ui/commit/302fc51684e744d8cceed78ebbc63c6defef2fe5))
+
 ### [0.121.1](https://github.com/scaleway/scaleway-ui/compare/v0.121.0...v0.121.1) (2021-11-19)
 
 
