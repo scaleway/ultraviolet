@@ -1,25 +1,24 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
 import ToastContainer, { toast } from '..'
 import { Boxer, Button } from '../..'
 
-<Meta title="Components/Feedback/Toaster" />
+export default {
+  component: ToastContainer,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Display short information about an event that happen in the interface in a floating alert.',
+      },
+    },
+  },
+  title: 'Components/Feedback/Toaster',
+} as Meta
 
-# Toaster
-
-<Description>
-  Display short information about an event that happen in the interface in a
-  floating alert.
-</Description>
-
-<Canvas>
-  <Story name="Basic">
-    <ToastContainer />
+const Template: Story = args => (
+  <>
+    <ToastContainer {...args} />
     <Boxer>
       <Button
         variant="success"
@@ -29,13 +28,13 @@ import { Boxer, Button } from '../..'
         Success
       </Button>
     </Boxer>
-  </Story>
-</Canvas>
+  </>
+)
 
-## Variants
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Variants">
+export const Variants: Story = () => (
+  <>
     <ToastContainer />
     <Boxer>
       <Button
@@ -63,9 +62,5 @@ import { Boxer, Button } from '../..'
         Error
       </Button>
     </Boxer>
-  </Story>
-</Canvas>
-
-## API
-
-<ArgsTable of={ToastContainer} />
+  </>
+)

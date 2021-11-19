@@ -197,12 +197,20 @@ const defaultValue = {
   value: '00:00',
 }
 
-type TimeInputProps = Partial<RichSelectProps> & {
+export type TimeInputProps = Partial<RichSelectProps> & {
   schedule?: ScheduleType
 }
-const TimeInput: FunctionComponent<TimeInputProps> & {
+
+interface TimeInputType extends FunctionComponent {
+  (props: TimeInputProps): JSX.Element
   options: typeof options
-} = ({ value = defaultValue, schedule = 'hours', ...props } = {}) => (
+}
+
+const TimeInput: TimeInputType = ({
+  value = defaultValue,
+  schedule = 'hours',
+  ...props
+}: TimeInputProps = {}) => (
   <RichSelect {...props} time value={value} options={options(schedule)} />
 )
 const scheduleType = Object.keys(schedules) as ScheduleType[]

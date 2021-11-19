@@ -1,37 +1,35 @@
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Meta,
-  Story,
-} from '@storybook/addon-docs'
-import TimeInput from '..'
+import { Meta, Story } from '@storybook/react'
+import React from 'react'
+import TimeInput, { TimeInputProps } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
-<Meta title="Components/Data Entry/TimeInput" />
+export default {
+  component: TimeInput,
+  parameters: {
+    docs: {
+      description: {
+        component: 'A simple input to choose a time in a list.',
+      },
+    },
+  },
+  title: 'Components/Data Entry/TimeInput',
+} as Meta
 
-# TimeInput
+const Template: Story<TimeInputProps> = args => (
+  <div style={{ height: '300px' }}>
+    <TimeInput
+      name="timeinput-test-basic"
+      placeholder="Time"
+      value={{ label: '03:30', value: '03:30' }}
+      {...args}
+    />
+  </div>
+)
 
-<Description>A simple input to choose a time in a list.</Description>
+export const Default = Template.bind({})
 
-<Canvas>
-  <Story name="Basic">
-    <div style={{ height: '300px' }}>
-      <TimeInput
-        name="timeinput-test-basic"
-        placeholder="Time"
-        value={{ label: '03:30', value: '03:30' }}
-      />
-    </div>
-  </Story>
-</Canvas>
-
-## Uncontrolled
-
-TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).
-
-<Canvas>
-  <Story name="Uncontrolled">
+export const Uncontrolled: Story = () => (
+  <>
     <div style={{ marginBottom: '16px' }}>
       <TimeInput
         name="timeinput-test-0"
@@ -48,15 +46,20 @@ TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/un
     <div style={{ height: '300px' }}>
       <TimeInput name="timeinput-test-3" placeholder="Time" error />
     </div>
-  </Story>
-</Canvas>
+  </>
+)
 
-## Controlled
+Uncontrolled.parameters = {
+  docs: {
+    description: {
+      story:
+        'TimeInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).',
+    },
+  },
+}
 
-Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).
-
-<Canvas>
-  <Story name="Controlled">
+export const Controlled: Story = () => (
+  <>
     <div style={{ marginBottom: '16px' }}>
       <ControlValue value={{ label: '03:30', value: '03:30' }} mb={2}>
         {({ value, onChange }) => (
@@ -81,19 +84,20 @@ Most of the time, you need a [controlled component](https://reactjs.org/docs/for
         )}
       </ControlValue>
     </div>
-  </Story>
-</Canvas>
+  </>
+)
 
-## Schedule
+Controlled.parameters = {
+  docs: {
+    description: {
+      story:
+        'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
+    },
+  },
+}
 
-You can adjust the time between options with the `schedule` props.
-
-`hours`, `half` and `quarter` are available.
-
-By default, the `hours` option is selected.
-
-<Canvas>
-  <Story name="Schedule">
+export const Schedule: Story = () => (
+  <>
     <div style={{ marginBottom: '16px' }}>
       <ControlValue value={{ label: '10:15', value: '10:15' }}>
         {({ value, onChange }) => (
@@ -132,9 +136,14 @@ By default, the `hours` option is selected.
         )}
       </ControlValue>
     </div>
-  </Story>
-</Canvas>
+  </>
+)
 
-## API
-
-<ArgsTable of={TimeInput} />
+Schedule.parameters = {
+  docs: {
+    description: {
+      story:
+        'You can adjust the time between options with the `schedule` props. `hours`, `half` and `quarter` are available. By default, the `hours` option is selected.',
+    },
+  },
+}

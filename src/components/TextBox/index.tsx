@@ -300,7 +300,8 @@ const StyledInput = styled('input', {
     padding-right: ${rightElementPadding || 32}px;
   `}
 `
-type TextBoxProps = {
+
+export type TextBoxProps = {
   'data-testid'?: string
   ariaControls?: string
   autoComplete?: string
@@ -340,7 +341,8 @@ type TextBoxProps = {
 } & (
   | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
-) & XStyledProps
+) &
+  XStyledProps
 
 const TextBox = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
@@ -387,7 +389,7 @@ const TextBox = forwardRef<
       ...props
     },
     ref,
-  ) => {
+  ): JSX.Element => {
     const controlRef = useRef<HTMLInputElement>(null)
 
     const [visited, setVisited] = useState(false)
