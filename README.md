@@ -73,12 +73,20 @@ $ yarn run start
 
 ### Test
 
+#### Unit 
+
 ```sh
 $ yarn run test # Will run all tests
 $ yarn run test --updateSnapshot # Will update all snapshots
 $ yarn run test:watch # Will watch tests and only rerun the one who are modified
 $ yarn run test:coverage # Will generate a coverage report
 $ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
+```
+
+#### Accessibility
+```sh
+$ yarn run test:a11y # Will run all accessibility tests
+$ yarn run test:a11y src/components/Alert # Will run accessibility test of Alert component only
 ```
 
 ### Lint

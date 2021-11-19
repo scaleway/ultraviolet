@@ -126,8 +126,18 @@ const Alert: FunctionComponent<AlertProps> = ({
   type = 'warning',
   ...props
 }) => (
-  <StyledContainer type={type} variant={variant} {...props}>
-    <Icon name={icon || typesDefaultIcons[type]} size={iconSize} />
+  <StyledContainer
+    role="region"
+    aria-label={type}
+    type={type}
+    variant={variant}
+    {...props}
+  >
+    <Icon
+      name={icon || typesDefaultIcons[type]}
+      size={iconSize}
+      aria-hidden="true"
+    />
     <StyledBox color="inherit">
       {title && <Title text={title} color="inherit" />}
       <Typography variant="bodyA" color="inherit" ml={2}>

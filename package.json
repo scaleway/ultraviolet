@@ -47,7 +47,7 @@
     "test:update": "yarn run test --updateSnapshot",
     "test": "LC_ALL=en_US.UTF-8 jest",
     "test:unit": "yarn test --testPathIgnorePatterns='src/__tests__/a11y.test.tsx'",
-    "test:a11y": "yarn test src/__tests__/a11y.test.tsx",
+    "test:a11y": "yarn test src/__tests__/a11y.test.tsx --testPathIgnorePatterns='src/components' ",
     "prepare": "husky install",
     "size": "yarn build && size-limit"
   },
