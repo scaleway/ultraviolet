@@ -1,3 +1,24 @@
+### [0.121.1](https://github.com/scaleway/scaleway-ui/compare/v0.121.0...v0.121.1) (2021-11-19)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v15 ([#912](https://github.com/scaleway/scaleway-ui/issues/912)) ([f433dc0](https://github.com/scaleway/scaleway-ui/commit/f433dc005065c1aafd3dc8bc4f799fb349b47641))
+* **devdeps:** update dependency size-limit to v7 ([#917](https://github.com/scaleway/scaleway-ui/issues/917)) ([33e5947](https://github.com/scaleway/scaleway-ui/commit/33e5947063234bd105a007b7a7f4be8a3fd33712))
+* **devdeps:** update emotion monorepo to v11.6.0 ([#903](https://github.com/scaleway/scaleway-ui/issues/903)) ([ad24473](https://github.com/scaleway/scaleway-ui/commit/ad244737044a372252091cb6beb7ab79746fa54c))
+* **storybook:** migration mdx to tsx ([#895](https://github.com/scaleway/scaleway-ui/issues/895)) ([#900](https://github.com/scaleway/scaleway-ui/issues/900)) ([1ffae1f](https://github.com/scaleway/scaleway-ui/commit/1ffae1fad739e3378aede8b6053bb6121a1a2fdc))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency reakit to v1.3.11 ([#922](https://github.com/scaleway/scaleway-ui/issues/922)) ([4d4fdc7](https://github.com/scaleway/scaleway-ui/commit/4d4fdc7dcccc1cafdd5c520d542ecfe782dabf42))
+
+
+### :zap: Refactor
+
+* migrate TagsPoplist, TextBox, TimeInput, Toaster stories to tsx ([#896](https://github.com/scaleway/scaleway-ui/issues/896)) ([84c23fc](https://github.com/scaleway/scaleway-ui/commit/84c23fc395c796e3bf59b83bfa45a83027ce5de9))
+* migrate unitinput universallink verificationcode and volumesize and delete unselectable ([#897](https://github.com/scaleway/scaleway-ui/issues/897)) ([35885ae](https://github.com/scaleway/scaleway-ui/commit/35885ae58d3eb233f266d979d853081a27ebefb5))
+
 ## [0.121.0](https://github.com/scaleway/scaleway-ui/compare/v0.120.2...v0.121.0) (2021-11-18)
 
 
