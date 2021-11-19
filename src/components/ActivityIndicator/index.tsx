@@ -1,10 +1,11 @@
 import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useMemo } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
 import { Color } from '../../theme/colors'
+import { getUUID } from '../../utils'
 
 const spin = keyframes`
   from {
@@ -31,6 +32,11 @@ const StyledProgressbar = styled(CircularProgressbar)<
     `}
 `
 
+const HiddenDiv = styled.div`
+  visibility: hidden;
+  position: absolute;
+`
+
 export type ActivityIndicatorProps = {
   active?: boolean
   color?: string
@@ -42,6 +48,10 @@ export type ActivityIndicatorProps = {
    */
   text?: string
   trailColor?: string
+  /**
+   * Label should be defined for accessibility, to indicate what is loading
+   */
+  label?: string
 }
 
 const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
@@ -52,40 +62,65 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   color = 'primary',
   trailColor = 'gray350',
   active = false,
+  label = 'Loading',
 }) => {
   const theme = useTheme()
+  const id = useMemo(() => getUUID('activityIndicator'), [])
 
   return (
-    <StyledProgressbar
-      value={percentage}
-      text={text}
-      strokeWidth={strokeWidth}
-      active={active}
-      size={size}
-      styles={{
-        path: {
-          stroke: theme.colors[color as Color] || color,
-          strokeLinecap: 'round',
-        },
-        root: {},
-        text: {
-          dominantBaseline: 'middle',
-          fill: theme.colors.primary,
-          fontSize: '26px',
-          textAnchor: 'middle',
-        },
-        trail: {
-          stroke: theme.colors[trailColor as Color] || trailColor,
-          strokeLinecap: 'round',
-        },
-      }}
-    />
+    <>
+      <div aria-hidden="true">
+        <StyledProgressbar
+          value={percentage}
+          text={text}
+          strokeWidth={strokeWidth}
+          active={active}
+          size={size}
+          styles={{
+            path: {
+              stroke: theme.colors[color as Color] || color,
+              strokeLinecap: 'round',
+            },
+            root: {},
+            text: {
+              dominantBaseline: 'middle',
+              fill: theme.colors.primary,
+              fontSize: '26px',
+              textAnchor: 'middle',
+            },
+            trail: {
+              stroke: theme.colors[trailColor as Color] || trailColor,
+              strokeLinecap: 'round',
+            },
+          }}
+        />
+      </div>
+      {/* This hidden div is for accessibility since CircularProgressbar didn't implement it */}
+      <HiddenDiv>
+        <label htmlFor={id}>{label}</label>
+        <progress
+          id={id}
+          max={100}
+          value={percentage}
+          aria-valuemin={0}
+          aria-valuenow={percentage}
+          aria-valuemax={100}
+          aria-valuetext={`${percentage}%`}
+        >
+          {percentage}%
+        </progress>
+      </HiddenDiv>
+    </>
   )
 }
 
 ActivityIndicator.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string,
+  /**
+   * Label should be defined for accessibility, to indicate what is loading
+   */
+  label: PropTypes.string,
   percentage: PropTypes.number,
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   strokeWidth: PropTypes.number,

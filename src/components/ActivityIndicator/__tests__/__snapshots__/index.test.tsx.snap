@@ -25,36 +25,65 @@ exports[`ActivityIndicator renders active with custom percentage 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
-<svg
-    class="CircularProgressbar  cache-82dnp8 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-82dnp8 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-2b664bf96e3e0a8435cca796484fca52"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-2b664bf96e3e0a8435cca796484fca52"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -83,36 +112,65 @@ exports[`ActivityIndicator renders active with default percentage 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
-<svg
-    class="CircularProgressbar  cache-82dnp8 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-82dnp8 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-371352a55f664e7f76321769a2ef2202"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-371352a55f664e7f76321769a2ef2202"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -123,36 +181,65 @@ exports[`ActivityIndicator renders default props 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-60023a5b76f6ba653e014b7ae5876e75"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-60023a5b76f6ba653e014b7ae5876e75"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -163,36 +250,65 @@ exports[`ActivityIndicator renders with color beta 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-7063bfb50c82f7eb2cae00e16a4360ef"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-7063bfb50c82f7eb2cae00e16a4360ef"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -203,36 +319,65 @@ exports[`ActivityIndicator renders with color black 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-2289b383c71cf9ec0b1bf694b97f1782"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-2289b383c71cf9ec0b1bf694b97f1782"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -243,36 +388,65 @@ exports[`ActivityIndicator renders with color blue 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-bd7936ab51bceabdc1043cbd2f1a4f63"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-bd7936ab51bceabdc1043cbd2f1a4f63"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -283,36 +457,65 @@ exports[`ActivityIndicator renders with color chartGreen 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #33BBB3; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #33BBB3; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-24d8f40acc6915f289d4b94b41881455"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-24d8f40acc6915f289d4b94b41881455"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -323,36 +526,65 @@ exports[`ActivityIndicator renders with color chartNegativeRed 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ef5774; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ef5774; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-d8ad7e13a96eb9c16f9869fdb95aaf4b"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-d8ad7e13a96eb9c16f9869fdb95aaf4b"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -363,36 +595,65 @@ exports[`ActivityIndicator renders with custom size 1`] = `
   width: 100px;
 }
 
-<svg
-    class="CircularProgressbar  cache-13skzuh e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-13skzuh e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-c77f6669ee653ed34c0afaa29e3ec0bb"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-c77f6669ee653ed34c0afaa29e3ec0bb"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -403,36 +664,65 @@ exports[`ActivityIndicator renders with inlined color 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ff0000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ff0000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-1a4523b695a458718e019c5fa7c65458"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-1a4523b695a458718e019c5fa7c65458"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -443,36 +733,65 @@ exports[`ActivityIndicator renders with inlined trailColor 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ff0000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ff0000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-46bbfc4f073177c65ac6baf1dca453db"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-46bbfc4f073177c65ac6baf1dca453db"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -501,36 +820,65 @@ exports[`ActivityIndicator renders with percentage 75 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
-<svg
-    class="CircularProgressbar  cache-82dnp8 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-82dnp8 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 65.97344572538566px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 65.97344572538566px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-a801327c057962085b74b75552d2c7be"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="75"
+      aria-valuetext="75%"
+      id="activityIndicator-a801327c057962085b74b75552d2c7be"
+      max="100"
+      value="75"
+    >
+      75%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -541,36 +889,65 @@ exports[`ActivityIndicator renders with strokeWidth 25 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-37.5
       a 37.5,37.5 0 1 1 0,75
       a 37.5,37.5 0 1 1 0,-75
     "
-      fill-opacity="0"
-      stroke-width="25"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 235.61944901923448px 235.61944901923448px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="25"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 235.61944901923448px 235.61944901923448px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-37.5
       a 37.5,37.5 0 1 1 0,75
       a 37.5,37.5 0 1 1 0,-75
     "
-      fill-opacity="0"
-      stroke-width="25"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 235.61944901923448px 235.61944901923448px; stroke-dashoffset: 188.4955592153876px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="25"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 235.61944901923448px 235.61944901923448px; stroke-dashoffset: 188.4955592153876px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-4da1aea1b7761cfcdd27e4f2299d5eb4"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-4da1aea1b7761cfcdd27e4f2299d5eb4"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -581,44 +958,73 @@ exports[`ActivityIndicator renders with text 100% 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-    <text
-      class="CircularProgressbar-text"
-      style="dominant-baseline: middle; fill: #4f0599; font-size: 26px; text-anchor: middle;"
-      x="50"
-      y="50"
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
     >
-      100%
-    </text>
-  </svg>
+      <path
+        class="CircularProgressbar-trail"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
+      M 50,50
+      m 0,-42
+      a 42,42 0 1 1 0,84
+      a 42,42 0 1 1 0,-84
+    "
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+      <text
+        class="CircularProgressbar-text"
+        style="dominant-baseline: middle; fill: #4f0599; font-size: 26px; text-anchor: middle;"
+        x="50"
+        y="50"
+      >
+        100%
+      </text>
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-4fed84b1f49cceb27916e3da7c3ef25c"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-4fed84b1f49cceb27916e3da7c3ef25c"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -629,36 +1035,65 @@ exports[`ActivityIndicator renders with trailColor beta 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ff8c69; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-a855c09db91872e92cad9c536828a7da"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-a855c09db91872e92cad9c536828a7da"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -669,36 +1104,65 @@ exports[`ActivityIndicator renders with trailColor black 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #000; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-aa5c64d7edcddbf9dbdd7d786cd91aca"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-aa5c64d7edcddbf9dbdd7d786cd91aca"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -709,36 +1173,65 @@ exports[`ActivityIndicator renders with trailColor blue 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #3f6ed8; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-184ca3585f51e54c3a9f0743c9d670ac"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-184ca3585f51e54c3a9f0743c9d670ac"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -749,36 +1242,65 @@ exports[`ActivityIndicator renders with trailColor chartGreen 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #33BBB3; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #33BBB3; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-061fba5deeb511c8136946b5ea14d82c"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-061fba5deeb511c8136946b5ea14d82c"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;
 
@@ -789,35 +1311,64 @@ exports[`ActivityIndicator renders with trailColor chartNegativeRed 1`] = `
   width: 40px;
 }
 
-<svg
-    class="CircularProgressbar  cache-5i4mj9 e7dhm9i0"
-    data-test-id="CircularProgressbar"
-    viewBox="0 0 100 100"
+<div
+    aria-hidden="true"
   >
-    <path
-      class="CircularProgressbar-trail"
-      d="
+    <svg
+      class="CircularProgressbar  cache-5i4mj9 e7dhm9i1"
+      data-test-id="CircularProgressbar"
+      viewBox="0 0 100 100"
+    >
+      <path
+        class="CircularProgressbar-trail"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #ef5774; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-    />
-    <path
-      class="CircularProgressbar-path"
-      d="
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #ef5774; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+      />
+      <path
+        class="CircularProgressbar-path"
+        d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-      fill-opacity="0"
-      stroke-width="16"
-      style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-    />
-  </svg>
+        fill-opacity="0"
+        stroke-width="16"
+        style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+      />
+    </svg>
+  </div>
+  .cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
+<div
+    class="cache-546l7a e7dhm9i0"
+  >
+    <label
+      for="activityIndicator-5893e90e45cf8764fa0f9efbd47bb585"
+    >
+      Loading test
+    </label>
+    <progress
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      id="activityIndicator-5893e90e45cf8764fa0f9efbd47bb585"
+      max="100"
+      value="20"
+    >
+      20%
+    </progress>
+  </div>
 </DocumentFragment>
 `;

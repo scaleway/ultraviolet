@@ -29,6 +29,7 @@ Percentages.decorators = [
           <ActivityIndicator
             key={`percent-${percentage}`}
             percentage={percentage}
+            label="Loading example"
           />
         </div>
       ))}
@@ -48,7 +49,12 @@ Sizes.decorators = [
     <>
       {[8, 16, 24, 32, 40, 100].map(size => (
         <div style={{ display: 'inline-flex', marginRight: 8 }}>
-          <ActivityIndicator key={`size-${size}`} percentage={75} size={size} />
+          <ActivityIndicator
+            key={`size-${size}`}
+            percentage={75}
+            size={size}
+            label="Loading example"
+          />
         </div>
       ))}
     </>
@@ -71,6 +77,7 @@ Colors.decorators = [
             key={`color-${color}`}
             color={color}
             percentage={75}
+            label="Loading example"
           />
         </div>
       ))}
@@ -95,6 +102,7 @@ TrailColor.decorators = [
               key={`trailColor-${color}`}
               trailColor={color}
               percentage={75}
+              label="Loading example"
             />
           </div>
         ),
@@ -119,6 +127,7 @@ StrokeWidth.decorators = [
             key={`strokeWidth-${size}`}
             percentage={75}
             strokeWidth={size}
+            label="Loading example"
           />
         </div>
       ))}
@@ -142,6 +151,7 @@ Text.decorators = [
             key={`text-${percentage}`}
             percentage={percentage}
             text={`${percentage}%`}
+            label="Loading example"
           />
         </div>
       ))}
@@ -161,7 +171,12 @@ Active.decorators = [
     <>
       {[10, 20, 30, 40, 50, 100].map(size => (
         <div style={{ display: 'inline-flex', marginRight: 8 }}>
-          <ActivityIndicator key={`active-${size}`} size={size} active />
+          <ActivityIndicator
+            key={`active-${size}`}
+            size={size}
+            active
+            label="Loading example"
+          />
         </div>
       ))}
     </>
