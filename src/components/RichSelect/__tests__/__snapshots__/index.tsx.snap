@@ -6203,6 +6203,346 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
 </DocumentFragment>
 `;
 
+exports[`RichSelect should render correctly description and inlineDescription 1`] = `
+<DocumentFragment>
+  .cache-1eau8hy-container {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1eau8hy-container.cache-1eau8hy-container {
+  margin-top: 0;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-1p9qdtk-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-color: #dce1eb;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-1p9qdtk-control:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.cache-1p9qdtk-control:focus-within {
+  border-color: #4f0599;
+  box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
+}
+
+.cache-1p9qdtk-control:focus-within svg {
+  fill: #4f0599;
+}
+
+.cache-1p9qdtk-control:hover {
+  border-color: #4f0599;
+}
+
+.cache-1p9qdtk-control:hover svg {
+  fill: #4f0599;
+}
+
+.cache-evyzo2-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-evyzo2-ValueContainer label {
+  display: initial;
+}
+
+.cache-1b3kxd {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+}
+
+.cache-m44uhw-placeholder {
+  color: #b2b6c3;
+  grid-area: 1/1/2/3;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+}
+
+.cache-1906h45-Input {
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  visibility: visible;
+  color: hsl(0, 0%, 20%);
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-1906h45-Input:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-bf5rcc-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: #eeeeff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 1px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.cache-tlfecz-indicatorContainer {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.cache-tlfecz-indicatorContainer:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.cache-rq2ji6 {
+  fill: #d4dae7;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
+}
+
+.cache-rq2ji6.cache-rq2ji6 {
+  vertical-align: middle;
+  margin-right: 0;
+}
+
+.cache-1w6vxon {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
+  overflow: hidden;
+}
+
+.cache-1jgvrmi.cache-1jgvrmi {
+  font-size: 12px;
+  color: #ef5774;
+  padding-top: 2px;
+}
+
+<div
+    class="e1lzna4r1 cache-1eau8hy-container e7ah3bn0"
+    data-testid="rich-select-test-loading"
+  >
+    <span
+      class="cache-1f43avz-a11yText-A11yText"
+      id="react-select-25-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="cache-1f43avz-a11yText-A11yText"
+    />
+    <div
+      class=" cache-1p9qdtk-control"
+    >
+      <div
+        class=" cache-evyzo2-ValueContainer"
+      >
+        <label
+          aria-live="assertive"
+          class="e1lzna4r0 cache-1b3kxd e7ah3bn0"
+          for="test"
+        >
+          Select...
+        </label>
+        <div
+          class=" cache-m44uhw-placeholder"
+          id="react-select-25-placeholder"
+        >
+          Select...
+        </div>
+        <div
+          class="cache-1906h45-Input"
+          data-value=""
+        >
+          <input
+            aria-autocomplete="list"
+            aria-describedby="react-select-25-placeholder"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-owns="react-select-25-listbox"
+            autocapitalize="none"
+            autocomplete="off"
+            autocorrect="off"
+            class=""
+            id="test"
+            role="combobox"
+            spellcheck="false"
+            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+            tabindex="0"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class=" cache-ralm3g-IndicatorsContainer"
+      >
+        <span
+          class=" cache-bf5rcc-indicatorSeparator"
+        />
+        <div
+          aria-hidden="true"
+          class=" cache-tlfecz-indicatorContainer"
+        >
+          <svg
+            class="sc-ui-icon etwatq50 cache-rq2ji6 e7ah3bn0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.88,18.29l-9-8.55a2.75,2.75,0,0,1,0-4,3.12,3.12,0,0,1,4.24,0L12,12.25l6.88-6.54a3.12,3.12,0,0,1,4.24,0,2.75,2.75,0,0,1,0,4l-9,8.55a3.12,3.12,0,0,1-4.24,0Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <input
+      name="test-loading"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
+    >
+      <div
+        class="cache-1jgvrmi e7ah3bn0"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`RichSelect should render correctly isLoading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {

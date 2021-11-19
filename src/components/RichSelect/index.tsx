@@ -34,11 +34,14 @@ import * as animations from '../../utils/animations'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Typography from '../Typography'
 
 export interface SelectOption {
   value: string
   label: ReactNode
   disabled?: boolean
+  description?: string
+  inlineDescription?: string
 }
 
 type SelectStyleGetterProps = {
@@ -513,21 +516,69 @@ const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
   selectProps,
   value,
   label,
+  children,
+  data: { inlineDescription, description },
+  isSelected,
+  data,
   ...props
-}) => (
-  <div
-    data-testid={`option-${selectProps.name || ''}-${
-      isJSONString(value) ? label : value
-    }`}
-  >
-    <components.Option {...props} selectProps={selectProps} label={label} />
-  </div>
-)
+}) => {
+  const [isFocused, setIsFocused] = useState(false)
+
+  return (
+    <div
+      data-testid={`option-${selectProps.name || ''}-${
+        isJSONString(value) ? label : value
+      }`}
+      onMouseOver={() => setIsFocused(true)}
+      onFocus={() => setIsFocused(true)}
+      onMouseOut={() => setIsFocused(false)}
+      onBlur={() => setIsFocused(false)}
+    >
+      <components.Option
+        {...props}
+        selectProps={selectProps}
+        label={label}
+        data={data}
+        isSelected={isSelected}
+      >
+        {children}
+        {inlineDescription ? (
+          <Typography
+            as="span"
+            variant="bodyB"
+            color={isSelected && !isFocused ? 'white' : undefined}
+            ml={1}
+          >
+            {inlineDescription}
+          </Typography>
+        ) : null}
+        {description ? (
+          <Typography
+            as="p"
+            variant="bodyB"
+            color={isSelected && !isFocused ? 'white' : undefined}
+            mt={1}
+            maxLines={3}
+          >
+            {description}
+          </Typography>
+        ) : null}
+      </components.Option>
+    </div>
+  )
+}
 
 Option.propTypes = {
+  description: PropTypes.string,
+  inlineDescription: PropTypes.string,
   label: PropTypes.string.isRequired,
   selectProps: SelectContainer.propTypes?.selectProps,
   value: PropTypes.string.isRequired,
+}
+
+Option.defaultProps = {
+  description: undefined,
+  inlineDescription: undefined,
 }
 
 const DropdownIndicator: FunctionComponent<
