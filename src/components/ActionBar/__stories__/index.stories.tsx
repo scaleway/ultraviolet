@@ -16,8 +16,10 @@ export const Default = Template.bind({})
 export const Ranks = Template.bind({})
 Ranks.parameters = {
   docs: {
-    storyDescription:
-      'You can choose the order of multiple `ActionBar` by using the `rank` prop.',
+    story: {
+      description:
+        'You can choose the order of multiple `ActionBar` by using the `rank` prop.',
+    },
   },
 }
 Ranks.decorators = [

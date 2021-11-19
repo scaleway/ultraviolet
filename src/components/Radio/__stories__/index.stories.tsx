@@ -4,6 +4,25 @@ import Radio, { RadioProps } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
+  args: {
+    checked: false,
+    children: "Choice 1",
+    disabled: false,
+    name: "basic",
+    value:"choice-1",
+  },
+  argTypes: {
+    checked: {
+      control: { type: 'boolean' },
+      description: 'checked',
+      name: 'checked',
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'boolean' },
+      },
+      type: { name: 'boolean', required: false },
+    },
+  },
   component: Radio,
   parameters: {
     docs: {
@@ -17,10 +36,9 @@ export default {
 } as Meta
 
 const Template: Story<RadioProps> = args => (
-  <Radio name="basic" value="choice-1" checked {...args}>
-    Choice 1
-  </Radio>
+  <Radio {...args} />
 )
+
 
 export const Default = Template.bind({})
 
@@ -58,51 +76,3 @@ Controlled.decorators = [
   ),
 ]
 
-export const Size = Template.bind({})
-Size.parameters = {
-  docs: {
-    storyDescription: 'Set size using `size` property.',
-  },
-}
-Size.decorators = [
-  () => (
-    <ControlValue value="big">
-      {({ value, onChange }) => (
-        <>
-          <Radio
-            name="radio-small"
-            value="small"
-            size={10}
-            checked={value === 'small'}
-            onChange={e => onChange(e.currentTarget.value)}
-          >
-            Small radio
-          </Radio>
-          <Radio
-            name="radio-big"
-            value="big"
-            size={40}
-            checked={value === 'big'}
-            onChange={e => onChange(e.currentTarget.value)}
-          >
-            Big radio
-          </Radio>
-        </>
-      )}
-    </ControlValue>
-  ),
-]
-
-export const Disabled = Template.bind({})
-Disabled.parameters = {
-  docs: {
-    storyDescription: 'Disable the input by using `disabled` prop',
-  },
-}
-Disabled.decorators = [
-  () => (
-    <Radio value="disabled" name="radio-size" disabled>
-      Disabled radio
-    </Radio>
-  ),
-]

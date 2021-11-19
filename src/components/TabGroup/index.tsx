@@ -63,11 +63,11 @@ const computeBarProperties = (tabsWidth: number[], index: number) => {
   return [width, left]
 }
 
-type TabGroupProps = {
+export type TabGroupProps = {
   selected?: number | string
-  onChange?: (data?: unknown) => void
+  onChange?: (data?: string | number) => void
 } & Omit<HTMLAttributes<HTMLElement>, 'onChange'> &
-  Omit<BoxProps, 'selected'>
+  Omit<BoxProps, 'selected' | 'onChange'>
 
 const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
   children = null,
