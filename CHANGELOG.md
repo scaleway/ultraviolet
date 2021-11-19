@@ -1,3 +1,10 @@
+### [0.122.1](https://github.com/scaleway/scaleway-ui/compare/v0.122.0...v0.122.1) (2021-11-19)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/random-name to v3 ([#921](https://github.com/scaleway/scaleway-ui/issues/921)) ([a3ddb02](https://github.com/scaleway/scaleway-ui/commit/a3ddb0268bdfcd72a319864bb7c49f716b81e9f5))
+
 ## [0.122.0](https://github.com/scaleway/scaleway-ui/compare/v0.121.1...v0.122.0) (2021-11-19)
 
 
