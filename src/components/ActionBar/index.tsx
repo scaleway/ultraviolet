@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
-import Box from '../Box'
+import React, { ReactNode } from 'react'
 
 const HEIGHT = 56
 const SPACING = 20
 
-const StyledBox = styled(Box)<{ rank: number }>`
+const StyledDiv = styled.div<{ rank: number }>`
   align-items: center;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.gray300};
@@ -32,21 +31,25 @@ export type ActionBarProps = {
    */
   rank?: number
   role?: string
+  'aria-modal'?: 'true' | 'false'
 }
 
-const ActionBar: FunctionComponent<ActionBarProps> = ({
+const ActionBar = ({
   children,
+  role = undefined,
   rank = 0,
-  ...props
-}) => (
-  <StyledBox rank={rank} {...props}>
+  'aria-modal': ariaModal = undefined,
+}: ActionBarProps): JSX.Element => (
+  <StyledDiv rank={rank} role={role} aria-modal={ariaModal}>
     {children}
-  </StyledBox>
+  </StyledDiv>
 )
 
 ActionBar.propTypes = {
+  'aria-modal': PropTypes.oneOf(['true', 'false']),
   children: PropTypes.node.isRequired,
   rank: PropTypes.number,
+  role: PropTypes.string,
 }
 
 export default ActionBar
