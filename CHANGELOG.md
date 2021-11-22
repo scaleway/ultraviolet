@@ -1,3 +1,16 @@
+## [0.123.0](https://github.com/scaleway/scaleway-ui/compare/v0.122.1...v0.123.0) (2021-11-22)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency lint-staged to v12.1.2 ([#925](https://github.com/scaleway/scaleway-ui/issues/925)) ([bc6c8b7](https://github.com/scaleway/scaleway-ui/commit/bc6c8b747749b8a524ab3eaeecc71496b2f9a8d9))
+* **devdeps:** update dependency size-limit to v7.0.3 ([#928](https://github.com/scaleway/scaleway-ui/issues/928)) ([224edb4](https://github.com/scaleway/scaleway-ui/commit/224edb4338d059d8d73c437e1256fccd68478062))
+
+
+### :gear: Features
+
+* migrate to tsx stories some components ([#899](https://github.com/scaleway/scaleway-ui/issues/899)) ([94073f5](https://github.com/scaleway/scaleway-ui/commit/94073f536a717d47d38133c8a34df6d55ede7342))
+
 ### [0.122.1](https://github.com/scaleway/scaleway-ui/compare/v0.122.0...v0.122.1) (2021-11-19)
 
 
