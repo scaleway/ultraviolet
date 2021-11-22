@@ -2,12 +2,12 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ElementType,
-  FunctionComponent,
+  ReactNode,
   useEffect,
   useRef,
   useState,
 } from 'react'
-import Box from '../Box'
+import Box, { XStyledProps } from '../Box'
 
 const StyledWrapper = styled(Box)`
   position: relative;
@@ -82,20 +82,22 @@ const StyledBorderWrapper = styled(Box)`
   }
 `
 
-export const Item: FunctionComponent<{ as?: string | ElementType<unknown> }> =
-  ({ as, ...props }) => (
-    <StyledBorderWrapper as={as} {...props} draggable="true" />
-  )
+export type SliderItemProps = {
+  as?: string | ElementType<unknown>
+}
+export const SliderItem = ({ as, ...props }: SliderItemProps): JSX.Element => (
+  <StyledBorderWrapper as={as} {...props} draggable="true" />
+)
 
-Item.propTypes = {
+SliderItem.propTypes = {
   as: PropTypes.string,
 }
 
-type SliderType = FunctionComponent & {
-  Item: typeof Item
-}
+export type SliderProps = {
+  children?: ReactNode
+} & XStyledProps
 
-const Slider: SliderType = ({ children, ...props }) => {
+const Slider = ({ children, ...props }: SliderProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
@@ -169,7 +171,7 @@ const Slider: SliderType = ({ children, ...props }) => {
   )
 }
 
-Slider.Item = Item
+Slider.Item = SliderItem
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,

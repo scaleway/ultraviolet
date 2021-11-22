@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { Color } from '../../theme/colors'
 import Box from '../Box'
 
@@ -48,7 +48,7 @@ const StyledTextSphere = styled('div', {
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 
-interface SphereProps {
+export type SphereProps = {
   size?: number
   bgColors?: string[]
   text?: string
@@ -56,14 +56,14 @@ interface SphereProps {
   textSize?: number
 }
 
-const Sphere: VoidFunctionComponent<SphereProps> = ({
+const Sphere = ({
   size = 32,
   bgColors = ['violet'],
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
   textColor = 'white',
   textSize = 16,
   ...props
-}) => (
+}: SphereProps): JSX.Element => (
   <StyledSphere
     size={size}
     bgColors={bgColors}

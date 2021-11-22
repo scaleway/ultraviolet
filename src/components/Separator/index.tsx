@@ -1,19 +1,19 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { ReactNode } from 'react'
 import { Color } from '../../theme/colors'
 import Box, { XStyledProps } from '../Box'
 import Icon, { IconName, icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
-type SytledIconProps = {
+type StyledIconProps = {
   direction: Direction
 } & XStyledProps
 
 const StyledIcon = styled(Box, {
   shouldForwardProp: prop => !['direction'].includes(prop.toString()),
-})<SytledIconProps>`
+})<StyledIconProps>`
   display: flex;
   flex-direction: ${({ direction }) =>
     direction === 'vertical' ? 'column' : 'row'};
@@ -43,15 +43,17 @@ const StyledHr = styled(Box.withComponent('hr'), {
   ${({ flex }) => flex && `flex: ${flex};`}
 `
 
-const Separator: FunctionComponent<
-  HorizontalSeparatorProps & XStyledProps & { icon?: IconName }
-> = ({
+export type SeparatorProps = HorizontalSeparatorProps & {
+  icon?: IconName
+  children?: ReactNode
+}
+const Separator = ({
   direction = 'horizontal',
   thickness = 1,
   color = 'gray200',
   icon,
   ...props
-}) =>
+}: SeparatorProps): JSX.Element =>
   icon ? (
     <StyledIcon
       role="separator"
@@ -86,7 +88,7 @@ const Separator: FunctionComponent<
 
 Separator.propTypes = {
   color: PropTypes.string,
-  direction: PropTypes.oneOf(['horizontal', 'vertical']),
+  direction: PropTypes.oneOf<Direction>(['horizontal', 'vertical']),
   icon: PropTypes.oneOf(icons),
   thickness: PropTypes.number,
 }
