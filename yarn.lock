@@ -3375,8 +3375,8 @@ __metadata:
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
-    "@size-limit/file": 7.0.0
-    "@size-limit/preset-big-lib": 7.0.0
+    "@size-limit/file": 7.0.3
+    "@size-limit/preset-big-lib": 7.0.3
     "@storybook/addon-a11y": 6.3.12
     "@storybook/addon-actions": 6.3.12
     "@storybook/addon-docs": 6.3.12
@@ -3438,7 +3438,7 @@ __metadata:
     rollup-plugin-visualizer: 5.5.2
     semantic-release: 18.0.0
     shx: 0.3.3
-    size-limit: 7.0.0
+    size-limit: 7.0.3
     timekeeper: 2.2.0
     typescript: 4.4.4
     use-media: 1.4.0
@@ -3631,52 +3631,52 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@size-limit/file@npm:7.0.0"
+"@size-limit/file@npm:7.0.3":
+  version: 7.0.3
+  resolution: "@size-limit/file@npm:7.0.3"
   dependencies:
     semver: 7.3.5
   peerDependencies:
-    size-limit: 7.0.0
-  checksum: a3b9b0dad75e7eedcecb031b60805a88addd2e05d1d2bd1f8ad7da31540c8e87d3c09224cc3828259db18c2958afc0eb5160eb2d5b11742cc173c5fb9637bb46
+    size-limit: 7.0.3
+  checksum: 2d01221fe10241e125a2325f38ff3a16cbbbde230cb51ad92d9acf49e89076678523884a984da25e8d9dec85d9d7ad46b4cabe89af2ff629d8bafaa4ffcf84d2
   languageName: node
   linkType: hard
 
-"@size-limit/preset-big-lib@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@size-limit/preset-big-lib@npm:7.0.0"
+"@size-limit/preset-big-lib@npm:7.0.3":
+  version: 7.0.3
+  resolution: "@size-limit/preset-big-lib@npm:7.0.3"
   dependencies:
-    "@size-limit/file": 7.0.0
-    "@size-limit/time": 7.0.0
-    "@size-limit/webpack": 7.0.0
+    "@size-limit/file": 7.0.3
+    "@size-limit/time": 7.0.3
+    "@size-limit/webpack": 7.0.3
   peerDependencies:
-    size-limit: 7.0.0
-  checksum: c5f642c53649396eac7798f06a6b36653b845acbd2f632b49aea06eecc3eb23bfccaaf900ca6187ac45faa228d45727b25690e5ce9a8086b49183828f55ea961
+    size-limit: 7.0.3
+  checksum: 7662c331151300f4f103627f96c9453bc43c460cd265a75c02c566c2ec3ab4f9d3cd196ac36e146110593bcaebfd2a295bc85261c1f708caa5328187edf837cd
   languageName: node
   linkType: hard
 
-"@size-limit/time@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@size-limit/time@npm:7.0.0"
+"@size-limit/time@npm:7.0.3":
+  version: 7.0.3
+  resolution: "@size-limit/time@npm:7.0.3"
   dependencies:
     estimo: ^2.3.0
     react: ^17.0.2
   peerDependencies:
-    size-limit: 7.0.0
-  checksum: 31a325af8ff1789e91e93b27dd2a122fc0c2f691d623ef78b7ff3abb71f9e6e958aa3279375ecd43a5b841263f741a733ced91689c7b04abbdc3ec2d7c54aa4b
+    size-limit: 7.0.3
+  checksum: 97ec2dff3fcbe97421f8cec9f73fbd0711047185fe2aea4e064e3accd12cbd9925465aed740b73cac8d609f47a702267be731e1c3ceaf6b3baf0247e72eca897
   languageName: node
   linkType: hard
 
-"@size-limit/webpack@npm:7.0.0":
-  version: 7.0.0
-  resolution: "@size-limit/webpack@npm:7.0.0"
+"@size-limit/webpack@npm:7.0.3":
+  version: 7.0.3
+  resolution: "@size-limit/webpack@npm:7.0.3"
   dependencies:
     escape-string-regexp: ^4.0.0
     nanoid: ^3.1.30
     webpack: ^5.64.1
   peerDependencies:
-    size-limit: 7.0.0
-  checksum: f4bbabd1737a3071e1591432271cad1210d1ca5eaf01021e16716bb83e74736a07e9f97cf0d42405e0e21f8e895057c2973cbc7d407df19311b7dcb1466c740f
+    size-limit: 7.0.3
+  checksum: 5970a9a44379ef0e0f6c68531d66af8eaf146b8af4ae95a63a45db469b0e561e4256a2f8987f34c4ca3bbea5d43e07dc5ab878b915f6d18d1e9c9c7545dc4bab
   languageName: node
   linkType: hard
 
@@ -20053,9 +20053,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"size-limit@npm:7.0.0":
-  version: 7.0.0
-  resolution: "size-limit@npm:7.0.0"
+"size-limit@npm:7.0.3":
+  version: 7.0.3
+  resolution: "size-limit@npm:7.0.3"
   dependencies:
     bytes-iec: ^3.1.1
     chokidar: ^3.5.2
@@ -20067,7 +20067,7 @@ resolve@^2.0.0-next.3:
     picocolors: ^1.0.0
   bin:
     size-limit: bin.js
-  checksum: 561ab8235b727a5f55c94ddbd4789453d81e7277b8a8534c0250fd667bb8ba6c8671d9a66cc2508d8504669f92064180885c29ebb5a4d82cda377cdd6ed139be
+  checksum: cdf8edd4fd8ef4db305b726a175902db0e63fea47d72a99435174a7bea3a982d2689013e3ee09990b1ffcd3899533df5774ef5667b039e5015988c1d7901f386
   languageName: node
   linkType: hard
 
