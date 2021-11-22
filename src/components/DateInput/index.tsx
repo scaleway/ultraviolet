@@ -120,7 +120,7 @@ const StyledIconContainer = styled.div`
   align-items: center;
   right: 0;
   top: 0;
-  height: '48px';
+  height: 48px;
 `
 
 const TopHeaderDiv = styled.div`

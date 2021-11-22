@@ -1,4 +1,4 @@
-import { css, useTheme } from '@emotion/react'
+import { css as emotionCss, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -11,7 +11,7 @@ import {
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
 
-const textStyle = (maxTagWidth: number) => css`
+const textStyle = (maxTagWidth: number) => emotionCss`
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: ${maxTagWidth}px;
@@ -34,11 +34,11 @@ const StyledTooltipReference = styled(TooltipReference)`
 
 const StyledTagContainer = styled('div', {
   shouldForwardProp: prop => !['css'].includes(prop.toString()),
-})<{ cssProp: string | undefined }>`
+})<{ css: string | undefined }>`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.gray700};
-  ${({ cssProp }) => cssProp}
+  ${({ css }) => css}
 `
 
 const StyledManyTagsContainer = styled.div`
@@ -48,7 +48,7 @@ const StyledManyTagsContainer = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.radii.default};
-  max-width: '80vw';
+  max-width: 80vw;
   flex-wrap: wrap;
 `
 
@@ -65,7 +65,7 @@ const TagsPoplist = ({
   maxTagWidth = 115,
   tags = [],
   threshold = 1,
-  css: cssProp,
+  css,
 }: TagsPoplistProps): JSX.Element | null => {
   const theme = useTheme()
   let tmpThreshold = threshold
@@ -88,7 +88,7 @@ const TagsPoplist = ({
 
   return (
     <FlexBox>
-      <StyledTagContainer cssProp={cssProp}>
+      <StyledTagContainer css={css}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
             // useful when two tags are identical `${tag}-${index}`

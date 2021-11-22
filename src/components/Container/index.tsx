@@ -10,7 +10,7 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledTitleContainer = styled(Box)`
+const StyledTitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
