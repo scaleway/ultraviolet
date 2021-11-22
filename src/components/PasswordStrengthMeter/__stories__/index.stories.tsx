@@ -17,28 +17,22 @@ export default {
 } as Meta
 
 const Template: Story<PasswordStrengthMeterProps> = args => (
-  <UncontrolledPasswordStrengthMeter name="template" {...args} />
+  <UncontrolledPasswordStrengthMeter
+    name="basic"
+    estimate={zxcvbn}
+    title="Password Strength"
+    strength={[
+      { color: 'red', t: 'veryWeak' },
+      { color: 'orange', t: 'weak' },
+      { color: 'yellow', t: 'medium' },
+      { color: 'green', t: 'strong' },
+      { color: 'green', t: 'veryStrong' },
+    ]}
+    {...args}
+  />
 )
 
 export const Default = Template.bind({})
-
-export const Strength = Template.bind({})
-Strength.decorators = [
-  () => (
-    <UncontrolledPasswordStrengthMeter
-      name="basic"
-      estimate={zxcvbn}
-      strength={[
-        { color: 'red', t: 'veryWeak' },
-        { color: 'orange', t: 'weak' },
-        { color: 'yellow', t: 'medium' },
-        { color: 'green', t: 'strong' },
-        { color: 'green', t: 'veryStrong' },
-      ]}
-      title="Password Strength"
-    />
-  ),
-]
 
 export const UserInputs = Template.bind({})
 UserInputs.parameters = {
@@ -48,20 +42,6 @@ UserInputs.parameters = {
 In this example try to type __thisisalongpassword__, the score should be really low as the word has been "banned" using __userInputs__ properties.`,
   },
 }
-UserInputs.decorators = [
-  () => (
-    <UncontrolledPasswordStrengthMeter
-      name="user-inputs"
-      estimate={zxcvbn}
-      strength={[
-        { color: 'red', t: 'veryWeak' },
-        { color: 'orange', t: 'weak' },
-        { color: 'yellow', t: 'medium' },
-        { color: 'green', t: 'strong' },
-        { color: 'green', t: 'veryStrong' },
-      ]}
-      title="Password Strength with User Inputs"
-      userInputs={['thisisalongpassword']}
-    />
-  ),
-]
+UserInputs.args = {
+  userInputs: ['thisisalongpassword'],
+}
