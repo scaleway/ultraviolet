@@ -175,7 +175,7 @@ const StyledRelativeDiv = styled.div`
 `
 
 const StyledError = styled.div`
-  font-size: '12px';
+  font-size: 12px;
   color: ${({ theme }) => theme.colors.warning};
   padding-left: 4px;
   padding-right: 4px;

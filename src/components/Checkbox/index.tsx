@@ -1,6 +1,12 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ChangeEvent, ReactNode, useEffect, useMemo } from 'react'
+import React, {
+  ChangeEvent,
+  FunctionComponent,
+  ReactNode,
+  useEffect,
+  useMemo,
+} from 'react'
 import {
   Checkbox as ReakitCheckbox,
   CheckboxProps as ReakitCheckboxProps,
@@ -62,7 +68,7 @@ const StyledActivityContainer = styled(ReakitCheckbox, {
 `
 
 const StyledError = styled.div`
-  font-size: '12px';
+  font-size: 12px;
   color: ${({ theme }) => theme.colors.warning};
   padding-left: 4px;
   padding-right: 4px;
@@ -80,7 +86,7 @@ export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
 } & Required<Pick<ReakitCheckboxProps, 'onChange'>> &
   XStyledProps
 
-const Checkbox = ({
+const Checkbox: FunctionComponent<CheckboxProps> = ({
   checked = false,
   onChange,
   onFocus,
@@ -96,7 +102,7 @@ const Checkbox = ({
   autoFocus = false,
   typographyVariant = 'default',
   ...props
-}: CheckboxProps): JSX.Element => {
+}) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
   const color = useMemo(() => {
