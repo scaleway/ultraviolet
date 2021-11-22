@@ -3368,7 +3368,7 @@ __metadata:
     "@scaleway/eslint-config-react": 2.3.2
     "@scaleway/jest-helpers": 1.1.4
     "@scaleway/random-name": 3.0.0
-    "@scaleway/use-i18n": 3.1.22
+    "@scaleway/use-i18n": 3.1.23
     "@semantic-release/changelog": 6.0.1
     "@semantic-release/commit-analyzer": 9.0.1
     "@semantic-release/git": 10.0.1
@@ -3455,12 +3455,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@scaleway/use-i18n@npm:3.1.22":
-  version: 3.1.22
-  resolution: "@scaleway/use-i18n@npm:3.1.22"
+"@scaleway/use-i18n@npm:3.1.23":
+  version: 3.1.23
+  resolution: "@scaleway/use-i18n@npm:3.1.23"
   dependencies:
     "@formatjs/fast-memoize": 1.2.0
-    date-fns: 2.25.0
+    date-fns: 2.26.0
     filesize: 8.0.6
     intl-messageformat: 9.9.6
     prop-types: 15.7.2
@@ -3468,7 +3468,7 @@ __metadata:
     date-fns: 2.x
     react: 17.x
     react-dom: 17.x
-  checksum: 54e6d1edd5dec40eb087e414193fac8b722b8afce2a576ea4ad936402d6b59b6c6f4ffc27e644bd0a9b8c2fe42a363822a35c84185876fff5f62f658e0d395e7
+  checksum: 1279b27ed77b66d5c49916c1f52c3faad3bff9ece26865995c707115d482ea2394926b0018195a7a6b2ef72d74fb8959d3ef686a0c800f2cfa440508fb9b43d7
   languageName: node
   linkType: hard
 
@@ -9314,10 +9314,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.25.0, date-fns@npm:^2.0.1, date-fns@npm:^2.24.0":
+"date-fns@npm:2.25.0":
   version: 2.25.0
   resolution: "date-fns@npm:2.25.0"
   checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:2.26.0, date-fns@npm:^2.0.1, date-fns@npm:^2.24.0":
+  version: 2.26.0
+  resolution: "date-fns@npm:2.26.0"
+  checksum: 49ad59bc788134a6552ef4e4af0d18792001c1ca0070d543de4f36aba5761058b6e6a57b8ca51dd3b0f07f3bd55376b8bc69602bd7940648ba3869c5253c6ae8
   languageName: node
   linkType: hard
 
