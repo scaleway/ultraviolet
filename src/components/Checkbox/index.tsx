@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  ChangeEvent,
-  FunctionComponent,
-  ReactNode,
-  useEffect,
-  useMemo,
-} from 'react'
+import React, { ChangeEvent, ReactNode, useEffect, useMemo } from 'react'
 import {
   Checkbox as ReakitCheckbox,
   CheckboxProps as ReakitCheckboxProps,
@@ -86,7 +80,7 @@ export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
 } & Required<Pick<ReakitCheckboxProps, 'onChange'>> &
   XStyledProps
 
-const Checkbox: FunctionComponent<CheckboxProps> = ({
+const Checkbox = ({
   checked = false,
   onChange,
   onFocus,
@@ -102,7 +96,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   autoFocus = false,
   typographyVariant = 'default',
   ...props
-}) => {
+}: CheckboxProps): JSX.Element => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
   const color = useMemo(() => {
