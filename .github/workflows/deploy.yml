@@ -5,7 +5,7 @@ on:
     types: ['opened', 'edited', 'reopened', 'synchronize']
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -28,8 +28,8 @@ jobs:
       - name: Export custom variables
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
-          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "BRANCH_SLUG=master" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-          ([[ $GITHUB_REF == 'refs/heads/master' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
+          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v0.6.0
