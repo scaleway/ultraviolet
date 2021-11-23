@@ -59,12 +59,12 @@ const StyledChildrenContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })``
 
-const StyledActivityContainer = styled(ReakitCheckbox, {
+const StyledActivityContainer = styled('div', {
   shouldForwardProp: prop => !['hasChildren'].includes(prop.toString()),
 })<{ hasChildren: boolean }>`
   display: flex;
   margin-right: ${({ theme, hasChildren }) =>
-    hasChildren ? theme.space['1'] : 0};
+    hasChildren ? theme.space[1] : 0};
 `
 
 const StyledError = styled.div`
