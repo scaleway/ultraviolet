@@ -4,6 +4,14 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { colors } from '../../../theme'
 
 describe('ActivityIndicator', () => {
+  beforeAll(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterAll(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
   test(`renders default props`, () =>
     shouldMatchEmotionSnapshot(<ActivityIndicator label="Loading test" />))
 

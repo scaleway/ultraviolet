@@ -52,9 +52,11 @@ export type ActivityIndicatorProps = {
    * Label should be defined for accessibility, to indicate what is loading
    */
   label?: string
+  id?: string
 }
 
 const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
+  id: idProp,
   percentage = 20,
   text,
   size = 40,
@@ -65,7 +67,7 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   label = 'Loading',
 }) => {
   const theme = useTheme()
-  const id = useMemo(() => getUUID('activityIndicator'), [])
+  const id = useMemo(() => idProp || getUUID('input'), [idProp])
 
   return (
     <>
@@ -117,6 +119,7 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
 ActivityIndicator.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string,
+  id: PropTypes.string,
   /**
    * Label should be defined for accessibility, to indicate what is loading
    */
