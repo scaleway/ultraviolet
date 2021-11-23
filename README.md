@@ -126,4 +126,4 @@ $ yarn build && yalc publish --push --sig # --push will automatically update the
 
 We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
 
-Only the `feat`, `fix` and `perf` types will generate a new package on the `master` branch
+Only the `feat`, `fix` and `perf` types will generate a new package on the `main` branch
