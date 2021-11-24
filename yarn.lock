@@ -3370,11 +3370,11 @@ __metadata:
     "@scaleway/random-name": 3.0.0
     "@scaleway/use-i18n": 3.1.23
     "@semantic-release/changelog": 6.0.1
-    "@semantic-release/commit-analyzer": 9.0.1
+    "@semantic-release/commit-analyzer": 9.0.2
     "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
-    "@semantic-release/release-notes-generator": 10.0.2
+    "@semantic-release/release-notes-generator": 10.0.3
     "@size-limit/file": 7.0.3
     "@size-limit/preset-big-lib": 7.0.3
     "@storybook/addon-a11y": 6.3.12
@@ -3436,7 +3436,7 @@ __metadata:
     rollup-plugin-dts: 4.0.1
     rollup-plugin-postcss: 4.0.2
     rollup-plugin-visualizer: 5.5.2
-    semantic-release: 18.0.0
+    semantic-release: 18.0.1
     shx: 0.3.3
     size-limit: 7.0.3
     timekeeper: 2.2.0
@@ -3486,20 +3486,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/commit-analyzer@npm:9.0.1, @semantic-release/commit-analyzer@npm:^9.0.0":
-  version: 9.0.1
-  resolution: "@semantic-release/commit-analyzer@npm:9.0.1"
+"@semantic-release/commit-analyzer@npm:9.0.2, @semantic-release/commit-analyzer@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "@semantic-release/commit-analyzer@npm:9.0.2"
   dependencies:
     conventional-changelog-angular: ^5.0.0
     conventional-commits-filter: ^2.0.0
-    conventional-commits-parser: ^3.0.7
+    conventional-commits-parser: ^3.2.3
     debug: ^4.0.0
     import-from: ^4.0.0
     lodash: ^4.17.4
     micromatch: ^4.0.2
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 4b38f235c7f3c424717693663e7ceac48319687b62d0a28429d04f03add183632fb64905847bdc499d0cee306b8d5e228018a0b495d260c09fd9f1209c40c100
+  checksum: f7f759e608c0c044ba8ec1b3aabad4305ac057cc45156b60a2f8dc355f5193b84ff7c661aefd4522659172f4d6ecf80219b8b28714bd76e4eb32e734b2e6ead9
   languageName: node
   linkType: hard
 
@@ -3584,14 +3584,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:10.0.2, @semantic-release/release-notes-generator@npm:^10.0.0":
-  version: 10.0.2
-  resolution: "@semantic-release/release-notes-generator@npm:10.0.2"
+"@semantic-release/release-notes-generator@npm:10.0.3, @semantic-release/release-notes-generator@npm:^10.0.0":
+  version: 10.0.3
+  resolution: "@semantic-release/release-notes-generator@npm:10.0.3"
   dependencies:
     conventional-changelog-angular: ^5.0.0
     conventional-changelog-writer: ^5.0.0
     conventional-commits-filter: ^2.0.0
-    conventional-commits-parser: ^3.0.0
+    conventional-commits-parser: ^3.2.3
     debug: ^4.0.0
     get-stream: ^6.0.0
     import-from: ^4.0.0
@@ -3600,7 +3600,7 @@ __metadata:
     read-pkg-up: ^7.0.0
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 6e71e8be33383fa71f68f5ca99f3143078678d7ba482fc277fcb4dc64f84f9ebaffbc798d8738a9e650f73d32ba1d0a3cf0413c25d428719a0a39238224223ce
+  checksum: 0237e7e6ebf41b7c6a72eea704b007442cfd05910ded7059235a5684a0e4a233b2ca3c3e39923901131e7f0a4dcb5e95737af469081529acc393223c04715505
   languageName: node
   linkType: hard
 
@@ -6240,16 +6240,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.2.4, acorn@npm:^8.4.1, acorn@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "acorn@npm:8.5.0"
-  bin:
-    acorn: bin/acorn
-  checksum: 2e4c1dbed3da327684863debf31d341bf8882c6893c506653872c00977eee45675feb9129255d6c74c88424d2b20d889ca6de5b39776e5e3cccfc756b3ca1da8
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^8.6.0":
+"acorn@npm:^8.2.4, acorn@npm:^8.4.1, acorn@npm:^8.6.0":
   version: 8.6.0
   resolution: "acorn@npm:8.6.0"
   bin:
@@ -8577,9 +8568,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-commits-parser@npm:^3.0.0, conventional-commits-parser@npm:^3.0.7, conventional-commits-parser@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "conventional-commits-parser@npm:3.2.2"
+"conventional-commits-parser@npm:^3.2.2, conventional-commits-parser@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "conventional-commits-parser@npm:3.2.3"
   dependencies:
     JSONStream: ^1.0.4
     is-text-path: ^1.0.1
@@ -8589,7 +8580,7 @@ __metadata:
     through2: ^4.0.0
   bin:
     conventional-commits-parser: cli.js
-  checksum: e7138cfeebc77affe790fa06b6c2f8ecaf74837c886c234bb268b6c4b84d123aba81851c8e3ef7169ee2d044d2d8c7a2a60a29d06b8bc3f1b5d7c2c984d5bb4f
+  checksum: 0f57b5cb7cb359eb49e6807cfd82b27cbe9ac30ec580b20ad7e79575561183110532a6c2e6328ce6c4cd05c01458b9bb781f1f6653b14560f7c509b87b0e9ac7
   languageName: node
   linkType: hard
 
@@ -10536,14 +10527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-visitor-keys@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "eslint-visitor-keys@npm:3.0.0"
-  checksum: 352607f367a2e0e2f9f234e40d6d9b34c39399345b8a9f204e1343749ddfae505d8343909cba6c4abc2ca03add4cdc0530af5e98f870ad7183fc2a89458669e5
-  languageName: node
-  linkType: hard
-
-"eslint-visitor-keys@npm:^3.1.0":
+"eslint-visitor-keys@npm:^3.0.0, eslint-visitor-keys@npm:^3.1.0":
   version: 3.1.0
   resolution: "eslint-visitor-keys@npm:3.1.0"
   checksum: fd2d613bb315bc549068ca97771d868437fb60c8f13ef8d6d54669773ff53f814b759fa9e57966f15e4c50a5f5e11c6ba47060b8f201f9776311f6c5d5c11b70
@@ -10598,18 +10582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "espree@npm:9.0.0"
-  dependencies:
-    acorn: ^8.5.0
-    acorn-jsx: ^5.3.1
-    eslint-visitor-keys: ^3.0.0
-  checksum: f313c642e35587ce62a419f57ceea47937a719b084c7b31f649d2ca15ed92bc2dde58e2ac4fc381a74364b0db0b97d9cdb2a5d1ca0ccd7483bde9b4b04fe23e8
-  languageName: node
-  linkType: hard
-
-"espree@npm:^9.1.0":
+"espree@npm:^9.0.0, espree@npm:^9.1.0":
   version: 9.1.0
   resolution: "espree@npm:9.1.0"
   dependencies:
@@ -19751,11 +19724,11 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:18.0.0":
-  version: 18.0.0
-  resolution: "semantic-release@npm:18.0.0"
+"semantic-release@npm:18.0.1":
+  version: 18.0.1
+  resolution: "semantic-release@npm:18.0.1"
   dependencies:
-    "@semantic-release/commit-analyzer": ^9.0.0
+    "@semantic-release/commit-analyzer": ^9.0.2
     "@semantic-release/error": ^3.0.0
     "@semantic-release/github": ^8.0.0
     "@semantic-release/npm": ^8.0.0
@@ -19785,7 +19758,7 @@ resolve@^2.0.0-next.3:
     yargs: ^16.2.0
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: 3fee100afea9f5285329a782ba7d89b4119ac164dec12f746eb905ff9cd06e69a117911400b005060db7860612a28eb7b96e5ae5fbd8e1119659b6474b6a5693
+  checksum: e99634d2fd392d007cd83cc28318cd4b0781825b550e75486676941b8f67a32c1b907c53de2761440b38ead220629cc3778c22373aacce4ee291dba43971b0d6
   languageName: node
   linkType: hard
 
