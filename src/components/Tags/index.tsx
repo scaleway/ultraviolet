@@ -4,7 +4,6 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
-  ChangeEventHandler,
   ClipboardEventHandler,
   KeyboardEventHandler,
   VoidFunctionComponent,
@@ -110,14 +109,7 @@ export type TagsProps = {
   id?: string
   manualInput?: boolean
   name?: string
-  onChange?: (
-    tags:
-      | (string | null | undefined)[]
-      | ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) =>
-    | Promise<void>
-    | void
-    | ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onChange?: (tags: (string | null | undefined)[]) => void
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   tags?: TagsProp

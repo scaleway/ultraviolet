@@ -36,7 +36,7 @@ const getCursorLinkWidth = (cursorsRef: RefObject<HTMLElement>[]) => {
   return cursorsX[1] - cursorsX[0]
 }
 
-const canMove = (value: number, values: number[] = [], valueIndex: number) => {
+const canMove = (value: number, valueIndex: number, values: number[] = []) => {
   // Range with single value can always move
   if (values.length === 1) return true
 
@@ -356,7 +356,7 @@ const Range: VoidFunctionComponent<RangeProps> = ({
 
         if (
           grabbedCursor !== undefined &&
-          canMove(valueFromPercentage, values, grabbedCursor)
+          canMove(valueFromPercentage, grabbedCursor, values)
         ) {
           cursor.style.transform = `translate3d(${
             tresholdedValue - minX + cursorWidth

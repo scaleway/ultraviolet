@@ -104,21 +104,23 @@ const Slider = ({ children, ...props }: SliderProps): JSX.Element => {
 
   const handleScrollRight = () => {
     intervalRight = setInterval(() => {
-      if (scrollRef.current?.scrollTo) {
-        scrollRef.current.scrollTo?.(scrollRef.current?.scrollLeft - 25, 0)
+      if (scrollRef.current?.scrollTo && scrollRef.current?.scrollLeft) {
+        scrollRef.current.scrollTo?.(scrollRef.current.scrollLeft - 25, 0)
       }
     }, 30)
   }
   const handleScrollLeft = () => {
     intervalLeft = setInterval(() => {
-      if (scrollRef.current?.scrollTo) {
-        scrollRef.current.scrollTo(scrollRef.current?.scrollLeft + 25, 0)
+      if (scrollRef.current?.scrollTo && scrollRef.current?.scrollLeft) {
+        scrollRef.current.scrollTo(scrollRef.current.scrollLeft + 25, 0)
       }
     }, 30)
   }
 
   const handleScrollX = (scrollX = 25) => {
-    scrollRef.current?.scrollTo?.(scrollRef.current?.scrollLeft + scrollX, 0)
+    if (scrollRef.current?.scrollTo && scrollRef.current?.scrollLeft) {
+      scrollRef.current.scrollTo?.(scrollRef.current.scrollLeft + scrollX, 0)
+    }
   }
 
   const cleanUp = () => {
