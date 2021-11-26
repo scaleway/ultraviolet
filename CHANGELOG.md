@@ -1,3 +1,23 @@
+### [0.123.1](https://github.com/scaleway/scaleway-ui/compare/v0.123.0...v0.123.1) (2021-11-26)
+
+
+### :repeat: CI
+
+* use main branch instead of master ([#934](https://github.com/scaleway/scaleway-ui/issues/934)) ([3e4b75e](https://github.com/scaleway/scaleway-ui/commit/3e4b75e87a4136bfcb68015a143c99cb60c17828))
+
+
+### :package: Chore
+
+* **deps:** update yarn to v3.1.1 ([#941](https://github.com/scaleway/scaleway-ui/issues/941)) ([7b9f8c7](https://github.com/scaleway/scaleway-ui/commit/7b9f8c72e3c42fc312f8dd67cab5135c9dc3c8c4))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3 ([#933](https://github.com/scaleway/scaleway-ui/issues/933)) ([409dd9b](https://github.com/scaleway/scaleway-ui/commit/409dd9b935780a2951878b6f6afc0bbeef3a6642))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.23 ([#929](https://github.com/scaleway/scaleway-ui/issues/929)) ([5d76aea](https://github.com/scaleway/scaleway-ui/commit/5d76aea0d47c48df17e0b20aea9c771091420f0d))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.15.1 ([#937](https://github.com/scaleway/scaleway-ui/issues/937)) ([8f41be6](https://github.com/scaleway/scaleway-ui/commit/8f41be6e0dd9d39c33a528780a372c70ec50425b))
+* **devdeps:** update dependency date-fns to v2.26.0 ([#936](https://github.com/scaleway/scaleway-ui/issues/936)) ([6845a55](https://github.com/scaleway/scaleway-ui/commit/6845a55a451ee0d2bb0e626f59ab9a31792f54b2))
+* **devdeps:** update dependency rollup to v2.60.1 ([#932](https://github.com/scaleway/scaleway-ui/issues/932)) ([f66f1d1](https://github.com/scaleway/scaleway-ui/commit/f66f1d16bcc31c110de76d5cd97708315f2aa2b2))
+* **devdeps:** update dependency rollup-plugin-postcss to v4.0.2 ([#935](https://github.com/scaleway/scaleway-ui/issues/935)) ([f75a5de](https://github.com/scaleway/scaleway-ui/commit/f75a5de81916dbd4a00b9c29606767e0a569537e))
+* **devdeps:** update dependency typescript to v4.5.2 ([#930](https://github.com/scaleway/scaleway-ui/issues/930)) ([59e174f](https://github.com/scaleway/scaleway-ui/commit/59e174f7c9fb6af7afa4eeeade79d11219a008ce))
+* **devdeps:** update semantic-release monorepo ([#938](https://github.com/scaleway/scaleway-ui/issues/938)) ([597491a](https://github.com/scaleway/scaleway-ui/commit/597491a6af83818a8d79704178ddf7c68809b274))
+
 ## [0.123.0](https://github.com/scaleway/scaleway-ui/compare/v0.122.1...v0.123.0) (2021-11-22)
 
 
