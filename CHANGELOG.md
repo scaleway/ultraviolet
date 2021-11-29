@@ -1,3 +1,16 @@
+### [0.123.2](https://github.com/scaleway/scaleway-ui/compare/v0.123.1...v0.123.2) (2021-11-29)
+
+
+### :zap: Refactor
+
+* **a11y:** activity-indicator ([#924](https://github.com/scaleway/scaleway-ui/issues/924)) ([ea4b6b6](https://github.com/scaleway/scaleway-ui/commit/ea4b6b6688eacdbe06ca08c548b18b64198a20aa))
+* **a11y:** alert ([#923](https://github.com/scaleway/scaleway-ui/issues/923)) ([5588ca5](https://github.com/scaleway/scaleway-ui/commit/5588ca53a350c72fecd5a41b27d6fbbb68db47e1))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency intl-tel-input to v17.0.14 ([#945](https://github.com/scaleway/scaleway-ui/issues/945)) ([edcb8fe](https://github.com/scaleway/scaleway-ui/commit/edcb8fe5b501f8cfc1c15cd1fb7d4e8ed82da903))
+
 ### [0.123.1](https://github.com/scaleway/scaleway-ui/compare/v0.123.0...v0.123.1) (2021-11-26)
 
 
