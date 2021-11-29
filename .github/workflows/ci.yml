@@ -48,7 +48,7 @@ jobs:
           node-version: 17
           cache: 'yarn'
       - run: yarn
-      - run: yarn run test:a11y || true
+      - run: yarn run test:a11y
   build:
     strategy:
       matrix:

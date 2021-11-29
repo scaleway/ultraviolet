@@ -8,6 +8,8 @@ import * as process from 'process'
 import React, { VoidFunctionComponent } from 'react'
 import { renderWithTheme } from '../helpers/jestHelpers'
 
+const testedComponents = ['Alert', 'ActivityIndicator']
+
 const foundFiles: string[] = []
 
 const searchFileFromDir = (startPath: string, filter: string) => {
@@ -18,8 +20,14 @@ const searchFileFromDir = (startPath: string, filter: string) => {
     const stat = fs.lstatSync(filename)
 
     if (stat.isDirectory()) {
-      // recursive search in case if directory
-      searchFileFromDir(filename, filter)
+      if (
+        testedComponents.some(component =>
+          filename.toLowerCase().includes(component.toLowerCase()),
+        )
+      ) {
+        // recursive search in case if directory
+        searchFileFromDir(filename, filter)
+      }
     } else if (filename.indexOf(filter) >= 0) {
       foundFiles.push(filename.replace('src/', '../'))
     }
@@ -34,6 +42,8 @@ if (process.argv[4]) {
 }
 
 expect.extend(toHaveNoViolations)
+
+jest.setTimeout(60000)
 
 describe('A11y', () => {
   afterEach(() => {
