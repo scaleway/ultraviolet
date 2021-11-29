@@ -1008,6 +1008,11 @@ exports[`Checkbox renders correctly with progress 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
 .cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -1045,36 +1050,60 @@ exports[`Checkbox renders correctly with progress 1`] = `
       <div
         class="cache-1wr6k2n e7ah3bn0"
       >
-        <svg
-          class="CircularProgressbar  cache-8ng7tj e7dhm9i0"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
+        <div
+          aria-hidden="true"
         >
-          <path
-            class="CircularProgressbar-trail"
-            d="
+          <svg
+            class="CircularProgressbar  cache-8ng7tj e7dhm9i1"
+            data-test-id="CircularProgressbar"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="CircularProgressbar-trail"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+            />
+            <path
+              class="CircularProgressbar-path"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+            />
+          </svg>
+        </div>
+        <div
+          class="cache-546l7a e7dhm9i0"
+        >
+          <label
+            for="input-6c756c756c756c756c756c756c756c75"
+          >
+            Loading
+          </label>
+          <progress
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="20"
+            aria-valuetext="20%"
+            id="input-6c756c756c756c756c756c756c756c75"
+            max="100"
+            value="20"
+          >
+            20%
+          </progress>
+        </div>
       </div>
       <div
         class="cache-0 eu28k4m0"
@@ -1166,6 +1195,11 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
 .cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -1203,36 +1237,60 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
       <div
         class="cache-iyx5sv e7ah3bn0"
       >
-        <svg
-          class="CircularProgressbar  cache-8ng7tj e7dhm9i0"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
+        <div
+          aria-hidden="true"
         >
-          <path
-            class="CircularProgressbar-trail"
-            d="
+          <svg
+            class="CircularProgressbar  cache-8ng7tj e7dhm9i1"
+            data-test-id="CircularProgressbar"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="CircularProgressbar-trail"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+            />
+            <path
+              class="CircularProgressbar-path"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+            />
+          </svg>
+        </div>
+        <div
+          class="cache-546l7a e7dhm9i0"
+        >
+          <label
+            for="input-6c756c756c756c756c756c756c756c75"
+          >
+            Loading
+          </label>
+          <progress
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="20"
+            aria-valuetext="20%"
+            id="input-6c756c756c756c756c756c756c756c75"
+            max="100"
+            value="20"
+          >
+            20%
+          </progress>
+        </div>
       </div>
     </label>
     <div
@@ -1447,6 +1505,11 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-546l7a {
+  visibility: hidden;
+  position: absolute;
+}
+
 .cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -1485,36 +1548,60 @@ exports[`Checkbox renders correctly with sizes 1`] = `
       <div
         class="cache-1wr6k2n e7ah3bn0"
       >
-        <svg
-          class="CircularProgressbar  cache-78jmh4 e7dhm9i0"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
+        <div
+          aria-hidden="true"
         >
-          <path
-            class="CircularProgressbar-trail"
-            d="
+          <svg
+            class="CircularProgressbar  cache-78jmh4 e7dhm9i1"
+            data-test-id="CircularProgressbar"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="CircularProgressbar-trail"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
+            />
+            <path
+              class="CircularProgressbar-path"
+              d="
       M 50,50
       m 0,-42
       a 42,42 0 1 1 0,84
       a 42,42 0 1 1 0,-84
     "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
+              fill-opacity="0"
+              stroke-width="16"
+              style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
+            />
+          </svg>
+        </div>
+        <div
+          class="cache-546l7a e7dhm9i0"
+        >
+          <label
+            for="input-6c756c756c756c756c756c756c756c75"
+          >
+            Loading
+          </label>
+          <progress
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="20"
+            aria-valuetext="20%"
+            id="input-6c756c756c756c756c756c756c756c75"
+            max="100"
+            value="20"
+          >
+            20%
+          </progress>
+        </div>
       </div>
       <div
         class="cache-0 eu28k4m0"
