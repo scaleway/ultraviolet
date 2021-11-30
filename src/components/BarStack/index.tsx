@@ -1,10 +1,20 @@
 import styled from '@emotion/styled'
 import { darken, lighten, transparentize } from 'polished'
-import React, { MouseEventHandler, useMemo } from 'react'
+import React, { MouseEventHandler, ReactNode, useMemo } from 'react'
+import Tooltip from '../Tooltip'
 
-export interface BarProps {
+export type BarProps = {
+  /**
+   * Unique id of the bar
+   */
   id: string
+  /**
+   * The value of the bar
+   */
   value: number
+  /**
+   * Text to display inside the bar
+   */
   text?: string
   onClick?: MouseEventHandler<HTMLDivElement>
   onDoubleClick?: MouseEventHandler<HTMLDivElement>
@@ -12,26 +22,34 @@ export interface BarProps {
   onMouseUp?: MouseEventHandler<HTMLDivElement>
   onMouseEnter?: MouseEventHandler<HTMLDivElement>
   onMouseLeave?: MouseEventHandler<HTMLDivElement>
+  /**
+   * A tooltip to display when hovering the bar
+   */
+  tooltip?: ReactNode
 }
 
 export interface BarStackProps {
-  data: BarProps[]
+  data: Array<BarProps>
   total?: number
 }
 
-const StyledBar = styled('div', {
-  shouldForwardProp: prop => prop.toString() !== 'value',
-})`
+const StyledBarWrapper = styled.div`
+  width: 0px;
+  transition: width 500ms;
+  background-color: ${({ theme }) => theme.colors.white};
+`
+
+const StyledBar = styled.div`
   height: 50px;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.white};
   font-size: 14px;
-  background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.space[1]};
-  transition: width 500ms;
-  width: 0px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   text-shadow: -1px 0 ${({ theme }) => transparentize(0.7, theme.colors.black)},
     0 1px ${({ theme }) => transparentize(0.7, theme.colors.black)},
     1px 0 ${({ theme }) => transparentize(0.7, theme.colors.black)},
@@ -41,11 +59,12 @@ const StyledBar = styled('div', {
 const StyledContainer = styled.div`
   width: 100%;
   display: flex;
+  background-color: ${({ theme }) => theme.colors.gray100};
   border-radius: ${({ theme }) => theme.radii.default};
   box-shadow: inset 0px 0px 0px 1px ${({ theme }) => theme.colors.gray300};
   overflow: hidden;
 
-  ${StyledBar}:nth-child(5n+1) {
+  ${StyledBarWrapper}:nth-child(5n+1) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.9,
       theme.colors.white,
@@ -60,8 +79,8 @@ const StyledContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
-  ${StyledBar}:nth-child(5n+2) {
-    background-color: ${({ theme }) => theme.colors.primary};
+  ${StyledBarWrapper}:nth-child(5n+2) {
+    background-color: ${({ theme }) => lighten(0.1, theme.colors.primary)};
 
     background-image: linear-gradient(
         135deg,
@@ -81,14 +100,14 @@ const StyledContainer = styled.div`
       linear-gradient(
         315deg,
         ${({ theme }) => transparentize(0.75, theme.colors.white)} 25%,
-        ${({ theme }) => theme.colors.primary} 25%
+        ${({ theme }) => lighten(0.1, theme.colors.primary)} 25%
       );
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 10px 10px;
     background-repeat: repeat;
   }
 
-  ${StyledBar}:nth-child(5n+3) {
+  ${StyledBarWrapper}:nth-child(5n+3) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.9,
       theme.colors.white,
@@ -103,7 +122,7 @@ const StyledContainer = styled.div`
     background-color: ${({ theme }) => darken(0.2, theme.colors.lightViolet)};
   }
 
-  ${StyledBar}:nth-child(5n+4) {
+  ${StyledBarWrapper}:nth-child(5n+4) {
     background-color: ${({ theme }) => theme.colors.lightViolet};
 
     background-image: linear-gradient(
@@ -131,7 +150,7 @@ const StyledContainer = styled.div`
     background-repeat: repeat;
   }
 
-  ${StyledBar}:nth-child(5n+5) {
+  ${StyledBarWrapper}:nth-child(5n+5) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.8,
       theme.colors.white,
@@ -169,19 +188,38 @@ const BarStack = ({ data, total }: BarStackProps): JSX.Element => {
           onMouseLeave,
           onMouseDown,
           onMouseUp,
+          tooltip,
         }) => (
-          <StyledBar
-            key={id}
+          <StyledBarWrapper
             style={{ width: `${(value / computedTotal) * 100}%` }}
-            onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onClick={onClick}
-            onDoubleClick={onDoubleClick}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            key={id}
           >
-            {text}
-          </StyledBar>
+            {tooltip ? (
+              <Tooltip baseId={`tooltip-${id}`} text={tooltip}>
+                <StyledBar
+                  onMouseDown={onMouseDown}
+                  onMouseUp={onMouseUp}
+                  onClick={onClick}
+                  onDoubleClick={onDoubleClick}
+                  onMouseEnter={onMouseEnter}
+                  onMouseLeave={onMouseLeave}
+                >
+                  {text}
+                </StyledBar>
+              </Tooltip>
+            ) : (
+              <StyledBar
+                onMouseDown={onMouseDown}
+                onMouseUp={onMouseUp}
+                onClick={onClick}
+                onDoubleClick={onDoubleClick}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
+                {text}
+              </StyledBar>
+            )}
+          </StyledBarWrapper>
         ),
       )}
     </StyledContainer>
