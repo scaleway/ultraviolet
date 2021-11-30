@@ -1,3 +1,16 @@
+## [0.124.0](https://github.com/scaleway/scaleway-ui/compare/v0.123.2...v0.124.0) (2021-11-30)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency prettier to v2.5.0 ([#950](https://github.com/scaleway/scaleway-ui/issues/950)) ([020b776](https://github.com/scaleway/scaleway-ui/commit/020b7768bd8e1fb221c8d91ec30fead0720fd7be))
+* **devdeps:** update emotion monorepo to v11.7.0 ([#939](https://github.com/scaleway/scaleway-ui/issues/939)) ([2e020dc](https://github.com/scaleway/scaleway-ui/commit/2e020dc87b118db340c97eb961f1a7c62f3139b8))
+
+
+### :gear: Features
+
+* add tooltip and background ([#949](https://github.com/scaleway/scaleway-ui/issues/949)) ([5c9abea](https://github.com/scaleway/scaleway-ui/commit/5c9abea250d71e0f17edc411727e262367d79c8a))
+
 ### [0.123.2](https://github.com/scaleway/scaleway-ui/compare/v0.123.1...v0.123.2) (2021-11-29)
 
 
