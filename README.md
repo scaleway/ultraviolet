@@ -22,16 +22,16 @@ $ yarn add @scaleway/ui @emotion/react @emotion/styled
 ```
 
 ```js
-import { theme, Button } from "@scaleway/ui";
-import { ThemeProvider } from "@emotion/react";
+import { theme, Button } from '@scaleway/ui'
+import { ThemeProvider } from '@emotion/react'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Button variant="primary" onClick={() => console.log("clicked")}>
+    <Button variant="primary" onClick={() => console.log('clicked')}>
       Click Me
     </Button>
   </ThemeProvider>
-);
+)
 ```
 
 N.B. To allow typescript theme typings with `@emotion/styled` components,
@@ -40,6 +40,7 @@ you'll have to define the `@emotion/react` module `Theme` interface in your proj
 Example, in a `global.d.ts` file:
 
 - Declaration to use the default Scaleway theme
+
 ```ts
 declare module '@emotion/react' {
   import type { SCWUITheme } from '@scaleway/ui'
@@ -47,9 +48,10 @@ declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Theme extends SCWUITheme {}
 }
-
 ```
--  Declaration to use your custom theme
+
+- Declaration to use your custom theme
+
 ```ts
 import type { MyTheme } from './src/theme'
 
@@ -58,7 +60,6 @@ declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Theme extends MyTheme {}
 }
-
 ```
 
 ## Development
@@ -73,7 +74,7 @@ $ yarn run start
 
 ### Test
 
-#### Unit 
+#### Unit
 
 ```sh
 $ yarn run test # Will run all tests
@@ -84,6 +85,7 @@ $ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/i
 ```
 
 #### Accessibility
+
 ```sh
 $ yarn run test:a11y # Will run all accessibility tests
 $ yarn run test:a11y src/components/Alert # Will run accessibility test of Alert component only

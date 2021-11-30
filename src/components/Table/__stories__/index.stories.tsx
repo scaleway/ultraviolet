@@ -36,55 +36,54 @@ Template.args = {
 export const Default = Template.bind({})
 
 Default.args = {
-  ...Template.args
+  ...Template.args,
 }
 
-export const Hoverable =  Template.bind({})
+export const Hoverable = Template.bind({})
 
 Hoverable.args = {
   children: [
     <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>ID</Table.HeadCell>
-      <Table.HeadCell>Date</Table.HeadCell>
-      <Table.HeadCell>Action</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>
-    , 
+      <Table.Row>
+        <Table.HeadCell>ID</Table.HeadCell>
+        <Table.HeadCell>Date</Table.HeadCell>
+        <Table.HeadCell>Action</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>,
     <Table.Body>
-    <Table.Row>
-      <Table.BodyCell>999</Table.BodyCell>
-      <Table.BodyCell>Just now</Table.BodyCell>
-      <Table.BodyCell>
-        <Button size="small" icon="eye" data-visibility="hover" />
-      </Table.BodyCell>
-    </Table.Row>
-    <Table.Row>
-      <Table.BodyCell>165</Table.BodyCell>
-      <Table.BodyCell>Yesterday</Table.BodyCell>
-      <Table.BodyCell>
-        <Button size="small" icon="eye" data-visibility="hover" />
-      </Table.BodyCell>
-    </Table.Row>
-  </Table.Body>]
+      <Table.Row>
+        <Table.BodyCell>999</Table.BodyCell>
+        <Table.BodyCell>Just now</Table.BodyCell>
+        <Table.BodyCell>
+          <Button size="small" icon="eye" data-visibility="hover" />
+        </Table.BodyCell>
+      </Table.Row>
+      <Table.Row>
+        <Table.BodyCell>165</Table.BodyCell>
+        <Table.BodyCell>Yesterday</Table.BodyCell>
+        <Table.BodyCell>
+          <Button size="small" icon="eye" data-visibility="hover" />
+        </Table.BodyCell>
+      </Table.Row>
+    </Table.Body>,
+  ],
 }
 
-export const Loader =  Template.bind({})
+export const Loader = Template.bind({})
 
 Loader.args = {
   children: [
     <Table.Head>
-    <Table.Row>
-      <Table.HeadCell>ID</Table.HeadCell>
-      <Table.HeadCell>Date</Table.HeadCell>
-    </Table.Row>
-  </Table.Head>,
-  <Table.Body loading colSpan={2}>
-    <Table.Row>
-      <Table.BodyCell>999</Table.BodyCell>
-      <Table.BodyCell>Just now</Table.BodyCell>
-    </Table.Row>
-  </Table.Body>
-  ]
+      <Table.Row>
+        <Table.HeadCell>ID</Table.HeadCell>
+        <Table.HeadCell>Date</Table.HeadCell>
+      </Table.Row>
+    </Table.Head>,
+    <Table.Body loading colSpan={2}>
+      <Table.Row>
+        <Table.BodyCell>999</Table.BodyCell>
+        <Table.BodyCell>Just now</Table.BodyCell>
+      </Table.Row>
+    </Table.Body>,
+  ],
 }
-

@@ -6,10 +6,10 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 export default {
   args: {
     checked: false,
-    children: "Choice 1",
+    children: 'Choice 1',
     disabled: false,
-    name: "basic",
-    value:"choice-1",
+    name: 'basic',
+    value: 'choice-1',
   },
   argTypes: {
     checked: {
@@ -35,10 +35,7 @@ export default {
   title: 'Components/Data Entry/Radio',
 } as Meta
 
-const Template: Story<RadioProps> = args => (
-  <Radio {...args} />
-)
-
+const Template: Story<RadioProps> = args => <Radio {...args} />
 
 export const Default = Template.bind({})
 
@@ -75,4 +72,3 @@ Controlled.decorators = [
     </ControlValue>
   ),
 ]
-

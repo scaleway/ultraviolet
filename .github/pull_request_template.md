@@ -27,10 +27,7 @@
 
 ## Relevant logs and/or screenshots
 
-Page | Before | After
-:-   |  :-:   | -:
-url | screenshot | screenshot
-url | screenshot | screenshot
-
-
-
+| Page |   Before   |      After |
+| :--- | :--------: | ---------: |
+| url  | screenshot | screenshot |
+| url  | screenshot | screenshot |

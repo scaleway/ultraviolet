@@ -7,10 +7,12 @@ export default {
   title: 'Components/Container/Boxer',
 } as Meta
 
-const Template: Story<Record<string, never>> = args => <Boxer {...args}>
-  <div>Children 1 - I&apos;m in a box component</div>
-  <span>Children 2 - I&apos;m in a box component too</span>
-</Boxer>
+const Template: Story<Record<string, never>> = args => (
+  <Boxer {...args}>
+    <div>Children 1 - I&apos;m in a box component</div>
+    <span>Children 2 - I&apos;m in a box component too</span>
+  </Boxer>
+)
 
 export const Default = Template.bind({})
 

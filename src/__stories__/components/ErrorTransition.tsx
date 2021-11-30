@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent, useLayoutEffect, useState } from 'react'
 
-const ErrorTransition: VoidFunctionComponent<{ error: unknown, Component: React.ElementType }> = ({ error, Component, ...props }) => {
+const ErrorTransition: VoidFunctionComponent<{
+  error: unknown
+  Component: React.ElementType
+}> = ({ error, Component, ...props }) => {
   const [err, setErr] = useState<unknown>()
   useLayoutEffect(() => {
     const timer = setTimeout(() => setErr(error), 2000)

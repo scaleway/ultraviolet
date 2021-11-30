@@ -9,7 +9,7 @@ export default {
     checked: false,
     children: 'This is a children',
     disabled: false,
-    name:'default',
+    name: 'default',
     onChange: (value: any) => console.log(value),
     tooltip: undefined,
     value: 'a',
@@ -53,7 +53,7 @@ Template.args = {
   checked: false,
   children: 'This is a children',
   disabled: false,
-  name:'default',
+  name: 'default',
   onChange: value => console.log(value),
   tooltip: undefined,
   value: 'a',
@@ -64,67 +64,63 @@ export const Default = Template.bind({})
 
 const DefaultShowcase: Story<{
   controlValue: string | number
-  variant?:  'segment'
+  variant?: 'segment'
   disabled: boolean
-}> = ({
-  controlValue = 'a',
-  disabled = false,
-  variant,
-}) => (
+}> = ({ controlValue = 'a', disabled = false, variant }) => (
   <ControlValue value={controlValue}>
-  {({ value, onChange }) => (
-    <Grid m={2}>
-      <Row >
-        <Col pr={0}>
-          <Row>
-            <Col xsmall={4} pr={1}>
-              <SwitchButton
-                name="switch"
-                value="a"
-                disabled={disabled}
-                variant={variant}
-                checked={value === 'a'}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  onChange(e.currentTarget.value)
-                }
-              >
-                This is A
-              </SwitchButton>
-            </Col>
-            <Col xsmall={4} pl={1}>
-              <SwitchButton
-                name="switch"
-                value="b"
-                disabled={disabled}
-                variant={variant}
-                checked={value === 'b'}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  onChange(e.currentTarget.value)
-                }
-              >
-                This is B
-              </SwitchButton>
-            </Col>
-            <Col xsmall={4} pl={1}>
-              <SwitchButton
-                name="switch"
-                value="c"
-                disabled={disabled}
-                variant={variant}
-                checked={value === 'c'}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  onChange(e.currentTarget.value)
-                }
-              >
-                This is C
-              </SwitchButton>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Grid>
-  )}
-</ControlValue>
+    {({ value, onChange }) => (
+      <Grid m={2}>
+        <Row>
+          <Col pr={0}>
+            <Row>
+              <Col xsmall={4} pr={1}>
+                <SwitchButton
+                  name="switch"
+                  value="a"
+                  disabled={disabled}
+                  variant={variant}
+                  checked={value === 'a'}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    onChange(e.currentTarget.value)
+                  }
+                >
+                  This is A
+                </SwitchButton>
+              </Col>
+              <Col xsmall={4} pl={1}>
+                <SwitchButton
+                  name="switch"
+                  value="b"
+                  disabled={disabled}
+                  variant={variant}
+                  checked={value === 'b'}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    onChange(e.currentTarget.value)
+                  }
+                >
+                  This is B
+                </SwitchButton>
+              </Col>
+              <Col xsmall={4} pl={1}>
+                <SwitchButton
+                  name="switch"
+                  value="c"
+                  disabled={disabled}
+                  variant={variant}
+                  checked={value === 'c'}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    onChange(e.currentTarget.value)
+                  }
+                >
+                  This is C
+                </SwitchButton>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
+    )}
+  </ControlValue>
 )
 
 export const Showcase = DefaultShowcase.bind({})

@@ -31,8 +31,9 @@ export const usePaginationContext = <T,>(): PaginationState<T> =>
   useContext(PaginationContext) as PaginationState<T>
 
 // START - Default Components
-const DefaultLeftComponent: VoidFunctionComponent<PaginationComponentProps> =
-  () => null
+const DefaultLeftComponent: VoidFunctionComponent<
+  PaginationComponentProps
+> = () => null
 
 const StyledPageButton = styled(Button, {
   shouldForwardProp: prop => !['current'].includes(prop.toString()),
@@ -53,91 +54,94 @@ export type PaginationComponentProps<T = unknown> = {
   paginationState: PaginationState<T>
 }
 
-const DefaultMiddleComponent: VoidFunctionComponent<PaginationComponentProps> =
-  ({ pageTabCount, paginationState }) => {
-    const {
-      isLoadingPage,
-      page,
-      maxPage,
-      canLoadMore,
-      goToNextPage,
-      goToFirstPage,
-      goToLastPage,
-      goToPage,
-      goToPreviousPage,
-    } = paginationState
+const DefaultMiddleComponent: VoidFunctionComponent<
+  PaginationComponentProps
+> = ({ pageTabCount, paginationState }) => {
+  const {
+    isLoadingPage,
+    page,
+    maxPage,
+    canLoadMore,
+    goToNextPage,
+    goToFirstPage,
+    goToLastPage,
+    goToPage,
+    goToPreviousPage,
+  } = paginationState
 
-    const pageNumbersToDisplay = useMemo(
-      () => (maxPage > 1 ? getPageNumbers(page, maxPage, pageTabCount) : [1]),
-      [page, maxPage, pageTabCount],
-    )
-
-    const handlePageClick = useCallback(
-      (pageNumber: number) => () => {
-        goToPage(pageNumber)
-      },
-      [goToPage],
-    )
-
-    return (
-      <div>
-        <Button
-          mr={1}
-          disabled={page === 1 || isLoadingPage}
-          onClick={goToFirstPage}
-          aria-label="First"
-        >
-          First
-        </Button>
-        <Button
-          aria-label="Back"
-          mr={1}
-          disabled={page === 1 || isLoadingPage}
-          onClick={goToPreviousPage}
-        >
-          Back
-        </Button>
-        {pageNumbersToDisplay.map(pageNumber => (
-          <StyledPageButton
-            aria-label={`Page ${pageNumber}`}
-            key={`pagination-page-${pageNumber}`}
-            mr={1}
-            disabled={isLoadingPage}
-            current={pageNumber === page}
-            variant="secondary"
-            onClick={handlePageClick(pageNumber)}
-          >
-            {pageNumber}
-          </StyledPageButton>
-        ))}
-        <Button
-          mr={1}
-          aria-label="Next"
-          disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
-          onClick={goToNextPage}
-        >
-          Next
-        </Button>
-        <Button
-          aria-label="Last"
-          disabled={page === maxPage || isLoadingPage}
-          onClick={goToLastPage}
-        >
-          Last
-        </Button>
-      </div>
-    )
-  }
-
-const DefaultRightComponent: VoidFunctionComponent<PaginationComponentProps> =
-  ({ paginationState: { page } }) => <div>Current : {page}</div>
-
-const DefaultLoaderComponent: VoidFunctionComponent<PaginationComponentProps> =
-  () => (
-    <Box my={2} display="flex" justifyContent="center">
-      <ActivityIndicator active />
-    </Box>
+  const pageNumbersToDisplay = useMemo(
+    () => (maxPage > 1 ? getPageNumbers(page, maxPage, pageTabCount) : [1]),
+    [page, maxPage, pageTabCount],
   )
+
+  const handlePageClick = useCallback(
+    (pageNumber: number) => () => {
+      goToPage(pageNumber)
+    },
+    [goToPage],
+  )
+
+  return (
+    <div>
+      <Button
+        mr={1}
+        disabled={page === 1 || isLoadingPage}
+        onClick={goToFirstPage}
+        aria-label="First"
+      >
+        First
+      </Button>
+      <Button
+        aria-label="Back"
+        mr={1}
+        disabled={page === 1 || isLoadingPage}
+        onClick={goToPreviousPage}
+      >
+        Back
+      </Button>
+      {pageNumbersToDisplay.map(pageNumber => (
+        <StyledPageButton
+          aria-label={`Page ${pageNumber}`}
+          key={`pagination-page-${pageNumber}`}
+          mr={1}
+          disabled={isLoadingPage}
+          current={pageNumber === page}
+          variant="secondary"
+          onClick={handlePageClick(pageNumber)}
+        >
+          {pageNumber}
+        </StyledPageButton>
+      ))}
+      <Button
+        mr={1}
+        aria-label="Next"
+        disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
+        onClick={goToNextPage}
+      >
+        Next
+      </Button>
+      <Button
+        aria-label="Last"
+        disabled={page === maxPage || isLoadingPage}
+        onClick={goToLastPage}
+      >
+        Last
+      </Button>
+    </div>
+  )
+}
+
+const DefaultRightComponent: VoidFunctionComponent<
+  PaginationComponentProps
+> = ({ paginationState: { page } }) => <div>Current : {page}</div>
+
+const DefaultLoaderComponent: VoidFunctionComponent<
+  PaginationComponentProps
+> = () => (
+  <Box my={2} display="flex" justifyContent="center">
+    <ActivityIndicator active />
+  </Box>
+)
 
 const StyledMainContainer = styled.div`
   display: grid;

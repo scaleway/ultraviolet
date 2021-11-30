@@ -636,18 +636,21 @@ ClearIndicator.propTypes = {
   selectProps: SelectContainer.propTypes?.selectProps,
 }
 
-const MultiValueContainer: FunctionComponent<MultiValueProps<SelectOption>> =
-  props => <components.MultiValueContainer {...props} />
+const MultiValueContainer: FunctionComponent<
+  MultiValueProps<SelectOption>
+> = props => <components.MultiValueContainer {...props} />
 
-const MultiValueLabel: FunctionComponent<MultiValueProps<SelectOption>> =
-  props => <components.MultiValueLabel {...props} />
+const MultiValueLabel: FunctionComponent<
+  MultiValueProps<SelectOption>
+> = props => <components.MultiValueLabel {...props} />
 
-const MultiValueRemove: FunctionComponent<MultiValueProps<SelectOption>> =
-  props => (
-    <components.MultiValueRemove {...props}>
-      <Icon name="close" size={16} />
-    </components.MultiValueRemove>
-  )
+const MultiValueRemove: FunctionComponent<
+  MultiValueProps<SelectOption>
+> = props => (
+  <components.MultiValueRemove {...props}>
+    <Icon name="close" size={16} />
+  </components.MultiValueRemove>
+)
 
 type SelectComponents = SelectProps['components']
 

@@ -30,7 +30,4 @@ export default {
 
 const Template: Story<TagProps> = args => <Tag {...args} />
 
-
 export const Default = Template.bind({})
-
-
