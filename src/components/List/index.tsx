@@ -76,8 +76,7 @@ type BodyProps = {
 const StyledActivityContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: ${({ theme }) => theme.space['2']};
-  margin-bottom: ${({ theme }) => theme.space['2']};
+  margin: ${({ theme }) => `${theme.space['2']} 0`};
 `
 
 const Body: FunctionComponent<BodyProps> = ({ children, ...props }) => {

@@ -10,10 +10,7 @@ const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledTitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+const StyledTitleContainer = styled(FlexBox)`
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 

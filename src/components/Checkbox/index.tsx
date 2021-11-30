@@ -70,8 +70,7 @@ const StyledActivityContainer = styled('div', {
 const StyledError = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.warning};
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
 export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {

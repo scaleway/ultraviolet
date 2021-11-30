@@ -67,7 +67,7 @@ const PasswordStrengthMeter = ({
 }: PasswordStrengthMeterProps): JSX.Element => {
   const [score, setScore] = useState<number>(0)
   const [backgroundColor, setBackgroundColor] = useState<string>(
-    strength?.[0]?.color || 'green',
+    strength[0]?.color || 'green',
   )
   const [width, setWidth] = useState<number | string>(0)
 
@@ -80,11 +80,11 @@ const PasswordStrengthMeter = ({
   const handleChange = useCallback((e: number) => onChange?.(e), [onChange])
 
   useEffect(() => {
-    setBackgroundColor(strength?.[score].color)
+    setBackgroundColor(strength[score].color)
     handleChange(score)
     setScore(getScore(password))
 
-    const toValue = ((score + 1) / (strength?.length ?? 1)) * 100
+    const toValue = ((score + 1) / strength.length) * 100
     setWidth(`${toValue}%`)
   }, [getScore, handleChange, password, score, strength])
 
@@ -94,12 +94,8 @@ const PasswordStrengthMeter = ({
         {title}
       </StyledTitle>
 
-      <StyledStrength
-        as="span"
-        variant="bodyB"
-        color={strength?.[score]?.color}
-      >
-        {strength?.[score]?.t}
+      <StyledStrength as="span" variant="bodyB" color={strength[score]?.color}>
+        {strength[score]?.t}
       </StyledStrength>
 
       <StyledWrapper mt={1} mb={2}>

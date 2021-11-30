@@ -36,7 +36,7 @@ export type ActionBarProps = {
 
 const ActionBar = ({
   children,
-  role = undefined,
+  role,
   rank = 0,
   'aria-modal': ariaModal = undefined,
 }: ActionBarProps): JSX.Element => (

@@ -32,13 +32,10 @@ const StyledTooltipReference = styled(TooltipReference)`
   padding-right: 8px;
 `
 
-const StyledTagContainer = styled('div', {
-  shouldForwardProp: prop => !['css'].includes(prop.toString()),
-})<{ css: string | undefined }>`
+const StyledTagContainer = styled.div`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.gray700};
-  ${({ css }) => css}
 `
 
 const StyledManyTagsContainer = styled.div`
