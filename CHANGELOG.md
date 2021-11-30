@@ -1,3 +1,10 @@
+### [0.124.1](https://github.com/scaleway/scaleway-ui/compare/v0.124.0...v0.124.1) (2021-11-30)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency intl-tel-input to v17.0.15 ([#946](https://github.com/scaleway/scaleway-ui/issues/946)) ([e0fe5ef](https://github.com/scaleway/scaleway-ui/commit/e0fe5ef577cfe84597ac8440b4a061c4a08ce815))
+
 ## [0.124.0](https://github.com/scaleway/scaleway-ui/compare/v0.123.2...v0.124.0) (2021-11-30)
 
 
