@@ -25,7 +25,10 @@ Percentages.decorators = [
   () => (
     <>
       {[8, 32, 50, 75, 90, 100].map(percentage => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div
+          key={percentage}
+          style={{ display: 'inline-flex', marginRight: 8 }}
+        >
           <ActivityIndicator
             key={`percent-${percentage}`}
             percentage={percentage}
@@ -48,7 +51,7 @@ Sizes.decorators = [
   () => (
     <>
       {[8, 16, 24, 32, 40, 100].map(size => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div key={size} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`size-${size}`}
             percentage={75}
@@ -72,7 +75,7 @@ Colors.decorators = [
   () => (
     <>
       {Object.keys(colors).map(color => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`color-${color}`}
             color={color}
@@ -97,7 +100,7 @@ TrailColor.decorators = [
     <>
       {['white', 'gray300', 'gray550', 'zumthor', 'shadow', 'beta', 'gold'].map(
         color => (
-          <div style={{ display: 'inline-flex', marginRight: 8 }}>
+          <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
             <ActivityIndicator
               key={`trailColor-${color}`}
               trailColor={color}
@@ -122,7 +125,7 @@ StrokeWidth.decorators = [
   () => (
     <>
       {[8, 16, 24, 32, 40, 100].map(size => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div key={size} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`strokeWidth-${size}`}
             percentage={75}
@@ -146,7 +149,10 @@ Text.decorators = [
   () => (
     <>
       {[8, 32, 50, 75, 90, 100].map(percentage => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div
+          key={percentage}
+          style={{ display: 'inline-flex', marginRight: 8 }}
+        >
           <ActivityIndicator
             key={`text-${percentage}`}
             percentage={percentage}
@@ -170,7 +176,7 @@ Active.decorators = [
   () => (
     <>
       {[10, 20, 30, 40, 50, 100].map(size => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div key={size} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`active-${size}`}
             size={size}
