@@ -33,7 +33,10 @@ export interface BulletListProps {
   children: ReactNode
 }
 
-const BulletList: FunctionComponent<BulletListProps> = ({ children, keyPrefix }) => (
+const BulletList: FunctionComponent<BulletListProps> = ({
+  children,
+  keyPrefix,
+}) => (
   <Steps>
     {Children.toArray(children).map((child, index) => (
       <Step key={`${keyPrefix ? `${keyPrefix}-` : ''}bullet-${index + 1}`}>

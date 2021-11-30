@@ -104,7 +104,6 @@ const Template: Story<SwitchProps> = args => <Switch {...args} />
 
 export const Default = Template.bind({})
 
-
 export const CustomLabelRender = Template.bind({})
 CustomLabelRender.parameters = {
   docs: {

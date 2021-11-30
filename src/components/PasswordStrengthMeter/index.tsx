@@ -78,7 +78,8 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   const [width, setWidth] = useState<number | string>(0)
 
   const getScore = useCallback(
-    (passwordToTest: string) => estimate(passwordToTest || '', userInputs)?.score || 0,
+    (passwordToTest: string) =>
+      estimate(passwordToTest || '', userInputs)?.score || 0,
     [estimate, userInputs],
   )
 

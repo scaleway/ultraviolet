@@ -25,23 +25,19 @@ Default.parameters = {
 export const Bordered = Template.bind({})
 Bordered.parameters = {
   docs: {
-    storyDescription: 'Using prop `bordered` you can add a border and some padding on a Box.',
+    storyDescription:
+      'Using prop `bordered` you can add a border and some padding on a Box.',
   },
 }
-Bordered.decorators = [
-  () => (
-    <Box bordered>This is a bordered box</Box>
-  ),
-]
+Bordered.decorators = [() => <Box bordered>This is a bordered box</Box>]
 
 export const OtherElement = Template.bind({})
 OtherElement.parameters = {
   docs: {
-    storyDescription: 'Using prop `as` you can specify another html or React element instead of the default div.',
+    storyDescription:
+      'Using prop `as` you can specify another html or React element instead of the default div.',
   },
 }
 OtherElement.decorators = [
-  () => (
-    <Box as="span">This is a Box as a span tag</Box>
-  ),
+  () => <Box as="span">This is a Box as a span tag</Box>,
 ]

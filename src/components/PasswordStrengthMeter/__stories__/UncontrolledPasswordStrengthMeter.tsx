@@ -3,7 +3,9 @@ import React, { VoidFunctionComponent, useState } from 'react'
 import PasswordStrengthMeter, { PasswordStrengthMeterProps } from '..'
 import { TextBox } from '../..'
 
-const UncontrolledPasswordStrengthMeter: VoidFunctionComponent<{ name: string } & PasswordStrengthMeterProps> = ({ name, ...props }) => {
+const UncontrolledPasswordStrengthMeter: VoidFunctionComponent<
+  { name: string } & PasswordStrengthMeterProps
+> = ({ name, ...props }) => {
   const [value, setValue] = useState('')
 
   return (

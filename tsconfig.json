@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "noEmit": true,
     "moduleResolution": "node",
-    "jsx": "preserve",
+    "jsx": "preserve"
   },
   "include": [
     "**/*.ts",
@@ -18,9 +18,5 @@
     "emotion.d.ts",
     "global.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "coverage",
-    "dist"
-  ]
+  "exclude": ["node_modules", "coverage", "dist"]
 }

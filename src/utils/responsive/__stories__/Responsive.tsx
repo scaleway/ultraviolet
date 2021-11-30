@@ -61,4 +61,6 @@ const responsiveClass = css`
   )}
 `
 
-export const WithCss: FunctionComponent = (props) => <div css={responsiveClass} {...props} />
+export const WithCss: FunctionComponent = props => (
+  <div css={responsiveClass} {...props} />
+)

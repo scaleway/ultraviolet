@@ -24,8 +24,8 @@ Default.parameters = {
       Creates a Breadcrumbs of hierarchical pages.
       Link are automatically supported with \`to\` prop using the \`linkComponent\` from
       your theme configuration.
-    `
-  }
+    `,
+  },
 }
 
 export const Variants = Template.bind({})
@@ -55,7 +55,8 @@ Variants.decorators = [
 export const Selected = Template.bind({})
 Selected.parameters = {
   docs: {
-    storyDescription: 'Selected is automatically determined as the last element. One can be specified using `selected` prop.',
+    storyDescription:
+      'Selected is automatically determined as the last element. One can be specified using `selected` prop.',
   },
 }
 
