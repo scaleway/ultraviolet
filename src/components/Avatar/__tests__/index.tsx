@@ -1,10 +1,23 @@
 import React from 'react'
 import Avatar from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import support from '../__stories__/support.svg'
 
 describe('Avatar', () => {
   it('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(<Avatar />))
+
+  it('renders correctly with custom alt', () =>
+    shouldMatchEmotionSnapshot(<Avatar alt="My avatar" />))
+
+  it('renders correctly with image', () =>
+    shouldMatchEmotionSnapshot(<Avatar image={support} />))
+
+  it('renders correctly with image and alt', () =>
+    shouldMatchEmotionSnapshot(<Avatar image={support} alt="Support" />))
+
+  it('renders correctly with size', () =>
+    shouldMatchEmotionSnapshot(<Avatar size={48} />))
 
   it('renders correctly with sentence', () =>
     shouldMatchEmotionSnapshot(<Avatar text="Hello World" />))
@@ -14,6 +27,11 @@ describe('Avatar', () => {
 
   it('renders correctly with text', () =>
     shouldMatchEmotionSnapshot(<Avatar text="HelloWorld" />))
+
+  it('renders correctly with text size', () =>
+    shouldMatchEmotionSnapshot(
+      <Avatar text="HelloWorld" size={50} textSize={30} />,
+    ))
 
   it('renders correctly with small text', () =>
     shouldMatchEmotionSnapshot(<Avatar text="HW" />))

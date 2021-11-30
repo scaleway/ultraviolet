@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Avatar renders correctly with custom alt 1`] = `
+<DocumentFragment>
+  .cache-ua3jbc.cache-ua3jbc {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cache-1kzq5ms {
+  height: 100%;
+  width: 100%;
+}
+
+<div
+    class="cache-ua3jbc e7ah3bn0"
+  >
+    <img
+      alt="My avatar"
+      class="cache-1kzq5ms e1frqeh80"
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Avatar renders correctly with custom background color 1`] = `
 <DocumentFragment>
   .cache-ua3jbc.cache-ua3jbc {
@@ -33,6 +58,7 @@ exports[`Avatar renders correctly with custom background color 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
+      alt="HW"
       class="cache-t4e693 e1frqeh81"
     >
       HW
@@ -74,6 +100,7 @@ exports[`Avatar renders correctly with custom text color 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
+      alt="HW"
       class="cache-lme662 e1frqeh81"
     >
       HW
@@ -99,7 +126,57 @@ exports[`Avatar renders correctly with default props 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <img
-      alt=""
+      alt="Avatar"
+      class="cache-1kzq5ms e1frqeh80"
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar renders correctly with image 1`] = `
+<DocumentFragment>
+  .cache-ua3jbc.cache-ua3jbc {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cache-1kzq5ms {
+  height: 100%;
+  width: 100%;
+}
+
+<div
+    class="cache-ua3jbc e7ah3bn0"
+  >
+    <img
+      alt="Avatar"
+      class="cache-1kzq5ms e1frqeh80"
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar renders correctly with image and alt 1`] = `
+<DocumentFragment>
+  .cache-ua3jbc.cache-ua3jbc {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.cache-1kzq5ms {
+  height: 100%;
+  width: 100%;
+}
+
+<div
+    class="cache-ua3jbc e7ah3bn0"
+  >
+    <img
+      alt="Support"
       class="cache-1kzq5ms e1frqeh80"
       src="test-file-stub"
     />
@@ -152,7 +229,8 @@ exports[`Avatar renders correctly with lock 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
-      class="cache-ha24km e1frqeh81"
+      alt="locked"
+      class="cache-wxe7fo e1frqeh81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-makwam e7ah3bn0"
@@ -200,10 +278,36 @@ exports[`Avatar renders correctly with sentence 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
+      alt="Hello World"
       class="cache-1am9adn e1frqeh81"
     >
       HW
     </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar renders correctly with size 1`] = `
+<DocumentFragment>
+  .cache-cywuei.cache-cywuei {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.cache-1kzq5ms {
+  height: 100%;
+  width: 100%;
+}
+
+<div
+    class="cache-cywuei e7ah3bn0"
+  >
+    <img
+      alt="Avatar"
+      class="cache-1kzq5ms e1frqeh80"
+      src="test-file-stub"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -241,6 +345,7 @@ exports[`Avatar renders correctly with small text 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
+      alt="HW"
       class="cache-1am9adn e1frqeh81"
     >
       HW
@@ -282,6 +387,7 @@ exports[`Avatar renders correctly with text 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
+      alt="HelloWorld"
       class="cache-1am9adn e1frqeh81"
     >
       HE
@@ -323,9 +429,52 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <div
-      class="cache-6jj1vw e1frqeh81"
+      alt="HW"
+      class="cache-4iifzb e1frqeh81"
     >
       HW
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Avatar renders correctly with text size 1`] = `
+<DocumentFragment>
+  .cache-nt716f.cache-nt716f {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.cache-bpwuh7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #a365f6;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+<div
+    class="cache-nt716f e7ah3bn0"
+  >
+    <div
+      alt="HelloWorld"
+      class="cache-bpwuh7 e1frqeh81"
+    >
+      HE
     </div>
   </div>
 </DocumentFragment>

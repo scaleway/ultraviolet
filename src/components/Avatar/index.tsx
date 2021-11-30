@@ -22,6 +22,7 @@ const formatTextToAvatar = (text: string): string => {
 }
 
 const StyledDiv = styled.div<{
+  alt: string
   lock?: boolean
   textBgColor?: string
   textColor: string
@@ -48,6 +49,7 @@ const StyledImg = styled.img`
 `
 
 interface AvatarProps {
+  alt?: string
   image?: string
   size?: number
   text?: string
@@ -58,6 +60,7 @@ interface AvatarProps {
 }
 
 const Avatar: FunctionComponent<AvatarProps> = ({
+  alt = 'Avatar',
   image = avatar,
   size = 32,
   text,
@@ -77,6 +80,7 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           textBgColor={textBgColor}
           textColor={textColor}
           textSize={textSize}
+          alt={lock ? 'locked' : text}
         >
           {lock ? (
             <Icon name="lock" color={theme.colors.neutral.textWeak} />
@@ -85,13 +89,17 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           )}
         </StyledDiv>
       ) : (
-        <StyledImg src={image} alt="" />
+        <StyledImg src={image} alt={alt} />
       )}
     </Box>
   )
 }
 
 Avatar.propTypes = {
+  /**
+   * Used only when `text` prop isn't specified
+   */
+  alt: PropTypes.string,
   image: PropTypes.string,
   /**
    * Used only when `text` prop is specified
