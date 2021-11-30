@@ -42,14 +42,13 @@
     "lint:fix": "yarn run lint --fix",
     "lint": "eslint --cache --ext js,ts,tsx,mdx .",
     "prebuild": "shx rm -rf dist",
+    "test:unit": "LC_ALL=en_US.UTF-8 jest --config .jest/unit.config.ts",
     "test:unit:coverage": "yarn run test:unit --coverage",
-    "test:watch": "yarn run test --watch",
-    "test:update": "yarn run test --updateSnapshot",
-    "test": "LC_ALL=en_US.UTF-8 jest",
-    "test:unit": "yarn test --config .jest/unit.config.ts",
-    "test:a11y": "yarn test --config .jest/a11y.config.ts",
+    "test:unit:watch": "yarn run tes:unitt --watch",
+    "test:unit:update": "yarn run test:unit --updateSnapshot",
+    "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "prepare": "husky install",
-    "size": "yarn build && size-limit"
+    "size": "yarn run build && size-limit"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
