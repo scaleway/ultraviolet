@@ -35,9 +35,11 @@ module.exports = {
       'emotion-theming': path.join(cwd, 'node_modules', '@emotion', 'react'),
     }
 
+    // This is only needed for @storybook/addon-a11y
     config.resolve.fallback = {
       crypto: require.resolve('crypto-browserify'),
       stream: require.resolve('stream-browserify'),
+      path: require.resolve('path-browserify'),
     }
 
     return config
