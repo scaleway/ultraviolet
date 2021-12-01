@@ -1,3 +1,16 @@
+## [0.125.0](https://github.com/scaleway/scaleway-ui/compare/v0.124.2...v0.125.0) (2021-12-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency rollup to v2.60.2 ([#953](https://github.com/scaleway/scaleway-ui/issues/953)) ([220b764](https://github.com/scaleway/scaleway-ui/commit/220b7644dc5685d6e44255bf9b76b0f9fb4b8d5f))
+* **devdeps:** update storybook monorepo to v6.4.1 ([#942](https://github.com/scaleway/scaleway-ui/issues/942)) ([0a21e8c](https://github.com/scaleway/scaleway-ui/commit/0a21e8cdbce5d80eff867fe823a73822312dee59))
+
+
+### :gear: Features
+
+* **icon:** add serverless icon ([#954](https://github.com/scaleway/scaleway-ui/issues/954)) ([98c730e](https://github.com/scaleway/scaleway-ui/commit/98c730eef3969c391d8862e2b018959e3983c5c7))
+
 ### [0.124.2](https://github.com/scaleway/scaleway-ui/compare/v0.124.1...v0.124.2) (2021-12-01)
 
 
