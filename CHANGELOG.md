@@ -1,3 +1,10 @@
+### [0.125.1](https://github.com/scaleway/scaleway-ui/compare/v0.125.0...v0.125.1) (2021-12-01)
+
+
+### :bug: Bug Fixes
+
+* **switch-button:** add missing BoxProps ([#956](https://github.com/scaleway/scaleway-ui/issues/956)) ([7c0dea9](https://github.com/scaleway/scaleway-ui/commit/7c0dea9dedf1cbe2b4cba8d0224ab674b7a80de9))
+
 ## [0.125.0](https://github.com/scaleway/scaleway-ui/compare/v0.124.2...v0.125.0) (2021-12-01)
 
 
