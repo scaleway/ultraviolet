@@ -1,20 +1,11 @@
-import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent, useEffect, useRef } from 'react'
+import React, {
+  VoidFunctionComponent,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import CountUp from 'react-countup'
-
-const styles = {
-  container: css`
-    position: relative;
-  `,
-  counter: css`
-    position: absolute;
-    top: 0;
-  `,
-  space: css`
-    visibility: hidden;
-  `,
-}
 
 export type CounterProps = {
   /**
@@ -31,17 +22,23 @@ const Counter: VoidFunctionComponent<CounterProps> = ({
   end,
   onEnd = () => {},
 }) => {
+  const [isBusy, setIsBusy] = useState<boolean>(true)
   const start = useRef<number>(0)
   useEffect(() => {
     start.current = end
   })
 
   return (
-    <div css={styles.container}>
-      <div css={styles.space}>{end}</div>
-      <div css={styles.counter}>
-        <CountUp start={start.current} end={end} onEnd={onEnd} duration={1.5} />
-      </div>
+    <div aria-live="polite" aria-busy={isBusy}>
+      <CountUp
+        start={start.current}
+        end={end}
+        onEnd={() => {
+          setIsBusy(false)
+          onEnd()
+        }}
+        duration={1.5}
+      />
     </div>
   )
 }
