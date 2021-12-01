@@ -10,7 +10,7 @@ import React, {
   ReactNode,
 } from 'react'
 import { Radio } from 'reakit'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 import Tooltip from '../Tooltip'
 
 const variants = {
@@ -87,7 +87,8 @@ type StyledSwitchProps = {
   checked?: boolean
   disabled?: boolean
   variant?: Variants
-} & LabelHTMLAttributes<HTMLLabelElement>
+} & BoxProps &
+  LabelHTMLAttributes<HTMLLabelElement>
 
 const StyledSwitch = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
