@@ -52,7 +52,6 @@ TagWidth.parameters = {
     },
   },
 }
-
 TagWidth.args = {
   maxTagWidth: 30,
   tags: [
@@ -64,4 +63,33 @@ TagWidth.args = {
     'cloud',
   ],
   threshold: 5,
+}
+
+export const Multiline = Template.bind({})
+Multiline.parameters = {
+  docs: {
+    description: {
+      story: '`multiline` can be used to allow a multilined tag container.',
+    },
+  },
+}
+
+Multiline.decorators = [
+  TagWidthStory => (
+    <div style={{ width: '500px' }}>
+      <TagWidthStory />
+    </div>
+  ),
+]
+Multiline.args = {
+  multiline: true,
+  tags: [
+    'very',
+    ...Array<string>(50).fill('item'),
+    'tooltip',
+    'scaleway',
+    'paris',
+    'cloud',
+  ],
+  threshold: 55,
 }

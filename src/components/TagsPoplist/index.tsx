@@ -32,10 +32,14 @@ const StyledTooltipReference = styled(TooltipReference)`
   padding-right: 8px;
 `
 
-const StyledTagContainer = styled.div`
+const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.gray700};
+  ${({ multiline, theme }) =>
+    multiline &&
+    `flex-wrap: wrap;
+  > * { margin-bottom: ${theme.space['1']}}`}
 `
 
 const StyledManyTagsContainer = styled.div`
@@ -54,7 +58,7 @@ export type TagsPoplistProps = {
   maxTagWidth?: number
   tags?: string[]
   threshold?: number
-  css: string | undefined
+  multiline?: boolean
 }
 
 const TagsPoplist = ({
@@ -62,7 +66,7 @@ const TagsPoplist = ({
   maxTagWidth = 115,
   tags = [],
   threshold = 1,
-  css,
+  multiline = false,
 }: TagsPoplistProps): JSX.Element | null => {
   const theme = useTheme()
   let tmpThreshold = threshold
@@ -85,7 +89,7 @@ const TagsPoplist = ({
 
   return (
     <FlexBox>
-      <StyledTagContainer css={css}>
+      <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
             // useful when two tags are identical `${tag}-${index}`
@@ -128,7 +132,6 @@ const TagsPoplist = ({
 }
 
 TagsPoplist.propTypes = {
-  css: PropTypes.string,
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
    */
@@ -137,6 +140,7 @@ TagsPoplist.propTypes = {
    * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
    */
   maxTagWidth: PropTypes.number,
+  multiline: PropTypes.bool,
   tags: PropTypes.arrayOf(PropTypes.string.isRequired),
   /**
    * This property define number of tags to display before hiding them in tooltip.

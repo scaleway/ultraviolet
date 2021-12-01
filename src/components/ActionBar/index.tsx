@@ -38,7 +38,7 @@ const ActionBar = ({
   children,
   role,
   rank = 0,
-  'aria-modal': ariaModal = undefined,
+  'aria-modal': ariaModal,
 }: ActionBarProps): JSX.Element => (
   <StyledDiv rank={rank} role={role} aria-modal={ariaModal}>
     {children}

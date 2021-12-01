@@ -48,4 +48,15 @@ describe('TagsPoplist', () => {
         />
       </div>,
     ))
+
+  test('renders correctly with multiline', () =>
+    shouldMatchEmotionSnapshot(
+      <div>
+        <TagsPoplist
+          multiline
+          threshold={2}
+          tags={['scaleway', 'cloud', 'provider']}
+        />
+      </div>,
+    ))
 })
