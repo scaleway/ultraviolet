@@ -1,3 +1,10 @@
+### [0.125.2](https://github.com/scaleway/scaleway-ui/compare/v0.125.1...v0.125.2) (2021-12-01)
+
+
+### :bug: Bug Fixes
+
+* **icon:** serverles, ai  icon ([#955](https://github.com/scaleway/scaleway-ui/issues/955)) ([ead19f8](https://github.com/scaleway/scaleway-ui/commit/ead19f88e72a3f18ada98f62d9c95c7dee30a549))
+
 ### [0.125.1](https://github.com/scaleway/scaleway-ui/compare/v0.125.0...v0.125.1) (2021-12-01)
 
 
