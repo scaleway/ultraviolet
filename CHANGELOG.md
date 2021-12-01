@@ -1,3 +1,15 @@
+### [0.124.2](https://github.com/scaleway/scaleway-ui/compare/v0.124.1...v0.124.2) (2021-12-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency webpack to v5.64.4 ([#952](https://github.com/scaleway/scaleway-ui/issues/952)) ([c99a855](https://github.com/scaleway/scaleway-ui/commit/c99a855c77536bcb5dde4bb456618ed4bf5fe9ce))
+
+
+### :bug: Bug Fixes
+
+* move storybook to devdeps + correct test scripts ([#947](https://github.com/scaleway/scaleway-ui/issues/947)) ([3901488](https://github.com/scaleway/scaleway-ui/commit/390148823292425d88e0897df1353ae53c08885c))
+
 ### [0.124.1](https://github.com/scaleway/scaleway-ui/compare/v0.124.0...v0.124.1) (2021-11-30)
 
 
