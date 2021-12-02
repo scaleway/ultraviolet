@@ -19,7 +19,7 @@ import Button from '../Button'
 import getPageNumbers from './getPageNumbers'
 import usePagination, { UsePaginationReturn } from './usePagination'
 
-type PaginationState<T = unknown> = {
+export type PaginationState<T = unknown> = {
   canLoadMore: boolean
   data?: T[] | null
 } & UsePaginationReturn<T>

@@ -21,18 +21,19 @@ const StyledTouchable = styled(Box)<
   padding: 0;
   margin: 0;
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     opacity: 0.5;
     cursor: not-allowed;
   }
 
-  &[aria-disabled='false'] {
+  &[aria-disabled="false"] {
     cursor: pointer;
     touch-action: manipulation;
   }
 
-  &[aria-disabled='false']:active {
-    opacity: ${({ activeOpacity }) => activeOpacity};
+  &[aria-disabled="false"]:active {
+      opacity: ${({ activeOpacity }) => activeOpacity};
+    }
   }
 `
 
