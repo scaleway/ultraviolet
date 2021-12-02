@@ -24,26 +24,26 @@ const variants = {
     &:hover,
     &:focus {
       box-shadow: none;
-      border-color: ${theme.colors.transparent};
-      color: ${theme.colors.gray700};
+      border-color: ${theme.colorsDeprecated.transparent};
+      color: ${theme.colorsDeprecated.gray700};
     }
 
     &[aria-checked='true'] {
-      background-color: ${theme.colors.primary};
-      color: ${theme.colors.white};
+      background-color: ${theme.colorsDeprecated.primary};
+      color: ${theme.colorsDeprecated.white};
       :hover {
-        color: ${theme.colors.white};
+        color: ${theme.colorsDeprecated.white};
       }
     }
 
     &[aria-checked='false'] {
       background-color: white;
-      color: ${theme.colors.gray700};
-      border-color: ${theme.colors.transparent};
+      color: ${theme.colorsDeprecated.gray700};
+      border-color: ${theme.colorsDeprecated.transparent};
       :hover,
       :focus {
-        color: ${theme.colors.gray700};
-        border-color: ${theme.colors.transparent};
+        color: ${theme.colorsDeprecated.gray700};
+        border-color: ${theme.colorsDeprecated.transparent};
         box-shadow: none;
       }
     }
@@ -57,29 +57,30 @@ const switchButtonVariants = Object.keys(variants) as Variants[]
 const active = ({ theme }: { theme: Theme }) => css`
   &:hover,
   &:focus {
-    color: ${theme.colors.gray550};
-    border-color: ${theme.colors.primary};
+    color: ${theme.colorsDeprecated.gray550};
+    border-color: ${theme.colorsDeprecated.primary};
   }
 
   &:hover {
-    box-shadow: 0 0 8px 2px ${theme.colors.gray200};
+    box-shadow: 0 0 8px 2px ${theme.colorsDeprecated.gray200};
   }
 
   &:focus {
-    box-shadow: 0 0 1px 2px ${transparentize(0.75, theme.colors.primary)};
+    box-shadow: 0 0 1px 2px
+      ${transparentize(0.75, theme.colorsDeprecated.primary)};
   }
 `
 
 const disabledClass = ({ theme }: { theme: Theme }) => css`
   cursor: not-allowed;
-  color: ${theme.colors.gray350};
-  background-color: ${theme.colors.gray50};
-  border-color: ${theme.colors.gray350};
+  color: ${theme.colorsDeprecated.gray350};
+  background-color: ${theme.colorsDeprecated.gray50};
+  border-color: ${theme.colorsDeprecated.gray350};
   pointer-events: none;
 
   &[aria-checked='true'] {
-    color: ${theme.colors.gray350};
-    border-color: ${theme.colors.gray350};
+    color: ${theme.colorsDeprecated.gray350};
+    border-color: ${theme.colorsDeprecated.gray350};
   }
 `
 
@@ -99,13 +100,13 @@ const StyledSwitch = styled(Box, {
   border-radius: 4px;
   align-items: center;
   border-style: solid;
-  border-color: ${({ theme }) => theme.colors.gray350};
+  border-color: ${({ theme }) => theme.colorsDeprecated.gray350};
   border-width: 1px;
   padding: 16px;
   transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
   user-select: none;
   touch-action: manipulation;
-  color: ${({ theme }) => theme.colors.gray550};
+  color: ${({ theme }) => theme.colorsDeprecated.gray550};
   font-size: 16px;
   line-height: 22px;
   position: relative;
@@ -114,8 +115,8 @@ const StyledSwitch = styled(Box, {
 
   &[aria-checked='true'] {
     cursor: auto;
-    color: ${({ theme }) => theme.colors.primary};
-    border-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colorsDeprecated.primary};
+    border-color: ${({ theme }) => theme.colorsDeprecated.primary};
   }
 
   ${({ checked, disabled }) => !checked && !disabled && active}

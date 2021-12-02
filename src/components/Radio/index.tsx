@@ -20,7 +20,7 @@ const IconContainer = styled(Box)`
 `
 
 const disabledClass = ({ theme }: { theme: Theme }) => css`
-  color: ${theme.colors.gray300};
+  color: ${theme.colorsDeprecated.gray300};
   cursor: not-allowed;
 `
 
@@ -28,11 +28,11 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
   :hover,
   :focus {
     ${IconContainer} {
-      background-color: ${transparentize(0.75, theme.colors.gray300)};
+      background-color: ${transparentize(0.75, theme.colorsDeprecated.gray300)};
       border-radius: 50%;
 
       > ${StyledIcon} {
-        fill: ${theme.colors.primary};
+        fill: ${theme.colorsDeprecated.primary};
       }
     }
   }

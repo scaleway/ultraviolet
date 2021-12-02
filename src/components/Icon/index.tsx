@@ -552,7 +552,8 @@ const StyledIcon = styled(Box, {
     viewBox: string
   } & XStyledProps
 >`
-  fill: ${({ theme, color }) => theme.colors[color as Color] ?? color};
+  fill: ${({ theme, color }) =>
+    theme.colorsDeprecated[color as Color] ?? color};
   ${sizeStyles}
 `
 

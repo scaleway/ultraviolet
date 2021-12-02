@@ -5,57 +5,57 @@ import React, { FunctionComponent, useMemo } from 'react'
 import Box, { XStyledProps } from '../Box'
 
 const variants = {
-  beta: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.beta};
-    color: ${colors.white};
+  beta: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.beta};
+    color: ${colorsDeprecated.white};
   `,
-  error: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.red};
-    color: ${colors.white};
+  error: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.red};
+    color: ${colorsDeprecated.white};
   `,
-  info: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.info};
-    color: ${colors.white};
+  info: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.info};
+    color: ${colorsDeprecated.white};
   `,
-  'light-beta': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.beta};
-    background-color: ${colors.serenade};
+  'light-beta': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.beta};
+    background-color: ${colorsDeprecated.serenade};
   `,
-  'light-error': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.red};
-    background-color: ${colors.pippin};
+  'light-error': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.red};
+    background-color: ${colorsDeprecated.pippin};
   `,
-  'light-info': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.info};
-    background-color: ${colors.zumthor};
+  'light-info': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.info};
+    background-color: ${colorsDeprecated.zumthor};
   `,
-  'light-neutral': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.gray550};
-    background-color: ${colors.gray100};
+  'light-neutral': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.gray550};
+    background-color: ${colorsDeprecated.gray100};
   `,
-  'light-primary': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.primary};
-    background-color: ${colors.gray200};
+  'light-primary': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.primary};
+    background-color: ${colorsDeprecated.gray200};
   `,
-  'light-success': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.success};
-    background-color: ${colors.foam};
+  'light-success': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.success};
+    background-color: ${colorsDeprecated.foam};
   `,
-  neutral: ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.gray700};
-    background-color: ${colors.gray350};
+  neutral: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    color: ${colorsDeprecated.gray700};
+    background-color: ${colorsDeprecated.gray350};
   `,
-  primary: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.primary};
-    color: ${colors.white};
+  primary: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.primary};
+    color: ${colorsDeprecated.white};
   `,
-  success: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.success};
-    color: ${colors.white};
+  success: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.success};
+    color: ${colorsDeprecated.white};
   `,
-  warning: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.warning};
-    color: ${colors.white};
+  warning: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
+    background-color: ${colorsDeprecated.warning};
+    color: ${colorsDeprecated.white};
   `,
 }
 

@@ -19,7 +19,7 @@ const StyledPentagon = styled('div', {
   ${({ size = '48px', color = 'pippin', theme }) => `
     width: ${size};
     height: ${size};
-    background-color: ${theme.colors[color as Color] ?? color};
+    background-color: ${theme.colorsDeprecated[color as Color] ?? color};
   `}
 `
 

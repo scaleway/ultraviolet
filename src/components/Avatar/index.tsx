@@ -29,11 +29,11 @@ const StyledDiv = styled.div<{
   align-items: center;
   background-color: ${({ lock, theme, textBgColor }) =>
     lock
-      ? theme.colors.gray50
-      : theme.colors[textBgColor as Color] || textBgColor};
+      ? theme.colorsDeprecated.gray50
+      : theme.colorsDeprecated[textBgColor as Color] || textBgColor};
   border-radius: 50%;
   color: ${({ theme, textColor }) =>
-    theme.colors[textColor as Color] || textColor};
+    theme.colorsDeprecated[textColor as Color] || textColor};
   font-size: ${({ textSize }) => textSize}px;
   display: flex;
   height: 100%;

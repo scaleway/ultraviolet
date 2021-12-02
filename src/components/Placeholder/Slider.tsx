@@ -5,7 +5,7 @@ import Box from '../Box'
 
 const styles = {
   card: (theme: Theme) => css`
-    border: 1px solid ${theme.colors.gray300};
+    border: 1px solid ${theme.colorsDeprecated.gray300};
     border-radius: 4px;
     width: 240px;
     height: 261px;
@@ -17,8 +17,8 @@ const styles = {
     overflow: auto;
   `,
   img: (theme: Theme) => css`
-    border: 1px solid ${theme.colors.gray300};
-    background-color: ${theme.colors.gray300};
+    border: 1px solid ${theme.colorsDeprecated.gray300};
+    background-color: ${theme.colorsDeprecated.gray300};
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     width: 240px;

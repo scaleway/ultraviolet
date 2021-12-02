@@ -36,11 +36,14 @@ const buildVariant =
   }) =>
   ({ theme }: { theme: Theme }) =>
     css`
-      background-color: ${theme.colors[bgColor as Color] ?? bgColor};
-      color: ${theme.colors[color as Color] ?? color};
-      fill: ${theme.colors[fill as Color] ?? fill};
+      background-color: ${theme.colorsDeprecated[bgColor as Color] ?? bgColor};
+      color: ${theme.colorsDeprecated[color as Color] ?? color};
+      fill: ${theme.colorsDeprecated[fill as Color] ?? fill};
       box-shadow: 0 2px 5px 5px
-        ${transparentize(0.7, theme.colors[shadow as Color] ?? shadow)};
+        ${transparentize(
+          0.7,
+          theme.colorsDeprecated[shadow as Color] ?? shadow,
+        )};
     `
 const variants = {
   black: buildVariant({

@@ -86,7 +86,7 @@ const SwitchBall = styled.span<{ size: Sizes }>`
   height: ${({ size }) => SIZES[size].ball}px;
 
   background-color: ${({ size, theme }) =>
-    theme.colors[
+    theme.colorsDeprecated[
       size === 'small' ? COLORS.smallBallColor : COLORS.inactiveBigBallColor
     ]};
 `
@@ -144,7 +144,7 @@ const buildVariants =
   }: VariantProps & { theme: Theme }) =>
     css`
       &[aria-checked='true'] {
-        background-color: ${theme.colors[bgColor] ?? bgColor};
+        background-color: ${theme.colorsDeprecated[bgColor] ?? bgColor};
       }
 
       &[aria-checked='true'] > ${SwitchBall} {
@@ -160,17 +160,17 @@ const buildVariants =
           )
           translateX(-100%);
         background-color: ${size === 'small'
-          ? theme.colors[COLORS.smallBallColor]
-          : theme.colors[activeBigBallColor] ?? activeBigBallColor};
+          ? theme.colorsDeprecated[COLORS.smallBallColor]
+          : theme.colorsDeprecated[activeBigBallColor] ?? activeBigBallColor};
       }
 
       &[aria-checked='false'] > ${StyledSpan} {
-        color: ${theme.colors[COLORS.inactiveLabelColor]};
+        color: ${theme.colorsDeprecated[COLORS.inactiveLabelColor]};
         right: 0;
       }
 
       &[aria-checked='true'] > ${StyledSpan} {
-        color: ${theme.colors[activeLabelColor] ?? activeLabelColor};
+        color: ${theme.colorsDeprecated[activeLabelColor] ?? activeLabelColor};
         left: 0;
       }
     `
@@ -209,7 +209,9 @@ const StyledSwitch = styled('span', {
   display: inline-flex;
   align-items: center;
   background-color: ${({ disabled, theme }) =>
-    theme.colors[disabled ? COLORS.disabled : COLORS.inactiveBgColor]};
+    theme.colorsDeprecated[
+      disabled ? COLORS.disabled : COLORS.inactiveBgColor
+    ]};
   border: none;
   border-radius: 34px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};

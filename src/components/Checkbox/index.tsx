@@ -41,13 +41,14 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
     svg {
       border-radius: ${({ theme }) => theme.radii.default};
       background-color: ${({ theme, disabled }) =>
-        !disabled && theme.colors.gray100};
-      fill: ${({ theme, disabled }) => !disabled && theme.colors.primary};
+        !disabled && theme.colorsDeprecated.gray100};
+      fill: ${({ theme, disabled }) =>
+        !disabled && theme.colorsDeprecated.primary};
       transition: fill 300ms;
     }
   }
   &:focus + svg {
-    outline: 1px ${({ theme }) => theme.colors.gray550} dotted;
+    outline: 1px ${({ theme }) => theme.colorsDeprecated.gray550} dotted;
   }
 `
 
@@ -69,7 +70,7 @@ const StyledActivityContainer = styled('div', {
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.warning};
+  color: ${({ theme }) => theme.colorsDeprecated.warning};
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 

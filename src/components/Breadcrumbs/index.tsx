@@ -58,9 +58,9 @@ const BubbleVariant = styled.li`
   margin-left: -${({ theme }) => theme.space['3']};
   margin-right: -${({ theme }) => theme.space['3']};
 
-  background-color: ${({ theme }) => theme.colors.success};
-  color: ${({ theme }) => theme.colors.white};
-  border-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colorsDeprecated.success};
+  color: ${({ theme }) => theme.colorsDeprecated.white};
+  border-color: ${({ theme }) => theme.colorsDeprecated.white};
 
   &:first-child {
     padding-left: ${({ theme }) => theme.space['3']};
@@ -73,24 +73,24 @@ const BubbleVariant = styled.li`
   }
 
   &[aria-current='page'] {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.white};
-    border-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colorsDeprecated.primary};
+    color: ${({ theme }) => theme.colorsDeprecated.white};
+    border-color: ${({ theme }) => theme.colorsDeprecated.white};
 
     &:focus {
       box-shadow: 0 0 0 2px
-        ${({ theme }) => transparentize(0.75, theme.colors.primary)};
+        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.primary)};
     }
   }
 
   &[aria-current='page'] ~ & {
-    background-color: ${({ theme }) => theme.colors.white};
-    color: ${({ theme }) => theme.colors.gray550};
-    border-color: ${({ theme }) => theme.colors.gray350};
+    background-color: ${({ theme }) => theme.colorsDeprecated.white};
+    color: ${({ theme }) => theme.colorsDeprecated.gray550};
+    border-color: ${({ theme }) => theme.colorsDeprecated.gray350};
 
     &:focus {
       box-shadow: 0 0 0 2px
-        ${({ theme }) => transparentize(0.75, theme.colors.gray550)};
+        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.gray550)};
     }
   }
 
@@ -103,7 +103,10 @@ const BubbleVariant = styled.li`
     }
 
   &:focus {
-    box-shadow: 0 0 0 2px ${transparentize(0.75, theme.colors.success)};
+    box-shadow: 0 0 0 2px ${transparentize(
+      0.75,
+      theme.colorsDeprecated.success,
+    )};
   }`
       : ``}
 
@@ -114,7 +117,7 @@ const LinkVariant = styled.li`
   display: inline;
 
   &[aria-current='page'] {
-    color: ${({ theme }) => theme.colors.gray550};
+    color: ${({ theme }) => theme.colorsDeprecated.gray550};
   }
 
   &:not(:last-child)::after {

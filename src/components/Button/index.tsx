@@ -23,7 +23,7 @@ import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
 
 const borderedVariant = ({
-  theme: { colors },
+  theme: { colorsDeprecated },
   color,
   bgColor,
   hoverColor,
@@ -33,9 +33,9 @@ const borderedVariant = ({
   bgColor: Color
   hoverColor: Color
 }) => {
-  const colorValue = colors[color]
-  const bgColorValue = colors[bgColor]
-  const hoverColorValue = colors[hoverColor]
+  const colorValue = colorsDeprecated[color]
+  const bgColorValue = colorsDeprecated[bgColor]
+  const hoverColorValue = colorsDeprecated[hoverColor]
 
   return `
     border: 1px solid ${colorValue};
@@ -66,7 +66,7 @@ const borderedVariant = ({
 }
 
 const plainVariant = ({
-  theme: { colors },
+  theme: { colorsDeprecated },
   bgColor,
   textColor,
 }: {
@@ -74,8 +74,8 @@ const plainVariant = ({
   bgColor: Color
   textColor: Color
 }) => {
-  const bgColorValue = colors[bgColor]
-  const textColorValue = colors[textColor]
+  const bgColorValue = colorsDeprecated[bgColor]
+  const textColorValue = colorsDeprecated[textColor]
 
   return `
     background-color: ${bgColorValue};
@@ -103,15 +103,15 @@ const variants = {
       hoverColor: 'blue',
       theme,
     }),
-  link: ({ theme: { colors } }: { theme: Theme }) => `
-    background-color: ${colors.white};
-    color: ${colors.blue};
+  link: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
+    background-color: ${colorsDeprecated.white};
+    color: ${colorsDeprecated.blue};
     vertical-align: baseline;
     font-weight: 400;
 
     &:hover,
     &:focus {
-      color: ${darken(0.2, colors.blue)};
+      color: ${darken(0.2, colorsDeprecated.blue)};
       text-decoration: underline;
     }
   `,
@@ -156,9 +156,9 @@ const variants = {
       hoverColor: 'success',
       theme,
     }),
-  transparent: ({ theme: { colors } }: { theme: Theme }) => `
+  transparent: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
     background-color: transparent;
-    color: ${colors.gray700};
+    color: ${colorsDeprecated.gray700};
   `,
   warning: ({ theme }: { theme: Theme }) =>
     plainVariant({ bgColor: 'warning', textColor: 'white', theme }),
@@ -308,14 +308,14 @@ const StyledButton = styled(Box, {
     `
     cursor: default;
     pointer-events: none;
-    color: ${theme.colors.gray350};`}
+    color: ${theme.colorsDeprecated.gray350};`}
 
   ${({ variant, disabled, theme }) =>
     variant !== 'link' &&
     disabled &&
     `
-    background-color: ${theme.colors.gray50};
-    border-color: ${theme.colors.gray50};
+    background-color: ${theme.colorsDeprecated.gray50};
+    border-color: ${theme.colorsDeprecated.gray50};
     box-shadow: none;
     `}
 

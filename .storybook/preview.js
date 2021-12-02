@@ -85,7 +85,7 @@ const globalStyles = theme => css`
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
   }
   body {
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colorsDeprecated.white};
     font-family: ${theme.fonts.sansSerif};
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

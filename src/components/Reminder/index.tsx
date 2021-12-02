@@ -40,7 +40,7 @@ const Notification = styled(Box, {
   cursor: pointer;
   border-radius: 14px;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.gray700};
+  color: ${({ theme }) => theme.colorsDeprecated.gray700};
   font-weight: 400;
 
   &:hover {
@@ -50,25 +50,29 @@ const Notification = styled(Box, {
   ${({ variant, bordered, theme }) => `
     background-color: ${
       bordered
-        ? theme.colors.transparent
-        : theme.colors[variants[variant].background as Color]
+        ? theme.colorsDeprecated.transparent
+        : theme.colorsDeprecated[variants[variant].background as Color]
     };
     border: 1px solid ${
-      bordered ? theme.colors.gray300 : theme.colors.transparent
+      bordered
+        ? theme.colorsDeprecated.gray300
+        : theme.colorsDeprecated.transparent
     };
     transition: all .3s ease-in-out;
 
     &:hover {
       box-shadow: 0 3px 6px ${
-        theme.colors[variants[variant].background as Color]
+        theme.colorsDeprecated[variants[variant].background as Color]
       };
-      border: 1px solid ${theme.colors[variants[variant].main as Color]};
+      border: 1px solid ${
+        theme.colorsDeprecated[variants[variant].main as Color]
+      };
     }
   `}
 
   & strong {
     ${({ variant, theme }) => `
-      color: ${theme.colors[variants[variant].main as Color]};
+      color: ${theme.colorsDeprecated[variants[variant].main as Color]};
     `}
   }
 `

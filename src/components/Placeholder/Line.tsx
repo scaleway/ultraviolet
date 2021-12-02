@@ -12,7 +12,7 @@ const Line = styled(Box, {
   height: 12px;
   width: ${({ width }) => width ?? randomSize()}px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.gray300};
+  background-color: ${({ theme }) => theme.colorsDeprecated.gray300};
 `
 
 Line.propTypes = {

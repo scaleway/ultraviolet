@@ -22,13 +22,15 @@ const StyledTabs = styled.div`
   flex-direction: row;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme: { colors } }) => colors.gray350};
+  border-bottom-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.gray350};
 `
 
 const StyledBorderBottom = styled.div`
   position: absolute;
   display: block;
-  background-color: ${({ theme: { colors } }) => colors.primary};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.primary};
   height: 2px;
   padding: inherit;
   transition: left 300ms cubic-bezier(0.5, 1, 0.89, 1),

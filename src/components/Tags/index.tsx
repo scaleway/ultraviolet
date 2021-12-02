@@ -23,25 +23,25 @@ type Keys = keyof typeof STATUS
 type StatusValue = typeof STATUS[Keys]
 
 const variants = {
-  base: ({ theme: { colors } }: { theme: Theme }) => `
+  base: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid ${colors.gray350};
+    border: 1px solid ${colorsDeprecated.gray350};
     &:focus-within {
-      border: 1px solid ${colors.primary};
-      box-shadow: 0 0 1px 2px ${transparentize(0.75, colors.primary)};
+      border: 1px solid ${colorsDeprecated.primary};
+      box-shadow: 0 0 1px 2px ${transparentize(0.75, colorsDeprecated.primary)};
     }
 
     & > * {
       margin: 6px;
     }
   `,
-  bordered: ({ theme: { colors } }: { theme: Theme }) => `
+  bordered: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
     margin-top: 0;
     padding: 8px 0;
 
     > input:focus {
-      box-shadow: 0 0 1px 2px ${transparentize(0.6, colors.primary)};
+      box-shadow: 0 0 1px 2px ${transparentize(0.6, colorsDeprecated.primary)};
     }
 
     > * {
@@ -51,9 +51,9 @@ const variants = {
       }
     }
   `,
-  'no-border': ({ theme: { colors } }: { theme: Theme }) => `
+  'no-border': ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
     &:focus-within {
-      box-shadow: 0 0 2px 4px ${transparentize(0.75, colors.primary)};
+      box-shadow: 0 0 2px 4px ${transparentize(0.75, colorsDeprecated.primary)};
     }
 
     > * {
@@ -81,12 +81,13 @@ const TagsContainer = styled('div', {
 
 const StyledInput = styled.input`
   font-size: 16px;
-  color: ${({ theme: { colors } }) => colors.gray700};
+  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
   border: none;
   outline: none;
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.white};
   &::placeholder {
-    color: ${({ theme: { colors } }) => colors.gray550};
+    color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
   }
 `
 

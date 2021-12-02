@@ -26,7 +26,7 @@ const StyledBox = styled(Box, {
   margin-right: 0;
   border-radius: 2px;
   background-color: ${({ theme, backgroundColor }) =>
-    theme.colors[backgroundColor as Color] ?? backgroundColor};
+    theme.colorsDeprecated[backgroundColor as Color] ?? backgroundColor};
 `
 
 const StyledProgress = styled.div`
@@ -56,7 +56,7 @@ const StyledFilled = styled('div', {
   left: 0;
   bottom: 0;
   background-color: ${({ theme, variant }) =>
-    theme.colors[variant as Color] ?? 'inherit'};
+    theme.colorsDeprecated[variant as Color] ?? 'inherit'};
   transition: 0.3s width;
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `

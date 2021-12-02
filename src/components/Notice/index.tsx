@@ -6,7 +6,7 @@ import Icon from '../Icon'
 import MarkDown from '../MarkDown'
 
 const Container = styled(Box)`
-  color: ${({ theme: { colors } }) => colors.gray550};
+  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
   font-size: 12px;
   display: flex;
   align-items: center;

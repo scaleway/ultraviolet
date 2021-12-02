@@ -25,10 +25,10 @@ const ProgressionContainer = styled(Box)`
   ${({ theme }) => `
   background: repeating-linear-gradient(
     45deg,
-    ${theme.colors.gray550},
-    ${theme.colors.gray550} 10px,
-    ${transparentize(0.25, theme.colors.gray550)} 10px,
-    ${transparentize(0.25, theme.colors.gray550)} 30px
+    ${theme.colorsDeprecated.gray550},
+    ${theme.colorsDeprecated.gray550} 10px,
+    ${transparentize(0.25, theme.colorsDeprecated.gray550)} 10px,
+    ${transparentize(0.25, theme.colorsDeprecated.gray550)} 30px
   );`}
 
   overflow: hidden;
@@ -50,7 +50,7 @@ interface ProgressionProps {
 
 const Progression = styled.div<ProgressionProps>`
   background-color: ${({ theme, color }) =>
-    theme.colors[color as Color] ?? color};
+    theme.colorsDeprecated[color as Color] ?? color};
   position: absolute;
   z-index: -1;
   top: 0;

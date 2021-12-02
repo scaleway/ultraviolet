@@ -6,27 +6,27 @@ import Button, { ButtonProps } from '../Button'
 const variantStyle = {
   danger: (theme: Theme) => css`
     display: inline-block;
-    color: ${theme.colors.red};
+    color: ${theme.colorsDeprecated.red};
     &:hover,
     &:focus {
-      color: ${theme.colors.crimson};
+      color: ${theme.colorsDeprecated.crimson};
       svg {
-        fill: ${theme.colors.crimson};
+        fill: ${theme.colorsDeprecated.crimson};
       }
     }
     svg {
-      fill: ${theme.colors.red};
+      fill: ${theme.colorsDeprecated.red};
     }
   `,
   nav: (theme: Theme) => css`
     font-size: 16px;
     line-height: 24px;
-    color: ${theme.colors.gray550};
+    color: ${theme.colorsDeprecated.gray550};
     &:hover,
     &:focus {
-      color: ${theme.colors.primary};
+      color: ${theme.colorsDeprecated.primary};
       svg {
-        fill: ${theme.colors.primary};
+        fill: ${theme.colorsDeprecated.primary};
       }
     }
   `,
@@ -38,14 +38,14 @@ const styles = {
   `,
   disabled: (theme: Theme) => css`
     cursor: not-allowed;
-    color: ${theme.colors.gray350};
+    color: ${theme.colorsDeprecated.gray350};
 
     &:hover,
     &:focus {
-      color: ${theme.colors.gray350};
-      background-color: ${theme.colors.white};
+      color: ${theme.colorsDeprecated.gray350};
+      background-color: ${theme.colorsDeprecated.white};
       svg {
-        fill: ${theme.colors.gray550};
+        fill: ${theme.colorsDeprecated.gray550};
       }
     }
   `,
@@ -55,19 +55,19 @@ const styles = {
     line-height: 22px;
     font-weight: inherit;
     padding: 4px 8px;
-    color: ${theme.colors.gray700};
+    color: ${theme.colorsDeprecated.gray700};
     border: 0;
-    border-bottom: 1px solid ${theme.colors.gray100};
+    border-bottom: 1px solid ${theme.colorsDeprecated.gray100};
     cursor: pointer;
     transition: color 300ms;
     min-width: 110px;
-    background-color: ${theme.colors.transparent};
+    background-color: ${theme.colorsDeprecated.transparent};
     &:hover,
     &:focus {
-      color: ${theme.colors.primary};
+      color: ${theme.colorsDeprecated.primary};
       svg {
         transition: fill 300ms;
-        fill: ${theme.colors.primary};
+        fill: ${theme.colorsDeprecated.primary};
       }
     }
 

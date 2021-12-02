@@ -17,7 +17,7 @@ const StyledStrength = styled(Typography)`
 `
 
 const StyledWrapper = styled(Box)`
-  background-color: ${({ theme }) => theme.colors.gray100};
+  background-color: ${({ theme }) => theme.colorsDeprecated.gray100};
   border-radius: 5px;
   height: 8px;
 `

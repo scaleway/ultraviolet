@@ -74,12 +74,12 @@ const temporalStepStyles = ({
 }) =>
   temporal !== 'future'
     ? css`
-        background-color: ${theme.colors.success};
+        background-color: ${theme.colorsDeprecated.success};
       `
     : css`
         background-color: transparent;
         border-style: solid;
-        border-color: ${theme.colors.gray350};
+        border-color: ${theme.colorsDeprecated.gray350};
       `
 
 const StyledStep = styled('div', {
@@ -100,7 +100,8 @@ const StyledText = styled.div`
 `
 
 const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.gray350};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.gray350};
   height: 7px;
   width: 7px;
   border-radius: 16px;
@@ -114,7 +115,8 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: 2px;
   flex-grow: 1;
   border-radius: 2px;
-  background-color: ${({ theme: { colors } }) => colors.gray350};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.gray350};
   position: relative;
 
   ::after {
@@ -124,7 +126,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     top: 0;
     height: 100%;
     border-radius: 2px;
-    background-color: ${({ theme }) => theme.colors.success};
+    background-color: ${({ theme }) => theme.colorsDeprecated.success};
     ${({ temporal }) => temporal === 'past' && `width: 100%;`}
     ${({ temporal, animated }) =>
       temporal === 'current' && animated && loadingStyle}

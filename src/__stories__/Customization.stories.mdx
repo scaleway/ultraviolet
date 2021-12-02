@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs'
 import Box from '../components/Box'
 import FlexBox from '../components/FlexBox'
-import { colors } from '../theme'
+import { colorsDeprecated } from '../theme'
 
 <Meta title="Theme" />
 
@@ -14,7 +14,7 @@ Scaleway UI is based on `@emotion/react` library. It allows you to customize the
 Here are all colors that we use in Scaleway UI. You can customize them in your custom theme.
 
 <div>
-  {Object.keys(colors).map(
+  {Object.keys(colorsDeprecated).map(
     color =>
       color !== 'colors' && (
         <FlexBox justifyContent="center" key={color}>
@@ -25,7 +25,7 @@ Here are all colors that we use in Scaleway UI. You can customize them in your c
             m={1}
             backgroundColor="black"
           >
-            <p style={{ color: colors[color] }}>{color}</p>
+            <p style={{ color: colorsDeprecated[color] }}>{color}</p>
           </Box>
           <Box
             textAlign="center"
@@ -34,7 +34,7 @@ Here are all colors that we use in Scaleway UI. You can customize them in your c
             m={1}
             backgroundColor="white"
           >
-            <p style={{ color: colors[color] }}>{color}</p>
+            <p style={{ color: colorsDeprecated[color] }}>{color}</p>
           </Box>
           <Box
             textAlign="center"
