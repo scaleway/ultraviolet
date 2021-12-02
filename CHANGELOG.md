@@ -1,3 +1,10 @@
+## [0.126.0](https://github.com/scaleway/scaleway-ui/compare/v0.125.3...v0.126.0) (2021-12-02)
+
+
+### :gear: Features
+
+* remove some of unnecessary boxes ([#919](https://github.com/scaleway/scaleway-ui/issues/919)) ([eb03f4d](https://github.com/scaleway/scaleway-ui/commit/eb03f4d5706693bd4e0da2d58de64e68fe897da6))
+
 ### [0.125.3](https://github.com/scaleway/scaleway-ui/compare/v0.125.2...v0.125.3) (2021-12-02)
 
 
