@@ -1,3 +1,10 @@
+### [0.125.3](https://github.com/scaleway/scaleway-ui/compare/v0.125.2...v0.125.3) (2021-12-02)
+
+
+### :bug: Bug Fixes
+
+* a11y badge tests ([#951](https://github.com/scaleway/scaleway-ui/issues/951)) ([4bdabac](https://github.com/scaleway/scaleway-ui/commit/4bdabacd01187ca87981d08aaf841a10d21da02f))
+
 ### [0.125.2](https://github.com/scaleway/scaleway-ui/compare/v0.125.1...v0.125.2) (2021-12-01)
 
 
