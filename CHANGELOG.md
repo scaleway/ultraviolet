@@ -1,3 +1,10 @@
+### [0.126.2](https://github.com/scaleway/scaleway-ui/compare/v0.126.1...v0.126.2) (2021-12-02)
+
+
+### :bug: Bug Fixes
+
+* **Typography:** avoid passing down color to xstyled ([#962](https://github.com/scaleway/scaleway-ui/issues/962)) ([641c7a1](https://github.com/scaleway/scaleway-ui/commit/641c7a1555fd3ae808b28e5ba73e274ad1568255))
+
 ### [0.126.1](https://github.com/scaleway/scaleway-ui/compare/v0.126.0...v0.126.1) (2021-12-02)
 
 
