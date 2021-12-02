@@ -1,3 +1,10 @@
+### [0.126.1](https://github.com/scaleway/scaleway-ui/compare/v0.126.0...v0.126.1) (2021-12-02)
+
+
+### :bug: Bug Fixes
+
+* a11y for counter ([#957](https://github.com/scaleway/scaleway-ui/issues/957)) ([68cfaf2](https://github.com/scaleway/scaleway-ui/commit/68cfaf2bdd71fe827e94c470c3f4977b6623090c))
+
 ## [0.126.0](https://github.com/scaleway/scaleway-ui/compare/v0.125.3...v0.126.0) (2021-12-02)
 
 
