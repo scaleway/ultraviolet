@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'
 import UniversalLink from '../UniversalLink'
@@ -78,7 +78,7 @@ export type ReminderProps = {
   text: string
   to?: string
   variant?: Variants
-}
+} & BoxProps
 
 const Reminder: FunctionComponent<ReminderProps> = ({
   text,
