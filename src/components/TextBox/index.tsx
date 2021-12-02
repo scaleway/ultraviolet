@@ -170,6 +170,16 @@ const StyledLabel = styled('label', {
     `}
 `
 
+const StyledRelativeDiv = styled.div`
+  position: relative;
+`
+
+const StyledError = styled.div`
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.warning};
+  padding-top: ${({ theme }) => theme.space['0.25']};
+`
+
 type StyledInputProps = {
   disabled?: boolean
   error?: boolean
@@ -548,7 +558,7 @@ const TextBox = forwardRef<
 
     return (
       <Box {...props}>
-        <Box position="relative">
+        <StyledRelativeDiv>
           <StyledInput
             aria-controls={ariaControls}
             aria-label={label && noTopLabel ? label : undefined}
@@ -607,11 +617,9 @@ const TextBox = forwardRef<
               {getRightComponent()}
             </StyledRightElement>
           ) : null}
-        </Box>
+        </StyledRelativeDiv>
         <Expandable height={56} overflow="hidden" opened={!!error}>
-          <Box fontSize={12} color="warning" pt="2px">
-            {error}
-          </Box>
+          <StyledError>{error}</StyledError>
         </Expandable>
         {notice && <Notice mt={1}>{notice}</Notice>}
       </Box>

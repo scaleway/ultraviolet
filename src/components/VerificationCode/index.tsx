@@ -7,7 +7,6 @@ import React, {
   KeyboardEventHandler,
   useState,
 } from 'react'
-import Box from '../Box'
 
 const StyledInput = styled.input`
   border: solid 1px
@@ -77,7 +76,6 @@ const VerificationCode = ({
   placeholder = '',
   required = false,
   type = 'number',
-  ...props
 }: VerificationCodeProps): JSX.Element => {
   const valuesArray = Object.assign(
     new Array(fields).fill(''),
@@ -203,7 +201,7 @@ const VerificationCode = ({
   }
 
   return (
-    <Box {...props}>
+    <div>
       {values.map((value: string, index) => (
         <StyledInput
           css={[inputStyle]}
@@ -225,7 +223,7 @@ const VerificationCode = ({
           placeholder={placeholder?.[index] ?? ''}
         />
       ))}
-    </Box>
+    </div>
   )
 }
 

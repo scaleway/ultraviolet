@@ -1,4 +1,4 @@
-import { css, useTheme } from '@emotion/react'
+import { css as emotionCss, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -8,11 +8,10 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
 
-const textStyle = (maxTagWidth: number) => css`
+const textStyle = (maxTagWidth: number) => emotionCss`
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: ${maxTagWidth}px;
@@ -33,11 +32,33 @@ const StyledTooltipReference = styled(TooltipReference)`
   padding-right: 8px;
 `
 
+const StyledTagContainer = styled.div<{ multiline?: boolean }>`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.gray700};
+  ${({ multiline, theme }) =>
+    multiline &&
+    `flex-wrap: wrap;
+  > * { margin-bottom: ${theme.space['1']}}`}
+`
+
+const StyledManyTagsContainer = styled.div`
+  box-shadow: 0 -1px 5px 3px rgba(165, 165, 205, 0.15);
+  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+  display: flex;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.radii.default};
+  max-width: 80vw;
+  flex-wrap: wrap;
+`
+
 export type TagsPoplistProps = {
   maxLength?: number
   maxTagWidth?: number
   tags?: string[]
   threshold?: number
+  multiline?: boolean
 }
 
 const TagsPoplist = ({
@@ -45,7 +66,7 @@ const TagsPoplist = ({
   maxTagWidth = 115,
   tags = [],
   threshold = 1,
-  ...props
+  multiline = false,
 }: TagsPoplistProps): JSX.Element | null => {
   const theme = useTheme()
   let tmpThreshold = threshold
@@ -68,7 +89,7 @@ const TagsPoplist = ({
 
   return (
     <FlexBox>
-      <Box display="flex" alignItems="center" color="gray700" {...props}>
+      <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
             // useful when two tags are identical `${tag}-${index}`
@@ -80,7 +101,7 @@ const TagsPoplist = ({
             {tag}
           </Tag>
         ))}
-      </Box>
+      </StyledTagContainer>
       {hasManyTags && (
         <>
           <StyledTooltipReference {...tooltip}>
@@ -91,17 +112,7 @@ const TagsPoplist = ({
               {...tooltip}
               style={{ fill: theme.colors.white, top: '93%' }}
             />
-            <Box
-              boxShadow="0 -1px 5px 3px rgba(165,165,205,0.15)"
-              px={1}
-              py="4px"
-              display="flex"
-              alignItems="center"
-              backgroundColor={theme.colors.white}
-              borderRadius={theme.radii.default}
-              maxWidth="80vw"
-              flexWrap="wrap"
-            >
+            <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
                 <Tag
@@ -112,7 +123,7 @@ const TagsPoplist = ({
                   {tag}
                 </Tag>
               ))}
-            </Box>
+            </StyledManyTagsContainer>
           </Tooltip>
         </>
       )}
@@ -129,6 +140,7 @@ TagsPoplist.propTypes = {
    * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
    */
   maxTagWidth: PropTypes.number,
+  multiline: PropTypes.bool,
   tags: PropTypes.arrayOf(PropTypes.string.isRequired),
   /**
    * This property define number of tags to display before hiding them in tooltip.

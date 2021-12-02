@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
@@ -72,6 +73,12 @@ type BodyProps = {
   children: (props: ListBodyRenderProps) => JSX.Element
 }
 
+const StyledActivityContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: ${({ theme }) => `${theme.space['2']} 0`};
+`
+
 const Body: FunctionComponent<BodyProps> = ({ children, ...props }) => {
   const {
     pageData,
@@ -90,9 +97,9 @@ const Body: FunctionComponent<BodyProps> = ({ children, ...props }) => {
     }
 
     return (
-      <Box display="flex" my={2} justifyContent="center">
+      <StyledActivityContainer>
         <ActivityIndicator active size={50} />
-      </Box>
+      </StyledActivityContainer>
     )
   }, [perPage])
 

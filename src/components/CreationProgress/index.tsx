@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNodeArray } from 'react'
 import flattenChildren from 'react-flatten-children'
-import Box, { XStyledProps } from '../Box'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
@@ -132,7 +131,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   }
 `
 
-const StyledContainer = styled(Box)<{ size: Size }>`
+const StyledContainer = styled.div<{ size: Size }>`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -177,7 +176,7 @@ export type CreationProgressProps = {
   selected?: number
   size?: Size
   children: ReactNodeArray
-} & XStyledProps
+}
 
 type CreationProgressComponent = FunctionComponent<CreationProgressProps> & {
   Step: FunctionComponent
@@ -189,12 +188,11 @@ const CreationProgress: CreationProgressComponent = ({
   animated = true,
   isStepsNumber = false,
   size = 'xlarge',
-  ...props
 }) => {
   const lastStep = React.Children.count(children) - 1
 
   return (
-    <StyledContainer size={size} {...props}>
+    <StyledContainer size={size}>
       {flattenChildren(children).map((child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'past'

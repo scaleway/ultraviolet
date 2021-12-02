@@ -7,7 +7,6 @@ import DatePicker, {
   registerLocale,
 } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
-import Box from '../Box'
 import Icon from '../Icon'
 import Separator from '../Separator'
 import TextBox from '../TextBox'
@@ -114,6 +113,16 @@ const StyledSpan = styled.span`
   top: 16px;
 `
 
+const StyledIconContainer = styled.div`
+  padding: ${({ theme }) => theme.space['1']};
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 0;
+  height: 48px;
+`
+
 const TopHeaderDiv = styled.div`
   margin-bottom: 8px;
   margin-left: 8px;
@@ -184,15 +193,7 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
                 value={format(value) || ''}
                 disabled={disabled}
               />
-              <Box
-                p={1}
-                position="absolute"
-                display="flex"
-                alignItems="center"
-                right={0}
-                top={0}
-                height={48}
-              >
+              <StyledIconContainer>
                 {required && <Icon name="asterisk" color="warning" size={8} />}
                 <Separator direction="vertical" mx={1} height="100%" />
                 <Icon
@@ -201,7 +202,7 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
                   size={24}
                   alignSelf="center"
                 />
-              </Box>
+              </StyledIconContainer>
             </div>
           }
           disabled={disabled}

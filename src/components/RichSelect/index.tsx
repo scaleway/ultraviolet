@@ -302,6 +302,12 @@ const StyledContainer = styled(Box, {
   ${({ additionalStyles }) => css(additionalStyles)}
 `
 
+const StyledError = styled.div`
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.warning};
+  padding-top: ${({ theme }) => theme.space['0.25']};
+`
+
 const SelectContainer: FunctionComponent<
   ContainerProps<SelectOption> & WithSelectProps
 > = props => {
@@ -359,9 +365,7 @@ const SelectContainer: FunctionComponent<
     >
       {children}
       <Expandable height={56} overflow="hidden" opened={!!error}>
-        <Box fontSize={12} color="warning" pt="2px">
-          {error}
-        </Box>
+        <StyledError>{error}</StyledError>
       </Expandable>
     </StyledContainer>
   )

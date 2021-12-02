@@ -1,10 +1,10 @@
 import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { DatumValue } from '@nivo/core'
 import { Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, memo } from 'react'
 import { getLegendColor } from '../../helpers/legend'
-import Box from '../Box'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
@@ -78,13 +78,17 @@ type CustomLegendProps = {
   setSelected: (selected: string[]) => void
 }
 
+const StyledContainer = styled.div`
+  margin-top: ${({ theme }) => theme.space[2]};
+`
+
 const CustomLegend: FunctionComponent<CustomLegendProps> = ({
   axisTransformer = noop,
   data,
   selected,
   setSelected,
 }) => (
-  <Box mt={2}>
+  <StyledContainer>
     <div css={styles.head}>
       <FlexBox.Child flex="6">Legend</FlexBox.Child>
       <Cell variant="bodyA" value="Minimum" />
@@ -128,7 +132,7 @@ const CustomLegend: FunctionComponent<CustomLegendProps> = ({
         )
       })}
     </div>
-  </Box>
+  </StyledContainer>
 )
 
 CustomLegend.propTypes = {

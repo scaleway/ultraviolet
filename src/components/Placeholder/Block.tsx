@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import React, { VoidFunctionComponent } from 'react'
 import Box from '../Box'
 import Separator from '../Separator'
@@ -30,15 +31,21 @@ const styles = {
   `,
 }
 
+const StyledLineContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: ${({ theme }) => theme.space['2']};
+`
+
 const Block: VoidFunctionComponent = props => (
   <Box {...props} css={styles.container}>
     <div css={styles.block}>
       {Array.from({ length: 3 }, (_, i) => (
         <React.Fragment key={i}>
-          <Box display="flex" alignItems="center" p={2}>
+          <StyledLineContainer>
             <div css={styles.icon} />
             <Line />
-          </Box>
+          </StyledLineContainer>
           {i !== 2 && <Separator my={1} />}
         </React.Fragment>
       ))}

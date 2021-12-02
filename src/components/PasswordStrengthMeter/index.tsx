@@ -1,11 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Box from '../Box'
 import Typography from '../Typography'
 
@@ -62,18 +57,17 @@ export type PasswordStrengthMeterProps = {
   userInputs?: string[]
 }
 
-const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
+const PasswordStrengthMeter = ({
   password = '',
   onChange,
   strength,
   title,
   estimate = () => ({ score: 0 }),
   userInputs = [],
-  ...props
-}) => {
+}: PasswordStrengthMeterProps): JSX.Element => {
   const [score, setScore] = useState<number>(0)
   const [backgroundColor, setBackgroundColor] = useState<string>(
-    strength[0].color,
+    strength[0]?.color || 'green',
   )
   const [width, setWidth] = useState<number | string>(0)
 
@@ -95,13 +89,13 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   }, [getScore, handleChange, password, score, strength])
 
   return (
-    <Box {...props} title={title} role="alert" aria-live="polite">
+    <div title={title} role="alert" aria-live="polite">
       <StyledTitle variant="bodyB" color="gray700">
         {title}
       </StyledTitle>
 
-      <StyledStrength as="span" variant="bodyB" color={strength[score].color}>
-        {strength[score].t}
+      <StyledStrength as="span" variant="bodyB" color={strength[score]?.color}>
+        {strength[score]?.t}
       </StyledStrength>
 
       <StyledWrapper mt={1} mb={2}>
@@ -112,7 +106,7 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
           }}
         />
       </StyledWrapper>
-    </Box>
+    </div>
   )
 }
 

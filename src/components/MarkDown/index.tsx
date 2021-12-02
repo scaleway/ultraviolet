@@ -26,12 +26,8 @@ const headingRenderer: FunctionComponent<{
 const inlineCodeRenderer: FunctionComponent = props => (
   <Typography variant="command">{props.children}</Typography>
 )
-const textRenderer: FunctionComponent = props => (
-  <Box as="span">{props.children}</Box>
-)
-const paragraphRenderer: FunctionComponent = props => (
-  <Box as="p">{props.children}</Box>
-)
+const textRenderer: FunctionComponent = props => <span>{props.children}</span>
+const paragraphRenderer: FunctionComponent = props => <p>{props.children}</p>
 
 const linkRenderer: FunctionComponent<{
   node: unknown
