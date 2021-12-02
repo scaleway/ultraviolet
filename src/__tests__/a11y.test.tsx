@@ -8,7 +8,7 @@ import * as process from 'process'
 import React, { VoidFunctionComponent } from 'react'
 import { renderWithTheme } from '../helpers/jestHelpers'
 
-const testedComponents = ['Alert', 'ActivityIndicator']
+const testedComponents = ['Alert', 'ActivityIndicator', 'Badge']
 
 const foundFiles: string[] = []
 

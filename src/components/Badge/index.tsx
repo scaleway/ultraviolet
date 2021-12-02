@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useMemo } from 'react'
 import Box, { XStyledProps } from '../Box'
 
 const variants = {
@@ -132,7 +132,31 @@ const Badge: FunctionComponent<BadgeProps> = ({
   variant = 'neutral',
   size = 'medium',
   ...props
-}) => <StyledBox as="span" variant={variant} size={size} {...props} />
+}) => {
+  /**
+   * Badge should display an aria-label if the status is not neutral or primary
+   */
+  const ariaLabel = useMemo(() => {
+    const strippedVariant = variant.replace('light-', '')
+
+    return ['neutral', 'primary'].some(
+      baseVariant => baseVariant === strippedVariant,
+    )
+      ? undefined
+      : strippedVariant
+  }, [variant])
+
+  return (
+    <StyledBox
+      role="status"
+      aria-label={ariaLabel}
+      as="span"
+      variant={variant}
+      size={size}
+      {...props}
+    />
+  )
+}
 
 Badge.propTypes = {
   size: PropTypes.oneOf<Sizes>(badgeSizes),
