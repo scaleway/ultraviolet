@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Abbr renders correctly 1`] = `
+<DocumentFragment>
+  .cache-5zdete {
+  font-variant: none;
+}
+
+<abbr
+    class="cache-5zdete elquw7y0"
+  >
+    Abbreviation
+  </abbr>
+</DocumentFragment>
+`;
+
+exports[`Abbr renders with title 1`] = `
+<DocumentFragment>
+  .cache-5zdete {
+  font-variant: none;
+}
+
+<abbr
+    class="cache-5zdete elquw7y0"
+    title="Abbreviation"
+  >
+    Abbr
+  </abbr>
+</DocumentFragment>
+`;

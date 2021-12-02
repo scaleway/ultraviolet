@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import Description, { DescriptionProps } from '..'
+import { Abbr } from '../..'
 
 export default {
   component: Description,
@@ -20,7 +21,9 @@ const Template: Story<DescriptionProps> = args => (
     <Description.Term>Name</Description.Term>
     <Description.Desc>Big instance</Description.Desc>
     <Description.Term>Size</Description.Term>
-    <Description.Desc>125 GB</Description.Desc>
+    <Description.Desc>
+      125 <Abbr title="GigaBytes">GB</Abbr>
+    </Description.Desc>
   </Description>
 )
 
@@ -38,7 +41,9 @@ Inline.decorators = [
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
       <Description.Term>Size</Description.Term>
-      <Description.Desc>125 GB</Description.Desc>
+      <Description.Desc>
+        125 <Abbr title="GigaBytes">GB</Abbr>
+      </Description.Desc>
     </Description>
   ),
 ]
@@ -55,7 +60,9 @@ Selectable.decorators = [
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
       <Description.Term>Size</Description.Term>
-      <Description.Desc>125 GB</Description.Desc>
+      <Description.Desc>
+        125 <Abbr title="GigaBytes">GB</Abbr>
+      </Description.Desc>
     </Description>
   ),
 ]

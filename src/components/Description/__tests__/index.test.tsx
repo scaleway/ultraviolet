@@ -1,5 +1,6 @@
 import React from 'react'
 import Description from '..'
+import { Abbr } from '../..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Description', () => {
@@ -9,7 +10,9 @@ describe('Description', () => {
         <Description.Term>Name</Description.Term>
         <Description.Desc>Big instance</Description.Desc>
         <Description.Term>Size</Description.Term>
-        <Description.Desc>125 GB</Description.Desc>
+        <Description.Desc>
+          125 <Abbr title="GigaBytes">GB</Abbr>
+        </Description.Desc>
       </Description>,
     ))
 
@@ -19,7 +22,9 @@ describe('Description', () => {
         <Description.Term>Name</Description.Term>
         <Description.Desc>Big instance</Description.Desc>
         <Description.Term>Size</Description.Term>
-        <Description.Desc>125 GB</Description.Desc>
+        <Description.Desc>
+          125 <Abbr title="GigaBytes">GB</Abbr>
+        </Description.Desc>
       </Description>,
     ))
 
@@ -29,7 +34,9 @@ describe('Description', () => {
         <Description.Term>Name</Description.Term>
         <Description.Desc>Big instance</Description.Desc>
         <Description.Term>Size</Description.Term>
-        <Description.Desc>125 GB</Description.Desc>
+        <Description.Desc>
+          125 <Abbr title="GigaBytes">GB</Abbr>
+        </Description.Desc>
       </Description>,
     ))
 })
