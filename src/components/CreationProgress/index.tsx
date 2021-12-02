@@ -46,7 +46,7 @@ const sizes = {
   },
 }
 
-export type Size = keyof typeof sizes
+type Size = keyof typeof sizes
 
 const loadingAnimation = keyframes`
   from {
@@ -172,7 +172,7 @@ const StyledContainer = styled.div<{ size: Size }>`
   }
 `
 
-export type CreationProgressProps = {
+type CreationProgressProps = {
   animated?: boolean
   isStepsNumber?: boolean
   selected?: number

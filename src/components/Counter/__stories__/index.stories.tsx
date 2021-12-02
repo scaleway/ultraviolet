@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import Counter, { CounterProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import Counter from '..'
 import { Button, FlexBox, Icon } from '../../index'
 
 export default {
@@ -8,7 +8,9 @@ export default {
   title: 'Components/Data Display/Counter',
 } as Meta
 
-const Template: Story<CounterProps> = args => <Counter end={20} {...args} />
+const Template: Story<ComponentProps<typeof Counter>> = args => (
+  <Counter end={20} {...args} />
+)
 
 export const Default = Template.bind({})
 

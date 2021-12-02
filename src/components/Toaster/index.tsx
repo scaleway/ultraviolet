@@ -1,6 +1,6 @@
 import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
   ToastContainerProps,
@@ -8,7 +8,7 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import Alert, { AlertProps } from '../Alert'
+import Alert from '../Alert'
 import Icon from '../Icon'
 
 const PREFIX = '.Toastify'
@@ -78,7 +78,7 @@ type SanitizedAlertBarProps = {
   closeToast?: () => void
   toastProps?: Record<string, unknown>
   children?: ReactNode
-} & AlertProps
+} & ComponentProps<typeof Alert>
 
 const SanitizedAlertBar: FunctionComponent<SanitizedAlertBarProps> = ({
   closeToast,

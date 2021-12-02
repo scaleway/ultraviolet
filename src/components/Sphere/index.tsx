@@ -49,7 +49,7 @@ const StyledTextSphere = styled('div', {
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 
-export type SphereProps = {
+type SphereProps = {
   size?: number
   bgColors?: string[]
   text?: string

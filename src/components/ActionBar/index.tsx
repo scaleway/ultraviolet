@@ -24,7 +24,7 @@ const StyledDiv = styled.div<{ rank: number }>`
   z-index: 2;
 `
 
-export type ActionBarProps = {
+type ActionBarProps = {
   children: ReactNode
   /**
    * The position of the bar (start at 0)

@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Popper, { DisclosureParam, PopperProps, popperVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Popper, { popperVariants } from '..'
+import { FlexBox } from '../..'
 import { getUUID } from '../../../utils'
 import Box from '../../Box'
 import Button from '../../Button'
@@ -18,7 +19,10 @@ export default {
   title: 'Components/Popper',
 } as Meta
 
-const disclosure: DisclosureParam = ({ placement, visible }) => (
+const disclosure: ComponentProps<typeof Popper>['disclosure'] = ({
+  placement,
+  visible,
+}) => (
   <Button>
     test {placement}:
     <Icon
@@ -30,7 +34,7 @@ const disclosure: DisclosureParam = ({ placement, visible }) => (
   </Button>
 )
 
-const Template: Story<PopperProps> = args => (
+const Template: Story<ComponentProps<typeof Popper>> = args => (
   <Popper aria-label="Custom popover" disclosure={disclosure} {...args}>
     {({ placement }) => <Box p={2}> placement:{placement}</Box>}
   </Popper>
@@ -67,7 +71,7 @@ ComplexChildren.decorators = [
         disclosure={({ placement }) => <Button>Popper {placement}:</Button>}
       >
         {() => (
-          <Box display="flex" flexDirection="column">
+          <FlexBox direction="column">
             {new Array(15).fill(0).map(() => {
               const uuid = getUUID()
 
@@ -77,7 +81,7 @@ ComplexChildren.decorators = [
                 </Box>
               )
             })}
-          </Box>
+          </FlexBox>
         )}
       </Popper>
     </div>
@@ -93,7 +97,7 @@ Placement.parameters = {
 Placement.decorators = [
   () => (
     <div>
-      <Box display="flex" flexDirection="column">
+      <FlexBox direction="column">
         <Popper
           placement="left-start"
           variant="black"
@@ -118,7 +122,7 @@ Placement.decorators = [
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
-      </Box>
+      </FlexBox>
       <div>
         <Popper
           placement="top-start"
@@ -148,7 +152,7 @@ Placement.decorators = [
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
       </div>
-      <Box display="flex" flexDirection="column">
+      <FlexBox direction="column">
         <Popper
           placement="right-start"
           variant="black"
@@ -173,7 +177,7 @@ Placement.decorators = [
         >
           {({ placement }) => <Box p={1}> {placement}</Box>}
         </Popper>
-      </Box>
+      </FlexBox>
       <div>
         <Popper
           placement="bottom-start"

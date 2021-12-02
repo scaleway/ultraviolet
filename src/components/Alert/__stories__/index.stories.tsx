@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Alert, { AlertProps, alertTypes, alertVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Alert, { alertTypes, alertVariants } from '..'
 import { Box } from '../..'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   title: 'Components/Feedback/Alert',
 } as Meta
 
-const Template: Story<AlertProps> = args => (
+const Template: Story<ComponentProps<typeof Alert>> = args => (
   <Alert {...args}>This is an alert</Alert>
 )
 

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Icon, { IconProps, icons } from '..'
+import React, { ComponentProps } from 'react'
+import Icon, { icons } from '..'
 import { Box, Boxer } from '../..'
 
 export default {
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Token/Icon',
 } as Meta
 
-const Template: Story<IconProps> = args => <Icon {...args} />
+const Template: Story<ComponentProps<typeof Icon>> = args => <Icon {...args} />
 
 export const Default = Template.bind({})
 

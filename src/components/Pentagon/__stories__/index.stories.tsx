@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Pentagon, { PentagonProps } from '..'
+import React, { ComponentProps } from 'react'
+import Pentagon from '..'
 import { colorsDeprecated } from '../../../theme'
 import { FlexBox } from '../../index'
 
@@ -16,7 +16,9 @@ export default {
   title: 'Components/Data Display/Pentagon',
 } as Meta
 
-const Template: Story<PentagonProps> = args => <Pentagon {...args} />
+const Template: Story<ComponentProps<typeof Pentagon>> = args => (
+  <Pentagon {...args} />
+)
 
 export const Default = Template.bind({})
 

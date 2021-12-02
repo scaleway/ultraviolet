@@ -89,7 +89,7 @@ type SelectStyleFactory = (
   state: SelectProps & OptionProps & WithSelectProps,
 ) => CSSObject
 
-export type SelectStyleMap = Record<string, SelectStyleFactory>
+type SelectStyleMap = Record<string, SelectStyleFactory>
 
 type SelectStyleProps = {
   error?: string
@@ -298,7 +298,7 @@ export interface WithSelectProps {
   selectProps: SelectProps
 }
 
-export type SelectProps = StyledContainerProps &
+type SelectProps = StyledContainerProps &
   Omit<Props<SelectOption>, 'value'> &
   CommonProps<SelectOption, boolean, GroupBase<SelectOption>> &
   XStyledProps & {
@@ -682,7 +682,7 @@ type SelectComponents = SelectProps['components']
 
 type StateManagedSelect = typeof Select
 
-export type RichSelectProps = SelectProps &
+type RichSelectProps = SelectProps &
   SelectStyleProps & {
     animation?: string
     animationOnChange?: boolean

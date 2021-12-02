@@ -61,7 +61,7 @@ const StyledFilled = styled('div', {
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `
 
-export type ProgressBarProps = {
+type ProgressBarProps = {
   variant?: string
   backgroundColor?: string
   value?: number

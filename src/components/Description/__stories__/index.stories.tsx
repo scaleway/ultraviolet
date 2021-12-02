@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Description, { DescriptionProps } from '..'
+import React, { ComponentProps } from 'react'
+import Description from '..'
 
 export default {
   component: Description,
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Data Display/Description',
 } as Meta
 
-const Template: Story<DescriptionProps> = args => (
+const Template: Story<ComponentProps<typeof Description>> = args => (
   <Description {...args}>
     <Description.Term>Name</Description.Term>
     <Description.Desc>Big instance</Description.Desc>

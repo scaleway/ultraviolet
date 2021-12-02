@@ -1,6 +1,11 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent, useCallback, useState } from 'react'
-import Checkbox, { CheckboxProps } from '..'
+import React, {
+  ChangeEvent,
+  ComponentProps,
+  useCallback,
+  useState,
+} from 'react'
+import Checkbox from '..'
 import { Boxer } from '../..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
@@ -9,7 +14,7 @@ export default {
   title: 'Components/Data Entry/Checkbox',
 } as Meta
 
-const Template: Story<CheckboxProps> = args => (
+const Template: Story<ComponentProps<typeof Checkbox>> = args => (
   <Checkbox onChange={() => {}} {...args}>
     Basic unchecked checkbox
   </Checkbox>

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import NavigationStepper, { NavigationStepperProps, Step } from '..'
+import React, { ComponentProps } from 'react'
+import NavigationStepper, { Step } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Button from '../../Button'
 
@@ -17,7 +17,7 @@ export default {
   title: 'Components/Navigation/NavigationStepper',
 } as Meta
 
-const Template: Story<NavigationStepperProps> = args => (
+const Template: Story<ComponentProps<typeof NavigationStepper>> = args => (
   <NavigationStepper {...args}>
     <NavigationStepper.Step>First</NavigationStepper.Step>
     <NavigationStepper.Step>Second</NavigationStepper.Step>

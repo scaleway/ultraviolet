@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import VolumeSize, { Sizes as SizesProps, VolumeSizeProps } from '..'
+import React, { ComponentProps } from 'react'
+import VolumeSize from '..'
 
 export default {
   component: VolumeSize,
   title: 'Components/Data Display/VolumeSize',
 } as Meta
 
-const Template: Story<VolumeSizeProps> = args => (
+const Template: Story<ComponentProps<typeof VolumeSize>> = args => (
   <VolumeSize maxSize={30} minSize={10} value={20} unit="KB" {...args} />
 )
 
@@ -44,15 +44,14 @@ MinSizeOnlyAndTooSmall.args = { minSize: 30, value: 25 }
 
 export const Sizes: Story = () => (
   <>
-    {['xsmall', 'small', 'medium', 'large', 'xlarge'].map(size => (
+    {(
+      ['xsmall', 'small', 'medium', 'large', 'xlarge'] as ComponentProps<
+        typeof VolumeSize
+      >['size'][]
+    ).map(size => (
       <div key={size} style={{ marginTop: '8px' }}>
         {size}:
-        <VolumeSize
-          minSize={30}
-          unit="KB"
-          value={30}
-          size={size as SizesProps}
-        />
+        <VolumeSize minSize={30} unit="KB" value={30} size={size} />
       </div>
     ))}
   </>

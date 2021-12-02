@@ -32,7 +32,7 @@ const cssAnimation = css`
   animation: ${flash} linear 1s infinite;
 `
 
-export type StatusIndicatorProps = XStyledProps & {
+type StatusIndicatorProps = XStyledProps & {
   animated?: boolean
   statuses?: Record<string, string>
   status?: string

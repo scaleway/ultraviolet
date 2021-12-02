@@ -5,7 +5,7 @@ import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import Typography from '../Typography'
 
-export interface StateBarStateProps {
+interface StateBarStateProps {
   children?: ReactNode
   label?: string
 }
@@ -42,7 +42,7 @@ const line = css`
   margin-top: 12px;
 `
 
-export interface StateBarBarProps {
+interface StateBarBarProps {
   unlimited?: boolean
   value?: number
   progress?: boolean

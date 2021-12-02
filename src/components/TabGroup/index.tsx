@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
+  ComponentProps,
   FunctionComponent,
   HTMLAttributes,
   KeyboardEventHandler,
@@ -14,7 +15,7 @@ import React, {
 } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Box, { BoxProps } from '../Box'
-import Tab, { TabProps } from './Tab'
+import Tab from './Tab'
 
 const StyledTabs = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ const computeBarProperties = (tabsWidth: number[], index: number) => {
   return [width, left]
 }
 
-export type TabGroupProps = {
+type TabGroupProps = {
   selected?: number | string
   onChange?: (data?: string | number) => void
 } & Omit<HTMLAttributes<HTMLElement>, 'onChange'> &
@@ -130,7 +131,7 @@ const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
         onKeyDown={navigateWithArrow}
       >
         {flattenedChildren.map((child, index) => {
-          if (isValidElement<TabProps>(child)) {
+          if (isValidElement<ComponentProps<typeof Tab>>(child)) {
             const isSelected = child.props.name
               ? child.props.name === selected
               : index === selected

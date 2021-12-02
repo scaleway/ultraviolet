@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Typography, { TypographyProps, typographyVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Typography, { typographyVariants } from '..'
 import Box from '../../Box'
 import Boxer from '../../Boxer'
 
@@ -17,7 +17,9 @@ export default {
   title: 'Components/Fondation/Typography',
 } as Meta
 
-const Template: Story<TypographyProps> = args => <Typography {...args} />
+const Template: Story<ComponentProps<typeof Typography>> = args => (
+  <Typography {...args} />
+)
 
 export const Default = Template.bind({})
 Default.args = {

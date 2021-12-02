@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import StatusIndicator, { StatusIndicatorProps } from '..'
+import React, { ComponentProps } from 'react'
+import StatusIndicator from '..'
 
 export default {
   component: StatusIndicator,
@@ -14,7 +14,7 @@ export default {
   title: 'Components/Data Display/StatusIndicator',
 } as Meta
 
-const Template: Story<StatusIndicatorProps> = args => (
+const Template: Story<ComponentProps<typeof StatusIndicator>> = args => (
   <StatusIndicator {...args} />
 )
 

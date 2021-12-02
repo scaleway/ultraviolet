@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Grid, { GridProps } from '../Grid'
+import React, { ComponentProps } from 'react'
+import Grid from '../Grid'
 import Row from '../Row'
 import ColWithBackground from './ColWithBackground'
 
@@ -17,7 +17,7 @@ export default {
   title: 'Components/Foundation/Grid',
 } as Meta
 
-const Template: Story<GridProps> = args => <Grid {...args} />
+const Template: Story<ComponentProps<typeof Grid>> = args => <Grid {...args} />
 
 export const Default = Template.bind({})
 

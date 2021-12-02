@@ -1,9 +1,13 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, InputHTMLAttributes, ReactNode } from 'react'
+import React, {
+  ComponentProps,
+  FunctionComponent,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
-import type { Sizes, Variants } from '../Badge'
 import Box, { XStyledProps } from '../Box'
 import Radio from '../Radio'
 
@@ -30,10 +34,10 @@ const StyledRadioContainer = styled.div`
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
-export type RadioBorderedBoxProps = {
-  badgeSize?: Sizes
+type RadioBorderedBoxProps = {
+  badgeSize?: ComponentProps<typeof Badge>['size']
   badgeText?: string
-  badgeVariant?: Variants
+  badgeVariant?: ComponentProps<typeof Badge>['variant']
   children: ReactNode
   label: ReactNode
   labelDescription?: string
@@ -99,7 +103,7 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-  badgeSize: PropTypes.oneOf<Sizes>(badgeSizes),
+  badgeSize: PropTypes.oneOf<ComponentProps<typeof Badge>['size']>(badgeSizes),
 
   /**
    * Add a badge next to the label
@@ -108,7 +112,8 @@ RadioBorderedBox.propTypes = {
   /**
    * See API of `Badge` component
    */
-  badgeVariant: PropTypes.oneOf<Variants>(badgeVariants),
+  badgeVariant:
+    PropTypes.oneOf<ComponentProps<typeof Badge>['variant']>(badgeVariants),
   checked: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,

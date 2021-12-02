@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import PasswordCheck, { PasswordCheckProps } from '..'
+import React, { ComponentProps } from 'react'
+import PasswordCheck from '..'
 
 export default {
   component: PasswordCheck,
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Data Entry/PasswordCheck',
 } as Meta
 
-const Template: Story<PasswordCheckProps> = args => (
+const Template: Story<ComponentProps<typeof PasswordCheck>> = args => (
   <PasswordCheck {...args} rules={[]}>
     Button
   </PasswordCheck>

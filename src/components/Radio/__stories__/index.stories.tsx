@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Radio, { RadioProps } from '..'
+import React, { ComponentProps } from 'react'
+import Radio from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -35,7 +35,9 @@ export default {
   title: 'Components/Data Entry/Radio',
 } as Meta
 
-const Template: Story<RadioProps> = args => <Radio {...args} />
+const Template: Story<ComponentProps<typeof Radio>> = args => (
+  <Radio {...args} />
+)
 
 export const Default = Template.bind({})
 

@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import CreationProgress, { CreationProgressProps, Size } from '..'
+import React, { ComponentProps } from 'react'
+import CreationProgress from '..'
 
 export default {
   component: CreationProgress,
   title: 'Components/Navigation/CreationProgress',
 } as Meta
 
-const Template: Story<CreationProgressProps> = args => (
+const Template: Story<ComponentProps<typeof CreationProgress>> = args => (
   <CreationProgress selected={0} {...args}>
     <CreationProgress.Step>Step 1</CreationProgress.Step>
     <CreationProgress.Step>Step 2</CreationProgress.Step>
@@ -72,7 +72,11 @@ Sizes.decorators = [
   () => (
     <>
       {['xsmall', 'small', 'medium', 'large', 'xlarge'].map(size => (
-        <CreationProgress size={size as Size} selected={1} isStepsNumber>
+        <CreationProgress
+          size={size as ComponentProps<typeof CreationProgress>['size']}
+          selected={1}
+          isStepsNumber
+        >
           <CreationProgress.Step>Step 1</CreationProgress.Step>
           <CreationProgress.Step>Step 2</CreationProgress.Step>
           <CreationProgress.Step>Step 3</CreationProgress.Step>

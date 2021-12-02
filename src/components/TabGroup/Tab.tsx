@@ -52,7 +52,7 @@ export const StyledTab = styled.span`
   }
 `
 
-export type TabProps = {
+type TabProps = {
   as?: ElementType | string
   children?: ReactNode
   disabled?: boolean

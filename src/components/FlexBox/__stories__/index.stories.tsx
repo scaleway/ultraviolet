@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import FlexBox, { FlexBoxProps } from '..'
+import React, { ComponentProps } from 'react'
+import FlexBox from '..'
 
 export default {
   component: FlexBox,
   title: 'Components/Foundation/FlexBox',
 } as Meta
 
-const Template: Story<FlexBoxProps> = args => (
+const Template: Story<ComponentProps<typeof FlexBox>> = args => (
   <FlexBox {...args}>I&apos;m a flexbox</FlexBox>
 )
 

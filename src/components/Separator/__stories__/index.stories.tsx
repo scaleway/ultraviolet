@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Separator, { SeparatorProps } from '..'
+import React, { ComponentProps } from 'react'
+import Separator from '..'
 import FlexBox from '../../FlexBox'
 
 export default {
@@ -15,7 +15,9 @@ export default {
   title: 'Components/Data Display/Separator',
 } as Meta
 
-const Template: Story<SeparatorProps> = args => <Separator {...args} />
+const Template: Story<ComponentProps<typeof Separator>> = args => (
+  <Separator {...args} />
+)
 
 export const Default = Template.bind({})
 
@@ -33,7 +35,7 @@ Thickness.parameters = {
   },
 }
 
-export const Direction: Story<SeparatorProps> = args => (
+export const Direction: Story<ComponentProps<typeof Separator>> = args => (
   <FlexBox inline>
     <div>left part</div>
     <Separator {...args} />
@@ -54,7 +56,7 @@ Direction.parameters = {
   },
 }
 
-export const Color: Story<SeparatorProps> = Template.bind({})
+export const Color: Story<ComponentProps<typeof Separator>> = Template.bind({})
 
 Color.args = {
   color: 'primary',
@@ -68,7 +70,7 @@ Color.parameters = {
   },
 }
 
-export const Icon: Story<SeparatorProps> = ({ icon }) => (
+export const Icon: Story<ComponentProps<typeof Separator>> = ({ icon }) => (
   <>
     <div>
       <div>horizontal start</div>

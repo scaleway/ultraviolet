@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import UnitInput, { UnitInputProps } from '..'
+import React, { ComponentProps } from 'react'
+import UnitInput from '..'
 
 export default {
   component: UnitInput,
@@ -14,7 +14,7 @@ export default {
   title: 'Components/Data Entry/UnitInput',
 } as Meta
 
-const Template: Story<UnitInputProps> = args => (
+const Template: Story<ComponentProps<typeof UnitInput>> = args => (
   <UnitInput name="test" {...args} />
 )
 

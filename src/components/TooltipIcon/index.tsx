@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
-import Icon, { IconName, icons } from '../Icon'
+import React, { ComponentProps, FunctionComponent } from 'react'
+import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
-export type TooltipIconProps = {
+type TooltipIconProps = {
   baseId?: string
   color?: string
-  name?: IconName
+  name?: ComponentProps<typeof Icon>['name']
   size?: number
   tooltip: string
   verticalAlign?: string

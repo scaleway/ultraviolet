@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import Stepper, { StepperProps, containerSizesKeys } from '..'
+import React, { ComponentProps, useState } from 'react'
+import Stepper, { containerSizesKeys } from '..'
 import Box from '../../Box'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   title: 'Components/Data Display/Stepper',
 } as Meta
 
-const Template: Story<StepperProps> = args => {
+const Template: Story<ComponentProps<typeof Stepper>> = args => {
   const [value, setValue] = useState(0)
 
   return (

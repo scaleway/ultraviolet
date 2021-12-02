@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import RadioBorderedBox, { RadioBorderedBoxProps } from '..'
+import React, { ComponentProps } from 'react'
+import RadioBorderedBox from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Data Entry/RadioBorderedBox',
 } as Meta
 
-const Template: Story<RadioBorderedBoxProps> = args => (
+const Template: Story<ComponentProps<typeof RadioBorderedBox>> = args => (
   <RadioBorderedBox
     name="choice-1"
     checked

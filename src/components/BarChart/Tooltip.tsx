@@ -20,7 +20,7 @@ const BarColorSquare = styled.span`
   margin-right: 12px;
 `
 
-export type BarChartToolTipProps = {
+type BarChartToolTipProps = {
   color: string
   indexValue: string
   formattedValue: string

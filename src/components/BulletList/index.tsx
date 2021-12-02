@@ -31,7 +31,7 @@ const StyledDiv = styled.div`
   width: 100%;
 `
 
-export interface BulletListProps {
+interface BulletListProps {
   keyPrefix?: string
   children: ReactNode
 }

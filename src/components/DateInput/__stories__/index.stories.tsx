@@ -1,9 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { useI18n } from '@scaleway/use-i18n'
 import { Meta, Story } from '@storybook/react'
 import { es, fr, ru } from 'date-fns/locale'
-import React from 'react'
-import DateInput, { DateInputProps } from '..'
+import React, { ComponentProps } from 'react'
+import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Box from '../../Box'
 import RichSelect from '../../RichSelect'
@@ -27,7 +26,9 @@ export default {
   title: 'Components/Data Entry/DateInput',
 } as Meta
 
-const Template: Story<DateInputProps> = args => <DateInput {...args} />
+const Template: Story<ComponentProps<typeof DateInput>> = args => (
+  <DateInput {...args} />
+)
 
 export const Default = Template.bind({})
 

@@ -1,8 +1,8 @@
 import { Theme, css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
-import Popper, { PopperProps } from '../Popper'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import Popper from '../Popper'
 import Item from './Item'
 
 const bottomStyles = (theme: Theme) => css`
@@ -138,12 +138,12 @@ const styles = {
 }
 
 interface ChildrenProps {
-  placement: PopperProps['placement']
+  placement: ComponentProps<typeof Popper>['placement']
   toggle: () => void
   visible: boolean
 }
 
-export type MenuProps = Omit<PopperProps, 'children'> & {
+type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
   align?: AlignStyle
   ariaLabel?: string
   placement?: ArrowPlacement

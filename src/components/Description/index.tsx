@@ -62,7 +62,7 @@ const StyledBox = styled(Box, {
     `}
 `
 
-export type DescriptionProps = {
+type DescriptionProps = {
   /**
    * Display description inline
    */

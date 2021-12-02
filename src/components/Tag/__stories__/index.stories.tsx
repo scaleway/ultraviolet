@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Tag, { TagProps } from '..'
+import React, { ComponentProps } from 'react'
+import Tag from '..'
 
 export default {
   args: {
@@ -28,6 +28,6 @@ export default {
   title: 'Components/Data Display/Tag',
 } as Meta
 
-const Template: Story<TagProps> = args => <Tag {...args} />
+const Template: Story<ComponentProps<typeof Tag>> = args => <Tag {...args} />
 
 export const Default = Template.bind({})

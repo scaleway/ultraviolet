@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Placeholder, { PlaceholderProps } from '..'
+import React, { ComponentProps } from 'react'
+import Placeholder from '..'
 
 export default {
   component: Placeholder,
@@ -15,7 +15,9 @@ export default {
   title: 'Components/Data Display/Placeholder',
 } as Meta
 
-const Template: Story<PlaceholderProps> = args => <Placeholder {...args} />
+const Template: Story<ComponentProps<typeof Placeholder>> = args => (
+  <Placeholder {...args} />
+)
 
 export const Default = Template.bind({})
 

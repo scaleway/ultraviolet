@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import Expandable, { ExpandableProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import Expandable from '..'
 import Button from '../../Button'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Expandable',
 } as Meta
 
-const Template: Story<ExpandableProps> = args => {
+const Template: Story<ComponentProps<typeof Expandable>> = args => {
   const [toggled, onToggle] = useState(false)
   const toggle = () => onToggle(state => !state)
 

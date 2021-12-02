@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import MarkDown, { MarkDownProps } from '..'
+import React, { ComponentProps } from 'react'
+import MarkDown from '..'
 import { html, simple, withMultipleParagraphs } from './markdown_example'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/MarkDown',
 } as Meta
 
-const Template: Story<MarkDownProps> = args => (
+const Template: Story<ComponentProps<typeof MarkDown>> = args => (
   <MarkDown source={simple} {...args} />
 )
 

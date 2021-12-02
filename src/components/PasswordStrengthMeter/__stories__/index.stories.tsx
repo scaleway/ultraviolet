@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import zxcvbn from 'zxcvbn'
-import PasswordStrengthMeter, { PasswordStrengthMeterProps } from '..'
+import PasswordStrengthMeter from '..'
 import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Data Entry/PasswordStrengthMeter',
 } as Meta
 
-const Template: Story<PasswordStrengthMeterProps> = args => (
+const Template: Story<ComponentProps<typeof PasswordStrengthMeter>> = args => (
   <UncontrolledPasswordStrengthMeter
     name="basic"
     estimate={zxcvbn}

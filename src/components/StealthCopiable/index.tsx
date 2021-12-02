@@ -33,7 +33,7 @@ const StyledContainer = styled.div`
   }
 `
 
-export type StealthCopiableProps = {
+type StealthCopiableProps = {
   children: ReactNode
   side?: 'left' | 'right'
   copyText?: string

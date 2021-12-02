@@ -13,7 +13,7 @@ const sizes = {
   xsmall: 0.5,
 }
 
-export type Sizes = keyof typeof sizes
+type Sizes = keyof typeof sizes
 
 type StyleProps = {
   hasError?: boolean
@@ -174,7 +174,7 @@ const getPercentUsed = ({
   return 10 + ((value - validMinSize) / (maxSize - validMinSize)) * 80
 }
 
-export type VolumeSizeProps = {
+type VolumeSizeProps = {
   /**
    * maximum label below the maxSize
    */

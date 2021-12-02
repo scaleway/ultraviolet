@@ -9,7 +9,7 @@ const StyledLabel = styled.label`
   margin-bottom: 8px;
 `
 
-export type LabelProps = LabelHTMLAttributes<HTMLLabelElement>
+type LabelProps = LabelHTMLAttributes<HTMLLabelElement>
 
 const Label: FunctionComponent<LabelProps> = props => <StyledLabel {...props} />
 

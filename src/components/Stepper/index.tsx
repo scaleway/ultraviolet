@@ -138,7 +138,7 @@ const StyledContainer = styled(Box, {
       : ''}
 `
 
-export type StepperProps = {
+type StepperProps = {
   disabled?: boolean
   maxValue?: number
   minValue?: number

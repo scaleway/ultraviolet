@@ -1,6 +1,6 @@
 import { Story } from '@storybook/react'
-import React from 'react'
-import BarStack, { BarStackProps } from '..'
+import React, { ComponentProps } from 'react'
+import BarStack from '..'
 
 const fakeData = [
   { id: '1', text: 'Hello', tooltip: 'Hello', value: 20 },
@@ -16,7 +16,9 @@ const fakeData = [
   { id: '6', text: 'Bye bye', tooltip: 'Bye bye', value: 42 },
 ]
 
-const Template: Story<BarStackProps> = args => <BarStack {...args} />
+const Template: Story<ComponentProps<typeof BarStack>> = args => (
+  <BarStack {...args} />
+)
 
 export const Basic = Template.bind({})
 

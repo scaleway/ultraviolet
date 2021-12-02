@@ -206,7 +206,7 @@ Input.propTypes = {
   value: PropTypes.number,
 }
 
-export type RangeProps = {
+type RangeProps = {
   cursorWidth?: number
   halfCursorWidth?: number
   limitOffset?: number

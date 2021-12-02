@@ -11,7 +11,7 @@ import {
 } from 'reakit/Tooltip'
 import Box, { XStyledProps } from '../Box'
 
-export type TooltipPlacement =
+type TooltipPlacement =
   | 'auto-start'
   | 'auto'
   | 'auto-end'
@@ -79,7 +79,7 @@ const StyledTooltip = styled(Box, {
   ${variantStyles}
 `
 
-export type TooltipProps = {
+type TooltipProps = {
   animated?: number | boolean
   baseId?: string
   children: ReactNode

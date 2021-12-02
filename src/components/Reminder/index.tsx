@@ -77,7 +77,7 @@ const Notification = styled(Box, {
   }
 `
 
-export type ReminderProps = {
+type ReminderProps = {
   bordered?: boolean
   text: string
   to?: string

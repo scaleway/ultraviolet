@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Sphere, { SphereProps } from '..'
+import React, { ComponentProps } from 'react'
+import Sphere from '..'
 
 export default {
   component: Sphere,
@@ -14,7 +14,9 @@ export default {
   title: 'Components/Data Display/Sphere',
 } as Meta
 
-const Template: Story<SphereProps> = args => <Sphere {...args} />
+const Template: Story<ComponentProps<typeof Sphere>> = args => (
+  <Sphere {...args} />
+)
 
 export const Default = Template.bind({})
 export const Halved = Template.bind({})

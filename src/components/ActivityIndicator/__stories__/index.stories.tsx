@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ActivityIndicator, { ActivityIndicatorProps } from '..'
+import React, { ComponentProps } from 'react'
+import ActivityIndicator from '..'
 import { colorsDeprecated } from '../../../theme'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   title: 'Components/Feedback/ActivityIndicator',
 } as Meta
 
-const Template: Story<ActivityIndicatorProps> = args => (
+const Template: Story<ComponentProps<typeof ActivityIndicator>> = args => (
   <ActivityIndicator {...args} />
 )
 

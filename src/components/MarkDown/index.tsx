@@ -86,7 +86,7 @@ const rootRenderer =
       />
     )
 
-export type MarkDownProps = {
+type MarkDownProps = {
   source: string
   linkTarget?: string
   escapeHtml?: boolean

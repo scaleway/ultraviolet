@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Breadcrumbs, { BreadcrumbsProps, Item, breadcrumbsVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Breadcrumbs, { Item, breadcrumbsVariants } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -9,7 +9,7 @@ export default {
   title: 'Components/Navigation/Breadcrumbs',
 } as Meta
 
-const Template: Story<BreadcrumbsProps> = args => (
+const Template: Story<ComponentProps<typeof Breadcrumbs>> = args => (
   <Breadcrumbs {...args}>
     <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
     <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>

@@ -3,7 +3,7 @@ import { darken, lighten, transparentize } from 'polished'
 import React, { MouseEventHandler, ReactNode, useMemo } from 'react'
 import Tooltip from '../Tooltip'
 
-export type BarProps = {
+type BarProps = {
   /**
    * Unique id of the bar
    */
@@ -28,7 +28,7 @@ export type BarProps = {
   tooltip?: ReactNode
 }
 
-export interface BarStackProps {
+interface BarStackProps {
   data: Array<BarProps>
   total?: number
 }

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useEffect, useState } from 'react'
-import RichSelect, { RichSelectProps } from '..'
+import React, { ComponentProps, useEffect, useState } from 'react'
+import RichSelect from '..'
 import { ActivityIndicator, Badge, Box, Button, FlexBox } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
@@ -25,7 +25,7 @@ export default {
   title: 'Components/Data Entry/RichSelect',
 } as Meta
 
-const Template: Story<RichSelectProps> = args => (
+const Template: Story<ComponentProps<typeof RichSelect>> = args => (
   <RichSelect name="basic" value={{ label: 'Option A', value: 'a' }} {...args}>
     <RichSelect.Option value="a">Option A</RichSelect.Option>
     <RichSelect.Option value="b">Option B</RichSelect.Option>

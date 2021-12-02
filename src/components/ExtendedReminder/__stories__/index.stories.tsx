@@ -1,10 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ExtendedReminder, {
-  ExtendedReminderProps,
-  Variants as VariantsType,
-  variants,
-} from '..'
+import React, { ComponentProps } from 'react'
+import ExtendedReminder, { variants } from '..'
 
 export default {
   component: ExtendedReminder,
@@ -19,7 +15,7 @@ export default {
   title: 'Components/Feeback/ExtendedReminder',
 } as Meta
 
-const Template: Story<ExtendedReminderProps> = args => (
+const Template: Story<ComponentProps<typeof ExtendedReminder>> = args => (
   <ExtendedReminder {...args} />
 )
 
@@ -31,15 +27,20 @@ Variants.parameters = {
     storyDescription: 'By using `variant` prop you can cusomize the component.',
   },
 }
+
 Variants.decorators = [
   () => (
     <>
-      {(Object.keys(variants) as VariantsType[]).map(variant => (
+      {(
+        Object.keys(variants) as ComponentProps<
+          typeof ExtendedReminder
+        >['variant'][]
+      ).map(variant => (
         <ExtendedReminder
           key={variant}
           variant={variant}
           icon="alert"
-          badgeText={`${variant} variant`}
+          badgeText={`${variant as string} variant`}
           mb={4}
           title="Reminder title"
           text="Reminder text"

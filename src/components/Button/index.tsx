@@ -4,6 +4,7 @@ import { darken, transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ButtonHTMLAttributes,
+  ComponentProps,
   ElementType,
   FocusEventHandler,
   FunctionComponent,
@@ -18,7 +19,7 @@ import React, {
 import { Color } from '../../theme/colors'
 import ActivityIndicator from '../ActivityIndicator'
 import Box, { XStyledProps } from '../Box'
-import Icon, { IconName } from '../Icon'
+import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
 
@@ -225,7 +226,11 @@ const SmartIcon: VoidFunctionComponent<{
   icon: ReactNode | string
   iconSize?: number
 }> = ({ icon, iconSize }) =>
-  isValidElement(icon) ? icon : <Icon name={icon as IconName} size={iconSize} />
+  isValidElement(icon) ? (
+    icon
+  ) : (
+    <Icon name={icon as ComponentProps<typeof Icon>['name']} size={iconSize} />
+  )
 
 SmartIcon.propTypes = {
   icon: PropTypes.node.isRequired,
@@ -353,7 +358,7 @@ const StyledButton = styled(Box, {
     `}
 `
 
-export type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
+type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
   children?: ReactNode
   variant?: ButtonVariant
   innerRef: Ref<Element>

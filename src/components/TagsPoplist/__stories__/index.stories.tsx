@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import TagsPoplist, { TagsPoplistProps } from '..'
+import React, { ComponentProps } from 'react'
+import TagsPoplist from '..'
 
 export default {
   component: TagsPoplist,
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Data Display/TagsPopList',
 } as Meta
 
-const Template: Story<TagsPoplistProps> = args => (
+const Template: Story<ComponentProps<typeof TagsPoplist>> = args => (
   <TagsPoplist tags={['smooth', 'code']} {...args} />
 )
 
