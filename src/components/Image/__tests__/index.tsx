@@ -4,5 +4,5 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Image', () => {
   test(`render correctly`, () =>
-    shouldMatchEmotionSnapshot(<Image src="//toto.png" />))
+    shouldMatchEmotionSnapshot(<Image src="//toto.png" alt="" />))
 })
