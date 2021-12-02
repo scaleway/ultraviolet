@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const shineAnimation = keyframes`
   from {
@@ -61,12 +61,12 @@ const StyledFilled = styled('div', {
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `
 
-export interface ProgressBarProps {
+export type ProgressBarProps = {
   variant?: string
   backgroundColor?: string
   value?: number
   progress?: boolean
-}
+} & BoxProps
 
 const ProgressBar: VoidFunctionComponent<ProgressBarProps> = ({
   backgroundColor = 'gray300',

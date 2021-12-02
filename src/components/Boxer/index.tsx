@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types'
-import React, { Children, FunctionComponent } from 'react'
-import Box from '../Box'
+import React, { Children, ReactNode } from 'react'
+import Box, { BoxProps } from '../Box'
 
-const Boxer: FunctionComponent = ({ children, ...props }) => (
+type BoxerProps = BoxProps & {
+  children: ReactNode
+}
+
+const Boxer = ({ children, ...props }: BoxerProps): JSX.Element => (
   <>
     {Children.map(children, child => (
       <Box {...props}>{child}</Box>

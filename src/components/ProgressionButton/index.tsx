@@ -4,7 +4,7 @@ import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Color } from '../../theme/colors'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const progressionAnimation = keyframes`
   from {
@@ -67,7 +67,7 @@ export type ProgressionButtonProps = Partial<
   color?: string
   creation?: string | Date
   duration?: number
-}
+} & BoxProps
 
 const ProgressionButton: FunctionComponent<ProgressionButtonProps> = ({
   children,
