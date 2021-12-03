@@ -9,21 +9,21 @@ import Icon, { IconName, icons } from '../Icon'
 import Typography from '../Typography'
 
 export const variants = {
-  error: ({ colors }: Theme) => ({
-    background: colors.pippin,
-    main: colors.red,
+  error: ({ colorsDeprecated }: Theme) => ({
+    background: colorsDeprecated.pippin,
+    main: colorsDeprecated.red,
   }),
-  info: ({ colors }: Theme) => ({
-    background: colors.zumthor,
-    main: colors.blue,
+  info: ({ colorsDeprecated }: Theme) => ({
+    background: colorsDeprecated.zumthor,
+    main: colorsDeprecated.blue,
   }),
-  success: ({ colors }: Theme) => ({
-    background: colors.foam,
-    main: colors.gray700,
+  success: ({ colorsDeprecated }: Theme) => ({
+    background: colorsDeprecated.foam,
+    main: colorsDeprecated.gray700,
   }),
-  warning: ({ colors }: Theme) => ({
-    background: colors.serenade,
-    main: colors.orange,
+  warning: ({ colorsDeprecated }: Theme) => ({
+    background: colorsDeprecated.serenade,
+    main: colorsDeprecated.orange,
   }),
 }
 
@@ -59,8 +59,9 @@ const StyledTitle = styled(Typography, {
 
 const StyledButtonLink = styled(Button)`
   margin-top: auto;
-  color: ${({ theme: { colors } }) => colors.blue};
-  background-color: ${({ theme: { colors } }) => colors.transparent};
+  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.blue};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.transparent};
   padding: 0;
   width: transparent;
   display: flex;
@@ -124,7 +125,12 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
     <StyledContainer variant={variant} {...props}>
       <StyledBadgeContainer>
         <Badge size="small" variant={badgeVariant[variant]}>
-          <Icon mr="4px" color={theme.colors.white} name={icon} size={16} />
+          <Icon
+            mr="4px"
+            color={theme.colorsDeprecated.white}
+            name={icon}
+            size={16}
+          />
           {badgeText}
         </Badge>
       </StyledBadgeContainer>

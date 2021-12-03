@@ -25,13 +25,15 @@ const StyledRow = styled(Box, {
   align-items: center;
   flex-wrap: wrap;
 
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
 
   color: ${({ selected, highlighted, theme }) =>
-    selected && highlighted ? theme.colors.primary : theme.colors.gray700};
+    selected && highlighted
+      ? theme.colorsDeprecated.primary
+      : theme.colorsDeprecated.gray700};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colorsDeprecated.primary};
   }
 
   ${Cell} {
@@ -52,11 +54,11 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
 
   ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colors.gray550};
+    color: ${({ theme }) => theme.colorsDeprecated.gray550};
     padding: 4px 8px !important;
 
     &[disabled] {
@@ -74,7 +76,8 @@ const StyledCheckbox = styled(Checkbox)`
 `
 
 const StyledSpan = styled.span<{ color?: Color }>`
-  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+  ${({ theme, color }) =>
+    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
 `
 
 export const Header: VoidFunctionComponent = () => {

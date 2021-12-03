@@ -64,7 +64,7 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
   margin = { bottom: 10, left: 10, right: 10, top: 10 },
   chartProps = {},
 }) => {
-  const { colors } = useTheme()
+  const { colorsDeprecated } = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data?.length === 0
@@ -108,7 +108,7 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
               ? data
               : [
                   {
-                    color: colors.gray300,
+                    color: colorsDeprecated.gray300,
                     id: 'empty',
                     percent: 100,
                   },
@@ -117,7 +117,7 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
           defs={[
             {
               background: 'inherit',
-              color: colors.white,
+              color: colorsDeprecated.white,
               id: 'lines',
               lineWidth: 2,
               rotation: 0,

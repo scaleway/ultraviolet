@@ -21,20 +21,20 @@ const typesColors = (
   theme: Theme,
 ): Record<AlertType, { primary: string; secondary: string }> => ({
   beta: {
-    primary: theme.colors.beta,
-    secondary: theme.colors.serenade,
+    primary: theme.colorsDeprecated.beta,
+    secondary: theme.colorsDeprecated.serenade,
   },
   info: {
-    primary: theme.colors.info,
-    secondary: theme.colors.zumthor,
+    primary: theme.colorsDeprecated.info,
+    secondary: theme.colorsDeprecated.zumthor,
   },
   success: {
-    primary: theme.colors.success,
-    secondary: theme.colors.foam,
+    primary: theme.colorsDeprecated.success,
+    secondary: theme.colorsDeprecated.foam,
   },
   warning: {
-    primary: theme.colors.warning,
-    secondary: theme.colors.pippin,
+    primary: theme.colorsDeprecated.warning,
+    secondary: theme.colorsDeprecated.pippin,
   },
 })
 
@@ -45,13 +45,15 @@ const variants = ({
   theme: Theme
   type: AlertType
 }): Record<AlertVariant, SerializedStyles> => {
-  const primary = typesColors(theme)[type]?.primary || theme.colors.warning
-  const secondary = typesColors(theme)[type]?.secondary || theme.colors.pippin
+  const primary =
+    typesColors(theme)[type]?.primary || theme.colorsDeprecated.warning
+  const secondary =
+    typesColors(theme)[type]?.secondary || theme.colorsDeprecated.pippin
 
   return {
     filled: css`
       background-color: ${primary};
-      color: ${theme.colors.white};
+      color: ${theme.colorsDeprecated.white};
     `,
     outlined: css`
       border: 1px solid ${primary};

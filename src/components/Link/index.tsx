@@ -11,10 +11,10 @@ const generateVariant =
   (color: Color | string) =>
   ({ theme }: { theme: Theme }) =>
     css`
-      color: ${theme.colors[color as Color] ?? color};
+      color: ${theme.colorsDeprecated[color as Color] ?? color};
       &:hover,
       &:focus {
-        color: ${darken(0.2, theme.colors[color as Color] ?? color)};
+        color: ${darken(0.2, theme.colorsDeprecated[color as Color] ?? color)};
       }
     `
 
@@ -31,10 +31,10 @@ const variants = {
     }
   `,
   primary: ({ theme }: { theme: Theme }) => css`
-    color: ${theme.colors.primary};
+    color: ${theme.colorsDeprecated.primary};
     &:hover,
     &:focus {
-      color: ${theme.colors.primary};
+      color: ${theme.colorsDeprecated.primary};
     }
   `,
   white: generateVariant('white'),

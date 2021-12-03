@@ -33,9 +33,9 @@ const disabledStyles = ({
 }) =>
   disabled &&
   `
-    background-color: ${theme.colors.gray100};
+    background-color: ${theme.colorsDeprecated.gray100};
     border: none;
-    color: ${theme.colors.gray550};
+    color: ${theme.colorsDeprecated.gray550};
     opacity: 1;
     cursor: not-allowed;
   `
@@ -70,11 +70,12 @@ const StyledTouchable = styled(Touchable, {
   width: ${({ size }) => containerSizes[size] - 10}px;
 
   > ${StyledIcon} {
-    fill: ${({ disabled, theme }) => !disabled && theme.colors.primary};
+    fill: ${({ disabled, theme }) =>
+      !disabled && theme.colorsDeprecated.primary};
   }
 
   :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colors.gray200};
+    background: ${({ theme }) => theme.colorsDeprecated.gray200};
   }
 
   margin: 0 4px;
@@ -90,18 +91,18 @@ const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
   border-radius: 4px;
   border: 1px solid transparent;
   :hover:not([disabled], :focus) {
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
   }
   :focus-within:not([disabled]) {
     box-shadow: 0 0 2px 2px
-      ${({ theme }) => transparentize(0.7, theme.colors.primary)};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+      ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.primary)};
+    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
   }
   max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
 `
 
 const StyledInput = styled.input`
-  color: ${({ theme }) => theme.colors.gray700};
+  color: ${({ theme }) => theme.colorsDeprecated.gray700};
   background-color: transparent;
   font-size: 16;
   border: none;
@@ -118,14 +119,14 @@ const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.gray100 : theme.colors.white};
+    disabled ? theme.colorsDeprecated.gray100 : theme.colorsDeprecated.white};
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: stretch;
   font-weight: 500;
   height: ${({ size }) => containerSizes[size]}px;
-  border: 1px solid ${({ theme }) => theme.colors.gray300};
+  border: 1px solid ${({ theme }) => theme.colorsDeprecated.gray300};
   border-radius: 4px;
   ${({ disabled, theme }) =>
     disabled

@@ -11,8 +11,8 @@ const StyledDot = styled(Box, {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: ${({ theme: { colors }, color }) =>
-    colors[color as Color] ?? color};
+  background-color: ${({ theme: { colorsDeprecated }, color }) =>
+    colorsDeprecated[color as Color] ?? color};
 `
 
 export type DotProps = {

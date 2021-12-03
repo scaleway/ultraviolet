@@ -54,14 +54,14 @@ const LineChart: FunctionComponent<LineChartProps> = ({
     axis: {
       ticks: {
         line: {
-          stroke: theme.colors.gray300,
+          stroke: theme.colorsDeprecated.gray300,
           strokeWidth: 1,
         },
       },
     },
     fontFamily: theme.fonts.sansSerif,
     fontSize: 12,
-    textColor: theme.colors.gray550,
+    textColor: theme.colorsDeprecated.gray550,
   }
 
   const [selected, setState] = useState(

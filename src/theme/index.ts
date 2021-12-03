@@ -1,5 +1,5 @@
 /* eslint-disable sort-keys */
-import colors from './colors'
+import colorsDeprecated from './colors'
 
 const radii = {
   none: '0',
@@ -40,7 +40,7 @@ const fonts = {
 } as const
 
 const theme = {
-  colors,
+  colorsDeprecated,
   fonts,
   space,
   screens,
@@ -53,4 +53,4 @@ type SCWUITheme = typeof theme & {
 
 export default theme
 
-export { colors, space, radii, fonts, screens, SCWUITheme }
+export { colorsDeprecated, space, radii, fonts, screens, SCWUITheme }

@@ -7,7 +7,7 @@ import Line from './Line'
 const styles = {
   circle: (theme: Theme) => css`
     transform-origin: 50% 50%;
-    stroke: ${theme.colors.gray300};
+    stroke: ${theme.colorsDeprecated.gray300};
     stroke-width: 18;
     stroke-linecap: butt;
     fill: none;

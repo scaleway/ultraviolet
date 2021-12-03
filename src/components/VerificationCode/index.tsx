@@ -11,10 +11,10 @@ import React, {
 const StyledInput = styled.input`
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
-      error ? theme.colors.red : theme.colors.gray300};
+      error ? theme.colorsDeprecated.red : theme.colorsDeprecated.gray300};
   font-size: 24px;
   color: ${({ 'aria-invalid': error, theme }) =>
-    error ? theme.colors.red : theme.colors.gray700};
+    error ? theme.colorsDeprecated.red : theme.colorsDeprecated.gray700};
   text-align: center;
   border-radius: 4px;
   margin-right: 8px;
@@ -26,7 +26,7 @@ const StyledInput = styled.input`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.gray300};
+    color: ${({ theme }) => theme.colorsDeprecated.gray300};
   }
 `
 

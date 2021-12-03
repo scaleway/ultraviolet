@@ -51,10 +51,10 @@ type SelectStyleGetterProps = {
 }
 
 const getControlColor = ({ state, error, theme }: SelectStyleGetterProps) => {
-  if (state.isDisabled) return theme.colors.gray300
-  if (error) return theme.colors.warning
+  if (state.isDisabled) return theme.colorsDeprecated.gray300
+  if (error) return theme.colorsDeprecated.warning
 
-  return theme.colors.gray700
+  return theme.colorsDeprecated.gray700
 }
 
 const getPlaceholderColor = ({
@@ -62,23 +62,23 @@ const getPlaceholderColor = ({
   error,
   theme,
 }: SelectStyleGetterProps) => {
-  if (state.isDisabled) return theme.colors.gray300
-  if (error) return theme.colors.warning
+  if (state.isDisabled) return theme.colorsDeprecated.gray300
+  if (error) return theme.colorsDeprecated.warning
 
-  return theme.colors.gray550
+  return theme.colorsDeprecated.gray550
 }
 
 const getOptionColor = ({ state, theme }: SelectStyleGetterProps) => {
-  let color: string = theme.colors.gray700
-  let backgroundColor: string = theme.colors.white
+  let color: string = theme.colorsDeprecated.gray700
+  let backgroundColor: string = theme.colorsDeprecated.white
   if (state.isDisabled) {
-    backgroundColor = theme.colors.gray50
-    color = theme.colors.gray300
+    backgroundColor = theme.colorsDeprecated.gray50
+    color = theme.colorsDeprecated.gray300
   } else if (state.isSelected) {
-    backgroundColor = theme.colors.primary
-    color = theme.colors.white
+    backgroundColor = theme.colorsDeprecated.primary
+    color = theme.colorsDeprecated.white
   } else if (state.isFocused) {
-    backgroundColor = theme.colors.gray200
+    backgroundColor = theme.colorsDeprecated.gray200
   }
 
   return { backgroundColor, color }
@@ -113,9 +113,11 @@ const getSelectStyles = ({
   control: (provided, state) => ({
     ...provided,
     backgroundColor: state.isDisabled
-      ? theme.colors.gray50
-      : theme.colors.white,
-    borderColor: error ? theme.colors.warning : theme.colors.gray300,
+      ? theme.colorsDeprecated.gray50
+      : theme.colorsDeprecated.white,
+    borderColor: error
+      ? theme.colorsDeprecated.warning
+      : theme.colorsDeprecated.gray300,
     borderRadius: '4px',
     borderStyle: state.isDisabled ? 'none' : 'solid',
     borderWidth: state.isDisabled ? 0 : '1px',
@@ -129,19 +131,29 @@ const getSelectStyles = ({
 
     ...(!state.isDisabled && {
       ':focus-within': {
-        borderColor: error ? theme.colors.warning : theme.colors.primary,
+        borderColor: error
+          ? theme.colorsDeprecated.warning
+          : theme.colorsDeprecated.primary,
         boxShadow: `0 0 2px 2px ${transparentize(
           0.75,
-          error ? theme.colors.warning : theme.colors.primary,
+          error
+            ? theme.colorsDeprecated.warning
+            : theme.colorsDeprecated.primary,
         )}`,
         svg: {
-          fill: error ? theme.colors.warning : theme.colors.primary,
+          fill: error
+            ? theme.colorsDeprecated.warning
+            : theme.colorsDeprecated.primary,
         },
       },
       ':hover': {
-        borderColor: error ? theme.colors.warning : theme.colors.primary,
+        borderColor: error
+          ? theme.colorsDeprecated.warning
+          : theme.colorsDeprecated.primary,
         svg: {
-          fill: error ? theme.colors.warning : theme.colors.primary,
+          fill: error
+            ? theme.colorsDeprecated.warning
+            : theme.colorsDeprecated.primary,
         },
       },
     }),
@@ -160,7 +172,7 @@ const getSelectStyles = ({
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colors.gray200,
+    backgroundColor: theme.colorsDeprecated.gray200,
     display: state.selectProps?.time ? 'flex' : 'none',
     ...(customStyle(state)?.indicatorSeparator || {}),
   }),
@@ -175,12 +187,12 @@ const getSelectStyles = ({
     ...(customStyle(state)?.menu || {}),
     boxShadow: `0 0 0 1px ${transparentize(
       0.9,
-      theme.colors.black,
-    )}, 0 4px 11px ${transparentize(0.9, theme.colors.black)}`,
+      theme.colorsDeprecated.black,
+    )}, 0 4px 11px ${transparentize(0.9, theme.colorsDeprecated.black)}`,
   }),
   menuList: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colorsDeprecated.white,
     maxHeight: '225px',
     ...(customStyle(state)?.menuList || {}),
   }),
@@ -192,9 +204,9 @@ const getSelectStyles = ({
   multiValue: (provided, state) => ({
     ...provided,
     alignItems: 'center',
-    backgroundColor: theme.colors.gray100,
+    backgroundColor: theme.colorsDeprecated.gray100,
     borderRadius: '4px',
-    color: theme.colors.gray700,
+    color: theme.colorsDeprecated.gray700,
     fontSize: '14px',
     fontWeight: 500,
     height: '24px',
@@ -205,7 +217,9 @@ const getSelectStyles = ({
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
-    color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
+    color: state.isDisabled
+      ? theme.colorsDeprecated.gray300
+      : theme.colorsDeprecated.gray700,
     fontSize: '14px',
     fontWeight: 'normal',
     lineHeight: '20px',
@@ -215,15 +229,17 @@ const getSelectStyles = ({
     ...provided,
     ...(state.isDisabled
       ? {
-          color: theme.colors.gray300,
+          color: theme.colorsDeprecated.gray300,
           cursor: 'none',
           pointerEvents: 'none',
         }
       : {
-          color: theme.colors.gray550,
+          color: theme.colorsDeprecated.gray550,
         }),
     ':hover': {
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.primary,
+      color: state.isDisabled
+        ? theme.colorsDeprecated.gray300
+        : theme.colorsDeprecated.primary,
       cursor: state.isDisabled ? 'none' : 'pointer',
       pointerEvents: state.isDisabled ? 'none' : 'fill',
     },
@@ -234,15 +250,19 @@ const getSelectStyles = ({
     ...getOptionColor({ state, theme }),
     ':active': {
       backgroundColor: state.isDisabled
-        ? theme.colors.gray50
-        : theme.colors.gray200,
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
+        ? theme.colorsDeprecated.gray50
+        : theme.colorsDeprecated.gray200,
+      color: state.isDisabled
+        ? theme.colorsDeprecated.gray300
+        : theme.colorsDeprecated.gray700,
     },
     ':hover': {
       backgroundColor: state.isDisabled
-        ? theme.colors.gray50
-        : theme.colors.gray200,
-      color: state.isDisabled ? theme.colors.gray300 : theme.colors.gray700,
+        ? theme.colorsDeprecated.gray50
+        : theme.colorsDeprecated.gray200,
+      color: state.isDisabled
+        ? theme.colorsDeprecated.gray300
+        : theme.colorsDeprecated.gray700,
     },
     ...(customStyle(state)?.option || {}),
   }),
@@ -253,7 +273,9 @@ const getSelectStyles = ({
   }),
   singleValue: (provided, state) => ({
     ...provided,
-    color: state.isDisabled ? theme.colors.gray550 : theme.colors.gray700,
+    color: state.isDisabled
+      ? theme.colorsDeprecated.gray550
+      : theme.colorsDeprecated.gray700,
     marginLeft: state.hasValue ? 0 : undefined,
     marginRight: state.hasValue ? 0 : undefined,
     marginTop: !state.hasValue || noTopLabel ? 0 : '5px',
@@ -304,7 +326,7 @@ const StyledContainer = styled(Box, {
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.warning};
+  color: ${({ theme }) => theme.colorsDeprecated.warning};
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
@@ -416,7 +438,7 @@ const StyledPlaceholder = styled(Box, {
   left: 0;
   font-weight: 400;
   pointer-events: none;
-  color: ${({ theme }) => theme.colors.gray550};
+  color: ${({ theme }) => theme.colorsDeprecated.gray550};
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -424,7 +446,7 @@ const StyledPlaceholder = styled(Box, {
   transition: transform 250ms ease;
   opacity: 0;
 
-  ${({ error, theme }) => error && `color: ${theme.colors.warning};`}
+  ${({ error, theme }) => error && `color: ${theme.colorsDeprecated.warning};`}
   ${({ hasValue }) =>
     hasValue &&
     `

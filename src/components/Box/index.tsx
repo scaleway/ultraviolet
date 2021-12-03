@@ -65,7 +65,7 @@ export interface XStyledProps {
 const borderedStyles = ({ theme }: { theme: Theme }) => css`
   padding: ${theme.space['3']};
   border-radius: ${theme.radii.default};
-  border: 1px solid ${theme.colors.gray350};
+  border: 1px solid ${theme.colorsDeprecated.gray350};
 `
 
 const StyledBox = styled(x.div, {

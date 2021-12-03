@@ -32,10 +32,10 @@ const getBorderColor = ({
   selected?: boolean
   theme: Theme
 }) => {
-  if (alert) return theme.colors.orange
-  if (selected || highlighted) return theme.colors.primary
+  if (alert) return theme.colorsDeprecated.orange
+  if (selected || highlighted) return theme.colorsDeprecated.primary
 
-  return theme.colors.gray350
+  return theme.colorsDeprecated.gray350
 }
 
 const fadeInAnimation = keyframes`
@@ -56,7 +56,7 @@ const StyledExpendableContainer = styled('div', {
   flex: 0 0 100%;
 
   [data-expandable] {
-    border-top: 1px solid ${({ theme }) => theme.colors.gray200};
+    border-top: 1px solid ${({ theme }) => theme.colorsDeprecated.gray200};
     padding: 16px 16px 8px ${({ multiselect }) => (multiselect ? 48 : 16)}px;
     margin-top: 8px;
 
@@ -105,16 +105,20 @@ const StyledRow = styled('details', {
   padding: 8px 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ alert, theme }) =>
-    alert ? theme.colors.pippin : `initial`};
+    alert ? theme.colorsDeprecated.pippin : `initial`};
 
   cursor: ${({ openable }) => (openable ? 'pointer' : 'auto')};
-  color: ${({ alert, theme }) => (alert ? theme.colors.orange : 'inherit')};
+  color: ${({ alert, theme }) =>
+    alert ? theme.colorsDeprecated.orange : 'inherit'};
 
   ${({ highlighted, isHoverable, theme }) =>
     isHoverable
       ? `&:hover${highlighted ? ', &' : ''} {
-        border-color: ${theme.colors.primary};
-        box-shadow: 0 2px 14px 8px ${transparentize(0.5, theme.colors.gray200)};
+        border-color: ${theme.colorsDeprecated.primary};
+        box-shadow: 0 2px 14px 8px ${transparentize(
+          0.5,
+          theme.colorsDeprecated.gray200,
+        )};
       }`
       : ''}
 
@@ -159,7 +163,7 @@ const StyledHeader = styled('div', {
 
   > ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colors.gray550};
+    color: ${({ theme }) => theme.colorsDeprecated.gray550};
     height: 40px;
 
     padding: 0 8px;
@@ -192,7 +196,8 @@ const StyledSummary = styled.summary`
 const StyledSpan = styled.span<{ color?: Color }>`
   text-overflow: ellipsis;
   overflow: hidden;
-  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+  ${({ theme, color }) =>
+    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
 `
 
 export const Header: FunctionComponent = props => {

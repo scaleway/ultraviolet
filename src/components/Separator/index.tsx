@@ -39,7 +39,7 @@ const StyledHr = styled(Box.withComponent('hr'), {
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
   background-color: ${({ theme, color }) =>
-    theme.colors[color as Color] ?? color};
+    theme.colorsDeprecated[color as Color] ?? color};
   ${({ flex }) => flex && `flex: ${flex};`}
 `
 

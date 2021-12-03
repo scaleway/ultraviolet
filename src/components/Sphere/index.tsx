@@ -16,7 +16,7 @@ const bordersStyles = ({
 }) => {
   const isHalved = bgColors.length > 1
   const finalColors = bgColors?.map(
-    bgColor => theme.colors[bgColor as Color] ?? bgColor,
+    bgColor => theme.colorsDeprecated[bgColor as Color] ?? bgColor,
   )
 
   return css`
@@ -44,7 +44,8 @@ const StyledSphere = styled(Box, {
 const StyledTextSphere = styled('div', {
   shouldForwardProp: prop => !['color', 'fontSize'].includes(prop.toString()),
 })<{ color: string; fontSize?: number }>`
-  color: ${({ theme, color }) => theme.colors[color as Color] ?? color};
+  color: ${({ theme, color }) =>
+    theme.colorsDeprecated[color as Color] ?? color};
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 

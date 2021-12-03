@@ -196,7 +196,8 @@ const StyledDialogBackdrop = styled(DialogBackdrop)`
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: ${({ theme }) => transparentize(0.8, theme.colors.gray700)};
+  background-color: ${({ theme }) =>
+    transparentize(0.8, theme.colorsDeprecated.gray700)};
   ${({ animated }) => animated && backdropAnimatedStyle}
 `
 
@@ -214,7 +215,7 @@ const StyledDialog = styled(Dialog, {
       props.toString(),
     ),
 })<StyledDialogProps>`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colorsDeprecated.white};
   position: relative;
   border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
   border: 0;
@@ -223,7 +224,7 @@ const StyledDialog = styled(Dialog, {
   width: ${({ width }) => MODAL_WIDTH[width]}px;
   min-height: ${({ height }) => height};
   box-shadow: 0 0 12px 18px
-    ${({ theme }) => transparentize(0.8, theme.colors.shadow)};
+    ${({ theme }) => transparentize(0.8, theme.colorsDeprecated.shadow)};
   opacity: 1;
   &::before {
     content: '';

@@ -23,7 +23,7 @@ const StyledBeforeScroll = styled.span`
   background: linear-gradient(
     -90deg,
     rgba(255, 255, 255, 0),
-    ${({ theme }) => theme.colors.white}
+    ${({ theme }) => theme.colorsDeprecated.white}
   );
   cursor: w-resize;
   z-index: auto;
@@ -53,7 +53,7 @@ const StyledAfterScroll = styled.span`
   z-index: auto;
   background: linear-gradient(
     -90deg,
-    ${({ theme }) => theme.colors.white},
+    ${({ theme }) => theme.colorsDeprecated.white},
     rgba(255, 255, 255, 0)
   );
 `
@@ -61,7 +61,7 @@ const StyledAfterScroll = styled.span`
 const StyledBorderWrapper = styled(Box)`
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid ${({ theme }) => theme.colors.gray350};
+  border: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
   height: 261px;
   width: 248px;
   max-width: 240px;
@@ -72,9 +72,10 @@ const StyledBorderWrapper = styled(Box)`
   &:hover,
   &:active,
   &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
     transition: box-shadow 0.2s ease;
-    box-shadow: 2px 2px 14px 8px ${({ theme }) => theme.colors.gray200};
+    box-shadow: 2px 2px 14px 8px
+      ${({ theme }) => theme.colorsDeprecated.gray200};
   }
 
   img {

@@ -80,18 +80,18 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
           size={size}
           styles={{
             path: {
-              stroke: theme.colors[color as Color] || color,
+              stroke: theme.colorsDeprecated[color as Color] || color,
               strokeLinecap: 'round',
             },
             root: {},
             text: {
               dominantBaseline: 'middle',
-              fill: theme.colors.primary,
+              fill: theme.colorsDeprecated.primary,
               fontSize: '26px',
               textAnchor: 'middle',
             },
             trail: {
-              stroke: theme.colors[trailColor as Color] || trailColor,
+              stroke: theme.colorsDeprecated[trailColor as Color] || trailColor,
               strokeLinecap: 'round',
             },
           }}

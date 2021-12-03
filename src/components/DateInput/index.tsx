@@ -36,11 +36,13 @@ const StyledWrapper = styled.div`
   }
   .calendar {
     font-family: 'Asap';
-    border-color: ${({ theme: { colors } }) => colors.gray300};
+    border-color: ${({ theme: { colorsDeprecated } }) =>
+      colorsDeprecated.gray300};
 
     ${PREFIX}__header {
-      color: ${({ theme: { colors } }) => colors.gray700};
-      background-color: ${({ theme: { colors } }) => colors.white};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
+      background-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.white};
       border-bottom: none;
       text-align: inherit;
       display: block;
@@ -49,7 +51,8 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__triangle {
-      border-bottom-color: ${({ theme: { colors } }) => colors.white};
+      border-bottom-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.white};
     }
     ${PREFIX}__month {
       margin: 0;
@@ -61,7 +64,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day-name {
       font-family: 'Asap';
-      color: ${({ theme: { colors } }) => colors.gray700};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
       font-weight: 500;
       font-size: 14px;
       line-height: 24px;
@@ -71,7 +74,7 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day {
-      color: ${({ theme: { colors } }) => colors.gray550};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
       font-size: 16px;
       width: 1.7rem;
       height: 1.7rem;
@@ -80,29 +83,33 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day--selected {
-      color: ${({ theme: { colors } }) => colors.gray200};
-      background-color: ${({ theme: { colors } }) => colors.primary};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
+      background-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.primary};
       border-radius: 50%;
     }
     ${PREFIX}__day--keyboard-selected {
-      color: ${({ theme: { colors } }) => colors.primary};
-      background-color: ${({ theme: { colors } }) => colors.gray200};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
+      background-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.gray200};
       border-radius: 50%;
     }
 
     ${PREFIX}__day: hover {
-      color: ${({ theme: { colors } }) => colors.primary};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
       border-radius: 50%;
-      background-color: ${({ theme: { colors } }) => colors.gray200};
+      background-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.gray200};
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme: { colors } }) => colors.gray200};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
     }
 
     ${PREFIX}__day--disabled: hover {
-      color: ${({ theme: { colors } }) => colors.gray200};
-      background-color: ${({ theme: { colors } }) => colors.transparent};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
+      background-color: ${({ theme: { colorsDeprecated } }) =>
+        colorsDeprecated.transparent};
     }
   }
 `
@@ -127,7 +134,8 @@ const TopHeaderDiv = styled.div`
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colorsDeprecated } }) =>
+    colorsDeprecated.white};
 `
 export type DateInputProps = Pick<
   ReactDatePickerProps<string>,

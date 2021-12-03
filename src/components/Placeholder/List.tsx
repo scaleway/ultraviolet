@@ -16,7 +16,7 @@ const StyledList = styled.ul`
   margin: 0;
 
   > ${StyledItem}:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.gray50};
+    background-color: ${({ theme }) => theme.colorsDeprecated.gray50};
   }
 `
 

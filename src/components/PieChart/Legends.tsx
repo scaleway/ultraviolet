@@ -44,7 +44,9 @@ const ListItem = styled.li<{ isFocused: boolean }>`
   margin-top: 8px;
   width: 100%;
   color: ${({ isFocused, theme }) =>
-    isFocused ? theme.colors.primary : theme.colors.gray700};
+    isFocused
+      ? theme.colorsDeprecated.primary
+      : theme.colorsDeprecated.gray700};
 `
 
 const Bullet = styled.div<{
@@ -57,13 +59,14 @@ const Bullet = styled.div<{
   width: 10px;
   height: 10px;
   margin: 0 8px;
-  background: ${({ color, theme }) => theme.colors[color as Color] ?? color};
+  background: ${({ color, theme }) =>
+    theme.colorsDeprecated[color as Color] ?? color};
 
   ${({ needPattern, color, theme, id }) => {
     if (!needPattern) return null
 
     return patternVariants?.[`${id}-dot` as keyof typeof patternVariants]?.(
-      theme.colors[color as Color] ?? color,
+      theme.colorsDeprecated[color as Color] ?? color,
     )
   }}
 
@@ -94,13 +97,13 @@ const ToggleBox = styled.div`
 `
 
 const Line = styled.span`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray300};
+  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray300};
   position: relative;
   width: 100%;
 `
 
 const ProgressiveLine = styled.span<{ isFocused: boolean }>`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
   position: absolute;
   left: 0;
   top: 0;

@@ -6,13 +6,13 @@ import Box, { BoxProps } from '../Box'
 
 const StyledDt = styled(Box.withComponent('dt'))`
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.gray950};
+  color: ${({ theme }) => theme.colorsDeprecated.gray950};
   &:after {
     content: ':';
   }
 `
 const StyledDd = styled(Box.withComponent('dd'))`
-  color: ${({ theme }) => theme.colors.gray700};
+  color: ${({ theme }) => theme.colorsDeprecated.gray700};
   margin: 0;
   margin-top: ${({ theme }) => theme.space['1']};
 `
@@ -55,8 +55,8 @@ const StyledBox = styled(Box, {
         user-select: all;
 
         &::selection {
-          color: ${theme.colors.gray200};
-          background: ${theme.colors.primary};
+          color: ${theme.colorsDeprecated.gray200};
+          background: ${theme.colorsDeprecated.primary};
         }
       }
     `}

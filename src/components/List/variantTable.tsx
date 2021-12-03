@@ -32,11 +32,11 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
 
   ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colors.gray550};
+    color: ${({ theme }) => theme.colorsDeprecated.gray550};
     padding: 4px 8px !important;
 
     &[disabled] {
@@ -56,10 +56,10 @@ const getRowColor = ({
   selected?: boolean
   theme: Theme
 }) => {
-  if (disabled) return theme.colors.gray550
-  if (selected && highlighted) return theme.colors.primary
+  if (disabled) return theme.colorsDeprecated.gray550
+  if (selected && highlighted) return theme.colorsDeprecated.primary
 
-  return theme.colors.gray700
+  return theme.colorsDeprecated.gray700
 }
 
 const StyledRow = styled(Box, {
@@ -87,14 +87,16 @@ const StyledRow = styled(Box, {
   flex-wrap: wrap;
 
   &:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.gray50};
+    background-color: ${({ theme }) => theme.colorsDeprecated.gray50};
   }
 
   color: ${getRowColor};
 
   &:hover {
     color: ${({ disabled, theme }) =>
-      disabled ? theme.colors.gray550 : theme.colors.primary};
+      disabled
+        ? theme.colorsDeprecated.gray550
+        : theme.colorsDeprecated.primary};
   }
 
   ${Cell} {
@@ -119,7 +121,8 @@ const StyledCheckbox = styled(Checkbox)`
 `
 
 const StyledSpan = styled.span<{ color?: Color }>`
-  ${({ theme, color }) => (color ? `color: ${theme.colors[color]};` : ``)}
+  ${({ theme, color }) =>
+    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
 `
 
 export const Header: FunctionComponent = () => {

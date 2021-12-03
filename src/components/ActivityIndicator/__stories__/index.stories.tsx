@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import ActivityIndicator, { ActivityIndicatorProps } from '..'
-import { colors } from '../../../theme'
+import { colorsDeprecated } from '../../../theme'
 
 export default {
   component: ActivityIndicator,
@@ -74,7 +74,7 @@ Colors.parameters = {
 Colors.decorators = [
   () => (
     <>
-      {Object.keys(colors).map(color => (
+      {Object.keys(colorsDeprecated).map(color => (
         <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`color-${color}`}

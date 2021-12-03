@@ -19,7 +19,7 @@ export const StyledTab = styled.span`
   align-items: center;
   font-size: 16px;
   line-height: 24px;
-  color: ${({ theme: { colors } }) => colors.gray550};
+  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
   font-weight: 500;
   text-decoration: none;
   user-select: none;
@@ -29,7 +29,7 @@ export const StyledTab = styled.span`
   &:hover,
   &:active,
   &:focus {
-    color: ${({ theme: { colors } }) => colors.primary};
+    color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
     text-decoration: none;
     outline: none;
   }
@@ -39,7 +39,7 @@ export const StyledTab = styled.span`
   }
 
   &[aria-selected='true'] {
-    color: ${({ theme: { colors } }) => colors.primary};
+    color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
   }
 
   &[aria-disabled='true'] {
@@ -47,7 +47,7 @@ export const StyledTab = styled.span`
     opacity: 0.5;
     &:hover,
     &:focus {
-      color: ${({ theme: { colors } }) => colors.gray550};
+      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
     }
   }
 `

@@ -8,12 +8,12 @@ const SPACING = 20
 
 const StyledDiv = styled.div<{ rank: number }>`
   align-items: center;
-  background: ${({ theme }) => theme.colors.white};
-  border: 1px solid ${({ theme }) => theme.colors.gray300};
+  background: ${({ theme }) => theme.colorsDeprecated.white};
+  border: 1px solid ${({ theme }) => theme.colorsDeprecated.gray300};
   border-radius: 4px;
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
   box-shadow: 0 2px 14px 8px
-    ${({ theme }) => transparentize(0.5, theme.colors.gray200)};
+    ${({ theme }) => transparentize(0.5, theme.colorsDeprecated.gray200)};
   display: flex;
   height: ${HEIGHT}px;
   left: 50%;

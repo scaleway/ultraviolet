@@ -6,26 +6,27 @@ import Popper, { PopperProps } from '../Popper'
 import Item from './Item'
 
 const bottomStyles = (theme: Theme) => css`
-  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.shadow)};
+  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colorsDeprecated.shadow)};
   &:after,
   &:before {
     bottom: 100%;
   }
   &:after {
-    border-bottom-color: ${theme.colors.white};
+    border-bottom-color: ${theme.colorsDeprecated.white};
   }
   &:before {
     border-bottom-color: rgba(165, 165, 205, 0.4);
   }
 `
 const topStyles = (theme: Theme) => css`
-  box-shadow: 0 1px 5px 3px ${transparentize(0.85, theme.colors.shadow)};
+  box-shadow: 0 1px 5px 3px
+    ${transparentize(0.85, theme.colorsDeprecated.shadow)};
   &:after,
   &:before {
     top: 100%;
   }
   &:after {
-    border-top-color: ${theme.colors.white};
+    border-top-color: ${theme.colorsDeprecated.white};
   }
   &:before {
     border-top-color: rgba(165, 165, 205, 0.4);
@@ -107,12 +108,12 @@ const styles = {
     }
   `,
   menu: (theme: Theme) => css`
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colorsDeprecated.white};
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    color: ${theme.colors.gray550};
+    color: ${theme.colorsDeprecated.gray550};
     border-radius: 4px;
     position: relative;
 

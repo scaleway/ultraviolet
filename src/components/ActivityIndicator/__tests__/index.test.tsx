@@ -1,7 +1,7 @@
 import React from 'react'
 import ActivityIndicator from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
-import { colors } from '../../../theme'
+import { colorsDeprecated } from '../../../theme'
 
 describe('ActivityIndicator', () => {
   beforeAll(() => {
@@ -30,7 +30,7 @@ describe('ActivityIndicator', () => {
       <ActivityIndicator label="Loading test" active percentage={75} />,
     ))
 
-  Object.keys(colors)
+  Object.keys(colorsDeprecated)
     .slice(0, 5)
     .forEach(color => {
       test(`renders with color ${color}`, () =>
@@ -44,7 +44,7 @@ describe('ActivityIndicator', () => {
       <ActivityIndicator label="Loading test" color="#ff0000" />,
     ))
 
-  Object.keys(colors)
+  Object.keys(colorsDeprecated)
     .slice(0, 5)
     .forEach(color => {
       test(`renders with trailColor ${color}`, () =>
