@@ -23,6 +23,8 @@ const generateTokens = ({
   contrast,
   neutralContrast,
 }: GenerateTokensProps) => ({
+  /* eslint-disable sort-keys */
+
   // Background
   background: contrast['100'],
   backgroundHover: contrast['100'],
@@ -55,9 +57,11 @@ const generateTokens = ({
   borderStrong: contrast['900'],
   borderStrongHover: contrast['900'],
   borderStrongDisabled: contrast['900'],
+
+  /* eslint-enable */
 })
 
-const colorTokens = Object.keys(sentiments).reduce(
+const colorsTokens = Object.keys(sentiments).reduce(
   (acc, sentiment) => ({
     ...acc,
     [sentiment]: generateTokens({
@@ -68,4 +72,8 @@ const colorTokens = Object.keys(sentiments).reduce(
   {},
 )
 
-export default colorTokens
+export type Color = keyof typeof sentiments
+
+const colors: Record<Color, ReturnType<typeof generateTokens>> = colorsTokens
+
+export default colors

@@ -1,5 +1,5 @@
 /* eslint-disable sort-keys */
-import color, { ContrastType } from './colors'
+import color from './colors'
 import colorsDeprecated from './deprecated/colors'
 
 const radii = {
@@ -41,7 +41,7 @@ const fonts = {
 } as const
 
 const theme = {
-  colors: colorsDeprecated,
+  colorsDeprecated,
   color,
   fonts,
   space,
@@ -51,17 +51,8 @@ const theme = {
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
-  colorToken: { [key: string]: ContrastType }
 }
 
 export default theme
 
-export {
-  color,
-  colorsDeprecated,
-  space,
-  radii,
-  fonts,
-  screens,
-  SCWUITheme,
-}
+export { color, colorsDeprecated, space, radii, fonts, screens, SCWUITheme }

@@ -5,9 +5,9 @@ import React, { FunctionComponent, useMemo } from 'react'
 import Box, { XStyledProps } from '../Box'
 
 const variants = {
-  beta: ({ theme: { colorTokens } }: { theme: Theme }) => css`
-    background-color: ${colorTokens.warning.backgroundStrong};
-    color: ${colorTokens.warning.textStrong};
+  beta: ({ theme: { color } }: { theme: Theme }) => css`
+    background-color: ${color.warning.backgroundStrong};
+    color: ${color.warning.textStrong};
   `,
   error: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
     background-color: ${colorsDeprecated.red};
