@@ -49,18 +49,18 @@ const theme = {
   radii,
 }
 
-type SCWUITheme = typeof theme & {
-  linkComponent?: unknown
-}
-
 const createTheme = ({
   contrasts,
 }: {
-  contrasts: Record<Color, ContrastType>
+  contrasts: { [key in Color]?: Partial<ContrastType> }
 }) => ({
   ...theme,
   colors: colorsTokens(contrasts),
 })
+
+type SCWUITheme = typeof theme & {
+  linkComponent?: unknown
+}
 
 export default theme
 

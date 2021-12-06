@@ -31,11 +31,11 @@ const generateTokens = ({
       /* eslint-disable sort-keys */
 
       // Background
-      background: contrast[500],
-      backgroundHover: contrast[500],
-      backgroundDisabled: contrast[500],
+      background: contrast[400],
+      backgroundHover: contrast[400],
+      backgroundDisabled: contrast[400],
       backgroundWeak: contrast[100],
-      backgroundWeakHover: contrast[100],
+      backgroundWeakHover: contrast[800],
       backgroundWeakDisabled: contrast[100],
       backgroundStrong: contrast[800],
       backgroundStrongHover: contrast[800],
@@ -45,9 +45,9 @@ const generateTokens = ({
       text: contrast[800],
       textHover: contrast[800],
       textDisabled: contrast[800],
-      textWeak: contrast[800],
-      textWeakHover: contrast[800],
-      textWeakDisabled: contrast[800],
+      textWeak: contrast[500],
+      textWeakHover: contrast[100],
+      textWeakDisabled: contrast[500],
       textStrong: contrast[100],
       textStrongHover: contrast[100],
       textStrongDisabled: contrast[100],
@@ -75,7 +75,7 @@ const generateTokens = ({
     backgroundHover: contrast[100],
     backgroundDisabled: contrast[100],
     backgroundWeak: neutralContrast[100],
-    backgroundWeakHover: neutralContrast[100],
+    backgroundWeakHover: contrast[800],
     backgroundWeakDisabled: neutralContrast[100],
     backgroundStrong: contrast[800],
     backgroundStrongHover: contrast[800],
@@ -86,7 +86,7 @@ const generateTokens = ({
     textHover: contrast[800],
     textDisabled: contrast[800],
     textWeak: contrast[800],
-    textWeakHover: contrast[800],
+    textWeakHover: contrast[100],
     textWeakDisabled: contrast[800],
     textStrong: neutralContrast[100],
     textStrongHover: neutralContrast[100],
@@ -110,9 +110,11 @@ const generateTokens = ({
 export type Color = keyof typeof localContrasts
 
 // This function get in parameter a shade of contrasts and return a well formatted design tokens
-export const colorsTokens = (contrasts: { [key in Color]: ContrastType }) => {
+export const colorsTokens = (contrasts: {
+  [key in Color]?: Partial<ContrastType>
+}) => {
   // We first get contrasts passed as parameter if some are missing we use local contrasts and deep merge them
-  const deepMergedContrasts = Object.keys(contrasts).reduce(
+  const deepMergedContrasts = Object.keys(localContrasts).reduce(
     (acc, contrast) => ({
       ...acc,
       [contrast]: {
@@ -128,8 +130,8 @@ export const colorsTokens = (contrasts: { [key in Color]: ContrastType }) => {
     (acc, contrast) => ({
       ...acc,
       [contrast]: generateTokens({
-        contrast: contrasts[contrast as Color],
-        neutralContrast: contrasts.neutral,
+        contrast: deepMergedContrasts[contrast as Color],
+        neutralContrast: deepMergedContrasts.neutral,
         sentiment: contrast,
       }),
     }),
