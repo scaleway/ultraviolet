@@ -56,7 +56,7 @@ const createTheme = ({
   radii: newRadii,
   fonts: newFonts,
 }: {
-  contrasts?: { [key in Color]?: Partial<ContrastType> }
+  contrasts?: Record<Color, Partial<ContrastType>>
   space?: Spaces
   screens?: ScreenSize
   radii?: Record<string, string>

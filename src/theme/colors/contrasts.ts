@@ -23,7 +23,7 @@ export const secondary = {
 }
 
 export const neutral = {
-  100: '#ffffff',
+  100: '#fff',
   200: '#fcfcfd',
   300: '#f6f6f8',
   400: '#f6f5f7',

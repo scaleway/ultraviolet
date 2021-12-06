@@ -139,6 +139,6 @@ export const colorsTokens = (contrasts: {
   ) as { [key in Color]: ReturnType<typeof generateTokens> }
 }
 
-const colors: ReturnType<typeof colorsTokens> = colorsTokens(localContrasts)
+const colors = colorsTokens(localContrasts)
 
 export default colors
