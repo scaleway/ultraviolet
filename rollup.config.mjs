@@ -64,7 +64,7 @@ export default [{
     url({
       limit: 63488,
     }),
-    svgr.default({ memo: true }),
+    svgr({ memo: true }),
     PROFILE &&
       visualizer({
         brotliSize: true,
