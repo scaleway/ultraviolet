@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { XStyledProps } from '../Box'
 
 // Non Material Design icons: 'send',

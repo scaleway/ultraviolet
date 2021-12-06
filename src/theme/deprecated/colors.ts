@@ -74,8 +74,8 @@ const baseColors = {
   zumthor,
 }
 
-export type Color = keyof typeof baseColors
+export type ColorDeprecated = keyof typeof baseColors
 
-const colors: Record<Color, string> = baseColors
+const colors: Record<ColorDeprecated, string> = baseColors
 
 export default colors

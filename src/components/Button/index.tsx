@@ -16,7 +16,7 @@ import React, {
   isValidElement,
   useMemo,
 } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import ActivityIndicator from '../ActivityIndicator'
 import Box, { XStyledProps } from '../Box'
 import Icon from '../Icon'

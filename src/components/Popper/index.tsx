@@ -20,7 +20,7 @@ import {
   PopoverStateReturn,
   usePopoverState,
 } from 'reakit/Popover'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 
 const buildVariant =
   ({

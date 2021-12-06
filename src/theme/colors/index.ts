@@ -1,4 +1,4 @@
-import * as sentiments from './contrasts'
+import * as localContrasts from './contrasts'
 
 export type ContrastType = {
   100: string
@@ -14,66 +14,129 @@ export type ContrastType = {
 }
 
 type GenerateTokensProps = {
+  sentiment: string
   contrast: ContrastType
   neutralContrast: ContrastType
 }
 
-// This function will generate all colors tokens using all contrasts of generated color and neutral contrasts
+// This function will generate all colors tokens using shade of contrasts
 const generateTokens = ({
+  sentiment,
   contrast,
   neutralContrast,
-}: GenerateTokensProps) => ({
-  /* eslint-disable sort-keys */
+}: GenerateTokensProps) => {
+  // Neutral is a particular color it has more shade and they are used differently than usual colors.
+  if (sentiment === 'neutral') {
+    return {
+      /* eslint-disable sort-keys */
 
-  // Background
-  background: contrast['100'],
-  backgroundHover: contrast['100'],
-  backgroundDisabled: contrast['100'],
-  backgroundWeak: neutralContrast['100'],
-  backgroundWeakHover: neutralContrast['100'],
-  backgroundWeakDisabled: neutralContrast['100'],
-  backgroundStrong: contrast['900'],
-  backgroundStrongHover: contrast['900'],
-  backgroundStrongDisabled: contrast['900'],
+      // Background
+      background: contrast[500],
+      backgroundHover: contrast[500],
+      backgroundDisabled: contrast[500],
+      backgroundWeak: contrast[100],
+      backgroundWeakHover: contrast[100],
+      backgroundWeakDisabled: contrast[100],
+      backgroundStrong: contrast[800],
+      backgroundStrongHover: contrast[800],
+      backgroundStrongDisabled: contrast[800],
 
-  // Text
-  text: contrast['900'],
-  textHover: contrast['900'],
-  textDisabled: contrast['900'],
-  textWeak: contrast['900'],
-  textWeakHover: contrast['900'],
-  textWeakDisabled: contrast['900'],
-  textStrong: neutralContrast['100'],
-  textStrongHover: neutralContrast['100'],
-  textStrongDisabled: neutralContrast['100'],
+      // Text
+      text: contrast[800],
+      textHover: contrast[800],
+      textDisabled: contrast[800],
+      textWeak: contrast[800],
+      textWeakHover: contrast[800],
+      textWeakDisabled: contrast[800],
+      textStrong: contrast[100],
+      textStrongHover: contrast[100],
+      textStrongDisabled: contrast[100],
 
-  // Border
-  border: contrast['900'],
-  borderHover: contrast['900'],
-  borderDisabled: contrast['900'],
-  borderWeak: contrast['900'],
-  borderWeakHover: contrast['900'],
-  borderWeakDisabled: contrast['900'],
-  borderStrong: contrast['900'],
-  borderStrongHover: contrast['900'],
-  borderStrongDisabled: contrast['900'],
+      // Border
+      border: contrast[800],
+      borderHover: contrast[800],
+      borderDisabled: contrast[800],
+      borderWeak: contrast[800],
+      borderWeakHover: contrast[800],
+      borderWeakDisabled: contrast[800],
+      borderStrong: contrast[800],
+      borderStrongHover: contrast[800],
+      borderStrongDisabled: contrast[800],
 
-  /* eslint-enable */
-})
+      /* eslint-enable */
+    }
+  }
 
-const colorsTokens = Object.keys(sentiments).reduce(
-  (acc, sentiment) => ({
-    ...acc,
-    [sentiment]: generateTokens({
-      contrast: sentiments[sentiment] as ContrastType,
-      neutralContrast: sentiments.neutral,
+  return {
+    /* eslint-disable sort-keys */
+
+    // Background
+    background: contrast[100],
+    backgroundHover: contrast[100],
+    backgroundDisabled: contrast[100],
+    backgroundWeak: neutralContrast[100],
+    backgroundWeakHover: neutralContrast[100],
+    backgroundWeakDisabled: neutralContrast[100],
+    backgroundStrong: contrast[800],
+    backgroundStrongHover: contrast[800],
+    backgroundStrongDisabled: contrast[800],
+
+    // Text
+    text: contrast[800],
+    textHover: contrast[800],
+    textDisabled: contrast[800],
+    textWeak: contrast[800],
+    textWeakHover: contrast[800],
+    textWeakDisabled: contrast[800],
+    textStrong: neutralContrast[100],
+    textStrongHover: neutralContrast[100],
+    textStrongDisabled: neutralContrast[100],
+
+    // Border
+    border: contrast[800],
+    borderHover: contrast[800],
+    borderDisabled: contrast[800],
+    borderWeak: contrast[800],
+    borderWeakHover: contrast[800],
+    borderWeakDisabled: contrast[800],
+    borderStrong: contrast[800],
+    borderStrongHover: contrast[800],
+    borderStrongDisabled: contrast[800],
+
+    /* eslint-enable */
+  }
+}
+
+export type Color = keyof typeof localContrasts
+
+// This function get in parameter a shade of contrasts and return a well formatted design tokens
+export const colorsTokens = (contrasts: { [key in Color]: ContrastType }) => {
+  // We first get contrasts passed as parameter if some are missing we use local contrasts and deep merge them
+  const deepMergedContrasts = Object.keys(contrasts).reduce(
+    (acc, contrast) => ({
+      ...acc,
+      [contrast]: {
+        ...localContrasts[contrast as Color],
+        ...contrasts[contrast as Color],
+      },
     }),
-  }),
-  {},
-)
+    {},
+  ) as { [key in Color]: ContrastType }
 
-export type Color = keyof typeof sentiments
+  // Then with list of contrasts we can now create our design tokens using generateTokens function
+  return Object.keys(deepMergedContrasts).reduce(
+    (acc, contrast) => ({
+      ...acc,
+      [contrast]: generateTokens({
+        contrast: contrasts[contrast as Color],
+        neutralContrast: contrasts.neutral,
+        sentiment: contrast,
+      }),
+    }),
+    {},
+  ) as { [key in Color]: ReturnType<typeof generateTokens> }
+}
 
-const colors: Record<Color, ReturnType<typeof generateTokens>> = colorsTokens
+const colors: ReturnType<typeof colorsTokens> = colorsTokens(localContrasts)
 
 export default colors

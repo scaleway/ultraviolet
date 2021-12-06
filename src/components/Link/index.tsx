@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Icon from '../Icon'
 import UniversalLink from '../UniversalLink'
 

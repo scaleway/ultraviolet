@@ -5,57 +5,57 @@ import React, { FunctionComponent, useMemo } from 'react'
 import Box, { XStyledProps } from '../Box'
 
 const variants = {
-  beta: ({ theme: { color } }: { theme: Theme }) => css`
-    background-color: ${color.warning.backgroundStrong};
-    color: ${color.warning.textStrong};
+  beta: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.warning.backgroundStrong};
+    color: ${colors.warning.textStrong};
   `,
-  error: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    background-color: ${colorsDeprecated.red};
-    color: ${colorsDeprecated.white};
+  error: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.danger.backgroundStrong};
+    color: ${colors.danger.textStrong};
   `,
-  info: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    background-color: ${colorsDeprecated.info};
-    color: ${colorsDeprecated.white};
+  info: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.info.backgroundStrong};
+    color: ${colors.info.textStrong};
   `,
-  'light-beta': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.beta};
-    background-color: ${colorsDeprecated.serenade};
+  'light-beta': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.warning.text};
+    background-color: ${colors.warning.background};
   `,
-  'light-error': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.red};
-    background-color: ${colorsDeprecated.pippin};
+  'light-error': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.danger.text};
+    background-color: ${colors.danger.background};
   `,
-  'light-info': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.info};
-    background-color: ${colorsDeprecated.zumthor};
+  'light-info': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.info.text};
+    background-color: ${colors.info.background};
   `,
-  'light-neutral': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.gray550};
-    background-color: ${colorsDeprecated.gray100};
+  'light-neutral': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.neutral.text};
+    background-color: ${colors.neutral.background};
   `,
-  'light-primary': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.primary};
-    background-color: ${colorsDeprecated.gray200};
+  'light-primary': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.primary.text};
+    background-color: ${colors.primary.background};
   `,
-  'light-success': ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.success};
-    background-color: ${colorsDeprecated.foam};
+  'light-success': ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.success.text};
+    background-color: ${colors.success.background};
   `,
-  neutral: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    color: ${colorsDeprecated.gray700};
-    background-color: ${colorsDeprecated.gray350};
+  neutral: ({ theme: { colors } }: { theme: Theme }) => css`
+    color: ${colors.neutral.text};
+    background-color: ${colors.neutral.background};
   `,
-  primary: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    background-color: ${colorsDeprecated.primary};
-    color: ${colorsDeprecated.white};
+  primary: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.primary.backgroundStrong};
+    color: ${colors.primary.textStrong};
   `,
-  success: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    background-color: ${colorsDeprecated.success};
-    color: ${colorsDeprecated.white};
+  success: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.success.backgroundStrong};
+    color: ${colors.success.textStrong};
   `,
-  warning: ({ theme: { colorsDeprecated } }: { theme: Theme }) => css`
-    background-color: ${colorsDeprecated.warning};
-    color: ${colorsDeprecated.white};
+  warning: ({ theme: { colors } }: { theme: Theme }) => css`
+    background-color: ${colors.danger.backgroundStrong};
+    color: ${colors.danger.textStrong};
   `,
 }
 
