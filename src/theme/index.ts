@@ -51,11 +51,23 @@ const theme = {
 
 const createTheme = ({
   contrasts,
+  space: newSpace,
+  screens: newScreens,
+  radii: newRadii,
+  fonts: newFonts,
 }: {
-  contrasts: { [key in Color]?: Partial<ContrastType> }
+  contrasts?: { [key in Color]?: Partial<ContrastType> }
+  space?: Spaces
+  screens?: ScreenSize
+  radii?: Record<string, string>
+  fonts?: Record<string, string>
 }) => ({
   ...theme,
-  colors: colorsTokens(contrasts),
+  ...(contrasts && { colors: colorsTokens(contrasts) }),
+  ...(newSpace && { space: newSpace }),
+  ...(newScreens && { screen: newScreens }),
+  ...(newRadii && { radii: newRadii }),
+  ...(newFonts && { fonts: newFonts }),
 })
 
 type SCWUITheme = typeof theme & {

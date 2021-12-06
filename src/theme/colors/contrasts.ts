@@ -11,27 +11,27 @@ export const primary = {
 }
 
 export const secondary = {
-  100: '#AE5DF6',
-  200: '#AE5DF6',
-  300: '#AE5DF6',
-  400: '#AE5DF6',
-  500: '#AE5DF6',
-  600: '#AE5DF6',
-  700: '#AE5DF6',
-  800: '#AE5DF6',
-  900: '#AE5DF6',
+  100: '#ae5df6',
+  200: '#ae5df6',
+  300: '#ae5df6',
+  400: '#ae5df6',
+  500: '#ae5df6',
+  600: '#ae5df6',
+  700: '#ae5df6',
+  800: '#ae5df6',
+  900: '#ae5df6',
 }
 
 export const neutral = {
-  100: '#FFFFFF',
-  200: '#FCFCFD',
-  300: '#F6F6F8',
-  400: '#F6F5F7',
-  500: '#D4DAE7',
-  600: '#B2B6C3',
-  700: '#B2B6C3',
-  800: '#4A4F62',
-  900: '#151A2D',
+  100: '#ffffff',
+  200: '#fcfcfd',
+  300: '#f6f6f8',
+  400: '#f6f5f7',
+  500: '#d4dae7',
+  600: '#b2b6c3',
+  700: '#b2b6c3',
+  800: '#4a4f62',
+  900: '#151a2d',
   1000: '#000000',
 }
 
