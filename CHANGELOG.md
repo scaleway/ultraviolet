@@ -1,3 +1,27 @@
+### [0.126.3](https://github.com/scaleway/scaleway-ui/compare/v0.126.2...v0.126.3) (2021-12-06)
+
+
+### :zap: Refactor
+
+* **theme:** renamed colors into deprecatedColors ([#960](https://github.com/scaleway/scaleway-ui/issues/960)) ([b881213](https://github.com/scaleway/scaleway-ui/commit/b8812137944c4741def8d68d5b124d2b5aea7897))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @storybook/testing-react to v1 ([#931](https://github.com/scaleway/scaleway-ui/issues/931)) ([2f50f28](https://github.com/scaleway/scaleway-ui/commit/2f50f282d8eb21feec45f8fdcc92a9e7720b16ee))
+* **devdeps:** update dependency @svgr/rollup to v6 ([#944](https://github.com/scaleway/scaleway-ui/issues/944)) ([495c6f0](https://github.com/scaleway/scaleway-ui/commit/495c6f0ceecc0676193c70ce4fdd21395cafc5b9))
+* **devdeps:** update dependency date-fns to v2.27.0 ([#967](https://github.com/scaleway/scaleway-ui/issues/967)) ([fd32df3](https://github.com/scaleway/scaleway-ui/commit/fd32df3c91823abeb2009722a46fe86020eaad95))
+* **devdeps:** update dependency jest to v27.4.3 ([#969](https://github.com/scaleway/scaleway-ui/issues/969)) ([7dc5dc7](https://github.com/scaleway/scaleway-ui/commit/7dc5dc7669b5c226f688e91fb32cafe1c081ffce))
+* **devdeps:** update dependency postcss to v8.4.4 ([#964](https://github.com/scaleway/scaleway-ui/issues/964)) ([0a9ebb4](https://github.com/scaleway/scaleway-ui/commit/0a9ebb4ef79d1c5d26e210edf868b48121a08f9e))
+* **devdeps:** update dependency prettier to v2.5.1 ([#968](https://github.com/scaleway/scaleway-ui/issues/968)) ([fc30b77](https://github.com/scaleway/scaleway-ui/commit/fc30b7704ebaf6f73c0df842f43a9a171f33cc9b))
+* **devdeps:** update storybook monorepo to v6.4.5 ([#965](https://github.com/scaleway/scaleway-ui/issues/965)) ([8692741](https://github.com/scaleway/scaleway-ui/commit/8692741e33f4e79f3dfeec0b73a27290f1e332f7))
+* **devdeps:** update storybook monorepo to v6.4.7 ([#966](https://github.com/scaleway/scaleway-ui/issues/966)) ([bc0f17f](https://github.com/scaleway/scaleway-ui/commit/bc0f17fbfa0530ed9ffb6bb7f50b3aa0fc0bdb84))
+
+
+### :bug: Bug Fixes
+
+* **Touchable:** correct invalid css class ([#963](https://github.com/scaleway/scaleway-ui/issues/963)) ([faac4c4](https://github.com/scaleway/scaleway-ui/commit/faac4c427020e66b49d2e9082e2e2c587ca57736))
+
 ### [0.126.2](https://github.com/scaleway/scaleway-ui/compare/v0.126.1...v0.126.2) (2021-12-02)
 
 
