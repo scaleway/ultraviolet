@@ -1,8 +1,8 @@
 import { DecoratorFunction } from '@storybook/csf'
 import { ReactFramework } from '@storybook/react'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const wrapStories = (stories: React.ReactNode[]) => (
+export const wrapStories = (stories: ReactNode[]) => (
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
     {React.Children.toArray(stories)}
   </div>
@@ -13,7 +13,6 @@ export const withProps =
   (render, context) =>
     wrapStories(
       values.map(args =>
-        // eslint-disable-next-line
         render({ ...context, args: { ...context.args, ...args } }),
       ),
     )

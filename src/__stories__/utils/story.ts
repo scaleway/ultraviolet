@@ -1,14 +1,13 @@
 import { DecoratorFunction } from '@storybook/csf'
-import { Args, ReactFramework, Story } from '@storybook/react'
+import { ReactFramework, StoryObj } from '@storybook/react'
 
-export default <A extends Args>(
-  template: Story<A>,
+export default <A>(
   args?: Partial<A>,
   storyDescription = '',
   decorators: DecoratorFunction<ReactFramework, A>[] = [],
-): Story<A> =>
-  Object.assign(template.bind(null), template, {
-    args: { ...template.args, ...args },
-    decorators,
-    parameters: { ...template.parameters, docs: { storyDescription } },
-  })
+  parameters = {},
+): StoryObj<A> => ({
+  args,
+  decorators,
+  parameters: { ...parameters, docs: { storyDescription } },
+})
