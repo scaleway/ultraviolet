@@ -63,11 +63,11 @@ const createTheme = ({
   fonts?: Record<string, string>
 }) => ({
   ...theme,
-  ...(contrasts && { colors: colorsTokens(contrasts) }),
-  ...(newSpace && { space: newSpace }),
-  ...(newScreens && { screen: newScreens }),
-  ...(newRadii && { radii: newRadii }),
-  ...(newFonts && { fonts: newFonts }),
+  ...(contrasts ? { colors: colorsTokens(contrasts) } : undefined),
+  ...(newSpace ? { space: newSpace } : undefined),
+  ...(newScreens ? { screen: newScreens } : undefined),
+  ...(newRadii ? { radii: newRadii } : undefined),
+  ...(newFonts ? { fonts: newFonts } : undefined),
 })
 
 type SCWUITheme = typeof theme & {
