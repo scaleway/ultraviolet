@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ProgressBar, { ProgressBarProps, progressBarVariants } from '..'
+import React, { ComponentProps } from 'react'
+import ProgressBar, { progressBarVariants } from '..'
 import Boxer from '../../Boxer'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Data Display/ProgressBar',
 } as Meta
 
-const Template: Story<ProgressBarProps> = args => (
+const Template: Story<ComponentProps<typeof ProgressBar>> = args => (
   <ProgressBar value={40} {...args} />
 )
 

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { ListColumn, ListOrder, ListRowState } from './types'
 
-export type ListContextType<T = Record<string, unknown>> = {
+type ListContextType<T = Record<string, unknown>> = {
   columns: ListColumn[]
   customLoader?: ReactNode
   data: T[]

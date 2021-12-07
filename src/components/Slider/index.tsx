@@ -83,7 +83,7 @@ const StyledBorderWrapper = styled(Box)`
   }
 `
 
-export type SliderItemProps = {
+type SliderItemProps = {
   as?: string | ElementType<unknown>
 }
 export const SliderItem = ({ as, ...props }: SliderItemProps): JSX.Element => (
@@ -94,7 +94,7 @@ SliderItem.propTypes = {
   as: PropTypes.string,
 }
 
-export type SliderProps = {
+type SliderProps = {
   children?: ReactNode
 } & XStyledProps
 

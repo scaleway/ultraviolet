@@ -1,8 +1,7 @@
 import { Meta, Story } from '@storybook/react'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { format } from 'date-fns'
-import React from 'react'
-import LineChart, { LineChartProps } from '..'
+import React, { ComponentProps } from 'react'
+import LineChart from '..'
 import {
   lineChartData,
   lineChartHoursData,
@@ -14,7 +13,7 @@ export default {
   title: 'Components/Data Display/Chart/LineChart',
 } as Meta
 
-const Template: Story<LineChartProps> = args => (
+const Template: Story<ComponentProps<typeof LineChart>> = args => (
   <LineChart data={lineChartData} xScale={{ type: 'linear' }} {...args} />
 )
 

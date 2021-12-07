@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import StealthCopiable, { StealthCopiableProps } from '..'
+import React, { ComponentProps } from 'react'
+import StealthCopiable from '..'
 import Typography from '../../Typography'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Data Display/StealthCopiable',
 } as Meta
 
-const Template: Story<StealthCopiableProps> = args => (
+const Template: Story<ComponentProps<typeof StealthCopiable>> = args => (
   <StealthCopiable {...args}>Hover me and copy me</StealthCopiable>
 )
 

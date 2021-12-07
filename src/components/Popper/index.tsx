@@ -71,7 +71,7 @@ const variantStyles = ({
   variant: PopoverVariant
 }) => variants[variant] ?? undefined
 
-export type DisclosureParam =
+type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
   | ReactElement
 
@@ -106,7 +106,7 @@ const StyledPopover = styled(Popover, {
   ${variantStyles}
 `
 
-export type PopperProps = Partial<PopoverProps> &
+type PopperProps = Partial<PopoverProps> &
   Partial<Pick<PopoverStateReturn, 'placement'>> & {
     backgroundColor?: string
     disclosure: DisclosureParam

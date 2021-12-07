@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import PhoneInput, { PhoneInputProps } from '..'
+import React, { ComponentProps } from 'react'
+import PhoneInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Box from '../../Box'
 
@@ -24,7 +24,9 @@ export default {
   title: 'Components/Data Entry/PhoneInput',
 } as Meta
 
-const Template: Story<PhoneInputProps> = args => <PhoneInput {...args} />
+const Template: Story<ComponentProps<typeof PhoneInput>> = args => (
+  <PhoneInput {...args} />
+)
 
 export const Default = Template.bind({})
 

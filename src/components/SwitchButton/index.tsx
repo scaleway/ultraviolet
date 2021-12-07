@@ -129,7 +129,7 @@ const StyledRadio = styled(Radio)`
   opacity: 0.01;
 `
 
-export type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
+type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
   children:
     | ReactNode
     | (({

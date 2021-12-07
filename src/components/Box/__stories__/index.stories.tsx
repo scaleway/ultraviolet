@@ -1,13 +1,15 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Box, { BoxProps } from '..'
+import React, { ComponentProps } from 'react'
+import Box from '..'
 
 export default {
   component: Box,
   title: 'Components/Container/Box',
 } as Meta
 
-const Template: Story<BoxProps> = args => <Box {...args}>Box</Box>
+const Template: Story<ComponentProps<typeof Box>> = args => (
+  <Box {...args}>Box</Box>
+)
 
 export const Default = Template.bind({})
 

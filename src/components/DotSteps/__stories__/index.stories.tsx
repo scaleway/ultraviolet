@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import DotSteps, { DotStepsProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import DotSteps from '..'
 
 export default {
   component: DotSteps,
@@ -14,7 +14,7 @@ export default {
   title: 'Components/Navigation/DotSteps',
 } as Meta
 
-const Template: Story<DotStepsProps> = args => {
+const Template: Story<ComponentProps<typeof DotSteps>> = args => {
   const [step, setStep] = useState(1)
 
   return (

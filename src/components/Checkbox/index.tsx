@@ -74,7 +74,7 @@ const StyledError = styled.div`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-export type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
+type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
   valid?: boolean
   error?: string | ReactNode

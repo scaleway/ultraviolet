@@ -1,14 +1,14 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
-import UniversalLink, { UniversalLinkProps } from '..'
+import UniversalLink from '..'
 
 export default {
   component: UniversalLink,
   title: 'Components/UniversalLink',
 } as Meta
 
-const Template: Story<UniversalLinkProps> = args => (
+const Template: Story<ComponentProps<typeof UniversalLink>> = args => (
   <UniversalLink
     href="/?path=/story/components-universallink--default"
     {...args}

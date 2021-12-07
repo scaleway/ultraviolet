@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import TimeInput, { TimeInputProps } from '..'
+import React, { ComponentProps } from 'react'
+import TimeInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Data Entry/TimeInput',
 } as Meta
 
-const Template: Story<TimeInputProps> = args => (
+const Template: Story<ComponentProps<typeof TimeInput>> = args => (
   <div style={{ height: '300px' }}>
     <TimeInput
       name="timeinput-test-basic"

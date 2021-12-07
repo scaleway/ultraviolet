@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import BulletList, { BulletListProps } from '..'
+import React, { ComponentProps } from 'react'
+import BulletList from '..'
 
 export default {
   component: BulletList,
@@ -14,7 +14,9 @@ export default {
   title: 'Components/Data Display/BulletList',
 } as Meta
 
-const Template: Story<BulletListProps> = args => <BulletList {...args} />
+const Template: Story<ComponentProps<typeof BulletList>> = args => (
+  <BulletList {...args} />
+)
 
 export const Default = Template.bind({})
 

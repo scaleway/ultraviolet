@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent } from 'react'
-import SwitchButton, { SwitchButtonProps } from '..'
+import React, { ChangeEvent, ComponentProps } from 'react'
+import SwitchButton from '..'
 import { Col, Grid, Row } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
@@ -10,7 +10,7 @@ export default {
     children: 'This is a children',
     disabled: false,
     name: 'default',
-    onChange: (value: any) => console.log(value),
+    onChange: (value: unknown) => console.log(value),
     tooltip: undefined,
     value: 'a',
     variant: undefined,
@@ -47,7 +47,9 @@ export default {
   title: 'Components/Data Entry/SwitchButton',
 } as Meta
 
-const Template: Story<SwitchButtonProps> = args => <SwitchButton {...args} />
+const Template: Story<ComponentProps<typeof SwitchButton>> = args => (
+  <SwitchButton {...args} />
+)
 
 Template.args = {
   checked: false,

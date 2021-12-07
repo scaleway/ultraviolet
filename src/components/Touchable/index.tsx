@@ -36,7 +36,7 @@ const StyledTouchable = styled(Box)<
   }
 `
 
-export type TouchableProps = {
+type TouchableProps = {
   activeOpacity?: number | string
   as?: string
   children?: ReactNode

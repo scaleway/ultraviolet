@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import CountUp from 'react-countup'
 
-export type CounterProps = {
+type CounterProps = {
   /**
    * Value to which counter will go. Can be negative or positive number.
    */

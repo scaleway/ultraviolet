@@ -2,6 +2,7 @@ import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
+  ComponentProps,
   ElementType,
   FocusEventHandler,
   MouseEventHandler,
@@ -13,7 +14,7 @@ import React, {
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color } from '../../theme/colors'
 import Box, { XStyledProps } from '../Box'
-import Tooltip, { TooltipProps } from '../Tooltip'
+import Tooltip from '../Tooltip'
 
 type StyleProps = {
   theme?: Theme
@@ -211,10 +212,10 @@ const StyledText = styled(Box, {
 
 export const typographyVariants = Object.keys(variantTags)
 
-export type TypographyProps = {
+type TypographyProps = {
   'aria-disabled'?: boolean
   children: ReactNode
-  tooltipProps?: Partial<TooltipProps>
+  tooltipProps?: Partial<ComponentProps<typeof Tooltip>>
   variant?: TypographyVariant
 } & Omit<StyledTextProps, 'variant'>
 

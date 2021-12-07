@@ -317,7 +317,7 @@ const StyledInput = styled('input', {
   `}
 `
 
-export type TextBoxProps = {
+type TextBoxProps = {
   'data-testid'?: string
   ariaControls?: string
   autoComplete?: string

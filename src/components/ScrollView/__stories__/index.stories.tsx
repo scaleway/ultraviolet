@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ScrollView, { ScrollViewProps } from '..'
+import React, { ComponentProps } from 'react'
+import ScrollView from '..'
 
 export default {
   component: ScrollView,
@@ -15,7 +15,7 @@ export default {
   title: 'Components/ScrollView',
 } as Meta
 
-const Template: Story<ScrollViewProps> = args => (
+const Template: Story<ComponentProps<typeof ScrollView>> = args => (
   <ScrollView style={{ height: '300px' }} {...args}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel sem
     fermentum, blandit lacus et, eleifend velit. Donec semper sem eu risus

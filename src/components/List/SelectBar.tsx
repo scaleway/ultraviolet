@@ -22,7 +22,7 @@ const StyledItemsCount = styled.div`
   color: ${({ theme }) => theme.colorsDeprecated.primary};
 `
 
-export type ListSelectBarProps = {
+type ListSelectBarProps = {
   text?: ReactNode | ((length: number) => string)
   children?:
     | ((props: {

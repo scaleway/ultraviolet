@@ -16,17 +16,15 @@ import React, {
 import orderBy from '../../utils/orderBy'
 import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
-import Pagination, {
-  PaginationComponentProps,
-  PaginationProps,
-} from '../Pagination'
+import Pagination from '../Pagination'
+import type { PaginationComponentProps, PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Placeholder from '../Placeholder'
 import Typography from '../Typography'
 import Cell from './Cell'
-import SelectBar, { ListSelectBarProps } from './SelectBar'
+import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
-import {
+import type {
   ListColumn,
   ListOrder,
   ListRowProps,
@@ -140,7 +138,7 @@ export type ListProps<T = ListData> = {
     Body: FunctionComponent<BodyProps>
     Cell: FunctionComponent
     data: T[]
-    SelectBar: FunctionComponent<ListSelectBarProps>
+    SelectBar: typeof SelectBar
     Header: FunctionComponent
     Row: FunctionComponent<ListRowProps>
     ExpendableContent: FunctionComponent

@@ -224,7 +224,7 @@ Item.propTypes = {
   variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
 }
 
-export interface BreadcrumbsProps {
+interface BreadcrumbsProps {
   variant?: Variants
   selected?: number
   children: ReactNode

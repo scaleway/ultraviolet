@@ -40,7 +40,7 @@ const variants = {
   white: generateVariant('white'),
 }
 
-export type Variant = keyof typeof variants
+type Variant = keyof typeof variants
 export const linkVariants = Object.keys(variants) as Variant[]
 
 const variantStyles = ({ variant }: { variant?: Variant }) =>
@@ -48,7 +48,7 @@ const variantStyles = ({ variant }: { variant?: Variant }) =>
     ? variants[variant]
     : undefined
 
-export type LinkProps = {
+type LinkProps = {
   children: ReactNode
   variant?: Variant
   target?: string

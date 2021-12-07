@@ -50,7 +50,7 @@ export const variants = {
 
 type PlaceholderVariant = keyof typeof variants
 
-export type PlaceholderProps = {
+type PlaceholderProps = {
   variant?: PlaceholderVariant
   length?: number
   width?: number

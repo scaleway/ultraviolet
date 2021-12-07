@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Link, { LinkProps, linkVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Link, { linkVariants } from '..'
 import theme from '../../../theme'
 
 export default {
@@ -17,7 +17,9 @@ export default {
   title: 'Components/Foundation/Link',
 } as Meta
 
-const Template: Story<LinkProps> = args => <Link {...args}>Basic Link</Link>
+const Template: Story<ComponentProps<typeof Link>> = args => (
+  <Link {...args}>Basic Link</Link>
+)
 
 export const Default = Template.bind({})
 

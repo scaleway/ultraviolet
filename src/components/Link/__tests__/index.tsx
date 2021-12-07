@@ -1,5 +1,5 @@
-import React from 'react'
-import Link, { Variant, linkVariants } from '..'
+import React, { ComponentProps } from 'react'
+import Link, { linkVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Link', () => {
@@ -11,7 +11,10 @@ describe('Link', () => {
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link to="/" variant={variant as Variant}>
+          <Link
+            to="/"
+            variant={variant as ComponentProps<typeof Link>['variant']}
+          >
             Hello
           </Link>,
         ),

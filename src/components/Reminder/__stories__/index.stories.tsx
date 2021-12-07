@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Reminder, { ReminderProps, variants } from '..'
+import React, { ComponentProps } from 'react'
+import Reminder, { variants } from '..'
 
 export default {
   component: Reminder,
@@ -15,7 +15,7 @@ export default {
   title: 'Components/Feedback/Reminder',
 } as Meta
 
-const Template: Story<ReminderProps> = args => (
+const Template: Story<ComponentProps<typeof Reminder>> = args => (
   <Reminder text="Your credit card [has expired]" {...args} />
 )
 

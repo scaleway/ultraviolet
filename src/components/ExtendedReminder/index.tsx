@@ -1,11 +1,16 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
+import React, {
+  ComponentProps,
+  FunctionComponent,
+  MouseEventHandler,
+  ReactNode,
+} from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
-import Icon, { IconName, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
 
 export const variants = {
@@ -25,9 +30,9 @@ export const variants = {
     background: colorsDeprecated.serenade,
     main: colorsDeprecated.orange,
   }),
-}
+} as const
 
-export type Variants = keyof typeof variants
+type Variants = keyof typeof variants
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
@@ -71,7 +76,7 @@ const StyledButtonLink = styled(Button)`
   font-size: 14px;
 `
 
-export type ExtendedReminderProps = {
+type ExtendedReminderProps = {
   /**
    * The text to be placed in the top badge
    */
@@ -79,7 +84,7 @@ export type ExtendedReminderProps = {
   /**
    * The icon to use in the badge
    */
-  icon: IconName
+  icon: ComponentProps<typeof Icon>['name']
   /**
    * The link text to display at the end
    */

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Range, { RangeProps } from '..'
+import React, { ComponentProps } from 'react'
+import Range from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -23,7 +23,9 @@ export default {
   title: 'Components/Data Entry/Range',
 } as Meta
 
-const Template: Story<RangeProps> = args => <Range {...args} />
+const Template: Story<ComponentProps<typeof Range>> = args => (
+  <Range {...args} />
+)
 
 export const Default = Template.bind({})
 

@@ -53,7 +53,7 @@ const StyledManyTagsContainer = styled.div`
   flex-wrap: wrap;
 `
 
-export type TagsPoplistProps = {
+type TagsPoplistProps = {
   maxLength?: number
   maxTagWidth?: number
   tags?: string[]

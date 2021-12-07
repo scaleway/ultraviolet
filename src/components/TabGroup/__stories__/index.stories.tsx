@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import TabGroup, { TabGroupProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import TabGroup from '..'
 import Tab from '../Tab'
 
 export default {
@@ -20,7 +20,10 @@ export default {
   title: 'Components/Navigation/TabGroup',
 } as Meta
 
-const Template: Story<TabGroupProps> = ({ selected, ...args }) => {
+const Template: Story<ComponentProps<typeof TabGroup>> = ({
+  selected,
+  ...args
+}) => {
   const [change, onChange] = useState(selected)
   const onChangeHandler = (e?: string | number) => onChange(e)
 

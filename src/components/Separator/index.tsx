@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme/colors'
 import Box, { XStyledProps } from '../Box'
-import Icon, { IconName, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
@@ -43,8 +43,8 @@ const StyledHr = styled(Box.withComponent('hr'), {
   ${({ flex }) => flex && `flex: ${flex};`}
 `
 
-export type SeparatorProps = HorizontalSeparatorProps & {
-  icon?: IconName
+type SeparatorProps = HorizontalSeparatorProps & {
+  icon?: ComponentProps<typeof Icon>['name']
   children?: ReactNode
 }
 const Separator = ({

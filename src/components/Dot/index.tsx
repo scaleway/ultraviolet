@@ -15,7 +15,7 @@ const StyledDot = styled(Box, {
     colorsDeprecated[color as Color] ?? color};
 `
 
-export type DotProps = {
+type DotProps = {
   /**
    * The dot color
    */

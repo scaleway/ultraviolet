@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ProgressionButton, { ProgressionButtonProps } from '..'
+import React, { ComponentProps } from 'react'
+import ProgressionButton from '..'
 
 export default {
   component: ProgressionButton,
@@ -14,7 +14,7 @@ export default {
   title: 'Components/Button/ProgressionButton',
 } as Meta
 
-const Template: Story<ProgressionButtonProps> = args => (
+const Template: Story<ComponentProps<typeof ProgressionButton>> = args => (
   <ProgressionButton height={40} {...args}>
     Progressing...
   </ProgressionButton>

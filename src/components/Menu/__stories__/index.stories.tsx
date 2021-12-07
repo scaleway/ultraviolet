@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Menu, { MenuProps } from '..'
+import React, { ComponentProps } from 'react'
+import Menu from '..'
 import { Box, Icon, Modal as SWUIModal, Touchable } from '../..'
 import Item from '../Item'
 
@@ -31,7 +31,7 @@ const Disclosure = (
   </Touchable>
 )
 
-const Template: Story<MenuProps> = args => (
+const Template: Story<ComponentProps<typeof Menu>> = args => (
   <div style={{ height: '80px' }}>
     <Menu disclosure={Disclosure} {...args}>
       <Menu.Item>MenuItem</Menu.Item>

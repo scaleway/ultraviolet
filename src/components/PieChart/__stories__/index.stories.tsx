@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import PieChart, { PieChartProps } from '..'
+import React, { ComponentProps } from 'react'
+import PieChart from '..'
 import {
   data,
   dataWithLegends,
@@ -13,7 +13,7 @@ export default {
   title: 'Components/Data Display/Chart/PieChart',
 } as Meta
 
-const Template: Story<PieChartProps> = args => (
+const Template: Story<ComponentProps<typeof PieChart>> = args => (
   <PieChart data={data} {...args} />
 )
 

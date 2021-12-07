@@ -59,7 +59,7 @@ const DotWrapper = styled(FlexBox, {
     selectedStepPosition(steps, dotSize + 2 * parseInt(theme.space[1], 10))}
 `
 
-export type DotStepsProps = {
+type DotStepsProps = {
   setStep(index: number): void
   step?: number
   steps?: number

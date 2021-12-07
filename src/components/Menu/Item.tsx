@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
-import Button, { ButtonProps } from '../Button'
+import React, { ComponentProps, FunctionComponent } from 'react'
+import Button from '../Button'
 
 const variantStyle = {
   danger: (theme: Theme) => css`
@@ -80,7 +80,7 @@ const styles = {
 
 type VariantItem = keyof typeof variantStyle
 
-type ItemProps = Omit<ButtonProps, 'variant' | 'innerRef'> & {
+type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
   borderless?: boolean
   variant?: VariantItem
 }

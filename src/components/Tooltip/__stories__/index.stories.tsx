@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Tooltip, { TooltipPlacement, TooltipProps } from '..'
+import React, { ComponentProps } from 'react'
+import Tooltip from '..'
 import Box from '../../Box'
 import Button from '../../Button'
 import FlexBox from '../../FlexBox'
@@ -20,7 +20,9 @@ export default {
   title: 'Components/Feedback/Tooltip',
 } as Meta
 
-const Template: Story<TooltipProps> = args => <Tooltip {...args} />
+const Template: Story<ComponentProps<typeof Tooltip>> = args => (
+  <Tooltip {...args} />
+)
 
 export const Default = Template.bind({})
 Default.args = {
@@ -148,9 +150,13 @@ Children.parameters = {
 
 export const Placement: Story = () => (
   <FlexBox justifyContent="space-evenly">
-    {['left', 'top', 'bottom', 'right'].map(placement => (
+    {(
+      ['left', 'top', 'bottom', 'right'] as ComponentProps<
+        typeof Tooltip
+      >['placement'][]
+    ).map(placement => (
       <Box key={placement} p={2}>
-        <Tooltip text="tooltip" placement={placement as TooltipPlacement}>
+        <Tooltip text="tooltip" placement={placement}>
           {placement}
         </Tooltip>
       </Box>
@@ -168,13 +174,13 @@ Placement.parameters = {
 
 export const Variants: Story = () => (
   <Box display="flex" backgroundColor="black" justifyContent="space-evenly">
-    {['left', 'top', 'bottom', 'right'].map(placement => (
+    {(
+      ['left', 'top', 'bottom', 'right'] as ComponentProps<
+        typeof Tooltip
+      >['placement'][]
+    ).map(placement => (
       <Box key={placement} p={2} color="white">
-        <Tooltip
-          text="tooltip"
-          variant="white"
-          placement={placement as TooltipPlacement}
-        >
+        <Tooltip text="tooltip" variant="white" placement={placement}>
           {placement}
         </Tooltip>
       </Box>

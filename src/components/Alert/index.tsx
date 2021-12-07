@@ -1,10 +1,10 @@
 import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import { useUUID } from '../../utils'
 import Box, { XStyledProps } from '../Box'
-import Icon, { IconName, icons } from '../Icon'
+import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
 
 export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
@@ -78,7 +78,10 @@ const variantStyles = ({
 }: ContainerProps & { theme: Theme }) =>
   variants(props)[variant] || variants(props).standard
 
-const typesDefaultIcons: Record<AlertType, IconName> = {
+const typesDefaultIcons: Record<
+  AlertType,
+  ComponentProps<typeof Icon>['name']
+> = {
   beta: 'alert',
   info: 'information-outline',
   success: 'checkbox-marked-circle-outline',
@@ -111,11 +114,11 @@ const Title = ({ color, text }: TitleProps) => (
   </Typography>
 )
 
-export type AlertProps = {
+type AlertProps = {
   variant?: AlertVariant
   children: ReactNode
   iconSize?: number
-  icon?: IconName
+  icon?: ComponentProps<typeof Icon>['name']
   title?: string
   type?: AlertType
 } & XStyledProps

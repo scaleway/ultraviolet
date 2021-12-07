@@ -11,7 +11,7 @@ const Container = styled(Box)`
   display: flex;
   align-items: center;
 `
-export type NoticeProps = {
+type NoticeProps = {
   children: ReactNode
 } & XStyledProps
 

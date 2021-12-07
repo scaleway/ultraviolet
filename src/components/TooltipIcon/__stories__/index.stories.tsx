@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import TooltipIcon, { TooltipIconProps } from '..'
+import React, { ComponentProps } from 'react'
+import TooltipIcon from '..'
 import FlexBox from '../../FlexBox'
 
 export default {
@@ -18,7 +18,9 @@ export default {
   title: 'Components/Feedback/TooltipIcon',
 } as Meta
 
-const Template: Story<TooltipIconProps> = args => <TooltipIcon {...args} />
+const Template: Story<ComponentProps<typeof TooltipIcon>> = args => (
+  <TooltipIcon {...args} />
+)
 
 export const Default = Template.bind({})
 Default.decorators = [

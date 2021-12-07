@@ -1,11 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
-import RichSelect, {
-  RichSelectProps,
-  SelectOption,
-  WithSelectProps,
-} from '../RichSelect'
+import React, { ComponentProps, useEffect, useState } from 'react'
+import RichSelect, { SelectOption } from '../RichSelect'
+import type { WithSelectProps } from '../RichSelect'
 import TextBox from '../TextBox'
 
 export const sizesHeight: Record<string, string> = {
@@ -76,7 +73,10 @@ type UnitInputValue = {
   value: number
 }
 
-export type UnitInputProps = Omit<Partial<RichSelectProps>, 'defaultValue'> & {
+type UnitInputProps = Omit<
+  Partial<ComponentProps<typeof RichSelect>>,
+  'defaultValue'
+> & {
   name?: string
   defaultValue?: number
   disabled?: boolean

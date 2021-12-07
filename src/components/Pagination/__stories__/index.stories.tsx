@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import Pagination, { PaginationProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import Pagination from '..'
 import Box from '../../Box'
 import Button from '../../Button'
 import Placeholder from '../../Placeholder'
@@ -19,7 +19,7 @@ export default {
   title: 'Components/Pagination',
 } as Meta
 
-const Template: Story<PaginationProps> = args => (
+const Template: Story<ComponentProps<typeof Pagination>> = args => (
   <Pagination {...args}>
     {({ pageData }: { pageData: string[] }) => (
       <ul>

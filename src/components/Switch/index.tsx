@@ -235,7 +235,7 @@ const StyledLabel = styled.label<{ disabled?: boolean }>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `
 
-export type SwitchProps = StyledSwitchProps & {
+type SwitchProps = StyledSwitchProps & {
   id?: string
   checked?: boolean
   name: string

@@ -38,7 +38,7 @@ const KEY_CODE = {
   up: 38,
 }
 
-export type VerificationCodeProps = {
+type VerificationCodeProps = {
   disabled?: boolean
   error?: boolean
   /**

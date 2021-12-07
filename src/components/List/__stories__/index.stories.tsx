@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Meta, Story } from '@storybook/react'
-import React, { useRef, useState } from 'react'
-import List, { ListProps } from '..'
+import React, { ComponentProps, useRef, useState } from 'react'
+import List from '..'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
@@ -18,7 +18,7 @@ export default {
   title: 'Components/List',
 } as Meta
 
-const Template: Story<ListProps> = args => (
+const Template: Story<ComponentProps<typeof List>> = args => (
   <List data={[]} columns={[{ label: 'Name' }]} {...args}>
     {list => (
       <>

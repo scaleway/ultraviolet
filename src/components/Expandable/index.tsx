@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import Box, { XStyledProps } from '../Box'
 
-export type ExpandableProps = {
+type ExpandableProps = {
   /**
    * The content to display
    */

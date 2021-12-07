@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Container, { ContainerProps } from '..'
+import React, { ComponentProps } from 'react'
+import Container from '..'
 import { Button } from '../../index'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   title: 'Components/Container/Container',
 } as Meta
 
-const Template: Story<ContainerProps> = args => (
+const Template: Story<ComponentProps<typeof Container>> = args => (
   <Container {...args}>Hello</Container>
 )
 

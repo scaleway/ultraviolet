@@ -137,7 +137,7 @@ const TopHeaderDiv = styled.div`
   background-color: ${({ theme: { colorsDeprecated } }) =>
     colorsDeprecated.white};
 `
-export type DateInputProps = Pick<
+type DateInputProps = Pick<
   ReactDatePickerProps<string>,
   | 'autoFocus'
   | 'disabled'

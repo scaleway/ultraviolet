@@ -92,8 +92,8 @@ const sizes = {
   `,
 }
 
-export type Variants = keyof typeof variants
-export type Sizes = keyof typeof sizes
+type Variants = keyof typeof variants
+type Sizes = keyof typeof sizes
 
 export const badgeVariants = Object.keys(variants) as Variants[]
 export const badgeSizes = Object.keys(sizes) as Sizes[]
@@ -108,7 +108,7 @@ const variantsStyle = ({
   theme: Theme
 }) => variants[variant as Variants]?.(props)
 
-export type BadgeProps = {
+type BadgeProps = {
   variant?: Variants
   size?: Sizes
 } & XStyledProps

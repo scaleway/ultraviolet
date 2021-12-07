@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import TextBox, { TextBoxProps, textBoxSizes } from '..'
+import React, { ComponentProps } from 'react'
+import TextBox, { textBoxSizes } from '..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 import Boxer from '../../Boxer'
 import UncontrolledTextBox from './UncontrolledTextBox'
@@ -17,7 +17,7 @@ export default {
   title: 'Components/Data Entry/TextBox',
 } as Meta
 
-const Template: Story<TextBoxProps> = args => (
+const Template: Story<ComponentProps<typeof TextBox>> = args => (
   <Boxer my={1}>
     <UncontrolledTextBox label="First Name" {...args} />
   </Boxer>

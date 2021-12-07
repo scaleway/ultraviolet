@@ -8,7 +8,7 @@ const StyledScrollView = styled.div`
   overflow-y: auto;
 `
 
-export type ScrollViewProps = HTMLAttributes<HTMLDivElement>
+type ScrollViewProps = HTMLAttributes<HTMLDivElement>
 
 const ScrollView: FunctionComponent<ScrollViewProps> = props => (
   <StyledScrollView {...props} />

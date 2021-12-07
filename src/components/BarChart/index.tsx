@@ -7,13 +7,18 @@ import {
 } from '@nivo/bar'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, Validator, useCallback } from 'react'
+import React, {
+  ComponentProps,
+  FunctionComponent,
+  Validator,
+  useCallback,
+} from 'react'
 import { getLegendColor } from '../../helpers/legend'
-import BarChartTooltip, { BarChartToolTipProps } from './Tooltip'
+import BarChartTooltip from './Tooltip'
 
 type Formater = ValueFormat<DatumValue>
 
-export type BarChartProps = {
+type BarChartProps = {
   height?: string | number
   margin?: Box
   data?: BarDatum[]
@@ -23,7 +28,9 @@ export type BarChartProps = {
   pointFormatters?: Partial<Record<'x' | 'y', Formater>>
   tickValues?: Box
   keys?: string[]
-  tooltipFunction?: (props: BarTooltipProps<BarDatum>) => BarChartToolTipProps
+  tooltipFunction?: (
+    props: BarTooltipProps<BarDatum>,
+  ) => ComponentProps<typeof BarChartTooltip>
   chartProps?: Partial<BarSvgProps<BarDatum>>
 }
 

@@ -46,7 +46,7 @@ const StyledImg = styled.img`
   width: 100%;
 `
 
-export interface AvatarProps {
+interface AvatarProps {
   image?: string
   size?: number
   text?: string

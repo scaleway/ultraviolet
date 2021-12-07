@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import ActionBar, { ActionBarProps } from '..'
+import React, { ComponentProps } from 'react'
+import ActionBar from '..'
 
 export default {
   component: ActionBar,
   title: 'Components/ActionBar',
 } as Meta
 
-const Template: Story<ActionBarProps> = args => (
+const Template: Story<ComponentProps<typeof ActionBar>> = args => (
   <ActionBar {...args}>I am an Action Bar</ActionBar>
 )
 

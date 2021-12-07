@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Dot, { DotProps } from '..'
+import React, { ComponentProps } from 'react'
+import Dot from '..'
 
 export default {
   component: Dot,
   title: 'Components/Data Display/Dot',
 } as Meta
 
-const Template: Story<DotProps> = args => <Dot {...args} />
+const Template: Story<ComponentProps<typeof Dot>> = args => <Dot {...args} />
 
 export const Default = Template.bind({})
 

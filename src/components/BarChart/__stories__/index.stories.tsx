@@ -1,8 +1,7 @@
 import { Meta, Story } from '@storybook/react'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { format } from 'date-fns'
-import React from 'react'
-import BarChart, { BarChartProps } from '..'
+import React, { ComponentProps } from 'react'
+import BarChart from '..'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,
@@ -14,7 +13,7 @@ export default {
   title: 'Components/Data Display/Chart/BarChart',
 } as Meta
 
-const Template: Story<BarChartProps> = args => (
+const Template: Story<ComponentProps<typeof BarChart>> = args => (
   <BarChart data={barChartSimpleData} {...args} />
 )
 

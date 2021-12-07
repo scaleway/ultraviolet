@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useState } from 'react'
-import VerificationCode, { VerificationCodeProps } from '..'
+import React, { ComponentProps, useState } from 'react'
+import VerificationCode from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   title: 'Components/Data Entry/VerificationCode',
 } as Meta
 
-const Template: Story<VerificationCodeProps> = args => (
+const Template: Story<ComponentProps<typeof VerificationCode>> = args => (
   <VerificationCode inputId="verification-code-input" {...args} />
 )
 

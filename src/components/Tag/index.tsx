@@ -24,7 +24,7 @@ export const variantsContainer = {
   `,
 }
 
-export type TagVariant = keyof typeof variantsContainer
+type TagVariant = keyof typeof variantsContainer
 
 const variantStyles = ({
   variant,
@@ -86,7 +86,7 @@ const StyledTouchable = styled(Touchable, {
 `}
 `
 
-export type TagProps = {
+type TagProps = {
   children: ReactNode
   disabled?: boolean
   isLoading?: boolean

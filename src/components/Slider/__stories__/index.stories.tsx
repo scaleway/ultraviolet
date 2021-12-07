@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Slider, { SliderItem, SliderProps } from '..'
+import React, { ComponentProps } from 'react'
+import Slider, { SliderItem } from '..'
 
 export default {
   component: Slider,
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Data Display/Slider',
 } as Meta
 
-const Template: Story<SliderProps> = args => (
+const Template: Story<ComponentProps<typeof Slider>> = args => (
   <Slider {...args}>
     <Slider.Item>Item 1</Slider.Item>
     <Slider.Item>Item 2</Slider.Item>

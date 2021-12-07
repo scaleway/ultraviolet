@@ -1,12 +1,7 @@
 import { css } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Modal, {
-  MODAL_ANIMATION,
-  MODAL_PLACEMENT,
-  MODAL_WIDTH,
-  ModalProps,
-} from '..'
+import React, { ComponentProps } from 'react'
+import Modal, { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '..'
 import { Box, Button, Switch as SWUISwitch } from '../..'
 
 export default {
@@ -23,7 +18,7 @@ By default now our modal is a portal. If you want to change this you can disable
   title: 'Components/Container/Modal',
 } as Meta
 
-const Template: Story<ModalProps> = args => (
+const Template: Story<ComponentProps<typeof Modal>> = args => (
   <Modal disclosure={<Button>Open Modal</Button>} {...args}>
     <Box p={4}>Content should be present in center of the modal</Box>
   </Modal>

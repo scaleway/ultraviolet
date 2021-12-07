@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Image, { ImageProps } from '..'
+import React, { ComponentProps } from 'react'
+import Image from '..'
 import logo from './scaleway-text.png'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   title: 'Components/Image',
 } as Meta
 
-const Template: Story<ImageProps> = args => (
+const Template: Story<ComponentProps<typeof Image>> = args => (
   <Image src={logo} alt="Scaleway logo" {...args} />
 )
 

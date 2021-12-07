@@ -37,7 +37,7 @@ const HiddenDiv = styled.div`
   position: absolute;
 `
 
-export type ActivityIndicatorProps = {
+type ActivityIndicatorProps = {
   active?: boolean
   color?: string
   percentage?: number

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, HTMLAttributes } from 'react'
 import { Color } from '../../theme/colors'
 
-export interface PentagonProps {
+interface PentagonProps {
   size?: string
   color?: string
 }

@@ -39,7 +39,7 @@ type Strength = {
   t: string
 }
 
-export type PasswordStrengthMeterProps = {
+type PasswordStrengthMeterProps = {
   /**
    * A function that should return a score based on password (index of strength array). The higher score is the stronger password is.
    */

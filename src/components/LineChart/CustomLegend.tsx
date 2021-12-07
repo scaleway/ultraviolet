@@ -67,7 +67,7 @@ Cell.propTypes = {
   variant: PropTypes.string,
 }
 
-export type Transformer = (value: DatumValue) => string
+type Transformer = (value: DatumValue) => string
 
 const noop: Transformer = value => value.toString()
 

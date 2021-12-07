@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
-import RichSelect, { RichSelectProps } from '../RichSelect'
+import React, { ComponentProps, FunctionComponent } from 'react'
+import RichSelect from '../RichSelect'
 
 const hours = [
   '00:00',
@@ -197,7 +197,7 @@ const defaultValue = {
   value: '00:00',
 }
 
-export type TimeInputProps = Partial<RichSelectProps> & {
+type TimeInputProps = Partial<ComponentProps<typeof RichSelect>> & {
   schedule?: ScheduleType
 }
 
