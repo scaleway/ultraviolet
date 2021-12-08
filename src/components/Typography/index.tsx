@@ -12,7 +12,7 @@ import React, {
   useCallback,
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { XStyledProps } from '../Box'
 import Tooltip from '../Tooltip'
 

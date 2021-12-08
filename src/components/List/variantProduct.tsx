@@ -11,7 +11,7 @@ import React, {
   isValidElement,
   useCallback,
 } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'

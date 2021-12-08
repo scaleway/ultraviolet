@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 
 const progressionAnimation = keyframes`

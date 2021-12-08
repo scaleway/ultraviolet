@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, useMemo } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import { getUUID } from '../../utils'
 
 const spin = keyframes`

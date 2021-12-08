@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { HTMLAttributes, ReactNode, VoidFunctionComponent } from 'react'
 import { Checkbox, CheckboxHTMLProps } from 'reakit'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Tooltip from '../Tooltip'
 
 const PADDING = 6

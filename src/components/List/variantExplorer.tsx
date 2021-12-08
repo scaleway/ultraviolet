@@ -7,7 +7,7 @@ import React, {
   VoidFunctionComponent,
   useCallback,
 } from 'react'
-import { Color } from '../../theme/colors'
+import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'

@@ -1,5 +1,6 @@
 /* eslint-disable sort-keys */
-import colorsDeprecated from './colors'
+import colors, { Color, ContrastType, colorsTokens } from './colors'
+import colorsDeprecated from './deprecated/colors'
 
 const radii = {
   none: '0',
@@ -41,11 +42,33 @@ const fonts = {
 
 const theme = {
   colorsDeprecated,
+  colors,
   fonts,
   space,
   screens,
   radii,
 }
+
+const createTheme = ({
+  contrasts,
+  space: newSpace,
+  screens: newScreens,
+  radii: newRadii,
+  fonts: newFonts,
+}: {
+  contrasts?: Partial<Record<Color, Partial<ContrastType>>>
+  space?: Partial<Record<Spaces, string>>
+  screens?: Partial<Record<ScreenSize, string>>
+  radii?: Partial<Record<string, string>>
+  fonts?: Partial<Record<string, string>>
+}) => ({
+  ...theme,
+  ...(contrasts ? { colors: colorsTokens(contrasts) } : {}),
+  ...(newSpace ? { space: newSpace } : {}),
+  ...(newScreens ? { screen: newScreens } : {}),
+  ...(newRadii ? { radii: newRadii } : {}),
+  ...(newFonts ? { fonts: newFonts } : {}),
+})
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
@@ -53,4 +76,13 @@ type SCWUITheme = typeof theme & {
 
 export default theme
 
-export { colorsDeprecated, space, radii, fonts, screens, SCWUITheme }
+export {
+  colors,
+  colorsDeprecated,
+  space,
+  radii,
+  fonts,
+  screens,
+  SCWUITheme,
+  createTheme,
+}
