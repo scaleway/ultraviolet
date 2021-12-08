@@ -1,3 +1,10 @@
+## [0.127.0](https://github.com/scaleway/scaleway-ui/compare/v0.126.4...v0.127.0) (2021-12-08)
+
+
+### :gear: Features
+
+* **theme:** creating new theme colors ([#959](https://github.com/scaleway/scaleway-ui/issues/959)) ([8ef3c72](https://github.com/scaleway/scaleway-ui/commit/8ef3c72b9cdf3c309f4ad7d5ed76dd22c9cb2f95))
+
 ### [0.126.4](https://github.com/scaleway/scaleway-ui/compare/v0.126.3...v0.126.4) (2021-12-08)
 
 
