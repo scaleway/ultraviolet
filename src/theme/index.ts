@@ -79,6 +79,7 @@ export default theme
 
 export {
   colors,
+  Color,
   colorsDeprecated,
   space,
   radii,

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { FunctionComponent, useMemo } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
 import { getUUID } from '../../utils'
 
 const spin = keyframes`
@@ -39,7 +39,7 @@ const HiddenDiv = styled.div`
 
 type ActivityIndicatorProps = {
   active?: boolean
-  color?: string
+  color?: Color | string
   percentage?: number
   size?: number | string
   strokeWidth?: number
@@ -47,7 +47,7 @@ type ActivityIndicatorProps = {
    * Text is placed in center of ProgressCircle.
    */
   text?: string
-  trailColor?: string
+  trailColor?: Color | string
   /**
    * Label should be defined for accessibility, to indicate what is loading
    */
@@ -62,7 +62,7 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   size = 40,
   strokeWidth = 16,
   color = 'primary',
-  trailColor = 'gray350',
+  trailColor = 'neutral',
   active = false,
   label = 'Loading',
 }) => {
@@ -80,18 +80,19 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
           size={size}
           styles={{
             path: {
-              stroke: theme.colorsDeprecated[color as Color] || color,
+              stroke: theme.colors[color as Color]?.backgroundStrong || color,
               strokeLinecap: 'round',
             },
             root: {},
             text: {
               dominantBaseline: 'middle',
-              fill: theme.colorsDeprecated.primary,
+              fill: theme.colors[color as Color]?.text || color,
               fontSize: '26px',
               textAnchor: 'middle',
             },
             trail: {
-              stroke: theme.colorsDeprecated[trailColor as Color] || trailColor,
+              stroke:
+                theme.colors[trailColor as Color]?.background || trailColor,
               strokeLinecap: 'round',
             },
           }}

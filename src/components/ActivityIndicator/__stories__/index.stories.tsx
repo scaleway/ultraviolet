@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import ActivityIndicator from '..'
-import { colorsDeprecated } from '../../../theme'
+import { colors } from '../../../theme'
 
 export default {
   component: ActivityIndicator,
@@ -74,7 +74,7 @@ Colors.parameters = {
 Colors.decorators = [
   () => (
     <>
-      {Object.keys(colorsDeprecated).map(color => (
+      {Object.keys(colors).map(color => (
         <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
           <ActivityIndicator
             key={`color-${color}`}
@@ -98,18 +98,16 @@ TrailColor.parameters = {
 TrailColor.decorators = [
   () => (
     <>
-      {['white', 'gray300', 'gray550', 'zumthor', 'shadow', 'beta', 'gold'].map(
-        color => (
-          <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
-            <ActivityIndicator
-              key={`trailColor-${color}`}
-              trailColor={color}
-              percentage={75}
-              label="Loading example"
-            />
-          </div>
-        ),
-      )}
+      {Object.keys(colors).map(color => (
+        <div key={color} style={{ display: 'inline-flex', marginRight: 8 }}>
+          <ActivityIndicator
+            key={`trailColor-${color}`}
+            trailColor={color}
+            percentage={25}
+            label="Loading example"
+          />
+        </div>
+      ))}
     </>
   ),
 ]
