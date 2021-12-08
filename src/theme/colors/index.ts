@@ -63,7 +63,7 @@ const generateTokens = ({
       borderStrongHover: contrast[800],
       borderStrongDisabled: contrast[800],
 
-      /* eslint-enable */
+      /* eslint-enable sort-keys */
     }
   }
 
@@ -103,7 +103,7 @@ const generateTokens = ({
     borderStrongHover: contrast[800],
     borderStrongDisabled: contrast[800],
 
-    /* eslint-enable */
+    /* eslint-enable sort-keys */
   }
 }
 

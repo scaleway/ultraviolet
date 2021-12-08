@@ -288,7 +288,7 @@ describe('createTheme', () => {
         '0': '6px',
         '9': '600px',
       },
-      /* eslint-enable */
+      /* eslint-enable sort-keys */
     })
   })
 })
