@@ -1,3 +1,23 @@
+### [0.126.4](https://github.com/scaleway/scaleway-ui/compare/v0.126.3...v0.126.4) (2021-12-08)
+
+
+### :zap: Refactor
+
+* favor ComponentProps instead of exporting types ([#961](https://github.com/scaleway/scaleway-ui/issues/961)) ([59f10f8](https://github.com/scaleway/scaleway-ui/commit/59f10f85949af61e82dcc7c304bb425fe3a87568))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.0.1 ([#970](https://github.com/scaleway/scaleway-ui/issues/970)) ([160850b](https://github.com/scaleway/scaleway-ui/commit/160850bd08d2d352c71728be0cfde16fa2dc6b33))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.24 ([#975](https://github.com/scaleway/scaleway-ui/issues/975)) ([e4bed5b](https://github.com/scaleway/scaleway-ui/commit/e4bed5be7b367eecf98f76fae383b1299775191d))
+* **devdeps:** update dependency size-limit to v7.0.4 ([#973](https://github.com/scaleway/scaleway-ui/issues/973)) ([0769bab](https://github.com/scaleway/scaleway-ui/commit/0769bab4af6d4bb9eac87a678c2fbff062711431))
+* **devdeps:** update storybook monorepo to v6.4.8 ([#974](https://github.com/scaleway/scaleway-ui/issues/974)) ([ce89539](https://github.com/scaleway/scaleway-ui/commit/ce8953937c616e4c7f01aa8eaf10037424a8ee9e))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-datepicker to v4.5.0 ([#943](https://github.com/scaleway/scaleway-ui/issues/943)) ([08a34f4](https://github.com/scaleway/scaleway-ui/commit/08a34f41d30d24ba27b4eb52e559b4ebc1ec7f14))
+
 ### [0.126.3](https://github.com/scaleway/scaleway-ui/compare/v0.126.2...v0.126.3) (2021-12-06)
 
 
