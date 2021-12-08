@@ -56,11 +56,11 @@ const createTheme = ({
   radii: newRadii,
   fonts: newFonts,
 }: {
-  contrasts?: Record<Color, Partial<ContrastType>>
-  space?: Spaces
-  screens?: ScreenSize
-  radii?: Record<string, string>
-  fonts?: Record<string, string>
+  contrasts?: Partial<Record<Color, Partial<ContrastType>>>
+  space?: Partial<Record<Spaces, string>>
+  screens?: Partial<Record<ScreenSize, string>>
+  radii?: Partial<Record<string, string>>
+  fonts?: Partial<Record<string, string>>
 }) => ({
   ...theme,
   ...(contrasts ? { colors: colorsTokens(contrasts) } : {}),

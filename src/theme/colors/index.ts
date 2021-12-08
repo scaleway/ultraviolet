@@ -111,7 +111,7 @@ export type Color = keyof typeof localContrasts
 
 // This function get in parameter a shade of contrasts and return a well formatted design tokens
 export const colorsTokens = (
-  contrasts: Record<Color, Partial<ContrastType>>,
+  contrasts: Partial<Record<Color, Partial<ContrastType>>>,
 ) => {
   // We first get contrasts passed as parameter if some are missing we use local contrasts and deep merge them
   const deepMergedContrasts = Object.keys(localContrasts).reduce(
@@ -123,7 +123,7 @@ export const colorsTokens = (
       },
     }),
     {},
-  ) as { [key in Color]: ContrastType }
+  ) as Record<Color, ContrastType>
 
   // Then with list of contrasts we can now create our design tokens using generateTokens function
   return Object.keys(deepMergedContrasts).reduce(
