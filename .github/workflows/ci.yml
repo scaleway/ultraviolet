@@ -104,6 +104,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: build:storybook
           exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing
       - name: Publish to Chromatic and auto accept changes
         if: github.ref == 'refs/heads/main'
