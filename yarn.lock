@@ -3389,6 +3389,7 @@ __metadata:
     "@xstyled/emotion": 2.5.0
     babel-loader: 8.2.3
     babel-plugin-annotate-pure-calls: 0.4.0
+    chromatic: ^6.2.0
     cross-env: 7.0.3
     cz-conventional-changelog: 3.3.0
     date-fns: 2.27.0
@@ -8031,6 +8032,17 @@ __metadata:
   version: 1.1.4
   resolution: "chownr@npm:1.1.4"
   checksum: 115648f8eb38bac5e41c3857f3e663f9c39ed6480d1349977c4d96c95a47266fcacc5a5aabf3cb6c481e22d72f41992827db47301851766c4fd77ac21a4f081d
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "chromatic@npm:6.2.0"
+  bin:
+    chroma: bin/main.cjs
+    chromatic: bin/main.cjs
+    chromatic-cli: bin/main.cjs
+  checksum: d0726a511531c2707d2c9964e26223cf30f890d3b322983180013d7d42de54ac6d3708ff0ef08e66c399be55639694004ecdd8a5110b58d2aea463be964c0905
   languageName: node
   linkType: hard
 
