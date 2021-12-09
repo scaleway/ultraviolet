@@ -22,7 +22,7 @@ const StyledList = styled.ul`
 
 const Item: VoidFunctionComponent = () => (
   <StyledItem>
-    <div style={{ width: '240px' }}>
+    <div style={{ width: '260px' }}>
       <Line />
     </div>
     <div style={{ width: '360px' }}>
