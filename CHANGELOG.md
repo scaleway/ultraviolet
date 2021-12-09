@@ -1,3 +1,10 @@
+### [0.127.2](https://github.com/scaleway/scaleway-ui/compare/v0.127.1...v0.127.2) (2021-12-09)
+
+
+### :bug: Bug Fixes
+
+* update neutral colors once again ([#981](https://github.com/scaleway/scaleway-ui/issues/981)) ([9eb4caa](https://github.com/scaleway/scaleway-ui/commit/9eb4caa9578d588231864592dc682472ae60b799))
+
 ### [0.127.1](https://github.com/scaleway/scaleway-ui/compare/v0.127.0...v0.127.1) (2021-12-09)
 
 
