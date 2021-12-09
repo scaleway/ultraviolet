@@ -11,15 +11,15 @@ export const primary = {
 }
 
 export const secondary = {
-  100: '#ae5df6',
-  200: '#ae5df6',
-  300: '#ae5df6',
-  400: '#ae5df6',
-  500: '#ae5df6',
-  600: '#ae5df6',
-  700: '#ae5df6',
-  800: '#ae5df6',
-  900: '#ae5df6',
+  100: '#a365f6',
+  200: '#a365f6',
+  300: '#a365f6',
+  400: '#a365f6',
+  500: '#a365f6',
+  600: '#a365f6',
+  700: '#a365f6',
+  800: '#a365f6',
+  900: '#a365f6',
 }
 
 export const neutral = {
