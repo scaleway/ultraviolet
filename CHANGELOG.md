@@ -1,3 +1,10 @@
+### [0.127.1](https://github.com/scaleway/scaleway-ui/compare/v0.127.0...v0.127.1) (2021-12-09)
+
+
+### :bug: Bug Fixes
+
+* **theme:** fix neutral weak border color ([#978](https://github.com/scaleway/scaleway-ui/issues/978)) ([0c59fb7](https://github.com/scaleway/scaleway-ui/commit/0c59fb7e0fcbb6fe9f860597d08ad6baceba9324))
+
 ## [0.127.0](https://github.com/scaleway/scaleway-ui/compare/v0.126.4...v0.127.0) (2021-12-08)
 
 
