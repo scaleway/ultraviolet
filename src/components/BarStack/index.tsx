@@ -36,13 +36,13 @@ interface BarStackProps {
 const StyledBarWrapper = styled.div`
   width: 0px;
   transition: width 500ms;
-  background-color: ${({ theme }) => theme.colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
 
 const StyledBar = styled.div`
   height: 50px;
   font-weight: 600;
-  color: ${({ theme }) => theme.colorsDeprecated.white};
+  color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -51,63 +51,78 @@ const StyledBar = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-shadow: -1px 0
-      ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.black)},
-    0 1px ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.black)},
-    1px 0 ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.black)},
-    0 -1px ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.black)};
+      ${({ theme }) =>
+        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
+    0 1px
+      ${({ theme }) =>
+        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
+    1px 0
+      ${({ theme }) =>
+        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
+    0 -1px ${({ theme }) => transparentize(0.7, theme.colors.neutral.backgroundStrong)};
 `
 
 const StyledContainer = styled.div`
   width: 100%;
   display: flex;
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray100};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   box-shadow: inset 0px 0px 0px 1px
-    ${({ theme }) => theme.colorsDeprecated.gray300};
+    ${({ theme }) => theme.colors.neutral.background};
   overflow: hidden;
 
   ${StyledBarWrapper}:nth-child(5n+1) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.9,
-      theme.colorsDeprecated.white,
+      theme.colors.neutral.backgroundWeak,
     )} 25%,
-      ${theme.colorsDeprecated.primary} 25%, ${
-      theme.colorsDeprecated.primary
+      ${theme.colors.primary.backgroundStrong} 25%, ${
+      theme.colors.primary.backgroundStrong
     } 50%,
       ${transparentize(
         0.9,
-        theme.colorsDeprecated.white,
-      )} 50%, ${transparentize(0.9, theme.colorsDeprecated.white)} 75%, ${
-      theme.colorsDeprecated.primary
-    }
+        theme.colors.neutral.backgroundWeak,
+      )} 50%, ${transparentize(
+      0.9,
+      theme.colors.neutral.backgroundWeak,
+    )} 75%, ${theme.colors.primary.backgroundStrong}
        75%);`}
     background-size: 30px 30px;
-    background-color: ${({ theme }) => theme.colorsDeprecated.primary};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
   ${StyledBarWrapper}:nth-child(5n+2) {
     background-color: ${({ theme }) =>
-      lighten(0.1, theme.colorsDeprecated.primary)};
+      lighten(0.1, theme.colors.primary.backgroundStrong)};
 
     background-image: linear-gradient(
         135deg,
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.75, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         225deg,
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.75, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         45deg,
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.75, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         315deg,
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.white)} 25%,
-        ${({ theme }) => lighten(0.1, theme.colorsDeprecated.primary)} 25%
+        ${({ theme }) =>
+            transparentize(0.75, theme.colors.neutral.backgroundWeak)}
+          25%,
+        ${({ theme }) => lighten(0.1, theme.colors.primary.backgroundStrong)}
+          25%
       );
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 10px 10px;
@@ -117,45 +132,54 @@ const StyledContainer = styled.div`
   ${StyledBarWrapper}:nth-child(5n+3) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.9,
-      theme.colorsDeprecated.white,
+      theme.colors.neutral.backgroundWeak,
     )} 25%,
-      ${theme.colorsDeprecated.lightViolet} 25%, ${
-      theme.colorsDeprecated.lightViolet
+      ${theme.colors.secondary.background} 25%, ${
+      theme.colors.secondary.background
     } 50%,
       ${transparentize(
         0.9,
-        theme.colorsDeprecated.white,
-      )} 50%, ${transparentize(0.9, theme.colorsDeprecated.white)} 75%, ${
-      theme.colorsDeprecated.lightViolet
-    }
+        theme.colors.neutral.backgroundWeak,
+      )} 50%, ${transparentize(
+      0.9,
+      theme.colors.neutral.backgroundWeak,
+    )} 75%, ${theme.colors.secondary.background}
        75%);`}
     background-size: 30px 30px;
     background-color: ${({ theme }) =>
-      darken(0.2, theme.colorsDeprecated.lightViolet)};
+      darken(0.2, theme.colors.secondary.background)};
   }
 
   ${StyledBarWrapper}:nth-child(5n+4) {
-    background-color: ${({ theme }) => theme.colorsDeprecated.lightViolet};
+    background-color: ${({ theme }) => theme.colors.secondary.background};
 
     background-image: linear-gradient(
         135deg,
-        ${({ theme }) => transparentize(0.8, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.8, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         225deg,
-        ${({ theme }) => transparentize(0.8, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.8, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         45deg,
-        ${({ theme }) => transparentize(0.8, theme.colorsDeprecated.white)} 25%,
+        ${({ theme }) =>
+            transparentize(0.8, theme.colors.neutral.backgroundWeak)}
+          25%,
         transparent 25%
       ),
       linear-gradient(
         315deg,
-        ${({ theme }) => transparentize(0.8, theme.colorsDeprecated.white)} 25%,
-        ${({ theme }) => theme.colorsDeprecated.lightViolet} 25%
+        ${({ theme }) =>
+            transparentize(0.8, theme.colors.neutral.backgroundWeak)}
+          25%,
+        ${({ theme }) => theme.colors.secondary.background} 25%
       );
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 10px 10px;
@@ -165,23 +189,23 @@ const StyledContainer = styled.div`
   ${StyledBarWrapper}:nth-child(5n+5) {
     ${({ theme }) => `background: linear-gradient(-45deg, ${transparentize(
       0.8,
-      theme.colorsDeprecated.white,
+      theme.colors.neutral.backgroundWeak,
     )} 25%,
-      ${lighten(0.1, theme.colorsDeprecated.lightViolet)} 25%, ${lighten(
+      ${lighten(0.1, theme.colors.secondary.background)} 25%, ${lighten(
       0.1,
-      theme.colorsDeprecated.lightViolet,
+      theme.colors.secondary.background,
     )} 50%,
       ${transparentize(
         0.8,
-        theme.colorsDeprecated.white,
+        theme.colors.neutral.backgroundWeak,
       )} 50%, ${transparentize(
       0.8,
-      theme.colorsDeprecated.white,
-    )} 75%, ${lighten(0.1, theme.colorsDeprecated.lightViolet)}
+      theme.colors.neutral.backgroundWeak,
+    )} 75%, ${lighten(0.1, theme.colors.secondary.background)}
        75%);`}
     background-size: 30px 30px;
     background-color: ${({ theme }) =>
-      lighten(0.1, theme.colorsDeprecated.lightViolet)};
+      lighten(0.1, theme.colors.secondary.background)};
   }
 `
 

@@ -1,9 +1,9 @@
 import { Theme } from '@emotion/react'
 
 export const legendColors = (theme: Theme): string[] => [
-  theme.colorsDeprecated.chartGreen,
-  theme.colorsDeprecated.chartPurple,
-  theme.colorsDeprecated.gray350,
+  theme.colors.success.backgroundStrong,
+  theme.colors.primary.backgroundStrong,
+  theme.colors.neutral.background,
 ]
 
 export const getLegendColor = (index: number, theme: Theme): string => {
