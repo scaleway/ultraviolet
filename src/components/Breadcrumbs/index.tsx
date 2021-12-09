@@ -58,9 +58,8 @@ const BubbleVariant = styled.li`
   margin-left: -${({ theme }) => theme.space['3']};
   margin-right: -${({ theme }) => theme.space['3']};
 
-  background-color: ${({ theme }) => theme.colorsDeprecated.success};
-  color: ${({ theme }) => theme.colorsDeprecated.white};
-  border-color: ${({ theme }) => theme.colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
+  color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 
   &:first-child {
     padding-left: ${({ theme }) => theme.space['3']};
@@ -73,24 +72,24 @@ const BubbleVariant = styled.li`
   }
 
   &[aria-current='page'] {
-    background-color: ${({ theme }) => theme.colorsDeprecated.primary};
-    color: ${({ theme }) => theme.colorsDeprecated.white};
-    border-color: ${({ theme }) => theme.colorsDeprecated.white};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    color: ${({ theme }) => theme.colors.primary.textStrong};
 
     &:focus {
       box-shadow: 0 0 0 2px
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.primary)};
+        ${({ theme }) =>
+          transparentize(0.75, theme.colors.primary.backgroundStrong)};
     }
   }
 
   &[aria-current='page'] ~ & {
-    background-color: ${({ theme }) => theme.colorsDeprecated.white};
-    color: ${({ theme }) => theme.colorsDeprecated.gray550};
-    border-color: ${({ theme }) => theme.colorsDeprecated.gray350};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+    border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 
     &:focus {
       box-shadow: 0 0 0 2px
-        ${({ theme }) => transparentize(0.75, theme.colorsDeprecated.gray550)};
+        ${({ theme }) => transparentize(0.75, theme.colors.neutral.borderWeak)};
     }
   }
 
@@ -105,7 +104,7 @@ const BubbleVariant = styled.li`
   &:focus {
     box-shadow: 0 0 0 2px ${transparentize(
       0.75,
-      theme.colorsDeprecated.success,
+      theme.colors.success.backgroundStrong,
     )};
   }`
       : ``}
@@ -117,7 +116,7 @@ const LinkVariant = styled.li`
   display: inline;
 
   &[aria-current='page'] {
-    color: ${({ theme }) => theme.colorsDeprecated.gray550};
+    color: ${({ theme }) => theme.colors.neutral.borderWeak};
   }
 
   &:not(:last-child)::after {

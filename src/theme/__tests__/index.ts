@@ -88,7 +88,7 @@ describe('createTheme', () => {
         },
         neutral: {
           background: '#d4dae7',
-          backgroundHover: '#f6f5f7',
+          backgroundHover: '#b2b6c3',
           backgroundDisabled: '#f6f5f7',
           backgroundWeak: '#ff0000',
           backgroundWeakHover: '#4a4f62',

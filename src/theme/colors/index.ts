@@ -32,7 +32,7 @@ const generateTokens = ({
 
       // Background
       background: contrast[500],
-      backgroundHover: contrast[400],
+      backgroundHover: contrast[600],
       backgroundDisabled: contrast[400],
       backgroundWeak: contrast[100],
       backgroundWeakHover: contrast[800],

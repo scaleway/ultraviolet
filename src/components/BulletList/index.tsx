@@ -20,8 +20,8 @@ export const Chip = styled.span`
   min-width: 24px;
   height: 24px;
   border-radius: 12px;
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray700};
-  color: ${({ theme }) => theme.colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  color: ${({ theme }) => theme.colors.neutral.textStrong};
   margin-right: 8px;
   text-align: center;
   font-weight: 600;
