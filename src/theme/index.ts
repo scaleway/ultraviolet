@@ -1,7 +1,7 @@
-/* eslint-disable sort-keys */
 import colors, { Color, ContrastType, colorsTokens } from './colors'
 import colorsDeprecated from './deprecated/colors'
 
+/* eslint-disable sort-keys */
 const radii = {
   none: '0',
   default: '4px',
@@ -48,6 +48,7 @@ const theme = {
   screens,
   radii,
 }
+/* eslint-enable sort-keys */
 
 const createTheme = ({
   contrasts,

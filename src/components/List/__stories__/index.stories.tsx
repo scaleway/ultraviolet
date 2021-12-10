@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useRef, useState } from 'react'
 import List from '..'
@@ -18,6 +17,7 @@ export default {
   title: 'Components/List',
 } as Meta
 
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 const Template: Story<ComponentProps<typeof List>> = args => (
   <List data={[]} columns={[{ label: 'Name' }]} {...args}>
     {list => (
@@ -474,3 +474,4 @@ PaginationLoadingPageCount.decorators = [
     )
   },
 ]
+/* eslint-enable @typescript-eslint/no-unsafe-assignment */
