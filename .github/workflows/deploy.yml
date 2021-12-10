@@ -68,7 +68,9 @@ jobs:
       - name: Deploy docker
         env:
           VERSION: v-${{ env.BRANCH_SLUG }}
-        run: docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
+        run: |
+          docker volume rm $(docker volume ls -qf dangling=true)
+          docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v0.6.0
