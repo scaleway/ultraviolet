@@ -14,21 +14,21 @@ import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
 
 export const variants = {
-  error: ({ colorsDeprecated }: Theme) => ({
-    background: colorsDeprecated.pippin,
-    main: colorsDeprecated.red,
+  error: ({ colors }: Theme) => ({
+    background: colors.danger.background,
+    main: colors.danger.text,
   }),
-  info: ({ colorsDeprecated }: Theme) => ({
-    background: colorsDeprecated.zumthor,
-    main: colorsDeprecated.blue,
+  info: ({ colors }: Theme) => ({
+    background: colors.info.background,
+    main: colors.info.text,
   }),
-  success: ({ colorsDeprecated }: Theme) => ({
-    background: colorsDeprecated.foam,
-    main: colorsDeprecated.gray700,
+  success: ({ colors }: Theme) => ({
+    background: colors.success.background,
+    main: colors.neutral.text,
   }),
-  warning: ({ colorsDeprecated }: Theme) => ({
-    background: colorsDeprecated.serenade,
-    main: colorsDeprecated.orange,
+  warning: ({ colors }: Theme) => ({
+    background: colors.warning.background,
+    main: colors.warning.text,
   }),
 } as const
 
