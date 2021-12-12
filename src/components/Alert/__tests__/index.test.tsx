@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react'
 import Alert, { alertTypes, alertVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
