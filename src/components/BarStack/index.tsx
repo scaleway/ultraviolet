@@ -134,8 +134,8 @@ const StyledContainer = styled.div`
       0.9,
       theme.colors.neutral.backgroundWeak,
     )} 25%,
-      ${theme.colors.secondary.background} 25%, ${
-      theme.colors.secondary.background
+      ${theme.colors.secondary.backgroundStrong} 25%, ${
+      theme.colors.secondary.backgroundStrong
     } 50%,
       ${transparentize(
         0.9,
@@ -143,15 +143,15 @@ const StyledContainer = styled.div`
       )} 50%, ${transparentize(
       0.9,
       theme.colors.neutral.backgroundWeak,
-    )} 75%, ${theme.colors.secondary.background}
+    )} 75%, ${theme.colors.secondary.backgroundStrong}
        75%);`}
     background-size: 30px 30px;
     background-color: ${({ theme }) =>
-      darken(0.2, theme.colors.secondary.background)};
+      darken(0.2, theme.colors.secondary.backgroundStrong)};
   }
 
   ${StyledBarWrapper}:nth-child(5n+4) {
-    background-color: ${({ theme }) => theme.colors.secondary.background};
+    background-color: ${({ theme }) => theme.colors.secondary.backgroundStrong};
 
     background-image: linear-gradient(
         135deg,
@@ -179,7 +179,7 @@ const StyledContainer = styled.div`
         ${({ theme }) =>
             transparentize(0.8, theme.colors.neutral.backgroundWeak)}
           25%,
-        ${({ theme }) => theme.colors.secondary.background} 25%
+        ${({ theme }) => theme.colors.secondary.backgroundStrong} 25%
       );
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 10px 10px;
@@ -191,9 +191,9 @@ const StyledContainer = styled.div`
       0.8,
       theme.colors.neutral.backgroundWeak,
     )} 25%,
-      ${lighten(0.1, theme.colors.secondary.background)} 25%, ${lighten(
+      ${lighten(0.1, theme.colors.secondary.backgroundStrong)} 25%, ${lighten(
       0.1,
-      theme.colors.secondary.background,
+      theme.colors.secondary.backgroundStrong,
     )} 50%,
       ${transparentize(
         0.8,
@@ -201,11 +201,11 @@ const StyledContainer = styled.div`
       )} 50%, ${transparentize(
       0.8,
       theme.colors.neutral.backgroundWeak,
-    )} 75%, ${lighten(0.1, theme.colors.secondary.background)}
+    )} 75%, ${lighten(0.1, theme.colors.secondary.backgroundStrong)}
        75%);`}
     background-size: 30px 30px;
     background-color: ${({ theme }) =>
-      lighten(0.1, theme.colors.secondary.background)};
+      lighten(0.1, theme.colors.secondary.backgroundStrong)};
   }
 `
 

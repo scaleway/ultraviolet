@@ -70,7 +70,7 @@ const BarChart: FunctionComponent<BarChartProps> = ({
     },
     fontFamily: theme.fonts.sansSerif,
     fontSize: 12,
-    textColor: theme.colors.neutral.text,
+    textColor: theme.colors.neutral.textWeak,
   }
 
   const tooltip = useCallback(
