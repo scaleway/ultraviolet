@@ -1,4 +1,4 @@
-import { Global } from '@emotion/react'
+import { Global, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
@@ -36,13 +36,11 @@ const StyledWrapper = styled.div`
   }
   .calendar {
     font-family: 'Asap';
-    border-color: ${({ theme: { colorsDeprecated } }) =>
-      colorsDeprecated.gray300};
+    border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 
     ${PREFIX}__header {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
-      background-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.white};
+      color: ${({ theme }) => theme.colors.neutral.text};
+      background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
       border-bottom: none;
       text-align: inherit;
       display: block;
@@ -51,8 +49,8 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__triangle {
-      border-bottom-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.white};
+      border-bottom-color: ${({ theme }) =>
+        theme.colors.neutral.backgroundWeak};
     }
     ${PREFIX}__month {
       margin: 0;
@@ -64,7 +62,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day-name {
       font-family: 'Asap';
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
+      color: ${({ theme }) => theme.colors.neutral.text};
       font-weight: 500;
       font-size: 14px;
       line-height: 24px;
@@ -74,7 +72,7 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
+      color: ${({ theme }) => theme.colors.neutral.textWeak};
       font-size: 16px;
       width: 1.7rem;
       height: 1.7rem;
@@ -83,33 +81,29 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day--selected {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
-      background-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.primary};
+      color: ${({ theme }) => theme.colors.primary.text};
+      background-color: ${({ theme }) => theme.colors.primary.background};
       border-radius: 50%;
     }
     ${PREFIX}__day--keyboard-selected {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
-      background-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.gray200};
+      color: ${({ theme }) => theme.colors.primary.text};
+      background-color: ${({ theme }) => theme.colors.primary.background};
       border-radius: 50%;
     }
 
     ${PREFIX}__day: hover {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
+      color: ${({ theme }) => theme.colors.primary.text};
       border-radius: 50%;
-      background-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.gray200};
+      background-color: ${({ theme }) => theme.colors.primary.background};
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
+      color: ${({ theme }) => theme.colors.primary.textWeakDisabled};
     }
 
     ${PREFIX}__day--disabled: hover {
-      color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray200};
-      background-color: ${({ theme: { colorsDeprecated } }) =>
-        colorsDeprecated.transparent};
+      color: ${({ theme }) => theme.colors.primary.textWeakDisabled};
+      background-color: transparent;
     }
   }
 `
@@ -134,8 +128,7 @@ const TopHeaderDiv = styled.div`
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
 type DateInputProps = Pick<
   ReactDatePickerProps<string>,
@@ -172,6 +165,7 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
   required = false,
   value,
 }) => {
+  const theme = useTheme()
   const localeCode =
     (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
 
@@ -202,11 +196,19 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
                 disabled={disabled}
               />
               <StyledIconContainer>
-                {required && <Icon name="asterisk" color="warning" size={8} />}
+                {required && (
+                  <Icon
+                    name="asterisk"
+                    color={theme.colors.danger.text}
+                    size={8}
+                  />
+                )}
                 <Separator direction="vertical" mx={1} height="100%" />
                 <Icon
                   name="calendar-range"
-                  color={error ? 'warning' : 'gray'}
+                  color={
+                    error ? theme.colors.danger.text : theme.colors.neutral.text
+                  }
                   size={24}
                   alignSelf="center"
                 />
@@ -239,14 +241,22 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
                   disabled={prevMonthButtonDisabled}
                   mx={1}
                 >
-                  <Icon size={11} name="chevron-left" color="lightBlack" />
+                  <Icon
+                    size={11}
+                    name="chevron-left"
+                    color={theme.colors.neutral.text}
+                  />
                 </Touchable>
                 <Touchable
                   onClick={increaseMonth}
                   disabled={nextMonthButtonDisabled}
                   mx={1}
                 >
-                  <Icon size={11} name="chevron-right" color="lightBlack" />
+                  <Icon
+                    size={11}
+                    name="chevron-right"
+                    color={theme.colors.neutral.text}
+                  />
                 </Touchable>
               </StyledSpan>
             </>
