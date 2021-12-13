@@ -39,15 +39,15 @@ const generateTokens = ({
       backgroundWeakDisabled: contrast[100],
       backgroundStrong: contrast[800],
       backgroundStrongHover: contrast[800],
-      backgroundStrongDisabled: contrast[800],
+      backgroundStrongDisabled: contrast[700],
 
       // Text
       text: contrast[800],
-      textHover: contrast[800],
-      textDisabled: contrast[800],
+      textHover: contrast[900],
+      textDisabled: contrast[600],
       textWeak: contrast[600],
       textWeakHover: contrast[600],
-      textWeakDisabled: contrast[600],
+      textWeakDisabled: contrast[400],
       textStrong: contrast[100],
       textStrongHover: contrast[100],
       textStrongDisabled: contrast[100],
@@ -61,7 +61,7 @@ const generateTokens = ({
       borderWeakDisabled: contrast[500],
       borderStrong: contrast[800],
       borderStrongHover: contrast[800],
-      borderStrongDisabled: contrast[800],
+      borderStrongDisabled: contrast[700],
 
       /* eslint-enable sort-keys */
     }
@@ -83,22 +83,22 @@ const generateTokens = ({
 
     // Text
     text: contrast[800],
-    textHover: contrast[800],
-    textDisabled: contrast[800],
+    textHover: contrast[900],
+    textDisabled: contrast[400],
     textWeak: contrast[800],
     textWeakHover: contrast[100],
-    textWeakDisabled: contrast[800],
+    textWeakDisabled: contrast[400],
     textStrong: neutralContrast[100],
     textStrongHover: neutralContrast[100],
     textStrongDisabled: neutralContrast[100],
 
     // Border
     border: contrast[800],
-    borderHover: contrast[800],
-    borderDisabled: contrast[800],
+    borderHover: contrast[900],
+    borderDisabled: contrast[400],
     borderWeak: contrast[800],
     borderWeakHover: contrast[800],
-    borderWeakDisabled: contrast[800],
+    borderWeakDisabled: contrast[400],
     borderStrong: contrast[800],
     borderStrongHover: contrast[800],
     borderStrongDisabled: contrast[800],
