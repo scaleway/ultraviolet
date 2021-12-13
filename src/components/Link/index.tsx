@@ -24,7 +24,6 @@ const neutral = ({ theme }: { theme: Theme }) =>
 const variants = {
   blue: generateVariant('info'),
   gray: neutral,
-  grey: neutral, // TODO: deprecated, to be removed soon
   inherit: () => css`
     color: inherit;
     &:hover,
