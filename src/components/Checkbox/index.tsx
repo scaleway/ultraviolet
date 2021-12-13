@@ -70,7 +70,7 @@ const StyledActivityContainer = styled('div', {
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.danger.backgroundStrong};
+  color: ${({ theme }) => theme.colors.danger.text};
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
