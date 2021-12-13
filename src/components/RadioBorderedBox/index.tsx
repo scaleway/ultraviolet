@@ -12,16 +12,19 @@ import Box, { XStyledProps } from '../Box'
 import Radio from '../Radio'
 
 const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
-  ${({ disabled, checked, theme: { colorsDeprecated } }) => {
+  ${({ disabled, checked, theme: { colors } }) => {
     if (disabled)
       return `
         cursor: not-allowed !important;
-        color: ${colorsDeprecated.gray300};
+        color: ${colors.neutral.textDisabled};
       `
     if (checked)
       return `
-        border: 1px solid ${colorsDeprecated.primary} !important;
-        box-shadow: 0 0 0 2px ${transparentize(0.75, colorsDeprecated.primary)};
+        border: 1px solid ${colors.primary.borderStrong} !important;
+        box-shadow: 0 0 0 2px ${transparentize(
+          0.75,
+          colors.primary.borderStrong,
+        )};
       `
 
     return null

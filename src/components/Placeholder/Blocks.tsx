@@ -14,7 +14,7 @@ const styles = {
     margin-bottom: 16px;
     border-style: solid;
     border-width: 1px;
-    border-color: ${theme.colorsDeprecated.gray300};
+    border-color: ${theme.colors.neutral.borderWeak};
     border-radius: 4px;
   `,
   container: ({ length }: { length: number }) => css`
@@ -25,7 +25,7 @@ const styles = {
     width: 32px;
     height: 32px;
     border-radius: 12px;
-    background-color: ${theme.colorsDeprecated.gray300};
+    background-color: ${theme.colors.neutral.background};
   `,
 }
 

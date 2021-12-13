@@ -74,3 +74,8 @@ Controlled.decorators = [
     </ControlValue>
   ),
 ]
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  disabled: true,
+}
