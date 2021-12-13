@@ -2,7 +2,7 @@ import { Theme } from '@emotion/react'
 
 export const legendColors = (theme: Theme): string[] => [
   theme.colors.success.backgroundStrong,
-  theme.colors.primary.backgroundStrong,
+  theme.colors.secondary.backgroundStrong,
   theme.colors.neutral.background,
 ]
 
