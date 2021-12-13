@@ -3375,7 +3375,7 @@ __metadata:
     "@storybook/builder-webpack5": 6.4.9
     "@storybook/manager-webpack5": 6.4.9
     "@storybook/react": 6.4.9
-    "@storybook/testing-react": 1.0.0
+    "@storybook/testing-react": 1.2.2
     "@storybook/theming": 6.4.9
     "@svgr/rollup": 6.1.2
     "@testing-library/jest-dom": 5.16.1
@@ -4894,15 +4894,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/testing-react@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@storybook/testing-react@npm:1.0.0"
+"@storybook/testing-react@npm:1.2.2":
+  version: 1.2.2
+  resolution: "@storybook/testing-react@npm:1.2.2"
+  dependencies:
+    "@storybook/csf": 0.0.2--canary.87bc651.0
   peerDependencies:
     "@storybook/addons": ">=6.4.0-0"
     "@storybook/client-api": ">=6.4.0-0"
+    "@storybook/preview-web": ">=6.4.0-0"
     "@storybook/react": ">=6.4.0-0"
     react: ^16.8.0 || ^17.0.0
-  checksum: f86c3b11e090783927f3ebad39747df4f3e1841482de80c9c8a69602610a2afceec09e2eeb06d5a28094e279ec8758aa292a3cf7df0f1e792e957b514ccc18b9
+  checksum: 2ad6d20a7a09e6bcb63e425988f1a80c539d74510fb2fea0ce279325e59a49e94aded6c50d2b4c33986234505635a2637815fa2f2951493b7910656a38eedcfb
   languageName: node
   linkType: hard
 
