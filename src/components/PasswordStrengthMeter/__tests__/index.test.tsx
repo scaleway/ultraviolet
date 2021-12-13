@@ -1,19 +1,22 @@
 import React from 'react'
 import PasswordStrengthMeter from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { colors } from '../../../theme'
 
 describe('PasswordStrengthMeter', () => {
+  const strengthLevels = [
+    { color: colors.danger.text, t: 'veryWeak' },
+    { color: colors.warning.text, t: 'weak' },
+    { color: 'yellow', t: 'medium' },
+    { color: colors.success.text, t: 'strong' },
+    { color: colors.success.text, t: 'veryStrong' },
+  ]
+
   test('render with empty password', () =>
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password=""
-        strength={[
-          { color: 'red', t: 'veryWeak' },
-          { color: 'orange', t: 'weak' },
-          { color: 'yellow', t: 'medium' },
-          { color: 'green', t: 'strong' },
-          { color: 'green', t: 'veryStrong' },
-        ]}
+        strength={strengthLevels}
         title="MyTitle"
       />,
     ))
@@ -22,13 +25,7 @@ describe('PasswordStrengthMeter', () => {
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="weak"
-        strength={[
-          { color: 'red', t: 'veryWeak' },
-          { color: 'orange', t: 'weak' },
-          { color: 'yellow', t: 'medium' },
-          { color: 'green', t: 'strong' },
-          { color: 'green', t: 'veryStrong' },
-        ]}
+        strength={strengthLevels}
         title="MyTitle"
       />,
     ))
@@ -37,13 +34,7 @@ describe('PasswordStrengthMeter', () => {
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="mediumpas"
-        strength={[
-          { color: 'red', t: 'veryWeak' },
-          { color: 'orange', t: 'weak' },
-          { color: 'yellow', t: 'medium' },
-          { color: 'green', t: 'strong' },
-          { color: 'green', t: 'veryStrong' },
-        ]}
+        strength={strengthLevels}
         title="MyTitle"
       />,
     ))
@@ -52,13 +43,7 @@ describe('PasswordStrengthMeter', () => {
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="strongpass{"
-        strength={[
-          { color: 'red', t: 'veryWeak' },
-          { color: 'orange', t: 'weak' },
-          { color: 'yellow', t: 'medium' },
-          { color: 'green', t: 'strong' },
-          { color: 'green', t: 'veryStrong' },
-        ]}
+        strength={strengthLevels}
         title="MyTitle"
       />,
     ))
@@ -67,13 +52,7 @@ describe('PasswordStrengthMeter', () => {
     shouldMatchEmotionSnapshot(
       <PasswordStrengthMeter
         password="verystrongpass{"
-        strength={[
-          { color: 'red', t: 'veryWeak' },
-          { color: 'orange', t: 'weak' },
-          { color: 'yellow', t: 'medium' },
-          { color: 'green', t: 'strong' },
-          { color: 'green', t: 'veryStrong' },
-        ]}
+        strength={strengthLevels}
         title="MyTitle"
       />,
     ))

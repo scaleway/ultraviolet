@@ -2,6 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import zxcvbn from 'zxcvbn'
 import PasswordStrengthMeter from '..'
+import { colors } from '../../../theme'
 import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
 
 export default {
@@ -16,17 +17,19 @@ export default {
   title: 'Components/Data Entry/PasswordStrengthMeter',
 } as Meta
 
-const Template: Story<ComponentProps<typeof PasswordStrengthMeter>> = args => (
+const Template: Story<
+  Omit<ComponentProps<typeof PasswordStrengthMeter>, 'title' | 'strength'>
+> = args => (
   <UncontrolledPasswordStrengthMeter
     name="basic"
     estimate={zxcvbn}
     title="Password Strength"
     strength={[
-      { color: 'red', t: 'veryWeak' },
-      { color: 'orange', t: 'weak' },
-      { color: 'yellow', t: 'medium' },
-      { color: 'green', t: 'strong' },
-      { color: 'green', t: 'veryStrong' },
+      { color: colors.danger.text, t: 'veryWeak' },
+      { color: colors.warning.text, t: 'weak' },
+      { color: colors.warning.text, t: 'medium' },
+      { color: colors.success.text, t: 'strong' },
+      { color: colors.success.text, t: 'veryStrong' },
     ]}
     {...args}
   />
