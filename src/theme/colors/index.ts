@@ -31,7 +31,7 @@ const generateTokens = ({
       /* eslint-disable sort-keys */
 
       // Background
-      background: contrast[400],
+      background: contrast[500],
       backgroundHover: contrast[400],
       backgroundDisabled: contrast[400],
       backgroundWeak: contrast[100],
@@ -71,9 +71,9 @@ const generateTokens = ({
     /* eslint-disable sort-keys */
 
     // Background
-    background: contrast[100],
-    backgroundHover: contrast[100],
-    backgroundDisabled: contrast[100],
+    background: contrast[300],
+    backgroundHover: contrast[300],
+    backgroundDisabled: contrast[300],
     backgroundWeak: neutralContrast[100],
     backgroundWeakHover: contrast[800],
     backgroundWeakDisabled: neutralContrast[100],
