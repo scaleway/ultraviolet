@@ -116,7 +116,7 @@ const LinkVariant = styled.li`
   display: inline;
 
   &[aria-current='page'] {
-    color: ${({ theme }) => theme.colors.neutral.borderWeak};
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
   }
 
   &:not(:last-child)::after {
