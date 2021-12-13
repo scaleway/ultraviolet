@@ -1,3 +1,22 @@
+### [0.127.3](https://github.com/scaleway/scaleway-ui/compare/v0.127.2...v0.127.3) (2021-12-13)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.1.1 ([#986](https://github.com/scaleway/scaleway-ui/issues/986)) ([18b36d2](https://github.com/scaleway/scaleway-ui/commit/18b36d29fc108679d30b99d7ceda60c4f960c4f5))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.25 ([#985](https://github.com/scaleway/scaleway-ui/issues/985)) ([416fc48](https://github.com/scaleway/scaleway-ui/commit/416fc48707a6d1e4f821b543ad2984f74069ebca))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.16.1 ([#990](https://github.com/scaleway/scaleway-ui/issues/990)) ([f593519](https://github.com/scaleway/scaleway-ui/commit/f593519dcd232395769af3f51c0c0da1eae77585))
+* **devdeps:** update dependency eslint to v8.4.1 ([#992](https://github.com/scaleway/scaleway-ui/issues/992)) ([b3bbac9](https://github.com/scaleway/scaleway-ui/commit/b3bbac92c40d8e5065212049f5b2c5bef3ec4f1a))
+* **devdeps:** update dependency jest to v27.4.4 ([#989](https://github.com/scaleway/scaleway-ui/issues/989)) ([6badbc9](https://github.com/scaleway/scaleway-ui/commit/6badbc96c64d7d14711a45b9ccf21eae1c4cb297))
+* **devdeps:** update dependency typescript to v4.5.3 ([#988](https://github.com/scaleway/scaleway-ui/issues/988)) ([918ce7f](https://github.com/scaleway/scaleway-ui/commit/918ce7f9331946adddad3b98e008dc0302cb2ca3))
+* **devdeps:** update dependency webpack to v5.65.0 ([#991](https://github.com/scaleway/scaleway-ui/issues/991)) ([7bce421](https://github.com/scaleway/scaleway-ui/commit/7bce4214ab0d4df9241cb235748fd87de4a71ad7))
+* **devdeps:** update storybook monorepo to v6.4.9 ([#983](https://github.com/scaleway/scaleway-ui/issues/983)) ([b5aff75](https://github.com/scaleway/scaleway-ui/commit/b5aff750d47df4b71454e2933620e5688ae299b9))
+
+
+### :bug: Bug Fixes
+
+* **theme:** updated neutral background color ([#997](https://github.com/scaleway/scaleway-ui/issues/997)) ([4551a45](https://github.com/scaleway/scaleway-ui/commit/4551a45beaa3e6f7940e9ab640c1764e6f485770))
+
 ### [0.127.2](https://github.com/scaleway/scaleway-ui/compare/v0.127.1...v0.127.2) (2021-12-09)
 
 
