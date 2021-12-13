@@ -1,3 +1,16 @@
+### [0.127.4](https://github.com/scaleway/scaleway-ui/compare/v0.127.3...v0.127.4) (2021-12-13)
+
+
+### :bug: Bug Fixes
+
+* **theme:** colors update ([#998](https://github.com/scaleway/scaleway-ui/issues/998)) ([6554b70](https://github.com/scaleway/scaleway-ui/commit/6554b7014bc55e102d7d85a6abf0311da5dbe3a1))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @storybook/testing-react to v1.2.2 ([#993](https://github.com/scaleway/scaleway-ui/issues/993)) ([548273c](https://github.com/scaleway/scaleway-ui/commit/548273cbb0b82ad659bd2706b066fb336e4d6659))
+* **devdeps:** update dependency @svgr/rollup to v6.1.2 ([#999](https://github.com/scaleway/scaleway-ui/issues/999)) ([6740082](https://github.com/scaleway/scaleway-ui/commit/6740082cc8852977b68c5d336ed473b656366525))
+
 ### [0.127.3](https://github.com/scaleway/scaleway-ui/compare/v0.127.2...v0.127.3) (2021-12-13)
 
 
