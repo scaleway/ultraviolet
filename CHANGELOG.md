@@ -1,3 +1,18 @@
+## [0.128.0](https://github.com/scaleway/scaleway-ui/compare/v0.127.5...v0.128.0) (2021-12-14)
+
+
+### :zap: Refactor
+
+* less stories boilerplate ([#976](https://github.com/scaleway/scaleway-ui/issues/976)) ([fd46a57](https://github.com/scaleway/scaleway-ui/commit/fd46a571fca2745c0196d7c01d17b1d0c1a49349))
+* **theme:** colors migration Button, Breadcrumbs, BulletList… ([#982](https://github.com/scaleway/scaleway-ui/issues/982)) ([35684ed](https://github.com/scaleway/scaleway-ui/commit/35684ed025bfb3d4df6322c02b83a968aa287240))
+* **theme:** revert border colors ([#1006](https://github.com/scaleway/scaleway-ui/issues/1006)) ([2875121](https://github.com/scaleway/scaleway-ui/commit/2875121e33f2c1360844c34114977782b29ebab8))
+* use new colors in Notice, PasswordStrengthMeter, Pentagon, PhoneInput, PieChart ([#1003](https://github.com/scaleway/scaleway-ui/issues/1003)) ([c9d2ee8](https://github.com/scaleway/scaleway-ui/commit/c9d2ee88a3f4b4b411d9c5fadc92caba5e48700b))
+
+
+### :gear: Features
+
+* migrate badge, barchart, barstack to new colors ([#979](https://github.com/scaleway/scaleway-ui/issues/979)) ([a6956a3](https://github.com/scaleway/scaleway-ui/commit/a6956a3107d9337b3e7a7f36b81f8291ac6af480))
+
 ### [0.127.5](https://github.com/scaleway/scaleway-ui/compare/v0.127.4...v0.127.5) (2021-12-14)
 
 
