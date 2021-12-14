@@ -17,9 +17,9 @@ const StyledItemsCount = styled.div`
   line-height: 20px;
   text-align: center;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray100};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   font-weight: 500;
-  color: ${({ theme }) => theme.colorsDeprecated.primary};
+  color: ${({ theme }) => theme.colors.primary.text};
 `
 
 type ListSelectBarProps = {
