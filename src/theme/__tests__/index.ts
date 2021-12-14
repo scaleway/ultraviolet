@@ -25,6 +25,7 @@ const newTheme = {
 
 describe('createTheme', () => {
   it('should give correct array of ids', () => {
+    console.log(createTheme(newTheme))
     expect(createTheme(newTheme)).toEqual({
       /* eslint-disable sort-keys */
       colors: {
@@ -47,8 +48,8 @@ describe('createTheme', () => {
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
-          border: '#ffe1e7',
-          borderHover: '#ffe1e7',
+          border: '#ef5774',
+          borderHover: '#cf0f34',
           borderDisabled: '#ffe1e7',
           borderWeak: '#ef5774',
           borderWeakHover: '#ef5774',
@@ -76,8 +77,8 @@ describe('createTheme', () => {
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
-          border: '#e4edff',
-          borderHover: '#e4edff',
+          border: '#3f6ed8',
+          borderHover: '#3f6ed8',
           borderDisabled: '#e4edff',
           borderWeak: '#3f6ed8',
           borderWeakHover: '#3f6ed8',
@@ -134,8 +135,8 @@ describe('createTheme', () => {
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
-          border: '#ffffff',
-          borderHover: '#eeeeff',
+          border: '#4f0599',
+          borderHover: '#ffffff',
           borderDisabled: '#eeeeff',
           borderWeak: '#4f0599',
           borderWeakHover: '#4f0599',
@@ -192,8 +193,8 @@ describe('createTheme', () => {
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
-          border: '#cdfcf1',
-          borderHover: '#cdfcf1',
+          border: '#45d6b5',
+          borderHover: '#45d6b5',
           borderDisabled: '#cdfcf1',
           borderWeak: '#45d6b5',
           borderWeakHover: '#45d6b5',
@@ -221,8 +222,8 @@ describe('createTheme', () => {
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
-          border: '#ffefe6',
-          borderHover: '#ffefe6',
+          border: '#ff8c69',
+          borderHover: '#ff8c69',
           borderDisabled: '#ffefe6',
           borderWeak: '#ff8c69',
           borderWeakHover: '#ff8c69',
