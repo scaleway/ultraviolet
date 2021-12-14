@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import React, { FunctionComponent, LabelHTMLAttributes } from 'react'
 
 const StyledLabel = styled.label`
-  color: ${({ theme }) => theme.colorsDeprecated.gray950};
+  color: ${({ theme }) => theme.colors.neutral.text};
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;

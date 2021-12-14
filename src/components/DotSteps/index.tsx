@@ -25,7 +25,7 @@ const DotStep = styled(Dot)`
     width: ${dotSize}px;
     height: ${dotSize}px;
     margin: ${-dotSize / 2}px;
-    background-color: ${({ theme }) => theme.colorsDeprecated.primary};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
   &::after {
     width: ${dotSize * 2}px;
@@ -38,7 +38,7 @@ const DotStep = styled(Dot)`
     }
   }
   &:last-child::after {
-    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
   }
 `
 const selectedStepPosition = (length: number, width: number) =>

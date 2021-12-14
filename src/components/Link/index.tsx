@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme/colors'
 import Icon from '../Icon'
 import UniversalLink from '../UniversalLink'
 
@@ -11,17 +11,19 @@ const generateVariant =
   (color: Color | string) =>
   ({ theme }: { theme: Theme }) =>
     css`
-      color: ${theme.colorsDeprecated[color as Color] ?? color};
+      color: ${theme.colors[color as Color]?.text ?? color};
       &:hover,
       &:focus {
-        color: ${darken(0.2, theme.colorsDeprecated[color as Color] ?? color)};
+        color: ${darken(0.2, theme.colors[color as Color]?.text ?? color)};
       }
     `
 
+const neutral = ({ theme }: { theme: Theme }) =>
+  generateVariant(theme.colors.neutral.textWeak)
+
 const variants = {
-  blue: generateVariant('blue'),
-  gray: generateVariant('gray550'),
-  grey: generateVariant('gray550'), // TODO: deprecated, to be removed soon
+  blue: generateVariant('info'),
+  gray: neutral,
   inherit: () => css`
     color: inherit;
     &:hover,
@@ -31,13 +33,14 @@ const variants = {
     }
   `,
   primary: ({ theme }: { theme: Theme }) => css`
-    color: ${theme.colorsDeprecated.primary};
+    color: ${theme.colors.primary.text};
     &:hover,
     &:focus {
-      color: ${theme.colorsDeprecated.primary};
+      color: ${theme.colors.primary.text};
     }
   `,
-  white: generateVariant('white'),
+  white: ({ theme }: { theme: Theme }) =>
+    generateVariant(theme.colors.neutral.textStrong),
 }
 
 type Variant = keyof typeof variants
