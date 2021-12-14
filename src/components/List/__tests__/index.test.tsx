@@ -986,7 +986,11 @@ describe('List', () => {
                 const { rowData } = props as ListBodyRenderProps<ListRowData>
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row
+                    id={rowData.id}
+                    alert={rowData.id === '1'}
+                    locked={rowData.id === '2'}
+                  >
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>

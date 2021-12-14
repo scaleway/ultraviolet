@@ -151,6 +151,48 @@ Sorting.decorators = [
   ),
 ]
 
+export const RowVariants = Template.bind({})
+RowVariants.decorators = [
+  () => (
+    <List
+      autoClose
+      idKey="id"
+      multiselect
+      data={generateData(5)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '50%' },
+        { label: 'Department', sort: 'department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row
+                alert={rowData.id === '1'}
+                locked={rowData.id === '2'}
+                animated
+                id={rowData.id}
+              >
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+        </>
+      )}
+    </List>
+  ),
+]
+
 export const Multiselect = Template.bind({})
 Multiselect.decorators = [
   () => (

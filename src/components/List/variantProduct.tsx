@@ -31,6 +31,7 @@ const getBorderColor = ({
   selected?: boolean
   theme: Theme
 }) => {
+  console.log(theme.colors.warning.border)
   if (alert) return theme.colors.warning.border
   if (selected || highlighted) return theme.colors.primary.border
 
@@ -104,7 +105,7 @@ const StyledRow = styled('details', {
   padding: 8px 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ alert, theme }) =>
-    alert ? theme.colors.danger.backgroundWeak : `initial`};
+    alert ? theme.colors.warning.background : `initial`};
 
   cursor: ${({ openable }) => (openable ? 'pointer' : 'auto')};
   color: ${({ alert, theme }) =>

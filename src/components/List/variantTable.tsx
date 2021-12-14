@@ -68,7 +68,6 @@ const StyledRow = styled(Box, {
       'disabled',
       'selected',
       'highlighted',
-      'locked',
       'isEditable',
       'isHoverable',
       'edition',
@@ -245,7 +244,6 @@ export const Row: FunctionComponent<ListRowProps> = ({
 }
 
 Row.propTypes = {
-  alert: PropTypes.bool,
   animated: PropTypes.bool,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -261,7 +259,6 @@ Row.propTypes = {
 }
 
 Row.defaultProps = {
-  alert: undefined,
   animated: undefined,
   customStyle: undefined,
   disabled: false,
