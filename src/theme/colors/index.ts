@@ -86,7 +86,7 @@ const generateTokens = ({
     textHover: contrast[900],
     textDisabled: contrast[400],
     textWeak: contrast[800],
-    textWeakHover: contrast[100],
+    textWeakHover: contrast[900],
     textWeakDisabled: contrast[400],
     textStrong: neutralContrast[100],
     textStrongHover: neutralContrast[100],

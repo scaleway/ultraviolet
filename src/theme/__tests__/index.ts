@@ -25,7 +25,6 @@ const newTheme = {
 
 describe('createTheme', () => {
   it('should give correct array of ids', () => {
-    console.log(createTheme(newTheme))
     expect(createTheme(newTheme)).toEqual({
       /* eslint-disable sort-keys */
       colors: {
@@ -43,7 +42,7 @@ describe('createTheme', () => {
           textHover: '#cf0f34',
           textDisabled: '#ffe1e7',
           textWeak: '#ef5774',
-          textWeakHover: '#ffe1e7',
+          textWeakHover: '#cf0f34',
           textWeakDisabled: '#ffe1e7',
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
@@ -72,7 +71,7 @@ describe('createTheme', () => {
           textHover: '#3f6ed8',
           textDisabled: '#e4edff',
           textWeak: '#3f6ed8',
-          textWeakHover: '#e4edff',
+          textWeakHover: '#3f6ed8',
           textWeakDisabled: '#e4edff',
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
@@ -188,7 +187,7 @@ describe('createTheme', () => {
           textHover: '#45d6b5',
           textDisabled: '#cdfcf1',
           textWeak: '#45d6b5',
-          textWeakHover: '#cdfcf1',
+          textWeakHover: '#45d6b5',
           textWeakDisabled: '#cdfcf1',
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
@@ -217,7 +216,7 @@ describe('createTheme', () => {
           textHover: '#ff8c69',
           textDisabled: '#ffefe6',
           textWeak: '#ff8c69',
-          textWeakHover: '#ffefe6',
+          textWeakHover: '#ff8c69',
           textWeakDisabled: '#ffefe6',
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
