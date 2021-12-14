@@ -2,6 +2,7 @@ import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import { Color } from '../../theme'
 import { useUUID } from '../../utils'
 import Box, { XStyledProps } from '../Box'
 import Icon, { icons } from '../Icon'
@@ -17,66 +18,43 @@ export const alertVariants = [
 type AlertType = typeof alertTypes[number]
 type AlertVariant = typeof alertVariants[number]
 
-const typesColors = (
-  theme: Theme,
-): Record<AlertType, { primary: string; secondary: string }> => ({
-  beta: {
-    primary: theme.colorsDeprecated.beta,
-    secondary: theme.colorsDeprecated.serenade,
-  },
-  info: {
-    primary: theme.colorsDeprecated.info,
-    secondary: theme.colorsDeprecated.zumthor,
-  },
-  success: {
-    primary: theme.colorsDeprecated.success,
-    secondary: theme.colorsDeprecated.foam,
-  },
-  warning: {
-    primary: theme.colorsDeprecated.warning,
-    secondary: theme.colorsDeprecated.pippin,
-  },
-})
-
-const variants = ({
-  type,
-  theme,
-}: {
-  theme: Theme
-  type: AlertType
-}): Record<AlertVariant, SerializedStyles> => {
-  const primary =
-    typesColors(theme)[type]?.primary || theme.colorsDeprecated.warning
-  const secondary =
-    typesColors(theme)[type]?.secondary || theme.colorsDeprecated.pippin
-
-  return {
-    filled: css`
-      background-color: ${primary};
-      color: ${theme.colorsDeprecated.white};
-    `,
-    outlined: css`
-      border: 1px solid ${primary};
-      color: ${primary};
-    `,
-    standard: css`
-      background-color: ${secondary};
-      color: ${primary};
-    `,
-    transparent: css`
-      background-color: transparent;
-      color: ${primary};
-      padding: 12px 0;
-    `,
-  }
+const alertTypeToColorMapping: Record<AlertType, Color> = {
+  beta: 'warning',
+  info: 'info',
+  success: 'success',
+  warning: 'danger',
 }
 
-type ContainerProps = { variant: AlertVariant; type: AlertType }
-const variantStyles = ({
+const alertStyles = ({
+  theme,
+  type,
   variant,
-  ...props
-}: ContainerProps & { theme: Theme }) =>
-  variants(props)[variant] || variants(props).standard
+}: ContainerProps & { theme: Theme }): SerializedStyles => {
+  const sentiment =
+    theme.colors[alertTypeToColorMapping[type]] || theme.colors.danger
+
+  if (variant === 'filled')
+    return css`
+      background-color: ${sentiment.backgroundStrong};
+      color: ${sentiment.textStrong};
+    `
+  if (variant === 'transparent')
+    return css`
+      background-color: transparent;
+      color: ${sentiment.text};
+      padding: 12px 0;
+    `
+  if (variant === 'outlined')
+    return css`
+      border: 1px solid ${sentiment.borderStrong};
+      color: ${sentiment.text};
+    `
+
+  return css`
+    background-color: ${sentiment.background};
+    color: ${sentiment.text};
+  `
+}
 
 const typesDefaultIcons: Record<
   AlertType,
@@ -88,6 +66,8 @@ const typesDefaultIcons: Record<
   warning: 'alert',
 }
 
+type ContainerProps = { variant: AlertVariant; type: AlertType }
+
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['type', 'variant'].includes(prop.toString()),
 })<ContainerProps>`
@@ -96,7 +76,7 @@ const StyledContainer = styled(Box, {
   align-items: center;
   border-radius: ${({ theme }) => theme.radii.default};
   padding: 12px;
-  ${variantStyles}
+  ${alertStyles}
 `
 
 const StyledBox = styled(Box)<{ color: string }>`

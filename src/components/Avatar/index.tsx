@@ -1,7 +1,8 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
 import Box from '../Box'
 import Icon from '../Icon'
 import avatar from './avatar.svg'
@@ -29,11 +30,11 @@ const StyledDiv = styled.div<{
   align-items: center;
   background-color: ${({ lock, theme, textBgColor }) =>
     lock
-      ? theme.colorsDeprecated.gray50
-      : theme.colorsDeprecated[textBgColor as Color] || textBgColor};
+      ? theme.colors.neutral.background
+      : theme.colors[textBgColor as Color]?.backgroundStrong || textBgColor};
   border-radius: 50%;
   color: ${({ theme, textColor }) =>
-    theme.colorsDeprecated[textColor as Color] || textColor};
+    theme.colors[textColor as Color]?.textStrong || textColor};
   font-size: ${({ textSize }) => textSize}px;
   display: flex;
   height: 100%;
@@ -60,27 +61,35 @@ const Avatar: FunctionComponent<AvatarProps> = ({
   image = avatar,
   size = 32,
   text,
-  textBgColor = 'lightViolet',
-  textColor = 'white',
+  textBgColor = 'secondary',
+  textColor = 'neutral',
   textSize = 10,
   lock = false,
   ...props
-}) => (
-  <Box width={size} height={size} position="relative" {...props}>
-    {text ? (
-      <StyledDiv
-        lock={lock}
-        textBgColor={textBgColor}
-        textColor={textColor}
-        textSize={textSize}
-      >
-        {lock ? <Icon name="lock" color="gray550" /> : formatTextToAvatar(text)}
-      </StyledDiv>
-    ) : (
-      <StyledImg src={image} alt="" />
-    )}
-  </Box>
-)
+}) => {
+  const theme = useTheme()
+
+  return (
+    <Box width={size} height={size} position="relative" {...props}>
+      {text ? (
+        <StyledDiv
+          lock={lock}
+          textBgColor={textBgColor}
+          textColor={textColor}
+          textSize={textSize}
+        >
+          {lock ? (
+            <Icon name="lock" color={theme.colors.neutral.textWeak} />
+          ) : (
+            formatTextToAvatar(text)
+          )}
+        </StyledDiv>
+      ) : (
+        <StyledImg src={image} alt="" />
+      )}
+    </Box>
+  )
+}
 
 Avatar.propTypes = {
   image: PropTypes.string,

@@ -1,4 +1,5 @@
-import colors, { Color, ContrastType, colorsTokens } from './colors'
+import colors, { colorsTokens } from './colors'
+import type { Color, ContrastType } from './colors'
 import colorsDeprecated from './deprecated/colors'
 
 /* eslint-disable sort-keys */
@@ -77,13 +78,6 @@ type SCWUITheme = typeof theme & {
 
 export default theme
 
-export {
-  colors,
-  colorsDeprecated,
-  space,
-  radii,
-  fonts,
-  screens,
-  SCWUITheme,
-  createTheme,
-}
+export type { Color, SCWUITheme }
+
+export { colors, colorsDeprecated, space, radii, fonts, screens, createTheme }

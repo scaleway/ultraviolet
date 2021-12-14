@@ -8,7 +8,9 @@ export default {
   title: 'Components/Data Display/Avatar',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Avatar>> = () => <Avatar />
+const Template: Story<ComponentProps<typeof Avatar>> = args => (
+  <Avatar {...args} />
+)
 
 export const Default = Template.bind({})
 
@@ -22,13 +24,15 @@ Image.parameters = {
 Image.decorators = [() => <Avatar image={support} />]
 
 export const Size = Template.bind({})
+Size.args = {
+  size: 48,
+}
 Size.parameters = {
   docs: {
     storyDescription:
       'You can change the default Size by using the `Size` prop. It work as `src` on a img tag.',
   },
 }
-Size.decorators = [() => <Avatar size={48} />]
 
 export const Text = Template.bind({})
 Text.parameters = {
@@ -76,23 +80,27 @@ TextSize.decorators = [
 ]
 
 export const TextColor = Template.bind({})
+TextColor.args = {
+  text: 'Hello You',
+  textColor: 'black',
+}
 TextColor.parameters = {
   docs: {
     storyDescription: 'You can set the text color by setting `textColor` prop',
   },
 }
-TextColor.decorators = [() => <Avatar text="Hello You" textColor="black" />]
 
 export const BackgroundColor = Template.bind({})
+BackgroundColor.args = {
+  text: 'Hello You',
+  textBgColor: 'warning',
+}
 BackgroundColor.parameters = {
   docs: {
     storyDescription:
       'You can set the background color when using text by setting `textBgColor` prop',
   },
 }
-BackgroundColor.decorators = [
-  () => <Avatar text="Hello You" textBgColor="warning" />,
-]
 
 export const Lock = Template.bind({})
 Lock.parameters = {
