@@ -27,7 +27,9 @@ const StyledBox = styled(Box, {
   padding-bottom: ${({ small }) => (small ? 16 : 24)}px;
   border: 1px solid
     ${({ edition, theme }) =>
-      edition ? theme.colors.primary.border : theme.colors.neutral.borderWeak};
+      edition
+        ? theme.colors.primary.borderWeak
+        : theme.colors.neutral.borderWeak};
   opacity: ${({ disabled }) => (disabled ? '0.4' : 'inherit')};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
 

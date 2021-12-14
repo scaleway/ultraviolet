@@ -56,7 +56,7 @@ export const danger = {
   600: '#ef5774',
   700: '#ef5774',
   800: '#ef5774',
-  900: '#ef5774',
+  900: '#cf0f34',
 }
 
 export const warning = {
