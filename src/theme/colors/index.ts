@@ -93,8 +93,8 @@ const generateTokens = ({
     textStrongDisabled: neutralContrast[100],
 
     // Border
-    border: contrast[300],
-    borderHover: contrast[400],
+    border: contrast[800],
+    borderHover: contrast[900],
     borderDisabled: contrast[200],
     borderWeak: contrast[800],
     borderWeakHover: contrast[800],
