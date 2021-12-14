@@ -63,14 +63,14 @@ const BarChart: FunctionComponent<BarChartProps> = ({
     axis: {
       ticks: {
         line: {
-          stroke: theme.colorsDeprecated.gray300,
+          stroke: theme.colors.neutral.background,
           strokeWidth: 1,
         },
       },
     },
     fontFamily: theme.fonts.sansSerif,
     fontSize: 12,
-    textColor: theme.colorsDeprecated.gray550,
+    textColor: theme.colors.neutral.textWeak,
   }
 
   const tooltip = useCallback(
