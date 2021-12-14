@@ -31,7 +31,6 @@ const getBorderColor = ({
   selected?: boolean
   theme: Theme
 }) => {
-  console.log(theme.colors.warning.border)
   if (alert) return theme.colors.warning.border
   if (selected || highlighted) return theme.colors.primary.border
 
