@@ -39,7 +39,7 @@ describe('createTheme', () => {
           backgroundStrongHover: '#ef5774',
           backgroundStrongDisabled: '#ef5774',
           text: '#ef5774',
-          textHover: '#ef5774',
+          textHover: '#cf0f34',
           textDisabled: '#ffe1e7',
           textWeak: '#ef5774',
           textWeakHover: '#ffe1e7',
