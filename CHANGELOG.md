@@ -1,3 +1,24 @@
+### [0.127.5](https://github.com/scaleway/scaleway-ui/compare/v0.127.4...v0.127.5) (2021-12-14)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.16.5 ([#1001](https://github.com/scaleway/scaleway-ui/issues/1001)) ([4870d5c](https://github.com/scaleway/scaleway-ui/commit/4870d5c0e5a0c886236748cff9fb33ae68d01f47))
+* **devdeps:** update dependency postcss to v8.4.5 ([#1002](https://github.com/scaleway/scaleway-ui/issues/1002)) ([d2f78ff](https://github.com/scaleway/scaleway-ui/commit/d2f78ff49ad0a9d3f61f604ee886d75a33159326))
+
+
+### :bug: Bug Fixes
+
+* **theme:** border colors ([#1004](https://github.com/scaleway/scaleway-ui/issues/1004)) ([9367fe5](https://github.com/scaleway/scaleway-ui/commit/9367fe5becbe8b6942277fba027be273427e90ec))
+
+
+### :zap: Refactor
+
+* migrate ActionBar, ActivityIndicator, Alert, Avatar deprecated color with new system ([#977](https://github.com/scaleway/scaleway-ui/issues/977)) ([068655c](https://github.com/scaleway/scaleway-ui/commit/068655c50103cef6ae179f04dd3981d46027933c))
+* migrate Container, CreationProgress, DateInput, Description to new color system ([#996](https://github.com/scaleway/scaleway-ui/issues/996)) ([820afea](https://github.com/scaleway/scaleway-ui/commit/820afeacd9bd9e67d9d9236bd0fff6c24d7308ae))
+* **theme:** migrate colors of Placeholder, Radio, RadioBorderedBox, Range ([#1000](https://github.com/scaleway/scaleway-ui/issues/1000)) ([5c82464](https://github.com/scaleway/scaleway-ui/commit/5c8246472e342249683af6e590a82687a3264d64))
+* **theme:** migrated colors of DotSteps ExtReminder Label… ([#987](https://github.com/scaleway/scaleway-ui/issues/987)) ([22b166f](https://github.com/scaleway/scaleway-ui/commit/22b166f9b1941612688ebb26bdf5be1c09cd734f))
+
 ### [0.127.4](https://github.com/scaleway/scaleway-ui/compare/v0.127.3...v0.127.4) (2021-12-13)
 
 
