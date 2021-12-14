@@ -1,7 +1,7 @@
-import { Interpolation, Theme } from '@emotion/react'
+import { SerializedStyles } from '@emotion/serialize'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { FunctionComponent, ReactNode, Validator } from 'react'
 import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
@@ -27,9 +27,7 @@ const StyledBox = styled(Box, {
   padding-bottom: ${({ small }) => (small ? 16 : 24)}px;
   border: 1px solid
     ${({ edition, theme }) =>
-      edition
-        ? theme.colorsDeprecated.primary
-        : theme.colorsDeprecated.gray350};
+      edition ? theme.colors.primary.border : theme.colors.neutral.borderWeak};
   opacity: ${({ disabled }) => (disabled ? '0.4' : 'inherit')};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
 
@@ -42,7 +40,7 @@ const StyledBox = styled(Box, {
 `
 
 type ContainerProps = {
-  boxStyle?: Interpolation<Theme>
+  boxStyle?: SerializedStyles
   children: ReactNode
   disabled?: boolean
   edition?: boolean
@@ -89,7 +87,7 @@ const Container: FunctionComponent<ContainerProps> = ({
 )
 
 Container.propTypes = {
-  boxStyle: PropTypes.shape({}),
+  boxStyle: PropTypes.shape({}) as Validator<SerializedStyles>,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   edition: PropTypes.bool,

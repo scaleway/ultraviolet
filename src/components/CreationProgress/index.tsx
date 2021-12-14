@@ -1,4 +1,4 @@
-import { Theme, css, keyframes } from '@emotion/react'
+import { Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNodeArray } from 'react'
@@ -74,12 +74,12 @@ const temporalStepStyles = ({
 }) =>
   temporal !== 'future'
     ? css`
-        background-color: ${theme.colorsDeprecated.success};
+        background-color: ${theme.colors.success.backgroundStrong};
       `
     : css`
         background-color: transparent;
         border-style: solid;
-        border-color: ${theme.colorsDeprecated.gray350};
+        border-color: ${theme.colors.neutral.borderWeak};
       `
 
 const StyledStep = styled('div', {
@@ -100,8 +100,7 @@ const StyledText = styled.div`
 `
 
 const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.gray350};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
   height: 7px;
   width: 7px;
   border-radius: 16px;
@@ -115,8 +114,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: 2px;
   flex-grow: 1;
   border-radius: 2px;
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.gray350};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
   position: relative;
 
   ::after {
@@ -126,7 +124,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     top: 0;
     height: 100%;
     border-radius: 2px;
-    background-color: ${({ theme }) => theme.colorsDeprecated.success};
+    background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
     ${({ temporal }) => temporal === 'past' && `width: 100%;`}
     ${({ temporal, animated }) =>
       temporal === 'current' && animated && loadingStyle}
@@ -192,6 +190,7 @@ const CreationProgress: CreationProgressComponent = ({
   size = 'xlarge',
 }) => {
   const lastStep = React.Children.count(children) - 1
+  const theme = useTheme()
 
   return (
     <StyledContainer size={size}>
@@ -209,16 +208,23 @@ const CreationProgress: CreationProgressComponent = ({
         const renderStep = () => {
           if (temporal !== 'future') {
             return isStepsNumber ? (
-              <Typography color="white" fontWeight={500}>
+              <Typography
+                color={theme.colors.neutral.textStrong}
+                fontWeight={500}
+              >
                 {index + 1}
               </Typography>
             ) : (
-              <Icon name="check" color="white" size={20} />
+              <Icon
+                name="check"
+                color={theme.colors.neutral.textStrong}
+                size={20}
+              />
             )
           }
 
           return isStepsNumber ? (
-            <Typography color="gray300" fontWeight={500}>
+            <Typography color={theme.colors.neutral.textWeak} fontWeight={500}>
               {index + 1}
             </Typography>
           ) : (
