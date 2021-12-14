@@ -215,7 +215,7 @@ const StyledDialog = styled(Dialog, {
       props.toString(),
     ),
 })<StyledDialogProps>`
-  background-color: ${({ theme }) => theme.colors.primary.backgroundWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   position: relative;
   border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
   border: 0;

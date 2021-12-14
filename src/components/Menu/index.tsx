@@ -108,7 +108,7 @@ const styles = {
     }
   `,
   menu: (theme: Theme) => css`
-    background-color: ${theme.colors.primary.backgroundWeak};
+    background-color: ${theme.colors.neutral.backgroundWeak};
     display: flex;
     flex-direction: column;
     text-align: center;

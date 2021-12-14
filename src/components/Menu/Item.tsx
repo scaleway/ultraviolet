@@ -43,7 +43,7 @@ const styles = {
     &:hover,
     &:focus {
       color: ${theme.colors.neutral.textHover};
-      background-color: ${theme.colors.primary.backgroundWeak};
+      background-color: ${theme.colors.neutral.backgroundWeak};
       svg {
         fill: ${theme.colors.neutral.textHover};
       }
