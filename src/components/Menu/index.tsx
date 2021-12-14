@@ -6,13 +6,13 @@ import Popper from '../Popper'
 import Item from './Item'
 
 const bottomStyles = (theme: Theme) => css`
-  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colorsDeprecated.shadow)};
+  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.neutral.background)};
   &:after,
   &:before {
     bottom: 100%;
   }
   &:after {
-    border-bottom-color: ${theme.colorsDeprecated.white};
+    border-bottom-color: ${theme.colors.primary.background};
   }
   &:before {
     border-bottom-color: rgba(165, 165, 205, 0.4);
@@ -20,13 +20,13 @@ const bottomStyles = (theme: Theme) => css`
 `
 const topStyles = (theme: Theme) => css`
   box-shadow: 0 1px 5px 3px
-    ${transparentize(0.85, theme.colorsDeprecated.shadow)};
+    ${transparentize(0.85, theme.colors.neutral.background)};
   &:after,
   &:before {
     top: 100%;
   }
   &:after {
-    border-top-color: ${theme.colorsDeprecated.white};
+    border-top-color: ${theme.colors.primary.background};
   }
   &:before {
     border-top-color: rgba(165, 165, 205, 0.4);
@@ -108,12 +108,12 @@ const styles = {
     }
   `,
   menu: (theme: Theme) => css`
-    background-color: ${theme.colorsDeprecated.white};
+    background-color: ${theme.colors.primary.backgroundWeak};
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    color: ${theme.colorsDeprecated.gray550};
+    color: ${theme.colors.neutral.text};
     border-radius: 4px;
     position: relative;
 
@@ -129,10 +129,10 @@ const styles = {
     }
 
     &:after {
-      border-color: rgba(255, 255, 255, 0);
+      border-color: transparent;
     }
     &:before {
-      border-color: rgba(165, 165, 205, 0);
+      border-color: transparent;
     }
   `,
 }

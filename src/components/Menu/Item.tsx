@@ -6,27 +6,27 @@ import Button from '../Button'
 const variantStyle = {
   danger: (theme: Theme) => css`
     display: inline-block;
-    color: ${theme.colorsDeprecated.red};
+    color: ${theme.colors.danger.text};
     &:hover,
     &:focus {
-      color: ${theme.colorsDeprecated.crimson};
+      color: ${theme.colors.danger.textHover};
       svg {
-        fill: ${theme.colorsDeprecated.crimson};
+        fill: ${theme.colors.danger.textHover};
       }
     }
     svg {
-      fill: ${theme.colorsDeprecated.red};
+      fill: ${theme.colors.danger.text};
     }
   `,
   nav: (theme: Theme) => css`
     font-size: 16px;
     line-height: 24px;
-    color: ${theme.colorsDeprecated.gray550};
+    color: ${theme.colors.neutral.textWeak};
     &:hover,
     &:focus {
-      color: ${theme.colorsDeprecated.primary};
+      color: ${theme.colors.primary.text};
       svg {
-        fill: ${theme.colorsDeprecated.primary};
+        fill: ${theme.colors.primary.text};
       }
     }
   `,
@@ -38,14 +38,14 @@ const styles = {
   `,
   disabled: (theme: Theme) => css`
     cursor: not-allowed;
-    color: ${theme.colorsDeprecated.gray350};
+    color: ${theme.colors.neutral.textDisabled};
 
     &:hover,
     &:focus {
-      color: ${theme.colorsDeprecated.gray350};
-      background-color: ${theme.colorsDeprecated.white};
+      color: ${theme.colors.neutral.textHover};
+      background-color: ${theme.colors.primary.backgroundWeak};
       svg {
-        fill: ${theme.colorsDeprecated.gray550};
+        fill: ${theme.colors.neutral.textHover};
       }
     }
   `,
@@ -55,19 +55,19 @@ const styles = {
     line-height: 22px;
     font-weight: inherit;
     padding: 4px 8px;
-    color: ${theme.colorsDeprecated.gray700};
+    color: ${theme.colors.neutral.text};
     border: 0;
-    border-bottom: 1px solid ${theme.colorsDeprecated.gray100};
+    border-bottom: 1px solid ${theme.colors.neutral.border};
     cursor: pointer;
     transition: color 300ms;
     min-width: 110px;
-    background-color: ${theme.colorsDeprecated.transparent};
+    background-color: transparent;
     &:hover,
     &:focus {
-      color: ${theme.colorsDeprecated.primary};
+      color: ${theme.colors.primary.text};
       svg {
         transition: fill 300ms;
-        fill: ${theme.colorsDeprecated.primary};
+        fill: ${theme.colors.primary.text};
       }
     }
 
