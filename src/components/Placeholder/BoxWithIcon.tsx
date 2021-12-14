@@ -9,7 +9,7 @@ const iconStyle = (size: number) => (theme: Theme) =>
     width: ${size}px;
     height: ${size}px;
     border-radius: ${size}px;
-    background-color: ${theme.colorsDeprecated.gray300};
+    background-color: ${theme.colors.neutral.background};
   `
 
 const boxStyled = (theme: Theme) => css`
@@ -17,7 +17,7 @@ const boxStyled = (theme: Theme) => css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid ${theme.colorsDeprecated.gray300};
+  border: 1px solid ${theme.colors.neutral.borderWeak};
 `
 
 const BoxWithIcon: VoidFunctionComponent<{

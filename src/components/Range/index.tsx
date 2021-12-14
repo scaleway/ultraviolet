@@ -64,7 +64,7 @@ const StyledBar = styled('div', {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: ${({ theme }) => theme.colorsDeprecated.zumthor};
+  background-color: ${({ theme }) => theme.colors.info.background};
   border-radius: 8px;
   user-select: none;
   top: ${({ offsetTop }) => offsetTop}px;
@@ -76,13 +76,13 @@ const StyledLimit = styled(Box, {
 })<{ offsetTop: number }>`
   position: absolute;
   font-size: 12px;
-  color: ${({ theme }) => theme.colorsDeprecated.gray950};
+  color: ${({ theme }) => theme.colors.neutral.text};
   font-weight: 500;
   top: ${({ offsetTop }) => offsetTop + 8}px;
 
   ::before {
     content: '';
-    background-color: ${({ theme }) => theme.colorsDeprecated.gray950};
+    background-color: ${({ theme }) => theme.colors.neutral.text};
     width: 2px;
     position: absolute;
     height: 10px;
@@ -143,7 +143,7 @@ const StyledCursorLink = styled('div', {
   top: ${({ offsetTop = 0 }) => offsetTop + 0}px;
   height: 4px;
   width: 100%;
-  background-color: ${({ theme }) => theme.colorsDeprecated.violet};
+  background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
   border-radius: 8px;
   user-select: none;
 `
@@ -157,7 +157,7 @@ const StyledCursor = styled(Box, {
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
-  border: 4px solid ${({ theme }) => theme.colorsDeprecated.violet};
+  border: 4px solid ${({ theme }) => theme.colors.primary.borderStrong};
   background-color: white;
   cursor: ${({ grabbed }) => (grabbed ? 'grabbing' : 'grab')};
   margin-bottom: 16px;
@@ -165,10 +165,10 @@ const StyledCursor = styled(Box, {
 
 const StyledInput = styled.input`
   position: absolute;
-  color: ${({ theme }) => theme.colorsDeprecated.gray950};
-  background-color: ${({ theme }) => theme.colorsDeprecated.white};
+  color: ${({ theme }) => theme.colors.neutral.text};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   font-size: 16px;
-  border: 1px solid ${({ theme }) => theme.colorsDeprecated.violet};
+  border: 1px solid ${({ theme }) => theme.colors.primary.borderStrong};
   border-radius: 4px;
   min-height: 25px;
   min-width: 40px;

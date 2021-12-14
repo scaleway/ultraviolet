@@ -5,9 +5,9 @@ import Box from '../Box'
 
 const styles = {
   card: (theme: Theme) => css`
-    border: 1px solid ${theme.colorsDeprecated.gray300};
+    border: 1px solid ${theme.colors.neutral.borderWeak};
     border-radius: 4px;
-    width: 240px;
+    width: 239px;
     height: 261px;
     margin-right: 16px;
   `,
@@ -17,11 +17,11 @@ const styles = {
     overflow: auto;
   `,
   img: (theme: Theme) => css`
-    border: 1px solid ${theme.colorsDeprecated.gray300};
-    background-color: ${theme.colorsDeprecated.gray300};
+    border: 1px solid ${theme.colors.neutral.borderWeak};
+    background-color: ${theme.colors.neutral.background};
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-    width: 240px;
+    width: 239px;
     height: 77px;
   `,
 }
