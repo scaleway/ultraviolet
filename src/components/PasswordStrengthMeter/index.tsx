@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { useCallback, useEffect, useState } from 'react'
@@ -17,7 +18,7 @@ const StyledStrength = styled(Typography)`
 `
 
 const StyledWrapper = styled(Box)`
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray100};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   border-radius: 5px;
   height: 8px;
 `
@@ -66,8 +67,9 @@ const PasswordStrengthMeter = ({
   userInputs = [],
 }: PasswordStrengthMeterProps): JSX.Element => {
   const [score, setScore] = useState<number>(0)
+  const theme = useTheme()
   const [backgroundColor, setBackgroundColor] = useState<string>(
-    strength[0]?.color || 'green',
+    strength[0]?.color || theme.colors.success.backgroundStrong,
   )
   const [width, setWidth] = useState<number | string>(0)
 
@@ -90,7 +92,7 @@ const PasswordStrengthMeter = ({
 
   return (
     <div title={title} role="alert" aria-live="polite">
-      <StyledTitle variant="bodyB" color="gray700">
+      <StyledTitle variant="bodyB" color={theme.colors.neutral.text}>
         {title}
       </StyledTitle>
 

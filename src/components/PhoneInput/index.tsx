@@ -22,8 +22,7 @@ const StyledSpan = styled.span`
   left: 10px;
   font-size: 14px;
   padding: 0 10px;
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
 
 interface PhoneInputLabelProps {
@@ -35,8 +34,7 @@ const StyledLabel = styled.label<PhoneInputLabelProps>`
   position: relative;
   display: flex;
   border-radius: 4px;
-  border: 1px solid
-    ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray350};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   padding: 0.8rem 0rem;
 
   &[aria-disabled='true'] {
@@ -45,11 +43,10 @@ const StyledLabel = styled.label<PhoneInputLabelProps>`
   }
 
   &:focus-within {
-    border: 1px solid
-      ${({ theme: { colorsDeprecated } }) => colorsDeprecated.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
     box-shadow: 0 0 0 2px
-      ${({ theme: { colorsDeprecated } }) =>
-        transparentize(0.75, colorsDeprecated.primary)};
+      ${({ theme }) =>
+        transparentize(0.75, theme.colors.primary.backgroundStrong)};
   }
 
   & .input__tel__container {

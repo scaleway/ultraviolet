@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Col, Grid, Row } from '../Grid'
@@ -31,27 +31,35 @@ type PasswordCheckProps = {
   rules: Rule[]
 }
 
-const PasswordCheck: FunctionComponent<PasswordCheckProps> = ({ rules }) => (
-  <Grid fluid gutter={0}>
-    <Row>
-      {rules.map(rule => (
-        <Col large={6} key={rule.name}>
-          <p css={styles.condition}>
-            <Icon
-              name={
-                rule.valid ? 'check-circle-outline' : 'close-circle-outline'
-              }
-              color={rule.valid ? 'success' : 'darkGrey'}
-              css={styles.icon}
-              size={20}
-            />
-            {rule.text}
-          </p>
-        </Col>
-      ))}
-    </Row>
-  </Grid>
-)
+const PasswordCheck: FunctionComponent<PasswordCheckProps> = ({ rules }) => {
+  const theme = useTheme()
+
+  return (
+    <Grid fluid gutter={0}>
+      <Row>
+        {rules.map(rule => (
+          <Col large={6} key={rule.name}>
+            <p css={styles.condition}>
+              <Icon
+                name={
+                  rule.valid ? 'check-circle-outline' : 'close-circle-outline'
+                }
+                color={
+                  rule.valid
+                    ? theme.colors.success.textWeak
+                    : theme.colors.neutral.textWeak
+                }
+                css={styles.icon}
+                size={20}
+              />
+              {rule.text}
+            </p>
+          </Col>
+        ))}
+      </Row>
+    </Grid>
+  )
+}
 
 PasswordCheck.propTypes = {
   rules: PropTypes.arrayOf(

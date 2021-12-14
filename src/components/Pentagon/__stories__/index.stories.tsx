@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Pentagon from '..'
-import { colorsDeprecated } from '../../../theme'
+import { colors } from '../../../theme'
 import { FlexBox } from '../../index'
 
 export default {
@@ -9,7 +9,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Simple pentagon with different sizes and colorsDeprecated.',
+        component: 'Simple pentagon with different sizes and colors.',
       },
     },
   },
@@ -26,10 +26,10 @@ export const Color = Template.bind({})
 Color.decorators = [
   () => (
     <FlexBox inline>
-      <Pentagon color={colorsDeprecated.zumthor} />
-      <Pentagon color={colorsDeprecated.foam} />
-      <Pentagon color={colorsDeprecated.serenade} />
-      <Pentagon color={colorsDeprecated.pippin} />
+      <Pentagon color={colors.info.background} />
+      <Pentagon color={colors.success.background} />
+      <Pentagon color={colors.warning.background} />
+      <Pentagon color={colors.danger.background} />
     </FlexBox>
   ),
 ]
