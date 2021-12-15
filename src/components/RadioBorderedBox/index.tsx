@@ -20,10 +20,10 @@ const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
       `
     if (checked)
       return `
-        border: 1px solid ${colors.primary.borderStrong} !important;
+        border: 1px solid ${colors.primary.borderWeak} !important;
         box-shadow: 0 0 0 2px ${transparentize(
           0.75,
-          colors.primary.borderStrong,
+          colors.primary.borderWeak,
         )};
       `
 

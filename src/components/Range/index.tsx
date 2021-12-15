@@ -157,7 +157,7 @@ const StyledCursor = styled(Box, {
   height: 16px;
   width: ${({ width }) => width}px;
   border-radius: 50%;
-  border: 4px solid ${({ theme }) => theme.colors.primary.borderStrong};
+  border: 4px solid ${({ theme }) => theme.colors.primary.borderWeak};
   background-color: white;
   cursor: ${({ grabbed }) => (grabbed ? 'grabbing' : 'grab')};
   margin-bottom: 16px;
@@ -168,7 +168,7 @@ const StyledInput = styled.input`
   color: ${({ theme }) => theme.colors.neutral.text};
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   font-size: 16px;
-  border: 1px solid ${({ theme }) => theme.colors.primary.borderStrong};
+  border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
   border-radius: 4px;
   min-height: 25px;
   min-width: 40px;
