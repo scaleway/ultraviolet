@@ -5,9 +5,9 @@ import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 
 const CopyButton = styled.button`
-  background-color: ${({ theme }) => theme.colorsDeprecated.transparent};
+  background-color: transparent;
   border: none;
-  color: ${({ theme }) => theme.colorsDeprecated.primary};
+  color: ${({ theme }) => theme.colors.primary.text};
   display: inline-block;
   padding-left: 8px;
   opacity: 0;
