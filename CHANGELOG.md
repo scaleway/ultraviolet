@@ -1,3 +1,10 @@
+### [0.128.2](https://github.com/scaleway/scaleway-ui/compare/v0.128.1...v0.128.2) (2021-12-15)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update nivo monorepo to v0.74.1 ([#995](https://github.com/scaleway/scaleway-ui/issues/995)) ([64096ed](https://github.com/scaleway/scaleway-ui/commit/64096ed1255481533151b10a30ea90b3dbf121ac))
+
 ### [0.128.1](https://github.com/scaleway/scaleway-ui/compare/v0.128.0...v0.128.1) (2021-12-15)
 
 
