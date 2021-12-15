@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme/colors'
+import { ColorDeprecated } from '../../theme/deprecated/colors'
 import Box, { XStyledProps } from '../Box'
 
 const StyledDot = styled(Box, {
@@ -11,8 +12,10 @@ const StyledDot = styled(Box, {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: ${({ theme: { colorsDeprecated }, color }) =>
-    colorsDeprecated[color as Color] ?? color};
+  background-color: ${({ theme, color }) =>
+    theme.colors[color as Color]?.backgroundStrong ??
+    theme.colorsDeprecated[color as ColorDeprecated] ??
+    color};
 `
 
 type DotProps = {
