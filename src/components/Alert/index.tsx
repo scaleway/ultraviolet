@@ -41,13 +41,13 @@ const alertStyles = ({
   if (variant === 'transparent')
     return css`
       background-color: transparent;
-      color: ${sentiment.text};
+      color: ${sentiment.textWeak};
       padding: 12px 0;
     `
   if (variant === 'outlined')
     return css`
-      border: 1px solid ${sentiment.borderStrong};
-      color: ${sentiment.text};
+      border: 1px solid ${sentiment.borderWeak};
+      color: ${sentiment.textWeak};
     `
 
   return css`

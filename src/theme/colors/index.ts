@@ -59,9 +59,9 @@ const generateTokens = ({
       borderWeak: contrast[500],
       borderWeakHover: contrast[500],
       borderWeakDisabled: contrast[500],
-      borderStrong: contrast[800],
-      borderStrongHover: contrast[800],
-      borderStrongDisabled: contrast[700],
+      borderStrong: contrast[100],
+      borderStrongHover: contrast[100],
+      borderStrongDisabled: contrast[100],
 
       /* eslint-enable sort-keys */
     }
@@ -99,9 +99,9 @@ const generateTokens = ({
     borderWeak: contrast[800],
     borderWeakHover: contrast[800],
     borderWeakDisabled: contrast[400],
-    borderStrong: contrast[800],
-    borderStrongHover: contrast[800],
-    borderStrongDisabled: contrast[800],
+    borderStrong: neutralContrast[100],
+    borderStrongHover: neutralContrast[100],
+    borderStrongDisabled: neutralContrast[100],
 
     /* eslint-enable sort-keys */
   }
