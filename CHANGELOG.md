@@ -1,3 +1,16 @@
+### [0.128.1](https://github.com/scaleway/scaleway-ui/compare/v0.128.0...v0.128.1) (2021-12-15)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency jest to v27.4.5 ([#1009](https://github.com/scaleway/scaleway-ui/issues/1009)) ([6224516](https://github.com/scaleway/scaleway-ui/commit/6224516291ba48fb9e77f41124f55e7ecc6fa216))
+* **devdeps:** update dependency typescript to v4.5.4 ([#1010](https://github.com/scaleway/scaleway-ui/issues/1010)) ([60b496a](https://github.com/scaleway/scaleway-ui/commit/60b496ab2fa8244dd5f1592bd5a4fe44ff07a93e))
+
+
+### :bug: Bug Fixes
+
+* **theme:** colors ([#1007](https://github.com/scaleway/scaleway-ui/issues/1007)) ([1d9c71c](https://github.com/scaleway/scaleway-ui/commit/1d9c71cb35a0885c018e72e222af12147ef37dc4))
+
 ## [0.128.0](https://github.com/scaleway/scaleway-ui/compare/v0.127.5...v0.128.0) (2021-12-14)
 
 
