@@ -121,7 +121,7 @@ const variants = {
     }),
   secondary: ({ theme }: { theme: Theme }) =>
     plainVariant({
-      bgColorValue: theme.colors.neutral.background,
+      bgColorValue: theme.colors.neutral.backgroundDisabled,
       textColorValue: theme.colors.neutral.text,
     }),
   'secondary-bordered': ({ theme }: { theme: Theme }) =>
