@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme/colors'
 import Box from '../Box'
 
 const bordersStyles = ({
@@ -16,7 +16,7 @@ const bordersStyles = ({
 }) => {
   const isHalved = bgColors.length > 1
   const finalColors = bgColors?.map(
-    bgColor => theme.colorsDeprecated[bgColor as Color] ?? bgColor,
+    bgColor => theme.colors[bgColor as Color]?.backgroundStrong ?? bgColor,
   )
 
   return css`
@@ -45,7 +45,7 @@ const StyledTextSphere = styled('div', {
   shouldForwardProp: prop => !['color', 'fontSize'].includes(prop.toString()),
 })<{ color: string; fontSize?: number }>`
   color: ${({ theme, color }) =>
-    theme.colorsDeprecated[color as Color] ?? color};
+    theme.colors[color as Color]?.textStrong ?? color};
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 
@@ -59,9 +59,9 @@ type SphereProps = {
 
 const Sphere = ({
   size = 32,
-  bgColors = ['violet'],
+  bgColors = ['primary'],
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
-  textColor = 'white',
+  textColor = 'primary',
   textSize = 16,
   ...props
 }: SphereProps): JSX.Element => (
