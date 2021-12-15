@@ -76,7 +76,7 @@ const StyledStep = styled('li', {
           }
 
           &[aria-current='true'] {
-            color: ${theme.colors.primary.text};
+            color: ${theme.colors.primary.textWeak};
             ${condensed
               ? css`
                   flex-grow: 1;

@@ -64,10 +64,10 @@ const styles = {
     background-color: transparent;
     &:hover,
     &:focus {
-      color: ${theme.colors.primary.text};
+      color: ${theme.colors.primary.textHover};
       svg {
         transition: fill 300ms;
-        fill: ${theme.colors.primary.text};
+        fill: ${theme.colors.primary.textHover};
       }
     }
 

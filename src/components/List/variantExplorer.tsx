@@ -28,11 +28,11 @@ const StyledRow = styled(Box, {
 
   color: ${({ selected, highlighted, theme }) =>
     selected && highlighted
-      ? theme.colors.primary.text
+      ? theme.colors.primary.textWeak
       : theme.colors.neutral.text};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary.text};
+    color: ${({ theme }) => theme.colors.primary.textWeakHover};
   }
 
   ${Cell} {

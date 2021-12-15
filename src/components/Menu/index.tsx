@@ -12,7 +12,7 @@ const bottomStyles = (theme: Theme) => css`
     bottom: 100%;
   }
   &:after {
-    border-bottom-color: ${theme.colors.primary.background};
+    border-bottom-color: ${theme.colors.primary.backgroundWeak};
   }
   &:before {
     border-bottom-color: rgba(165, 165, 205, 0.4);

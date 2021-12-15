@@ -17,7 +17,7 @@ const StyledItemsCount = styled.div`
   line-height: 20px;
   text-align: center;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary.text};
 `
