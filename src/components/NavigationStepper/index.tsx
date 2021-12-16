@@ -63,20 +63,20 @@ const StyledStep = styled('li', {
   ${({ condensed, isCompleted, theme }) =>
     isCompleted
       ? css`
-          color: ${theme.colorsDeprecated.success};
+          color: ${theme.colors.success.text};
           ${StyledStepNumber} {
-            background-color: ${theme.colorsDeprecated.success};
-            color: ${theme.colorsDeprecated.white};
+            background-color: ${theme.colors.success.backgroundStrong};
+            color: ${theme.colors.success.textStrong};
           }
         `
       : css`
-          color: ${theme.colorsDeprecated.gray550};
+          color: ${theme.colors.neutral.textWeak};
           ${StyledStepNumber} {
-            border: 3px solid ${theme.colorsDeprecated.gray550};
+            border: 3px solid ${theme.colors.neutral.borderWeak};
           }
 
           &[aria-current='true'] {
-            color: ${theme.colorsDeprecated.primary};
+            color: ${theme.colors.primary.textWeak};
             ${condensed
               ? css`
                   flex-grow: 1;
@@ -84,9 +84,9 @@ const StyledStep = styled('li', {
               : ``}
 
             ${StyledStepNumber} {
-              border-color: ${theme.colorsDeprecated.primary};
-              color: ${theme.colorsDeprecated.white};
-              background-color: ${theme.colorsDeprecated.primary};
+              border-color: ${theme.colors.primary.borderStrong};
+              color: ${theme.colors.primary.textStrong};
+              background-color: ${theme.colors.primary.backgroundStrong};
             }
           }
         `};

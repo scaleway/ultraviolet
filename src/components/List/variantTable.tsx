@@ -7,7 +7,6 @@ import React, {
   MouseEvent,
   useCallback,
 } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -32,11 +31,11 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 
   ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colorsDeprecated.gray550};
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
     padding: 4px 8px !important;
 
     &[disabled] {
@@ -56,10 +55,10 @@ const getRowColor = ({
   selected?: boolean
   theme: Theme
 }) => {
-  if (disabled) return theme.colorsDeprecated.gray550
-  if (selected && highlighted) return theme.colorsDeprecated.primary
+  if (disabled) return theme.colors.neutral.text
+  if (selected && highlighted) return theme.colors.primary.text
 
-  return theme.colorsDeprecated.gray700
+  return theme.colors.neutral.text
 }
 
 const StyledRow = styled(Box, {
@@ -69,7 +68,6 @@ const StyledRow = styled(Box, {
       'disabled',
       'selected',
       'highlighted',
-      'locked',
       'isEditable',
       'isHoverable',
       'edition',
@@ -87,16 +85,14 @@ const StyledRow = styled(Box, {
   flex-wrap: wrap;
 
   &:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colorsDeprecated.gray50};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   }
 
   color: ${getRowColor};
 
   &:hover {
     color: ${({ disabled, theme }) =>
-      disabled
-        ? theme.colorsDeprecated.gray550
-        : theme.colorsDeprecated.primary};
+      disabled ? theme.colors.neutral.textStrong : theme.colors.primary.text};
   }
 
   ${Cell} {
@@ -120,9 +116,9 @@ const StyledCheckbox = styled(Checkbox)`
   justify-content: center;
 `
 
-const StyledSpan = styled.span<{ color?: Color }>`
-  ${({ theme, color }) =>
-    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
+const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
+  ${({ theme, isPrimaryColor }) =>
+    isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
 export const Header: FunctionComponent = () => {
@@ -182,7 +178,7 @@ export const Header: FunctionComponent = () => {
             width: width ?? undefined,
           }}
         >
-          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan isPrimaryColor={sortedIndex === index}>
             {label}
           </StyledSpan>
           {sort ? (
@@ -248,7 +244,6 @@ export const Row: FunctionComponent<ListRowProps> = ({
 }
 
 Row.propTypes = {
-  alert: PropTypes.bool,
   animated: PropTypes.bool,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -264,7 +259,6 @@ Row.propTypes = {
 }
 
 Row.defaultProps = {
-  alert: undefined,
   animated: undefined,
   customStyle: undefined,
   disabled: false,

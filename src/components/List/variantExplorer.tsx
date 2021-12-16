@@ -7,7 +7,6 @@ import React, {
   VoidFunctionComponent,
   useCallback,
 } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -25,15 +24,15 @@ const StyledRow = styled(Box, {
   align-items: center;
   flex-wrap: wrap;
 
-  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 
   color: ${({ selected, highlighted, theme }) =>
     selected && highlighted
-      ? theme.colorsDeprecated.primary
-      : theme.colorsDeprecated.gray700};
+      ? theme.colors.primary.textWeak
+      : theme.colors.neutral.text};
 
   &:hover {
-    color: ${({ theme }) => theme.colorsDeprecated.primary};
+    color: ${({ theme }) => theme.colors.primary.textWeakHover};
   }
 
   ${Cell} {
@@ -54,11 +53,11 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray350};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 
   ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colorsDeprecated.gray550};
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
     padding: 4px 8px !important;
 
     &[disabled] {
@@ -75,9 +74,9 @@ const StyledCheckbox = styled(Checkbox)`
   align-self: center;
 `
 
-const StyledSpan = styled.span<{ color?: Color }>`
-  ${({ theme, color }) =>
-    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
+const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
+  ${({ theme, isPrimaryColor }) =>
+    isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
 export const Header: VoidFunctionComponent = () => {
@@ -137,7 +136,7 @@ export const Header: VoidFunctionComponent = () => {
             width: width ?? undefined,
           }}
         >
-          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan isPrimaryColor={sortedIndex === index}>
             {label}
           </StyledSpan>
           {sort ? (

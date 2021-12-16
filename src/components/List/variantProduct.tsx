@@ -11,7 +11,6 @@ import React, {
   isValidElement,
   useCallback,
 } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
@@ -32,10 +31,10 @@ const getBorderColor = ({
   selected?: boolean
   theme: Theme
 }) => {
-  if (alert) return theme.colorsDeprecated.orange
-  if (selected || highlighted) return theme.colorsDeprecated.primary
+  if (alert) return theme.colors.warning.border
+  if (selected || highlighted) return theme.colors.primary.border
 
-  return theme.colorsDeprecated.gray350
+  return theme.colors.neutral.borderWeak
 }
 
 const fadeInAnimation = keyframes`
@@ -56,7 +55,7 @@ const StyledExpendableContainer = styled('div', {
   flex: 0 0 100%;
 
   [data-expandable] {
-    border-top: 1px solid ${({ theme }) => theme.colorsDeprecated.gray200};
+    border-top: 1px solid ${({ theme }) => theme.colors.primary.border};
     padding: 16px 16px 8px ${({ multiselect }) => (multiselect ? 48 : 16)}px;
     margin-top: 8px;
 
@@ -105,19 +104,19 @@ const StyledRow = styled('details', {
   padding: 8px 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ alert, theme }) =>
-    alert ? theme.colorsDeprecated.pippin : `initial`};
+    alert ? theme.colors.warning.background : `initial`};
 
   cursor: ${({ openable }) => (openable ? 'pointer' : 'auto')};
   color: ${({ alert, theme }) =>
-    alert ? theme.colorsDeprecated.orange : 'inherit'};
+    alert ? theme.colors.warning.text : 'inherit'};
 
   ${({ highlighted, isHoverable, theme }) =>
     isHoverable
       ? `&:hover${highlighted ? ', &' : ''} {
-        border-color: ${theme.colorsDeprecated.primary};
+        border-color: ${theme.colors.primary.border};
         box-shadow: 0 2px 14px 8px ${transparentize(
           0.5,
-          theme.colorsDeprecated.gray200,
+          theme.colors.primary.background,
         )};
       }`
       : ''}
@@ -163,7 +162,7 @@ const StyledHeader = styled('div', {
 
   > ${Cell} {
     font-size: 14px;
-    color: ${({ theme }) => theme.colorsDeprecated.gray550};
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
     height: 40px;
 
     padding: 0 8px;
@@ -193,11 +192,11 @@ const StyledSummary = styled.summary`
   }
 `
 
-const StyledSpan = styled.span<{ color?: Color }>`
+const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
   text-overflow: ellipsis;
   overflow: hidden;
-  ${({ theme, color }) =>
-    color ? `color: ${theme.colorsDeprecated[color]};` : ``}
+  ${({ theme, isPrimaryColor }) =>
+    isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
 export const Header: FunctionComponent = props => {
@@ -261,7 +260,7 @@ export const Header: FunctionComponent = props => {
             width: width ?? undefined,
           }}
         >
-          <StyledSpan color={sortedIndex === index ? 'primary' : undefined}>
+          <StyledSpan isPrimaryColor={sortedIndex === index}>
             {label}
           </StyledSpan>
           {sort && (
