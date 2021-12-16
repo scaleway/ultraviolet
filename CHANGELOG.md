@@ -1,3 +1,21 @@
+### [0.128.3](https://github.com/scaleway/scaleway-ui/compare/v0.128.2...v0.128.3) (2021-12-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.1.2 ([#1014](https://github.com/scaleway/scaleway-ui/issues/1014)) ([011844a](https://github.com/scaleway/scaleway-ui/commit/011844a306c7a176e442cd89c773c3ee9ad0d6ca))
+* **devdeps:** update dependency rollup to v2.61.1 ([#1013](https://github.com/scaleway/scaleway-ui/issues/1013)) ([fa1bbaf](https://github.com/scaleway/scaleway-ui/commit/fa1bbaf7090520adab699609f35114606e43818f))
+
+
+### :zap: Refactor
+
+* colors on list menu modal navigationstepper components ([#1005](https://github.com/scaleway/scaleway-ui/issues/1005)) ([6db8403](https://github.com/scaleway/scaleway-ui/commit/6db84031fc83ce7ac1df6824b6f99b84a32c98ef))
+
+
+### :bug: Bug Fixes
+
+* button color ([#1011](https://github.com/scaleway/scaleway-ui/issues/1011)) ([e3dee3d](https://github.com/scaleway/scaleway-ui/commit/e3dee3da65663ef109050d8e35dc2dd96d3b5510))
+
 ### [0.128.2](https://github.com/scaleway/scaleway-ui/compare/v0.128.1...v0.128.2) (2021-12-15)
 
 
