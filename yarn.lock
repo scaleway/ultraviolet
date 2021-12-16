@@ -1850,16 +1850,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:11.6.0, @emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.6.0":
-  version: 11.6.0
-  resolution: "@emotion/cache@npm:11.6.0"
+"@emotion/cache@npm:11.7.1, @emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/cache@npm:11.7.1"
   dependencies:
     "@emotion/memoize": ^0.7.4
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.0.0
     "@emotion/weak-memoize": ^0.2.5
-    stylis: ^4.0.10
-  checksum: 3c72c50bfe06fd7ec2728988181173664183d2320305a01bb757caa6a9d485de25fccde1b173d810423d2ff88a178d5a72cc21db76b9e458311a8ce3044dd2a1
+    stylis: 4.0.13
+  checksum: cf7aa8fe3bacfdedcda94b53e76a7635e122043439715fcfbf7f1a81340cfe6099a59134481a03ec3e0437466566d18528577d1e6ea92f5b98c372b8b38a8f35
   languageName: node
   linkType: hard
 
@@ -1891,13 +1891,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css-prettifier@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@emotion/css-prettifier@npm:1.0.0"
+"@emotion/css-prettifier@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@emotion/css-prettifier@npm:1.0.1"
   dependencies:
     "@emotion/memoize": ^0.7.4
-    stylis: ^4.0.3
-  checksum: a3de555a49e26b7b226625cfb80e766cc19bd862b736d0c481021a77dc84d6588c97c949d3bcab605d7e5fd1f254ab9386fc368abc2aec74d37e6447d905354c
+    stylis: 4.0.13
+  checksum: 3c75e59b072fc4c6d1e555696ac01e41a02d29324c2e95795b6c1b2caae765f1967f561b64cf19522a06ec0d7bf89948ccf9ba8c000335a6693b6a4b43b74b92
   languageName: node
   linkType: hard
 
@@ -1946,15 +1946,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/jest@npm:11.6.0":
-  version: 11.6.0
-  resolution: "@emotion/jest@npm:11.6.0"
+"@emotion/jest@npm:11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/jest@npm:11.7.1"
   dependencies:
     "@babel/runtime": ^7.13.10
-    "@emotion/css-prettifier": ^1.0.0
+    "@emotion/css-prettifier": ^1.0.1
     chalk: ^4.1.0
     specificity: ^0.4.1
-    stylis: ^4.0.10
+    stylis: 4.0.13
   peerDependencies:
     "@types/jest": ^26.0.14 || ^27.0.0
     enzyme-to-json: ^3.2.1
@@ -1963,7 +1963,7 @@ __metadata:
       optional: true
     enzyme-to-json:
       optional: true
-  checksum: d512ecb7021105ecf80b05d59aa7a10a0e031b9a3ea1389e11f27e1844b63a3fc7402e827f52e5fe71174141aa74445f99255e856cf68e6a88b74c861e4227a9
+  checksum: 27137da08156e0157402f86392bb924dcf6a366cfd7e94b9d8a5903bdbfe0e86a9c8832d6d933b8d2bda9933f469121cad7c4110f0a19085eb4b23bc2f407406
   languageName: node
   linkType: hard
 
@@ -1981,12 +1981,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.7.0, @emotion/react@npm:^11.1.1":
-  version: 11.7.0
-  resolution: "@emotion/react@npm:11.7.0"
+"@emotion/react@npm:11.7.1, @emotion/react@npm:^11.1.1":
+  version: 11.7.1
+  resolution: "@emotion/react@npm:11.7.1"
   dependencies:
     "@babel/runtime": ^7.13.10
-    "@emotion/cache": ^11.6.0
+    "@emotion/cache": ^11.7.1
     "@emotion/serialize": ^1.0.2
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.0.0
@@ -2000,7 +2000,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 8b50d61caabe04ae413ae23b98c170da643754ec89f25eb001464095685686585d0f88988bc36432f231e6de6abdbee73308c42ba427de9eaaf5a54d7f2f6ae5
+  checksum: 3392aa71f9c68c16022947959f7f842174e6b075b3baf58e185462411cd9b5a87557109a9225b1abaa2d7200a08b7cb9d7f21aa035f0d36b2c89e19b2a124e02
   languageName: node
   linkType: hard
 
@@ -3318,17 +3318,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/jest-helpers@npm:1.1.5":
-  version: 1.1.5
-  resolution: "@scaleway/jest-helpers@npm:1.1.5"
+"@scaleway/jest-helpers@npm:1.1.6":
+  version: 1.1.6
+  resolution: "@scaleway/jest-helpers@npm:1.1.6"
   dependencies:
-    "@emotion/cache": 11.6.0
-    "@emotion/jest": 11.6.0
-    "@emotion/react": 11.7.0
+    "@emotion/cache": 11.7.1
+    "@emotion/jest": 11.7.1
+    "@emotion/react": 11.7.1
     "@testing-library/react": 12.1.2
   peerDependencies:
     react: ^17.0.1
-  checksum: 6f36fe3e082011249ac7aabdacb1c5bcf5fe0344cd394b9b703d778fc501098e8ac8626f4e966772c9163d3ad81ad90f1d4df8d9d1f42e7a423b0671fcb865f9
+  checksum: 388d0dcf5df41d1f14908af6ad3240c6fcffee4d8bf0e30e765c3226fb99b8455dd607172e95417768a09d27879dec1b1eb6470c99c300c8d923841f7ca3f32a
   languageName: node
   linkType: hard
 
@@ -3354,10 +3354,10 @@ __metadata:
     "@commitlint/cli": 15.0.0
     "@commitlint/config-conventional": 15.0.0
     "@emotion/babel-preset-css-prop": 11.2.0
-    "@emotion/cache": 11.6.0
+    "@emotion/cache": 11.7.1
     "@emotion/eslint-plugin": 11.7.0
-    "@emotion/jest": 11.6.0
-    "@emotion/react": 11.7.0
+    "@emotion/jest": 11.7.1
+    "@emotion/react": 11.7.1
     "@emotion/serialize": 1.0.2
     "@emotion/styled": 11.6.0
     "@nivo/bar": 0.74.1
@@ -3368,7 +3368,7 @@ __metadata:
     "@rollup/plugin-node-resolve": 13.0.6
     "@rollup/plugin-url": 6.1.0
     "@scaleway/eslint-config-react": 3.1.2
-    "@scaleway/jest-helpers": 1.1.5
+    "@scaleway/jest-helpers": 1.1.6
     "@scaleway/random-name": 3.0.0
     "@scaleway/use-i18n": 3.1.25
     "@semantic-release/changelog": 6.0.1
@@ -3447,7 +3447,7 @@ __metadata:
     webpack: 5.65.0
     zxcvbn: 4.4.2
   peerDependencies:
-    "@emotion/react": 11.7.0
+    "@emotion/react": 11.7.1
     "@emotion/styled": 11.6.0
     react: 17.0.2
     react-dom: 17.0.2
@@ -20730,10 +20730,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"stylis@npm:^4.0.10, stylis@npm:^4.0.3":
-  version: 4.0.10
-  resolution: "stylis@npm:4.0.10"
-  checksum: 0fecaf5c234ec3ffcb0afc21478742a815a21cb964365259789be9c1692e72e13d8c081c1150fd76ed2146633a3251cdecd6e0c120b158f44bd74c38f81cafb3
+"stylis@npm:4.0.13, stylis@npm:^4.0.3":
+  version: 4.0.13
+  resolution: "stylis@npm:4.0.13"
+  checksum: 8ea7a87028b6383c6a982231c4b5b6150031ce028e0fdaf7b2ace82253d28a8af50cc5a9da8a421d3c7c4441592f393086e332795add672aa4a825f0fe3713a3
   languageName: node
   linkType: hard
 
