@@ -1,12 +1,11 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { HTMLAttributes, ReactNode, VoidFunctionComponent } from 'react'
-import { Checkbox, CheckboxHTMLProps } from 'reakit'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import React, {
+  ChangeEventHandler,
+  ReactNode,
+  VoidFunctionComponent,
+} from 'react'
 import Tooltip from '../Tooltip'
-
-const PADDING = 6
 
 const SIZES = {
   medium: {
@@ -24,14 +23,6 @@ const SIZES = {
 type Sizes = keyof typeof SIZES
 const switchSizes = Object.keys(SIZES) as Sizes[]
 
-const COLORS = {
-  disabled: 'gray300',
-  inactiveBgColor: 'gray550',
-  inactiveBigBallColor: 'gray700',
-  inactiveLabelColor: 'gray700',
-  smallBallColor: 'gray100',
-} as const
-
 interface LabelProps {
   size?: Sizes
   onLabel?: string | ReactNode
@@ -47,7 +38,7 @@ const labelSize = (
   offLabel: string | ReactNode,
 ) => {
   if (typeof onLabel === 'string' && typeof offLabel === 'string') {
-    return Math.max(onLabel.length, offLabel.length) * 10
+    return Math.max(onLabel.length, offLabel.length) * 9 + 2
   }
 
   return 0
@@ -70,26 +61,14 @@ const getSwitchWidth = ({
   )
     // + 20 comes from the ball size to have some space around it
     // it centers the text with 10px margin on each side
-    return labelSize(onLabel, offLabel) + SIZES[size].ball + 20
+    return `${labelSize(onLabel, offLabel)}px`
 
-  return SIZES[size].width
+  return 'auto'
 }
 
-const SwitchBall = styled.span<{ size: Sizes }>`
-  display: block;
-  position: relative;
-  border-radius: 34px;
-  pointer-events: none;
-  transition: all 250ms;
-
-  width: ${({ size }) => SIZES[size].ball}px;
-  height: ${({ size }) => SIZES[size].ball}px;
-
-  background-color: ${({ size, theme }) =>
-    theme.colorsDeprecated[
-      size === 'small' ? COLORS.smallBallColor : COLORS.inactiveBigBallColor
-    ]};
-`
+const SwitchBall = styled.span``
+const SwitchBallContainer = styled.div``
+const StyledInsideLabel = styled.span``
 
 const StyledSpan = styled('span', {
   shouldForwardProp: prop =>
@@ -126,113 +105,123 @@ const StyledSpan = styled('span', {
 `
 
 const labelPositions = ['left', 'right', 'inside'] as const
+
 type LabelPositions = typeof labelPositions[number]
 
 type VariantProps = LabelProps & {
   width?: number
 }
 
-const buildVariants =
-  ({ bgColor, activeBigBallColor, activeLabelColor }: Record<string, Color>) =>
-  ({
-    theme,
-    width,
-    onLabel,
-    offLabel,
-    labeled,
-    size,
-  }: VariantProps & { theme: Theme }) =>
-    css`
-      &[aria-checked='true'] {
-        background-color: ${theme.colorsDeprecated[bgColor] ?? bgColor};
-      }
+type Variants = 'primary' | 'success'
 
-      &[aria-checked='true'] > ${SwitchBall} {
-        transform: translateX(
-            ${getSwitchWidth({
-              labeled,
-              offLabel,
-              onLabel,
-              size,
-              width,
-            }) -
-            2 * PADDING}px
-          )
-          translateX(-100%);
-        background-color: ${size === 'small'
-          ? theme.colorsDeprecated[COLORS.smallBallColor]
-          : theme.colorsDeprecated[activeBigBallColor] ?? activeBigBallColor};
-      }
+type StyledSwitchProps = VariantProps & {
+  variant?: Variants
+  disabled?: boolean
+}
 
-      &[aria-checked='false'] > ${StyledSpan} {
-        color: ${theme.colorsDeprecated[COLORS.inactiveLabelColor]};
-        right: 0;
-      }
-
-      &[aria-checked='true'] > ${StyledSpan} {
-        color: ${theme.colorsDeprecated[activeLabelColor] ?? activeLabelColor};
-        left: 0;
-      }
-    `
-
-const variants = {
-  primary: buildVariants({
-    activeBigBallColor: 'gray100',
-    activeLabelColor: 'gray100',
-    bgColor: 'primary',
-  }),
-  success: buildVariants({
-    activeBigBallColor: 'success',
-    activeLabelColor: 'success',
-    bgColor: 'foam',
-  }),
-} as const
-
-type Variants = keyof typeof variants
-
-const switchVariants = Object.keys(variants) as Variants[]
-
-type StyledSwitchProps = HTMLAttributes<HTMLElement> &
-  VariantProps & {
-    variant?: Variants
-    disabled?: boolean
-  }
-
-const StyledSwitch = styled('span', {
+const StyledSwitch = styled('div', {
   shouldForwardProp: prop =>
     !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop.toString()),
 })<StyledSwitchProps>`
-  overflow: hidden;
   outline: none;
-  width: ${getSwitchWidth}px;
-  height: ${({ size }) => SIZES[size as Sizes]?.height}px;
-  display: inline-flex;
+  overflow: hidden;
+  display: flex;
   align-items: center;
-  background-color: ${({ disabled, theme }) =>
-    theme.colorsDeprecated[
-      disabled ? COLORS.disabled : COLORS.inactiveBgColor
-    ]};
   border: none;
   border-radius: 34px;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   position: relative;
   transition: all 250ms;
-  padding: 0 ${PADDING}px;
+  cursor: pointer;
+  padding: ${({ theme }) => theme.space[0.5]};
+  height: ${({ theme }) => theme.space[3]};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  min-width: ${({ theme }) => theme.space[6]};
+  width: ${getSwitchWidth};
+  padding-right: ${({ theme }) => theme.space[1]};
 
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  & ${SwitchBallContainer} {
+    position: absolute;
+    margin-left: ${({ theme }) => theme.space[0.5]};
+    margin-right: ${({ theme }) => theme.space[0.5]};
+    left: 0;
+    right: ${({ theme }) => theme.space[3]};
+    transition: all 250ms;
+    top: ${({ theme }) => theme.space[0.5]};
+    bottom: 0;
+  }
 
-  ${({ variant }) => variants?.[variant as Variants]}
+  & ${SwitchBall} {
+    display: block;
+    border-radius: 50%;
+    width: ${({ theme }) => theme.space[3]};
+    height: ${({ theme }) => theme.space[3]};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  }
+
+  &[aria-checked='true'] ${SwitchBallContainer} {
+    transform: translateX(100%);
+  }
+
+  & > ${StyledInsideLabel} {
+    position: absolute;
+    right: ${({ theme }) => theme.space[0.5]};
+  }
+
+  &[aria-checked='true'] ${StyledInsideLabel} {
+    left: ${({ theme }) => theme.space[0.5]};
+    right: 0;
+  }
+
+  &[data-variant='primary'] {
+    &[aria-checked='true'] {
+      color: ${({ theme }) => theme.colors.neutral.textStrong};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    }
+
+    &[aria-checked='true'] > ${StyledSpan} {
+      color: ${({ theme }) => theme.colors.neutral.textWeak};
+      left: 0;
+    }
+  }
+
+  &[data-size='small'] {
+    padding: ${({ theme }) => theme.space[0.5]};
+    height: ${({ theme }) => theme.space[2]};
+    min-width: ${({ theme }) => theme.space[4]};
+
+    & ${SwitchBallContainer} {
+      right: ${({ theme }) => theme.space[2]};
+    }
+
+    & ${SwitchBall} {
+      width: ${({ theme }) => theme.space[2]};
+      height: ${({ theme }) => theme.space[2]};
+    }
+  }
+
+  &[data-variant='success'] {
+    &[aria-checked='true'] {
+      background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
+    }
+  }
 `
 
-const StyledCheckbox = styled(Checkbox)`
+const StyledCheckbox = styled.input`
   position: absolute;
   opacity: 0.01;
 `
 
-const StyledLabel = styled.label<{ disabled?: boolean }>`
+const StyledLabel = styled.label<{ width?: number }>`
   display: flex;
   align-items: center;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  cursor: pointer;
+  width: ${({ width }) => (width ? `${width}px` : `fit-content`)};
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.3;
+    pointer-events: none;
+  }
 `
 
 type SwitchProps = StyledSwitchProps & {
@@ -240,7 +229,7 @@ type SwitchProps = StyledSwitchProps & {
   checked?: boolean
   name: string
   tooltip?: string
-  onChange?: CheckboxHTMLProps['onChange']
+  onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
 const Switch: VoidFunctionComponent<SwitchProps> = ({
@@ -258,21 +247,18 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
   width,
 }) => {
   const renderLabel = () => (
-    <StyledSpan
-      labeled={labeled}
-      onLabel={onLabel}
-      offLabel={offLabel}
-      size={size}
-    >
-      {checked ? onLabel : offLabel}
-    </StyledSpan>
+    <StyledInsideLabel>{checked ? onLabel : offLabel}</StyledInsideLabel>
   )
 
   const renderInsideLabel = labeled && labeled !== 'right' && labeled !== 'left'
 
   return (
     <Tooltip text={tooltip}>
-      <StyledLabel aria-checked={checked} disabled={disabled}>
+      <StyledLabel
+        width={width}
+        aria-checked={checked}
+        aria-disabled={disabled}
+      >
         {labeled === 'left' ? renderLabel() : null}
         <StyledSwitch
           size={size}
@@ -282,7 +268,9 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
           onLabel={onLabel}
           offLabel={offLabel}
           variant={variant}
-          width={width}
+          data-variant={variant}
+          data-size={size}
+          role="checkbox"
         >
           <StyledCheckbox
             id={id || name}
@@ -290,9 +278,12 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
             disabled={disabled}
             name={name}
             onChange={onChange}
+            type="checkbox"
           />
           {renderInsideLabel ? renderLabel() : null}
-          <SwitchBall size={size} />
+          <SwitchBallContainer>
+            <SwitchBall />
+          </SwitchBallContainer>
         </StyledSwitch>
         {labeled === 'right' ? renderLabel() : null}
       </StyledLabel>
@@ -323,7 +314,7 @@ Switch.propTypes = {
   onLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   size: PropTypes.oneOf(switchSizes),
   tooltip: PropTypes.string,
-  variant: PropTypes.oneOf(switchVariants),
+  variant: PropTypes.oneOf(['primary', 'success']),
   width: PropTypes.number,
 }
 

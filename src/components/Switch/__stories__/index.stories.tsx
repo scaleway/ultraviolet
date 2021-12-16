@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent, ComponentProps } from 'react'
+import React, { ChangeEvent, ComponentProps, useEffect, useState } from 'react'
 import Switch from '..'
 import { Box, Icon } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
@@ -100,9 +100,25 @@ export default {
   title: 'Components/Data Entry/Switch',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Switch>> = args => (
-  <Switch {...args} />
-)
+const Template: Story<ComponentProps<typeof Switch>> = ({
+  checked,
+  ...args
+}) => {
+  const [value, setValue] = useState(checked)
+
+  useEffect(() => {
+    setValue(checked)
+  }, [checked])
+
+  return (
+    <Switch
+      {...args}
+      checked={value}
+      variant="success"
+      onChange={event => setValue(event.target.checked)}
+    />
+  )
+}
 
 export const Default = Template.bind({})
 
