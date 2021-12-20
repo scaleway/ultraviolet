@@ -1,3 +1,16 @@
+### [0.128.6](https://github.com/scaleway/scaleway-ui/compare/v0.128.5...v0.128.6) (2021-12-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.2.0 ([#1026](https://github.com/scaleway/scaleway-ui/issues/1026)) ([1ae12b5](https://github.com/scaleway/scaleway-ui/commit/1ae12b51d8bc67b2f31cfb287d8e345ea3757447))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.26 ([#1025](https://github.com/scaleway/scaleway-ui/issues/1025)) ([5271593](https://github.com/scaleway/scaleway-ui/commit/527159346bb54e65c26674b833f20a70da786c29))
+
+
+### :bug: Bug Fixes
+
+* a11y for stealthcopiable ([#1029](https://github.com/scaleway/scaleway-ui/issues/1029)) ([b320000](https://github.com/scaleway/scaleway-ui/commit/b320000eb83ca4ebf03da2ab123e44b2728b2cbc))
+
 ### [0.128.5](https://github.com/scaleway/scaleway-ui/compare/v0.128.4...v0.128.5) (2021-12-20)
 
 
