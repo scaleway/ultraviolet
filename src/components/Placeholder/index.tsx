@@ -99,12 +99,4 @@ Placeholder.propTypes = {
   width: PropTypes.number,
 }
 
-Placeholder.defaultProps = {
-  col: undefined,
-  height: undefined,
-  length: undefined,
-  variant: 'blocks',
-  width: undefined,
-}
-
 export default Placeholder
