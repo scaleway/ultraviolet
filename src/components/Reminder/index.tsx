@@ -1,34 +1,24 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'
 import UniversalLink from '../UniversalLink'
 
-export const variants = {
-  error: {
-    background: 'pippin',
-    main: 'red',
-  },
-  info: {
-    background: 'zumthor',
-    main: 'blue',
-  },
-  warning: {
-    background: 'serenade',
-    main: 'orange',
-  },
-}
+export const variants = ['error', 'info', 'warning'] as const
 
-type Variants = keyof typeof variants
-const reminderVariants = Object.keys(variants) as Variants[]
+type Variant = typeof variants[number]
+
+const variantToColor = (variant: Variant): Color =>
+  variant === 'error' ? 'danger' : variant
 
 const Notification = styled(Box, {
   shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
 })<{
-  variant: Variants
+  variant: Variant
   bordered: boolean
   type?: string
   to?: string
@@ -40,48 +30,36 @@ const Notification = styled(Box, {
   cursor: pointer;
   border-radius: 14px;
   text-decoration: none;
-  color: ${({ theme }) => theme.colorsDeprecated.gray700};
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  ${({ variant, bordered, theme }) => {
+    const color = variantToColor(variant)
 
-  &:hover {
-    text-decoration: none;
-  }
-
-  ${({ variant, bordered, theme }) => `
+    return `
     background-color: ${
-      bordered
-        ? theme.colorsDeprecated.transparent
-        : theme.colorsDeprecated[variants[variant].background as Color]
+      bordered ? 'transparent' : theme.colors[color].background
     };
     border: 1px solid ${
-      bordered
-        ? theme.colorsDeprecated.gray300
-        : theme.colorsDeprecated.transparent
+      bordered ? theme.colors.neutral.borderWeak : 'transparent'
     };
-    transition: all .3s ease-in-out;
-
+    color: ${theme.colors.neutral.text};
     &:hover {
-      box-shadow: 0 3px 6px ${
-        theme.colorsDeprecated[variants[variant].background as Color]
-      };
-      border: 1px solid ${
-        theme.colorsDeprecated[variants[variant].main as Color]
-      };
+      text-decoration: none;
+      box-shadow: 0 3px 6px ${theme.colors[color].background};
+      border: 1px solid ${theme.colors[color].border};
     }
-  `}
-
-  & strong {
-    ${({ variant, theme }) => `
-      color: ${theme.colorsDeprecated[variants[variant].main as Color]};
-    `}
-  }
+    & strong {
+      color: ${theme.colors[color].text};
+    }
+  `
+  }}
 `
 
 type ReminderProps = {
   bordered?: boolean
   text: string
   to?: string
-  variant?: Variants
+  variant?: Variant
 } & BoxProps
 
 const Reminder: FunctionComponent<ReminderProps> = ({
@@ -90,29 +68,37 @@ const Reminder: FunctionComponent<ReminderProps> = ({
   bordered = false,
   to,
   ...props
-}) => (
-  <Notification
-    as={to ? (UniversalLink as React.ElementType) : 'a'}
-    type={to ? undefined : 'button'}
-    style={{}}
-    fontSize={12}
-    px={1}
-    py={1}
-    bordered={bordered}
-    variant={variant}
-    to={to}
-    {...props}
-  >
-    <MarkDown inline source={text.replace(/\[(.*)\]/, '__$1__')} />
-    <Icon ml="4px" color={variants[variant].main} name="east" size={20} />
-  </Notification>
-)
+}) => {
+  const theme = useTheme()
+
+  return (
+    <Notification
+      as={to ? (UniversalLink as React.ElementType) : 'a'}
+      type={to ? undefined : 'button'}
+      fontSize={12}
+      px={1}
+      py={1}
+      bordered={bordered}
+      variant={variant}
+      to={to}
+      {...props}
+    >
+      <MarkDown inline source={text.replace(/\[(.*)\]/, '__$1__')} />
+      <Icon
+        ml="4px"
+        color={theme.colors[variantToColor(variant)].text}
+        name="east"
+        size={20}
+      />
+    </Notification>
+  )
+}
 
 Reminder.propTypes = {
   bordered: PropTypes.bool,
   text: PropTypes.string.isRequired,
   to: PropTypes.string,
-  variant: PropTypes.oneOf<Variants>(reminderVariants),
+  variant: PropTypes.oneOf(variants),
 }
 
 export default Reminder

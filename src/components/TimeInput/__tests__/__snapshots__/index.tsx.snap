@@ -24,13 +24,13 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.cache-1p9qdtk-control {
+.cache-1mxal29-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
-  border-color: #dce1eb;
+  border-color: #d4dae7;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
@@ -61,24 +61,24 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.cache-1p9qdtk-control:hover {
+.cache-1mxal29-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1p9qdtk-control:focus-within {
+.cache-1mxal29-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.cache-1p9qdtk-control:focus-within svg {
+.cache-1mxal29-control:focus-within svg {
   fill: #4f0599;
 }
 
-.cache-1p9qdtk-control:hover {
+.cache-1mxal29-control:hover {
   border-color: #4f0599;
 }
 
-.cache-1p9qdtk-control:hover svg {
+.cache-1mxal29-control:hover svg {
   fill: #4f0599;
 }
 
@@ -108,12 +108,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: initial;
 }
 
-.cache-16az7rm {
+.cache-14kqrng {
   position: absolute;
   left: 0;
   font-weight: 400;
   pointer-events: none;
-  color: #b2b6c3;
+  color: #4a4f62;
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -200,11 +200,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.cache-1oac2d5-indicatorSeparator {
+.cache-bex08z-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  background-color: #eeeeff;
+  background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
   width: 1px;
@@ -231,15 +231,15 @@ exports[`TimeInput renders correctly with base props 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-a5apoy {
-  fill: #d4dae7;
+.cache-o6c48m {
+  fill: #4a4f62;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-a5apoy.cache-a5apoy {
+.cache-o6c48m.cache-o6c48m {
   vertical-align: middle;
   margin-right: 0;
 }
@@ -279,14 +279,14 @@ exports[`TimeInput renders correctly with base props 1`] = `
       class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" cache-1p9qdtk-control"
+      class=" cache-1mxal29-control"
     >
       <div
         class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
-          class="e1lzna4r0 cache-16az7rm"
+          class="e1lzna4r0 cache-14kqrng"
           for="test"
         >
           Select...
@@ -323,14 +323,14 @@ exports[`TimeInput renders correctly with base props 1`] = `
         class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" cache-1oac2d5-indicatorSeparator"
+          class=" cache-bex08z-indicatorSeparator"
         />
         <div
           aria-hidden="true"
           class=" cache-tlfecz-indicatorContainer"
         >
           <svg
-            class="sc-ui-icon etwatq50 cache-a5apoy"
+            class="sc-ui-icon etwatq50 cache-o6c48m"
             viewBox="0 0 24 24"
           >
             <path
