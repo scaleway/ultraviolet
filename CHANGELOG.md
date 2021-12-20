@@ -1,3 +1,18 @@
+### [0.128.4](https://github.com/scaleway/scaleway-ui/compare/v0.128.3...v0.128.4) (2021-12-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v13.1.1 ([#1020](https://github.com/scaleway/scaleway-ui/issues/1020)) ([400fe12](https://github.com/scaleway/scaleway-ui/commit/400fe12b2079b9593a284b9dfb845957bf84d831))
+* **devdeps:** update dependency lint-staged to v12.1.3 ([#1021](https://github.com/scaleway/scaleway-ui/issues/1021)) ([b395b3a](https://github.com/scaleway/scaleway-ui/commit/b395b3a3af53573bd4b44e1bc18a2b30fa3de643))
+* **devdeps:** update dependency react-router-dom to v6.1.1 ([#1018](https://github.com/scaleway/scaleway-ui/issues/1018)) ([3ab6dbd](https://github.com/scaleway/scaleway-ui/commit/3ab6dbd09c5f4418d04b7d391b09dfc48344ba39))
+* **devdeps:** update emotion monorepo to v11.7.1 ([#994](https://github.com/scaleway/scaleway-ui/issues/994)) ([a738e27](https://github.com/scaleway/scaleway-ui/commit/a738e27e303fae9de6fddfe062607ea5dcdb3a4a))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update nivo monorepo to v0.75.0 ([#1019](https://github.com/scaleway/scaleway-ui/issues/1019)) ([c8b1094](https://github.com/scaleway/scaleway-ui/commit/c8b1094e725db18463bc84709b1086122e8806f3))
+
 ### [0.128.3](https://github.com/scaleway/scaleway-ui/compare/v0.128.2...v0.128.3) (2021-12-16)
 
 
