@@ -33,9 +33,9 @@ const disabledStyles = ({
 }) =>
   disabled &&
   `
-    background-color: ${theme.colorsDeprecated.gray100};
+    background-color: ${theme.colors.neutral.backgroundDisabled};
     border: none;
-    color: ${theme.colorsDeprecated.gray550};
+    color: ${theme.colors.neutral.textDisabled};
     opacity: 1;
     cursor: not-allowed;
   `
@@ -70,12 +70,11 @@ const StyledTouchable = styled(Touchable, {
   width: ${({ size }) => containerSizes[size] - 10}px;
 
   > ${StyledIcon} {
-    fill: ${({ disabled, theme }) =>
-      !disabled && theme.colorsDeprecated.primary};
+    fill: ${({ disabled, theme }) => !disabled && theme.colors.primary.text};
   }
 
   :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colorsDeprecated.gray200};
+    background: ${({ theme }) => theme.colors.primary.backgroundHover};
   }
 
   margin: 0 4px;
@@ -91,18 +90,19 @@ const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
   border-radius: 4px;
   border: 1px solid transparent;
   :hover:not([disabled], :focus) {
-    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
   :focus-within:not([disabled]) {
     box-shadow: 0 0 2px 2px
-      ${({ theme }) => transparentize(0.7, theme.colorsDeprecated.primary)};
-    border: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
+      ${({ theme }) =>
+        transparentize(0.7, theme.colors.primary.backgroundWeakHover)};
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
   max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
 `
 
 const StyledInput = styled.input`
-  color: ${({ theme }) => theme.colorsDeprecated.gray700};
+  color: ${({ theme }) => theme.colors.neutral.text};
   background-color: transparent;
   font-size: 16;
   border: none;
@@ -119,14 +119,16 @@ const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
-    disabled ? theme.colorsDeprecated.gray100 : theme.colorsDeprecated.white};
+    disabled
+      ? theme.colors.neutral.backgroundDisabled
+      : theme.colors.neutral.backgroundWeak};
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: stretch;
   font-weight: 500;
   height: ${({ size }) => containerSizes[size]}px;
-  border: 1px solid ${({ theme }) => theme.colorsDeprecated.gray300};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: 4px;
   ${({ disabled, theme }) =>
     disabled
