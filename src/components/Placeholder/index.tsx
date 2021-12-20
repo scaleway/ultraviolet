@@ -20,6 +20,14 @@ const shineAnimation = keyframes`
   }
 `
 
+const StyledContainer = styled(Box)`
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+`
+
 const StyledDiv = styled.div`
   position: absolute;
   top: 0;
@@ -36,6 +44,10 @@ const StyledDiv = styled.div`
   );
   animation: ${shineAnimation} 1s linear infinite;
   animation-direction: alternate;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: unset;
+  }
 `
 
 export const variants = {
@@ -69,17 +81,11 @@ const Placeholder: React.VoidFunctionComponent<PlaceholderProps> = ({
   const Component = variants[variant]
 
   return (
-    <Box
-      position="relative"
-      display="block"
-      width="100%"
-      overflow="hidden"
-      {...props}
-    >
+    <StyledContainer {...props}>
       <Component length={length} width={width} height={height} col={col} />
 
       <StyledDiv />
-    </Box>
+    </StyledContainer>
   )
 }
 
@@ -94,7 +100,11 @@ Placeholder.propTypes = {
 }
 
 Placeholder.defaultProps = {
+  col: undefined,
+  height: undefined,
+  length: undefined,
   variant: 'blocks',
+  width: undefined,
 }
 
 export default Placeholder
