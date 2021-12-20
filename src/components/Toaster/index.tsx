@@ -25,38 +25,38 @@ const styles = {
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${theme.colorsDeprecated.foam};
-      color: ${theme.colorsDeprecated.success};
+      background-color: ${theme.colors.success.background};
+      color: ${theme.colors.success.text};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.colorsDeprecated.success};
+        background-color: ${theme.colors.success.backgroundStrong};
       }
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${theme.colorsDeprecated.zumthor};
-      color: ${theme.colorsDeprecated.info};
+      background-color: ${theme.colors.info.background};
+      color: ${theme.colors.info.text};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.colorsDeprecated.info};
+        background-color: ${theme.colors.info.backgroundStrong};
       }
     }
 
     &${PREFIX}__toast--warning {
-      background-color: ${theme.colorsDeprecated.pippin};
-      color: ${theme.colorsDeprecated.warning};
+      background-color: ${theme.colors.danger.background};
+      color: ${theme.colors.danger.text};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.colorsDeprecated.warning};
+        background-color: ${theme.colors.danger.backgroundStrong};
       }
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${theme.colorsDeprecated.pippin};
-      color: ${theme.colorsDeprecated.warning};
+      background-color: ${theme.colors.danger.background};
+      color: ${theme.colors.danger.text};
 
       ${PREFIX}__progress-bar {
-        background-color: ${theme.colorsDeprecated.warning};
+        background-color: ${theme.colors.danger.backgroundStrong};
       }
     }
   `,
