@@ -375,50 +375,50 @@ Array [
 
 exports[`Toaster renders correctly with all kind of toast 2`] = `
 <DocumentFragment>
-  .cache-1piegqn {
+  .cache-ugndfs {
   border-radius: 4px;
   box-shadow: none;
-  min-height: 0;
+  min-height: 44px;
 }
 
-.cache-1piegqn .Toastify__toast-body {
+.cache-ugndfs .Toastify__toast-body {
   margin: 0;
   padding: 0;
 }
 
-.cache-1piegqn.Toastify__toast--success {
+.cache-ugndfs.Toastify__toast--success {
   background-color: #cdfcf1;
   color: #45d6b5;
 }
 
-.cache-1piegqn.Toastify__toast--success .Toastify__progress-bar {
+.cache-ugndfs.Toastify__toast--success .Toastify__progress-bar {
   background-color: #45d6b5;
 }
 
-.cache-1piegqn.Toastify__toast--info {
+.cache-ugndfs.Toastify__toast--info {
   background-color: #e4edff;
   color: #3f6ed8;
 }
 
-.cache-1piegqn.Toastify__toast--info .Toastify__progress-bar {
+.cache-ugndfs.Toastify__toast--info .Toastify__progress-bar {
   background-color: #3f6ed8;
 }
 
-.cache-1piegqn.Toastify__toast--warning {
+.cache-ugndfs.Toastify__toast--warning {
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
-.cache-1piegqn.Toastify__toast--warning .Toastify__progress-bar {
+.cache-ugndfs.Toastify__toast--warning .Toastify__progress-bar {
   background-color: #ef5774;
 }
 
-.cache-1piegqn.Toastify__toast--error {
+.cache-ugndfs.Toastify__toast--error {
   background-color: #ffe1e7;
   color: #ef5774;
 }
 
-.cache-1piegqn.Toastify__toast--error .Toastify__progress-bar {
+.cache-ugndfs.Toastify__toast--error .Toastify__progress-bar {
   background-color: #ef5774;
 }
 
@@ -549,7 +549,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
       class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast--info cache-1piegqn Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast--info cache-ugndfs Toastify--animate Toastify__bounce-enter--top-right"
         id="info"
       >
         <div
@@ -594,11 +594,11 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           aria-label="notification timer"
           class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar--info"
           role="progressbar"
-          style="animation-duration: 5000ms; animation-play-state: paused; opacity: 1;"
+          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
         />
       </div>
       <div
-        class="Toastify__toast Toastify__toast--success cache-1piegqn Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast--success cache-ugndfs Toastify--animate Toastify__bounce-enter--top-right"
         id="success"
       >
         <div
@@ -643,11 +643,11 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           aria-label="notification timer"
           class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar--success"
           role="progressbar"
-          style="animation-duration: 5000ms; animation-play-state: paused; opacity: 1;"
+          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
         />
       </div>
       <div
-        class="Toastify__toast Toastify__toast--warning cache-1piegqn Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast--warning cache-ugndfs Toastify--animate Toastify__bounce-enter--top-right"
         id="warn"
       >
         <div
@@ -692,11 +692,11 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           aria-label="notification timer"
           class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar--warning"
           role="progressbar"
-          style="animation-duration: 5000ms; animation-play-state: paused; opacity: 1;"
+          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
         />
       </div>
       <div
-        class="Toastify__toast Toastify__toast--error cache-1piegqn Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast--error cache-ugndfs Toastify--animate Toastify__bounce-enter--top-right"
         id="error"
       >
         <div
@@ -741,7 +741,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           aria-label="notification timer"
           class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar--error"
           role="progressbar"
-          style="animation-duration: 5000ms; animation-play-state: paused; opacity: 1;"
+          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
         />
       </div>
     </div>
