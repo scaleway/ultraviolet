@@ -55,7 +55,7 @@ const StyledExpendableContainer = styled('div', {
   flex: 0 0 100%;
 
   [data-expandable] {
-    border-top: 1px solid ${({ theme }) => theme.colors.primary.border};
+    border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
     padding: 16px 16px 8px ${({ multiselect }) => (multiselect ? 48 : 16)}px;
     margin-top: 8px;
 
