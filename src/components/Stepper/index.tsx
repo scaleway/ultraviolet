@@ -74,7 +74,7 @@ const StyledTouchable = styled(Touchable, {
   }
 
   :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colors.primary.backgroundWeakHover};
+    background: ${({ theme }) => theme.colors.primary.backgroundHover};
   }
 
   margin: 0 4px;
