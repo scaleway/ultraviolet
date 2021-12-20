@@ -1,3 +1,4 @@
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
@@ -30,6 +31,7 @@ interface LabelProps {
   labeled?: boolean | LabelPositions
 }
 
+const letterWidth = 9
 // Multiplies the max number of chars between labels by a "magic" number representing the average number of pixel per char
 // The goal is to stick as much as possible to real label size
 // number 10 has been chosen using letter O
@@ -38,7 +40,7 @@ const labelSize = (
   offLabel: string | ReactNode,
 ) => {
   if (typeof onLabel === 'string' && typeof offLabel === 'string') {
-    return Math.max(onLabel.length, offLabel.length) * 9 + 2
+    return Math.max(onLabel.length, offLabel.length) * letterWidth
   }
 
   return 0
@@ -83,13 +85,13 @@ const StyledSpan = styled('span', {
       case 'left':
         return `
         margin-right: 10px;
-        ${spanWidth ? `width: ${spanWidth - 2}px;` : ''}
+        ${spanWidth ? `width: ${spanWidth}px;` : ''}
         text-align: right;
         `
       case 'right':
         return `
         margin-left: 10px;
-        ${spanWidth ? `width: ${spanWidth - 2}px;` : ''}
+        ${spanWidth ? `width: ${spanWidth}px;` : ''}
         `
       case 'inside':
       default:
@@ -117,6 +119,25 @@ type Variants = 'primary' | 'success'
 type StyledSwitchProps = VariantProps & {
   variant?: Variants
   disabled?: boolean
+}
+
+const SwitchVariantsStyles = {
+  primary: (theme: Theme) => css`
+    &[aria-checked='true'] {
+      color: ${theme.colors.neutral.textStrong};
+      background-color: ${theme.colors.primary.backgroundStrong};
+    }
+
+    &[aria-checked='true'] > ${StyledSpan} {
+      color: ${theme.colors.neutral.textWeak};
+      left: 0;
+    }
+  `,
+  success: (theme: Theme) => css`
+    &[aria-checked='true'] {
+      background-color: ${theme.colors.success.backgroundStrong};
+    }
+  `,
 }
 
 const StyledSwitch = styled('div', {
@@ -172,18 +193,6 @@ const StyledSwitch = styled('div', {
     right: 0;
   }
 
-  &[data-variant='primary'] {
-    &[aria-checked='true'] {
-      color: ${({ theme }) => theme.colors.neutral.textStrong};
-      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-    }
-
-    &[aria-checked='true'] > ${StyledSpan} {
-      color: ${({ theme }) => theme.colors.neutral.textWeak};
-      left: 0;
-    }
-  }
-
   &[data-size='small'] {
     padding: ${({ theme }) => theme.space[0.5]};
     height: ${({ theme }) => theme.space[2]};
@@ -204,6 +213,15 @@ const StyledSwitch = styled('div', {
       background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
     }
   }
+
+  ${({ theme }) =>
+    Object.entries(SwitchVariantsStyles).map(
+      ([key, variantFn]) => css`
+        &[data-variant='${key}'] {
+          ${variantFn(theme)}
+        }
+      `,
+    )}
 `
 
 const StyledCheckbox = styled.input`
