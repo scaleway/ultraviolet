@@ -1,3 +1,15 @@
+### [0.128.5](https://github.com/scaleway/scaleway-ui/compare/v0.128.4...v0.128.5) (2021-12-20)
+
+
+### :zap: Refactor
+
+* colors for sphere statusindicator stealthcopiable stepper ([#1012](https://github.com/scaleway/scaleway-ui/issues/1012)) ([a117e0c](https://github.com/scaleway/scaleway-ui/commit/a117e0ce2f804010a99979813ddefb049fffc764))
+
+
+### :bug: Bug Fixes
+
+* list expandable color ([#1024](https://github.com/scaleway/scaleway-ui/issues/1024)) ([880f1f1](https://github.com/scaleway/scaleway-ui/commit/880f1f11ae869627fdd269313a193af79854cd57))
+
 ### [0.128.4](https://github.com/scaleway/scaleway-ui/compare/v0.128.3...v0.128.4) (2021-12-20)
 
 
