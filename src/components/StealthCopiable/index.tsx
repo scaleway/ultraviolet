@@ -7,7 +7,7 @@ import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenSt
 const CopyButton = styled.button`
   background-color: transparent;
   border: none;
-  color: ${({ theme }) => theme.colors.primary.text};
+  color: ${({ theme }) => theme.colors.primary.textWeak};
   display: inline-block;
   padding-left: 8px;
   opacity: 0;

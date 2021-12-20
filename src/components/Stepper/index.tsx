@@ -74,7 +74,7 @@ const StyledTouchable = styled(Touchable, {
   }
 
   :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colors.neutral.backgroundHover};
+    background: ${({ theme }) => theme.colors.primary.backgroundWeakHover};
   }
 
   margin: 0 4px;
@@ -128,7 +128,7 @@ const StyledContainer = styled(Box, {
   align-self: stretch;
   font-weight: 500;
   height: ${({ size }) => containerSizes[size]}px;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: 4px;
   ${({ disabled, theme }) =>
     disabled

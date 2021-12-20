@@ -45,7 +45,7 @@ const StyledTextSphere = styled('div', {
   shouldForwardProp: prop => !['color', 'fontSize'].includes(prop.toString()),
 })<{ color: string; fontSize?: number }>`
   color: ${({ theme, color }) =>
-    theme.colors[color as Color]?.textStrong ?? color};
+    theme.colors[color as Color]?.textWeak ?? color};
   font-size: ${({ fontSize = 10 }) => fontSize}px;
 `
 
