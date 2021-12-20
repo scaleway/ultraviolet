@@ -25,6 +25,7 @@ const newTheme = {
 
 describe('createTheme', () => {
   it('should give correct array of ids', () => {
+    console.log(createTheme(newTheme))
     expect(createTheme(newTheme)).toEqual({
       /* eslint-disable sort-keys */
       colors: {
@@ -92,7 +93,7 @@ describe('createTheme', () => {
           backgroundDisabled: '#f6f5f7',
           backgroundWeak: '#ff0000',
           backgroundWeakHover: '#4a4f62',
-          backgroundWeakDisabled: '#ff0000',
+          backgroundWeakDisabled: '#f6f6f8',
           backgroundStrong: '#4a4f62',
           backgroundStrongHover: '#4a4f62',
           backgroundStrongDisabled: '#b2b6c3',
@@ -101,7 +102,7 @@ describe('createTheme', () => {
           textDisabled: '#b2b6c3',
           textWeak: '#b2b6c3',
           textWeakHover: '#b2b6c3',
-          textWeakDisabled: '#f6f5f7',
+          textWeakDisabled: '#d4dae7',
           textStrong: '#ff0000',
           textStrongHover: '#ff0000',
           textStrongDisabled: '#ff0000',
@@ -110,7 +111,7 @@ describe('createTheme', () => {
           borderDisabled: '#f6f6f8',
           borderWeak: '#d4dae7',
           borderWeakHover: '#d4dae7',
-          borderWeakDisabled: '#d4dae7',
+          borderWeakDisabled: '#fcfcfd',
           borderStrong: '#ff0000',
           borderStrongHover: '#ff0000',
           borderStrongDisabled: '#ff0000',
