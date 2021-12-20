@@ -80,16 +80,31 @@ exports[`Button should render correctly loading 1`] = `
   pointer-events: none;
 }
 
-.cache-1d2vwm0 {
+.cache-11zej8u {
+  width: 100%;
+  vertical-align: center;
   height: 1em;
   width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
 
-.cache-546l7a {
-  visibility: hidden;
-  position: absolute;
+.cache-1q9hg9i {
+  fill-opacity: 0;
+  stroke-linecap: round;
+  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
+  stroke-dashoffset: 0px;
+  stroke: transparent;
+}
+
+.cache-gi1cky {
+  fill-opacity: 0;
+  stroke-linecap: round;
+  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
+  stroke-dashoffset: 211.11502632123413px;
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+  stroke: currentColor;
 }
 
 .cache-115wth8 {
@@ -116,60 +131,27 @@ exports[`Button should render correctly loading 1`] = `
     <div
       class="cache-i7e9al em6gco82"
     >
-      <div
-        aria-hidden="true"
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-11zej8u e7dhm9i4"
+        role="progressbar"
+        viewBox="0 0 100 100"
       >
-        <svg
-          class="CircularProgressbar  cache-1d2vwm0 e7dhm9i1"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
-        >
-          <path
-            class="CircularProgressbar-trail"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-546l7a e7dhm9i0"
-      >
-        <label
-          for="input-6c756c756c756c756c756c756c756c75"
-        >
-          Loading
-        </label>
-        <progress
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          id="input-6c756c756c756c756c756c756c756c75"
-          max="100"
-          value="20"
-        >
-          20%
-        </progress>
-      </div>
+        <path
+          class="cache-1q9hg9i e7dhm9i2"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+        <path
+          class="cache-gi1cky e7dhm9i1"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+      </svg>
     </div>
     <div
       class="cache-115wth8 em6gco81"
@@ -260,16 +242,31 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
-.cache-1d2vwm0 {
+.cache-11zej8u {
+  width: 100%;
+  vertical-align: center;
   height: 1em;
   width: 1em;
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
 
-.cache-546l7a {
-  visibility: hidden;
-  position: absolute;
+.cache-1q9hg9i {
+  fill-opacity: 0;
+  stroke-linecap: round;
+  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
+  stroke-dashoffset: 0px;
+  stroke: transparent;
+}
+
+.cache-gi1cky {
+  fill-opacity: 0;
+  stroke-linecap: round;
+  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
+  stroke-dashoffset: 211.11502632123413px;
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+  stroke: currentColor;
 }
 
 .cache-115wth8 {
@@ -305,60 +302,27 @@ exports[`Button should render correctly loading with an icon 1`] = `
     <div
       class="cache-i7e9al em6gco82"
     >
-      <div
-        aria-hidden="true"
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-11zej8u e7dhm9i4"
+        role="progressbar"
+        viewBox="0 0 100 100"
       >
-        <svg
-          class="CircularProgressbar  cache-1d2vwm0 e7dhm9i1"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
-        >
-          <path
-            class="CircularProgressbar-trail"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-546l7a e7dhm9i0"
-      >
-        <label
-          for="input-6c756c756c756c756c756c756c756c75"
-        >
-          Loading
-        </label>
-        <progress
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          id="input-6c756c756c756c756c756c756c756c75"
-          max="100"
-          value="20"
-        >
-          20%
-        </progress>
-      </div>
+        <path
+          class="cache-1q9hg9i e7dhm9i2"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+        <path
+          class="cache-gi1cky e7dhm9i1"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+      </svg>
     </div>
     <div
       class="cache-115wth8 em6gco81"
@@ -368,60 +332,27 @@ exports[`Button should render correctly loading with an icon 1`] = `
     <div
       class="cache-14frhxz em6gco82"
     >
-      <div
-        aria-hidden="true"
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-11zej8u e7dhm9i4"
+        role="progressbar"
+        viewBox="0 0 100 100"
       >
-        <svg
-          class="CircularProgressbar  cache-1d2vwm0 e7dhm9i1"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
-        >
-          <path
-            class="CircularProgressbar-trail"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: transparent; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: currentColor; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-546l7a e7dhm9i0"
-      >
-        <label
-          for="input-6c756c756c756c756c756c756c756c75"
-        >
-          Loading
-        </label>
-        <progress
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          id="input-6c756c756c756c756c756c756c756c75"
-          max="100"
-          value="20"
-        >
-          20%
-        </progress>
-      </div>
+        <path
+          class="cache-1q9hg9i e7dhm9i2"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+        <path
+          class="cache-gi1cky e7dhm9i1"
+          d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+          stroke-width="16"
+        />
+      </svg>
     </div>
   </button>
 </DocumentFragment>
