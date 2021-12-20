@@ -12,12 +12,13 @@ import Alert from '../Alert'
 import Icon from '../Icon'
 
 const PREFIX = '.Toastify'
+const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
 
 const styles = {
   toast: (theme: Theme) => css`
     border-radius: 4px;
     box-shadow: none;
-    min-height: 0;
+    min-height: 44px;
 
     ${PREFIX}__toast-body {
       margin: 0;
@@ -135,6 +136,7 @@ const ToastContainer = (props: ToastContainerProps): JSX.Element => {
           <BaseToastContainer
             closeButton={<CloseButton />}
             toastClassName={localCss(styles.toast(theme))}
+            autoClose={AUTOCLOSE_DELAY}
             {...props}
           />
         )}
