@@ -31,14 +31,6 @@ type ActivityIndicatorProps = {
   label?: string
 }
 
-const SVG = styled.svg<{ active: boolean }>`
-  ${({ active }) =>
-    active &&
-    css`
-      animation: ${spin} 0.75s linear infinite;
-    `}
-`
-
 const Text = styled('text', {
   shouldForwardProp: prop => !['color'].includes(prop.toString()),
 })<{ color: Color | string }>`
@@ -67,14 +59,19 @@ const ActivityIndicator = ({
   const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
-    <SVG
+    <svg
       role="progressbar"
       aria-label={label}
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
-      active={active}
+      css={
+        active &&
+        css`
+          animation: ${spin} 0.75s linear infinite;
+        `
+      }
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
       style={{
         height: typeof size === 'string' ? size : `${size}px`,
@@ -105,7 +102,7 @@ const ActivityIndicator = ({
           {text}
         </Text>
       ) : null}
-    </SVG>
+    </svg>
   )
 }
 
