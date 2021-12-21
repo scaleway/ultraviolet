@@ -13,6 +13,7 @@ const testedComponents = [
   'ActivityIndicator',
   'Badge',
   'Counter',
+  'Toaster',
   'Separator',
   'StealthCopiable',
 ]
