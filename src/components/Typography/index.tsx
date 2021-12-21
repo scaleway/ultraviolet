@@ -12,7 +12,8 @@ import React, {
   useCallback,
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
+import { ColorDeprecated } from '../../theme/deprecated/colors'
 import Box, { XStyledProps } from '../Box'
 import Tooltip from '../Tooltip'
 
@@ -25,8 +26,8 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
   {
     badge: ({ theme }: StyleProps) =>
       css`
-        background-color: ${theme?.colorsDeprecated.gray100};
-        color: ${theme?.colorsDeprecated.gray700};
+        background-color: ${theme?.colors.neutral.background};
+        color: ${theme?.colors.neutral.text};
         text-transform: capitalize;
         letter-spacing: 1px;
         font-weight: 500;
@@ -37,25 +38,25 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
       `,
     bodyA: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray700};
+        color: ${theme?.colors.neutral.text};
         font-size: 16px;
         line-height: 24px;
       `,
     bodyB: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray550};
+        color: ${theme?.colors.neutral.textWeak};
         font-size: 14px;
         line-height: 18px;
       `,
     bodyC: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray700};
+        color: ${theme?.colors.neutral.text};
         font-size: 14px;
         line-height: 22px;
       `,
     bodyD: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray700};
+        color: ${theme?.colors.neutral.text};
         font-size: 14px;
         line-height: 20px;
       `,
@@ -74,13 +75,13 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
         font-size: 13px;
         font-weight: 500;
         border-radius: ${theme?.radii.default};
-        color: ${theme?.colorsDeprecated.gray700};
-        background-color: ${theme?.colorsDeprecated.gray100};
+        color: ${theme?.colors.neutral.text};
+        background-color: ${theme?.colors.neutral.backgroundDisabled};
         padding: 8px;
       `,
     description: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray950};
+        color: ${theme?.colors.neutral.textHover};
         font-size: 16px;
         line-height: 24px;
         font-weight: 500;
@@ -92,14 +93,14 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
     `,
     hero: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray950};
+        color: ${theme?.colors.neutral.textHover};
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 72px;
       `,
     lead: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray950};
+        color: ${theme?.colors.neutral.textHover};
         font-size: 25px;
         line-height: 25px;
         margin-bottom: 0;
@@ -119,21 +120,21 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
     `,
     samplecode: ({ theme }: StyleProps) =>
       css`
-        background-color: ${theme?.colorsDeprecated.gray100};
-        color: ${theme?.colorsDeprecated.gray700};
+        background-color: ${theme?.colors.neutral.backgroundDisabled};
+        color: ${theme?.colors.neutral.text};
         font-size: 12px;
         line-height: 16px;
         padding: 4px;
       `,
     tiny: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray550};
+        color: ${theme?.colors.neutral.textWeak};
         font-size: 12px;
         line-height: 16px;
       `,
     title: ({ theme }: StyleProps) =>
       css`
-        color: ${theme?.colorsDeprecated.gray950};
+        color: ${theme?.colors.neutral.textHover};
         font-size: 21px;
         line-height: 24px;
       `,
@@ -162,7 +163,9 @@ const variantTags = {
 const colorStyles = ({ theme, color }: { theme: Theme; color?: string }) =>
   color
     ? css`
-        color: ${theme.colorsDeprecated[color as Color] ?? color};
+        color: ${theme.colors[color as Color]?.text ??
+        theme.colorsDeprecated[color as ColorDeprecated] ??
+        color};
       `
     : undefined
 
@@ -197,7 +200,7 @@ const StyledText = styled(Box, {
       prop.toString(),
     ),
 })<StyledTextProps>`
-  color: ${({ theme }) => theme?.colorsDeprecated.gray700};
+  color: ${({ theme }) => theme?.colors.neutral.text};
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;

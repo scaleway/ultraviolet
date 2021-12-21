@@ -13,14 +13,14 @@ const disabledStyles = css`
 
 export const variantsContainer = {
   base: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colorsDeprecated.gray100};
+    background-color: ${theme.colors.neutral.backgroundDisabled};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;
   `,
   bordered: ({ theme }: { theme: Theme }) => css`
     padding: 8px;
-    border: 1px solid ${theme.colorsDeprecated.gray350};
+    border: 1px solid ${theme.colors.neutral.borderWeak};
   `,
 }
 
@@ -52,7 +52,7 @@ const StyledContainer = styled(Box, {
 
 const StyledText = styled('span')`
   ${({ 'aria-disabled': disabled }) => disabled && disabledStyles}
-  color: ${({ theme }) => theme.colorsDeprecated.gray700};
+  color: ${({ theme }) => theme.colors.neutral.text};
   font-size: 14px;
   align-self: center;
   max-width: 350px;
@@ -70,16 +70,16 @@ const StyledTouchable = styled(Touchable, {
   justify-content: center;
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.colorsDeprecated.gray200};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
     svg {
-      fill: ${({ theme }) => theme.colorsDeprecated.primary};
+      fill: ${({ theme }) => theme.colors.primary.text};
     }
   }
   ${({ variant, theme }) =>
     variant === 'bordered' &&
     `
   border-radius: 4px;
-  border: 1px solid ${theme.colorsDeprecated.gray550};
+  border: 1px solid ${theme.colors.neutral.borderWeak};
   padding: 4px;
   width: 32px;
   height: 32px;
