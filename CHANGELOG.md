@@ -1,3 +1,15 @@
+### [0.130.1](https://github.com/scaleway/scaleway-ui/compare/v0.130.0...v0.130.1) (2021-12-21)
+
+
+### :zap: Refactor
+
+* **theme:** new colors for Tag, Tags, TagsPoplist and TextBox ([#1023](https://github.com/scaleway/scaleway-ui/issues/1023)) ([ced40fc](https://github.com/scaleway/scaleway-ui/commit/ced40fc6fa2818a888ab96a690f6c0dad675e931))
+
+
+### :bug: Bug Fixes
+
+* a11y for placeholder ([#1031](https://github.com/scaleway/scaleway-ui/issues/1031)) ([a5b46a7](https://github.com/scaleway/scaleway-ui/commit/a5b46a79e950618793a82d3f7665e2d74cbb3763))
+
 ## [0.130.0](https://github.com/scaleway/scaleway-ui/compare/v0.129.0...v0.130.0) (2021-12-21)
 
 
