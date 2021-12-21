@@ -31,80 +31,9 @@ interface LabelProps {
   labeled?: boolean | LabelPositions
 }
 
-const letterWidth = 9
-// Multiplies the max number of chars between labels by a "magic" number representing the average number of pixel per char
-// The goal is to stick as much as possible to real label size
-// number 10 has been chosen using letter O
-const labelSize = (
-  onLabel: string | ReactNode,
-  offLabel: string | ReactNode,
-) => {
-  if (typeof onLabel === 'string' && typeof offLabel === 'string') {
-    return Math.max(onLabel.length, offLabel.length) * letterWidth
-  }
-
-  return 0
-}
-
-const getSwitchWidth = ({
-  width,
-  onLabel,
-  offLabel,
-  size,
-  labeled,
-}: LabelProps & { width?: number }) => {
-  if (width) return width
-  if (!size) return 0
-
-  if (
-    typeof onLabel === 'string' &&
-    typeof offLabel === 'string' &&
-    (labeled === true || labeled === 'inside')
-  )
-    // + 20 comes from the ball size to have some space around it
-    // it centers the text with 10px margin on each side
-    return `${labelSize(onLabel, offLabel)}px`
-
-  return 'auto'
-}
-
 const SwitchBall = styled.span``
 const SwitchBallContainer = styled.div``
 const StyledInsideLabel = styled.span``
-
-const StyledSpan = styled('span', {
-  shouldForwardProp: prop =>
-    !['onLabel', 'offLabel', 'labeled', 'size'].includes(prop.toString()),
-})<LabelProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  ${({ labeled, onLabel, offLabel, size }) => {
-    const spanWidth = labelSize(onLabel, offLabel)
-    switch (labeled) {
-      case 'left':
-        return `
-        margin-right: 10px;
-        ${spanWidth ? `width: ${spanWidth}px;` : ''}
-        text-align: right;
-        `
-      case 'right':
-        return `
-        margin-left: 10px;
-        ${spanWidth ? `width: ${spanWidth}px;` : ''}
-        `
-      case 'inside':
-      default:
-        return `
-          font-weight: 700;
-          font-size: 16px;
-          position: absolute;
-          line-height: ${SIZES[size as Sizes]?.ball}px;
-          width: calc(100% - ${SIZES[size as Sizes]?.ball}px);
-          `
-    }
-  }}
-`
 
 const labelPositions = ['left', 'right', 'inside'] as const
 
@@ -128,9 +57,8 @@ const SwitchVariantsStyles = {
       background-color: ${theme.colors.primary.backgroundStrong};
     }
 
-    &[aria-checked='true'] > ${StyledSpan} {
-      color: ${theme.colors.neutral.textWeak};
-      left: 0;
+    &[aria-checked='true'] > ${StyledInsideLabel} {
+      color: ${theme.colors.neutral.textStrong};
     }
   `,
   success: (theme: Theme) => css`
@@ -157,8 +85,6 @@ const StyledSwitch = styled('div', {
   height: ${({ theme }) => theme.space[3]};
   background-color: ${({ theme }) => theme.colors.neutral.background};
   min-width: ${({ theme }) => theme.space[6]};
-  width: ${getSwitchWidth};
-  padding-right: ${({ theme }) => theme.space[1]};
 
   & ${SwitchBallContainer} {
     position: absolute;
@@ -179,18 +105,18 @@ const StyledSwitch = styled('div', {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
 
-  &[aria-checked='true'] ${SwitchBallContainer} {
+  &[aria-checked='true'] > ${SwitchBallContainer} {
     transform: translateX(100%);
   }
 
-  & > ${StyledInsideLabel} {
-    position: absolute;
-    right: ${({ theme }) => theme.space[0.5]};
+  &:not([aria-checked='true']) > ${StyledInsideLabel} {
+    margin-left: ${({ theme }) => theme.space[4]};
+    margin-right: ${({ theme }) => theme.space[1]};
   }
 
   &[aria-checked='true'] ${StyledInsideLabel} {
-    left: ${({ theme }) => theme.space[0.5]};
-    right: 0;
+    margin-right: ${({ theme }) => theme.space[4]};
+    margin-left: ${({ theme }) => theme.space[1]};
   }
 
   &[data-size='small'] {
@@ -205,6 +131,20 @@ const StyledSwitch = styled('div', {
     & ${SwitchBall} {
       width: ${({ theme }) => theme.space[2]};
       height: ${({ theme }) => theme.space[2]};
+    }
+
+    &:not([aria-checked='true']) > ${StyledInsideLabel} {
+      margin-left: calc(
+        ${({ theme }) => theme.space[2]} + ${({ theme }) => theme.space[0.5]}
+      );
+      margin-right: ${({ theme }) => theme.space[0.5]};
+    }
+
+    &[aria-checked='true'] ${StyledInsideLabel} {
+      margin-right: calc(
+        ${({ theme }) => theme.space[2]} + ${({ theme }) => theme.space[0.5]}
+      );
+      margin-left: ${({ theme }) => theme.space[0.5]};
     }
   }
 
@@ -264,10 +204,6 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
   variant = 'primary',
   width,
 }) => {
-  const renderLabel = () => (
-    <StyledInsideLabel>{checked ? onLabel : offLabel}</StyledInsideLabel>
-  )
-
   const renderInsideLabel = labeled && labeled !== 'right' && labeled !== 'left'
 
   return (
@@ -277,7 +213,12 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
         aria-checked={checked}
         aria-disabled={disabled}
       >
-        {labeled === 'left' ? renderLabel() : null}
+        {labeled === 'left' ? (
+          <>
+            {checked ? onLabel : null}
+            {!checked ? offLabel : null}
+          </>
+        ) : null}
         <StyledSwitch
           size={size}
           aria-checked={checked}
@@ -298,12 +239,21 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
             onChange={onChange}
             type="checkbox"
           />
-          {renderInsideLabel ? renderLabel() : null}
+          {renderInsideLabel ? (
+            <StyledInsideLabel>
+              {checked ? onLabel : offLabel}
+            </StyledInsideLabel>
+          ) : null}
           <SwitchBallContainer>
             <SwitchBall />
           </SwitchBallContainer>
         </StyledSwitch>
-        {labeled === 'right' ? renderLabel() : null}
+        {labeled === 'right' ? (
+          <>
+            {checked ? onLabel : null}
+            {!checked ? offLabel : null}
+          </>
+        ) : null}
       </StyledLabel>
     </Tooltip>
   )

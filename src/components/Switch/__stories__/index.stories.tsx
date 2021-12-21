@@ -122,62 +122,16 @@ const Template: Story<ComponentProps<typeof Switch>> = ({
 
 export const Default = Template.bind({})
 
-export const CustomLabelRender = Template.bind({})
-CustomLabelRender.parameters = {
-  docs: {
-    story: {
-      description:
-        'If you choose to place label near the Switch component with `labeled` you can set a custom element for the label with the `onLabel` and `offLabel` props.',
-    },
-  },
-}
-CustomLabelRender.decorators = [
-  () => (
-    <>
-      <div style={{ marginBottom: '16px' }}>
-        <ControlValue<boolean> value>
-          {({ value, onChange }) => (
-            <Switch
-              name="switch-label-left"
-              labeled
-              onLabel={<Icon size={24} name="check-circle-outline" />}
-              offLabel={<Icon size={24} name="close-circle-outline" />}
-              variant="primary"
-              checked={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.checked)
-              }
-            />
-          )}
-        </ControlValue>
-      </div>
+export const CustomLabelRender: Story = () => (
+  <>
+    <div style={{ marginBottom: '16px' }}>
       <ControlValue<boolean> value>
         {({ value, onChange }) => (
           <Switch
             name="switch-label-left"
-            labeled="left"
-            onLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
-                <span>Enabled</span>&nbsp;
-                <Icon size={24} name="check-circle-outline" />
-              </Box>
-            }
-            offLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
-                <span>Disabled</span>&nbsp;
-                <Icon size={24} name="close-circle-outline" />
-              </Box>
-            }
+            labeled
+            onLabel={<Icon size={24} name="check-circle-outline" />}
+            offLabel={<Icon size={24} name="close-circle-outline" />}
             variant="primary"
             checked={value}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -186,6 +140,77 @@ CustomLabelRender.decorators = [
           />
         )}
       </ControlValue>
-    </>
-  ),
-]
+    </div>
+    <ControlValue<boolean> value>
+      {({ value, onChange }) => (
+        <Switch
+          name="switch-label-left"
+          labeled="left"
+          onLabel={
+            <Box
+              width={100}
+              display="flex"
+              alignItems="center"
+              justifyContent="flex-end"
+            >
+              <span>Enabled</span>&nbsp;
+              <Icon size={24} name="check-circle-outline" />
+            </Box>
+          }
+          offLabel={
+            <Box
+              width={100}
+              display="flex"
+              alignItems="center"
+              justifyContent="flex-end"
+            >
+              <span>Disabled</span>&nbsp;
+              <Icon size={24} name="close-circle-outline" />
+            </Box>
+          }
+          variant="primary"
+          checked={value}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.target.checked)
+          }
+        />
+      )}
+    </ControlValue>
+    <ControlValue<boolean> value>
+      {({ value, onChange }) => (
+        <Switch
+          name="switch-label-inside-custom"
+          labeled
+          onLabel={
+            <Box display="flex" alignItems="center">
+              <span>Enabled</span>&nbsp;
+              <Icon size={24} name="check-circle-outline" />
+            </Box>
+          }
+          offLabel={
+            <Box display="flex" alignItems="center">
+              <span>Disabled</span>&nbsp;
+              <Icon size={24} name="close-circle-outline" />
+            </Box>
+          }
+          variant="primary"
+          checked={value}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.target.checked)
+          }
+        />
+      )}
+    </ControlValue>
+  </>
+)
+
+CustomLabelRender.args = {}
+CustomLabelRender.argTypes = {}
+CustomLabelRender.parameters = {
+  docs: {
+    story: {
+      description:
+        'If you choose to place label near the Switch component with `labeled` you can set a custom element for the label with the `onLabel` and `offLabel` props.',
+    },
+  },
+}
