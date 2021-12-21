@@ -22,7 +22,6 @@ const formatTextToAvatar = (text: string): string => {
 }
 
 const StyledDiv = styled.div<{
-  alt: string
   lock?: boolean
   textBgColor?: string
   textColor: string
@@ -80,7 +79,7 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           textBgColor={textBgColor}
           textColor={textColor}
           textSize={textSize}
-          alt={lock ? 'locked' : text}
+          aria-label={lock ? 'locked' : undefined}
         >
           {lock ? (
             <Icon name="lock" color={theme.colors.neutral.textWeak} />
