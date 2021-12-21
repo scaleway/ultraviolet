@@ -114,6 +114,7 @@ const Tag: FunctionComponent<TagProps> = ({
         onClick={!isLoading ? onClose : undefined}
         variant={variant}
         disabled={disabled}
+        aria-label="Close tag"
       >
         {isLoading ? (
           <ActivityIndicator active size={16} />
