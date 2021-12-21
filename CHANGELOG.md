@@ -1,3 +1,10 @@
+### [0.130.4](https://github.com/scaleway/scaleway-ui/compare/v0.130.3...v0.130.4) (2021-12-21)
+
+
+### :bug: Bug Fixes
+
+* **typescript:** add missing flexDirection to XStyledProps ([#1016](https://github.com/scaleway/scaleway-ui/issues/1016)) ([6703a93](https://github.com/scaleway/scaleway-ui/commit/6703a930f8d7d18ce9b5b1ad47986bb1cfe5fb3e))
+
 ### [0.130.3](https://github.com/scaleway/scaleway-ui/compare/v0.130.2...v0.130.3) (2021-12-21)
 
 
