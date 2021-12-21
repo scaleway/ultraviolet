@@ -1,3 +1,10 @@
+### [0.130.3](https://github.com/scaleway/scaleway-ui/compare/v0.130.2...v0.130.3) (2021-12-21)
+
+
+### :bug: Bug Fixes
+
+* box sizing property ([#1039](https://github.com/scaleway/scaleway-ui/issues/1039)) ([78f6652](https://github.com/scaleway/scaleway-ui/commit/78f66523ec88bf1e0a9920db7e87e5819872cb31))
+
 ### [0.130.2](https://github.com/scaleway/scaleway-ui/compare/v0.130.1...v0.130.2) (2021-12-21)
 
 
