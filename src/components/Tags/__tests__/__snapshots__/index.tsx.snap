@@ -1320,6 +1320,11 @@ exports[`Tags delete tag with error 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 .cache-1qk78jd {
   font-size: 16px;
   color: #4a4f62;
@@ -1405,6 +1410,7 @@ exports[`Tags delete tag with error 1`] = `
             stroke-width="16"
           />
           <circle
+            class="cache-wxrv4d-ActivityIndicator"
             cx="50"
             cy="50"
             fill="none"

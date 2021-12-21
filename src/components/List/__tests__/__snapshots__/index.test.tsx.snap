@@ -23555,6 +23555,11 @@ exports[`List should render correctly with isLoading 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 <div
     class="cache-11djngs e7ah3bn0"
   >
@@ -23721,6 +23726,7 @@ exports[`List should render correctly with isLoading 1`] = `
           stroke-width="16"
         />
         <circle
+          class="cache-wxrv4d-ActivityIndicator"
           cx="50"
           cy="50"
           fill="none"

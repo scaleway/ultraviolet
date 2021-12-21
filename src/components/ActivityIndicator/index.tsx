@@ -87,6 +87,9 @@ const ActivityIndicator = ({
         stroke={theme.colors[trailColor as Color]?.background || trailColor}
       />
       <circle
+        css={css`
+          transition: stroke-dashoffset 0.5s ease 0s;
+        `}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         r={circleRadius}

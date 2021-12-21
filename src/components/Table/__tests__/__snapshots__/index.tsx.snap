@@ -246,6 +246,11 @@ exports[`Table renders correctly while loading 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 <table
     class="efhaznt5 cache-1pbu3dg e7ah3bn0"
   >
@@ -300,6 +305,7 @@ exports[`Table renders correctly while loading 1`] = `
                 stroke-width="16"
               />
               <circle
+                class="cache-wxrv4d-ActivityIndicator"
                 cx="50"
                 cy="50"
                 fill="none"

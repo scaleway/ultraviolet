@@ -85,6 +85,11 @@ exports[`Button should render correctly loading 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 .cache-115wth8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -129,6 +134,7 @@ exports[`Button should render correctly loading 1`] = `
           stroke-width="16"
         />
         <circle
+          class="cache-wxrv4d-ActivityIndicator"
           cx="50"
           cy="50"
           fill="none"
@@ -235,6 +241,11 @@ exports[`Button should render correctly loading with an icon 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 .cache-115wth8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -288,6 +299,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
           stroke-width="16"
         />
         <circle
+          class="cache-wxrv4d-ActivityIndicator"
           cx="50"
           cy="50"
           fill="none"
@@ -328,6 +340,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
           stroke-width="16"
         />
         <circle
+          class="cache-wxrv4d-ActivityIndicator"
           cx="50"
           cy="50"
           fill="none"

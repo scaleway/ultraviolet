@@ -299,6 +299,11 @@ exports[`NavigationStepper should render correctly with bad child 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 <ul
     class="cache-q2a1ff eccy81h0"
   >
@@ -356,6 +361,7 @@ exports[`NavigationStepper should render correctly with bad child 1`] = `
               stroke-width="8"
             />
             <circle
+              class="cache-wxrv4d-ActivityIndicator"
               cx="50"
               cy="50"
               fill="none"
@@ -1107,6 +1113,11 @@ exports[`NavigationStepper should render correctly with isLoading 1`] = `
   animation: animation-0 0.75s linear infinite;
 }
 
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
 <ul
     class="cache-z9xsvn eccy81h0"
   >
@@ -1164,6 +1175,7 @@ exports[`NavigationStepper should render correctly with isLoading 1`] = `
               stroke-width="8"
             />
             <circle
+              class="cache-wxrv4d-ActivityIndicator"
               cx="50"
               cy="50"
               fill="none"
