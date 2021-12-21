@@ -258,6 +258,7 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
         <StyledInput
           id={id}
           name={name}
+          aria-label={name}
           type="text"
           placeholder={!tagsState.length ? placeholder : ''}
           value={input}
