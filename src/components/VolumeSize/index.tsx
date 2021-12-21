@@ -46,7 +46,7 @@ const StyledValue = styled('span', {
 })<{ hasError?: boolean }>`
   font-weight: 800;
   color: ${({ hasError, theme }) =>
-    hasError ? theme.colorsDeprecated.orange : theme.colorsDeprecated.gray950};
+    hasError ? theme.colors.warning.textWeak : theme.colors.neutral.text};
 `
 
 const StyledContainer = styled('div', {
@@ -63,7 +63,7 @@ const StyledContainer = styled('div', {
 const StyledVolumeContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<StyleProps>`
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray200};
+  background-color: ${({ theme }) => theme.colors.primary.background};
   border-radius: 3px;
   position: relative;
 
@@ -76,7 +76,9 @@ const StyledVolume = styled('span', {
     !['percentUsed', 'hasError'].includes(prop.toString()),
 })<StyleProps>`
   background-color: ${({ hasError, theme }) =>
-    hasError ? theme.colorsDeprecated.orange : theme.colorsDeprecated.green};
+    hasError
+      ? theme.colors.warning.backgroundStrong
+      : theme.colors.success.backgroundStrong};
   border-radius: ${({ percentUsed = 0 }) =>
     percentUsed >= 100 ? '3px' : '3px 0 0 3px'};
   position: absolute;
@@ -94,7 +96,8 @@ const StyledCursor = styled('div', {
   shouldForwardProp: prop =>
     !['size', 'hasMaxSize', 'isMaxSize'].includes(prop.toString()),
 })<StyleProps>`
-  background-color: ${({ theme }) => theme.colorsDeprecated.gray950};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundStrongHover};
   position: absolute;
   height: ${({ size = 'medium' }) => (sizes[size] || 1) * 15}px;
   width: ${({ size = 'medium' }) => (sizes[size] || 1) * 3}px;
