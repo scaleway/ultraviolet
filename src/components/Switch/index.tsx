@@ -62,8 +62,21 @@ const SwitchVariantsStyles = {
     }
   `,
   success: (theme: Theme) => css`
+    color: ${theme.colors.neutral.text};
+    background-color: ${theme.colors.neutral.background};
+    font-weight: bold;
+
+    & ${SwitchBall} {
+      background-color: ${theme.colors.neutral.backgroundStrong};
+    }
+
     &[aria-checked='true'] {
-      background-color: ${theme.colors.success.backgroundStrong};
+      color: ${theme.colors.success.text};
+      background-color: ${theme.colors.success.background};
+
+      & ${SwitchBall} {
+        background-color: ${theme.colors.success.backgroundStrong};
+      }
     }
   `,
 }
@@ -72,6 +85,7 @@ const StyledSwitch = styled('div', {
   shouldForwardProp: prop =>
     !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop.toString()),
 })<StyledSwitchProps>`
+  box-sizing: content-box;
   outline: none;
   overflow: hidden;
   display: flex;
@@ -199,8 +213,8 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
   size = 'medium',
   tooltip,
   labeled = false,
-  onLabel = 'ON',
-  offLabel = 'OFF',
+  onLabel,
+  offLabel,
   variant = 'primary',
   width,
 }) => {
@@ -222,11 +236,6 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
         <StyledSwitch
           size={size}
           aria-checked={checked}
-          disabled={disabled}
-          labeled={labeled}
-          onLabel={onLabel}
-          offLabel={offLabel}
-          variant={variant}
           data-variant={variant}
           data-size={size}
           role="checkbox"
