@@ -1,3 +1,10 @@
+### [0.130.2](https://github.com/scaleway/scaleway-ui/compare/v0.130.1...v0.130.2) (2021-12-21)
+
+
+### :bug: Bug Fixes
+
+* a11y for tooltipicon ([#1030](https://github.com/scaleway/scaleway-ui/issues/1030)) ([20bc2a1](https://github.com/scaleway/scaleway-ui/commit/20bc2a10f6ba163313b5c709f0c0ae96d7387be9))
+
 ### [0.130.1](https://github.com/scaleway/scaleway-ui/compare/v0.130.0...v0.130.1) (2021-12-21)
 
 
