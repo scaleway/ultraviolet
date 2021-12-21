@@ -1,3 +1,10 @@
+## [0.130.0](https://github.com/scaleway/scaleway-ui/compare/v0.129.0...v0.130.0) (2021-12-21)
+
+
+### :gear: Features
+
+* **toaster:** add a11y ([#1028](https://github.com/scaleway/scaleway-ui/issues/1028)) ([703e226](https://github.com/scaleway/scaleway-ui/commit/703e2267a4af748bd047cbfe48636ad3d43e10e4))
+
 ## [0.129.0](https://github.com/scaleway/scaleway-ui/compare/v0.128.6...v0.129.0) (2021-12-21)
 
 
