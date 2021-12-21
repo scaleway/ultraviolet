@@ -1,5 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
+import { x } from '@xstyled/emotion'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
@@ -80,7 +81,8 @@ const StyledTouchable = styled(Touchable, {
   margin: 0 4px;
 `
 
-const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
+const StyledCenterBox = styled(Box)<{ size: ContainerSizesType }>`
+  display: flex;
   flex: 1;
   flex-direction: row;
   height: calc(100% - 8px);
@@ -115,6 +117,14 @@ const StyledInput = styled.input`
   text-align: center;
 `
 
+const StyledAbbr = styled(x.abbr, {
+  shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
+})<{ disabled: boolean }>`
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
+  user-select: none;
+`
+
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ disabled: boolean; size: ContainerSizesType }>`
@@ -133,7 +143,7 @@ const StyledContainer = styled(Box, {
   ${({ disabled, theme }) =>
     disabled
       ? css`
-          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
+          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterBox} {
             ${disabledStyles({ disabled, theme })}
           }
         `
@@ -255,16 +265,16 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
         <StyledIcon name="minus" size={iconSizes[size]} color="gray300" />
       </StyledTouchable>
 
-      <StyledCenterTouchable
+      <StyledCenterBox
         size={size}
-        activeOpacity={0.5}
         disabled={disabled}
         onClick={() => {
           if (inputRef?.current) {
             inputRef.current.focus()
           }
         }}
-        aria-label="Input"
+        aria-live="assertive"
+        role="status"
       >
         <StyledInput
           disabled={disabled}
@@ -278,12 +288,10 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
             width: inputValue.toString().length * 10 + 15,
           }}
           value={inputValue.toString()} // A dom element can only have string attributes.
+          aria-label="Input"
         />
-
-        <StyledInput disabled={disabled} as="span">
-          {text}
-        </StyledInput>
-      </StyledCenterTouchable>
+        {text ? <StyledAbbr disabled={disabled}>{text}</StyledAbbr> : null}
+      </StyledCenterBox>
 
       <StyledTouchable
         size={size}

@@ -97,7 +97,16 @@ Sizes.decorators = [
 
 export const Disabled = Template.bind({})
 Disabled.decorators = [
-  () => <Stepper minValue={0} maxValue={100} value={10} disabled width={200} />,
+  () => (
+    <Stepper
+      minValue={0}
+      maxValue={100}
+      value={10}
+      disabled
+      width={200}
+      text="GB"
+    />
+  ),
 ]
 
 export const Events = Template.bind({})

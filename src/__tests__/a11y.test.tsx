@@ -19,6 +19,7 @@ const testedComponents = [
   'Reminder',
   'Separator',
   'StealthCopiable',
+  'Stepper',
   'Toaster',
   'TooltipIcon',
   'Tag',
@@ -32,20 +33,22 @@ const searchFileFromDir = (startPath: string, filter: string) => {
   const files = fs.readdirSync(startPath)
 
   for (let i = 0; i < files.length; i += 1) {
-    const filename = path.join(startPath, files[i])
-    const stat = fs.lstatSync(filename)
+    const fileName = files[i]
+    const filePath = path.join(startPath, fileName)
+    const stat = fs.lstatSync(filePath)
 
     if (stat.isDirectory()) {
-      if (
-        testedComponents.some(component =>
-          filename.toLowerCase().includes(component.toLowerCase()),
-        )
-      ) {
-        // recursive search in case if directory
-        searchFileFromDir(filename, filter)
+      // recursive search in case if directory
+      searchFileFromDir(filePath, filter)
+    } else if (filePath.indexOf(filter) >= 0) {
+      const isTested = testedComponents.some(
+        component =>
+          component.toLowerCase() === filePath.split('/')[2].toLowerCase(),
+      )
+
+      if (isTested) {
+        foundFiles.push(filePath.replace('src/', '../'))
       }
-    } else if (filename.indexOf(filter) >= 0) {
-      foundFiles.push(filename.replace('src/', '../'))
     }
   }
 }
