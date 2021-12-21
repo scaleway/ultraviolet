@@ -26,11 +26,15 @@ Default.args = {
 
 export const Status: Story = () => (
   <>
-    <StatusIndicator status="available" mr={1} />
-    <StatusIndicator status="unavailable" mr={1} />
-    <StatusIndicator status="available" mr={1} />
-    <StatusIndicator status="starting" mr={1} />
-    <StatusIndicator status="stopped_in_place" mr={1} />
+    <StatusIndicator status="available" tooltip="Available" mr={1} />
+    <StatusIndicator status="unavailable" tooltip="Unavailable" mr={1} />
+    <StatusIndicator status="starting" tooltip="Starting" mr={1} />
+    <StatusIndicator status="stopped" tooltip="Stopped" mr={1} />
+    <StatusIndicator
+      status="stopped_in_place"
+      tooltip="Stopped in place"
+      mr={1}
+    />
   </>
 )
 
@@ -66,4 +70,5 @@ CustomStatus.args = {
   statuses: {
     fake_status: 'purple',
   },
+  tooltip: 'Fake status',
 }
