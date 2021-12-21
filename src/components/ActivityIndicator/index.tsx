@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/react'
+import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -6,6 +6,8 @@ import { Color } from '../../theme'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
+const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
+const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
 const spin = keyframes`
   from { transform: rotate(0deg); }
@@ -29,50 +31,12 @@ type ActivityIndicatorProps = {
   label?: string
 }
 
-const SVG = styled.svg<{ size: number | string; active: boolean }>`
-  width: 100%;
-  vertical-align: center;
-
-  ${({ size }) => css`
-    height: ${typeof size === 'string' ? size : `${size}px`};
-    width: ${typeof size === 'string' ? size : `${size}px`};
-  `}
-
+const SVG = styled.svg<{ active: boolean }>`
   ${({ active }) =>
     active &&
     css`
       animation: ${spin} 0.75s linear infinite;
     `}
-`
-
-const BasePath = styled('path', {
-  shouldForwardProp: prop =>
-    !['pathRadius', 'dashRatio', 'color'].includes(prop.toString()),
-})<{ pathRadius: number; dashRatio: number }>`
-  fill-opacity: 0;
-  stroke-linecap: round;
-
-  ${({ pathRadius, dashRatio }) => {
-    const diameter = Math.PI * 2 * pathRadius
-    const gapLength = (1 - dashRatio) * diameter
-
-    return css`
-      stroke-dasharray: ${diameter}px ${diameter}px;
-      stroke-dashoffset: ${gapLength}px;
-    `
-  }}
-`
-
-const Trail = styled(BasePath)<{ color: Color | string }>`
-  stroke: ${({ theme, color }) =>
-    theme.colors[color as Color]?.background || color};
-`
-
-const Path = styled(BasePath)<{ color: Color | string }>`
-  transition: stroke-dashoffset 0.5s ease 0s;
-
-  stroke: ${({ theme, color }) =>
-    theme.colors[color as Color]?.backgroundStrong || color};
 `
 
 const Text = styled('text', {
@@ -86,17 +50,6 @@ const Text = styled('text', {
   text-anchor: middle;
 `
 
-const getPathRadius = (strokeWidth: number) =>
-  VIEWBOX_HEIGHT / 2 - strokeWidth / 2
-const getPathRatio = (value: number) => Math.min(Math.max(value, 0), 100) / 100
-
-const getPath = (radius: number) =>
-  `M ${VIEWBOX_WIDTH / 2},${
-    VIEWBOX_HEIGHT / 2
-  } m 0,-${radius} a ${radius},${radius} 0 1 1 0,${
-    2 * radius
-  } a ${radius},${radius} 0 1 1 0,-${2 * radius}`
-
 const ActivityIndicator = ({
   percentage = 20,
   text,
@@ -107,10 +60,11 @@ const ActivityIndicator = ({
   active = false,
   label = 'Loading',
 }: ActivityIndicatorProps) => {
-  const pathRadius = getPathRadius(strokeWidth)
-  const pathRatio = getPathRatio(percentage)
+  const theme = useTheme()
 
-  const path = getPath(pathRadius)
+  const circleRadius = HALF_VIEWBOX_HEIGHT - strokeWidth / 2
+  const boundedPercentage = Math.min(Math.max(percentage, 0), 100) / 100
+  const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
     <SVG
@@ -120,26 +74,34 @@ const ActivityIndicator = ({
       aria-valuemax={100}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
-      size={size}
       active={active}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
+      style={{
+        height: typeof size === 'string' ? size : `${size}px`,
+        width: typeof size === 'string' ? size : `${size}px`,
+      }}
     >
-      <Trail
-        pathRadius={pathRadius}
-        dashRatio={1}
-        color={trailColor}
+      <circle
+        cx={HALF_VIEWBOX_WIDTH}
+        cy={HALF_VIEWBOX_HEIGHT}
+        r={circleRadius}
+        fill="none"
         strokeWidth={strokeWidth}
-        d={path}
+        stroke={theme.colors[trailColor as Color]?.background || trailColor}
       />
-      <Path
-        pathRadius={pathRadius}
-        dashRatio={pathRatio}
-        color={color}
+      <circle
+        cx={HALF_VIEWBOX_WIDTH}
+        cy={HALF_VIEWBOX_HEIGHT}
+        r={circleRadius}
+        fill="none"
         strokeWidth={strokeWidth}
-        d={path}
+        strokeDasharray={circleDiameter}
+        strokeDashoffset={(1 - boundedPercentage) * circleDiameter}
+        stroke={theme.colors[color as Color]?.backgroundStrong || color}
+        strokeLinecap="round"
       />
       {text ? (
-        <Text color={color} x={VIEWBOX_WIDTH / 2} y={VIEWBOX_HEIGHT / 2}>
+        <Text color={color} x={HALF_VIEWBOX_WIDTH} y={HALF_VIEWBOX_HEIGHT}>
           {text}
         </Text>
       ) : null}

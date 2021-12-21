@@ -18,31 +18,9 @@ exports[`ActivityIndicator renders active with custom percentage 1`] = `
   }
 }
 
-.cache-11dz2rd {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
+.cache-1nuaba2 {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
 }
 
 <svg
@@ -51,19 +29,28 @@ exports[`ActivityIndicator renders active with custom percentage 1`] = `
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-11dz2rd e7dhm9i4"
+    class="cache-1nuaba2 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -88,31 +75,9 @@ exports[`ActivityIndicator renders active with default percentage 1`] = `
   }
 }
 
-.cache-11dz2rd {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
+.cache-1nuaba2 {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
 }
 
 <svg
@@ -121,19 +86,28 @@ exports[`ActivityIndicator renders active with default percentage 1`] = `
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-11dz2rd e7dhm9i4"
+    class="cache-1nuaba2 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -142,50 +116,34 @@ exports[`ActivityIndicator renders active with default percentage 1`] = `
 
 exports[`ActivityIndicator renders default props 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -194,50 +152,34 @@ exports[`ActivityIndicator renders default props 1`] = `
 
 exports[`ActivityIndicator renders with color beta 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-mq9mby {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: beta;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-mq9mby e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="beta"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -246,50 +188,34 @@ exports[`ActivityIndicator renders with color beta 1`] = `
 
 exports[`ActivityIndicator renders with color black 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-vk4d1x {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: black;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-vk4d1x e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="black"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -298,50 +224,34 @@ exports[`ActivityIndicator renders with color black 1`] = `
 
 exports[`ActivityIndicator renders with color blue 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-jf0zhj {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: blue;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-jf0zhj e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="blue"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -350,50 +260,34 @@ exports[`ActivityIndicator renders with color blue 1`] = `
 
 exports[`ActivityIndicator renders with color chartGreen 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1wigiex {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: chartGreen;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1wigiex e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="chartGreen"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -402,50 +296,34 @@ exports[`ActivityIndicator renders with color chartGreen 1`] = `
 
 exports[`ActivityIndicator renders with color chartNegativeRed 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1c4z0ub {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: chartNegativeRed;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1c4z0ub e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="chartNegativeRed"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -454,49 +332,34 @@ exports[`ActivityIndicator renders with color chartNegativeRed 1`] = `
 
 exports[`ActivityIndicator renders with custom size 1`] = `
 <DocumentFragment>
-  .cache-1cgi62p {
-  width: 100%;
-  vertical-align: center;
-  height: 100px;
-  width: 100px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1cgi62p e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
+    style="height: 100px; width: 100px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -505,50 +368,34 @@ exports[`ActivityIndicator renders with custom size 1`] = `
 
 exports[`ActivityIndicator renders with inlined color 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-bp0qsf {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #ff0000;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-bp0qsf e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#ff0000"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -557,50 +404,34 @@ exports[`ActivityIndicator renders with inlined color 1`] = `
 
 exports[`ActivityIndicator renders with inlined trailColor 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-1jgzzaa {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #ff0000;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-1jgzzaa e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#ff0000"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -625,31 +456,9 @@ exports[`ActivityIndicator renders with percentage 75 1`] = `
   }
 }
 
-.cache-11dz2rd {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
+.cache-1nuaba2 {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-7o1q80 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 65.97344572538566px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
 }
 
 <svg
@@ -658,19 +467,28 @@ exports[`ActivityIndicator renders with percentage 75 1`] = `
     aria-valuemin="0"
     aria-valuenow="75"
     aria-valuetext="75%"
-    class="cache-11dz2rd e7dhm9i4"
+    class="cache-1nuaba2 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-7o1q80 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="65.97344572538566"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -679,50 +497,34 @@ exports[`ActivityIndicator renders with percentage 75 1`] = `
 
 exports[`ActivityIndicator renders with strokeWidth 25 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-5uspz0 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 235.61944901923448px 235.61944901923448px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1y5jq2e {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 235.61944901923448px 235.61944901923448px;
-  stroke-dashoffset: 188.4955592153876px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-5uspz0 e7dhm9i2"
-      d="M 50,50 m 0,-37.5 a 37.5,37.5 0 1 1 0,75 a 37.5,37.5 0 1 1 0,-75"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="37.5"
+      stroke="#d4dae7"
       stroke-width="25"
     />
-    <path
-      class="cache-1y5jq2e e7dhm9i1"
-      d="M 50,50 m 0,-37.5 a 37.5,37.5 0 1 1 0,75 a 37.5,37.5 0 1 1 0,-75"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="37.5"
+      stroke="#4f0599"
+      stroke-dasharray="235.61944901923448"
+      stroke-dashoffset="188.4955592153876"
+      stroke-linecap="round"
       stroke-width="25"
     />
   </svg>
@@ -731,32 +533,7 @@ exports[`ActivityIndicator renders with strokeWidth 25 1`] = `
 
 exports[`ActivityIndicator renders with text 100% 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-107dm90 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: #d4dae7;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-.cache-1okb09s {
+  .cache-1okb09s {
   fill: #4f0599;
   font-size: 26px;
   dominant-baseline: middle;
@@ -769,19 +546,28 @@ exports[`ActivityIndicator renders with text 100% 1`] = `
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-107dm90 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
     <text
@@ -797,50 +583,34 @@ exports[`ActivityIndicator renders with text 100% 1`] = `
 
 exports[`ActivityIndicator renders with trailColor beta 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-k8ix8k {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: beta;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-k8ix8k e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="beta"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -849,50 +619,34 @@ exports[`ActivityIndicator renders with trailColor beta 1`] = `
 
 exports[`ActivityIndicator renders with trailColor black 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-1of5p0u {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: black;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-1of5p0u e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="black"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -901,50 +655,34 @@ exports[`ActivityIndicator renders with trailColor black 1`] = `
 
 exports[`ActivityIndicator renders with trailColor blue 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-1bymn22 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: blue;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-1bymn22 e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="blue"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -953,50 +691,34 @@ exports[`ActivityIndicator renders with trailColor blue 1`] = `
 
 exports[`ActivityIndicator renders with trailColor chartGreen 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-cnc6wp {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: chartGreen;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-cnc6wp e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="chartGreen"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>
@@ -1005,50 +727,34 @@ exports[`ActivityIndicator renders with trailColor chartGreen 1`] = `
 
 exports[`ActivityIndicator renders with trailColor chartNegativeRed 1`] = `
 <DocumentFragment>
-  .cache-1hl4wpf {
-  width: 100%;
-  vertical-align: center;
-  height: 40px;
-  width: 40px;
-}
-
-.cache-1ffug0y {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 0px;
-  stroke: chartNegativeRed;
-}
-
-.cache-1iofvh8 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 263.89378290154264px 263.89378290154264px;
-  stroke-dashoffset: 211.11502632123413px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #4f0599;
-}
-
-<svg
+  <svg
     aria-label="Loading test"
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="20"
     aria-valuetext="20%"
-    class="cache-1hl4wpf e7dhm9i4"
+    class="cache-1xdhyk6 e7dhm9i1"
     role="progressbar"
-    size="40"
+    style="height: 40px; width: 40px;"
     viewBox="0 0 100 100"
   >
-    <path
-      class="cache-1ffug0y e7dhm9i2"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="chartNegativeRed"
       stroke-width="16"
     />
-    <path
-      class="cache-1iofvh8 e7dhm9i1"
-      d="M 50,50 m 0,-42 a 42,42 0 1 1 0,84 a 42,42 0 1 1 0,-84"
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
       stroke-width="16"
     />
   </svg>

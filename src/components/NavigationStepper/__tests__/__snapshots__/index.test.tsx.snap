@@ -294,31 +294,9 @@ exports[`NavigationStepper should render correctly with bad child 1`] = `
   position: absolute;
 }
 
-.cache-16mv03v {
-  width: 100%;
-  vertical-align: center;
-  height: 100%;
-  width: 100%;
+.cache-1nuaba2 {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
-}
-
-.cache-bhnib4 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 289.02652413026095px 289.02652413026095px;
-  stroke-dashoffset: 0px;
-  stroke: transparent;
-}
-
-.cache-plddti {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 289.02652413026095px 289.02652413026095px;
-  stroke-dashoffset: 231.22121930420877px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #45d6b5;
 }
 
 <ul
@@ -364,18 +342,28 @@ exports[`NavigationStepper should render correctly with bad child 1`] = `
             aria-valuemin="0"
             aria-valuenow="20"
             aria-valuetext="20%"
-            class="cache-16mv03v e7dhm9i4"
+            class="cache-1nuaba2 e7dhm9i1"
             role="progressbar"
+            style="height: 100%; width: 100%;"
             viewBox="0 0 100 100"
           >
-            <path
-              class="cache-bhnib4 e7dhm9i2"
-              d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+            <circle
+              cx="50"
+              cy="50"
+              fill="none"
+              r="46"
+              stroke="transparent"
               stroke-width="8"
             />
-            <path
-              class="cache-plddti e7dhm9i1"
-              d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+            <circle
+              cx="50"
+              cy="50"
+              fill="none"
+              r="46"
+              stroke="#45d6b5"
+              stroke-dasharray="289.02652413026095"
+              stroke-dashoffset="231.22121930420877"
+              stroke-linecap="round"
               stroke-width="8"
             />
           </svg>
@@ -1114,31 +1102,9 @@ exports[`NavigationStepper should render correctly with isLoading 1`] = `
   position: absolute;
 }
 
-.cache-16mv03v {
-  width: 100%;
-  vertical-align: center;
-  height: 100%;
-  width: 100%;
+.cache-1nuaba2 {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
-}
-
-.cache-bhnib4 {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 289.02652413026095px 289.02652413026095px;
-  stroke-dashoffset: 0px;
-  stroke: transparent;
-}
-
-.cache-plddti {
-  fill-opacity: 0;
-  stroke-linecap: round;
-  stroke-dasharray: 289.02652413026095px 289.02652413026095px;
-  stroke-dashoffset: 231.22121930420877px;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-  stroke: #45d6b5;
 }
 
 <ul
@@ -1184,18 +1150,28 @@ exports[`NavigationStepper should render correctly with isLoading 1`] = `
             aria-valuemin="0"
             aria-valuenow="20"
             aria-valuetext="20%"
-            class="cache-16mv03v e7dhm9i4"
+            class="cache-1nuaba2 e7dhm9i1"
             role="progressbar"
+            style="height: 100%; width: 100%;"
             viewBox="0 0 100 100"
           >
-            <path
-              class="cache-bhnib4 e7dhm9i2"
-              d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+            <circle
+              cx="50"
+              cy="50"
+              fill="none"
+              r="46"
+              stroke="transparent"
               stroke-width="8"
             />
-            <path
-              class="cache-plddti e7dhm9i1"
-              d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+            <circle
+              cx="50"
+              cy="50"
+              fill="none"
+              r="46"
+              stroke="#45d6b5"
+              stroke-dasharray="289.02652413026095"
+              stroke-dashoffset="231.22121930420877"
+              stroke-linecap="round"
               stroke-width="8"
             />
           </svg>
