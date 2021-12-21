@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { x } from '@xstyled/emotion'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
@@ -117,7 +116,7 @@ const StyledInput = styled.input`
   text-align: center;
 `
 
-const StyledAbbr = styled(x.abbr, {
+const StyledText = styled('span', {
   shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
 })<{ disabled: boolean }>`
   color: ${({ theme, disabled }) =>
@@ -176,7 +175,7 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   onMinCrossed,
   size = 'large',
   step = 1,
-  text = '',
+  text,
   value,
   ...props
 }) => {
@@ -267,7 +266,6 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
 
       <StyledCenterBox
         size={size}
-        disabled={disabled}
         onClick={() => {
           if (inputRef?.current) {
             inputRef.current.focus()
@@ -290,7 +288,11 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
           value={inputValue.toString()} // A dom element can only have string attributes.
           aria-label="Input"
         />
-        {text ? <StyledAbbr disabled={disabled}>{text}</StyledAbbr> : null}
+        {typeof text === 'string' ? (
+          <StyledText disabled={disabled}>{text}</StyledText>
+        ) : (
+          text
+        )}
       </StyledCenterBox>
 
       <StyledTouchable
@@ -323,7 +325,7 @@ Stepper.propTypes = {
   /**
    * Text displayed into component at the right of number value.
    */
-  text: PropTypes.string,
+  text: PropTypes.node,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 

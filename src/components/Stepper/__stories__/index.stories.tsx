@@ -25,6 +25,12 @@ const Template: Story<ComponentProps<typeof Stepper>> = args => {
 export const Default = Template.bind({})
 
 export const Text = Template.bind({})
+Text.parameters = {
+  docs: {
+    storyDescription:
+      'You can change text inside stepper by using `text` prop. You can pass directly a text or a component.',
+  },
+}
 Text.decorators = [
   () => {
     const [value, setValue] = useState(0)
