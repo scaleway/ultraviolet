@@ -1,3 +1,15 @@
+## [0.129.0](https://github.com/scaleway/scaleway-ui/compare/v0.128.6...v0.129.0) (2021-12-21)
+
+
+### :zap: Refactor
+
+* **theme:** migration colors of Typography, VerificationCode, VolumeSize ([#1008](https://github.com/scaleway/scaleway-ui/issues/1008)) ([8d8d562](https://github.com/scaleway/scaleway-ui/commit/8d8d562e2b87d9f20506ffd1f6e49378bb454203))
+
+
+### :gear: Features
+
+* migrate switch to new colors ([#1017](https://github.com/scaleway/scaleway-ui/issues/1017)) ([9ce9164](https://github.com/scaleway/scaleway-ui/commit/9ce9164e41d4e5c63ece869ad4292726839b5c26))
+
 ### [0.128.6](https://github.com/scaleway/scaleway-ui/compare/v0.128.5...v0.128.6) (2021-12-20)
 
 
