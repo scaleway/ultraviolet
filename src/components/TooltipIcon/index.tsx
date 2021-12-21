@@ -21,7 +21,13 @@ const TooltipIcon: FunctionComponent<TooltipIconProps> = ({
   baseId,
 }) => (
   <Tooltip text={tooltip} baseId={baseId}>
-    <Icon color={color} name={name} size={size} verticalAlign={verticalAlign} />
+    <Icon
+      color={color}
+      name={name}
+      size={size}
+      verticalAlign={verticalAlign}
+      aria-label={name}
+    />
   </Tooltip>
 )
 
