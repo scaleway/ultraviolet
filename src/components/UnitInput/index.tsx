@@ -15,7 +15,6 @@ const CustomTextBox = styled(TextBox)`
   input {
     border-radius: 4px 0 0 4px;
     border-right: 0;
-    box-sizing: border-box;
 
     &:hover,
     &:focus {

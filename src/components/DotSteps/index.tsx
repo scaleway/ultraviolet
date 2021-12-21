@@ -16,7 +16,6 @@ const DotStep = styled(Dot)`
     content: '';
     position: absolute;
     border-radius: inherit;
-    box-sizing: border-box;
     top: 50%;
     left: 50%;
     transition: transform 0.5s;

@@ -12,7 +12,6 @@ type RowProps = {
 const StyledRow = styled(Box, {
   shouldForwardProp: prop => !['gutter'].includes(prop.toString()),
 })<RowProps>`
-  box-sizing: border-box;
   flex-grow: 1;
   flex-wrap: wrap;
   display: flex;

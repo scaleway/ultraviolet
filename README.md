@@ -22,11 +22,12 @@ $ yarn add @scaleway/ui @emotion/react @emotion/styled
 ```
 
 ```js
-import { theme, Button } from '@scaleway/ui'
-import { ThemeProvider } from '@emotion/react'
+import { theme, normalize, Button } from '@scaleway/ui'
+import { Global, css, ThemeProvider } from '@emotion/react'
 
 const App = () => (
   <ThemeProvider theme={theme}>
+    <Global styles={css`${normalize()}`}>
     <Button variant="primary" onClick={() => console.log('clicked')}>
       Click Me
     </Button>

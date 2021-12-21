@@ -141,23 +141,17 @@ Action.parameters = {
 }
 Action.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
       {icons.map(icon => (
-        <Button action key={icon} icon={icon} mr={2} mb={2} />
+        <Button action key={icon} icon={icon} />
       ))}
       {buttonVariants.map(variant => (
-        <Button action icon="lock" key={variant} variant={variant} mr={2} />
+        <Button action icon="lock" key={variant} variant={variant} />
       ))}
       {buttonVariants.map(variant => (
-        <Button
-          action="rounded"
-          icon="lock"
-          key={variant}
-          variant={variant}
-          mr={2}
-        />
+        <Button action="rounded" icon="lock" key={variant} variant={variant} />
       ))}
-    </>
+    </div>
   ),
 ]
 
