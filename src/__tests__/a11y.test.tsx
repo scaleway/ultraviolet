@@ -15,6 +15,7 @@ const testedComponents = [
   'Counter',
   'Separator',
   'StealthCopiable',
+  'StatusIndicator',
 ]
 
 const foundFiles: string[] = []

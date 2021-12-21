@@ -36,7 +36,8 @@ type StatusIndicatorProps = XStyledProps & {
   animated?: boolean
   statuses?: Record<string, string>
   status?: string
-  tooltip?: string
+  tooltip: string
+  baseId?: string
 }
 
 const StatusIndicator = ({
@@ -44,12 +45,14 @@ const StatusIndicator = ({
   status = 'unavailable',
   statuses = defaultStatuses,
   animated = false,
+  baseId,
   ...props
 }: StatusIndicatorProps): JSX.Element => (
-  <Tooltip text={tooltip}>
+  <Tooltip text={tooltip} baseId={baseId}>
     <Dot
       color={({ ...defaultStatuses, ...statuses }[status] as Color) || 'blue'}
       css={animated && cssAnimation}
+      aria-label={tooltip}
       {...props}
     />
   </Tooltip>
@@ -59,6 +62,7 @@ export const statuses = Object.keys(defaultStatuses)
 
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
+  baseId: PropTypes.string,
   status: (
     { statuses: propsStatuses, ...props }: { [key: string]: string },
     propName: string,
@@ -82,7 +86,7 @@ StatusIndicator.propTypes = {
     return null
   },
   statuses: PropTypes.shape({}),
-  tooltip: PropTypes.string,
+  tooltip: PropTypes.string.isRequired,
 }
 
 export default StatusIndicator
