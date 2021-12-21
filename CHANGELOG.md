@@ -1,3 +1,47 @@
+### [0.130.1](https://github.com/scaleway/scaleway-ui/compare/v0.130.0...v0.130.1) (2021-12-21)
+
+
+### :zap: Refactor
+
+* **theme:** new colors for Tag, Tags, TagsPoplist and TextBox ([#1023](https://github.com/scaleway/scaleway-ui/issues/1023)) ([ced40fc](https://github.com/scaleway/scaleway-ui/commit/ced40fc6fa2818a888ab96a690f6c0dad675e931))
+
+
+### :bug: Bug Fixes
+
+* a11y for placeholder ([#1031](https://github.com/scaleway/scaleway-ui/issues/1031)) ([a5b46a7](https://github.com/scaleway/scaleway-ui/commit/a5b46a79e950618793a82d3f7665e2d74cbb3763))
+
+## [0.130.0](https://github.com/scaleway/scaleway-ui/compare/v0.129.0...v0.130.0) (2021-12-21)
+
+
+### :gear: Features
+
+* **toaster:** add a11y ([#1028](https://github.com/scaleway/scaleway-ui/issues/1028)) ([703e226](https://github.com/scaleway/scaleway-ui/commit/703e2267a4af748bd047cbfe48636ad3d43e10e4))
+
+## [0.129.0](https://github.com/scaleway/scaleway-ui/compare/v0.128.6...v0.129.0) (2021-12-21)
+
+
+### :zap: Refactor
+
+* **theme:** migration colors of Typography, VerificationCode, VolumeSize ([#1008](https://github.com/scaleway/scaleway-ui/issues/1008)) ([8d8d562](https://github.com/scaleway/scaleway-ui/commit/8d8d562e2b87d9f20506ffd1f6e49378bb454203))
+
+
+### :gear: Features
+
+* migrate switch to new colors ([#1017](https://github.com/scaleway/scaleway-ui/issues/1017)) ([9ce9164](https://github.com/scaleway/scaleway-ui/commit/9ce9164e41d4e5c63ece869ad4292726839b5c26))
+
+### [0.128.6](https://github.com/scaleway/scaleway-ui/compare/v0.128.5...v0.128.6) (2021-12-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.2.0 ([#1026](https://github.com/scaleway/scaleway-ui/issues/1026)) ([1ae12b5](https://github.com/scaleway/scaleway-ui/commit/1ae12b51d8bc67b2f31cfb287d8e345ea3757447))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.26 ([#1025](https://github.com/scaleway/scaleway-ui/issues/1025)) ([5271593](https://github.com/scaleway/scaleway-ui/commit/527159346bb54e65c26674b833f20a70da786c29))
+
+
+### :bug: Bug Fixes
+
+* a11y for stealthcopiable ([#1029](https://github.com/scaleway/scaleway-ui/issues/1029)) ([b320000](https://github.com/scaleway/scaleway-ui/commit/b320000eb83ca4ebf03da2ab123e44b2728b2cbc))
+
 ### [0.128.5](https://github.com/scaleway/scaleway-ui/compare/v0.128.4...v0.128.5) (2021-12-20)
 
 

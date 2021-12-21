@@ -56,7 +56,12 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
     <StyledContainer>
       {side === 'right' && children}
       <UnselectableSpan>
-        <CopyButton onClick={setCopied} tabIndex={0} type="button">
+        <CopyButton
+          onClick={setCopied}
+          tabIndex={0}
+          type="button"
+          aria-live="polite"
+        >
           {isCopied ? copiedText : copyText}
         </CopyButton>
       </UnselectableSpan>

@@ -11,7 +11,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import { getUUID } from '../../utils/ids'
+import { getUUID } from '../../utils'
 import Tag from '../Tag'
 
 const STATUS = {
@@ -23,25 +23,28 @@ type Keys = keyof typeof STATUS
 type StatusValue = typeof STATUS[Keys]
 
 const variants = {
-  base: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
+  base: ({ theme: { colors } }: { theme: Theme }) => `
     padding: 8px;
     border-radius: 4px;
-    border: 1px solid ${colorsDeprecated.gray350};
+    border: 1px solid ${colors.neutral.borderWeak};
     &:focus-within {
-      border: 1px solid ${colorsDeprecated.primary};
-      box-shadow: 0 0 1px 2px ${transparentize(0.75, colorsDeprecated.primary)};
+      border: 1px solid ${colors.primary.borderWeak};
+      box-shadow: 0 0 1px 2px ${transparentize(
+        0.75,
+        colors.primary.borderWeak,
+      )};
     }
 
     & > * {
       margin: 6px;
     }
   `,
-  bordered: ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
+  bordered: ({ theme: { colors } }: { theme: Theme }) => `
     margin-top: 0;
     padding: 8px 0;
 
     > input:focus {
-      box-shadow: 0 0 1px 2px ${transparentize(0.6, colorsDeprecated.primary)};
+      box-shadow: 0 0 1px 2px ${transparentize(0.6, colors.primary.borderWeak)};
     }
 
     > * {
@@ -51,9 +54,12 @@ const variants = {
       }
     }
   `,
-  'no-border': ({ theme: { colorsDeprecated } }: { theme: Theme }) => `
+  'no-border': ({ theme: { colors } }: { theme: Theme }) => `
     &:focus-within {
-      box-shadow: 0 0 2px 4px ${transparentize(0.75, colorsDeprecated.primary)};
+      box-shadow: 0 0 2px 4px ${transparentize(
+        0.75,
+        colors.primary.borderWeak,
+      )};
     }
 
     > * {
@@ -81,13 +87,12 @@ const TagsContainer = styled('div', {
 
 const StyledInput = styled.input`
   font-size: 16px;
-  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
+  color: ${({ theme: { colors } }) => colors.neutral.text};
   border: none;
   outline: none;
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.white};
+  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
   &::placeholder {
-    color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
+    color: ${({ theme: { colors } }) => colors.neutral.textWeak};
   }
 `
 

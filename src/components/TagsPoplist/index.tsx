@@ -19,7 +19,7 @@ const textStyle = (maxTagWidth: number) => emotionCss`
 `
 
 const StyledTooltipReference = styled(TooltipReference)`
-  color: ${({ theme }) => theme.colorsDeprecated.primary};
+  color: ${({ theme }) => theme.colors.primary.text};
   border: none;
   font-size: 14px;
   align-self: center;
@@ -35,7 +35,7 @@ const StyledTooltipReference = styled(TooltipReference)`
 const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.colorsDeprecated.gray700};
+  color: ${({ theme }) => theme.colors.neutral.text};
   ${({ multiline, theme }) =>
     multiline &&
     `flex-wrap: wrap;
@@ -47,7 +47,7 @@ const StyledManyTagsContainer = styled.div`
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.colorsDeprecated.white};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   max-width: 80vw;
   flex-wrap: wrap;
@@ -110,7 +110,7 @@ const TagsPoplist = ({
           <Tooltip {...tooltip}>
             <TooltipArrow
               {...tooltip}
-              style={{ fill: theme.colorsDeprecated.white, top: '93%' }}
+              style={{ fill: theme.colors.neutral.backgroundWeak, top: '93%' }}
             />
             <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (

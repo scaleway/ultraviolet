@@ -59,8 +59,7 @@ const StyledSeparator = styled(Separator)`
   margin-right: 8px;
   margin-top: 1px;
   height: calc(100% - 2px);
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.gray350};
+  background-color: ${({ theme: { colors } }) => colors.neutral.background};
 `
 type StyledRightElementProps = {
   edit?: boolean
@@ -72,7 +71,7 @@ const StyledRightElement = styled('div', {
   shouldForwardProp: props =>
     !['edit', 'touchable', 'unit'].includes(props.toString()),
 })<StyledRightElementProps>`
-  ${({ theme: { colorsDeprecated } }) => css`
+  ${({ theme: { colors } }) => css`
     pointer-events: none;
     position: absolute;
     right: 0;
@@ -82,11 +81,11 @@ const StyledRightElement = styled('div', {
     display: flex;
     align-items: center;
     transition: transform 150ms, color 150ms;
-    color: ${colorsDeprecated.gray550};
+    color: ${colors.neutral.textWeak};
 
     &:hover,
     &:focus-within {
-      color: ${colorsDeprecated.gray700};
+      color: ${colors.neutral.textWeakHover};
     }
   `}
 
@@ -136,7 +135,7 @@ const StyledLabel = styled('label', {
   padding-left: 8px;
   padding-right: 8px;
   pointer-events: none;
-  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
+  color: ${({ theme: { colors } }) => colors.neutral.textWeak};
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -152,22 +151,22 @@ const StyledLabel = styled('label', {
       transform: translate(-9.6%, -3px) scale(0.8);
     `}
 
-  ${({ disabled, theme: { colorsDeprecated } }) =>
+  ${({ disabled, theme: { colors } }) =>
     disabled &&
     css`
-      color: ${colorsDeprecated.gray350};
+      color: ${colors.neutral.textWeakDisabled};
     `}
 
-  ${({ readOnly, theme: { colorsDeprecated } }) =>
+  ${({ readOnly, theme: { colors } }) =>
     readOnly &&
     css`
-      color: ${colorsDeprecated.gray550};
+      color: ${colors.neutral.textDisabled};
     `}
 
-  ${({ error, theme: { colorsDeprecated } }) =>
+  ${({ error, theme: { colors } }) =>
     error &&
     css`
-      color: ${colorsDeprecated.warning};
+      color: ${colors.danger.textWeak};
     `}
 `
 
@@ -177,7 +176,7 @@ const StyledRelativeDiv = styled.div`
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colorsDeprecated.warning};
+  color: ${({ theme }) => theme.colors.danger.textWeak};
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
@@ -219,13 +218,11 @@ const StyledInput = styled('input', {
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   appearance: none;
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.white};
+  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
   background-image: none;
-  border: 1px solid
-    ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray350};
+  border: 1px solid ${({ theme: { colors } }) => colors.neutral.borderWeak};
   border-radius: ${({ theme: { radii } }) => radii.default};
-  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray700};
+  color: ${({ theme: { colors } }) => colors.neutral.text};
   display: block;
   max-width: 100%;
   outline: none;
@@ -238,22 +235,20 @@ const StyledInput = styled('input', {
   line-height: 24px;
 
   &::placeholder {
-    color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.gray550};
+    color: ${({ theme: { colors } }) => colors.neutral.textWeak};
     opacity: 0;
   }
 
   &:hover,
   &:focus {
-    border-color: ${({ theme: { colorsDeprecated } }) =>
-      colorsDeprecated.ngray300};
+    border-color: ${({ theme: { colors } }) => colors.primary.borderWeakHover};
   }
 
   &:focus {
     box-shadow: 0 0 0 2px
-      ${({ theme: { colorsDeprecated } }) =>
-        transparentize(0.75, colorsDeprecated.primary)};
-    border-color: ${({ theme: { colorsDeprecated } }) =>
-      colorsDeprecated.primary};
+      ${({ theme: { colors } }) =>
+        transparentize(0.75, colors.primary.borderWeakHover)};
+    border-color: ${({ theme: { colors } }) => colors.primary.borderWeakHover};
   }
 
   ${({ isPlaceholderVisible }) =>
@@ -262,37 +257,40 @@ const StyledInput = styled('input', {
       opacity: 1;
     }`}
 
-  ${({ disabled, theme: { colorsDeprecated } }) =>
+  ${({ disabled, theme: { colors } }) =>
     disabled &&
     `cursor: default;
     pointer-events: none;
-    background-color: ${colorsDeprecated.gray50};
-    border-color: ${colorsDeprecated.gray50};
-    color: ${colorsDeprecated.gray350};`}
+    background-color: ${colors.neutral.backgroundWeakDisabled};
+    border-color: ${colors.neutral.borderWeakDisabled};
+    color: ${colors.neutral.textWeakDisabled};`}
 
-  ${({ readOnly, theme: { colorsDeprecated } }) =>
+  ${({ readOnly, theme: { colors } }) =>
     readOnly &&
-    `background-color: ${colorsDeprecated.gray100};
-    border-color: ${colorsDeprecated.gray100};
-    color: ${colorsDeprecated.gray700};`}
+    `background-color: ${colors.neutral.backgroundDisabled};
+    border-color: ${colors.neutral.borderDisabled};
+    color: ${colors.neutral.text};`}
 
   ${({ inputSize }) => inputSizes[inputSize]?.default}
 
   ${({ inputSize, hasLabel }) =>
     !!inputSize && !hasLabel && inputSizes[inputSize]?.full}
 
-  ${({ error, theme: { colorsDeprecated } }) =>
+  ${({ error, theme: { colors } }) =>
     error &&
-    `border-color: ${colorsDeprecated.warning};
+    `border-color: ${colors.danger.borderWeak};
 
     &:hover,
     &:focus {
-      border-color: ${colorsDeprecated.warning};
+      border-color: ${colors.danger.borderHover};
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, colorsDeprecated.warning)};
-      border-color: ${colorsDeprecated.warning};
+      box-shadow: 0 0 0 2px ${transparentize(
+        0.75,
+        colors.danger.borderWeakHover,
+      )};
+      border-color: ${colors.danger.borderWeakHover};
     }`}
 
     ${({ multiline, resizable, fillAvailable }) =>

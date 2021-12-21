@@ -1,6 +1,6 @@
 {
   "name": "@scaleway/ui",
-  "version": "0.128.5",
+  "version": "0.130.1",
   "description": "Scaleway UI",
   "homepage": "https://github.com/scaleway/scaleway-ui#readme",
   "repository": {
@@ -40,7 +40,7 @@
     "start:production": "STORYBOOK_ENVIRONMENT=production start-storybook -p 6006",
     "format": "prettier --write '**/*.{ts,tsx,js,json,md,mdx}'",
     "lint:fix": "yarn run lint --fix",
-    "lint": "eslint --report-unused-disable-directives --cache --ext js,ts,tsx,mdx .",
+    "lint": "eslint --report-unused-disable-directives --cache --ext js,ts,tsx .",
     "prebuild": "shx rm -rf dist",
     "test:unit": "LC_ALL=en_US.UTF-8 jest --config .jest/unit.config.ts",
     "test:unit:coverage": "yarn run test:unit --coverage",
@@ -54,10 +54,6 @@
     "*.(j|t)s?(x)": [
       "prettier --write",
       "eslint --fix --ext js,jsx,ts,tsx"
-    ],
-    "*.mdx": [
-      "prettier --write",
-      "eslint --fix --ext mdx"
     ]
   },
   "config": {
@@ -109,9 +105,9 @@
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-node-resolve": "13.1.1",
     "@rollup/plugin-url": "6.1.0",
-    "@scaleway/eslint-config-react": "3.1.2",
+    "@scaleway/eslint-config-react": "3.2.0",
     "@scaleway/jest-helpers": "1.1.6",
-    "@scaleway/use-i18n": "3.1.25",
+    "@scaleway/use-i18n": "3.1.26",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
@@ -127,6 +123,7 @@
     "@storybook/addon-links": "6.4.9",
     "@storybook/addons": "6.4.9",
     "@storybook/builder-webpack5": "6.4.9",
+    "@storybook/csf": "canary",
     "@storybook/manager-webpack5": "6.4.9",
     "@storybook/react": "6.4.9",
     "@storybook/testing-react": "1.2.2",
@@ -145,8 +142,6 @@
     "cz-conventional-changelog": "3.3.0",
     "date-fns": "2.27.0",
     "eslint": "8.4.1",
-    "eslint-mdx": "1.16.0",
-    "eslint-plugin-mdx": "1.16.0",
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.4.5",
