@@ -8,7 +8,7 @@ export default {
     docs: {
       description: {
         component:
-          'Placeholder will display empty blocks with animation. It can be used for loading screen or loading components.',
+          'Placeholder will display empty blocks with animation. It can be used for loading screen or loading components. In terms of accessibility, do not forget to add aria-live and aria-busy true/false to the placeholder container.',
       },
     },
   },
