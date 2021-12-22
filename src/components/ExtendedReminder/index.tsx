@@ -132,7 +132,12 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
   } as const
 
   return (
-    <StyledContainer variant={variant} role="region" {...props}>
+    <StyledContainer
+      variant={variant}
+      aria-label={variant}
+      role="region"
+      {...props}
+    >
       <StyledBadgeContainer>
         <StyledBadge size="small" variant={badgeVariant[variant]} as="strong">
           <Icon
