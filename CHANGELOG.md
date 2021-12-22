@@ -1,3 +1,15 @@
+### [0.131.1](https://github.com/scaleway/scaleway-ui/compare/v0.131.0...v0.131.1) (2021-12-22)
+
+
+### :zap: Refactor
+
+* **theme:** migrate colors for Toaster, Tooltip, TooltipIcon, UnitInput ([#1027](https://github.com/scaleway/scaleway-ui/issues/1027)) ([7d6b719](https://github.com/scaleway/scaleway-ui/commit/7d6b719f1603f1035104caa12621c58af48d6fc9))
+
+
+### :bug: Bug Fixes
+
+* update failing snapshots ([#1042](https://github.com/scaleway/scaleway-ui/issues/1042)) ([412d91d](https://github.com/scaleway/scaleway-ui/commit/412d91dd3853d449c490feb656ecde4d5a2c4f1a))
+
 ## [0.131.0](https://github.com/scaleway/scaleway-ui/compare/v0.130.4...v0.131.0) (2021-12-22)
 
 
