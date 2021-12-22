@@ -30,18 +30,18 @@ type TooltipPlacement =
 
 const variants = {
   black: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colorsDeprecated.black};
-    color: ${theme.colorsDeprecated.white};
-    fill: ${theme.colorsDeprecated.black};
+    background-color: ${theme.colors.neutral.backgroundStrongHover};
+    color: ${theme.colors.neutral.textStrong};
+    fill: ${theme.colors.neutral.backgroundStrongHover};
     box-shadow: 0 2px 5px 5px
-      ${transparentize(0.7, theme.colorsDeprecated.shadow)};
+      ${transparentize(0.7, theme.colors.neutral.border)};
   `,
   white: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colorsDeprecated.white};
-    color: ${theme.colorsDeprecated.black};
-    fill: ${theme.colorsDeprecated.white};
+    background-color: ${theme.colors.neutral.backgroundWeak};
+    color: ${theme.colors.neutral.text};
+    fill: ${theme.colors.neutral.backgroundWeak};
     box-shadow: 0 2px 5px 5px
-      ${transparentize(0.7, theme.colorsDeprecated.shadow)};
+      ${transparentize(0.7, theme.colors.neutral.border)};
   `,
 }
 

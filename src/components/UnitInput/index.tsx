@@ -19,8 +19,8 @@ const CustomTextBox = styled(TextBox)`
     &:hover,
     &:focus {
       text-decoration: none;
-      border-color: ${({ theme }) => theme.colorsDeprecated.primary};
-      border-right: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
+      border-color: ${({ theme }) => theme.colors.primary.borderWeak};
+      border-right: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
       z-index: 1;
       padding-right: 7px; // so it doesn't move rich select
     }
@@ -31,7 +31,7 @@ const CustomRichSelect = styled(RichSelect)`
   &:hover,
   &:focus {
     text-decoration: none;
-    border-color: ${({ theme }) => theme.colorsDeprecated.primary};
+    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
     box-shadow: none;
   }
 `
