@@ -63,6 +63,10 @@ const StyledTitle = styled(Typography, {
   color: ${({ theme, color }) => variants[color]?.(theme).main};
 `
 
+const StyledBadge = styled(Badge)`
+  font-weight: 500;
+`
+
 const StyledButtonLink = styled(Button)`
   margin-top: auto;
   color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.blue};
@@ -128,14 +132,9 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
   } as const
 
   return (
-    <StyledContainer
-      variant={variant}
-      aria-label={variant}
-      role="region"
-      {...props}
-    >
+    <StyledContainer variant={variant} role="region" {...props}>
       <StyledBadgeContainer>
-        <Badge size="small" variant={badgeVariant[variant]} as="strong">
+        <StyledBadge size="small" variant={badgeVariant[variant]} as="strong">
           <Icon
             mr="4px"
             color={theme.colorsDeprecated.white}
@@ -144,7 +143,7 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
             aria-hidden="true"
           />
           {badgeText}
-        </Badge>
+        </StyledBadge>
       </StyledBadgeContainer>
       <StyledTitle color={variant} mb={1} variant="bodyC" as="em">
         {title}
