@@ -7,14 +7,8 @@ describe('Avatar', () => {
   it('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(<Avatar />))
 
-  it('renders correctly with custom alt', () =>
-    shouldMatchEmotionSnapshot(<Avatar alt="My avatar" />))
-
   it('renders correctly with image', () =>
     shouldMatchEmotionSnapshot(<Avatar image={support} />))
-
-  it('renders correctly with image and alt', () =>
-    shouldMatchEmotionSnapshot(<Avatar image={support} alt="Support" />))
 
   it('renders correctly with size', () =>
     shouldMatchEmotionSnapshot(<Avatar size={48} />))

@@ -1,30 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar renders correctly with custom alt 1`] = `
-<DocumentFragment>
-  .cache-ua3jbc.cache-ua3jbc {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
-.cache-1kzq5ms {
-  height: 100%;
-  width: 100%;
-}
-
-<div
-    class="cache-ua3jbc e7ah3bn0"
-  >
-    <img
-      alt="My avatar"
-      class="cache-1kzq5ms e1frqeh80"
-      src="test-file-stub"
-    />
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Avatar renders correctly with custom background color 1`] = `
 <DocumentFragment>
   .cache-ua3jbc.cache-ua3jbc {
@@ -124,7 +99,7 @@ exports[`Avatar renders correctly with default props 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <img
-      alt="Avatar"
+      alt=""
       class="cache-1kzq5ms e1frqeh80"
       src="test-file-stub"
     />
@@ -149,32 +124,7 @@ exports[`Avatar renders correctly with image 1`] = `
     class="cache-ua3jbc e7ah3bn0"
   >
     <img
-      alt="Avatar"
-      class="cache-1kzq5ms e1frqeh80"
-      src="test-file-stub"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Avatar renders correctly with image and alt 1`] = `
-<DocumentFragment>
-  .cache-ua3jbc.cache-ua3jbc {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
-.cache-1kzq5ms {
-  height: 100%;
-  width: 100%;
-}
-
-<div
-    class="cache-ua3jbc e7ah3bn0"
-  >
-    <img
-      alt="Support"
+      alt=""
       class="cache-1kzq5ms e1frqeh80"
       src="test-file-stub"
     />
@@ -301,7 +251,7 @@ exports[`Avatar renders correctly with size 1`] = `
     class="cache-cywuei e7ah3bn0"
   >
     <img
-      alt="Avatar"
+      alt=""
       class="cache-1kzq5ms e1frqeh80"
       src="test-file-stub"
     />

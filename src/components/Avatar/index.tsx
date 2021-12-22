@@ -48,7 +48,6 @@ const StyledImg = styled.img`
 `
 
 interface AvatarProps {
-  alt?: string
   image?: string
   size?: number
   text?: string
@@ -59,7 +58,6 @@ interface AvatarProps {
 }
 
 const Avatar: FunctionComponent<AvatarProps> = ({
-  alt = 'Avatar',
   image = avatar,
   size = 32,
   text,
@@ -91,17 +89,13 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           )}
         </StyledDiv>
       ) : (
-        <StyledImg src={image} alt={alt} />
+        <StyledImg src={image} alt="" />
       )}
     </Box>
   )
 }
 
 Avatar.propTypes = {
-  /**
-   * Used only when `text` prop isn't specified
-   */
-  alt: PropTypes.string,
   image: PropTypes.string,
   /**
    * Used only when `text` prop is specified
