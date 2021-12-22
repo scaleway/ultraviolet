@@ -25,7 +25,6 @@ const newTheme = {
 
 describe('createTheme', () => {
   it('should give correct array of ids', () => {
-    console.log(createTheme(newTheme))
     expect(createTheme(newTheme)).toEqual({
       /* eslint-disable sort-keys */
       colors: {
