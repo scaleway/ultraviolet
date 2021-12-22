@@ -1,40 +1,17 @@
 import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, useMemo } from 'react'
-import { CircularProgressbar } from 'react-circular-progressbar'
-import { CircularProgressbarProps } from 'react-circular-progressbar/dist/types'
+import React from 'react'
 import { Color } from '../../theme'
-import { getUUID } from '../../utils'
+
+const VIEWBOX_WIDTH = 100
+const VIEWBOX_HEIGHT = 100
+const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
+const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
 const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-const StyledProgressbar = styled(CircularProgressbar)<
-  Partial<CircularProgressbarProps> & { size: number | string; active: boolean }
->`
-  ${({ size }) => css`
-    height: ${typeof size === 'string' ? size : `${size}px`};
-    width: ${typeof size === 'string' ? size : `${size}px`};
-  `}
-
-  ${({ active }) =>
-    active &&
-    css`
-      animation: ${spin} 0.75s linear infinite;
-    `}
-`
-
-const HiddenDiv = styled.div`
-  visibility: hidden;
-  position: absolute;
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 `
 
 type ActivityIndicatorProps = {
@@ -52,11 +29,20 @@ type ActivityIndicatorProps = {
    * Label should be defined for accessibility, to indicate what is loading
    */
   label?: string
-  id?: string
 }
 
-const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
-  id: idProp,
+const Text = styled('text', {
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+})<{ color: Color | string }>`
+  fill: ${({ theme, color }) =>
+    theme.colors[color as Color]?.backgroundStrong || color};
+
+  font-size: 26px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+`
+
+const ActivityIndicator = ({
   percentage = 20,
   text,
   size = 40,
@@ -65,62 +51,67 @@ const ActivityIndicator: FunctionComponent<ActivityIndicatorProps> = ({
   trailColor = 'neutral',
   active = false,
   label = 'Loading',
-}) => {
+}: ActivityIndicatorProps) => {
   const theme = useTheme()
-  const id = useMemo(() => idProp || getUUID('input'), [idProp])
+
+  const circleRadius = HALF_VIEWBOX_HEIGHT - strokeWidth / 2
+  const boundedPercentage = Math.min(Math.max(percentage, 0), 100) / 100
+  const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
-    <>
-      <div aria-hidden="true">
-        <StyledProgressbar
-          value={percentage}
-          text={text}
-          strokeWidth={strokeWidth}
-          active={active}
-          size={size}
-          styles={{
-            path: {
-              stroke: theme.colors[color as Color]?.backgroundStrong || color,
-              strokeLinecap: 'round',
-            },
-            root: {},
-            text: {
-              dominantBaseline: 'middle',
-              fill: theme.colors[color as Color]?.text || color,
-              fontSize: '26px',
-              textAnchor: 'middle',
-            },
-            trail: {
-              stroke:
-                theme.colors[trailColor as Color]?.background || trailColor,
-              strokeLinecap: 'round',
-            },
-          }}
-        />
-      </div>
-      {/* This hidden div is for accessibility since CircularProgressbar didn't implement it */}
-      <HiddenDiv>
-        <label htmlFor={id}>{label}</label>
-        <progress
-          id={id}
-          max={100}
-          value={percentage}
-          aria-valuemin={0}
-          aria-valuenow={percentage}
-          aria-valuemax={100}
-          aria-valuetext={`${percentage}%`}
-        >
-          {percentage}%
-        </progress>
-      </HiddenDiv>
-    </>
+    <svg
+      role="progressbar"
+      aria-label={label}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={percentage}
+      aria-valuetext={`${percentage}%`}
+      css={
+        active &&
+        css`
+          animation: ${spin} 0.75s linear infinite;
+        `
+      }
+      viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
+      style={{
+        height: typeof size === 'string' ? size : `${size}px`,
+        width: typeof size === 'string' ? size : `${size}px`,
+      }}
+    >
+      <circle
+        cx={HALF_VIEWBOX_WIDTH}
+        cy={HALF_VIEWBOX_HEIGHT}
+        r={circleRadius}
+        fill="none"
+        strokeWidth={strokeWidth}
+        stroke={theme.colors[trailColor as Color]?.background || trailColor}
+      />
+      <circle
+        css={css`
+          transition: stroke-dashoffset 0.5s ease 0s;
+        `}
+        cx={HALF_VIEWBOX_WIDTH}
+        cy={HALF_VIEWBOX_HEIGHT}
+        r={circleRadius}
+        fill="none"
+        strokeWidth={strokeWidth}
+        strokeDasharray={circleDiameter}
+        strokeDashoffset={(1 - boundedPercentage) * circleDiameter}
+        stroke={theme.colors[color as Color]?.backgroundStrong || color}
+        strokeLinecap="round"
+      />
+      {text ? (
+        <Text color={color} x={HALF_VIEWBOX_WIDTH} y={HALF_VIEWBOX_HEIGHT}>
+          {text}
+        </Text>
+      ) : null}
+    </svg>
   )
 }
 
 ActivityIndicator.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string,
-  id: PropTypes.string,
   /**
    * Label should be defined for accessibility, to indicate what is loading
    */

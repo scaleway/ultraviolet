@@ -23550,16 +23550,14 @@ exports[`List should render correctly with isLoading 1`] = `
   margin: 16px 0;
 }
 
-.cache-1e51aj0 {
-  height: 50px;
-  width: 50px;
+.cache-1mntgth-ActivityIndicator {
   -webkit-animation: animation-0 0.75s linear infinite;
   animation: animation-0 0.75s linear infinite;
 }
 
-.cache-546l7a {
-  visibility: hidden;
-  position: absolute;
+.cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
 }
 
 <div
@@ -23708,60 +23706,38 @@ exports[`List should render correctly with isLoading 1`] = `
     <div
       class="cache-18jry8r e1nh26ji0"
     >
-      <div
-        aria-hidden="true"
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-1mntgth-ActivityIndicator"
+        role="progressbar"
+        style="height: 50px; width: 50px;"
+        viewBox="0 0 100 100"
       >
-        <svg
-          class="CircularProgressbar  cache-1e51aj0 e7dhm9i1"
-          data-test-id="CircularProgressbar"
-          viewBox="0 0 100 100"
-        >
-          <path
-            class="CircularProgressbar-trail"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #d4dae7; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 0px;"
-          />
-          <path
-            class="CircularProgressbar-path"
-            d="
-      M 50,50
-      m 0,-42
-      a 42,42 0 1 1 0,84
-      a 42,42 0 1 1 0,-84
-    "
-            fill-opacity="0"
-            stroke-width="16"
-            style="stroke: #4f0599; stroke-linecap: round; stroke-dasharray: 263.89378290154264px 263.89378290154264px; stroke-dashoffset: 211.11502632123413px;"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-546l7a e7dhm9i0"
-      >
-        <label
-          for="input-6c756c756c756c756c756c756c756c75"
-        >
-          Loading
-        </label>
-        <progress
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          id="input-6c756c756c756c756c756c756c756c75"
-          max="100"
-          value="20"
-        >
-          20%
-        </progress>
-      </div>
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#d4dae7"
+          stroke-width="16"
+        />
+        <circle
+          class="cache-wxrv4d-ActivityIndicator"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#4f0599"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
     </div>
   </div>
 </DocumentFragment>
