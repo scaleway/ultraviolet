@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BorderedBox renders correctly 1`] = `
+<DocumentFragment>
+  .cache-1kl4lkx {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+<div
+    class="cache-1kl4lkx e1b630740"
+  />
+</DocumentFragment>
+`;
+
+exports[`BorderedBox renders correctly with children 1`] = `
+<DocumentFragment>
+  .cache-1kl4lkx {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+}
+
+<div
+    class="cache-1kl4lkx e1b630740"
+  >
+    Hello World
+  </div>
+</DocumentFragment>
+`;
