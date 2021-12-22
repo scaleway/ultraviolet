@@ -2,15 +2,14 @@ import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import PhoneInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import Box from '../../Box'
 
 export default {
   component: PhoneInput,
   decorators: [
     Children => (
-      <Box height="220">
+      <div style={{ height: 220 }}>
         <Children />
-      </Box>
+      </div>
     ),
   ],
   parameters: {

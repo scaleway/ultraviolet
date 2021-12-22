@@ -3,7 +3,6 @@ import React, { ComponentProps } from 'react'
 import Popper, { popperVariants } from '..'
 import { FlexBox } from '../..'
 import { getUUID } from '../../../utils'
-import Box from '../../Box'
 import Button from '../../Button'
 import Icon from '../../Icon'
 
@@ -36,7 +35,9 @@ const disclosure: ComponentProps<typeof Popper>['disclosure'] = ({
 
 const Template: Story<ComponentProps<typeof Popper>> = args => (
   <Popper aria-label="Custom popover" disclosure={disclosure} {...args}>
-    {({ placement }) => <Box p={2}> placement:{placement}</Box>}
+    {({ placement }) => (
+      <div style={{ padding: '16px' }}> placement:{placement}</div>
+    )}
   </Popper>
 )
 
@@ -45,19 +46,17 @@ export const Default = Template.bind({})
 export const Variants = Template.bind({})
 Variants.decorators = [
   () => (
-    <Box display="flex">
+    <div style={{ display: 'flex', gap: '8px' }}>
       {popperVariants.map(variant => (
-        <Box m={1}>
-          <Popper
-            variant={variant}
-            aria-label={`variant-${variant}`}
-            disclosure={() => <Button>{variant}</Button>}
-          >
-            <Box p={2}>{variant}</Box>
-          </Popper>
-        </Box>
+        <Popper
+          variant={variant}
+          aria-label={`variant-${variant}`}
+          disclosure={() => <Button>{variant}</Button>}
+        >
+          <div style={{ padding: 16 }}>{variant}</div>
+        </Popper>
       ))}
-    </Box>
+    </div>
   ),
 ]
 
@@ -76,9 +75,9 @@ ComplexChildren.decorators = [
               const uuid = getUUID()
 
               return (
-                <Box key={uuid} width={30} height={30} m={2}>
+                <div key={uuid} style={{ height: 30, margin: 16, width: 30 }}>
                   {uuid.substr(0, 3)}
-                </Box>
+                </div>
               )
             })}
           </FlexBox>
@@ -102,25 +101,31 @@ Placement.decorators = [
           placement="left-start"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="left"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="left-end"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
       </FlexBox>
       <div>
@@ -128,28 +133,31 @@ Placement.decorators = [
           placement="top-start"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
-          ml={2}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="top"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
-          ml={2}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="top-end"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
-          ml={2}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
       </div>
       <FlexBox direction="column">
@@ -157,25 +165,31 @@ Placement.decorators = [
           placement="right-start"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="right"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="right-end"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
       </FlexBox>
       <div>
@@ -183,25 +197,31 @@ Placement.decorators = [
           placement="bottom-start"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="bottom"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
         <Popper
           placement="bottom-end"
           variant="black"
           aria-label="Custom popover with button"
-          disclosure={({ placement }) => <Button m={1}>{placement}</Button>}
+          disclosure={disclosureProps => (
+            <Button m={1}>{disclosureProps?.placement}</Button>
+          )}
         >
-          {({ placement }) => <Box p={1}> {placement}</Box>}
+          {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
       </div>
     </div>

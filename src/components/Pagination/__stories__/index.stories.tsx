@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useState } from 'react'
 import Pagination from '..'
-import Box from '../../Box'
 import Button from '../../Button'
 import Placeholder from '../../Placeholder'
 import getPageNumbers from '../getPageNumbers'
@@ -189,11 +188,11 @@ CustomComponents.decorators = [
           value => `Item ${value}`,
         )}
         LoaderComponent={() => (
-          <Box my={2} display="flex">
+          <div style={{ display: 'flex', margin: '16px 0' }}>
             {Array.from({ length: 5 }, (_, index) => index).map(value => (
               <Placeholder key={value} variant="line" />
             ))}
-          </Box>
+          </div>
         )}
         RightComponent={() => <p>I am a custom right component</p>}
         LeftComponent={() => <p>I am a custom left component</p>}

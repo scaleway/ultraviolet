@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import ProgressBar, { progressBarVariants } from '..'
-import Boxer from '../../Boxer'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 export default {
@@ -30,11 +29,11 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <Boxer my={1}>
+    <div style={{ display: 'flex', gap: 8 }}>
       {progressBarVariants.map(variant => (
         <UncontrolledProgressBar key={variant} variant={variant} />
       ))}
-    </Boxer>
+    </div>
   ),
 ]
 
@@ -67,9 +66,9 @@ Cap.parameters = {
 }
 Cap.decorators = [
   () => (
-    <Boxer my={1}>
+    <div style={{ display: 'flex', gap: 8 }}>
       <ProgressBar value={600} />
       <ProgressBar value={-600} />
-    </Boxer>
+    </div>
   ),
 ]

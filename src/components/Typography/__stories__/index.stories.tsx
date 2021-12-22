@@ -1,8 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Typography, { typographyVariants } from '..'
-import Box from '../../Box'
-import Boxer from '../../Boxer'
 
 export default {
   component: Typography,
@@ -27,13 +25,13 @@ Default.args = {
 }
 
 export const Variants: Story = () => (
-  <Boxer>
+  <>
     {typographyVariants.map(variant => (
       <Typography key={variant} variant={variant}>
         {variant}
       </Typography>
     ))}
-  </Boxer>
+  </>
 )
 
 Variants.parameters = {
@@ -47,21 +45,21 @@ Variants.parameters = {
 export const Ellipsis: Story = () => (
   <>
     <strong>Without ellipsis</strong>
-    <Box width={500} mt={1} mb={2}>
+    <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
       <Typography>
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Typography>
-    </Box>
+    </div>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
-    <Box width={500} mt={1} mb={2}>
+    <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
       <Typography ellipsis>
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Typography>
-    </Box>
+    </div>
   </>
 )
 

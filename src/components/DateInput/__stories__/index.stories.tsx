@@ -4,16 +4,15 @@ import { es, fr, ru } from 'date-fns/locale'
 import React, { ComponentProps } from 'react'
 import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import Box from '../../Box'
 import RichSelect from '../../RichSelect'
 
 export default {
   component: DateInput,
   decorators: [
     Stories => (
-      <Box height="360">
+      <div style={{ height: 360 }}>
         <Stories />
-      </Box>
+      </div>
     ),
   ],
   parameters: {
@@ -83,12 +82,12 @@ Localized.parameters = {
 Localized.decorators = [
   () => (
     <>
-      <Box mb={2}>
+      <div style={{ marginBottom: 16 }}>
         <DateInput label="fr-FR" locale={fr} />
-      </Box>
-      <Box mb={2}>
+      </div>
+      <div style={{ marginBottom: 16 }}>
         <DateInput label="es-ES" locale={es} />
-      </Box>
+      </div>
       <DateInput label="ru-RU" locale={ru} />
     </>
   ),

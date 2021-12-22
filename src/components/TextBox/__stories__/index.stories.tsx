@@ -2,7 +2,6 @@ import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import TextBox, { textBoxSizes } from '..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
-import Boxer from '../../Boxer'
 import UncontrolledTextBox from './UncontrolledTextBox'
 
 export default {
@@ -18,22 +17,22 @@ export default {
 } as Meta
 
 const Template: Story<ComponentProps<typeof TextBox>> = args => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     <UncontrolledTextBox label="First Name" {...args} />
-  </Boxer>
+  </div>
 )
 
 export const Default = Template.bind({})
 
 export const NoLabel: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     <UncontrolledTextBox label="First Name" noTopLabel />
     <UncontrolledTextBox
       label="First Name"
       defaultValue="James Bond"
       noTopLabel
     />
-  </Boxer>
+  </div>
 )
 
 NoLabel.parameters = {
@@ -61,7 +60,7 @@ Placeholder.args = {
 }
 
 export const Size: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -85,7 +84,7 @@ export const Size: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Size.parameters = {
@@ -97,7 +96,7 @@ Size.parameters = {
 }
 
 export const Disabled: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -131,7 +130,7 @@ export const Disabled: Story = () => (
       label="Label"
       random="textbox"
     />
-  </Boxer>
+  </div>
 )
 
 Disabled.parameters = {
@@ -143,7 +142,7 @@ Disabled.parameters = {
 }
 
 export const ReadOnly: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -170,7 +169,7 @@ export const ReadOnly: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 ReadOnly.parameters = {
@@ -182,7 +181,7 @@ ReadOnly.parameters = {
 }
 
 export const Required: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -209,7 +208,7 @@ export const Required: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Required.parameters = {
@@ -221,7 +220,7 @@ Required.parameters = {
 }
 
 export const Valid: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -248,7 +247,7 @@ export const Valid: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Valid.parameters = {
@@ -260,7 +259,7 @@ Valid.parameters = {
 }
 
 export const Error: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <ErrorTransition
         key={size}
@@ -290,7 +289,7 @@ export const Error: Story = () => (
         Component={UncontrolledTextBox}
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Error.parameters = {
@@ -302,7 +301,7 @@ Error.parameters = {
 }
 
 export const Notice: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -329,7 +328,7 @@ export const Notice: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Notice.parameters = {
@@ -341,7 +340,7 @@ Notice.parameters = {
 }
 
 export const ToggleablePassword: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -368,7 +367,7 @@ export const ToggleablePassword: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 ToggleablePassword.parameters = {
@@ -381,7 +380,7 @@ ToggleablePassword.parameters = {
 }
 
 export const Unit: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -408,7 +407,7 @@ export const Unit: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Unit.parameters = {
@@ -420,7 +419,7 @@ Unit.parameters = {
 }
 
 export const Randomize: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -447,7 +446,7 @@ export const Randomize: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Randomize.parameters = {
@@ -459,7 +458,7 @@ Randomize.parameters = {
 }
 
 export const ForceEditMode: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -486,7 +485,7 @@ export const ForceEditMode: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 ForceEditMode.parameters = {
@@ -499,7 +498,7 @@ ForceEditMode.parameters = {
 }
 
 export const Multiline: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -526,7 +525,7 @@ export const Multiline: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 Multiline.parameters = {
@@ -538,7 +537,7 @@ Multiline.parameters = {
 }
 
 export const DisableResize: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
       <UncontrolledTextBox
         key={size}
@@ -568,7 +567,7 @@ export const DisableResize: Story = () => (
         label="Label"
       />
     ))}
-  </Boxer>
+  </div>
 )
 
 DisableResize.parameters = {
@@ -580,7 +579,7 @@ DisableResize.parameters = {
 }
 
 export const TabIndex: Story = () => (
-  <Boxer my={1}>
+  <div style={{ display: 'flex', gap: 8 }}>
     <UncontrolledTextBox
       label="First Name"
       defaultValue="Tabulation is ok here"
@@ -594,7 +593,7 @@ export const TabIndex: Story = () => (
       label="Last Name"
       defaultValue="Tabulation is ok here"
     />
-  </Boxer>
+  </div>
 )
 
 TabIndex.parameters = {

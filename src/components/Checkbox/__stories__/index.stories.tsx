@@ -6,7 +6,6 @@ import React, {
   useState,
 } from 'react'
 import Checkbox from '..'
-import { Boxer } from '../..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 export default {
@@ -81,7 +80,7 @@ Errors.parameters = {
 }
 Errors.decorators = [
   () => (
-    <Boxer>
+    <div>
       <ErrorTransition
         error="An Error occurred, your checkbox is invalid"
         Component={Checkbox}
@@ -95,7 +94,7 @@ Errors.decorators = [
       >
         Checkbox on Error
       </Checkbox>
-    </Boxer>
+    </div>
   ),
 ]
 

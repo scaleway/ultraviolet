@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useState } from 'react'
 import Stepper, { containerSizesKeys } from '..'
-import Box from '../../Box'
 
 export default {
   component: Stepper,
@@ -75,7 +74,10 @@ Sizes.decorators = [
         const [value, setValue] = useState(10)
 
         return (
-          <Box my={2} key={size} textTransform="capitalize">
+          <div
+            style={{ margin: '16px 0', textTransform: 'capitalize' }}
+            key={size}
+          >
             {size}
             <Stepper
               minValue={0}
@@ -86,7 +88,7 @@ Sizes.decorators = [
               mt={1}
               width={200}
             />
-          </Box>
+          </div>
         )
       })}
     </>

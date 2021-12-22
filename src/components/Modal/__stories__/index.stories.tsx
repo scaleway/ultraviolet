@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Modal, { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '..'
-import { Box, Button, Switch as SWUISwitch } from '../..'
+import { Button, Switch as SWUISwitch } from '../..'
 
 export default {
   component: Modal,
@@ -20,7 +20,7 @@ By default now our modal is a portal. If you want to change this you can disable
 
 const Template: Story<ComponentProps<typeof Modal>> = args => (
   <Modal disclosure={<Button>Open Modal</Button>} {...args}>
-    <Box p={4}>Content should be present in center of the modal</Box>
+    <div>Content should be present in center of the modal</div>
   </Modal>
 )
 
@@ -36,7 +36,7 @@ Switch.decorators = [
         </SWUISwitch>
       )}
     >
-      <Box p={4}>Content should be present in center of the modal</Box>
+      <div>Content should be present in center of the modal</div>
     </Modal>
   ),
 ]
@@ -54,19 +54,21 @@ WithLotsOfContent.decorators = [
       animation="scaleUp"
       disclosure={<Button>Open Modal with lot of content</Button>}
     >
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
-      <Box p={4}>Content should be present in center of the modal</Box>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+        <div>Content should be present in center of the modal</div>
+      </div>
     </Modal>
   ),
 ]
@@ -81,15 +83,15 @@ Animated.decorators = [
   () => (
     <>
       {Object.keys(MODAL_ANIMATION).map(animation => (
-        <Box p={2} key={animation} display="inline-block">
+        <div style={{ display: 'inline-block', padding: 16 }} key={animation}>
           <Modal
             animated
             animation={animation as keyof typeof MODAL_ANIMATION}
             disclosure={<Button>{animation}</Button>}
           >
-            <Box p={4}>Modal should be animated</Box>
+            <div style={{ padding: 32 }}>Modal should be animated</div>
           </Modal>
-        </Box>
+        </div>
       ))}
     </>
   ),
@@ -105,14 +107,14 @@ Width.decorators = [
   () => (
     <>
       {Object.keys(MODAL_WIDTH).map(width => (
-        <Box p={2} key={width} display="inline-block">
+        <div style={{ display: 'inline-block', padding: 16 }} key={width}>
           <Modal
             width={width as keyof typeof MODAL_WIDTH}
             disclosure={<Button>{width}</Button>}
           >
-            <Box p={4}>Content of the {width} modal</Box>
+            <div style={{ padding: 32 }}>Content of the {width} modal</div>
           </Modal>
-        </Box>
+        </div>
       ))}
     </>
   ),
@@ -128,14 +130,14 @@ Placement.decorators = [
   () => (
     <>
       {Object.keys(MODAL_PLACEMENT).map(placement => (
-        <Box p={2} key={placement} display="inline-block">
+        <div style={{ display: 'inline-block', padding: 16 }} key={placement}>
           <Modal
             placement={placement as keyof typeof MODAL_PLACEMENT}
             disclosure={<Button>{placement}</Button>}
           >
-            <Box p={4}>Content of the {placement} modal</Box>
+            <div style={{ padding: 32 }}>Content of the {placement} modal</div>
           </Modal>
-        </Box>
+        </div>
       ))}
     </>
   ),
@@ -150,7 +152,9 @@ Height.parameters = {
 Height.decorators = [
   () => (
     <Modal disclosure={<Button>Height 100%</Button>} height="100%">
-      <Box p={4}>Hello there this a modal with a full height</Box>
+      <div style={{ padding: 32 }}>
+        Hello there this a modal with a full height
+      </div>
     </Modal>
   ),
 ]
@@ -165,11 +169,11 @@ PreventBodyScroll.parameters = {
 PreventBodyScroll.decorators = [
   () => (
     <Modal disclosure={<Button>preventBodyScroll</Button>} preventBodyScroll>
-      <Box p={4}>
+      <div style={{ padding: 32 }}>
         Try to scroll on body ( outside of the Modal ) preventBodyScroll is
         available only when modal props is enabled
         https://reakit.io/docs/dialog/#props
-      </Box>
+      </div>
     </Modal>
   ),
 ]
@@ -188,7 +192,7 @@ HideOnClickOutside.decorators = [
       width="small"
       hideOnClickOutside={false}
     >
-      <Box p={4}>Try to click outside of the Modal</Box>
+      <div style={{ padding: 32 }}>Try to click outside of the Modal</div>
     </Modal>
   ),
 ]
@@ -207,7 +211,7 @@ HideOnEsc.decorators = [
       width="medium"
       hideOnEsc={false}
     >
-      <Box p={4}>try to ESCAPE</Box>
+      <div style={{ padding: 32 }}>try to ESCAPE</div>
     </Modal>
   ),
 ]
@@ -223,7 +227,9 @@ ModalProp.parameters = {
 ModalProp.decorators = [
   () => (
     <Modal disclosure={<Button>modal</Button>} width="medium" modal={false}>
-      <Box p={4}>Our modal is just below our Button in the DOM </Box>
+      <div style={{ padding: 32 }}>
+        Our modal is just below our Button in the DOM{' '}
+      </div>
     </Modal>
   ),
 ]
