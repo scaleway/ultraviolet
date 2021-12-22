@@ -22,7 +22,6 @@ const variants = {
       border-radius: 4px;
       box-shadow: none;
       border-color: transparent;
-      background-color: ${theme.colors.neutral.backgroundWeak};
       color: ${theme.colors.neutral.text};
 
       &:hover,
