@@ -1,3 +1,15 @@
+## [0.131.0](https://github.com/scaleway/scaleway-ui/compare/v0.130.4...v0.131.0) (2021-12-22)
+
+
+### :zap: Refactor
+
+* **tags:** add a11y ([#1033](https://github.com/scaleway/scaleway-ui/issues/1033)) ([be98715](https://github.com/scaleway/scaleway-ui/commit/be98715f03793e52bf754952e77a599e5c8c5376))
+
+
+### :gear: Features
+
+* provide modern normalize function ([#1041](https://github.com/scaleway/scaleway-ui/issues/1041)) ([e6c7c95](https://github.com/scaleway/scaleway-ui/commit/e6c7c9530784f9b0fc7c010ec86b892de607b793))
+
 ### [0.130.4](https://github.com/scaleway/scaleway-ui/compare/v0.130.3...v0.130.4) (2021-12-21)
 
 
