@@ -131,6 +131,137 @@ exports[`RadioBorderedBox renders correctly 1`] = `
 </DocumentFragment>
 `;
 
+exports[`RadioBorderedBox renders correctly and triggers change on borderedbox click 1`] = `
+<DocumentFragment>
+  .cache-5jm5b {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  display: block;
+}
+
+.cache-kmnzss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cache-1c9gspx {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  height: 32px;
+  cursor: pointer;
+}
+
+.cache-1c9gspx.cache-1c9gspx {
+  margin-right: 4px;
+}
+
+.cache-1c9gspx:hover .e1duuirp2,
+.cache-1c9gspx:focus .e1duuirp2 {
+  background-color: rgba(212,218,231,0.25);
+  border-radius: 50%;
+}
+
+.cache-1c9gspx:hover .e1duuirp2>.e1duuirp3,
+.cache-1c9gspx:focus .e1duuirp2>.e1duuirp3 {
+  fill: #4f0599;
+}
+
+.cache-10e5cfc {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.cache-14h2zyo {
+  fill: #dce1eb;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-14h2zyo.cache-14h2zyo {
+  vertical-align: middle;
+}
+
+.cache-cujed6 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+<div
+    class="cache-5jm5b e13z6rra1"
+  >
+    <div
+      class="cache-kmnzss e13z6rra0"
+    >
+      <label
+        class="e1duuirp1 cache-1c9gspx"
+        for="radioborderedbox-choice1"
+      >
+        <div
+          class="e1duuirp2 cache-10e5cfc"
+        >
+          <svg
+            class="e1duuirp3 etwatq50 cache-14h2zyo"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+            />
+          </svg>
+        </div>
+        Choice 1
+        <input
+          aria-checked="false"
+          class="cache-cujed6 e1duuirp0"
+          id="radioborderedbox-choice1"
+          name="radioborderedbox"
+          tabindex="0"
+          type="radio"
+          value="choice1"
+        />
+      </label>
+      <span />
+    </div>
+    <div>
+      Choice 1 description
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`RadioBorderedBox renders correctly when checked 1`] = `
 <DocumentFragment>
   .cache-z9adck {
