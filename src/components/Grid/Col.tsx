@@ -23,7 +23,6 @@ const StyledCol = styled(Box, {
   shouldForwardProp: prop =>
     ![...Object.keys(screens), 'gutter'].includes(prop.toString()),
 })<ColProps>`
-  box-sizing: border-box;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;

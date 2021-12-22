@@ -1,7 +1,7 @@
 import React from 'react'
 import I18n from '@scaleway/use-i18n'
 import { css, ThemeProvider, Global } from '@emotion/react'
-import { normalize } from 'polished'
+import normalize from '../src/utils/normalize'
 
 import theme from '../src/theme'
 
@@ -57,39 +57,9 @@ const adjustedTheme = ancestorTheme => ({
 
 const globalStyles = theme => css`
   ${normalize()}
-  /* Fallback system fonts */
-  @font-face {
-    font-family: 'System';
-    font-style: normal;
-    font-weight: 400;
-    src: local('.SFNSText-Regular'),
-      local('.HelveticaNeueDeskInterface-Regular'), local('.LucidaGrandeUI'),
-      local('Segoe UI'), local('Ubuntu'), local('Roboto-Regular'),
-      local('DroidSans'), local('Tahoma');
-  }
-  @font-face {
-    font-family: 'System';
-    font-style: normal;
-    font-weight: 500;
-    src: local('.SFNSText-Medium'),
-      local('.HelveticaNeueDeskInterface-MediumP4'), local('.LucidaGrandeUI'),
-      local('Segoe UI Semibold'), local('Ubuntu Medium'), local('Roboto-Medium'),
-      local('DroidSans-Bold'), local('Tahoma Bold');
-  }
-  @font-face {
-    font-family: 'System';
-    font-style: normal;
-    font-weight: 700;
-    src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'),
-      local('.LucidaGrandeUI'), local('Segoe UI Bold'), local('Ubuntu Bold'),
-      local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
-  }
+
   body {
-    background-color: ${theme.colorsDeprecated.white};
     font-family: ${theme.fonts.sansSerif};
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 `
 
