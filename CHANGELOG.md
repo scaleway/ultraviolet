@@ -1,3 +1,10 @@
+### [0.131.3](https://github.com/scaleway/scaleway-ui/compare/v0.131.2...v0.131.3) (2021-12-23)
+
+
+### :bug: Bug Fixes
+
+* a11y for markdown but mostly due to reminder ([#1037](https://github.com/scaleway/scaleway-ui/issues/1037)) ([42df038](https://github.com/scaleway/scaleway-ui/commit/42df0389198f883214abe62e5c7dad83cf4c6c26))
+
 ### [0.131.2](https://github.com/scaleway/scaleway-ui/compare/v0.131.1...v0.131.2) (2021-12-23)
 
 
