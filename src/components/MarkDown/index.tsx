@@ -61,11 +61,7 @@ const RootRendererComponent: FunctionComponent<{
   inline?: boolean
   parentProps?: XStyledProps
 }> = ({ inline = false, parentProps = {}, children }) => (
-  <StyledContainer
-    as={inline ? 'span' : 'div'}
-    inline={inline}
-    {...parentProps}
-  >
+  <StyledContainer inline={inline} {...parentProps}>
     {children}
   </StyledContainer>
 )
