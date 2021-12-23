@@ -6,7 +6,6 @@ import React, {
   ChangeEvent,
   ClipboardEventHandler,
   KeyboardEventHandler,
-  VoidFunctionComponent,
   useEffect,
   useRef,
   useState,
@@ -103,12 +102,7 @@ const convertTagArrayToTagStateArray = (tags: TagsProp = []) =>
       : { index: getUUID(`tag-${index}`), label: tag },
   )
 
-type TagsProp = (
-  | string
-  | { label?: string | null; index?: string | null }
-  | undefined
-  | null
-)[]
+type TagsProp = (string | { label: string; index: string })[]
 
 type TagsProps = {
   disabled?: boolean
@@ -122,7 +116,7 @@ type TagsProps = {
   variant?: Variant
 }
 
-const Tags: VoidFunctionComponent<TagsProps> = ({
+const Tags = ({
   disabled = false,
   id,
   manualInput = true,
@@ -133,7 +127,7 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
   tags,
   variant = 'base',
   ...props
-}) => {
+}: TagsProps): JSX.Element => {
   const [tagsState, setTags] = useState(convertTagArrayToTagStateArray(tags))
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
@@ -145,13 +139,9 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
   const inputRef = useRef<HTMLInputElement>(null)
 
   const dispatchOnChange = (newState: TagsProp) => {
-    function isTagDefined(tag: string | null | undefined): tag is string {
-      return tag !== null && tag !== undefined
-    }
-
-    const changes = newState
-      .map(tag => (typeof tag === 'object' ? tag?.label : tag))
-      .filter(isTagDefined)
+    const changes = newState.map(tag =>
+      typeof tag === 'object' ? tag?.label : tag,
+    )
 
     onChange?.(changes)
   }
