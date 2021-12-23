@@ -79,7 +79,11 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           textSize={textSize}
         >
           {lock ? (
-            <Icon name="lock" color={theme.colors.neutral.textWeak} />
+            <Icon
+              name="lock"
+              color={theme.colors.neutral.textWeak}
+              title="Locked"
+            />
           ) : (
             formatTextToAvatar(text)
           )}

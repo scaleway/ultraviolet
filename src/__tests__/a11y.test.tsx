@@ -10,6 +10,7 @@ import { renderWithTheme } from '../helpers/jestHelpers'
 
 const testedComponents = [
   'Alert',
+  'Avatar',
   'ActivityIndicator',
   'Badge',
   'Counter',
