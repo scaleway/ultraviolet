@@ -115,7 +115,7 @@ type TagsProps = {
   id?: string
   manualInput?: boolean
   name?: string
-  onChange?: (tags: (string | null | undefined)[]) => void
+  onChange?: (tags: string[]) => void
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   tags?: TagsProp
@@ -145,9 +145,14 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
   const inputRef = useRef<HTMLInputElement>(null)
 
   const dispatchOnChange = (newState: TagsProp) => {
-    const changes = newState.map(tag =>
-      typeof tag === 'object' ? tag?.label : tag,
-    )
+    function isTagDefined(tag: string | null | undefined): tag is string {
+      return tag !== null && tag !== undefined
+    }
+
+    const changes = newState
+      .map(tag => (typeof tag === 'object' ? tag?.label : tag))
+      .filter(isTagDefined)
+
     onChange?.(changes)
   }
 
