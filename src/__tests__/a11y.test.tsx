@@ -20,6 +20,7 @@ const testedComponents = [
   'TooltipIcon',
   'Tag',
   'Tags',
+  'ExtendedReminder',
 ]
 
 const foundFiles: string[] = []

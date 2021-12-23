@@ -58,8 +58,13 @@ const StyledTitle = styled(Typography, {
   shouldForwardProp: prop => !['color'].includes(prop.toString()),
 })<{ color: Variants }>`
   font-weight: 600;
+  font-style: unset;
   text-transform: uppercase;
   color: ${({ theme, color }) => variants[color]?.(theme).main};
+`
+
+const StyledBadge = styled(Badge)`
+  font-weight: 500;
 `
 
 const StyledButtonLink = styled(Button)`
@@ -129,17 +134,18 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
   return (
     <StyledContainer variant={variant} {...props}>
       <StyledBadgeContainer>
-        <Badge size="small" variant={badgeVariant[variant]}>
+        <StyledBadge size="small" variant={badgeVariant[variant]} as="strong">
           <Icon
             mr="4px"
             color={theme.colorsDeprecated.white}
             name={icon}
             size={16}
+            aria-hidden="true"
           />
           {badgeText}
-        </Badge>
+        </StyledBadge>
       </StyledBadgeContainer>
-      <StyledTitle color={variant} mb={1} variant="bodyC">
+      <StyledTitle color={variant} mb={1} variant="bodyC" as="em">
         {title}
       </StyledTitle>
       <Typography mb={1} variant="bodyD">
