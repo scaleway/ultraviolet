@@ -1,3 +1,10 @@
+### [0.131.4](https://github.com/scaleway/scaleway-ui/compare/v0.131.3...v0.131.4) (2021-12-23)
+
+
+### :bug: Bug Fixes
+
+* **Switch:** increase hidden input surface to allow click contact ([#1050](https://github.com/scaleway/scaleway-ui/issues/1050)) ([8606728](https://github.com/scaleway/scaleway-ui/commit/8606728e5be7b09a5ee5c66ecf54d5c9dabef739))
+
 ### [0.131.3](https://github.com/scaleway/scaleway-ui/compare/v0.131.2...v0.131.3) (2021-12-23)
 
 
