@@ -6,7 +6,6 @@ import React, {
   ChangeEvent,
   ClipboardEventHandler,
   KeyboardEventHandler,
-  VoidFunctionComponent,
   useEffect,
   useRef,
   useState,
@@ -103,26 +102,21 @@ const convertTagArrayToTagStateArray = (tags: TagsProp = []) =>
       : { index: getUUID(`tag-${index}`), label: tag },
   )
 
-type TagsProp = (
-  | string
-  | { label?: string | null; index?: string | null }
-  | undefined
-  | null
-)[]
+type TagsProp = (string | { label: string; index: string })[]
 
 type TagsProps = {
   disabled?: boolean
   id?: string
   manualInput?: boolean
   name?: string
-  onChange?: (tags: (string | null | undefined)[]) => void
+  onChange?: (tags: string[]) => void
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   tags?: TagsProp
   variant?: Variant
 }
 
-const Tags: VoidFunctionComponent<TagsProps> = ({
+const Tags = ({
   disabled = false,
   id,
   manualInput = true,
@@ -133,7 +127,7 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
   tags,
   variant = 'base',
   ...props
-}) => {
+}: TagsProps): JSX.Element => {
   const [tagsState, setTags] = useState(convertTagArrayToTagStateArray(tags))
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
@@ -148,6 +142,7 @@ const Tags: VoidFunctionComponent<TagsProps> = ({
     const changes = newState.map(tag =>
       typeof tag === 'object' ? tag?.label : tag,
     )
+
     onChange?.(changes)
   }
 
