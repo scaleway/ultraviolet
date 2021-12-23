@@ -181,6 +181,7 @@ const StyledSwitch = styled('div', {
 const StyledCheckbox = styled.input`
   position: absolute;
   opacity: 0.01;
+  width: ${({ theme }) => theme.space[6]};
 `
 
 const StyledLabel = styled.label<{ width?: number }>`
