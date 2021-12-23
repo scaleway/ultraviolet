@@ -1,3 +1,23 @@
+### [0.131.2](https://github.com/scaleway/scaleway-ui/compare/v0.131.1...v0.131.2) (2021-12-23)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency eslint to v8.5.0 ([#1047](https://github.com/scaleway/scaleway-ui/issues/1047)) ([a16f8e2](https://github.com/scaleway/scaleway-ui/commit/a16f8e261515c5a913026d4b08019e65d4abe1ba))
+* **devdeps:** update dependency react-router-dom to v6.2.1 ([#1045](https://github.com/scaleway/scaleway-ui/issues/1045)) ([40678a2](https://github.com/scaleway/scaleway-ui/commit/40678a2c52044c4537e6e44bb2a90f93f51fa2e4))
+
+
+### :bug: Bug Fixes
+
+* **tags:** onChange prop type definition ([#1049](https://github.com/scaleway/scaleway-ui/issues/1049)) ([43fe7ed](https://github.com/scaleway/scaleway-ui/commit/43fe7edefcfa97f9955f7d21b1e18ada200e805a))
+
+
+### :zap: Refactor
+
+* **ActivityIndicator:** port circular-progressbar ([#1022](https://github.com/scaleway/scaleway-ui/issues/1022)) ([e599606](https://github.com/scaleway/scaleway-ui/commit/e599606e891e03a247eb6d3ad43aeb13cb1fadcc))
+* **avatar:** add a11y ([#948](https://github.com/scaleway/scaleway-ui/issues/948)) ([8f8d034](https://github.com/scaleway/scaleway-ui/commit/8f8d034e86cbe4c22bcba4393a53045d825b35c1))
+* **extended-reminder:** add a11y ([#1040](https://github.com/scaleway/scaleway-ui/issues/1040)) ([0e04820](https://github.com/scaleway/scaleway-ui/commit/0e048202d58439f0675fd11afe3d4e6c44d2a16a))
+
 ### [0.131.1](https://github.com/scaleway/scaleway-ui/compare/v0.131.0...v0.131.1) (2021-12-22)
 
 
