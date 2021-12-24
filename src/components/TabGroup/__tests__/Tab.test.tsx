@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import Tab from '../Tab'
@@ -33,4 +34,14 @@ describe('Tab', () => {
         Test tab
       </Tab>,
     ))
+
+  test('renders correctly and trigger events', () =>
+    shouldMatchEmotionSnapshot(<Tab name="test">Test</Tab>, {
+      transform: node => {
+        const tab = node.getByRole('tab')
+        userEvent.type(tab, '{enter}')
+        userEvent.type(tab, '{space}')
+        userEvent.type(tab, 'a')
+      },
+    }))
 })

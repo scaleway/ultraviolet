@@ -117,4 +117,13 @@ describe('TabGroup', () => {
     fireEvent.keyDown(getByText('First'), { code: 'Enter' })
     expect(onChange).toHaveBeenLastCalledWith(0)
   })
+
+  test('renders correctly with invalid child', () =>
+    shouldMatchEmotionSnapshot(
+      <TabGroup>
+        <TabGroup.Tab as="div">First</TabGroup.Tab>
+        <TabGroup.Tab as="a">Second</TabGroup.Tab>
+        test
+      </TabGroup>,
+    ))
 })
