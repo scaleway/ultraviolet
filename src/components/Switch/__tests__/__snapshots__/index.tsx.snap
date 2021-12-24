@@ -23,7 +23,7 @@ exports[`Switch renders correctly 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -40,14 +40,18 @@ exports[`Switch renders correctly 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -59,7 +63,7 @@ exports[`Switch renders correctly 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -67,88 +71,105 @@ exports[`Switch renders correctly 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -158,17 +179,10 @@ exports[`Switch renders correctly 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -176,6 +190,12 @@ exports[`Switch renders correctly 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -204,7 +224,7 @@ exports[`Switch renders correctly labeled 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -221,14 +241,18 @@ exports[`Switch renders correctly labeled 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -240,7 +264,7 @@ exports[`Switch renders correctly labeled 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -248,88 +272,105 @@ exports[`Switch renders correctly labeled 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -339,17 +380,10 @@ exports[`Switch renders correctly labeled 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <span
         class="cache-0 e1x48wse3"
       />
@@ -360,6 +394,12 @@ exports[`Switch renders correctly labeled 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -388,7 +428,7 @@ exports[`Switch renders correctly when checked 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -405,14 +445,18 @@ exports[`Switch renders correctly when checked 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -424,7 +468,7 @@ exports[`Switch renders correctly when checked 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -432,88 +476,105 @@ exports[`Switch renders correctly when checked 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -523,18 +584,10 @@ exports[`Switch renders correctly when checked 1`] = `
   >
     <div
       aria-checked="true"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        checked=""
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -542,6 +595,13 @@ exports[`Switch renders correctly when checked 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        checked=""
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -570,7 +630,7 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -587,14 +647,18 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -606,7 +670,7 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -614,88 +678,105 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -705,18 +786,10 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   >
     <div
       aria-checked="true"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        checked=""
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <span
         class="cache-0 e1x48wse3"
       />
@@ -727,6 +800,13 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        checked=""
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -755,7 +835,7 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -772,14 +852,18 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -791,7 +875,7 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -799,88 +883,105 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -890,18 +991,10 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   >
     <div
       aria-checked="true"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        checked=""
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -909,6 +1002,13 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        checked=""
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -937,7 +1037,7 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -954,14 +1054,18 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -973,7 +1077,7 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -981,88 +1085,105 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1072,18 +1193,10 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   >
     <div
       aria-checked="true"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        checked=""
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -1091,6 +1204,13 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        checked=""
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -1119,7 +1239,7 @@ exports[`Switch renders correctly when disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1136,14 +1256,18 @@ exports[`Switch renders correctly when disabled 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -1155,7 +1279,7 @@ exports[`Switch renders correctly when disabled 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -1163,88 +1287,105 @@ exports[`Switch renders correctly when disabled 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1254,18 +1395,10 @@ exports[`Switch renders correctly when disabled 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        disabled=""
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -1273,6 +1406,13 @@ exports[`Switch renders correctly when disabled 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        disabled=""
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -1301,7 +1441,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1318,14 +1458,18 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -1337,7 +1481,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -1345,88 +1489,105 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1436,17 +1597,10 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <span
         class="cache-0 e1x48wse3"
       >
@@ -1459,6 +1613,12 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -1487,7 +1647,7 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1504,14 +1664,18 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -1523,7 +1687,7 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -1531,88 +1695,105 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1627,17 +1808,10 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
     </span>
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -1645,6 +1819,12 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -1673,7 +1853,7 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1690,14 +1870,18 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -1709,7 +1893,7 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -1717,88 +1901,105 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1808,17 +2009,10 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -1826,6 +2020,12 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
     Unchecked
   </label>
@@ -1853,7 +2053,7 @@ exports[`Switch renders correctly with custom width 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1870,14 +2070,18 @@ exports[`Switch renders correctly with custom width 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -1889,7 +2093,7 @@ exports[`Switch renders correctly with custom width 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -1897,88 +2101,105 @@ exports[`Switch renders correctly with custom width 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -1989,17 +2210,10 @@ exports[`Switch renders correctly with custom width 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -2007,6 +2221,12 @@ exports[`Switch renders correctly with custom width 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -2035,7 +2255,7 @@ exports[`Switch renders correctly with label inside 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2052,14 +2272,18 @@ exports[`Switch renders correctly with label inside 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -2071,7 +2295,7 @@ exports[`Switch renders correctly with label inside 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -2079,88 +2303,105 @@ exports[`Switch renders correctly with label inside 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -2170,17 +2411,10 @@ exports[`Switch renders correctly with label inside 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <span
         class="cache-0 e1x48wse3"
       />
@@ -2191,6 +2425,12 @@ exports[`Switch renders correctly with label inside 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -2219,7 +2459,7 @@ exports[`Switch renders correctly with labels on left 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2236,14 +2476,18 @@ exports[`Switch renders correctly with labels on left 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -2255,7 +2499,7 @@ exports[`Switch renders correctly with labels on left 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -2263,88 +2507,105 @@ exports[`Switch renders correctly with labels on left 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -2354,17 +2615,10 @@ exports[`Switch renders correctly with labels on left 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -2372,6 +2626,12 @@ exports[`Switch renders correctly with labels on left 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -2400,7 +2660,7 @@ exports[`Switch renders correctly with non default size 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2417,14 +2677,18 @@ exports[`Switch renders correctly with non default size 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -2436,7 +2700,7 @@ exports[`Switch renders correctly with non default size 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -2444,88 +2708,105 @@ exports[`Switch renders correctly with non default size 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -2535,17 +2816,10 @@ exports[`Switch renders correctly with non default size 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="small"
       data-variant="primary"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -2553,6 +2827,12 @@ exports[`Switch renders correctly with non default size 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
@@ -2581,7 +2861,7 @@ exports[`Switch renders correctly with non default variant 1`] = `
   pointer-events: none;
 }
 
-.cache-1hpe55g {
+.cache-k8jhlz {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2598,14 +2878,18 @@ exports[`Switch renders correctly with non default variant 1`] = `
   position: relative;
   -webkit-transition: all 250ms;
   transition: all 250ms;
-  cursor: pointer;
   padding: 4px;
   height: 24px;
   background-color: #d4dae7;
   min-width: 48px;
 }
 
-.cache-1hpe55g .e1x48wse4 {
+.cache-k8jhlz:focus-within,
+.cache-k8jhlz:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #d4dae7;
+}
+
+.cache-k8jhlz .e1x48wse4 {
   position: absolute;
   margin-left: 4px;
   margin-right: 4px;
@@ -2617,7 +2901,7 @@ exports[`Switch renders correctly with non default variant 1`] = `
   bottom: 0;
 }
 
-.cache-1hpe55g .e1x48wse5 {
+.cache-k8jhlz .e1x48wse5 {
   display: block;
   border-radius: 50%;
   width: 24px;
@@ -2625,88 +2909,105 @@ exports[`Switch renders correctly with non default variant 1`] = `
   background-color: #fff;
 }
 
-.cache-1hpe55g[aria-checked='true']>.e1x48wse4 {
+.cache-k8jhlz[aria-checked='true']>.e1x48wse4 {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.cache-1hpe55g:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: 32px;
   margin-right: 8px;
 }
 
-.cache-1hpe55g[aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[aria-checked='true'] .e1x48wse3 {
   margin-right: 32px;
   margin-left: 8px;
 }
 
-.cache-1hpe55g[data-size='small'] {
+.cache-k8jhlz[data-size='small'] {
   padding: 4px;
   height: 16px;
   min-width: 32px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse4 {
+.cache-k8jhlz[data-size='small'] .e1x48wse4 {
   right: 16px;
 }
 
-.cache-1hpe55g[data-size='small'] .e1x48wse5 {
+.cache-k8jhlz[data-size='small'] .e1x48wse5 {
   width: 16px;
   height: 16px;
 }
 
-.cache-1hpe55g[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
+.cache-k8jhlz[data-size='small']:not([aria-checked='true'])>.e1x48wse3 {
   margin-left: calc(
           16px + 4px
         );
   margin-right: 4px;
 }
 
-.cache-1hpe55g[data-size='small'][aria-checked='true'] .e1x48wse3 {
+.cache-k8jhlz[data-size='small'][aria-checked='true'] .e1x48wse3 {
   margin-right: calc(
           16px + 4px
         );
   margin-left: 4px;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   background-color: #45d6b5;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true'] {
   color: #fff;
   background-color: #4f0599;
 }
 
-.cache-1hpe55g[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']>.e1x48wse3 {
   color: #fff;
 }
 
-.cache-1hpe55g[data-variant='success'] {
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='primary'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #4f0599;
+}
+
+.cache-k8jhlz[data-variant='success'] {
   color: #4a4f62;
   background-color: #d4dae7;
   font-weight: bold;
 }
 
-.cache-1hpe55g[data-variant='success'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'] .e1x48wse5 {
   background-color: #4a4f62;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] {
   color: #45d6b5;
   background-color: #cdfcf1;
 }
 
-.cache-1hpe55g[data-variant='success'][aria-checked='true'] .e1x48wse5 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true'] .e1x48wse5 {
   background-color: #45d6b5;
 }
 
-.cache-1so18e9 {
+.cache-k8jhlz[data-variant='success'][aria-checked='true']>.e1x48wse3 {
+  color: #fff;
+}
+
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus-within,
+.cache-k8jhlz[data-variant='success'][aria-checked='true']:focus {
+  box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
+}
+
+.cache-16acut5 {
   position: absolute;
   opacity: 0.01;
-  width: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 <label
@@ -2716,17 +3017,10 @@ exports[`Switch renders correctly with non default variant 1`] = `
   >
     <div
       aria-checked="false"
-      class="cache-1hpe55g e1x48wse2"
+      class="cache-k8jhlz e1x48wse2"
       data-size="medium"
       data-variant="success"
-      role="checkbox"
     >
-      <input
-        class="cache-1so18e9 e1x48wse1"
-        id="test"
-        name="test"
-        type="checkbox"
-      />
       <div
         class="cache-0 e1x48wse4"
       >
@@ -2734,6 +3028,12 @@ exports[`Switch renders correctly with non default variant 1`] = `
           class="cache-0 e1x48wse5"
         />
       </div>
+      <input
+        class="cache-16acut5 e1x48wse1"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
     </div>
   </label>
 </DocumentFragment>
