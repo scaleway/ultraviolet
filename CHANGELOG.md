@@ -1,3 +1,10 @@
+### [0.131.5](https://github.com/scaleway/scaleway-ui/compare/v0.131.4...v0.131.5) (2021-12-24)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.3.3 ([#1051](https://github.com/scaleway/scaleway-ui/issues/1051)) ([30642ab](https://github.com/scaleway/scaleway-ui/commit/30642ab4f50082214eb14b48cabe3af55ac4b921))
+
 ### [0.131.4](https://github.com/scaleway/scaleway-ui/compare/v0.131.3...v0.131.4) (2021-12-23)
 
 
