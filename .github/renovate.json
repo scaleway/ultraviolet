@@ -1,7 +1,10 @@
 {
   "enabledManagers": ["dockerfile", "npm"],
   "extends": ["config:base", ":combinePatchMinorReleases"],
-  "reviewers": ["team:scaleway/console"],
+  "assignees": ["team:console"],
+  "assigneesSampleSize": 1,
+  "reviewers": ["team:console"],
+  "reviewersSampleSize": 2,
   "prHourlyLimit": 5,
   "prConcurrentLimit": 10,
   "postUpdateOptions": ["yarnDedupeHighest"],
