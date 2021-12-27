@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useEffect, useState } from 'react'
 import RichSelect from '..'
-import { ActivityIndicator, Badge, Box, Button, FlexBox } from '../..'
+import { ActivityIndicator, Badge, Button, FlexBox } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -9,9 +9,9 @@ export default {
   component: RichSelect,
   decorators: [
     Chidren => (
-      <Box mb={150}>
+      <div style={{ marginBottom: 150 }}>
         <Chidren />
-      </Box>
+      </div>
     ),
   ],
   parameters: {
@@ -179,7 +179,7 @@ ${Object.keys(animations)
 }
 Animated.decorators = [
   () => (
-    <Box mx={8} my={2}>
+    <div style={{ margin: '16px 64px' }}>
       <ControlValue value={{ label: '', value: '' }}>
         {({ value, onChange }) => {
           const [options] = useState(
@@ -210,7 +210,7 @@ Animated.decorators = [
           )
         }}
       </ControlValue>
-    </Box>
+    </div>
   ),
 ]
 
@@ -353,9 +353,9 @@ export const Description: Story = () => (
 )
 Description.decorators = [
   Chidren => (
-    <Box mb={300}>
+    <div style={{ marginBottom: 300 }}>
       <Chidren />
-    </Box>
+    </div>
   ),
 ]
 Description.parameters = {

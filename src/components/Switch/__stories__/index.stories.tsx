@@ -1,7 +1,13 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent, ComponentProps, useEffect, useState } from 'react'
+import React, {
+  ChangeEvent,
+  ComponentProps,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react'
 import Switch from '..'
-import { Box, Icon } from '../..'
+import { Icon } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -122,6 +128,17 @@ const Template: Story<ComponentProps<typeof Switch>> = ({
 
 export const Default = Template.bind({})
 
+const LabelContainer = ({ children }: { children: ReactNode }) => (
+  <div
+    style={{
+      alignItems: 'center',
+      display: 'flex',
+    }}
+  >
+    {children}
+  </div>
+)
+
 export const CustomLabelRender: Story = () => (
   <>
     <div style={{ marginBottom: '16px' }}>
@@ -148,26 +165,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-left"
             labeled="left"
             onLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
+              <LabelContainer>
                 <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             offLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
+              <LabelContainer>
                 <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}
@@ -185,16 +192,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-inside-custom"
             labeled
             onLabel={
-              <Box display="flex" alignItems="center">
+              <LabelContainer>
                 <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             offLabel={
-              <Box display="flex" alignItems="center">
+              <LabelContainer>
                 <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}
@@ -213,26 +220,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-disabled"
             labeled="left"
             onLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
+              <LabelContainer>
                 <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             offLabel={
-              <Box
-                width={100}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-              >
+              <LabelContainer>
                 <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </Box>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}

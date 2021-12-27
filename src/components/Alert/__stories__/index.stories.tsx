@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Alert, { alertTypes, alertVariants } from '..'
-import { Box } from '../..'
 
 export default {
   component: Alert,
@@ -25,11 +24,11 @@ Types.decorators = [
   () => (
     <>
       {alertTypes.map(type => (
-        <Box key={type} my={1}>
+        <div style={{ margin: '8px 0' }} key={type}>
           <Alert type={type}>
             This is a notification bar with the <b>{type}</b> variant.
           </Alert>
-        </Box>
+        </div>
       ))}
     </>
   ),
@@ -46,11 +45,11 @@ Variants.decorators = [
   () => (
     <>
       {alertVariants.map(variant => (
-        <Box key={variant} my={1}>
+        <div style={{ margin: '8px 0' }} key={variant}>
           <Alert type="info" variant={variant}>
             This is a notification bar with the <b>{variant}</b> variant.
           </Alert>
-        </Box>
+        </div>
       ))}
     </>
   ),

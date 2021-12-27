@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 import ToastContainer, { toast } from '..'
-import { Boxer, Button } from '../..'
+import { Button } from '../..'
 
 export default {
   component: ToastContainer,
@@ -19,15 +19,14 @@ export default {
 const Template: Story = args => (
   <>
     <ToastContainer {...args} />
-    <Boxer>
+    <div style={{ display: 'flex', gap: 8 }}>
       <Button
         variant="success"
-        mb={1}
         onClick={() => toast.success('This is success')}
       >
         Success
       </Button>
-    </Boxer>
+    </div>
   </>
 )
 
@@ -36,10 +35,9 @@ export const Default = Template.bind({})
 export const Variants: Story = () => (
   <>
     <ToastContainer />
-    <Boxer>
+    <div style={{ display: 'flex', gap: 8 }}>
       <Button
         variant="success"
-        mb={1}
         onClick={() => toast.success('This is success')}
       >
         Success
@@ -47,20 +45,12 @@ export const Variants: Story = () => (
       <Button variant="info" mb={1} onClick={() => toast.info('This is info')}>
         Info
       </Button>
-      <Button
-        variant="warning"
-        mb={1}
-        onClick={() => toast.warn('This is warning')}
-      >
+      <Button variant="warning" onClick={() => toast.warn('This is warning')}>
         Warning
       </Button>
-      <Button
-        variant="warning"
-        mb={1}
-        onClick={() => toast.error('This is error')}
-      >
+      <Button variant="warning" onClick={() => toast.error('This is error')}>
         Error
       </Button>
-    </Boxer>
+    </div>
   </>
 )

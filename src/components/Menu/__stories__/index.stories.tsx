@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Menu from '..'
-import { Box, Icon, Modal as SWUIModal, Touchable } from '../..'
+import { Icon, Modal as SWUIModal, Touchable } from '../..'
 import Item from '../Item'
 
 export default {
@@ -184,8 +184,12 @@ Modal.decorators = [
           animation="scaleUp"
           disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}
         >
-          <Box p={4}>Content should be present in center of the modal</Box>
-          <Box p={4}>Content should be present in center of the modal</Box>
+          <div style={{ padding: 32 }}>
+            Content should be present in center of the modal
+          </div>
+          <div style={{ padding: 32 }}>
+            Content should be present in center of the modal
+          </div>
         </SWUIModal>
       </Menu>
     </div>

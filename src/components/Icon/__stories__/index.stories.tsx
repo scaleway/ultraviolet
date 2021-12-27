@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Icon, { icons } from '..'
-import { Box, Boxer } from '../..'
 
 export default {
   component: Icon,
@@ -29,9 +28,9 @@ Name.decorators = [
   () => (
     <>
       {icons.map(name => (
-        <Box my={1} key={name} style={{ fontSize: '1.3em' }}>
+        <div key={name} style={{ fontSize: '1.3em', margin: '8px 0' }}>
           <Icon name={name} /> {name}
-        </Box>
+        </div>
       ))}
     </>
   ),
@@ -45,11 +44,11 @@ Size.parameters = {
 }
 Size.decorators = [
   () => (
-    <Boxer mr={2} display="inline-block">
+    <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
       <Icon name="eye" size={40} />
       <Icon name="eye" size={50} />
       <Icon name="eye" size={60} />
-    </Boxer>
+    </div>
   ),
 ]
 
@@ -62,11 +61,11 @@ Color.parameters = {
 }
 Color.decorators = [
   () => (
-    <Boxer mr={2} display="inline-block">
+    <div style={{ display: 'flex', gap: 16 }}>
       <Icon name="eye" color="primary" />
       <Icon name="eye" color="success" />
       <Icon name="eye" color="warning" />
-    </Boxer>
+    </div>
   ),
 ]
 
@@ -79,10 +78,11 @@ UnknownOrUndefined.parameters = {
 }
 UnknownOrUndefined.decorators = [
   () => (
-    <Boxer mr={2} display="inline-block">
+    <div style={{ display: 'flex', gap: 16 }}>
       <Icon name={undefined} color="red" />
+      {/* @ts-expect-error we test an unknown icon name */}
       <Icon name="unknown" color="orange" />
-    </Boxer>
+    </div>
   ),
 ]
 
@@ -95,12 +95,13 @@ VerticalAlign.parameters = {
 }
 VerticalAlign.decorators = [
   () => (
-    <Boxer display="flex">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {['top', 'middle', 'bottom'].map(align => (
-        <Box m={1}>
-          <Icon name="eye" verticalAlign={align} /> {align}
-        </Box>
+        <div style={{ alignItems: 'center', display: 'flex' }}>
+          <Icon name="eye" verticalAlign={align} />
+          &nbsp;{align}
+        </div>
       ))}
-    </Boxer>
+    </div>
   ),
 ]
