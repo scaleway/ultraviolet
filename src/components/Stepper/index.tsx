@@ -8,6 +8,7 @@ import React, {
   InputHTMLAttributes,
   KeyboardEventHandler,
   MutableRefObject,
+  ReactNode,
   VoidFunctionComponent,
   useEffect,
   useRef,
@@ -161,7 +162,7 @@ type StepperProps = {
   onMinCrossed?(): void
   size?: ContainerSizesType
   step?: number
-  text?: string
+  text?: string | ReactNode
   value?: string | number
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
@@ -327,7 +328,7 @@ Stepper.propTypes = {
   /**
    * Text displayed into component at the right of number value.
    */
-  text: PropTypes.node,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
