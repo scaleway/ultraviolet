@@ -3378,7 +3378,7 @@ __metadata:
     "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.3
     "@size-limit/file": 7.0.5
-    "@size-limit/preset-big-lib": 7.0.4
+    "@size-limit/preset-big-lib": 7.0.5
     "@storybook/addon-a11y": 6.4.9
     "@storybook/addon-actions": 6.4.9
     "@storybook/addon-docs": 6.4.9
@@ -3631,17 +3631,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:7.0.4":
-  version: 7.0.4
-  resolution: "@size-limit/file@npm:7.0.4"
-  dependencies:
-    semver: 7.3.5
-  peerDependencies:
-    size-limit: 7.0.4
-  checksum: 6fbaebcade289939123843d7f9acdd274b758d6bcc30948e71f7c842d1d8fb2d9c47d85603a38fbfb95d6def11dfbb93460e0859f1319f0ce53bff67248b6831
-  languageName: node
-  linkType: hard
-
 "@size-limit/file@npm:7.0.5":
   version: 7.0.5
   resolution: "@size-limit/file@npm:7.0.5"
@@ -3653,41 +3642,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/preset-big-lib@npm:7.0.4":
-  version: 7.0.4
-  resolution: "@size-limit/preset-big-lib@npm:7.0.4"
+"@size-limit/preset-big-lib@npm:7.0.5":
+  version: 7.0.5
+  resolution: "@size-limit/preset-big-lib@npm:7.0.5"
   dependencies:
-    "@size-limit/file": 7.0.4
-    "@size-limit/time": 7.0.4
-    "@size-limit/webpack": 7.0.4
+    "@size-limit/file": 7.0.5
+    "@size-limit/time": 7.0.5
+    "@size-limit/webpack": 7.0.5
   peerDependencies:
-    size-limit: 7.0.4
-  checksum: 0007ce0116eca28feacf00bf0a70598c99640177800a8975b773dcdb6c702d19ab439ebe9431b77c2e67a72d0b7424e410cd1842329f2a243d24f09e0887ab04
+    size-limit: 7.0.5
+  checksum: 47d31b6413e7528919b31851733d21e42e83cfa0271d7ca1401f99ab389a4bdafa9538f7c9cd8d3e54ccf1ef334520174e163c74d8d8cb3a103ed1005d382585
   languageName: node
   linkType: hard
 
-"@size-limit/time@npm:7.0.4":
-  version: 7.0.4
-  resolution: "@size-limit/time@npm:7.0.4"
+"@size-limit/time@npm:7.0.5":
+  version: 7.0.5
+  resolution: "@size-limit/time@npm:7.0.5"
   dependencies:
-    estimo: ^2.3.0
+    estimo: ^2.3.1
     react: ^17.0.2
   peerDependencies:
-    size-limit: 7.0.4
-  checksum: 13659e21b60e2e4110d4c14a94c0e358c7c0bafe2d8e440a2d4a7fcbe0620131dc2142aaf96326ff19c9ee434c4d07ef7cdfd5fbc6260b8656eea05cde79fa19
+    size-limit: 7.0.5
+  checksum: f5520c15d9bfc6f4adb86ef719b17745f52203aff290cfeaf6de348ca648e7e88369a632848bd5868884438684640b62eb56bfa5238c7245c524065a10765ca1
   languageName: node
   linkType: hard
 
-"@size-limit/webpack@npm:7.0.4":
-  version: 7.0.4
-  resolution: "@size-limit/webpack@npm:7.0.4"
+"@size-limit/webpack@npm:7.0.5":
+  version: 7.0.5
+  resolution: "@size-limit/webpack@npm:7.0.5"
   dependencies:
     escape-string-regexp: ^4.0.0
     nanoid: ^3.1.30
-    webpack: ^5.64.4
+    webpack: ^5.65.0
   peerDependencies:
-    size-limit: 7.0.4
-  checksum: 997ad50da5b0fdc623e84608d4ff581164a783a3bf732648d6c4bcfde9b78b7f2cb64d4fd4525c1198fa99998d58141dee7c1fb8b7e1d351411a7ab962669809
+    size-limit: 7.0.5
+  checksum: 82f5d3ff16a14776bda56a183a4b34daadba49b1b98b90a6ecf9f7c0eb52b83f4f7a415d72c0fb8e3bab41942b02ed1c0dd04f09648eefe3edec9ec0298d3574
   languageName: node
   linkType: hard
 
@@ -9668,10 +9657,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.901419":
-  version: 0.0.901419
-  resolution: "devtools-protocol@npm:0.0.901419"
-  checksum: de68331ddfb35b828ad743d939d9237e122f76d4a6cbf1e64f6c6d8e9c2c5cc65a5f1994db0fead90192cca1aa9dbed2ea822a7da7b58104cd041a90e215b9a3
+"devtools-protocol@npm:0.0.937139":
+  version: 0.0.937139
+  resolution: "devtools-protocol@npm:0.0.937139"
+  checksum: 4ac9d9e5fad229fca6786d2afe95bac4ee87a8e188092ce088a0fba222b20397ec61f8eff8d1703b96e3dab27927cb91a5c6f84d151342e0603c09d4378ab62d
   languageName: node
   linkType: hard
 
@@ -10584,17 +10573,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"estimo@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "estimo@npm:2.3.0"
+"estimo@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "estimo@npm:2.3.1"
   dependencies:
     "@sitespeed.io/tracium": ^0.3.3
     commander: ^8.3.0
+    find-chrome-bin: ^0.1.0
     nanoid: ^3.1.30
-    puppeteer-core: ^11.0.0
+    puppeteer-core: ^12.0.1
   bin:
     estimo: scripts/cli.js
-  checksum: 3a9998a143fea023ce060b5a3d20d1be324e1105b58d20fdf3a203ec1d4154e8e475242b2d938b32615c2ec2b7d63f880432d0735d3414386b119694cac76491
+  checksum: 165cc994b417764b78c7a3885478361e94de11b586c12a3669cc670080a197e0db4670deda6a68f01b3cf36d6f38bc57f84c34fdc1960413a3e29360bffd5ccc
   languageName: node
   linkType: hard
 
@@ -11130,6 +11120,13 @@ __metadata:
     make-dir: ^3.0.2
     pkg-dir: ^4.1.0
   checksum: 1e61c2e64f5c0b1c535bd85939ae73b0e5773142713273818cc0b393ee3555fb0fd44e1a5b161b8b6c3e03e98c2fcc9c227d784850a13a90a8ab576869576817
+  languageName: node
+  linkType: hard
+
+"find-chrome-bin@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "find-chrome-bin@npm:0.1.0"
+  checksum: f7666ccef61acc2cc18b1c46f98b6e732a1900ba380532b03b2a1c005064a0f18dd11ff77cc052070fee4c61187d428ddf788fb5b9df4b59d7b3ad8971ab6717
   languageName: node
   linkType: hard
 
@@ -17998,12 +17995,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:^11.0.0":
-  version: 11.0.0
-  resolution: "puppeteer-core@npm:11.0.0"
+"puppeteer-core@npm:^12.0.1":
+  version: 12.0.1
+  resolution: "puppeteer-core@npm:12.0.1"
   dependencies:
     debug: 4.3.2
-    devtools-protocol: 0.0.901419
+    devtools-protocol: 0.0.937139
     extract-zip: 2.0.1
     https-proxy-agent: 5.0.0
     node-fetch: 2.6.5
@@ -18014,7 +18011,7 @@ fsevents@^1.2.7:
     tar-fs: 2.1.1
     unbzip2-stream: 1.4.3
     ws: 8.2.3
-  checksum: 7f336902d7df8aef08488d2df8101ec1ff76bc1e22ec51eb3f6d6541e367b573365afd22aba2753f46ab790563e1d0dfad93efb2c3804c7cfa3f7b042e050028
+  checksum: b495a7b73bf36e8724ab7f811cbc2618634541011ab9a29a1f8bcb6fdbd8afb943a817e8f69b9b3c9f8cd7c709dcab92c1a26a7a9ae73b47bd563299a9afa2aa
   languageName: node
   linkType: hard
 
@@ -22221,7 +22218,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.65.0, webpack@npm:^5.64.4, webpack@npm:^5.9.0":
+"webpack@npm:5.65.0, webpack@npm:^5.65.0, webpack@npm:^5.9.0":
   version: 5.65.0
   resolution: "webpack@npm:5.65.0"
   dependencies:
