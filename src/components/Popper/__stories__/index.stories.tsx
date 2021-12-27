@@ -4,7 +4,6 @@ import Popper, { popperVariants } from '..'
 import { FlexBox } from '../..'
 import { getUUID } from '../../../utils'
 import Button from '../../Button'
-import Icon from '../../Icon'
 
 export default {
   component: Popper,
@@ -22,14 +21,12 @@ const disclosure: ComponentProps<typeof Popper>['disclosure'] = ({
   placement,
   visible,
 }) => (
-  <Button>
+  <Button
+    icon={visible ? 'chevron-up' : 'chevron-down'}
+    iconSize={11}
+    iconPosition="right"
+  >
     test {placement}:
-    <Icon
-      ml={2}
-      name={visible ? 'chevron-up' : 'chevron-down'}
-      color="white"
-      size={11}
-    />
   </Button>
 )
 
@@ -95,14 +92,14 @@ Placement.parameters = {
 }
 Placement.decorators = [
   () => (
-    <div>
-      <FlexBox direction="column">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <Popper
           placement="left-start"
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -112,7 +109,7 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -122,19 +119,19 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
-      </FlexBox>
-      <div>
+      </div>
+      <div style={{ display: 'flex', gap: 8 }}>
         <Popper
           placement="top-start"
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -144,7 +141,7 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -154,19 +151,19 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
       </div>
-      <FlexBox direction="column">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <Popper
           placement="right-start"
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -176,7 +173,7 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -186,19 +183,19 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
         </Popper>
-      </FlexBox>
-      <div>
+      </div>
+      <div style={{ display: 'flex', gap: 8 }}>
         <Popper
           placement="bottom-start"
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -208,7 +205,7 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}
@@ -218,7 +215,7 @@ Placement.decorators = [
           variant="black"
           aria-label="Custom popover with button"
           disclosure={disclosureProps => (
-            <Button m={1}>{disclosureProps?.placement}</Button>
+            <Button>{disclosureProps?.placement}</Button>
           )}
         >
           {({ placement }) => <div style={{ padding: 8 }}> {placement}</div>}

@@ -22,15 +22,13 @@ Types.parameters = {
 }
 Types.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {alertTypes.map(type => (
-        <div style={{ margin: '8px 0' }} key={type}>
-          <Alert type={type}>
-            This is a notification bar with the <b>{type}</b> variant.
-          </Alert>
-        </div>
+        <Alert key={type} type={type}>
+          This is a notification bar with the <b>{type}</b> variant.
+        </Alert>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -43,15 +41,13 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {alertVariants.map(variant => (
-        <div style={{ margin: '8px 0' }} key={variant}>
-          <Alert type="info" variant={variant}>
-            This is a notification bar with the <b>{variant}</b> variant.
-          </Alert>
-        </div>
+        <Alert type="info" variant={variant}>
+          This is a notification bar with the <b>{variant}</b> variant.
+        </Alert>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -93,13 +89,13 @@ IconSize.parameters = {
 }
 IconSize.decorators = [
   () => (
-    <>
-      <Alert iconSize={24} mb={2}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <Alert iconSize={24}>
         This is a notification bar with a custom icon size.
       </Alert>
       <Alert iconSize={40} type="info">
         This is a notification bar with a custom icon size.
       </Alert>
-    </>
+    </div>
   ),
 ]

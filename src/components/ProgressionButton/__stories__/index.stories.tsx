@@ -36,13 +36,12 @@ You can chose the color of the Progression using the \`color\` props`,
 }
 Custom.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       <ProgressionButton
         creation={new Date(new Date().setSeconds(new Date().getSeconds() + 10))}
         duration={20}
         color="beta"
         height={40}
-        mb={2}
       >
         I&apos;m going to start in 10 seconds and take 20 seconds to complete
       </ProgressionButton>
@@ -51,7 +50,6 @@ Custom.decorators = [
         duration={90}
         color="primary"
         height={40}
-        mb={2}
       >
         I was supposed to start one minute ago and take 90 seconds (meaning I
         only have 30s left and start at 66%)
@@ -65,6 +63,6 @@ Custom.decorators = [
         I was supposed to start 90 seconds ago and take 90 seconds (meaning
         I&apos;m already done)
       </ProgressionButton>
-    </>
+    </div>
   ),
 ]

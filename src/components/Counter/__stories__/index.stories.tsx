@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useState } from 'react'
 import Counter from '..'
-import { Button, FlexBox, Icon } from '../../index'
+import { Button, Icon } from '../../index'
 
 export default {
   component: Counter,
@@ -43,11 +43,11 @@ OnEnd.decorators = [
     const [reset, setReset] = useState(true)
 
     return (
-      <FlexBox alignItems="center">
+      <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
         {reset && (
           <>
             <Counter end={1000} onEnd={() => setIsShown(true)} />
-            {isShown && <Icon name="check" ml={1} />}
+            {isShown && <Icon name="check" />}
             <Button
               size="xxsmall"
               onClick={() => {
@@ -57,13 +57,12 @@ OnEnd.decorators = [
                   setReset(true)
                 })
               }}
-              ml={2}
             >
               Rerender
             </Button>
           </>
         )}
-      </FlexBox>
+      </div>
     )
   },
 ]

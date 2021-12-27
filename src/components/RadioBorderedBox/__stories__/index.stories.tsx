@@ -24,7 +24,6 @@ const Template: Story<ComponentProps<typeof RadioBorderedBox>> = args => (
     label="Choice 1"
     labelDescription="(choice details)"
     badgeText="Badge"
-    mb={1}
     {...args}
   >
     Description content
@@ -43,7 +42,7 @@ Controlled.decorators = [
   () => (
     <ControlValue value="basic-1">
       {({ value, onChange }) => (
-        <>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <RadioBorderedBox
             name="basic-1"
             checked={value === 'basic-1' ? true : undefined}
@@ -52,7 +51,6 @@ Controlled.decorators = [
             label="Choice 1"
             labelDescription="(choice details)"
             badgeText="Badge"
-            mb={1}
           >
             Description content
           </RadioBorderedBox>
@@ -65,7 +63,7 @@ Controlled.decorators = [
           >
             Description content choice 2
           </RadioBorderedBox>
-        </>
+        </div>
       )}
     </ControlValue>
   ),
@@ -129,7 +127,7 @@ Badge.decorators = [
   () => (
     <ControlValue value="badge-1">
       {({ value, onChange }) => (
-        <>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <RadioBorderedBox
             name="badge-1"
             checked={value === 'badge-1'}
@@ -140,7 +138,6 @@ Badge.decorators = [
             badgeText="Badge"
             badgeVariant="warning"
             badgeSize="medium"
-            mb={1}
           >
             All Badge props
           </RadioBorderedBox>
@@ -153,7 +150,6 @@ Badge.decorators = [
             labelDescription="(details)"
             badgeText="Badge"
             badgeSize="medium"
-            mb={1}
           >
             Badge Text and Size
           </RadioBorderedBox>
@@ -166,11 +162,10 @@ Badge.decorators = [
             labelDescription="(details)"
             badgeText="Badge"
             badgeVariant="success"
-            mb={1}
           >
             Badge Text and Variant
           </RadioBorderedBox>
-        </>
+        </div>
       )}
     </ControlValue>
   ),

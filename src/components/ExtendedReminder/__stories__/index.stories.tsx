@@ -30,7 +30,7 @@ Variants.parameters = {
 
 Variants.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
       {(
         Object.keys(variants) as ComponentProps<
           typeof ExtendedReminder
@@ -41,12 +41,11 @@ Variants.decorators = [
           variant={variant}
           icon="alert"
           badgeText={`${variant as string} variant`}
-          mb={4}
           title="Reminder title"
           text="Reminder text"
         />
       ))}
-    </>
+    </div>
   ),
 ]
 

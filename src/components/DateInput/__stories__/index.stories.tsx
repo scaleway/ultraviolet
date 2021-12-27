@@ -109,7 +109,7 @@ I18n.decorators = [
     }
 
     return (
-      <>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         <RichSelect
           name="locale-switcher"
           isSearchable={false}
@@ -119,7 +119,6 @@ I18n.decorators = [
           }}
           onChange={({ value }: { value: string }) => switchLocale(value)}
           noTopLabel
-          mb={3}
         >
           {locales.map(locale => (
             <RichSelect.Option value={locale} key={locale}>
@@ -128,7 +127,7 @@ I18n.decorators = [
           ))}
         </RichSelect>
         <DateInput label={currentLocale} />
-      </>
+      </div>
     )
   },
 ]

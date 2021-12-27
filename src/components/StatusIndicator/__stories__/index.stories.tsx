@@ -25,13 +25,13 @@ Default.args = {
 }
 
 export const Status: Story = () => (
-  <>
-    <StatusIndicator status="available" mr={1} />
-    <StatusIndicator status="unavailable" mr={1} />
-    <StatusIndicator status="available" mr={1} />
-    <StatusIndicator status="starting" mr={1} />
-    <StatusIndicator status="stopped_in_place" mr={1} />
-  </>
+  <div style={{ display: 'flex', gap: 8 }}>
+    <StatusIndicator status="available" />
+    <StatusIndicator status="unavailable" />
+    <StatusIndicator status="available" />
+    <StatusIndicator status="starting" />
+    <StatusIndicator status="stopped_in_place" />
+  </div>
 )
 
 Status.parameters = {

@@ -19,11 +19,11 @@ Color.parameters = {
 }
 Color.decorators = [
   () => (
-    <>
-      <Dot color="primary" mr={1} />
-      <Dot color="success" mr={1} />
-      <Dot color="warning" mr={1} />
-      <Dot color="info" mr={1} />
-    </>
+    <div style={{ display: 'flex', gap: 8 }}>
+      <Dot color="primary" />
+      <Dot color="success" />
+      <Dot color="warning" />
+      <Dot color="info" />
+    </div>
   ),
 ]

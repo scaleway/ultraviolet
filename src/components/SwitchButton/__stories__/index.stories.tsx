@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ChangeEvent, ComponentProps } from 'react'
 import SwitchButton from '..'
-import { Col, Grid, Row } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
@@ -71,56 +70,44 @@ const DefaultShowcase: Story<{
 }> = ({ controlValue = 'a', disabled = false, variant }) => (
   <ControlValue value={controlValue}>
     {({ value, onChange }) => (
-      <Grid m={2}>
-        <Row>
-          <Col pr={0}>
-            <Row>
-              <Col xsmall={4} pr={1}>
-                <SwitchButton
-                  name="switch"
-                  value="a"
-                  disabled={disabled}
-                  variant={variant}
-                  checked={value === 'a'}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    onChange(e.currentTarget.value)
-                  }
-                >
-                  This is A
-                </SwitchButton>
-              </Col>
-              <Col xsmall={4} pl={1}>
-                <SwitchButton
-                  name="switch"
-                  value="b"
-                  disabled={disabled}
-                  variant={variant}
-                  checked={value === 'b'}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    onChange(e.currentTarget.value)
-                  }
-                >
-                  This is B
-                </SwitchButton>
-              </Col>
-              <Col xsmall={4} pl={1}>
-                <SwitchButton
-                  name="switch"
-                  value="c"
-                  disabled={disabled}
-                  variant={variant}
-                  checked={value === 'c'}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    onChange(e.currentTarget.value)
-                  }
-                >
-                  This is C
-                </SwitchButton>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Grid>
+      <div style={{ display: 'flex', gap: 16 }}>
+        <SwitchButton
+          name="switch"
+          value="a"
+          disabled={disabled}
+          variant={variant}
+          checked={value === 'a'}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.currentTarget.value)
+          }
+        >
+          This is A
+        </SwitchButton>
+        <SwitchButton
+          name="switch"
+          value="b"
+          disabled={disabled}
+          variant={variant}
+          checked={value === 'b'}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.currentTarget.value)
+          }
+        >
+          This is B
+        </SwitchButton>
+        <SwitchButton
+          name="switch"
+          value="c"
+          disabled={disabled}
+          variant={variant}
+          checked={value === 'c'}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange(e.currentTarget.value)
+          }
+        >
+          This is C
+        </SwitchButton>
+      </div>
     )}
   </ControlValue>
 )
@@ -130,7 +117,7 @@ export const Showcase = DefaultShowcase.bind({})
 Showcase.parameters = {
   docs: {
     description: {
-      story: 'This is a showcase of SwitchButton with two SwitchButton',
+      story: 'This is a showcase of SwitchButton with three SwitchButton',
     },
   },
 }

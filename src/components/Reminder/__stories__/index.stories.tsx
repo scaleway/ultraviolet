@@ -30,11 +30,11 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {Object.keys(variants).map(variant => (
-        <Reminder key={variant} variant={variant} mb={1} text={variant} />
+        <Reminder key={variant} variant={variant} text={variant} />
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -46,22 +46,12 @@ Link.parameters = {
 }
 Link.decorators = [
   () => (
-    <>
-      <Reminder
-        to="."
-        mb={1}
-        variant="error"
-        text="Your credit card [has expired]"
-      />
-      <Reminder
-        to="."
-        mb={1}
-        variant="warning"
-        text="You have [1 locked instance]"
-      />
-      <Reminder to="." mb={1} variant="info" text="[2FA] is deactivated" />
-      <Reminder to="." mb={1} text="No [phone number] registered" />
-    </>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <Reminder to="." variant="error" text="Your credit card [has expired]" />
+      <Reminder to="." variant="warning" text="You have [1 locked instance]" />
+      <Reminder to="." variant="info" text="[2FA] is deactivated" />
+      <Reminder to="." text="No [phone number] registered" />
+    </div>
   ),
 ]
 
@@ -74,29 +64,21 @@ Bordered.parameters = {
 }
 Bordered.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       <Reminder
         to="/"
-        mb={1}
         bordered
         variant="error"
         text="Your credit card [has expired]"
       />
       <Reminder
         to="/"
-        mb={1}
         bordered
         variant="warning"
         text="You have [1 locked instance]"
       />
-      <Reminder
-        to="/"
-        mb={1}
-        bordered
-        variant="info"
-        text="[2FA] is deactivated"
-      />
-      <Reminder to="/" mb={1} bordered text="No [phone number] registered" />
-    </>
+      <Reminder to="/" bordered variant="info" text="[2FA] is deactivated" />
+      <Reminder to="/" bordered text="No [phone number] registered" />
+    </div>
   ),
 ]

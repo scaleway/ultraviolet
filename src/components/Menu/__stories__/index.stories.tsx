@@ -26,7 +26,7 @@ export default {
 } as Meta
 
 const Disclosure = (
-  <Touchable title="menu" name="menu" ml={8}>
+  <Touchable title="menu" name="menu">
     <Icon name="dots-horizontal" color="gray550" size={24} />
   </Touchable>
 )

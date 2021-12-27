@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useEffect, useState } from 'react'
 import RichSelect from '..'
-import { ActivityIndicator, Badge, Button, FlexBox } from '../..'
+import { ActivityIndicator, Badge, Button } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -75,12 +75,15 @@ CustomOptions.decorators = [
     <RichSelect name="disabled">
       <RichSelect.Option value="a">Option A</RichSelect.Option>
       <RichSelect.Option value="b">
-        <FlexBox alignItems="center">
-          Option B
-          <Badge size="rounded" ml={1}>
-            Awesome badge
-          </Badge>
-        </FlexBox>
+        <div
+          style={{
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          Option B<Badge size="rounded">Awesome badge</Badge>
+        </div>
       </RichSelect.Option>
     </RichSelect>
   ),
@@ -190,10 +193,9 @@ Animated.decorators = [
           )
 
           return (
-            <>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
               <Button
                 onClick={() => onChange({ label: 'pulse', value: 'pulse' })}
-                mb={4}
               >
                 Select pulse animation
               </Button>
@@ -206,7 +208,7 @@ Animated.decorators = [
                 onChange={onChange}
                 options={options}
               />
-            </>
+            </div>
           )
         }}
       </ControlValue>
@@ -308,8 +310,8 @@ LoadingExample.decorators = [
     }, [isLoading])
 
     return (
-      <div>
-        <Button size="small" mb={2} onClick={() => setIsLoading(true)}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <Button size="small" onClick={() => setIsLoading(true)}>
           Load data
         </Button>
         <RichSelect

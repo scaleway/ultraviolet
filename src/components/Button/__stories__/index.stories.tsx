@@ -22,13 +22,13 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', gap: 16 }}>
       {buttonVariants.map(variant => (
-        <Button key={variant} variant={variant} mr={2} mb={2}>
+        <Button key={variant} variant={variant}>
           {variant}
         </Button>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -40,13 +40,13 @@ Sizes.parameters = {
 }
 Sizes.decorators = [
   () => (
-    <>
+    <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
       {buttonSizes.map(size => (
-        <Button key={size} size={size} mr={2}>
-          {size}
-        </Button>
+        <div key={size}>
+          <Button size={size}>{size}</Button>
+        </div>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -67,12 +67,10 @@ Progress.parameters = {
 }
 Progress.decorators = [
   () => (
-    <>
-      <Button progress="left" mr={2}>
-        left progress
-      </Button>
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button progress="left">left progress</Button>
       <Button progress="right">right progress</Button>
-    </>
+    </div>
   ),
 ]
 
@@ -85,10 +83,10 @@ Icons.parameters = {
 }
 Icons.decorators = [
   () => (
-    <>
-      <Button icon="lock" mr={2} />
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button icon="lock" />
       <Button icon="lock">With text</Button>
-    </>
+    </div>
   ),
 ]
 
@@ -100,16 +98,16 @@ IconsSizes.parameters = {
 }
 IconsSizes.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', gap: 16 }}>
       {[10, 18, 24, 32].map(size => (
         <React.Fragment key={size}>
-          <Button icon="lock" iconSize={size} mr={2} />
-          <Button icon="lock" iconSize={size} mr={2}>
+          <Button icon="lock" iconSize={size} />
+          <Button icon="lock" iconSize={size}>
             With text
           </Button>
         </React.Fragment>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -122,14 +120,14 @@ IconsPositions.parameters = {
 }
 IconsPositions.decorators = [
   () => (
-    <>
-      <Button iconPosition="left" icon="lock" mr={2}>
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button iconPosition="left" icon="lock">
         Left
       </Button>
       <Button iconPosition="right" icon="lock">
         Right
       </Button>
-    </>
+    </div>
   ),
 ]
 
@@ -203,18 +201,12 @@ Tooltip.parameters = {
 }
 Tooltip.decorators = [
   () => (
-    <>
-      <Button
-        mb={2}
-        action
-        icon="lock"
-        variant="primary"
-        tooltip="I am locked"
-      />
-      <Button mb={2} icon="lock" variant="primary" tooltip="I am locked" />
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button action icon="lock" variant="primary" tooltip="I am locked" />
+      <Button icon="lock" variant="primary" tooltip="I am locked" />
       <Button icon="lock" variant="primary" tooltip="I am locked">
         Hover Me
       </Button>
-    </>
+    </div>
   ),
 ]

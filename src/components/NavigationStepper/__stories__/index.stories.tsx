@@ -90,19 +90,20 @@ Controlled.decorators = [
               Duis nisi id ipsum sint non aute ea sit est consectetur amet.
             </NavigationStepper.Step>
           </NavigationStepper>
-          <Button
-            onClick={() => onChange(value > 1 ? value - 1 : value)}
-            disabled={value === 1}
-            mr={1}
-          >
-            Previous
-          </Button>
-          <Button
-            onClick={() => onChange(value > 3 ? value : value + 1)}
-            disabled={value > 3}
-          >
-            Next
-          </Button>
+          <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
+            <Button
+              onClick={() => onChange(value > 1 ? value - 1 : value)}
+              disabled={value === 1}
+            >
+              Previous
+            </Button>
+            <Button
+              onClick={() => onChange(value > 3 ? value : value + 1)}
+              disabled={value > 3}
+            >
+              Next
+            </Button>
+          </div>
         </>
       )}
     </ControlValue>
@@ -126,19 +127,20 @@ Condensed.decorators = [
               Duis nisi id ipsum sint non aute ea sit est consectetur amet.
             </NavigationStepper.Step>
           </NavigationStepper>
-          <Button
-            onClick={() => onChange(value > 1 ? value - 1 : value)}
-            disabled={value === 1}
-            mr={1}
-          >
-            Previous
-          </Button>
-          <Button
-            onClick={() => onChange(value > 3 ? value : value + 1)}
-            disabled={value > 3}
-          >
-            Next
-          </Button>
+          <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
+            <Button
+              onClick={() => onChange(value > 1 ? value - 1 : value)}
+              disabled={value === 1}
+            >
+              Previous
+            </Button>
+            <Button
+              onClick={() => onChange(value > 3 ? value : value + 1)}
+              disabled={value > 3}
+            >
+              Next
+            </Button>
+          </div>
         </>
       )}
     </ControlValue>

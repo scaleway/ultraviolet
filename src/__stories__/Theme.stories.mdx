@@ -63,7 +63,7 @@ Easy right? Let's now make it a bit more complex adding prominence in our contex
 
 <ThemeProvider theme={theme}>
   <Global styles={[globalStyles]} />
-  <Alert variant="outlined" type="info" mt={2}>
+  <Alert variant="outlined" type="info">
     This is a simple alert with info sentiment and weak prominence
   </Alert>
 </ThemeProvider>
@@ -176,7 +176,7 @@ Here are all colors that we use in Scaleway UI. You can customize them in your o
             ))}
         </div>
       </div>
-      <Separator my={3} />
+      <Separator style={{ margin: `24px 0` }} />
     </>
   ))}
 </ThemeProvider>

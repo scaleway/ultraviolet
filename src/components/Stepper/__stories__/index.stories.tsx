@@ -69,15 +69,12 @@ Steps.decorators = [
 export const Sizes = Template.bind({})
 Sizes.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {containerSizesKeys.map(size => {
         const [value, setValue] = useState(10)
 
         return (
-          <div
-            style={{ margin: '16px 0', textTransform: 'capitalize' }}
-            key={size}
-          >
+          <div key={size}>
             {size}
             <Stepper
               minValue={0}
@@ -85,13 +82,12 @@ Sizes.decorators = [
               size={size}
               onChange={setValue}
               value={value}
-              mt={1}
               width={200}
             />
           </div>
         )
       })}
-    </>
+    </div>
   ),
 ]
 

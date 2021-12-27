@@ -71,18 +71,18 @@ Color.parameters = {
 }
 
 export const Icon: Story<ComponentProps<typeof Separator>> = ({ icon }) => (
-  <>
-    <div>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>horizontal start</div>
-      <Separator my={1} icon={icon} />
+      <Separator icon={icon} />
       <div>horizontal end</div>
     </div>
-    <FlexBox alignItems="center">
+    <div style={{ alignItems: 'center', display: 'flex', gap: 2 }}>
       <div>vertical start</div>
-      <Separator direction="vertical" mx={1} icon={icon} />
+      <Separator direction="vertical" icon={icon} />
       <div>vertical end</div>
-    </FlexBox>
-  </>
+    </div>
+  </div>
 )
 
 Icon.args = {
