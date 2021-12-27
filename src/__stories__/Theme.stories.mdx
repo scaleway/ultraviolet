@@ -18,7 +18,7 @@ Scaleway UI is based on `@emotion/react` library. It allows you to customize the
 
 ## Colors
 
-Scaleway UI provide you a set of colors trough theme, those colors are defined by tokens following asana token pattern.
+Scaleway UI provides you a set of colors trough theme, those colors are defined by tokens following Asana token pattern.
 
 Tokens are designed as follows: `sentiment.usageProminenceInteraction`
 
@@ -43,7 +43,7 @@ Let's see an example with an alert:
 **Text** and **icon** colors will be `theme.colors.info.text`<br/>
 **Background** color will be `theme.colors.info.background`
 
-In this example there are different colors, but they all are having the same sentiment: `info`.
+In this example there are different colors, but they are all having the same sentiment: `info`.
 
 <p>&nbsp;</p>
 
@@ -72,13 +72,13 @@ Easy right? Let's now make it a bit more complex adding prominence in our contex
 **Background** color will be `theme.colors.info.backgroundWeak`
 
 Here we have 2 alerts with different prominence, one is strong and the other one is weak.
-It results in a different sets of colors and style for expressing a different context on where the alert is displayed.
+It results in a different sets of colors and style to express a different context on where the alert is displayed.
 
 <p>&nbsp;</p>
 
 ### All colors
 
-Here are all colors that we use in Scaleway UI. You can customize them in your custom theme:
+Here are all colors that we use in Scaleway UI. You can customize them in your own theme:
 
 <ThemeProvider theme={theme}>
   <Global styles={[globalStyles]} />
@@ -187,7 +187,7 @@ To customize theme you will need to use `createTheme` function. This method will
 to your Theme Provider.
 
 By entering different shade of contrast in entry to `createTheme`, it will then generate correct tokens with previously seen pattern.<br/>
-Keep in mind that it is an extension of existing theme, meaning that it will override the theme your values.
+Keep in mind that it is an extension of existing theme, meaning that it will override the theme with your values.
 
 ```js
 import { ThemeProvider } from '@emotion/react'
