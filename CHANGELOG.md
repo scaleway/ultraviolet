@@ -1,3 +1,15 @@
+## [0.132.0](https://github.com/scaleway/scaleway-ui/compare/v0.131.6...v0.132.0) (2021-12-27)
+
+
+### :zap: Refactor
+
+* remove Box(er)? usage in stories ([#1046](https://github.com/scaleway/scaleway-ui/issues/1046)) ([7c6c112](https://github.com/scaleway/scaleway-ui/commit/7c6c11294da9d16058b9c963d50ade8a8e43767e))
+
+
+### :gear: Features
+
+* reintroduce BorderedBox ([#1044](https://github.com/scaleway/scaleway-ui/issues/1044)) ([a39a901](https://github.com/scaleway/scaleway-ui/commit/a39a9013167bb6f000f4afb41b7ebbacd7ef7f37))
+
 ### [0.131.6](https://github.com/scaleway/scaleway-ui/compare/v0.131.5...v0.131.6) (2021-12-27)
 
 
