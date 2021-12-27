@@ -42,7 +42,7 @@ const searchFileFromDir = (startPath: string, filter: string) => {
       searchFileFromDir(filePath, filter)
     } else if (filePath.indexOf(filter) >= 0) {
       const isTested = testedComponents.some(component =>
-        filePath.match(`/${component}/`),
+        filePath.match(`^src/components/${component}/`),
       )
 
       if (isTested) {
