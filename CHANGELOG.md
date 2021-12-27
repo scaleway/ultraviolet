@@ -1,3 +1,20 @@
+### [0.131.6](https://github.com/scaleway/scaleway-ui/compare/v0.131.5...v0.131.6) (2021-12-27)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.2.1 ([#1053](https://github.com/scaleway/scaleway-ui/issues/1053)) ([d0e4d0e](https://github.com/scaleway/scaleway-ui/commit/d0e4d0e686badeb5c3310bf85714b4e244411833))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.1.27 ([#1054](https://github.com/scaleway/scaleway-ui/issues/1054)) ([70eab6c](https://github.com/scaleway/scaleway-ui/commit/70eab6c3e847fa7ca1df442e36e68432573f2de0))
+* **devdeps:** update dependency @size-limit/file to v7.0.5 ([#1058](https://github.com/scaleway/scaleway-ui/issues/1058)) ([90a5db7](https://github.com/scaleway/scaleway-ui/commit/90a5db71b60b243edce7a6b9385dee742dac12d5))
+* **devdeps:** update dependency @size-limit/preset-big-lib to v7.0.5 ([#1059](https://github.com/scaleway/scaleway-ui/issues/1059)) ([b394d0a](https://github.com/scaleway/scaleway-ui/commit/b394d0ac7ab3e3df1128326c5af2f49e6df39b6c))
+* **devdeps:** update dependency lint-staged to v12.1.4 ([#1056](https://github.com/scaleway/scaleway-ui/issues/1056)) ([2b8b16d](https://github.com/scaleway/scaleway-ui/commit/2b8b16d6c58412316e23de9163b66560d2109ae4))
+* **devdeps:** update dependency size-limit to v7.0.5 ([#1060](https://github.com/scaleway/scaleway-ui/issues/1060)) ([ff7dbfb](https://github.com/scaleway/scaleway-ui/commit/ff7dbfbac6e74858fa65c127b3e4eca01a876275))
+
+
+### :bug: Bug Fixes
+
+* switch input ([#1055](https://github.com/scaleway/scaleway-ui/issues/1055)) ([830d343](https://github.com/scaleway/scaleway-ui/commit/830d343a483fae2efe021039944da25bf5260ca2))
+
 ### [0.131.5](https://github.com/scaleway/scaleway-ui/compare/v0.131.4...v0.131.5) (2021-12-24)
 
 
