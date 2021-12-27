@@ -3370,7 +3370,7 @@ __metadata:
     "@scaleway/eslint-config-react": 3.2.1
     "@scaleway/jest-helpers": 1.1.6
     "@scaleway/random-name": 3.0.0
-    "@scaleway/use-i18n": 3.1.26
+    "@scaleway/use-i18n": 3.1.27
     "@semantic-release/changelog": 6.0.1
     "@semantic-release/commit-analyzer": 9.0.2
     "@semantic-release/git": 10.0.1
@@ -3455,20 +3455,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@scaleway/use-i18n@npm:3.1.26":
-  version: 3.1.26
-  resolution: "@scaleway/use-i18n@npm:3.1.26"
+"@scaleway/use-i18n@npm:3.1.27":
+  version: 3.1.27
+  resolution: "@scaleway/use-i18n@npm:3.1.27"
   dependencies:
     "@formatjs/fast-memoize": 1.2.0
     date-fns: 2.27.0
     filesize: 8.0.6
     intl-messageformat: 9.9.6
-    prop-types: 15.7.2
+    prop-types: 15.8.0
   peerDependencies:
     date-fns: 2.x
     react: 17.x
     react-dom: 17.x
-  checksum: 6b5ac76e9ebe2ca51ef849b1220e29f0e2ccbb7b1a85650d6f660748e6c8416883b6b1bc05a42468ed7b69db93de8dcdf43134a53486f6d2d35948fa5bfc918b
+  checksum: 84bb6cbac02af4e358b412aaf6280b207f9fa6a1ce289c9712b714e7af24c8d79a8aa2ed7e8f80aea526f54aab89b8cbbaa78f466c399113fbae5811796e568d
   languageName: node
   linkType: hard
 
@@ -17878,7 +17878,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.7.2, prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -17886,6 +17886,17 @@ fsevents@^1.2.7:
     object-assign: ^4.1.1
     react-is: ^16.8.1
   checksum: 5eef82fdda64252c7e75aa5c8cc28a24bbdece0f540adb60ce67c205cf978a5bd56b83e4f269f91c6e4dcfd80b36f2a2dec24d362e278913db2086ca9c6f9430
+  languageName: node
+  linkType: hard
+
+"prop-types@npm:15.8.0, prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+  version: 15.8.0
+  resolution: "prop-types@npm:15.8.0"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: d8d51cf55d70cab207dd1e80df2dc093b8288a4519598a28d25d32d6e02319b2fd66712caa979040451656185f7393341185b0b081158520557aa4cbdcaa4b3a
   languageName: node
   linkType: hard
 
@@ -18372,7 +18383,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.7.0, react-is@npm:^16.8.1, react-is@npm:^16.8.6":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1, react-is@npm:^16.8.6":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
