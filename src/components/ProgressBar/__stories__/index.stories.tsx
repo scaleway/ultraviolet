@@ -29,7 +29,7 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <div style={{ display: 'flex', gap: 8 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {progressBarVariants.map(variant => (
         <UncontrolledProgressBar key={variant} variant={variant} />
       ))}
