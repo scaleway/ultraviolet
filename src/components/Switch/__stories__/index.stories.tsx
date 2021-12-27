@@ -141,66 +141,108 @@ export const CustomLabelRender: Story = () => (
         )}
       </ControlValue>
     </div>
-    <ControlValue<boolean> value>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label-left"
-          labeled="left"
-          onLabel={
-            <Box
-              width={100}
-              display="flex"
-              alignItems="center"
-              justifyContent="flex-end"
-            >
-              <span>Enabled</span>&nbsp;
-              <Icon size={24} name="check-circle-outline" />
-            </Box>
-          }
-          offLabel={
-            <Box
-              width={100}
-              display="flex"
-              alignItems="center"
-              justifyContent="flex-end"
-            >
-              <span>Disabled</span>&nbsp;
-              <Icon size={24} name="close-circle-outline" />
-            </Box>
-          }
-          variant="primary"
-          checked={value}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onChange(e.target.checked)
-          }
-        />
-      )}
-    </ControlValue>
-    <ControlValue<boolean> value>
-      {({ value, onChange }) => (
-        <Switch
-          name="switch-label-inside-custom"
-          labeled
-          onLabel={
-            <Box display="flex" alignItems="center">
-              <span>Enabled</span>&nbsp;
-              <Icon size={24} name="check-circle-outline" />
-            </Box>
-          }
-          offLabel={
-            <Box display="flex" alignItems="center">
-              <span>Disabled</span>&nbsp;
-              <Icon size={24} name="close-circle-outline" />
-            </Box>
-          }
-          variant="primary"
-          checked={value}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onChange(e.target.checked)
-          }
-        />
-      )}
-    </ControlValue>
+    <div style={{ marginBottom: '16px' }}>
+      <ControlValue<boolean> value>
+        {({ value, onChange }) => (
+          <Switch
+            name="switch-label-left"
+            labeled="left"
+            onLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Enabled</span>&nbsp;
+                <Icon size={24} name="check-circle-outline" />
+              </Box>
+            }
+            offLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Disabled</span>&nbsp;
+                <Icon size={24} name="close-circle-outline" />
+              </Box>
+            }
+            variant="primary"
+            checked={value}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
+          />
+        )}
+      </ControlValue>
+    </div>
+    <div style={{ marginBottom: '16px' }}>
+      <ControlValue<boolean> value>
+        {({ value, onChange }) => (
+          <Switch
+            name="switch-label-inside-custom"
+            labeled
+            onLabel={
+              <Box display="flex" alignItems="center">
+                <span>Enabled</span>&nbsp;
+                <Icon size={24} name="check-circle-outline" />
+              </Box>
+            }
+            offLabel={
+              <Box display="flex" alignItems="center">
+                <span>Disabled</span>&nbsp;
+                <Icon size={24} name="close-circle-outline" />
+              </Box>
+            }
+            variant="primary"
+            checked={value}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
+          />
+        )}
+      </ControlValue>
+    </div>
+    <div style={{ marginBottom: '16px' }}>
+      <ControlValue<boolean> value>
+        {({ value, onChange }) => (
+          <Switch
+            disabled
+            name="switch-label-disabled"
+            labeled="left"
+            onLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Enabled</span>&nbsp;
+                <Icon size={24} name="check-circle-outline" />
+              </Box>
+            }
+            offLabel={
+              <Box
+                width={100}
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+              >
+                <span>Disabled</span>&nbsp;
+                <Icon size={24} name="close-circle-outline" />
+              </Box>
+            }
+            variant="primary"
+            checked={value}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onChange(e.target.checked)
+            }
+          />
+        )}
+      </ControlValue>
+    </div>
   </>
 )
 

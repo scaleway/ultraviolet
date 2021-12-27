@@ -100,8 +100,7 @@ const SwitchVariantsStyles = {
 }
 
 const StyledSwitch = styled('div', {
-  shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
 })<StyledSwitchProps>`
   box-sizing: content-box;
   outline: none;
@@ -133,6 +132,7 @@ const StyledSwitch = styled('div', {
     transition: all 250ms;
     top: ${({ theme }) => theme.space[0.5]};
     bottom: 0;
+    cursor: pointer;
   }
 
   & ${SwitchBall} {
@@ -209,6 +209,11 @@ const StyledCheckbox = styled.input`
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+
+  &[disabled='true'] {
+    cursor: not-allowed;
+  }
 `
 
 const StyledLabel = styled.label<{ width?: number }>`
