@@ -55,7 +55,7 @@ const adjustedTheme = ancestorTheme => ({
   ),
 })
 
-const globalStyles = theme => css`
+export const globalStyles = theme => css`
   ${normalize()}
 
   body {
