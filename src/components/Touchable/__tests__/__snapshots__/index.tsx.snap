@@ -2,7 +2,7 @@
 
 exports[`Touchable renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-l6o7sv {
+  .cache-1me4bek {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -15,19 +15,19 @@ exports[`Touchable renders correctly disabled 1`] = `
   margin: 0;
 }
 
-.cache-l6o7sv[aria-disabled='true'] {
+.cache-1me4bek[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-l6o7sv[aria-disabled='false'] {
+.cache-1me4bek[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
 <button
     aria-disabled="true"
-    class="e1kgqxfn0 cache-l6o7sv e7ah3bn0"
+    class="e1kgqxfn0 cache-1me4bek"
     disabled=""
     type="button"
   >
@@ -38,7 +38,7 @@ exports[`Touchable renders correctly disabled 1`] = `
 
 exports[`Touchable renders correctly on focus 1`] = `
 <DocumentFragment>
-  .cache-122wgzc {
+  .cache-1dhr51f {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -51,27 +51,27 @@ exports[`Touchable renders correctly on focus 1`] = `
   margin: 0;
 }
 
-.cache-122wgzc.cache-122wgzc:active {
+.cache-1dhr51f.cache-1dhr51f:active {
   opacity: 0.7;
 }
 
-.cache-122wgzc[aria-disabled='true'] {
+.cache-1dhr51f[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-122wgzc[aria-disabled='false'] {
+.cache-1dhr51f[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-122wgzc[aria-disabled='false']:active {
+.cache-1dhr51f[aria-disabled='false']:active {
   opacity: 0.7;
 }
 
 <button
     aria-disabled="false"
-    class="e1kgqxfn0 cache-122wgzc e7ah3bn0"
+    class="e1kgqxfn0 cache-1dhr51f"
     tabindex="0"
     type="button"
   >
@@ -82,7 +82,7 @@ exports[`Touchable renders correctly on focus 1`] = `
 
 exports[`Touchable renders correctly with a non default as and type 1`] = `
 <DocumentFragment>
-  .cache-l6o7sv {
+  .cache-1me4bek {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -95,19 +95,19 @@ exports[`Touchable renders correctly with a non default as and type 1`] = `
   margin: 0;
 }
 
-.cache-l6o7sv[aria-disabled='true'] {
+.cache-1me4bek[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-l6o7sv[aria-disabled='false'] {
+.cache-1me4bek[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
 <div
     aria-disabled="false"
-    class="e1kgqxfn0 cache-l6o7sv e7ah3bn0"
+    class="e1kgqxfn0 cache-1me4bek"
     type="button"
   >
     Button Touchable
@@ -117,7 +117,7 @@ exports[`Touchable renders correctly with a non default as and type 1`] = `
 
 exports[`Touchable renders correctly with defaults 1`] = `
 <DocumentFragment>
-  .cache-l6o7sv {
+  .cache-1me4bek {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -130,19 +130,19 @@ exports[`Touchable renders correctly with defaults 1`] = `
   margin: 0;
 }
 
-.cache-l6o7sv[aria-disabled='true'] {
+.cache-1me4bek[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-l6o7sv[aria-disabled='false'] {
+.cache-1me4bek[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
 <button
     aria-disabled="false"
-    class="e1kgqxfn0 cache-l6o7sv e7ah3bn0"
+    class="e1kgqxfn0 cache-1me4bek"
     type="button"
   >
     Basic Touchable

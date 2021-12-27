@@ -1,5 +1,4 @@
-import { Interpolation, Theme, css } from '@emotion/react'
-import styled from '@emotion/styled'
+import { Interpolation, Theme } from '@emotion/react'
 import { x } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
 import React, {
@@ -63,20 +62,7 @@ export interface XStyledProps {
   target?: string
 }
 
-const borderedStyles = ({ theme }: { theme: Theme }) => css`
-  padding: ${theme.space['3']};
-  border-radius: ${theme.radii.default};
-  border: 1px solid ${theme.colorsDeprecated.gray350};
-`
-
-const StyledBox = styled(x.div, {
-  shouldForwardProp: prop => !['bordered'].includes(prop.toString()),
-})<{ bordered?: boolean }>`
-  ${({ bordered }) => (bordered ? borderedStyles : null)}
-`
-
 export type BoxProps = {
-  bordered?: boolean
   children?: ReactNode
   height?: number | string
   width?: number | string
@@ -98,9 +84,9 @@ type BoxType = typeof forwardType & {
 const Box: BoxType = forwardRef<
   Element | HTMLInputElement | HTMLButtonElement,
   BoxProps
->(({ width, height, bordered = false, ...props }, ref) => (
+>(({ width, height, ...props }, ref) => (
   // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
-  <StyledBox ref={ref} w={width} h={height} bordered={bordered} {...props} />
+  <x.div ref={ref} w={width} h={height} {...props} />
 ))
 
 Box.withComponent =
@@ -109,7 +95,6 @@ Box.withComponent =
     <Box as={element} {...props} />
 
 Box.propTypes = {
-  bordered: PropTypes.bool,
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }

@@ -1,10 +1,8 @@
-import { ThemeProvider } from '@emotion/react'
-import { render, waitFor } from '@testing-library/react'
+import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { ChangeEvent } from 'react'
 import RadioBorderedBox from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
-import theme from '../../../theme'
 
 describe('RadioBorderedBox', () => {
   test('renders correctly', () =>
@@ -62,26 +60,28 @@ describe('RadioBorderedBox', () => {
       </RadioBorderedBox>,
     ))
 
-  test('renders correctly and triggers change on borderedbox click', async () => {
+  test('renders correctly and triggers change on borderedbox click', () => {
     let choice = ''
-    render(
-      <ThemeProvider theme={theme}>
-        <RadioBorderedBox
-          checked={choice === 'choice1'}
-          id="radiotest"
-          label="Choice 1"
-          name="radioborderedbox"
-          value="choice1"
-          onChange={(evt: ChangeEvent<HTMLInputElement>) => {
-            choice = evt.target.value
-          }}
-        >
-          Choice 1 description
-        </RadioBorderedBox>
-      </ThemeProvider>,
+
+    return shouldMatchEmotionSnapshot(
+      <RadioBorderedBox
+        checked={choice === 'choice1'}
+        id="radiotest"
+        label="Choice 1"
+        name="radioborderedbox"
+        value="choice1"
+        onChange={(evt: ChangeEvent<HTMLInputElement>) => {
+          choice = evt.target.value
+        }}
+      >
+        Choice 1 description
+      </RadioBorderedBox>,
+      {
+        transform: async () => {
+          userEvent.click(document.body)
+          await waitFor(() => expect(choice).not.toBe('choice1'))
+        },
+      },
     )
-    const box = document.getElementById('radiotest')
-    userEvent.click(box as Element)
-    await waitFor(() => expect(choice).not.toBe('choice1'))
   })
 })

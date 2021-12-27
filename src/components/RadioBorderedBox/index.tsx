@@ -8,10 +8,12 @@ import React, {
   ReactNode,
 } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
-import Box, { XStyledProps } from '../Box'
+import BorderedBox from '../BorderedBox'
 import Radio from '../Radio'
 
-const StyledBox = styled(Box)<{ disabled: boolean; checked: boolean }>`
+const StyledBox = styled(BorderedBox)<{ disabled: boolean; checked: boolean }>`
+  display: block;
+
   ${({ disabled, checked, theme: { colors } }) => {
     if (disabled)
       return `
@@ -47,8 +49,7 @@ type RadioBorderedBoxProps = {
   name: string
   size?: number
   value: string | number
-} & InputHTMLAttributes<HTMLInputElement> &
-  XStyledProps
+} & InputHTMLAttributes<HTMLInputElement>
 
 const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   label,
@@ -65,15 +66,8 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   value,
   size = 24,
   children,
-  ...props
 }) => (
-  <StyledBox
-    bordered
-    display="block"
-    disabled={disabled}
-    checked={checked}
-    {...props}
-  >
+  <StyledBox disabled={disabled} checked={checked}>
     <StyledRadioContainer>
       <Radio
         name={name}

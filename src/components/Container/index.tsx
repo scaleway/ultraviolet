@@ -2,6 +2,7 @@ import { SerializedStyles } from '@emotion/serialize'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode, Validator } from 'react'
+import BorderedBox from '../BorderedBox'
 import Box from '../Box'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
@@ -14,7 +15,7 @@ const StyledTitleContainer = styled(FlexBox)`
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
-const StyledBox = styled(Box, {
+const StyledBox = styled(BorderedBox, {
   shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
 })<{
   small?: boolean
@@ -77,7 +78,6 @@ const Container: FunctionComponent<ContainerProps> = ({
     </FlexBox>
     {header}
     <StyledBox
-      bordered
       css={boxStyle}
       small={small}
       edition={edition}
