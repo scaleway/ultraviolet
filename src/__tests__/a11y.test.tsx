@@ -41,9 +41,8 @@ const searchFileFromDir = (startPath: string, filter: string) => {
       // recursive search in case if directory
       searchFileFromDir(filePath, filter)
     } else if (filePath.indexOf(filter) >= 0) {
-      const isTested = testedComponents.some(
-        component =>
-          component.toLowerCase() === filePath.split('/')[2].toLowerCase(),
+      const isTested = testedComponents.some(component =>
+        filePath.match(`/${component}/`),
       )
 
       if (isTested) {

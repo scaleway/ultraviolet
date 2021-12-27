@@ -80,7 +80,9 @@ const StyledTouchable = styled(Touchable, {
   margin: 0 4px;
 `
 
-const StyledCenterBox = styled(Box)<{ size: ContainerSizesType }>`
+const StyledCenterBox = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})<{ size: ContainerSizesType }>`
   display: flex;
   flex: 1;
   flex-direction: row;
