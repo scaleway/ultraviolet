@@ -57,8 +57,16 @@ const SwitchVariantsStyles = {
       background-color: ${theme.colors.primary.backgroundStrong};
     }
 
-    &[aria-checked='true'] > ${StyledInsideLabel} {
-      color: ${theme.colors.neutral.textStrong};
+    &[aria-checked='true'] {
+      & > ${StyledInsideLabel} {
+        color: ${theme.colors.neutral.textStrong};
+      }
+
+      &:focus-within,
+      &:focus {
+        box-shadow: 0 0 1px 2px ${theme.colors.neutral.backgroundWeak},
+          0 0 1px 3px ${theme.colors.primary.backgroundStrong};
+      }
     }
   `,
   success: (theme: Theme) => css`
@@ -77,13 +85,22 @@ const SwitchVariantsStyles = {
       & ${SwitchBall} {
         background-color: ${theme.colors.success.backgroundStrong};
       }
+
+      & > ${StyledInsideLabel} {
+        color: ${theme.colors.neutral.textStrong};
+      }
+
+      &:focus-within,
+      &:focus {
+        box-shadow: 0 0 1px 2px ${theme.colors.neutral.backgroundWeak},
+          0 0 1px 3px ${theme.colors.success.backgroundStrong};
+      }
     }
   `,
 }
 
 const StyledSwitch = styled('div', {
-  shouldForwardProp: prop =>
-    !['offLabel', 'onLabel', 'labeled', 'variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
 })<StyledSwitchProps>`
   box-sizing: content-box;
   outline: none;
@@ -94,11 +111,17 @@ const StyledSwitch = styled('div', {
   border-radius: 34px;
   position: relative;
   transition: all 250ms;
-  cursor: pointer;
   padding: ${({ theme }) => theme.space[0.5]};
   height: ${({ theme }) => theme.space[3]};
   background-color: ${({ theme }) => theme.colors.neutral.background};
   min-width: ${({ theme }) => theme.space[6]};
+
+  &:focus-within,
+  &:focus {
+    box-shadow: 0 0 1px 2px
+        ${({ theme }) => theme.colors.neutral.backgroundWeak},
+      0 0 1px 3px ${({ theme }) => theme.colors.neutral.background};
+  }
 
   & ${SwitchBallContainer} {
     position: absolute;
@@ -181,7 +204,15 @@ const StyledSwitch = styled('div', {
 const StyledCheckbox = styled.input`
   position: absolute;
   opacity: 0.01;
-  width: ${({ theme }) => theme.space[6]};
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
 `
 
 const StyledLabel = styled.label<{ width?: number }>`
@@ -193,7 +224,6 @@ const StyledLabel = styled.label<{ width?: number }>`
   &[aria-disabled='true'] {
     cursor: not-allowed;
     opacity: 0.3;
-    pointer-events: none;
   }
 `
 
@@ -239,16 +269,7 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
           aria-checked={checked}
           data-variant={variant}
           data-size={size}
-          role="checkbox"
         >
-          <StyledCheckbox
-            id={id || name}
-            checked={checked}
-            disabled={disabled}
-            name={name}
-            onChange={onChange}
-            type="checkbox"
-          />
           {renderInsideLabel ? (
             <StyledInsideLabel>
               {checked ? onLabel : offLabel}
@@ -257,6 +278,14 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
           <SwitchBallContainer>
             <SwitchBall />
           </SwitchBallContainer>
+          <StyledCheckbox
+            id={id || name}
+            checked={checked}
+            disabled={disabled}
+            name={name}
+            onChange={onChange}
+            type="checkbox"
+          />
         </StyledSwitch>
         {labeled === 'right' ? (
           <>
