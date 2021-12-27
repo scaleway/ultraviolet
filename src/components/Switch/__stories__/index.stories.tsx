@@ -133,8 +133,6 @@ const LabelContainer = ({ children }: { children: ReactNode }) => (
     style={{
       alignItems: 'center',
       display: 'flex',
-      justifyContent: 'flex-end',
-      width: 100,
     }}
   >
     {children}
@@ -167,16 +165,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-left"
             labeled="left"
             onLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
+              <LabelContainer>
                 <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             offLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
+              <LabelContainer>
                 <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}
@@ -194,16 +192,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-inside-custom"
             labeled
             onLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
-              <span>Enabled</span>&nbsp;
+              <LabelContainer>
+                <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             offLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
-              <span>Disabled</span>&nbsp;
+              <LabelContainer>
+                <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}
@@ -222,16 +220,16 @@ export const CustomLabelRender: Story = () => (
             name="switch-label-disabled"
             labeled="left"
             onLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
-              <span>Enabled</span>&nbsp;
+              <LabelContainer>
+                <span>Enabled</span>&nbsp;
                 <Icon size={24} name="check-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             offLabel={
-              <div style={{ alignItems: 'center', display: 'flex' }}>
-              <span>Disabled</span>&nbsp;
+              <LabelContainer>
+                <span>Disabled</span>&nbsp;
                 <Icon size={24} name="close-circle-outline" />
-              </div>
+              </LabelContainer>
             }
             variant="primary"
             checked={value}
