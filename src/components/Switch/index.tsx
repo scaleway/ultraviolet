@@ -132,7 +132,6 @@ const StyledSwitch = styled('div', {
     transition: all 250ms;
     top: ${({ theme }) => theme.space[0.5]};
     bottom: 0;
-    cursor: pointer;
   }
 
   & ${SwitchBall} {

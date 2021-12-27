@@ -2,7 +2,7 @@
 
 exports[`Switch renders correctly 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,10 +17,9 @@ exports[`Switch renders correctly 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -163,19 +162,24 @@ exports[`Switch renders correctly 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -191,7 +195,7 @@ exports[`Switch renders correctly 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -203,7 +207,7 @@ exports[`Switch renders correctly 1`] = `
 
 exports[`Switch renders correctly labeled 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -218,10 +222,9 @@ exports[`Switch renders correctly labeled 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -364,19 +367,24 @@ exports[`Switch renders correctly labeled 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -395,7 +403,7 @@ exports[`Switch renders correctly labeled 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -407,7 +415,7 @@ exports[`Switch renders correctly labeled 1`] = `
 
 exports[`Switch renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -422,10 +430,9 @@ exports[`Switch renders correctly when checked 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -568,19 +575,24 @@ exports[`Switch renders correctly when checked 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="true"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="true"
@@ -597,7 +609,7 @@ exports[`Switch renders correctly when checked 1`] = `
       </div>
       <input
         checked=""
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -609,7 +621,7 @@ exports[`Switch renders correctly when checked 1`] = `
 
 exports[`Switch renders correctly when checked and labeled 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -624,10 +636,9 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -770,19 +781,24 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="true"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="true"
@@ -802,7 +818,7 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
       </div>
       <input
         checked=""
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -814,7 +830,7 @@ exports[`Switch renders correctly when checked and labeled 1`] = `
 
 exports[`Switch renders correctly when checked and labeled on left 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -829,10 +845,9 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -975,19 +990,24 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="true"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="true"
@@ -1004,7 +1024,7 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
       </div>
       <input
         checked=""
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -1016,7 +1036,7 @@ exports[`Switch renders correctly when checked and labeled on left 1`] = `
 
 exports[`Switch renders correctly when checked and labeled on right 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1031,10 +1051,9 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -1177,19 +1196,24 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="true"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="true"
@@ -1206,7 +1230,7 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
       </div>
       <input
         checked=""
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -1218,7 +1242,7 @@ exports[`Switch renders correctly when checked and labeled on right 1`] = `
 
 exports[`Switch renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1233,10 +1257,9 @@ exports[`Switch renders correctly when disabled 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -1379,19 +1402,24 @@ exports[`Switch renders correctly when disabled 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="true"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -1407,7 +1435,7 @@ exports[`Switch renders correctly when disabled 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         disabled=""
         id="test"
         name="test"
@@ -1420,7 +1448,7 @@ exports[`Switch renders correctly when disabled 1`] = `
 
 exports[`Switch renders correctly with custom inside labels 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1435,10 +1463,9 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -1581,19 +1608,24 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -1614,7 +1646,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -1626,7 +1658,7 @@ exports[`Switch renders correctly with custom inside labels 1`] = `
 
 exports[`Switch renders correctly with custom label render on left 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1641,10 +1673,9 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -1787,19 +1818,24 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <span
       style="font-weight: bold;"
@@ -1820,7 +1856,7 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -1832,7 +1868,7 @@ exports[`Switch renders correctly with custom label render on left 1`] = `
 
 exports[`Switch renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1847,10 +1883,9 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -1993,19 +2028,24 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -2021,7 +2061,7 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -2034,7 +2074,7 @@ exports[`Switch renders correctly with custom labels on right 1`] = `
 
 exports[`Switch renders correctly with custom width 1`] = `
 <DocumentFragment>
-  .cache-1jr9shd {
+  .cache-13xnz0t {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2047,10 +2087,9 @@ exports[`Switch renders correctly with custom width 1`] = `
   width: 120px;
 }
 
-.cache-1jr9shd[aria-disabled='true'] {
+.cache-13xnz0t[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -2193,19 +2232,24 @@ exports[`Switch renders correctly with custom width 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-1jr9shd e1x48wse0"
+    class="cache-13xnz0t e1x48wse0"
     width="120"
   >
     <div
@@ -2222,7 +2266,7 @@ exports[`Switch renders correctly with custom width 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -2234,7 +2278,7 @@ exports[`Switch renders correctly with custom width 1`] = `
 
 exports[`Switch renders correctly with label inside 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2249,10 +2293,9 @@ exports[`Switch renders correctly with label inside 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -2395,19 +2438,24 @@ exports[`Switch renders correctly with label inside 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -2426,7 +2474,7 @@ exports[`Switch renders correctly with label inside 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -2438,7 +2486,7 @@ exports[`Switch renders correctly with label inside 1`] = `
 
 exports[`Switch renders correctly with labels on left 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2453,10 +2501,9 @@ exports[`Switch renders correctly with labels on left 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -2599,19 +2646,24 @@ exports[`Switch renders correctly with labels on left 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -2627,7 +2679,7 @@ exports[`Switch renders correctly with labels on left 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -2639,7 +2691,7 @@ exports[`Switch renders correctly with labels on left 1`] = `
 
 exports[`Switch renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2654,10 +2706,9 @@ exports[`Switch renders correctly with non default size 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -2800,19 +2851,24 @@ exports[`Switch renders correctly with non default size 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -2828,7 +2884,7 @@ exports[`Switch renders correctly with non default size 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
@@ -2840,7 +2896,7 @@ exports[`Switch renders correctly with non default size 1`] = `
 
 exports[`Switch renders correctly with non default variant 1`] = `
 <DocumentFragment>
-  .cache-lo7x9s {
+  .cache-td742h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2855,10 +2911,9 @@ exports[`Switch renders correctly with non default variant 1`] = `
   width: fit-content;
 }
 
-.cache-lo7x9s[aria-disabled='true'] {
+.cache-td742h[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.3;
-  pointer-events: none;
 }
 
 .cache-k8jhlz {
@@ -3001,19 +3056,24 @@ exports[`Switch renders correctly with non default variant 1`] = `
   box-shadow: 0 0 1px 2px #fff,0 0 1px 3px #45d6b5;
 }
 
-.cache-16acut5 {
+.cache-1d95tts {
   position: absolute;
   opacity: 0.01;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+
+.cache-1d95tts[disabled] {
+  cursor: not-allowed;
 }
 
 <label
     aria-checked="false"
     aria-disabled="false"
-    class="cache-lo7x9s e1x48wse0"
+    class="cache-td742h e1x48wse0"
   >
     <div
       aria-checked="false"
@@ -3029,7 +3089,7 @@ exports[`Switch renders correctly with non default variant 1`] = `
         />
       </div>
       <input
-        class="cache-16acut5 e1x48wse1"
+        class="cache-1d95tts e1x48wse1"
         id="test"
         name="test"
         type="checkbox"
