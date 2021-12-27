@@ -211,7 +211,7 @@ const StyledCheckbox = styled.input`
   height: 100%;
   cursor: pointer;
 
-  &[disabled='true'] {
+  &[disabled] {
     cursor: not-allowed;
   }
 `
@@ -225,7 +225,6 @@ const StyledLabel = styled.label<{ width?: number }>`
   &[aria-disabled='true'] {
     cursor: not-allowed;
     opacity: 0.3;
-    pointer-events: none;
   }
 `
 
