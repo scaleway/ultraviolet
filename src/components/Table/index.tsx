@@ -22,7 +22,7 @@ const Table: FunctionComponent<BoxProps> & {
 const StyledHead = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colorsDeprecated.gray350};
+  border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   border-style: solid;
 `
 
@@ -33,21 +33,21 @@ export const Head: FunctionComponent<BoxProps> = props => (
 const StyledRow = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => prop !== 'highlight',
 })<{ highlight?: boolean }>`
-  color: ${({ theme }) => theme.colorsDeprecated.gray700};
+  color: ${({ theme }) => theme.colors.neutral.text};
 
   a {
     color: inherit;
   }
 
   tr:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colorsDeprecated.gray50};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
 
   ${({ highlight = true, theme }) =>
     highlight &&
     css`
       &:hover {
-        color: ${theme.colorsDeprecated.primary};
+        color: ${theme.colors.primary.text};
 
         td:first-of-type {
           font-weight: 500;
@@ -92,7 +92,7 @@ const StyledHeadCell = styled(Box.withComponent('th'))`
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
-  color: ${({ theme }) => theme.colorsDeprecated.gray550};
+  color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-align: left;
   ${cellStyle};
 `
