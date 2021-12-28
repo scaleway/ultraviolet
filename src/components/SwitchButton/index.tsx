@@ -32,7 +32,7 @@ const variants = {
 
       &[aria-checked='true'] {
         background-color: ${theme.colors.primary.backgroundStrong};
-        color: ${theme.colors.neutral.textStrong};
+        color: ${theme.colors.primary.textStrong};
       }
 
       &[aria-disabled='true'] {
