@@ -1,3 +1,20 @@
+### [0.133.1](https://github.com/scaleway/scaleway-ui/compare/v0.133.0...v0.133.1) (2021-12-28)
+
+
+### :zap: Refactor
+
+* remove xstyled shorthand props in stories ([#1064](https://github.com/scaleway/scaleway-ui/issues/1064)) ([d0a4213](https://github.com/scaleway/scaleway-ui/commit/d0a42131939fa1f91dbc3a69d4d13550425ab7ac))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency prop-types to v15.8.0 ([#1048](https://github.com/scaleway/scaleway-ui/issues/1048)) ([7b0ed29](https://github.com/scaleway/scaleway-ui/commit/7b0ed29da99eb88f22049f16e8dfec997c1d5bf0))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.0 ([#1066](https://github.com/scaleway/scaleway-ui/issues/1066)) ([b15ec5f](https://github.com/scaleway/scaleway-ui/commit/b15ec5f0ab25ee82c53c59136e7d5766184e0767))
+
 ## [0.133.0](https://github.com/scaleway/scaleway-ui/compare/v0.132.0...v0.133.0) (2021-12-28)
 
 
