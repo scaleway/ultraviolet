@@ -41,7 +41,7 @@ const variants = {
     color: ${theme.colors.neutral.text};
     fill: ${theme.colors.neutral.backgroundWeak};
     box-shadow: 0 2px 5px 5px
-      ${transparentize(0.7, theme.colors.neutral.border)};
+      ${transparentize(0.7, theme.colors.neutral.borderWeak)};
   `,
 }
 
