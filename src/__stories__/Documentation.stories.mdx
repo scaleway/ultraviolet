@@ -78,15 +78,17 @@ sub-titles, etc. You will also find a file `story.example` that you can use as a
 
 <Canvas>
   <Story name="Variant">
-    <Button variant="primary" mr={2}>
-      Button
-    </Button>
-    <Button variant="success" mr={2}>
-      Button
-    </Button>
-    <Button variant="warning" mr={2}>
-      Button
-    </Button>
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button variant="primary">
+        Button
+      </Button>
+      <Button variant="success">
+        Button
+      </Button>
+      <Button variant="warning">
+        Button
+      </Button>
+    </div>
   </Story>
 </Canvas>
 

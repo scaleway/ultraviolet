@@ -21,13 +21,13 @@ Variants.parameters = {
 }
 Variants.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       {badgeVariants.map(variant => (
-        <Badge key={variant} m={1} variant={variant}>
+        <Badge key={variant} variant={variant}>
           {variant}
         </Badge>
       ))}
-    </>
+    </div>
   ),
 ]
 
@@ -39,12 +39,12 @@ Sizes.parameters = {
 }
 Sizes.decorators = [
   () => (
-    <>
+    <div style={{ alignItems: 'center', display: 'flex', gap: 8 }}>
       {badgeSizes.map(size => (
-        <Badge key={size} size={size} mx={1}>
+        <Badge key={size} size={size}>
           {size}
         </Badge>
       ))}
-    </>
+    </div>
   ),
 ]

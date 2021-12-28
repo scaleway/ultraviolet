@@ -42,7 +42,7 @@ export const Variants: Story = () => (
       >
         Success
       </Button>
-      <Button variant="info" mb={1} onClick={() => toast.info('This is info')}>
+      <Button variant="info" onClick={() => toast.info('This is info')}>
         Info
       </Button>
       <Button variant="warning" onClick={() => toast.warn('This is warning')}>

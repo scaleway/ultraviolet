@@ -50,7 +50,7 @@ CustomHeader.decorators = [
   () => (
     <Container
       title="Hello there"
-      header={<Button size="small" mb={1} icon="auto-fix" />}
+      header={<Button size="small" icon="auto-fix" />}
     >
       General Kenobi
     </Container>

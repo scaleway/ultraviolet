@@ -15,20 +15,20 @@ export default {
 } as Meta
 
 export const Default: Story = () => (
-  <>
-    <StateBar my={2}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <StateBar>
       <StateBar.State label="Label">your value</StateBar.State>
       <StateBar.Bar value={50} />
     </StateBar>
-    <StateBar my={2}>
+    <StateBar>
       <StateBar.State label="Value >= 90" />
       <StateBar.Bar value={90} />
     </StateBar>
-  </>
+  </div>
 )
 
 export const Unlimited: Story<{ unlimited?: boolean }> = ({ unlimited }) => (
-  <StateBar my={2}>
+  <StateBar>
     <StateBar.State label="Unlimited" />
     <StateBar.Bar unlimited={unlimited} />
   </StateBar>
@@ -47,7 +47,7 @@ Unlimited.args = {
 }
 
 export const Progress: Story<{ progress?: boolean }> = ({ progress }) => (
-  <StateBar my={2}>
+  <StateBar>
     <StateBar.State label="Progress" />
     <StateBar.Bar progress={progress} />
   </StateBar>

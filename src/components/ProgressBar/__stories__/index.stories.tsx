@@ -44,7 +44,7 @@ Progress.parameters = {
       'Progress is used to show a loading state of the component.',
   },
 }
-Progress.decorators = [() => <ProgressBar progress my={3} />]
+Progress.decorators = [() => <ProgressBar progress />]
 
 export const Background = Template.bind({})
 Background.parameters = {
@@ -66,7 +66,7 @@ Cap.parameters = {
 }
 Cap.decorators = [
   () => (
-    <div style={{ display: 'flex', gap: 8 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       <ProgressBar value={600} />
       <ProgressBar value={-600} />
     </div>

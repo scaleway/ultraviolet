@@ -61,7 +61,7 @@ Uncontrolled.parameters = {
 export const Controlled: Story = () => (
   <>
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ label: '03:30', value: '03:30' }} mb={2}>
+      <ControlValue value={{ label: '03:30', value: '03:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-4"
@@ -73,7 +73,7 @@ export const Controlled: Story = () => (
       </ControlValue>
     </div>
     <div style={{ height: '300px' }}>
-      <ControlValue value={{ label: '04:30', value: '04:30' }} mb={2}>
+      <ControlValue value={{ label: '04:30', value: '04:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-5"

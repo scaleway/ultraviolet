@@ -9,16 +9,10 @@ const UncontrolledPasswordStrengthMeter: VoidFunctionComponent<
   const [value, setValue] = useState('')
 
   return (
-    <>
-      <TextBox
-        name={name}
-        label="Password"
-        value={value}
-        onChange={setValue}
-        mb={2}
-      />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <TextBox name={name} label="Password" value={value} onChange={setValue} />
       <PasswordStrengthMeter password={value} {...props} />
-    </>
+    </div>
   )
 }
 

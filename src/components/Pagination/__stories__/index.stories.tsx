@@ -212,9 +212,8 @@ CustomComponents.decorators = [
           }
 
           return (
-            <>
+            <div style={{ display: 'flex', gap: 8 }}>
               <Button
-                mr={1}
                 disabled={page === 1 || isLoadingPage}
                 onClick={goToPreviousPage}
               >
@@ -223,7 +222,6 @@ CustomComponents.decorators = [
               {pageNumbersToDisplay.map(pageNumber => (
                 <Button
                   key={pageNumber}
-                  mr={1}
                   disabled={isLoadingPage}
                   variant={page === pageNumber ? 'primary' : 'secondary'}
                   onClick={handlePageClick(pageNumber)}
@@ -232,13 +230,12 @@ CustomComponents.decorators = [
                 </Button>
               ))}
               <Button
-                mr={1}
                 disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
                 onClick={goToNextPage}
               >
                 Next
               </Button>
-            </>
+            </div>
           )
         }}
       >
