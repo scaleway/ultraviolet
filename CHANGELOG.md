@@ -1,3 +1,26 @@
+## [0.133.0](https://github.com/scaleway/scaleway-ui/compare/v0.132.0...v0.133.0) (2021-12-28)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v16 ([#1057](https://github.com/scaleway/scaleway-ui/issues/1057)) ([1228ef5](https://github.com/scaleway/scaleway-ui/commit/1228ef546fbf1f588b69884ff1f59274e580faf5))
+* **renovate:** change reviewers config ([#1063](https://github.com/scaleway/scaleway-ui/issues/1063)) ([65946bc](https://github.com/scaleway/scaleway-ui/commit/65946bc06e10c873ca1c8b013453c91ae0a8e7fd))
+
+
+### :memo: Documentation
+
+* **theme:** updated theme and colors documentation ([#1043](https://github.com/scaleway/scaleway-ui/issues/1043)) ([ddf97c6](https://github.com/scaleway/scaleway-ui/commit/ddf97c659d9abce49be91bf95d2fdf355226079d))
+
+
+### :zap: Refactor
+
+* **a11y:** stepper and a11y tests fix ([#1032](https://github.com/scaleway/scaleway-ui/issues/1032)) ([31016cf](https://github.com/scaleway/scaleway-ui/commit/31016cffe52be5a7b4f0d3785a344610d1e95fe4))
+
+
+### :gear: Features
+
+* migrate tabgroup and table to new ds ([#1052](https://github.com/scaleway/scaleway-ui/issues/1052)) ([eb20274](https://github.com/scaleway/scaleway-ui/commit/eb20274e585f2b58aa1a4279875e82c8eabfd5bf))
+
 ## [0.132.0](https://github.com/scaleway/scaleway-ui/compare/v0.131.6...v0.132.0) (2021-12-27)
 
 
