@@ -8,6 +8,7 @@ import React, {
   InputHTMLAttributes,
   KeyboardEventHandler,
   MutableRefObject,
+  ReactNode,
   VoidFunctionComponent,
   useEffect,
   useRef,
@@ -80,7 +81,10 @@ const StyledTouchable = styled(Touchable, {
   margin: 0 4px;
 `
 
-const StyledCenterTouchable = styled(Touchable)<{ size: ContainerSizesType }>`
+const StyledCenterBox = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})<{ size: ContainerSizesType }>`
+  display: flex;
   flex: 1;
   flex-direction: row;
   height: calc(100% - 8px);
@@ -115,6 +119,14 @@ const StyledInput = styled.input`
   text-align: center;
 `
 
+const StyledText = styled('span', {
+  shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
+})<{ disabled: boolean }>`
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
+  user-select: none;
+`
+
 const StyledContainer = styled(Box, {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ disabled: boolean; size: ContainerSizesType }>`
@@ -133,7 +145,7 @@ const StyledContainer = styled(Box, {
   ${({ disabled, theme }) =>
     disabled
       ? css`
-          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterTouchable} {
+          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterBox} {
             ${disabledStyles({ disabled, theme })}
           }
         `
@@ -150,7 +162,7 @@ type StepperProps = {
   onMinCrossed?(): void
   size?: ContainerSizesType
   step?: number
-  text?: string
+  text?: string | ReactNode
   value?: string | number
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
@@ -166,7 +178,7 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   onMinCrossed,
   size = 'large',
   step = 1,
-  text = '',
+  text,
   value,
   ...props
 }) => {
@@ -255,16 +267,15 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
         <StyledIcon name="minus" size={iconSizes[size]} color="gray300" />
       </StyledTouchable>
 
-      <StyledCenterTouchable
+      <StyledCenterBox
         size={size}
-        activeOpacity={0.5}
-        disabled={disabled}
         onClick={() => {
           if (inputRef?.current) {
             inputRef.current.focus()
           }
         }}
-        aria-label="Input"
+        aria-live="assertive"
+        role="status"
       >
         <StyledInput
           disabled={disabled}
@@ -278,12 +289,14 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
             width: inputValue.toString().length * 10 + 15,
           }}
           value={inputValue.toString()} // A dom element can only have string attributes.
+          aria-label="Input"
         />
-
-        <StyledInput disabled={disabled} as="span">
-          {text}
-        </StyledInput>
-      </StyledCenterTouchable>
+        {typeof text === 'string' ? (
+          <StyledText disabled={disabled}>{text}</StyledText>
+        ) : (
+          text
+        )}
+      </StyledCenterBox>
 
       <StyledTouchable
         size={size}
@@ -315,7 +328,7 @@ Stepper.propTypes = {
   /**
    * Text displayed into component at the right of number value.
    */
-  text: PropTypes.string,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
