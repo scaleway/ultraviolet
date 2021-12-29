@@ -231,7 +231,7 @@ const VolumeSize = ({
 
   return (
     <StyledComponentContainer>
-      <StyledBox>
+      <StyledBox role="status" aria-live="polite">
         <Typography variant="bodyA" mr={2} fontWeight={500}>
           <StyledTitle>{title}</StyledTitle>
           <StyledValue hasError={hasError}>
