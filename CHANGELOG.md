@@ -1,3 +1,23 @@
+### [0.133.2](https://github.com/scaleway/scaleway-ui/compare/v0.133.1...v0.133.2) (2021-12-29)
+
+
+### :zap: Refactor
+
+* **a11y:** volumeSize ([#1036](https://github.com/scaleway/scaleway-ui/issues/1036)) ([815e67f](https://github.com/scaleway/scaleway-ui/commit/815e67ff5f36e78e83b62466843b8166986214ab))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @commitlint/cli to v16.0.1 ([#1068](https://github.com/scaleway/scaleway-ui/issues/1068)) ([20a327e](https://github.com/scaleway/scaleway-ui/commit/20a327eff0cf695a3461b046d6c405ea33cf1563))
+* **devdeps:** update dependency rollup to v2.62.0 ([#1069](https://github.com/scaleway/scaleway-ui/issues/1069)) ([d40b345](https://github.com/scaleway/scaleway-ui/commit/d40b345c975de8fa2c04e540ac940eca3ef9ea89))
+* **devdeps:** update dependency rollup-plugin-dts to v4.1.0 ([#1070](https://github.com/scaleway/scaleway-ui/issues/1070)) ([fa7e985](https://github.com/scaleway/scaleway-ui/commit/fa7e9856de4c6dbc0d2cf91517548bc8ed9290bd))
+
+
+### :bug: Bug Fixes
+
+* alert width to allow dismiss button ([#1071](https://github.com/scaleway/scaleway-ui/issues/1071)) ([fd8d65a](https://github.com/scaleway/scaleway-ui/commit/fd8d65a96b577f08acccb4c59e3c7e55e2e652a0))
+* remove Boxer ([#1067](https://github.com/scaleway/scaleway-ui/issues/1067)) ([2940c5a](https://github.com/scaleway/scaleway-ui/commit/2940c5ac5b392d22167bd8d55275315bfc240012))
+
 ### [0.133.1](https://github.com/scaleway/scaleway-ui/compare/v0.133.0...v0.133.1) (2021-12-28)
 
 
