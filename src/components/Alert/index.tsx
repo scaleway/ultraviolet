@@ -79,9 +79,14 @@ const StyledContainer = styled(Box, {
   ${alertStyles}
 `
 
+const StyledIcon = styled(Icon)`
+  margin-right: ${({ theme }) => theme.space[2]};
+`
+
 const StyledBox = styled(Box)<{ color: string }>`
   display: flex;
   flex-direction: column;
+  flex: 1;
 `
 
 type TitleProps = {
@@ -89,7 +94,7 @@ type TitleProps = {
   text: string
 }
 const Title = ({ color, text }: TitleProps) => (
-  <Typography variant="description" color={color} ml={2}>
+  <Typography variant="description" color={color}>
     {text}
   </Typography>
 )
@@ -119,14 +124,14 @@ const Alert: FunctionComponent<AlertProps> = ({
     variant={variant}
     {...props}
   >
-    <Icon
+    <StyledIcon
       name={icon || typesDefaultIcons[type]}
       size={iconSize}
       aria-hidden="true"
     />
     <StyledBox color="inherit">
       {title && <Title text={title} color="inherit" />}
-      <Typography variant="bodyA" color="inherit" ml={2}>
+      <Typography variant="bodyA" color="inherit">
         {children}
       </Typography>
     </StyledBox>
