@@ -79,6 +79,10 @@ const StyledContainer = styled(Box, {
   ${alertStyles}
 `
 
+const StyledIcon = styled(Icon)`
+  margin-right: ${({ theme }) => theme.space[2]};
+`
+
 const StyledBox = styled(Box)<{ color: string }>`
   display: flex;
   flex-direction: column;
@@ -120,11 +124,10 @@ const Alert: FunctionComponent<AlertProps> = ({
     variant={variant}
     {...props}
   >
-    <Icon
+    <StyledIcon
       name={icon || typesDefaultIcons[type]}
       size={iconSize}
       aria-hidden="true"
-      mr={2}
     />
     <StyledBox color="inherit">
       {title && <Title text={title} color="inherit" />}
