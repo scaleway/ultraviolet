@@ -1,3 +1,11 @@
+### [0.133.3](https://github.com/scaleway/scaleway-ui/compare/v0.133.2...v0.133.3) (2021-12-30)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.3.4 ([#1074](https://github.com/scaleway/scaleway-ui/issues/1074)) ([177f6db](https://github.com/scaleway/scaleway-ui/commit/177f6db4e0a5942fc25f2c7ff5a9883d68ee02cb))
+* **deps:** update nivo monorepo to v0.76.0 ([#1072](https://github.com/scaleway/scaleway-ui/issues/1072)) ([9157aba](https://github.com/scaleway/scaleway-ui/commit/9157aba5af28adcff2f9fdefe6e3460fe438d9f7))
+
 ### [0.133.2](https://github.com/scaleway/scaleway-ui/compare/v0.133.1...v0.133.2) (2021-12-29)
 
 
