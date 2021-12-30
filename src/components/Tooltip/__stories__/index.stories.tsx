@@ -148,7 +148,6 @@ export const Variants: Story = () => (
     {(['black', 'white'] as ComponentProps<typeof Tooltip>['variant'][]).map(
       variant => (
         <Tooltip
-          color="white"
           key={variant}
           text="tooltip"
           variant={variant}
