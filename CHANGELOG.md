@@ -1,3 +1,10 @@
+### [0.133.4](https://github.com/scaleway/scaleway-ui/compare/v0.133.3...v0.133.4) (2021-12-30)
+
+
+### :bug: Bug Fixes
+
+* fixes issue with tooltip border ([#1065](https://github.com/scaleway/scaleway-ui/issues/1065)) ([1229e98](https://github.com/scaleway/scaleway-ui/commit/1229e98131c05f6fdba3b1eab01c4954054d19cd))
+
 ### [0.133.3](https://github.com/scaleway/scaleway-ui/compare/v0.133.2...v0.133.3) (2021-12-30)
 
 
