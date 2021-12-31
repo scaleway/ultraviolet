@@ -1,3 +1,15 @@
+## [0.134.0](https://github.com/scaleway/scaleway-ui/compare/v0.133.4...v0.134.0) (2021-12-31)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.16.7 ([#1075](https://github.com/scaleway/scaleway-ui/issues/1075)) ([c3f0e4e](https://github.com/scaleway/scaleway-ui/commit/c3f0e4efd09debc36a28908778a241b06f655941))
+
+
+### :gear: Features
+
+* new colors in switch button ([#1038](https://github.com/scaleway/scaleway-ui/issues/1038)) ([46626c7](https://github.com/scaleway/scaleway-ui/commit/46626c7a2e99d93098b31619c23ca55efd08cb47))
+
 ### [0.133.4](https://github.com/scaleway/scaleway-ui/compare/v0.133.3...v0.133.4) (2021-12-30)
 
 
