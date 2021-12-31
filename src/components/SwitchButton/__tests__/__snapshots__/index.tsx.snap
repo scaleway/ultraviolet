@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .cache-3dhp9y {
+  .cache-1oe0y9h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,24 +38,73 @@ exports[`SwitchButton renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-3dhp9y[aria-checked='true'] {
+.cache-1oe0y9h[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.cache-3dhp9y:hover,
-.cache-3dhp9y:focus {
+.cache-1oe0y9h[aria-disabled='true'] {
+  cursor: not-allowed;
   color: #b2b6c3;
+  background-color: #f6f5f7;
+  border-color: #fcfcfd;
+  pointer-events: none;
+}
+
+.cache-1oe0y9h[aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  border-color: #fcfcfd;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
   border-color: #4f0599;
 }
 
-.cache-3dhp9y:hover {
-  box-shadow: 0 0 8px 2px #eeeeff;
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover {
+  box-shadow: 0 0 8px 2px rgba(79,5,153,0.1);
 }
 
-.cache-3dhp9y:focus {
-  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h[data-variant='segment'] {
+  font-size: 14;
+  height: 40px;
+  -webkit-transition: none;
+  transition: none;
+  border-radius: 4px;
+  box-shadow: none;
+  border-color: transparent;
+  color: #4a4f62;
+}
+
+.cache-1oe0y9h[data-variant='segment']:hover,
+.cache-1oe0y9h[data-variant='segment']:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-checked='true'] {
+  background-color: #4f0599;
+  color: #fff;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'] {
+  color: #b2b6c3;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+}
+
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .cache-cujed6 {
@@ -65,7 +114,8 @@ exports[`SwitchButton renders correctly 1`] = `
 
 <label
     aria-checked="false"
-    class="e16krxq01 cache-3dhp9y"
+    aria-disabled="false"
+    class="e16krxq01 cache-1oe0y9h"
     for="radio-choice"
   >
     Choice
@@ -84,7 +134,7 @@ exports[`SwitchButton renders correctly 1`] = `
 
 exports[`SwitchButton renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-vrtsao {
+  .cache-1oe0y9h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,22 +168,75 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   position: relative;
   font-weight: 500;
   cursor: pointer;
-  cursor: not-allowed;
-  color: #d4dae7;
-  background-color: #fafafb;
-  border-color: #d4dae7;
-  pointer-events: none;
 }
 
-.cache-vrtsao[aria-checked='true'] {
+.cache-1oe0y9h[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.cache-vrtsao[aria-checked='true'] {
-  color: #d4dae7;
-  border-color: #d4dae7;
+.cache-1oe0y9h[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+  border-color: #fcfcfd;
+  pointer-events: none;
+}
+
+.cache-1oe0y9h[aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  border-color: #fcfcfd;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: #4f0599;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover {
+  box-shadow: 0 0 8px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h[data-variant='segment'] {
+  font-size: 14;
+  height: 40px;
+  -webkit-transition: none;
+  transition: none;
+  border-radius: 4px;
+  box-shadow: none;
+  border-color: transparent;
+  color: #4a4f62;
+}
+
+.cache-1oe0y9h[data-variant='segment']:hover,
+.cache-1oe0y9h[data-variant='segment']:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-checked='true'] {
+  background-color: #4f0599;
+  color: #fff;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'] {
+  color: #b2b6c3;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+}
+
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .cache-cujed6 {
@@ -143,8 +246,8 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 
 <label
     aria-checked="false"
-    class="e16krxq01 cache-vrtsao"
-    disabled=""
+    aria-disabled="true"
+    class="e16krxq01 cache-1oe0y9h"
     for="radio-choice"
   >
     Choice
@@ -165,7 +268,7 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 
 exports[`SwitchButton renders correctly with complex child 1`] = `
 <DocumentFragment>
-  .cache-vrtsao {
+  .cache-1oe0y9h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,22 +302,75 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   position: relative;
   font-weight: 500;
   cursor: pointer;
-  cursor: not-allowed;
-  color: #d4dae7;
-  background-color: #fafafb;
-  border-color: #d4dae7;
-  pointer-events: none;
 }
 
-.cache-vrtsao[aria-checked='true'] {
+.cache-1oe0y9h[aria-checked='true'] {
   cursor: auto;
   color: #4f0599;
   border-color: #4f0599;
 }
 
-.cache-vrtsao[aria-checked='true'] {
-  color: #d4dae7;
-  border-color: #d4dae7;
+.cache-1oe0y9h[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+  border-color: #fcfcfd;
+  pointer-events: none;
+}
+
+.cache-1oe0y9h[aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  border-color: #fcfcfd;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: #4f0599;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover {
+  box-shadow: 0 0 8px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h[data-variant='segment'] {
+  font-size: 14;
+  height: 40px;
+  -webkit-transition: none;
+  transition: none;
+  border-radius: 4px;
+  box-shadow: none;
+  border-color: transparent;
+  color: #4a4f62;
+}
+
+.cache-1oe0y9h[data-variant='segment']:hover,
+.cache-1oe0y9h[data-variant='segment']:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-checked='true'] {
+  background-color: #4f0599;
+  color: #fff;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'] {
+  color: #b2b6c3;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+}
+
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .cache-cujed6 {
@@ -224,8 +380,8 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 
 <label
     aria-checked="true"
-    class="e16krxq01 cache-vrtsao"
-    disabled=""
+    aria-disabled="true"
+    class="e16krxq01 cache-1oe0y9h"
     for="radio-choice"
   >
     true true
@@ -247,7 +403,7 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 
 exports[`SwitchButton renders correctly with variant segment 1`] = `
 <DocumentFragment>
-  .cache-131746z {
+  .cache-1oe0y9h {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,59 +437,73 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   position: relative;
   font-weight: 500;
   cursor: pointer;
+}
+
+.cache-1oe0y9h[aria-checked='true'] {
+  cursor: auto;
+  color: #4f0599;
+  border-color: #4f0599;
+}
+
+.cache-1oe0y9h[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b2b6c3;
+  background-color: #f6f5f7;
+  border-color: #fcfcfd;
+  pointer-events: none;
+}
+
+.cache-1oe0y9h[aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  border-color: #fcfcfd;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  border-color: #4f0599;
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):hover {
+  box-shadow: 0 0 8px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h:not([aria-checked='true']):not([aria-disabled='true']):focus {
+  box-shadow: 0 0 1px 2px rgba(79,5,153,0.1);
+}
+
+.cache-1oe0y9h[data-variant='segment'] {
   font-size: 14;
   height: 40px;
   -webkit-transition: none;
   transition: none;
   border-radius: 4px;
   box-shadow: none;
-}
-
-.cache-131746z[aria-checked='true'] {
-  cursor: auto;
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-131746z:hover,
-.cache-131746z:focus {
-  color: #b2b6c3;
-  border-color: #4f0599;
-}
-
-.cache-131746z:hover {
-  box-shadow: 0 0 8px 2px #eeeeff;
-}
-
-.cache-131746z:focus {
-  box-shadow: 0 0 1px 2px rgba(79,5,153,0.25);
-}
-
-.cache-131746z:hover,
-.cache-131746z:focus {
-  box-shadow: none;
   border-color: transparent;
   color: #4a4f62;
 }
 
-.cache-131746z[aria-checked='true'] {
+.cache-1oe0y9h[data-variant='segment']:hover,
+.cache-1oe0y9h[data-variant='segment']:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.cache-1oe0y9h[data-variant='segment'][aria-checked='true'] {
   background-color: #4f0599;
   color: #fff;
 }
 
-.cache-131746z[aria-checked='true']:hover {
-  color: #fff;
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'] {
+  color: #b2b6c3;
 }
 
-.cache-131746z[aria-checked='false'] {
-  background-color: white;
-  color: #4a4f62;
-  border-color: transparent;
+.cache-1oe0y9h[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+  color: #b2b6c3;
+  background-color: #f6f5f7;
 }
 
-.cache-131746z[aria-checked='false']:hover,
-.cache-131746z[aria-checked='false']:focus {
-  color: #4a4f62;
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
+.cache-1oe0y9h[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -345,7 +515,9 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
 
 <label
     aria-checked="false"
-    class="e16krxq01 cache-131746z"
+    aria-disabled="false"
+    class="e16krxq01 cache-1oe0y9h"
+    data-variant="segment"
     for="radio-choice"
   >
     Choice

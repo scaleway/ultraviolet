@@ -14,37 +14,42 @@ import Box, { BoxProps } from '../Box'
 import Tooltip from '../Tooltip'
 
 const variants = {
-  segment: ({ theme }: { theme: Theme }) => css`
-    font-size: 14;
-    height: 40px;
-    transition: none;
-    border-radius: 4px;
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
+  segment: (theme: Theme) => css`
+    &[data-variant='segment'] {
+      font-size: 14;
+      height: 40px;
+      transition: none;
+      border-radius: 4px;
       box-shadow: none;
-      border-color: ${theme.colorsDeprecated.transparent};
-      color: ${theme.colorsDeprecated.gray700};
-    }
+      border-color: transparent;
+      color: ${theme.colors.neutral.text};
 
-    &[aria-checked='true'] {
-      background-color: ${theme.colorsDeprecated.primary};
-      color: ${theme.colorsDeprecated.white};
-      :hover {
-        color: ${theme.colorsDeprecated.white};
-      }
-    }
-
-    &[aria-checked='false'] {
-      background-color: white;
-      color: ${theme.colorsDeprecated.gray700};
-      border-color: ${theme.colorsDeprecated.transparent};
-      :hover,
-      :focus {
-        color: ${theme.colorsDeprecated.gray700};
-        border-color: ${theme.colorsDeprecated.transparent};
+      &:hover,
+      &:focus {
+        border-color: transparent;
         box-shadow: none;
+      }
+
+      &[aria-checked='true'] {
+        background-color: ${theme.colors.primary.backgroundStrong};
+        color: ${theme.colors.primary.textStrong};
+      }
+
+      &[aria-disabled='true'] {
+        color: ${theme.colors.neutral.textDisabled};
+
+        &[aria-checked='true'] {
+          color: ${theme.colors.neutral.textDisabled};
+          background-color: ${theme.colors.neutral.backgroundDisabled};
+        }
+      }
+
+      &:not([aria-checked='true']):not([aria-disabled='true']) {
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
       }
     }
   `,
@@ -54,42 +59,7 @@ type Variants = keyof typeof variants
 
 const switchButtonVariants = Object.keys(variants) as Variants[]
 
-const active = ({ theme }: { theme: Theme }) => css`
-  &:hover,
-  &:focus {
-    color: ${theme.colorsDeprecated.gray550};
-    border-color: ${theme.colorsDeprecated.primary};
-  }
-
-  &:hover {
-    box-shadow: 0 0 8px 2px ${theme.colorsDeprecated.gray200};
-  }
-
-  &:focus {
-    box-shadow: 0 0 1px 2px
-      ${transparentize(0.75, theme.colorsDeprecated.primary)};
-  }
-`
-
-const disabledClass = ({ theme }: { theme: Theme }) => css`
-  cursor: not-allowed;
-  color: ${theme.colorsDeprecated.gray350};
-  background-color: ${theme.colorsDeprecated.gray50};
-  border-color: ${theme.colorsDeprecated.gray350};
-  pointer-events: none;
-
-  &[aria-checked='true'] {
-    color: ${theme.colorsDeprecated.gray350};
-    border-color: ${theme.colorsDeprecated.gray350};
-  }
-`
-
-type StyledSwitchProps = {
-  checked?: boolean
-  disabled?: boolean
-  variant?: Variants
-} & BoxProps &
-  LabelHTMLAttributes<HTMLLabelElement>
+type StyledSwitchProps = BoxProps & LabelHTMLAttributes<HTMLLabelElement>
 
 const StyledSwitch = styled(Box, {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
@@ -100,13 +70,13 @@ const StyledSwitch = styled(Box, {
   border-radius: 4px;
   align-items: center;
   border-style: solid;
-  border-color: ${({ theme }) => theme.colorsDeprecated.gray350};
+  border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   border-width: 1px;
   padding: 16px;
   transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
   user-select: none;
   touch-action: manipulation;
-  color: ${({ theme }) => theme.colorsDeprecated.gray550};
+  color: ${({ theme }) => theme.colors.neutral.textWeak};
   font-size: 16px;
   line-height: 22px;
   position: relative;
@@ -115,13 +85,41 @@ const StyledSwitch = styled(Box, {
 
   &[aria-checked='true'] {
     cursor: auto;
-    color: ${({ theme }) => theme.colorsDeprecated.primary};
-    border-color: ${({ theme }) => theme.colorsDeprecated.primary};
+    color: ${({ theme }) => theme.colors.primary.text};
+    border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  ${({ checked, disabled }) => !checked && !disabled && active}
-  ${({ disabled }) => disabled && disabledClass}
-  ${({ variant }) => variant && variants[variant]}
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    pointer-events: none;
+
+    &[aria-checked='true'] {
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+      border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    }
+  }
+
+  &:not([aria-checked='true']):not([aria-disabled='true']) {
+    &:hover,
+    &:focus {
+      border-color: ${({ theme }) => theme.colors.primary.border};
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px 2px
+        ${({ theme }) => transparentize(0.9, theme.colors.primary.border)};
+    }
+
+    &:focus {
+      box-shadow: 0 0 1px 2px
+        ${({ theme }) => transparentize(0.9, theme.colors.primary.border)};
+    }
+  }
+
+  ${({ theme }) => Object.values(variants).map(variantFn => variantFn(theme))}
 `
 
 const StyledRadio = styled(Radio)`
@@ -145,6 +143,9 @@ type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
   onFocus?: FocusEventHandler
   tooltip?: string
   value: string
+  checked?: boolean
+  disabled?: boolean
+  variant?: Variants
 }
 
 const SwitchButton: FunctionComponent<SwitchButtonProps> = ({
@@ -164,10 +165,9 @@ const SwitchButton: FunctionComponent<SwitchButtonProps> = ({
     <StyledSwitch
       as="label"
       htmlFor={`${name}-${value}`}
-      disabled={disabled}
-      variant={variant}
-      checked={checked}
       aria-checked={checked}
+      aria-disabled={disabled}
+      data-variant={variant}
       {...props}
     >
       {typeof children === 'function'
