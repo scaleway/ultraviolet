@@ -1,3 +1,24 @@
+### [0.134.1](https://github.com/scaleway/scaleway-ui/compare/v0.134.0...v0.134.1) (2022-01-04)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v13.1.2 ([#1077](https://github.com/scaleway/scaleway-ui/issues/1077)) ([a01534b](https://github.com/scaleway/scaleway-ui/commit/a01534b5f3249d4e360ceb52ee39147fa8283e4c))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.1 ([#1079](https://github.com/scaleway/scaleway-ui/issues/1079)) ([b85632b](https://github.com/scaleway/scaleway-ui/commit/b85632bc08003445aa980eb9beee9560baccd212))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.0 ([#1080](https://github.com/scaleway/scaleway-ui/issues/1080)) ([d66507c](https://github.com/scaleway/scaleway-ui/commit/d66507c17ef853ead4cfc6731cf58440a8c2cbcf))
+* **devdeps:** update dependency date-fns to v2.28.0 ([#1078](https://github.com/scaleway/scaleway-ui/issues/1078)) ([2b4cbea](https://github.com/scaleway/scaleway-ui/commit/2b4cbea48595eff94f357f5a13338826e6de7c96))
+* **devdeps:** update dependency lint-staged to v12.1.5 ([#1081](https://github.com/scaleway/scaleway-ui/issues/1081)) ([64c97c0](https://github.com/scaleway/scaleway-ui/commit/64c97c0869c8d0292830d0a850179d9e6bb0e1ce))
+
+
+### :zap: Refactor
+
+* update theme colors of Reminder, RichSelect & Slider ([#1073](https://github.com/scaleway/scaleway-ui/issues/1073)) ([e021136](https://github.com/scaleway/scaleway-ui/commit/e0211367effd68d25e92460a9a4c20caef3abeb6))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update nivo monorepo to v0.78.0 ([#1076](https://github.com/scaleway/scaleway-ui/issues/1076)) ([36afb8b](https://github.com/scaleway/scaleway-ui/commit/36afb8b4783bd53b4efaf27571adbac63288a866))
+
 ## [0.134.0](https://github.com/scaleway/scaleway-ui/compare/v0.133.4...v0.134.0) (2021-12-31)
 
 
