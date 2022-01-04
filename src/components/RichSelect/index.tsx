@@ -9,6 +9,7 @@ import React, {
   LabelHTMLAttributes,
   ReactElement,
   ReactNode,
+  Validator,
   forwardRef,
   useEffect,
   useMemo,
@@ -51,10 +52,10 @@ type SelectStyleGetterProps = {
 }
 
 const getControlColor = ({ state, error, theme }: SelectStyleGetterProps) => {
-  if (state.isDisabled) return theme.colorsDeprecated.gray300
-  if (error) return theme.colorsDeprecated.warning
+  if (state.isDisabled) return theme.colors.neutral.textDisabled
+  if (error) return theme.colors.danger.text
 
-  return theme.colorsDeprecated.gray700
+  return theme.colors.neutral.text
 }
 
 const getPlaceholderColor = ({
@@ -62,23 +63,23 @@ const getPlaceholderColor = ({
   error,
   theme,
 }: SelectStyleGetterProps) => {
-  if (state.isDisabled) return theme.colorsDeprecated.gray300
-  if (error) return theme.colorsDeprecated.warning
+  if (state.isDisabled) return theme.colors.neutral.textWeakDisabled
+  if (error) return theme.colors.danger.textWeak
 
-  return theme.colorsDeprecated.gray550
+  return theme.colors.neutral.textWeak
 }
 
 const getOptionColor = ({ state, theme }: SelectStyleGetterProps) => {
-  let color: string = theme.colorsDeprecated.gray700
-  let backgroundColor: string = theme.colorsDeprecated.white
+  let color: string = theme.colors.neutral.text
+  let backgroundColor: string = theme.colors.neutral.backgroundWeak
   if (state.isDisabled) {
-    backgroundColor = theme.colorsDeprecated.gray50
-    color = theme.colorsDeprecated.gray300
+    backgroundColor = theme.colors.neutral.backgroundDisabled
+    color = theme.colors.neutral.textDisabled
   } else if (state.isSelected) {
-    backgroundColor = theme.colorsDeprecated.primary
-    color = theme.colorsDeprecated.white
+    backgroundColor = theme.colors.primary.backgroundStrong
+    color = theme.colors.primary.textStrong
   } else if (state.isFocused) {
-    backgroundColor = theme.colorsDeprecated.gray200
+    backgroundColor = theme.colors.primary.background
   }
 
   return { backgroundColor, color }
@@ -113,11 +114,11 @@ const getSelectStyles = ({
   control: (provided, state) => ({
     ...provided,
     backgroundColor: state.isDisabled
-      ? theme.colorsDeprecated.gray50
-      : theme.colorsDeprecated.white,
+      ? theme.colors.neutral.backgroundWeakDisabled
+      : theme.colors.neutral.backgroundWeak,
     borderColor: error
-      ? theme.colorsDeprecated.warning
-      : theme.colorsDeprecated.gray300,
+      ? theme.colors.danger.border
+      : theme.colors.neutral.borderWeak,
     borderRadius: '4px',
     borderStyle: state.isDisabled ? 'none' : 'solid',
     borderWidth: state.isDisabled ? 0 : '1px',
@@ -132,28 +133,24 @@ const getSelectStyles = ({
     ...(!state.isDisabled && {
       ':focus-within': {
         borderColor: error
-          ? theme.colorsDeprecated.warning
-          : theme.colorsDeprecated.primary,
+          ? theme.colors.danger.border
+          : theme.colors.primary.border,
         boxShadow: `0 0 2px 2px ${transparentize(
           0.75,
           error
-            ? theme.colorsDeprecated.warning
-            : theme.colorsDeprecated.primary,
+            ? theme.colors.danger.backgroundStrong
+            : theme.colors.primary.backgroundStrong,
         )}`,
         svg: {
-          fill: error
-            ? theme.colorsDeprecated.warning
-            : theme.colorsDeprecated.primary,
+          fill: error ? theme.colors.danger.text : theme.colors.primary.text,
         },
       },
       ':hover': {
         borderColor: error
-          ? theme.colorsDeprecated.warning
-          : theme.colorsDeprecated.primary,
+          ? theme.colors.danger.borderHover
+          : theme.colors.primary.borderHover,
         svg: {
-          fill: error
-            ? theme.colorsDeprecated.warning
-            : theme.colorsDeprecated.primary,
+          fill: error ? theme.colors.danger.text : theme.colors.primary.text,
         },
       },
     }),
@@ -172,7 +169,7 @@ const getSelectStyles = ({
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colorsDeprecated.gray200,
+    backgroundColor: theme.colors.neutral.borderWeak,
     display: state.selectProps?.time ? 'flex' : 'none',
     ...(customStyle(state)?.indicatorSeparator || {}),
   }),
@@ -187,12 +184,15 @@ const getSelectStyles = ({
     ...(customStyle(state)?.menu || {}),
     boxShadow: `0 0 0 1px ${transparentize(
       0.9,
-      theme.colorsDeprecated.black,
-    )}, 0 4px 11px ${transparentize(0.9, theme.colorsDeprecated.black)}`,
+      theme.colors.neutral.backgroundStrong,
+    )}, 0 4px 11px ${transparentize(
+      0.9,
+      theme.colors.neutral.backgroundStrong,
+    )}`,
   }),
   menuList: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colorsDeprecated.white,
+    backgroundColor: theme.colors.neutral.backgroundWeak,
     maxHeight: '225px',
     ...(customStyle(state)?.menuList || {}),
   }),
@@ -204,9 +204,9 @@ const getSelectStyles = ({
   multiValue: (provided, state) => ({
     ...provided,
     alignItems: 'center',
-    backgroundColor: theme.colorsDeprecated.gray100,
+    backgroundColor: theme.colors.neutral.backgroundDisabled,
     borderRadius: '4px',
-    color: theme.colorsDeprecated.gray700,
+    color: theme.colors.neutral.text,
     fontSize: '14px',
     fontWeight: 500,
     height: '24px',
@@ -218,8 +218,8 @@ const getSelectStyles = ({
   multiValueLabel: (provided, state) => ({
     ...provided,
     color: state.isDisabled
-      ? theme.colorsDeprecated.gray300
-      : theme.colorsDeprecated.gray700,
+      ? theme.colors.neutral.textDisabled
+      : theme.colors.neutral.text,
     fontSize: '14px',
     fontWeight: 'normal',
     lineHeight: '20px',
@@ -229,17 +229,17 @@ const getSelectStyles = ({
     ...provided,
     ...(state.isDisabled
       ? {
-          color: theme.colorsDeprecated.gray300,
+          color: theme.colors.neutral.textDisabled,
           cursor: 'none',
           pointerEvents: 'none',
         }
       : {
-          color: theme.colorsDeprecated.gray550,
+          color: theme.colors.primary.text,
         }),
     ':hover': {
       color: state.isDisabled
-        ? theme.colorsDeprecated.gray300
-        : theme.colorsDeprecated.primary,
+        ? theme.colors.neutral.textDisabled
+        : theme.colors.primary.text,
       cursor: state.isDisabled ? 'none' : 'pointer',
       pointerEvents: state.isDisabled ? 'none' : 'fill',
     },
@@ -250,19 +250,19 @@ const getSelectStyles = ({
     ...getOptionColor({ state, theme }),
     ':active': {
       backgroundColor: state.isDisabled
-        ? theme.colorsDeprecated.gray50
-        : theme.colorsDeprecated.gray200,
+        ? theme.colors.neutral.backgroundWeakDisabled
+        : theme.colors.primary.background,
       color: state.isDisabled
-        ? theme.colorsDeprecated.gray300
-        : theme.colorsDeprecated.gray700,
+        ? theme.colors.neutral.textDisabled
+        : theme.colors.primary.text,
     },
     ':hover': {
       backgroundColor: state.isDisabled
-        ? theme.colorsDeprecated.gray50
-        : theme.colorsDeprecated.gray200,
+        ? theme.colors.neutral.backgroundDisabled
+        : theme.colors.primary.background,
       color: state.isDisabled
-        ? theme.colorsDeprecated.gray300
-        : theme.colorsDeprecated.gray700,
+        ? theme.colors.neutral.textDisabled
+        : theme.colors.neutral.text,
     },
     ...(customStyle(state)?.option || {}),
   }),
@@ -274,8 +274,8 @@ const getSelectStyles = ({
   singleValue: (provided, state) => ({
     ...provided,
     color: state.isDisabled
-      ? theme.colorsDeprecated.gray550
-      : theme.colorsDeprecated.gray700,
+      ? theme.colors.neutral.textDisabled
+      : theme.colors.neutral.text,
     marginLeft: state.hasValue ? 0 : undefined,
     marginRight: state.hasValue ? 0 : undefined,
     marginTop: !state.hasValue || noTopLabel ? 0 : '5px',
@@ -326,7 +326,7 @@ const StyledContainer = styled(Box, {
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colorsDeprecated.warning};
+  color: ${({ theme }) => theme.colors.danger.text};
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
@@ -399,7 +399,6 @@ SelectContainer.propTypes = {
   getStyles: PropTypes.func.isRequired,
   innerProps: PropTypes.shape({}).isRequired,
   isDisabled: PropTypes.bool.isRequired,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   selectProps: PropTypes.shape({
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -420,7 +419,7 @@ SelectContainer.propTypes = {
     px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     py: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }) as any,
+  }) as Validator<SelectProps & ContainerProps<SelectOption>['selectProps']>,
 }
 
 type StyledPlaceholderProps = LabelHTMLAttributes<HTMLLabelElement> & {
@@ -438,15 +437,14 @@ const StyledPlaceholder = styled(Box, {
   left: 0;
   font-weight: 400;
   pointer-events: none;
-  color: ${({ theme }) => theme.colorsDeprecated.gray550};
+  color: ${({ theme, error }) =>
+    error ? theme.colors.danger.text : theme.colors.neutral.text};
   white-space: nowrap;
   width: 100%;
   height: 100%;
   font-size: 16px;
   transition: transform 250ms ease;
   opacity: 0;
-
-  ${({ error, theme }) => error && `color: ${theme.colorsDeprecated.warning};`}
   ${({ hasValue }) =>
     hasValue &&
     `
@@ -457,9 +455,7 @@ const StyledPlaceholder = styled(Box, {
     top: 2px;
     opacity: 1;
   `}
-
-  ${({ isDisabled, hasValue }) =>
-    hasValue && isDisabled ? 'opacity: 0.5' : ''}
+  ${({ isDisabled, hasValue }) => hasValue && isDisabled && 'opacity: 0.5'}
 `
 
 const ValueContainer: FunctionComponent<
@@ -549,6 +545,7 @@ const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState(false)
+  const theme = useTheme()
 
   return (
     <div
@@ -572,7 +569,11 @@ const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
           <Typography
             as="span"
             variant="bodyB"
-            color={isSelected && !isFocused ? 'white' : undefined}
+            color={
+              isSelected && !isFocused
+                ? theme.colors.primary.textStrong
+                : undefined
+            }
             ml={1}
           >
             {inlineDescription}
@@ -582,7 +583,11 @@ const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
           <Typography
             as="p"
             variant="bodyB"
-            color={isSelected && !isFocused ? 'white' : undefined}
+            color={
+              isSelected && !isFocused
+                ? theme.colors.primary.textStrong
+                : undefined
+            }
             mt={1}
             maxLines={3}
           >
@@ -613,11 +618,14 @@ const DropdownIndicator: FunctionComponent<
   const {
     selectProps: { isDisabled, time, required },
   } = props
-  const color = useMemo(() => {
-    if (isDisabled) return 'gray300'
-
-    return 'gray350'
-  }, [isDisabled])
+  const theme = useTheme()
+  const color = useMemo(
+    () =>
+      isDisabled
+        ? theme.colors.neutral.textDisabled
+        : theme.colors.neutral.text,
+    [theme, isDisabled],
+  )
 
   return (
     <components.DropdownIndicator {...props}>
@@ -627,7 +635,9 @@ const DropdownIndicator: FunctionComponent<
         color={color}
         mr={required ? 2 : 0}
       />
-      {required ? <Icon name="asterisk" size={8} color="warning" /> : null}
+      {required ? (
+        <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
+      ) : null}
     </components.DropdownIndicator>
   )
 }
@@ -639,6 +649,7 @@ DropdownIndicator.propTypes = {
 const ClearIndicator: FunctionComponent<
   ClearIndicatorProps<SelectOption> & WithSelectProps
 > = props => {
+  const theme = useTheme()
   const {
     selectProps: { checked, error },
     innerProps: { ref, ...restInnerProps },
@@ -651,7 +662,11 @@ const ClearIndicator: FunctionComponent<
         name="close"
         size={20}
         cursor="pointer"
-        color={(checked && 'primary') || (error && 'warning') || 'gray350'}
+        color={
+          (checked && theme.colors.primary.text) ||
+          (error && theme.colors.danger.text) ||
+          theme.colors.neutral.text
+        }
       />
     </components.ClearIndicator>
   )
@@ -693,6 +708,8 @@ type RichSelectProps = SelectProps &
     children: ReactNode
   }
 
+const defaultCustomStyle = () => ({})
+
 const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   animation = 'pulse',
   animationDuration = 1000,
@@ -700,7 +717,7 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   children,
   className,
   customComponents,
-  customStyle = () => ({}),
+  customStyle = defaultCustomStyle,
   disabled = false,
   error,
   innerRef,

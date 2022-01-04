@@ -15,9 +15,10 @@ export default {
   title: 'Components/Feedback/Reminder',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Reminder>> = args => (
-  <Reminder text="Your credit card [has expired]" {...args} />
-)
+const Template: Story<ComponentProps<typeof Reminder>> = ({
+  text = 'Your credit card [has expired]',
+  ...args
+}) => <Reminder text={text} {...args} />
 
 export const Default = Template.bind({})
 
@@ -31,7 +32,7 @@ Variants.parameters = {
 Variants.decorators = [
   () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      {Object.keys(variants).map(variant => (
+      {variants.map(variant => (
         <Reminder key={variant} variant={variant} text={variant} />
       ))}
     </div>
