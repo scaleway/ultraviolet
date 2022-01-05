@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode, Validator } from 'react'
 import BorderedBox from '../BorderedBox'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
@@ -15,13 +15,15 @@ const StyledTitleContainer = styled(FlexBox)`
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
-const StyledBox = styled(BorderedBox, {
-  shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
-})<{
+type ContainerBaseProps = {
   small?: boolean
   edition?: boolean
   disabled?: boolean
-}>`
+}
+
+const StyledBox = styled(BorderedBox, {
+  shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
+})<ContainerBaseProps>`
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
@@ -42,17 +44,14 @@ const StyledBox = styled(BorderedBox, {
   }
 `
 
-type ContainerProps = {
+type ContainerProps = ContainerBaseProps & {
   boxStyle?: SerializedStyles
   children: ReactNode
-  disabled?: boolean
-  edition?: boolean
   header?: ReactNode
   rightTitle?: ReactNode
-  small?: boolean
   subtitle?: string
   title?: string
-}
+} & BoxProps
 
 const Container: FunctionComponent<ContainerProps> = ({
   title,
