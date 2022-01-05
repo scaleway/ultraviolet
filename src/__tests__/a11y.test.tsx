@@ -88,7 +88,7 @@ describe('A11y', () => {
       for (const componentName of Object.keys(components)) {
         if (componentName !== 'default') {
           const ComponentToRender = components[
-            componentName
+            componentName as keyof typeof components
           ] as VoidFunctionComponent
           const { container } = renderWithTheme(<ComponentToRender />)
           // eslint-disable-next-line no-await-in-loop

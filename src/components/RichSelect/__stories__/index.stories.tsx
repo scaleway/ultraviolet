@@ -8,9 +8,9 @@ import * as animations from '../../../utils/animations'
 export default {
   component: RichSelect,
   decorators: [
-    Chidren => (
+    Children => (
       <div style={{ marginBottom: 150 }}>
-        <Chidren />
+        <Children />
       </div>
     ),
   ],
@@ -354,9 +354,9 @@ export const Description: Story = () => (
   </RichSelect>
 )
 Description.decorators = [
-  Chidren => (
+  Children => (
     <div style={{ marginBottom: 300 }}>
-      <Chidren />
+      <Children />
     </div>
   ),
 ]
@@ -377,4 +377,4 @@ KnownIssues.parameters = {
 RichSelect is based on the \`react-select\` library. To keep the focus on the selected option you need to use \`options\` prop with a memoized value or a memoized \`children\``,
   },
 }
-KnownIssues.decorators = [() => null]
+KnownIssues.decorators = []

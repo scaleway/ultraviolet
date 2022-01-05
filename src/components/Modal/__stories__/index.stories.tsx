@@ -18,8 +18,13 @@ By default now our modal is a portal. If you want to change this you can disable
   title: 'Components/Container/Modal',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Modal>> = args => (
-  <Modal disclosure={<Button>Open Modal</Button>} {...args}>
+const defaultDisclosure = <Button>Open Modal</Button>
+
+const Template: Story<ComponentProps<typeof Modal>> = ({
+  disclosure = defaultDisclosure,
+  ...props
+}) => (
+  <Modal disclosure={disclosure} {...props}>
     <div>Content should be present in center of the modal</div>
   </Modal>
 )
@@ -31,9 +36,7 @@ Switch.decorators = [
   () => (
     <Modal
       disclosure={dialog => (
-        <SWUISwitch name="switch" onChange={() => dialog?.toggle()}>
-          Open Modal
-        </SWUISwitch>
+        <SWUISwitch name="switch" onChange={() => dialog.toggle?.()} />
       )}
     >
       <div>Content should be present in center of the modal</div>

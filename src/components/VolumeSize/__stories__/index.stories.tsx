@@ -7,8 +7,20 @@ export default {
   title: 'Components/Data Display/VolumeSize',
 } as Meta
 
-const Template: Story<ComponentProps<typeof VolumeSize>> = args => (
-  <VolumeSize maxSize={30} minSize={10} value={20} unit="KB" {...args} />
+const Template: Story<ComponentProps<typeof VolumeSize>> = ({
+  maxSize = 30,
+  minSize = 10,
+  value = 20,
+  unit = 'KB',
+  ...props
+}) => (
+  <VolumeSize
+    maxSize={maxSize}
+    minSize={minSize}
+    value={value}
+    unit={unit}
+    {...props}
+  />
 )
 
 export const Default = Template.bind({})

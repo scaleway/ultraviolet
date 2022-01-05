@@ -14,7 +14,7 @@ const Template: Story<ComponentProps<typeof Stepper>> = args => {
     <Stepper
       minValue={0}
       maxValue={100}
-      onChange={setValue}
+      onChange={val => typeof val === 'number' && setValue(val)}
       value={value}
       width={200}
       {...args}
@@ -40,7 +40,7 @@ Text.decorators = [
         minValue={0}
         maxValue={100}
         text="GB"
-        onChange={setValue}
+        onChange={val => typeof val === 'number' && setValue(val)}
         value={value}
         width={200}
       />
@@ -64,7 +64,7 @@ Steps.decorators = [
         minValue={0}
         maxValue={100}
         step={10}
-        onChange={setValue}
+        onChange={val => typeof val === 'number' && setValue(val)}
         value={value}
         width={200}
       />
@@ -86,7 +86,7 @@ Sizes.decorators = [
               minValue={0}
               maxValue={100}
               size={size}
-              onChange={setValue}
+              onChange={val => typeof val === 'number' && setValue(val)}
               value={value}
               width={200}
             />

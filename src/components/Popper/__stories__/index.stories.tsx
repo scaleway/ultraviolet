@@ -17,7 +17,7 @@ export default {
   title: 'Components/Popper',
 } as Meta
 
-const disclosure: ComponentProps<typeof Popper>['disclosure'] = ({
+const defaultDisclosure: ComponentProps<typeof Popper>['disclosure'] = ({
   placement,
   visible,
 }) => (
@@ -30,8 +30,11 @@ const disclosure: ComponentProps<typeof Popper>['disclosure'] = ({
   </Button>
 )
 
-const Template: Story<ComponentProps<typeof Popper>> = args => (
-  <Popper aria-label="Custom popover" disclosure={disclosure} {...args}>
+const Template: Story<ComponentProps<typeof Popper>> = ({
+  disclosure = defaultDisclosure,
+  ...props
+}) => (
+  <Popper aria-label="Custom popover" disclosure={disclosure} {...props}>
     {({ placement }) => (
       <div style={{ padding: '16px' }}> placement:{placement}</div>
     )}
@@ -245,20 +248,6 @@ WithElementDisclosure.decorators = [
     <Popper
       aria-label="Custom popover with button"
       disclosure={<Button>Test</Button>}
-      placement="auto"
-      modal={false}
-      visible
-    >
-      {({ placement }) => <Button> {placement}</Button>}
-    </Popper>
-  ),
-]
-
-export const WithoutDisclosure = Template.bind({})
-WithoutDisclosure.decorators = [
-  () => (
-    <Popper
-      aria-label="Custom popover with button"
       placement="auto"
       modal={false}
       visible

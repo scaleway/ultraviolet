@@ -16,15 +16,23 @@ export default {
   title: 'Components/Data Entry/RadioBorderedBox',
 } as Meta
 
-const Template: Story<ComponentProps<typeof RadioBorderedBox>> = args => (
+const Template: Story<ComponentProps<typeof RadioBorderedBox>> = ({
+  name = 'choice-1',
+  checked = true,
+  value = 'choice-1',
+  label = 'Choice 1',
+  labelDescription = '(choice details)',
+  badgeText = 'Badge',
+  ...props
+}) => (
   <RadioBorderedBox
-    name="choice-1"
-    checked
-    value="choice-1"
-    label="Choice 1"
-    labelDescription="(choice details)"
-    badgeText="Badge"
-    {...args}
+    name={name}
+    checked={checked}
+    value={value}
+    label={label}
+    labelDescription={labelDescription}
+    badgeText={badgeText}
+    {...props}
   >
     Description content
   </RadioBorderedBox>

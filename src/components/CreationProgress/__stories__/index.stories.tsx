@@ -85,20 +85,3 @@ Sizes.decorators = [
     </>
   ),
 ]
-
-export const Styling = Template.bind({})
-Styling.parameters = {
-  docs: {
-    storyDescription:
-      'You can pass all props used by `xstyled` to customize the container of the component',
-  },
-}
-Styling.decorators = [
-  () => (
-    <CreationProgress width="50%" size="small" selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-  ),
-]

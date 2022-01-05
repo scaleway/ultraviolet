@@ -16,9 +16,10 @@ export default {
   title: 'Components/MarkDown',
 } as Meta
 
-const Template: Story<ComponentProps<typeof MarkDown>> = args => (
-  <MarkDown source={simple} {...args} />
-)
+const Template: Story<ComponentProps<typeof MarkDown>> = ({
+  source = simple,
+  ...props
+}) => <MarkDown source={source} {...props} />
 
 export const Default = Template.bind({})
 

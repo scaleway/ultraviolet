@@ -25,15 +25,18 @@ export default {
   title: 'Components/Navigation/Menu',
 } as Meta
 
-const Disclosure = (
+const DefaultDisclosure = (
   <Touchable title="menu" name="menu">
     <Icon name="dots-horizontal" color="gray550" size={24} />
   </Touchable>
 )
 
-const Template: Story<ComponentProps<typeof Menu>> = args => (
+const Template: Story<ComponentProps<typeof Menu>> = ({
+  disclosure = DefaultDisclosure,
+  ...props
+}) => (
   <div style={{ height: '80px' }}>
-    <Menu disclosure={Disclosure} {...args}>
+    <Menu disclosure={disclosure} {...props}>
       <Menu.Item>MenuItem</Menu.Item>
       <Menu.Item to="/?path=/docs/components-menu--basic">
         MenuItemLink
@@ -54,7 +57,7 @@ Variants.parameters = {
 Variants.decorators = [
   () => (
     <div style={{ height: '300px' }}>
-      <Menu disclosure={Disclosure}>
+      <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>default</Menu.Item>
         <Menu.Item variant="danger">Danger</Menu.Item>
         <Menu.Item variant="nav">Nav</Menu.Item>
@@ -95,7 +98,7 @@ Borderless.parameters = {
 Borderless.decorators = [
   () => (
     <div style={{ height: '250px' }}>
-      <Menu disclosure={Disclosure}>
+      <Menu disclosure={DefaultDisclosure}>
         <Menu.Item borderless>default</Menu.Item>
         <Menu.Item variant="danger" borderless>
           Danger
@@ -136,7 +139,7 @@ ChildrenProps.parameters = {
 ChildrenProps.decorators = [
   () => (
     <div style={{ height: '250px' }}>
-      <Menu disclosure={Disclosure}>
+      <Menu disclosure={DefaultDisclosure}>
         {({ toggle }) => (
           <>
             <Menu.Item>default</Menu.Item>
@@ -174,7 +177,7 @@ Modal.parameters = {
 Modal.decorators = [
   () => (
     <div style={{ height: '100px' }}>
-      <Menu disclosure={Disclosure}>
+      <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>Menu Item</Menu.Item>
         <Menu.Item to="/?path=/docs/components-menu--disclosure">
           Menu Item Link
@@ -205,7 +208,7 @@ AdvancedWIP.parameters = {
 AdvancedWIP.decorators = [
   () => (
     <div style={{ height: '300px' }}>
-      <Menu disclosure={Disclosure}>
+      <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>MenuItem</Menu.Item>
         <Menu.Item to="/?path=/docs/components-menu--basic">
           Menu Item with React Router Link
