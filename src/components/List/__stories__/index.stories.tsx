@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps, useRef, useState } from 'react'
-import List from '..'
+import React, { useRef, useState } from 'react'
+import List, { ListProps } from '..'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
@@ -17,12 +17,12 @@ export default {
   title: 'Components/List',
 } as Meta
 
-const Template: Story<ComponentProps<typeof List>> = args => (
-  <List<ReturnType<typeof generateData>[0]>
-    data={[]}
-    columns={[{ label: 'Name' }]}
-    {...args}
-  >
+const Template: Story<ListProps<ReturnType<typeof generateData>[0]>> = ({
+  data = [],
+  columns = [{ label: 'Name' }],
+  ...props
+}) => (
+  <List data={data} columns={columns} {...props}>
     {list => (
       <>
         <list.Header />

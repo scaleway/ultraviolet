@@ -188,10 +188,7 @@ function List<DataType extends Record<string, unknown>>(
     onChangePage,
     onSortClick,
     paginationProps = {
-      LeftComponent: Pagination.LeftComponent,
-      MiddleComponent: Pagination.MiddleComponent,
       pageTabCount: 5,
-      RightComponent: Pagination.RightComponent,
     },
     ...props
   }: ListProps<DataType>,

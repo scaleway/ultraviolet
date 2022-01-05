@@ -447,7 +447,9 @@ PaginationContainer.propTypes = {
   RightComponent: PropTypes.func,
 }
 
-type PaginationType<T = unknown> = typeof PaginationForwardFn & {
+type PaginationType<
+  T extends Record<string, unknown> = Record<string, string>,
+> = typeof PaginationForwardFn & {
   RightComponent: FunctionComponent<PaginationComponentProps<T>>
   LeftComponent: FunctionComponent<PaginationComponentProps<T>>
   PaginationContainer: FunctionComponent<PaginationComponentProps<T>>
