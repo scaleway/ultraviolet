@@ -1,3 +1,15 @@
+### [0.134.2](https://github.com/scaleway/scaleway-ui/compare/v0.134.1...v0.134.2) (2022-01-05)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.1 ([#1082](https://github.com/scaleway/scaleway-ui/issues/1082)) ([f1b784b](https://github.com/scaleway/scaleway-ui/commit/f1b784b32128450be9f020d7be86502d58181376))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency prop-types to v15.8.1 ([#1083](https://github.com/scaleway/scaleway-ui/issues/1083)) ([e1f1bf6](https://github.com/scaleway/scaleway-ui/commit/e1f1bf6cabeb36e289e83e87e5215bb5feffce59))
+
 ### [0.134.1](https://github.com/scaleway/scaleway-ui/compare/v0.134.0...v0.134.1) (2022-01-04)
 
 
