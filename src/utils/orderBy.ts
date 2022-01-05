@@ -1,14 +1,14 @@
 type ComparableType = string | number
 
-const orderBy = (
-  key: string | ((a: Record<string, unknown>) => ComparableType),
+function orderBy<T extends Record<string, unknown>>(
+  key: string | ((a: T) => ComparableType),
   order: 'asc' | 'desc',
-): ((a: Record<string, unknown>, b: Record<string, unknown>) => number) => {
+): (a: T, b: T) => number {
   const direction = order === 'asc' ? 1 : -1
   const transform =
     typeof key === 'function'
       ? key
-      : (item: Record<string, unknown>) =>
+      : (item: T) =>
           typeof item[key] === 'string'
             ? (item[key] as string).toLowerCase()
             : item[key]

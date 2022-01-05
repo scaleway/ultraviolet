@@ -1,7 +1,7 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { useEffect } from 'react'
-import List, { ListBodyRenderProps, ListRefType } from '..'
+import List, { ListRefType } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils'
@@ -41,7 +41,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -77,7 +77,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -114,7 +114,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -150,7 +150,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -187,7 +187,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -224,7 +224,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -245,9 +245,7 @@ describe('List', () => {
     shouldMatchEmotionSnapshot(
       <List
         multiselect
-        selectable={data =>
-          data.filter(({ name }) => (name as string).includes('1'))
-        }
+        selectable={data => data.filter(({ name }) => name.includes('1'))}
         idKey="id"
         data={generateData(5)}
         columns={[
@@ -263,7 +261,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -286,9 +284,7 @@ describe('List', () => {
       <List
         variant="table"
         multiselect
-        selectable={data =>
-          data.filter(({ name }) => (name as string).includes('1'))
-        }
+        selectable={data => data.filter(({ name }) => name.includes('1'))}
         idKey="id"
         data={generateData(5)}
         columns={[
@@ -304,7 +300,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -341,7 +337,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -401,7 +397,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -457,7 +453,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -527,7 +523,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -574,7 +570,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -644,7 +640,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -701,7 +697,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -767,7 +763,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -837,7 +833,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -873,7 +869,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -926,7 +922,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -983,7 +979,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row
@@ -1022,7 +1018,7 @@ describe('List', () => {
 
   test('should render correctly with no data', () =>
     shouldMatchEmotionSnapshot(
-      <List
+      <List<Record<string, string>>
         emptyListComponent="Test"
         multiselect
         idKey="id"
@@ -1039,7 +1035,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1062,7 +1058,7 @@ describe('List', () => {
 
   test('should render correctly with empty data', () =>
     shouldMatchEmotionSnapshot(
-      <List
+      <List<ReturnType<typeof generateData>[0]>
         multiselect
         idKey="id"
         data={[]}
@@ -1079,7 +1075,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1119,7 +1115,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1158,7 +1154,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1197,7 +1193,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row alert id={rowData.id}>
@@ -1236,7 +1232,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row animated id={rowData.id}>
@@ -1275,7 +1271,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row animated id={rowData.id}>
@@ -1311,7 +1307,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row disabled id={rowData.id}>
@@ -1330,7 +1326,8 @@ describe('List', () => {
     ))
 
   test('should render correctly with disabled', () => {
-    const ref = React.createRef<ListRefType>()
+    const data = generateData(2)
+    const ref = React.createRef<ListRefType<typeof data[number]>>()
 
     return shouldMatchEmotionSnapshot(
       <List
@@ -1349,7 +1346,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row disabled id={rowData.id}>
@@ -1385,7 +1382,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row isHoverable id={rowData.id}>
@@ -1420,8 +1417,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1464,8 +1460,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1508,8 +1503,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1552,8 +1546,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1598,8 +1591,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
 
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
@@ -1644,8 +1636,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData, setRowState, rowState } =
-                  props as ListBodyRenderProps<ListRowData>
+                const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
                     setRowState?.(rowData.id, {
@@ -1690,7 +1681,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1736,7 +1727,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1772,7 +1763,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>
@@ -1790,7 +1781,7 @@ describe('List', () => {
 
   test('should render correctly with pagination and page loading', () =>
     shouldMatchEmotionSnapshot(
-      <List
+      <List<ReturnType<typeof generateData>[0]>
         perPage={5}
         pageCount={10}
         onLoadPage={({ perPage }) =>
@@ -1814,7 +1805,7 @@ describe('List', () => {
             <list.Header />
             <list.Body>
               {props => {
-                const { rowData } = props as ListBodyRenderProps<ListRowData>
+                const { rowData } = props
 
                 return (
                   <list.Row id={rowData.id}>

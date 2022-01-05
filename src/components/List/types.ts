@@ -4,30 +4,30 @@ import { MouseEventHandler, ReactNode } from 'react'
 
 export type ListOrder = 'asc' | 'desc' | undefined
 
-export type ListSort = {
+export type ListSort<T> = {
   index: number
   onSort?:
     | ((
-        prop: string | ((item: unknown) => string) | null,
+        prop: string | ((item: T) => string) | null,
         order: string,
-      ) => (a: Record<string, unknown>, b: Record<string, unknown>) => number)
+      ) => (a: T, b: T) => number)
     | null
   order: ListOrder
-  prop: string | ((item: unknown) => string) | undefined
+  prop: string | ((item: T) => string) | undefined
 }
 
-export type ListColumn = {
+export type ListColumn<T> = {
   alignItems?: string | null
   justifyContent?: string | null
   label?: string | null
   onSort?:
     | ((
-        prop: string | ((item: unknown) => string) | null,
+        prop: string | ((item: T) => string) | null,
         order: string,
-      ) => (a: Record<string, unknown>, b: Record<string, unknown>) => number)
+      ) => (a: T, b: T) => number)
     | null
   padding?: string | null
-  sort?: string | ((item: unknown) => string) | null
+  sort?: string | ((item: T) => string) | null
   width?: string | null
   defaultSort?: ListOrder | null
 }

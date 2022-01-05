@@ -17,9 +17,12 @@ export default {
   title: 'Components/List',
 } as Meta
 
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 const Template: Story<ComponentProps<typeof List>> = args => (
-  <List data={[]} columns={[{ label: 'Name' }]} {...args}>
+  <List<ReturnType<typeof generateData>[0]>
+    data={[]}
+    columns={[{ label: 'Name' }]}
+    {...args}
+  >
     {list => (
       <>
         <list.Header />
@@ -44,7 +47,7 @@ export const Default = Template.bind({})
 export const EmptyText = Template.bind({})
 EmptyText.decorators = [
   () => (
-    <List
+    <List<ReturnType<typeof generateData>[0]>
       emptyListComponent={
         <div>This list is empty and display a custom component.</div>
       }
@@ -516,4 +519,3 @@ PaginationLoadingPageCount.decorators = [
     )
   },
 ]
-/* eslint-enable @typescript-eslint/no-unsafe-assignment */
