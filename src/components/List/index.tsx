@@ -5,6 +5,7 @@ import React, {
   FunctionComponent,
   ReactElement,
   ReactNode,
+  VoidFunctionComponent,
   WeakValidationMap,
   forwardRef,
   useCallback,
@@ -516,6 +517,7 @@ function List<DataType extends Record<string, unknown>>(
         {pagination.maxPage > 1 ? (
           <Pagination.PaginationContainer
             {...paginationProps}
+            // @ts-expect-error Pagination types are funky and does not allow generics yet
             paginationState={{ ...pagination, canLoadMore: !!onLoadPage }}
           />
         ) : null}
@@ -528,7 +530,7 @@ const ForwardedList = forwardRef(List) as <DataType>(
   props: ListProps<DataType> & { ref?: ForwardedRef<ListRefType<DataType>> },
 ) => ReturnType<typeof List>
 
-ForwardedList.propTypes = {
+;(ForwardedList as VoidFunctionComponent).propTypes = {
   /**
    * Auto close opened ExpandableContent when clicking on another row
    */
