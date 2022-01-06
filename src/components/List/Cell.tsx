@@ -18,7 +18,7 @@ const StyledCell = styled(Box, {
     columns,
     multiselect,
   }: {
-    columns: ListColumn[]
+    columns: ListColumn<Record<string, unknown>>[]
     multiselect?: boolean
   }) =>
     columns.map(
