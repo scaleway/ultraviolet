@@ -245,22 +245,23 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-type ModalProps = Partial<DialogProps> & {
-  animation?: ModalAnimation
-  ariaLabel?: string
-  bordered?: boolean
-  customDialogBackdropStyles?: Interpolation<Theme>
-  customDialogStyles?: Interpolation<Theme>
-  disclosure: DisclosureParam
-  height?: string
-  isClosable?: boolean
-  modal?: boolean
-  onClose?: () => void
-  onBeforeClose?: () => Promise<unknown>
-  opened?: boolean
-  placement?: ModalPlacement
-  width?: ModalWidth
-} & Partial<DialogState>
+type ModalProps = Partial<DialogProps> &
+  Partial<DialogState> & {
+    animation?: ModalAnimation
+    ariaLabel?: string
+    bordered?: boolean
+    customDialogBackdropStyles?: Interpolation<Theme>
+    customDialogStyles?: Interpolation<Theme>
+    disclosure?: DisclosureParam
+    height?: string
+    isClosable?: boolean
+    modal?: boolean
+    onClose?: () => void
+    onBeforeClose?: () => Promise<unknown>
+    opened?: boolean
+    placement?: ModalPlacement
+    width?: ModalWidth
+  }
 
 const Modal: FunctionComponent<ModalProps> = ({
   animated = false,
