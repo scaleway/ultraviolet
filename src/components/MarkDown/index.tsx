@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Link from '../Link'
 import Typography from '../Typography'
 
@@ -59,7 +59,7 @@ const StyledContainer = styled(Box, {
 const RootRendererComponent: FunctionComponent<{
   children?: ReactNode
   inline?: boolean
-  parentProps?: XStyledProps
+  parentProps?: BoxProps
 }> = ({ inline = false, parentProps = {}, children }) => (
   <StyledContainer inline={inline} {...parentProps}>
     {children}
@@ -72,7 +72,7 @@ RootRendererComponent.propTypes = {
 }
 
 const rootRenderer =
-  (inline: boolean, parentProps: XStyledProps): FunctionComponent =>
+  (inline: boolean, parentProps: BoxProps): FunctionComponent =>
   props =>
     (
       <RootRendererComponent
@@ -87,7 +87,7 @@ type MarkDownProps = {
   linkTarget?: string
   escapeHtml?: boolean
   inline?: boolean
-} & XStyledProps
+} & BoxProps
 
 const MarkDown: FunctionComponent<MarkDownProps> = ({
   source,

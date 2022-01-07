@@ -7,7 +7,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const StyledWrapper = styled(Box)`
   position: relative;
@@ -85,6 +85,7 @@ const StyledBorderWrapper = styled(Box)`
 
 type SliderItemProps = {
   as?: string | ElementType<unknown>
+  children: ReactNode
 }
 export const SliderItem = ({ as, ...props }: SliderItemProps): JSX.Element => (
   <StyledBorderWrapper as={as} {...props} draggable="true" />
@@ -96,7 +97,7 @@ SliderItem.propTypes = {
 
 type SliderProps = {
   children?: ReactNode
-} & XStyledProps
+} & BoxProps
 
 const Slider = ({ children, ...props }: SliderProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)

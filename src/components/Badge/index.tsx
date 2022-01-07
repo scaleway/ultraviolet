@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, useMemo } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const variants = {
   beta: ({ theme: { colors } }: { theme: Theme }) => css`
@@ -111,7 +111,7 @@ const variantsStyle = ({
 type BadgeProps = {
   variant?: Variants
   size?: Sizes
-} & XStyledProps
+} & BoxProps
 
 const StyledBox = styled(Box, {
   shouldForwardProp: prop => !['variant', 'size'].includes(prop.toString()),

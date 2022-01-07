@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 type ExpandableProps = {
   /**
@@ -16,7 +16,7 @@ type ExpandableProps = {
    * To display or not the content
    */
   opened?: boolean
-} & XStyledProps
+} & BoxProps
 
 const StyledExpandable = styled(Box, {
   shouldForwardProp: prop => !['opened', 'height'].includes(prop.toString()),

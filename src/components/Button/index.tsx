@@ -17,7 +17,7 @@ import React, {
   useMemo,
 } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
@@ -230,7 +230,7 @@ SmartIcon.propTypes = {
 
 type StyledIcon = {
   margin: number
-} & XStyledProps
+} & BoxProps
 
 const StyledIconContainer = styled('div', {
   shouldForwardProp: prop => !['margin', 'position'].includes(prop.toString()),
@@ -251,7 +251,7 @@ const StyledContent = styled.div`
 type StyledButtonProps = {
   action?: boolean | 'rounded'
   disabled?: boolean
-  download?: boolean
+  download?: boolean | string
   extend?: boolean
   href?: string
   icon?: string | JSX.Element
@@ -266,7 +266,7 @@ type StyledButtonProps = {
   variant: ButtonVariant
   onFocus?: FocusEventHandler
   onMouseEnter?: MouseEventHandler
-} & XStyledProps &
+} & Omit<BoxProps, 'download'> &
   ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled(Box, {
@@ -455,7 +455,7 @@ FwdButton.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]),
   disabled: PropTypes.bool,
-  download: PropTypes.bool,
+  download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   extend: PropTypes.bool,
   href: PropTypes.string,
   /**

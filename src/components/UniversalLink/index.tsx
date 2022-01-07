@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, ElementType, ReactNode, Ref } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const ABSOLUTE_LINK_REGEXP = /^https?:\/\//
 const TEL_LINK_REGEXP = /^tel:/
@@ -22,7 +22,7 @@ type UniversalLinkProps = {
   to?: string
 } & ComponentProps<'a'> & {
     ref?: Ref<Element>
-  } & XStyledProps
+  } & BoxProps
 
 const UniversalLink = ({
   children,

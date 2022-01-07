@@ -126,7 +126,6 @@ const Tags = ({
   placeholder,
   tags,
   variant = 'base',
-  ...props
 }: TagsProps): JSX.Element => {
   const [tagsState, setTags] = useState(convertTagArrayToTagStateArray(tags))
   const [input, setInput] = useState<string>('')
@@ -233,7 +232,6 @@ const Tags = ({
       onClick={handleContainerClick}
       variant={variant}
       onBlur={addTag}
-      {...props}
     >
       {tagsState.map(tag => (
         <Tag
