@@ -160,7 +160,7 @@ const Popper: FunctionComponent<PopperProps> = ({
         {hasArrow && (
           <PopoverArrow {...popover} style={{ fill: backgroundColor }} />
         )}
-        {typeof children === 'function' ? children({ ...popover }) : children}
+        {typeof children === 'function' ? children(popover) : children}
       </StyledPopover>
     </>
   )

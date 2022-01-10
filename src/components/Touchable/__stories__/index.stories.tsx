@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
-import Touchable, { TouchableProps } from '..'
+import React, { ComponentProps } from 'react'
+import Touchable from '..'
 
 export default {
   component: Touchable,
@@ -14,7 +14,9 @@ export default {
   title: 'Components/Touchable',
 } as Meta
 
-const Template: Story<TouchableProps> = args => <Touchable {...args} />
+const Template: Story<ComponentProps<typeof Touchable>> = args => (
+  <Touchable {...args} />
+)
 
 export const Default = Template.bind({})
 Default.args = {

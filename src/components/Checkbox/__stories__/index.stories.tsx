@@ -13,8 +13,11 @@ export default {
   title: 'Components/Data Entry/Checkbox',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Checkbox>> = args => (
-  <Checkbox onChange={() => {}} {...args}>
+const Template: Story<ComponentProps<typeof Checkbox>> = ({
+  onChange = console.log,
+  ...props
+}) => (
+  <Checkbox onChange={onChange} {...props}>
     Basic unchecked checkbox
   </Checkbox>
 )

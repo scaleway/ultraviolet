@@ -59,6 +59,7 @@ OnClick.parameters = {
 OnClick.decorators = [
   () => (
     <ExtendedReminder
+      icon="circle"
       badgeText="onClick (toggle your console)"
       onClick={() => console.log('clicked')}
       title="Verify your credit card"

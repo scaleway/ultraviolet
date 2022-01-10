@@ -44,7 +44,7 @@ export const Uncontrolled: Story = () => (
       <TimeInput name="timeinput-test-2" placeholder="Time" required />
     </div>
     <div style={{ height: '300px' }}>
-      <TimeInput name="timeinput-test-3" placeholder="Time" error />
+      <TimeInput name="timeinput-test-3" placeholder="Time" error="error" />
     </div>
   </>
 )

@@ -8,9 +8,10 @@ export default {
   title: 'Components/Data Display/Counter',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Counter>> = args => (
-  <Counter end={20} {...args} />
-)
+const Template: Story<ComponentProps<typeof Counter>> = ({
+  end = 20,
+  ...props
+}) => <Counter end={end} {...props} />
 
 export const Default = Template.bind({})
 
