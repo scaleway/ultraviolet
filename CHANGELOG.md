@@ -1,3 +1,26 @@
+### [0.134.3](https://github.com/scaleway/scaleway-ui/compare/v0.134.2...v0.134.3) (2022-01-10)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @commitlint/cli to v16.0.2 ([#1096](https://github.com/scaleway/scaleway-ui/issues/1096)) ([5b57f39](https://github.com/scaleway/scaleway-ui/commit/5b57f39596f8c0132df1dc0121fe2fe7a9f02f99))
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v13.1.3 ([#1088](https://github.com/scaleway/scaleway-ui/issues/1088)) ([e73fe8d](https://github.com/scaleway/scaleway-ui/commit/e73fe8db4849b6546ca03915496396088892b72a))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.2 ([#1089](https://github.com/scaleway/scaleway-ui/issues/1089)) ([62d93c7](https://github.com/scaleway/scaleway-ui/commit/62d93c7092093bbaca511d5400e11ffb78283078))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.2 ([#1090](https://github.com/scaleway/scaleway-ui/issues/1090)) ([944620d](https://github.com/scaleway/scaleway-ui/commit/944620d06a0f0fd77a0438a06f2d7d08814464bd))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.3 ([#1092](https://github.com/scaleway/scaleway-ui/issues/1092)) ([d8d7820](https://github.com/scaleway/scaleway-ui/commit/d8d78209431595077c6d542e7ccb8245f1413cf4))
+* **devdeps:** update dependency eslint to v8.6.0 ([#1086](https://github.com/scaleway/scaleway-ui/issues/1086)) ([7e95f37](https://github.com/scaleway/scaleway-ui/commit/7e95f37e3f90ca7c856904bdbfe0731313b8ca9c))
+* **devdeps:** update dependency jest to v27.4.7 ([#1087](https://github.com/scaleway/scaleway-ui/issues/1087)) ([6375571](https://github.com/scaleway/scaleway-ui/commit/63755714763bdd70ae0198aeafa07a0f21c95481))
+* **devdeps:** update dependency lint-staged to v12.1.7 ([#1094](https://github.com/scaleway/scaleway-ui/issues/1094)) ([0cdc938](https://github.com/scaleway/scaleway-ui/commit/0cdc9386f6059cff96942c4812b67bed562ec136))
+* **devdeps:** update dependency rollup to v2.63.0 ([#1095](https://github.com/scaleway/scaleway-ui/issues/1095)) ([fb3af4b](https://github.com/scaleway/scaleway-ui/commit/fb3af4b3bf0cd47e3e84e81c45e7b9a0ca497fb3))
+* **devdeps:** upgrade storybook ([#1097](https://github.com/scaleway/scaleway-ui/issues/1097)) ([d85c5a6](https://github.com/scaleway/scaleway-ui/commit/d85c5a6fb82f5f18f9cf6917dd55fca1f6198ca2))
+
+
+### :bug: Bug Fixes
+
+* correct generic List types ([#1084](https://github.com/scaleway/scaleway-ui/issues/1084)) ([75d7e76](https://github.com/scaleway/scaleway-ui/commit/75d7e76bb2e109e36e7428a2750ecb1b30270c27))
+* correct loads of ts errors ([#1085](https://github.com/scaleway/scaleway-ui/issues/1085)) ([1d3d731](https://github.com/scaleway/scaleway-ui/commit/1d3d731fc7c7f72e667fa4d449fafea08448761f))
+* **deps:** update dependency react-datepicker to v4.6.0 ([#1093](https://github.com/scaleway/scaleway-ui/issues/1093)) ([a6717d8](https://github.com/scaleway/scaleway-ui/commit/a6717d8c6ecd0089f761b4beb22a6894cc228a7d))
+
 ### [0.134.2](https://github.com/scaleway/scaleway-ui/compare/v0.134.1...v0.134.2) (2022-01-05)
 
 
