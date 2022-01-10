@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactElement, ReactNode } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
@@ -22,21 +22,18 @@ const StyledItemsCount = styled.div`
   color: ${({ theme }) => theme.colors.primary.text};
 `
 
-type ListSelectBarProps = {
+type ListSelectBarProps<T> = {
   text?: ReactNode | ((length: number) => string)
   children?:
-    | ((props: {
-        selectedItems: unknown[]
-        unselectAll: () => void
-      }) => ReactElement)
+    | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactElement)
     | ReactNode
 }
-const SelectBar: FunctionComponent<ListSelectBarProps> = ({
+function SelectBar<T extends Record<string, unknown>>({
   children,
   text = count => (count === 1 ? 'item selected' : `items selected`),
   ...props
-}) => {
-  const { data, idKey, rowsState, unselectAll } = useListContext()
+}: ListSelectBarProps<T>) {
+  const { data, idKey, rowsState, unselectAll } = useListContext<T>()
 
   const selectedItems = data.filter(item => {
     const itemState =

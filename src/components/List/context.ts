@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react'
 import { ListColumn, ListOrder, ListRowState } from './types'
 
-type ListContextType<T = Record<string, unknown>> = {
-  columns: ListColumn[]
+type ListContextType<DataType extends Record<string, unknown>> = {
+  columns: ListColumn<DataType>[]
   customLoader?: ReactNode
-  data: T[]
+  data: DataType[]
   emptyListComponent?: ReactNode
   hasAllSelected: boolean
   hasSelectedItems: boolean
@@ -19,18 +19,20 @@ type ListContextType<T = Record<string, unknown>> = {
   rowsState: { [x: string]: ListRowState }
   selectableItems: { [x: string]: boolean }
   selectAll: () => void
-  selectedItems: Record<string, unknown>[]
+  selectedItems: DataType[]
   setRowState: (localIdKey: string, state: ListRowState) => void
   sortedIndex: number
   sortOrder: ListOrder
   unselectAll: () => void
-  pageData: T[]
+  pageData: DataType[]
 }
 
+// @ts-expect-error Here we volontarily ignore generic, generic hint will be given through the consumer
 const ListContext = React.createContext<ListContextType>({} as ListContextType)
 
 export const useListContext = <
-  T = Record<string, unknown>,
->(): ListContextType<T> => React.useContext(ListContext) as ListContextType<T>
+  DataType extends Record<string, unknown>,
+>(): ListContextType<DataType> =>
+  React.useContext(ListContext) as ListContextType<DataType>
 
 export default ListContext
