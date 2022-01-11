@@ -1,3 +1,16 @@
+### [0.134.4](https://github.com/scaleway/scaleway-ui/compare/v0.134.3...v0.134.4) (2022-01-11)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.4 ([#1102](https://github.com/scaleway/scaleway-ui/issues/1102)) ([f4d2972](https://github.com/scaleway/scaleway-ui/commit/f4d297251219ed84ade8b2593127f54d2a0070bf))
+* **devdeps:** update dependency shx to v0.3.4 ([#1103](https://github.com/scaleway/scaleway-ui/issues/1103)) ([1269404](https://github.com/scaleway/scaleway-ui/commit/1269404da651f65bb35a6646513af640590dfcab))
+
+
+### :bug: Bug Fixes
+
+* correct some typescript types ([#1091](https://github.com/scaleway/scaleway-ui/issues/1091)) ([4d26601](https://github.com/scaleway/scaleway-ui/commit/4d266013c59ca88899535e64eb9214372670fbcf))
+
 ### [0.134.3](https://github.com/scaleway/scaleway-ui/compare/v0.134.2...v0.134.3) (2022-01-10)
 
 
