@@ -9,7 +9,7 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 type TooltipPlacement =
   | 'auto-start'
@@ -89,7 +89,7 @@ type TooltipProps = {
   variant?: keyof typeof variants
   visible?: boolean
   unstable_portal?: boolean
-} & XStyledProps
+} & BoxProps
 
 const Tooltip = ({
   animated = 150,

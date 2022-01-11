@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
 import Box, { BoxProps } from '../Box'
@@ -77,7 +77,9 @@ const StyledCol = styled(Box, {
       })}
 `
 
-const Col: FunctionComponent<ColProps> = props => <StyledCol {...props} />
+const Col = (props: ComponentProps<typeof StyledCol>) => (
+  <StyledCol {...props} />
+)
 
 const PropTypesBreakpoint = PropTypes.oneOfType([
   PropTypes.bool,

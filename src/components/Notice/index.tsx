@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, ReactNode } from 'react'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'
 
@@ -13,7 +13,7 @@ const Container = styled(Box)`
 `
 type NoticeProps = {
   children: ReactNode
-} & XStyledProps
+} & BoxProps
 
 const Notice: FunctionComponent<NoticeProps> = ({ children, ...props }) => (
   <Container {...props}>

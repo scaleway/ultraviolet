@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import Touchable from '../Touchable'
 
@@ -37,7 +37,7 @@ const variantStyles = ({
 type StyledContainerProps = {
   disabled: boolean
   variant: TagVariant
-} & XStyledProps
+} & BoxProps
 
 const StyledContainer = styled(Box, {
   shouldForwardProp: props =>
@@ -93,7 +93,7 @@ type TagProps = {
   onClose?: MouseEventHandler<HTMLButtonElement>
   textStyle?: Interpolation<Theme>
   variant?: TagVariant
-} & XStyledProps
+} & BoxProps
 
 const Tag: FunctionComponent<TagProps> = ({
   children,

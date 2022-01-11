@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import { Color } from '../../theme'
 import { useUUID } from '../../utils'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
 
@@ -106,7 +106,7 @@ type AlertProps = {
   icon?: ComponentProps<typeof Icon>['name']
   title?: string
   type?: AlertType
-} & XStyledProps
+} & BoxProps
 
 const Alert: FunctionComponent<AlertProps> = ({
   variant = 'standard',

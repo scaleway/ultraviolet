@@ -17,7 +17,7 @@ import React, {
   useMemo,
 } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
@@ -230,7 +230,8 @@ SmartIcon.propTypes = {
 
 type StyledIcon = {
   margin: number
-} & XStyledProps
+  position?: 'left' | 'right'
+}
 
 const StyledIconContainer = styled('div', {
   shouldForwardProp: prop => !['margin', 'position'].includes(prop.toString()),
@@ -251,7 +252,6 @@ const StyledContent = styled.div`
 type StyledButtonProps = {
   action?: boolean | 'rounded'
   disabled?: boolean
-  download?: boolean
   extend?: boolean
   href?: string
   icon?: string | JSX.Element
@@ -266,7 +266,7 @@ type StyledButtonProps = {
   variant: ButtonVariant
   onFocus?: FocusEventHandler
   onMouseEnter?: MouseEventHandler
-} & XStyledProps &
+} & BoxProps &
   ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled(Box, {
@@ -349,11 +349,12 @@ const StyledButton = styled(Box, {
     `}
 `
 
-type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size'> & {
+type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   children?: ReactNode
   variant?: ButtonVariant
   innerRef: Ref<Element>
   size?: ButtonSize
+  download?: boolean | string
 }
 
 const FwdButton: FunctionComponent<ButtonProps> = ({
@@ -410,7 +411,7 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
         (icon && iconPosition === 'left') ? (
           <StyledIconContainer
             margin={iconMargin}
-            position={children ? 'left' : ''}
+            position={children ? 'left' : undefined}
           >
             {progress ? (
               <ActivityIndicator
@@ -455,7 +456,7 @@ FwdButton.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]),
   disabled: PropTypes.bool,
-  download: PropTypes.bool,
+  download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   extend: PropTypes.bool,
   href: PropTypes.string,
   /**

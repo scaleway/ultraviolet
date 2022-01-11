@@ -8,7 +8,7 @@ import React, {
   ReactNode,
   forwardRef,
 } from 'react'
-import Box, { BoxProps, XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 const StyledTouchable = styled(Box)<
   BoxProps & { activeOpacity?: number | string }
@@ -49,7 +49,7 @@ type TouchableProps = {
   | ButtonHTMLAttributes<HTMLButtonElement>
   | InputHTMLAttributes<HTMLInputElement>
 ) &
-  XStyledProps
+  BoxProps
 
 const Touchable = forwardRef<Element, TouchableProps>(
   (

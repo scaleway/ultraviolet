@@ -2,14 +2,14 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, ReactNode } from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
 type StyledIconProps = {
   direction: Direction
-} & XStyledProps
+} & BoxProps
 
 const StyledIcon = styled(Box, {
   shouldForwardProp: prop => !['direction'].includes(prop.toString()),
@@ -25,7 +25,7 @@ type HorizontalSeparatorProps = {
   thickness?: number
   color?: Color | string
   flex?: string
-} & XStyledProps
+} & BoxProps
 
 const StyledHr = styled(Box.withComponent('hr'), {
   shouldForwardProp: prop =>

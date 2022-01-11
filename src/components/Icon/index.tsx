@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 
 // Non Material Design icons: 'send',
 
@@ -550,7 +550,7 @@ const StyledIcon = styled(Box, {
     size: number | string
     className: string
     viewBox: string
-  } & XStyledProps
+  } & BoxProps
 >`
   fill: ${({ theme, color }) =>
     theme.colorsDeprecated[color as Color] ?? color};
@@ -563,7 +563,7 @@ type IconProps = {
   size?: number | string
   name?: IconName
   title?: string
-} & XStyledProps &
+} & BoxProps &
   React.SVGAttributes<HTMLOrSVGElement>
 
 const Icon = forwardRef<SVGElement, IconProps>(

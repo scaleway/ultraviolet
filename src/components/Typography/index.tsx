@@ -14,7 +14,7 @@ import React, {
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color } from '../../theme'
 import { ColorDeprecated } from '../../theme/deprecated/colors'
-import Box, { XStyledProps } from '../Box'
+import Box, { BoxProps } from '../Box'
 import Tooltip from '../Tooltip'
 
 type StyleProps = {
@@ -192,7 +192,7 @@ type StyledTextProps = {
   as?: string | ElementType<unknown>
   onFocus?: FocusEventHandler
   onMouseEnter?: MouseEventHandler
-} & XStyledProps
+} & BoxProps
 
 const StyledText = styled(Box, {
   shouldForwardProp: prop =>
