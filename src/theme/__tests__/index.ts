@@ -276,6 +276,7 @@ describe('createTheme', () => {
       radii: {
         default: '1px',
         large: '2px',
+        none: '0',
       },
       screens: {
         large: 992,
@@ -285,8 +286,20 @@ describe('createTheme', () => {
         xsmall: 0,
       },
       space: {
-        '0': '6px',
-        '9': '600px',
+        0: '6px',
+        0.25: '2px',
+        0.5: '4px',
+        0.75: '6px',
+        1: '8px',
+        2: '16px',
+        2.25: '18px',
+        3: '24px',
+        4: '32px',
+        5: '40px',
+        6: '48px',
+        7: '56px',
+        8: '64px',
+        9: '600px',
       },
       /* eslint-enable sort-keys */
     })

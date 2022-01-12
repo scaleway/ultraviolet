@@ -24,7 +24,7 @@ const space = {
   7: '56px',
   8: '64px',
   9: '72px',
-} as const
+}
 export type Spaces = keyof typeof space
 
 const screens = {
@@ -33,13 +33,13 @@ const screens = {
   medium: 768,
   large: 992,
   xlarge: 1200,
-} as const
+}
 export type ScreenSize = keyof typeof screens
 
 const fonts = {
   monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
   sansSerif: 'Asap, System, sans-serif',
-} as const
+}
 
 const theme = {
   colorsDeprecated,
@@ -60,16 +60,16 @@ const createTheme = ({
 }: {
   contrasts?: Partial<Record<Color, Partial<ContrastType>>>
   space?: Partial<Record<Spaces, string>>
-  screens?: Partial<Record<ScreenSize, string>>
-  radii?: Partial<Record<string, string>>
-  fonts?: Partial<Record<string, string>>
-}) => ({
+  screens?: Partial<Record<ScreenSize, number>>
+  radii?: Partial<Record<keyof typeof radii, string>>
+  fonts?: Partial<Record<keyof typeof fonts, string>>
+}): SCWUITheme => ({
   ...theme,
-  ...(contrasts ? { colors: colorsTokens(contrasts) } : {}),
-  ...(newSpace ? { space: newSpace } : {}),
-  ...(newScreens ? { screen: newScreens } : {}),
-  ...(newRadii ? { radii: newRadii } : {}),
-  ...(newFonts ? { fonts: newFonts } : {}),
+  ...(contrasts ? { colors: { ...colors, ...colorsTokens(contrasts) } } : {}),
+  ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
+  ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
+  ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
+  ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
 })
 
 type SCWUITheme = typeof theme & {
