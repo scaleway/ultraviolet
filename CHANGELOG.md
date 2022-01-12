@@ -1,3 +1,15 @@
+### [0.134.5](https://github.com/scaleway/scaleway-ui/compare/v0.134.4...v0.134.5) (2022-01-12)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.16.8 ([#1105](https://github.com/scaleway/scaleway-ui/issues/1105)) ([6e48d4b](https://github.com/scaleway/scaleway-ui/commit/6e48d4b08394766c65250eb56e9a9a008766a800))
+
+
+### :bug: Bug Fixes
+
+* **theme:** ensure createTheme return a Theme type ([#1104](https://github.com/scaleway/scaleway-ui/issues/1104)) ([8269b90](https://github.com/scaleway/scaleway-ui/commit/8269b909ed35e97ac8a1d207e4446aa10517e04f))
+
 ### [0.134.4](https://github.com/scaleway/scaleway-ui/compare/v0.134.3...v0.134.4) (2022-01-11)
 
 
