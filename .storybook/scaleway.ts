@@ -1,4 +1,4 @@
-import { create } from '@storybook/theming/create'
+import { create } from '@storybook/theming'
 import brandImage from './assets/scaleway-text.png'
 
 export default create({

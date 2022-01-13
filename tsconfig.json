@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "esnext",
+    "module": "commonjs",
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
@@ -16,6 +16,8 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
     "emotion.d.ts",
     "global.d.ts"
   ],
