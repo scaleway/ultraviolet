@@ -1,3 +1,18 @@
+### [0.134.6](https://github.com/scaleway/scaleway-ui/compare/v0.134.5...v0.134.6) (2022-01-14)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.3 ([#1106](https://github.com/scaleway/scaleway-ui/issues/1106)) ([d6fe220](https://github.com/scaleway/scaleway-ui/commit/d6fe220c9b3efb3cb40bf84267426ecbd93ba123))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.5 ([#1107](https://github.com/scaleway/scaleway-ui/issues/1107)) ([2ac9a4a](https://github.com/scaleway/scaleway-ui/commit/2ac9a4ac217a19287da2a6b9da4d5172af43484b))
+* **devdeps:** update dependency @storybook/testing-react to v1.2.3 ([#1110](https://github.com/scaleway/scaleway-ui/issues/1110)) ([65c1079](https://github.com/scaleway/scaleway-ui/commit/65c107985aa888d8a8c0f86c1fe03bd6e75c65a7))
+* **devdeps:** update storybook monorepo to v6.4.12 ([#1108](https://github.com/scaleway/scaleway-ui/issues/1108)) ([a19ecce](https://github.com/scaleway/scaleway-ui/commit/a19ecceab12948767d14b682a09364a7d9c6c8b4))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.2.2 ([#1112](https://github.com/scaleway/scaleway-ui/issues/1112)) ([6705b64](https://github.com/scaleway/scaleway-ui/commit/6705b64fd126b72480a3301550881c2d8b9fa6b4))
+
 ### [0.134.5](https://github.com/scaleway/scaleway-ui/compare/v0.134.4...v0.134.5) (2022-01-12)
 
 
