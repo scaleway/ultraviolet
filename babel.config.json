@@ -1,4 +1,14 @@
 {
+  "plugins": [
+    [
+      "@emotion",
+      {
+        "sourceMap": false,
+        "autoLabel": "never",
+        "cssPropOptimization": true
+      }
+    ]
+  ],
   "presets": [
     "@babel/preset-typescript",
     [
@@ -8,15 +18,8 @@
     [
       "@babel/preset-react",
       {
-        "runtime": "automatic"
-      }
-    ],
-    [
-      "@emotion/babel-preset-css-prop",
-      {
-        "sourceMap": false,
-        "autoLabel": "never",
-        "labelFormat": "[filename]--[local]"
+        "runtime": "automatic",
+        "importSource": "@emotion/react"
       }
     ]
   ]

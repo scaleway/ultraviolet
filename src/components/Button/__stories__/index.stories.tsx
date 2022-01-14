@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import { Fragment, ComponentProps } from 'react'
+import { ComponentProps, Fragment } from 'react'
 import Button, { buttonSizes, buttonVariants } from '..'
 import { icons } from '../../Icon'
 

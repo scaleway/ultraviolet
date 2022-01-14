@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { createRef, FunctionComponent } from 'react'
+import { FunctionComponent, createRef } from 'react'
 import Pagination, { usePaginationContext } from '..'
 import type { PaginationState } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
