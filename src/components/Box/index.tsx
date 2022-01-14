@@ -8,7 +8,6 @@ import {
   ReactNode,
   forwardRef,
 } from 'react'
-import * as React from 'react'
 
 export type XStyledProps = {
   align?: string

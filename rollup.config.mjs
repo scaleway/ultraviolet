@@ -50,8 +50,9 @@ export default [
           [
             '@emotion',
             {
-              autoLabel: 'dev-only',
-              labelFormat: '[local]',
+              sourceMap: false,
+              autoLabel: 'never',
+              labelFormat: '[filename]--[local]',
             },
           ],
         ],
