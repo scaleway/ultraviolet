@@ -1,7 +1,12 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React from 'react'
 import IconPlaceholder from './IconPlaceholder'
+=======
+import { VoidFunctionComponent } from 'react'
+import Box from '../Box'
+>>>>>>> chore(react):react17 new jsx transform
 import Line from './Line'
 
 const StyledContainer = styled.div<{ col: number }>`

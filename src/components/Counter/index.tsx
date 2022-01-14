@@ -1,10 +1,5 @@
 import PropTypes from 'prop-types'
-import React, {
-  VoidFunctionComponent,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { VoidFunctionComponent, useEffect, useRef, useState } from 'react'
 import CountUp from 'react-countup'
 
 type CounterProps = {

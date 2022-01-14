@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, VoidFunctionComponent, useState } from 'react'
+import { ComponentProps, VoidFunctionComponent, useState } from 'react'
 import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
 

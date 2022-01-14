@@ -1,6 +1,6 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React, { useEffect } from 'react'
+import { createRef, useEffect } from 'react'
 import List, { ListRefType } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { generateData } from '../../../mocks/list'
@@ -1330,7 +1330,7 @@ describe('List', () => {
 
   test('should render correctly with disabled', () => {
     const data = generateData(2)
-    const ref = React.createRef<ListRefType<typeof data[number]>>()
+    const ref = createRef<ListRefType<typeof data[number]>>()
 
     return shouldMatchEmotionSnapshot(
       <List

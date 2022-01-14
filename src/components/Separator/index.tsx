@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'

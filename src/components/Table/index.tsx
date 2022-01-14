@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
 

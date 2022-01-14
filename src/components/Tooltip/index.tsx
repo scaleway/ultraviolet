@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { ReactNode, useEffect } from 'react'
+import { ReactNode, useEffect } from 'react'
 import {
   Tooltip as ReakitTooltip,
   TooltipArrow,

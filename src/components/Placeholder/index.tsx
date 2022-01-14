@@ -1,8 +1,13 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React from 'react'
 import Box, { BoxProps } from '../Box'
+=======
+import * as React from 'react'
+import Box from '../Box'
+>>>>>>> chore(react):react17 new jsx transform
 import Block from './Block'
 import Blocks from './Blocks'
 import BoxWithIcon from './BoxWithIcon'

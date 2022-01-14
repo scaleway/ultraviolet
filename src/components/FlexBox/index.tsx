@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import { ComponentProps, FunctionComponent } from 'react'
 
 const StyledChild = styled('div', {
   shouldForwardProp: prop =>

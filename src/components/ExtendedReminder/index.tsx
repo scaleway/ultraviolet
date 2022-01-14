@@ -1,7 +1,7 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ComponentProps,
   FunctionComponent,
   MouseEventHandler,

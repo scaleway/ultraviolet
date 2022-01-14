@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  ElementType,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { ElementType, ReactNode, useEffect, useRef, useState } from 'react'
 import Box, { BoxProps } from '../Box'
 
 const StyledWrapper = styled(Box)`

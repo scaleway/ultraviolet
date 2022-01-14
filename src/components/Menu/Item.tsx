@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import { ComponentProps, FunctionComponent } from 'react'
 import Button from '../Button'
 
 const variantStyle = {

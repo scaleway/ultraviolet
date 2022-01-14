@@ -7,7 +7,7 @@ import {
 } from '@nivo/bar'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ComponentProps,
   FunctionComponent,
   Validator,

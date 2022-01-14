@@ -2,7 +2,7 @@ import { Theme } from '@emotion/react'
 import styled from '@xstyled/emotion'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ChangeEvent,
   ClipboardEventHandler,
   KeyboardEventHandler,

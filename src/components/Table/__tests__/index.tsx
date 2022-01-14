@@ -1,4 +1,3 @@
-import React from 'react'
 import Table from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

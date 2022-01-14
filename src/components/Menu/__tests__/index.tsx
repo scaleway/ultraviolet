@@ -1,4 +1,3 @@
-import React from 'react'
 import Menu, { arrowPlacements } from '..'
 import {
   shouldMatchEmotionSnapshot,

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import Box, { BoxProps } from '../Box'
 import { useListContext } from './context'
 import { ListColumn } from './types'

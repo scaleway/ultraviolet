@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import { ComponentProps, FunctionComponent } from 'react'
 import RichSelect from '../RichSelect'
 
 const hours = [

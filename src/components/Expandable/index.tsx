@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 
 type ExpandableProps = {

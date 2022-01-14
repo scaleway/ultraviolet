@@ -5,7 +5,12 @@
       "@babel/preset-env",
       { "shippedProposals": true, "targets": { "node": "current" } }
     ],
-    "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
     [
       "@emotion/babel-preset-css-prop",
       {

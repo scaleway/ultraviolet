@@ -1,4 +1,3 @@
-import React from 'react'
 import ActivityIndicator from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { colorsDeprecated } from '../../../theme'

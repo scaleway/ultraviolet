@@ -1,5 +1,4 @@
 import { Meta, Story } from '@storybook/react'
-import React from 'react'
 import Table, { Body, BodyCell, Head, HeadCell, Row } from '..'
 import Button from '../../Button'
 

@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import { flash } from '../../utils/animations'
 import { XStyledProps } from '../Box'

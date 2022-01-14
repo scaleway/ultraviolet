@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
+  Children,
   ComponentProps,
   FunctionComponent,
   HTMLAttributes,
@@ -93,7 +94,7 @@ const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
   const isTabsWidthSet = tabsWidth.length === flattenedChildren.length
 
   const currentTabIndex =
-    selected !== undefined && React.Children.count(children) > 0
+    selected !== undefined && Children.count(children) > 0
       ? getCurrentTabIndex(selected, flattenedChildren)
       : -1
 

@@ -1,6 +1,11 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React from 'react'
+=======
+import { VoidFunctionComponent } from 'react'
+import Box from '../Box'
+>>>>>>> chore(react):react17 new jsx transform
 
 const StyledContainer = styled.div<{ length: number }>`
   height: 277px;

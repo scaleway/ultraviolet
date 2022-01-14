@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import Tooltip from '..'
 import Button from '../../Button'
 import FlexBox from '../../FlexBox'

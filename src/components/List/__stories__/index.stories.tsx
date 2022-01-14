@@ -1,6 +1,11 @@
 import { Meta, Story } from '@storybook/react'
+<<<<<<< HEAD
 import React, { useRef, useState } from 'react'
 import List, { ListProps, ListRefType } from '..'
+=======
+import { useRef, useState } from 'react'
+import List, { ListProps } from '..'
+>>>>>>> chore(react):react17 new jsx transform
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'

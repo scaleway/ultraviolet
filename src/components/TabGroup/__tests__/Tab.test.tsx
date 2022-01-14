@@ -1,5 +1,4 @@
 import userEvent from '@testing-library/user-event'
-import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import Tab from '../Tab'
 

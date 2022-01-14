@@ -1,7 +1,16 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+=======
+import {
+  ComponentProps,
+  FunctionComponent,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
+>>>>>>> chore(react):react17 new jsx transform
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Expandable from '../Expandable'

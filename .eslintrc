@@ -3,18 +3,14 @@
   "env": {
     "browser": true
   },
-  "extends": [
-    "@scaleway/react/typescript"
-  ],
+  "extends": ["@scaleway/react/typescript"],
   "parserOptions": {
-    "project": [
-      "tsconfig.json"
-    ]
+    "project": ["tsconfig.json"]
   },
-  "plugins": [
-    "@emotion"
-  ],
+  "plugins": ["@emotion"],
   "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "no-restricted-syntax": [
       // https://eslint.org/docs/rules/no-restricted-syntax#disallow-specified-syntax-no-restricted-syntax
       "warn",
@@ -53,20 +49,14 @@
     "@emotion/styled-import": "error",
     "@emotion/no-vanilla": "error",
     "@emotion/import-from-emotion": "error",
-    "@emotion/syntax-preference": [
-      "error",
-      "string"
-    ]
+    "@emotion/syntax-preference": ["error", "string"]
   },
   "overrides": [
     {
       "env": {
         "jest": true
       },
-      "files": [
-        "**/__stories__/**/*.{ts,tsx}",
-        "**/__tests__/**/*.{ts,tsx}"
-      ],
+      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
       "rules": {
         "no-console": "off",
         "no-alert": "off",

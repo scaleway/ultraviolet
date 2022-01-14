@@ -1,5 +1,4 @@
 import { act } from '@testing-library/react'
-import React from 'react'
 import Counter from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

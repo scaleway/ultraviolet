@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { Fragment, ComponentProps } from 'react'
 import Button, { buttonSizes, buttonVariants } from '..'
 import { icons } from '../../Icon'
 
@@ -100,12 +100,12 @@ IconsSizes.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
       {[10, 18, 24, 32].map(size => (
-        <React.Fragment key={size}>
+        <Fragment key={size}>
           <Button icon="lock" iconSize={size} />
           <Button icon="lock" iconSize={size}>
             With text
           </Button>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   ),

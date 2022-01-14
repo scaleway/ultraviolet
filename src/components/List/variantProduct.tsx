@@ -2,7 +2,9 @@ import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
+import {
+  Children,
+  cloneElement,
   ChangeEvent,
   FunctionComponent,
   KeyboardEvent,
@@ -331,9 +333,9 @@ export const Row: FunctionComponent<ListRowProps> = ({
     highlighted = false,
   } = rowsState[id] || {}
 
-  const finalChildren = React.Children.toArray(children).map(child =>
+  const finalChildren = Children.toArray(children).map(child =>
     isValidElement(child) && child.type === ExpendableContent
-      ? React.cloneElement(child, {
+      ? cloneElement(child, {
           id,
           isToggled: forceOpened || opened,
           rowsState,

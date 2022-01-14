@@ -2,12 +2,17 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React, {
   FunctionComponent,
   InputHTMLAttributes,
   ReactNode,
   useMemo,
 } from 'react'
+=======
+import { FunctionComponent, InputHTMLAttributes } from 'react'
+import * as React from 'react'
+>>>>>>> chore(react):react17 new jsx transform
 import { Radio as ReakitRadio } from 'reakit'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'

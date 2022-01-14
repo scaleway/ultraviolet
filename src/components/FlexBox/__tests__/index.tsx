@@ -1,4 +1,3 @@
-import React from 'react'
 import FlexBox from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

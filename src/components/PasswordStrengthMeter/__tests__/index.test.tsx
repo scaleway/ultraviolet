@@ -1,4 +1,3 @@
-import React from 'react'
 import PasswordStrengthMeter from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { colors } from '../../../theme'

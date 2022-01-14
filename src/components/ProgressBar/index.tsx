@@ -1,7 +1,7 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import { VoidFunctionComponent } from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 

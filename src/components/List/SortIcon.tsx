@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
 import Icon from '../Icon'
 import { ListOrder } from './types'
 

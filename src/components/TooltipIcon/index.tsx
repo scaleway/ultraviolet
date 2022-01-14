@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types'
+<<<<<<< HEAD
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+=======
+import { ComponentProps, FunctionComponent } from 'react'
+>>>>>>> chore(react):react17 new jsx transform
 import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 

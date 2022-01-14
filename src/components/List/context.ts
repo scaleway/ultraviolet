@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { createContext, useContext, ReactNode } from 'react'
 import { ListColumn, ListOrder, ListRowState } from './types'
 
 type ListContextType<DataType extends Record<string, unknown>> = {
@@ -28,11 +28,11 @@ type ListContextType<DataType extends Record<string, unknown>> = {
 }
 
 // @ts-expect-error Here we volontarily ignore generic, generic hint will be given through the consumer
-const ListContext = React.createContext<ListContextType>({} as ListContextType)
+const ListContext = createContext<ListContextType>({} as ListContextType)
 
 export const useListContext = <
   DataType extends Record<string, unknown>,
 >(): ListContextType<DataType> =>
-  React.useContext(ListContext) as ListContextType<DataType>
+  useContext(ListContext) as ListContextType<DataType>
 
 export default ListContext

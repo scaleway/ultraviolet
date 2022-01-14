@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Popper from '../Popper'
 import Item from './Item'
 

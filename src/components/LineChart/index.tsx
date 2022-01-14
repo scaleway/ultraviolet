@@ -2,12 +2,7 @@ import { useTheme } from '@emotion/react'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  Validator,
-  useState,
-} from 'react'
+import { ComponentProps, FunctionComponent, Validator, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import CustomLegend from './CustomLegend'
 import LineChartTooltip from './Tooltip'

@@ -1,4 +1,3 @@
-import React from 'react'
 import Popper, { popperVariants } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 

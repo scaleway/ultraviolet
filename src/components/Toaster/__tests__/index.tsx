@@ -1,5 +1,4 @@
 import { act, screen } from '@testing-library/react'
-import React from 'react'
 import ToastContainer, { toast } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 

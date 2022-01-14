@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ChangeEvent,
   FocusEventHandler,
   InputHTMLAttributes,

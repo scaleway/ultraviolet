@@ -1,4 +1,3 @@
-import React from 'react'
 import NavigationStepper from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import jestMockMatchMedia from '../../../helpers/jestMockMatchMedia'

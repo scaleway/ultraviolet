@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Grid, Row } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

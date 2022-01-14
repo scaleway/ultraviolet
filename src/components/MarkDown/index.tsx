@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
 import Box, { BoxProps } from '../Box'
 import Link from '../Link'

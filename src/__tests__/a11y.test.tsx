@@ -5,7 +5,7 @@ import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as path from 'path'
 import * as process from 'process'
-import React, { VoidFunctionComponent } from 'react'
+import { VoidFunctionComponent } from 'react'
 import { renderWithTheme } from '../helpers/jestHelpers'
 
 const testedComponents = [

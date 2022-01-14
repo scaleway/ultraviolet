@@ -1,7 +1,8 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { forwardRef, useMemo } from 'react'
+import { forwardRef, useMemo } from 'react'
+import * as React from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import Alert, { alertTypes, alertVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
