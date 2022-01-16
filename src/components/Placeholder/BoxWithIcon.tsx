@@ -1,51 +1,45 @@
-import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
-import Box from '../Box'
+import React from 'react'
+import IconPlaceholder from './IconPlaceholder'
 import Line from './Line'
 
-const iconStyle = (size: number) => (theme: Theme) =>
-  css`
-    width: ${size}px;
-    height: ${size}px;
-    border-radius: ${size}px;
-    background-color: ${theme.colors.neutral.background};
-  `
+const StyledContainer = styled.div<{ col: number }>`
+  display: grid;
+  grid-template-columns: repeat(${({ col }) => col}, 1fr);
+  gap: ${({ theme }) => theme.space['2']};
+`
 
-const boxStyled = (theme: Theme) => css`
+const Block = styled.div`
+  height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 1px solid ${theme.colors.neutral.borderWeak};
+  justify-content: space-evenly;
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border-radius: 4px;
+  overflow: hidden;
 `
 
-const BoxWithIcon: VoidFunctionComponent<{
+const BoxWithIcon = ({
+  col = 4,
+  length = 8,
+}: {
+  col?: number
   length?: number
-  height?: number
-  width?: number
-}> = ({ length = 1, width = 25, height = 25, ...props }) => (
-  <>
+}) => (
+  <StyledContainer col={col}>
     {Array.from({ length }, (_, i) => (
-      <Box
-        css={boxStyled}
-        mx={1}
-        key={i}
-        height={height}
-        width={width}
-        {...props}
-      >
-        <div css={iconStyle(height / 3)} />
-        <Line mt={3} width={width / 2} />
-      </Box>
+      <Block key={`placeholder-box-${i}`}>
+        <IconPlaceholder />
+        <Line />
+      </Block>
     ))}
-  </>
+  </StyledContainer>
 )
 
 BoxWithIcon.propTypes = {
-  height: PropTypes.number,
   length: PropTypes.number,
-  width: PropTypes.number,
 }
 
 export default BoxWithIcon

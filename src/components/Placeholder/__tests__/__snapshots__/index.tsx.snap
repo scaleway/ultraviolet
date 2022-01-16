@@ -20,44 +20,14 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   cursor: progress;
 }
 
-.cache-18aa786-Block {
+.cache-hmzedk {
   min-height: 200px;
-}
-
-.cache-18aa786-Block.cache-18aa786-Block {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.cache-1yj9b6p-Block {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 16px 16px;
-  margin-bottom: 16px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d4dae7;
+  padding: 16px;
+  border: 1px solid #d4dae7;
   border-radius: 4px;
+  margin: 0;
 }
 
 .cache-faujvq {
@@ -72,15 +42,16 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
   padding: 16px;
 }
 
-.cache-thdpz-Block {
+.cache-11mul8y {
   margin-right: 8px;
   width: 32px;
   height: 32px;
+  min-width: 32px;
   border-radius: 12px;
   background-color: #d4dae7;
 }
 
-.cache-bqjk63 {
+.cache-dbhrcj {
   height: 12px;
   width: 120px;
   border-radius: 10px;
@@ -133,54 +104,50 @@ exports[`Placeholder renders correctly with type="block" 1`] = `
 <div
     class="e3aa5lq1 cache-1ufwzsg"
   >
-    <div
-      class="cache-18aa786-Block"
+    <ul
+      class="cache-hmzedk e12uyvas1"
     >
-      <div
-        class="cache-1yj9b6p-Block"
+      <li
+        class="cache-faujvq e12uyvas0"
       >
         <div
-          class="cache-faujvq e12uyvas0"
-        >
-          <div
-            class="cache-thdpz-Block"
-          />
-          <div
-            class="e15slp7a0 cache-bqjk63"
-          />
-        </div>
-        <hr
-          aria-orientation="horizontal"
-          class="eoti1h20 cache-cz9t3a"
-          role="separator"
+          class="cache-11mul8y eki2pl50"
         />
         <div
-          class="cache-faujvq e12uyvas0"
-        >
-          <div
-            class="cache-thdpz-Block"
-          />
-          <div
-            class="e15slp7a0 cache-bqjk63"
-          />
-        </div>
-        <hr
-          aria-orientation="horizontal"
-          class="eoti1h20 cache-cz9t3a"
-          role="separator"
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </li>
+      <hr
+        aria-orientation="horizontal"
+        class="eoti1h20 cache-cz9t3a"
+        role="separator"
+      />
+      <li
+        class="cache-faujvq e12uyvas0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
         />
         <div
-          class="cache-faujvq e12uyvas0"
-        >
-          <div
-            class="cache-thdpz-Block"
-          />
-          <div
-            class="e15slp7a0 cache-bqjk63"
-          />
-        </div>
-      </div>
-    </div>
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </li>
+      <hr
+        aria-orientation="horizontal"
+        class="eoti1h20 cache-cz9t3a"
+        role="separator"
+      />
+      <li
+        class="cache-faujvq e12uyvas0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </li>
+    </ul>
     <div
       class="cache-rqnleh e3aa5lq0"
     />
@@ -208,80 +175,13 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
   cursor: progress;
 }
 
-.cache-15v2sy7-Blocks {
-  min-height: 1600 px;
+.cache-6vc3he {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
-.cache-9ejmqk {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (min-width: 576px) {
-  .cache-9ejmqk {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .cache-9ejmqk {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .cache-9ejmqk {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .cache-9ejmqk {
-    max-width: 1140px;
-  }
-}
-
-.cache-6pa6em {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
-.cache-spj0vx {
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 8px;
-  padding-right: 8px;
-  -webkit-flex: 0 0 25%;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.cache-1eab74n-Blocks {
+.cache-15z2ije {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -292,22 +192,21 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 8px 16px;
-  margin-bottom: 16px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d4dae7;
+  border: 1px solid #d4dae7;
   border-radius: 4px;
+  overflow: hidden;
 }
 
-.cache-13nnlbp-Blocks {
+.cache-11mul8y {
   margin-right: 8px;
   width: 32px;
   height: 32px;
+  min-width: 32px;
   border-radius: 12px;
   background-color: #d4dae7;
 }
 
-.cache-bqjk63 {
+.cache-dbhrcj {
   height: 12px;
   width: 120px;
   border-radius: 10px;
@@ -345,127 +244,87 @@ exports[`Placeholder renders correctly with type="blocks" 1`] = `
     class="e3aa5lq1 cache-1ufwzsg"
   >
     <div
-      class="cache-15v2sy7-Blocks"
+      class="cache-6vc3he e1g102fr1"
     >
       <div
-        class="em1vjd40 cache-9ejmqk"
+        class="cache-15z2ije e1g102fr0"
       >
         <div
-          class="e1uuye5o0 cache-6pa6em"
-        >
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-          <div
-            class="efyj23m0 cache-spj0vx"
-          >
-            <div
-              class="cache-1eab74n-Blocks"
-            >
-              <div
-                class="cache-13nnlbp-Blocks"
-              />
-              <div
-                class="e15slp7a0 cache-bqjk63"
-              />
-            </div>
-          </div>
-        </div>
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
       </div>
     </div>
     <div
@@ -495,7 +354,14 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
   cursor: progress;
 }
 
-.cache-1fycf2t-BoxWithIcon {
+.cache-6vc3he {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cache-s9qxgv {
+  height: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -507,173 +373,25 @@ exports[`Placeholder renders correctly with type="box" 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
   border: 1px solid #d4dae7;
-}
-
-.cache-1fycf2t-BoxWithIcon.cache-1fycf2t-BoxWithIcon {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-  margin-left: 8px;
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.cache-136cpd3-BoxWithIcon {
-  width: 8.333333333333334px;
-  height: 8.333333333333334px;
-  border-radius: 8.333333333333334px;
-  background-color: #d4dae7;
-}
-
-.cache-c8ymp2 {
-  height: 12px;
-  width: 12.5px;
-  border-radius: 10px;
-  background-color: #d4dae7;
-}
-
-.cache-c8ymp2.cache-c8ymp2 {
-  margin-top: 24px;
-}
-
-.cache-rqnleh {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0)
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cache-rqnleh {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
-    class="e3aa5lq1 cache-1ufwzsg"
-  >
-    <div
-      class="cache-1fycf2t-BoxWithIcon"
-    >
-      <div
-        class="cache-136cpd3-BoxWithIcon"
-      />
-      <div
-        class="e15slp7a0 cache-c8ymp2"
-      />
-    </div>
-    <div
-      class="cache-rqnleh e3aa5lq0"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Placeholder renders correctly with type="donut" 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.cache-1ufwzsg {
-  position: relative;
-  display: block;
-  width: 100%;
+  border-radius: 4px;
   overflow: hidden;
-  cursor: progress;
 }
 
-.cache-1kchpy5-Donut {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-11mul8y {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 12px;
+  background-color: #d4dae7;
 }
 
-.cache-1kchpy5-Donut.cache-1kchpy5-Donut {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.cache-ek92dq-Donut {
-  position: relative;
-  height: 206px;
-}
-
-.cache-14027xc-Donut {
-  transform-origin: 50% 50%;
-  stroke: #d4dae7;
-  stroke-width: 18;
-  stroke-linecap: butt;
-  fill: none;
-}
-
-.cache-1uvptj-Donut {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.cache-qiu83h-Donut {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 16px;
-  margin-left: 16px;
-}
-
-.cache-bqjk63 {
+.cache-dbhrcj {
   height: 12px;
   width: 120px;
   border-radius: 10px;
@@ -711,51 +429,217 @@ exports[`Placeholder renders correctly with type="donut" 1`] = `
     class="e3aa5lq1 cache-1ufwzsg"
   >
     <div
-      class="cache-1kchpy5-Donut"
+      class="cache-6vc3he e1tgi0mz1"
     >
       <div
-        class="cache-ek92dq-Donut"
+        class="cache-s9qxgv e1tgi0mz0"
       >
-        <svg
-          style="height: 206px; min-height: 206px; min-width: 206px; transform: rotate(-90deg); width: 206px;"
-        >
-          <circle
-            class="cache-14027xc-Donut"
-            cx="103"
-            cy="103"
-            r="90"
-          />
-        </svg>
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
       </div>
-      <ul
-        class="cache-1uvptj-Donut"
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
       >
-        <li
-          class="cache-qiu83h-Donut"
-        >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-s9qxgv e1tgi0mz0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+    </div>
+    <div
+      class="cache-rqnleh e3aa5lq0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Placeholder renders correctly with type="donut" 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.cache-1ufwzsg {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+}
+
+.cache-zjik7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-kfjcxd {
+  height: 206px;
+  width: 206px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.cache-ju096k {
+  transform-origin: 50% 50%;
+  stroke: #d4dae7;
+  stroke-width: 18;
+  stroke-linecap: butt;
+  fill: none;
+}
+
+.cache-pct5nu {
+  display: grid;
+  list-style: none;
+  gap: 16px;
+}
+
+.cache-dbhrcj {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #d4dae7;
+}
+
+.cache-rqnleh {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-rqnleh {
+    -webkit-animation: unset;
+    animation: unset;
+  }
+}
+
+<div
+    class="e3aa5lq1 cache-1ufwzsg"
+  >
+    <div
+      class="cache-zjik7 e3g0yqe3"
+    >
+      <svg
+        class="cache-kfjcxd e3g0yqe2"
+      >
+        <circle
+          class="cache-ju096k e3g0yqe1"
+          cx="103"
+          cy="103"
+          r="90"
+        />
+      </svg>
+      <ul
+        class="cache-pct5nu e3g0yqe0"
+      >
+        <li>
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </li>
-        <li
-          class="cache-qiu83h-Donut"
-        >
+        <li>
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </li>
-        <li
-          class="cache-qiu83h-Donut"
-        >
+        <li>
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </li>
-        <li
-          class="cache-qiu83h-Donut"
-        >
+        <li>
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </li>
       </ul>
@@ -787,25 +671,11 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
   cursor: progress;
 }
 
-.cache-16dm43i {
+.cache-dbhrcj {
   height: 12px;
   width: 120px;
   border-radius: 10px;
   background-color: #d4dae7;
-}
-
-.cache-16dm43i.cache-16dm43i {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
 }
 
 .cache-rqnleh {
@@ -839,7 +709,7 @@ exports[`Placeholder renders correctly with type="line" 1`] = `
     class="e3aa5lq1 cache-1ufwzsg"
   >
     <div
-      class="e15slp7a0 cache-16dm43i"
+      class="cache-dbhrcj e15slp7a0"
     />
     <div
       class="cache-rqnleh e3aa5lq0"
@@ -868,14 +738,14 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   cursor: progress;
 }
 
-.cache-jdn13g {
+.cache-1tqi6p8 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-jdn13g>.exf86061:nth-of-type(even) {
-  background-color: #d4dae7;
+.cache-1tqi6p8>.exf86061:nth-of-type(even) {
+  background-color: #f6f6f8;
 }
 
 .cache-1t7ed8m {
@@ -891,7 +761,7 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   padding: 4px 8px;
 }
 
-.cache-bqjk63 {
+.cache-dbhrcj {
   height: 12px;
   width: 120px;
   border-radius: 10px;
@@ -929,7 +799,7 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
     class="e3aa5lq1 cache-1ufwzsg"
   >
     <ul
-      class="cache-jdn13g exf86060"
+      class="cache-1tqi6p8 exf86060"
     >
       <li
         class="cache-1t7ed8m exf86061"
@@ -938,14 +808,14 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
           style="width: 240px;"
         >
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </div>
         <div
           style="width: 360px;"
         >
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </div>
       </li>
@@ -956,14 +826,14 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
           style="width: 240px;"
         >
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </div>
         <div
           style="width: 360px;"
         >
           <div
-            class="e15slp7a0 cache-bqjk63"
+            class="cache-dbhrcj e15slp7a0"
           />
         </div>
       </li>
@@ -995,44 +865,27 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
   cursor: progress;
 }
 
-.cache-1am8q4i-Slider {
+.cache-19gypvq {
   height: 277px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   overflow: auto;
 }
 
-.cache-1am8q4i-Slider.cache-1am8q4i-Slider {
-  box-sizing: border-box;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex: 0 0 undefined;
-  -ms-flex: 0 0 undefined;
-  flex: 0 0 undefined;
-}
-
-.cache-17d089-Slider {
+.cache-vv445g {
   border: 1px solid #d4dae7;
   border-radius: 4px;
   width: 239px;
   height: 261px;
-  margin-right: 16px;
+  overflow: hidden;
 }
 
-.cache-czy11c-Slider {
+.cache-4clcxl {
   border: 1px solid #d4dae7;
   background-color: #d4dae7;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  width: 239px;
-  height: 77px;
+  width: 100%;
+  height: 33%;
 }
 
 .cache-rqnleh {
@@ -1066,34 +919,213 @@ exports[`Placeholder renders correctly with type="slider" 1`] = `
     class="e3aa5lq1 cache-1ufwzsg"
   >
     <div
-      class="cache-1am8q4i-Slider"
+      class="cache-19gypvq etju4zs2"
     >
       <div
-        class="cache-17d089-Slider"
+        class="cache-vv445g etju4zs1"
       >
         <div
-          class="cache-czy11c-Slider"
+          class="cache-4clcxl etju4zs0"
         />
       </div>
       <div
-        class="cache-17d089-Slider"
+        class="cache-vv445g etju4zs1"
       >
         <div
-          class="cache-czy11c-Slider"
+          class="cache-4clcxl etju4zs0"
         />
       </div>
       <div
-        class="cache-17d089-Slider"
+        class="cache-vv445g etju4zs1"
       >
         <div
-          class="cache-czy11c-Slider"
+          class="cache-4clcxl etju4zs0"
         />
       </div>
       <div
-        class="cache-17d089-Slider"
+        class="cache-vv445g etju4zs1"
       >
         <div
-          class="cache-czy11c-Slider"
+          class="cache-4clcxl etju4zs0"
+        />
+      </div>
+    </div>
+    <div
+      class="cache-rqnleh e3aa5lq0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Placeholder renders default variant 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.cache-1ufwzsg {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+}
+
+.cache-6vc3he {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cache-15z2ije {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cache-11mul8y {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 12px;
+  background-color: #d4dae7;
+}
+
+.cache-dbhrcj {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #d4dae7;
+}
+
+.cache-rqnleh {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-rqnleh {
+    -webkit-animation: unset;
+    animation: unset;
+  }
+}
+
+<div
+    class="e3aa5lq1 cache-1ufwzsg"
+  >
+    <div
+      class="cache-6vc3he e1g102fr1"
+    >
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
+        />
+      </div>
+      <div
+        class="cache-15z2ije e1g102fr0"
+      >
+        <div
+          class="cache-11mul8y eki2pl50"
+        />
+        <div
+          class="cache-dbhrcj e15slp7a0"
         />
       </div>
     </div>

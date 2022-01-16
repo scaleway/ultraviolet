@@ -2,7 +2,7 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import Box from '../Box'
+import Box, { BoxProps } from '../Box'
 import Block from './Block'
 import Blocks from './Blocks'
 import BoxWithIcon from './BoxWithIcon'
@@ -65,24 +65,20 @@ type PlaceholderVariant = keyof typeof variants
 type PlaceholderProps = {
   variant?: PlaceholderVariant
   length?: number
-  width?: number
-  height?: number
   col?: number
-}
+} & BoxProps
 
-const Placeholder: React.VoidFunctionComponent<PlaceholderProps> = ({
+const Placeholder = ({
   variant = 'blocks',
   length,
-  width,
-  height,
   col,
   ...props
-}) => {
+}: PlaceholderProps) => {
   const Component = variants[variant]
 
   return (
     <StyledContainer {...props}>
-      <Component length={length} width={width} height={height} col={col} />
+      <Component length={length} col={col} />
 
       <StyledDiv />
     </StyledContainer>
@@ -93,10 +89,8 @@ export const placeholderTypes = Object.keys(variants) as PlaceholderVariant[]
 
 Placeholder.propTypes = {
   col: PropTypes.number,
-  height: PropTypes.number,
   length: PropTypes.number,
   variant: PropTypes.oneOf(placeholderTypes),
-  width: PropTypes.number,
 }
 
 export default Placeholder

@@ -1,41 +1,38 @@
-import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
-import Box from '../Box'
+import React from 'react'
 
-const styles = {
-  card: (theme: Theme) => css`
-    border: 1px solid ${theme.colors.neutral.borderWeak};
-    border-radius: 4px;
-    width: 239px;
-    height: 261px;
-    margin-right: 16px;
-  `,
-  container: css`
-    height: 277px;
-    display: flex;
-    overflow: auto;
-  `,
-  img: (theme: Theme) => css`
-    border: 1px solid ${theme.colors.neutral.borderWeak};
-    background-color: ${theme.colors.neutral.background};
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    width: 239px;
-    height: 77px;
-  `,
-}
+const StyledContainer = styled.div<{ length: number }>`
+  height: 277px;
+  display: grid;
+  grid-template-columns: repeat(${({ length }) => length}, 1fr);
+  gap: ${({ theme }) => theme.space['2']};
+  overflow: auto;
+`
 
-const Slider: VoidFunctionComponent<{
-  length?: number
-}> = ({ length = 4, ...props }) => (
-  <Box css={styles.container} {...props}>
+const StyledCard = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border-radius: 4px;
+  width: 239px;
+  height: 261px;
+  overflow: hidden;
+`
+
+const StyledBanner = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  width: 100%;
+  height: 33%;
+`
+
+const Slider = ({ length = 4 }: { length?: number }) => (
+  <StyledContainer length={length}>
     {Array.from({ length }, (_, i) => (
-      <div key={`placeholder-slider-card-${i}`} css={styles.card}>
-        <div css={styles.img} />
-      </div>
+      <StyledCard key={`placeholder-slider-card-${i}`}>
+        <StyledBanner />
+      </StyledCard>
     ))}
-  </Box>
+  </StyledContainer>
 )
 
 Slider.propTypes = {
