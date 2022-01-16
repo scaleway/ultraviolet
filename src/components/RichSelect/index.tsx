@@ -798,7 +798,7 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
       maxMenuHeight={250}
       inputId={inputId}
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      ref={innerRef as unknown}
+      ref={innerRef as any}
       {...props}
     />
   )
