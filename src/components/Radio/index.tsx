@@ -9,7 +9,7 @@ import Icon from '../Icon'
 
 const StyledIcon = styled(Icon)``
 
-const IconContainer = styled(Box)`
+const IconContainer = styled.div`
   min-width: 32px;
   width: 32px;
   height: 32px;

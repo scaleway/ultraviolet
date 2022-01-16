@@ -46,7 +46,7 @@ const StyledContainer = styled(Box, {
     variants[variant]?.(theme).background};
 `
 
-const StyledBadgeContainer = styled(Box)`
+const StyledBadgeContainer = styled.div`
   position: absolute;
   top: -12px;
   left: 16px;

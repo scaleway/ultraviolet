@@ -70,10 +70,10 @@ const StyledBar = styled('div', {
   top: ${({ offsetTop }) => offsetTop}px;
 `
 
-const StyledLimit = styled(Box, {
+const StyledLimit = styled('div', {
   shouldForwardProp: prop =>
     !['offsetTop', 'position'].includes(prop.toString()),
-})<{ offsetTop: number }>`
+})<{ offsetTop: number; position?: 'left' | 'right' }>`
   position: absolute;
   font-size: 12px;
   color: ${({ theme }) => theme.colors.neutral.text};
