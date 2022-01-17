@@ -9,11 +9,11 @@ Scaleway UI library.
 
 ---
 
-⚠️ This library is far from being ready. We are actively working on it. Our goal is to have an easy to use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
+⚠️ This library is still WIP. We are actively working on it. Our goal is to have an easy to use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
 
-⚠️ We are going to break a lot of things towards V1. This library is not yet made to be used by external projects
+⚠️ We are going to break a lot of things towards V1. This library is not yet production ready.
 
-⚠️ We currently do not accept contributions from external contributors
+📝 You can still participate in its development and start contributing to it.
 
 ## Quick Start
 
@@ -65,13 +65,21 @@ declare module '@emotion/react' {
 
 ## Development
 
+Before any command, install dependencies running following command:
+
+```sh
+$ yarn install
+```
+
 ### Storybook
 
-Make sure to have dependencies up to date by running `yarn install`
+You can easily start Storybook by running:
 
 ```sh
 $ yarn run start
 ```
+
+Storybook documentation will then be available on [http://localhost:6006](http://localhost:6006)
 
 ### Test
 
@@ -92,7 +100,7 @@ $ yarn run test:a11y # Will run all accessibility tests
 $ yarn run test:a11y src/components/Alert # Will run accessibility test of Alert component only
 ```
 
-### Lint
+#### Lint
 
 ```sh
 $ yarn run lint
@@ -138,3 +146,7 @@ $ yarn build && yalc publish --push --sig # --push will automatically update the
 We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
 
 Only the `feat`, `fix` and `perf` types will generate a new package on the `main` branch
+
+### Documentation
+
+Checkout our [documentation website](https://react.ui.scaleway.com/).
