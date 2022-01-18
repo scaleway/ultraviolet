@@ -13,7 +13,7 @@ Scaleway UI library.
 
 ⚠️ We are going to break a lot of things towards V1. This library is not yet production ready.
 
-📝 You can still participate in its development and start contributing to it.
+📝 You can still participate in its development and [start contributing](/CONTRIBUTING.md) to it.
 
 ## Quick Start
 

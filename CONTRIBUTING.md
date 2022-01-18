@@ -90,9 +90,14 @@ yarn test:unit
 If you have an error with unit test please check corresponding test and try to resolve the issue. 
 Generating snapshot might be required depending on modification.
 
-7. Commit and push your changes:
+7. Commit using conventional commit and push your changes:
 ```shell
-git commit -m "fix: my issue message" && git push -u origin HEAD
+yarn commit
+```
+
+and then:
+```shell
+git push -u origin HEAD
 ```
 
 8. Come back on our repository and create a [pull request](https://github.com/scaleway/scaleway-ui/compare).
