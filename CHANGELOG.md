@@ -1,3 +1,18 @@
+### [0.134.7](https://github.com/scaleway/scaleway-ui/compare/v0.134.6...v0.134.7) (2022-01-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @svgr/rollup to v6.2.0 ([#1114](https://github.com/scaleway/scaleway-ui/issues/1114)) ([af42e7b](https://github.com/scaleway/scaleway-ui/commit/af42e7bef84beca0f764e022e0ef9adae42619f3))
+* **devdeps:** update dependency rollup-plugin-visualizer to v5.5.4 ([#1116](https://github.com/scaleway/scaleway-ui/issues/1116)) ([9b50fb9](https://github.com/scaleway/scaleway-ui/commit/9b50fb99a8d3c88e041afb011aff201aee7e1ac7))
+* **devdeps:** update dependency webpack to v5.66.0 ([#1119](https://github.com/scaleway/scaleway-ui/issues/1119)) ([f74e951](https://github.com/scaleway/scaleway-ui/commit/f74e9517f39fa940800e607a18edb30250cfdaca))
+* **devdeps:** update storybook monorepo to v6.4.13 ([#1115](https://github.com/scaleway/scaleway-ui/issues/1115)) ([62dd60a](https://github.com/scaleway/scaleway-ui/commit/62dd60a6cce47fddb34c0eaa38b915272ca8501b))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-countup to v6.1.1 ([#1121](https://github.com/scaleway/scaleway-ui/issues/1121)) ([3776ca9](https://github.com/scaleway/scaleway-ui/commit/3776ca9ff0d2403e61eb680843558fbe4851c767))
+
 ### [0.134.6](https://github.com/scaleway/scaleway-ui/compare/v0.134.5...v0.134.6) (2022-01-14)
 
 
