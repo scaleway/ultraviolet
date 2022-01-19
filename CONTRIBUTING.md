@@ -10,6 +10,7 @@ Contribution is in fact open to anyone, developer or not, in order to guide you 
   - [Project Structure](#project-structure)
   - [Creating an Issue](#creating-an-issue)
   - [Creating a pull request](#creating-a-pull-request)
+  - [Commit & Pull Request Guideline](#commit--pull-request-guideline)
 
 ## Code of Conduct
 
@@ -90,7 +91,7 @@ yarn test:unit
 If you have an error with unit test please check corresponding test and try to resolve the issue. 
 Generating snapshot might be required depending on modification.
 
-7. Commit using conventional commit and push your changes:
+7. Commit using [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) and push your changes:
 ```shell
 yarn commit
 ```
@@ -103,6 +104,41 @@ git push -u origin HEAD
 8. Come back on our repository and create a [pull request](https://github.com/scaleway/scaleway-ui/compare).
 
 Congratulation! Now you just need to wait reviews from our core team, your pull request will either be merged, request changes or closed with an explanation.
+
+## Commit & Pull Request Guideline
+
+We have specific rules on how to structure of our commit messages to make them easy to read.
+
+### Structure
+
+Here is simple structure:
+
+```
+type(scope): commit message
+```
+
+Where types are defined just below, scope defines the subject and commit message should be a more precise definition of what has been changed.
+
+Example: I'm working on a fix on Button component by changing behavior on click event. Commit message & pull request title will be:
+
+```
+fix(button): fade in animation on click
+```
+
+### Types
+
+Must be one of the following:
+
+* **build**: Changes that affect the build system or external dependencies
+* **ci**: Changes to our CI configuration files and scripts
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **test**: Adding missing tests or correcting existing tests
+* **revert**: If the commit revert a previous commit
 
 ## License
 
