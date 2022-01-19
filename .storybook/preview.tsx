@@ -1,6 +1,7 @@
 import React from 'react'
 import I18n from '@scaleway/use-i18n'
-import { css, ThemeProvider, Global } from '@emotion/react'
+import { Story } from '@storybook/react'
+import { css, ThemeProvider, Global, Theme } from '@emotion/react'
 import normalize from '../src/utils/normalize'
 
 import theme from '../src/theme'
@@ -39,23 +40,25 @@ const ENV_PARAMETERS = {
   },
 }
 export const parameters =
-  ENV_PARAMETERS[process.env.STORYBOOK_ENVIRONMENT] || ENV_PARAMETERS.production
+  ENV_PARAMETERS[
+    process.env.STORYBOOK_ENVIRONMENT as keyof typeof ENV_PARAMETERS
+  ] || ENV_PARAMETERS.production
 
-const adjustedTheme = ancestorTheme => ({
+const adjustedTheme = (ancestorTheme: Record<string, unknown>) => ({
   ...ancestorTheme,
   ...Object.keys(theme).reduce(
     (acc, themeItem) => ({
       ...acc,
       [themeItem]: {
-        ...(acc[themeItem] ?? {}),
-        ...theme[themeItem],
+        ...((acc[themeItem] as Record<string, unknown>) ?? {}),
+        ...(theme[themeItem as keyof typeof theme] as Record<string, unknown>),
       },
     }),
     ancestorTheme,
   ),
 })
 
-export const globalStyles = theme => css`
+export const globalStyles = (theme: Theme) => css`
   ${normalize()}
 
   body {
@@ -64,7 +67,7 @@ export const globalStyles = theme => css`
 `
 
 export const decorators = [
-  Story => (
+  (StoryComponent: Story) => (
     <I18n
       defaultLoad={async ({ locale }) => import(`./locales/${locale}.json`)}
       defaultLocale="en"
@@ -75,9 +78,10 @@ export const decorators = [
       localeItemStorage="localeI18n"
       supportedLocales={['en', 'fr', 'es']}
     >
+      {/* @ts-expect-error adjustedTheme is a merge between storybook theme and our own theme */}
       <ThemeProvider theme={adjustedTheme}>
         <Global styles={[globalStyles]} />
-        <Story />
+        <StoryComponent />
       </ThemeProvider>
     </I18n>
   ),
