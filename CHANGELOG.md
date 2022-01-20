@@ -1,3 +1,20 @@
+### [0.134.8](https://github.com/scaleway/scaleway-ui/compare/v0.134.7...v0.134.8) (2022-01-20)
+
+
+### :memo: Documentation
+
+* contribution.md and updated readme ([#1120](https://github.com/scaleway/scaleway-ui/issues/1120)) ([d306296](https://github.com/scaleway/scaleway-ui/commit/d3062965f874ffdb7d2c5ad981d43334133e956e))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.4 ([#1124](https://github.com/scaleway/scaleway-ui/issues/1124)) ([2e77d78](https://github.com/scaleway/scaleway-ui/commit/2e77d78a0a096ce478986b0f9ee62b631b97c044))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.6 ([#1125](https://github.com/scaleway/scaleway-ui/issues/1125)) ([eec8b16](https://github.com/scaleway/scaleway-ui/commit/eec8b161874cf8e8d53c4f4fa79d2b9a56afb509))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.7 ([#1128](https://github.com/scaleway/scaleway-ui/issues/1128)) ([f38c596](https://github.com/scaleway/scaleway-ui/commit/f38c596676911e8f4a2934bb6064ceeee93c115c))
+* **devdeps:** update dependency rollup to v2.64.0 ([#1127](https://github.com/scaleway/scaleway-ui/issues/1127)) ([ff187b9](https://github.com/scaleway/scaleway-ui/commit/ff187b9b16ad3a7c046d0a6842ce417730a62e71))
+* **devdeps:** update semantic-release monorepo ([#1123](https://github.com/scaleway/scaleway-ui/issues/1123)) ([232440c](https://github.com/scaleway/scaleway-ui/commit/232440c3c0b6c256ec19afabd0963ed271fbe24e))
+* migrate storybook config to ts ([#1111](https://github.com/scaleway/scaleway-ui/issues/1111)) ([abfcfe6](https://github.com/scaleway/scaleway-ui/commit/abfcfe63bc16996277a905301398bb133d1aad69))
+
 ### [0.134.7](https://github.com/scaleway/scaleway-ui/compare/v0.134.6...v0.134.7) (2022-01-19)
 
 
