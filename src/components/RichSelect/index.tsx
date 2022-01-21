@@ -6,7 +6,6 @@ import React, {
   ForwardRefExoticComponent,
   ForwardedRef,
   FunctionComponent,
-  LabelHTMLAttributes,
   ReactElement,
   ReactNode,
   Validator,
@@ -422,14 +421,14 @@ SelectContainer.propTypes = {
   }) as Validator<SelectProps & ContainerProps<SelectOption>['selectProps']>,
 }
 
-type StyledPlaceholderProps = LabelHTMLAttributes<HTMLLabelElement> & {
+type StyledPlaceholderProps = {
   error?: string
   isMulti: boolean
   isDisabled?: boolean
   hasValue: boolean
 }
 
-const StyledPlaceholder = styled(Box, {
+const StyledPlaceholder = styled('label', {
   shouldForwardProp: prop =>
     !['error', 'hasValue', 'isDisabled', 'isMulti'].includes(prop.toString()),
 })<StyledPlaceholderProps>`
