@@ -1,3 +1,24 @@
+### [0.134.9](https://github.com/scaleway/scaleway-ui/compare/v0.134.8...v0.134.9) (2022-01-24)
+
+
+### :zap: Refactor
+
+* remove some extraneous Box ([#1118](https://github.com/scaleway/scaleway-ui/issues/1118)) ([1997326](https://github.com/scaleway/scaleway-ui/commit/19973262c5d4e816f128ef2261932d0436704e0f))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#1132](https://github.com/scaleway/scaleway-ui/issues/1132)) ([4f51c80](https://github.com/scaleway/scaleway-ui/commit/4f51c8049384ea4f11d09b3ecb18794b1ea50546))
+* **devdeps:** update dependency @babel/core to v7.16.12 ([#1136](https://github.com/scaleway/scaleway-ui/issues/1136)) ([5e8e436](https://github.com/scaleway/scaleway-ui/commit/5e8e4361c1d03a6ff36e907001b9610a0c30e383))
+* **devdeps:** update dependency eslint to v8.7.0 ([#1131](https://github.com/scaleway/scaleway-ui/issues/1131)) ([128331e](https://github.com/scaleway/scaleway-ui/commit/128331e9dfbc17f3c963f3e727a9d87dfd794c72))
+* **devdeps:** update dependency typescript to v4.5.5 ([#1133](https://github.com/scaleway/scaleway-ui/issues/1133)) ([701a8d5](https://github.com/scaleway/scaleway-ui/commit/701a8d5e35f42a566f307bc52c76807827375397))
+* **devdeps:** update storybook monorepo to v6.4.14 ([#1134](https://github.com/scaleway/scaleway-ui/issues/1134)) ([9dfff1a](https://github.com/scaleway/scaleway-ui/commit/9dfff1a7be75af0139979d09eab2c8fa2af5ff8c))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency polished to v4.1.4 ([#1135](https://github.com/scaleway/scaleway-ui/issues/1135)) ([29f5e0f](https://github.com/scaleway/scaleway-ui/commit/29f5e0f12ad45614b0ade0caa911d0b9e0f9e143))
+
 ### [0.134.8](https://github.com/scaleway/scaleway-ui/compare/v0.134.7...v0.134.8) (2022-01-20)
 
 
