@@ -1,3 +1,15 @@
+### [0.134.10](https://github.com/scaleway/scaleway-ui/compare/v0.134.9...v0.134.10) (2022-01-25)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update nivo monorepo ([#1109](https://github.com/scaleway/scaleway-ui/issues/1109)) ([a2fdb69](https://github.com/scaleway/scaleway-ui/commit/a2fdb69eab0c4ede6fba0c87ac32e9cddac37f2e))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @commitlint/cli to v16.1.0 ([#1137](https://github.com/scaleway/scaleway-ui/issues/1137)) ([1faf649](https://github.com/scaleway/scaleway-ui/commit/1faf64970f4cf7064846221d75df574ffb1bbd4f))
+
 ### [0.134.9](https://github.com/scaleway/scaleway-ui/compare/v0.134.8...v0.134.9) (2022-01-24)
 
 
