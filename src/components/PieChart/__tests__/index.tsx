@@ -10,6 +10,13 @@ import {
   dataWithLegendsDetailsAndDiscount,
 } from '../__stories__/mockData'
 
+// Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  disconnect: jest.fn(),
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+}))
+
 describe('PieChart', () => {
   test('renders correctly with no props', () =>
     shouldMatchEmotionSnapshot(<PieChart />))
