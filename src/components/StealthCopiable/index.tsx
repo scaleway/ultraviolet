@@ -38,7 +38,6 @@ type StealthCopiableProps = {
   side?: 'left' | 'right'
   copyText?: string
   copiedText?: string
-  hide?: boolean
 }
 
 const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
@@ -46,15 +45,12 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
   side = 'right',
   copyText = 'Copy',
   copiedText = 'Copied',
-  hide = false,
 }) => {
   const string = recursivelyGetChildrenString(children)
 
   const [isCopied, setCopied] = useClipboard(string, {
     successDuration: 5000,
   })
-
-  if (hide) return <StyledContainer>{children}</StyledContainer>
 
   return (
     <StyledContainer>
@@ -78,7 +74,6 @@ StealthCopiable.propTypes = {
   children: PropTypes.node.isRequired,
   copiedText: PropTypes.string,
   copyText: PropTypes.string,
-  hide: PropTypes.bool,
   side: PropTypes.oneOf(['left', 'right']),
 }
 
