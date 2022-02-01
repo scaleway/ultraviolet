@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React, { useRef, useState } from 'react'
-import List, { ListProps } from '..'
+import List, { ListProps, ListRefType } from '..'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
@@ -356,10 +356,9 @@ Ref.parameters = {
 }
 Ref.decorators = [
   () => {
-    const ref = useRef()
+    const ref = useRef<ListRefType<ReturnType<typeof generateData>[0]>>(null)
     const handleClick = () => {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      ref.current.unselectAll()
+      ref.current?.unselectAll()
     }
 
     return (

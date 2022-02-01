@@ -57,7 +57,7 @@ export default {
       table: {
         type: { summary: 'array' },
       },
-      type: { name: 'array' },
+      type: { name: 'string' },
     },
     variant: {
       description: `you have the possibility between "base | bordered | no-border "`,

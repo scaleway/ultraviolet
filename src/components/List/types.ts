@@ -1,5 +1,3 @@
-import { Theme } from '@emotion/react'
-import { Interpolation } from '@emotion/serialize'
 import { MouseEventHandler, ReactNode } from 'react'
 
 export type ListOrder = 'asc' | 'desc' | undefined
@@ -49,7 +47,7 @@ export type ListRowProps = {
   isHoverable?: boolean
   locked?: boolean
   alert?: boolean
-  customStyle?: Interpolation<Theme>
+  customStyle?: JSX.IntrinsicAttributes['css']
   open?: boolean
   disabled?: boolean
   onClick?: MouseEventHandler<HTMLDivElement | HTMLDetailsElement>

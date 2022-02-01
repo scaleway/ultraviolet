@@ -38,7 +38,7 @@ Uncontrolled.parameters = {
       'DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).',
   },
 }
-Uncontrolled.decorators = [() => <DateInput label="Date" />]
+Uncontrolled.decorators = [() => <DateInput onChange={() => {}} label="Date" />]
 
 export const Controlled = Template.bind({})
 Controlled.parameters = {
@@ -64,13 +64,21 @@ Error.parameters = {
       'Use `error` prop to style the input when the field is invalid.',
   },
 }
-Error.decorators = [() => <DateInput label="Error" error="This is an error" />]
+Error.decorators = [
+  () => (
+    <DateInput onChange={() => {}} label="Error" error="This is an error" />
+  ),
+]
 
 export const Disabled = Template.bind({})
-Disabled.decorators = [() => <DateInput label="Disabled" disabled />]
+Disabled.decorators = [
+  () => <DateInput onChange={() => {}} label="Disabled" disabled />,
+]
 
 export const Required = Template.bind({})
-Required.decorators = [() => <DateInput label="Required" required />]
+Required.decorators = [
+  () => <DateInput onChange={() => {}} label="Required" required />,
+]
 
 export const Localized = Template.bind({})
 Localized.parameters = {
@@ -83,12 +91,12 @@ Localized.decorators = [
   () => (
     <>
       <div style={{ marginBottom: 16 }}>
-        <DateInput label="fr-FR" locale={fr} />
+        <DateInput onChange={() => {}} label="fr-FR" locale={fr} />
       </div>
       <div style={{ marginBottom: 16 }}>
-        <DateInput label="es-ES" locale={es} />
+        <DateInput onChange={() => {}} label="es-ES" locale={es} />
       </div>
-      <DateInput label="ru-RU" locale={ru} />
+      <DateInput onChange={() => {}} label="ru-RU" locale={ru} />
     </>
   ),
 ]
@@ -126,7 +134,7 @@ I18n.decorators = [
             </RichSelect.Option>
           ))}
         </RichSelect>
-        <DateInput label={currentLocale} />
+        <DateInput onChange={() => {}} label={currentLocale} />
       </div>
     )
   },
@@ -142,6 +150,7 @@ MinMax.parameters = {
 MinMax.decorators = [
   () => (
     <DateInput
+      onChange={() => {}}
       label="Date"
       value={new Date('1995-12-17T03:24:00')}
       minDate={new Date('December 12, 1995 03:24:00')}
