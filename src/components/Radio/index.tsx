@@ -9,10 +9,10 @@ import React, {
   useMemo,
 } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
-import { Typography } from '..'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Typography from '../Typography'
 
 const StyledIcon = styled(Icon)``
 
@@ -61,10 +61,6 @@ const StyledRadioContainer = styled(Typography)<{
   ${({ disabled }) => (disabled ? disabledClass : activeFocusClass)}
 `
 
-const StyledChildrenContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
-})``
-
 const StyledRadio = styled(ReakitRadio)`
   position: absolute;
   opacity: 0.01;
@@ -74,6 +70,11 @@ const StyledError = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.danger.text};
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
+`
+
+const StyledExpandable = styled(Expandable)`
+  height: 56px;
+  overflow: hidden;
 `
 
 type RadioProps = {
@@ -123,7 +124,7 @@ const Radio: FunctionComponent<RadioProps> = ({
             size={size}
           />
         </IconContainer>
-        <StyledChildrenContainer>{children}</StyledChildrenContainer>
+        <div>{children}</div>
         <StyledRadio
           type="radio"
           aria-checked={checked ? 'true' : 'false'}
@@ -137,9 +138,9 @@ const Radio: FunctionComponent<RadioProps> = ({
           name={name}
         />
       </StyledRadioContainer>
-      <Expandable height={56} overflow="hidden" opened={!!error}>
+      <StyledExpandable opened={!!error}>
         <StyledError>{error}</StyledError>
-      </Expandable>
+      </StyledExpandable>
     </Box>
   )
 }
