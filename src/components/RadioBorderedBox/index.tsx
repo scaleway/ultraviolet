@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import BorderedBox from '../BorderedBox'
+import Expandable from '../Expandable'
 import Radio from '../Radio'
+import Typography from '../Typography'
 
 type RadioProps = Pick<
   ComponentProps<typeof Radio>,
@@ -20,15 +22,25 @@ type RadioProps = Pick<
   | 'valid'
 >
 
-const StyledBox = styled(BorderedBox)<{ disabled: boolean; checked: boolean }>`
+const StyledBox = styled(BorderedBox)<{
+  disabled: boolean
+  checked: boolean
+  error: string | ReactNode
+}>`
   display: block;
 
-  ${({ disabled, checked, theme: { colors } }) => {
+  ${({ disabled, checked, error, theme: { colors } }) => {
     if (disabled)
       return `
         cursor: not-allowed !important;
         color: ${colors.neutral.textDisabled};
       `
+    if (error)
+      return `
+        border: 1px solid ${colors.danger.borderWeak} !important;
+        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.danger.borderWeak)};
+      `
+
     if (checked)
       return `
         border: 1px solid ${colors.primary.borderWeak} !important;
@@ -45,6 +57,17 @@ const StyledBox = styled(BorderedBox)<{ disabled: boolean; checked: boolean }>`
 const StyledRadioContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.space['1']};
+`
+
+const StyledError = styled.div`
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.danger.text};
+  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
+`
+
+const StyledExpandable = styled(Expandable)`
+  margin-top: ${({ theme }) => theme.space['1']};
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
@@ -78,35 +101,41 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   error,
   valid,
 }) => (
-  <StyledBox disabled={disabled} checked={checked}>
-    <StyledRadioContainer>
-      <Radio
-        name={name}
-        checked={checked}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        disabled={disabled}
-        value={value}
-        size={size}
-        mr="4px"
-        error={error}
-        valid={valid}
-      >
-        {label}
-      </Radio>
-      <span>{labelDescription}</span>
-      {badgeText && (
-        <>
-          &nbsp;
-          <Badge size={badgeSize} variant={badgeVariant}>
-            {badgeText}
-          </Badge>
-        </>
-      )}
-    </StyledRadioContainer>
-    <div>{children}</div>
-  </StyledBox>
+  <>
+    <StyledBox disabled={disabled} checked={checked} error={error}>
+      <StyledRadioContainer>
+        <Radio
+          name={name}
+          checked={checked}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          disabled={disabled}
+          value={value}
+          size={size}
+          mr="4px"
+          error={error}
+          valid={valid}
+          showError={false}
+        >
+          {label}
+        </Radio>
+        <Typography as="span">{labelDescription}</Typography>
+        {badgeText && (
+          <>
+            &nbsp;
+            <Badge size={badgeSize} variant={badgeVariant}>
+              {badgeText}
+            </Badge>
+          </>
+        )}
+      </StyledRadioContainer>
+      <Typography>{children}</Typography>
+    </StyledBox>
+    <StyledExpandable opened={!!error}>
+      <StyledError>{error}</StyledError>
+    </StyledExpandable>
+  </>
 )
 
 RadioBorderedBox.propTypes = {

@@ -72,11 +72,6 @@ const StyledError = styled.div`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledExpandable = styled(Expandable)`
-  height: 56px;
-  overflow: hidden;
-`
-
 type RadioProps = {
   children: ReactNode
   valid?: boolean
@@ -84,6 +79,7 @@ type RadioProps = {
   name: string
   size?: number
   value: string | number
+  showError?: boolean
 } & XStyledProps &
   InputHTMLAttributes<HTMLInputElement>
 
@@ -99,8 +95,9 @@ const Radio: FunctionComponent<RadioProps> = ({
   value,
   size = 24,
   children,
+  showError = true,
   ...props
-}) => {
+}): JSX.Element => {
   const color = useMemo(() => {
     if (disabled) return 'gray100'
     if (valid === false || !!error) return 'warning'
@@ -138,9 +135,9 @@ const Radio: FunctionComponent<RadioProps> = ({
           name={name}
         />
       </StyledRadioContainer>
-      <StyledExpandable opened={!!error}>
+      <Expandable opened={!!error && showError}>
         <StyledError>{error}</StyledError>
-      </StyledExpandable>
+      </Expandable>
     </Box>
   )
 }
@@ -160,6 +157,7 @@ Radio.propTypes = {
   /**
    * Size of the button
    */
+  showError: PropTypes.bool,
   size: PropTypes.number,
   valid: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,

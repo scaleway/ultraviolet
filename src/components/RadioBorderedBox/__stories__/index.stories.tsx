@@ -4,6 +4,26 @@ import RadioBorderedBox from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
+  args: {
+    badgeText: 'Badge',
+    checked: true,
+    label: 'Choice 1',
+    labelDescription: '(choice details)',
+    name: 'choice-1',
+    value: 'choice-1',
+  },
+  argTypes: {
+    checked: {
+      control: { type: 'boolean' },
+      description: 'checked',
+      name: 'checked',
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'boolean' },
+      },
+      type: { name: 'boolean', required: false },
+    },
+  },
   component: RadioBorderedBox,
   parameters: {
     docs: {
@@ -16,26 +36,8 @@ export default {
   title: 'Components/Data Entry/RadioBorderedBox',
 } as Meta
 
-const Template: Story<ComponentProps<typeof RadioBorderedBox>> = ({
-  name = 'choice-1',
-  checked = true,
-  value = 'choice-1',
-  label = 'Choice 1',
-  labelDescription = '(choice details)',
-  badgeText = 'Badge',
-  ...props
-}) => (
-  <RadioBorderedBox
-    name={name}
-    checked={checked}
-    value={value}
-    label={label}
-    labelDescription={labelDescription}
-    badgeText={badgeText}
-    {...props}
-  >
-    Description content
-  </RadioBorderedBox>
+const Template: Story<ComponentProps<typeof RadioBorderedBox>> = args => (
+  <RadioBorderedBox {...args} />
 )
 
 export const Default = Template.bind({})
@@ -78,24 +80,14 @@ Controlled.decorators = [
 ]
 
 export const Disabled = Template.bind({})
-Disabled.parameters = {
-  docs: {
-    storyDescription: 'Disable the component by using `disabled` prop',
-  },
+Disabled.args = {
+  disabled: true,
 }
-Disabled.decorators = [
-  () => (
-    <RadioBorderedBox
-      value="disabled"
-      name="radio-disabled"
-      disabled
-      onChange={() => {}}
-      label="Disabled"
-    >
-      Disabled radio
-    </RadioBorderedBox>
-  ),
-]
+
+export const Error = Template.bind({})
+Error.args = {
+  error: 'Invalid value',
+}
 
 export const Label = Template.bind({})
 Label.parameters = {
