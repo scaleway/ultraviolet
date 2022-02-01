@@ -1,15 +1,24 @@
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Radio from '../Radio'
+
+type RadioProps = Pick<
+  ComponentProps<typeof Radio>,
+  | 'name'
+  | 'checked'
+  | 'onChange'
+  | 'onFocus'
+  | 'onBlur'
+  | 'disabled'
+  | 'value'
+  | 'size'
+  | 'error'
+  | 'valid'
+>
 
 const StyledBox = styled(BorderedBox)<{ disabled: boolean; checked: boolean }>`
   display: block;
@@ -39,7 +48,7 @@ const StyledRadioContainer = styled.div`
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
-type RadioBorderedBoxProps = {
+type RadioBorderedBoxProps = RadioProps & {
   badgeSize?: ComponentProps<typeof Badge>['size']
   badgeText?: string
   badgeVariant?: ComponentProps<typeof Badge>['variant']
@@ -49,7 +58,7 @@ type RadioBorderedBoxProps = {
   name: string
   size?: number
   value: string | number
-} & InputHTMLAttributes<HTMLInputElement>
+}
 
 const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   label,
@@ -66,6 +75,8 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   value,
   size = 24,
   children,
+  error,
+  valid,
 }) => (
   <StyledBox disabled={disabled} checked={checked}>
     <StyledRadioContainer>
@@ -79,6 +90,8 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
         value={value}
         size={size}
         mr="4px"
+        error={error}
+        valid={valid}
       >
         {label}
       </Radio>
@@ -114,6 +127,7 @@ RadioBorderedBox.propTypes = {
   checked: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  error: PropTypes.string,
   /**
    * Label next to the radio button, can be a string or a more complex child
    */
@@ -124,12 +138,13 @@ RadioBorderedBox.propTypes = {
   labelDescription: PropTypes.string,
   name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
   /**
    * Size of the radio button
    */
   size: PropTypes.number,
+  valid: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
