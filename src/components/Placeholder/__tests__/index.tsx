@@ -11,6 +11,9 @@ describe('Placeholder', () => {
     jest.spyOn(global.Math, 'random').mockRestore()
   })
 
+  test('renders default variant', () =>
+    shouldMatchEmotionSnapshot(<Placeholder />))
+
   test.each(placeholderTypes)('renders correctly with type="%s"', type =>
     shouldMatchEmotionSnapshot(<Placeholder variant={type} />),
   )

@@ -188,7 +188,7 @@ CustomComponents.decorators = [
           value => `Item ${value}`,
         )}
         LoaderComponent={() => (
-          <div style={{ display: 'flex', margin: '16px 0' }}>
+          <div style={{ display: 'grid', gap: 16 }}>
             {Array.from({ length: 5 }, (_, index) => index).map(value => (
               <Placeholder key={value} variant="line" />
             ))}
