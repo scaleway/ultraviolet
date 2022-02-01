@@ -505,3 +505,129 @@ exports[`Radio renders correctly when error 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Radio renders correctly when valid 1`] = `
+<DocumentFragment>
+  .cache-x2gf5e {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  cursor: pointer;
+}
+
+.cache-x2gf5e:hover .e1duuirp3,
+.cache-x2gf5e:focus .e1duuirp3 {
+  background-color: rgba(212,218,231,0.25);
+  border-radius: 50%;
+}
+
+.cache-x2gf5e:hover .e1duuirp3>.e1duuirp4,
+.cache-x2gf5e:focus .e1duuirp3>.e1duuirp4 {
+  fill: #4f0599;
+}
+
+.cache-tn3xtd {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.cache-1o781xh {
+  fill: #45d6b5;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-1o781xh.cache-1o781xh {
+  vertical-align: middle;
+}
+
+.cache-cujed6 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="cache-3svqc9"
+  >
+    <label
+      class="e1duuirp2 e1g1zfwd0 cache-x2gf5e"
+      for="radio-choice"
+    >
+      <div
+        class="cache-tn3xtd e1duuirp3"
+      >
+        <svg
+          class="e1duuirp4 etwatq50 cache-1o781xh"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+          />
+        </svg>
+      </div>
+      <div>
+        Choice
+      </div>
+      <input
+        aria-checked="false"
+        class="cache-cujed6 e1duuirp1"
+        id="radio-choice"
+        name="radio"
+        tabindex="0"
+        type="radio"
+        value="choice"
+      />
+    </label>
+    <div
+      class="e14o3tsk0 cache-x3o9mj"
+    >
+      <div
+        class="cache-1bj69hq e1duuirp0"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

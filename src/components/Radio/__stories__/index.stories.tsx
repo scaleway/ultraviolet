@@ -84,3 +84,9 @@ export const Error = Template.bind({})
 Error.args = {
   error: 'Invalid value',
 }
+
+export const Valid = Template.bind({})
+Valid.args = {
+  checked: true,
+  valid: true,
+}
