@@ -21,7 +21,15 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1c9gspx {
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-x2gf5e {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -31,25 +39,18 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
 }
 
-.cache-1c9gspx.cache-1c9gspx {
-  margin-right: 4px;
-}
-
-.cache-1c9gspx:hover .e1duuirp2,
-.cache-1c9gspx:focus .e1duuirp2 {
+.cache-x2gf5e:hover .e1duuirp3,
+.cache-x2gf5e:focus .e1duuirp3 {
   background-color: rgba(212,218,231,0.25);
   border-radius: 50%;
 }
 
-.cache-1c9gspx:hover .e1duuirp2>.e1duuirp3,
-.cache-1c9gspx:focus .e1duuirp2>.e1duuirp3 {
+.cache-x2gf5e:hover .e1duuirp3>.e1duuirp4,
+.cache-x2gf5e:focus .e1duuirp3>.e1duuirp4 {
   fill: #4f0599;
 }
 
@@ -89,44 +90,109 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   opacity: 0.01;
 }
 
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-    class="cache-5jm5b e13z6rra1"
+    class="cache-5jm5b e13z6rra3"
   >
     <div
-      class="cache-kmnzss e13z6rra0"
+      class="cache-kmnzss e13z6rra2"
     >
-      <label
-        class="e1duuirp1 cache-1c9gspx"
-        for="radio-choice"
+      <div
+        class="cache-1dp0kf7"
       >
-        <div
-          class="cache-tn3xtd e1duuirp2"
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-x2gf5e"
+          for="radio-choice"
         >
-          <svg
-            class="e1duuirp3 etwatq50 cache-14h2zyo"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-tn3xtd e1duuirp3"
           >
-            <path
-              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-            />
-          </svg>
+            <svg
+              class="e1duuirp4 etwatq50 cache-14h2zyo"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice
+          </div>
+          <input
+            aria-checked="false"
+            class="cache-cujed6 e1duuirp1"
+            id="radio-choice"
+            name="radio"
+            tabindex="0"
+            type="radio"
+            value="choice"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          />
         </div>
-        Choice
-        <input
-          aria-checked="false"
-          class="cache-cujed6 e1duuirp0"
-          id="radio-choice"
-          name="radio"
-          tabindex="0"
-          type="radio"
-          value="choice"
-        />
-      </label>
-      <span />
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      />
     </div>
-    <div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
       Choice description
     </div>
+  </div>
+  .cache-2himih {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-2himih"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -152,7 +218,15 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   margin-bottom: 8px;
 }
 
-.cache-1c9gspx {
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-x2gf5e {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -162,25 +236,18 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
 }
 
-.cache-1c9gspx.cache-1c9gspx {
-  margin-right: 4px;
-}
-
-.cache-1c9gspx:hover .e1duuirp2,
-.cache-1c9gspx:focus .e1duuirp2 {
+.cache-x2gf5e:hover .e1duuirp3,
+.cache-x2gf5e:focus .e1duuirp3 {
   background-color: rgba(212,218,231,0.25);
   border-radius: 50%;
 }
 
-.cache-1c9gspx:hover .e1duuirp2>.e1duuirp3,
-.cache-1c9gspx:focus .e1duuirp2>.e1duuirp3 {
+.cache-x2gf5e:hover .e1duuirp3>.e1duuirp4,
+.cache-x2gf5e:focus .e1duuirp3>.e1duuirp4 {
   fill: #4f0599;
 }
 
@@ -220,44 +287,109 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   opacity: 0.01;
 }
 
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-    class="cache-5jm5b e13z6rra1"
+    class="cache-5jm5b e13z6rra3"
   >
     <div
-      class="cache-kmnzss e13z6rra0"
+      class="cache-kmnzss e13z6rra2"
     >
-      <label
-        class="e1duuirp1 cache-1c9gspx"
-        for="radioborderedbox-choice1"
+      <div
+        class="cache-1dp0kf7"
       >
-        <div
-          class="cache-tn3xtd e1duuirp2"
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-x2gf5e"
+          for="radioborderedbox-choice1"
         >
-          <svg
-            class="e1duuirp3 etwatq50 cache-14h2zyo"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-tn3xtd e1duuirp3"
           >
-            <path
-              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-            />
-          </svg>
+            <svg
+              class="e1duuirp4 etwatq50 cache-14h2zyo"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice 1
+          </div>
+          <input
+            aria-checked="false"
+            class="cache-cujed6 e1duuirp1"
+            id="radioborderedbox-choice1"
+            name="radioborderedbox"
+            tabindex="0"
+            type="radio"
+            value="choice1"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          />
         </div>
-        Choice 1
-        <input
-          aria-checked="false"
-          class="cache-cujed6 e1duuirp0"
-          id="radioborderedbox-choice1"
-          name="radioborderedbox"
-          tabindex="0"
-          type="radio"
-          value="choice1"
-        />
-      </label>
-      <span />
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      />
     </div>
-    <div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
       Choice 1 description
     </div>
+  </div>
+  .cache-2himih {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-2himih"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -285,7 +417,15 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1c9gspx {
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-x2gf5e {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -295,25 +435,18 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
 }
 
-.cache-1c9gspx.cache-1c9gspx {
-  margin-right: 4px;
-}
-
-.cache-1c9gspx:hover .e1duuirp2,
-.cache-1c9gspx:focus .e1duuirp2 {
+.cache-x2gf5e:hover .e1duuirp3,
+.cache-x2gf5e:focus .e1duuirp3 {
   background-color: rgba(212,218,231,0.25);
   border-radius: 50%;
 }
 
-.cache-1c9gspx:hover .e1duuirp2>.e1duuirp3,
-.cache-1c9gspx:focus .e1duuirp2>.e1duuirp3 {
+.cache-x2gf5e:hover .e1duuirp3>.e1duuirp4,
+.cache-x2gf5e:focus .e1duuirp3>.e1duuirp4 {
   fill: #4f0599;
 }
 
@@ -353,45 +486,110 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   opacity: 0.01;
 }
 
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-    class="cache-z9adck e13z6rra1"
+    class="cache-z9adck e13z6rra3"
   >
     <div
-      class="cache-kmnzss e13z6rra0"
+      class="cache-kmnzss e13z6rra2"
     >
-      <label
-        class="e1duuirp1 cache-1c9gspx"
-        for="radio-choice"
+      <div
+        class="cache-1dp0kf7"
       >
-        <div
-          class="cache-tn3xtd e1duuirp2"
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-x2gf5e"
+          for="radio-choice"
         >
-          <svg
-            class="e1duuirp3 etwatq50 cache-d37612"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-tn3xtd e1duuirp3"
           >
-            <path
-              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z"
-            />
-          </svg>
+            <svg
+              class="e1duuirp4 etwatq50 cache-d37612"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice
+          </div>
+          <input
+            aria-checked="true"
+            checked=""
+            class="cache-cujed6 e1duuirp1"
+            id="radio-choice"
+            name="radio"
+            tabindex="0"
+            type="radio"
+            value="choice"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          />
         </div>
-        Choice
-        <input
-          aria-checked="true"
-          checked=""
-          class="cache-cujed6 e1duuirp0"
-          id="radio-choice"
-          name="radio"
-          tabindex="0"
-          type="radio"
-          value="choice"
-        />
-      </label>
-      <span />
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      />
     </div>
-    <div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
       Choice description
     </div>
+  </div>
+  .cache-2himih {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-2himih"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    />
   </div>
 </DocumentFragment>
 `;
@@ -419,7 +617,15 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1beqi8x {
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-1lp667k {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -429,17 +635,10 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
   color: #b2b6c3;
   cursor: not-allowed;
-}
-
-.cache-1beqi8x.cache-1beqi8x {
-  margin-right: 4px;
 }
 
 .cache-tn3xtd {
@@ -461,15 +660,15 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-right: 8px;
 }
 
-.cache-14h2zyo {
-  fill: #dce1eb;
+.cache-yvpov9 {
+  fill: #f6f5f7;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-14h2zyo.cache-14h2zyo {
+.cache-yvpov9.cache-yvpov9 {
   vertical-align: middle;
 }
 
@@ -478,47 +677,320 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   opacity: 0.01;
 }
 
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-    class="cache-hug1xt e13z6rra1"
+    class="cache-hug1xt e13z6rra3"
     disabled=""
   >
     <div
-      class="cache-kmnzss e13z6rra0"
+      class="cache-kmnzss e13z6rra2"
     >
-      <label
-        class="e1duuirp1 cache-1beqi8x"
-        disabled=""
-        for="radio-choice"
+      <div
+        class="cache-1dp0kf7"
       >
-        <div
-          class="cache-tn3xtd e1duuirp2"
-        >
-          <svg
-            class="e1duuirp3 etwatq50 cache-14h2zyo"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-            />
-          </svg>
-        </div>
-        Choice
-        <input
-          aria-checked="false"
-          aria-disabled="true"
-          class="cache-cujed6 e1duuirp0"
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-1lp667k"
           disabled=""
-          id="radio-choice"
-          name="radio"
-          style="pointer-events: none;"
-          type="radio"
-          value="choice"
-        />
-      </label>
-      <span />
+          for="radio-choice"
+        >
+          <div
+            class="cache-tn3xtd e1duuirp3"
+          >
+            <svg
+              class="e1duuirp4 etwatq50 cache-yvpov9"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice
+          </div>
+          <input
+            aria-checked="false"
+            aria-disabled="true"
+            class="cache-cujed6 e1duuirp1"
+            disabled=""
+            id="radio-choice"
+            name="radio"
+            style="pointer-events: none;"
+            type="radio"
+            value="choice"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          />
+        </div>
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      />
     </div>
-    <div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
       Choice description
+    </div>
+  </div>
+  .cache-2himih {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-2himih"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RadioBorderedBox renders correctly when error 1`] = `
+<DocumentFragment>
+  .cache-1ngpz17 {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  display: block;
+  border: 1px solid #ef5774!important;
+  box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
+}
+
+.cache-kmnzss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-x2gf5e {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  cursor: pointer;
+}
+
+.cache-x2gf5e:hover .e1duuirp3,
+.cache-x2gf5e:focus .e1duuirp3 {
+  background-color: rgba(212,218,231,0.25);
+  border-radius: 50%;
+}
+
+.cache-x2gf5e:hover .e1duuirp3>.e1duuirp4,
+.cache-x2gf5e:focus .e1duuirp3>.e1duuirp4 {
+  fill: #4f0599;
+}
+
+.cache-tn3xtd {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.cache-1i7hkfc {
+  fill: #ef5774;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-1i7hkfc.cache-1i7hkfc {
+  vertical-align: middle;
+}
+
+.cache-cujed6 {
+  position: absolute;
+  opacity: 0.01;
+}
+
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+<div
+    class="cache-1ngpz17 e13z6rra3"
+  >
+    <div
+      class="cache-kmnzss e13z6rra2"
+    >
+      <div
+        class="cache-1dp0kf7"
+      >
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-x2gf5e"
+          for="radio-choice"
+        >
+          <div
+            class="cache-tn3xtd e1duuirp3"
+          >
+            <svg
+              class="e1duuirp4 etwatq50 cache-1i7hkfc"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice
+          </div>
+          <input
+            aria-checked="false"
+            class="cache-cujed6 e1duuirp1"
+            id="radio-choice"
+            name="radio"
+            tabindex="0"
+            type="radio"
+            value="choice"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          >
+            Invalid value
+          </div>
+        </div>
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      />
+    </div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
+      Choice description
+    </div>
+  </div>
+  .cache-ne47lv {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  transition: max-height 300ms ease-in,opacity 300ms ease-in;
+  max-height: 5000px;
+  opacity: 1;
+  overflow: visible;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-ne47lv"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    >
+      Invalid value
     </div>
   </div>
 </DocumentFragment>
@@ -547,7 +1019,15 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1beqi8x {
+.cache-1dp0kf7.cache-1dp0kf7 {
+  margin-right: 4px;
+}
+
+.cache-1lp667k {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -557,17 +1037,10 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
   color: #b2b6c3;
   cursor: not-allowed;
-}
-
-.cache-1beqi8x.cache-1beqi8x {
-  margin-right: 4px;
 }
 
 .cache-tn3xtd {
@@ -589,21 +1062,44 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-right: 8px;
 }
 
-.cache-14h2zyo {
-  fill: #dce1eb;
+.cache-yvpov9 {
+  fill: #f6f5f7;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-14h2zyo.cache-14h2zyo {
+.cache-yvpov9.cache-yvpov9 {
   vertical-align: middle;
 }
 
 .cache-cujed6 {
   position: absolute;
   opacity: 0.01;
+}
+
+.cache-x3o9mj {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+.cache-b3zt23 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .cache-9nurcj {
@@ -633,43 +1129,58 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
 }
 
 <div
-    class="cache-hug1xt e13z6rra1"
+    class="cache-hug1xt e13z6rra3"
     disabled=""
   >
     <div
-      class="cache-kmnzss e13z6rra0"
+      class="cache-kmnzss e13z6rra2"
     >
-      <label
-        class="e1duuirp1 cache-1beqi8x"
-        disabled=""
-        for="radio-choice"
+      <div
+        class="cache-1dp0kf7"
       >
-        <div
-          class="cache-tn3xtd e1duuirp2"
-        >
-          <svg
-            class="e1duuirp3 etwatq50 cache-14h2zyo"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-            />
-          </svg>
-        </div>
-        Choice
-        <input
-          aria-checked="false"
-          aria-disabled="true"
-          class="cache-cujed6 e1duuirp0"
+        <label
+          class="e1duuirp2 e1g1zfwd0 cache-1lp667k"
           disabled=""
-          id="radio-choice"
-          name="radio"
-          style="pointer-events: none;"
-          type="radio"
-          value="choice"
-        />
-      </label>
-      <span>
+          for="radio-choice"
+        >
+          <div
+            class="cache-tn3xtd e1duuirp3"
+          >
+            <svg
+              class="e1duuirp4 etwatq50 cache-yvpov9"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+              />
+            </svg>
+          </div>
+          <div>
+            Choice
+          </div>
+          <input
+            aria-checked="false"
+            aria-disabled="true"
+            class="cache-cujed6 e1duuirp1"
+            disabled=""
+            id="radio-choice"
+            name="radio"
+            style="pointer-events: none;"
+            type="radio"
+            value="choice"
+          />
+        </label>
+        <div
+          class="e14o3tsk0 cache-x3o9mj"
+        >
+          <div
+            class="cache-1bj69hq e1duuirp0"
+          />
+        </div>
+      </div>
+      <span
+        class="e1g1zfwd0 cache-b3zt23"
+      >
         (something)
       </span>
        
@@ -681,9 +1192,36 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
         Badge
       </span>
     </div>
-    <div>
+    <div
+      class="e1g1zfwd0 cache-b3zt23"
+    >
       Choice description
     </div>
+  </div>
+  .cache-2himih {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cache-1bj69hq {
+  font-size: 12px;
+  color: #ef5774;
+  padding: 0 4px;
+}
+
+<div
+    class="e13z6rra0 e14o3tsk0 cache-2himih"
+  >
+    <div
+      class="cache-1bj69hq e13z6rra1"
+    />
   </div>
 </DocumentFragment>
 `;

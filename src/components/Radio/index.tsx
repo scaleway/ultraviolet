@@ -2,10 +2,17 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, InputHTMLAttributes } from 'react'
+import React, {
+  FunctionComponent,
+  InputHTMLAttributes,
+  ReactNode,
+  useMemo,
+} from 'react'
 import { Radio as ReakitRadio } from 'reakit'
 import Box, { XStyledProps } from '../Box'
+import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Typography from '../Typography'
 
 const StyledIcon = styled(Icon)``
 
@@ -41,13 +48,13 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
   }
 `
 
-const StyledBox = styled(Box)<{ disabled: boolean; htmlFor: string }>`
+const StyledRadioContainer = styled(Typography)<{
+  disabled: boolean
+  htmlFor: string
+}>`
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
   height: 32px;
   cursor: pointer;
 
@@ -59,11 +66,20 @@ const StyledRadio = styled(ReakitRadio)`
   opacity: 0.01;
 `
 
+const StyledError = styled.div`
+  font-size: 12px;
+  color: ${({ theme }) => theme.colors.danger.text};
+  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
+`
+
 type RadioProps = {
-  children: React.ReactNode
+  children: ReactNode
+  valid?: boolean
+  error?: string | ReactNode
   name: string
   size?: number
   value: string | number
+  showError?: boolean
 } & XStyledProps &
   InputHTMLAttributes<HTMLInputElement>
 
@@ -73,40 +89,58 @@ const Radio: FunctionComponent<RadioProps> = ({
   onFocus,
   onBlur,
   disabled = false,
+  error,
   name,
+  valid,
   value,
   size = 24,
   children,
+  showError = true,
   ...props
-}) => (
-  <StyledBox
-    as="label"
-    htmlFor={`${name}-${value}`}
-    disabled={disabled}
-    {...props}
-  >
-    <IconContainer>
-      <StyledIcon
-        name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-        color={checked ? 'primary' : 'gray300'}
-        size={size}
-      />
-    </IconContainer>
-    {children}
-    <StyledRadio
-      type="radio"
-      aria-checked={checked}
-      id={`${name}-${value}`}
-      checked={checked}
-      onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      value={value}
-      disabled={disabled}
-      name={name}
-    />
-  </StyledBox>
-)
+}): JSX.Element => {
+  const color = useMemo(() => {
+    if (disabled) return 'gray100'
+    if (valid === false || !!error) return 'warning'
+    if (valid === true) return 'success'
+    if (checked) return 'primary'
+
+    return 'gray300'
+  }, [disabled, valid, checked, error])
+
+  return (
+    <Box {...props}>
+      <StyledRadioContainer
+        as="label"
+        htmlFor={`${name}-${value}`}
+        disabled={disabled}
+      >
+        <IconContainer>
+          <StyledIcon
+            name={checked ? 'radiobox-marked' : 'radiobox-blank'}
+            color={color}
+            size={size}
+          />
+        </IconContainer>
+        <div>{children}</div>
+        <StyledRadio
+          type="radio"
+          aria-checked={checked ? 'true' : 'false'}
+          checked={checked}
+          id={`${name}-${value}`}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          value={value}
+          disabled={disabled}
+          name={name}
+        />
+      </StyledRadioContainer>
+      <Expandable opened={!!error && showError}>
+        <StyledError>{error}</StyledError>
+      </Expandable>
+    </Box>
+  )
+}
 
 Radio.propTypes = {
   checked: PropTypes.bool,
@@ -115,6 +149,7 @@ Radio.propTypes = {
    */
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -122,7 +157,9 @@ Radio.propTypes = {
   /**
    * Size of the button
    */
+  showError: PropTypes.bool,
   size: PropTypes.number,
+  valid: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 

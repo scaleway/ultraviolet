@@ -23,4 +23,23 @@ describe('Radio', () => {
         Choice
       </Radio>,
     ))
+
+  test('renders correctly when error', () =>
+    shouldMatchEmotionSnapshot(
+      <Radio
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        error="Invalid value"
+      >
+        Choice
+      </Radio>,
+    ))
+
+  test('renders correctly when valid', () =>
+    shouldMatchEmotionSnapshot(
+      <Radio onChange={() => {}} name="radio" value="choice" valid>
+        Choice
+      </Radio>,
+    ))
 })
