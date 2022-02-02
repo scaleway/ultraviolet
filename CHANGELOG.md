@@ -1,3 +1,10 @@
+### [0.135.1](https://github.com/scaleway/scaleway-ui/compare/v0.135.0...v0.135.1) (2022-02-02)
+
+
+### :bug: Bug Fixes
+
+* aligns radio component with checkbox one ([#1144](https://github.com/scaleway/scaleway-ui/issues/1144)) ([b7f7d5c](https://github.com/scaleway/scaleway-ui/commit/b7f7d5c848ec1007b5860a7c7a80499e698220ea))
+
 ## [0.135.0](https://github.com/scaleway/scaleway-ui/compare/v0.134.10...v0.135.0) (2022-02-01)
 
 
