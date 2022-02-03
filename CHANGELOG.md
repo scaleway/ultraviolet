@@ -1,3 +1,19 @@
+### [0.135.2](https://github.com/scaleway/scaleway-ui/compare/v0.135.1...v0.135.2) (2022-02-03)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.0 ([#1151](https://github.com/scaleway/scaleway-ui/issues/1151)) ([0ad6201](https://github.com/scaleway/scaleway-ui/commit/0ad6201516e06a21d69f7ed43b5942be0f79b827))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.6 ([#1147](https://github.com/scaleway/scaleway-ui/issues/1147)) ([e429b21](https://github.com/scaleway/scaleway-ui/commit/e429b217042e308046b8b434b0042e79413cf2ea))
+* **devdeps:** update dependency eslint to v8.8.0 ([#1152](https://github.com/scaleway/scaleway-ui/issues/1152)) ([f054d91](https://github.com/scaleway/scaleway-ui/commit/f054d91042915a95b25daa143d5cecbe9296ee58))
+* **devdeps:** update dependency lint-staged to v12.3.3 ([#1149](https://github.com/scaleway/scaleway-ui/issues/1149)) ([934ed81](https://github.com/scaleway/scaleway-ui/commit/934ed812255603586032de8efd201c3c3bf82248))
+* **devdeps:** update dependency postcss to v8.4.6 ([#1148](https://github.com/scaleway/scaleway-ui/issues/1148)) ([6a99177](https://github.com/scaleway/scaleway-ui/commit/6a99177fccd382c6136ca6acac2bd7e91f575d54))
+
+
+### :bug: Bug Fixes
+
+* **typescript:** correct loads of type errors ([#1146](https://github.com/scaleway/scaleway-ui/issues/1146)) ([4fa2b2b](https://github.com/scaleway/scaleway-ui/commit/4fa2b2ba830c0b3675828551bff49899c9a28558))
+
 ### [0.135.1](https://github.com/scaleway/scaleway-ui/compare/v0.135.0...v0.135.1) (2022-02-02)
 
 
