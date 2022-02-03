@@ -1,3 +1,4 @@
+import { KeyboardEvent } from 'react'
 import isJSONString from '../isJSON'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
@@ -57,7 +58,7 @@ describe('onKeyOnlyNumbers', () => {
       onKeyOnlyNumbers({
         key: String.fromCharCode(keyCode),
         preventDefault,
-      })
+      } as unknown as KeyboardEvent<Element>)
 
       expect(preventDefault).toHaveBeenCalledTimes(
         keyCode < 48 || keyCode > 57 ? 1 : 0,

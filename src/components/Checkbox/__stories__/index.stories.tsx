@@ -84,12 +84,8 @@ Errors.parameters = {
 Errors.decorators = [
   () => (
     <div>
-      <ErrorTransition
-        error="An Error occurred, your checkbox is invalid"
-        Component={Checkbox}
-        onChange={() => {}}
-      >
-        Checkbox on Error with transition
+      <ErrorTransition error="An Error occurred, your checkbox is invalid">
+        {error => <Checkbox error={error} onChange={() => {}} />}
       </ErrorTransition>
       <Checkbox
         error="An Error occurred, your checkbox is invalid"

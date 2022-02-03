@@ -1,7 +1,12 @@
 import { ChangeEvent, useState } from 'react'
+import { MultiValue, SingleValue } from 'react-select'
 
 const isEvent = <T>(
-  valueOrEvent: ChangeEvent<HTMLInputElement> | T,
+  valueOrEvent:
+    | ChangeEvent<HTMLInputElement>
+    | T
+    | SingleValue<T>
+    | MultiValue<T>,
 ): valueOrEvent is ChangeEvent<HTMLInputElement> =>
   !!(valueOrEvent as ChangeEvent)?.currentTarget
 

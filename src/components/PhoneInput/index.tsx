@@ -196,7 +196,7 @@ PhoneInput.propTypes = {
    * You can set input properties trough this prop.
    */
   inputProps: PropTypes.shape({
-    'data-testid': PropTypes.string.isRequired,
+    'data-testid': PropTypes.string,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,

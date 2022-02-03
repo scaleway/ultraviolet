@@ -261,33 +261,39 @@ Valid.parameters = {
 export const Error: Story = () => (
   <div style={{ display: 'flex', gap: 8 }}>
     {textBoxSizes.map(size => (
-      <ErrorTransition
-        key={size}
-        size={size}
-        error="An error"
-        placeholder="Placeholder"
-        Component={UncontrolledTextBox}
-      />
+      <ErrorTransition key={size} error="An error">
+        {error => (
+          <UncontrolledTextBox
+            size={size}
+            error={error}
+            placeholder="Placeholder"
+          />
+        )}
+      </ErrorTransition>
     ))}
     {textBoxSizes.map(size => (
-      <ErrorTransition
-        key={size}
-        size={size}
-        error="An error"
-        placeholder="Placeholder"
-        label="Label"
-        Component={UncontrolledTextBox}
-      />
+      <ErrorTransition key={size} error="An error">
+        {error => (
+          <UncontrolledTextBox
+            placeholder="Placeholder"
+            label="Label"
+            size={size}
+            error={error}
+          />
+        )}
+      </ErrorTransition>
     ))}
     {textBoxSizes.map(size => (
-      <ErrorTransition
-        key={size}
-        size={size}
-        error="An error"
-        defaultValue="Default value"
-        label="Label"
-        Component={UncontrolledTextBox}
-      />
+      <ErrorTransition error="An error" key={size}>
+        {error => (
+          <UncontrolledTextBox
+            defaultValue="Default value"
+            label="Label"
+            size={size}
+            error={error}
+          />
+        )}
+      </ErrorTransition>
     ))}
   </div>
 )
