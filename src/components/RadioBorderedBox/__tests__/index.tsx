@@ -30,6 +30,19 @@ describe('RadioBorderedBox', () => {
       </RadioBorderedBox>,
     ))
 
+  test('renders correctly when error', () =>
+    shouldMatchEmotionSnapshot(
+      <RadioBorderedBox
+        label="Choice"
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        error="Invalid value"
+      >
+        Choice description
+      </RadioBorderedBox>,
+    ))
+
   test('renders correctly when checked', () =>
     shouldMatchEmotionSnapshot(
       <RadioBorderedBox

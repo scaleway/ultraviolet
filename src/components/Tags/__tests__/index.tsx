@@ -28,7 +28,10 @@ describe('Tags', () => {
       <Tags
         onChange={() => {}}
         name="radio"
-        tags={[{ label: 'hello' }, { label: 'world' }]}
+        tags={[
+          { index: 'index', label: 'hello' },
+          { index: 'secondIndex', label: 'world' },
+        ]}
       />,
     ))
 
@@ -42,7 +45,10 @@ describe('Tags', () => {
       <Tags
         onChange={() => {}}
         name="radio"
-        tags={[{ label: 'hello' }, { label: 'world' }]}
+        tags={[
+          { index: 'index', label: 'hello' },
+          { index: 'secondIndex', label: 'world' },
+        ]}
       />,
     ))
 

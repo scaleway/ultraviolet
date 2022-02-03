@@ -79,3 +79,14 @@ export const Disabled = Template.bind({})
 Disabled.args = {
   disabled: true,
 }
+
+export const Error = Template.bind({})
+Error.args = {
+  error: 'Invalid value',
+}
+
+export const Valid = Template.bind({})
+Valid.args = {
+  checked: true,
+  valid: true,
+}

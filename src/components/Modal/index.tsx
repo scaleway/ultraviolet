@@ -1,4 +1,4 @@
-import { Interpolation, Theme, css } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
@@ -250,8 +250,8 @@ type ModalProps = Partial<DialogProps> &
     animation?: ModalAnimation
     ariaLabel?: string
     bordered?: boolean
-    customDialogBackdropStyles?: Interpolation<Theme>
-    customDialogStyles?: Interpolation<Theme>
+    customDialogBackdropStyles?: JSX.IntrinsicAttributes['css']
+    customDialogStyles?: JSX.IntrinsicAttributes['css']
     disclosure?: DisclosureParam
     height?: string
     isClosable?: boolean
@@ -270,7 +270,7 @@ const Modal: FunctionComponent<ModalProps> = ({
   baseId = 'modal',
   bordered = true,
   children,
-  customDialogBackdropStyles = {},
+  customDialogBackdropStyles,
   customDialogStyles = {},
   disclosure,
   height = 'initial',
@@ -303,7 +303,7 @@ const Modal: FunctionComponent<ModalProps> = ({
   return (
     <>
       {disclosure && <MemoDisclosure dialog={dialog} disclosure={disclosure} />}
-      <StyledDialogBackdrop {...dialog} css={[customDialogBackdropStyles]}>
+      <StyledDialogBackdrop {...dialog} css={customDialogBackdropStyles}>
         <StyledDialog
           aria-label={ariaLabel}
           role="dialog"
@@ -312,7 +312,7 @@ const Modal: FunctionComponent<ModalProps> = ({
           height={height}
           placement={placement}
           width={width}
-          css={[customDialogStyles]}
+          css={customDialogStyles}
           hideOnClickOutside={hideOnClickOutside}
           hideOnEsc={hideOnEsc}
           preventBodyScroll={preventBodyScroll}

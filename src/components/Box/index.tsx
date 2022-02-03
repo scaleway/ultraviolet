@@ -1,8 +1,8 @@
-import { Interpolation, Theme } from '@emotion/react'
-import { x } from '@xstyled/emotion'
+import { Box as XStyledBox } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
 import React, {
   AllHTMLAttributes,
+  ComponentProps,
   ElementType,
   FunctionComponent,
   ReactNode,
@@ -13,7 +13,6 @@ export interface XStyledProps {
   align?: string
   alignItems?: string
   alignSelf?: string
-  as?: string | React.ElementType<unknown>
   backgroundColor?: string
   border?: string
   borderRadius?: string | number
@@ -68,7 +67,7 @@ export type BoxProps = {
   width?: number | string
 } & Omit<AllHTMLAttributes<HTMLElement>, 'as' | 'size' | 'action'> &
   XStyledProps & {
-    css?: Interpolation<Theme>
+    as?: ComponentProps<typeof XStyledBox>['as'] | string
   }
 
 const forwardType = forwardRef<Element, BoxProps>(() => null)
@@ -77,7 +76,6 @@ type BoxType = typeof forwardType & {
   withComponent: (
     element: string | ElementType<unknown>,
   ) => FunctionComponent<BoxProps>
-  propTypes: FunctionComponent<BoxProps>['propTypes']
 }
 
 // @ts-expect-error We add withComponent & propTypes just below
@@ -86,7 +84,7 @@ const Box: BoxType = forwardRef<
   BoxProps
 >(({ width, height, ...props }, ref) => (
   // @ts-expect-error As we won't know the Element kind we can't assume that Ref will be a Element
-  <x.div ref={ref} w={width} h={height} {...props} />
+  <XStyledBox ref={ref} w={width} h={height} {...props} />
 ))
 
 Box.withComponent =

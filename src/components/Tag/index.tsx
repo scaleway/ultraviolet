@@ -1,4 +1,4 @@
-import { Interpolation, Theme, css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
@@ -91,7 +91,7 @@ type TagProps = {
   disabled?: boolean
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  textStyle?: Interpolation<Theme>
+  textStyle?: JSX.IntrinsicAttributes['css']
   variant?: TagVariant
 } & BoxProps
 
@@ -99,13 +99,13 @@ const Tag: FunctionComponent<TagProps> = ({
   children,
   isLoading = false,
   onClose,
-  textStyle = {},
+  textStyle,
   disabled = false,
   variant = 'base',
   ...props
 }) => (
   <StyledContainer {...props} disabled={disabled} variant={variant}>
-    <StyledText aria-disabled={disabled} css={[textStyle]}>
+    <StyledText aria-disabled={disabled} css={textStyle}>
       {children}
     </StyledText>
 

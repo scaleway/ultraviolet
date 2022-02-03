@@ -53,7 +53,7 @@ export default {
         defaultValue: { summary: false },
         type: { summary: 'boolean | left | right | inside' },
       },
-      type: { name: 'select' },
+      type: { name: 'string' },
     },
     offLabel: {
       defaultValue: 'NO',

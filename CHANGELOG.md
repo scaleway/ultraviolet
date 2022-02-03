@@ -1,3 +1,43 @@
+### [0.135.2](https://github.com/scaleway/scaleway-ui/compare/v0.135.1...v0.135.2) (2022-02-03)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.0 ([#1151](https://github.com/scaleway/scaleway-ui/issues/1151)) ([0ad6201](https://github.com/scaleway/scaleway-ui/commit/0ad6201516e06a21d69f7ed43b5942be0f79b827))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.6 ([#1147](https://github.com/scaleway/scaleway-ui/issues/1147)) ([e429b21](https://github.com/scaleway/scaleway-ui/commit/e429b217042e308046b8b434b0042e79413cf2ea))
+* **devdeps:** update dependency eslint to v8.8.0 ([#1152](https://github.com/scaleway/scaleway-ui/issues/1152)) ([f054d91](https://github.com/scaleway/scaleway-ui/commit/f054d91042915a95b25daa143d5cecbe9296ee58))
+* **devdeps:** update dependency lint-staged to v12.3.3 ([#1149](https://github.com/scaleway/scaleway-ui/issues/1149)) ([934ed81](https://github.com/scaleway/scaleway-ui/commit/934ed812255603586032de8efd201c3c3bf82248))
+* **devdeps:** update dependency postcss to v8.4.6 ([#1148](https://github.com/scaleway/scaleway-ui/issues/1148)) ([6a99177](https://github.com/scaleway/scaleway-ui/commit/6a99177fccd382c6136ca6acac2bd7e91f575d54))
+
+
+### :bug: Bug Fixes
+
+* **typescript:** correct loads of type errors ([#1146](https://github.com/scaleway/scaleway-ui/issues/1146)) ([4fa2b2b](https://github.com/scaleway/scaleway-ui/commit/4fa2b2ba830c0b3675828551bff49899c9a28558))
+
+### [0.135.1](https://github.com/scaleway/scaleway-ui/compare/v0.135.0...v0.135.1) (2022-02-02)
+
+
+### :bug: Bug Fixes
+
+* aligns radio component with checkbox one ([#1144](https://github.com/scaleway/scaleway-ui/issues/1144)) ([b7f7d5c](https://github.com/scaleway/scaleway-ui/commit/b7f7d5c848ec1007b5860a7c7a80499e698220ea))
+
+## [0.135.0](https://github.com/scaleway/scaleway-ui/compare/v0.134.10...v0.135.0) (2022-02-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.8 ([#1138](https://github.com/scaleway/scaleway-ui/issues/1138)) ([8d17eec](https://github.com/scaleway/scaleway-ui/commit/8d17eec55f189f26f0daf782dbd39c67ce630a92))
+* **devdeps:** update dependency @svgr/rollup to v6.2.1 ([#1143](https://github.com/scaleway/scaleway-ui/issues/1143)) ([551167f](https://github.com/scaleway/scaleway-ui/commit/551167f021324284845c220288a87fdfbecc2dc4))
+* **devdeps:** update dependency lint-staged to v12.3.2 ([#1145](https://github.com/scaleway/scaleway-ui/issues/1145)) ([4b36553](https://github.com/scaleway/scaleway-ui/commit/4b365531fb5364d75638dda9f2b4a023b0f15aef))
+* **devdeps:** update dependency rollup to v2.66.1 ([#1142](https://github.com/scaleway/scaleway-ui/issues/1142)) ([0c355f7](https://github.com/scaleway/scaleway-ui/commit/0c355f794b126d80802fbb8b038f4cd00f1af8a6))
+* **devdeps:** update dependency webpack to v5.67.0 ([#1139](https://github.com/scaleway/scaleway-ui/issues/1139)) ([9799580](https://github.com/scaleway/scaleway-ui/commit/979958051555f3a7c58dd4cb5d1d082e362efbee))
+* **devdeps:** update storybook monorepo to v6.4.17 ([#1141](https://github.com/scaleway/scaleway-ui/issues/1141)) ([dd2c39a](https://github.com/scaleway/scaleway-ui/commit/dd2c39a438221c4c2eb643b43bf2ae6e629467c0))
+
+
+### :gear: Features
+
+* rework Placeholder to remove most Box ([#1117](https://github.com/scaleway/scaleway-ui/issues/1117)) ([f9b4e2c](https://github.com/scaleway/scaleway-ui/commit/f9b4e2c1759fedc5b4f86cf481c708c01b4b000e))
+
 ### [0.134.10](https://github.com/scaleway/scaleway-ui/compare/v0.134.9...v0.134.10) (2022-01-25)
 
 
