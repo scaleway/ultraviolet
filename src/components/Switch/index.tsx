@@ -227,6 +227,16 @@ const StyledLabel = styled.label<{ width?: number }>`
   }
 `
 
+const StyledLabelContent = styled.div<{
+  labeled: boolean | LabelPositions
+  value: ReactNode
+}>`
+  ${({ labeled, value, theme }) =>
+    labeled === 'left' && typeof value === 'string'
+      ? `margin-right: ${theme.space[1]}`
+      : `margin-left: ${theme.space[1]}`}
+`
+
 type SwitchProps = StyledSwitchProps & {
   id?: string
   checked?: boolean
@@ -259,10 +269,13 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
         aria-disabled={disabled}
       >
         {labeled === 'left' ? (
-          <>
+          <StyledLabelContent
+            labeled={labeled}
+            value={checked ? onLabel : offLabel}
+          >
             {checked ? onLabel : null}
             {!checked ? offLabel : null}
-          </>
+          </StyledLabelContent>
         ) : null}
         <StyledSwitch
           size={size}
@@ -288,10 +301,13 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
           />
         </StyledSwitch>
         {labeled === 'right' ? (
-          <>
+          <StyledLabelContent
+            labeled={labeled}
+            value={checked ? onLabel : offLabel}
+          >
             {checked ? onLabel : null}
             {!checked ? offLabel : null}
-          </>
+          </StyledLabelContent>
         ) : null}
       </StyledLabel>
     </Tooltip>
