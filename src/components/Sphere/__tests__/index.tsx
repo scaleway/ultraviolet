@@ -7,16 +7,10 @@ describe('Sphere', () => {
     shouldMatchEmotionSnapshot(<Sphere />))
 
   test('renders correctly when halved', () =>
-    shouldMatchEmotionSnapshot(<Sphere bgColors={['#333', '#666']} />))
+    shouldMatchEmotionSnapshot(<Sphere colors={['#333', '#666']} />))
 
   test('renders correctly with one char and smaller', () =>
     shouldMatchEmotionSnapshot(
-      <Sphere
-        text="★"
-        bgColors={['#000']}
-        textColor="#fff"
-        size={20}
-        textSize={10}
-      />,
+      <Sphere text="★" colors={['#000']} textColor="#fff" size={20} />,
     ))
 })
