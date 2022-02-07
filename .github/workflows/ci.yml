@@ -157,7 +157,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: storybook-static
-          path: dist
+          path: storybook-static
       - name: Display structure of downloaded files
         run: ls -R
       - run: yarn install

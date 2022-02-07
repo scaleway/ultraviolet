@@ -1,9 +1,8 @@
 {
   "requireReference": true,
-  "reactUri": "file:/dist",
+  "reactUri": "file:./storybook-static",
   "storiesFilter": "^Components/ActionBar",
   "chromeTolerance": 0.02,
-  "chromeFlags": "--headless --disable-gpu --hide-scrollbars --no-sandbox --cap-add=SYS_ADMIN",
   "configurations": {
     "chrome.laptop": {
       "target": "chrome.docker",
