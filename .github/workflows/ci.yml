@@ -161,7 +161,11 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
       - run: yarn install
+<<<<<<< HEAD
       - run: yarn run loki:test
+>>>>>>> fix: ci action
+=======
+      - run: yarn run loki test
 >>>>>>> fix: ci action
   deploy:
     runs-on: ubuntu-20.04
