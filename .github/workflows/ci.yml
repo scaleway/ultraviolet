@@ -95,6 +95,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: storybook-static
+      - run: yarn install
       - run: yarn run loki:test
 >>>>>>> fix: ci action
   deploy:
