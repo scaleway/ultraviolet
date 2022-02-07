@@ -8,6 +8,7 @@ on:
       - main
 
 jobs:
+<<<<<<< HEAD
   typecheck:
     runs-on: ubuntu-20.04
     steps:
@@ -61,12 +62,67 @@ jobs:
           cache: "yarn"
       - run: yarn
       - run: yarn run test:a11y
+=======
+  # typecheck:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2.3.5
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2.4.1
+  #       with:
+  #         node-version: 17
+  #         cache: "yarn"
+  #     - run: yarn
+  #     - run: yarn run build
+  #     - run: yarn run tsc --noEmit || true
+  # lint:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2.3.5
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2.4.1
+  #       with:
+  #         node-version: 17
+  #         cache: "yarn"
+  #     - run: yarn
+  #     - run: yarn run lint
+  # test:
+  #   runs-on: ubuntu-20.04
+  #   strategy:
+  #     matrix:
+  #       node: ["17"]
+  #   steps:
+  #     - uses: actions/checkout@v2.3.5
+  #       with:
+  #         fetch-depth: "0"
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2.4.1
+  #       with:
+  #         node-version: ${{ matrix.node }}
+  #         cache: "yarn"
+  #     - run: yarn
+  #     - run: yarn run test:unit:coverage
+  #     - uses: codecov/codecov-action@v2.1.0
+  # accessibility:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2.3.5
+  #       with:
+  #         fetch-depth: "0"
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2.4.1
+  #       with:
+  #         node-version: 17
+  #         cache: "yarn"
+  #     - run: yarn
+  #     - run: yarn run test:a11y
+>>>>>>> fix: ci action
   build:
     strategy:
       matrix:
         node: ["17"]
     runs-on: ubuntu-20.04
-    needs: [lint, test]
+    # needs: [lint, test]
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Use Node.js
