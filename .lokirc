@@ -1,7 +1,7 @@
 {
   "requireReference": true,
   "chromeDockerWithoutSeccomp": true,
-  "reactUri": "file:./storybook-static",
+  "reactUri": "file:./dist",
   "storiesFilter": "^Components/ActionBar",
   "chromeTolerance": 0.02,
   "chromeFlags": "--headless --disable-gpu --hide-scrollbars --no-sandbox --cap-add=SYS_ADMIN",

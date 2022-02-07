@@ -76,12 +76,16 @@ jobs:
       - run: yarn install
       - run: yarn run build
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       - name: Build Storybook
+=======
+      - name: Save built Storybook
+>>>>>>> fix: ci action
         uses: actions/upload-artifact@v2
         with:
           name: storybook-static
-          path: ./storybook-static
+          path: ./dist
           retention-days: 2
   visual:
     runs-on: ubuntu-20.04
