@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+    types: ["opened", "edited", "reopened", "synchronize"]
   push:
     branches:
       - main
@@ -11,43 +11,43 @@ jobs:
   typecheck:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Use Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: 17
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run build
-    - run: yarn run tsc --noEmit || true
+      - uses: actions/checkout@v2.4.0
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: 17
+          cache: "yarn"
+      - run: yarn
+      - run: yarn run build
+      - run: yarn run tsc --noEmit || true
   lint:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Use Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: 17
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run lint
+      - uses: actions/checkout@v2.4.0
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: 17
+          cache: "yarn"
+      - run: yarn
+      - run: yarn run lint
   test:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node: [ '14', '16', '17' ]
+        node: ["14", "16", "17"]
     steps:
-    - uses: actions/checkout@v2.4.0
-      with:
-        fetch-depth: "0"
-    - name: Use Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: ${{ matrix.node }}
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run test:unit:coverage
-    - uses: codecov/codecov-action@v2.1.0
+      - uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: "0"
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "yarn"
+      - run: yarn
+      - run: yarn run test:unit:coverage
+      - uses: codecov/codecov-action@v2.1.0
   accessibility:
     runs-on: ubuntu-20.04
     steps:
@@ -58,23 +58,23 @@ jobs:
         uses: actions/setup-node@v2.5.1
         with:
           node-version: 17
-          cache: 'yarn'
+          cache: "yarn"
       - run: yarn
       - run: yarn run test:a11y
   build:
     strategy:
       matrix:
-        node: [ '14', '16', '17' ]
+        node: ["14", "16", "17"]
     runs-on: ubuntu-20.04
     needs: [lint, test]
     steps:
-    - uses: actions/checkout@v2.4.0
-    - name: Use Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: ${{ matrix.node }}
-    - run: yarn install
-    - run: yarn run build
+      - uses: actions/checkout@v2.4.0
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: yarn install
+      - run: yarn run build
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
@@ -83,19 +83,19 @@ jobs:
       GIT_COMMITTER_NAME: Scaleway Bot
       GIT_COMMITTER_EMAIL: github@scaleway.com
     steps:
-    - uses: actions/checkout@v2.4.0
-      with:
-        fetch-depth: "0"
-        persist-credentials: false
-    - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-    - name: Use Node.js
-      uses: actions/setup-node@v2.5.1
-      with:
-        node-version: 17
-    - run: yarn install
-    - run: yarn run build
-    - run: yarn run semantic-release
-      env:
-        HUSKY: 0
-        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: "0"
+          persist-credentials: false
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+        with:
+          node-version: 17
+      - run: yarn install
+      - run: yarn run build
+      - run: yarn run semantic-release
+        env:
+          HUSKY: 0
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

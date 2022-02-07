@@ -1,0 +1,17 @@
+{
+  "requireReference": true,
+  "chromeDockerWithoutSeccomp": true,
+  "reactUri": "file:./storybook-static",
+  "storiesFilter": "^Components/ActionBar",
+  "chromeTolerance": 0.02,
+  "chromeFlags": "--headless --disable-gpu --hide-scrollbars --no-sandbox --cap-add=SYS_ADMIN",
+  "configurations": {
+    "chrome.laptop": {
+      "target": "chrome.docker",
+      "width": 1201,
+      "height": 768,
+      "deviceScaleFactor": 1,
+      "mobile": false
+    }
+  }
+}

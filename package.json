@@ -48,7 +48,9 @@
     "test:unit:update": "yarn run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "prepare": "husky install",
-    "size": "yarn run build && size-limit"
+    "size": "yarn run build && size-limit",
+    "loki:update": "yarn run build:storybook && yarn loki update",
+    "loki:test": "yarn loki test"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
@@ -146,6 +148,7 @@
     "jest-axe": "5.0.1",
     "jest-junit": "13.0.0",
     "lint-staged": "12.3.4",
+    "loki": "^0.28.1",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
     "react": "17.0.2",
