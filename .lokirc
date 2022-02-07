@@ -1,6 +1,5 @@
 {
   "requireReference": true,
-  "chromeDockerWithoutSeccomp": true,
   "reactUri": "file:./dist",
   "storiesFilter": "^Components/ActionBar",
   "chromeTolerance": 0.02,
@@ -13,5 +12,6 @@
       "deviceScaleFactor": 1,
       "mobile": false
     }
-  }
+  },
+  "chromeDockerUseCopy": true
 }

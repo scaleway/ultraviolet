@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node: ["14", "16", "17"]
+        node: ["17"]
     steps:
       - uses: actions/checkout@v2.4.0
         with:
