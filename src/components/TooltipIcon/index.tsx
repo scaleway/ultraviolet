@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
@@ -8,7 +8,7 @@ type TooltipIconProps = {
   color?: string
   name?: ComponentProps<typeof Icon>['name']
   size?: number
-  tooltip: string
+  tooltip: ReactNode
   verticalAlign?: string
 }
 
@@ -36,7 +36,7 @@ TooltipIcon.propTypes = {
   color: PropTypes.string,
   name: PropTypes.oneOf(icons),
   size: PropTypes.number,
-  tooltip: PropTypes.string.isRequired,
+  tooltip: PropTypes.node.isRequired,
   verticalAlign: PropTypes.string,
 }
 

@@ -9,7 +9,8 @@ const CopyButton = styled.button`
   border: none;
   color: ${({ theme }) => theme.colors.primary.textWeak};
   display: inline-block;
-  padding-left: 8px;
+  padding: 0 ${({ theme }) => theme.space[1]};
+  line-height: 1;
   opacity: 0;
   z-index: 100;
 
@@ -25,7 +26,6 @@ const UnselectableSpan = styled.span`
 const StyledContainer = styled.div`
   display: block;
   position: relative;
-  white-space: nowrap;
 
   &:hover ${CopyButton} {
     opacity: 1;
