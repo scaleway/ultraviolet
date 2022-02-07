@@ -1,3 +1,21 @@
+### [0.135.3](https://github.com/scaleway/scaleway-ui/compare/v0.135.2...v0.135.3) (2022-02-07)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.9 ([#1160](https://github.com/scaleway/scaleway-ui/issues/1160)) ([dcabd91](https://github.com/scaleway/scaleway-ui/commit/dcabd91ddc094222a3cd33713f76c8c7fcc4091a))
+* **devdeps:** update dependency @size-limit/file to v7.0.8 ([#1156](https://github.com/scaleway/scaleway-ui/issues/1156)) ([b3af4b9](https://github.com/scaleway/scaleway-ui/commit/b3af4b930243870c498a2948061bd8327cbfa728))
+* **devdeps:** update dependency @size-limit/preset-big-lib to v7.0.8 ([#1150](https://github.com/scaleway/scaleway-ui/issues/1150)) ([be2fb30](https://github.com/scaleway/scaleway-ui/commit/be2fb304f95c5a9ffd43676a29a0cfb5dcd632ca))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.16.2 ([#1155](https://github.com/scaleway/scaleway-ui/issues/1155)) ([eabe90c](https://github.com/scaleway/scaleway-ui/commit/eabe90c9946ff7116c6ce5f4df04020286242dfe))
+* **devdeps:** update dependency size-limit to v7.0.8 ([#1157](https://github.com/scaleway/scaleway-ui/issues/1157)) ([153eb19](https://github.com/scaleway/scaleway-ui/commit/153eb1988ba706de4e4ca2ec49a914e43d61734f))
+* **devdeps:** update dependency webpack to v5.68.0 ([#1159](https://github.com/scaleway/scaleway-ui/issues/1159)) ([b19c496](https://github.com/scaleway/scaleway-ui/commit/b19c4967a84df9f26f433b472e30c80b50c2d0fd))
+* **devdeps:** update storybook monorepo to v6.4.18 ([#1153](https://github.com/scaleway/scaleway-ui/issues/1153)) ([bd9c75f](https://github.com/scaleway/scaleway-ui/commit/bd9c75f2f2a91d2aea59b01a158b579d6a7a293d))
+
+
+### :bug: Bug Fixes
+
+* **Sphere:** refactor props + remove spread ([#1158](https://github.com/scaleway/scaleway-ui/issues/1158)) ([6a58e30](https://github.com/scaleway/scaleway-ui/commit/6a58e3012ed0391bac61fa2a60cc9e4dde7594fc))
+
 ### [0.135.2](https://github.com/scaleway/scaleway-ui/compare/v0.135.1...v0.135.2) (2022-02-03)
 
 
