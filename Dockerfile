@@ -8,7 +8,7 @@ COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn ./.yarn
 
 # Install graphics magick
-RUN apt-get update && apt-get install -y graphicsmagick
+RUN apk update && apk add -y graphicsmagick
 
 RUN yarn --immutable --inline-builds
 
