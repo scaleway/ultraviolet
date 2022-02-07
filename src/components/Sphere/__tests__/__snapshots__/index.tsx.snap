@@ -2,7 +2,7 @@
 
 exports[`Sphere renders correctly when halved 1`] = `
 <DocumentFragment>
-  .cache-f5i7jk {
+  .cache-yta7ze {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -16,7 +16,6 @@ exports[`Sphere renders correctly when halved 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  width: 100%;
   border-left: 16px solid #333;
   border-top: 16px solid #333;
   border-right: 16px solid #666;
@@ -24,21 +23,16 @@ exports[`Sphere renders correctly when halved 1`] = `
   border-radius: 50%;
 }
 
-.cache-f5i7jk.cache-f5i7jk {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
-<div
-    class="e1vp87o21 cache-f5i7jk"
+<span
+    class="cache-yta7ze e1vp87o21"
+    style="height: 32px; width: 32px;"
   />
 </DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-1gb8t2p {
+  .cache-115o64y {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -52,7 +46,6 @@ exports[`Sphere renders correctly with default values 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  width: 100%;
   border-left: 16px solid #4f0599;
   border-top: 16px solid #4f0599;
   border-right: 16px solid #4f0599;
@@ -60,21 +53,16 @@ exports[`Sphere renders correctly with default values 1`] = `
   border-radius: 50%;
 }
 
-.cache-1gb8t2p.cache-1gb8t2p {
-  width: 32px;
-  height: 32px;
-  position: relative;
-}
-
-<div
-    class="e1vp87o21 cache-1gb8t2p"
+<span
+    class="cache-115o64y e1vp87o21"
+    style="height: 32px; width: 32px;"
   />
 </DocumentFragment>
 `;
 
 exports[`Sphere renders correctly with one char and smaller 1`] = `
 <DocumentFragment>
-  .cache-n1f0u1 {
+  .cache-lgms0z {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -88,7 +76,6 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  width: 100%;
   border-left: 10px solid #000;
   border-top: 10px solid #000;
   border-right: 10px solid #000;
@@ -96,25 +83,20 @@ exports[`Sphere renders correctly with one char and smaller 1`] = `
   border-radius: 50%;
 }
 
-.cache-n1f0u1.cache-n1f0u1 {
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
-
 .cache-b2bnvq {
   color: #fff;
   font-size: 10px;
 }
 
-<div
-    class="e1vp87o21 cache-n1f0u1"
+<span
+    class="cache-lgms0z e1vp87o21"
+    style="height: 20px; width: 20px;"
   >
-    <div
+    <span
       class="cache-b2bnvq e1vp87o20"
     >
       ★
-    </div>
-  </div>
+    </span>
+  </span>
 </DocumentFragment>
 `;
