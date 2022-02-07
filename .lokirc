@@ -5,12 +5,10 @@
   "chromeTolerance": 0.02,
   "configurations": {
     "chrome.laptop": {
-      "target": "chrome.app",
+      "target": "chrome.docker",
       "width": 1201,
-      "height": 768,
-      "deviceScaleFactor": 1,
-      "mobile": false
+      "height": 768
     }
   },
-  "chromeDockerUseCopy": true
+  "chromeDockerUseCopy": false
 }
