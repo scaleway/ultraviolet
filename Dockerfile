@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn ./.yarn
 
+# Install graphics magick
+RUN apt-get update && apt-get install -y graphicsmagick
 
 RUN yarn --immutable --inline-builds
 
