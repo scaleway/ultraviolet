@@ -31,15 +31,14 @@ Halved.parameters = {
 }
 
 Halved.args = {
-  bgColors: ['#333', '#666'],
+  colors: ['#333', '#666'],
 }
 
 export const Text = Template.bind({})
 
 Text.args = {
-  bgColors: ['#000'],
+  colors: ['#000'],
   size: 20,
   text: '★',
   textColor: '#fff',
-  textSize: 10,
 }
