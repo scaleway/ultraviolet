@@ -147,22 +147,20 @@ jobs:
     runs-on: ubuntu-20.04
     needs: [build]
     steps:
-      - name: Download built Storybook
-        uses: actions/download-artifact@v2
-        with:
-          name: storybook-static
-      - run: cp -r . dist
-      - name: Display structure of downloaded files
-        run: ls -R
       - uses: actions/checkout@v2.3.5
       - name: Use Node.js
         uses: actions/setup-node@v2.4.1
         with:
           node-version: 17
           cache: "yarn"
-      - run: yarn install
+      - name: Download built Storybook
+        uses: actions/download-artifact@v2
+        with:
+          name: storybook-static
+          path: dist
       - name: Display structure of downloaded files
         run: ls -R
+      - run: yarn install
       - run: yarn run loki:test
 >>>>>>> fix: ci action
   deploy:
