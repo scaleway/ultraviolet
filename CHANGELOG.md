@@ -1,3 +1,10 @@
+### [0.135.4](https://github.com/scaleway/scaleway-ui/compare/v0.135.3...v0.135.4) (2022-02-07)
+
+
+### :bug: Bug Fixes
+
+* **stealth-copiable:** added new prop and fixed line-height ([#1140](https://github.com/scaleway/scaleway-ui/issues/1140)) ([98d470a](https://github.com/scaleway/scaleway-ui/commit/98d470a0be6e2f22f12cd3cdc1c6ab4af6170899))
+
 ### [0.135.3](https://github.com/scaleway/scaleway-ui/compare/v0.135.2...v0.135.3) (2022-02-07)
 
 
