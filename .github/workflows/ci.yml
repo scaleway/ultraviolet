@@ -75,6 +75,24 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: yarn install
       - run: yarn run build
+<<<<<<< HEAD
+=======
+      - name: Build Storybook
+        uses: actions/upload-artifact@v2
+        with:
+          name: storybook-static
+          path: ./storybook-static
+          retention-days: 2
+  visual:
+    runs-on: ubuntu-20.04
+    needs: [build]
+    steps:
+      - name: Download built Storybook
+        uses: actions/download-artifact@v2
+        with:
+          name: storybook-static
+      - run: yarn run loki:test
+>>>>>>> fix: ci action
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
