@@ -286,6 +286,7 @@ jobs:
           name: storybook-screenshots
           path: .loki/difference
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fix: ci action
   deploy:
     runs-on: ubuntu-20.04
@@ -312,6 +313,9 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 =======
+=======
+          retention-days: 5
+>>>>>>> fix: ci action
   # deploy:
   #   runs-on: ubuntu-20.04
   #   needs: [build]
