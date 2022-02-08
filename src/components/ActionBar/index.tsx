@@ -22,7 +22,6 @@ const StyledDiv = styled.div<{ rank: number }>`
   transform: translate(-50%, 0);
   width: 600px;
   z-index: 2;
-  color: red;
 `
 
 type ActionBarProps = {
