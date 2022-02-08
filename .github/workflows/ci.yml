@@ -219,6 +219,7 @@ jobs:
         with:
           node-version: 17
           cache: "yarn"
+      - run: brew install graphicsmagick
       - run: yarn install
 <<<<<<< HEAD
 <<<<<<< HEAD
