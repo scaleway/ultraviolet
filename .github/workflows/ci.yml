@@ -246,6 +246,7 @@ jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       - run: yarn run loki:test
 >>>>>>> fix: ci action
 =======
@@ -259,6 +260,13 @@ jobs:
       - run: yarn run loki:test
 >>>>>>> fix: ci action
 =======
+=======
+      - uses: actions/cache@v2
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+>>>>>>> fix: ci action
       - run: yarn run loki:test --storiesFilter ^Components/${{ matrix.filter }}
 <<<<<<< HEAD
 >>>>>>> fix: ci action
