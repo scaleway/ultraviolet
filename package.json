@@ -50,7 +50,7 @@
     "prepare": "husky install",
     "size": "yarn run build && size-limit",
     "loki:update": "yarn run build:storybook && yarn loki update",
-    "loki:test": "yarn loki test"
+    "loki:test": "yarn loki test --requireReference --reactUri file:./storybook-static"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
