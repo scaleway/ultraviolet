@@ -160,7 +160,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ["17"]
+        node: ["14", "16", "17"]
     runs-on: ubuntu-20.04
 <<<<<<< HEAD
     # needs: [lint, test]
