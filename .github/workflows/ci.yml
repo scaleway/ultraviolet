@@ -214,7 +214,6 @@ jobs:
 =======
   build-storybook:
     runs-on: ubuntu-20.04
-    needs: [lint]
     steps:
       - uses: actions/checkout@v2.3.5
       - name: Use Node.js
