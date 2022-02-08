@@ -153,13 +153,14 @@ jobs:
         with:
           node-version: 17
           cache: "yarn"
-      - name: Download built Storybook
-        uses: actions/download-artifact@v2
-        with:
-          name: storybook-static
-          path: storybook-static
+      # - name: Download built Storybook
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: storybook-static
+      #     path: storybook-static
       - run: brew install graphicsmagick
       - run: yarn install
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       - run: yarn run loki:test
@@ -168,6 +169,9 @@ jobs:
       - run: yarn run loki test
 >>>>>>> fix: ci action
 =======
+=======
+      - run: yarn run build:storybook
+>>>>>>> fix: ci action
       - run: yarn run loki:test
 >>>>>>> fix: ci action
   deploy:
