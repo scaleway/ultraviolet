@@ -10,6 +10,7 @@ on:
 jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   typecheck:
     runs-on: ubuntu-20.04
     steps:
@@ -97,6 +98,8 @@ jobs:
       - run: yarn run test:a11y
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> fix: ci action
   # typecheck:
   #   runs-on: ubuntu-20.04
   #   steps:
@@ -152,6 +155,7 @@ jobs:
   #     - run: yarn run test:a11y
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fix: ci action
 =======
 >>>>>>> fix: ci action
@@ -194,6 +198,8 @@ jobs:
           path: ./dist
           retention-days: 2
 =======
+=======
+>>>>>>> fix: ci action
   # build:
   #   strategy:
   #     matrix:
@@ -208,10 +214,13 @@ jobs:
   #         node-version: ${{ matrix.node }}
   #     - run: yarn install
   #     - run: yarn run build
+<<<<<<< HEAD
 >>>>>>> fix: ci action
 =======
 >>>>>>> fix: ci action
 =======
+=======
+>>>>>>> fix: ci action
   build-storybook:
     runs-on: ubuntu-20.04
     steps:
@@ -276,6 +285,7 @@ jobs:
         with:
           name: storybook-screenshots
           path: .loki/difference
+<<<<<<< HEAD
 >>>>>>> fix: ci action
   deploy:
     runs-on: ubuntu-20.04
@@ -301,3 +311,29 @@ jobs:
           HUSKY: 0
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+=======
+  # deploy:
+  #   runs-on: ubuntu-20.04
+  #   needs: [build]
+  #   if: github.ref == 'refs/heads/main'
+  #   env:
+  #     GIT_COMMITTER_NAME: Scaleway Bot
+  #     GIT_COMMITTER_EMAIL: github@scaleway.com
+  #   steps:
+  #     - uses: actions/checkout@v2.3.5
+  #       with:
+  #         fetch-depth: "0"
+  #         persist-credentials: false
+  #     - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v2.4.1
+  #       with:
+  #         node-version: 17
+  #     - run: yarn install
+  #     - run: yarn run build
+  #     - run: yarn run semantic-release
+  #       env:
+  #         HUSKY: 0
+  #         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+>>>>>>> fix: ci action
