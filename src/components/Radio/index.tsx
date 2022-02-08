@@ -135,9 +135,11 @@ const Radio: FunctionComponent<RadioProps> = ({
           name={name}
         />
       </StyledRadioContainer>
-      <Expandable opened={!!error && showError}>
-        <StyledError>{error}</StyledError>
-      </Expandable>
+      {showError ? (
+        <Expandable opened={!!error}>
+          <StyledError>{error}</StyledError>
+        </Expandable>
+      ) : null}
     </Box>
   )
 }
