@@ -117,21 +117,33 @@ jobs:
   #     - run: yarn
   #     - run: yarn run test:a11y
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> fix: ci action
+=======
 >>>>>>> fix: ci action
   build:
     strategy:
       matrix:
         node: ["17"]
     runs-on: ubuntu-20.04
+<<<<<<< HEAD
     # needs: [lint, test]
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Use Node.js
         uses: actions/setup-node@v2.5.1
+=======
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v2.3.5
+      - name: Use Node.js
+        uses: actions/setup-node@v2.4.1
+>>>>>>> fix: ci action
         with:
           node-version: ${{ matrix.node }}
       - run: yarn install
       - run: yarn run build
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -159,6 +171,8 @@ jobs:
   #         node-version: ${{ matrix.node }}
   #     - run: yarn install
   #     - run: yarn run build
+>>>>>>> fix: ci action
+=======
 >>>>>>> fix: ci action
   visual:
     runs-on: ubuntu-20.04
