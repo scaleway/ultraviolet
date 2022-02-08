@@ -7,9 +7,6 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn ./.yarn
 
-# Install graphics magick
-RUN apk update && apk add -y graphicsmagick
-
 RUN yarn --immutable --inline-builds
 
 COPY . .
