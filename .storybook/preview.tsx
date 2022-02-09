@@ -2,9 +2,12 @@ import React from 'react'
 import I18n from '@scaleway/use-i18n'
 import { Story } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
+import { mockRandom } from 'jest-mock-random'
 import normalize from '../src/utils/normalize'
 
 import theme from '../src/theme'
+
+if (process.env.STORYBOOK_ENVIRONMENT === 'loki') mockRandom([0.25, 0.5])
 
 const STORY_SORT = {
   order: ['Home', 'Testing', 'Theme', 'Components'],
@@ -38,7 +41,10 @@ const ENV_PARAMETERS = {
       storySort: STORY_SORT,
     },
   },
+  loki: {},
 }
+ENV_PARAMETERS.loki = ENV_PARAMETERS.production
+
 export const parameters =
   ENV_PARAMETERS[
     process.env.STORYBOOK_ENVIRONMENT as keyof typeof ENV_PARAMETERS

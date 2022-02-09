@@ -2,6 +2,8 @@ import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Placeholder from '..'
 
+console.log(Math.random(), Math.random(), Math.random())
+
 export default {
   component: Placeholder,
   parameters: {

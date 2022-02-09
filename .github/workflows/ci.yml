@@ -230,7 +230,7 @@ jobs:
         with:
           node-version: 17
       - run: yarn install
-      - run: yarn run build:storybook
+      - run: yarn run build:storybook-loki
       - uses: actions/cache@v2
         id: restore-build
         with:

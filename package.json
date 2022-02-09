@@ -34,6 +34,7 @@
     "build": "rollup -c",
     "build:profile": "cross-env PROFILE=true yarn run build",
     "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
+    "build:storybook-loki": "STORYBOOK_ENVIRONMENT=loki build-storybook",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
     "commit": "npx git-cz -a",
     "start": "STORYBOOK_ENVIRONMENT=development start-storybook -p 6006",
@@ -49,7 +50,7 @@
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "prepare": "husky install",
     "size": "yarn run build && size-limit",
-    "loki:update": "yarn run build:storybook && yarn loki update",
+    "loki:update": "yarn run build:storybook-loki && yarn loki update",
     "loki:test": "yarn loki test"
   },
   "lint-staged": {
@@ -147,6 +148,7 @@
     "jest": "27.5.1",
     "jest-axe": "5.0.1",
     "jest-junit": "13.0.0",
+    "jest-mock-random": "^1.1.1",
     "lint-staged": "12.3.4",
     "loki": "^0.28.1",
     "postcss": "8.4.6",
