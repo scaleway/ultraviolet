@@ -120,7 +120,9 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
         >
           {label}
         </Radio>
-        <Typography as="span">{labelDescription}</Typography>
+        {labelDescription ? (
+          <Typography as="span">{labelDescription}</Typography>
+        ) : null}
         {badgeText && (
           <>
             &nbsp;
