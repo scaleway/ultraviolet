@@ -15,8 +15,20 @@ export default {
   title: 'Components/Feeback/ExtendedReminder',
 } as Meta
 
-const Template: Story<ComponentProps<typeof ExtendedReminder>> = args => (
-  <ExtendedReminder {...args} />
+const Template: Story<ComponentProps<typeof ExtendedReminder>> = ({
+  badgeText = 'default badge text',
+  icon = 'information-outline',
+  text = 'default text',
+  title = 'title',
+  ...args
+}) => (
+  <ExtendedReminder
+    badgeText={badgeText}
+    icon={icon}
+    text={text}
+    title={title}
+    {...args}
+  />
 )
 
 export const Default = Template.bind({})

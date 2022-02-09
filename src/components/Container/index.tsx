@@ -50,7 +50,7 @@ type ContainerProps = ContainerBaseProps & {
   header?: ReactNode
   rightTitle?: ReactNode
   subtitle?: string
-  title?: string
+  title: string
 } & BoxProps
 
 const Container: FunctionComponent<ContainerProps> = ({
@@ -102,7 +102,7 @@ Container.propTypes = {
   rightTitle: PropTypes.node,
   small: PropTypes.bool,
   subtitle: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default Container

@@ -652,7 +652,7 @@ TextBox.propTypes = {
   notice: PropTypes.string,
   noTopLabel: PropTypes.bool,
   onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   random: PropTypes.string,

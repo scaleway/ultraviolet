@@ -46,7 +46,7 @@ Text.decorators = [
     <>
       {['Hello', 'Hello you', 'This is really long text for an acronym'].map(
         text => (
-          <div style={{ display: 'inline-flex', marginRight: 8 }}>
+          <div key={text} style={{ display: 'inline-flex', marginRight: 8 }}>
             <Avatar text={text} />
           </div>
         ),
@@ -71,7 +71,10 @@ TextSize.decorators = [
         [50, 30],
         [80, 50],
       ].map(sizes => (
-        <div style={{ display: 'inline-flex', marginRight: 8 }}>
+        <div
+          key={sizes.toString()}
+          style={{ display: 'inline-flex', marginRight: 8 }}
+        >
           <Avatar size={sizes[0]} textSize={sizes[1]} text="Hello You" />
         </div>
       ))}
