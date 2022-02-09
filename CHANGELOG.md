@@ -1,3 +1,10 @@
+### [0.135.6](https://github.com/scaleway/scaleway-ui/compare/v0.135.5...v0.135.6) (2022-02-09)
+
+
+### :bug: Bug Fixes
+
+* correct a11y on Alert + correct some errors on unit tests ([#1166](https://github.com/scaleway/scaleway-ui/issues/1166)) ([d574aa3](https://github.com/scaleway/scaleway-ui/commit/d574aa3593a577fe6a76adf9039c9c2a0805aba6))
+
 ### [0.135.5](https://github.com/scaleway/scaleway-ui/compare/v0.135.4...v0.135.5) (2022-02-09)
 
 
