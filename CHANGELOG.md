@@ -1,3 +1,21 @@
+### [0.135.5](https://github.com/scaleway/scaleway-ui/compare/v0.135.4...v0.135.5) (2022-02-09)
+
+
+### :memo: Documentation
+
+* correct Sphere stories ([#1161](https://github.com/scaleway/scaleway-ui/issues/1161)) ([006cf3b](https://github.com/scaleway/scaleway-ui/commit/006cf3bc33a368fdb63e16724051a378cc03547b))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.2 ([#1165](https://github.com/scaleway/scaleway-ui/issues/1165)) ([2263f08](https://github.com/scaleway/scaleway-ui/commit/2263f08efcddaeb8d92c56613c4ba5c3161134e3))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.7 ([#1164](https://github.com/scaleway/scaleway-ui/issues/1164)) ([eb5c4ef](https://github.com/scaleway/scaleway-ui/commit/eb5c4efe4f1f58db052691b685b44cd4df792571))
+
+
+### :bug: Bug Fixes
+
+* some optimisation on Radio and RadioBorderedBox ([#1163](https://github.com/scaleway/scaleway-ui/issues/1163)) ([0654999](https://github.com/scaleway/scaleway-ui/commit/0654999280f4b181ac067dacabc01b434e3f4e6f))
+
 ### [0.135.4](https://github.com/scaleway/scaleway-ui/compare/v0.135.3...v0.135.4) (2022-02-07)
 
 
