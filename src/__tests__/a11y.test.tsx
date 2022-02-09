@@ -63,6 +63,10 @@ expect.extend(toHaveNoViolations)
 
 jest.setTimeout(60000)
 
+// TODO: Remove this once https://github.com/nickcolley/jest-axe/issues/147 is fixed.
+const { getComputedStyle } = window
+window.getComputedStyle = elt => getComputedStyle(elt)
+
 describe('A11y', () => {
   afterEach(() => {
     cleanup()

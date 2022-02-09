@@ -5,11 +5,10 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 describe('Alert', () => {
   beforeAll(() => {
     jest.spyOn(console, 'error').mockImplementation(() => null)
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 
   afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
+    jest.restoreAllMocks()
   })
 
   test('renders correctly with default values', () =>

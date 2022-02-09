@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import { Color } from '../../theme'
-import { useUUID } from '../../utils'
 import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'
 import Typography from '../Typography'
@@ -118,13 +117,7 @@ const Alert: FunctionComponent<AlertProps> = ({
   type = 'warning',
   ...props
 }) => (
-  <StyledContainer
-    role="region"
-    aria-label={useUUID(type)}
-    type={type}
-    variant={variant}
-    {...props}
-  >
+  <StyledContainer type={type} variant={variant} {...props}>
     <StyledIcon
       name={icon || typesDefaultIcons[type]}
       size={iconSize}

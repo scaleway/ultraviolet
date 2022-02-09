@@ -43,7 +43,7 @@ Variants.decorators = [
   () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {alertVariants.map(variant => (
-        <Alert type="info" variant={variant}>
+        <Alert key={variant} type="info" variant={variant}>
           This is a notification bar with the <b>{variant}</b> variant.
         </Alert>
       ))}
