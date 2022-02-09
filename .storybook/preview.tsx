@@ -7,7 +7,7 @@ import normalize from '../src/utils/normalize'
 
 import theme from '../src/theme'
 
-if (process.env.STORYBOOK_ENVIRONMENT === 'loki') mockRandom([0.25, 0.5])
+if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
 
 const STORY_SORT = {
   order: ['Home', 'Testing', 'Theme', 'Components'],
@@ -41,9 +41,9 @@ const ENV_PARAMETERS = {
       storySort: STORY_SORT,
     },
   },
-  loki: {},
+  visual: {},
 }
-ENV_PARAMETERS.loki = ENV_PARAMETERS.production
+ENV_PARAMETERS.visual = ENV_PARAMETERS.production
 
 export const parameters =
   ENV_PARAMETERS[

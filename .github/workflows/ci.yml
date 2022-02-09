@@ -267,7 +267,7 @@ jobs:
         with:
           node-version: 17
       - run: yarn install
-      - run: yarn run build:storybook-loki
+      - run: yarn run build:storybook-visual
       - uses: actions/cache@v2
         id: restore-build-visual
         with:
@@ -311,11 +311,15 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}
+<<<<<<< HEAD
 >>>>>>> fix: ci action
       - run: yarn run loki:test --storiesFilter ^Components/${{ matrix.filter }}
 <<<<<<< HEAD
 >>>>>>> fix: ci action
 =======
+=======
+      - run: yarn run visual:test --storiesFilter ^Components/${{ matrix.filter }}
+>>>>>>> fix: replace ref to loki by visual
       - name: Archive screenshots
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
