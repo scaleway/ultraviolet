@@ -1,3 +1,15 @@
+### [0.135.7](https://github.com/scaleway/scaleway-ui/compare/v0.135.6...v0.135.7) (2022-02-10)
+
+
+### :package: Chore
+
+* **devdeps:** update node.js to v16.14 ([#1167](https://github.com/scaleway/scaleway-ui/issues/1167)) ([843b675](https://github.com/scaleway/scaleway-ui/commit/843b675d1c942028d1f91ee7d1d1bbb3b98f2569))
+
+
+### :bug: Bug Fixes
+
+* **tags:** add className ([#1168](https://github.com/scaleway/scaleway-ui/issues/1168)) ([9a56636](https://github.com/scaleway/scaleway-ui/commit/9a56636d6642608b2b84d72e1d25e8ce7b336003))
+
 ### [0.135.6](https://github.com/scaleway/scaleway-ui/compare/v0.135.5...v0.135.6) (2022-02-09)
 
 
