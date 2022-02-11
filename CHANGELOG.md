@@ -1,3 +1,10 @@
+### [0.135.8](https://github.com/scaleway/scaleway-ui/compare/v0.135.7...v0.135.8) (2022-02-11)
+
+
+### :bug: Bug Fixes
+
+* **switch:** added margin on label when typeof is text ([#1154](https://github.com/scaleway/scaleway-ui/issues/1154)) ([a290dd3](https://github.com/scaleway/scaleway-ui/commit/a290dd3dc5981058fa851d19c609a1b2b843dcfe))
+
 ### [0.135.7](https://github.com/scaleway/scaleway-ui/compare/v0.135.6...v0.135.7) (2022-02-10)
 
 
