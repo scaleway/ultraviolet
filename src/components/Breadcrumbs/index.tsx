@@ -61,13 +61,13 @@ const BubbleVariant = styled.li`
   background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
   color: ${({ theme }) => theme.colors.success.textStrong};
 
-  &:first-child {
+  &:first-of-type {
     padding-left: ${({ theme }) => theme.space['3']};
     margin-left: 0;
     margin-right: -${({ theme }) => theme.space['3']};
   }
 
-  &:last-child {
+  &:last-of-type {
     margin-right: 0;
   }
 
