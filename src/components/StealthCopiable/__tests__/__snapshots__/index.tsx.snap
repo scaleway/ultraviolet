@@ -2,14 +2,24 @@
 
 exports[`StealthCopiable should renders correctly 1`] = `
 <DocumentFragment>
-  .cache-13zaz9t {
-  display: block;
+  .cache-vozhco {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
-.cache-13zaz9t:hover .elgyjs72 {
+.cache-vozhco:hover .elgyjs73 {
   opacity: 1;
   cursor: pointer;
+}
+
+.cache-1qkz5jq {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cache-oldbq4 {
@@ -35,15 +45,19 @@ exports[`StealthCopiable should renders correctly 1`] = `
 }
 
 <div
-    class="cache-13zaz9t elgyjs70"
+    class="cache-vozhco elgyjs71"
   >
-    Hello
     <span
-      class="cache-oldbq4 elgyjs71"
+      class="cache-1qkz5jq elgyjs70"
+    >
+      Hello
+    </span>
+    <span
+      class="cache-oldbq4 elgyjs72"
     >
       <button
         aria-live="polite"
-        class="cache-1cptxfh elgyjs72"
+        class="cache-1cptxfh elgyjs73"
         tabindex="0"
         type="button"
       >
@@ -56,12 +70,15 @@ exports[`StealthCopiable should renders correctly 1`] = `
 
 exports[`StealthCopiable should renders correctly with a complex children 1`] = `
 <DocumentFragment>
-  .cache-13zaz9t {
-  display: block;
+  .cache-vozhco {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
-.cache-13zaz9t:hover .elgyjs72 {
+.cache-vozhco:hover .elgyjs73 {
   opacity: 1;
   cursor: pointer;
 }
@@ -88,38 +105,52 @@ exports[`StealthCopiable should renders correctly with a complex children 1`] = 
   opacity: 1;
 }
 
+.cache-1qkz5jq {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 <div
-    class="cache-13zaz9t elgyjs70"
+    class="cache-vozhco elgyjs71"
   >
     <span
-      class="cache-oldbq4 elgyjs71"
+      class="cache-oldbq4 elgyjs72"
     >
       <button
         aria-live="polite"
-        class="cache-1cptxfh elgyjs72"
+        class="cache-1cptxfh elgyjs73"
         tabindex="0"
         type="button"
       >
         Copied
       </button>
     </span>
-    <div>
-      <span>
-        Hello
-      </span>
-    </div>
+    <span
+      class="cache-1qkz5jq elgyjs70"
+    >
+      <div>
+        <span>
+          Hello
+        </span>
+      </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
 
 exports[`StealthCopiable should renders correctly with custom side 1`] = `
 <DocumentFragment>
-  .cache-13zaz9t {
-  display: block;
+  .cache-vozhco {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
-.cache-13zaz9t:hover .elgyjs72 {
+.cache-vozhco:hover .elgyjs73 {
   opacity: 1;
   cursor: pointer;
 }
@@ -146,34 +177,48 @@ exports[`StealthCopiable should renders correctly with custom side 1`] = `
   opacity: 1;
 }
 
+.cache-1qkz5jq {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 <div
-    class="cache-13zaz9t elgyjs70"
+    class="cache-vozhco elgyjs71"
   >
     <span
-      class="cache-oldbq4 elgyjs71"
+      class="cache-oldbq4 elgyjs72"
     >
       <button
         aria-live="polite"
-        class="cache-1cptxfh elgyjs72"
+        class="cache-1cptxfh elgyjs73"
         tabindex="0"
         type="button"
       >
         Copy
       </button>
     </span>
-    Hello
+    <span
+      class="cache-1qkz5jq elgyjs70"
+    >
+      Hello
+    </span>
   </div>
 </DocumentFragment>
 `;
 
 exports[`StealthCopiable should renders correctly with custom side 2`] = `
 <DocumentFragment>
-  .cache-13zaz9t {
-  display: block;
+  .cache-vozhco {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
-.cache-13zaz9t:hover .elgyjs72 {
+.cache-vozhco:hover .elgyjs73 {
   opacity: 1;
   cursor: pointer;
 }
@@ -200,22 +245,33 @@ exports[`StealthCopiable should renders correctly with custom side 2`] = `
   opacity: 1;
 }
 
+.cache-1qkz5jq {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 <div
-    class="cache-13zaz9t elgyjs70"
+    class="cache-vozhco elgyjs71"
   >
     <span
-      class="cache-oldbq4 elgyjs71"
+      class="cache-oldbq4 elgyjs72"
     >
       <button
         aria-live="polite"
-        class="cache-1cptxfh elgyjs72"
+        class="cache-1cptxfh elgyjs73"
         tabindex="0"
         type="button"
       >
         Copied
       </button>
     </span>
-    Hello
+    <span
+      class="cache-1qkz5jq elgyjs70"
+    >
+      Hello
+    </span>
   </div>
 </DocumentFragment>
 `;

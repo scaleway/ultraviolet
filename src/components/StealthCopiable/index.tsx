@@ -24,13 +24,20 @@ const UnselectableSpan = styled.span`
 `
 
 const StyledContainer = styled.div`
-  display: block;
+  display: flex;
   position: relative;
 
   &:hover ${CopyButton} {
     opacity: 1;
     cursor: pointer;
   }
+`
+
+const StyledContent = styled.span`
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `
 
 type StealthCopiableProps = {
@@ -54,7 +61,7 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
 
   return (
     <StyledContainer>
-      {side === 'right' && children}
+      {side === 'right' && <StyledContent>{children}</StyledContent>}
       <UnselectableSpan>
         <CopyButton
           onClick={setCopied}
@@ -65,7 +72,7 @@ const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
           {isCopied ? copiedText : copyText}
         </CopyButton>
       </UnselectableSpan>
-      {side === 'left' && children}
+      {side === 'left' && <StyledContent>{children}</StyledContent>}
     </StyledContainer>
   )
 }
