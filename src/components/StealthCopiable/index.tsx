@@ -33,7 +33,7 @@ const StyledContainer = styled.div`
   }
 `
 
-const StyledContent = styled.span<{ width?: number | string }>`
+const StyledContent = styled.span`
   display: block;
   overflow: hidden;
   white-space: nowrap;
