@@ -1,3 +1,10 @@
+### [0.135.10](https://github.com/scaleway/scaleway-ui/compare/v0.135.9...v0.135.10) (2022-02-14)
+
+
+### :bug: Bug Fixes
+
+* replace unsafe (first|last)-child by (first|last)-of-type ([#1169](https://github.com/scaleway/scaleway-ui/issues/1169)) ([1b03236](https://github.com/scaleway/scaleway-ui/commit/1b0323618fabcbc385f5e49ff8ff855de8057263))
+
 ### [0.135.9](https://github.com/scaleway/scaleway-ui/compare/v0.135.8...v0.135.9) (2022-02-14)
 
 
