@@ -117,10 +117,10 @@ const StyledUl = styled('ul', {
           grid-template-columns: repeat(${count}, 1fr);
           ${StyledStep} {
             place-self: center;
-            &:first-child {
+            &:first-of-type {
               place-self: start;
             }
-            &:last-child {
+            &:last-of-type {
               place-self: end;
             }
           }
@@ -129,7 +129,7 @@ const StyledUl = styled('ul', {
           display: flex;
           ${StyledStep} {
             margin-right: ${theme.space[1]};
-            &:last-child {
+            &:last-of-type {
               margin-right: 0;
             }
           }

@@ -150,11 +150,11 @@ const StyledContainer = styled.div<{ size: Size }>`
     width: ${({ size }) => sizes[size].step}px;
     white-space: nowrap;
   }
-  ${StyledStepContainer}:first-child {
+  ${StyledStepContainer}:first-of-type {
     margin-left: 0px;
   }
 
-  ${StyledStepContainer}:last-child {
+  ${StyledStepContainer}:last-of-type {
     margin-right: 0px;
   }
 
