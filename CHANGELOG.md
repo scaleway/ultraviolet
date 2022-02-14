@@ -1,3 +1,17 @@
+### [0.135.9](https://github.com/scaleway/scaleway-ui/compare/v0.135.8...v0.135.9) (2022-02-14)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency jest to v27.5.1 ([#1172](https://github.com/scaleway/scaleway-ui/issues/1172)) ([4585c27](https://github.com/scaleway/scaleway-ui/commit/4585c2795275869b7ca1b9657e175146fc8ae521))
+* **devdeps:** update dependency read-pkg to v7.1.0 ([#1170](https://github.com/scaleway/scaleway-ui/issues/1170)) ([24b4da3](https://github.com/scaleway/scaleway-ui/commit/24b4da388a1b03f473a6da308da9e7832c4a2982))
+* **devdeps:** update storybook monorepo to v6.4.19 ([#1171](https://github.com/scaleway/scaleway-ui/issues/1171)) ([fa4b487](https://github.com/scaleway/scaleway-ui/commit/fa4b487ac47d13097d9f269b9ad788730737b4f0))
+
+
+### :bug: Bug Fixes
+
+* **stealth-copiable:** fix text overflow ([#1173](https://github.com/scaleway/scaleway-ui/issues/1173)) ([75a3e4a](https://github.com/scaleway/scaleway-ui/commit/75a3e4a747c1d8b462260eed7dff1853459e0c52))
+
 ### [0.135.8](https://github.com/scaleway/scaleway-ui/compare/v0.135.7...v0.135.8) (2022-02-11)
 
 
