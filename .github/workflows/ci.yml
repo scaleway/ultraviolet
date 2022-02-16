@@ -221,6 +221,7 @@ jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       - name: Build Storybook
 =======
@@ -384,6 +385,8 @@ jobs:
   #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 >>>>>>> fix: ci action
 =======
+=======
+>>>>>>> fix: set a new separate workflow
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
