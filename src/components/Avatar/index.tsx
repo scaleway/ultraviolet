@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { FunctionComponent } from 'react'
 import { Color } from '../../theme'
-import Box from '../Box'
 import Icon from '../Icon'
+import Image from '../Image'
 import avatar from './avatar.svg'
 
 const formatTextToAvatar = (text: string): string => {
@@ -21,12 +21,14 @@ const formatTextToAvatar = (text: string): string => {
   return text.substring(0, 2).toUpperCase()
 }
 
-const StyledDiv = styled.div<{
+type TextAvatarProps = {
   lock?: boolean
   textBgColor?: string
   textColor: string
   textSize: number
-}>`
+}
+
+const StyledTextAvatar = styled.span<TextAvatarProps>`
   align-items: center;
   background-color: ${({ lock, theme, textBgColor }) =>
     lock
@@ -42,7 +44,7 @@ const StyledDiv = styled.div<{
   width: 100%;
 `
 
-const StyledImg = styled.img`
+const StyledImg = styled(Image)`
   height: 100%;
   width: 100%;
 `
@@ -57,6 +59,11 @@ interface AvatarProps {
   lock?: boolean
 }
 
+const AvatarContainer = styled.div<{ size: number }>`
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
+`
+
 const Avatar: FunctionComponent<AvatarProps> = ({
   image = avatar,
   size = 32,
@@ -65,14 +72,13 @@ const Avatar: FunctionComponent<AvatarProps> = ({
   textColor = 'neutral',
   textSize = 10,
   lock = false,
-  ...props
 }) => {
   const theme = useTheme()
 
   return (
-    <Box width={size} height={size} position="relative" {...props}>
+    <AvatarContainer size={size}>
       {text ? (
-        <StyledDiv
+        <StyledTextAvatar
           lock={lock}
           textBgColor={textBgColor}
           textColor={textColor}
@@ -87,11 +93,11 @@ const Avatar: FunctionComponent<AvatarProps> = ({
           ) : (
             formatTextToAvatar(text)
           )}
-        </StyledDiv>
+        </StyledTextAvatar>
       ) : (
         <StyledImg src={image} alt="" />
       )}
-    </Box>
+    </AvatarContainer>
   )
 }
 
