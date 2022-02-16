@@ -1,3 +1,15 @@
+### [0.136.1](https://github.com/scaleway/scaleway-ui/compare/v0.136.0...v0.136.1) (2022-02-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.1.7 ([#1181](https://github.com/scaleway/scaleway-ui/issues/1181)) ([ec865ce](https://github.com/scaleway/scaleway-ui/commit/ec865ce54a7c10eb93f975c3e7702597ab752deb))
+
+
+### :bug: Bug Fixes
+
+* **RadioBorderedBox:** enforce label as string and allow labelDescription to be a node ([#1174](https://github.com/scaleway/scaleway-ui/issues/1174)) ([d3e718d](https://github.com/scaleway/scaleway-ui/commit/d3e718df5c41e6615ae3e26a1062958e769f6c91))
+
 ## [0.136.0](https://github.com/scaleway/scaleway-ui/compare/v0.135.10...v0.136.0) (2022-02-16)
 
 
