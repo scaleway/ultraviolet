@@ -1,3 +1,19 @@
+## [0.136.0](https://github.com/scaleway/scaleway-ui/compare/v0.135.10...v0.136.0) (2022-02-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.3.8 ([#1178](https://github.com/scaleway/scaleway-ui/issues/1178)) ([0c6fa45](https://github.com/scaleway/scaleway-ui/commit/0c6fa457e00a7c36e1fce5ad77326ce9884547f3))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.10 ([#1176](https://github.com/scaleway/scaleway-ui/issues/1176)) ([c14f5c3](https://github.com/scaleway/scaleway-ui/commit/c14f5c3f66b2a4ed0449e2bfeb707af30265eef0))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.2.11 ([#1180](https://github.com/scaleway/scaleway-ui/issues/1180)) ([01a4ca6](https://github.com/scaleway/scaleway-ui/commit/01a4ca6c1dc27b4296232d7cd2d35e54e778eaba))
+* **devdeps:** update dependency lint-staged to v12.3.4 ([#1175](https://github.com/scaleway/scaleway-ui/issues/1175)) ([6f8879c](https://github.com/scaleway/scaleway-ui/commit/6f8879cb3e22130d6ac7e617bff0674a18fe4270))
+* **devdeps:** update dependency rollup to v2.67.2 ([#1177](https://github.com/scaleway/scaleway-ui/issues/1177)) ([b794694](https://github.com/scaleway/scaleway-ui/commit/b79469444f43190d263fb69d356633da5c9efe50))
+
+
+### :gear: Features
+
+* box-less Avatar ([#1179](https://github.com/scaleway/scaleway-ui/issues/1179)) ([012dead](https://github.com/scaleway/scaleway-ui/commit/012dead9a9ee3a64894e7abbd29dd498d584906d))
+
 ### [0.135.10](https://github.com/scaleway/scaleway-ui/compare/v0.135.9...v0.135.10) (2022-02-14)
 
 
