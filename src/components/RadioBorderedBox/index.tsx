@@ -76,8 +76,8 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeText?: string
   badgeVariant?: ComponentProps<typeof Badge>['variant']
   children: ReactNode
-  label: ReactNode
-  labelDescription?: string
+  label: string
+  labelDescription?: ReactNode
   name: string
   size?: number
   value: string | number
@@ -162,11 +162,11 @@ RadioBorderedBox.propTypes = {
   /**
    * Label next to the radio button, can be a string or a more complex child
    */
-  label: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
   /**
    * Description next to the label
    */
-  labelDescription: PropTypes.string,
+  labelDescription: PropTypes.node,
   name: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
   onChange: PropTypes.func.isRequired,
