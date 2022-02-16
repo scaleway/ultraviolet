@@ -1,11 +1,11 @@
-name: Visual Testing
+name: Visual
 
 on:
   pull_request:
     types: ["opened", "edited", "reopened", "synchronize"]
 
 jobs:
-  build-storybook-visual:
+  build-storybook:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2.3.5
@@ -21,7 +21,7 @@ jobs:
           path: ./*
           key: ${{ github.sha }}
   visual:
-    needs: [build-storybook-visual]
+    needs: [build-storybook]
     strategy:
       matrix:
         filter: ["[A-C]", "D", "[E-Z]"]
