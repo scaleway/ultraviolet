@@ -31,7 +31,7 @@ jobs:
         run: docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v0.6.0
+        uses: bobheadxi/deployments@v0.6.2
         with:
           step: deactivate-env
           token: ${{ secrets.GITHUB_TOKEN }}
