@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2.4.0
     - name: Use Node.js
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: 17
         cache: 'yarn'
@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2.4.0
     - name: Use Node.js
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: 17
         cache: 'yarn'
@@ -41,7 +41,7 @@ jobs:
       with:
         fetch-depth: "0"
     - name: Use Node.js
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: ${{ matrix.node }}
         cache: 'yarn'
@@ -55,7 +55,7 @@ jobs:
         with:
           fetch-depth: "0"
       - name: Use Node.js
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2.5.1
         with:
           node-version: 17
           cache: 'yarn'
@@ -70,7 +70,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2.4.0
     - name: Use Node.js
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: ${{ matrix.node }}
     - run: yarn install
@@ -89,7 +89,7 @@ jobs:
         persist-credentials: false
     - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
     - name: Use Node.js
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.1
       with:
         node-version: 17
     - run: yarn install
