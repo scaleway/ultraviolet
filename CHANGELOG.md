@@ -1,3 +1,29 @@
+### [0.136.2](https://github.com/scaleway/scaleway-ui/compare/v0.136.1...v0.136.2) (2022-02-17)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v2.1.7 ([#1189](https://github.com/scaleway/scaleway-ui/issues/1189)) ([71a44b7](https://github.com/scaleway/scaleway-ui/commit/71a44b72a15f7457bc41c1931bb2430d4c8946e0))
+* **devdeps:** update actions/checkout action to v2.4.0 ([#1191](https://github.com/scaleway/scaleway-ui/issues/1191)) ([8d4f92c](https://github.com/scaleway/scaleway-ui/commit/8d4f92c958b48404ff03bd4b4d2d7533f4990d8c))
+* **devdeps:** update actions/setup-node action to v2.5.1 ([#1192](https://github.com/scaleway/scaleway-ui/issues/1192)) ([22777e2](https://github.com/scaleway/scaleway-ui/commit/22777e29e010814b8f24d2444121203adb02e114))
+* **devdeps:** update arwynfr/actions-docker-context commit hash to bf078c0 ([#1188](https://github.com/scaleway/scaleway-ui/issues/1188)) ([45794b8](https://github.com/scaleway/scaleway-ui/commit/45794b8d4e8d6bc205547e8d6a8242ac0d5f2c50))
+* **devdeps:** update bobheadxi/deployments action to v0.6.2 ([#1190](https://github.com/scaleway/scaleway-ui/issues/1190)) ([67e4eb5](https://github.com/scaleway/scaleway-ui/commit/67e4eb596455f7400be6cf268a52ba5ce379fbdc))
+* **devdeps:** update dependency @babel/core to v7.17.4 ([#1182](https://github.com/scaleway/scaleway-ui/issues/1182)) ([32b8d5d](https://github.com/scaleway/scaleway-ui/commit/32b8d5d395b9a0b94cb8268615c8192b5326a028))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.0 ([#1186](https://github.com/scaleway/scaleway-ui/issues/1186)) ([737de5b](https://github.com/scaleway/scaleway-ui/commit/737de5b2dca77482c044312c797dc59c3f00c76f))
+* **devdeps:** update dependency @testing-library/react to v12.1.3 ([#1183](https://github.com/scaleway/scaleway-ui/issues/1183)) ([942aeaf](https://github.com/scaleway/scaleway-ui/commit/942aeaf8bdeaddc0a2d08b6d047935ece1d91611))
+* **devdeps:** update dependency eslint to v8.9.0 ([#1184](https://github.com/scaleway/scaleway-ui/issues/1184)) ([0ee1a98](https://github.com/scaleway/scaleway-ui/commit/0ee1a986240c39813b76525120b7f3b3eff1b2eb))
+* **devdeps:** update docker/build-push-action action to v2.9.0 ([#1194](https://github.com/scaleway/scaleway-ui/issues/1194)) ([2230868](https://github.com/scaleway/scaleway-ui/commit/2230868bd55017abe2a6a0392785afb1a73787bc))
+* **devdeps:** update docker/login-action action to v1.13.0 ([#1195](https://github.com/scaleway/scaleway-ui/issues/1195)) ([498fb38](https://github.com/scaleway/scaleway-ui/commit/498fb384a548f69692e5a3506726f64d0c450882))
+* **devdeps:** update node.js to v17 ([#1196](https://github.com/scaleway/scaleway-ui/issues/1196)) ([20d9666](https://github.com/scaleway/scaleway-ui/commit/20d96668a585453df4d57dd00e0ecfa3c486a78e))
+* **devdeps:** update rlespinasse/github-slug-action action to v4 ([#1197](https://github.com/scaleway/scaleway-ui/issues/1197)) ([b322f78](https://github.com/scaleway/scaleway-ui/commit/b322f783bb254c5ccac5cddea18874d8e2d32ef3))
+* **renovate:** consider dockerfile and github actions as devDeps ([#1193](https://github.com/scaleway/scaleway-ui/issues/1193)) ([109bf03](https://github.com/scaleway/scaleway-ui/commit/109bf03a1d23d6ce655a72b36beb63c00ce582a7))
+* **renovate:** upgrade renovate config managers ([#1187](https://github.com/scaleway/scaleway-ui/issues/1187)) ([d628f1c](https://github.com/scaleway/scaleway-ui/commit/d628f1cc26de0d938dfbe2e1e7d7381396e390d7))
+
+
+### :bug: Bug Fixes
+
+* **types:** add mising fontStyle prop in BoxProps ([#1185](https://github.com/scaleway/scaleway-ui/issues/1185)) ([f0b2740](https://github.com/scaleway/scaleway-ui/commit/f0b27407ee9ec5b756bc655b9d53ec7a9566cc91))
+
 ### [0.136.1](https://github.com/scaleway/scaleway-ui/compare/v0.136.0...v0.136.1) (2022-02-16)
 
 
