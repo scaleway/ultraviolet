@@ -23,6 +23,7 @@ export interface XStyledProps {
   flexWrap?: string
   flexDirection?: string
   fontSize?: number
+  fontStyle?: string
   fontWeight?: number
   height?: string | number
   justifyContent?: string
