@@ -49,7 +49,7 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GH_TOKEN }}
       - name: Build
-        uses: docker/build-push-action@v2.7.0
+        uses: docker/build-push-action@v2.9.0
         env:
           IMAGE: ${{ env.IMAGE_NAME }}:v-${{ env.BRANCH_SLUG }}
         with:
