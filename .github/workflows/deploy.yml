@@ -59,7 +59,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
 
       - name: Set Docker context
-        uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
+        uses: arwynfr/actions-docker-context@bf078c08f0a39dbfafc65e3ff03e691cdd07b71d
         with:
           docker_host: ${{ env.REMOTE_SSH_SERVER }}
           context_name: v-${{ env.BRANCH_SLUG }}
