@@ -1,5 +1,5 @@
 {
-  "enabledManagers": ["dockerfile", "npm"],
+  "enabledManagers": ["dockerfile", "github-actions", "npm"],
   "extends": ["config:base", ":combinePatchMinorReleases"],
   "assignees": ["team:console"],
   "assigneesSampleSize": 1,
