@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    types: ["opened", "edited", "reopened", "synchronize"]
+    types: ['opened', 'edited', 'reopened', 'synchronize']
   push:
     branches:
       - main
@@ -24,6 +24,7 @@ jobs:
   typecheck:
     runs-on: ubuntu-20.04
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v2.3.5
       - name: Use Node.js
         uses: actions/setup-node@v2.4.1
@@ -60,10 +61,33 @@ jobs:
           cache: "yarn"
       - run: yarn
       - run: yarn run lint
+=======
+    - uses: actions/checkout@v2.4.0
+    - name: Use Node.js
+      uses: actions/setup-node@v2.5.1
+      with:
+        node-version: 17
+        cache: 'yarn'
+    - run: yarn
+    - run: yarn run build
+    - run: yarn run tsc --noEmit || true
+  lint:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2.4.0
+    - name: Use Node.js
+      uses: actions/setup-node@v2.5.1
+      with:
+        node-version: 17
+        cache: 'yarn'
+    - run: yarn
+    - run: yarn run lint
+>>>>>>> fix: restore ci file
   test:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         node: ["17"]
@@ -115,9 +139,32 @@ jobs:
 >>>>>>> fix: ci action
 =======
 >>>>>>> fix: restore other jobs
+=======
+        node: [ '14', '16', '17' ]
+    steps:
+    - uses: actions/checkout@v2.4.0
+      with:
+        fetch-depth: "0"
+    - name: Use Node.js
+      uses: actions/setup-node@v2.5.1
+      with:
+        node-version: ${{ matrix.node }}
+        cache: 'yarn'
+    - run: yarn
+    - run: yarn run test:unit:coverage
+    - uses: codecov/codecov-action@v2.1.0
+  accessibility:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.4.0
+        with:
+          fetch-depth: "0"
+      - name: Use Node.js
+        uses: actions/setup-node@v2.5.1
+>>>>>>> fix: restore ci file
         with:
           node-version: 17
-          cache: "yarn"
+          cache: 'yarn'
       - run: yarn
       - run: yarn run test:a11y
 <<<<<<< HEAD
@@ -191,7 +238,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ["14", "16", "17"]
+        node: [ '14', '16', '17' ]
     runs-on: ubuntu-20.04
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +252,7 @@ jobs:
 >>>>>>> fix: restore other jobs
     needs: [lint, test]
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v2.3.5
       - name: Use Node.js
         uses: actions/setup-node@v2.4.1
@@ -387,6 +435,15 @@ jobs:
 =======
 =======
 >>>>>>> fix: set a new separate workflow
+=======
+    - uses: actions/checkout@v2.4.0
+    - name: Use Node.js
+      uses: actions/setup-node@v2.5.1
+      with:
+        node-version: ${{ matrix.node }}
+    - run: yarn install
+    - run: yarn run build
+>>>>>>> fix: restore ci file
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
@@ -395,6 +452,7 @@ jobs:
       GIT_COMMITTER_NAME: Scaleway Bot
       GIT_COMMITTER_EMAIL: github@scaleway.com
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v2.3.5
         with:
           fetch-depth: "0"
@@ -412,3 +470,21 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 >>>>>>> fix: restore other jobs
+=======
+    - uses: actions/checkout@v2.4.0
+      with:
+        fetch-depth: "0"
+        persist-credentials: false
+    - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - name: Use Node.js
+      uses: actions/setup-node@v2.5.1
+      with:
+        node-version: 17
+    - run: yarn install
+    - run: yarn run build
+    - run: yarn run semantic-release
+      env:
+        HUSKY: 0
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+>>>>>>> fix: restore ci file
