@@ -17,92 +17,92 @@ export default {
   title: 'Components/Foundation/Grid',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Grid>> = args => <Grid {...args} />
+const Template: Story<ComponentProps<typeof Grid>> = args => (
+  <Grid {...args}>
+    <Row>
+      <ColWithBackground>One</ColWithBackground>
+      <ColWithBackground>Two</ColWithBackground>
+      <ColWithBackground>Three</ColWithBackground>
+    </Row>
+  </Grid>
+)
 
 export const Default = Template.bind({})
 
 export const Fluid = Template.bind({})
+Fluid.args = { fluid: true }
 Fluid.parameters = {
   docs: {
-    storyDescription:
-      'If you pass the `fluid` prop the grid will take the full width of its container',
+    description: {
+      story:
+        'If you pass the `fluid` prop the grid will take the full width of its container',
+    },
   },
 }
-Fluid.decorators = [
-  () => (
-    <Grid fluid>
-      <Row>
-        <ColWithBackground>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-    </Grid>
-  ),
-]
 
-export const Gutter = Template.bind({})
+export const Gutter: Story = () => (
+  <Grid fluid gutter={2}>
+    <Row>
+      <ColWithBackground>One</ColWithBackground>
+      <ColWithBackground>Two</ColWithBackground>
+      <ColWithBackground>Three</ColWithBackground>
+    </Row>
+    <Row gutter={2}>
+      <ColWithBackground>One</ColWithBackground>
+      <ColWithBackground>Two</ColWithBackground>
+      <ColWithBackground>Three</ColWithBackground>
+    </Row>
+    <Row>
+      <ColWithBackground gutter={2}>One</ColWithBackground>
+      <ColWithBackground>Two</ColWithBackground>
+      <ColWithBackground>Three</ColWithBackground>
+    </Row>
+  </Grid>
+)
+Gutter.args = { fluid: true }
 Gutter.parameters = {
   docs: {
-    storyDescription:
-      'If you pass the `gutter` prop the component will have more padding and margin',
+    description: {
+      story:
+        'If you pass the `gutter` prop the component will have more padding and margin',
+    },
   },
 }
-Gutter.decorators = [
-  () => (
-    <Grid fluid gutter={2}>
-      <Row>
-        <ColWithBackground>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-      <Row gutter={2}>
-        <ColWithBackground>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-      <Row>
-        <ColWithBackground gutter={2}>One</ColWithBackground>
-        <ColWithBackground>Two</ColWithBackground>
-        <ColWithBackground>Three</ColWithBackground>
-      </Row>
-    </Grid>
-  ),
-]
 
-export const Responsive = Template.bind({})
+export const Responsive: Story = () => (
+  <Grid>
+    <Row>
+      <ColWithBackground
+        xsmall={12}
+        medium={8}
+      >{`xsmall={12} medium={8}`}</ColWithBackground>
+      <ColWithBackground
+        xsmall={6}
+        medium={4}
+      >{`xsmall={6} medium={4}`}</ColWithBackground>
+    </Row>
+    <Row>
+      <ColWithBackground xsmall={6} medium={4}>
+        {`xsmall={6} medium={4}`}
+      </ColWithBackground>
+      <ColWithBackground xsmall={6} medium={4}>
+        {`xsmall={6} medium={4}`}
+      </ColWithBackground>
+      <ColWithBackground xsmall={6} medium={4}>
+        {`xsmall={6} medium={4}`}
+      </ColWithBackground>
+    </Row>
+    <Row>
+      <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
+      <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
+    </Row>
+  </Grid>
+)
+
 Responsive.parameters = {
   docs: {
-    storyDescription: 'A complex responsive example',
+    description: {
+      story: 'A complex responsive example',
+    },
   },
 }
-Responsive.decorators = [
-  () => (
-    <Grid>
-      <Row>
-        <ColWithBackground
-          xsmall={12}
-          medium={8}
-        >{`xsmall={12} medium={8}`}</ColWithBackground>
-        <ColWithBackground
-          xsmall={6}
-          medium={4}
-        >{`xsmall={6} medium={4}`}</ColWithBackground>
-      </Row>
-      <Row>
-        <ColWithBackground xsmall={6} medium={4}>
-          {`xsmall={6} medium={4}`}
-        </ColWithBackground>
-        <ColWithBackground xsmall={6} medium={4}>
-          {`xsmall={6} medium={4}`}
-        </ColWithBackground>
-        <ColWithBackground xsmall={6} medium={4}>
-          {`xsmall={6} medium={4}`}
-        </ColWithBackground>
-      </Row>
-      <Row>
-        <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
-        <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
-      </Row>
-    </Grid>
-  ),
-]

@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn ./.yarn
 
-
 RUN yarn --immutable --inline-builds
 
 COPY . .

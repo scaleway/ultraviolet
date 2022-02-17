@@ -1,0 +1,14 @@
+{
+  "diffingEngine": "pixelmatch",
+  "chromeTolerance": 0.02,
+  "requireReference": true,
+  "reactUri": "file:./storybook-static",
+  "storiesFilter": "^Components/*",
+  "configurations": {
+    "chrome.laptop": {
+      "target": "chrome.docker",
+      "width": 1201,
+      "height": 768
+    }
+  }
+}
