@@ -17,6 +17,7 @@ export default {
     '@storybook/addon-essentials',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
+    'storybook-dark-mode/register',
   ],
   webpackFinal: (config: Configuration) => {
     const cwd = process.cwd()

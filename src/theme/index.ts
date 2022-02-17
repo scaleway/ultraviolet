@@ -1,6 +1,7 @@
-import colors, { colorsTokens } from './colors'
 import type { Color, ContrastType } from './colors'
+import colors, { colorsTokens } from './colors'
 import colorsDeprecated from './deprecated/colors'
+import * as dark from './tokens/dark.json'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -63,13 +64,18 @@ const createTheme = ({
   screens?: Partial<Record<ScreenSize, number>>
   radii?: Partial<Record<keyof typeof radii, string>>
   fonts?: Partial<Record<keyof typeof fonts, string>>
-}): SCWUITheme => ({
+}): typeof theme => ({
   ...theme,
   ...(contrasts ? { colors: { ...colors, ...colorsTokens(contrasts) } } : {}),
   ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
   ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
   ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
   ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
+})
+
+const darkTheme = createTheme({
+  contrasts: (dark as Record<string, Record<string, Partial<ContrastType>>>)
+    .colors,
 })
 
 type SCWUITheme = typeof theme & {
@@ -80,4 +86,13 @@ export default theme
 
 export type { Color, SCWUITheme }
 
-export { colors, colorsDeprecated, space, radii, fonts, screens, createTheme }
+export {
+  colors,
+  colorsDeprecated,
+  space,
+  radii,
+  fonts,
+  screens,
+  createTheme,
+  darkTheme,
+}

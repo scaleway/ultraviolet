@@ -1,11 +1,21 @@
 import { create } from '@storybook/theming'
-import brandImage from './assets/scaleway-text.png'
+import lightBrandImage from './assets/scaleway-text-light.png'
+import darkBrandImage from './assets/scaleway-text-dark.png'
 
-export default create({
+export const light = create({
   base: 'light',
 
   brandTitle: 'Scaleway UI',
   brandUrl: 'https://github.com/scaleway/scaleway-ui',
-  brandImage,
+  brandImage: lightBrandImage,
   colorSecondary: '#4f0599',
+})
+
+export const dark = create({
+  base: 'dark',
+
+  brandTitle: 'Scaleway UI',
+  brandUrl: 'https://github.com/scaleway/scaleway-ui',
+  brandImage: darkBrandImage,
+  colorSecondary: '#CE80FF',
 })
