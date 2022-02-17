@@ -19,7 +19,7 @@ jobs:
           ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
       - name: Set Docker context
-        uses: arwynfr/actions-docker-context@98fc92878d0b856c1112c79b8d0f45353206e186
+        uses: arwynfr/actions-docker-context@v2
         with:
           docker_host: ${{ env.REMOTE_SSH_SERVER }}
           context_name: v-${{ env.BRANCH_SLUG }}
