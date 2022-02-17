@@ -14,12 +14,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.5
 
+      - name: Install jq
+        run: sudo apt install jq
+
       - name: Generate json files
+        uses: sergeysova/jq-action@v2
+        env:
+          JSON: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
         run: |
-          JSON=$(curl https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json)
           JQ_COLORS_EXTRACT='reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}'
-          echo $JSON | jq --arg theme "dark" $JQ_COLORS_EXTRACT > src/theme/tokens/dark.json
-          echo $JSON | jq --arg theme "light" $JQ_COLORS_EXTRACT > src/theme/tokens/light.json
+          curl ${{ JSON }} | jq --arg theme "dark" $JQ_COLORS_EXTRACT > src/theme/tokens/dark.json
+          curl ${{ JSON }} | jq --arg theme "light" $JQ_COLORS_EXTRACT > src/theme/tokens/light.json
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
