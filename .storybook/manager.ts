@@ -1,6 +1,6 @@
 import { addons } from '@storybook/addons'
-import scaleway from './scaleway'
+import { light } from './scaleway'
 
 addons.setConfig({
-  theme: scaleway,
+  theme: light,
 })

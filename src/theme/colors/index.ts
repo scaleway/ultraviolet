@@ -1,4 +1,9 @@
-import * as localContrasts from './contrasts'
+import * as light from '../tokens/light.json'
+
+// Scaleway UI is based on light colors by default
+const localContrasts = (
+  light as Record<string, Record<string, Partial<ContrastType>>>
+).colors
 
 export type ContrastType = {
   100: string
@@ -25,43 +30,45 @@ const generateTokens = ({
   contrast,
   neutralContrast,
 }: GenerateTokensProps) => {
+  const defaultValue: string =
+    (contrast[Object.keys(contrast)[0]] as string) || '#ffffff'
   // Neutral is a particular color it has more shade and they are used differently than usual colors.
   if (sentiment === 'neutral') {
     return {
       /* eslint-disable sort-keys */
 
       // Background
-      background: contrast[500],
-      backgroundHover: contrast[600],
-      backgroundDisabled: contrast[400],
-      backgroundWeak: contrast[100],
-      backgroundWeakHover: contrast[800],
-      backgroundWeakDisabled: contrast[300],
-      backgroundStrong: contrast[800],
-      backgroundStrongHover: contrast[1000],
-      backgroundStrongDisabled: contrast[700],
+      background: contrast[500] || defaultValue,
+      backgroundHover: contrast[600] || defaultValue,
+      backgroundDisabled: contrast[400] || defaultValue,
+      backgroundWeak: contrast[100] || defaultValue,
+      backgroundWeakHover: contrast[800] || defaultValue,
+      backgroundWeakDisabled: contrast[300] || defaultValue,
+      backgroundStrong: contrast[800] || defaultValue,
+      backgroundStrongHover: contrast[1000] || defaultValue,
+      backgroundStrongDisabled: contrast[700] || defaultValue,
 
       // Text
-      text: contrast[800],
-      textHover: contrast[900],
-      textDisabled: contrast[600],
-      textWeak: contrast[600],
-      textWeakHover: contrast[600],
-      textWeakDisabled: contrast[500],
-      textStrong: contrast[100],
-      textStrongHover: contrast[100],
-      textStrongDisabled: contrast[100],
+      text: contrast[800] || defaultValue,
+      textHover: contrast[900] || defaultValue,
+      textDisabled: contrast[600] || defaultValue,
+      textWeak: contrast[600] || defaultValue,
+      textWeakHover: contrast[600] || defaultValue,
+      textWeakDisabled: contrast[500] || defaultValue,
+      textStrong: contrast[100] || defaultValue,
+      textStrongHover: contrast[100] || defaultValue,
+      textStrongDisabled: contrast[100] || defaultValue,
 
       // Border
-      border: contrast[300],
-      borderHover: contrast[300],
-      borderDisabled: contrast[300],
-      borderWeak: contrast[500],
-      borderWeakHover: contrast[500],
-      borderWeakDisabled: contrast[200],
-      borderStrong: contrast[100],
-      borderStrongHover: contrast[100],
-      borderStrongDisabled: contrast[100],
+      border: contrast[300] || defaultValue,
+      borderHover: contrast[300] || defaultValue,
+      borderDisabled: contrast[300] || defaultValue,
+      borderWeak: contrast[500] || defaultValue,
+      borderWeakHover: contrast[500] || defaultValue,
+      borderWeakDisabled: contrast[200] || defaultValue,
+      borderStrong: contrast[100] || defaultValue,
+      borderStrongHover: contrast[100] || defaultValue,
+      borderStrongDisabled: contrast[100] || defaultValue,
 
       /* eslint-enable sort-keys */
     }
@@ -71,37 +78,37 @@ const generateTokens = ({
     /* eslint-disable sort-keys */
 
     // Background
-    background: contrast[300],
-    backgroundHover: contrast[300],
-    backgroundDisabled: contrast[300],
+    background: contrast[300] || defaultValue,
+    backgroundHover: contrast[300] || defaultValue,
+    backgroundDisabled: contrast[300] || defaultValue,
     backgroundWeak: neutralContrast[100],
-    backgroundWeakHover: contrast[800],
+    backgroundWeakHover: contrast[800] || defaultValue,
     backgroundWeakDisabled: neutralContrast[100],
-    backgroundStrong: contrast[800],
-    backgroundStrongHover: contrast[800],
-    backgroundStrongDisabled: contrast[800],
+    backgroundStrong: contrast[800] || defaultValue,
+    backgroundStrongHover: contrast[800] || defaultValue,
+    backgroundStrongDisabled: contrast[800] || defaultValue,
 
     // Text
-    text: contrast[800],
-    textHover: contrast[900],
-    textDisabled: contrast[400],
-    textWeak: contrast[800],
-    textWeakHover: contrast[900],
-    textWeakDisabled: contrast[400],
-    textStrong: neutralContrast[100],
-    textStrongHover: neutralContrast[100],
-    textStrongDisabled: neutralContrast[100],
+    text: contrast[800] || defaultValue,
+    textHover: contrast[900] || defaultValue,
+    textDisabled: contrast[400] || defaultValue,
+    textWeak: contrast[800] || defaultValue,
+    textWeakHover: contrast[900] || defaultValue,
+    textWeakDisabled: contrast[400] || defaultValue,
+    textStrong: neutralContrast[100] || '#ffffff',
+    textStrongHover: neutralContrast[100] || '#ffffff',
+    textStrongDisabled: neutralContrast[100] || '#ffffff',
 
     // Border
-    border: contrast[800],
-    borderHover: contrast[900],
-    borderDisabled: contrast[200],
-    borderWeak: contrast[800],
-    borderWeakHover: contrast[800],
-    borderWeakDisabled: contrast[400],
-    borderStrong: neutralContrast[100],
-    borderStrongHover: neutralContrast[100],
-    borderStrongDisabled: neutralContrast[100],
+    border: contrast[800] || defaultValue,
+    borderHover: contrast[900] || defaultValue,
+    borderDisabled: contrast[200] || defaultValue,
+    borderWeak: contrast[800] || defaultValue,
+    borderWeakHover: contrast[800] || defaultValue,
+    borderWeakDisabled: contrast[400] || defaultValue,
+    borderStrong: neutralContrast[100] || '#ffffff',
+    borderStrongHover: neutralContrast[100] || '#ffffff',
+    borderStrongDisabled: neutralContrast[100] || '#ffffff',
 
     /* eslint-enable sort-keys */
   }
@@ -118,8 +125,8 @@ export const colorsTokens = (
     (acc, contrast) => ({
       ...acc,
       [contrast]: {
-        ...localContrasts[contrast as Color],
-        ...contrasts[contrast as Color],
+        ...localContrasts[contrast],
+        ...contrasts[contrast],
       },
     }),
     {},
@@ -130,7 +137,7 @@ export const colorsTokens = (
     (acc, contrast) => ({
       ...acc,
       [contrast]: generateTokens({
-        contrast: deepMergedContrasts[contrast as Color],
+        contrast: deepMergedContrasts[contrast],
         neutralContrast: deepMergedContrasts.neutral,
         sentiment: contrast,
       }),
