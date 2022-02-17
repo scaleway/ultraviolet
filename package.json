@@ -48,10 +48,10 @@
     "test:unit:watch": "yarn run test:unit --watch",
     "test:unit:update": "yarn run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
+    "test:visual:update": "yarn run build:storybook-visual && yarn loki update",
+    "test:visual": "yarn loki test",
     "prepare": "husky install",
-    "size": "yarn run build && size-limit",
-    "visual:update": "yarn run build:storybook-visual && yarn loki update",
-    "visual:test": "yarn loki test"
+    "size": "yarn run build && size-limit"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
@@ -148,9 +148,9 @@
     "jest": "27.5.1",
     "jest-axe": "5.0.1",
     "jest-junit": "13.0.0",
-    "jest-mock-random": "^1.1.1",
+    "jest-mock-random": "1.1.1",
     "lint-staged": "12.3.4",
-    "loki": "^0.28.1",
+    "loki": "0.28.1",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
     "react": "17.0.2",

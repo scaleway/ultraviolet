@@ -39,7 +39,7 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}
-      - run: yarn run visual:test --storiesFilter ^Components/${{ matrix.filter }}
+      - run: yarn run test:visual --storiesFilter ^Components/${{ matrix.filter }}
       - name: Archive screenshots
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
