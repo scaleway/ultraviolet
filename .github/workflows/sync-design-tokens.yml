@@ -17,7 +17,7 @@ jobs:
       - name: Generate json files
         run: |
           JSON=$(curl https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json)
-          JQ_COLORS_EXTRACT=\'reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}\'
+          JQ_COLORS_EXTRACT='reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}'
           echo $JSON | jq --arg theme "dark" $JQ_COLORS_EXTRACT > src/theme/tokens/dark.json
           echo $JSON | jq --arg theme "light" $JQ_COLORS_EXTRACT > src/theme/tokens/light.json
 
