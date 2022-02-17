@@ -30,8 +30,8 @@ const generateTokens = ({
   contrast,
   neutralContrast,
 }: GenerateTokensProps) => {
-  const defaultValue: string =
-    (contrast[Object.keys(contrast)[0]] as string) || '#ffffff'
+  const defaultValue =
+    (contrast as Record<string, string>)[Object.keys(contrast)[0]] || '#ffffff'
   // Neutral is a particular color it has more shade and they are used differently than usual colors.
   if (sentiment === 'neutral') {
     return {

@@ -47,7 +47,14 @@ const ENV_PARAMETERS = {
     },
   },
   production: {
+    darkMode,
     actions: { argTypesRegex: '^on[A-Z].*' },
+    backgrounds: {
+      disable: true,
+      grid: {
+        disable: true,
+      },
+    },
     viewMode: 'docs',
     previewTabs: { canvas: { hidden: true } },
     options: {

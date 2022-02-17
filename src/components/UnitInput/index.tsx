@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, useEffect, useState } from 'react'
+import { SCWUITheme } from '../../theme'
 import RichSelect, { SelectOption } from '../RichSelect'
 import type { WithSelectProps } from '../RichSelect'
 import TextBox from '../TextBox'
@@ -31,7 +32,8 @@ const CustomRichSelect = styled(RichSelect)`
   &:hover,
   &:focus {
     text-decoration: none;
-    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
+    border-color: ${({ theme }: { theme: SCWUITheme }) =>
+      theme.colors.primary.borderWeak};
     box-shadow: none;
   }
 `
