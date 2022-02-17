@@ -11,8 +11,6 @@ on:
 jobs:
   synchronise:
     runs-on: ubuntu-20.04
-    env:
-      JSON: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
     steps:
       - uses: actions/checkout@v2.3.5
 
@@ -20,7 +18,8 @@ jobs:
         run: sudo apt install jq
 
       - name: Generate json files
-        uses: sergeysova/jq-action@v2
+        env:
+          JSON: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
         run: |
           JQ_COLORS_EXTRACT='reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}'
           curl ${{ JSON }} | jq --arg theme "dark" $JQ_COLORS_EXTRACT > src/theme/tokens/dark.json
