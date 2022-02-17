@@ -18,6 +18,10 @@
       "versionStrategy": "widen"
     },
     {
+      "matchManagers": ["dockerfile", "github-actions"],
+      "semanticCommitScope": "devDeps"
+    },
+    {
       "semanticCommitScope": "devDeps",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"]
