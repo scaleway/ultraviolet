@@ -9,7 +9,7 @@ import React, {
   forwardRef,
 } from 'react'
 
-export interface XStyledProps {
+export type XStyledProps = {
   align?: string
   alignItems?: string
   alignSelf?: string
