@@ -16,12 +16,23 @@ jobs:
         env:
           LANG: en_US.UTF-8
       - name: Generate json files
+        env:
+          URL: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
         run: |
-          JSON=$(curl https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json)
-          echo $JSON
-          JQ_COLORS_EXTRACT='reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}'
-          echo $JSON | jq --arg theme "dark" $JQ_COLORS_EXTRACT > src/theme/tokens/dark.json
-          echo $JSON | jq --arg theme "light" $JQ_COLORS_EXTRACT > src/theme/tokens/light.json
+          curl ${URL} | jq 'reduce (.dark.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}' > src/theme/tokens/dark.json
+          curl ${URL} | jq 'reduce (.light.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}' > src/theme/tokens/light.json
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          base: feat/sync-design-tokens
+          author: design <design@users.noreply.github.com>
+          commit-message: 'style(theme): synchronise design tokens'
+          branch: style/design-tokens-synchronise
+          delete-branch: true
+          title: 'style(theme): synchronise design tokens'
+          body: |
+            Design system tokens update. This MR is created automatically when a change is detected in design tokens.
+          team-reviewers: scaleway/console
+          labels: |
+            design system
