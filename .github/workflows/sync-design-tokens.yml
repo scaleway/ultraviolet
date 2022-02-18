@@ -22,7 +22,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           base: main
-          author: design <design@users.noreply.github.com>
+          author: Scaleway Design Bot <design@scaleway.com>
           commit-message: 'style(theme): synchronise design tokens'
           branch: style/design-tokens-synchronise
           delete-branch: true
