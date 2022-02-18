@@ -73,16 +73,14 @@ export const parameters =
     process.env.STORYBOOK_ENVIRONMENT as keyof typeof ENV_PARAMETERS
   ] || ENV_PARAMETERS.production
 
-const adjustedTheme = (
-  ancestorTheme: Record<string, unknown>,
-  theme: Theme,
-) => ({
+const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
   ...ancestorTheme,
   ...Object.keys(theme).reduce(
     (acc, themeItem) => ({
       ...acc,
       [themeItem]: {
-        ...((acc[themeItem] as Record<string, unknown>) ?? {}),
+        ...((acc[themeItem as keyof typeof theme] as Record<string, unknown>) ??
+          {}),
         ...(theme[themeItem as keyof typeof theme] as Record<string, unknown>),
       },
     }),

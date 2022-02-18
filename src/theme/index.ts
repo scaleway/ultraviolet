@@ -1,7 +1,7 @@
 import type { Color, ContrastType } from './colors'
 import colors, { colorsTokens } from './colors'
 import colorsDeprecated from './deprecated/colors'
-import * as dark from './tokens/dark.json'
+import dark from './tokens/dark'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -74,15 +74,12 @@ const createTheme = ({
 })
 
 const darkTheme = createTheme({
-  contrasts: (dark as Record<string, Record<string, Partial<ContrastType>>>)
-    .colors,
+  contrasts: dark.shades,
 })
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
-
-export default theme
 
 export type { Color, SCWUITheme }
 
@@ -96,3 +93,5 @@ export {
   createTheme,
   darkTheme,
 }
+
+export default theme

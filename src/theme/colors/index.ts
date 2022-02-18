@@ -1,9 +1,4 @@
-import * as light from '../tokens/light.json'
-
-// Scaleway UI is based on light colors by default
-const localContrasts = (
-  light as Record<string, Record<string, Partial<ContrastType>>>
-).colors
+import light from '../tokens/light'
 
 export type ContrastType = {
   100: string
@@ -24,7 +19,7 @@ type GenerateTokensProps = {
   neutralContrast: ContrastType
 }
 
-// This function will generate all colors tokens using shade of contrasts
+// This function will generate all tokens
 const generateTokens = ({
   sentiment,
   contrast,
@@ -114,19 +109,19 @@ const generateTokens = ({
   }
 }
 
-export type Color = keyof typeof localContrasts
+export type Color = keyof typeof light.shades
 
 // This function get in parameter a shade of contrasts and return a well formatted design tokens
 export const colorsTokens = (
   contrasts: Partial<Record<Color, Partial<ContrastType>>>,
 ) => {
   // We first get contrasts passed as parameter if some are missing we use local contrasts and deep merge them
-  const deepMergedContrasts = Object.keys(localContrasts).reduce(
+  const deepMergedContrasts = Object.keys(light.shades).reduce(
     (acc, contrast) => ({
       ...acc,
       [contrast]: {
-        ...localContrasts[contrast],
-        ...contrasts[contrast],
+        ...light.shades[contrast as Color],
+        ...contrasts[contrast as Color],
       },
     }),
     {},
@@ -137,7 +132,7 @@ export const colorsTokens = (
     (acc, contrast) => ({
       ...acc,
       [contrast]: generateTokens({
-        contrast: deepMergedContrasts[contrast],
+        contrast: deepMergedContrasts[contrast as Color],
         neutralContrast: deepMergedContrasts.neutral,
         sentiment: contrast,
       }),
@@ -146,6 +141,6 @@ export const colorsTokens = (
   ) as Record<Color, ReturnType<typeof generateTokens>>
 }
 
-const colors = colorsTokens(localContrasts)
+const colors = colorsTokens(light.shades)
 
 export default colors

@@ -5,7 +5,7 @@ Contribution is in fact open to anyone, developer or not, in order to guide you 
 
 ## Table of content
 
-- [Contributing](#contributing-to-scaleway-ui) 
+- [Contributing](#contributing-to-scaleway-ui)
   - [Code of Conduct](#code-of-conduct)
   - [Project Structure](#project-structure)
   - [Creating an Issue](#creating-an-issue)
@@ -49,7 +49,7 @@ Please [open an issue](https://github.com/scaleway/scaleway-ui/issues/new/choose
 
 **You didn't find any corresponding issue?**
 
-You can now [open an issue](https://github.com/scaleway/scaleway-ui/issues/new/choose) and choose most fitting template! Collect and describe as much information as possible. 
+You can now [open an issue](https://github.com/scaleway/scaleway-ui/issues/new/choose) and choose most fitting template! Collect and describe as much information as possible.
 If you're opening an issue about a bug or a fix please describe how to reproduce, put some screenshots and even videos if you can.
 
 ## Creating a pull request
@@ -60,6 +60,7 @@ In order to publish your changes here is what you need to do:
 
 1. Fork the repository.
 2. Clone your fork on your local machine:
+
 ```shell
 git clone https://github.com/<your username>/scaleway-ui.git
 cd scaleway-ui
@@ -67,17 +68,20 @@ git remote add upstream https://github.com/scaleway/scaleway-ui.git
 ```
 
 3. Synchronize your local main branch with the upstream one:
+
 ```shell
 git checkout main
 git pull upstream main
 ```
 
 4. Create a new branch:
+
 ```shell
 git checkout -b fix/my-branch
 ```
 
 5. Install dependencies and start storybook to test your modifications:
+
 ```shell
 yarn install && yarn start
 ```
@@ -88,15 +92,17 @@ yarn install && yarn start
 yarn test:unit
 ```
 
-If you have an error with unit test please check corresponding test and try to resolve the issue. 
+If you have an error with unit test please check corresponding test and try to resolve the issue.
 Generating snapshot might be required depending on modification.
 
 7. Commit using [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) and push your changes:
+
 ```shell
 yarn commit
 ```
 
 and then:
+
 ```shell
 git push -u origin HEAD
 ```
@@ -129,16 +135,16 @@ fix(button): fade in animation on click
 
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies
-* **ci**: Changes to our CI configuration files and scripts
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* **test**: Adding missing tests or correcting existing tests
-* **revert**: If the commit revert a previous commit
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to our CI configuration files and scripts
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **test**: Adding missing tests or correcting existing tests
+- **revert**: If the commit revert a previous commit
 
 ## License
 

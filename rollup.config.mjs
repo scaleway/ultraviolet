@@ -6,7 +6,6 @@ import { readPackage } from 'read-pkg'
 import dts from "rollup-plugin-dts"
 import postcss from 'rollup-plugin-postcss'
 import { visualizer } from 'rollup-plugin-visualizer'
-import json from '@rollup/plugin-json';
 
 const PROFILE = !!process.env.PROFILE
 
@@ -73,7 +72,6 @@ export default [{
         gzipSize: true,
         open: true,
       }),
-    json()
     ].filter(Boolean),
   },
   {

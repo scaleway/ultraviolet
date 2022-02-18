@@ -15,18 +15,19 @@ jobs:
         env:
           URL: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
         run: |
-          curl ${URL} | jq 'reduce (.dark.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}' > src/theme/tokens/dark.json
-          curl ${URL} | jq 'reduce (.light.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"colors": .}' > src/theme/tokens/light.json
+          (echo "/* eslint-disable sort-keys */\n export default "; (curl ${URL} | jq 'reduce (.dark.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"shades": .}'); echo "/* eslint-enable sort-keys */\n") > src/theme/tokens/dark.ts
+          (echo "/* eslint-disable sort-keys */\n export default "; (curl ${URL} | jq 'reduce (.light.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"shades": .}'); echo "/* eslint-enable sort-keys */\n") > src/theme/tokens/light.ts
+          yarn run format
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           base: main
-          author: Scaleway Design Bot <design@scaleway.com>
-          commit-message: 'style(theme): synchronise design tokens'
-          branch: style/design-tokens-synchronise
+          author: Scaleway Design Bot <github@scaleway.com>
+          commit-message: 'fix(theme): synchronise design tokens'
+          branch: fix/design-tokens-synchronise
           delete-branch: true
-          title: 'style(theme): synchronise design tokens'
+          title: 'fix(theme): synchronise design tokens'
           body: |
             Design system tokens update. This MR is created automatically when a change is detected in design tokens.
           team-reviewers: console

@@ -1,5 +1,4 @@
 export * from './components'
-export { default as theme } from './theme'
+export { default as lightTheme, createTheme, darkTheme } from './theme'
 export type { SCWUITheme } from './theme'
 export * from './utils'
-export { createTheme } from './theme'
