@@ -1,3 +1,20 @@
+### [0.136.3](https://github.com/scaleway/scaleway-ui/compare/v0.136.2...v0.136.3) (2022-02-18)
+
+
+### :repeat: CI
+
+* init visual testing with loki ([#1162](https://github.com/scaleway/scaleway-ui/issues/1162)) ([7cd359b](https://github.com/scaleway/scaleway-ui/commit/7cd359ba3dc65bad77b28dcf712b7295230635f3))
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v16.2.1 ([#1204](https://github.com/scaleway/scaleway-ui/issues/1204)) ([94644a9](https://github.com/scaleway/scaleway-ui/commit/94644a97d7d10110e49cc567692147e13be828f1))
+
+
+### :bug: Bug Fixes
+
+* **type:** allow extends of XstyledProps into scaleway form package ([#1209](https://github.com/scaleway/scaleway-ui/issues/1209)) ([e129c1d](https://github.com/scaleway/scaleway-ui/commit/e129c1d4abc954937df661bcb9c3091511521b3d))
+
 ### [0.136.2](https://github.com/scaleway/scaleway-ui/compare/v0.136.1...v0.136.2) (2022-02-17)
 
 
