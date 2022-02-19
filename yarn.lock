@@ -1847,7 +1847,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0, @emotion/babel-plugin@npm:^11.7.1":
   version: 11.7.2
   resolution: "@emotion/babel-plugin@npm:11.7.2"
   dependencies:
@@ -2000,6 +2000,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/jest@npm:11.8.0":
+  version: 11.8.0
+  resolution: "@emotion/jest@npm:11.8.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/css-prettifier": ^1.0.1
+    chalk: ^4.1.0
+    specificity: ^0.4.1
+    stylis: 4.0.13
+  peerDependencies:
+    "@types/jest": ^26.0.14 || ^27.0.0
+    enzyme-to-json: ^3.2.1
+  peerDependenciesMeta:
+    "@types/jest":
+      optional: true
+    enzyme-to-json:
+      optional: true
+  checksum: 00a6b31eab5a457bb02ff25a5930860566926c8afd10f6c06c2e3e74502ef0577df46902aa45762632316a4cca6b96df9cb1dd9d0be6aad0276b3990f3ba9384
+  languageName: node
+  linkType: hard
+
 "@emotion/memoize@npm:0.7.4":
   version: 0.7.4
   resolution: "@emotion/memoize@npm:0.7.4"
@@ -2014,7 +2035,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.7.1, @emotion/react@npm:^11.1.1":
+"@emotion/react@npm:11.7.1":
   version: 11.7.1
   resolution: "@emotion/react@npm:11.7.1"
   dependencies:
@@ -2034,6 +2055,30 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 3392aa71f9c68c16022947959f7f842174e6b075b3baf58e185462411cd9b5a87557109a9225b1abaa2d7200a08b7cb9d7f21aa035f0d36b2c89e19b2a124e02
+  languageName: node
+  linkType: hard
+
+"@emotion/react@npm:11.8.1, @emotion/react@npm:^11.1.1":
+  version: 11.8.1
+  resolution: "@emotion/react@npm:11.8.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.1.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: a767c6d7ca9e45dc3c1e873cfa51952db24e0d279944403ceb06be82d15859354e128becf6f7d0f8ff2b5f3460e3c165cd2b16ab1a2446e8e15e134a69e6ea3a
   languageName: node
   linkType: hard
 
@@ -2148,10 +2193,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/utils@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@emotion/utils@npm:1.0.0"
-  checksum: 3ce8048441a915447d9ef51eb6d1d4cbcce8c8d1647bc7a23333ce2fb2249e74cf9471670d6f49a716e93ff633c9e7a6633517698e17391aebfc40c9d0cabcc0
+"@emotion/utils@npm:^1.0.0, @emotion/utils@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@emotion/utils@npm:1.1.0"
+  checksum: d3b681ca3a23b07033ac6c6937e71010a5549ac8ccec325eb6c91a7e48d9a73db83fa5dadc58be981bb125d7c00fedca868ea4362b1da9e02866615f96be4df1
   languageName: node
   linkType: hard
 
@@ -3608,17 +3653,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/jest-helpers@npm:1.1.7":
-  version: 1.1.7
-  resolution: "@scaleway/jest-helpers@npm:1.1.7"
+"@scaleway/jest-helpers@npm:1.1.8":
+  version: 1.1.8
+  resolution: "@scaleway/jest-helpers@npm:1.1.8"
   dependencies:
     "@emotion/cache": 11.7.1
-    "@emotion/jest": 11.7.1
-    "@emotion/react": 11.7.1
+    "@emotion/jest": 11.8.0
+    "@emotion/react": 11.8.1
     "@testing-library/react": 12.1.3
   peerDependencies:
     react: ^17.0.1
-  checksum: ba6a6d82db2115941b12eb6ea1d5cccd5851a94545aa0dd9caa1cf575a305c195b9bd34df6be04b74bf4e3f617aa7d254c61b6bef05207eca317350d4d6b73ad
+  checksum: fe7d03f91da63e4d6cc18cb1471b1e212a149072b721018c6b7a82139ca9b27a17b721f00d32d20b52d12420c9844742dc666c8b1fa6217af34a33d134157692
   languageName: node
   linkType: hard
 
@@ -3658,7 +3703,7 @@ __metadata:
     "@rollup/plugin-node-resolve": 13.1.3
     "@rollup/plugin-url": 6.1.0
     "@scaleway/eslint-config-react": 3.4.1
-    "@scaleway/jest-helpers": 1.1.7
+    "@scaleway/jest-helpers": 1.1.8
     "@scaleway/random-name": 3.0.0
     "@scaleway/use-i18n": 3.2.11
     "@semantic-release/changelog": 6.0.1
