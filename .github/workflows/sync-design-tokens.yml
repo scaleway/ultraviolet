@@ -2,7 +2,7 @@ name: Design tokens
 
 on:
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "0 10-20 * * 1-5"
 
 jobs:
   synchronise:
@@ -14,10 +14,7 @@ jobs:
       - name: Generate json files
         env:
           URL: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
-        run: |
-          (echo "/* eslint-disable sort-keys */\n export default "; (curl ${URL} | jq 'reduce (.dark.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"shades": .}'); echo "/* eslint-enable sort-keys */\n") > src/theme/tokens/dark.ts
-          (echo "/* eslint-disable sort-keys */\n export default "; (curl ${URL} | jq 'reduce (.light.shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) }) | {"shades": .}'); echo "/* eslint-enable sort-keys */\n") > src/theme/tokens/light.ts
-          yarn run format
+        run: /scripts/figma-synchronise/tokens.sh $URL
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3

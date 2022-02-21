@@ -1,7 +1,6 @@
-import type { Color, ContrastType } from './colors'
-import colors, { colorsTokens } from './colors'
+import colors, { ShadesType, generateColors } from './colors'
 import colorsDeprecated from './deprecated/colors'
-import dark from './tokens/dark'
+import darkShades from './tokens/shades/dark'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -59,14 +58,14 @@ const createTheme = ({
   radii: newRadii,
   fonts: newFonts,
 }: {
-  contrasts?: Partial<Record<Color, Partial<ContrastType>>>
+  contrasts?: ShadesType
   space?: Partial<Record<Spaces, string>>
   screens?: Partial<Record<ScreenSize, number>>
   radii?: Partial<Record<keyof typeof radii, string>>
   fonts?: Partial<Record<keyof typeof fonts, string>>
 }): typeof theme => ({
   ...theme,
-  ...(contrasts ? { colors: { ...colors, ...colorsTokens(contrasts) } } : {}),
+  ...(contrasts ? { colors: { ...colors, ...generateColors(contrasts) } } : {}),
   ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
   ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
   ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
@@ -74,14 +73,14 @@ const createTheme = ({
 })
 
 const darkTheme = createTheme({
-  contrasts: dark.shades,
+  contrasts: darkShades,
 })
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-export type { Color, SCWUITheme }
+export type { SCWUITheme }
 
 export {
   colors,

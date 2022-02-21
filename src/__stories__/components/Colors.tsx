@@ -4,7 +4,6 @@ import React from 'react'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
 import Typography from '../../components/Typography'
-import * as localContrasts from '../../theme/colors/contrasts'
 import ThemeWrapper from './ThemeWrapper'
 
 const Colors = () => {
@@ -12,7 +11,7 @@ const Colors = () => {
 
   return (
     <>
-      {Object.keys(localContrasts).map(sentiment => (
+      {Object.keys(theme.colors).map(sentiment => (
         <>
           <Typography variant="title" style={{ textTransform: 'capitalize' }}>
             {sentiment}
