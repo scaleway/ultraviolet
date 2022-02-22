@@ -8,6 +8,7 @@ import ThemeWrapper from './ThemeWrapper'
 
 const Colors = () => {
   const theme = useTheme()
+  console.log(theme.colors)
 
   return (
     <>
