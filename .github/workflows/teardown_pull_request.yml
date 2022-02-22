@@ -33,6 +33,6 @@ jobs:
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.0.1
         with:
-          step: deactivate-env
+          step: delete-env
           token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.BRANCH_SLUG }}
