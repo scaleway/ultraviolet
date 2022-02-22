@@ -27,20 +27,37 @@ const getProperty = (object: Record<string, unknown>, path: string) => {
 const generateColors = (
   shades: ShadesType,
   scopedSentiments: SentimentsTypes = sentiments,
-) =>
-  Object.keys(scopedSentiments).reduce(
+) => {
+  // We deep merge provided shades with default light shades to be sure the is no missing tokens while generating
+  // as user is allowed to provide partial shades we need to complete them with default ones.
+  const deepMergedShades = Object.keys(lightShades).reduce(
+    (acc, sentiment) => ({
+      ...acc,
+      [sentiment]: {
+        ...(lightShades as SentimentsTypes)[sentiment],
+        ...shades[sentiment],
+      },
+    }),
+    {},
+  )
+
+  return Object.keys(scopedSentiments).reduce(
     (acc, sentiment) => ({
       ...acc,
       [sentiment]: Object.keys(scopedSentiments[sentiment]).reduce(
         (subAcc, key) => ({
           ...subAcc,
-          [key]: getProperty(shades, scopedSentiments[sentiment][key]),
+          [key]: getProperty(
+            deepMergedShades,
+            scopedSentiments[sentiment][key],
+          ),
         }),
         {},
       ),
     }),
     {},
   )
+}
 
 const colors = generateColors(lightShades)
 
