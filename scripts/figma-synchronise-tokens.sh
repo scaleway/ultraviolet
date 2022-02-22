@@ -14,7 +14,7 @@ function generateTokens {
   THEME=$1
   JSON=$(curl "${URL}")
   PARSED_SHADES=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" 'reduce (.[$theme].shades | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $shade ({}; . + { "\($shade.key)": $shade.value.value })) })')
-  GENERATED_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '.[$global] | with_entries(select(.value | has("backgroundStrong"))) | reduce (. | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | "\($number[2]).\($number[3])") })) })')
+  GENERATED_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '.[$global] | with_entries(select(.value | has("backgroundStrong"))) | reduce (. | to_entries | .[]) as $sentiment ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }) | {"colors": .}')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"
@@ -23,11 +23,8 @@ do
    echo "Generating theme: $i"
    generateTokens "$i"
 
-   # Generate shades files for all themes
-   (printf "/* Generated file, please do not edit here */\nexport default "; echo "${PARSED_SHADES}") > src/theme/tokens/shades/"${i}".ts
+   # Generate colors tokens
+   (printf "/* Generated tokens from figma. Please do not edit here. */\nexport default "; echo "${GENERATED_TOKENS_COLOR}") > src/theme/tokens/"${i}".ts
 done
-
-# Generate colors tokens associated with shade value
-(printf "/* Generated file, please do not edit here */\nexport default "; echo "${GENERATED_TOKENS_COLOR}") > src/theme/tokens/colors/index.ts
 
 yarn run format

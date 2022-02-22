@@ -1,6 +1,7 @@
-import colors, { ShadesType, generateColors } from './colors'
+import deepmerge from 'deepmerge'
 import colorsDeprecated from './deprecated/colors'
-import darkShades from './tokens/shades/dark'
+import dark from './tokens/dark'
+import light from './tokens/light'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -41,6 +42,8 @@ const fonts = {
   sansSerif: 'Asap, System, sans-serif',
 }
 
+const { colors } = light
+
 const theme = {
   colorsDeprecated,
   colors,
@@ -51,30 +54,24 @@ const theme = {
 }
 /* eslint-enable sort-keys */
 
-const createTheme = ({
-  contrasts,
-  space: newSpace,
-  screens: newScreens,
-  radii: newRadii,
-  fonts: newFonts,
-}: {
-  contrasts?: ShadesType
-  space?: Partial<Record<Spaces, string>>
-  screens?: Partial<Record<ScreenSize, number>>
-  radii?: Partial<Record<keyof typeof radii, string>>
-  fonts?: Partial<Record<keyof typeof fonts, string>>
-}): typeof theme => ({
-  ...theme,
-  ...(contrasts ? { colors: { ...colors, ...generateColors(contrasts) } } : {}),
-  ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
-  ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
-  ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
-  ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
-})
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>
+}
 
-const darkTheme = createTheme({
-  contrasts: darkShades,
-})
+/**
+ * Will extend theme with new theme properties
+ * @param {typeof theme} baseTheme the theme you want to extend from, by default it is set to light theme
+ * @param {RecursivePartial<typeof theme>} extendedTheme the properties of a new theme you want to apply from baseTheme
+ */
+const extendTheme = ({
+  baseTheme = theme,
+  extendedTheme,
+}: {
+  baseTheme?: typeof theme
+  extendedTheme: RecursivePartial<typeof theme>
+}) => deepmerge(baseTheme, extendedTheme)
+
+const darkTheme = extendTheme({ extendedTheme: { colors: dark.colors } })
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
@@ -89,7 +86,7 @@ export {
   radii,
   fonts,
   screens,
-  createTheme,
+  extendTheme,
   darkTheme,
 }
 
