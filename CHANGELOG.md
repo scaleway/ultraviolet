@@ -1,3 +1,26 @@
+## [0.137.0](https://github.com/scaleway/scaleway-ui/compare/v0.136.3...v0.137.0) (2022-02-22)
+
+
+### :package: Chore
+
+* **devdeps:** update bobheadxi/deployments action to v1 ([#1216](https://github.com/scaleway/scaleway-ui/issues/1216)) ([db1aea2](https://github.com/scaleway/scaleway-ui/commit/db1aea281941505ab5ceb95a4a27eefb9b571bcb))
+* **devdeps:** update dependency @babel/core to v7.17.5 ([#1210](https://github.com/scaleway/scaleway-ui/issues/1210)) ([1877005](https://github.com/scaleway/scaleway-ui/commit/1877005f245c3b0504fea9a95ea8b1b43358a768))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.1 ([#1213](https://github.com/scaleway/scaleway-ui/issues/1213)) ([6c16f6d](https://github.com/scaleway/scaleway-ui/commit/6c16f6d5d590c0acfa586d217fd0156d42aa703b))
+* **devdeps:** update dependency rollup to v2.67.3 ([#1211](https://github.com/scaleway/scaleway-ui/issues/1211)) ([3101756](https://github.com/scaleway/scaleway-ui/commit/3101756df63c4cacb7abd40a164ef8e5e2909188))
+* **devdeps:** update dependency webpack to v5.69.1 ([#1218](https://github.com/scaleway/scaleway-ui/issues/1218)) ([e5cd211](https://github.com/scaleway/scaleway-ui/commit/e5cd21111599e20161cf1ae4908074605fa0cab9))
+* **devdeps:** update emotion monorepo ([#1212](https://github.com/scaleway/scaleway-ui/issues/1212)) ([8afa82e](https://github.com/scaleway/scaleway-ui/commit/8afa82eb50644b1dfbbec1b2abcd635a947b4a84))
+* **devdeps:** update yarn to v3.2.0 ([#1215](https://github.com/scaleway/scaleway-ui/issues/1215)) ([5041656](https://github.com/scaleway/scaleway-ui/commit/50416565151085c3d1649e86318753d18bb9b578))
+
+
+### :repeat: CI
+
+* correctly remove image ([#1219](https://github.com/scaleway/scaleway-ui/issues/1219)) ([c176c11](https://github.com/scaleway/scaleway-ui/commit/c176c11834bf8ad62183c16dc1ab1c1ab6a9a28f))
+
+
+### :gear: Features
+
+* add email outline icon ([#1217](https://github.com/scaleway/scaleway-ui/issues/1217)) ([f9d5898](https://github.com/scaleway/scaleway-ui/commit/f9d58983079767f0874112788550ff7298c59da3))
+
 ### [0.136.3](https://github.com/scaleway/scaleway-ui/compare/v0.136.2...v0.136.3) (2022-02-18)
 
 
