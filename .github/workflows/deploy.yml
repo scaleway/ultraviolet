@@ -75,6 +75,7 @@ jobs:
         if: always()
         with:
           step: finish
+          env: ${{ env.BRANCH_SLUG }}
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
