@@ -36,7 +36,7 @@ jobs:
         id: deployment
         with:
           step: start
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           env: ${{ env.BRANCH_SLUG }}
           ref: ${{ github.head_ref }}
 
@@ -76,7 +76,7 @@ jobs:
         with:
           step: finish
           env: ${{ env.BRANCH_SLUG }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: https://${{ env.HOST }}

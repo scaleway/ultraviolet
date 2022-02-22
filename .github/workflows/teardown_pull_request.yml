@@ -8,6 +8,7 @@ jobs:
   teardown:
     runs-on: ubuntu-20.04
     env:
+      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
       REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
     steps:
       - uses: actions/checkout@v2.4.0
@@ -34,5 +35,5 @@ jobs:
         uses: bobheadxi/deployments@v1.0.1
         with:
           step: delete-env
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           env: ${{ env.BRANCH_SLUG }}
