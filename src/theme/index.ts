@@ -71,13 +71,17 @@ const extendTheme = ({
   extendedTheme: RecursivePartial<typeof theme>
 }) => deepmerge(baseTheme, extendedTheme)
 
-const darkTheme = extendTheme({ extendedTheme: { colors: dark.colors } })
+const darkTheme = extendTheme({
+  extendedTheme: { colors: dark.colors },
+})
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-export type { SCWUITheme }
+type Color = keyof typeof theme.colors
+
+export type { SCWUITheme, Color }
 
 export {
   colors,
