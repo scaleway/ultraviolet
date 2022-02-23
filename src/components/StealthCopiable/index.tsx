@@ -26,6 +26,7 @@ const UnselectableSpan = styled.span`
 const StyledContainer = styled.div`
   display: flex;
   position: relative;
+  min-width: 0;
 
   &:hover ${CopyButton} {
     opacity: 1;
