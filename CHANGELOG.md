@@ -1,3 +1,15 @@
+### [0.137.1](https://github.com/scaleway/scaleway-ui/compare/v0.137.0...v0.137.1) (2022-02-23)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.2 ([#1220](https://github.com/scaleway/scaleway-ui/issues/1220)) ([0337346](https://github.com/scaleway/scaleway-ui/commit/03373462dc5325eb43a3e889ec18d91f67283151))
+
+
+### :bug: Bug Fixes
+
+* missing min-with for auto with in flex context ([#1221](https://github.com/scaleway/scaleway-ui/issues/1221)) ([8b1cbee](https://github.com/scaleway/scaleway-ui/commit/8b1cbee90cfa06b424e47b847c294c3039d83b2e))
+
 ## [0.137.0](https://github.com/scaleway/scaleway-ui/compare/v0.136.3...v0.137.0) (2022-02-22)
 
 
