@@ -32,7 +32,7 @@ jobs:
         run: docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v1.0.1
+        uses: bobheadxi/deployments@v1.1.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
