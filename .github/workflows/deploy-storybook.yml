@@ -8,11 +8,13 @@ on:
       - main
 
 jobs:
-  deploy:
+   deploy:
+    name: Deploy
     runs-on: ubuntu-20.04
     env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
-      REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
+      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
+      SCW_DNS: ui.scaleway.com
+
     steps:
       - uses: actions/checkout@v3.0.0
       - name: Cache Docker layers
@@ -29,7 +31,6 @@ jobs:
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
           ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "HOST=react.ui.scaleway.com" || echo "HOST=$SAFE_GITHUB_HEAD_REF_SLUG_URL.react.ui.scaleway.com") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v1.1.0
@@ -42,12 +43,14 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1.6.0
-      - name: Login to GHCR
-        uses: docker/login-action@v1.14.1
+
+      - name: Login to Registry
+        uses: docker/login-action@v1.14.0
         with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GH_TOKEN }}
+          registry: rg.fr-par.scw.cloud/consolescw
+          username: nologin
+          password: ${{ secrets.SCW_SECRET_KEY }}
+
       - name: Build
         uses: docker/build-push-action@v2.9.0
         env:
@@ -58,17 +61,16 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
 
-      - name: Set Docker context
-        uses: arwynfr/actions-docker-context@v2
+      - name: Deploy Serverless Container Scaleway
+        uses: philibea/scaleway-containers-deploy@v1.0.5
+        id: deploy
         with:
-          docker_host: ${{ env.REMOTE_SSH_SERVER }}
-          context_name: v-${{ env.BRANCH_SLUG }}
-          ssh_cert: ${{ secrets.SSH_CERT }}
-          ssh_key: ${{ secrets.SSH_KEY }}
-      - name: Deploy docker
-        env:
-          VERSION: v-${{ env.BRANCH_SLUG }}
-        run: docker-compose --context ${VERSION} pull && docker-compose -p ${VERSION} --context ${VERSION} up -d --force-recreate
+          type: "deploy"
+          scw_dns: ${{ env.SCW_DNS }}
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.1.0
@@ -79,7 +81,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: https://${{ env.HOST }}
+          env_url: ${{ steps.deploy.outputs.url }}
 
       - name: Move cache
         run: |
