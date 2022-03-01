@@ -11,7 +11,7 @@ jobs:
       IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
       REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3.0.0
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
       - name: Export custom variables
