@@ -1,3 +1,24 @@
+## [0.138.0](https://github.com/scaleway/scaleway-ui/compare/v0.137.1...v0.138.0) (2022-03-02)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/checkout action to v3 ([#1231](https://github.com/scaleway/scaleway-ui/issues/1231)) ([02df66a](https://github.com/scaleway/scaleway-ui/commit/02df66a6633fe6683eeaf486510ab1b2f7016308))
+* **devdeps:** update actions/setup-node action to v3 ([#1224](https://github.com/scaleway/scaleway-ui/issues/1224)) ([d34c35f](https://github.com/scaleway/scaleway-ui/commit/d34c35fcc0df530a781767748a40cf42aa228ac1))
+* **devdeps:** update bobheadxi/deployments action to v1.1.0 ([#1230](https://github.com/scaleway/scaleway-ui/issues/1230)) ([1df7943](https://github.com/scaleway/scaleway-ui/commit/1df7943b57ad257d299826cd3f88ddb79b30e1ef))
+* **devdeps:** update dependency @rollup/plugin-babel to v5.3.1 ([#1223](https://github.com/scaleway/scaleway-ui/issues/1223)) ([8f3f9c0](https://github.com/scaleway/scaleway-ui/commit/8f3f9c0dedc01534fafe9d07f7fc306300e350a1))
+* **devdeps:** update dependency postcss to v8.4.7 ([#1225](https://github.com/scaleway/scaleway-ui/issues/1225)) ([c038f23](https://github.com/scaleway/scaleway-ui/commit/c038f23e4c10e8e394bed99ba5cb7f40027947c8))
+* **devdeps:** update dependency react-router-dom to v6.2.2 ([#1233](https://github.com/scaleway/scaleway-ui/issues/1233)) ([2eaa05b](https://github.com/scaleway/scaleway-ui/commit/2eaa05bb710bf3d5aef1e8f890e1e0de87799eda))
+* **devdeps:** update dependency rollup to v2.68.0 ([#1227](https://github.com/scaleway/scaleway-ui/issues/1227)) ([ee5d6b4](https://github.com/scaleway/scaleway-ui/commit/ee5d6b49a097e176dbaacd9b2e15bd815cb34d85))
+* **devdeps:** update docker/login-action action to v1.14.0 ([#1228](https://github.com/scaleway/scaleway-ui/issues/1228)) ([b37bac3](https://github.com/scaleway/scaleway-ui/commit/b37bac3ed247ef25cdc5a90480ffdc4d72d41539))
+* **devdeps:** update docker/login-action action to v1.14.1 ([#1232](https://github.com/scaleway/scaleway-ui/issues/1232)) ([7a95427](https://github.com/scaleway/scaleway-ui/commit/7a954271bb816fddd2582cc0d6df64e1ed306eb7))
+* **devdeps:** update node.js to v17.6 ([#1222](https://github.com/scaleway/scaleway-ui/issues/1222)) ([b6472ce](https://github.com/scaleway/scaleway-ui/commit/b6472cec4c37bf40fc28e5ebe64fd999df364c19))
+
+
+### :gear: Features
+
+* add new arrow right bottom icon ([#1234](https://github.com/scaleway/scaleway-ui/issues/1234)) ([32fac67](https://github.com/scaleway/scaleway-ui/commit/32fac671b3b2e41df2e57dcca7434e31df0b8126))
+
 ### [0.137.1](https://github.com/scaleway/scaleway-ui/compare/v0.137.0...v0.137.1) (2022-02-23)
 
 
