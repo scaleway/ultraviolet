@@ -1,3 +1,22 @@
+### [0.138.1](https://github.com/scaleway/scaleway-ui/compare/v0.138.0...v0.138.1) (2022-03-03)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency eslint to v8.10.0 ([#1236](https://github.com/scaleway/scaleway-ui/issues/1236)) ([ff77d51](https://github.com/scaleway/scaleway-ui/commit/ff77d51c35ab814b04f2f2417ba9c63f1d21f230))
+* **devdeps:** update dependency rollup-plugin-visualizer to v5.6.0 ([#1235](https://github.com/scaleway/scaleway-ui/issues/1235)) ([2f9e6d5](https://github.com/scaleway/scaleway-ui/commit/2f9e6d5bfcc8433378df455df8a76d36759098a3))
+
+
+### :repeat: CI
+
+* **deploy:** add serverless deploy ([#1229](https://github.com/scaleway/scaleway-ui/issues/1229)) ([bf19ed6](https://github.com/scaleway/scaleway-ui/commit/bf19ed659adfdd6bfc8449a1b70eb14535cad2cc))
+* **deploy:** fix build image versiong ([#1238](https://github.com/scaleway/scaleway-ui/issues/1238)) ([72b059e](https://github.com/scaleway/scaleway-ui/commit/72b059e95d16854ec4666a087d961831c697232b))
+
+
+### :bug: Bug Fixes
+
+* adds custom css for list expandable ([#1237](https://github.com/scaleway/scaleway-ui/issues/1237)) ([3f68ebf](https://github.com/scaleway/scaleway-ui/commit/3f68ebfec681bd34dbda3b57da2eadf667d14325))
+
 ## [0.138.0](https://github.com/scaleway/scaleway-ui/compare/v0.137.1...v0.138.0) (2022-03-02)
 
 
