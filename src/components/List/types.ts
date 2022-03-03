@@ -43,6 +43,7 @@ export type ListRowProps = {
   children: ReactNode
   animated?: boolean
   edition?: boolean
+  expandableClassName?: string
   isEditable?: boolean
   isHoverable?: boolean
   locked?: boolean

@@ -312,6 +312,7 @@ export const Row: FunctionComponent<ListRowProps> = ({
   alert,
   customStyle,
   open,
+  expandableClassName,
   ...props
 }) => {
   const {
@@ -412,7 +413,10 @@ export const Row: FunctionComponent<ListRowProps> = ({
           {content}
         </StyledContainerSummary>
       </StyledSummary>
-      <StyledExpendableContainer multiselect={multiselect}>
+      <StyledExpendableContainer
+        multiselect={multiselect}
+        css={expandableClassName}
+      >
         {expendableContent}
       </StyledExpendableContainer>
     </StyledRow>
@@ -425,6 +429,7 @@ Row.propTypes = {
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   edition: PropTypes.bool,
+  expandableClassName: PropTypes.string,
   id: PropTypes.string.isRequired,
   isEditable: PropTypes.bool,
   isHoverable: PropTypes.bool,
@@ -437,6 +442,7 @@ Row.defaultProps = {
   animated: undefined,
   customStyle: undefined,
   edition: false,
+  expandableClassName: undefined,
   isEditable: false,
   isHoverable: true,
   locked: false,
