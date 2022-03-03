@@ -872,7 +872,10 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row
+                    id={rowData.id}
+                    expandableClassName="expandableClass"
+                  >
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
