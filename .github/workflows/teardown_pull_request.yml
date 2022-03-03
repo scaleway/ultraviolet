@@ -8,28 +8,29 @@ jobs:
   teardown:
     runs-on: ubuntu-20.04
     env:
-      IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/scaleway-ui
-      REMOTE_SSH_SERVER: ssh://root@react.ui.scaleway.com
+      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
+      SCW_DNS: react.ui.scaleway.com
+
     steps:
       - uses: actions/checkout@v3.0.0
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
+
       - name: Export custom variables
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
           ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
-      - name: Set Docker context
-        uses: arwynfr/actions-docker-context@v2
+      - name: Delete Serverless Container Scaleway
+        uses: philibea/scaleway-containers-deploy@v1.0.5
+        id: teardown
         with:
-          docker_host: ${{ env.REMOTE_SSH_SERVER }}
-          context_name: v-${{ env.BRANCH_SLUG }}
-          ssh_cert: ${{ secrets.SSH_CERT }}
-          ssh_key: ${{ secrets.SSH_KEY }}
-      - name: Remove deployment
-        env:
-          VERSION: v-${{ env.BRANCH_SLUG }}
-        run: docker-compose -p ${VERSION} --context ${VERSION} down --rmi all
+          type: "teardown"
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_dns: ${{ env.SCW_DNS }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.1.0
