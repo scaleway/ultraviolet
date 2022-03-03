@@ -1,7 +1,6 @@
 import deepmerge from 'deepmerge'
 import colorsDeprecated from './deprecated/colors'
-import dark from './tokens/dark'
-import light from './tokens/light'
+import colors, { ContrastType, colorsTokens } from './deprecated/helper'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -26,6 +25,7 @@ const space = {
   8: '64px',
   9: '72px',
 }
+
 export type Spaces = keyof typeof space
 
 const screens = {
@@ -41,18 +41,40 @@ const fonts = {
   monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
   sansSerif: 'Asap, System, sans-serif',
 }
-
-const { colors } = light
+/* eslint-enable sort-keys */
 
 const theme = {
-  colorsDeprecated,
   colors,
+  colorsDeprecated,
   fonts,
-  space,
-  screens,
   radii,
+  screens,
+  space,
 }
-/* eslint-enable sort-keys */
+
+/**
+ * TODO: Remove this function when all components are reviewed and updated with new synchronised colors
+ */
+const createTheme = ({
+  contrasts,
+  space: newSpace,
+  screens: newScreens,
+  radii: newRadii,
+  fonts: newFonts,
+}: {
+  contrasts?: Partial<Record<Color, Partial<ContrastType>>>
+  space?: Partial<Record<Spaces, string>>
+  screens?: Partial<Record<ScreenSize, number>>
+  radii?: Partial<Record<keyof typeof radii, string>>
+  fonts?: Partial<Record<keyof typeof fonts, string>>
+}): SCWUITheme => ({
+  ...theme,
+  ...(contrasts ? { colors: { ...colors, ...colorsTokens(contrasts) } } : {}),
+  ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
+  ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
+  ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
+  ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
+})
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
@@ -71,15 +93,16 @@ const extendTheme = ({
   extendedTheme: RecursivePartial<typeof theme>
 }) => deepmerge(baseTheme, extendedTheme)
 
-const darkTheme = extendTheme({
+// TODO: enable this function when all components are reviewed and updated with new synchronised colors
+/* const darkTheme = extendTheme({
   extendedTheme: { colors: dark.colors },
-})
+}) */
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-type Color = keyof typeof theme.colors
+type Color = keyof typeof colors
 
 export type { SCWUITheme, Color }
 
@@ -91,7 +114,7 @@ export {
   fonts,
   screens,
   extendTheme,
-  darkTheme,
+  createTheme,
 }
 
 export default theme

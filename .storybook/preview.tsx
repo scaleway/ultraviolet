@@ -8,7 +8,7 @@ import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import { light, dark } from './scaleway'
 
-import lightTheme, { darkTheme } from '../src/theme'
+import lightTheme from '../src/theme'
 import DocsContainer from './components/DocsContainer'
 
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
@@ -101,9 +101,8 @@ export const decorators = [
     const mode = useDarkMode() ? 'dark' : 'light'
 
     const generatedTheme = useCallback(
-      ancestorTheme =>
-        adjustedTheme(ancestorTheme, mode === 'light' ? lightTheme : darkTheme),
-      [mode, adjustedTheme, lightTheme, darkTheme],
+      ancestorTheme => adjustedTheme(ancestorTheme, lightTheme),
+      [mode, adjustedTheme, lightTheme],
     )
 
     return (
