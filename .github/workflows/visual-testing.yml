@@ -42,7 +42,7 @@ jobs:
       - run: yarn run test:visual --storiesFilter ^Components/${{ matrix.filter }}
       - name: Archive screenshots
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: storybook-screenshots
           path: .loki/difference
