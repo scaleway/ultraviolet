@@ -1,4 +1,4 @@
-import { css, useTheme } from '@emotion/react'
+import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import React, { ReactNode, useMemo } from 'react'
 import Box from '../Box'
@@ -53,15 +53,13 @@ export const StateBarBar = ({
   value = 0,
   ...props
 }: StateBarBarProps): JSX.Element => {
-  const theme = useTheme()
-
   const variant = useMemo(() => {
     if (unlimited) return 'success'
-    if (value < 90 && value >= 70) return theme.colors.warning.backgroundStrong
+    if (value < 90 && value >= 70) return 'orange'
     if (value >= 90) return 'warning'
 
     return 'primary'
-  }, [unlimited, value, theme])
+  }, [unlimited, value])
 
   return (
     <ProgressBar
