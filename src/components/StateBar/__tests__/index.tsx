@@ -19,11 +19,11 @@ describe('StateBar', () => {
       </StateBar>,
     ))
 
-  test(`should render correctly with a value < 90`, () =>
+  test(`should render correctly with a value < 70`, () =>
     shouldMatchEmotionSnapshot(
       <StateBar>
         <StateBar.State>Hello</StateBar.State>
-        <StateBar.Bar value={89} />
+        <StateBar.Bar value={69} />
       </StateBar>,
     ))
 
@@ -40,6 +40,14 @@ describe('StateBar', () => {
       <StateBar>
         <StateBar.State>Hello</StateBar.State>
         <StateBar.Bar unlimited />
+      </StateBar>,
+    ))
+
+  test(`should render correctly with a value < 90 && >= 70`, () =>
+    shouldMatchEmotionSnapshot(
+      <StateBar>
+        <StateBar.State>Hello</StateBar.State>
+        <StateBar.Bar value={71} />
       </StateBar>,
     ))
 })
