@@ -81,5 +81,3 @@ do
  /* eslint-disable sort-keys */
 export default "; echo "${FINAL_RESULT}"; echo "/* eslint-enable sort-keys */") > src/theme/tokens/"${i}".ts
 done
-
-yarn run format

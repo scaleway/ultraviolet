@@ -14,7 +14,9 @@ jobs:
       - name: Generate json files
         env:
           URL: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
-        run: /scripts/figma-synchronise/tokens.sh $URL
+        run: |
+          /scripts/figma-synchronise/tokens.sh $URL
+          yarn run format
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
