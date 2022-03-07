@@ -1,3 +1,23 @@
+## [0.139.0](https://github.com/scaleway/scaleway-ui/compare/v0.138.2...v0.139.0) (2022-03-07)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/upload-artifact action to v3 ([#1241](https://github.com/scaleway/scaleway-ui/issues/1241)) ([c553140](https://github.com/scaleway/scaleway-ui/commit/c5531407c7a1152faea9ec687c0399b3576e97b0))
+* **devdeps:** update dependency @types/react-dom to v17.0.13 ([#1240](https://github.com/scaleway/scaleway-ui/issues/1240)) ([f8a0600](https://github.com/scaleway/scaleway-ui/commit/f8a06005b64f421322d4232530419b739ecab64f))
+* **devdeps:** update dependency lint-staged to v12.3.5 ([#1244](https://github.com/scaleway/scaleway-ui/issues/1244)) ([9457234](https://github.com/scaleway/scaleway-ui/commit/945723400345c2b0c63cdc3500b32b1bd949d591))
+* **devdeps:** update dependency typescript to v4.6.2 ([#1243](https://github.com/scaleway/scaleway-ui/issues/1243)) ([6995ac3](https://github.com/scaleway/scaleway-ui/commit/6995ac39cd5c251a44b9ce61fc8340e18338009f))
+
+
+### :gear: Features
+
+* **colors:** synchronise with figma ([#1198](https://github.com/scaleway/scaleway-ui/issues/1198)) ([d7dd211](https://github.com/scaleway/scaleway-ui/commit/d7dd211c49a2bfee7a1d4aaa33df87d0ff8582e7))
+
+
+### :bug: Bug Fixes
+
+* **deps:** pin dependency deepmerge to 4.2.2 ([#1246](https://github.com/scaleway/scaleway-ui/issues/1246)) ([92a9d6c](https://github.com/scaleway/scaleway-ui/commit/92a9d6c1fa8861a4be2b3c9088b570dc4b542dec))
+
 ### [0.138.2](https://github.com/scaleway/scaleway-ui/compare/v0.138.1...v0.138.2) (2022-03-03)
 
 
