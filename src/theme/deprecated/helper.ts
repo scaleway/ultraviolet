@@ -1,3 +1,6 @@
+/**
+ * TODO: Remove this file when all components are reviewed and updated with new synchronised colors
+ */
 import * as localContrasts from './contrasts'
 
 export type ContrastType = {
@@ -107,7 +110,7 @@ const generateTokens = ({
   }
 }
 
-export type Color = keyof typeof localContrasts
+type Color = keyof typeof localContrasts
 
 // This function get in parameter a shade of contrasts and return a well formatted design tokens
 export const colorsTokens = (

@@ -1,6 +1,6 @@
-import colors, { colorsTokens } from './colors'
-import type { Color, ContrastType } from './colors'
+import deepmerge from 'deepmerge'
 import colorsDeprecated from './deprecated/colors'
+import colors, { ContrastType, colorsTokens } from './deprecated/helper'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -25,6 +25,7 @@ const space = {
   8: '64px',
   9: '72px',
 }
+
 export type Spaces = keyof typeof space
 
 const screens = {
@@ -40,17 +41,20 @@ const fonts = {
   monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
   sansSerif: 'Asap, System, sans-serif',
 }
-
-const theme = {
-  colorsDeprecated,
-  colors,
-  fonts,
-  space,
-  screens,
-  radii,
-}
 /* eslint-enable sort-keys */
 
+const theme = {
+  colors,
+  colorsDeprecated,
+  fonts,
+  radii,
+  screens,
+  space,
+}
+
+/**
+ * TODO: Remove this function when all components are reviewed and updated with new synchronised colors
+ */
 const createTheme = ({
   contrasts,
   space: newSpace,
@@ -72,12 +76,45 @@ const createTheme = ({
   ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
 })
 
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>
+}
+
+/**
+ * Will extend theme with new theme properties
+ * @param {typeof theme} baseTheme the theme you want to extend from, by default it is set to light theme
+ * @param {RecursivePartial<typeof theme>} extendedTheme the properties of a new theme you want to apply from baseTheme
+ */
+const extendTheme = ({
+  baseTheme = theme,
+  extendedTheme,
+}: {
+  baseTheme?: typeof theme
+  extendedTheme: RecursivePartial<typeof theme>
+}) => deepmerge(baseTheme, extendedTheme)
+
+// TODO: enable this function when all components are reviewed and updated with new synchronised colors
+/* const darkTheme = extendTheme({
+  extendedTheme: { colors: dark.colors },
+}) */
+
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
+type Color = keyof typeof colors
+
+export type { SCWUITheme, Color }
+
+export {
+  colors,
+  colorsDeprecated,
+  space,
+  radii,
+  fonts,
+  screens,
+  extendTheme,
+  createTheme,
+}
+
 export default theme
-
-export type { Color, SCWUITheme }
-
-export { colors, colorsDeprecated, space, radii, fonts, screens, createTheme }

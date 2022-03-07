@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Color } from '../../theme/colors'
+import { Color } from '../../theme'
 
 const bordersStyles = ({
   size,

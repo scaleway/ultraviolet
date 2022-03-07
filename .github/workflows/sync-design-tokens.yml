@@ -1,0 +1,33 @@
+name: Design tokens
+
+on:
+  schedule:
+    - cron: "0 10-20 * * 1-5"
+
+jobs:
+  synchronise:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.5
+        env:
+          LANG: en_US.UTF-8
+      - name: Generate json files
+        env:
+          URL: https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json
+        run: |
+          /scripts/figma-synchronise/tokens.sh $URL
+          yarn run format
+
+      - name: Compare & Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          base: main
+          author: Scaleway Design Bot <github@scaleway.com>
+          commit-message: 'fix(theme): synchronise design tokens'
+          branch: fix/design-tokens-synchronise
+          delete-branch: true
+          title: 'fix(theme): synchronise design tokens'
+          body: |
+            Design system tokens update. This MR is created automatically when a change is detected in design tokens.
+          team-reviewers: console
+          labels:  design system
