@@ -17,16 +17,15 @@ export default {
   title: 'Components/Popper',
 } as Meta
 
-const defaultDisclosure: ComponentProps<typeof Popper>['disclosure'] = ({
-  placement,
-  visible,
-}) => (
+const defaultDisclosure: ComponentProps<
+  typeof Popper
+>['disclosure'] = disclosureProps => (
   <Button
-    icon={visible ? 'chevron-up' : 'chevron-down'}
+    icon={disclosureProps?.visible ? 'chevron-up' : 'chevron-down'}
     iconSize={11}
     iconPosition="right"
   >
-    test {placement}:
+    test {disclosureProps?.placement}:
   </Button>
 )
 
@@ -67,7 +66,9 @@ ComplexChildren.decorators = [
       <Popper
         variant="black"
         aria-label="Custom popover"
-        disclosure={({ placement }) => <Button>Popper {placement}:</Button>}
+        disclosure={disclosureProps => (
+          <Button>Popper {disclosureProps?.placement}:</Button>
+        )}
       >
         {() => (
           <FlexBox direction="column">

@@ -20,6 +20,7 @@ type RadioProps = Pick<
   | 'size'
   | 'error'
   | 'valid'
+  | 'id'
 >
 
 const StyledBox = styled(BorderedBox)<{
