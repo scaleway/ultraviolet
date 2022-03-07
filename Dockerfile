@@ -1,17 +1,18 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:17.7-alpine as builder
+FROM node:17.7-buster as builder
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn ./.yarn
+COPY package.json pnpm-lock.yaml .npmrc ./
 
-RUN yarn --immutable --inline-builds
+RUN apt install curl
+RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+RUN pnpm install
 
 COPY . .
 
-RUN yarn run build:storybook
+RUN pnpm run build:storybook
 
 ######################################################################
 # This stage download a simple http server and serve the application #
@@ -22,6 +23,7 @@ WORKDIR /workspace
 
 COPY --from=builder /usr/src/app/storybook-static .
 
-RUN yarn global add http-server
+RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+RUN pnpm add -g http-server
 
 CMD http-server -g -b -p 80

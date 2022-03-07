@@ -18,13 +18,13 @@
   },
   "engines": {
     "node": ">=14.x",
-    "yarn": ">=1.22.x"
+    "pnpm": ">=6"
   },
   "os": [
     "darwin",
     "linux"
   ],
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "pnpm@6",
   "sideEffects": false,
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
@@ -32,7 +32,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "build:profile": "cross-env PROFILE=true yarn run build",
+    "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
     "build:storybook-visual": "STORYBOOK_ENVIRONMENT=visual build-storybook",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
@@ -40,19 +40,19 @@
     "start": "STORYBOOK_ENVIRONMENT=development start-storybook -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production start-storybook -p 6006",
     "format": "prettier --write '**/*.{ts,tsx,js,json,md,mdx}'",
-    "lint:fix": "yarn run lint --fix",
+    "lint:fix": "pnpm run lint --fix",
     "lint": "eslint --report-unused-disable-directives --cache --ext js,ts,tsx .",
     "prebuild": "shx rm -rf dist",
     "test:unit": "LC_ALL=en_US.UTF-8 jest --config .jest/unit.config.ts",
-    "test:unit:coverage": "yarn run test:unit --coverage",
-    "test:unit:watch": "yarn run test:unit --watch",
-    "test:unit:update": "yarn run test:unit --updateSnapshot",
+    "test:unit:coverage": "pnpm run test:unit --coverage",
+    "test:unit:watch": "pnpm run test:unit --watch",
+    "test:unit:update": "pnpm run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
-    "test:visual:update": "yarn run build:storybook-visual && yarn loki update",
-    "test:visual": "yarn loki test",
+    "test:visual:update": "pnpm run build:storybook-visual && pnpm loki update",
+    "test:visual": "pnpm loki test",
     "prepare": "husky install",
-    "size": "yarn run build && size-limit",
-    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && yarn run format"
+    "size": "pnpm run build && size-limit",
+    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm run format"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
