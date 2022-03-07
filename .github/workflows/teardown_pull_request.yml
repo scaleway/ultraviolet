@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
-      SCW_DNS: react.ui.scaleway.com
 
     steps:
       - uses: actions/checkout@v3.0.0
@@ -28,7 +27,7 @@ jobs:
           type: "teardown"
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_dns: ${{ env.SCW_DNS }}
+          scw_dns: ${{ secrets.SCW_DNS }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
