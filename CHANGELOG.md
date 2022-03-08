@@ -1,3 +1,10 @@
+### [0.139.1](https://github.com/scaleway/scaleway-ui/compare/v0.139.0...v0.139.1) (2022-03-08)
+
+
+### :bug: Bug Fixes
+
+* **teardown:** dns env was not the same, use secret to keep one variable updated ([#1250](https://github.com/scaleway/scaleway-ui/issues/1250)) ([530da23](https://github.com/scaleway/scaleway-ui/commit/530da230f5b172f4488a97337d38a5098657312b))
+
 ## [0.139.0](https://github.com/scaleway/scaleway-ui/compare/v0.138.2...v0.139.0) (2022-03-07)
 
 
