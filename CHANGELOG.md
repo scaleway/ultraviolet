@@ -1,3 +1,10 @@
+### [0.139.2](https://github.com/scaleway/scaleway-ui/compare/v0.139.1...v0.139.2) (2022-03-08)
+
+
+### :bug: Bug Fixes
+
+* visual testing update ([#1254](https://github.com/scaleway/scaleway-ui/issues/1254)) ([0e8708d](https://github.com/scaleway/scaleway-ui/commit/0e8708d4a7a49d3c95bf8620bb8ed4249361c394))
+
 ### [0.139.1](https://github.com/scaleway/scaleway-ui/compare/v0.139.0...v0.139.1) (2022-03-08)
 
 
