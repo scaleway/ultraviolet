@@ -14,7 +14,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.0, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.5.5, @babel/code-frame@npm:^7.8.3":
+"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.5.5, @babel/code-frame@npm:^7.8.3":
   version: 7.16.7
   resolution: "@babel/code-frame@npm:7.16.7"
   dependencies:
@@ -3725,7 +3725,7 @@ __metadata:
     reakit: 1.3.11
     regenerator-runtime: 0.13.9
     rollup: 2.68.0
-    rollup-plugin-dts: 4.1.0
+    rollup-plugin-dts: 4.2.0
     rollup-plugin-postcss: 4.0.2
     rollup-plugin-visualizer: 5.6.0
     semantic-release: 18.0.1
@@ -15413,12 +15413,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.25.7":
-  version: 0.25.7
-  resolution: "magic-string@npm:0.25.7"
+"magic-string@npm:^0.26.1":
+  version: 0.26.1
+  resolution: "magic-string@npm:0.26.1"
   dependencies:
-    sourcemap-codec: ^1.4.4
-  checksum: 727a1fb70f9610304fe384f1df0251eb7d1d9dd779c07ef1225690361b71b216f26f5d934bfb11c919b5b0e7ba50f6240c823a6f2e44cfd33d4a07d7747ca829
+    sourcemap-codec: ^1.4.8
+  checksum: 23f21f5734346ddfbabd7b9834e3ecda3521e3e1db81166c1513b45b729489bbed1eafa8cd052c7db7fdc7c68ebc5c03bc00dd5a23697edda15dbecaf8c98397
   languageName: node
   linkType: hard
 
@@ -19700,19 +19700,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-dts@npm:4.1.0":
-  version: 4.1.0
-  resolution: "rollup-plugin-dts@npm:4.1.0"
+"rollup-plugin-dts@npm:4.2.0":
+  version: 4.2.0
+  resolution: "rollup-plugin-dts@npm:4.2.0"
   dependencies:
-    "@babel/code-frame": ^7.16.0
-    magic-string: ^0.25.7
+    "@babel/code-frame": ^7.16.7
+    magic-string: ^0.26.1
   peerDependencies:
     rollup: ^2.55
-    typescript: ~4.1 || ~4.2 || ~4.3 || ~4.4 || ~4.5
+    typescript: ^4.1
   dependenciesMeta:
     "@babel/code-frame":
       optional: true
-  checksum: add2715d4906dccb8bbad63e02668303eee553b68e2ae8c7c686abc5ea7936ef316db43845eb12bf978002f461e43b00ecfe61bd2ffedd6c570e12a289de7c18
+  checksum: 2b8394bf62c3903a68722266999adf3e85768bf1a7e93286841b466afaabf5cb30501f71d40075c3393cc33defa6ed13d3276bae0d8cb7a87a95d06f7a93c04d
   languageName: node
   linkType: hard
 
@@ -20497,7 +20497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sourcemap-codec@npm:^1.4.4":
+"sourcemap-codec@npm:^1.4.8":
   version: 1.4.8
   resolution: "sourcemap-codec@npm:1.4.8"
   checksum: b57981c05611afef31605732b598ccf65124a9fcb03b833532659ac4d29ac0f7bfacbc0d6c5a28a03e84c7510e7e556d758d0bb57786e214660016fb94279316
