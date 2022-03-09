@@ -24,6 +24,10 @@ export const Default: Story = () => (
       <StateBar.State label="Value >= 90" />
       <StateBar.Bar value={90} />
     </StateBar>
+    <StateBar>
+      <StateBar.State label="Value >= 70 && Value < 90" />
+      <StateBar.Bar value={70} />
+    </StateBar>
   </div>
 )
 
