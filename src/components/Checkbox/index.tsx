@@ -41,7 +41,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
     svg {
       border-radius: ${({ theme }) => theme.radii.default};
       background-color: ${({ theme, disabled }) =>
-        !disabled && theme.colors.neutral.background};
+        !disabled && theme.colors.neutral.backgroundStrong};
       fill: ${({ theme, disabled }) =>
         !disabled && theme.colors.primary.backgroundStrong};
       transition: fill 300ms;

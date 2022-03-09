@@ -32,7 +32,7 @@ const StyledTextAvatar = styled.span<TextAvatarProps>`
   align-items: center;
   background-color: ${({ lock, theme, textBgColor }) =>
     lock
-      ? theme.colors.neutral.background
+      ? theme.colors.neutral.backgroundStrong
       : theme.colors[textBgColor as Color]?.backgroundStrong || textBgColor};
   border-radius: 50%;
   color: ${({ theme, textColor }) =>

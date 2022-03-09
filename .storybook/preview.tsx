@@ -32,9 +32,9 @@ const ENV_PARAMETERS = {
         disable: true,
       },
     },
-    viewMode: 'canvas',
     previewTabs: {
       'storybook/docs/panel': { index: 1 },
+      canvas: { hidden: true },
     },
     viewport: {
       viewports: {},
@@ -65,6 +65,7 @@ const ENV_PARAMETERS = {
     },
   },
   visual: {},
+  layout: 'centered',
 }
 ENV_PARAMETERS.visual = ENV_PARAMETERS.production
 

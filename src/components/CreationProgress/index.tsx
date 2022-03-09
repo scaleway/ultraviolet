@@ -79,7 +79,7 @@ const temporalStepStyles = ({
     : css`
         background-color: transparent;
         border-style: solid;
-        border-color: ${theme.colors.neutral.borderWeak};
+        border-color: ${theme.colors.neutral.backgroundStrong};
       `
 
 const StyledStep = styled('div', {
@@ -100,7 +100,7 @@ const StyledText = styled.div`
 `
 
 const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   height: 7px;
   width: 7px;
   border-radius: 16px;
@@ -114,7 +114,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: 2px;
   flex-grow: 1;
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   position: relative;
 
   ::after {
@@ -209,7 +209,7 @@ const CreationProgress: CreationProgressComponent = ({
           if (temporal !== 'future') {
             return isStepsNumber ? (
               <Typography
-                color={theme.colors.neutral.textStrong}
+                color={theme.colors.success.textStrong}
                 fontWeight={500}
               >
                 {index + 1}
@@ -217,7 +217,7 @@ const CreationProgress: CreationProgressComponent = ({
             ) : (
               <Icon
                 name="check"
-                color={theme.colors.neutral.textStrong}
+                color={theme.colors.success.textStrong}
                 size={20}
               />
             )

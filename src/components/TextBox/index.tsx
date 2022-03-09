@@ -59,7 +59,8 @@ const StyledSeparator = styled(Separator)`
   margin-right: 8px;
   margin-top: 1px;
   height: calc(100% - 2px);
-  background-color: ${({ theme: { colors } }) => colors.neutral.background};
+  background-color: ${({ theme: { colors } }) =>
+    colors.neutral.backgroundStrong};
 `
 type StyledRightElementProps = {
   edit?: boolean

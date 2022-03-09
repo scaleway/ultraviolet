@@ -13,7 +13,7 @@ import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 const styles = {
   body: (theme: Theme) => css`
     > :not(:last-child) {
-      border-bottom: 1px solid ${theme.colors.neutral.background};
+      border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
     }
   `,
   cell: css`
@@ -24,7 +24,7 @@ const styles = {
   head: (theme: Theme) => css`
     display: flex;
     padding-bottom: 8px;
-    border-bottom: 1px solid ${theme.colors.neutral.background};
+    border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
 
     > :not(:last-child) {
       margin-right: 8px;

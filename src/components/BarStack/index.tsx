@@ -52,14 +52,14 @@ const StyledBar = styled.div`
   overflow: hidden;
   text-shadow: -1px 0
       ${({ theme }) =>
-        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
+        transparentize(0.7, theme.colors.neutral.backgroundStronger)},
     0 1px
       ${({ theme }) =>
-        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
+        transparentize(0.7, theme.colors.neutral.backgroundStronger)},
     1px 0
       ${({ theme }) =>
-        transparentize(0.7, theme.colors.neutral.backgroundStrong)},
-    0 -1px ${({ theme }) => transparentize(0.7, theme.colors.neutral.backgroundStrong)};
+        transparentize(0.7, theme.colors.neutral.backgroundStronger)},
+    0 -1px ${({ theme }) => transparentize(0.7, theme.colors.neutral.backgroundStronger)};
 `
 
 const StyledContainer = styled.div`
@@ -68,7 +68,7 @@ const StyledContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   box-shadow: inset 0px 0px 0px 1px
-    ${({ theme }) => theme.colors.neutral.background};
+    ${({ theme }) => theme.colors.neutral.backgroundStrong};
   overflow: hidden;
 
   ${StyledBarWrapper}:nth-child(5n+1) {

@@ -37,7 +37,7 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
     ${IconContainer} {
       background-color: ${transparentize(
         0.75,
-        theme.colors.neutral.background,
+        theme.colors.neutral.backgroundStrong,
       )};
       border-radius: 50%;
 

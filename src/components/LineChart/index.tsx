@@ -62,7 +62,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
     axis: {
       ticks: {
         line: {
-          stroke: theme.colors.neutral.background,
+          stroke: theme.colors.neutral.backgroundStrong,
           strokeWidth: 1,
         },
       },

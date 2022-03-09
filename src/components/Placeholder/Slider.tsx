@@ -20,7 +20,7 @@ const StyledCard = styled.div`
 
 const StyledBanner = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   width: 100%;
   height: 33%;
 `

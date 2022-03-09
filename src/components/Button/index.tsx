@@ -121,7 +121,7 @@ const variants = {
     }),
   secondary: ({ theme }: { theme: Theme }) =>
     plainVariant({
-      bgColorValue: theme.colors.neutral.backgroundDisabled,
+      bgColorValue: theme.colors.neutral.backgroundStrong,
       textColorValue: theme.colors.neutral.text,
     }),
   'secondary-bordered': ({ theme }: { theme: Theme }) =>
@@ -304,14 +304,14 @@ const StyledButton = styled(Box, {
     `
     cursor: default;
     pointer-events: none;
-    color: ${theme.colorsDeprecated.gray350};`}
+    color: ${theme.colors.neutral.textDisabled};`}
 
   ${({ variant, disabled, theme }) =>
     variant !== 'link' &&
     disabled &&
     `
-    background-color: ${theme.colorsDeprecated.gray50};
-    border-color: ${theme.colorsDeprecated.gray50};
+    background-color: ${theme.colors.neutral.backgroundDisabled};
+    border-color: ${theme.colors.neutral.borderDisabled};
     box-shadow: none;
     `}
 

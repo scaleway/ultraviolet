@@ -63,7 +63,7 @@ const BarChart: FunctionComponent<BarChartProps> = ({
     axis: {
       ticks: {
         line: {
-          stroke: theme.colors.neutral.background,
+          stroke: theme.colors.neutral.backgroundStrong,
           strokeWidth: 1,
         },
       },

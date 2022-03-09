@@ -26,7 +26,7 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
   {
     badge: ({ theme }: StyleProps) =>
       css`
-        background-color: ${theme?.colors.neutral.background};
+        background-color: ${theme?.colors.neutral.backgroundStrong};
         color: ${theme?.colors.neutral.text};
         text-transform: capitalize;
         letter-spacing: 1px;

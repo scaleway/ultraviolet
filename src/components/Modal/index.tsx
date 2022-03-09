@@ -197,7 +197,7 @@ const StyledDialogBackdrop = styled(DialogBackdrop)`
   z-index: 999;
   opacity: 1;
   background-color: ${({ theme }) =>
-    transparentize(0.8, theme.colors.neutral.backgroundStrong)};
+    transparentize(0.8, theme.colors.neutral.backgroundStronger)};
   ${({ animated }) => animated && backdropAnimatedStyle}
 `
 
@@ -224,7 +224,7 @@ const StyledDialog = styled(Dialog, {
   width: ${({ width }) => MODAL_WIDTH[width]}px;
   min-height: ${({ height }) => height};
   box-shadow: 0 0 12px 18px
-    ${({ theme }) => transparentize(0.8, theme.colors.neutral.background)};
+    ${({ theme }) => transparentize(0.8, theme.colors.neutral.backgroundStrong)};
   opacity: 1;
   &::before {
     content: '';
