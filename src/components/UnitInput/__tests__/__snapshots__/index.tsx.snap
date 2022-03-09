@@ -140,7 +140,7 @@ exports[`UnitInput renders with custom options 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -152,7 +152,7 @@ exports[`UnitInput renders with custom options 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -192,28 +192,28 @@ exports[`UnitInput renders with custom options 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -235,7 +235,7 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -263,7 +263,7 @@ exports[`UnitInput renders with custom options 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -277,12 +277,7 @@ exports[`UnitInput renders with custom options 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -300,9 +295,11 @@ exports[`UnitInput renders with custom options 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -315,7 +312,7 @@ exports[`UnitInput renders with custom options 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -334,7 +331,7 @@ exports[`UnitInput renders with custom options 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -346,7 +343,7 @@ exports[`UnitInput renders with custom options 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,7 +355,7 @@ exports[`UnitInput renders with custom options 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -407,20 +404,20 @@ exports[`UnitInput renders with custom options 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-3-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -431,12 +428,12 @@ exports[`UnitInput renders with custom options 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             KB
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -459,14 +456,14 @@ exports[`UnitInput renders with custom options 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -636,7 +633,7 @@ exports[`UnitInput renders with default props 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -648,7 +645,7 @@ exports[`UnitInput renders with default props 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -688,28 +685,28 @@ exports[`UnitInput renders with default props 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -731,7 +728,7 @@ exports[`UnitInput renders with default props 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -759,7 +756,7 @@ exports[`UnitInput renders with default props 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -773,12 +770,7 @@ exports[`UnitInput renders with default props 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -796,9 +788,11 @@ exports[`UnitInput renders with default props 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -811,7 +805,7 @@ exports[`UnitInput renders with default props 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -830,7 +824,7 @@ exports[`UnitInput renders with default props 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -842,7 +836,7 @@ exports[`UnitInput renders with default props 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -854,7 +848,7 @@ exports[`UnitInput renders with default props 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -903,20 +897,20 @@ exports[`UnitInput renders with default props 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-2-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -927,12 +921,12 @@ exports[`UnitInput renders with default props 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -955,14 +949,14 @@ exports[`UnitInput renders with default props 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -1132,7 +1126,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1144,7 +1138,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1184,28 +1178,28 @@ exports[`UnitInput renders with defaultOption 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1227,7 +1221,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -1255,7 +1249,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -1269,12 +1263,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -1292,9 +1281,11 @@ exports[`UnitInput renders with defaultOption 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1307,7 +1298,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1326,7 +1317,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1338,7 +1329,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1350,7 +1341,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -1399,20 +1390,20 @@ exports[`UnitInput renders with defaultOption 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-6-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -1423,12 +1414,12 @@ exports[`UnitInput renders with defaultOption 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -1451,14 +1442,14 @@ exports[`UnitInput renders with defaultOption 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -1628,7 +1619,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1640,7 +1631,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1680,28 +1671,28 @@ exports[`UnitInput renders with defaultValue 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1723,7 +1714,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -1751,7 +1742,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -1765,12 +1756,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -1788,9 +1774,11 @@ exports[`UnitInput renders with defaultValue 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1803,7 +1791,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1822,7 +1810,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1834,7 +1822,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1846,7 +1834,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -1895,20 +1883,20 @@ exports[`UnitInput renders with defaultValue 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-5-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -1919,12 +1907,12 @@ exports[`UnitInput renders with defaultValue 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -1947,14 +1935,14 @@ exports[`UnitInput renders with defaultValue 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -2131,7 +2119,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2143,7 +2131,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   white-space: nowrap;
 }
 
-.css-1hrfza9-control {
+.cache-1hrfza9-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2183,11 +2171,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   animation: none;
 }
 
-.css-1hrfza9-control:hover {
+.cache-1hrfza9-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-69ists-Component {
+.cache-69ists-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2210,7 +2198,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-top: 0;
 }
 
-.css-69ists-Component label {
+.cache-69ists-Component label {
   display: none;
 }
 
@@ -2239,7 +2227,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   opacity: 0.5;
 }
 
-.css-yp3il2-singleValue {
+.cache-yp3il2-singleValue {
   color: #c4c9d6;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -2253,12 +2241,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1rc6p1r-Component {
+.cache-1g94l98-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -2276,9 +2259,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1rc6p1r-Component:after {
+.cache-1g94l98-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2291,7 +2276,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2310,7 +2295,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2322,7 +2307,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2334,7 +2319,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2384,20 +2369,20 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-11-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-1hrfza9-control"
+        class=" cache-1hrfza9-control"
       >
         <div
-          class=" css-69ists-Component"
+          class=" cache-69ists-Component"
         >
           <label
             aria-live="assertive"
@@ -2408,12 +2393,12 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
             Select...
           </label>
           <div
-            class=" css-yp3il2-singleValue"
+            class=" cache-yp3il2-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1rc6p1r-Component"
+            class="cache-1g94l98-Component"
             data-value=""
           >
             <input
@@ -2437,14 +2422,14 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -2609,7 +2594,7 @@ exports[`UnitInput renders with min max 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2621,7 +2606,7 @@ exports[`UnitInput renders with min max 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2661,28 +2646,28 @@ exports[`UnitInput renders with min max 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2704,7 +2689,7 @@ exports[`UnitInput renders with min max 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -2732,7 +2717,7 @@ exports[`UnitInput renders with min max 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -2746,12 +2731,7 @@ exports[`UnitInput renders with min max 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -2769,9 +2749,11 @@ exports[`UnitInput renders with min max 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2784,7 +2766,7 @@ exports[`UnitInput renders with min max 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2803,7 +2785,7 @@ exports[`UnitInput renders with min max 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2815,7 +2797,7 @@ exports[`UnitInput renders with min max 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2827,7 +2809,7 @@ exports[`UnitInput renders with min max 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2876,20 +2858,20 @@ exports[`UnitInput renders with min max 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-4-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -2900,12 +2882,12 @@ exports[`UnitInput renders with min max 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -2928,14 +2910,14 @@ exports[`UnitInput renders with min max 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -3105,7 +3087,7 @@ exports[`UnitInput renders with size large 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -3117,7 +3099,7 @@ exports[`UnitInput renders with size large 1`] = `
   white-space: nowrap;
 }
 
-.css-167id9b-control {
+.cache-167id9b-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3157,28 +3139,28 @@ exports[`UnitInput renders with size large 1`] = `
   animation: none;
 }
 
-.css-167id9b-control:hover {
+.cache-167id9b-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-167id9b-control:focus-within {
+.cache-167id9b-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-167id9b-control:focus-within svg {
+.cache-167id9b-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-167id9b-control:hover {
+.cache-167id9b-control:hover {
   border-color: #390171;
 }
 
-.css-167id9b-control:hover svg {
+.cache-167id9b-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3200,7 +3182,7 @@ exports[`UnitInput renders with size large 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -3228,7 +3210,7 @@ exports[`UnitInput renders with size large 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -3242,12 +3224,7 @@ exports[`UnitInput renders with size large 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -3265,9 +3242,11 @@ exports[`UnitInput renders with size large 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3280,7 +3259,7 @@ exports[`UnitInput renders with size large 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3299,7 +3278,7 @@ exports[`UnitInput renders with size large 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3311,7 +3290,7 @@ exports[`UnitInput renders with size large 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3323,7 +3302,7 @@ exports[`UnitInput renders with size large 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3372,20 +3351,20 @@ exports[`UnitInput renders with size large 1`] = `
       data-testid="rich-select-default-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-7-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-167id9b-control"
+        class=" cache-167id9b-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -3396,12 +3375,12 @@ exports[`UnitInput renders with size large 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -3424,14 +3403,14 @@ exports[`UnitInput renders with size large 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -3601,7 +3580,7 @@ exports[`UnitInput renders with size medium 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -3613,7 +3592,7 @@ exports[`UnitInput renders with size medium 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3653,28 +3632,28 @@ exports[`UnitInput renders with size medium 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3696,7 +3675,7 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -3724,7 +3703,7 @@ exports[`UnitInput renders with size medium 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -3738,12 +3717,7 @@ exports[`UnitInput renders with size medium 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -3761,9 +3735,11 @@ exports[`UnitInput renders with size medium 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3776,7 +3752,7 @@ exports[`UnitInput renders with size medium 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3795,7 +3771,7 @@ exports[`UnitInput renders with size medium 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3807,7 +3783,7 @@ exports[`UnitInput renders with size medium 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3819,7 +3795,7 @@ exports[`UnitInput renders with size medium 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3868,20 +3844,20 @@ exports[`UnitInput renders with size medium 1`] = `
       data-testid="rich-select-default-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-8-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -3892,12 +3868,12 @@ exports[`UnitInput renders with size medium 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -3920,14 +3896,14 @@ exports[`UnitInput renders with size medium 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -4097,7 +4073,7 @@ exports[`UnitInput renders with size small 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -4109,7 +4085,7 @@ exports[`UnitInput renders with size small 1`] = `
   white-space: nowrap;
 }
 
-.css-1xpsz7j-control {
+.cache-1xpsz7j-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4149,28 +4125,28 @@ exports[`UnitInput renders with size small 1`] = `
   animation: none;
 }
 
-.css-1xpsz7j-control:hover {
+.cache-1xpsz7j-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1xpsz7j-control:focus-within {
+.cache-1xpsz7j-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1xpsz7j-control:focus-within svg {
+.cache-1xpsz7j-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1xpsz7j-control:hover {
+.cache-1xpsz7j-control:hover {
   border-color: #390171;
 }
 
-.css-1xpsz7j-control:hover svg {
+.cache-1xpsz7j-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4192,7 +4168,7 @@ exports[`UnitInput renders with size small 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -4220,7 +4196,7 @@ exports[`UnitInput renders with size small 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -4234,12 +4210,7 @@ exports[`UnitInput renders with size small 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -4257,9 +4228,11 @@ exports[`UnitInput renders with size small 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -4272,7 +4245,7 @@ exports[`UnitInput renders with size small 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4291,7 +4264,7 @@ exports[`UnitInput renders with size small 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4303,7 +4276,7 @@ exports[`UnitInput renders with size small 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4315,7 +4288,7 @@ exports[`UnitInput renders with size small 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -4364,20 +4337,20 @@ exports[`UnitInput renders with size small 1`] = `
       data-testid="rich-select-default-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-9-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-1xpsz7j-control"
+        class=" cache-1xpsz7j-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -4388,12 +4361,12 @@ exports[`UnitInput renders with size small 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -4416,14 +4389,14 @@ exports[`UnitInput renders with size small 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -4593,7 +4566,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   box-shadow: none;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -4605,7 +4578,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   white-space: nowrap;
 }
 
-.css-dyxw8i-control {
+.cache-dyxw8i-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4645,28 +4618,28 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   animation: none;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-dyxw8i-control:focus-within {
+.cache-dyxw8i-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-dyxw8i-control:focus-within svg {
+.cache-dyxw8i-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-dyxw8i-control:hover {
+.cache-dyxw8i-control:hover {
   border-color: #390171;
 }
 
-.css-dyxw8i-control:hover svg {
+.cache-dyxw8i-control:hover svg {
   fill: #4f0599;
 }
 
-.css-n58nda-Component {
+.cache-n58nda-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4688,7 +4661,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-top: 0;
 }
 
-.css-n58nda-Component label {
+.cache-n58nda-Component label {
   display: none;
 }
 
@@ -4716,7 +4689,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   opacity: 1;
 }
 
-.css-k8ufz4-singleValue {
+.cache-k8ufz4-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -4730,12 +4703,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding-left: 0;
 }
 
-.cache-aq1w8z-Component {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-1lldmgh-Component {
+.cache-vesquk-Component {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 0;
@@ -4753,9 +4721,11 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-1lldmgh-Component:after {
+.cache-vesquk-Component:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -4768,7 +4738,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   padding: 0;
 }
 
-.css-1b81bwn-Component {
+.cache-1b81bwn-Component {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4787,7 +4757,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4799,7 +4769,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4811,7 +4781,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -4860,20 +4830,20 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
       data-testid="rich-select-test-unit"
     >
       <span
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
         id="react-select-10-live-region"
       />
       <span
         aria-atomic="false"
         aria-live="polite"
         aria-relevant="additions text"
-        class="css-1f43avz-a11yText-A11yText"
+        class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" css-dyxw8i-control"
+        class=" cache-dyxw8i-control"
       >
         <div
-          class=" css-n58nda-Component"
+          class=" cache-n58nda-Component"
         >
           <label
             aria-live="assertive"
@@ -4884,12 +4854,12 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
             Select...
           </label>
           <div
-            class=" css-k8ufz4-singleValue"
+            class=" cache-k8ufz4-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-aq1w8z-Component css-1lldmgh-Component"
+            class="cache-vesquk-Component"
             data-value=""
           >
             <input
@@ -4912,14 +4882,14 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
           </div>
         </div>
         <div
-          class=" css-1b81bwn-Component"
+          class=" cache-1b81bwn-Component"
         >
           <span
-            class=" css-27txfv-indicatorSeparator"
+            class=" cache-27txfv-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" css-tlfecz-indicatorContainer"
+            class=" cache-tlfecz-indicatorContainer"
           >
             <svg
               class="sc-ui-icon etwatq50 cache-ctcg2i"
