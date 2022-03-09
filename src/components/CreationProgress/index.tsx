@@ -79,7 +79,7 @@ const temporalStepStyles = ({
     : css`
         background-color: transparent;
         border-style: solid;
-        border-color: ${theme.colors.neutral.backgroundStrong};
+        border-color: ${theme.colors.neutral.borderWeak};
       `
 
 const StyledStep = styled('div', {
@@ -100,7 +100,7 @@ const StyledText = styled.div`
 `
 
 const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   height: 7px;
   width: 7px;
   border-radius: 16px;
@@ -114,7 +114,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: 2px;
   flex-grow: 1;
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   position: relative;
 
   ::after {

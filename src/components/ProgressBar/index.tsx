@@ -83,7 +83,7 @@ const ProgressBar: VoidFunctionComponent<ProgressBarProps> = ({
       aria-valuenow={value}
       aria-valuemin={0}
       aria-valuemax={100}
-      backgroundColor={backgroundColor ?? theme.colors.neutral.backgroundStrong}
+      backgroundColor={backgroundColor ?? theme.colors.neutral.borderWeak}
       {...props}
     >
       {progress ? (
