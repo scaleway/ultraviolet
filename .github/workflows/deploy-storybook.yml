@@ -61,7 +61,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.0.5
+        uses: docker://ghcr.io/philibea/scaleway-containers-deploy:1.0
         id: deploy
         with:
           type: "deploy"
