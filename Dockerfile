@@ -4,7 +4,7 @@
 FROM node:17.7-buster as builder
 WORKDIR /usr/src/app
 
-COPY package.json pnpm-lock.yaml .npmrc ./
+COPY package.json pnpm-lock.yaml ./
 
 RUN apt install curl
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
