@@ -15,11 +15,11 @@ We tend towards 100% of coverage, this won't be able to cover all edge cases and
 Every js files inside a `__tests__` folder will be executed
 
 ```sh
-$ yarn run test # Will run all tests
-$ yarn run test --updateSnapshot # Will update all snapshots
-$ yarn run test:watch # Will watch tests and only rerun the one who are modified
-$ yarn run test:coverage # Will generate a coverage report
-$ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
+$ pnpm run test # Will run all tests
+$ pnpm run test -- --updateSnapshot # Will update all snapshots
+$ pnpm run test:watch # Will watch tests and only rerun the one who are modified
+$ pnpm run test:coverage # Will generate a coverage report
+$ pnpm run test:coverage -- --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
 ```
 
 ## Testing behavior (click, hover, input, ...)

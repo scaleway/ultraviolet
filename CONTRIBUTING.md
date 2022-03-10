@@ -83,13 +83,13 @@ git checkout -b fix/my-branch
 5. Install dependencies and start storybook to test your modifications:
 
 ```shell
-yarn install && yarn start
+pnpm install && pnpm start
 ```
 
 6. Make your code modifications and test them locally:
 
 ```shell
-yarn test:unit
+pnpm test:unit
 ```
 
 If you have an error with unit test please check corresponding test and try to resolve the issue.
@@ -98,7 +98,7 @@ Generating snapshot might be required depending on modification.
 7. Commit using [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) and push your changes:
 
 ```shell
-yarn commit
+pnpm commit
 ```
 
 and then:

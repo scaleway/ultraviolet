@@ -18,7 +18,7 @@ Scaleway UI library.
 ## Quick Start
 
 ```sh
-$ yarn add @scaleway/ui @emotion/react @emotion/styled
+$ pnpm add @scaleway/ui @emotion/react @emotion/styled
 ```
 
 ```js
@@ -68,7 +68,7 @@ declare module '@emotion/react' {
 Before any command, install dependencies running following command:
 
 ```sh
-$ yarn install
+$ pnpm install
 ```
 
 ### Storybook
@@ -76,7 +76,7 @@ $ yarn install
 You can easily start Storybook by running:
 
 ```sh
-$ yarn run start
+$ pnpm run start
 ```
 
 Storybook documentation will then be available on [http://localhost:6006](http://localhost:6006)
@@ -86,53 +86,53 @@ Storybook documentation will then be available on [http://localhost:6006](http:/
 #### Unit
 
 ```sh
-$ yarn run test # Will run all tests
-$ yarn run test --updateSnapshot # Will update all snapshots
-$ yarn run test:watch # Will watch tests and only rerun the one who are modified
-$ yarn run test:coverage # Will generate a coverage report
-$ yarn run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
+$ pnpm run test # Will run all tests
+$ pnpm run test -- --updateSnapshot # Will update all snapshots
+$ pnpm run test:watch # Will watch tests and only rerun the one who are modified
+$ pnpm run test:coverage # Will generate a coverage report
+$ pnpm run test:coverage -- --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
 ```
 
 #### Accessibility
 
 ```sh
-$ yarn run test:a11y # Will run all accessibility tests
-$ yarn run test:a11y src/components/Alert # Will run accessibility test of Alert component only
+$ pnpm run test:a11y # Will run all accessibility tests
+$ pnpm run test:a11y src/components/Alert # Will run accessibility test of Alert component only
 ```
 
 #### Lint
 
 ```sh
-$ yarn run lint
-$ yarn run lint:fix
+$ pnpm run lint
+$ pnpm run lint:fix
 ```
 
 ### Build
 
 ```sh
-$ yarn run build
-$ yarn run build:profile # Will open a visual representation of the modules inside the compile package
+$ pnpm run build
+$ pnpm run build:profile # Will open a visual representation of the modules inside the compile package
 ```
 
 ### Use a locally built package
 
 You might want to test your local changes against a React application.
 
-> [`yalc`](https://github.com/whitecolor/yalc) is a tool aiming to simplify working with local npm packages by providing a different workflow than `npm/yarn link`, hence avoiding most of their issues with module resolving.
+> [`yalc`](https://github.com/whitecolor/yalc) is a tool aiming to simplify working with local npm packages by providing a different workflow than `npm/pnpm link`, hence avoiding most of their issues with module resolving.
 
 ```bash
-$ yarn global add yalc # Make sure to have the yalc binary
+$ pnpm install --global yalc # Make sure to have the yalc binary
 ```
 
 ```bash
 $ cd scaleway-ui
-$ yarn build && yalc publish
+$ pnpm build && yalc publish
 $ # Now it's ready to install in your project
 $ cd ../project-something
-$ yalc add @scaleway/ui --yarn
+$ yalc add @scaleway/ui
 $ cd ../scaleway-ui
 $ # If you do some changes into your package
-$ yarn build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
+$ pnpm build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
 ```
 
 > :warning: since [1.0.0.pre.51 (2021-04-23)](https://github.com/wclr/yalc/blob/master/CHANGELOG.md#100pre51-2021-04-23), `yalc publish` needs the `--sig` option to trigger webpack module actual update.
