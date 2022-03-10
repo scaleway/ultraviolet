@@ -2014,7 +2014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.8.1, @emotion/react@npm:^11.1.1":
+"@emotion/react@npm:11.8.1":
   version: 11.8.1
   resolution: "@emotion/react@npm:11.8.1"
   dependencies:
@@ -2035,6 +2035,29 @@ __metadata:
     "@types/react":
       optional: true
   checksum: a767c6d7ca9e45dc3c1e873cfa51952db24e0d279944403ceb06be82d15859354e128becf6f7d0f8ff2b5f3460e3c165cd2b16ab1a2446e8e15e134a69e6ea3a
+  languageName: node
+  linkType: hard
+
+"@emotion/react@npm:11.8.2, @emotion/react@npm:^11.1.1":
+  version: 11.8.2
+  resolution: "@emotion/react@npm:11.8.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/utils": ^1.1.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: a8733f8375f9798953019872137326f39e5171b3286535fe34a695d63067a2c0f0f154beb6d117361206ef04a584fa4adef0ecc450654b6af4695b1d893d2496
   languageName: node
   linkType: hard
 
@@ -3648,7 +3671,7 @@ __metadata:
     "@emotion/cache": 11.7.1
     "@emotion/eslint-plugin": 11.7.0
     "@emotion/jest": 11.8.0
-    "@emotion/react": 11.8.1
+    "@emotion/react": 11.8.2
     "@emotion/serialize": 1.0.2
     "@emotion/styled": 11.8.1
     "@nivo/bar": 0.79.1
@@ -3738,7 +3761,7 @@ __metadata:
     webpack: 5.70.0
     zxcvbn: 4.4.2
   peerDependencies:
-    "@emotion/react": 11.8.1
+    "@emotion/react": 11.8.2
     "@emotion/styled": 11.8.1
     react: 17.0.2
     react-dom: 17.0.2
