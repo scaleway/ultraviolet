@@ -1,62 +1,53 @@
 ### [0.139.2](https://github.com/scaleway/scaleway-ui/compare/v0.139.1...v0.139.2) (2022-03-08)
 
-
 ### :bug: Bug Fixes
 
-* visual testing update ([#1254](https://github.com/scaleway/scaleway-ui/issues/1254)) ([0e8708d](https://github.com/scaleway/scaleway-ui/commit/0e8708d4a7a49d3c95bf8620bb8ed4249361c394))
+- visual testing update ([#1254](https://github.com/scaleway/scaleway-ui/issues/1254)) ([0e8708d](https://github.com/scaleway/scaleway-ui/commit/0e8708d4a7a49d3c95bf8620bb8ed4249361c394))
 
 ### [0.139.1](https://github.com/scaleway/scaleway-ui/compare/v0.139.0...v0.139.1) (2022-03-08)
 
-
 ### :bug: Bug Fixes
 
-* **teardown:** dns env was not the same, use secret to keep one variable updated ([#1250](https://github.com/scaleway/scaleway-ui/issues/1250)) ([530da23](https://github.com/scaleway/scaleway-ui/commit/530da230f5b172f4488a97337d38a5098657312b))
+- **teardown:** dns env was not the same, use secret to keep one variable updated ([#1250](https://github.com/scaleway/scaleway-ui/issues/1250)) ([530da23](https://github.com/scaleway/scaleway-ui/commit/530da230f5b172f4488a97337d38a5098657312b))
 
 ## [0.139.0](https://github.com/scaleway/scaleway-ui/compare/v0.138.2...v0.139.0) (2022-03-07)
 
-
 ### :package: Chore
 
-* **devdeps:** update actions/upload-artifact action to v3 ([#1241](https://github.com/scaleway/scaleway-ui/issues/1241)) ([c553140](https://github.com/scaleway/scaleway-ui/commit/c5531407c7a1152faea9ec687c0399b3576e97b0))
-* **devdeps:** update dependency @types/react-dom to v17.0.13 ([#1240](https://github.com/scaleway/scaleway-ui/issues/1240)) ([f8a0600](https://github.com/scaleway/scaleway-ui/commit/f8a06005b64f421322d4232530419b739ecab64f))
-* **devdeps:** update dependency lint-staged to v12.3.5 ([#1244](https://github.com/scaleway/scaleway-ui/issues/1244)) ([9457234](https://github.com/scaleway/scaleway-ui/commit/945723400345c2b0c63cdc3500b32b1bd949d591))
-* **devdeps:** update dependency typescript to v4.6.2 ([#1243](https://github.com/scaleway/scaleway-ui/issues/1243)) ([6995ac3](https://github.com/scaleway/scaleway-ui/commit/6995ac39cd5c251a44b9ce61fc8340e18338009f))
-
+- **devdeps:** update actions/upload-artifact action to v3 ([#1241](https://github.com/scaleway/scaleway-ui/issues/1241)) ([c553140](https://github.com/scaleway/scaleway-ui/commit/c5531407c7a1152faea9ec687c0399b3576e97b0))
+- **devdeps:** update dependency @types/react-dom to v17.0.13 ([#1240](https://github.com/scaleway/scaleway-ui/issues/1240)) ([f8a0600](https://github.com/scaleway/scaleway-ui/commit/f8a06005b64f421322d4232530419b739ecab64f))
+- **devdeps:** update dependency lint-staged to v12.3.5 ([#1244](https://github.com/scaleway/scaleway-ui/issues/1244)) ([9457234](https://github.com/scaleway/scaleway-ui/commit/945723400345c2b0c63cdc3500b32b1bd949d591))
+- **devdeps:** update dependency typescript to v4.6.2 ([#1243](https://github.com/scaleway/scaleway-ui/issues/1243)) ([6995ac3](https://github.com/scaleway/scaleway-ui/commit/6995ac39cd5c251a44b9ce61fc8340e18338009f))
 
 ### :gear: Features
 
-* **colors:** synchronise with figma ([#1198](https://github.com/scaleway/scaleway-ui/issues/1198)) ([d7dd211](https://github.com/scaleway/scaleway-ui/commit/d7dd211c49a2bfee7a1d4aaa33df87d0ff8582e7))
-
+- **colors:** synchronise with figma ([#1198](https://github.com/scaleway/scaleway-ui/issues/1198)) ([d7dd211](https://github.com/scaleway/scaleway-ui/commit/d7dd211c49a2bfee7a1d4aaa33df87d0ff8582e7))
 
 ### :bug: Bug Fixes
 
-* **deps:** pin dependency deepmerge to 4.2.2 ([#1246](https://github.com/scaleway/scaleway-ui/issues/1246)) ([92a9d6c](https://github.com/scaleway/scaleway-ui/commit/92a9d6c1fa8861a4be2b3c9088b570dc4b542dec))
+- **deps:** pin dependency deepmerge to 4.2.2 ([#1246](https://github.com/scaleway/scaleway-ui/issues/1246)) ([92a9d6c](https://github.com/scaleway/scaleway-ui/commit/92a9d6c1fa8861a4be2b3c9088b570dc4b542dec))
 
 ### [0.138.2](https://github.com/scaleway/scaleway-ui/compare/v0.138.1...v0.138.2) (2022-03-03)
 
-
 ### :bug: Bug Fixes
 
-* **deps:** update dependency react-datepicker to v4.7.0 ([#1226](https://github.com/scaleway/scaleway-ui/issues/1226)) ([9aa2d99](https://github.com/scaleway/scaleway-ui/commit/9aa2d99b4d1038bb7f87fc566515fde9c16facab))
+- **deps:** update dependency react-datepicker to v4.7.0 ([#1226](https://github.com/scaleway/scaleway-ui/issues/1226)) ([9aa2d99](https://github.com/scaleway/scaleway-ui/commit/9aa2d99b4d1038bb7f87fc566515fde9c16facab))
 
 ### [0.138.1](https://github.com/scaleway/scaleway-ui/compare/v0.138.0...v0.138.1) (2022-03-03)
 
-
 ### :package: Chore
 
-* **devdeps:** update dependency eslint to v8.10.0 ([#1236](https://github.com/scaleway/scaleway-ui/issues/1236)) ([ff77d51](https://github.com/scaleway/scaleway-ui/commit/ff77d51c35ab814b04f2f2417ba9c63f1d21f230))
-* **devdeps:** update dependency rollup-plugin-visualizer to v5.6.0 ([#1235](https://github.com/scaleway/scaleway-ui/issues/1235)) ([2f9e6d5](https://github.com/scaleway/scaleway-ui/commit/2f9e6d5bfcc8433378df455df8a76d36759098a3))
-
+- **devdeps:** update dependency eslint to v8.10.0 ([#1236](https://github.com/scaleway/scaleway-ui/issues/1236)) ([ff77d51](https://github.com/scaleway/scaleway-ui/commit/ff77d51c35ab814b04f2f2417ba9c63f1d21f230))
+- **devdeps:** update dependency rollup-plugin-visualizer to v5.6.0 ([#1235](https://github.com/scaleway/scaleway-ui/issues/1235)) ([2f9e6d5](https://github.com/scaleway/scaleway-ui/commit/2f9e6d5bfcc8433378df455df8a76d36759098a3))
 
 ### :repeat: CI
 
-* **deploy:** add serverless deploy ([#1229](https://github.com/scaleway/scaleway-ui/issues/1229)) ([bf19ed6](https://github.com/scaleway/scaleway-ui/commit/bf19ed659adfdd6bfc8449a1b70eb14535cad2cc))
-* **deploy:** fix build image versiong ([#1238](https://github.com/scaleway/scaleway-ui/issues/1238)) ([72b059e](https://github.com/scaleway/scaleway-ui/commit/72b059e95d16854ec4666a087d961831c697232b))
-
+- **deploy:** add serverless deploy ([#1229](https://github.com/scaleway/scaleway-ui/issues/1229)) ([bf19ed6](https://github.com/scaleway/scaleway-ui/commit/bf19ed659adfdd6bfc8449a1b70eb14535cad2cc))
+- **deploy:** fix build image versiong ([#1238](https://github.com/scaleway/scaleway-ui/issues/1238)) ([72b059e](https://github.com/scaleway/scaleway-ui/commit/72b059e95d16854ec4666a087d961831c697232b))
 
 ### :bug: Bug Fixes
 
-* adds custom css for list expandable ([#1237](https://github.com/scaleway/scaleway-ui/issues/1237)) ([3f68ebf](https://github.com/scaleway/scaleway-ui/commit/3f68ebfec681bd34dbda3b57da2eadf667d14325))
+- adds custom css for list expandable ([#1237](https://github.com/scaleway/scaleway-ui/issues/1237)) ([3f68ebf](https://github.com/scaleway/scaleway-ui/commit/3f68ebfec681bd34dbda3b57da2eadf667d14325))
 
 ## [0.138.0](https://github.com/scaleway/scaleway-ui/compare/v0.137.1...v0.138.0) (2022-03-02)
 

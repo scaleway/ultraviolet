@@ -51,7 +51,8 @@
     "test:visual:update": "yarn run build:storybook-visual && yarn loki update",
     "test:visual": "yarn loki test",
     "prepare": "husky install",
-    "size": "yarn run build && size-limit"
+    "size": "yarn run build && size-limit",
+    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && yarn run format"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+    echo "Error: one parameter is missing, you should pass an url that contains JSON tokens as parameter: ./figma-synchronisetokens.sh [URL]"
+    exit 1
+fi
+
 # Raw JSON file containing all design tokens passed as first parameter of script
 URL=$1
 
@@ -33,13 +38,13 @@ function generateTokens {
           {"colors": .}
   ')
   # Overload of tokens colors specific to each theme, depending
-    GENERATED_OVERLOADED_COLORS=$(echo "${JSON} $( cat "${TOKENS_EXTENSION}")" | jq -s '.[0] * .[1]' | jq --sort-keys --arg theme "${THEME}" --argjson shades "${PARSED_SHADES}" '
-    .[$theme] | with_entries(select(.value | has("backgroundWeakElevated"))) |
-      reduce (. | to_entries | .[]) as $sentiment
-        ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token
-          ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }) |
-            {"colors": .}
-    ')
+  GENERATED_OVERLOADED_COLORS=$(echo "${JSON} $( cat "${TOKENS_EXTENSION}")" | jq -s '.[0] * .[1]' | jq --sort-keys --arg theme "${THEME}" --argjson shades "${PARSED_SHADES}" '
+  .[$theme] | with_entries(select(.value | has("backgroundWeakElevated"))) |
+    reduce (. | to_entries | .[]) as $sentiment
+      ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token
+        ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }) |
+          {"colors": .}
+  ')
 
   # Gives all colors of shadows
   SHADOWS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
@@ -60,7 +65,7 @@ function generateTokens {
   # There are others colors for overlay for example
   GENERATED_OTHERS_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
     reduce (.[$theme].others | to_entries | .[]) as $sentiment
-      ({}; . + {"\($sentiment.key)": $sentiment.value.value}) | {"others": .}
+      ({}; . + {"\($sentiment.key)": $sentiment.value.value}) | {"colors": .}
   ')
 
   FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHERS_TOKENS}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3]')
