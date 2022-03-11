@@ -21,7 +21,7 @@ jobs:
           ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
       - name: Delete Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.0.6
+        uses: philibea/scaleway-containers-deploy@v1.0.7
         id: teardown
         with:
           type: "teardown"
