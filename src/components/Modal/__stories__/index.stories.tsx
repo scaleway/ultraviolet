@@ -36,7 +36,7 @@ Switch.decorators = [
   () => (
     <Modal
       disclosure={dialog => (
-        <SWUISwitch name="switch" onChange={() => dialog.toggle?.()} />
+        <SWUISwitch name="switch" onChange={() => dialog?.toggle?.()} />
       )}
     >
       <div>Content should be present in center of the modal</div>
