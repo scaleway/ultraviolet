@@ -645,7 +645,7 @@ TextBox.propTypes = {
   generated: PropTypes.bool,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   id: PropTypes.string,
-  inputProps: PropTypes.objectOf(PropTypes.any),
+  inputProps: PropTypes.shape({}),
   label: PropTypes.string,
   multiline: PropTypes.bool,
   name: PropTypes.string,

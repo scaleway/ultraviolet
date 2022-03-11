@@ -49,6 +49,7 @@ const StyledPageButton = styled(Button, {
 `
 
 export type PaginationComponentProps<T = unknown> = {
+  // eslint-disable-next-line react/no-unused-prop-types
   pageTabCount?: number
   paginationState: PaginationState<T>
 }
@@ -407,7 +408,9 @@ export const PaginationForwardFn = forwardRef<PaginationState, PaginationProps>(
 
 PaginationForwardFn.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.arrayOf(PropTypes.any),
+  // eslint-disable-next-line react/forbid-prop-types
   initialData: PropTypes.arrayOf(PropTypes.any),
   initialPage: PropTypes.number,
   LeftComponent: PropTypes.oneOfType([PropTypes.func]),
@@ -428,6 +431,7 @@ PaginationContainer.propTypes = {
   pageTabCount: PropTypes.number,
   paginationState: PropTypes.shape({
     canLoadMore: PropTypes.bool.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     data: PropTypes.arrayOf(PropTypes.any),
     goToFirstPage: PropTypes.func.isRequired,
     goToLastPage: PropTypes.func.isRequired,
@@ -437,6 +441,7 @@ PaginationContainer.propTypes = {
     isLoadingPage: PropTypes.bool.isRequired,
     maxPage: PropTypes.number.isRequired,
     page: PropTypes.number.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     pageData: PropTypes.arrayOf(PropTypes.any).isRequired,
     paginatedData: PropTypes.shape({}).isRequired,
     perPage: PropTypes.number,
