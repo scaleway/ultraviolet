@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN apt install curl
+RUN apk --no-cache add curl
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
 RUN pnpm install
 
@@ -23,6 +23,7 @@ WORKDIR /workspace
 
 COPY --from=builder /usr/src/app/storybook-static .
 
+RUN apk --no-cache add curl
 RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
 RUN pnpm add -g http-server
 
