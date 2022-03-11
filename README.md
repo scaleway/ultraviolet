@@ -126,13 +126,13 @@ $ pnpm install --global yalc # Make sure to have the yalc binary
 
 ```bash
 $ cd scaleway-ui
-$ pnpm build && yalc publish
+$ pnpm run sbuild && yalc publish
 $ # Now it's ready to install in your project
 $ cd ../project-something
 $ yalc add @scaleway/ui
 $ cd ../scaleway-ui
 $ # If you do some changes into your package
-$ pnpm build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
+$ pnpm run build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
 ```
 
 > :warning: since [1.0.0.pre.51 (2021-04-23)](https://github.com/wclr/yalc/blob/master/CHANGELOG.md#100pre51-2021-04-23), `yalc publish` needs the `--sig` option to trigger webpack module actual update.
