@@ -42,6 +42,8 @@ export type ListRowProps = {
   tooltip?: string
   children: ReactNode
   animated?: boolean
+  animation?: string
+  animationDuration?: number
   edition?: boolean
   expandableClassName?: string
   isEditable?: boolean

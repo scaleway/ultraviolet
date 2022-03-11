@@ -73,10 +73,11 @@ export const unfoldOut = keyframes`
 
 export const fadeIn = keyframes`
     0% {
-      background:rgba(0,0,0,.0);
+      opacity: 0;
     }
+
     100% {
-      background:rgba(0,0,0,.4);
+      opacity: 1;
     }
 `
 

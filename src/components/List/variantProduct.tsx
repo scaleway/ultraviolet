@@ -11,6 +11,7 @@ import React, {
   isValidElement,
   useCallback,
 } from 'react'
+import * as animations from '../../utils/animations'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
@@ -36,16 +37,6 @@ const getBorderColor = ({
 
   return theme.colors.neutral.borderWeak
 }
-
-const fadeInAnimation = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
 
 export const Cell = styled(BaseCell)``
 
@@ -91,10 +82,13 @@ const StyledRow = styled('details', {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  ${({ animated }) =>
+  ${({ animated, animationDuration, animation }) =>
     animated
       ? css`
-          animation: ${fadeInAnimation} 1s linear;
+          animation: ${(
+              animations as Record<string, ReturnType<typeof keyframes>>
+            )[animation as string]}
+            ${animationDuration as number}ms linear;
         `
       : ''}
 
@@ -305,13 +299,15 @@ export const Row: FunctionComponent<ListRowProps> = ({
   id,
   children,
   animated,
-  edition,
-  isEditable,
-  isHoverable,
-  locked,
+  animation = 'fadeIn',
+  animationDuration = 1000,
+  edition = false,
+  isEditable = false,
+  isHoverable = true,
+  locked = false,
   alert,
   customStyle,
-  open,
+  open = false,
   expandableClassName,
   ...props
 }) => {
@@ -371,6 +367,8 @@ export const Row: FunctionComponent<ListRowProps> = ({
     <StyledRow
       role="listitem"
       animated={animated}
+      animation={animation}
+      animationDuration={animationDuration}
       id={id}
       open={expendableContent && (forceOpened || opened)}
       isHoverable={isHoverable && !isEditable && !alert}
@@ -426,6 +424,8 @@ export const Row: FunctionComponent<ListRowProps> = ({
 Row.propTypes = {
   alert: PropTypes.bool,
   animated: PropTypes.bool,
+  animation: PropTypes.string,
+  animationDuration: PropTypes.number,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   edition: PropTypes.bool,
@@ -435,16 +435,4 @@ Row.propTypes = {
   isHoverable: PropTypes.bool,
   locked: PropTypes.bool,
   open: PropTypes.bool,
-}
-
-Row.defaultProps = {
-  alert: undefined,
-  animated: undefined,
-  customStyle: undefined,
-  edition: false,
-  expandableClassName: undefined,
-  isEditable: false,
-  isHoverable: true,
-  locked: false,
-  open: false,
 }

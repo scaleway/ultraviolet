@@ -23,7 +23,6 @@ import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Placeholder from '../Placeholder'
 import Typography from '../Typography'
-import Cell from './Cell'
 import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {

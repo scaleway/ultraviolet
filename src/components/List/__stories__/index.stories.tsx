@@ -1,9 +1,12 @@
 import { Meta, Story } from '@storybook/react'
 import React, { useRef, useState } from 'react'
 import List, { ListProps, ListRefType } from '..'
+import ControlValue from '../../../__stories__/components/ControlValue'
 import { generateData } from '../../../mocks/list'
+import * as animations from '../../../utils/animations'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
+import RichSelect from '../../RichSelect'
 
 export default {
   component: List,
@@ -517,4 +520,81 @@ PaginationLoadingPageCount.decorators = [
       </List>
     )
   },
+]
+
+export const Animated = Template.bind({})
+Animated.decorators = [
+  () => (
+    <ControlValue value={{ label: 'fadeIn', value: 'fadeIn' }}>
+      {({ value, onChange }) => {
+        const [options] = useState(
+          Object.keys(animations).map(animation => ({
+            label: animation,
+            value: animation,
+          })),
+        )
+
+        const [display, setDisplay] = useState(true)
+
+        return (
+          <>
+            <RichSelect
+              name="animated"
+              value={value}
+              onChange={onChange}
+              options={options}
+            />
+            <Button
+              onClick={() => {
+                setDisplay(false)
+                setTimeout(() => {
+                  setDisplay(true)
+                }, 50)
+              }}
+              mt={1}
+            >
+              Trigger
+            </Button>
+            <List
+              idKey="id"
+              data={generateData(1)}
+              columns={[
+                { label: 'Name', sort: 'name' },
+                { label: 'Description', sort: 'description', width: '25%' },
+                { label: 'Department', width: '120px' },
+                { justifyContent: 'center', width: '128px' },
+              ]}
+              multiselect
+            >
+              {list => (
+                <>
+                  <list.Header />
+                  {display ? (
+                    <list.Body>
+                      {({ rowData }) => (
+                        <list.Row
+                          id={rowData.id}
+                          animated
+                          animation={value.value}
+                        >
+                          <list.Cell>{rowData.name}</list.Cell>
+                          <list.Cell>{rowData.description}</list.Cell>
+                          <list.Cell>{rowData.department}</list.Cell>
+                          <list.Cell>actions</list.Cell>
+                          <list.ExpendableContent>
+                            {() => <>ExpendableContent of {rowData.name}</>}
+                          </list.ExpendableContent>
+                        </list.Row>
+                      )}
+                    </list.Body>
+                  ) : null}
+                  <list.SelectBar>{() => <>Hello SelectBar</>}</list.SelectBar>
+                </>
+              )}
+            </List>
+          </>
+        )
+      }}
+    </ControlValue>
+  ),
 ]
