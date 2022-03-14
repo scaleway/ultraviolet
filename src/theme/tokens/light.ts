@@ -97,6 +97,7 @@ export default {
       textWeakDisabled: '#d4dae7',
       textWeakHover: '#c4c9d6',
     },
+    overlay: '#4A4F628C',
     primary: {
       background: '#eeeeff',
       backgroundDisabled: '#d7ccf0',
@@ -213,9 +214,6 @@ export default {
       textWeakDisabled: '#FFD7C1',
       textWeakHover: '#CC4E18',
     },
-  },
-  others: {
-    overlay: '#4A4F628C',
   },
   shadows: {
     bulk: '0 4 32 8 #D4DAE766',
