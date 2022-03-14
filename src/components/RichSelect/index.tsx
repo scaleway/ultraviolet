@@ -36,7 +36,7 @@ import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
-export interface SelectOption {
+export type SelectOption = {
   value: string
   label: ReactNode
   disabled?: boolean
@@ -293,7 +293,7 @@ const getSelectStyles = ({
   }),
 })
 
-export interface WithSelectProps {
+export type WithSelectProps =  {
   selectProps: SelectProps
 }
 
