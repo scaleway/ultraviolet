@@ -29,7 +29,7 @@ const space = {
 
 export type Spaces = keyof typeof space
 
-const { colors, shadows, others } = light
+const { colors, shadows } = light
 
 const screens = {
   xsmall: 0,
@@ -50,7 +50,6 @@ const theme = {
   colors,
   colorsDeprecated,
   fonts,
-  others,
   radii,
   screens,
   shadows,
@@ -90,7 +89,6 @@ export {
   colors,
   colorsDeprecated,
   shadows,
-  others,
   space,
   radii,
   fonts,
