@@ -16,7 +16,7 @@ const StyledSVG = styled.svg`
 
 const StyledCircle = styled.circle`
   transform-origin: 50% 50%;
-  stroke: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  stroke: ${({ theme }) => theme.colors.neutral.borderWeak};
   stroke-width: 18;
   stroke-linecap: butt;
   fill: none;

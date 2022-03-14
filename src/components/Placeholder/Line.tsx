@@ -8,7 +8,7 @@ const Line = styled.div`
   height: 12px;
   width: ${() => randomSize()}px;
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 `
 
 export default Line

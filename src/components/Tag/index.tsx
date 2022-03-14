@@ -13,7 +13,7 @@ const disabledStyles = css`
 
 export const variantsContainer = {
   base: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colors.neutral.backgroundDisabled};
+    background-color: ${theme.colors.neutral.backgroundStrong};
     height: 24px;
     padding-left: 8px;
     padding-right: 8px;

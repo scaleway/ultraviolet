@@ -59,7 +59,7 @@ const SwitchVariantsStyles = {
 
     &[aria-checked='true'] {
       & > ${StyledInsideLabel} {
-        color: ${theme.colors.neutral.textStrong};
+        color: ${theme.colors.primary.textStrong};
       }
 
       &:focus-within,
