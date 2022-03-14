@@ -2014,7 +2014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.8.1, @emotion/react@npm:^11.1.1":
+"@emotion/react@npm:11.8.1":
   version: 11.8.1
   resolution: "@emotion/react@npm:11.8.1"
   dependencies:
@@ -2035,6 +2035,29 @@ __metadata:
     "@types/react":
       optional: true
   checksum: a767c6d7ca9e45dc3c1e873cfa51952db24e0d279944403ceb06be82d15859354e128becf6f7d0f8ff2b5f3460e3c165cd2b16ab1a2446e8e15e134a69e6ea3a
+  languageName: node
+  linkType: hard
+
+"@emotion/react@npm:11.8.2, @emotion/react@npm:^11.1.1":
+  version: 11.8.2
+  resolution: "@emotion/react@npm:11.8.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/utils": ^1.1.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: a8733f8375f9798953019872137326f39e5171b3286535fe34a695d63067a2c0f0f154beb6d117361206ef04a584fa4adef0ecc450654b6af4695b1d893d2496
   languageName: node
   linkType: hard
 
@@ -3609,17 +3632,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@scaleway/jest-helpers@npm:1.1.8":
-  version: 1.1.8
-  resolution: "@scaleway/jest-helpers@npm:1.1.8"
+"@scaleway/jest-helpers@npm:1.1.12":
+  version: 1.1.12
+  resolution: "@scaleway/jest-helpers@npm:1.1.12"
   dependencies:
     "@emotion/cache": 11.7.1
     "@emotion/jest": 11.8.0
-    "@emotion/react": 11.8.1
-    "@testing-library/react": 12.1.3
+    "@emotion/react": 11.8.2
+    "@testing-library/react": 12.1.4
   peerDependencies:
     react: ^17.0.1
-  checksum: fe7d03f91da63e4d6cc18cb1471b1e212a149072b721018c6b7a82139ca9b27a17b721f00d32d20b52d12420c9844742dc666c8b1fa6217af34a33d134157692
+  checksum: cb99952866e20d398f6d601c17f930f0082d25cbd92a395dff8db0cc91cb9a0d20389463a4dc79c3e2fda7fda33a07aa871ac5053cb008187b2fc0f31ba68e91
   languageName: node
   linkType: hard
 
@@ -3659,7 +3682,7 @@ __metadata:
     "@rollup/plugin-node-resolve": 13.1.3
     "@rollup/plugin-url": 6.1.0
     "@scaleway/eslint-config-react": 3.4.8
-    "@scaleway/jest-helpers": 1.1.8
+    "@scaleway/jest-helpers": 1.1.12
     "@scaleway/random-name": 3.0.0
     "@scaleway/use-i18n": 3.2.11
     "@semantic-release/changelog": 6.0.1
@@ -5492,20 +5515,6 @@ __metadata:
     lodash: ^4.17.15
     redent: ^3.0.0
   checksum: e4569df67c4c4998d2c60c6cf00ce2f1ac10c9397e0970320728c8be8f4e2c17a0e801705ce8a7384f7f5629b598a6f58db91d4401dde02044f5625405ca0988
-  languageName: node
-  linkType: hard
-
-"@testing-library/react@npm:12.1.3":
-  version: 12.1.3
-  resolution: "@testing-library/react@npm:12.1.3"
-  dependencies:
-    "@babel/runtime": ^7.12.5
-    "@testing-library/dom": ^8.0.0
-    "@types/react-dom": "*"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  checksum: 2f059e93dc3f161c4d15910d1fa80cd4f5cfb6eff8a733939a72ac720c2499b74761e8980c02983a6e49153b776e82bd770a1c3e66e05c4429db0e01612f7d0a
   languageName: node
   linkType: hard
 
