@@ -15562,6 +15562,366 @@ exports[`List should render correctly with animated, table variant 1`] = `
 </DocumentFragment>
 `;
 
+exports[`List should render correctly with animation on Row 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.cache-1mep1u3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1px;
+}
+
+.cache-1mep1u3>.e1r829127 {
+  font-size: 14px;
+  color: #b2b6c3;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.cache-1mep1u3>.e1r829127:first-of-type {
+  padding-left: 16px;
+}
+
+.cache-1mep1u3>.e1r829127[disabled] {
+  pointer-events: none;
+}
+
+.cache-1kzatv4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.cache-1kzatv4:nth-of-type(1) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-1kzatv4:nth-of-type(2) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-1kzatv4:nth-of-type(3) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-1baqory {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cache-t8q27f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  margin-left: 8px;
+  height: 16px;
+  width: 10px;
+}
+
+.cache-951dd8 {
+  fill: #b2b6c3;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.cache-951dd8.cache-951dd8 {
+  vertical-align: middle;
+}
+
+.cache-uiyxpm {
+  fill: #b2b6c3;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.cache-uiyxpm.cache-uiyxpm {
+  vertical-align: middle;
+}
+
+.cache-68pbmb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-animation: animation-0 700ms linear;
+  animation: animation-0 700ms linear;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+  background-color: initial;
+  cursor: auto;
+  color: inherit;
+}
+
+.cache-68pbmb:hover {
+  border-color: #4f0599;
+  box-shadow: 0 2px 14px 8px rgba(238,238,255,0.5);
+}
+
+.cache-68pbmb [data-visibility='hover'] {
+  opacity: 0;
+}
+
+.cache-68pbmb:hover [data-visibility='hover'] {
+  opacity: 1;
+}
+
+.cache-68pbmb .e1r829127 {
+  padding: 0 8px;
+  min-height: 48px;
+  font-size: 14px;
+}
+
+.cache-68pbmb .e1r829127:first-of-type {
+  padding-left: 16px;
+}
+
+.cache-yutsn4 {
+  width: 100%;
+  list-style-type: none;
+}
+
+.cache-yutsn4::before,
+.cache-yutsn4::after {
+  content: none;
+}
+
+.cache-yutsn4::-webkit-details-marker {
+  display: none;
+}
+
+.cache-yutsn4::-marker {
+  display: none;
+}
+
+.cache-1o7d3sk {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.cache-jdvdyf {
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.cache-jdvdyf [data-expandable] {
+  border-top: 1px solid #d4dae7;
+  padding: 16px 16px 8px 16px;
+  margin-top: 8px;
+}
+
+.cache-jdvdyf [data-expandable]>*+* {
+  margin: 16px 0;
+}
+
+.cache-jdvdyf [data-expandable]>*:last-child {
+  margin: 0;
+}
+
+<div
+    class="cache-3svqc9"
+  >
+    <div
+      class="cache-1mep1u3 e1r829122"
+    >
+      <div
+        aria-label="sort Name"
+        class="e1r829127 e1ipwytk0 cache-1kzatv4"
+        role="button"
+        style="align-items: center; cursor: pointer;"
+        tabindex="0"
+      >
+        <span
+          class="cache-1baqory e1r829120"
+        >
+          Name
+        </span>
+        <div
+          aria-sort="none"
+          class="cache-t8q27f e1yj8mjl2"
+        >
+          <svg
+            class="e1yj8mjl1 etwatq50 cache-951dd8"
+            title="ascending"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
+            />
+          </svg>
+          <svg
+            class="e1yj8mjl0 etwatq50 cache-uiyxpm"
+            title="descending"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        aria-label="sort Description"
+        class="e1r829127 e1ipwytk0 cache-1kzatv4"
+        role="button"
+        style="align-items: center; cursor: default;"
+        tabindex="0"
+      >
+        <span
+          class="cache-1baqory e1r829120"
+        >
+          Description
+        </span>
+      </div>
+      <div
+        aria-label="sort Department"
+        class="e1r829127 e1ipwytk0 cache-1kzatv4"
+        role="button"
+        style="align-items: center; cursor: default;"
+        tabindex="0"
+      >
+        <span
+          class="cache-1baqory e1r829120"
+        >
+          Department
+        </span>
+      </div>
+    </div>
+    <div
+      class="cache-3svqc9"
+      role="list"
+    >
+      <div
+        animation="pulse"
+        animationduration="700"
+        class="cache-68pbmb e1r829125"
+        data-testid="row-0"
+        role="listitem"
+      >
+        <div
+          class="cache-yutsn4 e1r829121"
+        >
+          <div
+            class="cache-1o7d3sk e1r829123"
+          >
+            <div
+              class="e1r829127 e1ipwytk0 cache-1kzatv4"
+            >
+              Scaler 0
+            </div>
+            <div
+              class="e1r829127 e1ipwytk0 cache-1kzatv4"
+            >
+              Fake message for row 0
+            </div>
+            <div
+              class="e1r829127 e1ipwytk0 cache-1kzatv4"
+            >
+              Front
+            </div>
+          </div>
+        </div>
+        <div
+          class="cache-jdvdyf e1r829126"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`List should render correctly with autoClose and ExpendableContent 1`] = `
 <DocumentFragment>
   .cache-1mep1u3 {
