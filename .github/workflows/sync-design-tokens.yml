@@ -8,7 +8,7 @@ jobs:
   synchronise:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.5
+      - uses: actions/checkout@v2.4.0
         env:
           LANG: en_US.UTF-8
       - name: Generate json files
