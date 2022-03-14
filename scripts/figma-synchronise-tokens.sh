@@ -27,7 +27,7 @@ function generateTokens {
   reduce (.[$theme].shades | to_entries | .[]) as $sentiment
     ({}; . + {"\($sentiment.key)": (
       reduce($sentiment.value | to_entries | .[]) as $shade
-        ({}; . + { "\($shade.key)": $shade.value.value })) })
+        ({}; . + { "\($shade.key)": ($shade.value.value | ascii_upcase) })) })
   ')
   # Match tokens and shades colors
   GENERATED_TOKENS_COLOR=$(echo "${JSON} $( cat "${TOKENS_EXTENSION}")" | jq -s '.[0] * .[1]' | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
