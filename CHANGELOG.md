@@ -1,3 +1,10 @@
+### [0.139.6](https://github.com/scaleway/scaleway-ui/compare/v0.139.5...v0.139.6) (2022-03-14)
+
+
+### :bug: Bug Fixes
+
+* **typescript:** change interface with type to allow used inside scaleway-form ([#1271](https://github.com/scaleway/scaleway-ui/issues/1271)) ([692ee8f](https://github.com/scaleway/scaleway-ui/commit/692ee8f4c63d9d5d2999d0d8147015747931579a))
+
 ### [0.139.5](https://github.com/scaleway/scaleway-ui/compare/v0.139.4...v0.139.5) (2022-03-14)
 
 
