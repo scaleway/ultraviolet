@@ -1,3 +1,13 @@
+### [0.139.5](https://github.com/scaleway/scaleway-ui/compare/v0.139.4...v0.139.5) (2022-03-14)
+
+
+### :package: Chore
+
+* **deps:** update dependency @emotion/react to v11.8.2 ([#1260](https://github.com/scaleway/scaleway-ui/issues/1260)) ([87e1a7e](https://github.com/scaleway/scaleway-ui/commit/87e1a7e9bf8ae3e213d3050b8df070a8837b9e2b))
+* **devdeps:** update actions/checkout action to v3 ([#1268](https://github.com/scaleway/scaleway-ui/issues/1268)) ([e8bf76a](https://github.com/scaleway/scaleway-ui/commit/e8bf76a00fd5e9aab0be3472c9e50c65e951a98b))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.8 ([#1269](https://github.com/scaleway/scaleway-ui/issues/1269)) ([f052ad0](https://github.com/scaleway/scaleway-ui/commit/f052ad0e07ec51fc06858908cce66241f2e8760d))
+* **devdeps:** update docker/login-action action to v1.14.1 ([#1266](https://github.com/scaleway/scaleway-ui/issues/1266)) ([947092b](https://github.com/scaleway/scaleway-ui/commit/947092b1d497dbd6af84bd61cc41a3868be22aed))
+
 ### [0.139.4](https://github.com/scaleway/scaleway-ui/compare/v0.139.3...v0.139.4) (2022-03-14)
 
 
