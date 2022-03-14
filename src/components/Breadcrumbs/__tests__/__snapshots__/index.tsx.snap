@@ -12,37 +12,37 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.cache-v0781e {
+.cache-r8ul2r {
   display: inline;
 }
 
-.cache-v0781e[aria-current='page'] {
-  color: #B2B6C3;
+.cache-r8ul2r[aria-current='page'] {
+  color: #b2b6c3;
 }
 
-.cache-v0781e:not(:last-child)::after {
+.cache-r8ul2r:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-15hennh {
+.cache-1lh5mnm {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
-  color: #4F0599;
+  color: #4f0599;
 }
 
-.cache-15hennh:hover,
-.cache-15hennh:focus {
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.cache-15hennh:hover,
-.cache-15hennh:focus {
-  color: #4F0599;
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  color: #4f0599;
 }
 
 <nav
@@ -53,10 +53,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
     >
       <li
         aria-disabled="false"
-        class="cache-v0781e e1081fv10"
+        class="cache-r8ul2r e1081fv10"
       >
         <a
-          class="e4bq1r51 cache-15hennh"
+          class="e4bq1r51 cache-1lh5mnm"
           href="/step1"
         >
           Step 1
@@ -64,10 +64,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-v0781e e1081fv10"
+        class="cache-r8ul2r e1081fv10"
       >
         <a
-          class="e4bq1r51 cache-15hennh"
+          class="e4bq1r51 cache-1lh5mnm"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -76,7 +76,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-v0781e e1081fv10"
+        class="cache-r8ul2r e1081fv10"
       >
         Step 3
       </li>
@@ -97,7 +97,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   display: flex;
 }
 
-.cache-fve0fy {
+.cache-re6h7p {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -125,97 +125,97 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   padding-right: 24px;
   margin-left: -24px;
   margin-right: -24px;
-  background-color: #22C8A2;
-  color: #FFFFFF;
+  background-color: #22c8a2;
+  color: #ffffff;
 }
 
-.cache-fve0fy:first-of-type {
+.cache-re6h7p:first-of-type {
   padding-left: 24px;
   margin-left: 0;
   margin-right: -24px;
 }
 
-.cache-fve0fy:last-of-type {
+.cache-re6h7p:last-of-type {
   margin-right: 0;
 }
 
-.cache-fve0fy[aria-current='page'] {
-  background-color: #4F0599;
-  color: #FFFFFF;
+.cache-re6h7p[aria-current='page'] {
+  background-color: #4f0599;
+  color: #ffffff;
 }
 
-.cache-fve0fy[aria-current='page']:focus {
+.cache-re6h7p[aria-current='page']:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
-.cache-fve0fy[aria-current='page']~.cache-fve0fy {
-  background-color: #FCFCFD;
-  color: #B2B6C3;
-  border-color: #D4DAE7;
+.cache-re6h7p[aria-current='page']~.cache-re6h7p {
+  background-color: #fcfcfd;
+  color: #b2b6c3;
+  border-color: #d4dae7;
 }
 
-.cache-fve0fy[aria-current='page']~.cache-fve0fy:focus {
+.cache-re6h7p[aria-current='page']~.cache-re6h7p:focus {
   box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
 }
 
-.cache-fve0fy:nth-child(1) {
+.cache-re6h7p:nth-child(1) {
   z-index: 10;
 }
 
-.cache-fve0fy:nth-child(2) {
+.cache-re6h7p:nth-child(2) {
   z-index: 9;
 }
 
-.cache-fve0fy:nth-child(3) {
+.cache-re6h7p:nth-child(3) {
   z-index: 8;
 }
 
-.cache-fve0fy:nth-child(4) {
+.cache-re6h7p:nth-child(4) {
   z-index: 7;
 }
 
-.cache-fve0fy:nth-child(5) {
+.cache-re6h7p:nth-child(5) {
   z-index: 6;
 }
 
-.cache-fve0fy:nth-child(6) {
+.cache-re6h7p:nth-child(6) {
   z-index: 5;
 }
 
-.cache-fve0fy:nth-child(7) {
+.cache-re6h7p:nth-child(7) {
   z-index: 4;
 }
 
-.cache-fve0fy:nth-child(8) {
+.cache-re6h7p:nth-child(8) {
   z-index: 3;
 }
 
-.cache-fve0fy:nth-child(9) {
+.cache-re6h7p:nth-child(9) {
   z-index: 2;
 }
 
-.cache-fve0fy:nth-child(10) {
+.cache-re6h7p:nth-child(10) {
   z-index: 1;
 }
 
-.cache-15hennh {
+.cache-1lh5mnm {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
-  color: #4F0599;
+  color: #4f0599;
 }
 
-.cache-15hennh:hover,
-.cache-15hennh:focus {
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.cache-15hennh:hover,
-.cache-15hennh:focus {
-  color: #4F0599;
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  color: #4f0599;
 }
 
 <nav
@@ -226,10 +226,10 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
     >
       <li
         aria-disabled="false"
-        class="cache-fve0fy e1081fv11"
+        class="cache-re6h7p e1081fv11"
       >
         <a
-          class="e4bq1r51 cache-15hennh"
+          class="e4bq1r51 cache-1lh5mnm"
           href="/step1"
         >
           Step 1
@@ -237,10 +237,10 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-fve0fy e1081fv11"
+        class="cache-re6h7p e1081fv11"
       >
         <a
-          class="e4bq1r51 cache-15hennh"
+          class="e4bq1r51 cache-1lh5mnm"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -249,7 +249,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-fve0fy e1081fv11"
+        class="cache-re6h7p e1081fv11"
       >
         Step 3
       </li>
