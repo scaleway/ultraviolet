@@ -1,3 +1,21 @@
+### [0.139.4](https://github.com/scaleway/scaleway-ui/compare/v0.139.3...v0.139.4) (2022-03-14)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.4 ([#1239](https://github.com/scaleway/scaleway-ui/issues/1239)) ([a88e997](https://github.com/scaleway/scaleway-ui/commit/a88e99743c5ed3b9e1d9a2f06a33f5780ffe05d1))
+* **devdeps:** update dependency @testing-library/react to v12.1.4 ([#1261](https://github.com/scaleway/scaleway-ui/issues/1261)) ([cd99e0a](https://github.com/scaleway/scaleway-ui/commit/cd99e0a13c482bfa2d66a45b5c398fea41c34bba))
+* **devdeps:** update dependency rollup to v2.70.0 ([#1265](https://github.com/scaleway/scaleway-ui/issues/1265)) ([d423153](https://github.com/scaleway/scaleway-ui/commit/d4231536dcb403926774e765dba635ec35da4bb0))
+* **devdeps:** update node.js to v17.7 ([#1263](https://github.com/scaleway/scaleway-ui/issues/1263)) ([5ee97b8](https://github.com/scaleway/scaleway-ui/commit/5ee97b88e1f78fea6b6be97ead0ae7941868d2c3))
+* **devdeps:** update philibea/scaleway-containers-deploy action to v1.0.6 ([#1257](https://github.com/scaleway/scaleway-ui/issues/1257)) ([e515823](https://github.com/scaleway/scaleway-ui/commit/e5158235344a388b584544c65c9b1d901940005f))
+* **devdeps:** update philibea/scaleway-containers-deploy action to v1.0.7 ([#1262](https://github.com/scaleway/scaleway-ui/issues/1262)) ([114ef56](https://github.com/scaleway/scaleway-ui/commit/114ef56a62f573aa2eff9801ad1c60f0a284a4a7))
+* **typescript:** fix somes errors typescript ([#1249](https://github.com/scaleway/scaleway-ui/issues/1249)) ([7d3bab9](https://github.com/scaleway/scaleway-ui/commit/7d3bab948ccc93412d0dcba6c9df3a1b15de1380))
+
+
+### :bug: Bug Fixes
+
+* script and tokens ([#1259](https://github.com/scaleway/scaleway-ui/issues/1259)) ([2a71dee](https://github.com/scaleway/scaleway-ui/commit/2a71deee9b7c0037ac507edeceace96861dcf668))
+
 ### [0.139.3](https://github.com/scaleway/scaleway-ui/compare/v0.139.2...v0.139.3) (2022-03-09)
 
 
