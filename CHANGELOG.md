@@ -1,3 +1,17 @@
+### [0.139.7](https://github.com/scaleway/scaleway-ui/compare/v0.139.6...v0.139.7) (2022-03-15)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.7 ([#1272](https://github.com/scaleway/scaleway-ui/issues/1272)) ([40eb9ea](https://github.com/scaleway/scaleway-ui/commit/40eb9ea7f349923509b3cf398c90df65a2b98cfd))
+* **devdeps:** update dependency rollup to v2.70.1 ([#1275](https://github.com/scaleway/scaleway-ui/issues/1275)) ([9858542](https://github.com/scaleway/scaleway-ui/commit/9858542e60264c467388232b0e8c74f456fa2429))
+* **devdeps:** update docker/build-push-action action to v2.10.0 ([#1273](https://github.com/scaleway/scaleway-ui/issues/1273)) ([1882556](https://github.com/scaleway/scaleway-ui/commit/1882556d07f53235ded51462fcbbed1ebf43b76e))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency intl-tel-input to v17.0.16 ([#1274](https://github.com/scaleway/scaleway-ui/issues/1274)) ([bdec261](https://github.com/scaleway/scaleway-ui/commit/bdec261bb439265364912d5f54e985df9cac5dcb))
+
 ### [0.139.6](https://github.com/scaleway/scaleway-ui/compare/v0.139.5...v0.139.6) (2022-03-14)
 
 
