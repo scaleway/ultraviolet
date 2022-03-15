@@ -1,3 +1,10 @@
+## [0.140.0](https://github.com/scaleway/scaleway-ui/compare/v0.139.7...v0.140.0) (2022-03-15)
+
+
+### :gear: Features
+
+* **design:** use new sync colors and audit all components ([#1253](https://github.com/scaleway/scaleway-ui/issues/1253)) ([2345d08](https://github.com/scaleway/scaleway-ui/commit/2345d08bd6c37428e4f9dc2c8033a96166bea81f))
+
 ### [0.139.7](https://github.com/scaleway/scaleway-ui/compare/v0.139.6...v0.139.7) (2022-03-15)
 
 
