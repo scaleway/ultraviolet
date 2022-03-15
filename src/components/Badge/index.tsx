@@ -131,7 +131,7 @@ const Badge: FunctionComponent<BadgeProps> = ({
     [prominence, theme],
   )
 
-  const sizeValue = SIZES[size]
+  const sizeValue = SIZES[size] || SIZES.medium
 
   return (
     <StyledBox
