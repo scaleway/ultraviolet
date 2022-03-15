@@ -81,7 +81,8 @@ type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-type Color = keyof typeof colors
+// This type exclude overlay color
+type Color = Exclude<keyof typeof colors, 'overlay'>
 
 export type { SCWUITheme, Color }
 
