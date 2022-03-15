@@ -30,9 +30,9 @@ type TooltipPlacement =
 
 const variants = {
   black: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colors.neutral.backgroundStrongHover};
-    color: ${theme.colors.neutral.textStrong};
-    fill: ${theme.colors.neutral.backgroundStrongHover};
+    background-color: ${theme.colors.neutral.backgroundStronger};
+    color: ${theme.colors.neutral.textStronger};
+    fill: ${theme.colors.neutral.backgroundStronger};
     box-shadow: 0 2px 5px 5px
       ${transparentize(0.7, theme.colors.neutral.border)};
   `,

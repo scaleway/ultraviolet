@@ -1,4 +1,4 @@
-import { keyframes } from '@emotion/react'
+import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
@@ -69,27 +69,31 @@ type ProgressBarProps = {
 } & BoxProps
 
 const ProgressBar: VoidFunctionComponent<ProgressBarProps> = ({
-  backgroundColor = 'gray300',
+  backgroundColor,
   progress = false,
   value = 0,
   variant = 'primary',
   ...props
-}) => (
-  <StyledBox
-    role="progressbar"
-    aria-valuenow={value}
-    aria-valuemin={0}
-    aria-valuemax={100}
-    backgroundColor={backgroundColor}
-    {...props}
-  >
-    {progress ? (
-      <StyledProgress />
-    ) : (
-      <StyledFilled variant={variant} value={value} />
-    )}
-  </StyledBox>
-)
+}) => {
+  const theme = useTheme()
+
+  return (
+    <StyledBox
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      backgroundColor={backgroundColor ?? theme.colors.neutral.borderWeak}
+      {...props}
+    >
+      {progress ? (
+        <StyledProgress />
+      ) : (
+        <StyledFilled variant={variant} value={value} />
+      )}
+    </StyledBox>
+  )
+}
 
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,

@@ -6,7 +6,7 @@ import Popper from '../Popper'
 import Item from './Item'
 
 const bottomStyles = (theme: Theme) => css`
-  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.neutral.background)};
+  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.neutral.backgroundStrong)};
   &:after,
   &:before {
     bottom: 100%;
@@ -20,7 +20,7 @@ const bottomStyles = (theme: Theme) => css`
 `
 const topStyles = (theme: Theme) => css`
   box-shadow: 0 1px 5px 3px
-    ${transparentize(0.85, theme.colors.neutral.background)};
+    ${transparentize(0.85, theme.colors.neutral.backgroundStrong)};
   &:after,
   &:before {
     top: 100%;

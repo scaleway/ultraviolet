@@ -34,9 +34,9 @@ const disabledStyles = ({
 }) =>
   disabled &&
   `
-    background-color: ${theme.colors.neutral.backgroundDisabled};
+    background-color: ${theme.colors.neutral.backgroundWeakDisabled};
     border: none;
-    color: ${theme.colors.neutral.textDisabled};
+    color: ${theme.colors.neutral.textWeakDisabled};
     opacity: 1;
     cursor: not-allowed;
   `
@@ -75,7 +75,7 @@ const StyledTouchable = styled(Touchable, {
   }
 
   :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colors.primary.backgroundHover};
+    background: ${({ theme }) => theme.colors.primary.background};
   }
 
   margin: 0 4px;
@@ -123,7 +123,9 @@ const StyledText = styled('span', {
   shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
 })<{ disabled: boolean }>`
   color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
+    disabled
+      ? theme.colors.neutral.textWeakDisabled
+      : theme.colors.neutral.text};
   user-select: none;
 `
 
@@ -132,7 +134,7 @@ const StyledContainer = styled(Box, {
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
     disabled
-      ? theme.colors.neutral.backgroundDisabled
+      ? theme.colors.neutral.backgroundWeakDisabled
       : theme.colors.neutral.backgroundWeak};
   display: flex;
   flex-direction: row;

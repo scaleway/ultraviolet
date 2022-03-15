@@ -31,7 +31,7 @@ const variants = {
   `,
   'light-neutral': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.neutral.text};
-    background-color: ${colors.neutral.background};
+    background-color: ${colors.neutral.backgroundStrong};
   `,
   'light-primary': ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.primary.text};
@@ -42,8 +42,8 @@ const variants = {
     background-color: ${colors.success.background};
   `,
   neutral: ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.neutral.text};
-    background-color: ${colors.neutral.background};
+    color: ${colors.neutral.textStrong};
+    background-color: ${colors.neutral.backgroundStrong};
   `,
   primary: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.primary.backgroundStrong};

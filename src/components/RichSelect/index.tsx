@@ -183,10 +183,10 @@ const getSelectStyles = ({
     ...(customStyle(state)?.menu || {}),
     boxShadow: `0 0 0 1px ${transparentize(
       0.9,
-      theme.colors.neutral.backgroundStrong,
+      theme.colors.neutral.backgroundStronger,
     )}, 0 4px 11px ${transparentize(
       0.9,
-      theme.colors.neutral.backgroundStrong,
+      theme.colors.neutral.backgroundStronger,
     )}`,
   }),
   menuList: (provided, state) => ({

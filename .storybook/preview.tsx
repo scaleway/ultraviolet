@@ -6,9 +6,9 @@ import { mockRandom } from 'jest-mock-random'
 import normalize from '../src/utils/normalize'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
-import { light, dark } from './scaleway'
+import { light, dark } from './storybookThemes'
 
-import lightTheme from '../src/theme'
+import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
 
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
@@ -32,9 +32,9 @@ const ENV_PARAMETERS = {
         disable: true,
       },
     },
-    viewMode: 'canvas',
     previewTabs: {
       'storybook/docs/panel': { index: 1 },
+      canvas: { hidden: true },
     },
     viewport: {
       viewports: {},
@@ -65,6 +65,7 @@ const ENV_PARAMETERS = {
     },
   },
   visual: {},
+  layout: 'centered',
 }
 ENV_PARAMETERS.visual = ENV_PARAMETERS.production
 
@@ -101,8 +102,9 @@ export const decorators = [
     const mode = useDarkMode() ? 'dark' : 'light'
 
     const generatedTheme = useCallback(
-      ancestorTheme => adjustedTheme(ancestorTheme, lightTheme),
-      [mode, adjustedTheme, lightTheme],
+      ancestorTheme =>
+        adjustedTheme(ancestorTheme, mode === 'light' ? lightTheme : darkTheme),
+      [mode, adjustedTheme, lightTheme, darkTheme],
     )
 
     return (

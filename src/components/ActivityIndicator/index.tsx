@@ -84,7 +84,7 @@ const ActivityIndicator = ({
         r={circleRadius}
         fill="none"
         strokeWidth={strokeWidth}
-        stroke={theme.colors[trailColor as Color]?.background || trailColor}
+        stroke={theme.colors[trailColor as Color]?.borderWeak || trailColor}
       />
       <circle
         css={css`

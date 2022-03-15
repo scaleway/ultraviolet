@@ -1,6 +1,7 @@
 import deepmerge from 'deepmerge'
 import colorsDeprecated from './deprecated/colors'
-import colors, { ContrastType, colorsTokens } from './deprecated/helper'
+import dark from './tokens/dark'
+import light from './tokens/light'
 
 /* eslint-disable sort-keys */
 const radii = {
@@ -28,6 +29,8 @@ const space = {
 
 export type Spaces = keyof typeof space
 
+const { colors, shadows } = light
+
 const screens = {
   xsmall: 0,
   small: 576,
@@ -49,32 +52,9 @@ const theme = {
   fonts,
   radii,
   screens,
+  shadows,
   space,
 }
-
-/**
- * TODO: Remove this function when all components are reviewed and updated with new synchronised colors
- */
-const createTheme = ({
-  contrasts,
-  space: newSpace,
-  screens: newScreens,
-  radii: newRadii,
-  fonts: newFonts,
-}: {
-  contrasts?: Partial<Record<Color, Partial<ContrastType>>>
-  space?: Partial<Record<Spaces, string>>
-  screens?: Partial<Record<ScreenSize, number>>
-  radii?: Partial<Record<keyof typeof radii, string>>
-  fonts?: Partial<Record<keyof typeof fonts, string>>
-}): SCWUITheme => ({
-  ...theme,
-  ...(contrasts ? { colors: { ...colors, ...colorsTokens(contrasts) } } : {}),
-  ...(newSpace ? { space: { ...space, ...newSpace } } : { space }),
-  ...(newScreens ? { screens: { ...screens, ...newScreens } } : { screens }),
-  ...(newRadii ? { radii: { ...radii, ...newRadii } } : { radii }),
-  ...(newFonts ? { fonts: { ...fonts, ...newFonts } } : { fonts }),
-})
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
@@ -91,30 +71,31 @@ const extendTheme = ({
 }: {
   baseTheme?: typeof theme
   extendedTheme: RecursivePartial<typeof theme>
-}) => deepmerge(baseTheme, extendedTheme)
+}) => deepmerge(baseTheme, extendedTheme) as typeof theme
 
-// TODO: enable this function when all components are reviewed and updated with new synchronised colors
-/* const darkTheme = extendTheme({
-  extendedTheme: { colors: dark.colors },
-}) */
+const darkTheme = extendTheme({
+  extendedTheme: dark,
+})
 
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-type Color = keyof typeof colors
+// This type exclude overlay color
+type Color = Exclude<keyof typeof colors, 'overlay'>
 
 export type { SCWUITheme, Color }
 
 export {
   colors,
   colorsDeprecated,
+  shadows,
   space,
   radii,
   fonts,
   screens,
+  darkTheme,
   extendTheme,
-  createTheme,
 }
 
 export default theme

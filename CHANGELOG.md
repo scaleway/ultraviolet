@@ -49,19 +49,17 @@
 
 ### [0.139.3](https://github.com/scaleway/scaleway-ui/compare/v0.139.2...v0.139.3) (2022-03-09)
 
-
 ### :package: Chore
 
-* **devdeps:** update dependency jest-axe to v6 ([#1251](https://github.com/scaleway/scaleway-ui/issues/1251)) ([1b8adc7](https://github.com/scaleway/scaleway-ui/commit/1b8adc78c05e35e1be788c4d75d762884bc49b27))
-* **devdeps:** update dependency postcss to v8.4.8 ([#1252](https://github.com/scaleway/scaleway-ui/issues/1252)) ([85d3cbd](https://github.com/scaleway/scaleway-ui/commit/85d3cbd0ff03e32337f7055c0e89b75aa9cee58f))
-* **devdeps:** update dependency rollup-plugin-dts to v4.2.0 ([#1255](https://github.com/scaleway/scaleway-ui/issues/1255)) ([92d40a4](https://github.com/scaleway/scaleway-ui/commit/92d40a45d1039e03f486670549c6575024e275c3))
-* **devdeps:** update dependency storybook-dark-mode to v1.0.9 ([#1247](https://github.com/scaleway/scaleway-ui/issues/1247)) ([f54412f](https://github.com/scaleway/scaleway-ui/commit/f54412f28b0cdc6d511a530618c1e00559a1298b))
-* **devdeps:** update dependency webpack to v5.70.0 ([#1256](https://github.com/scaleway/scaleway-ui/issues/1256)) ([aa30640](https://github.com/scaleway/scaleway-ui/commit/aa306407bff7680e1aa8f225920152b2a2b6f42d))
-
+- **devdeps:** update dependency jest-axe to v6 ([#1251](https://github.com/scaleway/scaleway-ui/issues/1251)) ([1b8adc7](https://github.com/scaleway/scaleway-ui/commit/1b8adc78c05e35e1be788c4d75d762884bc49b27))
+- **devdeps:** update dependency postcss to v8.4.8 ([#1252](https://github.com/scaleway/scaleway-ui/issues/1252)) ([85d3cbd](https://github.com/scaleway/scaleway-ui/commit/85d3cbd0ff03e32337f7055c0e89b75aa9cee58f))
+- **devdeps:** update dependency rollup-plugin-dts to v4.2.0 ([#1255](https://github.com/scaleway/scaleway-ui/issues/1255)) ([92d40a4](https://github.com/scaleway/scaleway-ui/commit/92d40a45d1039e03f486670549c6575024e275c3))
+- **devdeps:** update dependency storybook-dark-mode to v1.0.9 ([#1247](https://github.com/scaleway/scaleway-ui/issues/1247)) ([f54412f](https://github.com/scaleway/scaleway-ui/commit/f54412f28b0cdc6d511a530618c1e00559a1298b))
+- **devdeps:** update dependency webpack to v5.70.0 ([#1256](https://github.com/scaleway/scaleway-ui/issues/1256)) ([aa30640](https://github.com/scaleway/scaleway-ui/commit/aa306407bff7680e1aa8f225920152b2a2b6f42d))
 
 ### :bug: Bug Fixes
 
-* **statebar:** add new case on stateBar ([#1242](https://github.com/scaleway/scaleway-ui/issues/1242)) ([6c73786](https://github.com/scaleway/scaleway-ui/commit/6c7378636d9a77e9744caed4c2fef325c0d3907a))
+- **statebar:** add new case on stateBar ([#1242](https://github.com/scaleway/scaleway-ui/issues/1242)) ([6c73786](https://github.com/scaleway/scaleway-ui/commit/6c7378636d9a77e9744caed4c2fef325c0d3907a))
 
 ### [0.139.2](https://github.com/scaleway/scaleway-ui/compare/v0.139.1...v0.139.2) (2022-03-08)
 

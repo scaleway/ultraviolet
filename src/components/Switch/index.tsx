@@ -59,7 +59,7 @@ const SwitchVariantsStyles = {
 
     &[aria-checked='true'] {
       & > ${StyledInsideLabel} {
-        color: ${theme.colors.neutral.textStrong};
+        color: ${theme.colors.primary.textStrong};
       }
 
       &:focus-within,
@@ -71,16 +71,16 @@ const SwitchVariantsStyles = {
   `,
   success: (theme: Theme) => css`
     color: ${theme.colors.neutral.text};
-    background-color: ${theme.colors.neutral.background};
+    background-color: ${theme.colors.neutral.backgroundHover};
     font-weight: bold;
 
     & ${SwitchBall} {
-      background-color: ${theme.colors.neutral.backgroundStrong};
+      background-color: ${theme.colors.neutral.backgroundWeak};
     }
 
     &[aria-checked='true'] {
       color: ${theme.colors.success.text};
-      background-color: ${theme.colors.success.background};
+      background-color: ${theme.colors.success.backgroundHover};
 
       & ${SwitchBall} {
         background-color: ${theme.colors.success.backgroundStrong};
@@ -113,14 +113,14 @@ const StyledSwitch = styled('div', {
   transition: all 250ms;
   padding: ${({ theme }) => theme.space[0.5]};
   height: ${({ theme }) => theme.space[3]};
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   min-width: ${({ theme }) => theme.space[6]};
 
   &:focus-within,
   &:focus {
     box-shadow: 0 0 1px 2px
         ${({ theme }) => theme.colors.neutral.backgroundWeak},
-      0 0 1px 3px ${({ theme }) => theme.colors.neutral.background};
+      0 0 1px 3px ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
   & ${SwitchBallContainer} {

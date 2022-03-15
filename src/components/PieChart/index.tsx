@@ -108,7 +108,7 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
               ? data
               : [
                   {
-                    color: colors.neutral.background,
+                    color: colors.neutral.backgroundStrong,
                     id: 'empty',
                     percent: 100,
                   },

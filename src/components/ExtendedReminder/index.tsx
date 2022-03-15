@@ -24,7 +24,7 @@ export const variants = {
   }),
   success: ({ colors }: Theme) => ({
     background: colors.success.background,
-    main: colors.neutral.text,
+    main: colors.success.text,
   }),
   warning: ({ colors }: Theme) => ({
     background: colors.warning.background,

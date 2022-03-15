@@ -37,12 +37,12 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
     ${IconContainer} {
       background-color: ${transparentize(
         0.75,
-        theme.colors.neutral.background,
+        theme.colors.primary.backgroundHover,
       )};
       border-radius: 50%;
 
       > ${StyledIcon} {
-        fill: ${theme.colors.primary.text};
+        fill: ${theme.colors.primary.textHover};
       }
     }
   }

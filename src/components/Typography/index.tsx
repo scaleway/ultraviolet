@@ -26,7 +26,7 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
   {
     badge: ({ theme }: StyleProps) =>
       css`
-        background-color: ${theme?.colors.neutral.background};
+        background-color: ${theme?.colors.neutral.backgroundStrong};
         color: ${theme?.colors.neutral.text};
         text-transform: capitalize;
         letter-spacing: 1px;
@@ -75,8 +75,8 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
         font-size: 13px;
         font-weight: 500;
         border-radius: ${theme?.radii.default};
-        color: ${theme?.colors.neutral.text};
-        background-color: ${theme?.colors.neutral.backgroundDisabled};
+        color: ${theme?.colors.neutral.textStrong};
+        background-color: ${theme?.colors.neutral.backgroundStrong};
         padding: 8px;
       `,
     description: ({ theme }: StyleProps) =>
@@ -120,8 +120,8 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
     `,
     samplecode: ({ theme }: StyleProps) =>
       css`
-        background-color: ${theme?.colors.neutral.backgroundDisabled};
-        color: ${theme?.colors.neutral.text};
+        background-color: ${theme?.colors.neutral.backgroundStrong};
+        color: ${theme?.colors.neutral.textStrong};
         font-size: 12px;
         line-height: 16px;
         padding: 4px;

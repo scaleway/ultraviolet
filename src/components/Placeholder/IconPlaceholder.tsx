@@ -6,7 +6,7 @@ const IconPlaceholder = styled.div`
   height: ${({ theme }) => theme.space['4']};
   min-width: ${({ theme }) => theme.space['4']};
   border-radius: 12px;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 `
 
 export default IconPlaceholder
