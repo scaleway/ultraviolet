@@ -1,4 +1,3 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
@@ -6,6 +5,7 @@ import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Popper from '../Popper'
 import Item from './Item'
 
+<<<<<<< HEAD
 const bottomStyles = (theme: Theme) => css`
   box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.neutral.backgroundStrong)};
   &:after,
@@ -90,52 +90,25 @@ const arrowPlacementStyles = {
 } as const
 
 type ArrowPlacement = keyof typeof arrowPlacementStyles
+=======
+type ArrowPlacement =
+  | 'bottom'
+  | 'bottom-end'
+  | 'bottom-start'
+  | 'top'
+  | 'top-end'
+  | 'top-start'
+>>>>>>> 7f5c4ff1 (fix: nuke css attribute)
 type MenuListProps = {
   align: AlignStyle
   hasArrow: boolean
+  placement: ArrowPlacement
 }
-export const arrowPlacements = Object.keys(
-  arrowPlacementStyles,
-) as ArrowPlacement[]
 
 type AlignStyle = {
   left?: string | null
   right?: string | null
 }
-
-const MenuList = styled.div<MenuListProps>`
-  &:after,
-  &:before {
-    left: ${({ align }) => align.left};
-    right: ${({ align }) => align.left};
-  }
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  border-radius: 4px;
-  position: relative;
-
-  &:after,
-  &:before {
-    border: solid transparent;
-    border-width: 9px;
-    content: ' ';
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: transparent;
-  }
-  &:before {
-    border-color: transparent;
-  }
-`
 
 interface ChildrenProps {
   placement: ComponentProps<typeof Popper>['placement']
@@ -153,6 +126,69 @@ type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
 
 type MenuType = FunctionComponent<MenuProps> & { Item: typeof Item }
 
+const MenuList = styled.div<MenuListProps>`
+  &:after,
+  &:before {
+    left: ${({ align }) => align.left};
+    right: ${({ align }) => align.right};
+
+    border: solid transparent;
+    border-width: 9px;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: ${({ placement }) => (placement.includes('bottom') ? '100%' : '')};
+    top: ${({ placement }) => (placement.includes('top') ? '100%' : '')};
+    left: ${({ placement }) =>
+      !placement.includes('start') && !placement.includes('end') ? '50%' : ''};
+    transform: ${({ placement }) =>
+      !placement.includes('start') && !placement.includes('end')
+        ? 'translateX(-50%)'
+        : ''};
+  }
+
+  &:after {
+    border-color: transparent;
+    border-bottom-color: ${({ theme, placement }) =>
+      placement.includes('bottom') && theme.colors.primary.borderStrong};
+    border-top-color: ${({ theme, placement }) =>
+      placement.includes('top') && theme.colors.primary.borderStrong};
+    margin-left: ${({ placement }) => placement.includes('end') && '-9px'};
+    right: ${({ placement }) => placement.includes('end') && '24px'};
+    margin-right: ${({ placement }) => placement.includes('start') && '-9px'};
+    left: ${({ placement }) => placement.includes('start') && '24px'};
+  }
+  &:before {
+    border-color: transparent;
+    border-bottom-color: ${({ placement }) =>
+      placement.includes('bottom') && 'rgba(165, 165, 205, 0.4)'};
+    border-top-color: ${({ placement }) =>
+      placement.includes('top') && 'rgba(165, 165, 205, 0.4)'};
+    margin-left: ${({ placement }) => placement.includes('end') && '-11px'};
+    right: ${({ placement }) => placement.includes('end') && '24px'};
+    margin-right: ${({ placement }) => placement.includes('start') && '-11px'};
+    left: ${({ placement }) => placement.includes('start') && '24px'};
+  }
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  border-radius: 4px;
+  position: relative;
+  box-shadow: ${({ placement, theme }) =>
+    placement.includes('bottom') &&
+    '0 -1px 5px 3px' +
+      `${transparentize(0.85, theme.colors.neutral.background)}`};
+  box-shadow: ${({ placement, theme }) =>
+    placement.includes('top') &&
+    '0 1px 5px 3px' +
+      `${transparentize(0.85, theme.colors.neutral.background)}`};
+`
+
 const Menu: MenuType = ({
   align = { left: '50%', right: 'inherit' },
   ariaLabel = 'menu',
@@ -164,7 +200,7 @@ const Menu: MenuType = ({
   name = 'menu',
   placement = 'bottom',
   visible = false,
-  className = '',
+  className,
 }) => (
   <Popper
     aria-label={ariaLabel}
@@ -182,10 +218,8 @@ const Menu: MenuType = ({
         <MenuList
           align={align}
           hasArrow={hasArrow}
+          placement={placement}
           role="menu"
-          css={
-            hasArrow && arrowPlacementStyles[localPlacement as ArrowPlacement]
-          }
         >
           {typeof children === 'function'
             ? children({ placement: localPlacement, toggle, visible })
@@ -209,7 +243,14 @@ Menu.propTypes = {
   hasArrow: PropTypes.bool,
   modal: PropTypes.bool,
   name: PropTypes.string,
-  placement: PropTypes.oneOf<ArrowPlacement>(arrowPlacements),
+  placement: PropTypes.oneOf([
+    'bottom',
+    'top',
+    'bottom-end',
+    'bottom-start',
+    'top-end',
+    'top-start',
+  ]),
   visible: PropTypes.bool,
 }
 
