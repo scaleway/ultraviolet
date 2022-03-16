@@ -36,11 +36,11 @@ const variants = {
       }
 
       &[aria-disabled='true'] {
-        color: ${theme.colors.neutral.textDisabled};
+        color: ${theme.colors.neutral.textWeakDisabled};
 
         &[aria-checked='true'] {
-          color: ${theme.colors.neutral.textDisabled};
-          background-color: ${theme.colors.neutral.backgroundDisabled};
+          color: ${theme.colors.neutral.textWeakDisabled};
+          background-color: ${theme.colors.neutral.backgroundWeakDisabled};
         }
       }
 
@@ -91,13 +91,14 @@ const StyledSwitch = styled(Box, {
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+    background-color: ${({ theme }) =>
+      theme.colors.neutral.backgroundWeakDisabled};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
     pointer-events: none;
 
     &[aria-checked='true'] {
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
       border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
     }
   }
