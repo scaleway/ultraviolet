@@ -12,7 +12,9 @@ jobs:
         env:
           LANG: en_US.UTF-8
       - name: Generate json files
-        run: yarn run tokens:update
+        run: |
+          - yarn
+          - yarn run tokens:update
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
