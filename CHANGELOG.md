@@ -1,3 +1,10 @@
+### [0.140.1](https://github.com/scaleway/scaleway-ui/compare/v0.140.0...v0.140.1) (2022-03-16)
+
+
+### :bug: Bug Fixes
+
+* missing yarn install ([#1276](https://github.com/scaleway/scaleway-ui/issues/1276)) ([5efe2ca](https://github.com/scaleway/scaleway-ui/commit/5efe2ca42fedfa0b49666554b7ab4c50ae1fcb76))
+
 ## [0.140.0](https://github.com/scaleway/scaleway-ui/compare/v0.139.7...v0.140.0) (2022-03-15)
 
 
