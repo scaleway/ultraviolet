@@ -1,3 +1,10 @@
+### [0.140.3](https://github.com/scaleway/scaleway-ui/compare/v0.140.2...v0.140.3) (2022-03-16)
+
+
+### :bug: Bug Fixes
+
+* adjust disabled colors for button and switchbutton ([#1282](https://github.com/scaleway/scaleway-ui/issues/1282)) ([b63eb70](https://github.com/scaleway/scaleway-ui/commit/b63eb700a33bd6147194253136da1ce486980110))
+
 ### [0.140.2](https://github.com/scaleway/scaleway-ui/compare/v0.140.1...v0.140.2) (2022-03-16)
 
 
