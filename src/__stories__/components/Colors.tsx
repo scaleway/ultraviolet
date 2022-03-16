@@ -18,11 +18,7 @@ const Colors = () => {
           </Typography>
           <div style={{ display: 'flex', gap: 24, marginTop: 16 }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(
-                (theme.colors as Record<string, Record<string, string>>)[
-                  sentiment
-                ],
-              )
+              {Object.keys(theme.colors[sentiment as keyof typeof theme.colors])
                 .filter(context => context.includes('background'))
                 ?.map(context => (
                   <BorderedBox
@@ -30,7 +26,10 @@ const Colors = () => {
                     style={{
                       alignItems: 'center',
                       backgroundColor: (
-                        theme.colors as Record<string, Record<string, string>>
+                        theme.colors as unknown as Record<
+                          string,
+                          Record<string, string>
+                        >
                       )[sentiment][context],
                       display: 'flex',
                       justifyContent: 'space-between',
@@ -41,7 +40,10 @@ const Colors = () => {
                     <Typography
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
@@ -51,13 +53,19 @@ const Colors = () => {
                       variant="tiny"
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
                       {
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context]
                       }
                     </Typography>
@@ -66,9 +74,12 @@ const Colors = () => {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               {Object.keys(
-                (theme.colors as Record<string, Record<string, string>>)[
-                  sentiment
-                ],
+                (
+                  theme.colors as unknown as Record<
+                    string,
+                    Record<string, string>
+                  >
+                )[sentiment],
               )
                 .filter(context => context.includes('text'))
                 ?.map(context => (
@@ -77,7 +88,10 @@ const Colors = () => {
                     style={{
                       alignItems: 'center',
                       backgroundColor: (
-                        theme.colors as Record<string, Record<string, string>>
+                        theme.colors as unknown as Record<
+                          string,
+                          Record<string, string>
+                        >
                       )[sentiment][context],
                       display: 'flex',
                       justifyContent: 'space-between',
@@ -88,7 +102,10 @@ const Colors = () => {
                     <Typography
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
@@ -98,13 +115,19 @@ const Colors = () => {
                       variant="tiny"
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
                       {
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context]
                       }
                     </Typography>
@@ -113,9 +136,12 @@ const Colors = () => {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               {Object.keys(
-                (theme.colors as Record<string, Record<string, string>>)[
-                  sentiment
-                ],
+                (
+                  theme.colors as unknown as Record<
+                    string,
+                    Record<string, string>
+                  >
+                )[sentiment],
               )
                 .filter(context => context.includes('border'))
                 ?.map(context => (
@@ -124,7 +150,10 @@ const Colors = () => {
                     style={{
                       alignItems: 'center',
                       backgroundColor: (
-                        theme.colors as Record<string, Record<string, string>>
+                        theme.colors as unknown as Record<
+                          string,
+                          Record<string, string>
+                        >
                       )[sentiment][context],
                       display: 'flex',
                       justifyContent: 'space-between',
@@ -135,7 +164,10 @@ const Colors = () => {
                     <Typography
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
@@ -145,13 +177,19 @@ const Colors = () => {
                       variant="tiny"
                       color={readableColor(
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context],
                       )}
                     >
                       {
                         (
-                          theme.colors as Record<string, Record<string, string>>
+                          theme.colors as unknown as Record<
+                            string,
+                            Record<string, string>
+                          >
                         )[sentiment][context]
                       }
                     </Typography>
