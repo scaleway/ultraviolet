@@ -1,3 +1,10 @@
+### [0.140.2](https://github.com/scaleway/scaleway-ui/compare/v0.140.1...v0.140.2) (2022-03-16)
+
+
+### :bug: Bug Fixes
+
+* sync tokens ([#1278](https://github.com/scaleway/scaleway-ui/issues/1278)) ([194631d](https://github.com/scaleway/scaleway-ui/commit/194631d4488b101d6761ea4fc03b5c4e995ae78a))
+
 ### [0.140.1](https://github.com/scaleway/scaleway-ui/compare/v0.140.0...v0.140.1) (2022-03-16)
 
 
