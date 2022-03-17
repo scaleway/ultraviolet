@@ -126,7 +126,7 @@ $ pnpm install --global yalc # Make sure to have the yalc binary
 
 ```bash
 $ cd scaleway-ui
-$ pnpm run sbuild && yalc publish
+$ pnpm run build && yalc publish
 $ # Now it's ready to install in your project
 $ cd ../project-something
 $ yalc add @scaleway/ui
