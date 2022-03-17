@@ -12,7 +12,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
-.cache-1f43avz-a11yText-A11yText {
+.css-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -24,7 +24,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.cache-1bd5xum-control {
+.css-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -61,28 +61,28 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.cache-1bd5xum-control:hover {
+.css-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1bd5xum-control:focus-within {
+.css-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.cache-1bd5xum-control:focus-within svg {
+.css-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.cache-1bd5xum-control:hover {
+.css-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.cache-1bd5xum-control:hover svg {
+.css-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.cache-oxkbbn-Component {
+.css-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -104,7 +104,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-top: 0;
 }
 
-.cache-oxkbbn-Component label {
+.css-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -132,7 +132,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
+.css-fs070l-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -146,7 +146,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-left: 0;
 }
 
-.cache-14rl9yo-Component {
+.cache-cb6xa1-Input {
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.css-18mpa2g-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -164,11 +169,9 @@ exports[`TimeInput renders correctly with base props 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-14rl9yo-Component:after {
+.css-18mpa2g-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -181,7 +184,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding: 0;
 }
 
-.cache-1b81bwn-Component {
+.css-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -200,7 +203,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.cache-bex08z-indicatorSeparator {
+.css-bex08z-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -215,7 +218,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: flex;
 }
 
-.cache-tlfecz-indicatorContainer {
+.css-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -227,7 +230,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.css-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -269,20 +272,20 @@ exports[`TimeInput renders correctly with base props 1`] = `
     data-testid="rich-select-timeinput-test-0"
   >
     <span
-      class="cache-1f43avz-a11yText-A11yText"
+      class="css-1f43avz-a11yText-A11yText"
       id="react-select-2-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="cache-1f43avz-a11yText-A11yText"
+      class="css-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" cache-1bd5xum-control"
+      class=" css-1bd5xum-control"
     >
       <div
-        class=" cache-oxkbbn-Component"
+        class=" css-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -293,12 +296,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
           Select...
         </label>
         <div
-          class=" cache-fs070l-singleValue"
+          class=" css-fs070l-singleValue"
         >
           00:00
         </div>
         <div
-          class="cache-14rl9yo-Component"
+          class="cache-cb6xa1-Input css-18mpa2g-Input"
           data-value=""
         >
           <input
@@ -321,14 +324,14 @@ exports[`TimeInput renders correctly with base props 1`] = `
         </div>
       </div>
       <div
-        class=" cache-1b81bwn-Component"
+        class=" css-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" cache-bex08z-indicatorSeparator"
+          class=" css-bex08z-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" cache-tlfecz-indicatorContainer"
+          class=" css-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-o6c48m"
