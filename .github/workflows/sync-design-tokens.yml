@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 17
           cache: 'pnpm'
+      - run: pnpm install
       - name: Generate json files
         run: pnpm run tokens:update
 
