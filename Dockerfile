@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:17.7-buster as builder
+FROM node:17.7-alpine as builder
 WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
