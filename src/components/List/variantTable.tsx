@@ -249,7 +249,9 @@ export const Row: FunctionComponent<ListRowProps> = ({
 
 Row.propTypes = {
   animated: PropTypes.bool,
-  animation: PropTypes.string,
+  animation: PropTypes.oneOf<ListRowProps['animation']>(
+    Object.keys(animations) as ListRowProps['animation'][],
+  ),
   animationDuration: PropTypes.number,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),

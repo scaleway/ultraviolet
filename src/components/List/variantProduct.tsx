@@ -298,7 +298,7 @@ ExpendableContent.propTypes = {
 export const Row: FunctionComponent<ListRowProps> = ({
   id,
   children,
-  animated,
+  animated = false,
   animation = 'fadeIn',
   animationDuration = 1000,
   edition = false,
@@ -424,7 +424,9 @@ export const Row: FunctionComponent<ListRowProps> = ({
 Row.propTypes = {
   alert: PropTypes.bool,
   animated: PropTypes.bool,
-  animation: PropTypes.string,
+  animation: PropTypes.oneOf<ListRowProps['animation']>(
+    Object.keys(animations) as ListRowProps['animation'][],
+  ),
   animationDuration: PropTypes.number,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
