@@ -25,7 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           base: main
-          author: Scaleway Design Bot <github@scaleway.com>
+          author: Scaleway Design <github@scaleway.com>
           commit-message: 'fix(theme): synchronise design tokens'
           branch: fix/design-tokens-synchronise
           delete-branch: true

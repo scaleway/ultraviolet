@@ -56,26 +56,16 @@ const Colors = () => {
                       )}
                     >
                       {
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context]
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ]
                       }
                     </Typography>
                   </BorderedBox>
                 ))}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(
-                (
-                  theme.colors as unknown as Record<
-                    string,
-                    Record<string, string>
-                  >
-                )[sentiment],
-              )
+              {Object.keys(theme.colors[sentiment as Color])
                 .filter(context => context.includes('text'))
                 ?.map(context => (
                   <BorderedBox
@@ -119,14 +109,7 @@ const Colors = () => {
                 ))}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(
-                (
-                  theme.colors as unknown as Record<
-                    string,
-                    Record<string, string>
-                  >
-                )[sentiment],
-              )
+              {Object.keys(theme.colors[sentiment as Color])
                 .filter(context => context.includes('border'))
                 ?.map(context => (
                   <BorderedBox
