@@ -38,7 +38,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -50,7 +50,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   white-space: nowrap;
 }
 
-.css-1hzctx4-control {
+.cache-1hzctx4-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -87,28 +87,28 @@ exports[`RichSelect renders correctly animated 1`] = `
   animation: 1000ms animation-0;
 }
 
-.css-1hzctx4-control:hover {
+.cache-1hzctx4-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1hzctx4-control:focus-within {
+.cache-1hzctx4-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1hzctx4-control:focus-within svg {
+.cache-1hzctx4-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1hzctx4-control:hover {
+.cache-1hzctx4-control:hover {
   border-color: #390171;
 }
 
-.css-1hzctx4-control:hover svg {
+.cache-1hzctx4-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -130,7 +130,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -149,7 +149,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -157,12 +157,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -180,9 +175,11 @@ exports[`RichSelect renders correctly animated 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -195,7 +192,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -214,7 +211,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -226,7 +223,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -238,7 +235,7 @@ exports[`RichSelect renders correctly animated 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -280,20 +277,20 @@ exports[`RichSelect renders correctly animated 1`] = `
     data-testid="rich-select-animated"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-14-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1hzctx4-control"
+      class=" cache-1hzctx4-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -304,13 +301,13 @@ exports[`RichSelect renders correctly animated 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-14-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -334,14 +331,14 @@ exports[`RichSelect renders correctly animated 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -382,7 +379,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -394,7 +391,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -431,28 +428,28 @@ exports[`RichSelect renders correctly controlled 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -474,7 +471,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -493,7 +490,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -501,12 +498,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -524,9 +516,11 @@ exports[`RichSelect renders correctly controlled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -539,7 +533,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -558,7 +552,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -570,7 +564,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -582,7 +576,7 @@ exports[`RichSelect renders correctly controlled 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -624,20 +618,20 @@ exports[`RichSelect renders correctly controlled 1`] = `
     data-testid="rich-select-controlled"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-4-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -648,13 +642,13 @@ exports[`RichSelect renders correctly controlled 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-4-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -678,14 +672,14 @@ exports[`RichSelect renders correctly controlled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -726,7 +720,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -738,7 +732,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   white-space: nowrap;
 }
 
-.css-1r3lari-control {
+.cache-1r3lari-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -775,28 +769,28 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   animation: none;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #2684FF;
 }
 
-.css-1r3lari-control:focus-within {
+.cache-1r3lari-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1r3lari-control:focus-within svg {
+.cache-1r3lari-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #390171;
 }
 
-.css-1r3lari-control:hover svg {
+.cache-1r3lari-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -818,7 +812,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -837,7 +831,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -845,12 +839,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -868,9 +857,11 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -883,7 +874,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -902,7 +893,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -914,7 +905,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   display: none;
 }
 
-.css-1gtu0rj-indicatorContainer {
+.cache-1gtu0rj-indicatorContainer {
   color: hsl(0, 0%, 40%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -926,7 +917,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-1gtu0rj-indicatorContainer:hover {
+.cache-1gtu0rj-indicatorContainer:hover {
   color: hsl(0, 0%, 20%);
 }
 
@@ -943,7 +934,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   margin-right: 0;
 }
 
-.css-vnw7f1-menu {
+.cache-vnw7f1-menu {
   top: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
@@ -956,7 +947,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-1v7gcs-MenuList {
+.cache-1v7gcs-MenuList {
   max-height: 225px;
   overflow-y: auto;
   padding-bottom: 4px;
@@ -967,7 +958,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   background-color: #fcfcfd;
 }
 
-.css-6of5zw-option {
+.cache-6of5zw-option {
   background-color: #eeeeff;
   color: #4a4f62;
   cursor: default;
@@ -983,17 +974,17 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-6of5zw-option:active {
+.cache-6of5zw-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-6of5zw-option:hover {
+.cache-6of5zw-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-v3c230-option {
+.cache-v3c230-option {
   background-color: #fcfcfd;
   color: #4a4f62;
   cursor: default;
@@ -1009,12 +1000,12 @@ exports[`RichSelect renders correctly default values with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-v3c230-option:active {
+.cache-v3c230-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-v3c230-option:hover {
+.cache-v3c230-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
@@ -1044,14 +1035,14 @@ exports[`RichSelect renders correctly default values with click 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-13-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     >
       <span
         id="aria-selection"
@@ -1063,10 +1054,10 @@ exports[`RichSelect renders correctly default values with click 1`] = `
       </span>
     </span>
     <div
-      class=" css-1r3lari-control"
+      class=" cache-1r3lari-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -1077,13 +1068,13 @@ exports[`RichSelect renders correctly default values with click 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-13-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -1107,14 +1098,14 @@ exports[`RichSelect renders correctly default values with click 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-1gtu0rj-indicatorContainer"
+          class=" cache-1gtu0rj-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -1128,18 +1119,18 @@ exports[`RichSelect renders correctly default values with click 1`] = `
       </div>
     </div>
     <div
-      class=" css-vnw7f1-menu"
+      class=" cache-vnw7f1-menu"
       id="react-select-13-listbox"
     >
       <div
-        class=" css-1v7gcs-MenuList"
+        class=" cache-1v7gcs-MenuList"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
-            class=" css-6of5zw-option"
+            class=" cache-6of5zw-option"
             id="react-select-13-option-0"
             tabindex="-1"
           >
@@ -1151,7 +1142,7 @@ exports[`RichSelect renders correctly default values with click 1`] = `
         >
           <div
             aria-disabled="false"
-            class=" css-v3c230-option"
+            class=" cache-v3c230-option"
             id="react-select-13-option-1"
             tabindex="-1"
           >
@@ -1190,7 +1181,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1202,7 +1193,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   white-space: nowrap;
 }
 
-.css-1cxfu5m-control {
+.cache-1cxfu5m-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1239,11 +1230,11 @@ exports[`RichSelect renders correctly disabled 1`] = `
   animation: none;
 }
 
-.css-1cxfu5m-control:hover {
+.cache-1cxfu5m-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1jfs5jc-ValueContainer {
+.cache-1jfs5jc-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1266,7 +1257,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   padding-top: 0;
 }
 
-.css-1jfs5jc-ValueContainer label {
+.cache-1jfs5jc-ValueContainer label {
   display: initial;
 }
 
@@ -1285,7 +1276,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   opacity: 0;
 }
 
-.css-l15ycl-placeholder {
+.cache-l15ycl-placeholder {
   color: #d4dae7;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -1293,12 +1284,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-26lubj-Input {
+.cache-132z6pu-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -1316,9 +1302,11 @@ exports[`RichSelect renders correctly disabled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-26lubj-Input:after {
+.cache-132z6pu-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1331,7 +1319,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1350,7 +1338,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1362,7 +1350,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1374,7 +1362,7 @@ exports[`RichSelect renders correctly disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -1416,20 +1404,20 @@ exports[`RichSelect renders correctly disabled 1`] = `
     data-testid="rich-select-disabled"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-5-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1cxfu5m-control"
+      class=" cache-1cxfu5m-control"
     >
       <div
-        class=" css-1jfs5jc-ValueContainer"
+        class=" cache-1jfs5jc-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -1440,13 +1428,13 @@ exports[`RichSelect renders correctly disabled 1`] = `
           Select...
         </label>
         <div
-          class=" css-l15ycl-placeholder"
+          class=" cache-l15ycl-placeholder"
           id="react-select-5-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-26lubj-Input"
+          class="cache-132z6pu-Input"
           data-value=""
         >
           <input
@@ -1471,14 +1459,14 @@ exports[`RichSelect renders correctly disabled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -1516,7 +1504,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1528,7 +1516,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   white-space: nowrap;
 }
 
-.css-1cxfu5m-control {
+.cache-1cxfu5m-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1565,11 +1553,11 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   animation: none;
 }
 
-.css-1cxfu5m-control:hover {
+.cache-1cxfu5m-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1jfs5jc-ValueContainer {
+.cache-1jfs5jc-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1592,7 +1580,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   padding-top: 0;
 }
 
-.css-1jfs5jc-ValueContainer label {
+.cache-1jfs5jc-ValueContainer label {
   display: initial;
 }
 
@@ -1611,7 +1599,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   opacity: 0;
 }
 
-.css-l15ycl-placeholder {
+.cache-l15ycl-placeholder {
   color: #d4dae7;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -1619,12 +1607,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-26lubj-Input {
+.cache-132z6pu-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -1642,9 +1625,11 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-26lubj-Input:after {
+.cache-132z6pu-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1657,7 +1642,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1676,7 +1661,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1688,7 +1673,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1700,7 +1685,7 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -1742,20 +1727,20 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-12-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1cxfu5m-control"
+      class=" cache-1cxfu5m-control"
     >
       <div
-        class=" css-1jfs5jc-ValueContainer"
+        class=" cache-1jfs5jc-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -1766,13 +1751,13 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
           Select...
         </label>
         <div
-          class=" css-l15ycl-placeholder"
+          class=" cache-l15ycl-placeholder"
           id="react-select-12-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-26lubj-Input"
+          class="cache-132z6pu-Input"
           data-value=""
         >
           <input
@@ -1797,14 +1782,14 @@ exports[`RichSelect renders correctly disabled with click 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -1840,7 +1825,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1852,7 +1837,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1889,28 +1874,28 @@ exports[`RichSelect renders correctly multi 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1932,7 +1917,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -1951,7 +1936,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -1959,11 +1944,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   box-sizing: border-box;
 }
 
-.cache-ysvne1-Input {
-  margin-left: 0px;
-}
-
-.css-18mpa2g-Input {
+.cache-jyffit-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -1981,9 +1962,10 @@ exports[`RichSelect renders correctly multi 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
 }
 
-.css-18mpa2g-Input:after {
+.cache-jyffit-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1996,7 +1978,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2015,7 +1997,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2027,7 +2009,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2039,7 +2021,7 @@ exports[`RichSelect renders correctly multi 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2081,20 +2063,20 @@ exports[`RichSelect renders correctly multi 1`] = `
     data-testid="rich-select-multi"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-15-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -2105,13 +2087,13 @@ exports[`RichSelect renders correctly multi 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-15-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-ysvne1-Input css-18mpa2g-Input"
+          class="cache-jyffit-Input"
           data-value=""
         >
           <input
@@ -2135,14 +2117,14 @@ exports[`RichSelect renders correctly multi 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -2186,7 +2168,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2198,7 +2180,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   white-space: nowrap;
 }
 
-.css-1cxfu5m-control {
+.cache-1cxfu5m-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2235,11 +2217,11 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   animation: none;
 }
 
-.css-1cxfu5m-control:hover {
+.cache-1cxfu5m-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-abn5uu-ValueContainer {
+.cache-abn5uu-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2265,7 +2247,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   padding-top: 0;
 }
 
-.css-abn5uu-ValueContainer label {
+.cache-abn5uu-ValueContainer label {
   display: initial;
 }
 
@@ -2294,7 +2276,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   opacity: 0.5;
 }
 
-.css-19lzizy-multiValue {
+.cache-19lzizy-multiValue {
   background-color: #e6e9f0;
   border-radius: 4px;
   display: -webkit-box;
@@ -2320,7 +2302,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   text-overflow: ellipsis;
 }
 
-.css-1dgfoj8 {
+.cache-1dgfoj8 {
   border-radius: 2px;
   color: #c4c9d6;
   font-size: 14px;
@@ -2334,7 +2316,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   line-height: 20px;
 }
 
-.css-1cfbl34 {
+.cache-1cfbl34 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2352,7 +2334,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   pointer-events: none;
 }
 
-.css-1cfbl34:hover {
+.cache-1cfbl34:hover {
   color: #c4c9d6;
   cursor: none;
   pointer-events: none;
@@ -2370,11 +2352,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   vertical-align: middle;
 }
 
-.cache-ysvne1-Input {
-  margin-left: 0px;
-}
-
-.css-26lubj-Input {
+.cache-df5gwi-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -2392,9 +2370,10 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
 }
 
-.css-26lubj-Input:after {
+.cache-df5gwi-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2407,7 +2386,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2426,7 +2405,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2438,7 +2417,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2450,7 +2429,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2492,20 +2471,20 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
     data-testid="rich-select-multi-disabled"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-16-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1cxfu5m-control"
+      class=" cache-1cxfu5m-control"
     >
       <div
-        class=" css-abn5uu-ValueContainer"
+        class=" cache-abn5uu-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -2516,16 +2495,16 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
           Select...
         </label>
         <div
-          class="css-19lzizy-multiValue"
+          class="cache-19lzizy-multiValue"
         >
           <div
-            class="css-1dgfoj8"
+            class="cache-1dgfoj8"
           >
             Option A
           </div>
           <div
             aria-label="Remove Option A"
-            class="css-1cfbl34"
+            class="cache-1cfbl34"
             role="button"
           >
             <svg
@@ -2539,7 +2518,7 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
           </div>
         </div>
         <div
-          class="cache-ysvne1-Input css-26lubj-Input"
+          class="cache-df5gwi-Input"
           data-value=""
         >
           <input
@@ -2563,14 +2542,14 @@ exports[`RichSelect renders correctly multi disabled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -2606,7 +2585,7 @@ exports[`RichSelect renders correctly required 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2618,7 +2597,7 @@ exports[`RichSelect renders correctly required 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2655,28 +2634,28 @@ exports[`RichSelect renders correctly required 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2698,7 +2677,7 @@ exports[`RichSelect renders correctly required 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -2717,7 +2696,7 @@ exports[`RichSelect renders correctly required 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -2725,12 +2704,7 @@ exports[`RichSelect renders correctly required 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -2748,9 +2722,11 @@ exports[`RichSelect renders correctly required 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2763,7 +2739,7 @@ exports[`RichSelect renders correctly required 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2782,7 +2758,7 @@ exports[`RichSelect renders correctly required 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -2794,7 +2770,7 @@ exports[`RichSelect renders correctly required 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -2806,7 +2782,7 @@ exports[`RichSelect renders correctly required 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2860,20 +2836,20 @@ exports[`RichSelect renders correctly required 1`] = `
     data-testid="rich-select-required"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-6-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -2884,13 +2860,13 @@ exports[`RichSelect renders correctly required 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-6-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -2914,14 +2890,14 @@ exports[`RichSelect renders correctly required 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-25pmed"
@@ -2970,7 +2946,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2982,7 +2958,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3019,28 +2995,28 @@ exports[`RichSelect renders correctly timed 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3062,7 +3038,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -3081,7 +3057,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -3089,12 +3065,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -3112,9 +3083,11 @@ exports[`RichSelect renders correctly timed 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3127,7 +3100,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3146,7 +3119,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   max-height: 48px;
 }
 
-.css-bex08z-indicatorSeparator {
+.cache-bex08z-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3161,7 +3134,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   display: flex;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3173,7 +3146,7 @@ exports[`RichSelect renders correctly timed 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3215,20 +3188,20 @@ exports[`RichSelect renders correctly timed 1`] = `
     data-testid="rich-select-time"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-7-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -3239,13 +3212,13 @@ exports[`RichSelect renders correctly timed 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-7-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -3269,14 +3242,14 @@ exports[`RichSelect renders correctly timed 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-bex08z-indicatorSeparator"
+          class=" cache-bex08z-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-o6c48m"
@@ -3317,7 +3290,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -3329,7 +3302,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   white-space: nowrap;
 }
 
-.css-11k9rwc-control {
+.cache-11k9rwc-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3366,28 +3339,28 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   animation: none;
 }
 
-.css-11k9rwc-control:hover {
+.cache-11k9rwc-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-11k9rwc-control:focus-within {
+.cache-11k9rwc-control:focus-within {
   border-color: #dd3252;
   box-shadow: 0 0 2px 2px rgba(221,50,82,0.25);
 }
 
-.css-11k9rwc-control:focus-within svg {
+.cache-11k9rwc-control:focus-within svg {
   fill: #dd3252;
 }
 
-.css-11k9rwc-control:hover {
+.cache-11k9rwc-control:hover {
   border-color: #a6102d;
 }
 
-.css-11k9rwc-control:hover svg {
+.cache-11k9rwc-control:hover svg {
   fill: #dd3252;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3409,7 +3382,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -3428,7 +3401,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   opacity: 0;
 }
 
-.css-dw13vo-placeholder {
+.cache-dw13vo-placeholder {
   color: #dd3252;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -3436,12 +3409,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -3459,9 +3427,11 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3474,7 +3444,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3493,7 +3463,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   max-height: 48px;
 }
 
-.css-bex08z-indicatorSeparator {
+.cache-bex08z-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3508,7 +3478,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   display: flex;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3520,7 +3490,7 @@ exports[`RichSelect renders correctly timed with error 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3562,20 +3532,20 @@ exports[`RichSelect renders correctly timed with error 1`] = `
     data-testid="rich-select-time-error"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-8-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-11k9rwc-control"
+      class=" cache-11k9rwc-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -3586,13 +3556,13 @@ exports[`RichSelect renders correctly timed with error 1`] = `
           Select...
         </label>
         <div
-          class=" css-dw13vo-placeholder"
+          class=" cache-dw13vo-placeholder"
           id="react-select-8-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -3616,14 +3586,14 @@ exports[`RichSelect renders correctly timed with error 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-bex08z-indicatorSeparator"
+          class=" cache-bex08z-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-o6c48m"
@@ -3664,7 +3634,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -3676,7 +3646,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   white-space: nowrap;
 }
 
-.css-1r3lari-control {
+.cache-1r3lari-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3713,28 +3683,28 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   animation: none;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #2684FF;
 }
 
-.css-1r3lari-control:focus-within {
+.cache-1r3lari-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1r3lari-control:focus-within svg {
+.cache-1r3lari-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #390171;
 }
 
-.css-1r3lari-control:hover svg {
+.cache-1r3lari-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3756,7 +3726,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -3775,7 +3745,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -3783,12 +3753,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -3806,9 +3771,11 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3821,7 +3788,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3840,7 +3807,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -3852,7 +3819,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   display: none;
 }
 
-.css-1gtu0rj-indicatorContainer {
+.cache-1gtu0rj-indicatorContainer {
   color: hsl(0, 0%, 40%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -3864,7 +3831,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.css-1gtu0rj-indicatorContainer:hover {
+.cache-1gtu0rj-indicatorContainer:hover {
   color: hsl(0, 0%, 20%);
 }
 
@@ -3881,7 +3848,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   margin-right: 0;
 }
 
-.css-vnw7f1-menu {
+.cache-vnw7f1-menu {
   top: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
@@ -3894,7 +3861,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.css-1v7gcs-MenuList {
+.cache-1v7gcs-MenuList {
   max-height: 225px;
   overflow-y: auto;
   padding-bottom: 4px;
@@ -3905,7 +3872,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   background-color: #fcfcfd;
 }
 
-.css-6of5zw-option {
+.cache-6of5zw-option {
   background-color: #eeeeff;
   color: #4a4f62;
   cursor: default;
@@ -3921,17 +3888,17 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.css-6of5zw-option:active {
+.cache-6of5zw-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-6of5zw-option:hover {
+.cache-6of5zw-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-v3c230-option {
+.cache-v3c230-option {
   background-color: #fcfcfd;
   color: #4a4f62;
   cursor: default;
@@ -3947,12 +3914,12 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
   box-sizing: border-box;
 }
 
-.css-v3c230-option:active {
+.cache-v3c230-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-v3c230-option:hover {
+.cache-v3c230-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
@@ -3982,14 +3949,14 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
     data-testid="rich-select-uncontrolled"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-2-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     >
       <span
         id="aria-selection"
@@ -4001,10 +3968,10 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
       </span>
     </span>
     <div
-      class=" css-1r3lari-control"
+      class=" cache-1r3lari-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -4015,13 +3982,13 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-2-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -4045,14 +4012,14 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-1gtu0rj-indicatorContainer"
+          class=" cache-1gtu0rj-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -4066,18 +4033,18 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
       </div>
     </div>
     <div
-      class=" css-vnw7f1-menu"
+      class=" cache-vnw7f1-menu"
       id="react-select-2-listbox"
     >
       <div
-        class=" css-1v7gcs-MenuList"
+        class=" cache-1v7gcs-MenuList"
       >
         <div
           data-testid="option-uncontrolled-a"
         >
           <div
             aria-disabled="false"
-            class=" css-6of5zw-option"
+            class=" cache-6of5zw-option"
             id="react-select-2-option-0"
             tabindex="-1"
           >
@@ -4089,7 +4056,7 @@ exports[`RichSelect renders correctly uncontrolled 1`] = `
         >
           <div
             aria-disabled="false"
-            class=" css-v3c230-option"
+            class=" cache-v3c230-option"
             id="react-select-2-option-1"
             tabindex="-1"
           >
@@ -4126,7 +4093,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -4138,7 +4105,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   white-space: nowrap;
 }
 
-.css-1r3lari-control {
+.cache-1r3lari-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4175,28 +4142,28 @@ exports[`RichSelect renders correctly with click 1`] = `
   animation: none;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #2684FF;
 }
 
-.css-1r3lari-control:focus-within {
+.cache-1r3lari-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1r3lari-control:focus-within svg {
+.cache-1r3lari-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #390171;
 }
 
-.css-1r3lari-control:hover svg {
+.cache-1r3lari-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4218,7 +4185,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -4237,7 +4204,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -4245,12 +4212,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -4268,9 +4230,11 @@ exports[`RichSelect renders correctly with click 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -4283,7 +4247,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4302,7 +4266,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4314,7 +4278,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   display: none;
 }
 
-.css-1gtu0rj-indicatorContainer {
+.cache-1gtu0rj-indicatorContainer {
   color: hsl(0, 0%, 40%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4326,7 +4290,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-1gtu0rj-indicatorContainer:hover {
+.cache-1gtu0rj-indicatorContainer:hover {
   color: hsl(0, 0%, 20%);
 }
 
@@ -4343,7 +4307,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   margin-right: 0;
 }
 
-.css-vnw7f1-menu {
+.cache-vnw7f1-menu {
   top: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
@@ -4356,7 +4320,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-1v7gcs-MenuList {
+.cache-1v7gcs-MenuList {
   max-height: 225px;
   overflow-y: auto;
   padding-bottom: 4px;
@@ -4367,7 +4331,7 @@ exports[`RichSelect renders correctly with click 1`] = `
   background-color: #fcfcfd;
 }
 
-.css-6of5zw-option {
+.cache-6of5zw-option {
   background-color: #eeeeff;
   color: #4a4f62;
   cursor: default;
@@ -4383,17 +4347,17 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-6of5zw-option:active {
+.cache-6of5zw-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-6of5zw-option:hover {
+.cache-6of5zw-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-v3c230-option {
+.cache-v3c230-option {
   background-color: #fcfcfd;
   color: #4a4f62;
   cursor: default;
@@ -4409,12 +4373,12 @@ exports[`RichSelect renders correctly with click 1`] = `
   box-sizing: border-box;
 }
 
-.css-v3c230-option:active {
+.cache-v3c230-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-v3c230-option:hover {
+.cache-v3c230-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
@@ -4444,14 +4408,14 @@ exports[`RichSelect renders correctly with click 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-9-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     >
       <span
         id="aria-selection"
@@ -4463,10 +4427,10 @@ exports[`RichSelect renders correctly with click 1`] = `
       </span>
     </span>
     <div
-      class=" css-1r3lari-control"
+      class=" cache-1r3lari-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -4477,13 +4441,13 @@ exports[`RichSelect renders correctly with click 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-9-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -4507,14 +4471,14 @@ exports[`RichSelect renders correctly with click 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-1gtu0rj-indicatorContainer"
+          class=" cache-1gtu0rj-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -4528,18 +4492,18 @@ exports[`RichSelect renders correctly with click 1`] = `
       </div>
     </div>
     <div
-      class=" css-vnw7f1-menu"
+      class=" cache-vnw7f1-menu"
       id="react-select-9-listbox"
     >
       <div
-        class=" css-1v7gcs-MenuList"
+        class=" cache-1v7gcs-MenuList"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
-            class=" css-6of5zw-option"
+            class=" cache-6of5zw-option"
             id="react-select-9-option-0"
             tabindex="-1"
           >
@@ -4551,7 +4515,7 @@ exports[`RichSelect renders correctly with click 1`] = `
         >
           <div
             aria-disabled="false"
-            class=" css-v3c230-option"
+            class=" cache-v3c230-option"
             id="react-select-9-option-1"
             tabindex="-1"
           >
@@ -4588,7 +4552,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -4600,7 +4564,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   white-space: nowrap;
 }
 
-.css-1r3lari-control {
+.cache-1r3lari-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4637,28 +4601,28 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   animation: none;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #2684FF;
 }
 
-.css-1r3lari-control:focus-within {
+.cache-1r3lari-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1r3lari-control:focus-within svg {
+.cache-1r3lari-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #390171;
 }
 
-.css-1r3lari-control:hover svg {
+.cache-1r3lari-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4680,7 +4644,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -4699,7 +4663,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -4707,12 +4671,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -4730,9 +4689,11 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -4745,7 +4706,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4764,7 +4725,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -4776,7 +4737,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   display: none;
 }
 
-.css-1gtu0rj-indicatorContainer {
+.cache-1gtu0rj-indicatorContainer {
   color: hsl(0, 0%, 40%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -4788,7 +4749,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-1gtu0rj-indicatorContainer:hover {
+.cache-1gtu0rj-indicatorContainer:hover {
   color: hsl(0, 0%, 20%);
 }
 
@@ -4805,7 +4766,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   margin-right: 0;
 }
 
-.css-vnw7f1-menu {
+.cache-vnw7f1-menu {
   top: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
@@ -4818,7 +4779,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-1v7gcs-MenuList {
+.cache-1v7gcs-MenuList {
   max-height: 225px;
   overflow-y: auto;
   padding-bottom: 4px;
@@ -4829,7 +4790,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   background-color: #fcfcfd;
 }
 
-.css-6of5zw-option {
+.cache-6of5zw-option {
   background-color: #eeeeff;
   color: #4a4f62;
   cursor: default;
@@ -4845,17 +4806,17 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-6of5zw-option:active {
+.cache-6of5zw-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-6of5zw-option:hover {
+.cache-6of5zw-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-v3c230-option {
+.cache-v3c230-option {
   background-color: #fcfcfd;
   color: #4a4f62;
   cursor: default;
@@ -4871,17 +4832,17 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-v3c230-option:active {
+.cache-v3c230-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-v3c230-option:hover {
+.cache-v3c230-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-1b6h1z4-option {
+.cache-1b6h1z4-option {
   background-color: #e6e9f0;
   color: #c4c9d6;
   cursor: default;
@@ -4897,12 +4858,12 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-1b6h1z4-option:active {
+.cache-1b6h1z4-option:active {
   background-color: #f6f6f8;
   color: #c4c9d6;
 }
 
-.css-1b6h1z4-option:hover {
+.cache-1b6h1z4-option:hover {
   background-color: #e6e9f0;
   color: #c4c9d6;
 }
@@ -4932,14 +4893,14 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-10-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     >
       <span
         id="aria-selection"
@@ -4951,10 +4912,10 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
       </span>
     </span>
     <div
-      class=" css-1r3lari-control"
+      class=" cache-1r3lari-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -4965,13 +4926,13 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-10-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -4995,14 +4956,14 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-1gtu0rj-indicatorContainer"
+          class=" cache-1gtu0rj-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -5016,18 +4977,18 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
       </div>
     </div>
     <div
-      class=" css-vnw7f1-menu"
+      class=" cache-vnw7f1-menu"
       id="react-select-10-listbox"
     >
       <div
-        class=" css-1v7gcs-MenuList"
+        class=" cache-1v7gcs-MenuList"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
-            class=" css-6of5zw-option"
+            class=" cache-6of5zw-option"
             id="react-select-10-option-0"
             tabindex="-1"
           >
@@ -5039,7 +5000,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
         >
           <div
             aria-disabled="false"
-            class=" css-v3c230-option"
+            class=" cache-v3c230-option"
             id="react-select-10-option-1"
             tabindex="-1"
           >
@@ -5051,7 +5012,7 @@ exports[`RichSelect renders correctly with click and option disabled 1`] = `
         >
           <div
             aria-disabled="true"
-            class=" css-1b6h1z4-option"
+            class=" cache-1b6h1z4-option"
             id="react-select-10-option-2"
             tabindex="-1"
           >
@@ -5088,7 +5049,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -5100,7 +5061,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   white-space: nowrap;
 }
 
-.css-1r3lari-control {
+.cache-1r3lari-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5137,28 +5098,28 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   animation: none;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #2684FF;
 }
 
-.css-1r3lari-control:focus-within {
+.cache-1r3lari-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1r3lari-control:focus-within svg {
+.cache-1r3lari-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1r3lari-control:hover {
+.cache-1r3lari-control:hover {
   border-color: #390171;
 }
 
-.css-1r3lari-control:hover svg {
+.cache-1r3lari-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5180,7 +5141,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -5199,7 +5160,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -5207,12 +5168,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -5230,9 +5186,11 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -5245,7 +5203,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5264,7 +5222,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -5276,7 +5234,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   display: none;
 }
 
-.css-1gtu0rj-indicatorContainer {
+.cache-1gtu0rj-indicatorContainer {
   color: hsl(0, 0%, 40%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -5288,7 +5246,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.css-1gtu0rj-indicatorContainer:hover {
+.cache-1gtu0rj-indicatorContainer:hover {
   color: hsl(0, 0%, 20%);
 }
 
@@ -5305,7 +5263,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   margin-right: 0;
 }
 
-.css-vnw7f1-menu {
+.cache-vnw7f1-menu {
   top: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 4px;
@@ -5318,7 +5276,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.css-1v7gcs-MenuList {
+.cache-1v7gcs-MenuList {
   max-height: 225px;
   overflow-y: auto;
   padding-bottom: 4px;
@@ -5329,7 +5287,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   background-color: #fcfcfd;
 }
 
-.css-6of5zw-option {
+.cache-6of5zw-option {
   background-color: #eeeeff;
   color: #4a4f62;
   cursor: default;
@@ -5345,17 +5303,17 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.css-6of5zw-option:active {
+.cache-6of5zw-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-6of5zw-option:hover {
+.cache-6of5zw-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-v3c230-option {
+.cache-v3c230-option {
   background-color: #fcfcfd;
   color: #4a4f62;
   cursor: default;
@@ -5371,17 +5329,17 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.css-v3c230-option:active {
+.cache-v3c230-option:active {
   background-color: #eeeeff;
   color: #4f0599;
 }
 
-.css-v3c230-option:hover {
+.cache-v3c230-option:hover {
   background-color: #eeeeff;
   color: #4a4f62;
 }
 
-.css-1b6h1z4-option {
+.cache-1b6h1z4-option {
   background-color: #e6e9f0;
   color: #c4c9d6;
   cursor: default;
@@ -5397,12 +5355,12 @@ exports[`RichSelect renders correctly with click and options 1`] = `
   box-sizing: border-box;
 }
 
-.css-1b6h1z4-option:active {
+.cache-1b6h1z4-option:active {
   background-color: #f6f6f8;
   color: #c4c9d6;
 }
 
-.css-1b6h1z4-option:hover {
+.cache-1b6h1z4-option:hover {
   background-color: #e6e9f0;
   color: #c4c9d6;
 }
@@ -5432,14 +5390,14 @@ exports[`RichSelect renders correctly with click and options 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-11-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     >
       <span
         id="aria-selection"
@@ -5451,10 +5409,10 @@ exports[`RichSelect renders correctly with click and options 1`] = `
       </span>
     </span>
     <div
-      class=" css-1r3lari-control"
+      class=" cache-1r3lari-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -5465,13 +5423,13 @@ exports[`RichSelect renders correctly with click and options 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-11-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -5495,14 +5453,14 @@ exports[`RichSelect renders correctly with click and options 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-1gtu0rj-indicatorContainer"
+          class=" cache-1gtu0rj-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -5516,18 +5474,18 @@ exports[`RichSelect renders correctly with click and options 1`] = `
       </div>
     </div>
     <div
-      class=" css-vnw7f1-menu"
+      class=" cache-vnw7f1-menu"
       id="react-select-11-listbox"
     >
       <div
-        class=" css-1v7gcs-MenuList"
+        class=" cache-1v7gcs-MenuList"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
-            class=" css-6of5zw-option"
+            class=" cache-6of5zw-option"
             id="react-select-11-option-0"
             tabindex="-1"
           >
@@ -5539,7 +5497,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
         >
           <div
             aria-disabled="false"
-            class=" css-v3c230-option"
+            class=" cache-v3c230-option"
             id="react-select-11-option-1"
             tabindex="-1"
           >
@@ -5551,7 +5509,7 @@ exports[`RichSelect renders correctly with click and options 1`] = `
         >
           <div
             aria-disabled="true"
-            class=" css-1b6h1z4-option"
+            class=" cache-1b6h1z4-option"
             id="react-select-11-option-2"
             tabindex="-1"
           >
@@ -5588,7 +5546,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -5600,7 +5558,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5637,28 +5595,28 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5680,7 +5638,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -5699,7 +5657,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -5707,12 +5665,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -5730,9 +5683,11 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -5745,7 +5700,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5764,7 +5719,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -5776,7 +5731,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -5788,7 +5743,7 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -5830,20 +5785,20 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
     data-testid="rich-select-uncontrolled"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-3-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -5854,13 +5809,13 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-3-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -5884,14 +5839,14 @@ exports[`RichSelect renders correctly with custom styles 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -5932,7 +5887,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -5944,7 +5899,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5981,28 +5936,28 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6024,7 +5979,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -6043,7 +5998,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -6051,12 +6006,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -6074,9 +6024,11 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -6089,7 +6041,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6108,7 +6060,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -6120,7 +6072,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -6132,7 +6084,7 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -6174,20 +6126,20 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
     data-testid="rich-select-test-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-24-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -6198,13 +6150,13 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-24-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -6228,17 +6180,17 @@ exports[`RichSelect should render correctly custom isLoading 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <div>
           Loading...
         </div>
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -6279,7 +6231,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -6291,7 +6243,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6328,28 +6280,28 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6371,7 +6323,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -6390,7 +6342,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -6398,12 +6350,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -6421,9 +6368,11 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -6436,7 +6385,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6455,7 +6404,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -6467,7 +6416,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -6479,7 +6428,7 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -6521,20 +6470,20 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
     data-testid="rich-select-test-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-25-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -6545,13 +6494,13 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-25-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -6575,14 +6524,14 @@ exports[`RichSelect should render correctly description and inlineDescription 1`
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -6653,7 +6602,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -6665,7 +6614,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6702,28 +6651,28 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6745,7 +6694,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -6764,7 +6713,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -6772,12 +6721,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -6795,9 +6739,11 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -6810,7 +6756,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6829,7 +6775,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   max-height: 48px;
 }
 
-.css-at12u2-loadingIndicator {
+.cache-at12u2-loadingIndicator {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -6849,7 +6795,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.css-1xtdfmb-LoadingDot {
+.cache-1xtdfmb-LoadingDot {
   -webkit-animation: animation-0 1s ease-in-out 0ms infinite;
   animation: animation-0 1s ease-in-out 0ms infinite;
   background-color: currentColor;
@@ -6860,7 +6806,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1em;
 }
 
-.css-zoievk-LoadingDot {
+.cache-zoievk-LoadingDot {
   -webkit-animation: animation-0 1s ease-in-out 160ms infinite;
   animation: animation-0 1s ease-in-out 160ms infinite;
   background-color: currentColor;
@@ -6872,7 +6818,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1em;
 }
 
-.css-x748d8-LoadingDot {
+.cache-x748d8-LoadingDot {
   -webkit-animation: animation-0 1s ease-in-out 320ms infinite;
   animation: animation-0 1s ease-in-out 320ms infinite;
   background-color: currentColor;
@@ -6884,7 +6830,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   width: 1em;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -6896,7 +6842,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -6908,7 +6854,7 @@ exports[`RichSelect should render correctly isLoading 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -6950,20 +6896,20 @@ exports[`RichSelect should render correctly isLoading 1`] = `
     data-testid="rich-select-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-21-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -6974,13 +6920,13 @@ exports[`RichSelect should render correctly isLoading 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-21-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -7004,28 +6950,28 @@ exports[`RichSelect should render correctly isLoading 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <div
           aria-hidden="true"
-          class=" css-at12u2-loadingIndicator"
+          class=" cache-at12u2-loadingIndicator"
         >
           <span
-            class="css-1xtdfmb-LoadingDot"
+            class="cache-1xtdfmb-LoadingDot"
           />
           <span
-            class="css-zoievk-LoadingDot"
+            class="cache-zoievk-LoadingDot"
           />
           <span
-            class="css-x748d8-LoadingDot"
+            class="cache-x748d8-LoadingDot"
           />
         </div>
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -7066,7 +7012,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -7078,7 +7024,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7115,28 +7061,28 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7158,7 +7104,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -7186,7 +7132,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   opacity: 1;
 }
 
-.css-fs070l-singleValue {
+.cache-fs070l-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -7200,12 +7146,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding-left: 0;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -7223,9 +7164,11 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -7238,7 +7181,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7257,7 +7200,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   max-height: 48px;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -7269,7 +7212,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -7286,7 +7229,7 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
   cursor: pointer;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -7336,20 +7279,20 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
     data-testid="rich-select-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-17-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -7360,12 +7303,12 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
           Select...
         </label>
         <div
-          class=" css-fs070l-singleValue"
+          class=" cache-fs070l-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -7388,11 +7331,11 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             aria-hidden="true"
@@ -7405,11 +7348,11 @@ exports[`RichSelect should render correctly multi isClearable 1`] = `
           </svg>
         </div>
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -7452,7 +7395,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -7464,7 +7407,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   white-space: nowrap;
 }
 
-.css-1cxfu5m-control {
+.cache-1cxfu5m-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7501,11 +7444,11 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   animation: none;
 }
 
-.css-1cxfu5m-control:hover {
+.cache-1cxfu5m-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1jfs5jc-ValueContainer {
+.cache-1jfs5jc-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7528,7 +7471,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding-top: 0;
 }
 
-.css-1jfs5jc-ValueContainer label {
+.cache-1jfs5jc-ValueContainer label {
   display: initial;
 }
 
@@ -7557,7 +7500,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   opacity: 0.5;
 }
 
-.css-1ci9ux6-singleValue {
+.cache-1ci9ux6-singleValue {
   color: #c4c9d6;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -7571,12 +7514,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding-left: 0;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-26lubj-Input {
+.cache-132z6pu-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -7594,9 +7532,11 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-26lubj-Input:after {
+.cache-132z6pu-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -7609,7 +7549,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7628,7 +7568,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -7640,7 +7580,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -7652,7 +7592,7 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -7694,20 +7634,20 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
     data-testid="rich-select-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-18-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1cxfu5m-control"
+      class=" cache-1cxfu5m-control"
     >
       <div
-        class=" css-1jfs5jc-ValueContainer"
+        class=" cache-1jfs5jc-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -7718,12 +7658,12 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
           Select...
         </label>
         <div
-          class=" css-1ci9ux6-singleValue"
+          class=" cache-1ci9ux6-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-cb6xa1-Input css-26lubj-Input"
+          class="cache-132z6pu-Input"
           data-value=""
         >
           <input
@@ -7747,14 +7687,14 @@ exports[`RichSelect should render correctly multi isClearable disabled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -7790,7 +7730,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -7802,7 +7742,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7839,28 +7779,28 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7882,7 +7822,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -7910,7 +7850,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   opacity: 1;
 }
 
-.css-fs070l-singleValue {
+.cache-fs070l-singleValue {
   color: #4a4f62;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -7924,12 +7864,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding-left: 0;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -7947,9 +7882,11 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -7962,7 +7899,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7981,7 +7918,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -7993,7 +7930,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -8005,7 +7942,7 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -8047,20 +7984,20 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
     data-testid="rich-select-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-19-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -8071,12 +8008,12 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
           Select...
         </label>
         <div
-          class=" css-fs070l-singleValue"
+          class=" cache-fs070l-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -8099,14 +8036,14 @@ exports[`RichSelect should render correctly multi isSearchable 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -8149,7 +8086,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -8161,7 +8098,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   white-space: nowrap;
 }
 
-.css-1cxfu5m-control {
+.cache-1cxfu5m-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8198,11 +8135,11 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   animation: none;
 }
 
-.css-1cxfu5m-control:hover {
+.cache-1cxfu5m-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1jfs5jc-ValueContainer {
+.cache-1jfs5jc-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8225,7 +8162,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding-top: 0;
 }
 
-.css-1jfs5jc-ValueContainer label {
+.cache-1jfs5jc-ValueContainer label {
   display: initial;
 }
 
@@ -8254,7 +8191,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   opacity: 0.5;
 }
 
-.css-1ci9ux6-singleValue {
+.cache-1ci9ux6-singleValue {
   color: #c4c9d6;
   grid-area: 1/1/2/3;
   margin-left: 0;
@@ -8268,12 +8205,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding-left: 0;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-26lubj-Input {
+.cache-132z6pu-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -8291,9 +8223,11 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-26lubj-Input:after {
+.cache-132z6pu-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -8306,7 +8240,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8325,7 +8259,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -8337,7 +8271,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -8349,7 +8283,7 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -8391,20 +8325,20 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
     data-testid="rich-select-loading"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-20-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1cxfu5m-control"
+      class=" cache-1cxfu5m-control"
     >
       <div
-        class=" css-1jfs5jc-ValueContainer"
+        class=" cache-1jfs5jc-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -8415,12 +8349,12 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
           Select...
         </label>
         <div
-          class=" css-1ci9ux6-singleValue"
+          class=" cache-1ci9ux6-singleValue"
         >
           Option A
         </div>
         <div
-          class="cache-cb6xa1-Input css-26lubj-Input"
+          class="cache-132z6pu-Input"
           data-value=""
         >
           <input
@@ -8444,14 +8378,14 @@ exports[`RichSelect should render correctly multi isSearchable disabled 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-1t210r9"
@@ -8487,7 +8421,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -8499,7 +8433,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8536,28 +8470,28 @@ exports[`RichSelect should render correctly with portal 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8579,7 +8513,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -8598,7 +8532,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -8606,12 +8540,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -8629,9 +8558,11 @@ exports[`RichSelect should render correctly with portal 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -8644,7 +8575,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8663,7 +8594,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -8675,7 +8606,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -8687,7 +8618,7 @@ exports[`RichSelect should render correctly with portal 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -8729,20 +8660,20 @@ exports[`RichSelect should render correctly with portal 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-22-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -8753,13 +8684,13 @@ exports[`RichSelect should render correctly with portal 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-22-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -8783,14 +8714,14 @@ exports[`RichSelect should render correctly with portal 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
@@ -8834,7 +8765,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   margin-top: 0;
 }
 
-.css-1f43avz-a11yText-A11yText {
+.cache-1f43avz-a11yText-A11yText {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -8846,7 +8777,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   white-space: nowrap;
 }
 
-.css-1bd5xum-control {
+.cache-1bd5xum-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8883,28 +8814,28 @@ exports[`RichSelect should render correctly without children 1`] = `
   animation: none;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.css-1bd5xum-control:focus-within {
+.cache-1bd5xum-control:focus-within {
   border-color: #4f0599;
   box-shadow: 0 0 2px 2px rgba(79,5,153,0.25);
 }
 
-.css-1bd5xum-control:focus-within svg {
+.cache-1bd5xum-control:focus-within svg {
   fill: #4f0599;
 }
 
-.css-1bd5xum-control:hover {
+.cache-1bd5xum-control:hover {
   border-color: #390171;
 }
 
-.css-1bd5xum-control:hover svg {
+.cache-1bd5xum-control:hover svg {
   fill: #4f0599;
 }
 
-.css-evyzo2-ValueContainer {
+.cache-evyzo2-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8926,7 +8857,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   padding-top: 0;
 }
 
-.css-evyzo2-ValueContainer label {
+.cache-evyzo2-ValueContainer label {
   display: initial;
 }
 
@@ -8945,7 +8876,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   opacity: 0;
 }
 
-.css-m44uhw-placeholder {
+.cache-m44uhw-placeholder {
   color: #b2b6c3;
   grid-area: 1/1/2/3;
   margin-left: 2px;
@@ -8953,12 +8884,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   box-sizing: border-box;
 }
 
-.cache-cb6xa1-Input {
-  margin-left: 0px;
-  caret-color: transparent;
-}
-
-.css-18mpa2g-Input {
+.cache-1906h45-Input {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -8976,9 +8902,11 @@ exports[`RichSelect should render correctly without children 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
 }
 
-.css-18mpa2g-Input:after {
+.cache-1906h45-Input:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -8991,7 +8919,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   padding: 0;
 }
 
-.css-ralm3g-IndicatorsContainer {
+.cache-ralm3g-IndicatorsContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -9010,7 +8938,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   max-height: 48px;
 }
 
-.css-27txfv-indicatorSeparator {
+.cache-27txfv-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -9022,7 +8950,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   display: none;
 }
 
-.css-tlfecz-indicatorContainer {
+.cache-tlfecz-indicatorContainer {
   color: hsl(0, 0%, 80%);
   display: -webkit-box;
   display: -webkit-flex;
@@ -9034,7 +8962,7 @@ exports[`RichSelect should render correctly without children 1`] = `
   box-sizing: border-box;
 }
 
-.css-tlfecz-indicatorContainer:hover {
+.cache-tlfecz-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -9076,20 +9004,20 @@ exports[`RichSelect should render correctly without children 1`] = `
     data-testid="rich-select-test"
   >
     <span
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
       id="react-select-23-live-region"
     />
     <span
       aria-atomic="false"
       aria-live="polite"
       aria-relevant="additions text"
-      class="css-1f43avz-a11yText-A11yText"
+      class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" css-1bd5xum-control"
+      class=" cache-1bd5xum-control"
     >
       <div
-        class=" css-evyzo2-ValueContainer"
+        class=" cache-evyzo2-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -9100,13 +9028,13 @@ exports[`RichSelect should render correctly without children 1`] = `
           Select...
         </label>
         <div
-          class=" css-m44uhw-placeholder"
+          class=" cache-m44uhw-placeholder"
           id="react-select-23-placeholder"
         >
           Select...
         </div>
         <div
-          class="cache-cb6xa1-Input css-18mpa2g-Input"
+          class="cache-1906h45-Input"
           data-value=""
         >
           <input
@@ -9130,14 +9058,14 @@ exports[`RichSelect should render correctly without children 1`] = `
         </div>
       </div>
       <div
-        class=" css-ralm3g-IndicatorsContainer"
+        class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" css-27txfv-indicatorSeparator"
+          class=" cache-27txfv-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" css-tlfecz-indicatorContainer"
+          class=" cache-tlfecz-indicatorContainer"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-ctcg2i"
