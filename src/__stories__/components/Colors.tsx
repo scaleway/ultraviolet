@@ -4,7 +4,10 @@ import React from 'react'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
 import Typography from '../../components/Typography'
+import lightTheme, { Color } from '../../theme'
 import ThemeWrapper from './ThemeWrapper'
+
+type AvailableContexts = keyof typeof lightTheme['colors'][Color]
 
 const Colors = () => {
   const theme = useTheme()
@@ -25,12 +28,10 @@ const Colors = () => {
                     key={context}
                     style={{
                       alignItems: 'center',
-                      backgroundColor: (
-                        theme.colors as unknown as Record<
-                          string,
-                          Record<string, string>
-                        >
-                      )[sentiment][context],
+                      backgroundColor:
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       display: 'flex',
                       justifyContent: 'space-between',
                       padding: 8,
@@ -39,12 +40,9 @@ const Colors = () => {
                   >
                     <Typography
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {context}
@@ -52,12 +50,9 @@ const Colors = () => {
                     <Typography
                       variant="tiny"
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {
@@ -87,12 +82,10 @@ const Colors = () => {
                     key={context}
                     style={{
                       alignItems: 'center',
-                      backgroundColor: (
-                        theme.colors as unknown as Record<
-                          string,
-                          Record<string, string>
-                        >
-                      )[sentiment][context],
+                      backgroundColor:
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       display: 'flex',
                       justifyContent: 'space-between',
                       padding: 8,
@@ -101,12 +94,9 @@ const Colors = () => {
                   >
                     <Typography
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {context}
@@ -114,21 +104,15 @@ const Colors = () => {
                     <Typography
                       variant="tiny"
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context]
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ]
                       }
                     </Typography>
                   </BorderedBox>
@@ -149,12 +133,10 @@ const Colors = () => {
                     key={context}
                     style={{
                       alignItems: 'center',
-                      backgroundColor: (
-                        theme.colors as unknown as Record<
-                          string,
-                          Record<string, string>
-                        >
-                      )[sentiment][context],
+                      backgroundColor:
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       display: 'flex',
                       justifyContent: 'space-between',
                       padding: 8,
@@ -163,12 +145,9 @@ const Colors = () => {
                   >
                     <Typography
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {context}
@@ -176,21 +155,15 @@ const Colors = () => {
                     <Typography
                       variant="tiny"
                       color={readableColor(
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context],
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ],
                       )}
                     >
                       {
-                        (
-                          theme.colors as unknown as Record<
-                            string,
-                            Record<string, string>
-                          >
-                        )[sentiment][context]
+                        theme.colors[sentiment as Color][
+                          context as AvailableContexts
+                        ]
                       }
                     </Typography>
                   </BorderedBox>
