@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3.0.0
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: 17
-        cache: 'yarn'
-    - run: yarn
-    - run: echo '${{ github.event.pull_request.title }}' | yarn run commitlint
+        cache: 'pnpm'
+    - run: pnpm install
+    - run: echo '${{ github.event.pull_request.title }}' | pnpm commitlint

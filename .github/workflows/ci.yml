@@ -12,25 +12,26 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3.0.0
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: 17
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run build
-    - run: yarn run tsc --noEmit || true
+        cache: 'pnpm'
+    - run: pnpm install
+    - run: pnpm tsc --noEmit || true
   lint:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3.0.0
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: 17
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run lint
+        cache: 'pnpm'
+    - run: pnpm install
+    - run: pnpm run lint
   test:
     runs-on: ubuntu-20.04
     strategy:
@@ -40,13 +41,14 @@ jobs:
     - uses: actions/checkout@v3.0.0
       with:
         fetch-depth: "0"
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: ${{ matrix.node }}
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn run test:unit:coverage
+        cache: 'pnpm'
+    - run: pnpm install
+    - run: pnpm run test:unit:coverage
     - uses: codecov/codecov-action@v2.1.0
   accessibility:
     runs-on: ubuntu-20.04
@@ -54,13 +56,14 @@ jobs:
       - uses: actions/checkout@v3.0.0
         with:
           fetch-depth: "0"
+      - uses: pnpm/action-setup@v2.2.1
       - name: Use Node.js
         uses: actions/setup-node@v3.0.0
         with:
           node-version: 17
-          cache: 'yarn'
-      - run: yarn
-      - run: yarn run test:a11y
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run test:a11y
   build:
     strategy:
       matrix:
@@ -69,12 +72,13 @@ jobs:
     needs: [lint, test]
     steps:
     - uses: actions/checkout@v3.0.0
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: ${{ matrix.node }}
-    - run: yarn install
-    - run: yarn run build
+    - run: pnpm install
+    - run: pnpm run build
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
@@ -88,13 +92,14 @@ jobs:
         fetch-depth: "0"
         persist-credentials: false
     - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - uses: pnpm/action-setup@v2.2.1
     - name: Use Node.js
       uses: actions/setup-node@v3.0.0
       with:
         node-version: 17
-    - run: yarn install
-    - run: yarn run build
-    - run: yarn run semantic-release
+    - run: pnpm install
+    - run: pnpm run build
+    - run: pnpm run semantic-release
       env:
         HUSKY: 0
         NPM_TOKEN: ${{secrets.NPM_TOKEN}}
