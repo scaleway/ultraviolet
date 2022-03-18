@@ -212,6 +212,10 @@ devDependencies:
   webpack: 5.70.0
   zxcvbn: 4.4.2
 
+dependenciesMeta:
+  '@react-spring/core':
+    built: false
+
 packages:
 
   /@ampproject/remapping/2.1.2:
@@ -18995,7 +18999,3 @@ packages:
   /zxcvbn/4.4.2:
     resolution: {integrity: sha1-KOwXzwl0PtyrBW3dixsGJizHPDA=}
     dev: true
-
-dependenciesMeta:
-  '@react-spring/core':
-    built: false
