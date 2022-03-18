@@ -149,8 +149,8 @@ const MenuList = styled.div<MenuListProps>`
   color: ${({ theme }) => theme.colors.neutral.text};
   border-radius: 4px;
   position: relative;
-  ${({ placement, theme }) =>
-    placement && arrowPlacementStyles[placement](theme)}
+  ${({ placement, theme, hasArrow }) =>
+    hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
 const Menu: MenuType = ({
@@ -178,18 +178,18 @@ const Menu: MenuType = ({
     className={className}
   >
     {({ placement: localPlacement, toggle, visible: isOpen }) =>
-      isOpen && (
+      isOpen ? (
         <MenuList
           align={align}
           hasArrow={hasArrow}
-          placement={placement}
+          placement={localPlacement as ArrowPlacement}
           role="menu"
         >
           {typeof children === 'function'
             ? children({ placement: localPlacement, toggle, visible })
             : children}
         </MenuList>
-      )
+      ) : null
     }
   </Popper>
 )
