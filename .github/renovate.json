@@ -22,14 +22,14 @@
     },
     {
       "semanticCommitScope": "devDeps",
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["packageManager", "devDependencies"],
       "matchUpdateTypes": ["major"]
     },
     {
       "automerge": true,
       "automergeType": "branch",
       "semanticCommitScope": "devDeps",
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["packageManager", "devDependencies"],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
