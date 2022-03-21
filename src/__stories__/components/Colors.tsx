@@ -14,148 +14,115 @@ const Colors = () => {
 
   return (
     <>
-      {Object.keys(theme.colors).map(sentiment => (
-        <>
-          <Typography variant="title" style={{ textTransform: 'capitalize' }}>
-            {sentiment}
-          </Typography>
-          <div style={{ display: 'flex', gap: 24, marginTop: 16 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(theme.colors[sentiment as keyof typeof theme.colors])
-                .filter(context => context.includes('background'))
-                ?.map(context => (
-                  <BorderedBox
-                    key={context}
-                    style={{
-                      alignItems: 'center',
-                      backgroundColor:
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      padding: 8,
-                      width: 275,
-                    }}
-                  >
-                    <Typography
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
+      {(Object.keys(theme.colors) as Color[]).map(sentiment => {
+        const colorContextKeys = Object.keys(
+          theme.colors[sentiment],
+        ) as AvailableContexts[]
+
+        return (
+          <>
+            <Typography variant="title" style={{ textTransform: 'capitalize' }}>
+              {sentiment}
+            </Typography>
+            <div style={{ display: 'flex', gap: 24, marginTop: 16 }}>
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
+              >
+                {colorContextKeys
+                  .filter(context => context.includes('background'))
+                  .map(context => (
+                    <BorderedBox
+                      key={context}
+                      style={{
+                        alignItems: 'center',
+                        backgroundColor: theme.colors[sentiment][context],
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        padding: 8,
+                        width: 275,
+                      }}
                     >
-                      {context}
-                    </Typography>
-                    <Typography
-                      variant="tiny"
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
+                      <Typography
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {context}
+                      </Typography>
+                      <Typography
+                        variant="tiny"
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {theme.colors[sentiment][context]}
+                      </Typography>
+                    </BorderedBox>
+                  ))}
+              </div>
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
+              >
+                {colorContextKeys
+                  .filter(context => context.includes('text'))
+                  .map(context => (
+                    <BorderedBox
+                      key={context}
+                      style={{
+                        alignItems: 'center',
+                        backgroundColor: theme.colors[sentiment][context],
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        padding: 8,
+                        width: 275,
+                      }}
                     >
-                      {
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ]
-                      }
-                    </Typography>
-                  </BorderedBox>
-                ))}
+                      <Typography
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {context}
+                      </Typography>
+                      <Typography
+                        variant="tiny"
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {theme.colors[sentiment][context]}
+                      </Typography>
+                    </BorderedBox>
+                  ))}
+              </div>
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
+              >
+                {colorContextKeys
+                  .filter(context => context.includes('border'))
+                  .map(context => (
+                    <BorderedBox
+                      key={context}
+                      style={{
+                        alignItems: 'center',
+                        backgroundColor: theme.colors[sentiment][context],
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        padding: 8,
+                        width: 275,
+                      }}
+                    >
+                      <Typography
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {context}
+                      </Typography>
+                      <Typography
+                        variant="tiny"
+                        color={readableColor(theme.colors[sentiment][context])}
+                      >
+                        {theme.colors[sentiment][context]}
+                      </Typography>
+                    </BorderedBox>
+                  ))}
+              </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(theme.colors[sentiment as Color])
-                .filter(context => context.includes('text'))
-                ?.map(context => (
-                  <BorderedBox
-                    key={context}
-                    style={{
-                      alignItems: 'center',
-                      backgroundColor:
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      padding: 8,
-                      width: 275,
-                    }}
-                  >
-                    <Typography
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
-                    >
-                      {context}
-                    </Typography>
-                    <Typography
-                      variant="tiny"
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
-                    >
-                      {
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ]
-                      }
-                    </Typography>
-                  </BorderedBox>
-                ))}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {Object.keys(theme.colors[sentiment as Color])
-                .filter(context => context.includes('border'))
-                ?.map(context => (
-                  <BorderedBox
-                    key={context}
-                    style={{
-                      alignItems: 'center',
-                      backgroundColor:
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      padding: 8,
-                      width: 275,
-                    }}
-                  >
-                    <Typography
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
-                    >
-                      {context}
-                    </Typography>
-                    <Typography
-                      variant="tiny"
-                      color={readableColor(
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ],
-                      )}
-                    >
-                      {
-                        theme.colors[sentiment as Color][
-                          context as AvailableContexts
-                        ]
-                      }
-                    </Typography>
-                  </BorderedBox>
-                ))}
-            </div>
-          </div>
-          <Separator style={{ margin: `24px 0` }} />
-        </>
-      ))}
+            <Separator style={{ margin: `24px 0` }} />
+          </>
+        )
+      })}
     </>
   )
 }
