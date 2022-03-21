@@ -16,9 +16,9 @@ export default {
   title: 'Components/Feedback/Toaster',
 } as Meta
 
-const Template: Story = args => (
+const Template: Story = () => (
   <>
-    <ToastContainer {...args} />
+    <ToastContainer />
     <div style={{ display: 'flex', gap: 8 }}>
       <Button
         variant="success"
