@@ -1,3 +1,10 @@
+### [0.140.5](https://github.com/scaleway/scaleway-ui/compare/v0.140.4...v0.140.5) (2022-03-21)
+
+
+### :bug: Bug Fixes
+
+* **menu:** add className to menu component ([#1277](https://github.com/scaleway/scaleway-ui/issues/1277)) ([e1748a5](https://github.com/scaleway/scaleway-ui/commit/e1748a5b4edd70ed5f44a47a0d83df484005a7d0))
+
 ### [0.140.4](https://github.com/scaleway/scaleway-ui/compare/v0.140.3...v0.140.4) (2022-03-21)
 
 
