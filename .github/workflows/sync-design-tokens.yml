@@ -2,7 +2,7 @@ name: Design tokens
 
 on:
   schedule:
-    - cron: "0 10-20 * * 1-5"
+    - cron: "30 9 * * 1-5"
 
 jobs:
   synchronise:
@@ -24,8 +24,9 @@ jobs:
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          token: ${{ secrets.GH_TOKEN }}
           base: main
-          author: Scaleway Design Bot <github@scaleway.com>
+          author: Scaleway Design <github@scaleway.com>
           commit-message: 'fix(theme): synchronise design tokens'
           branch: fix/design-tokens-synchronise
           delete-branch: true
