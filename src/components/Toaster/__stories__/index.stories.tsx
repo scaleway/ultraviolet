@@ -45,9 +45,6 @@ export const Variants: Story = () => (
       <Button variant="info" onClick={() => toast.info('This is info')}>
         Info
       </Button>
-      <Button variant="warning" onClick={() => toast.warn('This is warning')}>
-        Warning
-      </Button>
       <Button variant="warning" onClick={() => toast.error('This is error')}>
         Error
       </Button>

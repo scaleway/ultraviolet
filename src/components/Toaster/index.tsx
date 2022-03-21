@@ -43,15 +43,6 @@ const styles = {
       }
     }
 
-    &${PREFIX}__toast--warning {
-      background-color: ${theme.colors.danger.background};
-      color: ${theme.colors.danger.text};
-
-      ${PREFIX}__progress-bar {
-        background-color: ${theme.colors.danger.backgroundStrong};
-      }
-    }
-
     &${PREFIX}__toast--error {
       background-color: ${theme.colors.danger.background};
       color: ${theme.colors.danger.text};
@@ -111,11 +102,6 @@ const toast = {
   success: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.success(
       <SanitizedAlertBar type="success">{children}</SanitizedAlertBar>,
-      options,
-    ),
-  warn: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.warn(
-      <SanitizedAlertBar type="warning">{children}</SanitizedAlertBar>,
       options,
     ),
 }
