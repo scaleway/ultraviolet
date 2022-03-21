@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
@@ -89,7 +90,11 @@ const arrowPlacementStyles = {
 } as const
 
 type ArrowPlacement = keyof typeof arrowPlacementStyles
-
+type MenuListProps = {
+  align: AlignStyle
+  hasArrow: boolean
+  placement: ArrowPlacement
+}
 export const arrowPlacements = Object.keys(
   arrowPlacementStyles,
 ) as ArrowPlacement[]
@@ -97,44 +102,6 @@ export const arrowPlacements = Object.keys(
 type AlignStyle = {
   left?: string | null
   right?: string | null
-}
-
-const styles = {
-  align: (align: AlignStyle) => css`
-    &:after,
-    &:before {
-      left: ${align.left};
-      right: ${align.right};
-    }
-  `,
-  menu: (theme: Theme) => css`
-    background-color: ${theme.colors.neutral.backgroundWeak};
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: ${theme.colors.neutral.text};
-    border-radius: 4px;
-    position: relative;
-
-    &:after,
-    &:before {
-      border: solid transparent;
-      border-width: 9px;
-      content: ' ';
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    &:after {
-      border-color: transparent;
-    }
-    &:before {
-      border-color: transparent;
-    }
-  `,
 }
 
 interface ChildrenProps {
@@ -148,9 +115,43 @@ type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
   ariaLabel?: string
   placement?: ArrowPlacement
   children?: ((props: ChildrenProps) => ReactNode) | ReactNode
+  className?: string
 }
 
 type MenuType = FunctionComponent<MenuProps> & { Item: typeof Item }
+
+const MenuList = styled.div<MenuListProps>`
+  &:after,
+  &:before {
+    left: ${({ align }) => align.left};
+    right: ${({ align }) => align.right};
+
+    border: solid transparent;
+    border-width: 9px;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: transparent;
+  }
+  &:before {
+    border-color: transparent;
+  }
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  border-radius: 4px;
+  position: relative;
+  ${({ placement, theme, hasArrow }) =>
+    hasArrow && arrowPlacementStyles[placement]?.(theme)}
+`
 
 const Menu: MenuType = ({
   align = { left: '50%', right: 'inherit' },
@@ -163,6 +164,7 @@ const Menu: MenuType = ({
   name = 'menu',
   placement = 'bottom',
   visible = false,
+  className,
 }) => (
   <Popper
     aria-label={ariaLabel}
@@ -173,22 +175,21 @@ const Menu: MenuType = ({
     name={name}
     placement={placement}
     visible={visible}
+    className={className}
   >
     {({ placement: localPlacement, toggle, visible: isOpen }) =>
-      isOpen && (
-        <div
+      isOpen ? (
+        <MenuList
+          align={align}
+          hasArrow={hasArrow}
+          placement={localPlacement as ArrowPlacement}
           role="menu"
-          css={[
-            styles.menu,
-            hasArrow && arrowPlacementStyles[localPlacement as ArrowPlacement],
-            styles.align(align),
-          ]}
         >
           {typeof children === 'function'
             ? children({ placement: localPlacement, toggle, visible })
             : children}
-        </div>
-      )
+        </MenuList>
+      ) : null
     }
   </Popper>
 )
@@ -201,6 +202,7 @@ Menu.propTypes = {
   ariaLabel: PropTypes.string,
   baseId: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  className: PropTypes.string,
   disclosure: PropTypes.func.isRequired,
   hasArrow: PropTypes.bool,
   modal: PropTypes.bool,
