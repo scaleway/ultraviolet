@@ -1,4 +1,4 @@
-import { Theme, css, keyframes } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
@@ -66,18 +66,15 @@ const StyledRow = styled(Box, {
     ].includes(prop.toString()),
 })<{
   animated?: boolean
-  animation?: string
-  animationDuration?: number
+  animation: keyof typeof animations
+  animationDuration: number
   disabled?: boolean
   highlighted?: boolean
 }>`
   ${({ animated, animationDuration, animation }) =>
     animated
       ? css`
-          animation: ${(
-              animations as Record<string, ReturnType<typeof keyframes>>
-            )[animation as string]}
-            ${animationDuration as number}ms linear;
+          animation: ${animations[animation]} ${animationDuration}ms linear;
         `
       : ''}
   display: flex;
