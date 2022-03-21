@@ -16,7 +16,7 @@ jobs:
           node-version: 17
       - run: pnpm install
       - run: pnpm run build:storybook-visual
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: restore-build-visual
         with:
           path: ./*
@@ -36,7 +36,7 @@ jobs:
           node-version: 17
           cache: "pnpm"
       - run: pnpm install
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: restore-build-visual
         with:
           path: ./*
