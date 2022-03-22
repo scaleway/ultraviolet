@@ -5,7 +5,6 @@ import Button from '../Button'
 
 const variantStyle = {
   danger: (theme: Theme) => css`
-    display: inline-block;
     color: ${theme.colors.danger.text};
     &:hover,
     &:focus {
@@ -50,7 +49,7 @@ const styles = {
     }
   `,
   item: (theme: Theme) => css`
-    display: block;
+    display: inline-block;
     font-size: 14px;
     line-height: 22px;
     font-weight: inherit;
