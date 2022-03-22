@@ -71,7 +71,7 @@ const extendTheme = ({
 }: {
   baseTheme?: typeof theme
   extendedTheme: RecursivePartial<typeof theme>
-}) => deepmerge(baseTheme, extendedTheme) as typeof theme
+}) => deepmerge(baseTheme, extendedTheme) as SCWUITheme
 
 const darkTheme = extendTheme({
   extendedTheme: dark,
@@ -80,6 +80,8 @@ const darkTheme = extendTheme({
 type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
+
+const lightTheme: SCWUITheme = theme
 
 // This type exclude overlay color
 type Color = Exclude<keyof typeof colors, 'overlay'>
@@ -98,4 +100,4 @@ export {
   extendTheme,
 }
 
-export default theme
+export default lightTheme
