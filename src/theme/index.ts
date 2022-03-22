@@ -56,32 +56,32 @@ const theme = {
   space,
 }
 
+type SCWUITheme = typeof theme & {
+  linkComponent?: unknown
+}
+
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
 }
 
 /**
  * Will extend theme with new theme properties
- * @param {typeof theme} baseTheme the theme you want to extend from, by default it is set to light theme
- * @param {RecursivePartial<typeof theme>} extendedTheme the properties of a new theme you want to apply from baseTheme
+ * @param {SCWUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
+ * @param {RecursivePartial<SCWUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
 const extendTheme = ({
   baseTheme = theme,
   extendedTheme,
 }: {
-  baseTheme?: typeof theme
-  extendedTheme: RecursivePartial<typeof theme>
+  baseTheme?: SCWUITheme
+  extendedTheme: RecursivePartial<SCWUITheme>
 }) => deepmerge(baseTheme, extendedTheme) as SCWUITheme
+
+const lightTheme: SCWUITheme = theme
 
 const darkTheme = extendTheme({
   extendedTheme: dark,
 })
-
-type SCWUITheme = typeof theme & {
-  linkComponent?: unknown
-}
-
-const lightTheme: SCWUITheme = theme
 
 // This type exclude overlay color
 type Color = Exclude<keyof typeof colors, 'overlay'>
