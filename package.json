@@ -52,7 +52,7 @@
     "test:visual": "pnpm loki test",
     "prepare": "husky install",
     "size": "pnpm run build && size-limit",
-    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm run format"
+    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write src/theme/tokens"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
