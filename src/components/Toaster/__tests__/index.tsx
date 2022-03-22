@@ -29,9 +29,6 @@ describe('Toaster', () => {
         toast.success('This is a success', {
           toastId: 'success',
         })
-        toast.warn('This is a warning', {
-          toastId: 'warn',
-        })
         toast.error('This is an error', {
           toastId: 'error',
         })
