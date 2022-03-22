@@ -1,3 +1,10 @@
+### [0.140.6](https://github.com/scaleway/scaleway-ui/compare/v0.140.5...v0.140.6) (2022-03-22)
+
+
+### :package: Chore
+
+* **deps:** upgrade react-toastify to 8.2.0 ([#1297](https://github.com/scaleway/scaleway-ui/issues/1297)) ([b0cdfe2](https://github.com/scaleway/scaleway-ui/commit/b0cdfe255b05026c1a4332d287fb592cf72776df))
+
 ### [0.140.5](https://github.com/scaleway/scaleway-ui/compare/v0.140.4...v0.140.5) (2022-03-21)
 
 
