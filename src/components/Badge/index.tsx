@@ -43,7 +43,7 @@ const variants = {
   `,
   neutral: ({ theme: { colors } }: { theme: Theme }) => css`
     color: ${colors.neutral.textStrong};
-    background-color: ${colors.neutral.backgroundStrong};
+    background-color: ${colors.neutral.borderStrong};
   `,
   primary: ({ theme: { colors } }: { theme: Theme }) => css`
     background-color: ${colors.primary.backgroundStrong};
