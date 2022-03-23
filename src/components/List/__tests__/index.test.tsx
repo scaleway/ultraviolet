@@ -1849,4 +1849,41 @@ describe('List', () => {
         },
       },
     ))
+
+  test('should render correctly with animation on Row', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        idKey="id"
+        data={generateData(1)}
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {props => {
+                const { rowData } = props
+
+                return (
+                  <list.Row
+                    id={rowData.id}
+                    animated
+                    animation="pulse"
+                    animationDuration={700}
+                  >
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                  </list.Row>
+                )
+              }}
+            </list.Body>
+          </>
+        )}
+      </List>,
+    ))
 })

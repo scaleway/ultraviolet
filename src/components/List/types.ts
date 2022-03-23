@@ -1,4 +1,5 @@
 import { MouseEventHandler, ReactNode } from 'react'
+import * as animations from '../../utils/animations'
 
 export type ListOrder = 'asc' | 'desc' | undefined
 
@@ -42,6 +43,8 @@ export type ListRowProps = {
   tooltip?: string
   children: ReactNode
   animated?: boolean
+  animation?: keyof typeof animations
+  animationDuration?: number
   edition?: boolean
   expandableClassName?: string
   isEditable?: boolean

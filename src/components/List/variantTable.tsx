@@ -1,4 +1,4 @@
-import { Theme, css, keyframes } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
@@ -7,6 +7,7 @@ import React, {
   MouseEvent,
   useCallback,
 } from 'react'
+import * as animations from '../../utils/animations'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -16,16 +17,6 @@ import { useListContext } from './context'
 import { ListRowProps } from './types'
 
 export const Cell = styled(BaseCell)``
-
-const fadeInAnimation = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
 
 const StyledHeader = styled.div`
   display: flex;
@@ -73,13 +64,19 @@ const StyledRow = styled(Box, {
       'edition',
       'customStyle',
     ].includes(prop.toString()),
-})<{ animated?: boolean; disabled?: boolean; highlighted?: boolean }>`
-  ${({ animated }) =>
+})<{
+  animated?: boolean
+  animation: keyof typeof animations
+  animationDuration: number
+  disabled?: boolean
+  highlighted?: boolean
+}>`
+  ${({ animated, animationDuration, animation }) =>
     animated
       ? css`
-          animation: ${fadeInAnimation} 1s linear;
+          animation: ${animations[animation]} ${animationDuration}ms linear;
         `
-      : ``}
+      : ''}
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -194,6 +191,8 @@ export const Row: FunctionComponent<ListRowProps> = ({
   id,
   children,
   animated,
+  animation = 'fadeIn',
+  animationDuration = 1000,
   disabled,
   tooltip,
   ...props
@@ -217,6 +216,8 @@ export const Row: FunctionComponent<ListRowProps> = ({
         role="listitem"
         disabled={disabled}
         animated={animated}
+        animation={animation}
+        animationDuration={animationDuration}
         selected={selected}
         highlighted={highlighted}
         data-testid={`row-${id}`}
@@ -245,6 +246,10 @@ export const Row: FunctionComponent<ListRowProps> = ({
 
 Row.propTypes = {
   animated: PropTypes.bool,
+  animation: PropTypes.oneOf<ListRowProps['animation']>(
+    Object.keys(animations) as ListRowProps['animation'][],
+  ),
+  animationDuration: PropTypes.number,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   disabled: PropTypes.bool,
