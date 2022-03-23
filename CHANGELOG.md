@@ -1,3 +1,10 @@
+### [0.141.2](https://github.com/scaleway/scaleway-ui/compare/v0.141.1...v0.141.2) (2022-03-23)
+
+
+### :bug: Bug Fixes
+
+* correct theme type ([#1300](https://github.com/scaleway/scaleway-ui/issues/1300)) ([05a47f4](https://github.com/scaleway/scaleway-ui/commit/05a47f4d33675d8072657a80d1cc99a9a990db5f))
+
 ### [0.141.1](https://github.com/scaleway/scaleway-ui/compare/v0.141.0...v0.141.1) (2022-03-23)
 
 
