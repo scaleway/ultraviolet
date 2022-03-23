@@ -1,3 +1,10 @@
+## [0.141.0](https://github.com/scaleway/scaleway-ui/compare/v0.140.6...v0.141.0) (2022-03-23)
+
+
+### :gear: Features
+
+* **list:** added some animation on list ([#1264](https://github.com/scaleway/scaleway-ui/issues/1264)) ([aaeb7aa](https://github.com/scaleway/scaleway-ui/commit/aaeb7aa3ee732ef4e431977101eff0668f5b992f))
+
 ### [0.140.6](https://github.com/scaleway/scaleway-ui/compare/v0.140.5...v0.140.6) (2022-03-22)
 
 
