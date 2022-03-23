@@ -1,3 +1,15 @@
+### [0.141.1](https://github.com/scaleway/scaleway-ui/compare/v0.141.0...v0.141.1) (2022-03-23)
+
+
+### :bug: Bug Fixes
+
+* **colors:** badge neutral to be more dark ([#1303](https://github.com/scaleway/scaleway-ui/issues/1303)) ([8ca7e52](https://github.com/scaleway/scaleway-ui/commit/8ca7e528185a1f2bb3bd9fed9872d1c372095124))
+
+
+### :package: Chore
+
+* update package json tokens sync ([#1299](https://github.com/scaleway/scaleway-ui/issues/1299)) ([fdee9a0](https://github.com/scaleway/scaleway-ui/commit/fdee9a023ed171030b35d053ff537ac4a4dac7d8))
+
 ## [0.141.0](https://github.com/scaleway/scaleway-ui/compare/v0.140.6...v0.141.0) (2022-03-23)
 
 
