@@ -97,7 +97,7 @@ export default {
       textWeakDisabled: '#4d5266',
       textWeakHover: '#898fa2',
     },
-    overlay: '#151A2D99',
+    overlay: '#151A2DA6',
     primary: {
       background: '#2d2242',
       backgroundDisabled: '#3e2a58',
@@ -228,7 +228,7 @@ export default {
     hoverWarning: '0 4 16 4 #413038CC',
     menu: '0 0 24 6 #00000066',
     modal: '0 8 40 10 #0000008C',
-    popover: '0 4 32 8 #00000066',
+    popover: '0 4 32 8 #0000008C',
     tooltip: '0 4 32 8 #00000066',
   },
 }

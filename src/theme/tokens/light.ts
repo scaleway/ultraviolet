@@ -72,7 +72,7 @@ export default {
       backgroundStrongDisabled: '#b2b6c3',
       backgroundStrongHover: '#000000',
       backgroundStronger: '#4a4f62',
-      backgroundWeak: '#fcfcfd',
+      backgroundWeak: '#ffffff',
       backgroundWeakDisabled: '#f6f6f8',
       backgroundWeakElevated: '#ffffff',
       backgroundWeakHover: '#4a4f62',
@@ -97,7 +97,7 @@ export default {
       textWeakDisabled: '#d4dae7',
       textWeakHover: '#c4c9d6',
     },
-    overlay: '#4A4F628C',
+    overlay: '#4A4F62A6',
     primary: {
       background: '#eeeeff',
       backgroundDisabled: '#d7ccf0',
@@ -228,7 +228,7 @@ export default {
     hoverWarning: '0 4 16 4 #FFEFE6CC',
     menu: '0 0 24 6 #D4DAE766',
     modal: '0 8 40 10 #151A2D5C',
-    popover: '0 4 32 8 #D4DAE766',
+    popover: '0 4 32 8 #151A2D5C',
     tooltip: '0 4 32 8 #D4DAE766',
   },
 }
