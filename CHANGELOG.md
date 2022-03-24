@@ -1,3 +1,17 @@
+### [0.141.3](https://github.com/scaleway/scaleway-ui/compare/v0.141.2...v0.141.3) (2022-03-24)
+
+
+### :bug: Bug Fixes
+
+* update design tokens ([#1304](https://github.com/scaleway/scaleway-ui/issues/1304)) ([1617ccc](https://github.com/scaleway/scaleway-ui/commit/1617ccc452408a2ccae0192cbbe66d430d075782))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency babel-loader to v8.2.4 ([#1306](https://github.com/scaleway/scaleway-ui/issues/1306)) ([0bf162b](https://github.com/scaleway/scaleway-ui/commit/0bf162baf3bd56fca58d6696a02bfaeb99d111cf))
+* **devdeps:** update node.js to v17.8 ([#1305](https://github.com/scaleway/scaleway-ui/issues/1305)) ([6f5d643](https://github.com/scaleway/scaleway-ui/commit/6f5d643e36a389b08446049771a6e821b2c116ad))
+* **devdeps:** update peter-evans/create-pull-request action to v4 ([#1301](https://github.com/scaleway/scaleway-ui/issues/1301)) ([a4e4f2f](https://github.com/scaleway/scaleway-ui/commit/a4e4f2f9ece78b1beeaad8af5b80c3ccd6b9dff5))
+
 ### [0.141.2](https://github.com/scaleway/scaleway-ui/compare/v0.141.1...v0.141.2) (2022-03-23)
 
 
