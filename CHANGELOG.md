@@ -1,3 +1,10 @@
+### [0.141.4](https://github.com/scaleway/scaleway-ui/compare/v0.141.3...v0.141.4) (2022-03-24)
+
+
+### :bug: Bug Fixes
+
+* menu display ([#1302](https://github.com/scaleway/scaleway-ui/issues/1302)) ([8d93eab](https://github.com/scaleway/scaleway-ui/commit/8d93eabdf00d9e037a1a21e3f9c4f87f33bcec82))
+
 ### [0.141.3](https://github.com/scaleway/scaleway-ui/compare/v0.141.2...v0.141.3) (2022-03-24)
 
 
