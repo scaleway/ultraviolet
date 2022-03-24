@@ -30,6 +30,7 @@ const external = id =>
 
 export default [{
   external,
+  preserveSymlinks: true,
   input: './src/index.ts',
   output: {
     dir: 'dist',
