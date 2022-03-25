@@ -25,7 +25,7 @@ Types.decorators = [
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {alertTypes.map(type => (
         <Alert key={type} type={type}>
-          This is a notification bar with the <b>{type}</b> variant.
+          This is a notification bar with the {type} variant.
         </Alert>
       ))}
     </div>
@@ -44,7 +44,7 @@ Variants.decorators = [
     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {alertVariants.map(variant => (
         <Alert key={variant} type="info" variant={variant}>
-          This is a notification bar with the <b>{variant}</b> variant.
+          This is a notification bar with the {variant} variant.
         </Alert>
       ))}
     </div>
@@ -94,6 +94,23 @@ IconSize.decorators = [
         This is a notification bar with a custom icon size.
       </Alert>
       <Alert iconSize={40} type="info">
+        This is a notification bar with a custom icon size.
+      </Alert>
+    </div>
+  ),
+]
+
+export const AdvancedChildren = Template.bind({})
+AdvancedChildren.parameters = {
+  docs: {
+    storyDescription:
+      'If you want to add more information into your alert you can simply pass it to Alert component as children.',
+  },
+}
+AdvancedChildren.decorators = [
+  () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <Alert type="warning">
         This is a notification bar with a custom icon size.
       </Alert>
     </div>

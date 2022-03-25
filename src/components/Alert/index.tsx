@@ -125,9 +125,13 @@ const Alert: FunctionComponent<AlertProps> = ({
     />
     <AlertContainer>
       {title && <Title text={title} color="inherit" />}
-      <Typography variant="bodyA" color="inherit">
-        {children}
-      </Typography>
+      {typeof children === 'string' ? (
+        <Typography variant="bodyA" color="inherit">
+          {children}
+        </Typography>
+      ) : (
+        children
+      )}
     </AlertContainer>
   </StyledContainer>
 )
