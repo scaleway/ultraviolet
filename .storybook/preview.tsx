@@ -13,9 +13,7 @@ import DocsContainer from './components/DocsContainer'
 
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
 
-const STORY_SORT = {
-  order: ['Home', 'Testing', 'Theme', 'Components'],
-}
+const STORY_SORT = { order: ['Home', 'Testing', 'Theme', 'Components'] }
 
 const darkMode = {
   dark: { ...themes.dark, ...dark },
@@ -39,9 +37,9 @@ const ENV_PARAMETERS = {
     viewport: {
       viewports: {},
     },
-    options: {
-      storySort: STORY_SORT,
-    },
+    // options: {
+    //   storySort: STORY_SORT,
+    // },
     docs: {
       container: DocsContainer,
     },
@@ -57,9 +55,9 @@ const ENV_PARAMETERS = {
     },
     viewMode: 'docs',
     previewTabs: { canvas: { hidden: true } },
-    options: {
-      storySort: STORY_SORT,
-    },
+    // options: {
+    //   storySort: STORY_SORT,
+    // },
     docs: {
       container: DocsContainer,
     },

@@ -1,1 +1,28 @@
-{ "extends": "../babel.config.json" }
+
+{
+    "plugins": [
+      [
+        "@emotion",
+        {
+          "sourceMap": false,
+          "autoLabel": "never",
+          "labelFormat": "[filename]--[local]"
+        }
+      ]
+    ],
+    "presets": [
+      "@babel/preset-typescript",
+      [
+        "@babel/preset-env",
+        { "shippedProposals": true, "targets": { "node": "current" } }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
+      ]
+    ]
+  }
+  

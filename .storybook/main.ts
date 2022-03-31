@@ -3,7 +3,16 @@ import { Configuration } from 'webpack'
 
 export default {
   core: {
-    builder: 'webpack5',
+    builder: {
+      name: 'webpack5',
+      // options: {
+      //   lazyCompilation: true,
+      // },
+    },
+  },
+  features: {
+    // storyStoreV7: true,
+    previewMdx2: true,
   },
   typescript: {
     // also valid 'react-docgen-typescript' | false
@@ -20,9 +29,10 @@ export default {
     'storybook-dark-mode/register',
   ],
   webpackFinal: (config: Configuration) => {
-    const cwd = process.cwd()
-    // TODO: remove when storybook supports emotion 11
+    const cwd = process.cwd() // TODO: remove when storybook supports emotion 11
+
     const newConfig = config
+
     newConfig.resolve = {
       ...(newConfig?.resolve ? newConfig.resolve : {}),
       alias: {
@@ -38,7 +48,6 @@ export default {
         path: require.resolve('path-browserify'),
       },
     }
-
-    return config
+    return newConfig
   },
 }
