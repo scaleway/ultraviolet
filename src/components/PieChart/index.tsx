@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ReactNode,
   Validator,
   VoidFunctionComponent,

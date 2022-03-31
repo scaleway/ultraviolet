@@ -2,7 +2,7 @@ import { CSSObject, Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ForwardRefExoticComponent,
   ForwardedRef,
   FunctionComponent,
@@ -293,7 +293,7 @@ const getSelectStyles = ({
   }),
 })
 
-export type WithSelectProps =  {
+export type WithSelectProps = {
   selectProps: SelectProps
 }
 

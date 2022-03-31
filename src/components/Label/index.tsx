@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { FunctionComponent, LabelHTMLAttributes } from 'react'
+import { FunctionComponent, LabelHTMLAttributes } from 'react'
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.neutral.text};

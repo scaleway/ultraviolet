@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React, { FunctionComponent } from 'react'
+import { FunctionComponent, createRef } from 'react'
 import Pagination, { usePaginationContext } from '..'
 import type { PaginationState } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
@@ -490,7 +490,7 @@ describe('Pagination', () => {
     ))
 
   test('should render correctly with ref', async () => {
-    const ref = React.createRef<PaginationState>()
+    const ref = createRef<PaginationState>()
     await shouldMatchEmotionSnapshot(
       <Pagination
         ref={ref}

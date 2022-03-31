@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { FunctionComponent, HTMLAttributes } from 'react'
+import { FunctionComponent, HTMLAttributes } from 'react'
 
 const StyledScrollView = styled.div`
   display: flex;

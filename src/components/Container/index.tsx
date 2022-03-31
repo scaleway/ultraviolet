@@ -1,7 +1,7 @@
 import { SerializedStyles } from '@emotion/serialize'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode, Validator } from 'react'
+import { FunctionComponent, ReactNode, Validator } from 'react'
 import BorderedBox from '../BorderedBox'
 import Box, { BoxProps } from '../Box'
 import FlexBox from '../FlexBox'

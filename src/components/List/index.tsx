@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ForwardedRef,
+  Fragment,
   FunctionComponent,
   ReactElement,
   ReactNode,
@@ -106,14 +107,14 @@ function Body<DataType extends Record<string, unknown>>({
     <Box {...props} role="list">
       {pageData.length === 0 ? emptyListComponent : null}
       {pageData.map((rowData, index) => (
-        <React.Fragment key={(rowData[idKey] as string) || index}>
+        <Fragment key={(rowData[idKey] as string) || index}>
           {children({
             index,
             rowData,
             rowState: rowsState[rowData[idKey] as keyof typeof rowsState] ?? {},
             setRowState,
           } as ListBodyRenderProps<DataType>)}
-        </React.Fragment>
+        </Fragment>
       ))}
     </Box>
   )

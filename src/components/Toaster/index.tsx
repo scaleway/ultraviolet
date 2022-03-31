@@ -1,7 +1,7 @@
 import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
   ToastOptions,

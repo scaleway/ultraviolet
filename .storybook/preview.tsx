@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import I18n from '@scaleway/use-i18n'
 import { Story } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
@@ -37,9 +37,9 @@ const ENV_PARAMETERS = {
     viewport: {
       viewports: {},
     },
-    // options: {
-    //   storySort: STORY_SORT,
-    // },
+    options: {
+      storySort: STORY_SORT,
+    },
     docs: {
       container: DocsContainer,
     },
@@ -55,9 +55,9 @@ const ENV_PARAMETERS = {
     },
     viewMode: 'docs',
     previewTabs: { canvas: { hidden: true } },
-    // options: {
-    //   storySort: STORY_SORT,
-    // },
+    options: {
+      storySort: STORY_SORT,
+    },
     docs: {
       container: DocsContainer,
     },

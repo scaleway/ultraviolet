@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ImgHTMLAttributes } from 'react'
+import { FunctionComponent, ImgHTMLAttributes } from 'react'
 
 type ImageProps = ImgHTMLAttributes<HTMLImageElement>
 

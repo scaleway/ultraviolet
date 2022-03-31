@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import { readableColor } from 'polished'
-import React from 'react'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
 import Typography from '../../components/Typography'

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { Children, FunctionComponent, ReactNode } from 'react'
+import { Children, FunctionComponent, ReactNode } from 'react'
 
 export const Steps = styled.ul`
   list-style: none;

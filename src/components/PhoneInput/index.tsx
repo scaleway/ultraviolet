@@ -4,7 +4,7 @@ import intlTelInput from 'intl-tel-input'
 import style from 'intl-tel-input/build/css/intlTelInput.css'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ChangeEvent,
   InputHTMLAttributes,
   MutableRefObject,

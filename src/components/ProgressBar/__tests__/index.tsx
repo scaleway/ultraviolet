@@ -1,4 +1,3 @@
-import React from 'react'
 import ProgressBar, { progressBarVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, useMemo } from 'react'
+import { FunctionComponent, useMemo } from 'react'
 import Box, { BoxProps } from '../Box'
 
 const variants = {

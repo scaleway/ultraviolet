@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent, ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
 import Box, { BoxProps } from '../Box'

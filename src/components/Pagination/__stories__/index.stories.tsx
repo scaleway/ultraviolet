@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps, useState } from 'react'
+import { ComponentProps, useState } from 'react'
 import Pagination from '..'
 import Button from '../../Button'
 import Placeholder from '../../Placeholder'

@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
   KeyboardEventHandler,
+  createRef,
   useState,
 } from 'react'
 
@@ -84,7 +85,7 @@ const VerificationCode = ({
   const [values, setValues] = useState<string[]>(valuesArray)
 
   const inputRefs = Array.from({ length: fields }, () =>
-    React.createRef<HTMLInputElement>(),
+    createRef<HTMLInputElement>(),
   )
 
   const triggerChange = (inputValues: string[]) => {

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { ReactNode, useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import Box from '../Box'
 import ProgressBar from '../ProgressBar'
 import Typography from '../Typography'

@@ -1,4 +1,3 @@
-import React from 'react'
 import Badge, { badgeSizes, badgeVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import makeHelpers from '@scaleway/jest-helpers'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import defaultTheme from '../theme'
 
 interface WrapperProps {

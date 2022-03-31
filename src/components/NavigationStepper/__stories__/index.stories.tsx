@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import NavigationStepper, { Step } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Button from '../../Button'

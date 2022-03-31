@@ -1,7 +1,7 @@
 import { Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNodeArray } from 'react'
+import { Children, Fragment, FunctionComponent, ReactNodeArray } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -189,7 +189,7 @@ const CreationProgress: CreationProgressComponent = ({
   isStepsNumber = false,
   size = 'xlarge',
 }) => {
-  const lastStep = React.Children.count(children) - 1
+  const lastStep = Children.count(children) - 1
   const theme = useTheme()
 
   return (
@@ -234,7 +234,7 @@ const CreationProgress: CreationProgressComponent = ({
 
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <React.Fragment key={`creation-progress-${index}`}>
+          <Fragment key={`creation-progress-${index}`}>
             <StyledStepContainer>
               <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
 
@@ -244,7 +244,7 @@ const CreationProgress: CreationProgressComponent = ({
             {isNotLast && (
               <StyledLine temporal={temporal} animated={animated} />
             )}
-          </React.Fragment>
+          </Fragment>
         )
       })}
     </StyledContainer>

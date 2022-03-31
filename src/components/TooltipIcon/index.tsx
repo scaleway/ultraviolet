@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 

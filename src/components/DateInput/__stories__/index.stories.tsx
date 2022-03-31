@@ -1,7 +1,7 @@
 import { useI18n } from '@scaleway/use-i18n'
 import { Meta, Story } from '@storybook/react'
 import { es, fr, ru } from 'date-fns/locale'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import RichSelect from '../../RichSelect'
