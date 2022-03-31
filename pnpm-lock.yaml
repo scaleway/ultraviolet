@@ -32,7 +32,7 @@ specifiers:
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
-  '@semantic-release/github': 8.0.2
+  '@semantic-release/github': 8.0.4
   '@semantic-release/npm': 9.0.1
   '@semantic-release/release-notes-generator': 10.0.3
   '@size-limit/file': 7.0.8
@@ -155,7 +155,7 @@ devDependencies:
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
-  '@semantic-release/github': 8.0.2_semantic-release@19.0.2
+  '@semantic-release/github': 8.0.4_semantic-release@19.0.2
   '@semantic-release/npm': 9.0.1_semantic-release@19.0.2
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.2
   '@size-limit/file': 7.0.8_size-limit@7.0.8
@@ -3373,8 +3373,8 @@ packages:
       - supports-color
     dev: true
 
-  /@semantic-release/github/8.0.2_semantic-release@19.0.2:
-    resolution: {integrity: sha512-wIbfhOeuxlYzMTjtSAa2xgr54n7ZuPAS2gadyTWBpUt2PNAPgla7A6XxCXJnaKPgfVF0iFfSk3B+KlVKk6ByVg==}
+  /@semantic-release/github/8.0.4_semantic-release@19.0.2:
+    resolution: {integrity: sha512-But4e8oqqP3anZI5tjzZssZc2J6eoUdeeE0s7LVKKwyiAXJiQDWNNvtPOpgG2DsIz4+Exuse7cEQgjGMxwtLmg==}
     engines: {node: '>=14.17'}
     peerDependencies:
       semantic-release: '>=18.0.0-beta.1'
@@ -15644,7 +15644,7 @@ packages:
     dependencies:
       '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
       '@semantic-release/error': 3.0.0
-      '@semantic-release/github': 8.0.2_semantic-release@19.0.2
+      '@semantic-release/github': 8.0.4_semantic-release@19.0.2
       '@semantic-release/npm': 9.0.1_semantic-release@19.0.2
       '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.2
       aggregate-error: 3.1.0
