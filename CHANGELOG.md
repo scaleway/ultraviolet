@@ -1,3 +1,15 @@
+### [0.141.6](https://github.com/scaleway/scaleway-ui/compare/v0.141.5...v0.141.6) (2022-04-03)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-countup to v6.2.0 ([#1327](https://github.com/scaleway/scaleway-ui/issues/1327)) ([0521a76](https://github.com/scaleway/scaleway-ui/commit/0521a76fcb80111508b28650dfd22eb56809902f))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency prettier to v2.6.2 ([#1329](https://github.com/scaleway/scaleway-ui/issues/1329)) ([c90fea4](https://github.com/scaleway/scaleway-ui/commit/c90fea4067f44c101607e5b053dc11ecd32b36e7))
+
 ### [0.141.5](https://github.com/scaleway/scaleway-ui/compare/v0.141.4...v0.141.5) (2022-04-03)
 
 
