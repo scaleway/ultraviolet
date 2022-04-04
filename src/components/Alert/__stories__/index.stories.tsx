@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps } from 'react'
 import Alert, { alertTypes, alertVariants } from '..'
+import { Button, Typography } from '../../index'
 
 export default {
   component: Alert,
@@ -109,9 +110,20 @@ AdvancedChildren.parameters = {
 }
 AdvancedChildren.decorators = [
   () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div>
       <Alert type="warning">
-        This is a notification bar with a custom icon size.
+        <div
+          style={{
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: 16,
+            justifyContent: 'space-between',
+          }}
+        >
+          <Typography color="danger">I am a complex children</Typography>
+          <Button variant="warning">With a button</Button>
+        </div>
       </Alert>
     </div>
   ),
