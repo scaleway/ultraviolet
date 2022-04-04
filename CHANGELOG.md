@@ -1,3 +1,10 @@
+### [0.141.7](https://github.com/scaleway/scaleway-ui/compare/v0.141.6...v0.141.7) (2022-04-04)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency polished to v4.2.1 ([#1330](https://github.com/scaleway/scaleway-ui/issues/1330)) ([e365af7](https://github.com/scaleway/scaleway-ui/commit/e365af75c7e84cb73cdc75ccde3b75eaae224b6b))
+
 ### [0.141.6](https://github.com/scaleway/scaleway-ui/compare/v0.141.5...v0.141.6) (2022-04-03)
 
 
