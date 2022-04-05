@@ -70,7 +70,7 @@ const getPlaceholderColor = ({
 
 const getOptionColor = ({ state, theme }: SelectStyleGetterProps) => {
   let color: string = theme.colors.neutral.text
-  let backgroundColor: string = theme.colors.neutral.backgroundWeak
+  let backgroundColor: string = theme.colors.neutral.backgroundWeakElevated
   if (state.isDisabled) {
     backgroundColor = theme.colors.neutral.backgroundDisabled
     color = theme.colors.neutral.textDisabled
@@ -293,7 +293,7 @@ const getSelectStyles = ({
   }),
 })
 
-export type WithSelectProps =  {
+export type WithSelectProps = {
   selectProps: SelectProps
 }
 

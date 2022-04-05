@@ -40,7 +40,8 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__header {
       color: ${({ theme }) => theme.colors.neutral.text};
-      background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+      background-color: ${({ theme }) =>
+        theme.colors.neutral.backgroundWeakElevated};
       border-bottom: none;
       text-align: inherit;
       display: block;
@@ -50,7 +51,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__triangle {
       border-bottom-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundWeak};
+        theme.colors.neutral.backgroundWeakElevated};
     }
     ${PREFIX}__month {
       margin: 0;
@@ -128,7 +129,8 @@ const TopHeaderDiv = styled.div`
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundWeakElevated};
 `
 type DateInputProps = Pick<
   ReactDatePickerProps<string>,
