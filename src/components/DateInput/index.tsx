@@ -37,6 +37,8 @@ const StyledWrapper = styled.div`
   .calendar {
     font-family: 'Asap';
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+    background-color: ${({ theme }) =>
+      theme.colors.neutral.backgroundWeakElevated};
 
     ${PREFIX}__header {
       color: ${({ theme }) => theme.colors.neutral.text};
