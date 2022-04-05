@@ -196,8 +196,7 @@ const StyledDialogBackdrop = styled(DialogBackdrop)`
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: ${({ theme }) =>
-    transparentize(0.8, theme.colors.neutral.backgroundStronger)};
+  background-color: ${({ theme }) => theme.colors.overlay};
   ${({ animated }) => animated && backdropAnimatedStyle}
 `
 
