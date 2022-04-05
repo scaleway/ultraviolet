@@ -28,7 +28,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.4.12
   '@scaleway/jest-helpers': 1.1.12
   '@scaleway/random-name': 3.0.0
-  '@scaleway/use-i18n': 3.2.13
+  '@scaleway/use-i18n': 3.2.14
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
@@ -151,7 +151,7 @@ devDependencies:
   '@rollup/plugin-url': 6.1.0_rollup@2.70.1
   '@scaleway/eslint-config-react': 3.4.12_eslint@8.12.0+typescript@4.6.3
   '@scaleway/jest-helpers': 1.1.12_978f344c876a57c1143ffe356b90df31
-  '@scaleway/use-i18n': 3.2.13_react-dom@17.0.2+react@17.0.2
+  '@scaleway/use-i18n': 3.2.14_react-dom@17.0.2+react@17.0.2
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
@@ -166,7 +166,7 @@ devDependencies:
   '@storybook/addon-links': 6.4.20_react-dom@17.0.2+react@17.0.2
   '@storybook/addons': 6.4.20_react-dom@17.0.2+react@17.0.2
   '@storybook/builder-webpack5': 6.4.20_f20e6186fe6af3f477ab127b79656e9d
-  '@storybook/csf': 0.0.2--canary.507502b.0
+  '@storybook/csf': 0.0.2--canary.7c6c115.0
   '@storybook/manager-webpack5': 6.4.20_f20e6186fe6af3f477ab127b79656e9d
   '@storybook/react': 6.4.20_edd5bf720a41f083cd1709604dea6701
   '@storybook/testing-react': 1.2.4_2c4160e4c10feaf39caca55d739ef61c
@@ -3298,8 +3298,8 @@ packages:
     resolution: {integrity: sha512-ml6Cd+OJxUb4NjGMsBLaEUDSYLXIb8c9jBEK7vjLvtgwwaDVT+LdKEwWxiwMcI5vaedfkgTIGhooiTgBxwqijA==}
     dev: false
 
-  /@scaleway/use-i18n/3.2.13_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-UN3jN3EtRuJ1qzSCk9ZjLUA7kT2MVavU0gxla1S6jMJmckUea6ph1yIGWLjJuqvV48WfPjjl8WyeU9lB2WXpGQ==}
+  /@scaleway/use-i18n/3.2.14_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-fiKyR/NS6QXhklTZIvY/bjPYzdfcMX7TKJ3c39eck+t9oAcYKZmh24eh4Z3L1o+LbfHN77rvj4pV5aVoQFqT1g==}
     peerDependencies:
       react: 17.x
       react-dom: 17.x
@@ -4629,8 +4629,8 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/csf/0.0.2--canary.507502b.0:
-    resolution: {integrity: sha512-8WnH9H3rm2D3iK6b0QDAlpzb4ozQCW8pX0x2txN/9wRjjdbAJQ9wUEGVYPteQn7nZ+6NRw2EcVvsDY5X+BP/NA==}
+  /@storybook/csf/0.0.2--canary.7c6c115.0:
+    resolution: {integrity: sha512-LRIDJp2JionBqZ4/c2DncDk5jGzd3sua92jGbQVRtVyIGdaAVDuNtqXY9Fh+yzO7QE03Cm+BEs59Yat5J7EdEQ==}
     dependencies:
       lodash: 4.17.21
     dev: true
