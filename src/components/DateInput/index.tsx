@@ -53,7 +53,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__triangle {
       border-bottom-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundWeakElevated};
+        theme.colors.neutral.backgroundWeak};
     }
     ${PREFIX}__month {
       margin: 0;
