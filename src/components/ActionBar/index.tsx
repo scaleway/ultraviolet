@@ -8,7 +8,7 @@ const SPACING = 20
 
 const StyledDiv = styled.div<{ rank: number }>`
   align-items: center;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: 4px;
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;

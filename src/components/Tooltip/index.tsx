@@ -37,7 +37,7 @@ const variants = {
       ${transparentize(0.7, theme.colors.neutral.border)};
   `,
   white: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colors.neutral.backgroundWeakElevated};
+    background-color: ${theme.colors.neutral.backgroundWeak};
     color: ${theme.colors.neutral.text};
     fill: ${theme.colors.neutral.backgroundWeak};
     box-shadow: 0 2px 5px 5px
