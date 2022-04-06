@@ -212,6 +212,289 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
+<DocumentFragment>
+  .cache-v28fi1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-c4b0i7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  padding-right: 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  background-color: #22c8a2;
+  color: #ffffff;
+}
+
+.cache-c4b0i7:first-of-type {
+  padding-left: 24px;
+  margin-left: 0;
+  margin-right: -24px;
+}
+
+.cache-c4b0i7:last-of-type {
+  margin-right: 0;
+}
+
+.cache-c4b0i7[aria-current='page'] {
+  background-color: #4f0599;
+  color: #ffffff;
+}
+
+.cache-c4b0i7[aria-current='page']:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.cache-c4b0i7[aria-current='page']~.cache-c4b0i7 {
+  background-color: #ffffff;
+  color: #b2b6c3;
+  border-color: #d4dae7;
+}
+
+.cache-c4b0i7[aria-current='page']~.cache-c4b0i7:focus {
+  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
+}
+
+.cache-c4b0i7:nth-child(1) {
+  z-index: 10;
+}
+
+.cache-c4b0i7:nth-child(2) {
+  z-index: 9;
+}
+
+.cache-c4b0i7:nth-child(3) {
+  z-index: 8;
+}
+
+.cache-c4b0i7:nth-child(4) {
+  z-index: 7;
+}
+
+.cache-c4b0i7:nth-child(5) {
+  z-index: 6;
+}
+
+.cache-c4b0i7:nth-child(6) {
+  z-index: 5;
+}
+
+.cache-c4b0i7:nth-child(7) {
+  z-index: 4;
+}
+
+.cache-c4b0i7:nth-child(8) {
+  z-index: 3;
+}
+
+.cache-c4b0i7:nth-child(9) {
+  z-index: 2;
+}
+
+.cache-c4b0i7:nth-child(10) {
+  z-index: 1;
+}
+
+.cache-1lh5mnm {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  color: #4f0599;
+}
+
+.cache-gd6myn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 48px;
+  padding-right: 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  background-color: #22c8a2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.cache-gd6myn:first-of-type {
+  padding-left: 24px;
+  margin-left: 0;
+  margin-right: -24px;
+}
+
+.cache-gd6myn:last-of-type {
+  margin-right: 0;
+}
+
+.cache-gd6myn[aria-current='page'] {
+  background-color: #4f0599;
+  color: #ffffff;
+}
+
+.cache-gd6myn[aria-current='page']:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+}
+
+.cache-gd6myn[aria-current='page']~.cache-gd6myn {
+  background-color: #ffffff;
+  color: #b2b6c3;
+  border-color: #d4dae7;
+}
+
+.cache-gd6myn[aria-current='page']~.cache-gd6myn:focus {
+  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
+}
+
+.cache-gd6myn[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+.cache-gd6myn:focus {
+  box-shadow: 0 0 0 2px rgba(34,200,162,0.25);
+}
+
+.cache-gd6myn:nth-child(1) {
+  z-index: 10;
+}
+
+.cache-gd6myn:nth-child(2) {
+  z-index: 9;
+}
+
+.cache-gd6myn:nth-child(3) {
+  z-index: 8;
+}
+
+.cache-gd6myn:nth-child(4) {
+  z-index: 7;
+}
+
+.cache-gd6myn:nth-child(5) {
+  z-index: 6;
+}
+
+.cache-gd6myn:nth-child(6) {
+  z-index: 5;
+}
+
+.cache-gd6myn:nth-child(7) {
+  z-index: 4;
+}
+
+.cache-gd6myn:nth-child(8) {
+  z-index: 3;
+}
+
+.cache-gd6myn:nth-child(9) {
+  z-index: 2;
+}
+
+.cache-gd6myn:nth-child(10) {
+  z-index: 1;
+}
+
+<nav
+    aria-label="breadcrumb"
+  >
+    <ol
+      class="cache-v28fi1 e1081fv12"
+    >
+      <li
+        aria-disabled="false"
+        class="cache-c4b0i7 e1081fv11"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1"
+        >
+          Step 1
+        </a>
+      </li>
+      <li
+        aria-disabled="false"
+        class="cache-c4b0i7 e1081fv11"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1/step2"
+        >
+          I'm a very long... long long step
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        aria-disabled="false"
+        class="cache-gd6myn e1081fv11"
+      >
+        Step 3
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;
+
 exports[`Breadcrumbs renders correctly with selected item 1`] = `
 <DocumentFragment>
   .cache-v28fi1 {
