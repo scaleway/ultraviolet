@@ -26,7 +26,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.1.3
   '@rollup/plugin-url': 6.1.0
   '@scaleway/eslint-config-react': 3.4.15
-  '@scaleway/jest-helpers': 1.1.13
+  '@scaleway/jest-helpers': 1.2.1
   '@scaleway/random-name': 3.0.0
   '@scaleway/use-i18n': 3.2.14
   '@semantic-release/changelog': 6.0.1
@@ -150,7 +150,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.1.3_rollup@2.70.1
   '@rollup/plugin-url': 6.1.0_rollup@2.70.1
   '@scaleway/eslint-config-react': 3.4.15_eslint@8.12.0+typescript@4.6.3
-  '@scaleway/jest-helpers': 1.1.13_978f344c876a57c1143ffe356b90df31
+  '@scaleway/jest-helpers': 1.2.1_978f344c876a57c1143ffe356b90df31
   '@scaleway/use-i18n': 3.2.14_react-dom@17.0.2+react@17.0.2
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
@@ -2018,24 +2018,6 @@ packages:
       '@emotion/memoize': 0.7.5
     dev: true
 
-  /@emotion/jest/11.8.0:
-    resolution: {integrity: sha512-LfiD3cmPekVFky4L9Z9D2LpD/25JnJs1EalJGP/bmDJlqPiV8rLzUVwtfNvq7lk68o4GMxg/VRf28qPPeZKEPQ==}
-    peerDependencies:
-      '@types/jest': ^26.0.14 || ^27.0.0
-      enzyme-to-json: ^3.2.1
-    peerDependenciesMeta:
-      '@types/jest':
-        optional: true
-      enzyme-to-json:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.17.8
-      '@emotion/css-prettifier': 1.0.1
-      chalk: 4.1.2
-      specificity: 0.4.1
-      stylis: 4.0.13
-    dev: true
-
   /@emotion/jest/11.9.0:
     resolution: {integrity: sha512-DgmKVpciuv2tyZiRKe7uU3Rs0djpJExTRmcjxjSPAI6zuxmpbWZMDcjazdNnAD3e8HPWG2KZy3svumFw6N283g==}
     peerDependencies:
@@ -2060,29 +2042,6 @@ packages:
 
   /@emotion/memoize/0.7.5:
     resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
-
-  /@emotion/react/11.8.2_@babel+core@7.17.8+react@17.0.2:
-    resolution: {integrity: sha512-+1bcHBaNJv5nkIIgnGKVsie3otS0wF9f1T1hteF3WeVvMNQEtfZ4YyFpnphGoot3ilU/wWMgP2SgIDuHLE/wAA==}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      '@types/react': '*'
-      react: '>=16.8.0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/core': 7.17.8
-      '@babel/runtime': 7.17.8
-      '@emotion/babel-plugin': 11.7.2_@babel+core@7.17.8
-      '@emotion/cache': 11.7.1
-      '@emotion/serialize': 1.0.3
-      '@emotion/utils': 1.1.0
-      '@emotion/weak-memoize': 0.2.5
-      hoist-non-react-statics: 3.3.2
-      react: 17.0.2
-    dev: true
 
   /@emotion/react/11.9.0_@babel+core@7.17.8+react@17.0.2:
     resolution: {integrity: sha512-lBVSF5d0ceKtfKCDQJveNAtkC7ayxpVlgOohLgXqRwqWr9bOf4TZAFFyIcNngnV6xK6X4x2ZeXq7vliHkoVkxQ==}
@@ -3317,14 +3276,14 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.1.13_978f344c876a57c1143ffe356b90df31:
-    resolution: {integrity: sha512-KG95ZgZdumi9TZkxXFwJ+ncO7bCas0bmfjW440zRoASbyOdSqT1xrjl3m9oJdDMVsHp4V8zi3+YAkW6fks2G3A==}
+  /@scaleway/jest-helpers/1.2.1_978f344c876a57c1143ffe356b90df31:
+    resolution: {integrity: sha512-iGOibEs8wmoBa14Fesyu8j5zB58bLco/5l87fgWJiNM30xK12WuFZT+ZUES5LreWDFkC0xY3Q1288kIc9CKdCA==}
     peerDependencies:
       react: ^17.0.1
     dependencies:
       '@emotion/cache': 11.7.1
-      '@emotion/jest': 11.8.0
-      '@emotion/react': 11.8.2_@babel+core@7.17.8+react@17.0.2
+      '@emotion/jest': 11.9.0
+      '@emotion/react': 11.9.0_@babel+core@7.17.8+react@17.0.2
       '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
     transitivePeerDependencies:
@@ -10268,7 +10227,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.15.2
+      uglify-js: 3.15.3
     dev: true
 
   /hard-rejection/2.1.0:
@@ -16976,8 +16935,8 @@ packages:
     hasBin: true
     dev: true
 
-  /uglify-js/3.15.2:
-    resolution: {integrity: sha512-peeoTk3hSwYdoc9nrdiEJk+gx1ALCtTjdYuKSXMTDqq7n1W7dHPqWDdSi+BPL0ni2YMeHD7hKUSdbj3TZauY2A==}
+  /uglify-js/3.15.3:
+    resolution: {integrity: sha512-6iCVm2omGJbsu3JWac+p6kUiOpg3wFO2f8lIXjfEb8RrmLjzog1wTPMmwKB7swfzzqxj9YM+sGUM++u1qN4qJg==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
