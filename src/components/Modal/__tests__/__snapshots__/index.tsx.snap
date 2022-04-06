@@ -8,7 +8,7 @@ exports[`Modal renders with customStyle 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .cache-i96ctm-Modal {
+  .cache-1h4pku8-Modal {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,11 +22,11 @@ exports[`Modal renders with customStyle 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
   background-color: aliceblue;
 }
 
-.cache-1461no7-Modal {
+.cache-d41n4q-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -35,12 +35,12 @@ exports[`Modal renders with customStyle 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
   background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 }
 
-.cache-1461no7-Modal::before {
+.cache-d41n4q-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -115,13 +115,13 @@ exports[`Modal renders with customStyle 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-i96ctm-Modal e1x6rvve2"
+      class="cache-1h4pku8-Modal e1x6rvve2"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="cache-1461no7-Modal e1x6rvve1"
+        class="cache-d41n4q-Modal e1x6rvve1"
         data-dialog="true"
         id="modal"
         role="dialog"
@@ -163,7 +163,7 @@ exports[`Modal renders with customStyle 1`] = `
 
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
-  .cache-17j1j2f {
+  .cache-ykeqs0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,10 +177,10 @@ exports[`Modal renders with default Props 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
 }
 
-.cache-os4s1s-Modal {
+.cache-1avc42j-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -189,11 +189,11 @@ exports[`Modal renders with default Props 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
 }
 
-.cache-os4s1s-Modal::before {
+.cache-1avc42j-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -268,7 +268,7 @@ exports[`Modal renders with default Props 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-17j1j2f e1x6rvve2"
+      class="cache-ykeqs0 e1x6rvve2"
       data-dialog-ref="modal"
       hidden=""
       style="display: none;"
@@ -276,7 +276,7 @@ exports[`Modal renders with default Props 1`] = `
       <div
         aria-label="modal"
         aria-modal="true"
-        class="cache-os4s1s-Modal e1x6rvve1"
+        class="cache-1avc42j-Modal e1x6rvve1"
         data-dialog="true"
         hidden=""
         id="modal"
@@ -319,7 +319,7 @@ exports[`Modal renders with disclosure 1`] = `
   >
     Test
   </button>
-  .cache-17j1j2f {
+  .cache-ykeqs0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -333,10 +333,10 @@ exports[`Modal renders with disclosure 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
 }
 
-.cache-os4s1s-Modal {
+.cache-1avc42j-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -345,11 +345,11 @@ exports[`Modal renders with disclosure 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
 }
 
-.cache-os4s1s-Modal::before {
+.cache-1avc42j-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -424,7 +424,7 @@ exports[`Modal renders with disclosure 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-17j1j2f e1x6rvve2"
+      class="cache-ykeqs0 e1x6rvve2"
       data-dialog-ref="modal-test"
       hidden=""
       style="display: none;"
@@ -432,7 +432,7 @@ exports[`Modal renders with disclosure 1`] = `
       <div
         aria-label="modal-test"
         aria-modal="true"
-        class="cache-os4s1s-Modal e1x6rvve1"
+        class="cache-1avc42j-Modal e1x6rvve1"
         data-dialog="true"
         hidden=""
         id="modal-test"
@@ -475,7 +475,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   >
     Test modal-test
   </button>
-  .cache-17j1j2f {
+  .cache-ykeqs0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -489,10 +489,10 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
 }
 
-.cache-os4s1s-Modal {
+.cache-1avc42j-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -501,11 +501,11 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
 }
 
-.cache-os4s1s-Modal::before {
+.cache-1avc42j-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -580,14 +580,14 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-17j1j2f e1x6rvve2"
+      class="cache-ykeqs0 e1x6rvve2"
       data-dialog-ref="modal-test"
       style=""
     >
       <div
         aria-label="modal-test"
         aria-modal="true"
-        class="cache-os4s1s-Modal e1x6rvve1"
+        class="cache-1avc42j-Modal e1x6rvve1"
         data-dialog="true"
         id="modal-test"
         role="dialog"
@@ -630,7 +630,7 @@ exports[`Modal renders with opened={true} 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .cache-17j1j2f {
+  .cache-ykeqs0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,10 +644,10 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
 }
 
-.cache-os4s1s-Modal {
+.cache-1avc42j-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -656,11 +656,11 @@ exports[`Modal renders with opened={true} 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
 }
 
-.cache-os4s1s-Modal::before {
+.cache-1avc42j-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -735,13 +735,13 @@ exports[`Modal renders with opened={true} 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-17j1j2f e1x6rvve2"
+      class="cache-ykeqs0 e1x6rvve2"
       data-dialog-ref="modal"
     >
       <div
         aria-label="modal"
         aria-modal="true"
-        class="cache-os4s1s-Modal e1x6rvve1"
+        class="cache-1avc42j-Modal e1x6rvve1"
         data-dialog="true"
         id="modal"
         role="dialog"
@@ -783,7 +783,7 @@ exports[`Modal renders with opened={true} 1`] = `
 
 exports[`Modal renders with portal node (modal=false) 1`] = `
 <DocumentFragment>
-  .cache-17j1j2f {
+  .cache-ykeqs0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -797,10 +797,10 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: rgba(74,79,98,0.2);
+  background-color: #4A4F62A6;
 }
 
-.cache-os4s1s-Modal {
+.cache-1avc42j-Modal {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -809,11 +809,11 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   margin: auto;
   width: 616px;
   min-height: initial;
-  box-shadow: 0 0 12px 18px rgba(246,246,248,0.2);
+  box-shadow: 0 0 12px 18px #151a2d5c;
   opacity: 1;
 }
 
-.cache-os4s1s-Modal::before {
+.cache-1avc42j-Modal::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -885,14 +885,14 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
 }
 
 <div
-    class="cache-17j1j2f e1x6rvve2"
+    class="cache-ykeqs0 e1x6rvve2"
     data-dialog-ref="modal-test"
     hidden=""
     style="display: none;"
   >
     <div
       aria-label="modal-test"
-      class="cache-os4s1s-Modal e1x6rvve1"
+      class="cache-1avc42j-Modal e1x6rvve1"
       data-dialog="true"
       hidden=""
       id="modal-test"
