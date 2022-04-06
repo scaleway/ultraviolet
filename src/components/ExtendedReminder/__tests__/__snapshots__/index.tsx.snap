@@ -400,7 +400,535 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ExtendedReminder renders correctly with variant 1`] = `
+exports[`ExtendedReminder renders correctly with error variant 1`] = `
+<DocumentFragment>
+  .cache-17i810t {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: #ffe1e7;
+}
+
+.cache-gmk9s9 {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cache-bfgam3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #dd3252;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+  font-weight: 500;
+}
+
+.cache-1iuna2e {
+  fill: #fff;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1iuna2e.cache-1iuna2e {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.cache-1oy8vf4 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  font-style: unset;
+  text-transform: uppercase;
+  color: #dd3252;
+}
+
+.cache-1oy8vf4.cache-1oy8vf4 {
+  margin-bottom: 8px;
+}
+
+.cache-1c7itzr {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cache-1c7itzr.cache-1c7itzr {
+  margin-bottom: 8px;
+}
+
+.cache-146v7xs {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #ffffff;
+  color: #3f6ed8;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px;
+  margin-top: auto;
+  color: #3f6ed8;
+  background-color: transparent;
+  padding: 0;
+  width: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cache-146v7xs:hover,
+.cache-146v7xs:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-146v7xs:hover,
+.cache-146v7xs:focus {
+  color: #1e4293;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-i7e9al {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+.cache-una6lk {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-una6lk.cache-una6lk {
+  vertical-align: middle;
+}
+
+.cache-115wth8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+<div
+    class="edgwu7l4 cache-17i810t"
+  >
+    <div
+      class="cache-gmk9s9 edgwu7l3"
+    >
+      <strong
+        aria-label="error"
+        class="edgwu7l1 egvl2gp0 cache-bfgam3"
+        role="status"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          />
+        </svg>
+        10 days remaining
+      </strong>
+    </div>
+    <em
+      class="edgwu7l2 e1g1zfwd0 cache-1oy8vf4"
+    >
+      Verify your credit card
+    </em>
+    <p
+      class="e1g1zfwd0 cache-1c7itzr"
+    >
+      Enter the code we send to your bank account to validate your payment method.
+    </p>
+    <a
+      aria-disabled="false"
+      class="edgwu7l0 em6gco80 cache-146v7xs"
+      href="/"
+    >
+      <div
+        class="cache-i7e9al em6gco82"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-una6lk"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+          />
+        </svg>
+      </div>
+      <div
+        class="cache-115wth8 em6gco81"
+      >
+        Verify my credit card
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExtendedReminder renders correctly with success variant 1`] = `
+<DocumentFragment>
+  .cache-1v2mte8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  padding: 16px;
+  background-color: #eafffb;
+}
+
+.cache-gmk9s9 {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cache-1cb56ra {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #22c8a2;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+  font-weight: 500;
+}
+
+.cache-1iuna2e {
+  fill: #fff;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1iuna2e.cache-1iuna2e {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.cache-1fkj84p {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  font-style: unset;
+  text-transform: uppercase;
+  color: #22c8a2;
+}
+
+.cache-1fkj84p.cache-1fkj84p {
+  margin-bottom: 8px;
+}
+
+.cache-1c7itzr {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #4a4f62;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cache-1c7itzr.cache-1c7itzr {
+  margin-bottom: 8px;
+}
+
+.cache-146v7xs {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  background-color: #ffffff;
+  color: #3f6ed8;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px;
+  margin-top: auto;
+  color: #3f6ed8;
+  background-color: transparent;
+  padding: 0;
+  width: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cache-146v7xs:hover,
+.cache-146v7xs:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-146v7xs:hover,
+.cache-146v7xs:focus {
+  color: #1e4293;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-i7e9al {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+.cache-una6lk {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-una6lk.cache-una6lk {
+  vertical-align: middle;
+}
+
+.cache-115wth8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+<div
+    class="edgwu7l4 cache-1v2mte8"
+  >
+    <div
+      class="cache-gmk9s9 edgwu7l3"
+    >
+      <strong
+        aria-label="success"
+        class="edgwu7l1 egvl2gp0 cache-1cb56ra"
+        role="status"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+          />
+        </svg>
+        10 days remaining
+      </strong>
+    </div>
+    <em
+      class="edgwu7l2 e1g1zfwd0 cache-1fkj84p"
+    >
+      Verify your credit card
+    </em>
+    <p
+      class="e1g1zfwd0 cache-1c7itzr"
+    >
+      Enter the code we send to your bank account to validate your payment method.
+    </p>
+    <a
+      aria-disabled="false"
+      class="edgwu7l0 em6gco80 cache-146v7xs"
+      href="/"
+    >
+      <div
+        class="cache-i7e9al em6gco82"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-una6lk"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+          />
+        </svg>
+      </div>
+      <div
+        class="cache-115wth8 em6gco81"
+      >
+        Verify my credit card
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExtendedReminder renders correctly with warning variant 1`] = `
 <DocumentFragment>
   .cache-zx4fwa {
   display: -webkit-box;
