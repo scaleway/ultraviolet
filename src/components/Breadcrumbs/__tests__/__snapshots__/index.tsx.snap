@@ -85,6 +85,218 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Breadcrumbs renders correctly with invalid child 1`] = `
+<DocumentFragment>
+  .cache-v28fi1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<nav
+    aria-label="breadcrumb"
+  >
+    <ol
+      class="cache-v28fi1 e1081fv12"
+    >
+      Invalid child
+    </ol>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Breadcrumbs renders correctly with onClick 1`] = `
+<DocumentFragment>
+  .cache-v28fi1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-r8ul2r {
+  display: inline;
+}
+
+.cache-r8ul2r[aria-current='page'] {
+  color: #b2b6c3;
+}
+
+.cache-r8ul2r:not(:last-child)::after {
+  content: '›';
+  margin: 0 8px;
+}
+
+.cache-1lh5mnm {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  color: #4f0599;
+}
+
+.cache-1t5mqm6 {
+  display: inline;
+  cursor: pointer;
+}
+
+.cache-1t5mqm6[aria-current='page'] {
+  color: #b2b6c3;
+}
+
+.cache-1t5mqm6:not(:last-child)::after {
+  content: '›';
+  margin: 0 8px;
+}
+
+.cache-1t5mqm6[aria-disabled="true"] {
+  pointer-events: none;
+}
+
+<nav
+    aria-label="breadcrumb"
+  >
+    <ol
+      class="cache-v28fi1 e1081fv12"
+    >
+      <li
+        aria-disabled="false"
+        class="cache-r8ul2r e1081fv10"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1"
+        >
+          Step 1
+        </a>
+      </li>
+      <li
+        aria-disabled="false"
+        class="cache-r8ul2r e1081fv10"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1/step2"
+        >
+          I'm a very long... long long step
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        aria-disabled="false"
+        class="cache-1t5mqm6 e1081fv10"
+      >
+        Step 3
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Breadcrumbs renders correctly with selected item 1`] = `
+<DocumentFragment>
+  .cache-v28fi1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-r8ul2r {
+  display: inline;
+}
+
+.cache-r8ul2r[aria-current='page'] {
+  color: #b2b6c3;
+}
+
+.cache-r8ul2r:not(:last-child)::after {
+  content: '›';
+  margin: 0 8px;
+}
+
+.cache-1lh5mnm {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  color: #4f0599;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.cache-1lh5mnm:hover,
+.cache-1lh5mnm:focus {
+  color: #4f0599;
+}
+
+<nav
+    aria-label="breadcrumb"
+  >
+    <ol
+      class="cache-v28fi1 e1081fv12"
+    >
+      <li
+        aria-disabled="false"
+        class="cache-r8ul2r e1081fv10"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1"
+        >
+          Step 1
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        aria-disabled="false"
+        class="cache-r8ul2r e1081fv10"
+      >
+        <a
+          class="e4bq1r51 cache-1lh5mnm"
+          href="/step1/step2"
+        >
+          I'm a very long... long long step
+        </a>
+      </li>
+      <li
+        aria-disabled="false"
+        class="cache-r8ul2r e1081fv10"
+      >
+        Step 3
+      </li>
+    </ol>
+  </nav>
+</DocumentFragment>
+`;
+
 exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
 <DocumentFragment>
   .cache-v28fi1 {
