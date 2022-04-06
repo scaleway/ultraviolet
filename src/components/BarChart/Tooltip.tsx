@@ -12,7 +12,9 @@ const BarToolTipContainer = styled(FlexBox)`
   align-items: center;
 `
 
-const BarColorSquare = styled.span`
+const BarColorSquare = styled('span', {
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+})<{ color: string }>`
   display: block;
   width: 12px;
   height: 12px;

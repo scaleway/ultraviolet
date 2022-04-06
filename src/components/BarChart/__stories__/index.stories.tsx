@@ -28,8 +28,8 @@ FormattedValuesAndTooltip.decorators = [
         bottom: value => format(new Date(value), 'dd-MM-Y'),
         left: value => `${value.toString()} kb`,
       }}
-      tooltipFunction={({ value, indexValue, ...props }) => ({
-        ...props,
+      tooltipFunction={({ value, indexValue, color }) => ({
+        color,
         formattedValue: `${value} kb`,
         indexValue: format(new Date(indexValue), 'dd-MM-Y'),
       })}
@@ -46,8 +46,9 @@ MultiSeries.decorators = [
       axisFormatters={{
         bottom: value => format(new Date(value), 'dd-MM-Y'),
       }}
-      tooltipFunction={({ value, indexValue, ...props }) => ({
-        ...props,
+      tooltipFunction={({ value, indexValue, color }) => ({
+        color,
+        formattedValue: `${value}`,
         indexValue: format(new Date(indexValue), 'dd-MM-Y'),
       })}
     />
@@ -69,8 +70,8 @@ PositiveNegative.decorators = [
           return ''
         },
       }}
-      tooltipFunction={({ value, indexValue, ...props }) => ({
-        ...props,
+      tooltipFunction={({ value, indexValue, color }) => ({
+        color,
         formattedValue: value === 1 ? 'Active' : 'Inactive',
         indexValue: format(new Date(indexValue), 'dd-MM-Y'),
       })}
