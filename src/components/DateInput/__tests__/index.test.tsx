@@ -97,8 +97,8 @@ describe('DateInput', () => {
       },
     ))
 
-  test('renders correctly with object locale', () =>
+  test('renders correctly with invalid object locale', () =>
     shouldMatchEmotionSnapshot(
-      <DateInput label="Date" locale={{ code: 'en-GB' }} onChange={() => {}} />,
+      <DateInput label="Date" locale={{}} onChange={() => {}} />,
     ))
 })
