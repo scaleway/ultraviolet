@@ -33,7 +33,7 @@ export type UsePaginationReturn<T> = {
   pageData: T[]
   paginatedData: Record<number, T[]>
   perPage?: number | null
-  reloadPage: () => void
+  reloadPage: () => Promise<void | T | T[]> | undefined
   setPageData: (pageToUpdate: number, data: T[]) => void
   setPaginatedData: Dispatch<SetStateAction<Record<number, T[]>>>
 }

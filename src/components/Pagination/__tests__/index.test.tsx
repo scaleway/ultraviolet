@@ -504,7 +504,7 @@ describe('Pagination', () => {
         transform: () => {
           act(() => {
             ref.current?.goToLastPage()
-            ref.current?.reloadPage()
+            ref.current?.reloadPage()?.catch(undefined)
           })
         },
       },
