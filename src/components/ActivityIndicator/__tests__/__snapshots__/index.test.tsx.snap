@@ -168,11 +168,18 @@ exports[`ActivityIndicator renders default props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ActivityIndicator renders with color beta 1`] = `
+exports[`ActivityIndicator renders with color neutral and primary 1`] = `
 <DocumentFragment>
   .cache-wxrv4d-ActivityIndicator {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.cache-1i8hcfu {
+  fill: #f6f6f8;
+  font-size: 26px;
+  dominant-baseline: middle;
+  text-anchor: middle;
 }
 
 <svg
@@ -200,21 +207,30 @@ exports[`ActivityIndicator renders with color beta 1`] = `
       cy="50"
       fill="none"
       r="42"
-      stroke="beta"
+      stroke="#f6f6f8"
       stroke-dasharray="263.89378290154264"
       stroke-dashoffset="211.11502632123413"
       stroke-linecap="round"
       stroke-width="16"
     />
+    <text
+      class="cache-1i8hcfu e7dhm9i0"
+      x="50"
+      y="50"
+    >
+      Colored text
+    </text>
   </svg>
-</DocumentFragment>
-`;
-
-exports[`ActivityIndicator renders with color black 1`] = `
-<DocumentFragment>
   .cache-wxrv4d-ActivityIndicator {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.cache-1okb09s {
+  fill: #4f0599;
+  font-size: 26px;
+  dominant-baseline: middle;
+  text-anchor: middle;
 }
 
 <svg
@@ -242,138 +258,19 @@ exports[`ActivityIndicator renders with color black 1`] = `
       cy="50"
       fill="none"
       r="42"
-      stroke="black"
+      stroke="#4f0599"
       stroke-dasharray="263.89378290154264"
       stroke-dashoffset="211.11502632123413"
       stroke-linecap="round"
       stroke-width="16"
     />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`ActivityIndicator renders with color blue 1`] = `
-<DocumentFragment>
-  .cache-wxrv4d-ActivityIndicator {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<svg
-    aria-label="Loading test"
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="20"
-    aria-valuetext="20%"
-    class="cache-0"
-    role="progressbar"
-    style="height: 40px; width: 40px;"
-    viewBox="0 0 100 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="#d4dae7"
-      stroke-width="16"
-    />
-    <circle
-      class="cache-wxrv4d-ActivityIndicator"
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="blue"
-      stroke-dasharray="263.89378290154264"
-      stroke-dashoffset="211.11502632123413"
-      stroke-linecap="round"
-      stroke-width="16"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`ActivityIndicator renders with color chartGreen 1`] = `
-<DocumentFragment>
-  .cache-wxrv4d-ActivityIndicator {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<svg
-    aria-label="Loading test"
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="20"
-    aria-valuetext="20%"
-    class="cache-0"
-    role="progressbar"
-    style="height: 40px; width: 40px;"
-    viewBox="0 0 100 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="#d4dae7"
-      stroke-width="16"
-    />
-    <circle
-      class="cache-wxrv4d-ActivityIndicator"
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="chartGreen"
-      stroke-dasharray="263.89378290154264"
-      stroke-dashoffset="211.11502632123413"
-      stroke-linecap="round"
-      stroke-width="16"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`ActivityIndicator renders with color chartNegativeRed 1`] = `
-<DocumentFragment>
-  .cache-wxrv4d-ActivityIndicator {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<svg
-    aria-label="Loading test"
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="20"
-    aria-valuetext="20%"
-    class="cache-0"
-    role="progressbar"
-    style="height: 40px; width: 40px;"
-    viewBox="0 0 100 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="#d4dae7"
-      stroke-width="16"
-    />
-    <circle
-      class="cache-wxrv4d-ActivityIndicator"
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="chartNegativeRed"
-      stroke-dasharray="263.89378290154264"
-      stroke-dashoffset="211.11502632123413"
-      stroke-linecap="round"
-      stroke-width="16"
-    />
+    <text
+      class="cache-1okb09s e7dhm9i0"
+      x="50"
+      y="50"
+    >
+      Colored text
+    </text>
   </svg>
 </DocumentFragment>
 `;
@@ -427,6 +324,13 @@ exports[`ActivityIndicator renders with inlined color 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
+.cache-y9uhqf {
+  fill: #ff0000;
+  font-size: 26px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
 <svg
     aria-label="Loading test"
     aria-valuemax="100"
@@ -458,6 +362,13 @@ exports[`ActivityIndicator renders with inlined color 1`] = `
       stroke-linecap="round"
       stroke-width="16"
     />
+    <text
+      class="cache-y9uhqf e7dhm9i0"
+      x="50"
+      y="50"
+    >
+      Colored text
+    </text>
   </svg>
 </DocumentFragment>
 `;
@@ -866,6 +777,48 @@ exports[`ActivityIndicator renders with trailColor chartNegativeRed 1`] = `
       fill="none"
       r="42"
       stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
+      stroke-width="16"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`ActivityIndicator renders with unknown inlined color 1`] = `
+<DocumentFragment>
+  .cache-wxrv4d-ActivityIndicator {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<svg
+    aria-label="Loading test"
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="20"
+    aria-valuetext="20%"
+    class="cache-0"
+    role="progressbar"
+    style="height: 40px; width: 40px;"
+    viewBox="0 0 100 100"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#d4dae7"
+      stroke-width="16"
+    />
+    <circle
+      class="cache-wxrv4d-ActivityIndicator"
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="unknown"
       stroke-dasharray="263.89378290154264"
       stroke-dashoffset="211.11502632123413"
       stroke-linecap="round"
