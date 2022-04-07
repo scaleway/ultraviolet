@@ -1,3 +1,10 @@
+### [0.141.11](https://github.com/scaleway/scaleway-ui/compare/v0.141.10...v0.141.11) (2022-04-07)
+
+
+### :bug: Bug Fixes
+
+* missing px into shadows script ([#1351](https://github.com/scaleway/scaleway-ui/issues/1351)) ([a9bc4ad](https://github.com/scaleway/scaleway-ui/commit/a9bc4adecf7573e74a0409ffaf5c6511209e884e))
+
 ### [0.141.10](https://github.com/scaleway/scaleway-ui/compare/v0.141.9...v0.141.10) (2022-04-07)
 
 
