@@ -74,8 +74,7 @@ const StyledBorderWrapper = styled(Box)`
   &:focus {
     border: 1px solid ${({ theme }) => theme.colors.primary.border};
     transition: box-shadow 0.2s ease;
-    box-shadow: 2px 2px 14px 8px
-      ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
   img {

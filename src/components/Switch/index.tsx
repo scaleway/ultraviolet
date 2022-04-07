@@ -64,8 +64,7 @@ const SwitchVariantsStyles = {
 
       &:focus-within,
       &:focus {
-        box-shadow: 0 0 1px 2px ${theme.colors.neutral.backgroundWeak},
-          0 0 1px 3px ${theme.colors.primary.backgroundStrong};
+        box-shadow: ${theme.shadows.focusPrimary};
       }
     }
   `,
@@ -118,9 +117,7 @@ const StyledSwitch = styled('div', {
 
   &:focus-within,
   &:focus {
-    box-shadow: 0 0 1px 2px
-        ${({ theme }) => theme.colors.neutral.backgroundWeak},
-      0 0 1px 3px ${({ theme }) => theme.colors.neutral.backgroundHover};
+    box-shadow: ${({ theme }) => theme.shadows.bulk};
   }
 
   & ${SwitchBallContainer} {

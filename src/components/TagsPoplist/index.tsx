@@ -43,7 +43,7 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
 `
 
 const StyledManyTagsContainer = styled.div`
-  box-shadow: 0 -1px 5px 3px rgba(165, 165, 205, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   display: flex;
   align-items: center;

@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEventHandler,
@@ -110,13 +109,11 @@ const StyledSwitch = styled(Box, {
     }
 
     &:hover {
-      box-shadow: 0 0 8px 2px
-        ${({ theme }) => transparentize(0.9, theme.colors.primary.border)};
+      box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
     }
 
     &:focus {
-      box-shadow: 0 0 1px 2px
-        ${({ theme }) => transparentize(0.9, theme.colors.primary.border)};
+      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     }
   }
 
