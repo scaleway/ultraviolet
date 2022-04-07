@@ -141,7 +141,8 @@ const MenuList = styled.div<MenuListProps>`
   &:before {
     border-color: transparent;
   }
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundWeakElevated};
   display: flex;
   flex-direction: column;
   text-align: center;

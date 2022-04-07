@@ -37,10 +37,13 @@ const StyledWrapper = styled.div`
   .calendar {
     font-family: 'Asap';
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+    background-color: ${({ theme }) =>
+      theme.colors.neutral.backgroundWeakElevated};
 
     ${PREFIX}__header {
       color: ${({ theme }) => theme.colors.neutral.text};
-      background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+      background-color: ${({ theme }) =>
+        theme.colors.neutral.backgroundWeakElevated};
       border-bottom: none;
       text-align: inherit;
       display: block;
@@ -128,7 +131,8 @@ const TopHeaderDiv = styled.div`
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundWeakElevated};
 `
 type DateInputProps = Pick<
   ReactDatePickerProps<string>,

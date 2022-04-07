@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
@@ -196,8 +195,7 @@ const StyledDialogBackdrop = styled(DialogBackdrop)`
   left: 0;
   z-index: 999;
   opacity: 1;
-  background-color: ${({ theme }) =>
-    transparentize(0.8, theme.colors.neutral.backgroundStronger)};
+  background-color: ${({ theme }) => theme.colors.overlay};
   ${({ animated }) => animated && backdropAnimatedStyle}
 `
 
@@ -215,7 +213,8 @@ const StyledDialog = styled(Dialog, {
       props.toString(),
     ),
 })<StyledDialogProps>`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundWeakElevated};
   position: relative;
   border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
   border: 0;
@@ -223,8 +222,7 @@ const StyledDialog = styled(Dialog, {
   ${({ placement }) => MODAL_PLACEMENT[placement]}
   width: ${({ width }) => MODAL_WIDTH[width]}px;
   min-height: ${({ height }) => height};
-  box-shadow: 0 0 12px 18px
-    ${({ theme }) => transparentize(0.8, theme.colors.neutral.backgroundStrong)};
+  box-shadow: 0 8px 40px 10px #151A2D5C;
   opacity: 1;
   &::before {
     content: '';
