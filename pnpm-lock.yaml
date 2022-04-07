@@ -14,7 +14,7 @@ specifiers:
   '@emotion/babel-preset-css-prop': 11.2.0
   '@emotion/cache': 11.7.1
   '@emotion/eslint-plugin': 11.7.0
-  '@emotion/jest': 11.9.0
+  '@emotion/jest': 11.9.1
   '@emotion/react': 11.9.0
   '@emotion/serialize': 1.0.3
   '@emotion/styled': 11.8.1
@@ -143,7 +143,7 @@ devDependencies:
   '@emotion/babel-preset-css-prop': 11.2.0_@babel+core@7.17.9
   '@emotion/cache': 11.7.1
   '@emotion/eslint-plugin': 11.7.0_eslint@8.12.0
-  '@emotion/jest': 11.9.0
+  '@emotion/jest': 11.9.1
   '@emotion/react': 11.9.0_@babel+core@7.17.9+react@17.0.2
   '@emotion/styled': 11.8.1_3ce471551e6e06bcaecec3488aa5ccb5
   '@rollup/plugin-babel': 5.3.1_@babel+core@7.17.9+rollup@2.70.1
@@ -2061,6 +2061,24 @@ packages:
 
   /@emotion/jest/11.9.0:
     resolution: {integrity: sha512-DgmKVpciuv2tyZiRKe7uU3Rs0djpJExTRmcjxjSPAI6zuxmpbWZMDcjazdNnAD3e8HPWG2KZy3svumFw6N283g==}
+    peerDependencies:
+      '@types/jest': ^26.0.14 || ^27.0.0
+      enzyme-to-json: ^3.2.1
+    peerDependenciesMeta:
+      '@types/jest':
+        optional: true
+      enzyme-to-json:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@emotion/css-prettifier': 1.0.1
+      chalk: 4.1.2
+      specificity: 0.4.1
+      stylis: 4.0.13
+    dev: true
+
+  /@emotion/jest/11.9.1:
+    resolution: {integrity: sha512-JFf9yBA6a7fKrKCWMmjODGRcgBnjiQsl9AakP1y7oRJ6B147ZKPo8DgzHUZ5qQkI06GKAWwYU1vKROInc7SYVA==}
     peerDependencies:
       '@types/jest': ^26.0.14 || ^27.0.0
       enzyme-to-json: ^3.2.1
