@@ -56,7 +56,7 @@ function generateTokens {
   GENERATED_SHADOW_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shadows_color "${SHADOWS_COLOR}" '
   .[$global] | with_entries(select(.value.type == "boxShadow")) |
     reduce (. | to_entries | .[]) as $sentiment
-      ({}; . + {"\($sentiment.key)": "\($sentiment.value.value.x) \($sentiment.value.value.y) \($sentiment.value.value.blur) \($sentiment.value.value.spread) \($sentiment.value.value.color | gsub("[$]shadows."; "") |
+      ({}; . + {"\($sentiment.key)": "\($sentiment.value.value.x)px \($sentiment.value.value.y)px \($sentiment.value.value.blur)px \($sentiment.value.value.spread)px \($sentiment.value.value.color | gsub("[$]shadows."; "") |
           split(".") as $number |
             $shadows_color[$number[0]][$number[1]])"}) |
               {"shadows": .}
