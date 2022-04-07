@@ -1,3 +1,17 @@
+### [0.141.9](https://github.com/scaleway/scaleway-ui/compare/v0.141.8...v0.141.9) (2022-04-07)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.9 ([#1349](https://github.com/scaleway/scaleway-ui/issues/1349)) ([214524f](https://github.com/scaleway/scaleway-ui/commit/214524f1fee01e463924e2edcfa9bbea8f29b581))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.16.4 ([#1347](https://github.com/scaleway/scaleway-ui/issues/1347)) ([1d8d918](https://github.com/scaleway/scaleway-ui/commit/1d8d9184e58850a10f19fa506468f79167b201e5))
+* **devdeps:** update emotion monorepo ([#1340](https://github.com/scaleway/scaleway-ui/issues/1340)) ([7199b81](https://github.com/scaleway/scaleway-ui/commit/7199b8103e09619a5d80609186bf53af84e03f3e))
+
+
+### :bug: Bug Fixes
+
+* background overlay and elevated colors ([#1338](https://github.com/scaleway/scaleway-ui/issues/1338)) ([f4f6ed9](https://github.com/scaleway/scaleway-ui/commit/f4f6ed95c2813ce3df10c9bccb43c98ab1409c55))
+
 ### [0.141.8](https://github.com/scaleway/scaleway-ui/compare/v0.141.7...v0.141.8) (2022-04-06)
 
 
