@@ -1,3 +1,10 @@
+### [0.141.10](https://github.com/scaleway/scaleway-ui/compare/v0.141.9...v0.141.10) (2022-04-07)
+
+
+### :bug: Bug Fixes
+
+* **colors:** fixed neutral text strong and disabled colors ([#1345](https://github.com/scaleway/scaleway-ui/issues/1345)) ([d92aa2a](https://github.com/scaleway/scaleway-ui/commit/d92aa2af04daad04f6824f4cc6f14d0cdc0b9828))
+
 ### [0.141.9](https://github.com/scaleway/scaleway-ui/compare/v0.141.8...v0.141.9) (2022-04-07)
 
 
