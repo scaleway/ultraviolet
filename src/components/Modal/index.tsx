@@ -222,7 +222,7 @@ const StyledDialog = styled(Dialog, {
   ${({ placement }) => MODAL_PLACEMENT[placement]}
   width: ${({ width }) => MODAL_WIDTH[width]}px;
   min-height: ${({ height }) => height};
-  box-shadow: 0 8px 40px 10px #151A2D5C;
+  box-shadow: ${({ theme }) => theme.shadows.modal};
   opacity: 1;
   &::before {
     content: '';

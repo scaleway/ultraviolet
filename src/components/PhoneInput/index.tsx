@@ -2,7 +2,6 @@ import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import intlTelInput from 'intl-tel-input'
 import style from 'intl-tel-input/build/css/intlTelInput.css'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
@@ -44,9 +43,7 @@ const StyledLabel = styled.label<PhoneInputLabelProps>`
 
   &:focus-within {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
-    box-shadow: 0 0 0 2px
-      ${({ theme }) =>
-        transparentize(0.75, theme.colors.primary.backgroundStrong)};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
   & .input__tel__container {

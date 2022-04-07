@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   AriaAttributes,
@@ -74,39 +73,21 @@ const BubbleVariant = styled.li`
   &[aria-current='page'] {
     background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
     color: ${({ theme }) => theme.colors.primary.textStrong};
-
-    &:focus {
-      box-shadow: 0 0 0 2px
-        ${({ theme }) =>
-          transparentize(0.75, theme.colors.primary.backgroundStrong)};
-    }
   }
 
   &[aria-current='page'] ~ & {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     color: ${({ theme }) => theme.colors.neutral.textWeak};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-
-    &:focus {
-      box-shadow: 0 0 0 2px
-        ${({ theme }) => transparentize(0.75, theme.colors.neutral.borderWeak)};
-    }
   }
 
-  ${({ onClick, theme }) =>
+  ${({ onClick }) =>
     onClick
       ? `
     cursor: pointer;
     &[aria-disabled="true"] {
       pointer-events: none;
-    }
-
-  &:focus {
-    box-shadow: 0 0 0 2px ${transparentize(
-      0.75,
-      theme.colors.success.backgroundStrong,
-    )};
-  }`
+    }`
       : ``}
 
   ${reverseZIndexes()}

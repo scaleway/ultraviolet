@@ -67,8 +67,7 @@ const StyledContainer = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
-  box-shadow: inset 0px 0px 0px 1px
-    ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
   overflow: hidden;
 
   ${StyledBarWrapper}:nth-child(5n+1) {

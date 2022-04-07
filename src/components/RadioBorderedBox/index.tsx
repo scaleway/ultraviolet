@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
@@ -30,7 +29,7 @@ const StyledBox = styled(BorderedBox)<{
 }>`
   display: block;
 
-  ${({ disabled, checked, error, theme: { colors } }) => {
+  ${({ disabled, checked, error, theme: { colors, shadows } }) => {
     if (disabled)
       return `
         cursor: not-allowed !important;
@@ -39,16 +38,13 @@ const StyledBox = styled(BorderedBox)<{
     if (error)
       return `
         border: 1px solid ${colors.danger.borderWeak} !important;
-        box-shadow: 0 0 0 2px ${transparentize(0.75, colors.danger.borderWeak)};
+        box-shadow: ${shadows.focusDanger};
       `
 
     if (checked)
       return `
         border: 1px solid ${colors.primary.borderWeak} !important;
-        box-shadow: 0 0 0 2px ${transparentize(
-          0.75,
-          colors.primary.borderWeak,
-        )};
+        box-shadow: ${shadows.focusPrimary};
       `
 
     return null

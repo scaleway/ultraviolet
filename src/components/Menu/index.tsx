@@ -1,13 +1,12 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
 import Popper from '../Popper'
 import Item from './Item'
 
 const bottomStyles = (theme: Theme) => css`
-  box-shadow: 0 -1px 5px 3px ${transparentize(0.85, theme.colors.neutral.backgroundStrong)};
+  box-shadow: ${theme.shadows.menu};
   &:after,
   &:before {
     bottom: 100%;
@@ -20,8 +19,7 @@ const bottomStyles = (theme: Theme) => css`
   }
 `
 const topStyles = (theme: Theme) => css`
-  box-shadow: 0 1px 5px 3px
-    ${transparentize(0.85, theme.colors.neutral.backgroundStrong)};
+  box-shadow: ${theme.shadows.menu};
   &:after,
   &:before {
     top: 100%;
