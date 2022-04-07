@@ -30,18 +30,34 @@ describe('ActivityIndicator', () => {
       <ActivityIndicator label="Loading test" active percentage={75} />,
     ))
 
-  Object.keys(colorsDeprecated)
-    .slice(0, 5)
-    .forEach(color => {
-      test(`renders with color ${color}`, () =>
-        shouldMatchEmotionSnapshot(
-          <ActivityIndicator label="Loading test" color={color} />,
-        ))
-    })
+  test(`renders with color neutral and primary`, () =>
+    shouldMatchEmotionSnapshot(
+      <>
+        <ActivityIndicator
+          label="Loading test"
+          text="Colored text"
+          color="neutral"
+        />
+        <ActivityIndicator
+          label="Loading test"
+          text="Colored text"
+          color="primary"
+        />
+      </>,
+    ))
 
   test(`renders with inlined color`, () =>
     shouldMatchEmotionSnapshot(
-      <ActivityIndicator label="Loading test" color="#ff0000" />,
+      <ActivityIndicator
+        label="Loading test"
+        text="Colored text"
+        color="#ff0000"
+      />,
+    ))
+
+  test(`renders with unknown inlined color`, () =>
+    shouldMatchEmotionSnapshot(
+      <ActivityIndicator label="Loading test" color="unknown" />,
     ))
 
   Object.keys(colorsDeprecated)

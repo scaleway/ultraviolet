@@ -1,6 +1,7 @@
 import { ResponsiveWrapper } from '@nivo/core'
+import userEvent from '@testing-library/user-event'
 import React, { ComponentProps } from 'react'
-import Barchart from '..'
+import BarChart from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import {
   barChartMultiData,
@@ -20,14 +21,14 @@ jest.mock('@nivo/core', () => ({
 
 describe('BarChart', () => {
   test('renders correctly without data', () =>
-    shouldMatchEmotionSnapshot(<Barchart />))
+    shouldMatchEmotionSnapshot(<BarChart />))
 
   test('renders correctly with data', () =>
-    shouldMatchEmotionSnapshot(<Barchart data={barChartSimpleData} />))
+    shouldMatchEmotionSnapshot(<BarChart data={barChartSimpleData} />))
 
   test('renders correctly with data transformer', () =>
     shouldMatchEmotionSnapshot(
-      <Barchart
+      <BarChart
         data={barChartSimpleData}
         axisFormatters={{
           bottom: value => value.toString(),
@@ -36,22 +37,30 @@ describe('BarChart', () => {
     ))
 
   test('renders correctly with multiple series', () =>
-    shouldMatchEmotionSnapshot(<Barchart data={barChartMultiData} />))
+    shouldMatchEmotionSnapshot(<BarChart data={barChartMultiData} />))
 
   test('renders correctly with negative values', () =>
     shouldMatchEmotionSnapshot(
-      <Barchart data={barChartPositiveNegativeData} />,
+      <BarChart data={barChartPositiveNegativeData} />,
     ))
 
   test('renders correctly with custom tooltip format', () =>
     shouldMatchEmotionSnapshot(
-      <Barchart
+      <BarChart
         data={barChartPositiveNegativeData}
-        tooltipFunction={({ value, indexValue, ...props }) => ({
-          ...props,
+        tooltipFunction={({ value, indexValue, color }) => ({
+          color,
           formattedValue: `${value} kb`,
           indexValue: indexValue.toString(),
         })}
       />,
+      {
+        transform: () => {
+          const bar = document.querySelector('svg[role="img"] g line')
+          if (!bar) throw new Error('BarChart column not found')
+          userEvent.unhover(bar)
+          userEvent.hover(bar)
+        },
+      },
     ))
 })

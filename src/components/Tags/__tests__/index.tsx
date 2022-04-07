@@ -4,6 +4,8 @@ import React from 'react'
 import Tags from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
+const mockOnClick = jest.fn()
+
 describe('Tags', () => {
   beforeAll(() => {
     jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
@@ -155,7 +157,7 @@ describe('Tags', () => {
     shouldMatchEmotionSnapshot(
       <Tags
         id="test"
-        onChange={() => {}}
+        onChange={mockOnClick}
         name="radio"
         tags={['hello', 'world']}
       />,

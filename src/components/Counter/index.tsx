@@ -18,10 +18,7 @@ type CounterProps = {
   onEnd?: () => void
 }
 
-const Counter: VoidFunctionComponent<CounterProps> = ({
-  end,
-  onEnd = () => {},
-}) => {
+const Counter: VoidFunctionComponent<CounterProps> = ({ end, onEnd }) => {
   const [isBusy, setIsBusy] = useState<boolean>(true)
   const start = useRef<number>(0)
   useEffect(() => {
@@ -35,7 +32,7 @@ const Counter: VoidFunctionComponent<CounterProps> = ({
         end={end}
         onEnd={() => {
           setIsBusy(false)
-          onEnd()
+          onEnd?.()
         }}
         duration={1.5}
       />

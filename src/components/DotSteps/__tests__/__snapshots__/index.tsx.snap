@@ -442,3 +442,92 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`DotSteps triggers onclick 1`] = `
+<DocumentFragment>
+  .cache-16zi2u0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-16zi2u0 .e1cog6k71:nth-of-type(2)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-0px);
+  -moz-transform: translateX(-0px);
+  -ms-transform: translateX(-0px);
+  transform: translateX(-0px);
+}
+
+.cache-16zi2u0 .e1cog6k71:nth-of-type(1)[aria-selected='true']~.e1cog6k71:last-child:after {
+  -webkit-transform: translateX(-26px);
+  -moz-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+}
+
+.cache-5fjmba {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #4f0599;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+.cache-5fjmba::before,
+.cache-5fjmba::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.cache-5fjmba::before {
+  width: 10px;
+  height: 10px;
+  margin: -5px;
+  background-color: #4f0599;
+}
+
+.cache-5fjmba::after {
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+}
+
+.cache-5fjmba[aria-selected='true']::before {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.cache-5fjmba:last-child::after {
+  border: 1px solid #4f0599;
+}
+
+<div
+    class="e1cog6k70 e1l6meh00 cache-16zi2u0 e1l6meh01"
+  >
+    <div
+      aria-selected="true"
+      class="e1cog6k71 e6t57f80 cache-5fjmba"
+    />
+    <div
+      aria-selected="false"
+      class="e1cog6k71 e6t57f80 cache-5fjmba"
+    />
+  </div>
+</DocumentFragment>
+`;
