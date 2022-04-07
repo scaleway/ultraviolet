@@ -1,3 +1,10 @@
+### [0.141.12](https://github.com/scaleway/scaleway-ui/compare/v0.141.11...v0.141.12) (2022-04-07)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-use-clipboard to v1.0.8 ([#1343](https://github.com/scaleway/scaleway-ui/issues/1343)) ([ccfa7e9](https://github.com/scaleway/scaleway-ui/commit/ccfa7e93d4d49b422b9b9c86eda4e2608c29dd29))
+
 ### [0.141.11](https://github.com/scaleway/scaleway-ui/compare/v0.141.10...v0.141.11) (2022-04-07)
 
 
