@@ -39,7 +39,9 @@ const StyledHr = styled(Box.withComponent('hr'), {
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
   background-color: ${({ theme, color }) =>
-    theme.colorsDeprecated[color as Color] ?? color};
+    color
+      ? theme.colorsDeprecated[color as Color] || color
+      : theme.colors.neutral.border};
   ${({ flex }) => flex && `flex: ${flex};`}
 `
 
@@ -50,7 +52,7 @@ type SeparatorProps = HorizontalSeparatorProps & {
 const Separator = ({
   direction = 'horizontal',
   thickness = 1,
-  color = 'gray200',
+  color,
   icon,
   ...props
 }: SeparatorProps): JSX.Element =>

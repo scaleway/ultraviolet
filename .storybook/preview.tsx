@@ -94,6 +94,7 @@ export const globalStyles = (theme: Theme) => css`
 
   body {
     font-family: ${theme.fonts.sansSerif};
+    color: ${theme.colors.neutral.text};
   }
 `
 

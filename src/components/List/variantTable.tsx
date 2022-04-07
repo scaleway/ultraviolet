@@ -82,7 +82,7 @@ const StyledRow = styled(Box, {
   flex-wrap: wrap;
 
   &:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+    background-color: ${({ theme }) => theme.colors.neutral.background};
   }
 
   color: ${getRowColor};

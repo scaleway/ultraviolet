@@ -98,7 +98,7 @@ const StyledRow = styled('details', {
   padding: 8px 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ alert, theme }) =>
-    alert ? theme.colors.warning.background : `initial`};
+    alert ? theme.colors.warning.background : theme.colors.neutral.background};
 
   cursor: ${({ openable }) => (openable ? 'pointer' : 'auto')};
   color: ${({ alert, theme }) =>

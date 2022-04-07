@@ -25,6 +25,7 @@ const StyledRow = styled(Box, {
   flex-wrap: wrap;
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  background: ${({ theme }) => theme.colors.neutral.background};
 
   color: ${({ selected, highlighted, theme }) =>
     selected && highlighted
