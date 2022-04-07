@@ -5,7 +5,7 @@ import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
 const BarToolTipContainer = styled(FlexBox)`
-  background: white;
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
   padding: 5px 9px;
@@ -41,9 +41,7 @@ const BarChartToolTip: FunctionComponent<BarChartToolTipProps> = ({
       <Typography variant="bodyA" fontWeight={600} color="primary">
         {formattedValue}
       </Typography>
-      <Typography variant="bodyB" color="gray700">
-        {indexValue}
-      </Typography>
+      <Typography variant="bodyC">{indexValue}</Typography>
     </div>
   </BarToolTipContainer>
 )

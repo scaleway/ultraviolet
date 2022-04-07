@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { VoidFunctionComponent } from 'react'
@@ -35,29 +36,40 @@ type TooltipProps = {
   }
 }
 
-const Tooltip: VoidFunctionComponent<TooltipProps> = ({ data }) => (
-  <div tabIndex={-1} role="tooltip">
-    <StyledList>
-      <StyledItem>
-        <Typography color="gray950">{data.name}</Typography>
-        <Space />
-        <Typography color="gray950">{data.value}</Typography>
-      </StyledItem>
-      {data.details &&
-        data.details.map(detail => (
-          <StyledItem key={detail.name}>
-            <Typography variant="bodyB" color="gray700">
-              {detail.name}
-            </Typography>
-            <Space />
-            <Typography variant="bodyB" color="gray950">
-              {detail.value}
-            </Typography>
-          </StyledItem>
-        ))}
-    </StyledList>
-  </div>
-)
+const Tooltip: VoidFunctionComponent<TooltipProps> = ({ data }) => {
+  const theme = useTheme()
+
+  return (
+    <div tabIndex={-1} role="tooltip">
+      <StyledList>
+        <StyledItem>
+          <Typography color={theme.colors.neutral.textStrong}>
+            {data.name}
+          </Typography>
+          <Space />
+          <Typography color={theme.colors.neutral.textStrong}>
+            {data.value}
+          </Typography>
+        </StyledItem>
+        {data.details &&
+          data.details.map(detail => (
+            <StyledItem key={detail.name}>
+              <Typography variant="bodyB" color={theme.colors.neutral.text}>
+                {detail.name}
+              </Typography>
+              <Space />
+              <Typography
+                variant="bodyB"
+                color={theme.colors.neutral.textStrong}
+              >
+                {detail.value}
+              </Typography>
+            </StyledItem>
+          ))}
+      </StyledList>
+    </div>
+  )
+}
 
 Tooltip.propTypes = {
   data: PropTypes.shape({

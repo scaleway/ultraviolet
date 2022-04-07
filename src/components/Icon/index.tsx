@@ -2,7 +2,8 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
+import { ColorDeprecated } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 
 // Non Material Design icons: 'send',
@@ -552,14 +553,16 @@ const StyledIcon = styled(Box, {
   shouldForwardProp: prop => !['size', 'color'].includes(prop.toString()),
 })<
   {
-    color: string
+    color: ColorDeprecated | Color | string
     size: number | string
     className: string
     viewBox: string
   } & BoxProps
 >`
   fill: ${({ theme, color }) =>
-    theme.colorsDeprecated[color as Color] ?? color};
+    theme.colors[color as Color]?.text ||
+    theme.colorsDeprecated[color as ColorDeprecated] ||
+    color};
   ${sizeStyles}
 `
 
