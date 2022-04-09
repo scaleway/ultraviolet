@@ -27,7 +27,7 @@ specifiers:
   '@rollup/plugin-url': 6.1.0
   '@scaleway/eslint-config-react': 3.4.15
   '@scaleway/jest-helpers': 1.2.1
-  '@scaleway/random-name': 3.0.0
+  '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.2.14
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
@@ -112,7 +112,7 @@ dependencies:
   '@nivo/core': 0.79.0_75cb922c19ee1b7939faae9b4d1f4cf7
   '@nivo/line': 0.79.1_d6b911f291990e4ea501d615c4dd6f55
   '@nivo/pie': 0.79.1_d6b911f291990e4ea501d615c4dd6f55
-  '@scaleway/random-name': 3.0.0
+  '@scaleway/random-name': 3.0.2
   '@types/intl-tel-input': 17.0.4
   '@types/react-datepicker': 4.3.4_react@17.0.2
   '@xstyled/emotion': 2.5.0_f4211c0e3b1e72bd8df03648eda816c7
@@ -3353,8 +3353,8 @@ packages:
       - react-dom
     dev: true
 
-  /@scaleway/random-name/3.0.0:
-    resolution: {integrity: sha512-ml6Cd+OJxUb4NjGMsBLaEUDSYLXIb8c9jBEK7vjLvtgwwaDVT+LdKEwWxiwMcI5vaedfkgTIGhooiTgBxwqijA==}
+  /@scaleway/random-name/3.0.2:
+    resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
   /@scaleway/use-i18n/3.2.14_react-dom@17.0.2+react@17.0.2:
@@ -5548,6 +5548,12 @@ packages:
     transitivePeerDependencies:
       - react
     dev: false
+
+  /@types/react-dom/17.0.15:
+    resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
+    dependencies:
+      '@types/react': 17.0.39
+    dev: true
 
   /@types/react-dom/17.0.15:
     resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
