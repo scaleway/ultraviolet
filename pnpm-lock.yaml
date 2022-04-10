@@ -26,7 +26,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.1.3
   '@rollup/plugin-url': 6.1.0
   '@scaleway/eslint-config-react': 3.4.15
-  '@scaleway/jest-helpers': 1.2.1
+  '@scaleway/jest-helpers': 1.2.2
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.2.14
   '@semantic-release/changelog': 6.0.1
@@ -150,7 +150,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.1.3_rollup@2.70.1
   '@rollup/plugin-url': 6.1.0_rollup@2.70.1
   '@scaleway/eslint-config-react': 3.4.15_eslint@8.12.0+typescript@4.6.3
-  '@scaleway/jest-helpers': 1.2.1_f370f735164a03a12cea0cc89593cbee
+  '@scaleway/jest-helpers': 1.2.2_f370f735164a03a12cea0cc89593cbee
   '@scaleway/use-i18n': 3.2.14_react-dom@17.0.2+react@17.0.2
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
@@ -2044,24 +2044,6 @@ packages:
       '@emotion/memoize': 0.7.5
     dev: true
 
-  /@emotion/jest/11.9.0:
-    resolution: {integrity: sha512-DgmKVpciuv2tyZiRKe7uU3Rs0djpJExTRmcjxjSPAI6zuxmpbWZMDcjazdNnAD3e8HPWG2KZy3svumFw6N283g==}
-    peerDependencies:
-      '@types/jest': ^26.0.14 || ^27.0.0
-      enzyme-to-json: ^3.2.1
-    peerDependenciesMeta:
-      '@types/jest':
-        optional: true
-      enzyme-to-json:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.17.9
-      '@emotion/css-prettifier': 1.0.1
-      chalk: 4.1.2
-      specificity: 0.4.1
-      stylis: 4.0.13
-    dev: true
-
   /@emotion/jest/11.9.1:
     resolution: {integrity: sha512-JFf9yBA6a7fKrKCWMmjODGRcgBnjiQsl9AakP1y7oRJ6B147ZKPo8DgzHUZ5qQkI06GKAWwYU1vKROInc7SYVA==}
     peerDependencies:
@@ -3320,13 +3302,13 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.1_f370f735164a03a12cea0cc89593cbee:
-    resolution: {integrity: sha512-iGOibEs8wmoBa14Fesyu8j5zB58bLco/5l87fgWJiNM30xK12WuFZT+ZUES5LreWDFkC0xY3Q1288kIc9CKdCA==}
+  /@scaleway/jest-helpers/1.2.2_f370f735164a03a12cea0cc89593cbee:
+    resolution: {integrity: sha512-2hxOf6H0tS2M3+zTGaqnLg0zLuedfscYoOZ2fTZeuES4e7O+nVwGN2+QlQ9WK6BW01AnL02TPxJIDXdI7H9lBg==}
     peerDependencies:
       react: ^17.0.1
     dependencies:
       '@emotion/cache': 11.7.1
-      '@emotion/jest': 11.9.0
+      '@emotion/jest': 11.9.1
       '@emotion/react': 11.9.0_@babel+core@7.17.9+react@17.0.2
       '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
