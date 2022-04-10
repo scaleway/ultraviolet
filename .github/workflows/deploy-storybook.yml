@@ -78,6 +78,9 @@ jobs:
           step: finish
           env: ${{ env.BRANCH_SLUG }}
           token: ${{ secrets.GH_TOKEN }}
+          auto_inactive: true
+          # This will now be automatically handled by github with the auto_inactive
+          override: false
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{ steps.deploy.outputs.url }}
