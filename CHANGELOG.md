@@ -1,3 +1,22 @@
+### [0.141.13](https://github.com/scaleway/scaleway-ui/compare/v0.141.12...v0.141.13) (2022-04-10)
+
+
+### :white_check_mark: Test
+
+* improve coverage ([#1346](https://github.com/scaleway/scaleway-ui/issues/1346)) ([8371e8c](https://github.com/scaleway/scaleway-ui/commit/8371e8c4bd49e9bf6944cc816db1b804da2d05e8))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @emotion/jest to v11.9.1 ([#1358](https://github.com/scaleway/scaleway-ui/issues/1358)) ([3ad507e](https://github.com/scaleway/scaleway-ui/commit/3ad507efeb43123cee04ac8812770459359e5187))
+* **devdeps:** update dependency @types/react-dom to v17.0.15 ([#1356](https://github.com/scaleway/scaleway-ui/issues/1356)) ([f734e63](https://github.com/scaleway/scaleway-ui/commit/f734e6327e609c354b653ceb9ff470562e3c3a82))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/random-name to v3.0.2 ([#1357](https://github.com/scaleway/scaleway-ui/issues/1357)) ([81d73c6](https://github.com/scaleway/scaleway-ui/commit/81d73c66a037134025b083a5d8281c52c0c6dfc7))
+* **pnpm:** lockfile broken ([#1363](https://github.com/scaleway/scaleway-ui/issues/1363)) ([1218425](https://github.com/scaleway/scaleway-ui/commit/1218425d485e386d0afd5c3bd24dc37de6e73d83))
+
 ### [0.141.12](https://github.com/scaleway/scaleway-ui/compare/v0.141.11...v0.141.12) (2022-04-07)
 
 
