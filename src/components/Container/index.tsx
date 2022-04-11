@@ -24,15 +24,14 @@ type ContainerBaseProps = {
 const StyledBox = styled(BorderedBox, {
   shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
 })<ContainerBaseProps>`
+  background: ${({ theme }) => theme.colors.neutral.background};
   padding-left: 24px;
   padding-right: 24px;
   padding-top: ${({ small }) => (small ? 16 : 24)}px;
   padding-bottom: ${({ small }) => (small ? 16 : 24)}px;
   border: 1px solid
     ${({ edition, theme }) =>
-      edition
-        ? theme.colors.primary.borderWeak
-        : theme.colors.neutral.borderWeak};
+      edition ? theme.colors.primary.border : theme.colors.neutral.border};
   opacity: ${({ disabled }) => (disabled ? '0.4' : 'inherit')};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
 
