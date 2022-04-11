@@ -85,7 +85,7 @@ specifiers:
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3
   react-router-dom: 6.3.0
-  react-select: 5.2.2
+  react-select: 5.3.0
   react-toastify: 8.2.0
   react-use-clipboard: 1.0.8
   read-pkg: 7.1.0
@@ -124,7 +124,7 @@ dependencies:
   react-datepicker: 4.7.0_react-dom@17.0.2+react@17.0.2
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3_react@17.0.2
-  react-select: 5.2.2_f370f735164a03a12cea0cc89593cbee
+  react-select: 5.3.0_f370f735164a03a12cea0cc89593cbee
   react-toastify: 8.2.0_react-dom@17.0.2+react@17.0.2
   react-use-clipboard: 1.0.8_react-dom@17.0.2+react@17.0.2
   reakit: 1.3.11_react-dom@17.0.2+react@17.0.2
@@ -14849,11 +14849,11 @@ packages:
       react: 17.0.2
     dev: true
 
-  /react-select/5.2.2_f370f735164a03a12cea0cc89593cbee:
-    resolution: {integrity: sha512-miGS2rT1XbFNjduMZT+V73xbJEeMzVkJOz727F6MeAr2hKE0uUSA8Ff7vD44H32x2PD3SRB6OXTY/L+fTV3z9w==}
+  /react-select/5.3.0_f370f735164a03a12cea0cc89593cbee:
+    resolution: {integrity: sha512-GM6Fbv1+X+kb3e5Fc4oNeyOJkCIesY/D4NBiReKlGY4RxoeztFYm3J0KREgwMaIKQqwTiuLqTlpUBY3SYw5goQ==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-      react-dom: ^16.8.0 || ^17.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.17.9
       '@emotion/cache': 11.7.1
