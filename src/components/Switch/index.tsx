@@ -117,7 +117,7 @@ const StyledSwitch = styled('div', {
 
   &:focus-within,
   &:focus {
-    box-shadow: ${({ theme }) => theme.shadows.bulk};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
   & ${SwitchBallContainer} {

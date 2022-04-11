@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
@@ -27,36 +26,28 @@ const buildVariant =
     bgColor,
     color,
     fill,
-    shadow,
   }: {
     bgColor: string
     color: string
     fill: string
-    shadow: string
   }) =>
   ({ theme }: { theme: Theme }) =>
     css`
       background-color: ${theme.colorsDeprecated[bgColor as Color] ?? bgColor};
       color: ${theme.colorsDeprecated[color as Color] ?? color};
       fill: ${theme.colorsDeprecated[fill as Color] ?? fill};
-      box-shadow: 0 2px 5px 5px
-        ${transparentize(
-          0.7,
-          theme.colorsDeprecated[shadow as Color] ?? shadow,
-        )};
+      box-shadow: ${theme.shadows.dropdown};
     `
 const variants = {
   black: buildVariant({
     bgColor: 'black',
     color: 'white',
     fill: 'black',
-    shadow: 'shadow',
   }),
   white: buildVariant({
     bgColor: 'white',
     color: 'black',
     fill: 'white',
-    shadow: 'shadow',
   }),
 } as const
 
