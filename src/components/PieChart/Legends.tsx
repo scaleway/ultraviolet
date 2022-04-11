@@ -44,9 +44,7 @@ const ListItem = styled.li<{ isFocused: boolean }>`
   margin-top: 8px;
   width: 100%;
   color: ${({ isFocused, theme }) =>
-    isFocused
-      ? theme.colorsDeprecated.primary
-      : theme.colorsDeprecated.gray700};
+    isFocused ? theme.colors.primary.textWeak : theme.colors.neutral.text};
 `
 
 const Bullet = styled.div<{
@@ -97,13 +95,13 @@ const ToggleBox = styled.div`
 `
 
 const Line = styled.span`
-  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.gray300};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
   position: relative;
   width: 100%;
 `
 
 const ProgressiveLine = styled.span<{ isFocused: boolean }>`
-  border-bottom: 1px solid ${({ theme }) => theme.colorsDeprecated.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
   position: absolute;
   left: 0;
   top: 0;

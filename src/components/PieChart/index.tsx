@@ -148,9 +148,9 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
           onMouseLeave={() => setCurrentFocusIndex(undefined)}
           {...chartProps}
         />
-        {content && <StyledContent>{content}</StyledContent>}
+        {content ? <StyledContent>{content}</StyledContent> : null}
       </div>
-      {withLegend && <LegendDisplayer />}
+      {withLegend ? <LegendDisplayer /> : null}
     </Container>
   )
 }
