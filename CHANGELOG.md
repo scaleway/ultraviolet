@@ -1,3 +1,16 @@
+## [0.143.0](https://github.com/scaleway/scaleway-ui/compare/v0.142.0...v0.143.0) (2022-04-11)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.2 ([#1364](https://github.com/scaleway/scaleway-ui/issues/1364)) ([74486fc](https://github.com/scaleway/scaleway-ui/commit/74486fc462cbe730c7f9ea0a5b5bc7587edc0e60))
+* **devdeps:** update pnpm to v6.32.6 ([#1367](https://github.com/scaleway/scaleway-ui/issues/1367)) ([71bad55](https://github.com/scaleway/scaleway-ui/commit/71bad55ca54494234f3b64d5d4c01439fa66e4a0))
+
+
+### :gear: Features
+
+* colors updated for dark theme ([#1355](https://github.com/scaleway/scaleway-ui/issues/1355)) ([8929e85](https://github.com/scaleway/scaleway-ui/commit/8929e852282ac3c515d218f63aaf32dbbd0e7909))
+
 ## [0.142.0](https://github.com/scaleway/scaleway-ui/compare/v0.141.13...v0.142.0) (2022-04-11)
 
 
