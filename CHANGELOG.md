@@ -1,3 +1,23 @@
+## [0.142.0](https://github.com/scaleway/scaleway-ui/compare/v0.141.13...v0.142.0) (2022-04-11)
+
+
+### :repeat: CI
+
+* correct deployment failing because of too much inactive requests ([#1362](https://github.com/scaleway/scaleway-ui/issues/1362)) ([3033a25](https://github.com/scaleway/scaleway-ui/commit/3033a2596f957f23d79746c37c68218fa74b2b73))
+
+
+### :gear: Features
+
+* **colors:** dark colors list containers and separator ([#1352](https://github.com/scaleway/scaleway-ui/issues/1352)) ([817d92a](https://github.com/scaleway/scaleway-ui/commit/817d92ac6b6930f84d647f56e0b7de65ba879898))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.2.2 ([#1344](https://github.com/scaleway/scaleway-ui/issues/1344)) ([d37b2cb](https://github.com/scaleway/scaleway-ui/commit/d37b2cb3d8ae44e984c0477bcaeb58a87ba579ef))
+* **devdeps:** update dependency jest-junit to v13.1.0 ([#1361](https://github.com/scaleway/scaleway-ui/issues/1361)) ([9096838](https://github.com/scaleway/scaleway-ui/commit/9096838da3a5b4a651d623c5357af252a0c0fb66))
+* **devdeps:** update dependency rollup-plugin-dts to v4.2.1 ([#1359](https://github.com/scaleway/scaleway-ui/issues/1359)) ([b089a41](https://github.com/scaleway/scaleway-ui/commit/b089a41da1ec7aa4e326005a444aca2e3bca8886))
+* **devdeps:** update storybook monorepo to v6.4.21 ([#1360](https://github.com/scaleway/scaleway-ui/issues/1360)) ([8574b70](https://github.com/scaleway/scaleway-ui/commit/8574b70a2772b80dc577c55c84dffaee5cb73bb9))
+
 ### [0.141.13](https://github.com/scaleway/scaleway-ui/compare/v0.141.12...v0.141.13) (2022-04-10)
 
 
