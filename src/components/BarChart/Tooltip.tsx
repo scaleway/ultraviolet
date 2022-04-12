@@ -7,7 +7,7 @@ import Typography from '../Typography'
 const BarToolTipContainer = styled(FlexBox)`
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
+  box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: 5px 9px;
   align-items: center;
 `

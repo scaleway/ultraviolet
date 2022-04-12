@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ReactNode } from 'react'
 
@@ -12,8 +11,7 @@ const StyledDiv = styled.div<{ rank: number }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: 4px;
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
-  box-shadow: 0 2px 14px 8px
-    ${({ theme }) => transparentize(0.5, theme.colors.primary.background)};
+  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
   display: flex;
   height: ${HEIGHT}px;
   left: 50%;

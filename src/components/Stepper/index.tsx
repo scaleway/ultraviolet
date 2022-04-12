@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEventHandler,
@@ -97,9 +96,7 @@ const StyledCenterBox = styled('div', {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
   :focus-within:not([disabled]) {
-    box-shadow: 0 0 2px 2px
-      ${({ theme }) =>
-        transparentize(0.7, theme.colors.primary.backgroundWeakHover)};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
   max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);

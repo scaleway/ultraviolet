@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
@@ -246,9 +245,7 @@ const StyledInput = styled('input', {
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px
-      ${({ theme: { colors } }) =>
-        transparentize(0.75, colors.primary.borderWeakHover)};
+    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
     border-color: ${({ theme: { colors } }) => colors.primary.borderWeakHover};
   }
 
@@ -277,7 +274,7 @@ const StyledInput = styled('input', {
   ${({ inputSize, hasLabel }) =>
     !!inputSize && !hasLabel && inputSizes[inputSize]?.full}
 
-  ${({ error, theme: { colors } }) =>
+  ${({ error, theme: { colors, shadows } }) =>
     error &&
     `border-color: ${colors.danger.borderWeak};
 
@@ -287,10 +284,7 @@ const StyledInput = styled('input', {
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(
-        0.75,
-        colors.danger.borderWeakHover,
-      )};
+      box-shadow: ${shadows.focusDanger};
       border-color: ${colors.danger.borderWeakHover};
     }`}
 

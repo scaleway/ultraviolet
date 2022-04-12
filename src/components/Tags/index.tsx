@@ -1,6 +1,5 @@
 import { Theme } from '@emotion/react'
 import styled from '@xstyled/emotion'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
@@ -22,28 +21,25 @@ type Keys = keyof typeof STATUS
 type StatusValue = typeof STATUS[Keys]
 
 const variants = {
-  base: ({ theme: { colors } }: { theme: Theme }) => `
+  base: ({ theme: { colors, shadows } }: { theme: Theme }) => `
     padding: 8px;
     border-radius: 4px;
     border: 1px solid ${colors.neutral.borderWeak};
     &:focus-within {
       border: 1px solid ${colors.primary.borderWeak};
-      box-shadow: 0 0 1px 2px ${transparentize(
-        0.75,
-        colors.primary.borderWeak,
-      )};
+      box-shadow: ${shadows.focusPrimary};
     }
 
     & > * {
       margin: 6px;
     }
   `,
-  bordered: ({ theme: { colors } }: { theme: Theme }) => `
+  bordered: ({ theme: { shadows } }: { theme: Theme }) => `
     margin-top: 0;
     padding: 8px 0;
 
     > input:focus {
-      box-shadow: 0 0 1px 2px ${transparentize(0.6, colors.primary.borderWeak)};
+      box-shadow: ${shadows.focusPrimary};
     }
 
     > * {
@@ -53,12 +49,9 @@ const variants = {
       }
     }
   `,
-  'no-border': ({ theme: { colors } }: { theme: Theme }) => `
+  'no-border': ({ theme: { shadows } }: { theme: Theme }) => `
     &:focus-within {
-      box-shadow: 0 0 2px 4px ${transparentize(
-        0.75,
-        colors.primary.borderWeak,
-      )};
+      box-shadow: ${shadows.focusPrimary};
     }
 
     > * {

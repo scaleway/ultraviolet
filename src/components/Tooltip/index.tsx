@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, { ReactNode, useEffect } from 'react'
 import {
@@ -33,15 +32,13 @@ const variants = {
     background-color: ${theme.colors.neutral.backgroundStronger};
     color: ${theme.colors.neutral.textStronger};
     fill: ${theme.colors.neutral.backgroundStronger};
-    box-shadow: 0 2px 5px 5px
-      ${transparentize(0.7, theme.colors.neutral.border)};
+    box-shadow: ${theme.shadows.tooltip};
   `,
   white: ({ theme }: { theme: Theme }) => css`
     background-color: ${theme.colors.neutral.backgroundWeak};
     color: ${theme.colors.neutral.text};
     fill: ${theme.colors.neutral.backgroundWeak};
-    box-shadow: 0 2px 5px 5px
-      ${transparentize(0.7, theme.colors.neutral.borderWeak)};
+    box-shadow: ${theme.shadows.tooltip};
   `,
 }
 

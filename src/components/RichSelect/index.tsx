@@ -1,6 +1,5 @@
 import { CSSObject, Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import React, {
   ForwardRefExoticComponent,
@@ -134,12 +133,9 @@ const getSelectStyles = ({
         borderColor: error
           ? theme.colors.danger.border
           : theme.colors.primary.border,
-        boxShadow: `0 0 2px 2px ${transparentize(
-          0.75,
-          error
-            ? theme.colors.danger.backgroundStrong
-            : theme.colors.primary.backgroundStrong,
-        )}`,
+        boxShadow: error
+          ? theme.shadows.focusDanger
+          : theme.shadows.focusPrimary,
         svg: {
           fill: error ? theme.colors.danger.text : theme.colors.primary.text,
         },
@@ -181,13 +177,7 @@ const getSelectStyles = ({
   menu: (provided, state) => ({
     ...provided,
     ...(customStyle(state)?.menu || {}),
-    boxShadow: `0 0 0 1px ${transparentize(
-      0.9,
-      theme.colors.neutral.backgroundStronger,
-    )}, 0 4px 11px ${transparentize(
-      0.9,
-      theme.colors.neutral.backgroundStronger,
-    )}`,
+    boxShadow: theme.shadows.menu,
   }),
   menuList: (provided, state) => ({
     ...provided,
