@@ -2,7 +2,7 @@ name: Visual
 
 on:
   pull_request:
-    types: ["opened", "edited", "reopened", "synchronize"]
+    types: ['opened', 'edited', 'reopened', 'synchronize']
 
 jobs:
   build-storybook:
@@ -25,7 +25,7 @@ jobs:
     needs: [build-storybook]
     strategy:
       matrix:
-        filter: ["[A-C]", "D", "[E-Z]"]
+        filter: ['[A-C]', 'D', '[E-Z]']
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3.0.0
@@ -34,14 +34,14 @@ jobs:
         uses: actions/setup-node@v3.1.1
         with:
           node-version: 17
-          cache: "pnpm"
+          cache: 'pnpm'
       - run: pnpm install
       - uses: actions/cache@v3
         id: restore-build-visual
         with:
           path: ./*
           key: ${{ github.sha }}
-      - run: pnpm run test:visual -- --storiesFilter ^Components/${{ matrix.filter }}
+      - run: pnpm run test:visual:nobuild -- --storiesFilter ^Components/${{ matrix.filter }}
       - name: Archive screenshots
         if: ${{ failure() }}
         uses: actions/upload-artifact@v3

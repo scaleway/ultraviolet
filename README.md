@@ -107,6 +107,14 @@ $ pnpm run lint
 $ pnpm run lint:fix
 ```
 
+#### Visual
+
+```sh
+$ pnpm run test:visual # Build the storybook and launch visual tests
+$ pnpm run test:visual:update # Build the storybook, launch visual tests and update screenshots
+$ pnpm run test:visual:nobuild # Launch visual tests without (re)building the storybook
+```
+
 ### Build
 
 ```sh
