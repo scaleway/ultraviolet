@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import React, { ComponentProps } from 'react'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 
@@ -16,21 +16,21 @@ const variants = {
     color: ${theme.colors.neutral.text};
   `,
   disabled: ({ theme }: { theme: Theme }) => `
-  border: 1px solid ${theme.colors.neutral.borderWeak};
+    border: 1px solid ${theme.colors.neutral.borderWeak};
     background-color: ${theme.colors.neutral.background};
     color: ${theme.colors.neutral.textWeak};
   `,
-  on: ({ theme }: { theme: Theme }) => `
+  info: ({ theme }: { theme: Theme }) => `
+    background-color: ${theme.colors.info.background};
+    color: ${theme.colors.info.text};
+  `,
+  primary: ({ theme }: { theme: Theme }) => `
     background-color: ${theme.colors.primary.background};
     color: ${theme.colors.primary.text};
   `,
   success: ({ theme }: { theme: Theme }) => `
     background-color: ${theme.colors.success.background};
     color: ${theme.colors.success.text};
-  `,
-  wait: ({ theme }: { theme: Theme }) => `
-    background-color: ${theme.colors.info.background};
-    color: ${theme.colors.info.text};
   `,
   warning: ({ theme }: { theme: Theme }) => `
     background-color: ${theme.colors.warning.background};
@@ -41,24 +41,19 @@ type BulletVariant = keyof typeof variants
 export const bulletVariants = Object.keys(variants) as BulletVariant[]
 
 const sizes = {
-  medium: ({ theme }: { theme: Theme }) => css`
-    width: ${theme.space['4']};
-    height: ${theme.space['4']};
+  medium: css`
+    width: 32px;
+    height: 32px;
     font-size: 16px;
   `,
-  small: ({ theme }: { theme: Theme }) => css`
-    width: ${theme.space['3']};
-    height: ${theme.space['3']};
+  small: css`
+    width: 24px;
+    height: 24px;
     font-size: 14px;
   `,
 } as const
 type BulletSize = keyof typeof sizes
 export const bulletSizes = Object.keys(sizes) as BulletSize[]
-
-const iconSizes: Record<BulletSize, number> = {
-  medium: 14,
-  small: 10,
-}
 
 const variantStyles = ({ variant }: { variant: BulletVariant }) =>
   variants[variant]
@@ -86,7 +81,7 @@ type BulletProps = {
   variant?: BulletVariant
 } & ContentProps
 
-const Bullet: FunctionComponent<BulletProps> = ({
+const Bullet = ({
   className,
   variant = 'default',
   size = 'medium',
@@ -94,10 +89,10 @@ const Bullet: FunctionComponent<BulletProps> = ({
   text,
   tooltip,
   tooltipBaseId,
-}) => (
+}: BulletProps) => (
   <Tooltip baseId={tooltipBaseId} text={tooltip}>
     <StyledContainer variant={variant} size={size} className={className}>
-      {icon ? <Icon name={icon} size={iconSizes[size]} /> : text}
+      {icon ? <Icon name={icon} size="50%" /> : text}
     </StyledContainer>
   </Tooltip>
 )
