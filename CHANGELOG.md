@@ -1,3 +1,10 @@
+## [0.144.0](https://github.com/scaleway/scaleway-ui/compare/v0.143.1...v0.144.0) (2022-04-12)
+
+
+### :gear: Features
+
+* **theme:** typography synchronized with figma ([#1369](https://github.com/scaleway/scaleway-ui/issues/1369)) ([18f25c6](https://github.com/scaleway/scaleway-ui/commit/18f25c6b91cdccb785790cc8f71692adc7db608b))
+
 ### [0.143.1](https://github.com/scaleway/scaleway-ui/compare/v0.143.0...v0.143.1) (2022-04-12)
 
 
