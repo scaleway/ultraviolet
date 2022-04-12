@@ -43,7 +43,7 @@ Sizes.decorators = [
     <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
       {buttonSizes.map(size => (
         <div key={size}>
-          <Button size={size}>1</Button>
+          <Button size={size}>{size}</Button>
         </div>
       ))}
     </div>
