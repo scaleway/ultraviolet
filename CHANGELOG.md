@@ -1,3 +1,17 @@
+### [0.144.1](https://github.com/scaleway/scaleway-ui/compare/v0.144.0...v0.144.1) (2022-04-12)
+
+
+### :package: Chore
+
+* 🤖 update visual testings cmds and related ci process ([#1372](https://github.com/scaleway/scaleway-ui/issues/1372)) ([8003a16](https://github.com/scaleway/scaleway-ui/commit/8003a16491976e50aef42e587d3d38995e2702d6))
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.2.3 ([#1371](https://github.com/scaleway/scaleway-ui/issues/1371)) ([4ec9fbf](https://github.com/scaleway/scaleway-ui/commit/4ec9fbf004ebdadf526aadf29c67842697c6be7b))
+* **devdeps:** update dependency webpack to v5.72.0 ([#1373](https://github.com/scaleway/scaleway-ui/issues/1373)) ([cfb9fa4](https://github.com/scaleway/scaleway-ui/commit/cfb9fa45ecd5899aa738c3e0d15cbabbd5f57319))
+
+
+### :bug: Bug Fixes
+
+* shadows colors ([#1353](https://github.com/scaleway/scaleway-ui/issues/1353)) ([a2c426c](https://github.com/scaleway/scaleway-ui/commit/a2c426ce6e33b22bb4346b9aa67eb054a96ee9f9))
+
 ## [0.144.0](https://github.com/scaleway/scaleway-ui/compare/v0.143.1...v0.144.0) (2022-04-12)
 
 
