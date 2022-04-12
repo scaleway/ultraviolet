@@ -50,7 +50,7 @@ specifiers:
   '@storybook/theming': 6.4.21
   '@svgr/rollup': 6.2.1
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 12.1.4
+  '@testing-library/react': 12.1.5
   '@testing-library/user-event': 13.5.0
   '@types/intl-tel-input': 17.0.4
   '@types/jest-axe': 3.5.3
@@ -173,7 +173,7 @@ devDependencies:
   '@storybook/theming': 6.4.21_react-dom@17.0.2+react@17.0.2
   '@svgr/rollup': 6.2.1
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 12.1.5_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
   '@types/jest-axe': 3.5.3
   '@types/react-dom': 18.0.0
@@ -5239,6 +5239,20 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
+  /@testing-library/react/12.1.5_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: <18.0.0
+      react-dom: <18.0.0
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@testing-library/dom': 8.11.3
+      '@types/react-dom': 17.0.15
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: true
+
   /@testing-library/user-event/13.5.0:
     resolution: {integrity: sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==}
     engines: {node: '>=10', npm: '>=6'}
@@ -5497,6 +5511,12 @@ packages:
     transitivePeerDependencies:
       - react
     dev: false
+
+  /@types/react-dom/17.0.15:
+    resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
+    dependencies:
+      '@types/react': 17.0.39
+    dev: true
 
   /@types/react-dom/18.0.0:
     resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
