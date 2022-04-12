@@ -11,7 +11,7 @@ const StyledDiv = styled.div<{ rank: number }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: 4px;
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
-  box-shadow: ${({ theme }) => theme.shadows.bulk};
+  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
   display: flex;
   height: ${HEIGHT}px;
   left: 50%;
