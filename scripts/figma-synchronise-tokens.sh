@@ -22,6 +22,9 @@ function generateTokens {
   THEME=$1
   JSON=$(curl "${URL}")
 
+  # We get unit value
+  UNIT=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" '.[$global].unit.value | tonumber')
+
   # Gives all shades and their colors in hexadecimal values
   PARSED_SHADES=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
   reduce (.[$theme].shades | to_entries | .[]) as $sentiment
@@ -68,7 +71,23 @@ function generateTokens {
       ({}; . + {"\($sentiment.key)": $sentiment.value.value}) | {"colors": .}
   ')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHERS_TOKENS}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3]')
+  # Line height generated used for typography
+  GENERATED_LINE_HEIGHT=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson unit "${UNIT}" '
+  .[$global].lineHeight |
+    reduce (. | to_entries | .[]) as $size ({}; . + {"\($size.key)": ($size.value.value | split("*") as $param | $param[1] | tonumber * $unit | tostring + "px")})')
+
+  # Font size generated used for typography
+  GENERATED_FONT_SIZES=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" '.[$global].fontSize | reduce (. | to_entries | .[]) as $size ({}; . + {"\($size.key)": ($size.value.value + "px")})')
+
+  # Fully generated typography properties
+  GENERATED_TYPOGRAPHY=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson lineHeight "${GENERATED_LINE_HEIGHT}" --argjson fontSize "${GENERATED_FONT_SIZES}" '
+  .[$global] | with_entries(select(.value.type == "typography")) |
+    reduce (. | to_entries | .[]) as $typography
+      ({}; . + {"\($typography.key)": (reduce($typography.value.value | to_entries | .[]) as $property
+        ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
+          }))}) | {"typography": .}')
+
+  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHERS_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"
