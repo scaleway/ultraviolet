@@ -1,3 +1,17 @@
+### [0.143.1](https://github.com/scaleway/scaleway-ui/compare/v0.143.0...v0.143.1) (2022-04-12)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/setup-node action to v3.1.1 ([#1368](https://github.com/scaleway/scaleway-ui/issues/1368)) ([966ef73](https://github.com/scaleway/scaleway-ui/commit/966ef7391945b8fa51fa331af1fbbefddbc84546))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.16 ([#1370](https://github.com/scaleway/scaleway-ui/issues/1370)) ([b115d23](https://github.com/scaleway/scaleway-ui/commit/b115d23b9bbf14dbf24ecf8155c0a8682ad391e8))
+* **devdeps:** update dependency @types/react-dom to v18 ([#1354](https://github.com/scaleway/scaleway-ui/issues/1354)) ([abedeea](https://github.com/scaleway/scaleway-ui/commit/abedeeac68c91e26ca710b1e81d2cbaa5c41b28d))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.3.0 ([#1366](https://github.com/scaleway/scaleway-ui/issues/1366)) ([047fb7b](https://github.com/scaleway/scaleway-ui/commit/047fb7b6a74eb66cad88379fb5381a9298239dee))
+
 ## [0.143.0](https://github.com/scaleway/scaleway-ui/compare/v0.142.0...v0.143.0) (2022-04-11)
 
 
