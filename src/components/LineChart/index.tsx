@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react'
-import { Box, DatumValue, ValueFormat } from '@nivo/core'
+import { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
+import type { ScaleSpec } from '@nivo/scales'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, Validator, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
@@ -10,10 +11,10 @@ import { getMaxChartValue, getMinChartValue } from './helpers'
 
 type LineChartProps = {
   height?: string | number
-  margin?: Box
-  xScale?: LineSvgProps['xScale']
-  yScale?: LineSvgProps['yScale']
-  data?: LineSvgProps['data']
+  margin?: NivoBox
+  xScale?: ScaleSpec
+  yScale?: ScaleSpec
+  data?: Serie[]
   withLegend?: boolean
   axisFormatters?: Partial<
     Record<
@@ -22,7 +23,7 @@ type LineChartProps = {
     >
   >
   pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<DatumValue>>>
-  tickValues?: Box
+  tickValues?: NivoBox
   chartProps?: Partial<LineSvgProps>
 }
 
