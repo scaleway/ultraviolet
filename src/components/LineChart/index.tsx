@@ -2,12 +2,7 @@ import { useTheme } from '@emotion/react'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  Validator,
-  useState,
-} from 'react'
+import React, { ComponentProps, Validator, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import CustomLegend from './CustomLegend'
 import LineChartTooltip from './Tooltip'
@@ -31,7 +26,7 @@ type LineChartProps = {
   chartProps?: Partial<LineSvgProps>
 }
 
-const LineChart: FunctionComponent<LineChartProps> = ({
+const LineChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width
   margin = { bottom: 50, left: 60, right: 25, top: 50 },
   xScale = {
@@ -47,7 +42,7 @@ const LineChart: FunctionComponent<LineChartProps> = ({
   pointFormatters,
   tickValues,
   chartProps = {},
-}) => {
+}: LineChartProps) => {
   const theme = useTheme()
   const dataset = {
     datasets: data.map((d, i) => ({

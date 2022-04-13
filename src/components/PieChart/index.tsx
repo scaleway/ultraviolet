@@ -3,13 +3,7 @@ import styled from '@emotion/styled'
 import { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import PropTypes from 'prop-types'
-import React, {
-  ReactNode,
-  Validator,
-  VoidFunctionComponent,
-  useCallback,
-  useState,
-} from 'react'
+import React, { ReactNode, Validator, useCallback, useState } from 'react'
 import Typography from '../Typography'
 import Legends from './Legends'
 import { Data } from './types'
@@ -54,7 +48,7 @@ type PieChartProps = {
   margin?: Box
 }
 
-const PieChart: VoidFunctionComponent<PieChartProps> = ({
+const PieChart = ({
   height = 206,
   width = 206,
   data = undefined,
@@ -63,7 +57,7 @@ const PieChart: VoidFunctionComponent<PieChartProps> = ({
   withLegend = false,
   margin = { bottom: 10, left: 10, right: 10, top: 10 },
   chartProps = {},
-}) => {
+}: PieChartProps) => {
   const { colors } = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
   const emptyTooltip = useCallback(() => <span />, [])

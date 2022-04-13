@@ -1,10 +1,5 @@
 import PropTypes from 'prop-types'
-import React, {
-  VoidFunctionComponent,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CountUp from 'react-countup'
 
 type CounterProps = {
@@ -18,7 +13,7 @@ type CounterProps = {
   onEnd?: () => void
 }
 
-const Counter: VoidFunctionComponent<CounterProps> = ({ end, onEnd }) => {
+const Counter = ({ end, onEnd }: CounterProps) => {
   const [isBusy, setIsBusy] = useState<boolean>(true)
   const start = useRef<number>(0)
   useEffect(() => {

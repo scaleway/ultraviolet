@@ -8,7 +8,6 @@ import React, {
   KeyboardEventHandler,
   MutableRefObject,
   ReactNode,
-  VoidFunctionComponent,
   useEffect,
   useRef,
   useState,
@@ -165,7 +164,7 @@ type StepperProps = {
   value?: string | number
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
-const Stepper: VoidFunctionComponent<StepperProps> = ({
+const Stepper = ({
   disabled = false,
   maxValue = 100,
   minValue = 0,
@@ -180,7 +179,7 @@ const Stepper: VoidFunctionComponent<StepperProps> = ({
   text,
   value,
   ...props
-}) => {
+}: StepperProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
   const [inputValue, setInputValue] = useState(

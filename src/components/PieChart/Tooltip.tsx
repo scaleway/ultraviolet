@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import Typography from '../Typography'
 
 const StyledList = styled.ul`
@@ -36,7 +36,7 @@ type TooltipProps = {
   }
 }
 
-const Tooltip: VoidFunctionComponent<TooltipProps> = ({ data }) => {
+const Tooltip = ({ data }: TooltipProps) => {
   const theme = useTheme()
 
   return (

@@ -7,7 +7,6 @@ import React, {
   ChangeEvent,
   InputHTMLAttributes,
   MutableRefObject,
-  VoidFunctionComponent,
   useEffect,
   useRef,
 } from 'react'
@@ -113,14 +112,14 @@ type PhoneInputProps = PhoneInputLabelProps & {
   label?: string
 }
 
-const PhoneInput: VoidFunctionComponent<PhoneInputProps> = ({
+const PhoneInput = ({
   disabled = false,
   disableDropdown = false,
   inputProps: { name, id, placeholder, 'data-testid': dataTestId } = {},
   onChange,
   value,
   label = 'Phone',
-}) => {
+}: PhoneInputProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
 

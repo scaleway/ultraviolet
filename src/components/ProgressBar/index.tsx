@@ -1,7 +1,7 @@
 import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 
@@ -68,13 +68,13 @@ type ProgressBarProps = {
   progress?: boolean
 } & BoxProps
 
-const ProgressBar: VoidFunctionComponent<ProgressBarProps> = ({
+const ProgressBar = ({
   backgroundColor,
   progress = false,
   value = 0,
   variant = 'primary',
   ...props
-}) => {
+}: ProgressBarProps) => {
   const theme = useTheme()
 
   return (

@@ -6,7 +6,6 @@ import React, {
   ReactElement,
   ReactNode,
   VoidFunctionComponent,
-  WeakValidationMap,
   forwardRef,
   useCallback,
   useEffect,
@@ -617,9 +616,7 @@ const ForwardedList = forwardRef(List) as <DataType>(
   /**
    * Additional props to pass to the Pagination component
    */
-  paginationProps: PropTypes.shape(
-    Pagination.propTypes as WeakValidationMap<PaginationProps>,
-  ),
+  paginationProps: PropTypes.shape(Pagination.propTypes),
   /**
    * Number of item per page
    */

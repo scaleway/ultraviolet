@@ -82,12 +82,12 @@ const StyledContainer = styled.div`
   margin-top: ${({ theme }) => theme.space[2]};
 `
 
-const CustomLegend: FunctionComponent<CustomLegendProps> = ({
+const CustomLegend = ({
   axisTransformer = noop,
   data,
   selected,
   setSelected,
-}) => (
+}: CustomLegendProps) => (
   <StyledContainer>
     <div css={styles.head}>
       <FlexBox.Child flex="6">Legend</FlexBox.Child>

@@ -1,9 +1,8 @@
 import { ThemeProvider } from '@emotion/react'
 import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import Pagination, { usePaginationContext } from '..'
-import type { PaginationState } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import theme from '../../../theme'
 import getPageNumbers from '../getPageNumbers'
@@ -128,12 +127,8 @@ describe('Pagination', () => {
           value => `Item ${value}`,
         )}
         LoaderComponent={() => <div>Loading</div>}
-        RightComponent={
-          (() => <>I&apos;m a custom right component</>) as FunctionComponent
-        }
-        LeftComponent={
-          (() => <>I&apos;m a custom left component</>) as FunctionComponent
-        }
+        RightComponent={() => <>I&apos;m a custom right component</>}
+        LeftComponent={() => <>I&apos;m a custom left component</>}
         MiddleComponent={({
           paginationState: {
             isLoadingPage,
@@ -365,7 +360,7 @@ describe('Pagination', () => {
         onLoadPage={async () =>
           new Promise(resolve => {
             setTimeout(() => {
-              resolve(false)
+              resolve()
             }, 500)
           })
         }
@@ -488,28 +483,6 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
     ))
-
-  test('should render correctly with ref', async () => {
-    const ref = React.createRef<PaginationState>()
-    await shouldMatchEmotionSnapshot(
-      <Pagination
-        ref={ref}
-        initialData={Array.from({ length: 50 }, (_, index) => index).map(
-          value => `Item ${value}`,
-        )}
-      >
-        <ExampleChildren />
-      </Pagination>,
-      {
-        transform: () => {
-          act(() => {
-            ref.current?.goToLastPage()
-            ref.current?.reloadPage()?.catch(undefined)
-          })
-        },
-      },
-    )
-  })
 
   test('should render correctly with controlled', async () => {
     const fn = jest.fn()

@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
-  FunctionComponent,
+  ForwardedRef,
   ReactNode,
-  VoidFunctionComponent,
   createContext,
   forwardRef,
   useCallback,
@@ -19,20 +18,20 @@ import Button from '../Button'
 import getPageNumbers from './getPageNumbers'
 import usePagination, { UsePaginationReturn } from './usePagination'
 
-export type PaginationState<T = unknown> = {
+export type PaginationState<T> = {
   canLoadMore: boolean
   data?: T[] | null
 } & UsePaginationReturn<T>
 
-const PaginationContext = createContext<PaginationState>({} as PaginationState)
+const PaginationContext = createContext<PaginationState<unknown> | undefined>(
+  undefined,
+)
 
 export const usePaginationContext = <T,>(): PaginationState<T> =>
   useContext(PaginationContext) as PaginationState<T>
 
 // START - Default Components
-const DefaultLeftComponent: VoidFunctionComponent<
-  PaginationComponentProps
-> = () => null
+const DefaultLeftComponent = () => null
 
 const StyledPageButton = styled(Button, {
   shouldForwardProp: prop => !['current'].includes(prop.toString()),
@@ -54,9 +53,10 @@ export type PaginationComponentProps<T = unknown> = {
   paginationState: PaginationState<T>
 }
 
-const DefaultMiddleComponent: VoidFunctionComponent<
-  PaginationComponentProps
-> = ({ pageTabCount, paginationState }) => {
+function DefaultMiddleComponent<T>({
+  pageTabCount,
+  paginationState,
+}: PaginationComponentProps<T>): JSX.Element {
   const {
     isLoadingPage,
     page,
@@ -131,9 +131,11 @@ const DefaultMiddleComponent: VoidFunctionComponent<
   )
 }
 
-const DefaultRightComponent: VoidFunctionComponent<
-  PaginationComponentProps
-> = ({ paginationState: { page } }) => <div>Current : {page}</div>
+function DefaultRightComponent<T>({
+  paginationState: { page },
+}: PaginationComponentProps<T>): JSX.Element {
+  return <div>Current : {page}</div>
+}
 
 const StyledActivityContainer = styled.div`
   display: flex;
@@ -141,9 +143,7 @@ const StyledActivityContainer = styled.div`
   margin: ${({ theme }) => `${theme.space['2']} 0`};
 `
 
-const DefaultLoaderComponent: VoidFunctionComponent<
-  PaginationComponentProps
-> = () => (
+const DefaultLoaderComponent = () => (
   <StyledActivityContainer>
     <ActivityIndicator active />
   </StyledActivityContainer>
@@ -172,18 +172,24 @@ const StyledRightContainer = styled.div`
 `
 
 type PaginationContainerProps<T = unknown> = PaginationComponentProps<T> & {
-  RightComponent?: FunctionComponent<PaginationComponentProps<T>>
-  LeftComponent?: FunctionComponent<PaginationComponentProps<T>>
-  MiddleComponent?: FunctionComponent<PaginationComponentProps<T>>
+  RightComponent?:
+    | ((props: PaginationComponentProps<T>) => JSX.Element | null)
+    | (() => JSX.Element | null)
+  LeftComponent?:
+    | ((props: PaginationComponentProps<T>) => JSX.Element | null)
+    | (() => JSX.Element | null)
+  MiddleComponent?:
+    | ((props: PaginationComponentProps<T>) => JSX.Element | null)
+    | (() => JSX.Element | null)
 }
 
-const PaginationContainer: VoidFunctionComponent<PaginationContainerProps> = ({
+const PaginationContainer = ({
   LeftComponent = DefaultLeftComponent,
   MiddleComponent = DefaultMiddleComponent,
   RightComponent = DefaultRightComponent,
   paginationState,
   pageTabCount = 5,
-}) => (
+}: PaginationContainerProps) => (
   <StyledMainContainer role="navigation">
     <StyledLeftContainer>
       <LeftComponent
@@ -206,14 +212,9 @@ const PaginationContainer: VoidFunctionComponent<PaginationContainerProps> = ({
   </StyledMainContainer>
 )
 
-const PaginationComponent = {
-  propTypes: {},
-}
-
-DefaultLeftComponent.propTypes = PaginationComponent.propTypes
-DefaultMiddleComponent.propTypes = PaginationComponent.propTypes
-DefaultRightComponent.propTypes = PaginationComponent.propTypes
-DefaultLoaderComponent.propTypes = PaginationComponent.propTypes
+// DefaultMiddleComponent.propTypes = PaginationComponent.propTypes
+// DefaultRightComponent.propTypes = PaginationComponent.propTypes
+// DefaultLoaderComponent.propTypes = PaginationComponent.propTypes
 // END - Default Components
 
 export type PaginationProps<T = unknown> = {
@@ -228,10 +229,10 @@ export type PaginationProps<T = unknown> = {
   initialPage?: number
   page?: number
   pageCount?: number
-  RightComponent?: FunctionComponent<PaginationComponentProps<T>>
-  LeftComponent?: FunctionComponent<PaginationComponentProps<T>>
-  MiddleComponent?: FunctionComponent<PaginationComponentProps<T>>
-  LoaderComponent?: FunctionComponent<PaginationComponentProps<T>>
+  RightComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
+  LeftComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
+  MiddleComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
+  LoaderComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
   children: ReactNode
   /**
    * Number of page buttons you want for the default MiddleComponent
@@ -239,190 +240,168 @@ export type PaginationProps<T = unknown> = {
   pageTabCount?: number
 }
 
-export const PaginationForwardFn = forwardRef<PaginationState, PaginationProps>(
-  (
-    {
-      children,
-      data: dataProp,
-      initialData = [],
-      initialPage = 1,
-      page: pageProp,
-      pageCount,
-      onLoadPage,
-      onChangePage,
-      perPage: perPageProp = 25,
-      LeftComponent = DefaultLeftComponent,
-      MiddleComponent = DefaultMiddleComponent,
-      RightComponent = DefaultRightComponent,
-      LoaderComponent = DefaultLoaderComponent,
-      pageTabCount = 5,
-    },
-    ref,
-  ) => {
-    const paginationRef = useRef<PaginationState>({} as PaginationState)
-    useImperativeHandle(ref, () => paginationRef.current)
+function Pagination<T>(
+  {
+    children,
+    data: dataProp,
+    initialData = [],
+    initialPage = 1,
+    page: pageProp,
+    pageCount,
+    onLoadPage,
+    onChangePage,
+    perPage: perPageProp = 25,
+    LeftComponent = DefaultLeftComponent,
+    MiddleComponent = DefaultMiddleComponent,
+    RightComponent = DefaultRightComponent,
+    LoaderComponent = DefaultLoaderComponent,
+    pageTabCount = 5,
+  }: PaginationProps<T>,
+  ref: ForwardedRef<PaginationState<T>>,
+): JSX.Element {
+  const paginationRef = useRef<PaginationState<T>>({} as PaginationState<T>)
+  useImperativeHandle(ref, () => paginationRef.current)
 
-    const [page, setPage] = useState(pageProp ?? initialPage)
-    const [data, setData] = useState(dataProp ?? initialData)
-    const onChangePageRef = useRef(onChangePage)
-    const onLoadPageRef = useRef(onLoadPage)
+  const [page, setPage] = useState(pageProp ?? initialPage)
+  const [data, setData] = useState(dataProp ?? initialData)
+  const onChangePageRef = useRef(onChangePage)
+  const onLoadPageRef = useRef(onLoadPage)
 
-    const handleLoadPage = useCallback(
-      async ({
+  const handleLoadPage = useCallback(
+    async ({
+      page: currentPage,
+      perPage,
+    }: {
+      page: number
+      perPage?: number
+    }) => {
+      const res = (await onLoadPageRef.current?.({
         page: currentPage,
         perPage,
-      }: {
-        page: number
-        perPage?: number
-      }) => {
-        const res = (await onLoadPageRef.current?.({
-          page: currentPage,
-          perPage,
-        })) as []
-        if (res?.length > 0) {
-          paginationRef.current.setPageData(currentPage, res)
-        }
-      },
-      [],
-    )
-
-    const handleChangePage = useCallback((newPage: number) => {
-      if (onChangePageRef.current) {
-        onChangePageRef.current(newPage)
-      } else {
-        setPage(newPage)
+      })) as []
+      if (res?.length > 0) {
+        paginationRef.current.setPageData(currentPage, res)
       }
-    }, [])
+    },
+    [],
+  )
 
-    const {
+  const handleChangePage = useCallback((newPage: number) => {
+    if (onChangePageRef.current) {
+      onChangePageRef.current(newPage)
+    } else {
+      setPage(newPage)
+    }
+  }, [])
+
+  const {
+    goToFirstPage,
+    goToLastPage,
+    goToNextPage,
+    goToPage,
+    goToPreviousPage,
+    maxPage,
+    page: currentPage,
+    pageData,
+    paginatedData,
+    isLoadingPage,
+    perPage,
+    reloadPage,
+    setPageData,
+    setPaginatedData,
+  } = usePagination({
+    data,
+    onChangePage: handleChangePage,
+    onLoadPage: onLoadPage ? handleLoadPage : undefined,
+    page,
+    pageCount,
+    perPage: perPageProp,
+  })
+
+  useEffect(() => {
+    if (pageProp && pageProp !== page) {
+      setPage(pageProp)
+    }
+  }, [pageProp, page])
+
+  useEffect(() => {
+    if (dataProp) {
+      setData(dataProp)
+    }
+  }, [dataProp])
+
+  const value = useMemo(() => {
+    paginationRef.current = {
+      canLoadMore: onLoadPageRef.current !== undefined,
+      data: dataProp,
       goToFirstPage,
       goToLastPage,
       goToNextPage,
       goToPage,
       goToPreviousPage,
+      isLoadingPage,
       maxPage,
       page: currentPage,
       pageData,
       paginatedData,
-      isLoadingPage,
       perPage,
       reloadPage,
       setPageData,
       setPaginatedData,
-    } = usePagination({
-      data,
-      onChangePage: handleChangePage,
-      onLoadPage: onLoadPage ? handleLoadPage : undefined,
-      page,
-      pageCount,
-      perPage: perPageProp,
-    })
+    }
 
-    useEffect(() => {
-      if (pageProp && pageProp !== page) {
-        setPage(pageProp)
-      }
-    }, [pageProp, page])
+    return paginationRef.current
+  }, [
+    goToFirstPage,
+    goToLastPage,
+    goToNextPage,
+    goToPage,
+    goToPreviousPage,
+    isLoadingPage,
+    dataProp,
+    maxPage,
+    currentPage,
+    pageData,
+    paginatedData,
+    perPage,
+    reloadPage,
+    setPageData,
+    setPaginatedData,
+  ])
 
-    useEffect(() => {
-      if (dataProp) {
-        setData(dataProp)
-      }
-    }, [dataProp])
+  useEffect(() => {
+    onLoadPageRef.current = onLoadPage
+  }, [onLoadPage])
 
-    const value = useMemo(() => {
-      paginationRef.current = {
-        canLoadMore: onLoadPageRef.current !== undefined,
-        data: dataProp,
-        goToFirstPage,
-        goToLastPage,
-        goToNextPage,
-        goToPage,
-        goToPreviousPage,
-        isLoadingPage,
-        maxPage,
-        page: currentPage,
-        pageData,
-        paginatedData,
-        perPage,
-        reloadPage,
-        setPageData,
-        setPaginatedData,
-      }
+  useEffect(() => {
+    onChangePageRef.current = onChangePage
+  }, [onChangePage])
 
-      return paginationRef.current
-    }, [
-      goToFirstPage,
-      goToLastPage,
-      goToNextPage,
-      goToPage,
-      goToPreviousPage,
-      isLoadingPage,
-      dataProp,
-      maxPage,
-      currentPage,
-      pageData,
-      paginatedData,
-      perPage,
-      reloadPage,
-      setPageData,
-      setPaginatedData,
-    ])
+  const TypedPaginationContainer = PaginationContainer as (
+    props: PaginationContainerProps<T>,
+  ) => JSX.Element
 
-    useEffect(() => {
-      onLoadPageRef.current = onLoadPage
-    }, [onLoadPage])
-
-    useEffect(() => {
-      onChangePageRef.current = onChangePage
-    }, [onChangePage])
-
-    const TypedPaginationContainer =
-      PaginationContainer as FunctionComponent<PaginationContainerProps>
-
-    return (
-      <PaginationContext.Provider value={value}>
-        {isLoadingPage ? (
-          <LoaderComponent
-            paginationState={value}
-            pageTabCount={pageTabCount}
-          />
-        ) : null}
-        {children && typeof children === 'function' && !isLoadingPage
-          ? children(value)
-          : null}
-        {children && typeof children !== 'function' && !isLoadingPage
-          ? children
-          : null}
-        <TypedPaginationContainer
-          paginationState={value}
-          pageTabCount={pageTabCount}
-          LeftComponent={LeftComponent}
-          RightComponent={RightComponent}
-          MiddleComponent={MiddleComponent}
-        />
-      </PaginationContext.Provider>
-    )
-  },
-)
-
-PaginationForwardFn.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.arrayOf(PropTypes.any),
-  // eslint-disable-next-line react/forbid-prop-types
-  initialData: PropTypes.arrayOf(PropTypes.any),
-  initialPage: PropTypes.number,
-  LeftComponent: PropTypes.oneOfType([PropTypes.func]),
-  LoaderComponent: PropTypes.oneOfType([PropTypes.func]),
-  MiddleComponent: PropTypes.oneOfType([PropTypes.func]),
-  onChangePage: PropTypes.func,
-  onLoadPage: PropTypes.func,
-  page: PropTypes.number,
-  pageCount: PropTypes.number,
-  pageTabCount: PropTypes.number,
-  perPage: PropTypes.number,
-  RightComponent: PropTypes.oneOfType([PropTypes.func]),
+  return (
+    // @ts-expect-error we force cast the generic context
+    <PaginationContext.Provider value={value}>
+      {isLoadingPage ? (
+        <LoaderComponent paginationState={value} pageTabCount={pageTabCount} />
+      ) : null}
+      {children && typeof children === 'function' && !isLoadingPage
+        ? children(value)
+        : null}
+      {children && typeof children !== 'function' && !isLoadingPage
+        ? children
+        : null}
+      <TypedPaginationContainer
+        paginationState={value}
+        pageTabCount={pageTabCount}
+        LeftComponent={LeftComponent}
+        RightComponent={RightComponent}
+        MiddleComponent={MiddleComponent}
+      />
+    </PaginationContext.Provider>
+  )
 }
 
 PaginationContainer.propTypes = {
@@ -452,21 +431,52 @@ PaginationContainer.propTypes = {
   RightComponent: PropTypes.func,
 }
 
-type PaginationType<
-  T extends Record<string, unknown> = Record<string, string>,
-> = typeof PaginationForwardFn & {
-  RightComponent: FunctionComponent<PaginationComponentProps<T>>
-  LeftComponent: FunctionComponent<PaginationComponentProps<T>>
-  PaginationContainer: FunctionComponent<PaginationComponentProps<T>>
-  MiddleComponent: FunctionComponent<PaginationComponentProps<T>>
-  LoaderComponent: FunctionComponent<PaginationComponentProps<T>>
+const propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.arrayOf(PropTypes.any),
+  // eslint-disable-next-line react/forbid-prop-types
+  initialData: PropTypes.arrayOf(PropTypes.any),
+  initialPage: PropTypes.number,
+  LeftComponent: PropTypes.func,
+  LoaderComponent: PropTypes.func,
+  MiddleComponent: PropTypes.func,
+  onChangePage: PropTypes.func,
+  onLoadPage: PropTypes.func,
+  page: PropTypes.number,
+  pageCount: PropTypes.number,
+  pageTabCount: PropTypes.number,
+  perPage: PropTypes.number,
+  RightComponent: PropTypes.func,
 }
 
-export default {
-  ...PaginationForwardFn,
-  LeftComponent: DefaultLeftComponent,
-  LoaderComponent: DefaultLoaderComponent,
-  MiddleComponent: DefaultMiddleComponent,
-  PaginationContainer,
-  RightComponent: DefaultRightComponent,
-} as PaginationType
+// @ts-expect-error it breaks on propTypes
+const PaginationForward = forwardRef(Pagination) as (<T>(
+  props: PaginationProps<T> & { ref?: React.ForwardedRef<HTMLUListElement> },
+) => ReturnType<typeof Pagination>) & {
+  RightComponent: (
+    props: PaginationComponentProps<unknown>,
+  ) => JSX.Element | null
+  LeftComponent: (
+    props: PaginationComponentProps<unknown>,
+  ) => JSX.Element | null
+  PaginationContainer: (
+    props: PaginationComponentProps<unknown>,
+  ) => JSX.Element | null
+  MiddleComponent: (
+    props: PaginationComponentProps<unknown>,
+  ) => JSX.Element | null
+  LoaderComponent: (
+    props: PaginationComponentProps<unknown>,
+  ) => JSX.Element | null
+  propTypes: typeof propTypes
+}
+
+Pagination.propTypes = propTypes
+PaginationForward.LeftComponent = DefaultLeftComponent
+PaginationForward.LoaderComponent = DefaultLoaderComponent
+PaginationForward.MiddleComponent = DefaultMiddleComponent
+PaginationForward.PaginationContainer = PaginationContainer
+PaginationForward.RightComponent = DefaultRightComponent
+
+export default PaginationForward
