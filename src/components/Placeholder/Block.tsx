@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import IconPlaceholder from './IconPlaceholder'
 import Line from './Line'
 
@@ -23,7 +23,7 @@ const StyledList = styled.ul`
   }
 `
 
-const Block: VoidFunctionComponent = ({ length = 3 }: { length?: number }) => (
+const Block = ({ length = 3 }: { length?: number }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
       <React.Fragment key={`placeholder-block-${i}`}>

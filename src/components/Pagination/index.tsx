@@ -452,7 +452,7 @@ const propTypes = {
 
 // @ts-expect-error it breaks on propTypes
 const PaginationForward = forwardRef(Pagination) as (<T>(
-  props: PaginationProps<T> & { ref?: React.ForwardedRef<HTMLUListElement> },
+  props: PaginationProps<T> & { ref?: ForwardedRef<PaginationState<T>> },
 ) => ReturnType<typeof Pagination>) & {
   RightComponent: (
     props: PaginationComponentProps<unknown>,

@@ -5,7 +5,6 @@ import React, {
   FunctionComponent,
   ReactElement,
   ReactNode,
-  VoidFunctionComponent,
   forwardRef,
   useCallback,
   useEffect,
@@ -524,11 +523,7 @@ function List<DataType extends Record<string, unknown>>(
   )
 }
 
-const ForwardedList = forwardRef(List) as <DataType>(
-  props: ListProps<DataType> & { ref?: ForwardedRef<ListRefType<DataType>> },
-) => ReturnType<typeof List>
-
-;(ForwardedList as VoidFunctionComponent).propTypes = {
+const propTypes = {
   /**
    * Auto close opened ExpandableContent when clicking on another row
    */
@@ -628,5 +623,12 @@ const ForwardedList = forwardRef(List) as <DataType>(
   selectable: PropTypes.func,
   variant: PropTypes.oneOf(['product', 'table', 'explorer']),
 }
+
+const ForwardedList = forwardRef(List) as <DataType>(
+  props: ListProps<DataType> & { ref?: ForwardedRef<ListRefType<DataType>> },
+) => ReturnType<typeof List>
+
+// @ts-expect-error proptypes funky
+ForwardedList.propTypes = propTypes
 
 export default ForwardedList
