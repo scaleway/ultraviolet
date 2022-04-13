@@ -26,7 +26,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.1.3
   '@rollup/plugin-url': 6.1.0
   '@scaleway/eslint-config-react': 3.4.16
-  '@scaleway/jest-helpers': 1.2.3
+  '@scaleway/jest-helpers': 1.2.4
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.2.14
   '@semantic-release/changelog': 6.0.1
@@ -150,7 +150,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.1.3_rollup@2.70.1
   '@rollup/plugin-url': 6.1.0_rollup@2.70.1
   '@scaleway/eslint-config-react': 3.4.16_eslint@8.12.0+typescript@4.6.3
-  '@scaleway/jest-helpers': 1.2.3_f370f735164a03a12cea0cc89593cbee
+  '@scaleway/jest-helpers': 1.2.4_f370f735164a03a12cea0cc89593cbee
   '@scaleway/use-i18n': 3.2.14_react-dom@17.0.2+react@17.0.2
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
@@ -3284,15 +3284,15 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.3_f370f735164a03a12cea0cc89593cbee:
-    resolution: {integrity: sha512-pr4rIM2WqoUujxv6X9bbRn3BFKzxAxru1/FretvpzpXMte6AkBSuDlikSc/LPE3US0/0jmFWcdo35VdkGRVnsg==}
+  /@scaleway/jest-helpers/1.2.4_f370f735164a03a12cea0cc89593cbee:
+    resolution: {integrity: sha512-jz8epZfnP1jZGgFIQxvwqmFEr7P3WemhvsuZ1rILtXWF7MJxab598GYXjwYD2rrzRgPUBSYWwj/MRtDmH284/w==}
     peerDependencies:
       react: ^17.0.1
     dependencies:
       '@emotion/cache': 11.7.1
       '@emotion/jest': 11.9.1
       '@emotion/react': 11.9.0_@babel+core@7.17.9+react@17.0.2
-      '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
+      '@testing-library/react': 12.1.5_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
     transitivePeerDependencies:
       - '@babel/core'
@@ -5223,20 +5223,6 @@ packages:
       dom-accessibility-api: 0.5.13
       lodash: 4.17.21
       redent: 3.0.0
-    dev: true
-
-  /@testing-library/react/12.1.4_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-jiPKOm7vyUw311Hn/HlNQ9P8/lHNtArAx0PisXyFixDDvfl8DbD6EUdbshK5eqauvBSvzZd19itqQ9j3nferJA==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
-    dependencies:
-      '@babel/runtime': 7.17.9
-      '@testing-library/dom': 8.11.3
-      '@types/react-dom': 18.0.0
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
     dev: true
 
   /@testing-library/react/12.1.5_react-dom@17.0.2+react@17.0.2:
