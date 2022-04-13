@@ -525,12 +525,19 @@ PaginationLoadingPageCount.decorators = [
 export const Animated = Template.bind({})
 Animated.decorators = [
   () => (
-    <ControlValue value={{ label: 'fadeIn', value: 'fadeIn' }}>
+    <ControlValue<{
+      label: keyof typeof animations
+      value: keyof typeof animations
+    }>
+      value={{ label: 'fadeIn', value: 'fadeIn' }}
+    >
       {({ value, onChange }) => {
-        const [options] = useState(
+        const [options] = useState<
+          { label: keyof typeof animations; value: keyof typeof animations }[]
+        >(
           Object.keys(animations).map(animation => ({
-            label: animation,
-            value: animation,
+            label: animation as keyof typeof animations,
+            value: animation as keyof typeof animations,
           })),
         )
 
@@ -541,7 +548,14 @@ Animated.decorators = [
             <RichSelect
               name="animated"
               value={value}
-              onChange={onChange}
+              onChange={newValue =>
+                onChange(
+                  newValue as {
+                    label: keyof typeof animations
+                    value: keyof typeof animations
+                  },
+                )
+              }
               options={options}
             />
             <Button

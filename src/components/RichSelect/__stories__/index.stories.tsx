@@ -52,9 +52,13 @@ Uncontrolled.decorators = [
 export const Controlled = Template.bind({})
 Controlled.decorators = [
   () => (
-    <ControlValue value="">
+    <ControlValue<string> value="">
       {({ value, onChange }) => (
-        <RichSelect name="controlled" value={value} onChange={onChange}>
+        <RichSelect
+          name="controlled"
+          value={value}
+          onChange={newValue => newValue && onChange(newValue)}
+        >
           <RichSelect.Option value="a">Option A</RichSelect.Option>
           <RichSelect.Option value="b">Option B</RichSelect.Option>
         </RichSelect>
@@ -183,7 +187,9 @@ ${Object.keys(animations)
 Animated.decorators = [
   () => (
     <div style={{ margin: '16px 64px' }}>
-      <ControlValue value={{ label: '', value: '' }}>
+      <ControlValue<{ label: string; value: string }>
+        value={{ label: '', value: '' }}
+      >
         {({ value, onChange }) => {
           const [options] = useState(
             Object.keys(animations).map(animation => ({
@@ -205,7 +211,9 @@ Animated.decorators = [
                 animation={value.value}
                 animationDuration={1000}
                 value={value}
-                onChange={onChange}
+                onChange={newValue =>
+                  onChange(newValue as { label: string; value: string })
+                }
                 options={options}
               />
             </div>
@@ -270,7 +278,7 @@ TimeNormal.decorators = [
 export const TimeError = Template.bind({})
 TimeError.decorators = [
   () => (
-    <RichSelect name="time-error" time error>
+    <RichSelect name="time-error" time error="Sample error">
       <RichSelect.Option value="11">11:00</RichSelect.Option>
       <RichSelect.Option value="12">12:00</RichSelect.Option>
     </RichSelect>

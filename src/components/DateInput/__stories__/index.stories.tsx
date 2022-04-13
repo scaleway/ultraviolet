@@ -49,9 +49,13 @@ Controlled.parameters = {
 }
 Controlled.decorators = [
   () => (
-    <ControlValue value={new Date('December 17, 1995 03:24:00')}>
+    <ControlValue<Date> value={new Date('December 17, 1995 03:24:00')}>
       {({ value, onChange }) => (
-        <DateInput label="Date" value={value} onChange={onChange} />
+        <DateInput
+          label="Date"
+          value={value}
+          onChange={date => date && onChange(date)}
+        />
       )}
     </ControlValue>
   ),
@@ -125,7 +129,7 @@ I18n.decorators = [
             label: currentLocale,
             value: currentLocale,
           }}
-          onChange={({ value }: { value: string }) => switchLocale(value)}
+          onChange={value => value && switchLocale(value as unknown as string)}
           noTopLabel
         >
           {locales.map(locale => (

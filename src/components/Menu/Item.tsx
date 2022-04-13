@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps } from 'react'
 import Button from '../Button'
@@ -31,11 +32,45 @@ const variantStyle = {
   `,
 } as const
 
-const styles = {
-  borderless: css`
-    border: 0;
-  `,
-  disabled: (theme: Theme) => css`
+type VariantItem = keyof typeof variantStyle
+
+type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
+  borderless?: boolean
+  variant?: VariantItem
+}
+
+const StyledButton = styled(Button)<{ borderless: boolean }>`
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  border: 0;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  cursor: pointer;
+  transition: color 300ms;
+  min-width: 110px;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.primary.textHover};
+    svg {
+      transition: fill 300ms;
+      fill: ${({ theme }) => theme.colors.primary.textHover};
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 4px 4px;
+  }
+
+  ${({ borderless }) => (borderless ? `border: 0;` : '')}
+
+  ${({ disabled, theme }) =>
+    disabled
+      ? `
     cursor: not-allowed;
     color: ${theme.colors.neutral.textDisabled};
 
@@ -47,42 +82,9 @@ const styles = {
         fill: ${theme.colors.neutral.textHover};
       }
     }
-  `,
-  item: (theme: Theme) => css`
-    display: inline-block;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: inherit;
-    padding: 4px 8px;
-    color: ${theme.colors.neutral.text};
-    border: 0;
-    border-bottom: 1px solid ${theme.colors.neutral.border};
-    cursor: pointer;
-    transition: color 300ms;
-    min-width: 110px;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary.textHover};
-      svg {
-        transition: fill 300ms;
-        fill: ${theme.colors.primary.textHover};
-      }
-    }
-
-    &:last-child {
-      border-bottom: 0;
-      border-radius: 0 0 4px 4px;
-    }
-  `,
-} as const
-
-type VariantItem = keyof typeof variantStyle
-
-type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
-  borderless?: boolean
-  variant?: VariantItem
-}
+  `
+      : ''}
+`
 
 const Item = ({
   borderless = false,
@@ -91,18 +93,14 @@ const Item = ({
   variant,
   ...props
 }: ItemProps) => (
-  <Button
+  <StyledButton
     variant="transparent"
     role="menuitem"
     disabled={disabled}
+    borderless={borderless}
     onClick={onClick}
     {...props}
-    css={[
-      styles.item,
-      variant && variantStyle[variant],
-      disabled && styles.disabled,
-      borderless && styles.borderless,
-    ]}
+    css={variant && variantStyle[variant]}
   />
 )
 
