@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { ReactNode } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
 
@@ -11,7 +11,7 @@ const StyledTable = styled(Box.withComponent('table'))`
   border-collapse: collapse;
 `
 
-const Table: FunctionComponent<BoxProps> & {
+const Table: ((props: BoxProps) => JSX.Element) & {
   Head: typeof Head
   Body: typeof Body
   Row: typeof Row
@@ -26,9 +26,7 @@ const StyledHead = styled(Box.withComponent('thead'))`
   border-style: solid;
 `
 
-export const Head: FunctionComponent<BoxProps> = props => (
-  <StyledHead {...props} />
-)
+export const Head = (props: BoxProps) => <StyledHead {...props} />
 
 const StyledRow = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => prop !== 'highlight',
@@ -73,9 +71,7 @@ type RowProps = {
   highlight?: boolean
 } & BoxProps
 
-export const Row: FunctionComponent<RowProps> = props => (
-  <StyledRow {...props} />
-)
+export const Row = (props: RowProps) => <StyledRow {...props} />
 
 Row.propTypes = {
   highlight: PropTypes.bool,
@@ -97,9 +93,7 @@ const StyledHeadCell = styled(Box.withComponent('th'))`
   ${cellStyle};
 `
 
-export const HeadCell: FunctionComponent<BoxProps> = props => (
-  <StyledHeadCell {...props} />
-)
+export const HeadCell = (props: BoxProps) => <StyledHeadCell {...props} />
 
 const StyledBodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
@@ -107,9 +101,7 @@ const StyledBodyCell = styled(Box.withComponent('td'))`
   ${cellStyle};
 `
 
-export const BodyCell: FunctionComponent<BoxProps> = props => (
-  <StyledBodyCell {...props} />
-)
+export const BodyCell = (props: BoxProps) => <StyledBodyCell {...props} />
 
 const TBody = Box.withComponent('tbody')
 
@@ -119,7 +111,7 @@ const StyledBox = styled(Box)`
   left: 50%;
 `
 
-const BodyLoader: FunctionComponent<BoxProps & BodyProps> = props => (
+const BodyLoader = (props: BoxProps & BodyProps) => (
   <TBody>
     <Row>
       <BodyCell height={80} position="relative" {...props}>
@@ -136,11 +128,17 @@ type BodyProps = {
   colSpan?: number
 }
 
-export const Body: FunctionComponent<BodyProps> = ({
+export const Body = ({
   loading = false,
   colSpan = 1,
+  children,
   ...props
-}) => (loading ? <BodyLoader colSpan={colSpan} /> : <TBody {...props} />)
+}: BodyProps & { children: ReactNode }) =>
+  loading ? (
+    <BodyLoader colSpan={colSpan} />
+  ) : (
+    <TBody {...props}>{children}</TBody>
+  )
 
 Body.propTypes = {
   colSpan: PropTypes.number,

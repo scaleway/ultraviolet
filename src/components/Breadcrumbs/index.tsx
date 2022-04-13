@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import React, {
   AriaAttributes,
   Children,
-  FunctionComponent,
   ReactNode,
+  WeakValidationMap,
   cloneElement,
   isValidElement,
   useMemo,
@@ -144,7 +144,7 @@ interface ItemProps {
   ) => void
 }
 
-export const Item: FunctionComponent<ItemProps> = ({
+export const Item = ({
   to,
   children,
   disabled = false,
@@ -152,7 +152,7 @@ export const Item: FunctionComponent<ItemProps> = ({
   'aria-current': ariaCurrent,
   onClick,
   step,
-}) => {
+}: ItemProps) => {
   const VariantComponent = useMemo(
     () => variants[variant] ?? variants.link,
     [variant],
@@ -210,8 +210,9 @@ interface BreadcrumbsProps {
   children: ReactNode
 }
 
-type BreadcrumbsType = FunctionComponent<BreadcrumbsProps> & {
+type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
   Item: typeof Item
+  propTypes: WeakValidationMap<BreadcrumbsProps>
 }
 
 const Breadcrumbs: BreadcrumbsType = ({

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ImgHTMLAttributes } from 'react'
+import React, { ImgHTMLAttributes } from 'react'
 
 type ImageProps = ImgHTMLAttributes<HTMLImageElement>
 
-const Image: FunctionComponent<ImageProps> = ({ alt, src, ...props }) => (
+const Image = ({ alt, src, ...props }: ImageProps) => (
   <img alt={alt} src={src} {...props} />
 )
 

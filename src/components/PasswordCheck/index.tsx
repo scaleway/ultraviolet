@@ -1,6 +1,6 @@
 import { css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Col, Grid, Row } from '../Grid'
 import Icon from '../Icon'
 
@@ -31,7 +31,7 @@ type PasswordCheckProps = {
   rules: Rule[]
 }
 
-const PasswordCheck: FunctionComponent<PasswordCheckProps> = ({ rules }) => {
+const PasswordCheck = ({ rules }: PasswordCheckProps) => {
   const theme = useTheme()
 
   return (

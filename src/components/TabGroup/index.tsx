@@ -2,12 +2,12 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ComponentProps,
-  FunctionComponent,
   HTMLAttributes,
   KeyboardEventHandler,
   ReactChild,
   ReactFragment,
   ReactPortal,
+  WeakValidationMap,
   cloneElement,
   isValidElement,
   useCallback,
@@ -70,7 +70,10 @@ type TabGroupProps = {
 } & Omit<HTMLAttributes<HTMLElement>, 'onChange'> &
   Omit<BoxProps, 'selected' | 'onChange'>
 
-const TabGroup: FunctionComponent<TabGroupProps> & { Tab: typeof Tab } = ({
+const TabGroup: ((props: TabGroupProps) => JSX.Element) & {
+  Tab: typeof Tab
+  propTypes: WeakValidationMap<TabGroupProps>
+} = ({
   children = null,
   selected,
   onChange = () => {},

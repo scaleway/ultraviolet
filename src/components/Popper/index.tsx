@@ -2,7 +2,6 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
-  FunctionComponent,
   ReactElement,
   ReactNode,
   RefObject,
@@ -107,7 +106,7 @@ type PopperProps = Partial<PopoverProps> &
     children?: ((popover: PopoverStateReturn) => ReactNode) | ReactNode
   }
 
-const Popper: FunctionComponent<PopperProps> = ({
+const Popper = ({
   animated = 100,
   backgroundColor,
   baseId = '',
@@ -122,7 +121,7 @@ const Popper: FunctionComponent<PopperProps> = ({
   variant = 'white',
   visible = false,
   ...props
-}) => {
+}: PopperProps) => {
   const popover = usePopoverState({
     animated,
     baseId,

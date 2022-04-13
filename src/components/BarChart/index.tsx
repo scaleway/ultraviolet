@@ -7,12 +7,7 @@ import {
 } from '@nivo/bar'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  Validator,
-  useCallback,
-} from 'react'
+import React, { ComponentProps, Validator, useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import BarChartTooltip from './Tooltip'
 
@@ -34,7 +29,7 @@ type BarChartProps = {
   chartProps?: Partial<BarSvgProps<BarDatum>>
 }
 
-const BarChart: FunctionComponent<BarChartProps> = ({
+const BarChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width,
   margin = { bottom: 50, left: 60, right: 25, top: 50 },
   data = [],
@@ -43,7 +38,7 @@ const BarChart: FunctionComponent<BarChartProps> = ({
   keys = ['value'],
   tooltipFunction,
   chartProps,
-}) => {
+}: BarChartProps) => {
   const theme = useTheme()
   const dataset = data?.map(d => {
     const colors = keys?.reduce<Record<string, string>>((acc, key, index) => {

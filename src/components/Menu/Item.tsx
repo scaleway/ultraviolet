@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import React, { ComponentProps } from 'react'
 import Button from '../Button'
 
 const variantStyle = {
@@ -84,13 +84,13 @@ type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
   variant?: VariantItem
 }
 
-const Item: FunctionComponent<ItemProps> = ({
+const Item = ({
   borderless = false,
   disabled = false,
   onClick,
   variant,
   ...props
-}) => (
+}: ItemProps) => (
   <Button
     variant="transparent"
     role="menuitem"

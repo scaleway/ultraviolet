@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Spaces, space } from '../../theme'
 import Box, { BoxProps } from '../Box'
 
@@ -19,7 +19,7 @@ const StyledRow = styled(Box, {
   margin-right: ${({ gutter = 1 }) => `-${space[gutter]}`};
 `
 
-const Row: FunctionComponent<RowProps> = props => <StyledRow {...props} />
+const Row = (props: RowProps) => <StyledRow {...props} />
 
 Row.propTypes = {
   children: PropTypes.node,

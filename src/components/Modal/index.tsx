@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
-  FunctionComponent,
   ReactElement,
   isValidElement,
   memo,
@@ -257,7 +256,7 @@ type ModalProps = Partial<DialogProps> &
     width?: ModalWidth
   }
 
-const Modal: FunctionComponent<ModalProps> = ({
+const Modal = ({
   animated = false,
   animation = 'zoom',
   ariaLabel = 'modal',
@@ -278,7 +277,7 @@ const Modal: FunctionComponent<ModalProps> = ({
   placement = 'center',
   preventBodyScroll = true,
   width = 'small',
-}) => {
+}: ModalProps) => {
   const dialog = useDialogState({
     animated,
     baseId,

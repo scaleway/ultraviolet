@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { ReactNode, useMemo } from 'react'
 import Box, { BoxProps } from '../Box'
 
 const variants = {
@@ -111,6 +111,7 @@ const variantsStyle = ({
 type BadgeProps = {
   variant?: Variants
   size?: Sizes
+  children: ReactNode
 } & BoxProps
 
 const StyledBox = styled(Box, {
@@ -128,11 +129,11 @@ const StyledBox = styled(Box, {
   ${sizesStyle}
 `
 
-const Badge: FunctionComponent<BadgeProps> = ({
+const Badge = ({
   variant = 'neutral',
   size = 'medium',
   ...props
-}) => {
+}: BadgeProps) => {
   /**
    * Badge should display an aria-label if the status is not neutral or primary
    */

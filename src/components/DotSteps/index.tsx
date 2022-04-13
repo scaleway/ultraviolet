@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 
@@ -64,11 +64,7 @@ type DotStepsProps = {
   steps?: number
 }
 
-const DotSteps: FunctionComponent<DotStepsProps> = ({
-  steps = 2,
-  step = 1,
-  setStep,
-}) => (
+const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
   <DotWrapper justifyContent="center" steps={steps}>
     {Array.from({ length: steps }, (_, i) => (
       <DotStep

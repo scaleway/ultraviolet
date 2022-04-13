@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Color } from '../../theme'
 import { ColorDeprecated } from '../../theme/deprecated/colors'
 import Box, { XStyledProps } from '../Box'
@@ -26,7 +26,7 @@ type DotProps = {
   onClick?: () => unknown
 } & XStyledProps
 
-const Dot: FunctionComponent<DotProps> = ({ color = 'primary', ...props }) => (
+const Dot = ({ color = 'primary', ...props }: DotProps) => (
   <StyledDot color={color} {...props} />
 )
 

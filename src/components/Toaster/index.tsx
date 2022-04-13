@@ -1,7 +1,7 @@
 import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
   ToastOptions,
@@ -58,7 +58,7 @@ type CloseButtonProps = {
   closeToast?: () => void
 }
 
-const CloseButton: FunctionComponent<CloseButtonProps> = ({ closeToast }) => (
+const CloseButton = ({ closeToast }: CloseButtonProps) => (
   <Icon name="close" size={18} ml={1} onClick={closeToast} />
 )
 
@@ -74,10 +74,7 @@ type SanitizedAlertBarProps = {
   children?: ReactNode
 } & ComponentProps<typeof Alert>
 
-const SanitizedAlertBar: FunctionComponent<SanitizedAlertBarProps> = ({
-  type,
-  children,
-}) => (
+const SanitizedAlertBar = ({ type, children }: SanitizedAlertBarProps) => (
   <StyledAlert type={type} iconSize={24}>
     {children}
   </StyledAlert>

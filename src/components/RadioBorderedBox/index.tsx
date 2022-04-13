@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import Badge, { badgeSizes, badgeVariants } from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Expandable from '../Expandable'
@@ -22,11 +22,13 @@ type RadioProps = Pick<
   | 'id'
 >
 
-const StyledBox = styled(BorderedBox)<{
+type BorderedBoxTypes = {
   disabled: boolean
   checked: boolean
   error: string | ReactNode
-}>`
+}
+
+const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
   display: block;
 
   ${({ disabled, checked, error, theme: { colors, shadows } }) => {
@@ -80,7 +82,7 @@ type RadioBorderedBoxProps = RadioProps & {
   value: string | number
 }
 
-const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
+const RadioBorderedBox = ({
   label,
   labelDescription,
   badgeText,
@@ -97,9 +99,9 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
   children,
   error,
   valid,
-}) => (
+}: RadioBorderedBoxProps) => (
   <>
-    <StyledBox disabled={disabled} checked={checked} error={error}>
+    <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
       <StyledRadioContainer>
         <Radio
           name={name}
@@ -130,7 +132,7 @@ const RadioBorderedBox: FunctionComponent<RadioBorderedBoxProps> = ({
         )}
       </StyledRadioContainer>
       <Typography>{children}</Typography>
-    </StyledBox>
+    </StyledBorderedBox>
     <StyledExpandable opened={!!error}>
       <StyledError>{error}</StyledError>
     </StyledExpandable>

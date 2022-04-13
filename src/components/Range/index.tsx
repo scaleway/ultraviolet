@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
   FocusEvent,
-  FunctionComponent,
   InputHTMLAttributes,
   KeyboardEvent,
   RefObject,
@@ -182,13 +181,13 @@ type InputProps = {
   value?: number
 } & InputHTMLAttributes<HTMLInputElement>
 
-const Input: FunctionComponent<InputProps> = ({
+const Input = ({
   onChange,
   onKeyPress,
   onBlur,
   value = 0,
   ...props
-}) => (
+}: InputProps) => (
   <StyledInput
     {...props}
     onChange={onChange}

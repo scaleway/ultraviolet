@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
 import Image from '../Image'
@@ -66,7 +66,7 @@ const AvatarContainer = styled.div<{ size: number }>`
   width: ${({ size }) => size}px;
 `
 
-const Avatar: FunctionComponent<AvatarProps> = ({
+const Avatar = ({
   image = avatar,
   size = 32,
   text,
@@ -74,7 +74,7 @@ const Avatar: FunctionComponent<AvatarProps> = ({
   textColor = 'neutral',
   textSize = 10,
   lock = false,
-}) => {
+}: AvatarProps) => {
   const theme = useTheme()
 
   return (

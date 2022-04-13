@@ -1,7 +1,7 @@
 import { SerializedStyles } from '@emotion/serialize'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode, Validator } from 'react'
+import React, { ReactNode, Validator } from 'react'
 import BorderedBox from '../BorderedBox'
 import Box, { BoxProps } from '../Box'
 import FlexBox from '../FlexBox'
@@ -52,7 +52,7 @@ type ContainerProps = ContainerBaseProps & {
   title: string
 } & BoxProps
 
-const Container: FunctionComponent<ContainerProps> = ({
+const Container = ({
   title,
   subtitle,
   header,
@@ -63,7 +63,7 @@ const Container: FunctionComponent<ContainerProps> = ({
   children,
   boxStyle,
   ...props
-}) => (
+}: ContainerProps) => (
   <StyledContainer {...props}>
     <FlexBox justifyContent="space-between">
       <StyledTitleContainer>

@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode, WeakValidationMap } from 'react'
 import Popper from '../Popper'
 import Item from './Item'
 
@@ -116,7 +116,10 @@ type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
   className?: string
 }
 
-type MenuType = FunctionComponent<MenuProps> & { Item: typeof Item }
+type MenuType = ((props: MenuProps) => JSX.Element) & {
+  Item: typeof Item
+  propTypes: WeakValidationMap<MenuProps>
+}
 
 const MenuList = styled.div<MenuListProps>`
   &:after,
