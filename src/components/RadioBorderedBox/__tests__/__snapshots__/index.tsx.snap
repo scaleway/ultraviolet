@@ -954,7 +954,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-top: 0;
 }
 
-.cache-oc0g9e {
+.cache-1l9frw5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -969,15 +969,29 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   justify-content: center;
   white-space: nowrap;
   border-radius: 16px;
-  padding: 0 16px;
+  padding: 0 8px;
+  gap: 4px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #dd3252;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
-  height: 24px;
+  height: 16px;
+  color: #ff8c69;
+  background: #ffefe6;
+}
+
+.cache-190v7s9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.cache-190v7s9.cache-190v7s9 {
+  font-size: 10px;
+  font-weight: 500;
 }
 
 <div
@@ -1029,13 +1043,18 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
         (something)
       </span>
        
-      <span
+      <div
         aria-label="warning"
-        class="egvl2gp0 cache-oc0g9e"
+        as="span"
+        class="cache-1l9frw5 egvl2gp0"
         role="status"
       >
-        Badge
-      </span>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-190v7s9"
+        >
+          Badge
+        </div>
+      </div>
     </div>
     <div
       class="e1g1zfwd0 cache-b3zt23"
