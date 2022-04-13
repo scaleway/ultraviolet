@@ -212,9 +212,6 @@ const PaginationContainer = ({
   </StyledMainContainer>
 )
 
-// DefaultMiddleComponent.propTypes = PaginationComponent.propTypes
-// DefaultRightComponent.propTypes = PaginationComponent.propTypes
-// DefaultLoaderComponent.propTypes = PaginationComponent.propTypes
 // END - Default Components
 
 export type PaginationProps<T = unknown> = {
