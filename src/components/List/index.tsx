@@ -130,7 +130,9 @@ export type ListProps<DataType> = {
   multiselect?: boolean
   children: (props: {
     Body: (props: BodyProps<DataType>) => JSX.Element
-    Cell: (props: { children: ReactNode }) => JSX.Element
+    Cell:
+      | ((props: { children: ReactNode }) => ReactElement | null)
+      | ((props: { children: ReactNode }) => ReactElement | null)
     data: DataType[]
     SelectBar: typeof SelectBar
     Header: () => JSX.Element
@@ -490,15 +492,15 @@ function List<DataType extends Record<string, unknown>>(
   ])
 
   const childrenProps = useMemo(() => {
-    const variantFinded = variants[variant]
+    const variantFound = variants[variant]
 
     return {
       Body,
       SelectBar,
-      ...variantFinded,
-      Cell: variantFinded.Cell,
+      ...variantFound,
+      Cell: variantFound.Cell,
       ExpendableContent:
-        (variantFinded as typeof variantProduct).ExpendableContent ??
+        (variantFound as typeof variantProduct).ExpendableContent ??
         (() => null),
     }
   }, [variant])
