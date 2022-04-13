@@ -1,167 +1,152 @@
-import { Theme, css } from '@emotion/react'
+import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import React, { ReactNode, useMemo } from 'react'
-import Box, { BoxProps } from '../Box'
+import React, { FunctionComponent, useMemo } from 'react'
+import { Color, SENTIMENTS } from '../../theme'
+import capitalize from '../../utils/capitalize'
+import Icon, { IconName } from '../Icon'
+import Typography from '../Typography'
 
-const variants = {
-  beta: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.warning.backgroundStrong};
-    color: ${colors.warning.textStrong};
-  `,
-  error: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.danger.backgroundStrong};
-    color: ${colors.danger.textStrong};
-  `,
-  info: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.info.backgroundStrong};
-    color: ${colors.info.textStrong};
-  `,
-  'light-beta': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.warning.text};
-    background-color: ${colors.warning.background};
-  `,
-  'light-error': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.danger.text};
-    background-color: ${colors.danger.background};
-  `,
-  'light-info': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.info.text};
-    background-color: ${colors.info.background};
-  `,
-  'light-neutral': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.neutral.text};
-    background-color: ${colors.neutral.backgroundStrong};
-  `,
-  'light-primary': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.primary.text};
-    background-color: ${colors.primary.background};
-  `,
-  'light-success': ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.success.text};
-    background-color: ${colors.success.background};
-  `,
-  neutral: ({ theme: { colors } }: { theme: Theme }) => css`
-    color: ${colors.neutral.textStrong};
-    background-color: ${colors.neutral.borderStrong};
-  `,
-  primary: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.primary.backgroundStrong};
-    color: ${colors.primary.textStrong};
-  `,
-  success: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.success.backgroundStrong};
-    color: ${colors.success.textStrong};
-  `,
-  warning: ({ theme: { colors } }: { theme: Theme }) => css`
-    background-color: ${colors.danger.backgroundStrong};
-    color: ${colors.danger.textStrong};
-  `,
+const StyledTypography = styled(Typography)`
+  text-transform: uppercase;
+  font-size: ${({ fontSize }) => fontSize}px;
+`
+
+// TODO: remove when typography has been created
+const TEXT_SIZES = {
+  large: 14,
+  medium: 12,
+  small: 10,
 }
 
-const sizes = {
-  medium: ({ theme: { space } }: { theme: Theme }) => css`
-    font-size: 14px;
-    line-height: ${space['4']};
-    height: ${space['4']};
-  `,
-  rounded: ({ theme: { space, radii } }: { theme: Theme }) => css`
-    border-radius: ${radii.large};
-    font-size: 10px;
-    height: ${space['2']};
-    padding: ${space['0.25']} ${space['0.75']};
-    text-transform: uppercase;
-  `,
-  small: ({ theme: { space } }: { theme: Theme }) => css`
-    font-size: 12px;
-    line-height: ${space['3']};
-    height: ${space['3']};
-  `,
-  xsmall: ({ theme: { space, radii } }: { theme: Theme }) => css`
-    border-radius: ${radii.default};
-    font-size: 12px;
-    line-height: ${space['2.25']};
-    height: ${space['2.25']};
-  `,
-  xxsmall: ({ theme: { space, radii } }: { theme: Theme }) => css`
-    border-radius: ${radii.default};
-    font-size: 10px;
-    line-height: ${space['2']};
-    height: ${space['2']};
-    padding: 0 ${space['0.75']};
-  `,
+export const SIZES = {
+  large: 32,
+  medium: 24,
+  small: 16,
 }
 
-type Variants = keyof typeof variants
-type Sizes = keyof typeof sizes
+export const PROMINENCES = {
+  default: 'default',
+  strong: 'strong',
+}
 
-export const badgeVariants = Object.keys(variants) as Variants[]
-export const badgeSizes = Object.keys(sizes) as Sizes[]
-
-const sizesStyle = ({ size, ...props }: { size?: Sizes; theme: Theme }) =>
-  sizes[size as Sizes]?.(props)
-const variantsStyle = ({
-  variant,
-  ...props
+/**
+ * Generate all styles available for badge based on prominence and variants
+ * @param prominence
+ * @param theme
+ */
+const generateStyles = ({
+  prominence,
+  theme,
 }: {
-  variant?: Variants
+  prominence: string
   theme: Theme
-}) => variants[variant as Variants]?.(props)
+}): Record<string, string> => {
+  const definedProminence =
+    prominence === PROMINENCES.strong ? capitalize(PROMINENCES.strong) : ''
+
+  const text = `text${definedProminence}` as keyof typeof theme.colors.primary
+  const background =
+    `background${definedProminence}` as keyof typeof theme.colors.primary
+
+  return {
+    ...SENTIMENTS.reduce(
+      (reducer, sentiment) => ({
+        ...reducer,
+        [sentiment]: `
+      color: ${theme.colors[sentiment][text]};
+      background: ${theme.colors[sentiment][background]}
+    `,
+      }),
+      {},
+    ),
+    disabled: `
+      color: ${theme.colors.neutral.textWeak};
+      background: ${theme.colors.neutral.backgroundStrong}
+    `,
+    neutral: `
+      color: ${
+        prominence === PROMINENCES.strong
+          ? theme.colors.neutral[text]
+          : theme.colors.neutral.textWeak
+      };
+      background: ${theme.colors.neutral[background]}
+    `,
+  }
+}
 
 type BadgeProps = {
-  variant?: Variants
-  size?: Sizes
-  children: ReactNode
-} & BoxProps
+  variant?: Color
+  size?: keyof typeof SIZES
+  prominence?: keyof typeof PROMINENCES
+  icon?: IconName
+  disabled?: boolean
+  className?: string
+}
 
-const StyledBox = styled(Box, {
+const StyledBox = styled('div', {
   shouldForwardProp: prop => !['variant', 'size'].includes(prop.toString()),
-})<BadgeProps>`
+})<{ size: number; variant: string }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   border-radius: ${({ theme }) => theme.space['2']};
-  padding: 0 ${({ theme }) => theme.space['2']};
+  padding: 0
+    ${({ theme, size }) =>
+      size === SIZES.small ? theme.space['1'] : theme.space['2']};
+  gap: ${({ theme, size }) =>
+    size === SIZES.small ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
-
-  ${variantsStyle}
-  ${sizesStyle}
+  height: ${({ size }) => size}px;
+  ${({ variant }) => variant}
 `
 
-const Badge = ({
+const Badge: FunctionComponent<BadgeProps> = ({
   variant = 'neutral',
   size = 'medium',
-  ...props
-}: BadgeProps) => {
+  prominence = 'default',
+  icon,
+  disabled = false,
+  className,
+  children,
+}) => {
+  const theme = useTheme()
+
   /**
    * Badge should display an aria-label if the status is not neutral or primary
    */
-  const ariaLabel = useMemo(() => {
-    const strippedVariant = variant.replace('light-', '')
+  const ariaLabel = useMemo(
+    () =>
+      ['neutral', 'primary'].some(baseVariant => baseVariant === variant)
+        ? undefined
+        : variant,
+    [variant],
+  )
 
-    return ['neutral', 'primary'].some(
-      baseVariant => baseVariant === strippedVariant,
-    )
-      ? undefined
-      : strippedVariant
-  }, [variant])
+  const generatedStyles = useMemo(
+    () => generateStyles({ prominence, theme }),
+    [prominence, theme],
+  )
 
   return (
     <StyledBox
       role="status"
       aria-label={ariaLabel}
       as="span"
-      variant={variant}
-      size={size}
-      {...props}
-    />
+      variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
+      size={SIZES[size]}
+      className={className}
+    >
+      {icon ? <Icon name={icon} size={12} /> : null}
+      <StyledTypography
+        fontSize={TEXT_SIZES[size]}
+        fontWeight={500}
+        color="inherit"
+      >
+        {children}
+      </StyledTypography>
+    </StyledBox>
   )
-}
-
-Badge.propTypes = {
-  size: PropTypes.oneOf<Sizes>(badgeSizes),
-  variant: PropTypes.oneOf(badgeVariants),
 }
 
 export default Badge

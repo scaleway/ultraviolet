@@ -83,8 +83,12 @@ const darkTheme = extendTheme({
   extendedTheme: dark,
 })
 
-// This type exclude overlay color
-type Color = Exclude<keyof typeof colors, 'overlay'>
+// This type exclude overlay and secondary color
+type Color = Exclude<keyof typeof colors, 'overlay' | 'secondary'>
+
+const SENTIMENTS = Object.keys(colors).filter(
+  sentiment => sentiment !== 'overlay' && sentiment !== 'secondary',
+) as Array<Color>
 
 export type { SCWUITheme, Color }
 
@@ -98,6 +102,7 @@ export {
   screens,
   darkTheme,
   extendTheme,
+  SENTIMENTS,
 }
 
 export default lightTheme
