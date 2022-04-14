@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
@@ -116,11 +116,7 @@ type LegendsProps = {
   onFocusChange(index?: string): void
 }
 
-const Legends: VoidFunctionComponent<LegendsProps> = ({
-  focused,
-  data,
-  onFocusChange,
-}) => (
+const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
   <List>
     {data?.map(item => {
       const isSegmentFocused = focused !== undefined && item.id === focused

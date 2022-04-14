@@ -11,7 +11,6 @@ import React, {
   MouseEventHandler,
   ReactNode,
   Ref,
-  VoidFunctionComponent,
   forwardRef,
   isValidElement,
   useMemo,
@@ -213,10 +212,13 @@ const variantStyles = ({
 }) => variants[variant]?.({ theme, ...props })
 const sizeStyles = ({ size }: { size: ButtonSize }) => sizes[size]
 
-const SmartIcon: VoidFunctionComponent<{
+const SmartIcon = ({
+  icon,
+  iconSize,
+}: {
   icon: ReactNode | string
   iconSize?: number
-}> = ({ icon, iconSize }) =>
+}) =>
   isValidElement(icon) ? (
     icon
   ) : (

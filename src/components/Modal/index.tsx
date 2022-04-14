@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React, {
   FunctionComponent,
   ReactElement,
-  VoidFunctionComponent,
   isValidElement,
   memo,
   useCallback,
@@ -160,10 +159,7 @@ type DisclosureProps = {
   disclosure: DisclosureParam
   dialog: Partial<DialogStateReturn>
 }
-const Disclosure: VoidFunctionComponent<DisclosureProps> = ({
-  disclosure,
-  dialog,
-}) => {
+const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   // if you need dialog inside your component, use function, otherwise component is fine
   const target = isValidElement(disclosure) ? disclosure : disclosure(dialog)
   const innerRef = useRef(

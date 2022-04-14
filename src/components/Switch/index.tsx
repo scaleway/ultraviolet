@@ -1,11 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  ChangeEventHandler,
-  ReactNode,
-  VoidFunctionComponent,
-} from 'react'
+import React, { ChangeEventHandler, ReactNode } from 'react'
 import Tooltip from '../Tooltip'
 
 const SIZES = {
@@ -242,7 +238,7 @@ type SwitchProps = StyledSwitchProps & {
   onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
-const Switch: VoidFunctionComponent<SwitchProps> = ({
+const Switch = ({
   checked = false,
   disabled = false,
   id,
@@ -255,7 +251,7 @@ const Switch: VoidFunctionComponent<SwitchProps> = ({
   offLabel,
   variant = 'primary',
   width,
-}) => {
+}: SwitchProps) => {
   const renderInsideLabel = labeled && labeled !== 'right' && labeled !== 'left'
 
   return (

@@ -5,7 +5,6 @@ import React, {
   FunctionComponent,
   ReactNode,
   ReactNodeArray,
-  VoidFunctionComponent,
   isValidElement,
 } from 'react'
 import useMedia from 'use-media'
@@ -93,8 +92,7 @@ const StyledStep = styled('li', {
 `
 
 type StepProps = { children: ReactNode; isLoading?: boolean }
-export const Step: FunctionComponent<StepProps> = ({ children }) =>
-  children as JSX.Element
+export const Step = ({ children }: StepProps) => children as JSX.Element
 Step.displayName = 'NavigationStepper.Step'
 
 Step.propTypes = {
@@ -144,7 +142,7 @@ type NavigationStepperProps = {
 }
 
 type NavigationStepperType = FunctionComponent<NavigationStepperProps> & {
-  Step: VoidFunctionComponent<StepProps>
+  Step: (props: StepProps) => JSX.Element
 }
 
 const NavigationStepper: NavigationStepperType = ({

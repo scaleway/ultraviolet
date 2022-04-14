@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  KeyboardEvent,
-  MouseEvent,
-  VoidFunctionComponent,
-  useCallback,
-} from 'react'
+import React, { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'
@@ -80,7 +74,7 @@ const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
     isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
-export const Header: VoidFunctionComponent = () => {
+export const Header = () => {
   const {
     columns,
     isLoading,
@@ -149,12 +143,7 @@ export const Header: VoidFunctionComponent = () => {
   )
 }
 
-export const Row: FunctionComponent<ListRowProps> = ({
-  id,
-  children,
-  tooltip,
-  ...props
-}) => {
+export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
   const { multiselect, rowsState, setRowState, hasSelectedItems } =
     useListContext()
 

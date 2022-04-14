@@ -1,7 +1,7 @@
 import { Global, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import DatePicker, {
   ReactDatePickerProps,
   registerLocale,
@@ -153,7 +153,7 @@ type DateInputProps = Pick<
   value?: Date | string
 }
 
-const DateInput: VoidFunctionComponent<DateInputProps> = ({
+const DateInput = ({
   autoFocus = false,
   disabled = false,
   error,
@@ -168,7 +168,7 @@ const DateInput: VoidFunctionComponent<DateInputProps> = ({
   onFocus,
   required = false,
   value,
-}) => {
+}: DateInputProps) => {
   const theme = useTheme()
   const localeCode =
     (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'

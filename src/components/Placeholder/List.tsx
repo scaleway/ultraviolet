@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import Line from './Line'
 
 const StyledItem = styled.li`
@@ -21,7 +21,7 @@ const StyledList = styled.ul`
   }
 `
 
-const Item: VoidFunctionComponent = () => (
+const Item = () => (
   <StyledItem>
     <div style={{ width: '240px' }}>
       <Line />
@@ -32,7 +32,7 @@ const Item: VoidFunctionComponent = () => (
   </StyledItem>
 )
 
-const List: VoidFunctionComponent<{ length?: number }> = ({ length = 2 }) => (
+const List = ({ length = 2 }: { length?: number }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
       <Item key={`placeholder-list-${i}`} />

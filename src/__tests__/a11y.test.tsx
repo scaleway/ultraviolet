@@ -5,7 +5,7 @@ import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as path from 'path'
 import * as process from 'process'
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { renderWithTheme } from '../helpers/jestHelpers'
 
 const testedComponents = [
@@ -93,7 +93,7 @@ describe('A11y', () => {
         if (componentName !== 'default') {
           const ComponentToRender = components[
             componentName as keyof typeof components
-          ] as VoidFunctionComponent
+          ] as () => JSX.Element
           const { container } = renderWithTheme(<ComponentToRender />)
           // eslint-disable-next-line no-await-in-loop
           const results = await axe(container)

@@ -1,16 +1,21 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
 import Box, { BoxProps } from '../Box'
 import Link from '../Link'
 import Typography from '../Typography'
 
-const headingRenderer: FunctionComponent<{
+const headingRenderer = ({
+  node,
+  children,
+  ...props
+}: {
   node: unknown
   level: number
-}> = ({ node, children, ...props }) => {
+  children: ReactNode
+}) => {
   if (props.level === 1) {
     return (
       <Typography mt={0} variant="lead-block">
@@ -23,16 +28,25 @@ const headingRenderer: FunctionComponent<{
   return <Heading {...props}>{children}</Heading>
 }
 
-const inlineCodeRenderer: FunctionComponent = props => (
-  <Typography variant="command">{props.children}</Typography>
+const inlineCodeRenderer = ({ children }: { children: ReactNode }) => (
+  <Typography variant="command">{children}</Typography>
 )
-const textRenderer: FunctionComponent = props => <span>{props.children}</span>
-const paragraphRenderer: FunctionComponent = props => <p>{props.children}</p>
+const textRenderer = ({ children }: { children: ReactNode }) => (
+  <span>{children}</span>
+)
+const paragraphRenderer = ({ children }: { children: ReactNode }) => (
+  <p>{children}</p>
+)
 
-const linkRenderer: FunctionComponent<{
+const linkRenderer = ({
+  node,
+  children,
+  ...props
+}: {
   node: unknown
   href: string
-}> = ({ children, node, ...props }) => {
+  children: ReactNode
+}) => {
   if (!props.href) {
     return null
   }
@@ -56,11 +70,15 @@ const StyledContainer = styled(Box, {
     `}
 `
 
-const RootRendererComponent: FunctionComponent<{
+const RootRendererComponent = ({
+  inline = false,
+  parentProps = {},
+  children,
+}: {
   children?: ReactNode
   inline?: boolean
   parentProps?: BoxProps
-}> = ({ inline = false, parentProps = {}, children }) => (
+}) => (
   <StyledContainer inline={inline} {...parentProps}>
     {children}
   </StyledContainer>
@@ -72,8 +90,8 @@ RootRendererComponent.propTypes = {
 }
 
 const rootRenderer =
-  (inline: boolean, parentProps: BoxProps): FunctionComponent =>
-  props =>
+  (inline: boolean, parentProps: BoxProps) =>
+  (props: Record<string, unknown>) =>
     (
       <RootRendererComponent
         {...props}
@@ -89,13 +107,13 @@ type MarkDownProps = {
   inline?: boolean
 } & BoxProps
 
-const MarkDown: FunctionComponent<MarkDownProps> = ({
+const MarkDown = ({
   source,
   linkTarget,
   escapeHtml = true,
   inline = false,
   ...props
-}) => (
+}: MarkDownProps) => (
   <ReactMarkDown
     source={source}
     renderers={{

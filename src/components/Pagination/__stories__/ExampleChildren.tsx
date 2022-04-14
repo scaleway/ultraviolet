@@ -1,7 +1,7 @@
-import React, { VoidFunctionComponent } from 'react'
+import React from 'react'
 import { usePaginationContext } from '..'
 
-const ExampleChildren: VoidFunctionComponent = () => {
+const ExampleChildren = () => {
   const { pageData } = usePaginationContext<string>()
 
   return (

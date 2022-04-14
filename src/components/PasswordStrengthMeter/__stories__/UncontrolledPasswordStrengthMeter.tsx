@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, VoidFunctionComponent, useState } from 'react'
+import React, { ComponentProps, useState } from 'react'
 import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
 
-const UncontrolledPasswordStrengthMeter: VoidFunctionComponent<
-  { name: string } & ComponentProps<typeof PasswordStrengthMeter>
-> = ({ name, ...props }) => {
+const UncontrolledPasswordStrengthMeter = ({
+  name,
+  ...props
+}: { name: string } & ComponentProps<typeof PasswordStrengthMeter>) => {
   const [value, setValue] = useState('')
 
   return (

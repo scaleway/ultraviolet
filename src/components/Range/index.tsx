@@ -7,7 +7,6 @@ import React, {
   InputHTMLAttributes,
   KeyboardEvent,
   RefObject,
-  VoidFunctionComponent,
   useCallback,
   useEffect,
   useLayoutEffect,
@@ -118,12 +117,12 @@ type LimitProps = {
   value?: number
 }
 
-const Limit: VoidFunctionComponent<LimitProps> = ({
+const Limit = ({
   value = 0,
   label = '',
   position,
   offsetTop = 0,
-}) => (
+}: LimitProps) => (
   <StyledLimit position={position} offsetTop={offsetTop}>
     {value} {label}
   </StyledLimit>
@@ -218,7 +217,7 @@ type RangeProps = {
   value?: number[]
 }
 
-const Range: VoidFunctionComponent<RangeProps> = ({
+const Range = ({
   min = 0,
   max = 5,
   value: values = [3],
@@ -229,7 +228,7 @@ const Range: VoidFunctionComponent<RangeProps> = ({
   limitOffset = 24,
   offsetTop = 16,
   ...props
-}) => {
+}: RangeProps) => {
   const [internValues, setInternValues] = useState(values)
 
   const container = useRef<HTMLElement>(null)

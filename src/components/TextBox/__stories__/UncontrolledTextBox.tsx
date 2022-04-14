@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, VoidFunctionComponent, useState } from 'react'
+import React, { ComponentProps, useState } from 'react'
 import TextBox from '..'
 
-const UncontrolledTextBox: VoidFunctionComponent<
-  ComponentProps<typeof TextBox>
-> = ({ defaultValue, ...props }) => {
+const UncontrolledTextBox = ({
+  defaultValue,
+  ...props
+}: ComponentProps<typeof TextBox>) => {
   const [value, setValue] = useState(defaultValue)
 
   return <TextBox name="test" value={value} onChange={setValue} {...props} />
