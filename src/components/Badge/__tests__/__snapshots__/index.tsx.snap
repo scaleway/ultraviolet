@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge renders correctly size medium 1`] = `
+exports[`Badge renders correctly prominence default 1`] = `
 <DocumentFragment>
-  .cache-rdc79q {
+  .cache-13mawr1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -18,28 +18,47 @@ exports[`Badge renders correctly size medium 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #b2b6c3;
+  background: #ffffff;
 }
 
-<span
-    class="egvl2gp0 cache-rdc79q"
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-13mawr1 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly size rounded 1`] = `
+exports[`Badge renders correctly prominence strong 1`] = `
 <DocumentFragment>
-  .cache-qt7dy3 {
+  .cache-1uu06zg {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -55,30 +74,159 @@ exports[`Badge renders correctly size rounded 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: 24px;
   color: #151a2d;
-  background-color: #d4dae7;
-  border-radius: 8px;
-  font-size: 10px;
-  height: 16px;
-  padding: 2px 6px;
-  text-transform: uppercase;
+  background: #f6f6f8;
 }
 
-<span
-    class="egvl2gp0 cache-qt7dy3"
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-1uu06zg egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Badge renders correctly size large 1`] = `
+<DocumentFragment>
+  .cache-cvos70 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 32px;
+  color: #b2b6c3;
+  background: #ffffff;
+}
+
+.cache-1b0uuur {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cache-1b0uuur.cache-1b0uuur {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-cvos70 egvl2gp0"
+    role="status"
+  >
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-1b0uuur"
+    >
+      Sample badge
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Badge renders correctly size medium 1`] = `
+<DocumentFragment>
+  .cache-13mawr1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #b2b6c3;
+  background: #ffffff;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-13mawr1 egvl2gp0"
+    role="status"
+  >
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly size small 1`] = `
 <DocumentFragment>
-  .cache-15uvhf0 {
+  .cache-on8h10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -93,106 +241,48 @@ exports[`Badge renders correctly size small 1`] = `
   justify-content: center;
   white-space: nowrap;
   border-radius: 16px;
-  padding: 0 16px;
+  padding: 0 8px;
+  gap: 4px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  font-size: 12px;
-  line-height: 24px;
-  height: 24px;
-}
-
-<span
-    class="egvl2gp0 cache-15uvhf0"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly size xsmall 1`] = `
-<DocumentFragment>
-  .cache-1jp69s7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 18px;
-  height: 18px;
-}
-
-<span
-    class="egvl2gp0 cache-1jp69s7"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly size xxsmall 1`] = `
-<DocumentFragment>
-  .cache-h73jke {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  border-radius: 4px;
-  font-size: 10px;
-  line-height: 16px;
   height: 16px;
-  padding: 0 6px;
+  color: #b2b6c3;
+  background: #ffffff;
 }
 
-<span
-    class="egvl2gp0 cache-h73jke"
+.cache-190v7s9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.cache-190v7s9.cache-190v7s9 {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-on8h10 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-190v7s9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly variant beta 1`] = `
+exports[`Badge renders correctly variant danger 1`] = `
 <DocumentFragment>
-  .cache-17vutqk {
+  .cache-18e1p8k {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -208,67 +298,48 @@ exports[`Badge renders correctly variant beta 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #ff8c69;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #a6102d;
+  background: #ffe1e7;
 }
 
-<span
-    aria-label="beta"
-    class="egvl2gp0 cache-17vutqk"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant error 1`] = `
-<DocumentFragment>
-  .cache-16r5qw1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #dd3252;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
-<span
-    aria-label="error"
-    class="egvl2gp0 cache-16r5qw1"
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    aria-label="danger"
+    as="span"
+    class="cache-18e1p8k egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly variant info 1`] = `
 <DocumentFragment>
-  .cache-140mm8v {
+  .cache-1lbrtex {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -284,255 +355,48 @@ exports[`Badge renders correctly variant info 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #3f6ed8;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-}
-
-<span
-    aria-label="info"
-    class="egvl2gp0 cache-140mm8v"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-beta 1`] = `
-<DocumentFragment>
-  .cache-dgtbtb {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #cc4e18;
-  background-color: #ffefe6;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-}
-
-<span
-    aria-label="beta"
-    class="egvl2gp0 cache-dgtbtb"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-error 1`] = `
-<DocumentFragment>
-  .cache-lqz8xw {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #a6102d;
-  background-color: #ffe1e7;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-}
-
-<span
-    aria-label="error"
-    class="egvl2gp0 cache-lqz8xw"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-info 1`] = `
-<DocumentFragment>
-  .cache-1qww9fs {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 24px;
   color: #1a4dbf;
-  background-color: #e1ebff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  background: #e1ebff;
 }
 
-<span
-    aria-label="info"
-    class="egvl2gp0 cache-1qww9fs"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-neutral 1`] = `
-<DocumentFragment>
-  .cache-dhdxq8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.cache-gxqlf9 {
   color: #4a4f62;
-  background-color: #f6f6f8;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
-<span
-    class="egvl2gp0 cache-dhdxq8"
-    role="status"
-  >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-primary 1`] = `
-<DocumentFragment>
-  .cache-b5hapk {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #390171;
-  background-color: #eeeeff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
-<span
-    class="egvl2gp0 cache-b5hapk"
+<div
+    aria-label="info"
+    as="span"
+    class="cache-1lbrtex egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Badge renders correctly variant light-success 1`] = `
-<DocumentFragment>
-  .cache-1dvyct7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #149a7b;
-  background-color: #eafffb;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-}
-
-<span
-    aria-label="success"
-    class="egvl2gp0 cache-1dvyct7"
-    role="status"
-  >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly variant neutral 1`] = `
 <DocumentFragment>
-  .cache-rdc79q {
+  .cache-13mawr1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -548,28 +412,47 @@ exports[`Badge renders correctly variant neutral 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #b2b6c3;
+  background: #ffffff;
 }
 
-<span
-    class="egvl2gp0 cache-rdc79q"
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-13mawr1 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly variant primary 1`] = `
 <DocumentFragment>
-  .cache-y85sgz {
+  .cache-1e2dqqa {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -585,28 +468,47 @@ exports[`Badge renders correctly variant primary 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #4f0599;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #390171;
+  background: #eeeeff;
 }
 
-<span
-    class="egvl2gp0 cache-y85sgz"
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-1e2dqqa egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly variant success 1`] = `
 <DocumentFragment>
-  .cache-13raz3x {
+  .cache-hb6ra1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -622,29 +524,48 @@ exports[`Badge renders correctly variant success 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #22c8a2;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #149a7b;
+  background: #eafffb;
 }
 
-<span
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
     aria-label="success"
-    class="egvl2gp0 cache-13raz3x"
+    as="span"
+    class="cache-hb6ra1 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly variant warning 1`] = `
 <DocumentFragment>
-  .cache-16r5qw1 {
+  .cache-12bz811 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -660,29 +581,48 @@ exports[`Badge renders correctly variant warning 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #dd3252;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #cc4e18;
+  background: #ffefe6;
 }
 
-<span
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
     aria-label="warning"
-    class="egvl2gp0 cache-16r5qw1"
+    as="span"
+    class="cache-12bz811 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Badge renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-rdc79q {
+  .cache-13mawr1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -698,21 +638,40 @@ exports[`Badge renders correctly with default values 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #151a2d;
-  background-color: #d4dae7;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
+  height: 24px;
+  color: #b2b6c3;
+  background: #ffffff;
 }
 
-<span
-    class="egvl2gp0 cache-rdc79q"
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-13mawr1 egvl2gp0"
     role="status"
   >
-    Sample badge
-  </span>
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
 </DocumentFragment>
 `;

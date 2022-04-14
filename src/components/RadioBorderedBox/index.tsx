@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import React, { ComponentProps, ReactNode } from 'react'
-import Badge, { badgeSizes, badgeVariants } from '../Badge'
+import Badge from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Expandable from '../Expandable'
 import Radio from '../Radio'
@@ -86,7 +85,7 @@ const RadioBorderedBox = ({
   label,
   labelDescription,
   badgeText,
-  badgeSize = 'xsmall',
+  badgeSize = 'small',
   badgeVariant = 'info',
   checked = false,
   onChange,
@@ -125,7 +124,7 @@ const RadioBorderedBox = ({
         {badgeText && (
           <>
             &nbsp;
-            <Badge size={badgeSize} variant={badgeVariant}>
+            <Badge size={badgeSize} variant={badgeVariant} prominence="strong">
               {badgeText}
             </Badge>
           </>
@@ -138,44 +137,5 @@ const RadioBorderedBox = ({
     </StyledExpandable>
   </>
 )
-
-RadioBorderedBox.propTypes = {
-  /**
-   * See API of `Badge` component
-   */
-  badgeSize: PropTypes.oneOf<ComponentProps<typeof Badge>['size']>(badgeSizes),
-
-  /**
-   * Add a badge next to the label
-   */
-  badgeText: PropTypes.string,
-  /**
-   * See API of `Badge` component
-   */
-  badgeVariant:
-    PropTypes.oneOf<ComponentProps<typeof Badge>['variant']>(badgeVariants),
-  checked: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  /**
-   * Label next to the radio button, can be a string or a more complex child
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Description next to the label
-   */
-  labelDescription: PropTypes.node,
-  name: PropTypes.string.isRequired,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  /**
-   * Size of the radio button
-   */
-  size: PropTypes.number,
-  valid: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-}
 
 export default RadioBorderedBox
