@@ -1,3 +1,24 @@
+### [0.144.2](https://github.com/scaleway/scaleway-ui/compare/v0.144.1...v0.144.2) (2022-04-14)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.2.4 ([#1377](https://github.com/scaleway/scaleway-ui/issues/1377)) ([96ab94b](https://github.com/scaleway/scaleway-ui/commit/96ab94b0c5a58a1c99c943da21dfa71024e05ae1))
+* **devdeps:** update dependency @testing-library/react to v12.1.5 ([#1375](https://github.com/scaleway/scaleway-ui/issues/1375)) ([066c720](https://github.com/scaleway/scaleway-ui/commit/066c7209e0b89133095ca2b81a1234036ab90c10))
+* **devdeps:** update dependency eslint to v8.13.0 ([#1383](https://github.com/scaleway/scaleway-ui/issues/1383)) ([c3dbbf5](https://github.com/scaleway/scaleway-ui/commit/c3dbbf544583f394a757c3872ac2f719eba8321b))
+* **devdeps:** update node.js to v17.9 ([#1376](https://github.com/scaleway/scaleway-ui/issues/1376)) ([c75c35d](https://github.com/scaleway/scaleway-ui/commit/c75c35d527a1bde1e702618620fb6598e4313a2e))
+
+
+### :zap: Refactor
+
+* migrate VoidFunctionComponent to arguments types ([#1379](https://github.com/scaleway/scaleway-ui/issues/1379)) ([cc11944](https://github.com/scaleway/scaleway-ui/commit/cc11944f658bf152fd7baaa7947525da94ce1294))
+
+
+### :bug: Bug Fixes
+
+* **deps:** pin dependency @nivo/scales to 0.79.0 ([#1384](https://github.com/scaleway/scaleway-ui/issues/1384)) ([5023328](https://github.com/scaleway/scaleway-ui/commit/5023328e243c74396b18903c1d5fa7f7b4af39e4))
+* migrate FunctionComponent to arguments types ([#1382](https://github.com/scaleway/scaleway-ui/issues/1382)) ([67d45d8](https://github.com/scaleway/scaleway-ui/commit/67d45d87650f11ceba29e0b1f7e0aa294fd7f35c))
+
 ### [0.144.1](https://github.com/scaleway/scaleway-ui/compare/v0.144.0...v0.144.1) (2022-04-12)
 
 
