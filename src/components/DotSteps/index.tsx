@@ -18,7 +18,7 @@ const DotStep = styled(Dot)`
     border-radius: inherit;
     top: 50%;
     left: 50%;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
   }
   &::before {
     width: ${dotSize}px;
