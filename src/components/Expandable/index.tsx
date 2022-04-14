@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 
 type ExpandableProps = {
@@ -38,9 +38,7 @@ const StyledExpandable = styled(Box, {
   `}
 `
 
-const Expandable: FunctionComponent<ExpandableProps> = props => (
-  <StyledExpandable {...props} />
-)
+const Expandable = (props: ExpandableProps) => <StyledExpandable {...props} />
 
 Expandable.propTypes = {
   children: PropTypes.node.isRequired,

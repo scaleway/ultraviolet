@@ -1,14 +1,7 @@
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  useEffect,
-  useState,
-} from 'react'
+import React, { ComponentProps, useEffect, useState } from 'react'
 import ProgressBar from '..'
 
-const UncontrolledProgressBar: FunctionComponent<
-  ComponentProps<typeof ProgressBar>
-> = props => {
+const UncontrolledProgressBar = (props: ComponentProps<typeof ProgressBar>) => {
   const [value, setValue] = useState(0)
   useEffect(() => {
     const handler = setInterval(() => {

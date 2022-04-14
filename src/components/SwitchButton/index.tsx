@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React, {
   ChangeEventHandler,
   FocusEventHandler,
-  FunctionComponent,
   LabelHTMLAttributes,
   ReactNode,
 } from 'react'
@@ -146,7 +145,7 @@ type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
   variant?: Variants
 }
 
-const SwitchButton: FunctionComponent<SwitchButtonProps> = ({
+const SwitchButton = ({
   checked = false,
   disabled = false,
   onChange,
@@ -158,7 +157,7 @@ const SwitchButton: FunctionComponent<SwitchButtonProps> = ({
   tooltip,
   variant,
   ...props
-}) => (
+}: SwitchButtonProps) => (
   <Tooltip text={tooltip}>
     <StyledSwitch
       as="label"

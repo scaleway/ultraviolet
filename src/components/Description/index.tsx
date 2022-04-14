@@ -1,17 +1,17 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { WeakValidationMap } from 'react'
 import Box, { BoxProps } from '../Box'
 
-const StyledDt = styled(Box.withComponent('dt'))`
+const Term = styled(Box.withComponent('dt'))`
   font-weight: 500;
   color: ${({ theme }) => theme.colors.neutral.textHover};
   &:after {
     content: ':';
   }
 `
-const StyledDd = styled(Box.withComponent('dd'))`
+const Desc = styled(Box.withComponent('dd'))`
   color: ${({ theme }) => theme.colors.neutral.text};
   margin: 0;
   margin-top: ${({ theme }) => theme.space['1']};
@@ -25,24 +25,24 @@ const StyledBox = styled(Box, {
   line-height: 16px;
   margin: 0;
 
-  ${StyledDd} + ${StyledDt} {
+  ${Desc} + ${Term} {
     margin-top: ${({ theme }) => theme.space['2']};
   }
 
   ${({ theme, inline }) =>
     inline
       ? css`
-          & > ${StyledDt} {
+          & > ${Term} {
             float: left;
             clear: left;
             margin-right: ${theme.space['1']};
           }
 
-          & > ${StyledDd} {
+          & > ${Desc} {
             margin-top: 0;
           }
 
-          ${StyledDd} + ${StyledDt} + ${StyledDd} {
+          ${Desc} + ${Term} + ${Desc} {
             margin-top: ${theme.space['2']};
           }
         `
@@ -51,7 +51,7 @@ const StyledBox = styled(Box, {
   ${({ theme, selectable }) =>
     selectable &&
     css`
-      > ${StyledDd} {
+      > ${Desc} {
         user-select: all;
 
         &::selection {
@@ -73,9 +73,10 @@ type DescriptionProps = {
   selectable?: boolean
 } & BoxProps
 
-type DescriptionComponent = FunctionComponent<DescriptionProps> & {
-  Desc: FunctionComponent<BoxProps>
-  Term: FunctionComponent<BoxProps>
+type DescriptionComponent = ((props: DescriptionProps) => JSX.Element) & {
+  propTypes: WeakValidationMap<DescriptionProps>
+  Desc: typeof Desc
+  Term: typeof Term
 }
 
 const Description: DescriptionComponent = ({
@@ -95,10 +96,10 @@ Description.propTypes = {
   selectable: PropTypes.bool,
 }
 
-Description.Term = StyledDt
-Description.Term.displayName = 'Description.Term'
+Desc.displayName = 'Description.Term'
+Description.Term = Term
 
-Description.Desc = StyledDd
-Description.Desc.displayName = 'Description.Desc'
+Desc.displayName = 'Description.Desc'
+Description.Desc = Desc
 
 export default Description

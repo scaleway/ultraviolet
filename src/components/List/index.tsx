@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ForwardedRef,
-  FunctionComponent,
   ReactElement,
   ReactNode,
   forwardRef,
@@ -130,13 +129,15 @@ export type ListProps<DataType> = {
   columns: ListColumn<DataType>[]
   multiselect?: boolean
   children: (props: {
-    Body: FunctionComponent<BodyProps<DataType>>
-    Cell: FunctionComponent
+    Body: (props: BodyProps<DataType>) => JSX.Element
+    Cell:
+      | ((props: { children: ReactNode }) => ReactElement | null)
+      | ((props: { children: ReactNode }) => ReactElement | null)
     data: DataType[]
     SelectBar: typeof SelectBar
-    Header: FunctionComponent
-    Row: FunctionComponent<ListRowProps>
-    ExpendableContent: FunctionComponent
+    Header: () => JSX.Element
+    Row: (props: ListRowProps) => JSX.Element
+    ExpendableContent: (props: { children: ReactNode }) => JSX.Element
   }) => ReactElement
   customLoader?: ReactNode
   variant?: ListVariant
@@ -491,15 +492,15 @@ function List<DataType extends Record<string, unknown>>(
   ])
 
   const childrenProps = useMemo(() => {
-    const variantFinded = variants[variant]
+    const variantFound = variants[variant]
 
     return {
       Body,
       SelectBar,
-      ...variantFinded,
-      Cell: variantFinded.Cell,
+      ...variantFound,
+      Cell: variantFound.Cell,
       ExpendableContent:
-        (variantFinded as typeof variantProduct).ExpendableContent ??
+        (variantFound as typeof variantProduct).ExpendableContent ??
         (() => null),
     }
   }, [variant])

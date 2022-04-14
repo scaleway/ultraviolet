@@ -1,12 +1,7 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  ReactNode,
-  ReactNodeArray,
-  isValidElement,
-} from 'react'
+import React, { ReactNode, WeakValidationMap, isValidElement } from 'react'
 import useMedia from 'use-media'
 import ActivityIndicator from '../ActivityIndicator'
 import Icon from '../Icon'
@@ -136,13 +131,16 @@ const StyledUl = styled('ul', {
 
 type NavigationStepperProps = {
   step?: number
-  children: ReactNodeArray
+  children: ReactNode[]
   condensed?: boolean
   className?: string
 }
 
-type NavigationStepperType = FunctionComponent<NavigationStepperProps> & {
+type NavigationStepperType = ((
+  props: NavigationStepperProps,
+) => JSX.Element) & {
   Step: (props: StepProps) => JSX.Element
+  propTypes: WeakValidationMap<NavigationStepperProps>
 }
 
 const NavigationStepper: NavigationStepperType = ({

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
@@ -28,11 +28,11 @@ type BarChartToolTipProps = {
   formattedValue: string
 }
 
-const BarChartToolTip: FunctionComponent<BarChartToolTipProps> = ({
+const BarChartToolTip = ({
   formattedValue,
   indexValue,
   color,
-}) => (
+}: BarChartToolTipProps) => (
   <BarToolTipContainer>
     <div>
       <BarColorSquare color={color} />

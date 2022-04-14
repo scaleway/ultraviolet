@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import Icon, { icons } from '../Icon'
 import Tooltip from '../Tooltip'
 
@@ -12,14 +12,14 @@ type TooltipIconProps = {
   verticalAlign?: string
 }
 
-const TooltipIcon: FunctionComponent<TooltipIconProps> = ({
+const TooltipIcon = ({
   color = 'gray550',
   name = 'help-circle-outline',
   size = 20,
   verticalAlign = 'middle',
   tooltip,
   baseId,
-}) => (
+}: TooltipIconProps) => (
   <Tooltip text={tooltip} baseId={baseId}>
     <Icon
       color={color}

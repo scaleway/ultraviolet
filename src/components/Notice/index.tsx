@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'
@@ -15,7 +15,7 @@ type NoticeProps = {
   children: ReactNode
 } & BoxProps
 
-const Notice: FunctionComponent<NoticeProps> = ({ children, ...props }) => (
+const Notice = ({ children, ...props }: NoticeProps) => (
   <Container {...props}>
     <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
     {typeof children === 'string' ? (

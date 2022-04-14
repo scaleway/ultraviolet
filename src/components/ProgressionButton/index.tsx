@@ -2,7 +2,7 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 
@@ -67,13 +67,13 @@ type ProgressionButtonProps = Partial<Omit<ProgressionProps, 'delay'>> & {
   duration?: number
 } & BoxProps
 
-const ProgressionButton: FunctionComponent<ProgressionButtonProps> = ({
+const ProgressionButton = ({
   children,
   color = 'green',
   creation = new Date(), // Supposed start time of the progression
   duration = 120, // Approximation of the progression's duration (in seconds)
   ...props
-}) => {
+}: ProgressionButtonProps) => {
   const createdAt = typeof creation === 'string' ? new Date(creation) : creation
   const delay = Math.floor((Date.now() - createdAt.getTime()) / 1000)
 

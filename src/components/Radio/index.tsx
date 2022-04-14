@@ -2,12 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  InputHTMLAttributes,
-  ReactNode,
-  useMemo,
-} from 'react'
+import React, { InputHTMLAttributes, ReactNode, useMemo } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
@@ -48,10 +43,12 @@ const activeFocusClass = ({ theme }: { theme: Theme }) => css`
   }
 `
 
-const StyledRadioContainer = styled(Typography)<{
+type StyledContainerProps = {
   disabled: boolean
   htmlFor: string
-}>`
+}
+
+const StyledRadioContainer = styled(Typography)<StyledContainerProps>`
   position: relative;
   display: flex;
   align-items: center;
@@ -83,7 +80,7 @@ type RadioProps = {
 } & XStyledProps &
   InputHTMLAttributes<HTMLInputElement>
 
-const Radio: FunctionComponent<RadioProps> = ({
+const Radio = ({
   checked,
   onChange,
   onFocus,
@@ -97,7 +94,7 @@ const Radio: FunctionComponent<RadioProps> = ({
   children,
   showError = true,
   ...props
-}): JSX.Element => {
+}: RadioProps): JSX.Element => {
   const color = useMemo(() => {
     if (disabled) return 'gray100'
     if (valid === false || !!error) return 'warning'

@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, MouseEventHandler, ReactNode } from 'react'
+import React, { MouseEventHandler, ReactNode } from 'react'
 import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
@@ -95,7 +95,7 @@ type TagProps = {
   variant?: TagVariant
 } & BoxProps
 
-const Tag: FunctionComponent<TagProps> = ({
+const Tag = ({
   children,
   isLoading = false,
   onClose,
@@ -103,7 +103,7 @@ const Tag: FunctionComponent<TagProps> = ({
   disabled = false,
   variant = 'base',
   ...props
-}) => (
+}: TagProps) => (
   <StyledContainer {...props} disabled={disabled} variant={variant}>
     <StyledText aria-disabled={disabled} css={textStyle}>
       {children}

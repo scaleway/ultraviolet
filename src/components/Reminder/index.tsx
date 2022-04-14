@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { Color } from '../../theme'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
@@ -15,14 +15,16 @@ type Variant = typeof variants[number]
 const variantToColor = (variant: Variant): Color =>
   variant === 'error' ? 'danger' : variant
 
-const Notification = styled(Box, {
-  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
-})<{
+type NotificationProps = {
   variant: Variant
   bordered: boolean
   type?: string
   to?: string
-}>`
+}
+
+const Notification = styled(Box, {
+  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
+})<NotificationProps>`
   height: 28px;
   width: max-content;
   display: flex;
@@ -62,13 +64,13 @@ type ReminderProps = {
   variant?: Variant
 } & BoxProps
 
-const Reminder: FunctionComponent<ReminderProps> = ({
+const Reminder = ({
   text,
   variant = 'info',
   bordered = false,
   to,
   ...props
-}) => {
+}: ReminderProps) => {
   const theme = useTheme()
 
   return (

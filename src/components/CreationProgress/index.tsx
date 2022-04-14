@@ -1,7 +1,7 @@
 import { Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNodeArray } from 'react'
+import React, { ReactNode, WeakValidationMap } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -175,11 +175,14 @@ type CreationProgressProps = {
   isStepsNumber?: boolean
   selected?: number
   size?: Size
-  children: ReactNodeArray
+  children: ReactNode[]
 }
 
-type CreationProgressComponent = FunctionComponent<CreationProgressProps> & {
-  Step: FunctionComponent
+type CreationProgressComponent = ((
+  props: CreationProgressProps,
+) => JSX.Element) & {
+  Step: (props: { children: ReactNode }) => JSX.Element
+  propTypes: WeakValidationMap<CreationProgressProps>
 }
 
 const CreationProgress: CreationProgressComponent = ({
@@ -251,10 +254,10 @@ const CreationProgress: CreationProgressComponent = ({
   )
 }
 
-const Step: FunctionComponent = ({ children }) => children as JSX.Element
+const Step = ({ children }: { children: ReactNode }) => children as JSX.Element
+Step.displayName = 'CreationProgress.Step'
 
 CreationProgress.Step = Step
-CreationProgress.Step.displayName = 'CreationProgress.Step'
 
 CreationProgress.propTypes = {
   animated: PropTypes.bool,

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 
@@ -48,12 +48,12 @@ type StealthCopiableProps = {
   copiedText?: string
 }
 
-const StealthCopiable: FunctionComponent<StealthCopiableProps> = ({
+const StealthCopiable = ({
   children,
   side = 'right',
   copyText = 'Copy',
   copiedText = 'Copied',
-}) => {
+}: StealthCopiableProps) => {
   const string = recursivelyGetChildrenString(children)
 
   const [isCopied, setCopied] = useClipboard(string, {

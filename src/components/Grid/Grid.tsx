@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
 import Box, { BoxProps } from '../Box'
@@ -40,7 +40,7 @@ const StyledGrid = styled(Box, {
         )}
 `
 
-const Grid: FunctionComponent<GridProps> = props => <StyledGrid {...props} />
+const Grid = (props: GridProps) => <StyledGrid {...props} />
 
 Grid.propTypes = {
   children: PropTypes.node.isRequired,

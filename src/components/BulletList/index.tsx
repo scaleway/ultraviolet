@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { Children, FunctionComponent, ReactNode } from 'react'
+import React, { Children, ReactNode } from 'react'
 
 export const Steps = styled.ul`
   list-style: none;
@@ -36,10 +36,7 @@ interface BulletListProps {
   children: ReactNode
 }
 
-const BulletList: FunctionComponent<BulletListProps> = ({
-  children,
-  keyPrefix,
-}) => (
+const BulletList = ({ children, keyPrefix }: BulletListProps) => (
   <Steps>
     {Children.toArray(children).map((child, index) => (
       <Step key={`${keyPrefix ? `${keyPrefix}-` : ''}bullet-${index + 1}`}>

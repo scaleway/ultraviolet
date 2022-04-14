@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { FunctionComponent, LabelHTMLAttributes } from 'react'
+import React, { ComponentProps } from 'react'
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.neutral.text};
@@ -9,8 +9,8 @@ const StyledLabel = styled.label`
   margin-bottom: 8px;
 `
 
-type LabelProps = LabelHTMLAttributes<HTMLLabelElement>
-
-const Label: FunctionComponent<LabelProps> = props => <StyledLabel {...props} />
+const Label = (props: ComponentProps<typeof StyledLabel>) => (
+  <StyledLabel {...props} />
+)
 
 export default Label

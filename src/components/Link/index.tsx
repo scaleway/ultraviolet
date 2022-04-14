@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { darken } from 'polished'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
 import UniversalLink from '../UniversalLink'
@@ -75,12 +75,7 @@ const StyledIcon = styled(Icon)`
   opacity: 0.5;
 `
 
-const Link: FunctionComponent<LinkProps> = ({
-  variant,
-  children,
-  target,
-  ...props
-}) => (
+const Link = ({ variant, children, target, ...props }: LinkProps) => (
   <StyledLink variant={variant} target={target} {...props}>
     {children}
     {target === '_blank' && (

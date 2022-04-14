@@ -1,12 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  FunctionComponent,
-  KeyboardEvent,
-  MouseEvent,
-  useCallback,
-} from 'react'
+import React, { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import * as animations from '../../utils/animations'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
@@ -52,6 +47,14 @@ const getRowColor = ({
   return theme.colors.neutral.text
 }
 
+type StyledRowProps = {
+  animated?: boolean
+  animation: keyof typeof animations
+  animationDuration: number
+  disabled?: boolean
+  highlighted?: boolean
+}
+
 const StyledRow = styled(Box, {
   shouldForwardProp: prop =>
     ![
@@ -64,13 +67,7 @@ const StyledRow = styled(Box, {
       'edition',
       'customStyle',
     ].includes(prop.toString()),
-})<{
-  animated?: boolean
-  animation: keyof typeof animations
-  animationDuration: number
-  disabled?: boolean
-  highlighted?: boolean
-}>`
+})<StyledRowProps>`
   ${({ animated, animationDuration, animation }) =>
     animated
       ? css`
@@ -118,7 +115,7 @@ const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
     isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
-export const Header: FunctionComponent = () => {
+export const Header = () => {
   const {
     columns,
     isLoading,
@@ -187,7 +184,7 @@ export const Header: FunctionComponent = () => {
   )
 }
 
-export const Row: FunctionComponent<ListRowProps> = ({
+export const Row = ({
   id,
   children,
   animated,
@@ -196,7 +193,7 @@ export const Row: FunctionComponent<ListRowProps> = ({
   disabled,
   tooltip,
   ...props
-}) => {
+}: ListRowProps) => {
   const {
     multiselect,
     rowsState,

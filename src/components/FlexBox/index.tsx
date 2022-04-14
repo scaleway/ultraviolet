@@ -1,8 +1,17 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import React, { ComponentProps, WeakValidationMap } from 'react'
 
-const StyledChild = styled('div', {
+type ChildProps = {
+  alignSelf?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
+  basis?: string | number
+  flex?: string | number
+  grow?: string | number
+  order?: number
+  shrink?: string | number
+}
+
+const Child = styled('div', {
   shouldForwardProp: prop =>
     !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(
       prop.toString(),
@@ -15,19 +24,6 @@ const StyledChild = styled('div', {
   ${({ flex }) => (flex ? `flex: ${flex};` : '')}
   ${({ order }) => (order ? `order: ${order};` : '')}
 `
-
-type ChildProps = {
-  alignSelf?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
-  basis?: string | number
-  flex?: string | number
-  grow?: string | number
-  order?: number
-  shrink?: string | number
-}
-
-const Child: FunctionComponent<
-  ChildProps & ComponentProps<typeof StyledChild>
-> = props => <StyledChild {...props} />
 
 Child.propTypes = {
   alignSelf: PropTypes.oneOf([
@@ -42,15 +38,6 @@ Child.propTypes = {
   grow: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   order: PropTypes.number,
   shrink: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-}
-
-Child.defaultProps = {
-  alignSelf: undefined,
-  basis: undefined,
-  flex: undefined,
-  grow: undefined,
-  order: undefined,
-  shrink: undefined,
 }
 
 const StyledFlexBox = styled(Child, {
@@ -96,8 +83,11 @@ type FlexBoxProps = {
   wrap?: 'nowrap' | 'wrap-reverse' | 'wrap'
 } & ComponentProps<typeof Child>
 
-type FlexBoxType = FunctionComponent<ComponentProps<typeof StyledFlexBox>> & {
+type FlexBoxType = ((
+  props: ComponentProps<typeof StyledFlexBox>,
+) => JSX.Element) & {
   Child: typeof Child
+  propTypes: WeakValidationMap<ComponentProps<typeof StyledFlexBox>>
 }
 
 const FlexBox: FlexBoxType = props => <StyledFlexBox {...props} />
@@ -135,15 +125,6 @@ FlexBox.propTypes = {
   ]),
   wrap: PropTypes.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
   ...Child.propTypes,
-}
-
-FlexBox.defaultProps = {
-  alignContent: undefined,
-  alignItems: undefined,
-  direction: undefined,
-  inline: undefined,
-  justifyContent: undefined,
-  wrap: undefined,
 }
 
 FlexBox.Child = Child

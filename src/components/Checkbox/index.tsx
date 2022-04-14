@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
-  FunctionComponent,
   ReactNode,
+  WeakValidationMap,
   useEffect,
   useMemo,
 } from 'react'
@@ -83,10 +83,11 @@ type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   disabled?: boolean
   typographyVariant?: string
   checked?: boolean | 'indeterminate'
+  className?: string
 } & Required<Pick<ReakitCheckboxProps, 'onChange'>> &
   XStyledProps
 
-const Checkbox: FunctionComponent<CheckboxProps> = ({
+const Checkbox = ({
   checked = false,
   onChange,
   onFocus,
@@ -101,8 +102,9 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   disabled = false,
   autoFocus = false,
   typographyVariant = 'default',
+  className,
   ...props
-}) => {
+}: CheckboxProps) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
   const color = useMemo(() => {
@@ -120,7 +122,7 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   }, [checked, setState])
 
   return (
-    <Box {...props}>
+    <Box className={className} {...props}>
       <StyledCheckBoxContainer
         as="label"
         variant={typographyVariant}
@@ -193,6 +195,6 @@ Checkbox.propTypes = {
   typographyVariant: PropTypes.oneOf(typographyVariants),
   valid: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-}
+} as WeakValidationMap<CheckboxProps>
 
 export default Checkbox

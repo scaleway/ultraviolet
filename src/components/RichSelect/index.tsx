@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React, {
   ForwardRefExoticComponent,
   ForwardedRef,
-  FunctionComponent,
   ReactElement,
   ReactNode,
   Validator,
@@ -319,9 +318,9 @@ const StyledError = styled.div`
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
-const SelectContainer: FunctionComponent<
-  ContainerProps<SelectOption> & WithSelectProps
-> = props => {
+const SelectContainer = (
+  props: ContainerProps<SelectOption> & WithSelectProps,
+) => {
   const {
     children,
     getStyles,
@@ -447,16 +446,14 @@ const StyledPlaceholder = styled('label', {
   ${({ isDisabled, hasValue }) => hasValue && isDisabled && 'opacity: 0.5'}
 `
 
-const ValueContainer: FunctionComponent<
-  ValueContainerProps<SelectOption> & WithSelectProps
-> = ({
+const ValueContainer = ({
   isDisabled,
   children,
   selectProps: { error, labelId, inputId, ...selectProps },
   isMulti,
   hasValue,
   ...props
-}) => (
+}: ValueContainerProps<SelectOption> & WithSelectProps) => (
   <components.ValueContainer
     {...props}
     selectProps={selectProps}
@@ -497,12 +494,12 @@ const inputStyles = ({ isMulti }: Partial<SelectProps>) => css`
   ${!isMulti && 'caret-color: transparent'};
 `
 
-const Input: FunctionComponent<InputProps<SelectOption> & WithSelectProps> = ({
+const Input = ({
   isMulti,
   hasValue,
-  selectProps: { inputId, labelId, placeholder, ...selectProps } = {},
+  selectProps: { inputId, labelId, placeholder, ...selectProps },
   ...props
-}) => (
+}: InputProps<SelectOption> & WithSelectProps) => (
   <components.Input
     {...props}
     css={inputStyles({ isMulti })}
@@ -523,7 +520,7 @@ Input.propTypes = {
   value: PropTypes.string,
 }
 
-const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
+const Option = ({
   selectProps,
   value,
   label,
@@ -532,7 +529,7 @@ const Option: FunctionComponent<OptionProps<SelectOption> & SelectOption> = ({
   isSelected,
   data,
   ...props
-}) => {
+}: OptionProps<SelectOption> & SelectOption) => {
   const [isFocused, setIsFocused] = useState(false)
   const theme = useTheme()
 
@@ -601,9 +598,9 @@ Option.defaultProps = {
   inlineDescription: undefined,
 }
 
-const DropdownIndicator: FunctionComponent<
-  DropdownIndicatorProps<SelectOption> & WithSelectProps
-> = props => {
+const DropdownIndicator = (
+  props: DropdownIndicatorProps<SelectOption> & WithSelectProps,
+) => {
   const {
     selectProps: { isDisabled, time, required },
   } = props
@@ -635,9 +632,9 @@ DropdownIndicator.propTypes = {
   selectProps: SelectContainer.propTypes?.selectProps,
 }
 
-const ClearIndicator: FunctionComponent<
-  ClearIndicatorProps<SelectOption> & WithSelectProps
-> = props => {
+const ClearIndicator = (
+  props: ClearIndicatorProps<SelectOption> & WithSelectProps,
+) => {
   const theme = useTheme()
   const {
     selectProps: { checked, error },
@@ -666,17 +663,15 @@ ClearIndicator.propTypes = {
   selectProps: SelectContainer.propTypes?.selectProps,
 }
 
-const MultiValueContainer: FunctionComponent<
-  MultiValueProps<SelectOption>
-> = props => <components.MultiValueContainer {...props} />
+const MultiValueContainer = (props: MultiValueProps<SelectOption>) => (
+  <components.MultiValueContainer {...props} />
+)
 
-const MultiValueLabel: FunctionComponent<
-  MultiValueProps<SelectOption>
-> = props => <components.MultiValueLabel {...props} />
+const MultiValueLabel = (props: MultiValueProps<SelectOption>) => (
+  <components.MultiValueLabel {...props} />
+)
 
-const MultiValueRemove: FunctionComponent<
-  MultiValueProps<SelectOption>
-> = props => (
+const MultiValueRemove = (props: MultiValueProps<SelectOption>) => (
   <components.MultiValueRemove {...props}>
     <Icon name="close" size={16} />
   </components.MultiValueRemove>
@@ -699,7 +694,7 @@ type RichSelectProps = SelectProps &
 
 const defaultCustomStyle = () => ({})
 
-const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
+const RichSelect = ({
   animation = 'pulse',
   animationDuration = 1000,
   animationOnChange = false,
@@ -723,7 +718,7 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   readOnly = false,
   value,
   ...props
-}) => {
+}: Partial<RichSelectProps>) => {
   const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
   const theme = useTheme()
   const [isAnimated, setIsAnimated] = useState(false)
@@ -794,9 +789,9 @@ const RichSelect: FunctionComponent<Partial<RichSelectProps>> = ({
   )
 }
 
-type OptionComponent = FunctionComponent<
-  Partial<OptionProps<SelectOption> & SelectOption>
->
+type OptionComponent = (
+  props: Partial<OptionProps<SelectOption> & SelectOption>,
+) => JSX.Element
 
 const RichSelectWithRef = forwardRef(
   (props: RichSelectProps, ref: ForwardedRef<StateManagedSelect>) => (

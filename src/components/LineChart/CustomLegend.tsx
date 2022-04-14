@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { DatumValue } from '@nivo/core'
 import { Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, memo } from 'react'
+import React from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
@@ -51,7 +51,7 @@ type CellProps = {
   variant?: string
 }
 
-const Cell: FunctionComponent<CellProps> = memo(({ value, variant }) => (
+const Cell = ({ value, variant }: CellProps) => (
   <Typography
     variant={variant}
     textAlign="right"
@@ -60,7 +60,7 @@ const Cell: FunctionComponent<CellProps> = memo(({ value, variant }) => (
   >
     {value}
   </Typography>
-))
+)
 
 Cell.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

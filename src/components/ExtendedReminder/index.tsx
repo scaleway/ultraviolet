@@ -1,12 +1,7 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
-  ComponentProps,
-  FunctionComponent,
-  MouseEventHandler,
-  ReactNode,
-} from 'react'
+import React, { ComponentProps, MouseEventHandler, ReactNode } from 'react'
 import Badge from '../Badge'
 import Box from '../Box'
 import Button from '../Button'
@@ -111,7 +106,7 @@ type ExtendedReminderProps = {
   CustomLink?: ReactNode
 }
 
-const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
+const ExtendedReminder = ({
   badgeText,
   icon,
   linkText,
@@ -122,7 +117,7 @@ const ExtendedReminder: FunctionComponent<ExtendedReminderProps> = ({
   variant = 'info',
   CustomLink,
   ...props
-}) => {
+}: ExtendedReminderProps) => {
   const theme = useTheme()
   const badgeVariant = {
     error: 'error',

@@ -7,7 +7,6 @@ import React, {
   ComponentProps,
   ElementType,
   FocusEventHandler,
-  FunctionComponent,
   MouseEventHandler,
   ReactNode,
   Ref,
@@ -359,7 +358,7 @@ type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   download?: boolean | string
 }
 
-const FwdButton: FunctionComponent<ButtonProps> = ({
+const FwdButton = ({
   children,
   disabled = false,
   download,
@@ -377,7 +376,7 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
   type: elementType = 'button',
   variant = 'primary',
   ...props
-}) => {
+}: ButtonProps) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
     if (to) return UniversalLink as ElementType
@@ -449,7 +448,11 @@ const FwdButton: FunctionComponent<ButtonProps> = ({
   )
 }
 
-FwdButton.propTypes = {
+const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
+  (props, ref) => <FwdButton {...props} innerRef={ref} />,
+)
+
+Button.propTypes = {
   action: PropTypes.oneOf([true, false, 'rounded']),
   children: PropTypes.oneOfType([
     PropTypes.string,
@@ -467,7 +470,6 @@ FwdButton.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   iconPosition: PropTypes.oneOf(['left', 'right']),
   iconSize: PropTypes.number,
-  innerRef: PropTypes.func,
   /**
    * Use this properties to associate ref to button component.
    */
@@ -478,12 +480,6 @@ FwdButton.propTypes = {
   tooltipBaseId: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),
 }
-
-const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
-  (props, ref) => <FwdButton {...props} innerRef={ref} />,
-)
-
-Button.propTypes = FwdButton.propTypes
 
 Button.displayName = 'fwd(Button)'
 

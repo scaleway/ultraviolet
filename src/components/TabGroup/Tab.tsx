@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ElementType,
-  FunctionComponent,
   KeyboardEvent,
   MouseEvent,
   ReactNode,
@@ -67,7 +66,7 @@ type TabProps = {
   setInternTabsWidth?: (width: number, index: number) => void
 }
 
-const Tab: FunctionComponent<TabProps> = ({
+const Tab = ({
   children,
   disabled = false,
   isSelected = false,
@@ -81,7 +80,7 @@ const Tab: FunctionComponent<TabProps> = ({
   hasEndedCount = false,
   as,
   ...props
-}) => {
+}: TabProps) => {
   const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {

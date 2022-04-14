@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { FunctionComponent, HTMLAttributes } from 'react'
+import React, { HTMLAttributes, ReactNode } from 'react'
 
 const StyledScrollView = styled.div`
   display: flex;
@@ -8,10 +8,8 @@ const StyledScrollView = styled.div`
   overflow-y: auto;
 `
 
-type ScrollViewProps = HTMLAttributes<HTMLDivElement>
+type ScrollViewProps = HTMLAttributes<HTMLDivElement> & { children: ReactNode }
 
-const ScrollView: FunctionComponent<ScrollViewProps> = props => (
-  <StyledScrollView {...props} />
-)
+const ScrollView = (props: ScrollViewProps) => <StyledScrollView {...props} />
 
 export default ScrollView

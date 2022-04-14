@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
-  FunctionComponent,
   KeyboardEvent,
   MouseEvent,
   ReactNode,
@@ -189,7 +188,7 @@ const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
     isPrimaryColor ? `color: ${theme.colors.primary.text};` : ``}
 `
 
-export const Header: FunctionComponent = props => {
+export const Header = () => {
   const {
     columns,
     isLoading,
@@ -213,7 +212,7 @@ export const Header: FunctionComponent = props => {
   )
 
   return (
-    <StyledHeader multiselect={multiselect} {...props}>
+    <StyledHeader multiselect={multiselect}>
       {multiselect && (
         <StyledCheckboxContainer>
           <Checkbox
@@ -270,11 +269,11 @@ type ExpandedContentProps = {
     | ((props: { id?: string; isToggled: boolean }) => Element)
 }
 
-export const ExpendableContent: FunctionComponent<ExpandedContentProps> = ({
+export const ExpendableContent = ({
   children,
   id,
   rowsState,
-}) => (
+}: ExpandedContentProps) => (
   <div data-expandable>
     {typeof children === 'function'
       ? children({
@@ -291,7 +290,7 @@ ExpendableContent.propTypes = {
   rowsState: PropTypes.shape({}),
 }
 
-export const Row: FunctionComponent<ListRowProps> = ({
+export const Row = ({
   id,
   children,
   animated = false,
@@ -306,7 +305,7 @@ export const Row: FunctionComponent<ListRowProps> = ({
   open = false,
   expandableClassName,
   ...props
-}) => {
+}: ListRowProps) => {
   const {
     multiselect,
     rowsState,

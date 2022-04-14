@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, FunctionComponent } from 'react'
+import React, { ComponentProps, WeakValidationMap } from 'react'
 import RichSelect from '../RichSelect'
 
 const hours = [
@@ -201,9 +201,9 @@ type TimeInputProps = Partial<ComponentProps<typeof RichSelect>> & {
   schedule?: ScheduleType
 }
 
-interface TimeInputType extends FunctionComponent {
-  (props: TimeInputProps): JSX.Element
+type TimeInputType = ((props: TimeInputProps) => JSX.Element) & {
   options: typeof options
+  propTypes: WeakValidationMap<TimeInputProps>
 }
 
 const TimeInput: TimeInputType = ({

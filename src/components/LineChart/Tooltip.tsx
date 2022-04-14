@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Point } from '@nivo/line'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, Validator } from 'react'
+import React, { Validator } from 'react'
 import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
@@ -21,9 +21,7 @@ const LineColorSquare = styled.span`
 `
 type LineChartTooltipProps = { point: Point }
 
-const LineChartTooltip: FunctionComponent<LineChartTooltipProps> = ({
-  point,
-}) => (
+const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
   <LineTooltipContainer>
     <div>
       <LineColorSquare color={point.serieColor} />

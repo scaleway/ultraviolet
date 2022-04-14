@@ -1,9 +1,11 @@
 import fireEvent from '@testing-library/user-event'
-import React, { FunctionComponent } from 'react'
+import React, { ReactNode } from 'react'
 import StealthCopiable from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
-const ComplexChild: FunctionComponent = ({ children }) => <div>{children}</div>
+const ComplexChild = ({ children }: { children: ReactNode }) => (
+  <div>{children}</div>
+)
 
 describe('StealthCopiable', () => {
   beforeAll(() => {

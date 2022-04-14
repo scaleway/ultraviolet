@@ -4,7 +4,6 @@ import React, {
   AllHTMLAttributes,
   ComponentProps,
   ElementType,
-  FunctionComponent,
   ReactNode,
   forwardRef,
 } from 'react'
@@ -76,7 +75,7 @@ const forwardType = forwardRef<Element, BoxProps>(() => null)
 type BoxType = typeof forwardType & {
   withComponent: (
     element: string | ElementType<unknown>,
-  ) => FunctionComponent<BoxProps>
+  ) => (props: BoxProps) => JSX.Element
 }
 
 // @ts-expect-error We add withComponent & propTypes just below
@@ -89,8 +88,7 @@ const Box: BoxType = forwardRef<
 ))
 
 Box.withComponent =
-  (element: string | ElementType<unknown>): FunctionComponent<BoxProps> =>
-  props =>
+  (element: string | ElementType<unknown>) => (props: BoxProps) =>
     <Box as={element} {...props} />
 
 Box.propTypes = {

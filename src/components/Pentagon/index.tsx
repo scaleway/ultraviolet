@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent, HTMLAttributes } from 'react'
+import React, { HTMLAttributes } from 'react'
 import { Color } from '../../theme'
 
 interface PentagonProps {
@@ -23,9 +23,9 @@ const StyledPentagon = styled('div', {
   `}
 `
 
-const Pentagon: FunctionComponent<
-  PentagonProps & HTMLAttributes<HTMLDivElement>
-> = props => <StyledPentagon {...props} />
+const Pentagon = (props: PentagonProps & HTMLAttributes<HTMLDivElement>) => (
+  <StyledPentagon {...props} />
+)
 
 Pentagon.propTypes = {
   color: PropTypes.string,

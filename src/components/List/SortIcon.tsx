@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import Icon from '../Icon'
 import { ListOrder } from './types'
 
@@ -24,9 +24,12 @@ const DownIcon = styled(Icon)`
 
 type AriaSortType = 'none' | 'descending' | 'ascending' | 'other' | undefined
 
-const SortIcon: FunctionComponent<{ active?: boolean; order?: ListOrder }> = ({
+const SortIcon = ({
   active,
   order,
+}: {
+  active?: boolean
+  order?: ListOrder
 }) => {
   let ariaSort: AriaSortType = 'none'
   if (active) {

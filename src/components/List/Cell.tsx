@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { FunctionComponent } from 'react'
+import React, { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import { useListContext } from './context'
 import { ListColumn } from './types'
@@ -35,7 +35,7 @@ const StyledCell = styled(Box, {
     )}
 `
 
-const Cell: FunctionComponent<BoxProps> = ({ children, ...props }) => {
+const Cell = ({ children, ...props }: BoxProps & { children: ReactNode }) => {
   const { columns, multiselect } = useListContext()
 
   return (
