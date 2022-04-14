@@ -1,3 +1,10 @@
+### [0.144.3](https://github.com/scaleway/scaleway-ui/compare/v0.144.2...v0.144.3) (2022-04-14)
+
+
+### :bug: Bug Fixes
+
+* **alert:** complex children ([#1309](https://github.com/scaleway/scaleway-ui/issues/1309)) ([e1cf008](https://github.com/scaleway/scaleway-ui/commit/e1cf0084a571cf2465e9f636db5294d1dfedac10))
+
 ### [0.144.2](https://github.com/scaleway/scaleway-ui/compare/v0.144.1...v0.144.2) (2022-04-14)
 
 
