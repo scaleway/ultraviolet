@@ -1,3 +1,17 @@
+### [0.144.4](https://github.com/scaleway/scaleway-ui/compare/v0.144.3...v0.144.4) (2022-04-15)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/checkout action to v3.0.1 ([#1387](https://github.com/scaleway/scaleway-ui/issues/1387)) ([28e2ee1](https://github.com/scaleway/scaleway-ui/commit/28e2ee16a3fc5d682d4d139839afd66197175cf2))
+* **devdeps:** update pnpm to v6.32.7 ([#1388](https://github.com/scaleway/scaleway-ui/issues/1388)) ([03f6436](https://github.com/scaleway/scaleway-ui/commit/03f6436d434ec286a5d905b5d4a1c6078d08917d))
+* **devdeps:** update storybook monorepo to v6.4.22 ([#1389](https://github.com/scaleway/scaleway-ui/issues/1389)) ([753fb26](https://github.com/scaleway/scaleway-ui/commit/753fb262fa579a30d9e4dd51ac3600cc22d0e3e6))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.4.0 ([#1365](https://github.com/scaleway/scaleway-ui/issues/1365)) ([1c5ab97](https://github.com/scaleway/scaleway-ui/commit/1c5ab97c0ac7c8de23344907a3ba8e9efd8f0a70))
+
 ### [0.144.3](https://github.com/scaleway/scaleway-ui/compare/v0.144.2...v0.144.3) (2022-04-14)
 
 
