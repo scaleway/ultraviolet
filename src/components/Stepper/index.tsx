@@ -198,8 +198,7 @@ const Stepper = ({
   const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
     event.stopPropagation()
     const parsedValue = parseIntOr(event.currentTarget.value, 0)
-    const roundedValue = roundStep(parsedValue, step)
-    setValue(roundedValue)
+    setValue(parsedValue)
   }
 
   const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
