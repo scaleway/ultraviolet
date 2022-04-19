@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import React, { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
@@ -11,8 +10,9 @@ const Container = styled(Box)`
   display: flex;
   align-items: center;
 `
+
 type NoticeProps = {
-  children: ReactNode
+  children: ReactNode | string
 } & BoxProps
 
 const Notice = ({ children, ...props }: NoticeProps) => (
@@ -23,8 +23,5 @@ const Notice = ({ children, ...props }: NoticeProps) => (
     ) : null}
   </Container>
 )
-Notice.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Notice
