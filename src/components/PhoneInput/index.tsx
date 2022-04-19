@@ -45,6 +45,17 @@ const StyledLabel = styled.label<PhoneInputLabelProps>`
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
+  ul[role='listbox'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
+    color: ${({ theme }) => theme.colors.neutral.text};
+    box-shadow: ${({ theme }) => theme.shadows.menu};
+    border: none;
+  }
+
+  .iti__divider {
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+  }
+
   & .input__tel__container {
     border: none;
     width: calc(100%-2px);
@@ -88,6 +99,13 @@ const StyledInput = styled.input`
   border: none;
   outline: none;
   width: 100%;
+
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
+
+  &::placeholder {
+    color: ${({ theme: { colors } }) => colors.neutral.textWeak};
+  }
 
   &:disabled {
     cursor: not-allowed;
