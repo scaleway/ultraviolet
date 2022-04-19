@@ -620,6 +620,62 @@ exports[`Badge renders correctly variant warning 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Badge renders correctly when disabled 1`] = `
+<DocumentFragment>
+  .cache-1rx474n {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #b2b6c3;
+  background: #f6f6f8;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-1rx474n egvl2gp0"
+    role="status"
+  >
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Badge renders correctly with default values 1`] = `
 <DocumentFragment>
   .cache-13mawr1 {
@@ -667,6 +723,82 @@ exports[`Badge renders correctly with default values 1`] = `
     class="cache-13mawr1 egvl2gp0"
     role="status"
   >
+    <div
+      class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+    >
+      Sample badge
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Badge renders correctly with icon 1`] = `
+<DocumentFragment>
+  .cache-13mawr1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #b2b6c3;
+  background: #ffffff;
+}
+
+.cache-vjjd4q {
+  fill: currentColor;
+  height: 12px;
+  width: 12px;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+.cache-vjjd4q.cache-vjjd4q {
+  vertical-align: middle;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+<div
+    as="span"
+    class="cache-13mawr1 egvl2gp0"
+    role="status"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-vjjd4q"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+      />
+    </svg>
     <div
       class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
     >

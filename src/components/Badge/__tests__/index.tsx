@@ -7,6 +7,14 @@ describe('Badge', () => {
   test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(<Badge>Sample badge</Badge>))
 
+  test('renders correctly with icon', () =>
+    shouldMatchEmotionSnapshot(
+      <Badge icon="information-outline">Sample badge</Badge>,
+    ))
+
+  test('renders correctly when disabled', () =>
+    shouldMatchEmotionSnapshot(<Badge disabled>Sample badge</Badge>))
+
   SENTIMENTS.forEach(variant => {
     test(`renders correctly variant ${variant}`, () =>
       shouldMatchEmotionSnapshot(<Badge variant={variant}>Sample badge</Badge>))

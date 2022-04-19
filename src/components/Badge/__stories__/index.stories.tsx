@@ -89,3 +89,9 @@ export const Disabled = Template.bind({})
 Disabled.args = {
   disabled: true,
 }
+
+export const Icon = Template.bind({})
+Icon.args = {
+  icon: 'information-outline',
+  variant: 'primary',
+}
