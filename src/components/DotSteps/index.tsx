@@ -18,7 +18,7 @@ const DotStep = styled(Dot)`
     border-radius: inherit;
     top: 50%;
     left: 50%;
-    transition: transform 0.5s;
+    transition: transform 0.2s;
   }
   &::before {
     width: ${dotSize}px;
@@ -35,6 +35,15 @@ const DotStep = styled(Dot)`
     &::before {
       transform: scale(0.5);
     }
+  }
+  &[aria-selected='false']:hover {
+    &::before {
+      transform: scale(1.6);
+      transition: transform 0.2s;
+    }
+  }
+  &[aria-selected='false']:last-child::after {
+    pointer-events: none;
   }
   &:last-child::after {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
