@@ -1,3 +1,23 @@
+### [0.144.5](https://github.com/scaleway/scaleway-ui/compare/v0.144.4...v0.144.5) (2022-04-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/react-dom to v18.0.1 ([#1390](https://github.com/scaleway/scaleway-ui/issues/1390)) ([279e3c8](https://github.com/scaleway/scaleway-ui/commit/279e3c8d7e1e2e8799f5743baf76cc6c953cd058))
+* **devdeps:** update dependency lint-staged to v12.3.8 ([#1391](https://github.com/scaleway/scaleway-ui/issues/1391)) ([4de5851](https://github.com/scaleway/scaleway-ui/commit/4de5851501ffe247c6f0b6b37275ac5f6fdfd9e7))
+* **devdeps:** update dependency rollup to v2.70.2 ([#1392](https://github.com/scaleway/scaleway-ui/issues/1392)) ([7877ff5](https://github.com/scaleway/scaleway-ui/commit/7877ff540c236111d7f77ab58182fcc3aff79062))
+* **devdeps:** update pnpm to v6.32.8 ([#1393](https://github.com/scaleway/scaleway-ui/issues/1393)) ([03d92c9](https://github.com/scaleway/scaleway-ui/commit/03d92c94b7875d92fe370deadb8b9bf52118d240))
+
+
+### :zap: Refactor
+
+* dotsteps component ([#1385](https://github.com/scaleway/scaleway-ui/issues/1385)) ([249eb7a](https://github.com/scaleway/scaleway-ui/commit/249eb7a93a447aa9a1cbba85014a1f4eaa288154))
+
+
+### :bug: Bug Fixes
+
+* **theme:** synchronise design tokens ([#1394](https://github.com/scaleway/scaleway-ui/issues/1394)) ([4efb37d](https://github.com/scaleway/scaleway-ui/commit/4efb37daabf9296b15f68cd3b2a521ff6c355174))
+
 ### [0.144.4](https://github.com/scaleway/scaleway-ui/compare/v0.144.3...v0.144.4) (2022-04-15)
 
 
