@@ -1,3 +1,15 @@
+## [0.145.0](https://github.com/scaleway/scaleway-ui/compare/v0.144.5...v0.145.0) (2022-04-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.17 ([#1395](https://github.com/scaleway/scaleway-ui/issues/1395)) ([8917f3b](https://github.com/scaleway/scaleway-ui/commit/8917f3bfd5f72207c2e227fb5221c4ee7ee678df))
+
+
+### :gear: Features
+
+* new bullet component ([#1374](https://github.com/scaleway/scaleway-ui/issues/1374)) ([21cb54c](https://github.com/scaleway/scaleway-ui/commit/21cb54cb894e93c9a89538fdf271cb45e4c076cd))
+
 ### [0.144.5](https://github.com/scaleway/scaleway-ui/compare/v0.144.4...v0.144.5) (2022-04-19)
 
 
