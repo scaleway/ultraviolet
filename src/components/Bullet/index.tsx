@@ -1,6 +1,5 @@
 import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import React, { ComponentProps } from 'react'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
@@ -96,33 +95,5 @@ const Bullet = ({
     </StyledContainer>
   </Tooltip>
 )
-
-const customXorPropType = (
-  props: Record<string, unknown>,
-  propName: string,
-  comp: string,
-) => {
-  if ((props.text && props.icon) || (!props.text && !props.icon)) {
-    return new Error(
-      `Invalid props supplied to ${comp}, you must supply an icon prop OR a text prop, not both`,
-    )
-  }
-  if (props[propName] && typeof props[propName] !== 'string') {
-    return new Error(
-      `Invalid prop supplied to ${comp}, text should be a string`,
-    )
-  }
-
-  return null
-}
-Bullet.propTypes = {
-  className: PropTypes.string,
-  icon: customXorPropType,
-  size: PropTypes.oneOf<BulletSize>(bulletSizes),
-  text: customXorPropType,
-  tooltip: PropTypes.string,
-  tooltipBaseId: PropTypes.string,
-  variant: PropTypes.oneOf<BulletVariant>(bulletVariants),
-}
 
 export default Bullet
