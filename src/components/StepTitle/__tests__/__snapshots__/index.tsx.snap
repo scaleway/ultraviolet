@@ -1,200 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BulletList renders correctly  1`] = `
-<DocumentFragment>
-  .cache-7078ng-Steps {
-  list-style: none;
-  padding-left: 16px;
-  margin-top: 24px;
-  text-align: left;
-  font-size: 16px;
-}
-
-.cache-z01g5q-Step {
-  margin-bottom: 24px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-1da3zhe-Chip {
-  display: inline-block;
-  min-width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  background-color: #4a4f62;
-  color: #ffffff;
-  margin-right: 8px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.cache-1talnks-StyledDiv {
-  width: 100%;
-}
-
-<ul
-    class="cache-7078ng-Steps e12g85273"
-  >
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        1
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          a
-        </div>
-      </div>
-    </li>
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        2
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          b
-        </div>
-      </div>
-    </li>
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        3
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          c
-        </div>
-      </div>
-    </li>
-  </ul>
-</DocumentFragment>
-`;
-
-exports[`BulletList renders correctly with custom keyPrefix 1`] = `
-<DocumentFragment>
-  .cache-7078ng-Steps {
-  list-style: none;
-  padding-left: 16px;
-  margin-top: 24px;
-  text-align: left;
-  font-size: 16px;
-}
-
-.cache-z01g5q-Step {
-  margin-bottom: 24px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-1da3zhe-Chip {
-  display: inline-block;
-  min-width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  background-color: #4a4f62;
-  color: #ffffff;
-  margin-right: 8px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.cache-1talnks-StyledDiv {
-  width: 100%;
-}
-
-<ul
-    class="cache-7078ng-Steps e12g85273"
-  >
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        1
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          a
-        </div>
-      </div>
-    </li>
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        2
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          b
-        </div>
-      </div>
-    </li>
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        3
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        y
-      </div>
-    </li>
-    <li
-      class="cache-z01g5q-Step e12g85272"
-    >
-      <span
-        class="cache-1da3zhe-Chip e12g85271"
-      >
-        4
-      </span>
-      <div
-        class="cache-1talnks-StyledDiv e12g85270"
-      >
-        <div>
-          c
-        </div>
-      </div>
-    </li>
-  </ul>
-</DocumentFragment>
-`;
-
 exports[`StepTitle renders correctly  1`] = `
 <DocumentFragment>
-  .cache-1ri5xvh {
+  .cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -211,7 +19,7 @@ exports[`StepTitle renders correctly  1`] = `
   color: #151a2d;
 }
 
-.cache-1ktcim9 {
+.cache-t9e53m-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -234,7 +42,7 @@ exports[`StepTitle renders correctly  1`] = `
   font-size: 16px;
 }
 
-.cache-1kbqic1 {
+.cache-1m08j4b-StyledDiv {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -243,15 +51,15 @@ exports[`StepTitle renders correctly  1`] = `
 }
 
 <div
-    class="cache-1ri5xvh e17jwwhf1"
+    class="cache-1lgdhts-Step e17jwwhf1"
   >
     <div
-      class="cache-1ktcim9 e1u3ywq30"
+      class="cache-t9e53m-StyledContainer e1u3ywq30"
     >
       1
     </div>
     <div
-      class="cache-1kbqic1 e17jwwhf0"
+      class="cache-1m08j4b-StyledDiv e17jwwhf0"
     >
       Item 1
     </div>
@@ -261,7 +69,7 @@ exports[`StepTitle renders correctly  1`] = `
 
 exports[`StepTitle renders correctly with custom keyPrefix 1`] = `
 <DocumentFragment>
-  .cache-1ri5xvh {
+  .cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -278,7 +86,7 @@ exports[`StepTitle renders correctly with custom keyPrefix 1`] = `
   color: #151a2d;
 }
 
-.cache-1ktcim9 {
+.cache-t9e53m-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -301,7 +109,7 @@ exports[`StepTitle renders correctly with custom keyPrefix 1`] = `
   font-size: 16px;
 }
 
-.cache-1kbqic1 {
+.cache-1m08j4b-StyledDiv {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -310,15 +118,15 @@ exports[`StepTitle renders correctly with custom keyPrefix 1`] = `
 }
 
 <div
-    class="cache-1ri5xvh e17jwwhf1"
+    class="cache-1lgdhts-Step e17jwwhf1"
   >
     <div
-      class="cache-1ktcim9 e1u3ywq30"
+      class="cache-t9e53m-StyledContainer e1u3ywq30"
     >
       1
     </div>
     <div
-      class="cache-1kbqic1 e17jwwhf0"
+      class="cache-1m08j4b-StyledDiv e17jwwhf0"
     >
       Item 1
     </div>
@@ -328,7 +136,7 @@ exports[`StepTitle renders correctly with custom keyPrefix 1`] = `
 
 exports[`StepTitle renders correctly with disabled state 1`] = `
 <DocumentFragment>
-  .cache-baod9r {
+  .cache-b6lmz-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -345,7 +153,7 @@ exports[`StepTitle renders correctly with disabled state 1`] = `
   color: #b2b6c3;
 }
 
-.cache-ln3rwk {
+.cache-16j3ie1-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -368,7 +176,7 @@ exports[`StepTitle renders correctly with disabled state 1`] = `
   font-size: 16px;
 }
 
-.cache-1kbqic1 {
+.cache-1m08j4b-StyledDiv {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -377,15 +185,15 @@ exports[`StepTitle renders correctly with disabled state 1`] = `
 }
 
 <div
-    class="cache-baod9r e17jwwhf1"
+    class="cache-b6lmz-Step e17jwwhf1"
   >
     <div
-      class="cache-ln3rwk e1u3ywq30"
+      class="cache-16j3ie1-StyledContainer e1u3ywq30"
     >
       1
     </div>
     <div
-      class="cache-1kbqic1 e17jwwhf0"
+      class="cache-1m08j4b-StyledDiv e17jwwhf0"
     >
       <div>
         Item 1 with disabled state
@@ -397,7 +205,7 @@ exports[`StepTitle renders correctly with disabled state 1`] = `
 
 exports[`StepTitle renders correctly with small size 1`] = `
 <DocumentFragment>
-  .cache-1ri5xvh {
+  .cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -414,7 +222,7 @@ exports[`StepTitle renders correctly with small size 1`] = `
   color: #151a2d;
 }
 
-.cache-cyicbw {
+.cache-1ut1z3i-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -437,7 +245,7 @@ exports[`StepTitle renders correctly with small size 1`] = `
   font-size: 14px;
 }
 
-.cache-4vid3f {
+.cache-1wj8egs-StyledDiv {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -446,15 +254,15 @@ exports[`StepTitle renders correctly with small size 1`] = `
 }
 
 <div
-    class="cache-1ri5xvh e17jwwhf1"
+    class="cache-1lgdhts-Step e17jwwhf1"
   >
     <div
-      class="cache-cyicbw e1u3ywq30"
+      class="cache-1ut1z3i-StyledContainer e1u3ywq30"
     >
       1
     </div>
     <div
-      class="cache-4vid3f e17jwwhf0"
+      class="cache-1wj8egs-StyledDiv e17jwwhf0"
     >
       Item 1 small
     </div>
