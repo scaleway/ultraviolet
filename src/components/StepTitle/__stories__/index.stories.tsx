@@ -22,21 +22,23 @@ export const Default = Template.bind({})
 
 Default.args = {
   ...Template.args,
+  bulletText: '1',
   children: 'First',
-  index: 1,
 }
 
 export const Sizes = Template.bind({})
 Sizes.parameters = {
   docs: {
-    storyDescription: 'Set `size` using size property.',
+    story: {
+      description: 'Set `size` using size property.',
+    },
   },
 }
 Sizes.decorators = [
   () => (
     <div style={{ display: 'flex', gap: '8px' }}>
-      {['medium', 'large'].map((size, index) => (
-        <StepTitle index={index + 1} size={size as SizesType}>
+      {['small', 'medium'].map((size, index) => (
+        <StepTitle bulletText={(index + 1).toString()} size={size as SizesType}>
           {size}
         </StepTitle>
       ))}
@@ -47,27 +49,31 @@ Sizes.decorators = [
 export const Disabled = Template.bind({})
 Disabled.parameters = {
   docs: {
-    storyDescription: 'Set a disable state using `disabled` property.',
+    story: {
+      description: 'Set a disable state using `disabled` property.',
+    },
   },
 }
 Disabled.args = {
   ...Template.args,
+  bulletText: 'A',
   children: 'First',
   disabled: true,
-  index: 1,
 }
 
 export const List = Template.bind({})
 List.parameters = {
   docs: {
-    storyDescription: 'Example to populate a step list.',
+    story: {
+      description: 'Example to populate a step list.',
+    },
   },
 }
 List.decorators = [
   () => (
     <div>
       {['First', 'Second', 'Third'].map((rank, index) => (
-        <StepTitle index={index + 1}>{rank}</StepTitle>
+        <StepTitle bulletText={(index + 1).toString()}>{rank}</StepTitle>
       ))}
     </div>
   ),

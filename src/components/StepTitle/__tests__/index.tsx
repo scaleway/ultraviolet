@@ -4,25 +4,25 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('StepTitle', () => {
   test('renders correctly ', () =>
-    shouldMatchEmotionSnapshot(<StepTitle index={1}>Item 1</StepTitle>))
+    shouldMatchEmotionSnapshot(<StepTitle bulletText="1">Item 1</StepTitle>))
 
   test('renders correctly with custom keyPrefix', () =>
     shouldMatchEmotionSnapshot(
-      <StepTitle index={1} keyPrefix="test">
+      <StepTitle bulletText="1" keyPrefix="test">
         Item 1
       </StepTitle>,
     ))
 
-  test('renders correctly with large size', () =>
+  test('renders correctly with small size', () =>
     shouldMatchEmotionSnapshot(
-      <StepTitle index={1} size="large">
-        Item 1 large
+      <StepTitle bulletText="1" size="small">
+        Item 1 small
       </StepTitle>,
     ))
 
   test('renders correctly with disabled state', () =>
     shouldMatchEmotionSnapshot(
-      <StepTitle index={1} disabled>
+      <StepTitle bulletText="1" disabled>
         <div>Item 1 with disabled state</div>
       </StepTitle>,
     ))

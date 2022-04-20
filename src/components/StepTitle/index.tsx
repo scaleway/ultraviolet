@@ -1,16 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ReactNode } from 'react'
+import Bullet from '../Bullet'
 
-export const Steps = styled.ul`
-  list-style: none;
-  padding-left: 16px;
-  margin-top: 24px;
-  text-align: left;
-  font-size: 16px;
-`
-
-export const Step = styled('li', {
+export const Step = styled('div', {
   shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
 })<{ disabled: boolean }>`
   margin-bottom: 24px;
@@ -21,31 +14,19 @@ export const Step = styled('li', {
     disabled ? theme.colors.neutral.textWeak : theme.colors.neutral.textStrong};
 `
 
-export const Chip = styled('span', {
+const StyledDiv = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ size: Sizes }>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  margin-right: ${({ theme, size }) =>
-    size === 'medium' ? theme.space['1'] : theme.space['2']};
-  text-align: center;
-  font-weight: 600;
+  flex: 1;
+  margin-left: ${({ theme, size }) =>
+    size === 'medium' ? theme.space['2'] : theme.space['1']};
+  font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
 `
 
-const StyledDiv = styled.div`
-  width: 100%;
-`
-
-export type Sizes = 'medium' | 'large'
+export type Sizes = 'small' | 'medium' | undefined
 
 interface StepTitleProps {
-  index: number
+  bulletText: string
   size?: Sizes
   disabled?: boolean
   keyPrefix?: string
@@ -53,28 +34,32 @@ interface StepTitleProps {
 }
 
 const StepTitle = ({
-  index,
+  bulletText,
   children,
   keyPrefix,
   size = 'medium',
   disabled = false,
 }: StepTitleProps) => (
   <Step
-    key={`${keyPrefix ? `${keyPrefix}-` : ''}step-${index}`}
+    key={`${keyPrefix ? `${keyPrefix}-` : ''}step-${bulletText}`}
     disabled={disabled}
   >
-    <Chip size={size}>{`${index}`}</Chip>
-    <StyledDiv>{children}</StyledDiv>
+    <Bullet
+      text={bulletText}
+      size={size}
+      variant={disabled ? 'disabled' : 'default'}
+    />
+    <StyledDiv size={size}>{children}</StyledDiv>
   </Step>
 )
 
 StepTitle.propTypes = {
+  bulletText: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   /**
    * Add a prefix if you have multiple StepTitle in a same page.
    */
-  index: PropTypes.number.isRequired,
   keyPrefix: PropTypes.string,
   size: PropTypes.string,
 }
