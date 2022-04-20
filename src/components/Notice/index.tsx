@@ -12,11 +12,12 @@ const Container = styled(Box)`
 `
 
 type NoticeProps = {
-  children: ReactNode | string
+  children: ReactNode
+  className?: string
 } & BoxProps
 
-const Notice = ({ children, ...props }: NoticeProps) => (
-  <Container {...props}>
+const Notice = ({ children, className, ...props }: NoticeProps) => (
+  <Container className={className} {...props}>
     <Icon name="information-outline" verticalAlign="top" mr={1} size={20} />
     {typeof children === 'string' ? (
       <MarkDown source={children} linkTarget="_blank" />
