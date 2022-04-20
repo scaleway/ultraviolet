@@ -13,6 +13,7 @@ const testedComponents = [
   'Avatar',
   'ActivityIndicator',
   'Badge',
+  'Bullet',
   'Counter',
   'MarkDown',
   'Placeholder',
