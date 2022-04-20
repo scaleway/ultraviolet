@@ -1,4 +1,4 @@
-import { Theme, css } from '@emotion/react'
+import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps } from 'react'
@@ -41,12 +41,12 @@ type BulletVariant = keyof typeof variants
 export const bulletVariants = Object.keys(variants) as BulletVariant[]
 
 const sizes = {
-  medium: css`
+  medium: `
     width: 32px;
     height: 32px;
     font-size: 16px;
   `,
-  small: css`
+  small: `
     width: 24px;
     height: 24px;
     font-size: 14px;
