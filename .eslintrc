@@ -8,7 +8,8 @@
   ],
   "parserOptions": {
     "project": [
-      "tsconfig.json"
+      "tsconfig.json",
+      "rollup.tsconfig.json"
     ]
   },
   "plugins": [
@@ -42,7 +43,7 @@
         "devDependencies": [
           "**/__stories__/**/*",
           "**/__tests__/**/*",
-          "rollup.config.mjs"
+          "rollup.config.ts"
         ]
       }
     ],

@@ -31,7 +31,7 @@
   "jsnext:main": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --configPlugin 'typescript={ \"tsconfig\": \"rollup.tsconfig.json\" }'",
     "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
     "build:storybook-visual": "STORYBOOK_ENVIRONMENT=visual build-storybook",
@@ -109,6 +109,7 @@
     "@emotion/styled": "11.8.1",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-node-resolve": "13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@rollup/plugin-url": "6.1.0",
     "@scaleway/eslint-config-react": "3.4.17",
     "@scaleway/jest-helpers": "1.2.4",
