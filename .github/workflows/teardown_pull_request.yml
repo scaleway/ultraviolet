@@ -11,7 +11,7 @@ jobs:
       IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
 
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.0.2
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
 
