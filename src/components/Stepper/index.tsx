@@ -8,7 +8,6 @@ import React, {
   KeyboardEventHandler,
   MutableRefObject,
   ReactNode,
-  useEffect,
   useRef,
   useState,
 } from 'react'
@@ -186,24 +185,20 @@ const Stepper = ({
     typeof value === 'number' ? value : parseIntOr(value, minValue),
   )
 
-  useEffect(() => {
-    if (onChange) {
-      onChange(inputValue)
-    }
-  }, [inputValue, onChange])
+  const setValue = (newValue: number) => {
+    setInputValue(newValue)
+    onChange?.(newValue)
+  }
 
   const offsetFn = (direction: number) => () => {
-    setInputValue(currentValue => {
-      const newValue = currentValue + step * direction
-      const boundedValue = bounded(newValue, minValue, maxValue)
-
-      return boundedValue
-    })
+    const newValue = inputValue + step * direction
+    setValue(newValue)
   }
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
     event.stopPropagation()
-    setInputValue(parseIntOr(event.currentTarget.value, 0))
+    const parsedValue = parseIntOr(event.currentTarget.value, 0)
+    setValue(parsedValue)
   }
 
   const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
@@ -211,22 +206,13 @@ const Stepper = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    setInputValue(currentValue => {
-      const properVal = roundStep(currentValue, step)
-      if (properVal < minValue) {
-        if (onMinCrossed) onMinCrossed()
+    const roundedValue = roundStep(inputValue, step)
+    const boundedValue = bounded(roundedValue, minValue, maxValue)
 
-        return minValue
-      }
+    if (inputValue > maxValue) onMaxCrossed?.()
+    if (inputValue < minValue) onMinCrossed?.()
 
-      if (inputValue > maxValue) {
-        if (onMaxCrossed) onMaxCrossed()
-
-        return maxValue
-      }
-
-      return properVal
-    })
+    setValue(boundedValue)
 
     if (onBlur) onBlur(event)
   }
@@ -237,7 +223,7 @@ const Stepper = ({
       e.stopPropagation()
       e.preventDefault()
       if (inputValue + step <= maxValue) {
-        setInputValue(inputValue + step)
+        setValue(inputValue + step)
       }
     }
 
@@ -246,7 +232,7 @@ const Stepper = ({
       e.stopPropagation()
       e.preventDefault()
       if (inputValue - step >= minValue) {
-        setInputValue(inputValue - step)
+        setValue(inputValue - step)
       }
     }
   }
