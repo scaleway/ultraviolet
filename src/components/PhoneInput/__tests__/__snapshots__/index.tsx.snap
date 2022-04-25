@@ -2,7 +2,7 @@
 
 exports[`PhoneInput renders correctly 1`] = `
 <DocumentFragment>
-  .cache-legdvu {
+  .cache-fvd57y {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13,17 +13,28 @@ exports[`PhoneInput renders correctly 1`] = `
   padding: 0.8rem 0rem;
 }
 
-.cache-legdvu[aria-disabled='true'] {
+.cache-fvd57y[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-legdvu:focus-within {
+.cache-fvd57y:focus-within {
   border: 1px solid #4f0599;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-legdvu .input__tel__container {
+.cache-fvd57y ul[role='listbox'] {
+  background: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+  border: none;
+}
+
+.cache-fvd57y .iti__divider {
+  border-color: #e6e9f0;
+}
+
+.cache-fvd57y .input__tel__container {
   border: none;
   width: calc(100%-2px);
   -webkit-box-flex: 1;
@@ -32,31 +43,31 @@ exports[`PhoneInput renders correctly 1`] = `
   flex-grow: 1;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag {
+.cache-fvd57y .input__tel__container .iti__selected-flag {
   background-color: inherit;
   outline: none;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag:hover,
-.cache-legdvu .input__tel__container .iti__selected-flag:focus {
+.cache-fvd57y .input__tel__container .iti__selected-flag:hover,
+.cache-fvd57y .input__tel__container .iti__selected-flag:focus {
   background-color: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__flag-container {
+.cache-fvd57y .input__tel__container .iti__flag-container {
   cursor: inherit;
   pointer-events: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-dial-code {
+.cache-fvd57y .input__tel__container .iti__selected-dial-code {
   padding-left: 5px;
 }
 
-.cache-legdvu .input__tel__container .iti__flag {
+.cache-fvd57y .input__tel__container .iti__flag {
   background-image: url(test-file-stub);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cache-legdvu .input__tel__container .iti__flag {
+  .cache-fvd57y .input__tel__container .iti__flag {
     background-image: url(test-file-stub);
   }
 }
@@ -70,14 +81,32 @@ exports[`PhoneInput renders correctly 1`] = `
   background-color: #ffffff;
 }
 
-.cache-15p91ee {
+.cache-1q3ll4x {
   height: 100%;
   border: none;
   outline: none;
   width: 100%;
+  background: #ffffff;
+  color: #4a4f62;
 }
 
-.cache-15p91ee:disabled {
+.cache-1q3ll4x::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:disabled {
   cursor: not-allowed;
   pointer-events: none;
   background-color: inherit;
@@ -85,7 +114,7 @@ exports[`PhoneInput renders correctly 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-legdvu e1wokhi11"
+    class="cache-fvd57y e1wokhi11"
   >
     <span
       class="cache-14ac4kz e1wokhi12"
@@ -6772,7 +6801,7 @@ exports[`PhoneInput renders correctly 1`] = `
       </div>
       <input
         autocomplete="off"
-        class="cache-15p91ee e1wokhi10"
+        class="cache-1q3ll4x e1wokhi10"
         data-intl-tel-input-id="0"
         maxlength="50"
         placeholder="+1 201-555-0123"
@@ -6786,7 +6815,7 @@ exports[`PhoneInput renders correctly 1`] = `
 
 exports[`PhoneInput renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-lfpwu3 {
+  .cache-o6fe5l {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6797,17 +6826,28 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   padding: 0.8rem 0rem;
 }
 
-.cache-lfpwu3[aria-disabled='true'] {
+.cache-o6fe5l[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-lfpwu3:focus-within {
+.cache-o6fe5l:focus-within {
   border: 1px solid #4f0599;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-lfpwu3 .input__tel__container {
+.cache-o6fe5l ul[role='listbox'] {
+  background: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+  border: none;
+}
+
+.cache-o6fe5l .iti__divider {
+  border-color: #e6e9f0;
+}
+
+.cache-o6fe5l .input__tel__container {
   border: none;
   width: calc(100%-2px);
   -webkit-box-flex: 1;
@@ -6816,31 +6856,31 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   flex-grow: 1;
 }
 
-.cache-lfpwu3 .input__tel__container .iti__selected-flag {
+.cache-o6fe5l .input__tel__container .iti__selected-flag {
   background-color: inherit;
   outline: none;
 }
 
-.cache-lfpwu3 .input__tel__container .iti__selected-flag:hover,
-.cache-lfpwu3 .input__tel__container .iti__selected-flag:focus {
+.cache-o6fe5l .input__tel__container .iti__selected-flag:hover,
+.cache-o6fe5l .input__tel__container .iti__selected-flag:focus {
   background-color: inherit;
 }
 
-.cache-lfpwu3 .input__tel__container .iti__flag-container {
+.cache-o6fe5l .input__tel__container .iti__flag-container {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.cache-lfpwu3 .input__tel__container .iti__selected-dial-code {
+.cache-o6fe5l .input__tel__container .iti__selected-dial-code {
   padding-left: 5px;
 }
 
-.cache-lfpwu3 .input__tel__container .iti__flag {
+.cache-o6fe5l .input__tel__container .iti__flag {
   background-image: url(test-file-stub);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cache-lfpwu3 .input__tel__container .iti__flag {
+  .cache-o6fe5l .input__tel__container .iti__flag {
     background-image: url(test-file-stub);
   }
 }
@@ -6854,14 +6894,32 @@ exports[`PhoneInput renders correctly disabled 1`] = `
   background-color: #ffffff;
 }
 
-.cache-15p91ee {
+.cache-1q3ll4x {
   height: 100%;
   border: none;
   outline: none;
   width: 100%;
+  background: #ffffff;
+  color: #4a4f62;
 }
 
-.cache-15p91ee:disabled {
+.cache-1q3ll4x::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:disabled {
   cursor: not-allowed;
   pointer-events: none;
   background-color: inherit;
@@ -6869,7 +6927,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-lfpwu3 e1wokhi11"
+    class="cache-o6fe5l e1wokhi11"
     disabled=""
   >
     <span
@@ -13557,7 +13615,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
       </div>
       <input
         autocomplete="off"
-        class="cache-15p91ee e1wokhi10"
+        class="cache-1q3ll4x e1wokhi10"
         data-intl-tel-input-id="1"
         disabled=""
         maxlength="50"
@@ -13572,7 +13630,7 @@ exports[`PhoneInput renders correctly disabled 1`] = `
 
 exports[`PhoneInput renders correctly with change 1`] = `
 <DocumentFragment>
-  .cache-legdvu {
+  .cache-fvd57y {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13583,17 +13641,28 @@ exports[`PhoneInput renders correctly with change 1`] = `
   padding: 0.8rem 0rem;
 }
 
-.cache-legdvu[aria-disabled='true'] {
+.cache-fvd57y[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-legdvu:focus-within {
+.cache-fvd57y:focus-within {
   border: 1px solid #4f0599;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-legdvu .input__tel__container {
+.cache-fvd57y ul[role='listbox'] {
+  background: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+  border: none;
+}
+
+.cache-fvd57y .iti__divider {
+  border-color: #e6e9f0;
+}
+
+.cache-fvd57y .input__tel__container {
   border: none;
   width: calc(100%-2px);
   -webkit-box-flex: 1;
@@ -13602,31 +13671,31 @@ exports[`PhoneInput renders correctly with change 1`] = `
   flex-grow: 1;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag {
+.cache-fvd57y .input__tel__container .iti__selected-flag {
   background-color: inherit;
   outline: none;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag:hover,
-.cache-legdvu .input__tel__container .iti__selected-flag:focus {
+.cache-fvd57y .input__tel__container .iti__selected-flag:hover,
+.cache-fvd57y .input__tel__container .iti__selected-flag:focus {
   background-color: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__flag-container {
+.cache-fvd57y .input__tel__container .iti__flag-container {
   cursor: inherit;
   pointer-events: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-dial-code {
+.cache-fvd57y .input__tel__container .iti__selected-dial-code {
   padding-left: 5px;
 }
 
-.cache-legdvu .input__tel__container .iti__flag {
+.cache-fvd57y .input__tel__container .iti__flag {
   background-image: url(test-file-stub);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cache-legdvu .input__tel__container .iti__flag {
+  .cache-fvd57y .input__tel__container .iti__flag {
     background-image: url(test-file-stub);
   }
 }
@@ -13640,14 +13709,32 @@ exports[`PhoneInput renders correctly with change 1`] = `
   background-color: #ffffff;
 }
 
-.cache-15p91ee {
+.cache-1q3ll4x {
   height: 100%;
   border: none;
   outline: none;
   width: 100%;
+  background: #ffffff;
+  color: #4a4f62;
 }
 
-.cache-15p91ee:disabled {
+.cache-1q3ll4x::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:disabled {
   cursor: not-allowed;
   pointer-events: none;
   background-color: inherit;
@@ -13655,7 +13742,7 @@ exports[`PhoneInput renders correctly with change 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-legdvu e1wokhi11"
+    class="cache-fvd57y e1wokhi11"
   >
     <span
       class="cache-14ac4kz e1wokhi12"
@@ -20342,7 +20429,7 @@ exports[`PhoneInput renders correctly with change 1`] = `
       </div>
       <input
         autocomplete="off"
-        class="cache-15p91ee e1wokhi10"
+        class="cache-1q3ll4x e1wokhi10"
         data-intl-tel-input-id="4"
         id="tel-id"
         maxlength="50"
@@ -20358,7 +20445,7 @@ exports[`PhoneInput renders correctly with change 1`] = `
 
 exports[`PhoneInput renders correctly with default value 1`] = `
 <DocumentFragment>
-  .cache-legdvu {
+  .cache-fvd57y {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20369,17 +20456,28 @@ exports[`PhoneInput renders correctly with default value 1`] = `
   padding: 0.8rem 0rem;
 }
 
-.cache-legdvu[aria-disabled='true'] {
+.cache-fvd57y[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-legdvu:focus-within {
+.cache-fvd57y:focus-within {
   border: 1px solid #4f0599;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-legdvu .input__tel__container {
+.cache-fvd57y ul[role='listbox'] {
+  background: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+  border: none;
+}
+
+.cache-fvd57y .iti__divider {
+  border-color: #e6e9f0;
+}
+
+.cache-fvd57y .input__tel__container {
   border: none;
   width: calc(100%-2px);
   -webkit-box-flex: 1;
@@ -20388,31 +20486,31 @@ exports[`PhoneInput renders correctly with default value 1`] = `
   flex-grow: 1;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag {
+.cache-fvd57y .input__tel__container .iti__selected-flag {
   background-color: inherit;
   outline: none;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag:hover,
-.cache-legdvu .input__tel__container .iti__selected-flag:focus {
+.cache-fvd57y .input__tel__container .iti__selected-flag:hover,
+.cache-fvd57y .input__tel__container .iti__selected-flag:focus {
   background-color: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__flag-container {
+.cache-fvd57y .input__tel__container .iti__flag-container {
   cursor: inherit;
   pointer-events: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-dial-code {
+.cache-fvd57y .input__tel__container .iti__selected-dial-code {
   padding-left: 5px;
 }
 
-.cache-legdvu .input__tel__container .iti__flag {
+.cache-fvd57y .input__tel__container .iti__flag {
   background-image: url(test-file-stub);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cache-legdvu .input__tel__container .iti__flag {
+  .cache-fvd57y .input__tel__container .iti__flag {
     background-image: url(test-file-stub);
   }
 }
@@ -20426,14 +20524,32 @@ exports[`PhoneInput renders correctly with default value 1`] = `
   background-color: #ffffff;
 }
 
-.cache-15p91ee {
+.cache-1q3ll4x {
   height: 100%;
   border: none;
   outline: none;
   width: 100%;
+  background: #ffffff;
+  color: #4a4f62;
 }
 
-.cache-15p91ee:disabled {
+.cache-1q3ll4x::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:disabled {
   cursor: not-allowed;
   pointer-events: none;
   background-color: inherit;
@@ -20441,7 +20557,7 @@ exports[`PhoneInput renders correctly with default value 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-legdvu e1wokhi11"
+    class="cache-fvd57y e1wokhi11"
   >
     <span
       class="cache-14ac4kz e1wokhi12"
@@ -27128,7 +27244,7 @@ exports[`PhoneInput renders correctly with default value 1`] = `
       </div>
       <input
         autocomplete="off"
-        class="cache-15p91ee e1wokhi10"
+        class="cache-1q3ll4x e1wokhi10"
         data-intl-tel-input-id="2"
         maxlength="50"
         placeholder="+33 6 12 34 56 78"
@@ -27142,7 +27258,7 @@ exports[`PhoneInput renders correctly with default value 1`] = `
 
 exports[`PhoneInput renders correctly with props 1`] = `
 <DocumentFragment>
-  .cache-legdvu {
+  .cache-fvd57y {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -27153,17 +27269,28 @@ exports[`PhoneInput renders correctly with props 1`] = `
   padding: 0.8rem 0rem;
 }
 
-.cache-legdvu[aria-disabled='true'] {
+.cache-fvd57y[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-legdvu:focus-within {
+.cache-fvd57y:focus-within {
   border: 1px solid #4f0599;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-legdvu .input__tel__container {
+.cache-fvd57y ul[role='listbox'] {
+  background: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+  border: none;
+}
+
+.cache-fvd57y .iti__divider {
+  border-color: #e6e9f0;
+}
+
+.cache-fvd57y .input__tel__container {
   border: none;
   width: calc(100%-2px);
   -webkit-box-flex: 1;
@@ -27172,31 +27299,31 @@ exports[`PhoneInput renders correctly with props 1`] = `
   flex-grow: 1;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag {
+.cache-fvd57y .input__tel__container .iti__selected-flag {
   background-color: inherit;
   outline: none;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-flag:hover,
-.cache-legdvu .input__tel__container .iti__selected-flag:focus {
+.cache-fvd57y .input__tel__container .iti__selected-flag:hover,
+.cache-fvd57y .input__tel__container .iti__selected-flag:focus {
   background-color: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__flag-container {
+.cache-fvd57y .input__tel__container .iti__flag-container {
   cursor: inherit;
   pointer-events: inherit;
 }
 
-.cache-legdvu .input__tel__container .iti__selected-dial-code {
+.cache-fvd57y .input__tel__container .iti__selected-dial-code {
   padding-left: 5px;
 }
 
-.cache-legdvu .input__tel__container .iti__flag {
+.cache-fvd57y .input__tel__container .iti__flag {
   background-image: url(test-file-stub);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cache-legdvu .input__tel__container .iti__flag {
+  .cache-fvd57y .input__tel__container .iti__flag {
     background-image: url(test-file-stub);
   }
 }
@@ -27210,14 +27337,32 @@ exports[`PhoneInput renders correctly with props 1`] = `
   background-color: #ffffff;
 }
 
-.cache-15p91ee {
+.cache-1q3ll4x {
   height: 100%;
   border: none;
   outline: none;
   width: 100%;
+  background: #ffffff;
+  color: #4a4f62;
 }
 
-.cache-15p91ee:disabled {
+.cache-1q3ll4x::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1q3ll4x:disabled {
   cursor: not-allowed;
   pointer-events: none;
   background-color: inherit;
@@ -27225,7 +27370,7 @@ exports[`PhoneInput renders correctly with props 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-legdvu e1wokhi11"
+    class="cache-fvd57y e1wokhi11"
   >
     <span
       class="cache-14ac4kz e1wokhi12"
@@ -33912,7 +34057,7 @@ exports[`PhoneInput renders correctly with props 1`] = `
       </div>
       <input
         autocomplete="off"
-        class="cache-15p91ee e1wokhi10"
+        class="cache-1q3ll4x e1wokhi10"
         data-intl-tel-input-id="3"
         id="tel-id"
         maxlength="50"
