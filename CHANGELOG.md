@@ -1,3 +1,17 @@
+### [0.145.2](https://github.com/scaleway/scaleway-ui/compare/v0.145.1...v0.145.2) (2022-04-25)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.0 ([#1410](https://github.com/scaleway/scaleway-ui/issues/1410)) ([e20d434](https://github.com/scaleway/scaleway-ui/commit/e20d43410a4ebe78bbc56f9e4bd3f49a8e0dd681))
+* **devdeps:** update dependency @types/react-dom to v18.0.2 ([#1406](https://github.com/scaleway/scaleway-ui/issues/1406)) ([d3b1880](https://github.com/scaleway/scaleway-ui/commit/d3b188034c40fa3d1b02cbca31479902a4fed8be))
+
+
+### :bug: Bug Fixes
+
+* dark theme support for phone input component ([#1396](https://github.com/scaleway/scaleway-ui/issues/1396)) ([b87d92d](https://github.com/scaleway/scaleway-ui/commit/b87d92dd8d1c5288e651183fbdefa8697d13f606))
+* removed and fixed notice proptypes ([#1397](https://github.com/scaleway/scaleway-ui/issues/1397)) ([9391192](https://github.com/scaleway/scaleway-ui/commit/93911925a4ac5af1d7fef1ecfa845ec8531123cb))
+
 ### [0.145.1](https://github.com/scaleway/scaleway-ui/compare/v0.145.0...v0.145.1) (2022-04-25)
 
 
