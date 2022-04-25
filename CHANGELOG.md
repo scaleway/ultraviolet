@@ -1,3 +1,20 @@
+### [0.145.1](https://github.com/scaleway/scaleway-ui/compare/v0.145.0...v0.145.1) (2022-04-25)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/checkout action to v3.0.2 ([#1404](https://github.com/scaleway/scaleway-ui/issues/1404)) ([54e3c47](https://github.com/scaleway/scaleway-ui/commit/54e3c4736b4aa6f0151af1f761e8a8f94101b6cf))
+* **devdeps:** update codecov/codecov-action action to v3.1.0 ([#1405](https://github.com/scaleway/scaleway-ui/issues/1405)) ([49b8d59](https://github.com/scaleway/scaleway-ui/commit/49b8d59bff6d16088311c73b9ca072007bb26c55))
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v13.2.1 ([#1400](https://github.com/scaleway/scaleway-ui/issues/1400)) ([3cbd269](https://github.com/scaleway/scaleway-ui/commit/3cbd269ee071f36cb4c91da34b614abeae8a9dda))
+* **devdeps:** update dependency babel-loader to v8.2.5 ([#1401](https://github.com/scaleway/scaleway-ui/issues/1401)) ([b848e71](https://github.com/scaleway/scaleway-ui/commit/b848e719e8fd32bda89c8aab01013a4a2f0645c8))
+* **devdeps:** update node.js to v18 ([#1402](https://github.com/scaleway/scaleway-ui/issues/1402)) ([81a334b](https://github.com/scaleway/scaleway-ui/commit/81a334b5b5f0c3a034446ab4c2221d1950e6723f))
+* **devdeps:** update pnpm to v6.32.9 ([#1398](https://github.com/scaleway/scaleway-ui/issues/1398)) ([1251554](https://github.com/scaleway/scaleway-ui/commit/12515546165e1d90a0c30ba832faf0dfc65bb499))
+
+
+### :bug: Bug Fixes
+
+* stepper changes ([#1386](https://github.com/scaleway/scaleway-ui/issues/1386)) ([df7deaf](https://github.com/scaleway/scaleway-ui/commit/df7deaf1dfa8b4f04c9a9f0c84896fdad23e333f))
+
 ## [0.145.0](https://github.com/scaleway/scaleway-ui/compare/v0.144.5...v0.145.0) (2022-04-20)
 
 
