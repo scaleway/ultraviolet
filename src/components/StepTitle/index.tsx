@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 import Bullet from '../Bullet'
 
 export const Step = styled('div', {
@@ -25,42 +25,50 @@ const StyledDiv = styled('div', {
 
 export type Sizes = 'small' | 'medium' | undefined
 
-interface StepTitleProps {
-  bulletText: string
+type ContentProps =
+  | { bulletIcon: ComponentProps<typeof Bullet>['icon']; bulletText?: never }
+  | { bulletIcon?: never; bulletText: string }
+
+type StepTitleProps = {
+  bulletVariant?: ComponentProps<typeof Bullet>['variant']
   size?: Sizes
   disabled?: boolean
-  keyPrefix?: string
   children: ReactNode
-}
+} & ContentProps
 
 const StepTitle = ({
   bulletText,
+  bulletIcon,
+  bulletVariant,
   children,
-  keyPrefix,
   size = 'medium',
   disabled = false,
 }: StepTitleProps) => (
-  <Step
-    key={`${keyPrefix ? `${keyPrefix}-` : ''}step-${bulletText}`}
-    disabled={disabled}
-  >
-    <Bullet
-      text={bulletText}
-      size={size}
-      variant={disabled ? 'disabled' : 'default'}
-    />
+  <Step disabled={disabled}>
+    {bulletIcon ? (
+      <Bullet
+        icon={bulletIcon}
+        size={size}
+        variant={disabled ? 'disabled' : bulletVariant}
+      />
+    ) : null}
+    {bulletText ? (
+      <Bullet
+        text={bulletText}
+        size={size}
+        variant={disabled ? 'disabled' : bulletVariant}
+      />
+    ) : null}
     <StyledDiv size={size}>{children}</StyledDiv>
   </Step>
 )
 
 StepTitle.propTypes = {
-  bulletText: PropTypes.string.isRequired,
+  bulletIcon: PropTypes.string,
+  bulletText: PropTypes.string,
+  bulletVariant: PropTypes.string,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
-  /**
-   * Add a prefix if you have multiple StepTitle in a same page.
-   */
-  keyPrefix: PropTypes.string,
   size: PropTypes.string,
 }
 

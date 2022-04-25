@@ -21,7 +21,6 @@ const Template: Story<ComponentProps<typeof StepTitle>> = args => (
 export const Default = Template.bind({})
 
 Default.args = {
-  ...Template.args,
   bulletText: '1',
   children: 'First',
 }
@@ -55,10 +54,37 @@ Disabled.parameters = {
   },
 }
 Disabled.args = {
-  ...Template.args,
   bulletText: 'A',
   children: 'First',
   disabled: true,
+}
+
+export const BulletVariant = Template.bind({})
+BulletVariant.parameters = {
+  docs: {
+    story: {
+      description: 'Set a bullet variant state using `bulletVariant` property.',
+    },
+  },
+}
+BulletVariant.args = {
+  bulletText: 'A',
+  bulletVariant: 'success',
+  children: 'First',
+}
+
+export const BulletIcon = Template.bind({})
+BulletIcon.parameters = {
+  docs: {
+    story: {
+      description: 'Set a bullet icon state using `bulletIcon` property.',
+    },
+  },
+}
+BulletIcon.args = {
+  bulletIcon: 'check',
+  bulletVariant: 'success',
+  children: 'First',
 }
 
 export const List = Template.bind({})
@@ -73,7 +99,9 @@ List.decorators = [
   () => (
     <div>
       {['First', 'Second', 'Third'].map((rank, index) => (
-        <StepTitle bulletText={(index + 1).toString()}>{rank}</StepTitle>
+        <StepTitle key={rank} bulletText={(index + 1).toString()}>
+          {rank}
+        </StepTitle>
       ))}
     </div>
   ),
