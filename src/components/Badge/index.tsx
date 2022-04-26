@@ -74,15 +74,6 @@ const generateStyles = ({
   }
 }
 
-type BadgeProps = {
-  variant?: Color
-  size?: keyof typeof SIZES
-  prominence?: keyof typeof PROMINENCES
-  icon?: IconName
-  disabled?: boolean
-  className?: string
-}
-
 const StyledBox = styled('div', {
   shouldForwardProp: prop => !['variant', 'size'].includes(prop.toString()),
 })<{ size: number; variant: string }>`
@@ -100,6 +91,18 @@ const StyledBox = styled('div', {
   height: ${({ size }) => size}px;
   ${({ variant }) => variant}
 `
+
+type BadgeProps = {
+  variant?: Color
+  size?: keyof typeof SIZES
+  prominence?: keyof typeof PROMINENCES
+  /**
+   * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
+   */
+  icon?: IconName
+  disabled?: boolean
+  className?: string
+}
 
 const Badge: FunctionComponent<BadgeProps> = ({
   variant = 'neutral',
@@ -128,16 +131,20 @@ const Badge: FunctionComponent<BadgeProps> = ({
     [prominence, theme],
   )
 
+  const sizeValue = SIZES[size]
+
   return (
     <StyledBox
       role="status"
       aria-label={ariaLabel}
       as="span"
       variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
-      size={SIZES[size]}
+      size={sizeValue}
       className={className}
     >
-      {icon ? <Icon name={icon} size={12} /> : null}
+      {icon && sizeValue !== SIZES.small ? (
+        <Icon name={icon} size={16} />
+      ) : null}
       <StyledTypography
         fontSize={TEXT_SIZES[size]}
         fontWeight={500}
