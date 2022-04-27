@@ -23,7 +23,7 @@ const StyledDiv = styled('div', {
   font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
 `
 
-export type Sizes = 'small' | 'medium' | undefined
+export type Sizes = 'small' | 'medium'
 
 type ContentProps =
   | { bulletIcon: ComponentProps<typeof Bullet>['icon']; bulletText?: never }
