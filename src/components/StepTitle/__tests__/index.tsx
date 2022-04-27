@@ -11,9 +11,9 @@ describe('StepTitle', () => {
       <StepTitle bulletIcon="circle">Item 1</StepTitle>,
     ))
 
-  test('renders correctly with bulletIcon & bulletVariant', () =>
+  test('renders correctly with bulletIcon & variant', () =>
     shouldMatchEmotionSnapshot(
-      <StepTitle bulletIcon="circle" bulletVariant="success">
+      <StepTitle bulletIcon="circle" variant="success">
         Item 1
       </StepTitle>,
     ))

@@ -59,18 +59,18 @@ Disabled.args = {
   disabled: true,
 }
 
-export const BulletVariant = Template.bind({})
-BulletVariant.parameters = {
+export const Variant = Template.bind({})
+Variant.parameters = {
   docs: {
     story: {
-      description: 'Set a bullet variant state using `bulletVariant` property.',
+      description: 'Set a bullet variant state using `variant` property.',
     },
   },
 }
-BulletVariant.args = {
+Variant.args = {
   bulletText: 'A',
-  bulletVariant: 'success',
   children: 'First',
+  variant: 'success',
 }
 
 export const BulletIcon = Template.bind({})
@@ -83,8 +83,8 @@ BulletIcon.parameters = {
 }
 BulletIcon.args = {
   bulletIcon: 'check',
-  bulletVariant: 'success',
   children: 'First',
+  variant: 'success',
 }
 
 export const List = Template.bind({})

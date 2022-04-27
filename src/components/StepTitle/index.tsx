@@ -30,7 +30,7 @@ type ContentProps =
   | { bulletIcon?: never; bulletText: string }
 
 type StepTitleProps = {
-  bulletVariant?: ComponentProps<typeof Bullet>['variant']
+  variant?: ComponentProps<typeof Bullet>['variant']
   size?: Sizes
   disabled?: boolean
   children: ReactNode
@@ -39,7 +39,7 @@ type StepTitleProps = {
 const StepTitle = ({
   bulletText,
   bulletIcon,
-  bulletVariant,
+  variant,
   children,
   size = 'medium',
   disabled = false,
@@ -49,14 +49,14 @@ const StepTitle = ({
       <Bullet
         icon={bulletIcon}
         size={size}
-        variant={disabled ? 'disabled' : bulletVariant}
+        variant={disabled ? 'disabled' : variant}
       />
     ) : null}
     {bulletText ? (
       <Bullet
         text={bulletText}
         size={size}
-        variant={disabled ? 'disabled' : bulletVariant}
+        variant={disabled ? 'disabled' : variant}
       />
     ) : null}
     <StyledDiv size={size}>{children}</StyledDiv>
@@ -66,10 +66,10 @@ const StepTitle = ({
 StepTitle.propTypes = {
   bulletIcon: PropTypes.string,
   bulletText: PropTypes.string,
-  bulletVariant: PropTypes.string,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   size: PropTypes.string,
+  variant: PropTypes.string,
 }
 
 export default StepTitle
