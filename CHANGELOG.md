@@ -1,3 +1,18 @@
+### [0.145.3](https://github.com/scaleway/scaleway-ui/compare/v0.145.2...v0.145.3) (2022-04-27)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.18 ([#1415](https://github.com/scaleway/scaleway-ui/issues/1415)) ([ff0018d](https://github.com/scaleway/scaleway-ui/commit/ff0018df1cf775bd6d94aee30563b3df0ce3e424))
+* **devdeps:** update dependency jest-junit to v13.2.0 ([#1413](https://github.com/scaleway/scaleway-ui/issues/1413)) ([019055d](https://github.com/scaleway/scaleway-ui/commit/019055d6d321c6bd9d11093d8e605c3182fa31c6))
+* **devdeps:** update dependency lint-staged to v12.4.0 ([#1412](https://github.com/scaleway/scaleway-ui/issues/1412)) ([6699fef](https://github.com/scaleway/scaleway-ui/commit/6699fefb528af463163b44e2fac0c9090566d337))
+* **devdeps:** update pnpm to v6.32.10 ([#1414](https://github.com/scaleway/scaleway-ui/issues/1414)) ([12612b2](https://github.com/scaleway/scaleway-ui/commit/12612b29889c710e6e6499982b4fb755dee69409))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.4.1 ([#1407](https://github.com/scaleway/scaleway-ui/issues/1407)) ([be9e58f](https://github.com/scaleway/scaleway-ui/commit/be9e58fe9662f8fa69bc39cfb31259aa4a2d3cda))
+
 ### [0.145.2](https://github.com/scaleway/scaleway-ui/compare/v0.145.1...v0.145.2) (2022-04-25)
 
 
