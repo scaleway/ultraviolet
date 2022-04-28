@@ -59,6 +59,8 @@ const StyledRow = styled(Box, {
   shouldForwardProp: prop =>
     ![
       'animated',
+      'animation',
+      'animationDuration',
       'disabled',
       'selected',
       'highlighted',

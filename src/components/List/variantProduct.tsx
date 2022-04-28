@@ -64,6 +64,8 @@ const StyledRow = styled('details', {
   shouldForwardProp: prop =>
     ![
       'animated',
+      'animation',
+      'animationDuration',
       'openable',
       'alert',
       'highlighted',
