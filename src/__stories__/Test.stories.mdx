@@ -41,7 +41,7 @@ test(`click checkbox`, async () => {
   const node = renderWithTheme(<input role="checkbox" />)
 
   const input = node.getByRole('checkbox')
-  userEvent.click(input)
+  await userEvent.click(input)
   expect(input.getAttribute('aria-checked')).toBe('true')
 })
 ```
@@ -61,7 +61,7 @@ test(`click and snapshot checkbox`, async () =>
   shouldMatchEmotionSnapshot(<input role="checkbox" />, {
     transform: async ({ getByRole }) => {
       const input = getByRole('checkbox')
-      userEvent.click(input)
+      await userEvent.click(input)
     },
   }))
 ```

@@ -107,7 +107,7 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
-  test('renders with click event', () => {
+  test('renders with click event', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test">
         Checkbox Label
@@ -115,11 +115,11 @@ describe('Checkbox', () => {
     )
 
     const input = node.getByRole('checkbox', { hidden: true })
-    userEvent.click(input)
+    await userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
 
-  test('renders with click event with progress', () => {
+  test('renders with click event with progress', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test" progress>
         Checkbox Label
@@ -127,7 +127,7 @@ describe('Checkbox', () => {
     )
 
     const input = node.getByRole('checkbox', { hidden: true })
-    userEvent.click(input)
+    await userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
 

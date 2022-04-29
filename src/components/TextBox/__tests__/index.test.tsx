@@ -124,11 +124,11 @@ describe('TextBox', () => {
     shouldMatchEmotionSnapshot(
       <TextBox type="toggleable-password" name="password" />,
       {
-        transform: node => {
+        transform: async node => {
           const button = node.getByTitle('Show')
-          userEvent.click(button)
-          userEvent.type(button, '{enter}')
-          userEvent.type(button, '{space}')
+          await userEvent.click(button)
+          await userEvent.type(button, '{enter}')
+          await userEvent.type(button, '{space}')
         },
       },
     ))
@@ -144,11 +144,11 @@ describe('TextBox', () => {
     shouldMatchEmotionSnapshot(
       <TextBox random="test" name="test" onChange={() => {}} />,
       {
-        transform: node => {
+        transform: async node => {
           const button = node.getByTitle('Randomize')
-          userEvent.click(button)
-          userEvent.type(button, '{enter}')
-          userEvent.type(button, '{space}')
+          await userEvent.click(button)
+          await userEvent.type(button, '{enter}')
+          await userEvent.type(button, '{space}')
         },
       },
     ))

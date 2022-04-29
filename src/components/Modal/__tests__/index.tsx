@@ -65,9 +65,9 @@ describe('Modal', () => {
         <div>modal</div>
       </Modal>,
       {
-        transform: node => {
+        transform: async node => {
           const closeButton = node.getByTitle('close')
-          userEvent.click(closeButton)
+          await userEvent.click(closeButton)
           expect(count).toBe(1)
         },
       },

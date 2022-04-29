@@ -77,11 +77,11 @@ describe('LineChart', () => {
     shouldMatchEmotionSnapshot(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
       {
-        transform: () => {
+        transform: async () => {
           const line = document.querySelector('svg[role="img"] g path')
           if (!line) throw new Error('LineChart line path not found')
-          userEvent.unhover(line)
-          userEvent.hover(line)
+          await userEvent.unhover(line)
+          await userEvent.hover(line)
         },
       },
     ))

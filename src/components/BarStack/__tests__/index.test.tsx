@@ -44,19 +44,19 @@ describe('BarStack', () => {
         ]}
       />,
       {
-        transform: node => {
+        transform: async node => {
           const helloDiv = node.getByText('Hello')
-          userEvent.click(helloDiv)
+          await userEvent.click(helloDiv)
           expect(onClick).toBeCalledTimes(1)
           expect(onMouseEnter).toBeCalledTimes(1)
           expect(onMouseDown).toBeCalledTimes(1)
           expect(onMouseUp).toBeCalledTimes(1)
           expect(onDoubleClick).toBeCalledTimes(0)
           expect(onMouseLeave).toBeCalledTimes(0)
-          userEvent.dblClick(helloDiv)
+          await userEvent.dblClick(helloDiv)
           expect(onDoubleClick).toBeCalledTimes(1)
           expect(onClick).toBeCalledTimes(3)
-          userEvent.unhover(helloDiv)
+          await userEvent.unhover(helloDiv)
           expect(onMouseLeave).toBeCalledTimes(1)
         },
       },

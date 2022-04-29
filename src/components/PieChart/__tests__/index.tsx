@@ -48,11 +48,11 @@ describe('PieChart', () => {
     shouldMatchEmotionSnapshot(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
-        transform: () => {
+        transform: async () => {
           const slice = document.querySelector('svg g path')
           if (!slice) throw new Error('PieChart slice path not found')
-          userEvent.unhover(slice)
-          userEvent.hover(slice)
+          await userEvent.unhover(slice)
+          await userEvent.hover(slice)
         },
       },
     ))
@@ -61,10 +61,10 @@ describe('PieChart', () => {
     shouldMatchEmotionSnapshot(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
-        transform: ({ getByTestId }) => {
+        transform: async ({ getByTestId }) => {
           const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
-          userEvent.unhover(getByTestId(id))
-          userEvent.hover(getByTestId(id))
+          await userEvent.unhover(getByTestId(id))
+          await userEvent.hover(getByTestId(id))
         },
       },
     ))

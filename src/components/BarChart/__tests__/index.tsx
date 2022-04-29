@@ -53,11 +53,11 @@ describe('BarChart', () => {
         })}
       />,
       {
-        transform: () => {
+        transform: async () => {
           const bar = document.querySelector('svg[role="img"] g line')
           if (!bar) throw new Error('BarChart column not found')
-          userEvent.unhover(bar)
-          userEvent.hover(bar)
+          await userEvent.unhover(bar)
+          await userEvent.hover(bar)
         },
       },
     ))

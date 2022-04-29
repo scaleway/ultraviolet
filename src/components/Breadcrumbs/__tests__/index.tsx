@@ -52,9 +52,9 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
       {
-        transform: ({ getByText }) => {
+        transform: async ({ getByText }) => {
           const step3 = getByText('Step 3')
-          userEvent.click(step3)
+          await userEvent.click(step3)
           expect(onClick).toHaveBeenCalledTimes(1)
         },
       },
@@ -73,9 +73,9 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
       {
-        transform: ({ getByText }) => {
+        transform: async ({ getByText }) => {
           const step3 = getByText('Step 3')
-          userEvent.click(step3)
+          await userEvent.click(step3)
           expect(onClick).toHaveBeenCalledTimes(1)
         },
       },

@@ -67,9 +67,9 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={fr} onChange={() => {}} />,
       {
-        transform: ({ getByLabelText }) => {
+        transform: async ({ getByLabelText }) => {
           const buttonContainer = getByLabelText('Date')
-          userEvent.click(buttonContainer)
+          await userEvent.click(buttonContainer)
         },
       },
     ))
@@ -78,9 +78,9 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={es} onChange={() => {}} />,
       {
-        transform: ({ getByLabelText }) => {
+        transform: async ({ getByLabelText }) => {
           const buttonContainer = getByLabelText('Date')
-          userEvent.click(buttonContainer)
+          await userEvent.click(buttonContainer)
         },
       },
     ))
@@ -89,9 +89,9 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={ru} onChange={() => {}} />,
       {
-        transform: ({ getByLabelText }) => {
+        transform: async ({ getByLabelText }) => {
           const buttonContainer = getByLabelText('Date')
-          userEvent.click(buttonContainer)
+          await userEvent.click(buttonContainer)
         },
       },
     ))

@@ -104,7 +104,7 @@ describe('Tags', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByDisplayValue('')
           expect(input).toBeInTheDocument()
           const HelloTag = node.queryByText(/hello/)
@@ -112,7 +112,7 @@ describe('Tags', () => {
 
           // remove Tag
           const tagClose = HelloTag?.nextElementSibling as HTMLButtonElement
-          userEvent.click(tagClose)
+          await userEvent.click(tagClose)
 
           // check Tag was removed
           expect(HelloTag).not.toBeInTheDocument()
@@ -131,7 +131,7 @@ describe('Tags', () => {
         tags={['throw', 'error']}
       />,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByDisplayValue('')
           expect(input).toBeInTheDocument()
           const ErrorTag = node.queryByText(/error/)
@@ -139,7 +139,7 @@ describe('Tags', () => {
 
           // remove Tag
           const tagClose = ErrorTag?.nextElementSibling as HTMLButtonElement
-          userEvent.click(tagClose)
+          await userEvent.click(tagClose)
         },
       },
     ))
@@ -155,7 +155,7 @@ describe('Tags', () => {
       {
         transform: async ({ getByDisplayValue, getByText }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          userEvent.type(input, 'test{enter}')
+          await userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
           expect(getByText('test')).toBeInTheDocument()
         },
@@ -176,7 +176,7 @@ describe('Tags', () => {
       {
         transform: async ({ getByDisplayValue }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          userEvent.type(input, 'test{enter}')
+          await userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
         },
       },
@@ -191,13 +191,13 @@ describe('Tags', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: ({ getByDisplayValue, queryByText }) => {
+        transform: async ({ getByDisplayValue, queryByText }) => {
           const input = getByDisplayValue('')
           const LastTag = queryByText(/world/)
           expect(LastTag).toBeInTheDocument()
-          userEvent.click(input)
+          await userEvent.click(input)
           expect(input).toHaveFocus()
-          userEvent.keyboard('{backspace}')
+          await userEvent.keyboard('{backspace}')
           expect(LastTag).not.toBeInTheDocument()
         },
       },
@@ -214,7 +214,7 @@ describe('Tags', () => {
       {
         transform: async ({ getByDisplayValue, getByText }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          userEvent.paste(input, '', {
+          await userEvent.paste(input, '', {
             // @ts-expect-error we mock, don't care about the other values
             clipboardData: { getData: () => 'test' },
           })
@@ -235,9 +235,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: ({ getByDisplayValue }) => {
+        transform: async ({ getByDisplayValue }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          userEvent.paste(input, '', {
+          await userEvent.paste(input, '', {
             // @ts-expect-error we mock, don't care about the other values
             clipboardData: { getData: () => 'test' },
           })
