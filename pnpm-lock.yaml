@@ -25,7 +25,7 @@ specifiers:
   '@nivo/scales': 0.79.0
   '@rollup/plugin-babel': 5.3.1
   '@rollup/plugin-node-resolve': 13.2.1
-  '@rollup/plugin-url': 6.1.0
+  '@rollup/plugin-url': 7.0.0
   '@scaleway/eslint-config-react': 3.4.19
   '@scaleway/jest-helpers': 1.2.4
   '@scaleway/random-name': 3.0.2
@@ -150,7 +150,7 @@ devDependencies:
   '@emotion/styled': 11.8.1_3ce471551e6e06bcaecec3488aa5ccb5
   '@rollup/plugin-babel': 5.3.1_@babel+core@7.17.9+rollup@2.70.2
   '@rollup/plugin-node-resolve': 13.2.1_rollup@2.70.2
-  '@rollup/plugin-url': 6.1.0_rollup@2.70.2
+  '@rollup/plugin-url': 7.0.0_rollup@2.70.2
   '@scaleway/eslint-config-react': 3.4.19_eslint@8.14.0+typescript@4.6.3
   '@scaleway/jest-helpers': 1.2.4_f370f735164a03a12cea0cc89593cbee
   '@scaleway/use-i18n': 3.3.1_react-dom@17.0.2+react@17.0.2
@@ -1814,31 +1814,10 @@ packages:
       '@commitlint/types': 16.2.1
     dev: true
 
-  /@commitlint/load/16.2.3:
-    resolution: {integrity: sha512-Hb4OUlMnBUK6UxJEZ/VJ5k0LocIS7PtEMbRXEAA7eSpOgORIFexC4K/RaRpVd5UTtu3M0ST3ddPPijF9rdW6nw==}
-    engines: {node: '>=v12'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 16.2.1
-      '@commitlint/execute-rule': 16.2.1
-      '@commitlint/resolve-extends': 16.2.1
-      '@commitlint/types': 16.2.1
-      '@types/node': 17.0.21
-      chalk: 4.1.2
-      cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 1.0.6_f01b7c141b75a45db67b7d9ae4c261df
-      lodash: 4.17.21
-      resolve-from: 5.0.0
-      typescript: 4.6.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-    optional: true
-
   /@commitlint/load/16.2.4:
     resolution: {integrity: sha512-HjANm3/29ROV+zt4yfaY/K6gpr9Dbzgtlp0kSwZGW0poDXlD/yqVYgPQ6JolJzZii5FUz5R4yVLC15hVL/w60w==}
     engines: {node: '>=v12'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 16.2.1
       '@commitlint/execute-rule': 16.2.1
@@ -3263,13 +3242,13 @@ packages:
       rollup: 2.70.2
     dev: true
 
-  /@rollup/plugin-url/6.1.0_rollup@2.70.2:
-    resolution: {integrity: sha512-FJNWBnBB7nLzbcaGmu1no+U/LlRR67TtgfRFP+VEKSrWlDTE6n9jMns/N4Q/VL6l4x6kTHQX4HQfwTcldaAfHQ==}
+  /@rollup/plugin-url/7.0.0_rollup@2.70.2:
+    resolution: {integrity: sha512-cIWcEObrmEPAU8q8NluGWlCPlQDuoSKvkyI3eOFO4fx6W02mLNj4ZEiUT0X2mKMIvQzoWL1feEK9d1yr1ICgrw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.70.2
+      '@rollup/pluginutils': 4.2.1
       make-dir: 3.1.0
       mime: 2.6.0
       rollup: 2.70.2
@@ -3285,6 +3264,14 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.3.1
       rollup: 2.70.2
+    dev: true
+
+  /@rollup/pluginutils/4.2.1:
+    resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
     dev: true
 
   /@scaleway/eslint-config-react/3.4.19_eslint@8.14.0+typescript@4.6.3:
@@ -5672,7 +5659,7 @@ packages:
       functional-red-black-tree: 1.0.1
       ignore: 5.2.0
       regexpp: 3.2.0
-      semver: 7.3.5
+      semver: 7.3.7
       tsutils: 3.21.0_typescript@4.6.3
       typescript: 4.6.3
     transitivePeerDependencies:
@@ -5745,7 +5732,7 @@ packages:
       debug: 4.3.3
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.5
+      semver: 7.3.7
       tsutils: 3.21.0_typescript@4.6.3
       typescript: 4.6.3
     transitivePeerDependencies:
@@ -8277,7 +8264,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 16.2.3
+      '@commitlint/load': 16.2.4
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -9281,6 +9268,10 @@ packages:
 
   /estree-walker/1.0.1:
     resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
+    dev: true
+
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
 
   /esutils/2.0.3:
