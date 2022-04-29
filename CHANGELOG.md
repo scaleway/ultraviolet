@@ -1,3 +1,21 @@
+### [0.145.4](https://github.com/scaleway/scaleway-ui/compare/v0.145.3...v0.145.4) (2022-04-29)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v16.2.4 ([#1423](https://github.com/scaleway/scaleway-ui/issues/1423)) ([4ed0d74](https://github.com/scaleway/scaleway-ui/commit/4ed0d74c7097f6e6ca8512ede192ccac190536d0))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.19 ([#1416](https://github.com/scaleway/scaleway-ui/issues/1416)) ([7c618e1](https://github.com/scaleway/scaleway-ui/commit/7c618e1b2e5a557df715870aa156c05c6cb7bdb6))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.1 ([#1421](https://github.com/scaleway/scaleway-ui/issues/1421)) ([cf4cd21](https://github.com/scaleway/scaleway-ui/commit/cf4cd2133474e37bab61759938484889309105bb))
+* **devdeps:** update dependency eslint to v8.14.0 ([#1419](https://github.com/scaleway/scaleway-ui/issues/1419)) ([72253fe](https://github.com/scaleway/scaleway-ui/commit/72253fea213e9a93e9757bedd06082630a5057cb))
+* **devdeps:** update dependency lint-staged to v12.4.1 ([#1417](https://github.com/scaleway/scaleway-ui/issues/1417)) ([59ea7cb](https://github.com/scaleway/scaleway-ui/commit/59ea7cb49b75a79c5bc6b479c5ca32375e6d922b))
+* **devdeps:** update docker/setup-buildx-action action to v1.7.0 ([#1420](https://github.com/scaleway/scaleway-ui/issues/1420)) ([2259e65](https://github.com/scaleway/scaleway-ui/commit/2259e65dec00f7801e4c0e6352298db5675476e8))
+* **devdeps:** update pnpm to v6.32.11 ([#1422](https://github.com/scaleway/scaleway-ui/issues/1422)) ([8ec9c10](https://github.com/scaleway/scaleway-ui/commit/8ec9c106cd590f4750e8056fe8ce049f404438c2))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.3.1 ([#1418](https://github.com/scaleway/scaleway-ui/issues/1418)) ([3c9d521](https://github.com/scaleway/scaleway-ui/commit/3c9d5214dcb76b6fc5b3ca17168e71c9d56093d9))
+
 ### [0.145.3](https://github.com/scaleway/scaleway-ui/compare/v0.145.2...v0.145.3) (2022-04-27)
 
 
