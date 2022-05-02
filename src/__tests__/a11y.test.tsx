@@ -19,6 +19,7 @@ const testedComponents = [
   'Placeholder',
   'Reminder',
   'Separator',
+  'Status',
   'StealthCopiable',
   'Stepper',
   'Toaster',

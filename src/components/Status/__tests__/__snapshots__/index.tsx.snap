@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Status render animated 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cache-h473kd-StyledCircle-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #22c8a2;
+  -webkit-animation: animation-0 linear 1s infinite;
+  animation: animation-0 linear 1s infinite;
+}
+
+<div
+    class="cache-h473kd-StyledCircle-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Status renders correctly with type="danger" 1`] = `
+<DocumentFragment>
+  .cache-hn05i3-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #dd3252;
+}
+
+<div
+    class="cache-hn05i3-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Status renders correctly with type="info" 1`] = `
+<DocumentFragment>
+  .cache-1kwzqhx-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f6ed8;
+}
+
+<div
+    class="cache-1kwzqhx-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Status renders correctly with type="neutral" 1`] = `
+<DocumentFragment>
+  .cache-18gs2l6-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4a4f62;
+}
+
+<div
+    class="cache-18gs2l6-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Status renders correctly with type="success" 1`] = `
+<DocumentFragment>
+  .cache-bgp5mr-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #22c8a2;
+}
+
+<div
+    class="cache-bgp5mr-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Status renders correctly with type="warning" 1`] = `
+<DocumentFragment>
+  .cache-uy7h6k-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff8c69;
+}
+
+<div
+    class="cache-uy7h6k-StyledCircle ew1r0gb0"
+  />
+</DocumentFragment>
+`;
