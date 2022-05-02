@@ -1,4 +1,4 @@
-import { Theme, useTheme } from '@emotion/react'
+import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ComponentProps, MouseEventHandler, ReactNode } from 'react'
@@ -118,25 +118,22 @@ const ExtendedReminder = ({
   CustomLink,
   ...props
 }: ExtendedReminderProps) => {
-  const theme = useTheme()
   const badgeVariant = {
-    error: 'error',
+    error: 'danger',
     info: 'info',
     success: 'success',
-    warning: 'beta',
+    warning: 'warning',
   } as const
 
   return (
     <StyledContainer variant={variant} {...props}>
       <StyledBadgeContainer>
-        <StyledBadge size="small" variant={badgeVariant[variant]} as="strong">
-          <Icon
-            mr="4px"
-            color={theme.colorsDeprecated.white}
-            name={icon}
-            size={16}
-            aria-hidden="true"
-          />
+        <StyledBadge
+          size="medium"
+          variant={badgeVariant[variant]}
+          prominence="strong"
+          icon={icon}
+        >
           {badgeText}
         </StyledBadge>
       </StyledBadgeContainer>

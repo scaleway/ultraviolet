@@ -24,7 +24,7 @@ exports[`ExtendedReminder renders correctly with custom link 1`] = `
   text-transform: uppercase;
 }
 
-.cache-1wb4gw6 {
+.cache-vwyhx5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -40,28 +40,41 @@ exports[`ExtendedReminder renders correctly with custom link 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #ff8c69;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #ff8c69;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-c3ofca {
@@ -102,22 +115,26 @@ exports[`ExtendedReminder renders correctly with custom link 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
-        aria-label="beta"
-        class="edgwu7l1 egvl2gp0 cache-1wb4gw6"
+      <div
+        aria-label="warning"
+        as="span"
+        class="edgwu7l1 cache-vwyhx5 egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-c3ofca"
@@ -160,7 +177,7 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   text-transform: uppercase;
 }
 
-.cache-btv0ch {
+.cache-mew9lq {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -176,28 +193,41 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #3f6ed8;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #3f6ed8;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-5nju1t {
@@ -346,22 +376,26 @@ exports[`ExtendedReminder renders correctly with default values 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
+      <div
         aria-label="info"
-        class="edgwu7l1 egvl2gp0 cache-btv0ch"
+        as="span"
+        class="edgwu7l1 cache-mew9lq egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-5nju1t"
@@ -424,7 +458,7 @@ exports[`ExtendedReminder renders correctly with error variant 1`] = `
   text-transform: uppercase;
 }
 
-.cache-bfgam3 {
+.cache-c4n49o {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -440,28 +474,41 @@ exports[`ExtendedReminder renders correctly with error variant 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #dd3252;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #dd3252;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-sd4q3b {
@@ -610,22 +657,26 @@ exports[`ExtendedReminder renders correctly with error variant 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
-        aria-label="error"
-        class="edgwu7l1 egvl2gp0 cache-bfgam3"
+      <div
+        aria-label="danger"
+        as="span"
+        class="edgwu7l1 cache-c4n49o egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-sd4q3b"
@@ -688,7 +739,7 @@ exports[`ExtendedReminder renders correctly with success variant 1`] = `
   text-transform: uppercase;
 }
 
-.cache-1cb56ra {
+.cache-1t5sdpp {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -704,28 +755,41 @@ exports[`ExtendedReminder renders correctly with success variant 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #22c8a2;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #22c8a2;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-13jrwxc {
@@ -874,22 +938,26 @@ exports[`ExtendedReminder renders correctly with success variant 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
+      <div
         aria-label="success"
-        class="edgwu7l1 egvl2gp0 cache-1cb56ra"
+        as="span"
+        class="edgwu7l1 cache-1t5sdpp egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-13jrwxc"
@@ -952,7 +1020,7 @@ exports[`ExtendedReminder renders correctly with warning variant 1`] = `
   text-transform: uppercase;
 }
 
-.cache-1wb4gw6 {
+.cache-vwyhx5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -968,28 +1036,41 @@ exports[`ExtendedReminder renders correctly with warning variant 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #ff8c69;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #ff8c69;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-c3ofca {
@@ -1138,22 +1219,26 @@ exports[`ExtendedReminder renders correctly with warning variant 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
-        aria-label="beta"
-        class="edgwu7l1 egvl2gp0 cache-1wb4gw6"
+      <div
+        aria-label="warning"
+        as="span"
+        class="edgwu7l1 cache-vwyhx5 egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-c3ofca"
@@ -1216,7 +1301,7 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   text-transform: uppercase;
 }
 
-.cache-1wb4gw6 {
+.cache-vwyhx5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1232,28 +1317,41 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
   white-space: nowrap;
   border-radius: 16px;
   padding: 0 16px;
+  gap: 8px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #ff8c69;
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
   height: 24px;
+  color: #ffffff;
+  background: #ff8c69;
   font-weight: 500;
 }
 
-.cache-1iuna2e {
-  fill: #fff;
+.cache-ll8m4i {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1iuna2e.cache-1iuna2e {
+.cache-ll8m4i.cache-ll8m4i {
   vertical-align: middle;
-  margin-right: 4px;
+}
+
+.cache-gxqlf9 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cache-gxqlf9.cache-gxqlf9 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cache-c3ofca {
@@ -1294,22 +1392,26 @@ exports[`ExtendedReminder renders correctly without link 1`] = `
     <div
       class="cache-gmk9s9 edgwu7l3"
     >
-      <strong
-        aria-label="beta"
-        class="edgwu7l1 egvl2gp0 cache-1wb4gw6"
+      <div
+        aria-label="warning"
+        as="span"
+        class="edgwu7l1 cache-vwyhx5 egvl2gp0"
         role="status"
       >
         <svg
-          aria-hidden="true"
-          class="sc-ui-icon etwatq50 cache-1iuna2e"
+          class="sc-ui-icon etwatq50 cache-ll8m4i"
           viewBox="0 0 24 24"
         >
           <path
             d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
           />
         </svg>
-        10 days remaining
-      </strong>
+        <div
+          class="egvl2gp1 e1g1zfwd0 cache-gxqlf9"
+        >
+          10 days remaining
+        </div>
+      </div>
     </div>
     <em
       class="edgwu7l2 e1g1zfwd0 cache-c3ofca"

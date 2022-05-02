@@ -1,5 +1,6 @@
 import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../helpers/jestHelpers'
+import capitalize from '../capitalize'
 import { getUUID, useUUID } from '../ids'
 
 const Component = ({ prefix }: { prefix?: string } = {}) => (
@@ -31,5 +32,11 @@ describe('ids', () => {
 
     test('renders correctly with a prefix', () =>
       shouldMatchEmotionSnapshot(<Component prefix="ah" />))
+  })
+
+  describe('capitalize', () => {
+    test('returns correctly without arguments', () => {
+      expect(capitalize('test')).toBe('Test')
+    })
   })
 })

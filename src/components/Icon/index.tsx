@@ -566,7 +566,7 @@ const StyledIcon = styled(Box, {
   ${sizeStyles}
 `
 
-type IconName = keyof typeof ICONS
+export type IconName = keyof typeof ICONS
 
 type IconProps = {
   size?: number | string
