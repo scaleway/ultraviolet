@@ -1,3 +1,18 @@
+## [0.146.0](https://github.com/scaleway/scaleway-ui/compare/v0.145.4...v0.146.0) (2022-05-02)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-url to v7 ([#1424](https://github.com/scaleway/scaleway-ui/issues/1424)) ([890c7d9](https://github.com/scaleway/scaleway-ui/commit/890c7d9d3065716247af49fb8ad1adfcbbff82b0))
+* **devdeps:** update dependency @types/react-dom to v18.0.3 ([#1426](https://github.com/scaleway/scaleway-ui/issues/1426)) ([0bbfe75](https://github.com/scaleway/scaleway-ui/commit/0bbfe75b8a1530ec97da0b8995b8308c8fb01b83))
+* **devdeps:** update dependency postcss to v8.4.13 ([#1427](https://github.com/scaleway/scaleway-ui/issues/1427)) ([6638d18](https://github.com/scaleway/scaleway-ui/commit/6638d18bc8a78da0f43048b5fab2cc2359552ad6))
+* **devdeps:** update dependency typescript to v4.6.4 ([#1425](https://github.com/scaleway/scaleway-ui/issues/1425)) ([b8f8505](https://github.com/scaleway/scaleway-ui/commit/b8f8505a9d940d1b88f7d0fcaa262ca8f4b5105d))
+
+
+### :gear: Features
+
+* **badge:** refactor component ([#1381](https://github.com/scaleway/scaleway-ui/issues/1381)) ([99b694b](https://github.com/scaleway/scaleway-ui/commit/99b694b7ad404c74564360f0c8b7871fc485248c))
+
 ### [0.145.4](https://github.com/scaleway/scaleway-ui/compare/v0.145.3...v0.145.4) (2022-04-29)
 
 
