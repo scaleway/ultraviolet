@@ -2,9 +2,9 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { MouseEventHandler, ReactNode } from 'react'
-import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
+import Loader from '../Loader'
 import Touchable from '../Touchable'
 
 const disabledStyles = css`
@@ -117,7 +117,7 @@ const Tag = ({
         aria-label="Close tag"
       >
         {isLoading ? (
-          <ActivityIndicator active size={16} />
+          <Loader active size={16} />
         ) : (
           <Icon name="close" size={16} color="gray550" />
         )}

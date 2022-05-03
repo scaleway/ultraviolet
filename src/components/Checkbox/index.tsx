@@ -12,10 +12,10 @@ import {
   CheckboxProps as ReakitCheckboxProps,
   useCheckboxState,
 } from 'reakit/Checkbox'
-import ActivityIndicator from '../ActivityIndicator'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Loader from '../Loader'
 import Typography, { typographyVariants } from '../Typography'
 
 const StyledCheckBoxContainer = styled(Typography)`
@@ -154,7 +154,7 @@ const Checkbox = ({
         />
         {progress ? (
           <StyledActivityContainer hasChildren={hasChildren}>
-            <ActivityIndicator active size={size} />
+            <Loader active size={size} />
           </StyledActivityContainer>
         ) : (
           <StyledIcon

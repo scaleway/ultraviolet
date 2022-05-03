@@ -14,9 +14,9 @@ import React, {
   isValidElement,
   useMemo,
 } from 'react'
-import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
+import Loader from '../Loader'
 import Tooltip from '../Tooltip'
 import UniversalLink from '../UniversalLink'
 
@@ -415,7 +415,7 @@ const FwdButton = ({
             position={children ? 'left' : undefined}
           >
             {progress ? (
-              <ActivityIndicator
+              <Loader
                 active
                 trailColor="transparent"
                 color="currentColor"
@@ -432,7 +432,7 @@ const FwdButton = ({
         {progress === 'right' || (icon && iconPosition === 'right') ? (
           <StyledIconContainer margin={iconMargin} position="right">
             {progress ? (
-              <ActivityIndicator
+              <Loader
                 active
                 trailColor="transparent"
                 color="currentColor"

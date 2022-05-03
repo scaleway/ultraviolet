@@ -13,8 +13,8 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import ActivityIndicator from '../ActivityIndicator'
 import Button from '../Button'
+import Loader from '../Loader'
 import getPageNumbers from './getPageNumbers'
 import usePagination, { UsePaginationReturn } from './usePagination'
 
@@ -145,7 +145,7 @@ const StyledActivityContainer = styled.div`
 
 const DefaultLoaderComponent = () => (
   <StyledActivityContainer>
-    <ActivityIndicator active />
+    <Loader active />
   </StyledActivityContainer>
 )
 

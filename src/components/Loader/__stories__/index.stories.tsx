@@ -1,15 +1,15 @@
 import { Meta } from '@storybook/react'
 import { ComponentProps } from 'react'
-import ActivityIndicator from '..'
+import Loader from '..'
 import { story, withPropValues, withProps } from '../../../__stories__/utils'
 import { colors } from '../../../theme'
 
 export default {
-  component: ActivityIndicator,
-  title: 'Components/Feedback/ActivityIndicator',
+  component: Loader,
+  title: 'Components/Feedback/Loader',
 } as Meta
 
-type ActivitiIndicatorProps = ComponentProps<typeof ActivityIndicator>
+type ActivitiIndicatorProps = ComponentProps<typeof Loader>
 
 export const Template = story<ActivitiIndicatorProps>({
   label: 'Loading example',

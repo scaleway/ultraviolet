@@ -240,7 +240,7 @@ export const Loading = Template.bind({})
 Loading.parameters = {
   docs: {
     storyDescription:
-      'By put `loader` prop to `true` in `list.Body` tag you can display an `ActivityIndicator`',
+      'By put `loader` prop to `true` in `list.Body` tag you can display an `Loader`',
   },
 }
 Loading.decorators = [

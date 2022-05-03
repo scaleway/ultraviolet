@@ -48,7 +48,7 @@ export const LoadingStep = Template.bind({})
 LoadingStep.parameters = {
   docs: {
     storyDescription:
-      'You can put `isLoading` on a step to display an ActivityIndicator on current step.',
+      'You can put `isLoading` on a step to display an Loader on current step.',
   },
 }
 LoadingStep.decorators = [

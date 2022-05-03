@@ -13,8 +13,8 @@ import React, {
   useState,
 } from 'react'
 import orderBy from '../../utils/orderBy'
-import ActivityIndicator from '../ActivityIndicator'
 import Box from '../Box'
+import Loader from '../Loader'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
@@ -90,7 +90,7 @@ function Body<DataType extends Record<string, unknown>>({
 
     return (
       <StyledActivityContainer>
-        <ActivityIndicator active size={50} />
+        <Loader active size={50} />
       </StyledActivityContainer>
     )
   }, [perPage])
