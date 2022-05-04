@@ -1,3 +1,22 @@
+### [0.146.1](https://github.com/scaleway/scaleway-ui/compare/v0.146.0...v0.146.1) (2022-05-04)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.20 ([#1432](https://github.com/scaleway/scaleway-ui/issues/1432)) ([9df5e98](https://github.com/scaleway/scaleway-ui/commit/9df5e98c2848d12b8f7af6dc5bf62d526d38308f))
+* **devdeps:** update dependency storybook-dark-mode to v1.1.0 ([#1430](https://github.com/scaleway/scaleway-ui/issues/1430)) ([cef4fae](https://github.com/scaleway/scaleway-ui/commit/cef4fae560010bb43a148441d8c631278dfecafd))
+* **devdeps:** update node.js to v18.1 ([#1435](https://github.com/scaleway/scaleway-ui/issues/1435)) ([a1a67a6](https://github.com/scaleway/scaleway-ui/commit/a1a67a6f1ea0ea8cb03821981f7b445852658b42))
+
+
+### :zap: Refactor
+
+* rename ActivityIndicator to Loader ([#1433](https://github.com/scaleway/scaleway-ui/issues/1433)) ([06e4640](https://github.com/scaleway/scaleway-ui/commit/06e4640e85c20355f97bd25094715c4312e4e672))
+
+
+### :bug: Bug Fixes
+
+* **tags:** remove inheritance background ([#1436](https://github.com/scaleway/scaleway-ui/issues/1436)) ([438553b](https://github.com/scaleway/scaleway-ui/commit/438553bda8d678bbe80f07f90fbe642a798d19aa))
+
 ## [0.146.0](https://github.com/scaleway/scaleway-ui/compare/v0.145.4...v0.146.0) (2022-05-02)
 
 
