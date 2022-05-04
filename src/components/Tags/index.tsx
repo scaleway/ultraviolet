@@ -73,6 +73,7 @@ const TagsContainer = styled('div', {
 })<TagsContainersProps>`
   display: flex;
   flex-wrap: wrap;
+  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
   ${({ variant, theme }) =>
     variants[variant] ? variants[variant]({ theme }) : variants.base({ theme })}
 `
