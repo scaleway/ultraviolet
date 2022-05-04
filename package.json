@@ -61,6 +61,13 @@
       "eslint --fix --ext js,jsx,ts,tsx"
     ]
   },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "17"
+      }
+    }
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
