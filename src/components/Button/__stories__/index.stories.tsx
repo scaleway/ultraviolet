@@ -62,7 +62,7 @@ export const Progress = Template.bind({})
 Progress.parameters = {
   docs: {
     storyDescription:
-      'Add `ActivityIndicator` by setting progress property to `left` or `right`.',
+      'Add `Loader` by setting progress property to `left` or `right`.',
   },
 }
 Progress.decorators = [

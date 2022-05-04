@@ -1,6 +1,6 @@
 export * from './Grid'
 export { default as ActionBar } from './ActionBar'
-export { default as ActivityIndicator } from './ActivityIndicator'
+export { default as Loader } from './Loader'
 export { default as Alert } from './Alert'
 export { default as Avatar } from './Avatar'
 export { default as Badge } from './Badge'

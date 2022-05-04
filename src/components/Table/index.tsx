@@ -2,8 +2,8 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ReactNode } from 'react'
-import ActivityIndicator from '../ActivityIndicator'
 import Box, { BoxProps } from '../Box'
+import Loader from '../Loader'
 
 const StyledTable = styled(Box.withComponent('table'))`
   table-layout: fixed;
@@ -116,7 +116,7 @@ const BodyLoader = (props: BoxProps & BodyProps) => (
     <Row>
       <BodyCell height={80} position="relative" {...props}>
         <StyledBox>
-          <ActivityIndicator active size={40} />
+          <Loader active size={40} />
         </StyledBox>
       </BodyCell>
     </Row>

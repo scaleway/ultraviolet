@@ -14,7 +14,7 @@ const spin = keyframes`
   to { transform: rotate(360deg); }
 `
 
-type ActivityIndicatorProps = {
+type LoaderProps = {
   active?: boolean
   color?: Color | string
   percentage?: number
@@ -42,7 +42,7 @@ const Text = styled('text', {
   text-anchor: middle;
 `
 
-const ActivityIndicator = ({
+const Loader = ({
   percentage = 20,
   text,
   size = 40,
@@ -51,7 +51,7 @@ const ActivityIndicator = ({
   trailColor = 'neutral',
   active = false,
   label = 'Loading',
-}: ActivityIndicatorProps) => {
+}: LoaderProps) => {
   const theme = useTheme()
 
   const circleRadius = HALF_VIEWBOX_HEIGHT - strokeWidth / 2
@@ -109,7 +109,7 @@ const ActivityIndicator = ({
   )
 }
 
-ActivityIndicator.propTypes = {
+Loader.propTypes = {
   active: PropTypes.bool,
   color: PropTypes.string,
   /**
@@ -126,4 +126,4 @@ ActivityIndicator.propTypes = {
   trailColor: PropTypes.string,
 }
 
-export default ActivityIndicator
+export default Loader

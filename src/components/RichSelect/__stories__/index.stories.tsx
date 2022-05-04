@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React, { ComponentProps, useEffect, useState } from 'react'
 import RichSelect from '..'
-import { ActivityIndicator, Badge, Button } from '../..'
+import { Badge, Button, Loader } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
@@ -318,7 +318,7 @@ LoadingExample.decorators = [
           name="exemple"
           isLoading={isLoading}
           customComponents={{
-            LoadingIndicator: () => <ActivityIndicator active size={24} />,
+            LoadingIndicator: () => <Loader active size={24} />,
           }}
         >
           <RichSelect.Option value="a">Option A</RichSelect.Option>

@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, { ReactNode, WeakValidationMap, isValidElement } from 'react'
 import useMedia from 'use-media'
-import ActivityIndicator from '../ActivityIndicator'
 import Icon from '../Icon'
+import Loader from '../Loader'
 
 const sizes = {
   medium: {
@@ -172,7 +172,7 @@ const NavigationStepper: NavigationStepperType = ({
             <StyledStepNumber>
               {isLoading && isCurrent ? (
                 <StyledStepLoader>
-                  <ActivityIndicator
+                  <Loader
                     active
                     trailColor="transparent"
                     color="success"
