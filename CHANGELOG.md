@@ -1,3 +1,18 @@
+### [0.146.2](https://github.com/scaleway/scaleway-ui/compare/v0.146.1...v0.146.2) (2022-05-05)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.17.10 ([#1441](https://github.com/scaleway/scaleway-ui/issues/1441)) ([fc1a6f9](https://github.com/scaleway/scaleway-ui/commit/fc1a6f91fe0118c9ced87db6add2a2e9229370b6))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.21 ([#1437](https://github.com/scaleway/scaleway-ui/issues/1437)) ([238b3c2](https://github.com/scaleway/scaleway-ui/commit/238b3c2ddfb0beb5b03df62c036438b27cc0cd60))
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.2.5 ([#1438](https://github.com/scaleway/scaleway-ui/issues/1438)) ([974a826](https://github.com/scaleway/scaleway-ui/commit/974a826cd21aa9fe69e0e8d353d0b1297825ecbf))
+* **devdeps:** update dependency @scaleway/jest-helpers to v1.2.6 ([#1439](https://github.com/scaleway/scaleway-ui/issues/1439)) ([03820ef](https://github.com/scaleway/scaleway-ui/commit/03820efababf062c7674ebb6ebd821a15c3613ec))
+
+
+### :bug: Bug Fixes
+
+* modal types ([#1442](https://github.com/scaleway/scaleway-ui/issues/1442)) ([4adf6c5](https://github.com/scaleway/scaleway-ui/commit/4adf6c5137062df5a88c24d1e19b0d7fdec79385))
+
 ### [0.146.1](https://github.com/scaleway/scaleway-ui/compare/v0.146.0...v0.146.1) (2022-05-04)
 
 
