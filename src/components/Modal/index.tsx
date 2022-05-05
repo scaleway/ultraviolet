@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React, {
   ReactElement,
+  ReactNode,
   isValidElement,
   memo,
   useCallback,
@@ -254,6 +255,7 @@ type ModalProps = Partial<DialogProps> &
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
+    children: ReactNode | ((args: DialogStateReturn) => JSX.Element)
   }
 
 const Modal = ({
