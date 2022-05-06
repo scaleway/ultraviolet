@@ -217,6 +217,7 @@ export const Header = () => {
     selectAll,
     unselectAll,
     hasAllSelected,
+    hasSelectedItems,
   } = useListContext()
 
   const onSortEvent = useCallback(
@@ -229,6 +230,11 @@ export const Header = () => {
     [onSort],
   )
 
+  const handleOnChange = useCallback(() => {
+    if (hasAllSelected || (hasSelectedItems && !hasAllSelected)) unselectAll()
+    else selectAll()
+  }, [hasAllSelected, hasSelectedItems, unselectAll, selectAll])
+
   return (
     <StyledHeader multiselect={multiselect}>
       {multiselect && (
@@ -239,16 +245,14 @@ export const Header = () => {
             alignItems="center"
             name="select-rows"
             value="all"
-            checked={hasAllSelected}
+            checked={
+              hasSelectedItems && !hasAllSelected
+                ? 'indeterminate'
+                : hasAllSelected
+            }
             size={20}
             disabled={isLoading}
-            onChange={() => {
-              if (hasAllSelected) {
-                unselectAll()
-              } else {
-                selectAll()
-              }
-            }}
+            onChange={handleOnChange}
           />
         </StyledCheckboxContainer>
       )}

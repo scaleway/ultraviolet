@@ -5,6 +5,7 @@ import {
   CheckboxProps as ReakitCheckboxProps,
   useCheckboxState,
 } from 'reakit/Checkbox'
+import { getUUID } from '../../utils'
 import Icon from '../Icon'
 import Loader from '../Loader'
 import Typography from '../Typography'
@@ -16,7 +17,7 @@ const StyledError = styled(Typography)`
 const StyledIcon = styled(Icon)`
   margin-right: ${({ theme }) => theme.space['1']};
   border-radius: ${({ theme }) => theme.radii.default};
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
@@ -34,10 +35,21 @@ const StyledCheckBoxContainer = styled(Typography)`
   position: relative;
   display: inline-flex;
   align-items: center;
-  cursor: ${({ 'aria-disabled': disabled }) =>
-    disabled ? 'not-allowed' : 'pointer'};
 
-  ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon}, 
+  &[aria-disabled='false'] {
+    cursor: pointer;
+  }
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
+    ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.neutral.textDisabled};
+    }
+  }
+
+  ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon},
   ${StyledReakitCheckbox}[aria-checked="mixed"][aria-invalid="false"] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.text};
   }
@@ -46,9 +58,9 @@ const StyledCheckBoxContainer = styled(Typography)`
     fill: ${({ theme }) => theme.colors.danger.text};
   }
 
-  :hover,
-  :focus {
-    ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon}, 
+  :hover[aria-disabled='false'],
+  :focus[aria-disabled='false'] {
+    ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon},
     ${StyledReakitCheckbox}[aria-checked="mixed"][aria-invalid="false"] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
     }
@@ -76,7 +88,6 @@ const StyledActivityContainer = styled('div', {
 
 type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
-  valid?: boolean
   error?: string | ReactNode
   size?: number
   progress?: boolean
@@ -90,9 +101,8 @@ const Checkbox = ({
   onChange,
   onFocus,
   onBlur,
-  valid,
   error,
-  name = 'checkbox',
+  name = getUUID('checkbox'),
   value,
   size = 24,
   children,
@@ -117,17 +127,20 @@ const Checkbox = ({
   }, [checked, setState])
 
   return (
-    <div className={className}>
+    <>
       {progress ? (
         <StyledActivityContainer hasChildren={hasChildren}>
           <Loader active size={size} />
         </StyledActivityContainer>
       ) : null}
-      <StyledCheckBoxContainer as="label">
+      <StyledCheckBoxContainer
+        as="label"
+        className={className}
+        aria-disabled={disabled}
+      >
         <StyledReakitCheckbox
-          aria-disabled={disabled}
-          aria-invalid={valid === false || !!error}
-          aria-describedby="hint"
+          aria-invalid={!!error}
+          aria-describedby={error ? `${name}-hint` : undefined}
           aria-checked={
             checkbox.state === 'indeterminate'
               ? 'mixed'
@@ -156,11 +169,11 @@ const Checkbox = ({
         {children}
       </StyledCheckBoxContainer>
       {error ? (
-        <StyledError id="hint" as="p" variant="bodyB" color="danger">
+        <StyledError id={`${name}-id`} as="p" variant="bodyB" color="danger">
           {error}
         </StyledError>
       ) : null}
-    </div>
+    </>
   )
 }
 

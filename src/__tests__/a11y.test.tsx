@@ -26,7 +26,6 @@ const testedComponents = [
   'Tag',
   'Tags',
   'ExtendedReminder',
-  'Checkbox',
 ]
 
 const foundFiles: string[] = []
