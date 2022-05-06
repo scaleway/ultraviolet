@@ -27,14 +27,20 @@ export const Default = Template.bind({})
 export const Checked = Template.bind({})
 Checked.parameters = {
   docs: {
-    storyDescription: 'You can specify `checked` prop to tick the checkbox.',
+    storyDescription:
+      'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
   },
 }
 Checked.decorators = [
   () => (
-    <Checkbox checked onChange={() => {}}>
-      Basic checked checkbox
-    </Checkbox>
+    <>
+      <Checkbox checked onChange={() => {}}>
+        Checked checkbox
+      </Checkbox>
+      <Checkbox checked="indeterminate" onChange={() => {}}>
+        Indeterminate checkbox
+      </Checkbox>
+    </>
   ),
 ]
 
@@ -119,24 +125,6 @@ Progress.decorators = [
       </Checkbox>
     )
   },
-]
-
-export const Typography = Template.bind({})
-Typography.parameters = {
-  docs: {
-    storyDescription: 'Set value using `typographyVariant` property.',
-  },
-}
-Typography.decorators = [
-  () => (
-    <>
-      {['tiny', 'description', 'title'].map(typography => (
-        <Checkbox typographyVariant={typography} onChange={() => {}}>
-          Checkbox typo {typography}
-        </Checkbox>
-      ))}
-    </>
-  ),
 ]
 
 export const Value = Template.bind({})
