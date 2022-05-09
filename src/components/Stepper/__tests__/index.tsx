@@ -168,4 +168,50 @@ describe('Stepper', () => {
         },
       },
     ))
+
+  it('should click on plus button with a step value and an in-between value set', () =>
+    shouldMatchEmotionSnapshot(
+      <Stepper
+        minValue={0}
+        step={10}
+        maxValue={100}
+        value={12}
+        onBlur={() => {}}
+      />,
+      {
+        transform: async ({ getByLabelText, getByRole }) => {
+          const plus = getByLabelText('Plus')
+          const input = getByRole('textbox') as HTMLTextAreaElement
+
+          userEvent.click(plus)
+          await waitFor(() => expect(input.value).toBe('20'))
+
+          userEvent.click(plus)
+          await waitFor(() => expect(input.value).toBe('30'))
+        },
+      },
+    ))
+
+  it('should increase and decrease input with arrow up and down, step and an in-between value set', () =>
+    shouldMatchEmotionSnapshot(
+      <Stepper minValue={10} maxValue={100} value={32} step={10} />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('textbox') as HTMLTextAreaElement
+          if (input.parentElement) userEvent.click(input.parentElement)
+          userEvent.type(input, '{arrowup}')
+          await waitFor(() => expect(input.value).toBe('40'))
+          userEvent.type(input, '{arrowdown}')
+          await waitFor(() => expect(input.value).toBe('30'))
+          userEvent.clear(input)
+          userEvent.type(input, '12')
+          userEvent.type(input, '{arrowdown}')
+          await waitFor(() => expect(input.value).toBe('10'))
+          userEvent.clear(input)
+          userEvent.type(input, '99')
+          userEvent.type(input, '{arrowup}')
+          await waitFor(() => expect(input.value).toBe('100'))
+        },
+      },
+    ))
 })
