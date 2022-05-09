@@ -1,5 +1,12 @@
 import styled from '@emotion/styled'
-import React, { ChangeEvent, ReactNode, useEffect, useMemo } from 'react'
+import React, {
+  ChangeEvent,
+  KeyboardEventHandler,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+} from 'react'
 import {
   Checkbox as ReakitCheckbox,
   CheckboxProps as ReakitCheckboxProps,
@@ -40,6 +47,14 @@ const StyledCheckBoxContainer = styled(Typography)`
     cursor: pointer;
   }
 
+  ${StyledReakitCheckbox} + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
   &[aria-disabled='true'] {
     cursor: not-allowed;
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
@@ -49,23 +64,18 @@ const StyledCheckBoxContainer = styled(Typography)`
     }
   }
 
-  ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon},
-  ${StyledReakitCheckbox}[aria-checked="mixed"][aria-invalid="false"] + ${StyledIcon} {
+  ${StyledReakitCheckbox}:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
     fill: ${({ theme }) => theme.colors.primary.text};
   }
 
-  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+  ${StyledReakitCheckbox}[aria-invalid="true"]:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.text};
   }
 
-  :hover[aria-disabled='false'],
-  :focus[aria-disabled='false'] {
-    ${StyledReakitCheckbox}[aria-checked="true"][aria-invalid="false"] + ${StyledIcon},
-    ${StyledReakitCheckbox}[aria-checked="mixed"][aria-invalid="false"] + ${StyledIcon} {
-      background-color: ${({ theme }) => theme.colors.primary.background};
-    }
-
-    ${StyledReakitCheckbox}[aria-checked="false"][aria-invalid="false"] + ${StyledIcon} {
+  :hover[aria-disabled='false'] {
+    ${StyledReakitCheckbox} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.text};
     }
@@ -102,7 +112,7 @@ const Checkbox = ({
   onFocus,
   onBlur,
   error,
-  name = getUUID('checkbox'),
+  name,
   value,
   size = 24,
   children,
@@ -113,6 +123,12 @@ const Checkbox = ({
 }: CheckboxProps) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
+
+  const computedName = useMemo(() => {
+    if (!name) return getUUID('checkbox')
+
+    return name
+  }, [name])
 
   const icon = useMemo(() => {
     if (checkbox.state === 'indeterminate') return 'minus-box-outline'
@@ -125,6 +141,24 @@ const Checkbox = ({
   useEffect(() => {
     setState(checked)
   }, [checked, setState])
+
+  const onLocalChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (!progress) onChange(event)
+      setState(event.target.checked)
+    },
+    [onChange, progress, setState],
+  )
+
+  const onKeyPress: KeyboardEventHandler = useCallback(
+    event => {
+      if (event.keyCode === 32) {
+        event.stopPropagation()
+        onChange(event)
+      }
+    },
+    [onChange],
+  )
 
   return (
     <>
@@ -140,7 +174,7 @@ const Checkbox = ({
       >
         <StyledReakitCheckbox
           aria-invalid={!!error}
-          aria-describedby={error ? `${name}-hint` : undefined}
+          aria-describedby={error ? `${computedName}-hint` : undefined}
           aria-checked={
             checkbox.state === 'indeterminate'
               ? 'mixed'
@@ -152,15 +186,13 @@ const Checkbox = ({
               : (checkbox.state as boolean)
           }
           size={size}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => {
-            if (!progress) onChange(e)
-            setState(e.target.checked)
-          }}
+          onChange={onLocalChange}
           onFocus={onFocus}
           onBlur={onBlur}
+          onKeyPress={onKeyPress}
           disabled={disabled}
           value={value}
-          name={name}
+          name={computedName}
           autoFocus={autoFocus}
         />
         {!progress ? (
@@ -169,7 +201,12 @@ const Checkbox = ({
         {children}
       </StyledCheckBoxContainer>
       {error ? (
-        <StyledError id={`${name}-id`} as="p" variant="bodyB" color="danger">
+        <StyledError
+          id={`${computedName}-id`}
+          as="p"
+          variant="bodyB"
+          color="danger"
+        >
           {error}
         </StyledError>
       ) : null}

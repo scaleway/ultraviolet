@@ -413,6 +413,58 @@ describe('List', () => {
       },
     ))
 
+  test('should render correctly multiselect and click indeterminate', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        multiselect
+        idKey="id"
+        data={generateData(5)}
+        columns={[
+          { label: 'Name' },
+          { label: 'Description', width: '15%' },
+          { label: 'Department', width: '64px' },
+          { label: 'Reference', sort: 'reference', width: '64px' },
+          { justifyContent: 'center', width: '128px' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {props => {
+                const { rowData } = props
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
+            </list.Body>
+            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
+          </>
+        )}
+      </List>,
+      {
+        transform: node => {
+          expect(node.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = node.getAllByRole('checkbox', {
+            hidden: true,
+          }) as HTMLInputElement[]
+          expect(checkboxes[0].name).toBe('select-rows')
+          expect(checkboxes[0].value).toBe('all')
+          userEvent.click(checkboxes[1])
+          userEvent.click(checkboxes[2])
+          expect(node.getByText('items selected'))
+          userEvent.click(checkboxes[0])
+        },
+      },
+    ))
+
   test('should render correctly multiselect and with click and not functional SelectBar children', () =>
     shouldMatchEmotionSnapshot(
       <List
@@ -585,6 +637,59 @@ describe('List', () => {
       },
     ))
 
+  test('should render correctly multiselect and click indeterminate, table variant', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        variant="table"
+        multiselect
+        idKey="id"
+        data={generateData(5)}
+        columns={[
+          { label: 'Name' },
+          { label: 'Description', width: '15%' },
+          { label: 'Department', width: '64px' },
+          { label: 'Reference', sort: 'reference', width: '64px' },
+          { justifyContent: 'center', width: '128px' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {props => {
+                const { rowData } = props
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
+            </list.Body>
+            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
+          </>
+        )}
+      </List>,
+      {
+        transform: node => {
+          expect(node.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = node.getAllByRole('checkbox', {
+            hidden: true,
+          }) as HTMLInputElement[]
+          expect(checkboxes[0].name).toBe('select-rows')
+          expect(checkboxes[0].value).toBe('all')
+          userEvent.click(checkboxes[1])
+          userEvent.click(checkboxes[2])
+          expect(node.getByText('items selected'))
+          userEvent.click(checkboxes[0])
+        },
+      },
+    ))
+
   test('should render correctly multiselect, table variant and with sort click', () =>
     shouldMatchEmotionSnapshot(
       <List
@@ -708,6 +813,59 @@ describe('List', () => {
           expect(node.getByText('item selected'))
           userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
+        },
+      },
+    ))
+
+  test('should render correctly multiselect and click indeterminate, explorer variant', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        variant="explorer"
+        multiselect
+        idKey="id"
+        data={generateData(5)}
+        columns={[
+          { label: 'Name' },
+          { label: 'Description', width: '15%' },
+          { label: 'Department', width: '64px' },
+          { label: 'Reference', sort: 'reference', width: '64px' },
+          { justifyContent: 'center', width: '128px' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {props => {
+                const { rowData } = props
+
+                return (
+                  <list.Row id={rowData.id}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
+            </list.Body>
+            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
+          </>
+        )}
+      </List>,
+      {
+        transform: node => {
+          expect(node.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = node.getAllByRole('checkbox', {
+            hidden: true,
+          }) as HTMLInputElement[]
+          expect(checkboxes[0].name).toBe('select-rows')
+          expect(checkboxes[0].value).toBe('all')
+          userEvent.click(checkboxes[1])
+          userEvent.click(checkboxes[2])
+          expect(node.getByText('items selected'))
+          userEvent.click(checkboxes[0])
         },
       },
     ))

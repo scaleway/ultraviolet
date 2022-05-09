@@ -17,7 +17,12 @@ describe('Checkbox', () => {
 
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onBlur={() => {}} onFocus={() => {}} onChange={() => {}}>
+      <Checkbox
+        onBlur={() => {}}
+        onFocus={() => {}}
+        onChange={() => {}}
+        name="testing"
+      >
         Checkbox Label
       </Checkbox>,
     ))
@@ -125,5 +130,17 @@ describe('Checkbox', () => {
     const input = node.getByRole('checkbox')
     userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
+  })
+
+  test('renders with space click for a11y', () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox')
+    userEvent.type(input, '{space}')
+    expect(input.getAttribute('aria-checked')).toBe('false')
   })
 })
