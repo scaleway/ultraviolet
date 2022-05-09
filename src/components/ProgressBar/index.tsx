@@ -23,7 +23,8 @@ const StyledBox = styled(Box)`
   margin-left: 0;
   margin-right: 0;
   border-radius: 2px;
-  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundStrongDisabled};
 `
 
 const StyledProgress = styled.div`
