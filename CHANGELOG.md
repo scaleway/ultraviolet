@@ -1,3 +1,15 @@
+## [0.147.0](https://github.com/scaleway/scaleway-ui/compare/v0.146.3...v0.147.0) (2022-05-09)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v13.3.0 ([#1448](https://github.com/scaleway/scaleway-ui/issues/1448)) ([11eba14](https://github.com/scaleway/scaleway-ui/commit/11eba14edfb7bb860920e72c0bf223c533e99cd4))
+
+
+### :gear: Features
+
+* add account-multiple icon ([#1440](https://github.com/scaleway/scaleway-ui/issues/1440)) ([050b15a](https://github.com/scaleway/scaleway-ui/commit/050b15abc415b454b9dcb11f98a622ac8687d42f))
+
 ### [0.146.3](https://github.com/scaleway/scaleway-ui/compare/v0.146.2...v0.146.3) (2022-05-09)
 
 
