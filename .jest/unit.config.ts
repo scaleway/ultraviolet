@@ -1,5 +1,6 @@
 import type { Config } from '@jest/types'
 import path from 'path'
+import '@testing-library/jest-dom/extend-expect'
 
 const config: Config.InitialOptions = {
   rootDir: path.join(__dirname, '..'),
@@ -26,7 +27,7 @@ const config: Config.InitialOptions = {
       '<rootDir>/.jest/fileMock.ts',
     '\\.(css|less)$': 'identity-obj-proxy',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  setupFilesAfterEnv: ['.jest/setupTests.ts'],
 }
 
 export default config
