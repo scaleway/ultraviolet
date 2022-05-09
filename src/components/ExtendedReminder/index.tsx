@@ -64,7 +64,7 @@ const StyledBadge = styled(Badge)`
 
 const StyledButtonLink = styled(Button)`
   margin-top: auto;
-  color: ${({ theme: { colors } }) => colors.info.backgroundStrong};
+  color: ${({ theme: { colors } }) => colors.info.textWeak};
   background-color: transparent;
   padding: 0;
   width: transparent;
