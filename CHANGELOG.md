@@ -1,3 +1,15 @@
+### [0.147.1](https://github.com/scaleway/scaleway-ui/compare/v0.147.0...v0.147.1) (2022-05-09)
+
+
+### :package: Chore
+
+* **devdeps:** update pnpm to v7 ([#1428](https://github.com/scaleway/scaleway-ui/issues/1428)) ([ae8d223](https://github.com/scaleway/scaleway-ui/commit/ae8d2236c30cd02dff8bba3e8984f64451c5762e))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9 ([#1434](https://github.com/scaleway/scaleway-ui/issues/1434)) ([41a8993](https://github.com/scaleway/scaleway-ui/commit/41a8993a3b6cf468b57855f2ba91184edcb5743b))
+
 ## [0.147.0](https://github.com/scaleway/scaleway-ui/compare/v0.146.3...v0.147.0) (2022-05-09)
 
 
