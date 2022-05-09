@@ -1,3 +1,15 @@
+### [0.147.2](https://github.com/scaleway/scaleway-ui/compare/v0.147.1...v0.147.2) (2022-05-09)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.22 ([#1455](https://github.com/scaleway/scaleway-ui/issues/1455)) ([ae016b9](https://github.com/scaleway/scaleway-ui/commit/ae016b98c56ca6b3a4e734ccc3fbd58dce567927))
+
+
+### :bug: Bug Fixes
+
+* **devdeps:** pin dependencies ([#1454](https://github.com/scaleway/scaleway-ui/issues/1454)) ([83b4754](https://github.com/scaleway/scaleway-ui/commit/83b47540f290f0528929bd7bf17cdfe05128ca2d))
+
 ### [0.147.1](https://github.com/scaleway/scaleway-ui/compare/v0.147.0...v0.147.1) (2022-05-09)
 
 
