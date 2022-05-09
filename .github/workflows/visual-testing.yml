@@ -41,7 +41,7 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}
-      - run: pnpm run test:visual:nobuild -- --storiesFilter ^Components/${{ matrix.filter }}
+      - run: pnpm run test:visual:nobuild --storiesFilter ^Components/${{ matrix.filter }}
       - name: Archive screenshots
         if: ${{ failure() }}
         uses: actions/upload-artifact@v3

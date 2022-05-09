@@ -18,13 +18,13 @@
   },
   "engines": {
     "node": ">=14.x",
-    "pnpm": ">=6"
+    "pnpm": ">=7.0.0"
   },
   "os": [
     "darwin",
     "linux"
   ],
-  "packageManager": "pnpm@6.32.11",
+  "packageManager": "pnpm@7.0.0",
   "sideEffects": false,
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
@@ -40,13 +40,13 @@
     "start": "STORYBOOK_ENVIRONMENT=development start-storybook -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production start-storybook -p 6006",
     "format": "prettier --write '**/*.{ts,tsx,js,json,md,mdx}'",
-    "lint:fix": "pnpm run lint -- --fix",
+    "lint:fix": "pnpm run lint --fix",
     "lint": "eslint --report-unused-disable-directives --cache --ext js,ts,tsx .",
     "prebuild": "shx rm -rf dist",
     "test:unit": "LC_ALL=en_US.UTF-8 jest --config .jest/unit.config.ts",
-    "test:unit:coverage": "pnpm run test:unit -- --coverage",
-    "test:unit:watch": "pnpm run test:unit -- --watch",
-    "test:unit:update": "pnpm run test:unit -- --updateSnapshot",
+    "test:unit:coverage": "pnpm run test:unit --coverage",
+    "test:unit:watch": "pnpm run test:unit --watch",
+    "test:unit:update": "pnpm run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "test:visual": "pnpm run build:storybook-visual && pnpm loki test",
     "test:visual:update": "pnpm run build:storybook-visual && pnpm loki update",
@@ -60,6 +60,13 @@
       "prettier --write",
       "eslint --fix --ext js,jsx,ts,tsx"
     ]
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "17"
+      }
+    }
   },
   "config": {
     "commitizen": {
@@ -107,6 +114,7 @@
     "@emotion/jest": "11.9.1",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
+    "@nivo/tooltip": "0.79.0",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-url": "7.0.0",
@@ -126,18 +134,29 @@
     "@storybook/addon-essentials": "6.4.22",
     "@storybook/addon-links": "6.4.22",
     "@storybook/addons": "6.4.22",
+    "@storybook/api": "6.4.22",
     "@storybook/builder-webpack5": "6.4.22",
+    "@storybook/client-api": "6.4.22",
+    "@storybook/components": "6.4.22",
+    "@storybook/core-events": "6.4.22",
     "@storybook/csf": "canary",
     "@storybook/manager-webpack5": "6.4.22",
+    "@storybook/preview-web": "6.4.22",
     "@storybook/react": "6.4.22",
     "@storybook/testing-react": "1.2.4",
     "@storybook/theming": "6.4.22",
     "@svgr/rollup": "6.2.1",
+    "@testing-library/dom": "8.13.0",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "13.5.0",
+    "@types/jest": "27.4.1",
     "@types/jest-axe": "3.5.3",
+    "@types/node": "17.0.31",
+    "@types/prop-types": "15.7.5",
+    "@types/react": "17.0.39",
     "@types/react-dom": "18.0.3",
+    "@types/testing-library__jest-dom": "^5.14.3",
     "@types/zxcvbn": "4.4.1",
     "babel-loader": "8.2.5",
     "babel-plugin-annotate-pure-calls": "0.4.0",
@@ -176,6 +195,7 @@
   "dependencies": {
     "@babel/runtime": "7.17.9",
     "@emotion/serialize": "1.0.3",
+    "@jest/types": "^28.0.2",
     "@nivo/bar": "0.79.1",
     "@nivo/core": "0.79.0",
     "@nivo/line": "0.79.1",

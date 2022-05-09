@@ -26,7 +26,7 @@ const config: Config.InitialOptions = {
       '<rootDir>/.jest/fileMock.ts',
     '\\.(css|less)$': 'identity-obj-proxy',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  setupFilesAfterEnv: ['<rootDir>/.jest/setupTests.ts'],
 }
 
 export default config
