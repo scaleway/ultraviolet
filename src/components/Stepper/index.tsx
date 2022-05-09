@@ -19,8 +19,10 @@ import Touchable from '../Touchable'
 const bounded = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(value, max))
 
-const roundStep = (value: number, step: number) =>
-  Math.ceil(value / step) * step
+const roundStep = (value: number, step: number, direction: number) =>
+  direction === -1
+    ? Math.floor(value / step) * step
+    : Math.ceil(value / step) * step
 
 const disabledStyles = ({
   disabled,
@@ -191,8 +193,10 @@ const Stepper = ({
   }
 
   const offsetFn = (direction: number) => () => {
-    const newValue = inputValue + step * direction
-    setValue(newValue)
+    const newValue =
+      inputValue % step === 0 ? inputValue + step * direction : inputValue
+    const roundedValue = roundStep(newValue, step, direction)
+    setValue(roundedValue)
   }
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
@@ -206,8 +210,7 @@ const Stepper = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    const roundedValue = roundStep(inputValue, step)
-    const boundedValue = bounded(roundedValue, minValue, maxValue)
+    const boundedValue = bounded(inputValue, minValue, maxValue)
 
     if (inputValue > maxValue) onMaxCrossed?.()
     if (inputValue < minValue) onMinCrossed?.()
@@ -222,8 +225,14 @@ const Stepper = ({
     if (e.keyCode === 38) {
       e.stopPropagation()
       e.preventDefault()
-      if (inputValue + step <= maxValue) {
-        setValue(inputValue + step)
+
+      const direction = 1
+      const newValue =
+        inputValue % step === 0 ? inputValue + step * direction : inputValue
+      const roundedValue = roundStep(newValue, step, direction)
+
+      if (roundedValue <= maxValue) {
+        setValue(roundedValue)
       }
     }
 
@@ -231,14 +240,29 @@ const Stepper = ({
     if (e.keyCode === 40) {
       e.stopPropagation()
       e.preventDefault()
-      if (inputValue - step >= minValue) {
-        setValue(inputValue - step)
+
+      const direction = -1
+
+      const newValue =
+        inputValue % step === 0 ? inputValue + step * direction : inputValue
+      const roundedValue = roundStep(newValue, step, direction)
+
+      if (roundedValue >= minValue) {
+        setValue(roundedValue)
       }
     }
   }
 
-  const isMinusDisabled = inputValue <= minValue || disabled
-  const isPlusDisabled = inputValue >= maxValue || disabled
+  const minusRoundedValue =
+    inputValue % step === 0
+      ? roundStep(inputValue - step, step, -1)
+      : roundStep(inputValue, step, -1)
+  const plusRoundedValue =
+    inputValue % step === 0
+      ? roundStep(inputValue + step, step, 1)
+      : roundStep(inputValue, step, 1)
+  const isMinusDisabled = minusRoundedValue < minValue || disabled
+  const isPlusDisabled = plusRoundedValue > maxValue || disabled
 
   return (
     <StyledContainer disabled={disabled} size={size} {...props}>
