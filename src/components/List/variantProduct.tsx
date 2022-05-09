@@ -199,6 +199,12 @@ const StyledSummary = styled.summary`
   }
 `
 
+const StyledCheckbox = styled(Checkbox)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
   text-overflow: ellipsis;
   overflow: hidden;
@@ -239,10 +245,7 @@ export const Header = () => {
     <StyledHeader multiselect={multiselect}>
       {multiselect && (
         <StyledCheckboxContainer>
-          <Checkbox
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+          <StyledCheckbox
             name="select-rows"
             value="all"
             checked={
@@ -416,11 +419,8 @@ export const Row = ({
                   baseId={`list-tooltip-row-${id}`}
                   text={!isSelectable ? notSelectableText : undefined}
                 >
-                  <Checkbox
+                  <StyledCheckbox
                     value={id}
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
                     data-visibility={hasSelectedItems ? '' : 'hover'}
                     checked={selected}
                     disabled={!isSelectable || disabled}
