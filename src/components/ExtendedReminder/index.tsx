@@ -64,9 +64,8 @@ const StyledBadge = styled(Badge)`
 
 const StyledButtonLink = styled(Button)`
   margin-top: auto;
-  color: ${({ theme: { colorsDeprecated } }) => colorsDeprecated.blue};
-  background-color: ${({ theme: { colorsDeprecated } }) =>
-    colorsDeprecated.transparent};
+  color: ${({ theme: { colors } }) => colors.info.backgroundStrong};
+  background-color: transparent;
   padding: 0;
   width: transparent;
   display: flex;

@@ -8,11 +8,6 @@ describe('ProgressBar', () => {
       shouldMatchEmotionSnapshot(<ProgressBar value={40} variant={variant} />))
   })
 
-  it(`renders with different background`, () =>
-    shouldMatchEmotionSnapshot(
-      <ProgressBar value={40} backgroundColor="yellow" />,
-    ))
-
   it(`renders progression`, () =>
     shouldMatchEmotionSnapshot(<ProgressBar progress />))
 

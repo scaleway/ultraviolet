@@ -1,6 +1,6 @@
 import { SerializedStyles, css } from '@emotion/react'
 
-const discountDot = (color: string): SerializedStyles => css`
+const discountDot = (color?: string): SerializedStyles => css`
   opacity: 0.6;
   border: 0.3px solid ${color};
   background-size: 10px;

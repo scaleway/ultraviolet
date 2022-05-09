@@ -1,7 +1,7 @@
 import React from 'react'
 import Loader from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
-import { colorsDeprecated } from '../../../theme'
+import { SENTIMENTS } from '../../../theme'
 
 describe('Loader', () => {
   beforeAll(() => {
@@ -42,14 +42,12 @@ describe('Loader', () => {
   test(`renders with unknown inlined color`, () =>
     shouldMatchEmotionSnapshot(<Loader label="Loading test" color="unknown" />))
 
-  Object.keys(colorsDeprecated)
-    .slice(0, 5)
-    .forEach(color => {
-      test(`renders with trailColor ${color}`, () =>
-        shouldMatchEmotionSnapshot(
-          <Loader label="Loading test" trailColor={color} />,
-        ))
-    })
+  SENTIMENTS.slice(0, 5).forEach(color => {
+    test(`renders with trailColor ${color}`, () =>
+      shouldMatchEmotionSnapshot(
+        <Loader label="Loading test" trailColor={color} />,
+      ))
+  })
 
   test(`renders with inlined trailColor`, () =>
     shouldMatchEmotionSnapshot(

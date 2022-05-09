@@ -55,8 +55,8 @@ export const StateBarBar = ({
 }: StateBarBarProps): JSX.Element => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
-    if (value < 90 && value >= 70) return 'beta'
-    if (value >= 90) return 'warning'
+    if (value < 90 && value >= 70) return 'warning'
+    if (value >= 90) return 'danger'
 
     return 'primary'
   }, [unlimited, value])
