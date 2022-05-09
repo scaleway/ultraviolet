@@ -1,3 +1,17 @@
+### [0.146.3](https://github.com/scaleway/scaleway-ui/compare/v0.146.2...v0.146.3) (2022-05-09)
+
+
+### :package: Chore
+
+* **devdeps:** update docker/build-push-action action to v3 ([#1443](https://github.com/scaleway/scaleway-ui/issues/1443)) ([02b0774](https://github.com/scaleway/scaleway-ui/commit/02b077471475f0e33a51600f5523b2918affbbb4))
+* **devdeps:** update docker/login-action action to v2 ([#1444](https://github.com/scaleway/scaleway-ui/issues/1444)) ([1f0f89d](https://github.com/scaleway/scaleway-ui/commit/1f0f89d8b8400efd4868cc50fc23b486418e326f))
+* **devdeps:** update docker/setup-buildx-action action to v2 ([#1445](https://github.com/scaleway/scaleway-ui/issues/1445)) ([e61ba5e](https://github.com/scaleway/scaleway-ui/commit/e61ba5e1f7cfeb63563e8cf9d81547675ead6ce2))
+
+
+### :bug: Bug Fixes
+
+* update even color on table variant on the list ([#1447](https://github.com/scaleway/scaleway-ui/issues/1447)) ([04578ae](https://github.com/scaleway/scaleway-ui/commit/04578aecd8050c112e118d0639981a91651675a7))
+
 ### [0.146.2](https://github.com/scaleway/scaleway-ui/compare/v0.146.1...v0.146.2) (2022-05-05)
 
 
