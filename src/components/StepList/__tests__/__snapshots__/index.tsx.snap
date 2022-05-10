@@ -2,7 +2,15 @@
 
 exports[`StepTitle renders correctly  1`] = `
 <DocumentFragment>
-  .cache-1lgdhts-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,26 +58,38 @@ exports[`StepTitle renders correctly  1`] = `
   font-size: 24px;
 }
 
-<div
-    class="cache-1lgdhts-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-t9e53m-StyledContainer e1u3ywq30"
+    <li
+      class="cache-1lgdhts-Step e1p9x3di1"
     >
-      1
-    </div>
-    <div
-      class="cache-1m08j4b-StyledDiv e17jwwhf0"
-    >
-      Item 1
-    </div>
-  </div>
+      <div
+        class="cache-t9e53m-StyledContainer e1u3ywq30"
+      >
+        1
+      </div>
+      <div
+        class="cache-1m08j4b-StyledDiv e1p9x3di0"
+      >
+        Item 1
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
 
 exports[`StepTitle renders correctly with bulletIcon & variant 1`] = `
 <DocumentFragment>
-  .cache-1lgdhts-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -128,33 +148,45 @@ exports[`StepTitle renders correctly with bulletIcon & variant 1`] = `
   font-size: 24px;
 }
 
-<div
-    class="cache-1lgdhts-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-15uwjvh-StyledContainer e1u3ywq30"
+    <li
+      class="cache-1lgdhts-Step e1p9x3di1"
     >
-      <svg
-        class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
-        viewBox="0 0 24 24"
+      <div
+        class="cache-15uwjvh-StyledContainer e1u3ywq30"
       >
-        <path
-          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-1m08j4b-StyledDiv e17jwwhf0"
-    >
-      Item 1
-    </div>
-  </div>
+        <svg
+          class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="cache-1m08j4b-StyledDiv e1p9x3di0"
+      >
+        Item 1
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
 
 exports[`StepTitle renders correctly with bulletIcon 1`] = `
 <DocumentFragment>
-  .cache-1lgdhts-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -214,33 +246,45 @@ exports[`StepTitle renders correctly with bulletIcon 1`] = `
   font-size: 24px;
 }
 
-<div
-    class="cache-1lgdhts-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-t9e53m-StyledContainer e1u3ywq30"
+    <li
+      class="cache-1lgdhts-Step e1p9x3di1"
     >
-      <svg
-        class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
-        viewBox="0 0 24 24"
+      <div
+        class="cache-t9e53m-StyledContainer e1u3ywq30"
       >
-        <path
-          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-1m08j4b-StyledDiv e17jwwhf0"
-    >
-      Item 1
-    </div>
-  </div>
+        <svg
+          class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="cache-1m08j4b-StyledDiv e1p9x3di0"
+      >
+        Item 1
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
 
 exports[`StepTitle renders correctly with disabled state & bullet icon 1`] = `
 <DocumentFragment>
-  .cache-b6lmz-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-b6lmz-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -300,35 +344,47 @@ exports[`StepTitle renders correctly with disabled state & bullet icon 1`] = `
   font-size: 24px;
 }
 
-<div
-    class="cache-b6lmz-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-16j3ie1-StyledContainer e1u3ywq30"
+    <li
+      class="cache-b6lmz-Step e1p9x3di1"
     >
-      <svg
-        class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
-        viewBox="0 0 24 24"
+      <div
+        class="cache-16j3ie1-StyledContainer e1u3ywq30"
       >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-1m08j4b-StyledDiv e17jwwhf0"
-    >
-      <div>
-        Item 1 with disabled state
+        <svg
+          class="sc-ui-icon etwatq50 cache-4hen91-StyledIcon-sizeStyles"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
       </div>
-    </div>
-  </div>
+      <div
+        class="cache-1m08j4b-StyledDiv e1p9x3di0"
+      >
+        <div>
+          Item 1 with disabled state
+        </div>
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
 
 exports[`StepTitle renders correctly with disabled state 1`] = `
 <DocumentFragment>
-  .cache-b6lmz-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-b6lmz-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -376,28 +432,40 @@ exports[`StepTitle renders correctly with disabled state 1`] = `
   font-size: 24px;
 }
 
-<div
-    class="cache-b6lmz-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-16j3ie1-StyledContainer e1u3ywq30"
+    <li
+      class="cache-b6lmz-Step e1p9x3di1"
     >
-      1
-    </div>
-    <div
-      class="cache-1m08j4b-StyledDiv e17jwwhf0"
-    >
-      <div>
-        Item 1 with disabled state
+      <div
+        class="cache-16j3ie1-StyledContainer e1u3ywq30"
+      >
+        1
       </div>
-    </div>
-  </div>
+      <div
+        class="cache-1m08j4b-StyledDiv e1p9x3di0"
+      >
+        <div>
+          Item 1 with disabled state
+        </div>
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
 
 exports[`StepTitle renders correctly with small size 1`] = `
 <DocumentFragment>
-  .cache-1lgdhts-Step {
+  .cache-7078ng-Steps {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cache-1lgdhts-Step {
   margin-bottom: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -445,19 +513,23 @@ exports[`StepTitle renders correctly with small size 1`] = `
   font-size: 16px;
 }
 
-<div
-    class="cache-1lgdhts-Step e17jwwhf1"
+<ul
+    class="cache-7078ng-Steps e1p9x3di2"
   >
-    <div
-      class="cache-1ut1z3i-StyledContainer e1u3ywq30"
+    <li
+      class="cache-1lgdhts-Step e1p9x3di1"
     >
-      1
-    </div>
-    <div
-      class="cache-1wj8egs-StyledDiv e17jwwhf0"
-    >
-      Item 1 small
-    </div>
-  </div>
+      <div
+        class="cache-1ut1z3i-StyledContainer e1u3ywq30"
+      >
+        1
+      </div>
+      <div
+        class="cache-1wj8egs-StyledDiv e1p9x3di0"
+      >
+        Item 1 small
+      </div>
+    </li>
+  </ul>
 </DocumentFragment>
 `;

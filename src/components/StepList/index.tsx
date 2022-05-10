@@ -3,7 +3,15 @@ import PropTypes from 'prop-types'
 import React, { ComponentProps, ReactNode } from 'react'
 import Bullet from '../Bullet'
 
-export const Step = styled('div', {
+export const Steps = styled.ul`
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 24px;
+  text-align: left;
+  font-size: 16px;
+`
+
+export const Step = styled('li', {
   shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
 })<{ disabled: boolean }>`
   margin-bottom: 24px;
@@ -29,21 +37,21 @@ type ContentProps =
   | { bulletIcon: ComponentProps<typeof Bullet>['icon']; bulletText?: never }
   | { bulletIcon?: never; bulletText: string }
 
-type StepTitleProps = {
+type ItemProps = {
   variant?: ComponentProps<typeof Bullet>['variant']
   size?: Sizes
   disabled?: boolean
   children: ReactNode
 } & ContentProps
 
-const StepTitle = ({
+const Item = ({
   bulletText,
   bulletIcon,
   variant,
   children,
   size = 'medium',
   disabled = false,
-}: StepTitleProps) => (
+}: ItemProps) => (
   <Step disabled={disabled}>
     {bulletIcon ? (
       <Bullet
@@ -63,7 +71,7 @@ const StepTitle = ({
   </Step>
 )
 
-StepTitle.propTypes = {
+Item.propTypes = {
   bulletIcon: PropTypes.string,
   bulletText: PropTypes.string,
   children: PropTypes.node.isRequired,
@@ -72,4 +80,12 @@ StepTitle.propTypes = {
   variant: PropTypes.string,
 }
 
-export default StepTitle
+type StepListProps = {
+  children: ReactNode
+}
+
+const StepList = ({ children }: StepListProps) => <Steps>{children}</Steps>
+
+StepList.Item = Item
+
+export default StepList
