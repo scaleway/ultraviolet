@@ -32,7 +32,7 @@ jobs:
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v1.1.0
+        uses: bobheadxi/deployments@v1.2.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
