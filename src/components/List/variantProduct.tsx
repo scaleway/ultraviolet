@@ -5,6 +5,7 @@ import React, {
   ChangeEvent,
   KeyboardEvent,
   MouseEvent,
+  ReactEventHandler,
   ReactNode,
   isValidElement,
   useCallback,
@@ -345,7 +346,7 @@ export const Row = ({
     child => isValidElement(child) && child.type !== ExpendableContent && child,
   )
 
-  const handleToggle = (event: MouseEvent<HTMLElement>) => {
+  const handleToggle: ReactEventHandler<HTMLDetailsElement> = event => {
     setRowState(id, {
       opened: (event.target as HTMLDetailsElement).open,
     } as ListRowState)
