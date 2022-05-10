@@ -2,7 +2,7 @@ import React from 'react'
 import StepList from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
-describe('StepTitle', () => {
+describe('StepList', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
