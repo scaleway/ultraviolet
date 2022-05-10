@@ -160,7 +160,7 @@ type StepperProps = {
   size?: ContainerSizesType
   step?: number
   text?: string | ReactNode
-  value?: string | number
+  value?: number
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
 const Stepper = ({
@@ -335,7 +335,7 @@ Stepper.propTypes = {
    * Text displayed into component at the right of number value.
    */
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.number,
 }
 
 export default Stepper
