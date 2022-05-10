@@ -260,6 +260,7 @@ const Switch = ({
         width={width}
         aria-checked={checked}
         aria-disabled={disabled}
+        onClick={evt => evt.stopPropagation()}
       >
         {labeled === 'left' ? (
           <StyledLabelContent
