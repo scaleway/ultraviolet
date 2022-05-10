@@ -1,3 +1,16 @@
+### [0.147.3](https://github.com/scaleway/scaleway-ui/compare/v0.147.2...v0.147.3) (2022-05-10)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.23 ([#1457](https://github.com/scaleway/scaleway-ui/issues/1457)) ([1063dd6](https://github.com/scaleway/scaleway-ui/commit/1063dd6e38250e6cd8c16ff95426e50305d0b3ca))
+* **devdeps:** update pnpm to v7.0.1 ([#1459](https://github.com/scaleway/scaleway-ui/issues/1459)) ([172d839](https://github.com/scaleway/scaleway-ui/commit/172d839f790dacb790a5d5dc66c3f89c91a74e5f))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.3.2 ([#1450](https://github.com/scaleway/scaleway-ui/issues/1450)) ([6616034](https://github.com/scaleway/scaleway-ui/commit/6616034383ca107d31e49ba6ddd97f6d9a6c5a38))
+
 ### [0.147.2](https://github.com/scaleway/scaleway-ui/compare/v0.147.1...v0.147.2) (2022-05-09)
 
 
