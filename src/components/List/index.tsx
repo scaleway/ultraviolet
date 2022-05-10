@@ -350,14 +350,12 @@ function List<DataType extends Record<string, unknown>>(
     setRowsState((current: ListRowStates) => {
       const updateRowsState = pagination.pageData
         .filter(
-          item =>
-            selectableItems[item[idKey] as keyof typeof selectableItems] ===
-            true,
+          item => selectableItems[item[idKey] as keyof typeof selectableItems],
         )
         .reduce<ListRowStates>((acc, item) => {
           acc[item[idKey] as keyof typeof acc] = {
             ...current[item[idKey] as string],
-            selected: true,
+            selected: !current[item[idKey] as string]?.disabled,
           }
 
           return acc
@@ -404,7 +402,8 @@ function List<DataType extends Record<string, unknown>>(
         .every(
           item =>
             rowsState[item[idKey] as string] &&
-            rowsState[item[idKey] as string].selected,
+            (rowsState[item[idKey] as string].selected ||
+              rowsState[item[idKey] as string].disabled),
         ),
     [selectableItems, idKey, rowsState, pagination.pageData],
   )

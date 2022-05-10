@@ -36,6 +36,7 @@ export type ListRowState = {
   opened?: boolean
   highlighted?: boolean
   forceOpened?: boolean
+  disabled?: boolean
 }
 
 export type ListRowProps = {

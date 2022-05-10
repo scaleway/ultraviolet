@@ -236,6 +236,43 @@ Multiselect.decorators = [
   ),
 ]
 
+export const Disabled = Template.bind({})
+Disabled.decorators = [
+  () => (
+    <List
+      idKey="id"
+      data={generateData(5)}
+      columns={[
+        { label: 'Name', sort: 'name' },
+        { label: 'Description', sort: 'description', width: '25%' },
+        { label: 'Department', width: '120px' },
+        { justifyContent: 'center', width: '128px' },
+      ]}
+      multiselect
+    >
+      {list => (
+        <>
+          <list.Header />
+          <list.Body>
+            {({ rowData }) => (
+              <list.Row id={rowData.id} disabled={rowData.reference === 1}>
+                <list.Cell>{rowData.name}</list.Cell>
+                <list.Cell>{rowData.description}</list.Cell>
+                <list.Cell>{rowData.department}</list.Cell>
+                <list.Cell>actions</list.Cell>
+                <list.ExpendableContent>
+                  {() => <>ExpendableContent of {rowData.name}</>}
+                </list.ExpendableContent>
+              </list.Row>
+            )}
+          </list.Body>
+          <list.SelectBar>{() => <>Hello SelectBar</>}</list.SelectBar>
+        </>
+      )}
+    </List>
+  ),
+]
+
 export const Loading = Template.bind({})
 Loading.parameters = {
   docs: {

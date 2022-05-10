@@ -9,6 +9,7 @@ import React, {
   ReactNode,
   isValidElement,
   useCallback,
+  useEffect,
 } from 'react'
 import * as animations from '../../utils/animations'
 import Checkbox from '../Checkbox'
@@ -76,6 +77,8 @@ const StyledRow = styled('details', {
     openable?: boolean
     highlighted?: boolean
     multiselect?: boolean
+    selected?: boolean
+    disabled?: boolean
   }
 >`
   display: flex;
@@ -92,6 +95,7 @@ const StyledRow = styled('details', {
       : ''}
 
   border: ${BORDER_THICKNESS}px solid ${getBorderColor};
+
   border-radius: 4px;
   margin-bottom: 16px;
   padding: 8px 0;
@@ -117,6 +121,17 @@ const StyledRow = styled('details', {
   &:hover [data-visibility='hover'] {
     opacity: 1;
   }
+
+  ${({ disabled, theme }) =>
+    disabled
+      ? `
+    border: ${BORDER_THICKNESS}px solid
+      ${theme.colors.neutral.borderDisabled};
+    background-color: ${theme.colors.neutral.backgroundWeakDisabled};
+    color: ${theme.colors.neutral.textDisabled};
+    pointer-events: none;
+    `
+      : undefined}
 
   ${Cell} {
     padding: 0 8px;
@@ -305,6 +320,7 @@ export const Row = ({
   customStyle,
   open = false,
   expandableClassName,
+  disabled = false,
   ...props
 }: ListRowProps) => {
   const {
@@ -315,6 +331,12 @@ export const Row = ({
     selectableItems,
     notSelectableText,
   } = useListContext()
+
+  useEffect(() => {
+    if (disabled) {
+      setRowState(id, { disabled } as ListRowState)
+    }
+  }, [disabled, id, setRowState])
 
   const {
     selected = edition || false,
@@ -337,7 +359,7 @@ export const Row = ({
     child => isValidElement(child) && child.type === ExpendableContent,
   )
 
-  const isSelectable = !!selectableItems[id as keyof typeof selectableItems]
+  const isSelectable = selectableItems[id as keyof typeof selectableItems]
 
   const expendableContent = finalChildren.map(
     child => isValidElement(child) && child.type === ExpendableContent && child,
@@ -371,6 +393,8 @@ export const Row = ({
       openable={expandable && !forceOpened}
       highlighted={highlighted}
       multiselect={multiselect}
+      selected={isSelectable ? selected : false}
+      disabled={disabled}
       alert={alert}
       css={customStyle}
       as={CustomDetails}
@@ -393,7 +417,7 @@ export const Row = ({
                     alignItems="center"
                     data-visibility={hasSelectedItems ? '' : 'hover'}
                     checked={selected}
-                    disabled={!isSelectable}
+                    disabled={!isSelectable || disabled}
                     size={20}
                     name="select-rows"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -426,6 +450,7 @@ Row.propTypes = {
   animationDuration: PropTypes.number,
   children: PropTypes.node.isRequired,
   customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  disabled: PropTypes.bool,
   edition: PropTypes.bool,
   expandableClassName: PropTypes.string,
   id: PropTypes.string.isRequired,
