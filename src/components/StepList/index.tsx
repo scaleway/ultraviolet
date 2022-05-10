@@ -5,8 +5,8 @@ import Bullet from '../Bullet'
 
 export const Steps = styled.ul`
   list-style: none;
-  padding-left: 16px;
-  margin-top: 24px;
+  padding-left: ${({ theme }) => theme.space['2']};
+  margin-top: ${({ theme }) => theme.space['3']};
   text-align: left;
   font-size: 16px;
 `
