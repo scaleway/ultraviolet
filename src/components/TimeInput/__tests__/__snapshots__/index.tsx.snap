@@ -2,13 +2,13 @@
 
 exports[`TimeInput renders correctly with base props 1`] = `
 <DocumentFragment>
-  .cache-19uvffh-container {
+  .cache-1fg0y9a-StyledContainer-container-StyledContainer {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-19uvffh-container.cache-19uvffh-container {
+.cache-1fg0y9a-StyledContainer-container-StyledContainer.cache-1fg0y9a-StyledContainer-container-StyledContainer {
   margin-top: 0;
 }
 
@@ -108,7 +108,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: initial;
 }
 
-.cache-isgbik {
+.cache-12w4gz-StyledPlaceholder {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -146,7 +146,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-left: 0;
 }
 
-.cache-1906h45-Input {
+.cache-1eede0w-inputStyles {
   margin: 2px;
   padding-bottom: 2px;
   padding-top: 11px;
@@ -168,7 +168,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   caret-color: transparent;
 }
 
-.cache-1906h45-Input:after {
+.cache-1eede0w-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -231,7 +231,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-o6c48m {
+.cache-13wqvtl-StyledIcon-sizeStyles {
   fill: #4a4f62;
   height: 24px;
   width: 24px;
@@ -239,12 +239,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.cache-o6c48m.cache-o6c48m {
+.cache-13wqvtl-StyledIcon-sizeStyles.cache-13wqvtl-StyledIcon-sizeStyles {
   vertical-align: middle;
   margin-right: 0;
 }
 
-.cache-xcx33n {
+.cache-3dfrrx-StyledExpandable {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -254,18 +254,18 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-top: 0;
 }
 
-.cache-xcx33n.cache-xcx33n {
+.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
   overflow: hidden;
 }
 
-.cache-19pioxy {
+.cache-1k8ev0-StyledError {
   font-size: 12px;
   color: #a6102d;
   padding-top: 2px;
 }
 
 <div
-    class="e1lzna4r2 cache-19uvffh-container"
+    class="e1lzna4r2 cache-1fg0y9a-StyledContainer-container-StyledContainer"
     data-testid="rich-select-timeinput-test-0"
   >
     <span
@@ -287,7 +287,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
         <label
           aria-live="assertive"
           as="label"
-          class="cache-isgbik e1lzna4r0"
+          class="cache-12w4gz-StyledPlaceholder e1lzna4r0"
           for="test"
         >
           Select...
@@ -298,7 +298,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
           00:00
         </div>
         <div
-          class="cache-1906h45-Input"
+          class="cache-1eede0w-inputStyles"
           data-value=""
         >
           <input
@@ -330,7 +330,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
           class=" cache-tlfecz-indicatorContainer"
         >
           <svg
-            class="sc-ui-icon etwatq50 cache-o6c48m"
+            class="sc-ui-icon etwatq50 cache-13wqvtl-StyledIcon-sizeStyles"
             viewBox="0 0 24 24"
           >
             <path
@@ -346,10 +346,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
-      class="e14o3tsk0 cache-xcx33n"
+      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
     >
       <div
-        class="cache-19pioxy e1lzna4r1"
+        class="cache-1k8ev0-StyledError e1lzna4r1"
       />
     </div>
   </div>
