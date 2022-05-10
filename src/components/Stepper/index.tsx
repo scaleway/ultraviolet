@@ -57,7 +57,9 @@ const iconSizes = {
   small: 22,
 }
 
-const StyledIcon = styled(Icon)``
+const StyledIcon = styled(Icon)`
+  color: ${({ theme }) => theme.colors.primary.text};
+`
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop.toString()),
@@ -68,10 +70,6 @@ const StyledTouchable = styled(Touchable, {
   position: relative;
   border-radius: 4px;
   width: ${({ size }) => containerSizes[size] - 10}px;
-
-  > ${StyledIcon} {
-    fill: ${({ disabled, theme }) => !disabled && theme.colors.primary.text};
-  }
 
   :hover:not([disabled]) {
     background: ${({ theme }) => theme.colors.primary.background};
@@ -272,7 +270,7 @@ const Stepper = ({
         disabled={isMinusDisabled}
         aria-label="Minus"
       >
-        <StyledIcon name="minus" size={iconSizes[size]} color="gray300" />
+        <StyledIcon name="minus" size={iconSizes[size]} />
       </StyledTouchable>
 
       <StyledCenterBox
