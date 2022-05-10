@@ -1,3 +1,10 @@
+### [0.147.5](https://github.com/scaleway/scaleway-ui/compare/v0.147.4...v0.147.5) (2022-05-10)
+
+
+### :bug: Bug Fixes
+
+* **Switch:** avoid event bubbling on label click ([#1465](https://github.com/scaleway/scaleway-ui/issues/1465)) ([635ca73](https://github.com/scaleway/scaleway-ui/commit/635ca7341f44ce39f0412fa3d10d3da8c97d4d4e))
+
 ### [0.147.4](https://github.com/scaleway/scaleway-ui/compare/v0.147.3...v0.147.4) (2022-05-10)
 
 
