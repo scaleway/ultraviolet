@@ -1,6 +1,6 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { ReactNode, useMemo } from 'react'
 import { Color, SENTIMENTS } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import Icon, { IconName } from '../Icon'
@@ -102,9 +102,10 @@ type BadgeProps = {
   icon?: IconName
   disabled?: boolean
   className?: string
+  children: ReactNode
 }
 
-const Badge: FunctionComponent<BadgeProps> = ({
+const Badge = ({
   variant = 'neutral',
   size = 'medium',
   prominence = 'default',
@@ -112,7 +113,7 @@ const Badge: FunctionComponent<BadgeProps> = ({
   disabled = false,
   className,
   children,
-}) => {
+}: BadgeProps) => {
   const theme = useTheme()
 
   /**
