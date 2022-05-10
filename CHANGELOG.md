@@ -1,3 +1,17 @@
+### [0.147.4](https://github.com/scaleway/scaleway-ui/compare/v0.147.3...v0.147.4) (2022-05-10)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/jest to v27.5.0 ([#1461](https://github.com/scaleway/scaleway-ui/issues/1461)) ([3f4c876](https://github.com/scaleway/scaleway-ui/commit/3f4c876571e2282ee2941cd59e20ab04db96008e))
+* **devdeps:** update dependency @types/react to v17.0.45 ([#1458](https://github.com/scaleway/scaleway-ui/issues/1458)) ([9295511](https://github.com/scaleway/scaleway-ui/commit/9295511ba3f6da5f0f84036586bd8832062bb832))
+* **devdeps:** update dependency husky to v8 ([#1451](https://github.com/scaleway/scaleway-ui/issues/1451)) ([954cd4c](https://github.com/scaleway/scaleway-ui/commit/954cd4c1a82581c20912809c0f09dba7067740c9))
+
+
+### :bug: Bug Fixes
+
+* **Badge:** correct component type ([#1462](https://github.com/scaleway/scaleway-ui/issues/1462)) ([0ce51d0](https://github.com/scaleway/scaleway-ui/commit/0ce51d0a17b80781a8e2d099c452d3d765d42f99))
+
 ### [0.147.3](https://github.com/scaleway/scaleway-ui/compare/v0.147.2...v0.147.3) (2022-05-10)
 
 
