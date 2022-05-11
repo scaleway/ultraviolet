@@ -1,3 +1,24 @@
+## [0.149.0](https://github.com/scaleway/scaleway-ui/compare/v0.148.0...v0.149.0) (2022-05-11)
+
+
+### :repeat: CI
+
+* **node:** upgrade to node 18 ([#1467](https://github.com/scaleway/scaleway-ui/issues/1467)) ([de63767](https://github.com/scaleway/scaleway-ui/commit/de63767dc0c05b5e34eeb5e2bfe352422aff1ac3))
+
+
+### :package: Chore
+
+* **devdeps:** pin dependency jest-environment-jsdom to 28.1.0 ([#1469](https://github.com/scaleway/scaleway-ui/issues/1469)) ([d17103b](https://github.com/scaleway/scaleway-ui/commit/d17103bbcb970ffdd06ea62c0e3d9e63ab1668ff))
+* **devdeps:** update bobheadxi/deployments action to v1.2.0 ([#1466](https://github.com/scaleway/scaleway-ui/issues/1466)) ([8cfb1f9](https://github.com/scaleway/scaleway-ui/commit/8cfb1f9bcc0aa99ebd528d9ac8c01003eb26d7ca))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.2 ([#1468](https://github.com/scaleway/scaleway-ui/issues/1468)) ([bf7ac7d](https://github.com/scaleway/scaleway-ui/commit/bf7ac7dbf7fc73438c224d7cb6b7b2a9e348ab97))
+* **devdeps:** update dependency jest to v28 ([#1411](https://github.com/scaleway/scaleway-ui/issues/1411)) ([93fbd93](https://github.com/scaleway/scaleway-ui/commit/93fbd93e2beb747555f3b54ce854736fc13da543))
+* **devdeps:** update dependency webpack to v5.72.1 ([#1470](https://github.com/scaleway/scaleway-ui/issues/1470)) ([cdbb948](https://github.com/scaleway/scaleway-ui/commit/cdbb948cdad00eca6cbf78b281f65c0833224064))
+
+
+### :gear: Features
+
+* 🎸 status component ([#1431](https://github.com/scaleway/scaleway-ui/issues/1431)) ([a645a72](https://github.com/scaleway/scaleway-ui/commit/a645a72fb57c005e368eb3008ccfca9554616f50))
+
 ## [0.148.0](https://github.com/scaleway/scaleway-ui/compare/v0.147.5...v0.148.0) (2022-05-11)
 
 
