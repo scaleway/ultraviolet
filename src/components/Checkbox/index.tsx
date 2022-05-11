@@ -35,7 +35,6 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
-  pointer-events: auto;
 `
 
 const StyledCheckBoxContainer = styled(Typography)`
@@ -201,12 +200,7 @@ const Checkbox = ({
         {children}
       </StyledCheckBoxContainer>
       {error ? (
-        <StyledError
-          id={`${computedName}-id`}
-          as="p"
-          variant="bodyB"
-          color="danger"
-        >
+        <StyledError id={`${computedName}-id`} variant="bodyB" color="danger">
           {error}
         </StyledError>
       ) : null}
