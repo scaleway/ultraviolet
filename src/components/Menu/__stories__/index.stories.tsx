@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react'
+import { screen, userEvent } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import Menu from '..'
 import { Icon, Modal as SWUIModal, Touchable } from '../..'
@@ -38,7 +39,7 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
   <div style={{ height: '80px' }}>
     <Menu disclosure={disclosure} {...props}>
       <Menu.Item>MenuItem</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-menu--basic">
+      <Menu.Item to="/?path=/docs/components-navigation-menu--default">
         MenuItemLink
       </Menu.Item>
     </Menu>
@@ -46,6 +47,7 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
 )
 
 export const Default = Template.bind({})
+Default.play = () => userEvent.click(screen.getByRole('button'))
 
 export const Variants = Template.bind({})
 Variants.parameters = {
@@ -62,23 +64,31 @@ Variants.decorators = [
         <Menu.Item variant="danger">Danger</Menu.Item>
         <Menu.Item variant="nav">Nav</Menu.Item>
         <Menu.Item>default</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-menu--basic">Link</Menu.Item>
-        <Menu.Item variant="danger" to="/?path=/docs/components-menu--basic">
+        <Menu.Item to="/?path=/docs/components-navigation-menu--default">
+          Link
+        </Menu.Item>
+        <Menu.Item
+          variant="danger"
+          to="/?path=/docs/components-navigation-menu--default"
+        >
           Link Danger
         </Menu.Item>
         <Menu.Item
           variant="danger"
-          to="/?path=/docs/components-menu--basic"
+          to="/?path=/docs/components-navigation-menu--default"
           disabled
         >
           Link Danger Disabled
         </Menu.Item>
-        <Menu.Item variant="nav" to="/?path=/docs/components-menu--basic">
+        <Menu.Item
+          variant="nav"
+          to="/?path=/docs/components-navigation-menu--default"
+        >
           Link Nav
         </Menu.Item>
         <Menu.Item
           variant="nav"
-          to="/?path=/docs/components-menu--basic"
+          to="/?path=/docs/components-navigation-menu--default"
           disabled
         >
           Link Nav disabled
@@ -87,6 +97,7 @@ Variants.decorators = [
     </div>
   ),
 ]
+Variants.play = () => userEvent.click(screen.getByRole('button'))
 
 export const Borderless = Template.bind({})
 Borderless.parameters = {
@@ -107,19 +118,22 @@ Borderless.decorators = [
           Nav
         </Menu.Item>
         <Menu.Item borderless>default</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-menu--basic" borderless>
+        <Menu.Item
+          to="/?path=/docs/components-navigation-menu--borderless"
+          borderless
+        >
           Link
         </Menu.Item>
         <Menu.Item
           variant="danger"
-          to="/?path=/docs/components-menu--basic"
+          to="/?path=/docs/components-navigation-menu--borderless"
           borderless
         >
           Link Danger
         </Menu.Item>
         <Menu.Item
           variant="nav"
-          to="/?path=/docs/components-menu--basic"
+          to="/?path=/docs/components-navigation-menu--borderless"
           borderless
         >
           Link Nav
@@ -128,6 +142,7 @@ Borderless.decorators = [
     </div>
   ),
 ]
+Borderless.play = () => userEvent.click(screen.getByRole('button'))
 
 export const ChildrenProps = Template.bind({})
 ChildrenProps.parameters = {
@@ -156,7 +171,7 @@ ChildrenProps.decorators = [
               Nav disabled borderless
             </Menu.Item>
             <Menu.Item
-              to="/?path=/docs/components-menu--disclosure"
+              to="/?path=/docs/components-navigation-menu--children-props"
               onClick={toggle}
             >
               Menu Item Link
@@ -167,6 +182,7 @@ ChildrenProps.decorators = [
     </div>
   ),
 ]
+ChildrenProps.play = () => userEvent.click(screen.getByRole('button'))
 
 export const Modal = Template.bind({})
 Modal.parameters = {
@@ -179,7 +195,7 @@ Modal.decorators = [
     <div style={{ height: '100px' }}>
       <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>Menu Item</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-menu--disclosure">
+        <Menu.Item to="/?path=/docs/components-navigation-menu--modal">
           Menu Item Link
         </Menu.Item>
         <SWUIModal
@@ -198,6 +214,13 @@ Modal.decorators = [
     </div>
   ),
 ]
+Modal.play = () => {
+  userEvent.click(screen.getByRole('button'))
+  const button = screen.getByText('MenuItem with Modal').closest('button')
+  if (button !== null) {
+    userEvent.click(button)
+  }
+}
 
 export const AdvancedWIP = Template.bind({})
 AdvancedWIP.parameters = {
@@ -210,7 +233,7 @@ AdvancedWIP.decorators = [
     <div style={{ height: '300px' }}>
       <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>MenuItem</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-menu--basic">
+        <Menu.Item to="/?path=/docs/components-navigation-menu--advanced-wip">
           Menu Item with React Router Link
         </Menu.Item>
         <Menu.Item href="https://react.ui.scaleway.com">
@@ -229,3 +252,10 @@ AdvancedWIP.decorators = [
     </div>
   ),
 ]
+AdvancedWIP.play = () => {
+  userEvent.click(screen.getByRole('button'))
+  const button = screen.getByText('Sub Menu').closest('button')
+  if (button !== null) {
+    userEvent.click(button)
+  }
+}
