@@ -1,3 +1,10 @@
+## [0.148.0](https://github.com/scaleway/scaleway-ui/compare/v0.147.5...v0.148.0) (2022-05-11)
+
+
+### :gear: Features
+
+* **list:** selected and disabled row ([#1464](https://github.com/scaleway/scaleway-ui/issues/1464)) ([2bfacb4](https://github.com/scaleway/scaleway-ui/commit/2bfacb4c66eba7bf4605f254266ae315056d0af7))
+
 ### [0.147.5](https://github.com/scaleway/scaleway-ui/compare/v0.147.4...v0.147.5) (2022-05-10)
 
 
