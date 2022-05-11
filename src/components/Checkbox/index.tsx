@@ -47,7 +47,7 @@ const StyledCheckBoxContainer = styled(Typography)`
     cursor: pointer;
   }
 
-  ${StyledReakitCheckbox} + ${StyledIcon} {
+  ${StyledReakitCheckbox}[aria-checked="true"] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.text};
   }
 
