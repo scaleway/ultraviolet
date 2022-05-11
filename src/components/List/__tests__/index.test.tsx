@@ -58,6 +58,41 @@ describe('List', () => {
         )}
       </List>,
     ))
+  test('should render correctly disabled', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        idKey="id"
+        data={generateData(5)}
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description', sort: 'description', width: '15%' },
+          { label: 'Department', width: '64px' },
+          { label: 'Reference', sort: 'reference', width: '64px' },
+          { justifyContent: 'center', width: '128px' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {props => {
+                const { rowData } = props
+
+                return (
+                  <list.Row id={rowData.id} disabled={rowData.reference === 1}>
+                    <list.Cell>{rowData.name}</list.Cell>
+                    <list.Cell>{rowData.description}</list.Cell>
+                    <list.Cell>{rowData.department}</list.Cell>
+                    <list.Cell>{rowData.reference}</list.Cell>
+                    <list.Cell>actions</list.Cell>
+                  </list.Row>
+                )
+              }}
+            </list.Body>
+          </>
+        )}
+      </List>,
+    ))
   test('should render correctly variant table', () =>
     shouldMatchEmotionSnapshot(
       <List
