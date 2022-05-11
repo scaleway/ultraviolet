@@ -162,7 +162,7 @@ const Tooltip = ({
   className,
   maxWidth = 232,
   visible = false,
-}: TooltipProps): JSX.Element => {
+}: TooltipProps) => {
   const childrenRef = useRef<HTMLDivElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timer = useRef<ReturnType<typeof setInterval>>()
@@ -268,7 +268,7 @@ const Tooltip = ({
   }, [children, className, generatedId, onMouseEvent])
 
   if (!text) {
-    return children as JSX.Element
+    return children
   }
 
   return (

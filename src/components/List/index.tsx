@@ -138,7 +138,11 @@ export type ListProps<DataType> = {
     SelectBar: typeof SelectBar
     Header: () => JSX.Element
     Row: (props: ListRowProps) => JSX.Element
-    ExpendableContent: (props: { children: ReactNode }) => JSX.Element
+    ExpendableContent: (props: {
+      children:
+        | ReactNode
+        | ((props: { id?: string; isToggled: boolean }) => ReactNode)
+    }) => JSX.Element
   }) => ReactElement
   customLoader?: ReactNode
   variant?: ListVariant

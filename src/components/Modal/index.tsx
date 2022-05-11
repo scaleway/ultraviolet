@@ -237,7 +237,7 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-type ModalProps = Partial<DialogProps> &
+type ModalProps = Partial<Omit<DialogProps, 'children'>> &
   Partial<DialogState> & {
     animation?: ModalAnimation
     ariaLabel?: string
@@ -253,7 +253,7 @@ type ModalProps = Partial<DialogProps> &
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
-    children: ReactNode | ((args: DialogStateReturn) => JSX.Element)
+    children: ReactNode | ((args: DialogStateReturn) => ReactNode)
   }
 
 const Modal = ({
