@@ -16,7 +16,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3.1.1
       with:
-        node-version: 17
+        node-version: 18
         cache: 'pnpm'
     - run: pnpm install
     - run: pnpm tsc --noEmit || true
@@ -28,7 +28,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3.1.1
       with:
-        node-version: 17
+        node-version: 18
         cache: 'pnpm'
     - run: pnpm install
     - run: pnpm run lint
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node: [ '14', '16', '17' ]
+        node: [ '16', '18' ]
     steps:
     - uses: actions/checkout@v3.0.2
       with:
@@ -60,14 +60,14 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: 17
+          node-version: 18
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run test:a11y
   build:
     strategy:
       matrix:
-        node: [ '14', '16', '17' ]
+        node: [ '16', '18' ]
     runs-on: ubuntu-20.04
     needs: [lint, test]
     steps:
@@ -96,7 +96,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3.1.1
       with:
-        node-version: 17
+        node-version: 18
     - run: pnpm install
     - run: pnpm run build
     - run: pnpm semantic-release
