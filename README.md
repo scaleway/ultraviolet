@@ -86,11 +86,11 @@ Storybook documentation will then be available on [http://localhost:6006](http:/
 #### Unit
 
 ```sh
-$ pnpm run test # Will run all tests
-$ pnpm run test --updateSnapshot # Will update all snapshots
-$ pnpm run test:watch # Will watch tests and only rerun the one who are modified
-$ pnpm run test:coverage # Will generate a coverage report
-$ pnpm run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
+$ pnpm run test:unit # Will run all tests
+$ pnpm run test:unit:update # Will update all snapshots
+$ pnpm run test:unit:watch # Will watch tests and only rerun the one who are modified
+$ pnpm run test:unit:coverage # Will generate a coverage report
+$ pnpm run testunit::coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
 ```
 
 #### Accessibility
