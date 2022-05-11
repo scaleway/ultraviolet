@@ -31,7 +31,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.4.23
   '@scaleway/jest-helpers': 1.2.6
   '@scaleway/random-name': 3.0.2
-  '@scaleway/use-i18n': 3.3.1
+  '@scaleway/use-i18n': 3.3.2
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
@@ -169,7 +169,7 @@ devDependencies:
   '@rollup/plugin-url': 7.0.0_rollup@2.70.2
   '@scaleway/eslint-config-react': 3.4.23_t725usgvqspm5woeqpaxbfp2qu
   '@scaleway/jest-helpers': 1.2.6_2uf6h6pj4xfrnrl33sel2hpk4e
-  '@scaleway/use-i18n': 3.3.1_sfoxds7t5ydpegc3knd667wn6m
+  '@scaleway/use-i18n': 3.3.2_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
@@ -3399,11 +3399,11 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-i18n/3.3.1_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-+mxWBRhzHOoAkDOxTo4FiuEdVttNLAdi6sQAc7k7M/PzoriJHb8Tocl5DtujIpG6DlIw+xxJXr/LoQCDU7zuWg==}
+  /@scaleway/use-i18n/3.3.2_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-DmaMBOAQwLbcjujDe7+JSREuz7XM5TQOVN/di5S9i25kVQimLFaHu/RF0Dz6+90H7IKOIlK588Um2oI9qRRPsg==}
     peerDependencies:
-      react: 17.x || 17
-      react-dom: 17.x
+      react: 17.x || 18.x || 17
+      react-dom: 17.x || 18.x
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.4
       '@formatjs/fast-memoize': 1.2.1
