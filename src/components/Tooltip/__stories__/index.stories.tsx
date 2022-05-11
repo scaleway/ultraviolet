@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react'
+import { userEvent, within } from '@storybook/testing-library'
 import { ComponentProps, ReactNode } from 'react'
 import Tooltip from '..'
 import Button from '../../Button'
@@ -27,6 +28,13 @@ export const Default = Template.bind({})
 Default.args = {
   children: 'Hover Me',
   text: 'Hello there',
+}
+Default.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  const hoverElement = canvas.getByText('Hover Me')
+  if (hoverElement) {
+    userEvent.click(hoverElement)
+  }
 }
 
 Default.decorators = [

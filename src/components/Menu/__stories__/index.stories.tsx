@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import { screen, userEvent } from '@storybook/testing-library'
+import { userEvent, within } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import Menu from '..'
 import { Icon, Modal as SWUIModal, Touchable } from '../..'
@@ -47,7 +47,10 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
 )
 
 export const Default = Template.bind({})
-Default.play = () => userEvent.click(screen.getByRole('button'))
+Default.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+}
 
 export const Variants = Template.bind({})
 Variants.parameters = {
@@ -97,7 +100,10 @@ Variants.decorators = [
     </div>
   ),
 ]
-Variants.play = () => userEvent.click(screen.getByRole('button'))
+Variants.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+}
 
 export const Borderless = Template.bind({})
 Borderless.parameters = {
@@ -142,7 +148,10 @@ Borderless.decorators = [
     </div>
   ),
 ]
-Borderless.play = () => userEvent.click(screen.getByRole('button'))
+Borderless.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+}
 
 export const ChildrenProps = Template.bind({})
 ChildrenProps.parameters = {
@@ -182,7 +191,10 @@ ChildrenProps.decorators = [
     </div>
   ),
 ]
-ChildrenProps.play = () => userEvent.click(screen.getByRole('button'))
+ChildrenProps.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+}
 
 export const Modal = Template.bind({})
 Modal.parameters = {
@@ -214,9 +226,10 @@ Modal.decorators = [
     </div>
   ),
 ]
-Modal.play = () => {
-  userEvent.click(screen.getByRole('button'))
-  const button = screen.getByText('MenuItem with Modal').closest('button')
+Modal.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+  const button = canvas.getByText('MenuItem with Modal').closest('button')
   if (button !== null) {
     userEvent.click(button)
   }
@@ -252,9 +265,10 @@ AdvancedWIP.decorators = [
     </div>
   ),
 ]
-AdvancedWIP.play = () => {
-  userEvent.click(screen.getByRole('button'))
-  const button = screen.getByText('Sub Menu').closest('button')
+AdvancedWIP.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+  const button = canvas.getByText('Sub Menu').closest('button')
   if (button !== null) {
     userEvent.click(button)
   }
