@@ -153,6 +153,7 @@ const Checkbox = ({
     event => {
       if (event.keyCode === 32) {
         event.stopPropagation()
+        event.preventDefault()
         onChange(event)
       }
     },

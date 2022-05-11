@@ -2,7 +2,7 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -16,108 +16,99 @@ exports[`Checkbox renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="testing"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="false"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly checked 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -131,109 +122,100 @@ exports[`Checkbox renders correctly checked 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="true"
+      aria-invalid="false"
+      checked=""
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="true"
-        checked=""
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <path
+        d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly checked and disabled 1`] = `
 <DocumentFragment>
-  .cache-lqmxup-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -247,110 +229,104 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: not-allowed;
 }
 
-.cache-kd66ta-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-kd66ta-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-kd66ta-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon {
-  fill: #f6f5f7;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="true"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
+    <input
+      aria-checked="true"
       aria-disabled="true"
-      class="eu28k4m5 e1g1zfwd0 cache-lqmxup-StyledText-variantStyles-StyledCheckBoxContainer"
+      aria-invalid="false"
+      checked=""
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      disabled=""
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      style="pointer-events: none;"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      disabled=""
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="true"
-        aria-disabled="true"
-        checked=""
-        class="cache-kd66ta-StyledReakitCheckbox eu28k4m4"
-        disabled=""
-        name="checkbox"
-        style="pointer-events: none;"
-        type="checkbox"
+      <path
+        d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-lqmxup-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -364,109 +340,319 @@ exports[`Checkbox renders correctly disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: not-allowed;
 }
 
-.cache-kd66ta-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-kd66ta-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-kd66ta-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon {
-  fill: #f6f5f7;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon.cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="true"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
+    <input
+      aria-checked="false"
       aria-disabled="true"
-      class="eu28k4m5 e1g1zfwd0 cache-lqmxup-StyledText-variantStyles-StyledCheckBoxContainer"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      disabled=""
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      style="pointer-events: none;"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      disabled=""
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="false"
-        aria-disabled="true"
-        class="cache-kd66ta-StyledReakitCheckbox eu28k4m4"
-        disabled=""
-        name="checkbox"
-        style="pointer-events: none;"
-        type="checkbox"
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-1ejm8rt-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+    </svg>
+    Checkbox Label
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly indeterminate 1`] = `
+<DocumentFragment>
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+}
+
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+  >
+    <input
+      aria-checked="mixed"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
+      <path
+        d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M17,11V13H7V11H17Z"
       />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
+<DocumentFragment>
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+}
+
+<label
+    aria-disabled="true"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+  >
+    <input
+      aria-checked="mixed"
+      aria-disabled="true"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      disabled=""
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      style="pointer-events: none;"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      disabled=""
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M17,11V13H7V11H17Z"
+      />
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly no child 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -480,103 +666,98 @@ exports[`Checkbox renders correctly no child 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-v17sm8-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 0;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-v17sm8-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-v17sm8-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-199gkqe-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-199gkqe-StyledIcon-sizeStyles-StyledIcon.cache-199gkqe-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 0;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="false"
-        class="cache-v17sm8-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-199gkqe-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly with a value 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -590,109 +771,100 @@ exports[`Checkbox renders correctly with a value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+      value="test"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="false"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
-        value="test"
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly with an error 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -706,115 +878,118 @@ exports[`Checkbox renders correctly with an error 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-i3vfhu-StyledIcon-sizeStyles-StyledIcon {
-  fill: #cc4e18;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-i3vfhu-StyledIcon-sizeStyles-StyledIcon.cache-i3vfhu-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-12czo5r-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+  >
+    <input
+      aria-checked="false"
+      aria-describedby="checkbox-6c756c756c756c756c756c756c756c75-hint"
+      aria-invalid="true"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+      />
+    </svg>
+    Checkbox Label
+  </label>
+  .cache-8c1h4a-StyledText-bodyB-variantStyles-colorStyles-StyledError {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
   margin-top: 0;
-  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  max-height: 56px;
-  opacity: 1;
-  overflow: visible;
-}
-
-.cache-12czo5r-StyledExpandable.cache-12czo5r-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
+  color: #b2b6c3;
+  font-size: 14px;
+  line-height: 18px;
   color: #a6102d;
   padding: 0 4px;
 }
 
-<div
-    class="cache-3svqc9"
+<p
+    class="eu28k4m4 e1g1zfwd0 cache-8c1h4a-StyledText-bodyB-variantStyles-colorStyles-StyledError"
+    id="checkbox-6c756c756c756c756c756c756c756c75-id"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
-    >
-      <input
-        aria-checked="false"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
-      />
-      <svg
-        class="eu28k4m3 etwatq50 cache-i3vfhu-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-12czo5r-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      >
-        test error
-      </div>
-    </div>
-  </div>
+    test error
+  </p>
 </DocumentFragment>
 `;
 
 exports[`Checkbox renders correctly with indeterminate state 1`] = `
 <DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -828,102 +1003,93 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="mixed"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="mixed"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <path
+        d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M17,11V13H7V11H17Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
@@ -945,51 +1111,9 @@ exports[`Checkbox renders correctly with progress 1`] = `
   }
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.cache-13urrpd-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-18l7wuo-StyledActivityContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tqrbnc-StyledActivityContainer {
+  display: inline;
+  vertical-align: middle;
   margin-right: 8px;
 }
 
@@ -1003,89 +1127,120 @@ exports[`Checkbox renders correctly with progress 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
 <div
-    class="cache-3svqc9"
+    class="cache-1tqrbnc-StyledActivityContainer eu28k4m0"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 24px; width: 24px;"
+      viewBox="0 0 100 100"
     >
-      <input
-        aria-checked="false"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#d4dae7"
+        stroke-width="16"
       />
-      <div
-        class="cache-18l7wuo-StyledActivityContainer eu28k4m1"
-      >
-        <svg
-          aria-label="Loading"
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          class="cache-gqzzce-Loader"
-          role="progressbar"
-          style="height: 24px; width: 24px;"
-          viewBox="0 0 100 100"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#d4dae7"
-            stroke-width="16"
-          />
-          <circle
-            class="cache-11f05l0-Loader"
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#4f0599"
-            stroke-dasharray="263.89378290154264"
-            stroke-dashoffset="211.11502632123413"
-            stroke-linecap="round"
-            stroke-width="16"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#4f0599"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
       />
-    </div>
+    </svg>
   </div>
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+  >
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;
 
@@ -1107,51 +1262,9 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   }
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.cache-v17sm8-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-  margin-right: 0;
-  padding: 2px;
-  pointer-events: auto;
-}
-
-.cache-v17sm8-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-v17sm8-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1yuatfa-StyledActivityContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1x5sj3x-StyledActivityContainer {
+  display: inline;
+  vertical-align: middle;
   margin-right: 0;
 }
 
@@ -1165,90 +1278,43 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
 <div
-    class="cache-3svqc9"
+    class="cache-1x5sj3x-StyledActivityContainer eu28k4m0"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 24px; width: 24px;"
+      viewBox="0 0 100 100"
     >
-      <input
-        aria-checked="false"
-        class="cache-v17sm8-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#d4dae7"
+        stroke-width="16"
       />
-      <div
-        class="cache-1yuatfa-StyledActivityContainer eu28k4m1"
-      >
-        <svg
-          aria-label="Loading"
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          class="cache-gqzzce-Loader"
-          role="progressbar"
-          style="height: 24px; width: 24px;"
-          viewBox="0 0 100 100"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#d4dae7"
-            stroke-width="16"
-          />
-          <circle
-            class="cache-11f05l0-Loader"
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#4f0599"
-            stroke-dasharray="263.89378290154264"
-            stroke-dashoffset="211.11502632123413"
-            stroke-linecap="round"
-            stroke-width="16"
-          />
-        </svg>
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#4f0599"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
       />
-    </div>
+    </svg>
   </div>
-</DocumentFragment>
-`;
-
-exports[`Checkbox renders correctly with sizes 1`] = `
-<DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1262,103 +1328,176 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1lxp3gb-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+  >
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with sizes 1`] = `
+<DocumentFragment>
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1fh2o0l-StyledReakitCheckbox {
   opacity: 0.01;
   width: 37px;
   height: 37px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-1lxp3gb-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-1lxp3gb-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-ss6lij-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-oofvmt-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 37px;
   width: 37px;
   min-width: 37px;
   min-height: 37px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-ss6lij-StyledIcon-sizeStyles-StyledIcon.cache-ss6lij-StyledIcon-sizeStyles-StyledIcon {
+.cache-oofvmt-StyledIcon-sizeStyles-StyledIcon.cache-oofvmt-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-1fh2o0l-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+      value="test"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-oofvmt-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
     >
-      <input
-        aria-checked="false"
-        class="cache-1lxp3gb-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
-        value="test"
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
       />
-      <svg
-        class="eu28k4m3 etwatq50 cache-ss6lij-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    </svg>
+    Checkbox Label
+  </label>
   @keyframes animation-0 {
   from {
     -webkit-transform: rotate(0deg);
@@ -1375,51 +1514,9 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   }
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.cache-1lxp3gb-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 37px;
-  height: 37px;
-  position: absolute;
-  cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
-}
-
-.cache-1lxp3gb-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-1lxp3gb-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-18l7wuo-StyledActivityContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tqrbnc-StyledActivityContainer {
+  display: inline;
+  vertical-align: middle;
   margin-right: 8px;
 }
 
@@ -1433,96 +1530,43 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
 <div
-    class="cache-3svqc9"
+    class="cache-1tqrbnc-StyledActivityContainer eu28k4m0"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 37px; width: 37px;"
+      viewBox="0 0 100 100"
     >
-      <input
-        aria-checked="false"
-        class="cache-1lxp3gb-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
-        value="test"
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#d4dae7"
+        stroke-width="16"
       />
-      <div
-        class="cache-18l7wuo-StyledActivityContainer eu28k4m1"
-      >
-        <svg
-          aria-label="Loading"
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          class="cache-gqzzce-Loader"
-          role="progressbar"
-          style="height: 37px; width: 37px;"
-          viewBox="0 0 100 100"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#d4dae7"
-            stroke-width="16"
-          />
-          <circle
-            class="cache-11f05l0-Loader"
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#4f0599"
-            stroke-dasharray="263.89378290154264"
-            stroke-dashoffset="211.11502632123413"
-            stroke-linecap="round"
-            stroke-width="16"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#4f0599"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
       />
-    </div>
+    </svg>
   </div>
-</DocumentFragment>
-`;
-
-exports[`Checkbox renders correctly with valid 1`] = `
-<DocumentFragment>
-  .cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1536,101 +1580,70 @@ exports[`Checkbox renders correctly with valid 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1fh2o0l-StyledReakitCheckbox {
   opacity: 0.01;
-  width: 24px;
-  height: 24px;
+  width: 37px;
+  height: 37px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-evks2w-StyledIcon-sizeStyles-StyledIcon {
-  fill: #149a7b;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  box-sizing: content-box;
-}
-
-.cache-evks2w-StyledIcon-sizeStyles-StyledIcon.cache-evks2w-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
   >
-    <label
-      aria-disabled="false"
-      class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
-    >
-      <input
-        aria-checked="false"
-        class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-        name="checkbox"
-        type="checkbox"
-      />
-      <svg
-        class="eu28k4m3 etwatq50 cache-evks2w-StyledIcon-sizeStyles-StyledIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-        />
-      </svg>
-      <div
-        class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-      >
-        Checkbox Label
-      </div>
-    </label>
-    <div
-      class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError eu28k4m0"
-      />
-    </div>
-  </div>
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-1fh2o0l-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+      value="test"
+    />
+    Checkbox Label
+  </label>
 </DocumentFragment>
 `;

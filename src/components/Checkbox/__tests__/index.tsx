@@ -141,6 +141,6 @@ describe('Checkbox', () => {
 
     const input = node.getByRole('checkbox')
     userEvent.type(input, '{space}')
-    expect(input.getAttribute('aria-checked')).toBe('false')
+    expect(input.getAttribute('aria-checked')).toBe('true')
   })
 })
