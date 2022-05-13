@@ -1,3 +1,15 @@
+### [0.149.1](https://github.com/scaleway/scaleway-ui/compare/v0.149.0...v0.149.1) (2022-05-13)
+
+
+### :package: Chore
+
+* **devdeps:** pin dependency babel-plugin-named-exports-order to 0.0.2 ([#1471](https://github.com/scaleway/scaleway-ui/issues/1471)) ([da0cd9a](https://github.com/scaleway/scaleway-ui/commit/da0cd9a7bed41519e55b6c4656d324cec99b98a7))
+
+
+### :bug: Bug Fixes
+
+* stepper behaviour with rounding ([#1452](https://github.com/scaleway/scaleway-ui/issues/1452)) ([4aa1cf0](https://github.com/scaleway/scaleway-ui/commit/4aa1cf06b1fd1cb6dd2003ee74cf817f4b39ce76))
+
 ## [0.149.0](https://github.com/scaleway/scaleway-ui/compare/v0.148.0...v0.149.0) (2022-05-11)
 
 
