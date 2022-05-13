@@ -26,8 +26,7 @@ const StyledDiv = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop.toString()),
 })<{ size: Sizes }>`
   flex: 1;
-  margin-left: ${({ theme, size }) =>
-    size === 'medium' ? theme.space['2'] : theme.space['1']};
+  margin-left: 1rem;
   font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
 `
 
