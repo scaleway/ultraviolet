@@ -1,12 +1,10 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import React, { ComponentProps, ReactNode } from 'react'
 import Bullet from '../Bullet'
 
 export const Steps = styled.ul`
   list-style: none;
   padding-left: ${({ theme }) => theme.space['2']};
-  margin-top: ${({ theme }) => theme.space['3']};
   text-align: left;
   font-size: 16px;
 `
@@ -14,12 +12,14 @@ export const Steps = styled.ul`
 export const Step = styled('li', {
   shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
 })<{ disabled: boolean }>`
-  margin-bottom: 24px;
+  margin-bottom: ${({ theme }) => theme.space['3']};
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.neutral.textWeak : theme.colors.neutral.textStrong};
+    disabled
+      ? theme.colors.neutral.textDisabled
+      : theme.colors.neutral.textStrong};
 `
 
 const StyledDiv = styled('div', {
@@ -70,15 +70,6 @@ const Item = ({
     <StyledDiv size={size}>{children}</StyledDiv>
   </Step>
 )
-
-Item.propTypes = {
-  bulletIcon: PropTypes.string,
-  bulletText: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  size: PropTypes.string,
-  variant: PropTypes.string,
-}
 
 type StepListProps = {
   children: ReactNode
