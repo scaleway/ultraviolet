@@ -1,3 +1,10 @@
+### [0.150.2](https://github.com/scaleway/scaleway-ui/compare/v0.150.1...v0.150.2) (2022-05-16)
+
+
+### :bug: Bug Fixes
+
+* remove some unused colorsDeprecated ([#1453](https://github.com/scaleway/scaleway-ui/issues/1453)) ([dab1852](https://github.com/scaleway/scaleway-ui/commit/dab18525037e3dac75288920c18ef9711f255fb6))
+
 ### [0.150.1](https://github.com/scaleway/scaleway-ui/compare/v0.150.0...v0.150.1) (2022-05-16)
 
 
