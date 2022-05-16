@@ -1,3 +1,18 @@
+## [0.150.0](https://github.com/scaleway/scaleway-ui/compare/v0.149.1...v0.150.0) (2022-05-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.24 ([#1473](https://github.com/scaleway/scaleway-ui/issues/1473)) ([0285baf](https://github.com/scaleway/scaleway-ui/commit/0285baf1b9fbbd04da367ad3937e550d32905dac))
+* **devdeps:** update dependency @types/react-dom to v18.0.4 ([#1477](https://github.com/scaleway/scaleway-ui/issues/1477)) ([8014794](https://github.com/scaleway/scaleway-ui/commit/801479456da5d1c0c4061eec3d2500995e429da9))
+* **devdeps:** update dependency eslint to v8.15.0 ([#1474](https://github.com/scaleway/scaleway-ui/issues/1474)) ([5297904](https://github.com/scaleway/scaleway-ui/commit/5297904de52efdb486a9b4b700664a959bf728d3))
+* **devdeps:** update dependency rollup to v2.72.1 ([#1475](https://github.com/scaleway/scaleway-ui/issues/1475)) ([ad41d8c](https://github.com/scaleway/scaleway-ui/commit/ad41d8c7abc5eccf10fc1cd48c3170a28b216d5f))
+
+
+### :gear: Features
+
+* bullet list becomes step title ([#1399](https://github.com/scaleway/scaleway-ui/issues/1399)) ([78aaa86](https://github.com/scaleway/scaleway-ui/commit/78aaa86acdaaed664ed16cfc5ea66aa7f3d3e733))
+
 ### [0.149.1](https://github.com/scaleway/scaleway-ui/compare/v0.149.0...v0.149.1) (2022-05-13)
 
 
