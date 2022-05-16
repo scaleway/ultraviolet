@@ -1,3 +1,4 @@
+import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Checkbox from '..'
@@ -132,15 +133,31 @@ describe('Checkbox', () => {
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
 
-  test('renders with space click for a11y', () => {
+  test('renders with space key for a11y', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox')
+    const input = node.getByRole('checkbox') as HTMLInputElement
+
+    input.focus()
     userEvent.type(input, '{space}')
-    expect(input.getAttribute('aria-checked')).toBe('true')
+    await waitFor(() => expect(input.checked).toBe(false))
+  })
+
+  test('renders with a key for a11y', async () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox') as HTMLInputElement
+
+    input.focus()
+    userEvent.type(input, 'a')
+    await waitFor(() => expect(input.checked).toBe(true))
   })
 })

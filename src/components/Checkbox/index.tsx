@@ -149,11 +149,9 @@ const Checkbox = ({
     [onChange, progress, setState],
   )
 
-  const onKeyPress: KeyboardEventHandler = useCallback(
+  const onKeyDown: KeyboardEventHandler = useCallback(
     event => {
-      if (event.keyCode === 32) {
-        event.stopPropagation()
-        event.preventDefault()
+      if (event.key.charCodeAt(0) === 32) {
         onChange(event)
       }
     },
@@ -189,7 +187,7 @@ const Checkbox = ({
           onChange={onLocalChange}
           onFocus={onFocus}
           onBlur={onBlur}
-          onKeyPress={onKeyPress}
+          onKeyDown={onKeyDown}
           disabled={disabled}
           value={value}
           name={computedName}
