@@ -1,3 +1,15 @@
+### [0.150.1](https://github.com/scaleway/scaleway-ui/compare/v0.150.0...v0.150.1) (2022-05-16)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/setup-node action to v3.2.0 ([#1478](https://github.com/scaleway/scaleway-ui/issues/1478)) ([0b9b652](https://github.com/scaleway/scaleway-ui/commit/0b9b652aef987148237e47b8d2b35c2557beb225))
+
+
+### :bug: Bug Fixes
+
+* remove unused deprecated colors ([#1456](https://github.com/scaleway/scaleway-ui/issues/1456)) ([fc9528a](https://github.com/scaleway/scaleway-ui/commit/fc9528a63ce0a8c2144368da48548f637d3932c3))
+
 ## [0.150.0](https://github.com/scaleway/scaleway-ui/compare/v0.149.1...v0.150.0) (2022-05-16)
 
 
