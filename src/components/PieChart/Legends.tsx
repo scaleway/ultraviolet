@@ -2,7 +2,6 @@ import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
 import patternVariants from './patterns'
@@ -57,14 +56,13 @@ const Bullet = styled.div<{
   width: 10px;
   height: 10px;
   margin: 0 8px;
-  background: ${({ color, theme }) =>
-    theme.colorsDeprecated[color as Color] ?? color};
+  background: ${({ color }) => color};
 
-  ${({ needPattern, color, theme, id }) => {
+  ${({ needPattern, color, id }) => {
     if (!needPattern) return null
 
     return patternVariants?.[`${id}-dot` as keyof typeof patternVariants]?.(
-      theme.colorsDeprecated[color as Color] ?? color,
+      color,
     )
   }}
 

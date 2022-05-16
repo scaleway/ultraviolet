@@ -1,8 +1,8 @@
-import { keyframes, useTheme } from '@emotion/react'
+import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
 import Box, { BoxProps } from '../Box'
 
 const shineAnimation = keyframes`
@@ -17,16 +17,14 @@ const shineAnimation = keyframes`
 
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
-const StyledBox = styled(Box, {
-  shouldForwardProp: prop => !['backgroundColor'].includes(prop.toString()),
-})<{ backgroundColor: string }>`
+const StyledBox = styled(Box)`
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 2px;
-  background-color: ${({ theme, backgroundColor }) =>
-    theme.colorsDeprecated[backgroundColor as Color] ?? backgroundColor};
+  background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundStrongDisabled};
 `
 
 const StyledProgress = styled.div`
@@ -56,47 +54,39 @@ const StyledFilled = styled('div', {
   left: 0;
   bottom: 0;
   background-color: ${({ theme, variant }) =>
-    theme.colorsDeprecated[variant as Color] ?? 'inherit'};
+    theme.colors[variant as Color].backgroundStrong ?? 'inherit'};
   transition: 0.3s width;
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `
 
 type ProgressBarProps = {
   variant?: string
-  backgroundColor?: string
   value?: number
   progress?: boolean
 } & BoxProps
 
 const ProgressBar = ({
-  backgroundColor,
   progress = false,
   value = 0,
   variant = 'primary',
   ...props
-}: ProgressBarProps) => {
-  const theme = useTheme()
-
-  return (
-    <StyledBox
-      role="progressbar"
-      aria-valuenow={value}
-      aria-valuemin={0}
-      aria-valuemax={100}
-      backgroundColor={backgroundColor ?? theme.colors.neutral.borderWeak}
-      {...props}
-    >
-      {progress ? (
-        <StyledProgress />
-      ) : (
-        <StyledFilled variant={variant} value={value} />
-      )}
-    </StyledBox>
-  )
-}
+}: ProgressBarProps) => (
+  <StyledBox
+    role="progressbar"
+    aria-valuenow={value}
+    aria-valuemin={0}
+    aria-valuemax={100}
+    {...props}
+  >
+    {progress ? (
+      <StyledProgress />
+    ) : (
+      <StyledFilled variant={variant} value={value} />
+    )}
+  </StyledBox>
+)
 
 ProgressBar.propTypes = {
-  backgroundColor: PropTypes.string,
   /**
    * Put ProgressBar in a loading state
    */
