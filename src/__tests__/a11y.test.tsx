@@ -22,6 +22,7 @@ const testedComponents = [
   'Status',
   'StealthCopiable',
   'Stepper',
+  'StepList',
   'Toaster',
   'TooltipIcon',
   'Tag',
