@@ -1,3 +1,15 @@
+### [0.150.3](https://github.com/scaleway/scaleway-ui/compare/v0.150.2...v0.150.3) (2022-05-17)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v17 ([#1479](https://github.com/scaleway/scaleway-ui/issues/1479)) ([356dbc1](https://github.com/scaleway/scaleway-ui/commit/356dbc1066d5db11beac6c136d6cd392380e990b))
+
+
+### :bug: Bug Fixes
+
+* allow classname on steplist ([#1483](https://github.com/scaleway/scaleway-ui/issues/1483)) ([5c9e644](https://github.com/scaleway/scaleway-ui/commit/5c9e6440b9d0d1e6c69c5566d5f2c2997c502be8))
+
 ### [0.150.2](https://github.com/scaleway/scaleway-ui/compare/v0.150.1...v0.150.2) (2022-05-16)
 
 
