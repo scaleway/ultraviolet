@@ -74,7 +74,7 @@ const Item = ({
 
 type StepListProps = {
   children: ReactNode
-  className: string
+  className?: string
 }
 
 const StepList = ({ children, className }: StepListProps) => (
