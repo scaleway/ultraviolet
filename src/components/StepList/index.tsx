@@ -41,6 +41,7 @@ type ItemProps = {
   size?: Sizes
   disabled?: boolean
   children: ReactNode
+  className?: string
 } & ContentProps
 
 const Item = ({
@@ -50,8 +51,9 @@ const Item = ({
   children,
   size = 'medium',
   disabled = false,
+  className,
 }: ItemProps) => (
-  <Step disabled={disabled}>
+  <Step disabled={disabled} className={className}>
     {bulletIcon ? (
       <Bullet
         icon={bulletIcon}
@@ -72,9 +74,12 @@ const Item = ({
 
 type StepListProps = {
   children: ReactNode
+  className?: string
 }
 
-const StepList = ({ children }: StepListProps) => <Steps>{children}</Steps>
+const StepList = ({ children, className }: StepListProps) => (
+  <Steps className={className}>{children}</Steps>
+)
 
 StepList.Item = Item
 
