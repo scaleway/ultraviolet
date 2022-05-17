@@ -41,7 +41,7 @@ type ItemProps = {
   size?: Sizes
   disabled?: boolean
   children: ReactNode
-  className: string
+  className?: string
 } & ContentProps
 
 const Item = ({
