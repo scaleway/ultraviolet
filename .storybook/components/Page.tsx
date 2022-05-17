@@ -23,9 +23,10 @@ const StyledDiv = styled.div`
 
 type PageProps = {
   deprecated?: boolean
+  deprecatedReason?: string
 }
 
-const Page = ({ deprecated }: PageProps) => (
+const Page = ({ deprecated, deprecatedReason }: PageProps) => (
   <>
     <StyledDiv>
       <Title />
@@ -37,7 +38,11 @@ const Page = ({ deprecated }: PageProps) => (
     </StyledDiv>
     {deprecated ? (
       <StyledText>
-        <b>This component is deprecated please do not use it any more.</b>
+        <b>
+          {deprecatedReason
+            ? deprecatedReason
+            : 'This component is deprecated please do not use it any more.'}
+        </b>
       </StyledText>
     ) : (
       <Subtitle />

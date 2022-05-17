@@ -14,16 +14,19 @@ import {Button} from '../components'
   How to make a component deprecated and what is the process of migration? That's what we will see in this documentation.
 </Description>
 
-## I want to migrate my component with new name
+## I have a new component replacing an old one, and we can't have a 1:1 easy migration path
 
 1. Step one, the old component should be marked as deprecated in story.
 
-  For stories, you can simply use the parameter `deprecated` into your story default export. It should look as follows:
+  For stories, you can simply use the parameter `deprecated` and `deprecatedReason` into your story default export. It should look as follows:
 
   ```typescript
     export default {
       component: Button,
-      parameters: { deprecated: true }, // <= Right here
+      parameters: {
+        deprecated: true,
+        deprecatedReason: 'This component is deprecated please do not use it any more.',
+      },
       title: 'Components/Button/Button',
     } as Meta
   ```
@@ -31,7 +34,7 @@ import {Button} from '../components'
   This will add a badge and a message into your storybook documentation. It should look as follows:
   <img src="https://scaleway-ui-storybook-images.s3.fr-par.scw.cloud/Screenshot%202022-05-17%20at%2016.23.10.png" alt="deprecated example screenshot" />
 
-2. Second step is to mark component deprecated trough JSDoc comments with a beautiful description on what to replace usage by. It should look as follows:
+2. Second step is to mark component deprecated trough JSDoc comments with a beautiful description on what to replace usage by. This should be shown in typescript hints. It should look as follows:
 
   ```typescript
     /**

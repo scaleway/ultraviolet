@@ -15,8 +15,6 @@ const DocsContainer: typeof BaseContainer = (props: {
   const isDarkTheme = useDarkMode()
   const currentTheme = isDarkTheme ? darkTheme : lightTheme
 
-  console.log(props)
-
   return (
     <ThemeProvider theme={currentTheme}>
       <BaseContainer
@@ -38,6 +36,7 @@ const DocsContainer: typeof BaseContainer = (props: {
       >
         {React.cloneElement(props.children, {
           deprecated: props.context.parameters.deprecated,
+          deprecatedReason: props.context.parameters.deprecatedReason,
         })}
       </BaseContainer>
     </ThemeProvider>
