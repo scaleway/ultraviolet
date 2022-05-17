@@ -3,11 +3,10 @@ import {
   Canvas,
   Description,
   Meta,
-  Story,
 } from '@storybook/addon-docs'
-import { Button } from '../components'
+import {Button} from '../components'
 
-<Meta title="Documentation Guidelines" />
+<Meta title="Documentation Guidelines"/>
 
 # Documentation Guidelines
 
@@ -29,14 +28,14 @@ sub-titles, etc. You will also find a file `story.example` that you can use as a
 2. Pattern should be:
 
 - Title
-  - Description
-    - Option title
-      - Description (optional)
-      - Example
-    - Option title
-      - Description (optional)
-      - Example
-    - API
+- Description
+- Option title
+- Description (optional)
+- Example
+- Option title
+- Description (optional)
+- Example
+- API
 
 3. When writing your story you should set a name with uppercase and spaces. Example:
 
@@ -64,10 +63,10 @@ sub-titles, etc. You will also find a file `story.example` that you can use as a
 </Description>
 
 <Canvas>
-  <Story name="Basic">
-    <Button>Button</Button>
-  </Story>
+  <Button>Button</Button>
 </Canvas>
+
+<ArgsTable of={Button}/>
 
 ## Variants
 
@@ -77,13 +76,11 @@ sub-titles, etc. You will also find a file `story.example` that you can use as a
 </Description>
 
 <Canvas>
-  <Story name="Variant">
-    <div style={{ display: 'flex', gap: 16 }}>
-      <Button variant="primary">Button</Button>
-      <Button variant="success">Button</Button>
-      <Button variant="warning">Button</Button>
-    </div>
-  </Story>
+  <div style={{display: 'flex', gap: 16}}>
+    <Button variant="primary">Button</Button>
+    <Button variant="success">Button</Button>
+    <Button variant="warning">Button</Button>
+  </div>
 </Canvas>
 
 ## Disabled
@@ -94,11 +91,5 @@ sub-titles, etc. You will also find a file `story.example` that you can use as a
 </Description>
 
 <Canvas>
-  <Story name="Disabled">
-    <Button disabled>Button</Button>
-  </Story>
+  <Button disabled>Button</Button>
 </Canvas>
-
-## API
-
-<ArgsTable of={Button} />
