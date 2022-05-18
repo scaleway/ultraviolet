@@ -99,6 +99,7 @@ const variants = {
       color: ${darken(0.2, colors.info.textWeak)};
       text-decoration: underline;
     }
+    padding: 0;
   `,
   primary: ({ theme }: { theme: Theme }) =>
     plainVariant({
@@ -298,8 +299,8 @@ const StyledButton = styled(Box, {
     text-decoration: none;
   }
 
-  ${variantStyles}
   ${sizeStyles}
+  ${variantStyles}
   ${({ disabled, theme }) =>
     disabled &&
     `
