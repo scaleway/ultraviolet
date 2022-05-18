@@ -151,7 +151,7 @@ const dialogAnimatedStyle = ({
   }
 `
 
-type DisclosureParam =
+export type DisclosureParam =
   | ((dialog?: Partial<DialogStateReturn>) => ReactElement)
   | ReactElement
 
