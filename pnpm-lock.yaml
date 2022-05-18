@@ -96,7 +96,7 @@ specifiers:
   prop-types: 15.8.1
   react: 17.0.2
   react-countup: 6.2.0
-  react-datepicker: 4.7.0
+  react-datepicker: 4.8.0
   react-dom: 17.0.2
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3
@@ -139,7 +139,7 @@ dependencies:
   polished: 4.2.2
   prop-types: 15.8.1
   react-countup: 6.2.0_react@17.0.2
-  react-datepicker: 4.7.0_sfoxds7t5ydpegc3knd667wn6m
+  react-datepicker: 4.8.0_sfoxds7t5ydpegc3knd667wn6m
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3_hx2b44akkvgcgvvtmk7ds2qk6q
   react-select: 5.3.2_cgmcp4y3anqoviq4hre22lv2k4
@@ -14917,11 +14917,11 @@ packages:
       react: 17.0.2
     dev: false
 
-  /react-datepicker/4.7.0_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-FS8KgbwqpxmJBv/bUdA42MYqYZa+fEYcpc746DZiHvVE2nhjrW/dg7c5B5fIUuI8gZET6FOzuDgezNcj568Czw==}
+  /react-datepicker/4.8.0_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg==}
     peerDependencies:
-      react: ^16.9.0 || ^17 || 17
-      react-dom: ^16.9.0 || ^17
+      react: ^16.9.0 || ^17 || ^18 || 17
+      react-dom: ^16.9.0 || ^17 || ^18
     dependencies:
       '@popperjs/core': 2.11.2
       classnames: 2.3.1
