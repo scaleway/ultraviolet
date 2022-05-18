@@ -6,7 +6,6 @@ import React, {
   useState,
 } from 'react'
 import Checkbox from '..'
-import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 
 export default {
   component: Checkbox,
@@ -18,7 +17,7 @@ const Template: Story<ComponentProps<typeof Checkbox>> = ({
   ...props
 }) => (
   <Checkbox onChange={onChange} {...props}>
-    Basic unchecked checkbox
+    Beautiful checkbox
   </Checkbox>
 )
 
@@ -27,14 +26,20 @@ export const Default = Template.bind({})
 export const Checked = Template.bind({})
 Checked.parameters = {
   docs: {
-    storyDescription: 'You can specify `checked` prop to tick the checkbox.',
+    storyDescription:
+      'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
   },
 }
 Checked.decorators = [
   () => (
-    <Checkbox checked onChange={() => {}}>
-      Basic checked checkbox
-    </Checkbox>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Checkbox checked onChange={() => {}}>
+        Checked checkbox
+      </Checkbox>
+      <Checkbox checked="indeterminate" onChange={() => {}}>
+        Indeterminate checkbox
+      </Checkbox>
+    </div>
   ),
 ]
 
@@ -46,33 +51,20 @@ Sizes.parameters = {
 }
 Sizes.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       {[10, 20, 30].map(size => (
         <Checkbox size={size} onChange={() => {}}>
           Checkbox size {size}
         </Checkbox>
       ))}
-    </>
+    </div>
   ),
 ]
 
-export const Validation = Template.bind({})
-Validation.parameters = {
-  docs: {
-    storyDescription: 'Set validation using `valid` boolean property.',
-  },
+export const Disabled = Template.bind({})
+Disabled.args = {
+  disabled: true,
 }
-Validation.decorators = [
-  () => (
-    <>
-      {[true, false].map(valid => (
-        <Checkbox valid={valid} onChange={() => {}}>
-          Checkbox valid {valid}
-        </Checkbox>
-      ))}
-    </>
-  ),
-]
 
 export const Errors = Template.bind({})
 Errors.parameters = {
@@ -81,21 +73,9 @@ Errors.parameters = {
       'Set validation with error message using `error` property.',
   },
 }
-Errors.decorators = [
-  () => (
-    <div>
-      <ErrorTransition error="An Error occurred, your checkbox is invalid">
-        {error => <Checkbox error={error} onChange={() => {}} />}
-      </ErrorTransition>
-      <Checkbox
-        error="An Error occurred, your checkbox is invalid"
-        onChange={() => {}}
-      >
-        Checkbox on Error
-      </Checkbox>
-    </div>
-  ),
-]
+Errors.args = {
+  error: 'An error message',
+}
 
 export const Progress = Template.bind({})
 Progress.parameters = {
@@ -121,24 +101,6 @@ Progress.decorators = [
   },
 ]
 
-export const Typography = Template.bind({})
-Typography.parameters = {
-  docs: {
-    storyDescription: 'Set value using `typographyVariant` property.',
-  },
-}
-Typography.decorators = [
-  () => (
-    <>
-      {['tiny', 'description', 'title'].map(typography => (
-        <Checkbox typographyVariant={typography} onChange={() => {}}>
-          Checkbox typo {typography}
-        </Checkbox>
-      ))}
-    </>
-  ),
-]
-
 export const Value = Template.bind({})
 Value.parameters = {
   docs: {
@@ -147,12 +109,12 @@ Value.parameters = {
 }
 Value.decorators = [
   () => (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       {['false', 'true', 1234].map(value => (
         <Checkbox value={value} onChange={() => {}}>
           Checkbox value {value}
         </Checkbox>
       ))}
-    </>
+    </div>
   ),
 ]

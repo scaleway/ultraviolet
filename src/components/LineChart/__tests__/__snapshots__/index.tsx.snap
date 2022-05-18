@@ -743,7 +743,7 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   margin-right: 8px;
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -757,45 +757,70 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
 .cache-185d03p-Child-StyledFlexBox {
@@ -828,26 +853,6 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   width: 32px;
   height: 2px;
   background-color: #22c8a2;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
 }
 
 .cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
@@ -913,54 +918,40 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartSerie"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="true"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartSerie"
-                type="checkbox"
+              <path
+                d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartSerie"
-                  >
-                    line chart values
-                  </p>
-                  <div
-                    class="cache-1agnpp2-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartSerie"
+              >
+                line chart values
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-1agnpp2-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
@@ -1664,7 +1655,7 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   margin-right: 8px;
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -1678,45 +1669,70 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon.cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
 .cache-185d03p-Child-StyledFlexBox {
@@ -1749,26 +1765,6 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   width: 32px;
   height: 2px;
   background-color: #22c8a2;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
 }
 
 .cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
@@ -1834,54 +1830,40 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="false"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartSerie"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="false"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartSerie"
-                type="checkbox"
+              <path
+                d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-1ut6nax-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartSerie"
-                  >
-                    line chart values
-                  </p>
-                  <div
-                    class="cache-1agnpp2-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartSerie"
+              >
+                line chart values
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-1agnpp2-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
@@ -4022,7 +4004,7 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   margin-right: 8px;
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -4036,45 +4018,70 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
 .cache-185d03p-Child-StyledFlexBox {
@@ -4107,26 +4114,6 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   width: 32px;
   height: 2px;
   background-color: #22c8a2;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
 }
 
 .cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
@@ -4192,54 +4179,40 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartSerie"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="true"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartSerie"
-                type="checkbox"
+              <path
+                d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartSerie"
-                  >
-                    line chart values
-                  </p>
-                  <div
-                    class="cache-1agnpp2-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartSerie"
+              >
+                line chart values
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-1agnpp2-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
@@ -5374,7 +5347,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   margin-right: 8px;
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -5388,45 +5361,70 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
 .cache-185d03p-Child-StyledFlexBox {
@@ -5459,26 +5457,6 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   width: 32px;
   height: 2px;
   background-color: #22c8a2;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
 }
 
 .cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
@@ -5551,54 +5529,40 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartMultiple1"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="true"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartMultiple1"
-                type="checkbox"
+              <path
+                d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartMultiple1"
-                  >
-                    Serie 1
-                  </p>
-                  <div
-                    class="cache-1agnpp2-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartMultiple1"
+              >
+                Serie 1
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-1agnpp2-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
@@ -5627,54 +5591,40 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartMultiple2"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="true"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartMultiple2"
-                type="checkbox"
+              <path
+                d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartMultiple2"
-                  >
-                    Serie 2
-                  </p>
-                  <div
-                    class="cache-ja0hz5-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartMultiple2"
+              >
+                Serie 2
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-ja0hz5-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
@@ -7308,7 +7258,7 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   margin-right: 8px;
 }
 
-.cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -7322,45 +7272,70 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-13urrpd-StyledReakitCheckbox {
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
   opacity: 0.01;
   width: 24px;
   height: 24px;
   position: absolute;
   cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-  pointer-events: auto;
 }
 
-.cache-13urrpd-StyledReakitCheckbox:hover svg {
-  border-radius: 4px;
-  background-color: #f6f6f8;
-  fill: #4f0599;
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-}
-
-.cache-13urrpd-StyledReakitCheckbox:focus+svg {
-  outline: 1px #c4c9d6 dotted;
-}
-
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
-  fill: #390171;
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
-  box-sizing: content-box;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
 }
 
-.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon.cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon {
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-right: 10px;
-  padding: 2px;
 }
 
 .cache-185d03p-Child-StyledFlexBox {
@@ -7393,26 +7368,6 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   width: 32px;
   height: 2px;
   background-color: #22c8a2;
-}
-
-.cache-3dfrrx-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-3dfrrx-StyledExpandable.cache-3dfrrx-StyledExpandable {
-  overflow: hidden;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
 }
 
 .cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
@@ -7478,54 +7433,40 @@ exports[`LineChart renders correctly with timeline data 1`] = `
         <div
           class="cache-voos84-Child e1l6meh01"
         >
-          <div
-            class="cache-3svqc9"
+          <label
+            aria-disabled="false"
+            class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
           >
-            <label
-              aria-disabled="false"
-              class="eu28k4m5 e1g1zfwd0 cache-1yhe2tz-StyledText-variantStyles-StyledCheckBoxContainer"
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+              name="lineChartHours"
+              type="checkbox"
+            />
+            <svg
+              class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-checked="true"
-                checked=""
-                class="cache-13urrpd-StyledReakitCheckbox eu28k4m4"
-                name="lineChartHours"
-                type="checkbox"
+              <path
+                d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
               />
-              <svg
-                class="eu28k4m3 etwatq50 cache-wdbqu6-StyledIcon-sizeStyles-StyledIcon"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
-                />
-              </svg>
-              <div
-                class="cache-egzmkg-StyledChildrenContainer eu28k4m2"
-              >
-                <div
-                  class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
-                >
-                  <p
-                    class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                    data-testid="label-lineChartHours"
-                  >
-                    line chart hours values
-                  </p>
-                  <div
-                    class="cache-1agnpp2-legend"
-                  />
-                </div>
-              </div>
-            </label>
+            </svg>
             <div
-              class="e14o3tsk0 cache-3dfrrx-StyledExpandable"
+              class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
+              <p
+                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+                data-testid="label-lineChartHours"
+              >
+                line chart hours values
+              </p>
               <div
-                class="cache-1hzw3uf-StyledError eu28k4m0"
+                class="cache-1agnpp2-legend"
               />
             </div>
-          </div>
+          </label>
         </div>
         <p
           class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"

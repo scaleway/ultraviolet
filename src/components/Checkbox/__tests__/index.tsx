@@ -1,3 +1,4 @@
+import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Checkbox from '..'
@@ -17,40 +18,57 @@ describe('Checkbox', () => {
 
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onBlur={() => {}} onFocus={() => {}} onChange={() => {}}>
+      <Checkbox
+        onBlur={() => {}}
+        onFocus={() => {}}
+        onChange={() => {}}
+        name="testing"
+      >
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly no child', () =>
     shouldMatchEmotionSnapshot(<Checkbox onChange={() => {}} />))
+
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} disabled>
         Checkbox Label
       </Checkbox>,
     ))
+
   test('renders correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} checked>
         Checkbox Label
       </Checkbox>,
     ))
+
+  test('renders correctly indeterminate', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} checked="indeterminate">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders correctly checked and disabled', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} checked disabled>
         Checkbox Label
       </Checkbox>,
     ))
-  test('renders correctly with an error', () =>
+
+  test('renders correctly indeterminate and disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} error="test error">
+      <Checkbox onChange={() => {}} checked="indeterminate" disabled>
         Checkbox Label
       </Checkbox>,
     ))
-  test('renders correctly with valid', () =>
+
+  test('renders correctly with an error', () =>
     shouldMatchEmotionSnapshot(
-      <Checkbox onChange={() => {}} valid>
+      <Checkbox onChange={() => {}} error="test error">
         Checkbox Label
       </Checkbox>,
     ))
@@ -113,5 +131,33 @@ describe('Checkbox', () => {
     const input = node.getByRole('checkbox')
     userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
+  })
+
+  test('renders with space key for a11y', async () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox') as HTMLInputElement
+
+    input.focus()
+    userEvent.type(input, '{space}')
+    await waitFor(() => expect(input.checked).toBe(false))
+  })
+
+  test('renders with a key for a11y', async () => {
+    const node = renderWithTheme(
+      <Checkbox onChange={() => {}} value="test">
+        Checkbox Label
+      </Checkbox>,
+    )
+
+    const input = node.getByRole('checkbox') as HTMLInputElement
+
+    input.focus()
+    userEvent.type(input, 'a')
+    await waitFor(() => expect(input.checked).toBe(true))
   })
 })

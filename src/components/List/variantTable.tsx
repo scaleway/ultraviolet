@@ -128,6 +128,7 @@ export const Header = () => {
     selectAll,
     unselectAll,
     hasAllSelected,
+    hasSelectedItems,
   } = useListContext()
 
   const onSortEvent = useCallback(
@@ -140,13 +141,10 @@ export const Header = () => {
     [onSort],
   )
 
-  const handleSelectAll = useCallback(() => {
-    if (hasAllSelected) {
-      unselectAll()
-    } else {
-      selectAll()
-    }
-  }, [hasAllSelected, unselectAll, selectAll])
+  const handleOnChange = useCallback(() => {
+    if (hasAllSelected || (hasSelectedItems && !hasAllSelected)) unselectAll()
+    else selectAll()
+  }, [hasAllSelected, hasSelectedItems, unselectAll, selectAll])
 
   return (
     <StyledHeader>
@@ -154,10 +152,14 @@ export const Header = () => {
         <StyledCheckbox
           name="select-rows"
           value="all"
-          checked={hasAllSelected}
+          checked={
+            hasSelectedItems && !hasAllSelected
+              ? 'indeterminate'
+              : hasAllSelected
+          }
           size={20}
           disabled={isLoading}
-          onChange={handleSelectAll}
+          onChange={handleOnChange}
         />
       ) : null}
       {columns.map(({ sort, label, width }, index) => (

@@ -199,6 +199,12 @@ const StyledSummary = styled.summary`
   }
 `
 
+const StyledCheckbox = styled(Checkbox)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
   text-overflow: ellipsis;
   overflow: hidden;
@@ -217,6 +223,7 @@ export const Header = () => {
     selectAll,
     unselectAll,
     hasAllSelected,
+    hasSelectedItems,
   } = useListContext()
 
   const onSortEvent = useCallback(
@@ -229,26 +236,26 @@ export const Header = () => {
     [onSort],
   )
 
+  const handleOnChange = useCallback(() => {
+    if (hasAllSelected || (hasSelectedItems && !hasAllSelected)) unselectAll()
+    else selectAll()
+  }, [hasAllSelected, hasSelectedItems, unselectAll, selectAll])
+
   return (
     <StyledHeader multiselect={multiselect}>
       {multiselect && (
         <StyledCheckboxContainer>
-          <Checkbox
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+          <StyledCheckbox
             name="select-rows"
             value="all"
-            checked={hasAllSelected}
+            checked={
+              hasSelectedItems && !hasAllSelected
+                ? 'indeterminate'
+                : hasAllSelected
+            }
             size={20}
             disabled={isLoading}
-            onChange={() => {
-              if (hasAllSelected) {
-                unselectAll()
-              } else {
-                selectAll()
-              }
-            }}
+            onChange={handleOnChange}
           />
         </StyledCheckboxContainer>
       )}
@@ -412,11 +419,8 @@ export const Row = ({
                   baseId={`list-tooltip-row-${id}`}
                   text={!isSelectable ? notSelectableText : undefined}
                 >
-                  <Checkbox
+                  <StyledCheckbox
                     value={id}
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
                     data-visibility={hasSelectedItems ? '' : 'hover'}
                     checked={selected}
                     disabled={!isSelectable || disabled}

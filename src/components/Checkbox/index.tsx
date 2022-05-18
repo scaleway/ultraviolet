@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import React, {
   ChangeEvent,
+  KeyboardEventHandler,
   ReactNode,
-  WeakValidationMap,
+  useCallback,
   useEffect,
   useMemo,
 } from 'react'
@@ -12,123 +12,167 @@ import {
   CheckboxProps as ReakitCheckboxProps,
   useCheckboxState,
 } from 'reakit/Checkbox'
-import Box, { XStyledProps } from '../Box'
-import Expandable from '../Expandable'
+import { getUUID } from '../../utils'
 import Icon from '../Icon'
 import Loader from '../Loader'
-import Typography, { typographyVariants } from '../Typography'
+import Typography from '../Typography'
 
-const StyledCheckBoxContainer = styled(Typography)`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  cursor: ${({ 'aria-disabled': disabled }) =>
-    disabled ? 'not-allowed' : 'pointer'};
+const StyledError = styled(Typography)`
+  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: ${({ theme }) => theme.space['1']};
+  border-radius: ${({ theme }) => theme.radii.default};
+  color: ${({ theme }) => theme.colors.neutral.text};
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
-  shouldForwardProp: prop => !['hasChildren', 'size'].includes(prop.toString()),
-})<{ hasChildren: boolean }>`
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})`
   opacity: 0.01;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
-  margin-right: ${({ hasChildren }) => (hasChildren ? '10px' : 0)};
-  padding: 2px;
-  pointer-events: auto;
-  &:hover {
-    svg {
-      border-radius: ${({ theme }) => theme.radii.default};
-      background-color: ${({ theme, disabled }) =>
-        !disabled && theme.colors.neutral.backgroundStrong};
-      fill: ${({ theme, disabled }) =>
-        !disabled && theme.colors.primary.backgroundStrong};
-      transition: fill 300ms;
+`
+
+const StyledCheckBoxContainer = styled(Typography)`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &[aria-disabled='false'] {
+    cursor: pointer;
+  }
+
+  ${StyledReakitCheckbox}[aria-checked="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
+    ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.neutral.textDisabled};
     }
   }
-  &:focus + svg {
-    outline: 1px ${({ theme }) => theme.colors.neutral.backgroundHover} dotted;
+
+  ${StyledReakitCheckbox}:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  ${StyledReakitCheckbox}[aria-invalid="true"]:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  :hover[aria-disabled='false'] {
+    ${StyledReakitCheckbox} + ${StyledIcon} {
+      background-color: ${({ theme }) => theme.colors.primary.background};
+      fill: ${({ theme }) => theme.colors.primary.text};
+    }
+
+    ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+      background-color: ${({ theme }) => theme.colors.danger.background};
+      fill: ${({ theme }) => theme.colors.danger.text};
+    }
   }
 `
-
-const StyledIcon = styled(Icon)`
-  box-sizing: content-box;
-`
-
-const StyledChildrenContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
-})``
 
 const StyledActivityContainer = styled('div', {
   shouldForwardProp: prop => !['hasChildren'].includes(prop.toString()),
 })<{ hasChildren: boolean }>`
-  display: flex;
+  display: inline;
+  vertical-align: middle;
   margin-right: ${({ theme, hasChildren }) =>
     hasChildren ? theme.space[1] : 0};
 `
 
-const StyledError = styled.div`
-  font-size: 12px;
-  color: ${({ theme }) => theme.colors.danger.text};
-  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
-`
-
 type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   children?: ReactNode
-  valid?: boolean
   error?: string | ReactNode
   size?: number
   progress?: boolean
   disabled?: boolean
-  typographyVariant?: string
   checked?: boolean | 'indeterminate'
   className?: string
-} & Required<Pick<ReakitCheckboxProps, 'onChange'>> &
-  XStyledProps
+} & Required<Pick<ReakitCheckboxProps, 'onChange'>>
 
 const Checkbox = ({
   checked = false,
   onChange,
   onFocus,
   onBlur,
-  valid,
   error,
-  name = 'checkbox',
+  name,
   value,
   size = 24,
   children,
   progress = false,
   disabled = false,
   autoFocus = false,
-  typographyVariant = 'default',
   className,
-  ...props
 }: CheckboxProps) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
-  const color = useMemo(() => {
-    if (disabled) return 'gray100'
-    if (valid === false || !!error) return 'warning'
-    if (valid === true) return 'success'
-    if (checkbox.state) return 'primary'
 
-    return 'gray300'
-  }, [disabled, valid, checkbox.state, error])
+  const computedName = useMemo(() => {
+    if (!name) return getUUID('checkbox')
+
+    return name
+  }, [name])
+
+  const icon = useMemo(() => {
+    if (checkbox.state === 'indeterminate') return 'minus-box-outline'
+    if (checkbox.state) return 'checkbox-marked-outline'
+
+    return 'checkbox-blank-outline'
+  }, [checkbox?.state])
 
   const { setState } = checkbox
   useEffect(() => {
     setState(checked)
   }, [checked, setState])
 
+  const onLocalChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (!progress) onChange(event)
+      setState(event.target.checked)
+    },
+    [onChange, progress, setState],
+  )
+
+  const onKeyDown: KeyboardEventHandler = useCallback(
+    event => {
+      if (event.key.charCodeAt(0) === 32) {
+        onChange(event)
+      }
+    },
+    [onChange],
+  )
+
   return (
-    <Box className={className} {...props}>
+    <>
+      {progress ? (
+        <StyledActivityContainer hasChildren={hasChildren}>
+          <Loader active size={size} />
+        </StyledActivityContainer>
+      ) : null}
       <StyledCheckBoxContainer
         as="label"
-        variant={typographyVariant}
+        className={className}
         aria-disabled={disabled}
       >
         <StyledReakitCheckbox
+          aria-invalid={!!error}
+          aria-describedby={error ? `${computedName}-hint` : undefined}
           aria-checked={
             checkbox.state === 'indeterminate'
               ? 'mixed'
@@ -139,62 +183,28 @@ const Checkbox = ({
               ? false
               : (checkbox.state as boolean)
           }
-          hasChildren={hasChildren}
           size={size}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => {
-            if (!progress) onChange(e)
-            setState(e.target.checked)
-          }}
+          onChange={onLocalChange}
           onFocus={onFocus}
           onBlur={onBlur}
+          onKeyDown={onKeyDown}
           disabled={disabled}
           value={value}
-          name={name}
+          name={computedName}
           autoFocus={autoFocus}
         />
-        {progress ? (
-          <StyledActivityContainer hasChildren={hasChildren}>
-            <Loader active size={size} />
-          </StyledActivityContainer>
-        ) : (
-          <StyledIcon
-            mr={hasChildren ? '10px' : 0}
-            p="2px"
-            name={
-              checkbox?.state
-                ? 'checkbox-marked-outline'
-                : 'checkbox-blank-outline'
-            }
-            color={color}
-            size={size}
-          />
-        )}
-        {hasChildren && (
-          <StyledChildrenContainer>{children}</StyledChildrenContainer>
-        )}
+        {!progress ? (
+          <StyledIcon name={icon} size={size} disabled={disabled} />
+        ) : null}
+        {children}
       </StyledCheckBoxContainer>
-      <Expandable height={56} overflow="hidden" opened={!!error}>
-        <StyledError>{error}</StyledError>
-      </Expandable>
-    </Box>
+      {error ? (
+        <StyledError id={`${computedName}-id`} variant="bodyB" color="danger">
+          {error}
+        </StyledError>
+      ) : null}
+    </>
   )
 }
-
-Checkbox.propTypes = {
-  autoFocus: PropTypes.bool,
-  checked: PropTypes.oneOf([true, false, 'indeterminate']),
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  progress: PropTypes.bool,
-  size: PropTypes.number,
-  typographyVariant: PropTypes.oneOf(typographyVariants),
-  valid: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-} as WeakValidationMap<CheckboxProps>
 
 export default Checkbox
