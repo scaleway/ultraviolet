@@ -1,3 +1,10 @@
+### [0.151.2](https://github.com/scaleway/scaleway-ui/compare/v0.151.1...v0.151.2) (2022-05-18)
+
+
+### :bug: Bug Fixes
+
+* **button:** link variant ([#1480](https://github.com/scaleway/scaleway-ui/issues/1480)) ([55951e0](https://github.com/scaleway/scaleway-ui/commit/55951e065e3f9e3139681ffc469fa21399f579de))
+
 ### [0.151.1](https://github.com/scaleway/scaleway-ui/compare/v0.151.0...v0.151.1) (2022-05-18)
 
 
