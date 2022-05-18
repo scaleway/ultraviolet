@@ -1,3 +1,15 @@
+## [0.151.0](https://github.com/scaleway/scaleway-ui/compare/v0.150.3...v0.151.0) (2022-05-18)
+
+
+### :package: Chore
+
+* **devdeps:** update pnpm to v7.1.0 ([#1481](https://github.com/scaleway/scaleway-ui/issues/1481)) ([f530cb7](https://github.com/scaleway/scaleway-ui/commit/f530cb7e9ffdc20df17239820708cd4b8bf07d69))
+
+
+### :gear: Features
+
+* **checkbox:** refactoring ([#1446](https://github.com/scaleway/scaleway-ui/issues/1446)) ([ebfbbd8](https://github.com/scaleway/scaleway-ui/commit/ebfbbd814ad224486c2323d94755d3334f25de34))
+
 ### [0.150.3](https://github.com/scaleway/scaleway-ui/compare/v0.150.2...v0.150.3) (2022-05-17)
 
 
