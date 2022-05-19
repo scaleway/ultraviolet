@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { darken, lighten, transparentize } from 'polished'
-import React, { MouseEventHandler, ReactNode, useMemo } from 'react'
+import { MouseEventHandler, ReactNode, useMemo } from 'react'
 import Tooltip from '../Tooltip'
 
 type BarProps = {

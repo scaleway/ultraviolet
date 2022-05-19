@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import BarStack from '..'
 
 const fakeData = [

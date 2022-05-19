@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import Pentagon from '..'
 import { colors } from '../../../theme'
 import { FlexBox } from '../../index'

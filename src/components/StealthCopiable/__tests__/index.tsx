@@ -1,5 +1,5 @@
 import fireEvent from '@testing-library/user-event'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import StealthCopiable from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

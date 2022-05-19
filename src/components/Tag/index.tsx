@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { MouseEventHandler, ReactNode } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import Loader from '../Loader'

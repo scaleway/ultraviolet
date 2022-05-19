@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React from 'react'
+import { Fragment } from 'react'
 import IconPlaceholder from './IconPlaceholder'
 import Line from './Line'
 
@@ -26,12 +26,12 @@ const StyledList = styled.ul`
 const Block = ({ length = 3 }: { length?: number }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
-      <React.Fragment key={`placeholder-block-${i}`}>
+      <Fragment key={`placeholder-block-${i}`}>
         <StyledLine>
           <IconPlaceholder />
           <Line />
         </StyledLine>
-      </React.Fragment>
+      </Fragment>
     ))}
   </StyledList>
 )

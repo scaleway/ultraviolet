@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import TooltipIcon from '..'
 import FlexBox from '../../FlexBox'
 

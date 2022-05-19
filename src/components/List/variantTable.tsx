@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { KeyboardEvent, MouseEvent, useCallback } from 'react'
+import { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import * as animations from '../../utils/animations'
 import Box from '../Box'
 import Checkbox from '../Checkbox'

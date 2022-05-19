@@ -1,6 +1,6 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import React, { ReactNode, useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import { Color, SENTIMENTS } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import Icon, { IconName } from '../Icon'

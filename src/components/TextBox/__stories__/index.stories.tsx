@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import TextBox, { textBoxSizes } from '..'
 import ErrorTransition from '../../../__stories__/components/ErrorTransition'
 import UncontrolledTextBox from './UncontrolledTextBox'

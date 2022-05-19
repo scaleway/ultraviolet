@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react'
 import { Color } from '../../theme'
 
 interface PentagonProps {

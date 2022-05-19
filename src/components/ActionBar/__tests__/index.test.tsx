@@ -1,4 +1,3 @@
-import React from 'react'
 import ActionBar from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

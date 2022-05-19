@@ -1,4 +1,3 @@
-import React from 'react'
 import Avatar from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import support from '../__stories__/support.svg'

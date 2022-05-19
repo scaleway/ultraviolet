@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, {
+import {
   ChangeEvent,
   ComponentProps,
   ReactNode,

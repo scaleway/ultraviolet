@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps, useEffect, useState } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import RichSelect from '..'
 import { Badge, Button, Loader } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'

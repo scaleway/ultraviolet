@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import MarkDown from '../MarkDown'

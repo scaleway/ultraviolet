@@ -1,4 +1,3 @@
-import React from 'react'
 import Badge, { PROMINENCES, SIZES } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { SENTIMENTS } from '../../../theme'

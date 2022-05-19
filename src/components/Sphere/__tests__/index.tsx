@@ -1,4 +1,3 @@
-import React from 'react'
 import Sphere from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

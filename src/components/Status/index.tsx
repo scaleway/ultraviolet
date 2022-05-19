@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import React from 'react'
 import { flash } from '../../utils'
 import Tooltip from '../Tooltip'
 

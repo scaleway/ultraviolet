@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, WeakValidationMap } from 'react'
+import { ComponentProps, WeakValidationMap } from 'react'
 
 type ChildProps = {
   alignSelf?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'

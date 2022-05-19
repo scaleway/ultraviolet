@@ -1,11 +1,11 @@
 import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import { useState } from 'react'
 import PhoneInput from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 const Controlled = () => {
-  const [state, setState] = React.useState('+33')
+  const [state, setState] = useState('+33')
 
   return (
     <PhoneInput

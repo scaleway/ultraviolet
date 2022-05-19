@@ -1,4 +1,3 @@
-import React from 'react'
 import ExtendedReminder from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

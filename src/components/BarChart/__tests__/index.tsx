@@ -1,6 +1,6 @@
 import { ResponsiveWrapper } from '@nivo/core'
 import userEvent from '@testing-library/user-event'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import BarChart from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import {

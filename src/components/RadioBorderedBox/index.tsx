@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import Badge from '../Badge'
 import BorderedBox from '../BorderedBox'
 import Expandable from '../Expandable'

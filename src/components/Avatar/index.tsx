@@ -1,7 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
 import Image from '../Image'

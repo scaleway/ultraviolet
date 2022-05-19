@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 import Line from './Line'
 
 const StyledItem = styled.li`

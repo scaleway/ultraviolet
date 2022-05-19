@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import List, { ListProps, ListRefType } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import { generateData } from '../../../mocks/list'

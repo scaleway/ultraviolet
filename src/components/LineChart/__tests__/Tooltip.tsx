@@ -1,5 +1,4 @@
 import { Point } from '@nivo/line'
-import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import LineChartTooltip from '../Tooltip'
 

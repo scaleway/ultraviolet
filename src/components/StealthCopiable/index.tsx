@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 

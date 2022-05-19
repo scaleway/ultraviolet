@@ -1,7 +1,6 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 import Box, { BoxProps } from '../Box'
 import Block from './Block'
 import Blocks from './Blocks'

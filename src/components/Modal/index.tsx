@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ReactElement,
   ReactNode,
   isValidElement,
@@ -10,6 +10,7 @@ import React, {
   useEffect,
   useRef,
 } from 'react'
+import * as React from 'react'
 import {
   Dialog,
   DialogBackdrop,
