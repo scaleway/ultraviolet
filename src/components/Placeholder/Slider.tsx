@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 
 const StyledContainer = styled.div<{ length: number }>`
   height: 277px;

@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import zxcvbn from 'zxcvbn'
 import PasswordStrengthMeter from '..'
 import { colors } from '../../../theme'

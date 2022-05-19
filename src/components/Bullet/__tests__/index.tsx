@@ -1,4 +1,3 @@
-import React from 'react'
 import Bullet, { bulletSizes, bulletVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

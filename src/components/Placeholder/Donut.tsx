@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import React from 'react'
 import Line from './Line'
 
 const CIRCLE_SIZE = 206

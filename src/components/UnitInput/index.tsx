@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, useEffect, useState } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import RichSelect, { SelectOption } from '../RichSelect'
 import type { WithSelectProps } from '../RichSelect'
 import TextBox from '../TextBox'

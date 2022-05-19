@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent, ComponentProps } from 'react'
+import { ChangeEvent, ComponentProps } from 'react'
 import SwitchButton from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 

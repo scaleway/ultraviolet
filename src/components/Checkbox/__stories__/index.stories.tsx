@@ -1,10 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, {
-  ChangeEvent,
-  ComponentProps,
-  useCallback,
-  useState,
-} from 'react'
+import { ChangeEvent, ComponentProps, useCallback, useState } from 'react'
 import Checkbox from '..'
 
 export default {

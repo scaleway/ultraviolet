@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ChangeEventHandler, ReactNode } from 'react'
+import { ChangeEventHandler, ReactNode } from 'react'
 import Tooltip from '../Tooltip'
 
 const SIZES = {

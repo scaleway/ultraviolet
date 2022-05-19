@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { ComponentProps, WeakValidationMap } from 'react'
+import { ComponentProps, WeakValidationMap } from 'react'
 import RichSelect from '../RichSelect'
 
 const hours = [

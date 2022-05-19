@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ChangeEvent,
   FocusEventHandler,
   InputHTMLAttributes,

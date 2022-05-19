@@ -1,4 +1,3 @@
-import React from 'react'
 import Status, { statusVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

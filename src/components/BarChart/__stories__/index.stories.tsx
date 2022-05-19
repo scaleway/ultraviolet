@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import { format } from 'date-fns'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import BarChart from '..'
 import {
   barChartMultiData,

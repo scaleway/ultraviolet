@@ -1,4 +1,3 @@
-import React from 'react'
 import Button, { buttonSizes, buttonVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

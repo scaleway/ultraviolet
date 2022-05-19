@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.neutral.text};

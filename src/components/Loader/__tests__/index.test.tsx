@@ -1,4 +1,3 @@
-import React from 'react'
 import Loader from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import { SENTIMENTS } from '../../../theme'

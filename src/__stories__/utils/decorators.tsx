@@ -1,10 +1,10 @@
 import { DecoratorFunction } from '@storybook/csf'
 import { ReactFramework } from '@storybook/react'
-import React, { ReactNode } from 'react'
+import { Children, ReactNode } from 'react'
 
 export const wrapStories = (stories: ReactNode[]) => (
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-    {React.Children.toArray(stories)}
+    {Children.toArray(stories)}
   </div>
 )
 

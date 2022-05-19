@@ -1,4 +1,3 @@
-import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import BarChartTooltip from '../Tooltip'
 

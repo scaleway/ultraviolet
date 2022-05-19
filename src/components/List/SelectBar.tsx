@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'

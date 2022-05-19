@@ -7,7 +7,7 @@ import {
 } from '@nivo/bar'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, Validator, useCallback } from 'react'
+import { ComponentProps, Validator, useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import BarChartTooltip from './Tooltip'
 

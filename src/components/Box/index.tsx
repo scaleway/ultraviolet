@@ -1,6 +1,6 @@
 import { Box as XStyledBox } from '@xstyled/emotion'
 import PropTypes from 'prop-types'
-import React, {
+import {
   AllHTMLAttributes,
   ComponentProps,
   ElementType,

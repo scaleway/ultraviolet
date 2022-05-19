@@ -1,4 +1,3 @@
-import React from 'react'
 import { shouldMatchEmotionSnapshot } from '../../helpers/jestHelpers'
 import capitalize from '../capitalize'
 import { getUUID, useUUID } from '../ids'

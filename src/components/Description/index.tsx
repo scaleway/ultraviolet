@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { WeakValidationMap } from 'react'
+import { WeakValidationMap } from 'react'
 import Box, { BoxProps } from '../Box'
 
 const Term = styled(Box.withComponent('dt'))`

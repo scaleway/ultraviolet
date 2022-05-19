@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
 import Modal from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
 

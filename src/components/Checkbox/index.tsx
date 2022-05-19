@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, {
+import {
   ChangeEvent,
   KeyboardEventHandler,
   ReactNode,

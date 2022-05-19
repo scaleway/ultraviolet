@@ -1,4 +1,4 @@
-import React, { ComponentProps, useEffect, useState } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import ProgressBar from '..'
 
 const UncontrolledProgressBar = (props: ComponentProps<typeof ProgressBar>) => {

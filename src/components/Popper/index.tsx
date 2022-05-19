@@ -1,10 +1,11 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   ReactElement,
   ReactNode,
   RefObject,
+  cloneElement,
   isValidElement,
   memo,
   useEffect,
@@ -77,7 +78,7 @@ const Disclosure = ({ disclosure, popover }: DisclosureProps): JSX.Element => {
 
   return (
     <PopoverDisclosure {...popover} ref={innerRef}>
-      {disclosureProps => React.cloneElement(target, disclosureProps)}
+      {disclosureProps => cloneElement(target, disclosureProps)}
     </PopoverDisclosure>
   )
 }

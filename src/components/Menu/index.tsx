@@ -1,7 +1,7 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ComponentProps, ReactNode, WeakValidationMap } from 'react'
+import { ComponentProps, ReactNode, WeakValidationMap } from 'react'
 import Popper from '../Popper'
 import Item from './Item'
 

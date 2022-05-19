@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { KeyboardEvent, MouseEvent, useCallback } from 'react'
+import { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import Box from '../Box'
 import Checkbox from '../Checkbox'
 import Tooltip from '../Tooltip'

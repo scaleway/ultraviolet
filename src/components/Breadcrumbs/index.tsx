@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, {
+import {
   AriaAttributes,
   Children,
   ReactNode,
@@ -9,6 +9,7 @@ import React, {
   isValidElement,
   useMemo,
 } from 'react'
+import * as React from 'react'
 import Link from '../Link'
 
 function reverseZIndexes() {

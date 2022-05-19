@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import { act, render, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
 import Pagination, { usePaginationContext } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import theme from '../../../theme'

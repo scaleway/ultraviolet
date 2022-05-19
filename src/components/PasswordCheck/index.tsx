@@ -1,6 +1,5 @@
 import { css, useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
-import React from 'react'
 import { Col, Grid, Row } from '../Grid'
 import Icon from '../Icon'
 

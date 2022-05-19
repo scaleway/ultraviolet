@@ -1,7 +1,7 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React, { ReactNode, WeakValidationMap, isValidElement } from 'react'
+import { Children, ReactNode, WeakValidationMap, isValidElement } from 'react'
 import useMedia from 'use-media'
 import Icon from '../Icon'
 import Loader from '../Loader'
@@ -153,7 +153,7 @@ const NavigationStepper: NavigationStepperType = ({
   const isMobile = useMedia({ maxWidth: theme.screens.small })
 
   const computedCondensed = condensed !== undefined ? condensed : isMobile
-  const steps = React.Children.map<JSX.Element | null, ReactNode>(
+  const steps = Children.map<JSX.Element | null, ReactNode>(
     children,
     (child, index) => {
       if (isValidElement(child) && child.type === Step) {

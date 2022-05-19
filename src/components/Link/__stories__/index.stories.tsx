@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
-import React, { ComponentProps } from 'react'
+import { ComponentProps } from 'react'
 import Link, { linkVariants } from '..'
 import theme from '../../../theme'
 

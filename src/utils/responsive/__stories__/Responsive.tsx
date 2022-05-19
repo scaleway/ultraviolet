@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { down, up } from '../utilities'
 
 export const WithStyled = styled.div`

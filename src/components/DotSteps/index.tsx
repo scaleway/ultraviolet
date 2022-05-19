@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 

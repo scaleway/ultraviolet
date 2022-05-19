@@ -1,5 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
 import { globalStyles } from '../../../.storybook/preview'
 import lightTheme, { darkTheme } from '../../theme'

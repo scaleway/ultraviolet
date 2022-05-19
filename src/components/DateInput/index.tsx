@@ -1,7 +1,6 @@
 import { Global, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import React from 'react'
 import DatePicker, {
   ReactDatePickerProps,
   registerLocale,
