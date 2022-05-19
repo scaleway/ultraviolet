@@ -1,3 +1,16 @@
+## [0.152.0](https://github.com/scaleway/scaleway-ui/compare/v0.151.2...v0.152.0) (2022-05-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency rollup to v2.73.0 ([#1487](https://github.com/scaleway/scaleway-ui/issues/1487)) ([06025d8](https://github.com/scaleway/scaleway-ui/commit/06025d8d5d0e6a363661d331aa933544d52c8392))
+* **devdeps:** update storybook monorepo to v6.5.0 ([#1488](https://github.com/scaleway/scaleway-ui/issues/1488)) ([6469760](https://github.com/scaleway/scaleway-ui/commit/646976073961feba84063853437ad4ec7ad3ed12))
+
+
+### :gear: Features
+
+* **react:** new automatic runtime ([#1490](https://github.com/scaleway/scaleway-ui/issues/1490)) ([0aa0b73](https://github.com/scaleway/scaleway-ui/commit/0aa0b7335154918b002a76f24953b2266dadfa5c))
+
 ### [0.151.2](https://github.com/scaleway/scaleway-ui/compare/v0.151.1...v0.151.2) (2022-05-18)
 
 ### :bug: Bug Fixes
