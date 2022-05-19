@@ -5,6 +5,10 @@ export default {
   core: {
     builder: 'webpack5',
   },
+  features: {
+    // storyStoreV7: true,
+    previewMdx2: true,
+  },
   typescript: {
     // also valid 'react-docgen-typescript' | false
     reactDocgen: 'react-docgen-typescript',

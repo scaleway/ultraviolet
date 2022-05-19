@@ -1,15 +1,26 @@
 {
+  "plugins": [
+    [
+      "@emotion",
+      {
+        "sourceMap": false,
+        "autoLabel": "dev-only",
+        "labelFormat": "[local]",
+        "cssPropOptimization": true
+      }
+    ]
+  ],
   "presets": [
     "@babel/preset-typescript",
     [
       "@babel/preset-env",
       { "shippedProposals": true, "targets": { "node": "current" } }
     ],
-    "@babel/preset-react",
     [
-      "@emotion/babel-preset-css-prop",
+      "@babel/preset-react",
       {
-        "sourceMap": false
+        "runtime": "automatic",
+        "importSource": "@emotion/react"
       }
     ]
   ]
