@@ -34,11 +34,4 @@ describe('Radio', () => {
         Choice
       </Radio>,
     ))
-
-  test('renders correctly when valid', () =>
-    shouldMatchEmotionSnapshot(
-      <Radio onChange={() => {}} name="radio" value="choice" valid>
-        Choice
-      </Radio>,
-    ))
 })

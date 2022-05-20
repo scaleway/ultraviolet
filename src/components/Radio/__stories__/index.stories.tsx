@@ -5,11 +5,11 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
   args: {
-    checked: false,
-    children: 'Choice 1',
+    checked: true,
+    children: 'Label 1',
     disabled: false,
     name: 'basic',
-    value: 'choice-1',
+    value: 'label-1',
   },
   argTypes: {
     checked: {
@@ -50,24 +50,24 @@ Controlled.parameters = {
 }
 Controlled.decorators = [
   () => (
-    <ControlValue value="choice-1">
+    <ControlValue value="label-1">
       {({ value, onChange }) => (
         <>
           <Radio
-            name="choice-1"
-            checked={value === 'choice-1'}
-            value="choice-1"
+            name="label-1"
+            checked={value === 'label-1'}
+            value="label-1"
             onChange={e => onChange(e.currentTarget.value)}
           >
-            Choice 1
+            Label 1
           </Radio>
           <Radio
-            name="choice-2"
-            checked={value === 'choice-2'}
-            value="choice-2"
+            name="label-2"
+            checked={value === 'label-2'}
+            value="label-2"
             onChange={e => onChange(e.currentTarget.value)}
           >
-            Choice 2
+            Label 2
           </Radio>
         </>
       )}
@@ -83,10 +83,4 @@ Disabled.args = {
 export const Error = Template.bind({})
 Error.args = {
   error: 'Invalid value',
-}
-
-export const Valid = Template.bind({})
-Valid.args = {
-  checked: true,
-  valid: true,
 }

@@ -1,145 +1,125 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
-import { InputHTMLAttributes, ReactNode, useMemo } from 'react'
+import { InputHTMLAttributes, ReactNode } from 'react'
 import { Radio as ReakitRadio } from 'reakit'
-import Box, { XStyledProps } from '../Box'
-import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
-const StyledIcon = styled(Icon)``
+const StyledIcon = styled(Icon)`
+  margin-right: ${({ theme }) => theme.space['1']};
+  margin-top: ${({ theme }) => theme.space['0.25']};
+  border-radius: ${({ theme }) => theme.radii.circle};
+  fill: ${({ theme }) => theme.colors.neutral.text};
+`
 
-const IconContainer = styled.div`
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
+const StyledRadio = styled(ReakitRadio, {
+  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+})`
+  opacity: 0.01;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+  position: absolute;
+  cursor: pointer;
+`
+
+const StyledRadioContainer = styled(Typography)`
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-`
+  align-items: flex-start;
 
-const disabledClass = ({ theme }: { theme: Theme }) => css`
-  color: ${theme.colors.neutral.textDisabled};
-  cursor: not-allowed;
-`
+  &[aria-disabled='false'] {
+    cursor: pointer;
+  }
 
-const activeFocusClass = ({ theme }: { theme: Theme }) => css`
-  :hover,
-  :focus {
-    ${IconContainer} {
-      background-color: ${transparentize(
-        0.75,
-        theme.colors.primary.backgroundHover,
-      )};
-      border-radius: 50%;
+  ${StyledRadio}[aria-checked="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
 
-      > ${StyledIcon} {
-        fill: ${theme.colors.primary.textHover};
-      }
+  ${StyledRadio}[aria-invalid="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
+    ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.neutral.textDisabled} !important;
+    }
+  }
+
+  ${StyledRadio}:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  ${StyledRadio}[aria-invalid="true"]:focus  + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  :hover[aria-disabled='false'] {
+    ${StyledRadio} + ${StyledIcon} {
+      background-color: ${({ theme }) => theme.colors.primary.background};
+      fill: ${({ theme }) => theme.colors.primary.text};
+    }
+
+    ${StyledRadio}[aria-invalid="true"]  + ${StyledIcon} {
+      background-color: ${({ theme }) => theme.colors.danger.background};
+      fill: ${({ theme }) => theme.colors.danger.text};
     }
   }
 `
 
-type StyledContainerProps = {
-  disabled: boolean
-  htmlFor: string
-}
-
-const StyledRadioContainer = styled(Typography)<StyledContainerProps>`
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 32px;
-  cursor: pointer;
-
-  ${({ disabled }) => (disabled ? disabledClass : activeFocusClass)}
-`
-
-const StyledRadio = styled(ReakitRadio)`
-  position: absolute;
-  opacity: 0.01;
-`
-
-const StyledError = styled.div`
-  font-size: 12px;
-  color: ${({ theme }) => theme.colors.danger.text};
-  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
-`
-
 type RadioProps = {
   children: ReactNode
-  valid?: boolean
   error?: string | ReactNode
   name: string
   size?: number
   value: string | number
-  showError?: boolean
-} & XStyledProps &
-  InputHTMLAttributes<HTMLInputElement>
+} & InputHTMLAttributes<HTMLInputElement>
 
 const Radio = ({
-  checked,
+  checked = false,
   onChange,
   onFocus,
   onBlur,
   disabled = false,
   error,
   name,
-  valid,
   value,
-  size = 24,
+  size = 20,
   children,
-  showError = true,
-  ...props
-}: RadioProps): JSX.Element => {
-  const color = useMemo(() => {
-    if (disabled) return 'gray100'
-    if (valid === false || !!error) return 'warning'
-    if (valid === true) return 'success'
-    if (checked) return 'primary'
-
-    return 'gray300'
-  }, [disabled, valid, checked, error])
-
-  return (
-    <Box {...props}>
-      <StyledRadioContainer
-        as="label"
-        htmlFor={`${name}-${value}`}
-        disabled={disabled}
-      >
-        <IconContainer>
-          <StyledIcon
-            name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-            color={color}
-            size={size}
-          />
-        </IconContainer>
-        <div>{children}</div>
-        <StyledRadio
-          type="radio"
-          aria-checked={checked ? 'true' : 'false'}
-          checked={checked}
-          id={`${name}-${value}`}
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          value={value}
-          disabled={disabled}
-          name={name}
-        />
-      </StyledRadioContainer>
-      {showError ? (
-        <Expandable opened={!!error}>
-          <StyledError>{error}</StyledError>
-        </Expandable>
-      ) : null}
-    </Box>
-  )
-}
+  className,
+  autoFocus,
+}: RadioProps): JSX.Element => (
+  <StyledRadioContainer
+    as="label"
+    aria-disabled={disabled}
+    htmlFor={`${name}-${value}`}
+    className={className}
+  >
+    <StyledRadio
+      type="radio"
+      aria-invalid={!!error}
+      aria-checked={checked}
+      checked={checked}
+      id={`${name}-${value}`}
+      onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      value={value}
+      disabled={disabled}
+      name={name}
+      autoFocus={autoFocus}
+    />
+    <StyledIcon
+      name={checked ? 'radiobox-marked' : 'radiobox-blank'}
+      size={size}
+    />
+    {children}
+  </StyledRadioContainer>
+)
 
 Radio.propTypes = {
   checked: PropTypes.bool,
@@ -156,9 +136,7 @@ Radio.propTypes = {
   /**
    * Size of the button
    */
-  showError: PropTypes.bool,
   size: PropTypes.number,
-  valid: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
