@@ -21,7 +21,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -35,47 +35,48 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -86,7 +87,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -95,10 +96,10 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -117,7 +118,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -131,7 +132,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -196,7 +197,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -210,47 +211,48 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -261,7 +263,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -270,10 +272,10 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -292,7 +294,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
     >
       <label
         aria-disabled="false"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radioborderedbox-choice1"
       >
         <input
@@ -306,7 +308,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
           value="choice1"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -373,7 +375,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -387,47 +389,48 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -438,7 +441,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -447,10 +450,10 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -469,7 +472,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -484,7 +487,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -551,7 +554,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -565,47 +568,48 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -616,7 +620,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -625,10 +629,10 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -648,7 +652,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
     >
       <label
         aria-disabled="true"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -664,7 +668,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -731,7 +735,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -745,47 +749,48 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -796,7 +801,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -805,10 +810,10 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -827,7 +832,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -841,7 +846,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -915,7 +920,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -929,47 +934,48 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+  margin-right: 8px;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6!important;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -980,7 +986,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   cursor: pointer;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
@@ -989,10 +995,10 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
-  fill: #4a4f62;
+  fill: #b2b6c3;
 }
 
-.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon.cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon {
+.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -1052,7 +1058,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
     >
       <label
         aria-disabled="true"
-        class="e1duuirp0 e1g1zfwd0 cache-1vw2qab-StyledText-variantStyles-StyledRadioContainer"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -1068,7 +1074,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-1rbp9rf-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path

@@ -6,7 +6,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 export default {
   args: {
     badgeText: 'Badge',
-    checked: true,
+    checked: false,
     label: 'Choice 1',
     labelDescription: '(choice details)',
     name: 'choice-1',
@@ -57,7 +57,9 @@ Controlled.decorators = [
             name="basic-1"
             checked={value === 'basic-1' ? true : undefined}
             value="basic-1"
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
             label="Choice 1"
             labelDescription="(choice details)"
             badgeText="Badge"
@@ -68,7 +70,9 @@ Controlled.decorators = [
             name="basic-2"
             checked={value === 'basic-2' ? true : undefined}
             value="basic-2"
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
             label="Choice 2"
           >
             Description content choice 2
@@ -103,6 +107,7 @@ Label.decorators = [
       name="radio-label"
       label="Lorem Ipsum"
       labelDescription="Do nostrud labore aliquip nostrud excepteur laboris laborum. 🤔"
+      onChange={() => {}}
     >
       <div>
         Fugiat nulla Lorem elit Lorem labore exercitation ipsum et. Excepteur
@@ -131,7 +136,9 @@ Badge.decorators = [
           <RadioBorderedBox
             name="badge-1"
             checked={value === 'badge-1'}
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
             value="badge-1"
             label="Choice 1"
             labelDescription="(details)"
@@ -144,7 +151,9 @@ Badge.decorators = [
           <RadioBorderedBox
             name="badge-2"
             checked={value === 'badge-2'}
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
             value="badge-2"
             label="Choice 2"
             labelDescription="(details)"
@@ -156,7 +165,9 @@ Badge.decorators = [
           <RadioBorderedBox
             name="badge-3"
             checked={value === 'badge-3'}
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
             value="badge-3"
             label="Choice 3"
             labelDescription="(details)"

@@ -5,7 +5,7 @@ import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
   args: {
-    checked: true,
+    checked: false,
     children: 'Label 1',
     disabled: false,
     name: 'basic',
@@ -57,7 +57,9 @@ Controlled.decorators = [
             name="label-1"
             checked={value === 'label-1'}
             value="label-1"
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
           >
             Label 1
           </Radio>
@@ -65,7 +67,9 @@ Controlled.decorators = [
             name="label-2"
             checked={value === 'label-2'}
             value="label-2"
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
           >
             Label 2
           </Radio>

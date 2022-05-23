@@ -17,8 +17,6 @@ type RadioProps = Pick<
   | 'value'
   | 'size'
   | 'error'
-  | 'valid'
-  | 'id'
 >
 
 type BorderedBoxTypes = {
@@ -26,6 +24,10 @@ type BorderedBoxTypes = {
   checked: boolean
   error: string | ReactNode
 }
+
+const StyledRadio = styled(Radio)`
+  margin-right: ${({ theme }) => theme.space['1']};
+`
 
 const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
   display: block;
@@ -97,12 +99,11 @@ const RadioBorderedBox = ({
   size = 24,
   children,
   error,
-  valid,
 }: RadioBorderedBoxProps) => (
   <>
     <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
       <StyledRadioContainer>
-        <Radio
+        <StyledRadio
           name={name}
           checked={checked}
           onChange={onChange}
@@ -111,13 +112,10 @@ const RadioBorderedBox = ({
           disabled={disabled}
           value={value}
           size={size}
-          mr="4px"
           error={error}
-          valid={valid}
-          showError={false}
         >
           {label}
-        </Radio>
+        </StyledRadio>
         {labelDescription ? (
           <Typography as="span">{labelDescription}</Typography>
         ) : null}
