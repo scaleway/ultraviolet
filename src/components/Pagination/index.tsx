@@ -126,7 +126,9 @@ function DefaultMiddleComponent<T>({
           variant="primary-bordered"
           onClick={goToFirstPage}
         >
-          <Icon name="arrow-left-double" />
+          <div>
+            <Icon name="arrow-left-double" />
+          </div>
         </StyledPageSwitch>
         <StyledPageSwitch
           aria-label="Back"
@@ -134,7 +136,9 @@ function DefaultMiddleComponent<T>({
           variant="primary-bordered"
           onClick={goToPreviousPage}
         >
-          <Icon name="arrow-left" />
+          <div>
+            <Icon name="arrow-left" />
+          </div>
         </StyledPageSwitch>
       </PageSwitchContainer>
       <PageNumbersContainer>
@@ -157,7 +161,9 @@ function DefaultMiddleComponent<T>({
           variant="primary-bordered"
           onClick={goToNextPage}
         >
-          <Icon name="arrow-right" />
+          <div>
+            <Icon name="arrow-right" />
+          </div>
         </StyledPageSwitch>
         <StyledPageSwitch
           aria-label="Last"
@@ -165,7 +171,9 @@ function DefaultMiddleComponent<T>({
           variant="primary-bordered"
           onClick={goToLastPage}
         >
-          <Icon name="arrow-right-double" />
+          <div>
+            <Icon name="arrow-right-double" />
+          </div>
         </StyledPageSwitch>
       </PageSwitchContainer>
     </FlexBox>
