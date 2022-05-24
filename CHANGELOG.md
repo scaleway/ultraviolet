@@ -1,3 +1,22 @@
+### [0.152.1](https://github.com/scaleway/scaleway-ui/compare/v0.152.0...v0.152.1) (2022-05-24)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.25 ([#1492](https://github.com/scaleway/scaleway-ui/issues/1492)) ([7489c7d](https://github.com/scaleway/scaleway-ui/commit/7489c7d6eb427ab7534fd8468d88eb66ddc34861))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.26 ([#1496](https://github.com/scaleway/scaleway-ui/issues/1496)) ([4b0dfa8](https://github.com/scaleway/scaleway-ui/commit/4b0dfa86df7085e8725e8dd36eeeab7ca92effe0))
+* **devdeps:** update dependency postcss to v8.4.14 ([#1491](https://github.com/scaleway/scaleway-ui/issues/1491)) ([026f001](https://github.com/scaleway/scaleway-ui/commit/026f0014c163896448920fd7de3af68fbab77925))
+* **devdeps:** update node.js to v18.2 ([#1489](https://github.com/scaleway/scaleway-ui/issues/1489)) ([c856cb3](https://github.com/scaleway/scaleway-ui/commit/c856cb32ea1c420e9604b05d76e090146a860224))
+* **devdeps:** update pnpm to v7.1.2 ([#1486](https://github.com/scaleway/scaleway-ui/issues/1486)) ([9815d46](https://github.com/scaleway/scaleway-ui/commit/9815d464d814d8f1b38381ae2900b3d0c1e4ceb0))
+* **devdeps:** update pnpm to v7.1.3 ([#1497](https://github.com/scaleway/scaleway-ui/issues/1497)) ([7f5238c](https://github.com/scaleway/scaleway-ui/commit/7f5238c57a9253f2f5d63d299e7b7f6af8589719))
+* **devdeps:** update storybook monorepo to v6.5.3 ([#1494](https://github.com/scaleway/scaleway-ui/issues/1494)) ([82da21f](https://github.com/scaleway/scaleway-ui/commit/82da21fdc832d762a3257dd49b8e522d6657c73d))
+* **devdeps:** update storybook monorepo to v6.5.4 ([#1498](https://github.com/scaleway/scaleway-ui/issues/1498)) ([50824c5](https://github.com/scaleway/scaleway-ui/commit/50824c5df3a7f9b99d75d4ad3aaa11ce7fdf70af))
+
+
+### :bug: Bug Fixes
+
+* **list:** bug with checkbox ([#1501](https://github.com/scaleway/scaleway-ui/issues/1501)) ([394a7cf](https://github.com/scaleway/scaleway-ui/commit/394a7cffe73c3c4dd59434da5a61578f4fe923c8))
+
 ## [0.152.0](https://github.com/scaleway/scaleway-ui/compare/v0.151.2...v0.152.0) (2022-05-19)
 
 
