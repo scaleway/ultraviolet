@@ -149,18 +149,20 @@ export const Header = () => {
   return (
     <StyledHeader>
       {multiselect ? (
-        <StyledCheckbox
-          name="select-rows"
-          value="all"
-          checked={
-            hasSelectedItems && !hasAllSelected
-              ? 'indeterminate'
-              : hasAllSelected
-          }
-          size={20}
-          disabled={isLoading}
-          onChange={handleOnChange}
-        />
+        <div>
+          <StyledCheckbox
+            name="select-rows"
+            value="all"
+            checked={
+              hasSelectedItems && !hasAllSelected
+                ? 'indeterminate'
+                : hasAllSelected
+            }
+            size={20}
+            disabled={isLoading}
+            onChange={handleOnChange}
+          />
+        </div>
       ) : null}
       {columns.map(({ sort, label, width }, index) => (
         <Cell
@@ -223,22 +225,24 @@ export const Row = ({
         highlighted={highlighted}
         data-testid={`row-${id}`}
       >
-        {multiselect && (
-          <Tooltip
-            baseId={`list-tooltip-row-${id}`}
-            text={!isSelectable ? notSelectableText : undefined}
-          >
-            <StyledCheckbox
-              value={id}
-              name="select-rows"
-              data-visibility={hasSelectedItems ? '' : 'hover'}
-              checked={selected}
-              disabled={!isSelectable}
-              size={20}
-              onChange={() => setRowState(id, { selected: !selected })}
-            />
-          </Tooltip>
-        )}
+        <div>
+          {multiselect && (
+            <Tooltip
+              baseId={`list-tooltip-row-${id}`}
+              text={!isSelectable ? notSelectableText : undefined}
+            >
+              <StyledCheckbox
+                value={id}
+                name="select-rows"
+                data-visibility={hasSelectedItems ? '' : 'hover'}
+                checked={selected}
+                disabled={!isSelectable}
+                size={20}
+                onChange={() => setRowState(id, { selected: !selected })}
+              />
+            </Tooltip>
+          )}
+        </div>
         {children}
       </StyledRow>
     </Tooltip>

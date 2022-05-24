@@ -106,18 +106,20 @@ export const Header = () => {
   return (
     <StyledHeader>
       {multiselect ? (
-        <StyledCheckbox
-          name="select-rows"
-          value="all"
-          checked={
-            hasSelectedItems && !hasAllSelected
-              ? 'indeterminate'
-              : hasAllSelected
-          }
-          size={20}
-          disabled={isLoading}
-          onChange={handleOnChange}
-        />
+        <div>
+          <StyledCheckbox
+            name="select-rows"
+            value="all"
+            checked={
+              hasSelectedItems && !hasAllSelected
+                ? 'indeterminate'
+                : hasAllSelected
+            }
+            size={20}
+            disabled={isLoading}
+            onChange={handleOnChange}
+          />
+        </div>
       ) : null}
       {columns.map(({ label, sort, width }, index) => (
         <Cell
@@ -161,16 +163,18 @@ export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
         highlighted={highlighted}
       >
         {multiselect ? (
-          <StyledCheckbox
-            data-visibility={hasSelectedItems ? '' : 'hover'}
-            checked={selected}
-            size={20}
-            value={id}
-            name="select-rows"
-            onChange={() => {
-              setRowState(id, { selected: !selected })
-            }}
-          />
+          <div>
+            <StyledCheckbox
+              data-visibility={hasSelectedItems ? '' : 'hover'}
+              checked={selected}
+              size={20}
+              value={id}
+              name="select-rows"
+              onChange={() => {
+                setRowState(id, { selected: !selected })
+              }}
+            />
+          </div>
         ) : null}
         {children}
       </StyledRow>
