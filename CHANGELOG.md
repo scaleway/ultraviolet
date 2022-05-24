@@ -1,3 +1,10 @@
+### [0.152.2](https://github.com/scaleway/scaleway-ui/compare/v0.152.1...v0.152.2) (2022-05-24)
+
+
+### :bug: Bug Fixes
+
+* checkbox div ([#1503](https://github.com/scaleway/scaleway-ui/issues/1503)) ([89be0a9](https://github.com/scaleway/scaleway-ui/commit/89be0a9fb4978053316e24d80dec9db43c74ffd2))
+
 ### [0.152.1](https://github.com/scaleway/scaleway-ui/compare/v0.152.0...v0.152.1) (2022-05-24)
 
 
