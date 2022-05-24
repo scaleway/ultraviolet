@@ -225,8 +225,8 @@ export const Row = ({
         highlighted={highlighted}
         data-testid={`row-${id}`}
       >
-        <div>
-          {multiselect && (
+        {multiselect && (
+          <div>
             <Tooltip
               baseId={`list-tooltip-row-${id}`}
               text={!isSelectable ? notSelectableText : undefined}
@@ -241,8 +241,8 @@ export const Row = ({
                 onChange={() => setRowState(id, { selected: !selected })}
               />
             </Tooltip>
-          )}
-        </div>
+          </div>
+        )}
         {children}
       </StyledRow>
     </Tooltip>
