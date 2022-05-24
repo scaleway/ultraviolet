@@ -1,3 +1,4 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import {
@@ -14,12 +15,11 @@ import {
   useState,
 } from 'react'
 import Button from '../Button'
+import FlexBox from '../FlexBox'
+import Icon from '../Icon'
 import Loader from '../Loader'
 import getPageNumbers from './getPageNumbers'
 import usePagination, { UsePaginationReturn } from './usePagination'
-import { css } from '@emotion/react'
-import FlexBox from '../FlexBox'
-import Icon from '../Icon'
 
 export type PaginationState<T> = {
   canLoadMore: boolean
