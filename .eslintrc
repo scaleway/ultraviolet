@@ -49,6 +49,7 @@
     // React
     "react/jsx-props-no-spreading": "warn",
     "react/sort-prop-types": "off",
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
     // use react 17 transformer
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
