@@ -246,20 +246,22 @@ export const Header = () => {
   return (
     <StyledHeader multiselect={multiselect}>
       {multiselect && (
-        <StyledCheckboxContainer>
-          <StyledCheckbox
-            name="select-rows"
-            value="all"
-            checked={
-              hasSelectedItems && !hasAllSelected
-                ? 'indeterminate'
-                : hasAllSelected
-            }
-            size={20}
-            disabled={isLoading}
-            onChange={handleOnChange}
-          />
-        </StyledCheckboxContainer>
+        <div>
+          <StyledCheckboxContainer>
+            <StyledCheckbox
+              name="select-rows"
+              value="all"
+              checked={
+                hasSelectedItems && !hasAllSelected
+                  ? 'indeterminate'
+                  : hasAllSelected
+              }
+              size={20}
+              disabled={isLoading}
+              onChange={handleOnChange}
+            />
+          </StyledCheckboxContainer>
+        </div>
       )}
       {columns.map(({ label, sort, width }, index) => (
         <Cell
@@ -417,22 +419,24 @@ export const Row = ({
           {multiselect && (
             <StyledCheckboxContainer>
               {!locked && (
-                <Tooltip
-                  baseId={`list-tooltip-row-${id}`}
-                  text={!isSelectable ? notSelectableText : undefined}
-                >
-                  <StyledCheckbox
-                    value={id}
-                    data-visibility={hasSelectedItems ? '' : 'hover'}
-                    checked={selected}
-                    disabled={!isSelectable || disabled}
-                    size={20}
-                    name="select-rows"
-                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      setRowState(id, { selected: e.target.checked })
-                    }
-                  />
-                </Tooltip>
+                <div>
+                  <Tooltip
+                    baseId={`list-tooltip-row-${id}`}
+                    text={!isSelectable ? notSelectableText : undefined}
+                  >
+                    <StyledCheckbox
+                      value={id}
+                      data-visibility={hasSelectedItems ? '' : 'hover'}
+                      checked={selected}
+                      disabled={!isSelectable || disabled}
+                      size={20}
+                      name="select-rows"
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        setRowState(id, { selected: e.target.checked })
+                      }
+                    />
+                  </Tooltip>
+                </div>
               )}
             </StyledCheckboxContainer>
           )}
