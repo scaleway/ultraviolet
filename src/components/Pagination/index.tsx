@@ -17,6 +17,9 @@ import Button from '../Button'
 import Loader from '../Loader'
 import getPageNumbers from './getPageNumbers'
 import usePagination, { UsePaginationReturn } from './usePagination'
+import { css } from '@emotion/react'
+import FlexBox from '../FlexBox'
+import Icon from '../Icon'
 
 export type PaginationState<T> = {
   canLoadMore: boolean
@@ -33,18 +36,51 @@ export const usePaginationContext = <T,>(): PaginationState<T> =>
 // START - Default Components
 const DefaultLeftComponent = () => null
 
-const StyledPageButton = styled(Button, {
+const PageNumbersContainer = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.space['2']};
+  margin: 0 ${({ theme }) => theme.space['2']};
+`
+
+const StyledPageSwitch = styled(Button)`
+  width: ${({ theme }) => theme.space['4']};
+  height: ${({ theme }) => theme.space['6']};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+`
+
+const PageSwitchContainer = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.space['1']};
+`
+
+const StyledPageButton = styled('button', {
   shouldForwardProp: prop => !['current'].includes(prop.toString()),
 })<{ current?: boolean }>`
-  ${({ current }) =>
-    current
-      ? `
-    text-decoration: underline;
-    &:hover {
-      text-decoration: underline;
-    }
-  `
-      : ''}
+  color: ${({ theme }) => theme.colors.neutral.textStrong};
+  line-height: ${({ theme }) => theme.space['3']};
+  width: ${({ theme }) => theme.space['6']};
+  height: ${({ theme }) => theme.space['6']};
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  border: 1px solid transparent;
+  border-radius: ${({ theme }) => theme.radii.default};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary.textWeak};
+    border-color: ${({ theme }) => theme.colors.neutral.borderStrong};
+  }
+
+  ${({ current, theme }) =>
+    current &&
+    css`
+      color: ${theme.colors.primary.text} !important;
+      border-color: ${theme.colors.primary.borderWeak} !important;
+    `}
 `
 
 export type PaginationComponentProps<T = unknown> = {
@@ -82,52 +118,57 @@ function DefaultMiddleComponent<T>({
   )
 
   return (
-    <div>
-      <Button
-        mr={1}
-        disabled={page === 1 || isLoadingPage}
-        onClick={goToFirstPage}
-        aria-label="First"
-      >
-        First
-      </Button>
-      <Button
-        aria-label="Back"
-        mr={1}
-        disabled={page === 1 || isLoadingPage}
-        onClick={goToPreviousPage}
-      >
-        Back
-      </Button>
-      {pageNumbersToDisplay.map(pageNumber => (
-        <StyledPageButton
-          aria-label={`Page ${pageNumber}`}
-          key={`pagination-page-${pageNumber}`}
-          mr={1}
-          disabled={isLoadingPage}
-          current={pageNumber === page}
-          variant="secondary"
-          onClick={handlePageClick(pageNumber)}
+    <FlexBox>
+      <PageSwitchContainer>
+        <StyledPageSwitch
+          aria-label="First"
+          disabled={page === 1 || isLoadingPage}
+          variant="primary-bordered"
+          onClick={goToFirstPage}
         >
-          {pageNumber}
-        </StyledPageButton>
-      ))}
-      <Button
-        mr={1}
-        aria-label="Next"
-        disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
-        onClick={goToNextPage}
-      >
-        Next
-      </Button>
-      <Button
-        aria-label="Last"
-        disabled={page === maxPage || isLoadingPage}
-        onClick={goToLastPage}
-      >
-        Last
-      </Button>
-    </div>
+          <Icon name="arrow-left-double" />
+        </StyledPageSwitch>
+        <StyledPageSwitch
+          aria-label="Back"
+          disabled={page === 1 || isLoadingPage}
+          variant="primary-bordered"
+          onClick={goToPreviousPage}
+        >
+          <Icon name="arrow-left" />
+        </StyledPageSwitch>
+      </PageSwitchContainer>
+      <PageNumbersContainer>
+        {pageNumbersToDisplay.map(pageNumber => (
+          <StyledPageButton
+            aria-label={`Page ${pageNumber}`}
+            key={`pagination-page-${pageNumber}`}
+            disabled={isLoadingPage}
+            current={pageNumber === page}
+            onClick={handlePageClick(pageNumber)}
+          >
+            {pageNumber}
+          </StyledPageButton>
+        ))}
+      </PageNumbersContainer>
+      <PageSwitchContainer>
+        <StyledPageSwitch
+          aria-label="Next"
+          disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
+          variant="primary-bordered"
+          onClick={goToNextPage}
+        >
+          <Icon name="arrow-right" />
+        </StyledPageSwitch>
+        <StyledPageSwitch
+          aria-label="Last"
+          disabled={page === maxPage || isLoadingPage}
+          variant="primary-bordered"
+          onClick={goToLastPage}
+        >
+          <Icon name="arrow-right-double" />
+        </StyledPageSwitch>
+      </PageSwitchContainer>
+    </FlexBox>
   )
 }
 
