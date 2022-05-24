@@ -60,6 +60,15 @@ type TagsPoplistProps = {
   multiline?: boolean
 }
 
+const TagContainer = styled.div<{ index: number; visibleTagsCount: number }>`
+  margin-right: ${({ index, visibleTagsCount }) =>
+    index + 1 !== visibleTagsCount ? 1 : 0};
+`
+
+const StyledTag = styled(Tag)`
+  margin-right: ${({ theme }) => theme.space['1']};
+`
+
 const TagsPoplist = ({
   maxLength = 600,
   maxTagWidth = 115,
@@ -90,15 +99,16 @@ const TagsPoplist = ({
     <FlexBox>
       <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
-          <Tag
-            // useful when two tags are identical `${tag}-${index}`
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${tag}-${index}`}
-            textStyle={textStyle(maxTagWidth)}
-            mr={index + 1 !== visibleTagsCount ? 1 : 0}
-          >
-            {tag}
-          </Tag>
+          <TagContainer visibleTagsCount={visibleTagsCount} index={index}>
+            <Tag
+              // useful when two tags are identical `${tag}-${index}`
+              // eslint-disable-next-line react/no-array-index-key
+              key={`${tag}-${index}`}
+              textStyle={textStyle(maxTagWidth)}
+            >
+              {tag}
+            </Tag>
+          </TagContainer>
         ))}
       </StyledTagContainer>
       {hasManyTags && (
@@ -114,13 +124,12 @@ const TagsPoplist = ({
             <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
-                <Tag
-                  m="4px"
+                <StyledTag
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${tag}-${index}`}
                 >
                   {tag}
-                </Tag>
+                </StyledTag>
               ))}
             </StyledManyTagsContainer>
           </Tooltip>

@@ -21,36 +21,44 @@ exports[`TagsPoplist renders correctly 1`] = `
   color: #4a4f62;
 }
 
-.cache-q170gk-StyledContainer-base {
-  border-radius: 4px;
+.cache-1ta1wie-TagContainer {
+  margin-right: 0;
+}
+
+.cache-1a4majh-StyledBox {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-q170gk-StyledContainer-base.cache-q170gk-StyledContainer-base {
-  margin-right: 0;
-}
-
-.cache-1xx2k26-StyledText-textStyle {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 115px;
@@ -77,36 +85,41 @@ exports[`TagsPoplist renders correctly 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-p9ey6j-StyledContainer-base {
-  border-radius: 4px;
+.cache-1e9s2z0-StyledBox-StyledTag {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-p9ey6j-StyledContainer-base.cache-p9ey6j-StyledContainer-base {
-  margin: 4px;
-}
-
-.cache-1vwmh8m-StyledText {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+  margin-right: 8px;
+}
+
+.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
 }
 
 <div>
@@ -114,32 +127,40 @@ exports[`TagsPoplist renders correctly 1`] = `
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt1"
+        class="cache-55k8e4-StyledTagContainer eom2dbt3"
       >
         <div
-          class="e1vt8sjg2 cache-q170gk-StyledContainer-base"
+          class="cache-1ta1wie-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            scaleway
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              scaleway
+            </div>
+          </div>
         </div>
       </div>
       +1
       <div
-        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt0"
+        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt2"
       >
         <div
-          class="e1vt8sjg2 cache-p9ey6j-StyledContainer-base"
+          as="span"
+          class="eom2dbt0 cache-1e9s2z0-StyledBox-StyledTag e1vt8sjg2"
+          role="status"
         >
-          <span
+          <div
             aria-disabled="false"
-            class="cache-1vwmh8m-StyledText e1vt8sjg1"
+            class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
           >
             cloud
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -169,59 +190,51 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   color: #4a4f62;
 }
 
-.cache-4o2pls-StyledContainer-base {
-  border-radius: 4px;
+.cache-3raeat-TagContainer {
+  margin-right: 1;
+}
+
+.cache-1a4majh-StyledBox {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-4o2pls-StyledContainer-base.cache-4o2pls-StyledContainer-base {
-  margin-right: 8px;
-}
-
-.cache-1xx2k26-StyledText-textStyle {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 115px;
   white-space: nowrap;
 }
 
-.cache-q170gk-StyledContainer-base {
-  border-radius: 4px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
-  height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-q170gk-StyledContainer-base.cache-q170gk-StyledContainer-base {
+.cache-1ta1wie-TagContainer {
   margin-right: 0;
 }
 
@@ -230,27 +243,39 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt1"
+        class="cache-55k8e4-StyledTagContainer eom2dbt3"
       >
         <div
-          class="e1vt8sjg2 cache-4o2pls-StyledContainer-base"
+          class="cache-3raeat-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            scaleway
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              scaleway
+            </div>
+          </div>
         </div>
         <div
-          class="e1vt8sjg2 cache-q170gk-StyledContainer-base"
+          class="cache-1ta1wie-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            cloud
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              cloud
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -279,59 +304,51 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   color: #4a4f62;
 }
 
-.cache-4o2pls-StyledContainer-base {
-  border-radius: 4px;
+.cache-3raeat-TagContainer {
+  margin-right: 1;
+}
+
+.cache-1a4majh-StyledBox {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-4o2pls-StyledContainer-base.cache-4o2pls-StyledContainer-base {
-  margin-right: 8px;
-}
-
-.cache-1xx2k26-StyledText-textStyle {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 115px;
   white-space: nowrap;
 }
 
-.cache-q170gk-StyledContainer-base {
-  border-radius: 4px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
-  height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-q170gk-StyledContainer-base.cache-q170gk-StyledContainer-base {
+.cache-1ta1wie-TagContainer {
   margin-right: 0;
 }
 
@@ -355,36 +372,41 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   flex-wrap: wrap;
 }
 
-.cache-p9ey6j-StyledContainer-base {
-  border-radius: 4px;
+.cache-1e9s2z0-StyledBox-StyledTag {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-p9ey6j-StyledContainer-base.cache-p9ey6j-StyledContainer-base {
-  margin: 4px;
-}
-
-.cache-1vwmh8m-StyledText {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+  margin-right: 8px;
+}
+
+.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
 }
 
 <div>
@@ -392,42 +414,56 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt1"
+        class="cache-55k8e4-StyledTagContainer eom2dbt3"
       >
         <div
-          class="e1vt8sjg2 cache-4o2pls-StyledContainer-base"
+          class="cache-3raeat-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            scaleway
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              scaleway
+            </div>
+          </div>
         </div>
         <div
-          class="e1vt8sjg2 cache-q170gk-StyledContainer-base"
+          class="cache-1ta1wie-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            cloud
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              cloud
+            </div>
+          </div>
         </div>
       </div>
       +1
       <div
-        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt0"
+        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt2"
       >
         <div
-          class="e1vt8sjg2 cache-p9ey6j-StyledContainer-base"
+          as="span"
+          class="eom2dbt0 cache-1e9s2z0-StyledBox-StyledTag e1vt8sjg2"
+          role="status"
         >
-          <span
+          <div
             aria-disabled="false"
-            class="cache-1vwmh8m-StyledText e1vt8sjg1"
+            class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
           >
             provider
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -456,36 +492,44 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   color: #4a4f62;
 }
 
-.cache-q170gk-StyledContainer-base {
-  border-radius: 4px;
+.cache-1ta1wie-TagContainer {
+  margin-right: 0;
+}
+
+.cache-1a4majh-StyledBox {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-q170gk-StyledContainer-base.cache-q170gk-StyledContainer-base {
-  margin-right: 0;
-}
-
-.cache-1xx2k26-StyledText-textStyle {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 115px;
@@ -512,36 +556,41 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   flex-wrap: wrap;
 }
 
-.cache-p9ey6j-StyledContainer-base {
-  border-radius: 4px;
+.cache-1e9s2z0-StyledBox-StyledTag {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-p9ey6j-StyledContainer-base.cache-p9ey6j-StyledContainer-base {
-  margin: 4px;
-}
-
-.cache-1vwmh8m-StyledText {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+  margin-right: 8px;
+}
+
+.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
 }
 
 <div>
@@ -549,42 +598,52 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt1"
+        class="cache-55k8e4-StyledTagContainer eom2dbt3"
       >
         <div
-          class="e1vt8sjg2 cache-q170gk-StyledContainer-base"
+          class="cache-1ta1wie-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            scaleway
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              scaleway
+            </div>
+          </div>
         </div>
       </div>
       +2
       <div
-        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt0"
+        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt2"
       >
         <div
-          class="e1vt8sjg2 cache-p9ey6j-StyledContainer-base"
+          as="span"
+          class="eom2dbt0 cache-1e9s2z0-StyledBox-StyledTag e1vt8sjg2"
+          role="status"
         >
-          <span
+          <div
             aria-disabled="false"
-            class="cache-1vwmh8m-StyledText e1vt8sjg1"
+            class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
           >
             cloud
-          </span>
+          </div>
         </div>
         <div
-          class="e1vt8sjg2 cache-p9ey6j-StyledContainer-base"
+          as="span"
+          class="eom2dbt0 cache-1e9s2z0-StyledBox-StyledTag e1vt8sjg2"
+          role="status"
         >
-          <span
+          <div
             aria-disabled="false"
-            class="cache-1vwmh8m-StyledText e1vt8sjg1"
+            class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
           >
             provider
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -621,59 +680,51 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-4o2pls-StyledContainer-base {
-  border-radius: 4px;
+.cache-3raeat-TagContainer {
+  margin-right: 1;
+}
+
+.cache-1a4majh-StyledBox {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-4o2pls-StyledContainer-base.cache-4o2pls-StyledContainer-base {
-  margin-right: 8px;
-}
-
-.cache-1xx2k26-StyledText-textStyle {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 115px;
   white-space: nowrap;
 }
 
-.cache-q170gk-StyledContainer-base {
-  border-radius: 4px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
-  height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-q170gk-StyledContainer-base.cache-q170gk-StyledContainer-base {
+.cache-1ta1wie-TagContainer {
   margin-right: 0;
 }
 
@@ -697,36 +748,41 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-p9ey6j-StyledContainer-base {
-  border-radius: 4px;
+.cache-1e9s2z0-StyledBox-StyledTag {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.cache-p9ey6j-StyledContainer-base.cache-p9ey6j-StyledContainer-base {
-  margin: 4px;
-}
-
-.cache-1vwmh8m-StyledText {
   color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+  margin-right: 8px;
+}
+
+.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
 }
 
 <div>
@@ -734,42 +790,56 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-v44dnh-StyledTagContainer eom2dbt1"
+        class="cache-v44dnh-StyledTagContainer eom2dbt3"
       >
         <div
-          class="e1vt8sjg2 cache-4o2pls-StyledContainer-base"
+          class="cache-3raeat-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            scaleway
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              scaleway
+            </div>
+          </div>
         </div>
         <div
-          class="e1vt8sjg2 cache-q170gk-StyledContainer-base"
+          class="cache-1ta1wie-TagContainer eom2dbt1"
         >
-          <span
-            aria-disabled="false"
-            class="cache-1xx2k26-StyledText-textStyle e1vt8sjg1"
+          <div
+            as="span"
+            class="cache-1a4majh-StyledBox e1vt8sjg2"
+            role="status"
           >
-            cloud
-          </span>
+            <div
+              aria-disabled="false"
+              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
+            >
+              cloud
+            </div>
+          </div>
         </div>
       </div>
       +1
       <div
-        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt0"
+        class="cache-1jveiaj-StyledManyTagsContainer eom2dbt2"
       >
         <div
-          class="e1vt8sjg2 cache-p9ey6j-StyledContainer-base"
+          as="span"
+          class="eom2dbt0 cache-1e9s2z0-StyledBox-StyledTag e1vt8sjg2"
+          role="status"
         >
-          <span
+          <div
             aria-disabled="false"
-            class="cache-1vwmh8m-StyledText e1vt8sjg1"
+            class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
           >
             provider
-          </span>
+          </div>
         </div>
       </div>
     </div>

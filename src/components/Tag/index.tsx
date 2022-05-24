@@ -1,140 +1,147 @@
-import { Theme, css } from '@emotion/react'
+import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { MouseEventHandler, ReactNode } from 'react'
-import Box, { BoxProps } from '../Box'
-import Icon from '../Icon'
+import { MouseEventHandler, ReactNode, useMemo } from 'react'
+import { Color, SENTIMENTS } from '../../theme'
+import Icon, { IconName } from '../Icon'
 import Loader from '../Loader'
 import Touchable from '../Touchable'
+import Typography from '../Typography'
 
-const disabledStyles = css`
-  opacity: 0.5;
-`
-
-export const variantsContainer = {
-  base: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colors.neutral.backgroundStrong};
-    height: 24px;
-    padding-left: 8px;
-    padding-right: 8px;
-  `,
-  bordered: ({ theme }: { theme: Theme }) => css`
-    padding: 8px;
-    border: 1px solid ${theme.colors.neutral.borderWeak};
-  `,
-}
-
-type TagVariant = keyof typeof variantsContainer
-
-const variantStyles = ({
-  variant,
-  ...props
-}: {
-  variant: TagVariant
-  theme: Theme
-}) => variantsContainer[variant]?.(props)
-
-type StyledContainerProps = {
-  disabled: boolean
-  variant: TagVariant
-} & BoxProps
-
-const StyledContainer = styled(Box, {
-  shouldForwardProp: props =>
-    !['disabled', 'variant'].includes(props.toString()),
-})<StyledContainerProps>`
-  ${({ disabled }) => disabled && disabledStyles}
-  border-radius: 4px;
+const StyledBox = styled('div', {
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+})<{ variant: string }>`
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  display: flex;
-  ${variantStyles}
+  white-space: nowrap;
+  border-radius: ${({ theme }) => theme.space['0.5']};
+  padding: 0 ${({ theme }) => theme.space['1']};
+  gap: ${({ theme }) => theme.space['1']};
+  width: fit-content;
+  height: 24px;
+  ${({ variant }) => variant}
 `
 
-const StyledText = styled('span')`
-  ${({ 'aria-disabled': disabled }) => disabled && disabledStyles}
-  color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: 14px;
-  align-self: center;
-  max-width: 350px;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+const StyledTypography = styled(Typography)`
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
 `
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: props => !['variant'].includes(props.toString()),
-})<{ variant: TagVariant }>`
-  margin-left: 16px;
+})<{ variant: Color }>`
   display: flex;
   align-items: center;
-  justify-content: center;
+  svg {
+    fill: ${({ theme }) => theme.colors.neutral.textWeak};
+  }
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
     svg {
-      fill: ${({ theme }) => theme.colors.primary.text};
+      fill: ${({ theme }) => theme.colors.neutral.textHover};
     }
   }
-  ${({ variant, theme }) =>
-    variant === 'bordered' &&
-    `
-  border-radius: 4px;
-  border: 1px solid ${theme.colors.neutral.borderWeak};
-  padding: 4px;
-  width: 32px;
-  height: 32px;
-`}
 `
+const generateStyles = ({
+  theme,
+}: {
+  theme: Theme
+}): Record<string, string> => {
+  const text = 'text'
+  const background = 'background'
+
+  return {
+    ...SENTIMENTS.reduce(
+      (reducer, sentiment) => ({
+        ...reducer,
+        [sentiment]: `
+      color: ${theme.colors[sentiment][text]};
+      background: ${theme.colors[sentiment][background]}
+    `,
+      }),
+      {},
+    ),
+    disabled: `
+      color: ${theme.colors.neutral.textWeak};
+      background: ${theme.colors.neutral.backgroundStrong};
+    `,
+    neutral: `
+      color: ${theme.colors.neutral.text};
+      background: ${theme.colors.neutral[background]};
+      border: solid 1px ${theme.colors.neutral.border};
+    `,
+  }
+}
 
 type TagProps = {
-  children: ReactNode
-  disabled?: boolean
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
   textStyle?: JSX.IntrinsicAttributes['css']
-  variant?: TagVariant
-} & BoxProps
+  variant?: Color
+  /**
+   * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
+   */
+  disabled?: boolean
+  icon?: IconName
+  className?: string
+  children: ReactNode
+}
 
 const Tag = ({
   children,
   isLoading = false,
   onClose,
   textStyle,
+  icon,
   disabled = false,
-  variant = 'base',
-  ...props
-}: TagProps) => (
-  <StyledContainer {...props} disabled={disabled} variant={variant}>
-    <StyledText aria-disabled={disabled} css={textStyle}>
-      {children}
-    </StyledText>
+  variant = 'neutral',
+  className,
+}: TagProps) => {
+  const theme = useTheme()
 
-    {onClose && (
-      <StyledTouchable
-        onClick={!isLoading ? onClose : undefined}
-        variant={variant}
-        disabled={disabled}
-        aria-label="Close tag"
-      >
-        {isLoading ? (
-          <Loader active size={16} />
-        ) : (
-          <Icon name="close" size={16} color="gray550" />
-        )}
-      </StyledTouchable>
-    )}
-  </StyledContainer>
-)
+  /**
+   * Badge should display an aria-label if the status is not neutral or primary
+   */
+  const ariaLabel = useMemo(
+    () =>
+      ['neutral', 'primary'].some(baseVariant => baseVariant === variant)
+        ? undefined
+        : variant,
+    [variant],
+  )
 
-Tag.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  disabled: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  onClose: PropTypes.func,
-  textStyle: PropTypes.shape({}),
-  variant: PropTypes.oneOf<TagVariant>(
-    Object.keys(variantsContainer) as TagVariant[],
-  ),
+  const generatedStyles = useMemo(() => generateStyles({ theme }), [theme])
+
+  return (
+    <StyledBox
+      role="status"
+      aria-label={ariaLabel}
+      as="span"
+      variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
+      className={className}
+    >
+      {icon ? <Icon name={icon} size={16} /> : null}
+      <StyledTypography aria-disabled={disabled} css={textStyle}>
+        {children}
+      </StyledTypography>
+
+      {onClose || isLoading ? (
+        <StyledTouchable
+          onClick={!isLoading ? onClose : undefined}
+          variant={variant}
+          disabled={disabled}
+          aria-label="Close tag"
+        >
+          {isLoading ? (
+            <Loader active size={16} />
+          ) : (
+            <Icon name="close" size={16} />
+          )}
+        </StyledTouchable>
+      ) : null}
+    </StyledBox>
+  )
 }
 
 export default Tag
