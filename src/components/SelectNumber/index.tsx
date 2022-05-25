@@ -175,7 +175,7 @@ const SelectNumber = ({
   disabled = false,
   maxValue = 100,
   minValue = 0,
-  name = 'stepper',
+  name = 'selectnumber',
   onChange,
   onFocus,
   onBlur,
@@ -341,7 +341,7 @@ SelectNumber.propTypes = {
   onMinCrossed: PropTypes.func,
   size: PropTypes.oneOf(containerSizesKeys),
   /**
-   * Define how much will stepper increase / decrease each time you click on + / - button.
+   * Define how much will selectnumber increase / decrease each time you click on + / - button.
    */
   step: PropTypes.number,
   /**
