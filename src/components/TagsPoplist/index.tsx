@@ -50,6 +50,7 @@ const StyledManyTagsContainer = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   max-width: 80vw;
   flex-wrap: wrap;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 type TagsPoplistProps = {
@@ -63,10 +64,6 @@ type TagsPoplistProps = {
 const TagContainer = styled.div<{ index: number; visibleTagsCount: number }>`
   margin-right: ${({ index, visibleTagsCount }) =>
     index + 1 !== visibleTagsCount ? 1 : 0};
-`
-
-const StyledTag = styled(Tag)`
-  margin-right: ${({ theme }) => theme.space['1']};
 `
 
 const TagsPoplist = ({
@@ -124,12 +121,12 @@ const TagsPoplist = ({
             <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
-                <StyledTag
+                <Tag
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${tag}-${index}`}
                 >
                   {tag}
-                </StyledTag>
+                </Tag>
               ))}
             </StyledManyTagsContainer>
           </Tooltip>

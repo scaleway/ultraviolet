@@ -7,7 +7,7 @@ import Loader from '../Loader'
 import Touchable from '../Touchable'
 import Typography from '../Typography'
 
-const StyledBox = styled('div', {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
 })<{ variant: string }>`
   display: inline-flex;
@@ -67,7 +67,7 @@ const generateStyles = ({
       background: ${theme.colors.neutral.backgroundStrong};
     `,
     neutral: `
-      color: ${theme.colors.neutral.text};
+      color: ${theme.colors.neutral[text]};
       background: ${theme.colors.neutral[background]};
       border: solid 1px ${theme.colors.neutral.border};
     `,
@@ -101,7 +101,7 @@ const Tag = ({
   const theme = useTheme()
 
   /**
-   * Badge should display an aria-label if the status is not neutral or primary
+   * Tag should display an aria-label if the status is not neutral or primary
    */
   const ariaLabel = useMemo(
     () =>
@@ -114,7 +114,7 @@ const Tag = ({
   const generatedStyles = useMemo(() => generateStyles({ theme }), [theme])
 
   return (
-    <StyledBox
+    <StyledContainer
       role="status"
       aria-label={ariaLabel}
       as="span"
@@ -140,7 +140,7 @@ const Tag = ({
           )}
         </StyledTouchable>
       ) : null}
-    </StyledBox>
+    </StyledContainer>
   )
 }
 
