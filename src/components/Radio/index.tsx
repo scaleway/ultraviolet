@@ -11,7 +11,6 @@ import Typography from '../Typography'
 
 const StyledIcon = styled(Icon)`
   margin-right: ${({ theme }) => theme.space['1']};
-  margin-top: ${({ theme }) => theme.space['0.25']};
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.textWeak};
 `
@@ -68,6 +67,9 @@ const StyledRadioContainer = styled(Typography)`
 
     ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.neutral.textDisabled};
+      .icon-background {
+        fill: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+      }
     }
   }
 `
@@ -91,7 +93,7 @@ const Radio = ({
   error,
   name,
   value,
-  size = 20,
+  size = 24,
   children,
   className,
   autoFocus,

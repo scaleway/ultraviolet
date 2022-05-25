@@ -21,7 +21,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -38,45 +38,49 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -87,19 +91,18 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -118,7 +121,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -132,12 +135,24 @@ exports[`RadioBorderedBox renders correctly 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+          </g>
         </svg>
         Choice
       </label>
@@ -197,7 +212,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -214,45 +229,49 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -263,19 +282,18 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -294,7 +312,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
     >
       <label
         aria-disabled="false"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radioborderedbox-choice1"
       >
         <input
@@ -308,12 +326,24 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
           value="choice1"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+          </g>
         </svg>
         Choice 1
       </label>
@@ -375,7 +405,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -392,45 +422,49 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -441,19 +475,18 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -472,7 +505,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -487,12 +520,29 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            />
+          </g>
         </svg>
         Choice
       </label>
@@ -554,7 +604,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -571,45 +621,49 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -620,19 +674,18 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -652,7 +705,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
     >
       <label
         aria-disabled="true"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -668,12 +721,24 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+          </g>
         </svg>
         Choice
       </label>
@@ -735,7 +800,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -752,45 +817,49 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -801,19 +870,18 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -832,7 +900,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
     >
       <label
         aria-disabled="false"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -846,12 +914,24 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+          </g>
         </svg>
         Choice
       </label>
@@ -920,7 +1000,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-bottom: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -937,45 +1017,49 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   margin-right: 8px;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-checked="true"]+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio .e1duuirp1[aria-invalid="true"]:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio:hover[aria-disabled='false'] .e1duuirp1[aria-invalid="true"]+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
+}
+
+.cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio[aria-disabled='true'] .e1duuirp2 .icon-background {
+  fill: #f6f6f8;
 }
 
 .cache-1ihnbva-StyledRadio {
@@ -986,19 +1070,18 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   cursor: pointer;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  margin-top: 2px;
   border-radius: 100%;
   fill: #b2b6c3;
 }
 
-.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon.cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon {
+.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon.cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -1058,7 +1141,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
     >
       <label
         aria-disabled="true"
-        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-1vsjs52-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
+        class="e13z6rra4 e1duuirp0 e1g1zfwd0 cache-b14az2-StyledText-variantStyles-StyledRadioContainer-StyledRadio"
         for="radio-choice"
       >
         <input
@@ -1074,12 +1157,24 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
           value="choice"
         />
         <svg
-          class="e1duuirp2 etwatq50 cache-10x4xsp-StyledIcon-sizeStyles-StyledIcon"
+          class="e1duuirp2 etwatq50 cache-tz5o7l-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="icon-background"
+              cx="12"
+              cy="12"
+              fill="#FFFFFF"
+              r="6"
+            />
+          </g>
         </svg>
         Choice
       </label>
