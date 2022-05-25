@@ -7,7 +7,7 @@ import Loader from '../Loader'
 import Touchable from '../Touchable'
 import Typography from '../Typography'
 
-const StyledContainer = styled('div', {
+const StyledContainer = styled('span', {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
 })<{ variant: string }>`
   display: inline-flex;
@@ -100,24 +100,10 @@ const Tag = ({
 }: TagProps) => {
   const theme = useTheme()
 
-  /**
-   * Tag should display an aria-label if the status is not neutral or primary
-   */
-  const ariaLabel = useMemo(
-    () =>
-      ['neutral', 'primary'].some(baseVariant => baseVariant === variant)
-        ? undefined
-        : variant,
-    [variant],
-  )
-
   const generatedStyles = useMemo(() => generateStyles({ theme }), [theme])
 
   return (
     <StyledContainer
-      role="status"
-      aria-label={ariaLabel}
-      as="span"
       variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
       className={className}
     >
