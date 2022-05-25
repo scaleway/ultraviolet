@@ -1,0 +1,2964 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectNumber should click on center button 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="10"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should click on min button 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 25px;"
+        value="8"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should click on plus button with a step value 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="30"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should click on plus button with a step value and an in-between value set 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="30"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should focus input and modify value 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        type="text"
+        value="20"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should focus input and modify value onMaxCrossed 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 45px;"
+        type="text"
+        value="100"
+      />
+    </div>
+    <button
+      aria-disabled="true"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should focus input and modify value onMinCrossed 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="true"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        type="text"
+        value="10"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should increase and decrease input with arrow up and down 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 45px;"
+        type="text"
+        value="100"
+      />
+    </div>
+    <button
+      aria-disabled="true"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should increase and decrease input with arrow up and down, step and an in-between value set 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 45px;"
+        type="text"
+        value="100"
+      />
+    </div>
+    <button
+      aria-disabled="true"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders correctly 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1qlmcqr-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="10"
+      />
+      <span
+        class="cache-1qlmcqr-StyledText ermgxlz1"
+      >
+        unit
+      </span>
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-10gq3lk-StyledContainer-StyledContainer {
+  background-color: #f6f6f8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-10gq3lk-StyledContainer-StyledContainer>.ermgxlz4,
+.cache-10gq3lk-StyledContainer-StyledContainer .ermgxlz2,
+.cache-10gq3lk-StyledContainer-StyledContainer .ermgxlz3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #d4dae7;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1b93rpl-StyledText {
+  color: #d4dae7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    class="ermgxlz0 cache-10gq3lk-StyledContainer-StyledContainer"
+    disabled=""
+  >
+    <button
+      aria-disabled="true"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        disabled=""
+        name="stepper"
+        style="width: 35px;"
+        value="10"
+      />
+      <span
+        class="cache-1b93rpl-StyledText ermgxlz1"
+      >
+        unit
+      </span>
+    </div>
+    <button
+      aria-disabled="true"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders correctly max value 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1qlmcqr-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 45px;"
+        value="100"
+      />
+      <span
+        class="cache-1qlmcqr-StyledText ermgxlz1"
+      >
+        unit
+      </span>
+    </div>
+    <button
+      aria-disabled="true"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders correctly min value 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #d4dae7;
+  margin: 0 8px;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-1li1zam-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cache-1qlmcqr-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="true"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-1li1zam-StyledTouchable-StyledTouchable"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 25px;"
+        value="0"
+      />
+      <span
+        class="cache-1qlmcqr-StyledText ermgxlz1"
+      >
+        unit
+      </span>
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders large size 1`] = `
+<DocumentFragment>
+  .cache-jglfj7-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-19dlf6l-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-15pdzsf-StyledIcon-sizeStyles.cache-15pdzsf-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t3rswc-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 96px);
+}
+
+.cache-t3rswc-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-t3rswc-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-jglfj7-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-t3rswc-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="10"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-19dlf6l-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-15pdzsf-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectNumber should renders small size 1`] = `
+<DocumentFragment>
+  .cache-22olbd-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 32px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-zozdgk-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  color: #4f0599;
+  margin: 0 8px;
+}
+
+.cache-zozdgk-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-zozdgk-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-zozdgk-StyledTouchable-StyledTouchable:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-1q7t9xm-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.cache-1q7t9xm-StyledIcon-sizeStyles.cache-1q7t9xm-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-yrvtlw-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: calc(100% - 64px);
+}
+
+.cache-yrvtlw-StyledCenterBox:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-yrvtlw-StyledCenterBox:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-4fk8vx-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  text-align: right;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+
+<div
+    class="ermgxlz0 cache-22olbd-StyledContainer"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Minus"
+      class="ermgxlz4 e1kgqxfn0 cache-zozdgk-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-1q7t9xm-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H5V11H19V13Z"
+        />
+      </svg>
+    </button>
+    <div
+      aria-live="assertive"
+      class="cache-yrvtlw-StyledCenterBox ermgxlz3"
+      role="status"
+    >
+      <input
+        aria-label="Input"
+        class="cache-4fk8vx-StyledInput ermgxlz2"
+        name="stepper"
+        style="width: 35px;"
+        value="10"
+      />
+    </div>
+    <button
+      aria-disabled="false"
+      aria-label="Plus"
+      class="ermgxlz4 e1kgqxfn0 cache-zozdgk-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-1q7t9xm-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
