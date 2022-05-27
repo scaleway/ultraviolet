@@ -110,7 +110,7 @@ specifiers:
   regenerator-runtime: 0.13.9
   require-from-string: ^2.0.2
   rollup: 2.74.1
-  rollup-plugin-dts: 4.2.1
+  rollup-plugin-dts: 4.2.2
   rollup-plugin-postcss: 4.0.2
   rollup-plugin-visualizer: 5.6.0
   semantic-release: 19.0.2
@@ -236,7 +236,7 @@ devDependencies:
   regenerator-runtime: 0.13.9
   require-from-string: 2.0.2
   rollup: 2.74.1
-  rollup-plugin-dts: 4.2.1_lq4dy2bb4fhoyaf2vwyb4geyfa
+  rollup-plugin-dts: 4.2.2_lq4dy2bb4fhoyaf2vwyb4geyfa
   rollup-plugin-postcss: 4.0.2_postcss@8.4.14
   rollup-plugin-visualizer: 5.6.0_rollup@2.74.1
   semantic-release: 19.0.2
@@ -16099,12 +16099,12 @@ packages:
       inherits: 2.0.4
     dev: true
 
-  /rollup-plugin-dts/4.2.1_lq4dy2bb4fhoyaf2vwyb4geyfa:
-    resolution: {integrity: sha512-eaxQZNUJ5iQcxNGlpJ1CUgG4OSVqWjDZ3nNSWBIoGrpcote2aNphSe1RJOaSYkb8dwn3o+rYm1vvld/5z3EGSQ==}
+  /rollup-plugin-dts/4.2.2_lq4dy2bb4fhoyaf2vwyb4geyfa:
+    resolution: {integrity: sha512-A3g6Rogyko/PXeKoUlkjxkP++8UDVpgA7C+Tdl77Xj4fgEaIjPSnxRmR53EzvoYy97VMVwLAOcWJudaVAuxneQ==}
     engines: {node: '>=v12.22.11'}
     peerDependencies:
-      rollup: ^2.70
-      typescript: ^4.6
+      rollup: ^2.55
+      typescript: ^4.1
     dependencies:
       magic-string: 0.26.2
       rollup: 2.74.1
