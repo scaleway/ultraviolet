@@ -2,7 +2,7 @@
 
 exports[`CreationProgress renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .cache-8fgrj3-StyledContainer {
+  .cache-10oufrk-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,35 +20,34 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   align-items: flex-start;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu4 {
+.cache-10oufrk-StyledContainer .e13ux8wu4 {
   height: 32px;
   width: 32px;
   font-size: 16px;
   line-height: 1;
-  border-width: 3px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5 {
+.cache-10oufrk-StyledContainer .e13ux8wu5 {
   margin: 0 8px;
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:first-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:first-of-type {
   margin-left: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:last-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:last-of-type {
   margin-right: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu1 {
+.cache-10oufrk-StyledContainer .e13ux8wu1 {
   height: 4px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu3 {
+.cache-10oufrk-StyledContainer .e13ux8wu3 {
   margin-top: 16px;
   font-size: 16px;
 }
@@ -71,7 +70,7 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   justify-content: flex-start;
 }
 
-.cache-1i14971-StyledStep-temporalStepStyles {
+.cache-ja0taa-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,18 +84,20 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #22c8a2;
+  color: #149a7b;
+  background-color: #eafffb;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles {
-  fill: #ffffff;
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+  fill: #149a7b;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles.cache-ub7j99-StyledIcon-sizeStyles {
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -132,17 +133,42 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
   width: 100%;
 }
 
+.cache-epigh9-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #390171;
+  background-color: #eeeeff;
+}
+
+.cache-i7tymf-StyledText-variantStyles {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 <div
-    class="cache-8fgrj3-StyledContainer e13ux8wu0"
+    class="cache-10oufrk-StyledContainer e13ux8wu0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-ja0taa-StyledStep e13ux8wu4"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
+          class="e13ux8wu2 etwatq50 cache-1509w7j-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -163,10 +189,10 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-ja0taa-StyledStep e13ux8wu4"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
+          class="e13ux8wu2 etwatq50 cache-1509w7j-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -187,16 +213,13 @@ exports[`CreationProgress renders correctly with all selected 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-epigh9-StyledStep e13ux8wu4"
       >
-        <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          3
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -220,7 +243,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   }
 }
 
-.cache-8fgrj3-StyledContainer {
+.cache-10oufrk-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,35 +261,34 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   align-items: flex-start;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu4 {
+.cache-10oufrk-StyledContainer .e13ux8wu4 {
   height: 32px;
   width: 32px;
   font-size: 16px;
   line-height: 1;
-  border-width: 3px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5 {
+.cache-10oufrk-StyledContainer .e13ux8wu5 {
   margin: 0 8px;
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:first-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:first-of-type {
   margin-left: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:last-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:last-of-type {
   margin-right: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu1 {
+.cache-10oufrk-StyledContainer .e13ux8wu1 {
   height: 4px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu3 {
+.cache-10oufrk-StyledContainer .e13ux8wu3 {
   margin-top: 16px;
   font-size: 16px;
 }
@@ -289,7 +311,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   justify-content: flex-start;
 }
 
-.cache-1i14971-StyledStep-temporalStepStyles {
+.cache-epigh9-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -303,19 +325,15 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #22c8a2;
+  color: #390171;
+  background-color: #eeeeff;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles {
-  fill: #ffffff;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.cache-ub7j99-StyledIcon-sizeStyles.cache-ub7j99-StyledIcon-sizeStyles {
-  vertical-align: middle;
+.cache-i7tymf-StyledText-variantStyles {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .cache-iqnvfc-StyledText {
@@ -328,7 +346,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   text-align: center;
 }
 
-.cache-1lwhthm-StyledLine-loadingStyle {
+.cache-prcay6-StyledLine-loadingStyle {
   border-radius: 2px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -339,7 +357,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   position: relative;
 }
 
-.cache-1lwhthm-StyledLine-loadingStyle::after {
+.cache-prcay6-StyledLine-loadingStyle::after {
   content: '';
   position: absolute;
   left: 0;
@@ -351,7 +369,7 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.cache-1k0r1aw-StyledStep-temporalStepStyles {
+.cache-1li9a2m-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -365,16 +383,9 @@ exports[`CreationProgress renders correctly with default props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  color: #4a4f62;
   background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
-}
-
-.cache-10y1xlz-StyledFutureInternalDot {
-  background-color: #d4dae7;
-  height: 7px;
-  width: 7px;
-  border-radius: 16px;
+  border: 1px solid #d4dae7;
 }
 
 .cache-rgwnp4-StyledLine {
@@ -399,22 +410,19 @@ exports[`CreationProgress renders correctly with default props 1`] = `
 }
 
 <div
-    class="cache-8fgrj3-StyledContainer e13ux8wu0"
+    class="cache-10oufrk-StyledContainer e13ux8wu0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-epigh9-StyledStep e13ux8wu4"
       >
-        <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          1
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -423,17 +431,19 @@ exports[`CreationProgress renders correctly with default props 1`] = `
       </div>
     </div>
     <div
-      class="cache-1lwhthm-StyledLine-loadingStyle e13ux8wu1"
+      class="cache-prcay6-StyledLine-loadingStyle e13ux8wu1"
     />
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1k0r1aw-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-1li9a2m-StyledStep e13ux8wu4"
       >
         <div
-          class="cache-10y1xlz-StyledFutureInternalDot e13ux8wu2"
-        />
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          2
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -448,11 +458,13 @@ exports[`CreationProgress renders correctly with default props 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1k0r1aw-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-1li9a2m-StyledStep e13ux8wu4"
       >
         <div
-          class="cache-10y1xlz-StyledFutureInternalDot e13ux8wu2"
-        />
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          3
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -476,7 +488,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   }
 }
 
-.cache-8fgrj3-StyledContainer {
+.cache-10oufrk-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,35 +506,34 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   align-items: flex-start;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu4 {
+.cache-10oufrk-StyledContainer .e13ux8wu4 {
   height: 32px;
   width: 32px;
   font-size: 16px;
   line-height: 1;
-  border-width: 3px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5 {
+.cache-10oufrk-StyledContainer .e13ux8wu5 {
   margin: 0 8px;
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:first-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:first-of-type {
   margin-left: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:last-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:last-of-type {
   margin-right: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu1 {
+.cache-10oufrk-StyledContainer .e13ux8wu1 {
   height: 4px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu3 {
+.cache-10oufrk-StyledContainer .e13ux8wu3 {
   margin-top: 16px;
   font-size: 16px;
 }
@@ -545,7 +556,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   justify-content: flex-start;
 }
 
-.cache-1i14971-StyledStep-temporalStepStyles {
+.cache-ja0taa-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -559,18 +570,20 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #22c8a2;
+  color: #149a7b;
+  background-color: #eafffb;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles {
-  fill: #ffffff;
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+  fill: #149a7b;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles.cache-ub7j99-StyledIcon-sizeStyles {
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -606,30 +619,7 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   width: 100%;
 }
 
-.cache-1lwhthm-StyledLine-loadingStyle {
-  border-radius: 2px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 2px;
-  background-color: #d4dae7;
-  position: relative;
-}
-
-.cache-1lwhthm-StyledLine-loadingStyle::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 2px;
-  background-color: #22c8a2;
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.cache-1k0r1aw-StyledStep-temporalStepStyles {
+.cache-epigh9-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -643,16 +633,57 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
+  color: #390171;
+  background-color: #eeeeff;
 }
 
-.cache-10y1xlz-StyledFutureInternalDot {
+.cache-i7tymf-StyledText-variantStyles {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.cache-prcay6-StyledLine-loadingStyle {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
   background-color: #d4dae7;
-  height: 7px;
-  width: 7px;
-  border-radius: 16px;
+  position: relative;
+}
+
+.cache-prcay6-StyledLine-loadingStyle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #22c8a2;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+.cache-1li9a2m-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #4a4f62;
+  background-color: transparent;
+  border: 1px solid #d4dae7;
 }
 
 .cache-rgwnp4-StyledLine {
@@ -677,16 +708,16 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
 }
 
 <div
-    class="cache-8fgrj3-StyledContainer e13ux8wu0"
+    class="cache-10oufrk-StyledContainer e13ux8wu0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-ja0taa-StyledStep e13ux8wu4"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
+          class="e13ux8wu2 etwatq50 cache-1509w7j-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -707,16 +738,13 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-epigh9-StyledStep e13ux8wu4"
       >
-        <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          2
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -725,17 +753,19 @@ exports[`CreationProgress renders correctly with selected prop 1`] = `
       </div>
     </div>
     <div
-      class="cache-1lwhthm-StyledLine-loadingStyle e13ux8wu1"
+      class="cache-prcay6-StyledLine-loadingStyle e13ux8wu1"
     />
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1k0r1aw-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-1li9a2m-StyledStep e13ux8wu4"
       >
         <div
-          class="cache-10y1xlz-StyledFutureInternalDot e13ux8wu2"
-        />
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          3
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -762,7 +792,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   }
 }
 
-.cache-8fgrj3-StyledContainer {
+.cache-10oufrk-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -780,35 +810,34 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   align-items: flex-start;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu4 {
+.cache-10oufrk-StyledContainer .e13ux8wu4 {
   height: 32px;
   width: 32px;
   font-size: 16px;
   line-height: 1;
-  border-width: 3px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5 {
+.cache-10oufrk-StyledContainer .e13ux8wu5 {
   margin: 0 8px;
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:first-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:first-of-type {
   margin-left: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu5:last-of-type {
+.cache-10oufrk-StyledContainer .e13ux8wu5:last-of-type {
   margin-right: 0px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu1 {
+.cache-10oufrk-StyledContainer .e13ux8wu1 {
   height: 4px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.cache-8fgrj3-StyledContainer .e13ux8wu3 {
+.cache-10oufrk-StyledContainer .e13ux8wu3 {
   margin-top: 16px;
   font-size: 16px;
 }
@@ -831,7 +860,7 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   justify-content: flex-start;
 }
 
-.cache-1i14971-StyledStep-temporalStepStyles {
+.cache-ja0taa-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -845,271 +874,20 @@ exports[`CreationProgress renders correctly with steps number 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #22c8a2;
+  color: #149a7b;
+  background-color: #eafffb;
 }
 
-.cache-8u0ti5-StyledText-variantStyles-colorStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.cache-8u0ti5-StyledText-variantStyles-colorStyles.cache-8u0ti5-StyledText-variantStyles-colorStyles {
-  font-weight: 500;
-}
-
-.cache-iqnvfc-StyledText {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.cache-1onazp5-StyledLine {
-  border-radius: 2px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 2px;
-  background-color: #d4dae7;
-  position: relative;
-}
-
-.cache-1onazp5-StyledLine::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 2px;
-  background-color: #22c8a2;
-  width: 100%;
-}
-
-.cache-1lwhthm-StyledLine-loadingStyle {
-  border-radius: 2px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 2px;
-  background-color: #d4dae7;
-  position: relative;
-}
-
-.cache-1lwhthm-StyledLine-loadingStyle::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 2px;
-  background-color: #22c8a2;
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.cache-1k0r1aw-StyledStep-temporalStepStyles {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
-}
-
-.cache-1c1gkbj-StyledText-variantStyles-colorStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
-}
-
-.cache-1c1gkbj-StyledText-variantStyles-colorStyles.cache-1c1gkbj-StyledText-variantStyles-colorStyles {
-  font-weight: 500;
-}
-
-<div
-    class="cache-8fgrj3-StyledContainer e13ux8wu0"
-  >
-    <div
-      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
-    >
-      <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
-      >
-        <div
-          class="e1g1zfwd0 cache-8u0ti5-StyledText-variantStyles-colorStyles"
-        >
-          1
-        </div>
-      </div>
-      <div
-        class="cache-iqnvfc-StyledText e13ux8wu3"
-      >
-        Step 1
-      </div>
-    </div>
-    <div
-      class="cache-1onazp5-StyledLine e13ux8wu1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
-    >
-      <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
-      >
-        <div
-          class="e1g1zfwd0 cache-8u0ti5-StyledText-variantStyles-colorStyles"
-        >
-          2
-        </div>
-      </div>
-      <div
-        class="cache-iqnvfc-StyledText e13ux8wu3"
-      >
-        Step 2
-      </div>
-    </div>
-    <div
-      class="cache-1lwhthm-StyledLine-loadingStyle e13ux8wu1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
-    >
-      <div
-        class="cache-1k0r1aw-StyledStep-temporalStepStyles e13ux8wu4"
-      >
-        <div
-          class="e1g1zfwd0 cache-1c1gkbj-StyledText-variantStyles-colorStyles"
-        >
-          3
-        </div>
-      </div>
-      <div
-        class="cache-iqnvfc-StyledText e13ux8wu3"
-      >
-        Step 3
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`CreationProgress renders correctly without animation 1`] = `
-<DocumentFragment>
-  .cache-8fgrj3-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu4 {
-  height: 32px;
-  width: 32px;
-  font-size: 16px;
-  line-height: 1;
-  border-width: 3px;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu5 {
-  margin: 0 8px;
-  width: 32px;
-  white-space: nowrap;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu5:first-of-type {
-  margin-left: 0px;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu5:last-of-type {
-  margin-right: 0px;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu1 {
-  height: 4px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.cache-8fgrj3-StyledContainer .e13ux8wu3 {
-  margin-top: 16px;
-  font-size: 16px;
-}
-
-.cache-64yl8v-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-}
-
-.cache-1i14971-StyledStep-temporalStepStyles {
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-color: #22c8a2;
-}
-
-.cache-ub7j99-StyledIcon-sizeStyles {
-  fill: #ffffff;
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+  fill: #149a7b;
 }
 
-.cache-ub7j99-StyledIcon-sizeStyles.cache-ub7j99-StyledIcon-sizeStyles {
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
@@ -1145,6 +923,301 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   width: 100%;
 }
 
+.cache-epigh9-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #390171;
+  background-color: #eeeeff;
+}
+
+.cache-i7tymf-StyledText-variantStyles {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.cache-prcay6-StyledLine-loadingStyle {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
+}
+
+.cache-prcay6-StyledLine-loadingStyle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #22c8a2;
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+}
+
+.cache-1li9a2m-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #4a4f62;
+  background-color: transparent;
+  border: 1px solid #d4dae7;
+}
+
+<div
+    class="cache-10oufrk-StyledContainer e13ux8wu0"
+  >
+    <div
+      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
+    >
+      <div
+        class="cache-ja0taa-StyledStep e13ux8wu4"
+      >
+        <svg
+          class="e13ux8wu2 etwatq50 cache-1509w7j-StyledIcon-sizeStyles-StyledIcon"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+          />
+        </svg>
+      </div>
+      <div
+        class="cache-iqnvfc-StyledText e13ux8wu3"
+      >
+        Step 1
+      </div>
+    </div>
+    <div
+      class="cache-1onazp5-StyledLine e13ux8wu1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
+    >
+      <div
+        class="cache-epigh9-StyledStep e13ux8wu4"
+      >
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="cache-iqnvfc-StyledText e13ux8wu3"
+      >
+        Step 2
+      </div>
+    </div>
+    <div
+      class="cache-prcay6-StyledLine-loadingStyle e13ux8wu1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e13ux8wu5"
+    >
+      <div
+        class="cache-1li9a2m-StyledStep e13ux8wu4"
+      >
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="cache-iqnvfc-StyledText e13ux8wu3"
+      >
+        Step 3
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CreationProgress renders correctly without animation 1`] = `
+<DocumentFragment>
+  .cache-10oufrk-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu4 {
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu5 {
+  margin: 0 8px;
+  width: 32px;
+  white-space: nowrap;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu5:first-of-type {
+  margin-left: 0px;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu5:last-of-type {
+  margin-right: 0px;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu1 {
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-10oufrk-StyledContainer .e13ux8wu3 {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.cache-64yl8v-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.cache-ja0taa-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #149a7b;
+  background-color: #eafffb;
+}
+
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  fill: #149a7b;
+}
+
+.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon.cache-1509w7j-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+}
+
+.cache-iqnvfc-StyledText {
+  margin-top: 16px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.cache-1onazp5-StyledLine {
+  border-radius: 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 2px;
+  background-color: #d4dae7;
+  position: relative;
+}
+
+.cache-1onazp5-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #22c8a2;
+  width: 100%;
+}
+
+.cache-epigh9-StyledStep {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #390171;
+  background-color: #eeeeff;
+}
+
+.cache-i7tymf-StyledText-variantStyles {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .cache-rgwnp4-StyledLine {
   border-radius: 2px;
   -webkit-box-flex: 1;
@@ -1166,7 +1239,7 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-1k0r1aw-StyledStep-temporalStepStyles {
+.cache-1li9a2m-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1180,29 +1253,22 @@ exports[`CreationProgress renders correctly without animation 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  color: #4a4f62;
   background-color: transparent;
-  border-style: solid;
-  border-color: #d4dae7;
-}
-
-.cache-10y1xlz-StyledFutureInternalDot {
-  background-color: #d4dae7;
-  height: 7px;
-  width: 7px;
-  border-radius: 16px;
+  border: 1px solid #d4dae7;
 }
 
 <div
-    class="cache-8fgrj3-StyledContainer e13ux8wu0"
+    class="cache-10oufrk-StyledContainer e13ux8wu0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-ja0taa-StyledStep e13ux8wu4"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
+          class="e13ux8wu2 etwatq50 cache-1509w7j-StyledIcon-sizeStyles-StyledIcon"
           viewBox="0 0 24 24"
         >
           <path
@@ -1223,16 +1289,13 @@ exports[`CreationProgress renders correctly without animation 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1i14971-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-epigh9-StyledStep e13ux8wu4"
       >
-        <svg
-          class="sc-ui-icon etwatq50 cache-ub7j99-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <div
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          2
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"
@@ -1247,11 +1310,13 @@ exports[`CreationProgress renders correctly without animation 1`] = `
       class="cache-64yl8v-StyledStepContainer e13ux8wu5"
     >
       <div
-        class="cache-1k0r1aw-StyledStep-temporalStepStyles e13ux8wu4"
+        class="cache-1li9a2m-StyledStep e13ux8wu4"
       >
         <div
-          class="cache-10y1xlz-StyledFutureInternalDot e13ux8wu2"
-        />
+          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        >
+          3
+        </div>
       </div>
       <div
         class="cache-iqnvfc-StyledText e13ux8wu3"

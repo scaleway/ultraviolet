@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import CreationProgress from '..'
@@ -7,81 +8,41 @@ export default {
   title: 'Components/Navigation/CreationProgress',
 } as Meta
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+const steps = (count: number) => `Step ${count}`
 const Template: Story<ComponentProps<typeof CreationProgress>> = args => (
-  <CreationProgress selected={0} {...args}>
-    <CreationProgress.Step>Step 1</CreationProgress.Step>
-    <CreationProgress.Step>Step 2</CreationProgress.Step>
-    <CreationProgress.Step>Step 3</CreationProgress.Step>
-  </CreationProgress>
+  <Container>
+    {Array.from(Array(5), (_, index) => (
+      <CreationProgress selected={index} {...args}>
+        {Array.from(Array(5), (__, i) => (
+          <CreationProgress.Step key={i}>{steps(i + 1)}</CreationProgress.Step>
+        ))}
+      </CreationProgress>
+    ))}
+  </Container>
 )
 
 export const Default = Template.bind({})
 
-export const SelectedOne = Template.bind({})
-SelectedOne.decorators = [
-  () => (
-    <CreationProgress selected={1}>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-  ),
-]
-
-export const SelectedAll = Template.bind({})
-SelectedAll.decorators = [
-  () => (
-    <CreationProgress selected={2}>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-  ),
-]
-
 export const WithoutAnimation = Template.bind({})
+WithoutAnimation.parameters = {
+  docs: {
+    storyDescription:
+      'CreationProgress Component without animation (static) by passing `animated={false}` ',
+  },
+}
 WithoutAnimation.decorators = [
   () => (
     <CreationProgress selected={1} animated={false}>
       <CreationProgress.Step>Step 1</CreationProgress.Step>
       <CreationProgress.Step>Step 2</CreationProgress.Step>
       <CreationProgress.Step>Step 3</CreationProgress.Step>
+      <CreationProgress.Step>Step 4</CreationProgress.Step>
+      <CreationProgress.Step>Step 5</CreationProgress.Step>
     </CreationProgress>
-  ),
-]
-
-export const WithStepsNumber = Template.bind({})
-WithStepsNumber.decorators = [
-  () => (
-    <CreationProgress selected={1} isStepsNumber>
-      <CreationProgress.Step>Step 1</CreationProgress.Step>
-      <CreationProgress.Step>Step 2</CreationProgress.Step>
-      <CreationProgress.Step>Step 3</CreationProgress.Step>
-    </CreationProgress>
-  ),
-]
-
-export const Sizes = Template.bind({})
-Sizes.parameters = {
-  docs: {
-    storyDescription:
-      'You can change the size of the creation progress with the `size` props which accept `xsmall`, `small`, `medium`, `large`, `xlarge`. By default `xlarge` will be taken',
-  },
-}
-Sizes.decorators = [
-  () => (
-    <>
-      {['xsmall', 'small', 'medium', 'large', 'xlarge'].map(size => (
-        <CreationProgress
-          size={size as ComponentProps<typeof CreationProgress>['size']}
-          selected={1}
-          isStepsNumber
-        >
-          <CreationProgress.Step>Step 1</CreationProgress.Step>
-          <CreationProgress.Step>Step 2</CreationProgress.Step>
-          <CreationProgress.Step>Step 3</CreationProgress.Step>
-        </CreationProgress>
-      ))}
-    </>
   ),
 ]

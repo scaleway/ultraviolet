@@ -1,4 +1,4 @@
-import { Theme, css, keyframes, useTheme } from '@emotion/react'
+import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { Children, Fragment, ReactNode, WeakValidationMap } from 'react'
@@ -6,53 +6,12 @@ import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
 import Typography from '../Typography'
 
-type Temporal = 'future' | 'past' | 'current'
-
-const sizes = {
-  large: {
-    line: 12,
-    step: 28,
-    stepBorder: 2,
-    stepTextMargin: 15,
-    text: 14,
-  },
-  medium: {
-    line: 10,
-    step: 24,
-    stepBorder: 2,
-    stepTextMargin: 15,
-    text: 12,
-  },
-  small: {
-    line: 8,
-    step: 20,
-    stepBorder: 2,
-    stepTextMargin: 15,
-    text: 11,
-  },
-  xlarge: {
-    line: 14,
-    step: 32,
-    stepBorder: 3,
-    stepTextMargin: 15,
-    text: 16,
-  },
-  xsmall: {
-    line: 5,
-    step: 16,
-    stepBorder: 1,
-    stepTextMargin: 15,
-    text: 10,
-  },
-}
-
-type Size = keyof typeof sizes
+type Temporal = 'previous' | 'next' | 'current'
 
 const loadingAnimation = keyframes`
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
@@ -64,24 +23,6 @@ const StyledStepContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 `
-
-const temporalStepStyles = ({
-  temporal,
-  theme,
-}: {
-  temporal: Temporal
-  theme: Theme
-}) =>
-  temporal !== 'future'
-    ? css`
-        background-color: ${theme.colors.success.backgroundStrong};
-      `
-    : css`
-        background-color: transparent;
-        border-style: solid;
-        border-color: ${theme.colors.neutral.borderWeak};
-      `
-
 const StyledStep = styled('div', {
   shouldForwardProp: prop => !['temporal'].includes(prop.toString()),
 })<{ temporal: Temporal }>`
@@ -89,21 +30,34 @@ const StyledStep = styled('div', {
   display: flex;
   align-items: center;
   justify-content: center;
-  ${temporalStepStyles}
+  color: ${({ temporal, theme }) => {
+    if (temporal === 'previous') return theme.colors.success.text
+    if (temporal === 'current') return theme.colors.primary.text
+
+    return theme.colors.neutral.text
+  }};
+  background-color: ${({ temporal, theme }) => {
+    if (temporal === 'previous') return theme.colors.success.background
+    if (temporal === 'current') return theme.colors.primary.background
+
+    return 'transparent'
+  }};
+
+  border: ${({ temporal, theme }) =>
+    temporal === 'next'
+      ? `1px solid ${theme.colors.neutral.borderWeak}`
+      : null};
 `
 
 const StyledText = styled.div`
-  margin-top: 16px;
-  font-size: 16px;
+  margin-top: ${({ theme }) => theme.space['2']};
+  font-size: ${({ theme }) => theme.space['2']};
   display: flex;
   text-align: center;
 `
 
-const StyledFutureInternalDot = styled.div`
-  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-  height: 7px;
-  width: 7px;
-  border-radius: 16px;
+const StyledIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.success.text};
 `
 
 const loadingStyle = css`
@@ -111,9 +65,9 @@ const loadingStyle = css`
 `
 
 const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.space['0.25']};
   flex-grow: 1;
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.space['0.25']};
   background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   position: relative;
 
@@ -123,31 +77,30 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     left: 0;
     top: 0;
     height: 100%;
-    border-radius: 2px;
+    border-radius: ${({ theme }) => theme.space['0.25']};
     background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
-    ${({ temporal }) => temporal === 'past' && `width: 100%;`}
+    ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
     ${({ temporal, animated }) =>
       temporal === 'current' && animated && loadingStyle}
   }
 `
 
-const StyledContainer = styled.div<{ size: Size }>`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
 
   ${StyledStep} {
-    height: ${({ size }) => sizes[size].step}px;
-    width: ${({ size }) => sizes[size].step}px;
-    font-size: ${({ size }) => sizes[size].text}px;
+    height: ${({ theme }) => theme.space['4']};
+    width: ${({ theme }) => theme.space['4']};
+    font-size: ${({ theme }) => theme.space['2']};
     line-height: 1;
-    border-width: ${({ size }) => sizes[size].stepBorder}px;
   }
 
   ${StyledStepContainer} {
-    margin: 0 8px;
-    width: ${({ size }) => sizes[size].step}px;
+    margin: 0 ${({ theme }) => theme.space['1']};
+    width: ${({ theme }) => theme.space['4']};
     white-space: nowrap;
   }
   ${StyledStepContainer}:first-of-type {
@@ -159,94 +112,84 @@ const StyledContainer = styled.div<{ size: Size }>`
   }
 
   ${StyledLine} {
-    height: 4px;
-    margin-top: ${({ size }) => sizes[size].line}px;
-    margin-bottom: ${({ size }) => sizes[size].line}px;
+    height: ${({ theme }) => theme.space['0.5']};
+    margin-top: ${({ theme }) => theme.space['2']};
+    margin-bottom: ${({ theme }) => theme.space['2']};
   }
 
   ${StyledText} {
-    margin-top: ${({ size }) => sizes[size].text}px;
-    font-size: ${({ size }) => sizes[size].text}px;
+    margin-top: ${({ theme }) => theme.space['2']};
+    font-size: ${({ theme }) => theme.space['2']};
   }
 `
 
-type CreationProgressProps = {
+type StepperNumbersProps = {
+  temporal: Temporal
+  child: ReactNode
+  CurrentStep: number
+}
+
+const StepperNumbers = ({
+  temporal,
+  child,
+  CurrentStep,
+}: StepperNumbersProps) => (
+  <StyledStepContainer>
+    <StyledStep temporal={temporal}>
+      {temporal !== 'previous' ? (
+        <Typography>{CurrentStep}</Typography>
+      ) : (
+        <StyledIcon name="check" size={20} />
+      )}
+    </StyledStep>
+
+    <StyledText>{child}</StyledText>
+  </StyledStepContainer>
+)
+
+type StepperProps = {
   animated?: boolean
   isStepsNumber?: boolean
   selected?: number
-  size?: Size
   children: ReactNode[]
 }
 
-type CreationProgressComponent = ((
-  props: CreationProgressProps,
-) => JSX.Element) & {
+type StepperComponent = ((props: StepperProps) => JSX.Element) & {
   Step: (props: { children: ReactNode }) => JSX.Element
-  propTypes: WeakValidationMap<CreationProgressProps>
+  propTypes: WeakValidationMap<StepperProps>
 }
 
-const CreationProgress: CreationProgressComponent = ({
+const Stepper: StepperComponent = ({
   children,
   selected = 0,
   animated = true,
-  isStepsNumber = false,
-  size = 'xlarge',
 }) => {
   const lastStep = Children.count(children) - 1
-  const theme = useTheme()
 
   return (
-    <StyledContainer size={size}>
+    <StyledContainer>
       {flattenChildren(children).map((child, index) => {
         const getTemporal = () => {
-          if (selected > index) return 'past'
+          if (selected > index) return 'previous'
 
           if (selected === index) return 'current'
 
-          return 'future'
+          return 'next'
         }
         const isNotLast = index < lastStep
         const temporal = getTemporal()
 
-        const renderStep = () => {
-          if (temporal !== 'future') {
-            return isStepsNumber ? (
-              <Typography
-                color={theme.colors.success.textStrong}
-                fontWeight={500}
-              >
-                {index + 1}
-              </Typography>
-            ) : (
-              <Icon
-                name="check"
-                color={theme.colors.success.textStrong}
-                size={20}
-              />
-            )
-          }
-
-          return isStepsNumber ? (
-            <Typography color={theme.colors.neutral.textWeak} fontWeight={500}>
-              {index + 1}
-            </Typography>
-          ) : (
-            <StyledFutureInternalDot />
-          )
-        }
-
         return (
           // eslint-disable-next-line react/no-array-index-key
           <Fragment key={`creation-progress-${index}`}>
-            <StyledStepContainer>
-              <StyledStep temporal={temporal}>{renderStep()}</StyledStep>
-
-              <StyledText>{child}</StyledText>
-            </StyledStepContainer>
-
-            {isNotLast && (
+            <StepperNumbers
+              child={child}
+              CurrentStep={index + 1}
+              temporal={temporal}
+            />
+            {isNotLast ? (
               <StyledLine temporal={temporal} animated={animated} />
-            )}
+            ) : null}
           </Fragment>
         )
       })}
@@ -255,16 +198,15 @@ const CreationProgress: CreationProgressComponent = ({
 }
 
 const Step = ({ children }: { children: ReactNode }) => children as JSX.Element
-Step.displayName = 'CreationProgress.Step'
 
-CreationProgress.Step = Step
+Step.displayName = 'Stepper.Step'
 
-CreationProgress.propTypes = {
+Stepper.Step = Step
+
+Stepper.propTypes = {
   animated: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  isStepsNumber: PropTypes.bool,
   selected: PropTypes.number,
-  size: PropTypes.oneOf<NonNullable<Size>>(Object.keys(sizes) as Size[]),
 }
 
-export default CreationProgress
+export default Stepper
