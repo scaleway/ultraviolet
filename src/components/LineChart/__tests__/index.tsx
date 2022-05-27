@@ -1,4 +1,4 @@
-import { ResponsiveWrapper } from '@nivo/core'
+import * as nivo from '@nivo/core'
 import { fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ComponentProps } from 'react'
@@ -10,15 +10,13 @@ import {
   lineChartMultipleData,
 } from '../__stories__/mockData'
 
-// HACK to allows snapshots rendering of responsive graphs
-jest.mock('@nivo/core', () => ({
-  ...jest.requireActual('@nivo/core'),
-  ResponsiveWrapper: ({
-    children,
-  }: ComponentProps<typeof ResponsiveWrapper>) => (
-    <div>{children({ height: 500, width: 1000 })}</div>
-  ),
-}))
+jest
+  .spyOn(nivo, 'ResponsiveWrapper')
+  .mockImplementation(
+    ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (
+      <div>{children({ height: 500, width: 1000 })}</div>
+    ),
+  )
 
 describe('LineChart', () => {
   test('renders correctly without data', () =>
