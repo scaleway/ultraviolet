@@ -31,7 +31,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.4.29
   '@scaleway/jest-helpers': 1.2.6
   '@scaleway/random-name': 3.0.2
-  '@scaleway/use-i18n': 3.3.5
+  '@scaleway/use-i18n': 3.3.6
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
@@ -172,7 +172,7 @@ devDependencies:
   '@rollup/plugin-url': 7.0.0_rollup@2.74.1
   '@scaleway/eslint-config-react': 3.4.29_utdtartgf6fqqgkivzeynh76la
   '@scaleway/jest-helpers': 1.2.6_f6myx75va7tobgmmolvmn6x5fu
-  '@scaleway/use-i18n': 3.3.5_sfoxds7t5ydpegc3knd667wn6m
+  '@scaleway/use-i18n': 3.3.6_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
@@ -3308,8 +3308,8 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-i18n/3.3.5_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-zF5DbA46YgWgjzvM6nSyzvNi3jp+Dx3uLYGOmJYvvWExilSxWTlt6qpWToacnsz38ADmycjXs2O72Uy52mWbxA==}
+  /@scaleway/use-i18n/3.3.6_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-Sm3tIByDLJsh7fVfILwnNyTKSbLVODjixUdI5GoWh8d1qtFRwWbVXxRmKNmkubCGnyCOA9+q5KUtKJ9h+4Y/Cg==}
     peerDependencies:
       react: 17.x || 18.x || 17
       react-dom: 17.x || 18.x
@@ -3317,7 +3317,7 @@ packages:
       '@formatjs/ecma402-abstract': 1.11.6
       '@formatjs/fast-memoize': 1.2.3
       date-fns: 2.28.0
-      filesize: 8.0.7
+      filesize: 9.0.0
       intl-messageformat: 10.0.1
       prop-types: 15.8.1
       react: 17.0.2
@@ -9711,8 +9711,8 @@ packages:
     dev: true
     optional: true
 
-  /filesize/8.0.7:
-    resolution: {integrity: sha512-pjmC+bkIF8XI7fWaH8KxHcZL3DPybs1roSKP4rKDvy20tAWwIObE4+JIseG2byfGKhud5ZnM4YSGKBz7Sh0ndQ==}
+  /filesize/9.0.0:
+    resolution: {integrity: sha512-Is0jgR3gdoTVnbTOHZUYineME5w02oUtxJ9T7FI22sp0zAtUyjjy7RSGzwsTSw4Rm0U+VB+rfsL/xkXEJLwpgQ==}
     engines: {node: '>= 0.4.0'}
     dev: true
 
