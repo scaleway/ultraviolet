@@ -365,14 +365,14 @@ const ICONS = {
   'radiobox-blank': () => (
     <g>
       <circle cx="12" cy="12" r="8" strokeWidth="2" />
-      <circle cx="12" cy="12" r="6" className="circle-background" />
+      <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
     </g>
   ),
 
   'radiobox-marked': () => (
     <g>
       <circle cx="12" cy="12" r="8" strokeWidth="2" />
-      <circle cx="12" cy="12" r="6" className="circle-background" />
+      <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
       <circle cx="12" cy="12" r="4" />
     </g>
   ),
