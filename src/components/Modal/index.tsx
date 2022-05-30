@@ -168,6 +168,7 @@ const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   ) as unknown as React.RefObject<HTMLButtonElement>
 
   return (
+    // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
     <DialogDisclosure {...dialog} ref={innerRef}>
       {disclosureProps => React.cloneElement(target, disclosureProps)}
     </DialogDisclosure>
