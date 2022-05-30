@@ -5,7 +5,6 @@ import Icon from '../Icon'
 import Typography from '../Typography'
 
 const StyledIcon = styled(Icon)`
-  margin-right: ${({ theme }) => theme.space['1']};
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.textWeak};
   .circle-background {
@@ -25,6 +24,7 @@ const StyledRadioContainer = styled(Typography)`
   position: relative;
   display: flex;
   align-items: flex-start;
+  gap: ${({ theme }) => theme.space['1']};
 
   &[aria-disabled='false'] {
     cursor: pointer;
