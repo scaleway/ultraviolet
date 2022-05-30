@@ -1,10 +1,5 @@
 import styled from '@emotion/styled'
-import {
-  InputHTMLAttributes,
-  KeyboardEventHandler,
-  ReactNode,
-  useCallback,
-} from 'react'
+import { InputHTMLAttributes, ReactNode } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -97,45 +92,35 @@ const Radio = ({
   children,
   className,
   autoFocus,
-}: RadioProps) => {
-  const onKeyDown: KeyboardEventHandler = useCallback(
-    event => {
-      if (event.key.charCodeAt(0) === 32) {
-        onChange(event)
-      }
-    },
-    [onChange],
-  )
-
-  return (
-    <StyledRadioContainer
-      as="label"
-      aria-disabled={disabled}
-      htmlFor={`${name}-${value}`}
-      className={className}
-    >
-      <StyledRadio
-        type="radio"
-        aria-invalid={!!error}
-        aria-checked={checked}
-        checked={checked}
-        id={`${name}-${value}`}
-        onChange={onChange}
-        onFocus={onFocus}
-        onKeyDown={onKeyDown}
-        onBlur={onBlur}
-        value={value}
-        disabled={disabled}
-        name={name}
-        autoFocus={autoFocus}
-      />
-      <StyledIcon
-        name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-        size={size}
-      />
-      {children}
-    </StyledRadioContainer>
-  )
-}
+  onKeyDown,
+}: RadioProps) => (
+  <StyledRadioContainer
+    as="label"
+    aria-disabled={disabled}
+    htmlFor={`${name}-${value}`}
+    className={className}
+  >
+    <StyledRadio
+      type="radio"
+      aria-invalid={!!error}
+      aria-checked={checked}
+      checked={checked}
+      id={`${name}-${value}`}
+      onChange={onChange}
+      onFocus={onFocus}
+      onKeyDown={onKeyDown}
+      onBlur={onBlur}
+      value={value}
+      disabled={disabled}
+      name={name}
+      autoFocus={autoFocus}
+    />
+    <StyledIcon
+      name={checked ? 'radiobox-marked' : 'radiobox-blank'}
+      size={size}
+    />
+    {children}
+  </StyledRadioContainer>
+)
 
 export default Radio
