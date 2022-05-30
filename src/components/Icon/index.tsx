@@ -370,7 +370,7 @@ const ICONS = {
         cy="12"
         r="6"
         fill="#FFFFFF"
-        className="icon-background"
+        className="circle-background"
       />
     </g>
   ),
@@ -383,7 +383,7 @@ const ICONS = {
         cy="12"
         r="6"
         fill="#FFFFFF"
-        className="icon-background"
+        className="circle-background"
       />
       <circle cx="12" cy="12" r="4" />
     </g>

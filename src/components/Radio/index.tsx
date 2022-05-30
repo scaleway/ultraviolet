@@ -8,6 +8,9 @@ const StyledIcon = styled(Icon)`
   margin-right: ${({ theme }) => theme.space['1']};
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.textWeak};
+  .circle-background {
+    fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  }
 `
 
 const StyledRadio = styled(ReakitRadio)`
@@ -29,31 +32,49 @@ const StyledRadioContainer = styled(Typography)`
 
   ${StyledRadio}[aria-checked="true"] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.text};
+    .circle-background {
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
   }
 
   ${StyledRadio}[aria-invalid="true"] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.danger.text};
+    .circle-background {
+      fill: ${({ theme }) => theme.colors.danger.background};
+    }
   }
 
   ${StyledRadio}:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
     fill: ${({ theme }) => theme.colors.primary.text};
+    .circle-background {
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
   }
 
   ${StyledRadio}[aria-invalid="true"]:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.text};
+    .circle-background {
+      fill: ${({ theme }) => theme.colors.danger.background};
+    }
   }
 
   :hover[aria-disabled='false'] {
     ${StyledRadio} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.text};
+      .circle-background {
+        fill: ${({ theme }) => theme.colors.primary.background};
+      }
     }
 
     ${StyledRadio}[aria-invalid="true"]  + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
+      .circle-background {
+        fill: ${({ theme }) => theme.colors.danger.background};
+      }
     }
   }
   &[aria-disabled='true'] {
@@ -62,7 +83,7 @@ const StyledRadioContainer = styled(Typography)`
 
     ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.neutral.textDisabled};
-      .icon-background {
+      .circle-background {
         fill: ${({ theme }) => theme.colors.neutral.backgroundStrong};
       }
     }
