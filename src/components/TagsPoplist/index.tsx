@@ -62,8 +62,8 @@ type TagsPoplistProps = {
 }
 
 const TagContainer = styled.div<{ index: number; visibleTagsCount: number }>`
-  margin-right: ${({ index, visibleTagsCount }) =>
-    index + 1 !== visibleTagsCount ? 1 : 0};
+  margin-right: ${({ index, visibleTagsCount, theme }) =>
+    index + 1 !== visibleTagsCount ? theme.space['1'] : 0};
 `
 
 const TagsPoplist = ({
