@@ -38,10 +38,8 @@ exports[`Tag renders correctly 1`] = `
   color: inherit;
 }
 
-<div
-    as="span"
+<span
     class="cache-1q42p0o-StyledContainer e1vt8sjg2"
-    role="status"
   >
     <div
       aria-disabled="false"
@@ -49,7 +47,7 @@ exports[`Tag renders correctly 1`] = `
     >
       test
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
@@ -88,11 +86,8 @@ exports[`Tag renders correctly bordered 1`] = `
   color: inherit;
 }
 
-<div
-    aria-label="bordered"
-    as="span"
+<span
     class="cache-13cgenx-StyledContainer e1vt8sjg2"
-    role="status"
   >
     <div
       aria-disabled="false"
@@ -100,7 +95,7 @@ exports[`Tag renders correctly bordered 1`] = `
     >
       test
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
@@ -141,10 +136,8 @@ exports[`Tag renders correctly disabled 1`] = `
   color: inherit;
 }
 
-<div
-    as="span"
+<span
     class="cache-ccb1lf-StyledContainer e1vt8sjg2"
-    role="status"
   >
     <div
       aria-disabled="true"
@@ -152,6 +145,6 @@ exports[`Tag renders correctly disabled 1`] = `
     >
       test
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
