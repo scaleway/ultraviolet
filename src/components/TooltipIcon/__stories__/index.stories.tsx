@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react'
+import { userEvent, within } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import TooltipIcon from '..'
 import FlexBox from '../../FlexBox'
@@ -32,6 +33,13 @@ Default.decorators = [
 ]
 Default.args = {
   tooltip: 'Hello there',
+}
+Default.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  const hoverElement = canvas.getByLabelText('help-circle-outline')
+  if (hoverElement) {
+    userEvent.click(hoverElement)
+  }
 }
 
 export const Colors: Story = () => (
