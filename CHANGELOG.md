@@ -1,3 +1,37 @@
+### [0.152.3](https://github.com/scaleway/scaleway-ui/compare/v0.152.2...v0.152.3) (2022-05-31)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.3 ([#1527](https://github.com/scaleway/scaleway-ui/issues/1527)) ([f2e8f7c](https://github.com/scaleway/scaleway-ui/commit/f2e8f7c762f7b13d441add0bf6956bf7dec66114))
+* **devdeps:** update andresz1/size-limit-action action to v1.7.0 ([#1525](https://github.com/scaleway/scaleway-ui/issues/1525)) ([9448148](https://github.com/scaleway/scaleway-ui/commit/94481481e535c483d24ae9cabcb54312e35529ab))
+* **devdeps:** update babel monorepo ([#1508](https://github.com/scaleway/scaleway-ui/issues/1508)) ([7048fd0](https://github.com/scaleway/scaleway-ui/commit/7048fd0561962c6dbf79eae34c50f0cc28671e4f))
+* **devdeps:** update dependency @commitlint/cli to v17.0.1 ([#1515](https://github.com/scaleway/scaleway-ui/issues/1515)) ([4f15bcc](https://github.com/scaleway/scaleway-ui/commit/4f15bcc1f3db1f872f7293d4ae02f9b72b0453da))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.27 ([#1505](https://github.com/scaleway/scaleway-ui/issues/1505)) ([6e57827](https://github.com/scaleway/scaleway-ui/commit/6e578277987a1ba4dc5781bfff9c2f1eb73b89da))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.28 ([#1517](https://github.com/scaleway/scaleway-ui/issues/1517)) ([af141a7](https://github.com/scaleway/scaleway-ui/commit/af141a714d5e5a5379edea0c8e2d230b4fcb6ac7))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.29 ([#1518](https://github.com/scaleway/scaleway-ui/issues/1518)) ([917a805](https://github.com/scaleway/scaleway-ui/commit/917a80549ee84dbf661409d336f5204ef7816f00))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.4 ([#1506](https://github.com/scaleway/scaleway-ui/issues/1506)) ([09e0b24](https://github.com/scaleway/scaleway-ui/commit/09e0b24ddeebe6a7241162e5ec62f3d1eebfbf9a))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.5 ([#1519](https://github.com/scaleway/scaleway-ui/issues/1519)) ([937a37c](https://github.com/scaleway/scaleway-ui/commit/937a37c8736af4268d7d6e81236f8b377cf3f39b))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.6 ([#1520](https://github.com/scaleway/scaleway-ui/issues/1520)) ([f8ed7b4](https://github.com/scaleway/scaleway-ui/commit/f8ed7b49c520f6ff5350bb6c8383b45e6e5eaa22))
+* **devdeps:** update dependency @storybook/testing-react to v1.3.0 ([#1499](https://github.com/scaleway/scaleway-ui/issues/1499)) ([71a3efd](https://github.com/scaleway/scaleway-ui/commit/71a3efd161346e56bba5c7d4bcdbf5e3d18cb4c2))
+* **devdeps:** update dependency @types/jest to v27.5.1 ([#1476](https://github.com/scaleway/scaleway-ui/issues/1476)) ([acc89cb](https://github.com/scaleway/scaleway-ui/commit/acc89cbdb845f677f397f96d16a4eba3b0d5f208))
+* **devdeps:** update dependency @types/react-dom to v18.0.5 ([#1507](https://github.com/scaleway/scaleway-ui/issues/1507)) ([5b9a146](https://github.com/scaleway/scaleway-ui/commit/5b9a146386ece5b33590ff710974f02ab05a8058))
+* **devdeps:** update dependency eslint to v8.16.0 ([#1514](https://github.com/scaleway/scaleway-ui/issues/1514)) ([86d178e](https://github.com/scaleway/scaleway-ui/commit/86d178e5457360380f9a0f3b2e0e97ad711f747c))
+* **devdeps:** update dependency lint-staged to v12.4.2 ([#1512](https://github.com/scaleway/scaleway-ui/issues/1512)) ([281150d](https://github.com/scaleway/scaleway-ui/commit/281150d4d30a8f4d9ee47403f2817a81c173fb79))
+* **devdeps:** update dependency rollup to v2.74.1 ([#1509](https://github.com/scaleway/scaleway-ui/issues/1509)) ([0ec67e5](https://github.com/scaleway/scaleway-ui/commit/0ec67e56c3e8851b643575bad4172297a31c78ab))
+* **devdeps:** update dependency rollup-plugin-dts to v4.2.2 ([#1516](https://github.com/scaleway/scaleway-ui/issues/1516)) ([654b2cd](https://github.com/scaleway/scaleway-ui/commit/654b2cdc16ff54da74a2e5568e20b77bdd61e9d5))
+* **devdeps:** update dependency typescript to v4.7.2 ([#1524](https://github.com/scaleway/scaleway-ui/issues/1524)) ([8523d66](https://github.com/scaleway/scaleway-ui/commit/8523d664e7a5a2164089ef3e5ae6a1fc1f890d20))
+* **devdeps:** update pnpm to v7.1.5 ([#1510](https://github.com/scaleway/scaleway-ui/issues/1510)) ([fe656d5](https://github.com/scaleway/scaleway-ui/commit/fe656d54fc8308ed94845dfc230b6ccb49645db2))
+* **devdeps:** update pnpm to v7.1.7 ([#1521](https://github.com/scaleway/scaleway-ui/issues/1521)) ([346cd31](https://github.com/scaleway/scaleway-ui/commit/346cd31cb39fd7a55f668574d3a59ad9eb68fe0e))
+* **devdeps:** update pnpm/action-setup action to v2.2.2 ([#1522](https://github.com/scaleway/scaleway-ui/issues/1522)) ([abcc24d](https://github.com/scaleway/scaleway-ui/commit/abcc24d45c6ff3e30f468886c260c01a3a851bcb))
+* **devdeps:** update storybook monorepo to v6.5.5 ([#1513](https://github.com/scaleway/scaleway-ui/issues/1513)) ([c99d3c1](https://github.com/scaleway/scaleway-ui/commit/c99d3c17474aaf47245ad0a6bf7418ed7c44b9b6))
+* **devdeps:** update storybook monorepo to v6.5.6 ([#1526](https://github.com/scaleway/scaleway-ui/issues/1526)) ([00bd88c](https://github.com/scaleway/scaleway-ui/commit/00bd88cae899b40cd339fc7a805c5c9f83ac094c))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.0.2 ([#1523](https://github.com/scaleway/scaleway-ui/issues/1523)) ([3fde124](https://github.com/scaleway/scaleway-ui/commit/3fde1248fb363ff7733fe60eca8ddf7312159aa9))
+
 ### [0.152.2](https://github.com/scaleway/scaleway-ui/compare/v0.152.1...v0.152.2) (2022-05-24)
 
 
