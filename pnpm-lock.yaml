@@ -89,7 +89,7 @@ specifiers:
   jest-environment-jsdom: 28.1.0
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
-  lint-staged: 12.4.2
+  lint-staged: 12.4.3
   loki: 0.29.0
   polished: 4.2.2
   postcss: 8.4.14
@@ -225,7 +225,7 @@ devDependencies:
   jest-environment-jsdom: 28.1.0
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
-  lint-staged: 12.4.2
+  lint-staged: 12.4.3
   loki: 0.29.0_pbasms24wmyjbdvf3bwuucxyu4
   postcss: 8.4.14
   prettier: 2.6.2
@@ -7654,8 +7654,8 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
-  /commander/9.2.0:
-    resolution: {integrity: sha512-e2i4wANQiSXgnrBlIatyHtP1odfUp0BbV5Y5nEGbxtIrStkEOAAzCUirvLBNXHLr7kwLvJl6V+4V3XV9x7Wd9w==}
+  /commander/9.3.0:
+    resolution: {integrity: sha512-hv95iU5uXPbK83mjrJKuZyFM/LBAoCV/XhVGkS5Je6tl7sxr6A0ITMw5WoRV46/UaJ46Nllm3Xt7IaJhXTIkzw==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
@@ -8009,14 +8009,14 @@ packages:
     dev: true
 
   /cross-spawn/4.0.2:
-    resolution: {integrity: sha1-e5JHYhwjrf3ThWAEqCPL45dCTUE=}
+    resolution: {integrity: sha512-yAXz/pA1tD8Gtg2S98Ekf/sewp3Lcp3YoFKJ4Hkp5h5yLWnKVTDU0kwjKJ8NDCYcfTLfyGkzTikst+jWypT1iA==}
     dependencies:
       lru-cache: 4.1.5
       which: 1.3.1
     dev: true
 
   /cross-spawn/5.1.0:
-    resolution: {integrity: sha1-6L0O/uWPz/b4+UUQoKVUu/ojVEk=}
+    resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
     dependencies:
       lru-cache: 4.1.5
       shebang-command: 1.2.0
@@ -8894,7 +8894,7 @@ packages:
       is-shared-array-buffer: 1.0.2
       is-string: 1.0.7
       is-weakref: 1.0.2
-      object-inspect: 1.12.0
+      object-inspect: 1.12.2
       object-keys: 1.1.1
       object.assign: 4.1.2
       regexp.prototype.flags: 1.4.3
@@ -9294,7 +9294,7 @@ packages:
     hasBin: true
     dependencies:
       '@sitespeed.io/tracium': 0.3.3
-      commander: 9.2.0
+      commander: 9.3.0
       find-chrome-bin: 0.1.0
       nanoid: 3.3.4
       puppeteer-core: 13.7.0
@@ -9413,7 +9413,7 @@ packages:
     dev: true
 
   /execa/0.6.3:
-    resolution: {integrity: sha1-V7aaWU8IF1nGnlNw8NF7nLEWWP4=}
+    resolution: {integrity: sha512-/teX3MDLFBdYUhRk8WCBYboIMUmqeizu0m9Z3YF3JWrbEh/SlZg00vLJSaAGWw3wrZ9tE0buNw79eaAPYhUuvg==}
     engines: {node: '>=4'}
     dependencies:
       cross-spawn: 5.1.0
@@ -10170,7 +10170,7 @@ packages:
     optional: true
 
   /get-stream/3.0.0:
-    resolution: {integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=}
+    resolution: {integrity: sha512-GlhdIUuVakc8SJ6kK0zAFbiGzRFzNnY4jUuEbV9UROo4Y+0Ny4fjvcZFVTeDA4odpFyOQzaw6hXukJSq/f28sQ==}
     engines: {node: '>=4'}
     dev: true
 
@@ -11280,7 +11280,7 @@ packages:
     optional: true
 
   /is-fullwidth-code-point/2.0.0:
-    resolution: {integrity: sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=}
+    resolution: {integrity: sha512-VHskAKYM8RfSFXwee5t5cbN5PZeq1Wrh6qd5bkyiXIf6UQcN6w/A0eXM9r6t8d+GYOh+o6ZhiEnb88LN/Y8m2w==}
     engines: {node: '>=4'}
     dev: true
 
@@ -11430,7 +11430,7 @@ packages:
     dev: true
 
   /is-stream/1.1.0:
-    resolution: {integrity: sha1-EtSj3U5o4Lec6428hBc66A2RykQ=}
+    resolution: {integrity: sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -12406,11 +12406,6 @@ packages:
       - supports-color
     dev: true
 
-  /lilconfig/2.0.4:
-    resolution: {integrity: sha512-bfTIN7lEsiooCocSISTWXkiWJkRqtL9wYtYy+8EK3Y41qh3mpwPU0ycTOgjdY9ErwXCc8QyrQp82bdL0Xkm9yA==}
-    engines: {node: '>=10'}
-    dev: true
-
   /lilconfig/2.0.5:
     resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
     engines: {node: '>=10'}
@@ -12419,21 +12414,21 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /lint-staged/12.4.2:
-    resolution: {integrity: sha512-JAJGIzY/OioIUtrRePr8go6qUxij//mL+RGGoFKU3VWQRtIHgWoHizSqH0QVn2OwrbXS9Q6CICQjfj+E5qvrXg==}
+  /lint-staged/12.4.3:
+    resolution: {integrity: sha512-eH6SKOmdm/ZwCRMTZAmM3q3dPkpq6vco/BfrOw8iGun4Xs/thYegPD/MLIwKO+iPkzibkLJuQcRhRLXKvaKreg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       cli-truncate: 3.1.0
       colorette: 2.0.16
-      commander: 8.3.0
+      commander: 9.3.0
       debug: 4.3.4_supports-color@9.2.2
       execa: 5.1.1
-      lilconfig: 2.0.4
+      lilconfig: 2.0.5
       listr2: 4.0.5
       micromatch: 4.0.5
       normalize-path: 3.0.0
-      object-inspect: 1.12.0
+      object-inspect: 1.12.2
       pidtree: 0.5.0
       string-argv: 0.3.1
       supports-color: 9.2.2
@@ -13580,7 +13575,7 @@ packages:
     dev: true
 
   /ms/2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
 
   /ms/2.1.1:
@@ -13895,8 +13890,8 @@ packages:
       kind-of: 3.2.2
     dev: true
 
-  /object-inspect/1.12.0:
-    resolution: {integrity: sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==}
+  /object-inspect/1.12.2:
+    resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
     dev: true
 
   /object-keys/1.1.1:
@@ -16592,7 +16587,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.1
-      object-inspect: 1.12.0
+      object-inspect: 1.12.2
     dev: true
 
   /signal-exit/3.0.7:
