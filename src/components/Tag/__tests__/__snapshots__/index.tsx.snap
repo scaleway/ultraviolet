@@ -51,54 +51,6 @@ exports[`Tag renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly bordered 1`] = `
-<DocumentFragment>
-  .cache-13cgenx-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-}
-
-.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 12px;
-  font-weight: 500;
-  color: inherit;
-}
-
-<span
-    class="cache-13cgenx-StyledContainer e1vt8sjg2"
-  >
-    <div
-      aria-disabled="false"
-      class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
-    >
-      test
-    </div>
-  </span>
-</DocumentFragment>
-`;
-
 exports[`Tag renders correctly disabled 1`] = `
 <DocumentFragment>
   .cache-ccb1lf-StyledContainer {
@@ -141,6 +93,57 @@ exports[`Tag renders correctly disabled 1`] = `
   >
     <div
       aria-disabled="true"
+      class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
+    >
+      test
+    </div>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tag renders correctly neutral 1`] = `
+<DocumentFragment>
+  .cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-ezrk2s-StyledText-variantStyles-StyledTypography {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+}
+
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+  >
+    <div
+      aria-disabled="false"
       class="e1vt8sjg1 e1g1zfwd0 cache-ezrk2s-StyledText-variantStyles-StyledTypography"
     >
       test

@@ -36,10 +36,7 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
   gap: ${({ theme }) => theme.space['1']};
-  ${({ multiline, theme }) =>
-    multiline &&
-    `flex-wrap: wrap;
-  > * { margin-bottom: ${theme.space['1']}}`};
+  ${({ multiline }) => multiline && `flex-wrap: wrap;`};
 `
 
 const StyledManyTagsContainer = styled.div`
