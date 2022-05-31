@@ -35,10 +35,11 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
+  gap: ${({ theme }) => theme.space['1']};
   ${({ multiline, theme }) =>
     multiline &&
     `flex-wrap: wrap;
-  > * { margin-bottom: ${theme.space['1']}}`}
+  > * { margin-bottom: ${theme.space['1']}}`};
 `
 
 const StyledManyTagsContainer = styled.div`
@@ -60,11 +61,6 @@ type TagsPoplistProps = {
   threshold?: number
   multiline?: boolean
 }
-
-const TagContainer = styled.div<{ index: number; visibleTagsCount: number }>`
-  margin-right: ${({ index, visibleTagsCount, theme }) =>
-    index + 1 !== visibleTagsCount ? theme.space['1'] : 0};
-`
 
 const TagsPoplist = ({
   maxLength = 600,
@@ -96,16 +92,14 @@ const TagsPoplist = ({
     <FlexBox>
       <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
-          <TagContainer visibleTagsCount={visibleTagsCount} index={index}>
-            <Tag
-              // useful when two tags are identical `${tag}-${index}`
-              // eslint-disable-next-line react/no-array-index-key
-              key={`${tag}-${index}`}
-              textStyle={textStyle(maxTagWidth)}
-            >
-              {tag}
-            </Tag>
-          </TagContainer>
+          <Tag
+            // useful when two tags are identical `${tag}-${index}`
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${tag}-${index}`}
+            textStyle={textStyle(maxTagWidth)}
+          >
+            {tag}
+          </Tag>
         ))}
       </StyledTagContainer>
       {hasManyTags && (

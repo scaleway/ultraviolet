@@ -9,7 +9,7 @@ exports[`TagsPoplist renders correctly 1`] = `
   display: flex;
 }
 
-.cache-55k8e4-StyledTagContainer {
+.cache-sqaep6-StyledTagContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,10 +19,7 @@ exports[`TagsPoplist renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-}
-
-.cache-1ta1wie-TagContainer {
-  margin-right: 0;
+  gap: 8px;
 }
 
 .cache-1q42p0o-StyledContainer {
@@ -101,26 +98,22 @@ exports[`TagsPoplist renders correctly 1`] = `
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt2"
+        class="cache-sqaep6-StyledTagContainer eom2dbt1"
       >
-        <div
-          class="cache-1ta1wie-TagContainer eom2dbt0"
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              scaleway
-            </div>
-          </span>
-        </div>
+            scaleway
+          </div>
+        </span>
       </div>
       +1
       <div
-        class="cache-g1yzof-StyledManyTagsContainer eom2dbt1"
+        class="cache-g1yzof-StyledManyTagsContainer eom2dbt0"
       >
         <span
           class="cache-1q42p0o-StyledContainer e1vt8sjg2"
@@ -148,7 +141,7 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   display: flex;
 }
 
-.cache-55k8e4-StyledTagContainer {
+.cache-sqaep6-StyledTagContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,10 +151,7 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-}
-
-.cache-ga3v5-TagContainer {
-  margin-right: 8px;
+  gap: 8px;
 }
 
 .cache-1q42p0o-StyledContainer {
@@ -204,45 +194,33 @@ exports[`TagsPoplist renders correctly with custom threshold 1`] = `
   white-space: nowrap;
 }
 
-.cache-1ta1wie-TagContainer {
-  margin-right: 0;
-}
-
 <div>
     <div
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt2"
+        class="cache-sqaep6-StyledTagContainer eom2dbt1"
       >
-        <div
-          class="cache-ga3v5-TagContainer eom2dbt0"
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              scaleway
-            </div>
-          </span>
-        </div>
-        <div
-          class="cache-1ta1wie-TagContainer eom2dbt0"
+            scaleway
+          </div>
+        </span>
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              cloud
-            </div>
-          </span>
-        </div>
+            cloud
+          </div>
+        </span>
       </div>
     </div>
   </div>
@@ -258,7 +236,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   display: flex;
 }
 
-.cache-55k8e4-StyledTagContainer {
+.cache-sqaep6-StyledTagContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -268,10 +246,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-}
-
-.cache-ga3v5-TagContainer {
-  margin-right: 8px;
+  gap: 8px;
 }
 
 .cache-1q42p0o-StyledContainer {
@@ -312,10 +287,6 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
   text-overflow: ellipsis;
   max-width: 115px;
   white-space: nowrap;
-}
-
-.cache-1ta1wie-TagContainer {
-  margin-right: 0;
 }
 
 .cache-g1yzof-StyledManyTagsContainer {
@@ -354,40 +325,32 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags 1`] 
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt2"
+        class="cache-sqaep6-StyledTagContainer eom2dbt1"
       >
-        <div
-          class="cache-ga3v5-TagContainer eom2dbt0"
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              scaleway
-            </div>
-          </span>
-        </div>
-        <div
-          class="cache-1ta1wie-TagContainer eom2dbt0"
+            scaleway
+          </div>
+        </span>
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              cloud
-            </div>
-          </span>
-        </div>
+            cloud
+          </div>
+        </span>
       </div>
       +1
       <div
-        class="cache-g1yzof-StyledManyTagsContainer eom2dbt1"
+        class="cache-g1yzof-StyledManyTagsContainer eom2dbt0"
       >
         <span
           class="cache-1q42p0o-StyledContainer e1vt8sjg2"
@@ -414,7 +377,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   display: flex;
 }
 
-.cache-55k8e4-StyledTagContainer {
+.cache-sqaep6-StyledTagContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -424,10 +387,7 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-}
-
-.cache-1ta1wie-TagContainer {
-  margin-right: 0;
+  gap: 8px;
 }
 
 .cache-1q42p0o-StyledContainer {
@@ -506,26 +466,22 @@ exports[`TagsPoplist renders correctly with custom threshold and extra tags and 
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-55k8e4-StyledTagContainer eom2dbt2"
+        class="cache-sqaep6-StyledTagContainer eom2dbt1"
       >
-        <div
-          class="cache-1ta1wie-TagContainer eom2dbt0"
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              scaleway
-            </div>
-          </span>
-        </div>
+            scaleway
+          </div>
+        </span>
       </div>
       +2
       <div
-        class="cache-g1yzof-StyledManyTagsContainer eom2dbt1"
+        class="cache-g1yzof-StyledManyTagsContainer eom2dbt0"
       >
         <span
           class="cache-1q42p0o-StyledContainer e1vt8sjg2"
@@ -562,7 +518,7 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
   display: flex;
 }
 
-.cache-v44dnh-StyledTagContainer {
+.cache-c34a22-StyledTagContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -572,18 +528,15 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
+  gap: 8px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.cache-v44dnh-StyledTagContainer>* {
+.cache-c34a22-StyledTagContainer>* {
   margin-bottom: 8px;
-}
-
-.cache-ga3v5-TagContainer {
-  margin-right: 8px;
 }
 
 .cache-1q42p0o-StyledContainer {
@@ -626,10 +579,6 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
   white-space: nowrap;
 }
 
-.cache-1ta1wie-TagContainer {
-  margin-right: 0;
-}
-
 .cache-g1yzof-StyledManyTagsContainer {
   box-shadow: 0px 4px 32px 8px #D4DAE766;
   padding: 4px 8px;
@@ -666,40 +615,32 @@ exports[`TagsPoplist renders correctly with multiline 1`] = `
       class="cache-tbwc3a-Child-StyledFlexBox e1l6meh00"
     >
       <div
-        class="cache-v44dnh-StyledTagContainer eom2dbt2"
+        class="cache-c34a22-StyledTagContainer eom2dbt1"
       >
-        <div
-          class="cache-ga3v5-TagContainer eom2dbt0"
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              scaleway
-            </div>
-          </span>
-        </div>
-        <div
-          class="cache-1ta1wie-TagContainer eom2dbt0"
+            scaleway
+          </div>
+        </span>
+        <span
+          class="cache-1q42p0o-StyledContainer e1vt8sjg2"
         >
-          <span
-            class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+          <div
+            aria-disabled="false"
+            class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
           >
-            <div
-              aria-disabled="false"
-              class="e1vt8sjg1 e1g1zfwd0 cache-1pbmh0y-StyledText-variantStyles-StyledTypography-textStyle"
-            >
-              cloud
-            </div>
-          </span>
-        </div>
+            cloud
+          </div>
+        </span>
       </div>
       +1
       <div
-        class="cache-g1yzof-StyledManyTagsContainer eom2dbt1"
+        class="cache-g1yzof-StyledManyTagsContainer eom2dbt0"
       >
         <span
           class="cache-1q42p0o-StyledContainer e1vt8sjg2"

@@ -1,7 +1,6 @@
-import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { MouseEventHandler, ReactNode, useMemo } from 'react'
-import { Color, SENTIMENTS } from '../../theme'
+import { MouseEventHandler, ReactNode } from 'react'
+import { Color } from '../../theme'
 import Icon, { IconName } from '../Icon'
 import Loader from '../Loader'
 import Touchable from '../Touchable'
@@ -9,7 +8,7 @@ import Typography from '../Typography'
 
 const StyledContainer = styled('span', {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
-})<{ variant: string }>`
+})<{ variant: Color | 'disabled' }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -18,8 +17,25 @@ const StyledContainer = styled('span', {
   padding: 0 ${({ theme }) => theme.space['1']};
   gap: ${({ theme }) => theme.space['1']};
   width: fit-content;
-  height: 24px;
-  ${({ variant }) => variant}
+  height: ${({ theme }) => theme.space['3']};
+  ${({ variant, theme }) => {
+    if (variant === 'disabled')
+      return `
+      color: ${theme.colors.neutral.textWeak};
+      background: ${theme.colors.neutral.backgroundStrong};
+    `
+    if (variant === 'neutral')
+      return `
+      color: ${theme.colors.neutral.text};
+      background: ${theme.colors.neutral.background};
+      border: solid 1px ${theme.colors.neutral.border};
+    `
+
+    return `
+      color: ${theme.colors[variant].text};
+      background: ${theme.colors[variant].background}
+    `
+  }}
 `
 
 const StyledTypography = styled(Typography)`
@@ -43,36 +59,6 @@ const StyledTouchable = styled(Touchable, {
     }
   }
 `
-const generateStyles = ({
-  theme,
-}: {
-  theme: Theme
-}): Record<string, string> => {
-  const text = 'text'
-  const background = 'background'
-
-  return {
-    ...SENTIMENTS.reduce(
-      (reducer, sentiment) => ({
-        ...reducer,
-        [sentiment]: `
-      color: ${theme.colors[sentiment][text]};
-      background: ${theme.colors[sentiment][background]}
-    `,
-      }),
-      {},
-    ),
-    disabled: `
-      color: ${theme.colors.neutral.textWeak};
-      background: ${theme.colors.neutral.backgroundStrong};
-    `,
-    neutral: `
-      color: ${theme.colors.neutral[text]};
-      background: ${theme.colors.neutral[background]};
-      border: solid 1px ${theme.colors.neutral.border};
-    `,
-  }
-}
 
 type TagProps = {
   isLoading?: boolean
@@ -97,37 +83,31 @@ const Tag = ({
   disabled = false,
   variant = 'neutral',
   className,
-}: TagProps) => {
-  const theme = useTheme()
+}: TagProps) => (
+  <StyledContainer
+    variant={disabled ? 'disabled' : variant}
+    className={className}
+  >
+    {icon ? <Icon name={icon} size={16} /> : null}
+    <StyledTypography aria-disabled={disabled} css={textStyle}>
+      {children}
+    </StyledTypography>
 
-  const generatedStyles = useMemo(() => generateStyles({ theme }), [theme])
-
-  return (
-    <StyledContainer
-      variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
-      className={className}
-    >
-      {icon ? <Icon name={icon} size={16} /> : null}
-      <StyledTypography aria-disabled={disabled} css={textStyle}>
-        {children}
-      </StyledTypography>
-
-      {onClose || isLoading ? (
-        <StyledTouchable
-          onClick={!isLoading ? onClose : undefined}
-          variant={variant}
-          disabled={disabled}
-          aria-label="Close tag"
-        >
-          {isLoading ? (
-            <Loader active size={16} />
-          ) : (
-            <Icon name="close" size={16} />
-          )}
-        </StyledTouchable>
-      ) : null}
-    </StyledContainer>
-  )
-}
+    {onClose || isLoading ? (
+      <StyledTouchable
+        onClick={!isLoading ? onClose : undefined}
+        variant={variant}
+        disabled={disabled}
+        aria-label="Close tag"
+      >
+        {isLoading ? (
+          <Loader active size={16} />
+        ) : (
+          <Icon name="close" size={16} />
+        )}
+      </StyledTouchable>
+    ) : null}
+  </StyledContainer>
+)
 
 export default Tag
