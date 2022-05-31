@@ -4,6 +4,9 @@ import Box from '..'
 
 export default {
   component: Box,
+  parameters: {
+    deprecated: true,
+  },
   title: 'Components/Container/Box',
 } as Meta
 

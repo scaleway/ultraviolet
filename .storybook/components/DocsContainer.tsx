@@ -1,17 +1,12 @@
-import { DocsContainer as BaseContainer } from '@storybook/addon-docs/blocks'
+import { isValidElement, cloneElement } from 'react'
+import { DocsContainer as BaseContainer } from '@storybook/addon-docs'
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
 import { darkTheme } from '../../src'
 import { ThemeProvider } from '@emotion/react'
 import lightTheme from '../../src/theme'
 
-const DocsContainer: typeof BaseContainer = (props: {
-  context: {
-    storyById: (arg0: any) => any
-    parameters: Record<string, unknown>
-  }
-  children: any
-}) => {
+const DocsContainer: typeof BaseContainer = ({ context, children }) => {
   const isDarkTheme = useDarkMode()
   const currentTheme = isDarkTheme ? darkTheme : lightTheme
 
@@ -19,9 +14,9 @@ const DocsContainer: typeof BaseContainer = (props: {
     <ThemeProvider theme={currentTheme}>
       <BaseContainer
         context={{
-          ...props.context,
+          ...context,
           storyById: (id: any) => {
-            const storyContext = props.context.storyById(id)
+            const storyContext = context.storyById(id)
             return {
               ...storyContext,
               parameters: {
@@ -34,10 +29,12 @@ const DocsContainer: typeof BaseContainer = (props: {
           },
         }}
       >
-        {React.cloneElement(props.children, {
-          deprecated: props.context.parameters.deprecated,
-          deprecatedReason: props.context.parameters.deprecatedReason,
-        })}
+        {isValidElement(children)
+          ? cloneElement(children, {
+              deprecated: context.parameters?.deprecated,
+              deprecatedReason: context.parameters?.deprecatedReason,
+            })
+          : children}
       </BaseContainer>
     </ThemeProvider>
   )

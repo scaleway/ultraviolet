@@ -90,6 +90,9 @@ type FlexBoxType = ((
   propTypes: WeakValidationMap<ComponentProps<typeof StyledFlexBox>>
 }
 
+/**
+ * @deprecated
+ */
 const FlexBox: FlexBoxType = props => <StyledFlexBox {...props} />
 
 FlexBox.propTypes = {

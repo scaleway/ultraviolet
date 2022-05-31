@@ -4,6 +4,9 @@ import FlexBox from '..'
 
 export default {
   component: FlexBox,
+  parameters: {
+    deprecated: true,
+  },
   title: 'Components/Foundation/FlexBox',
 } as Meta
 

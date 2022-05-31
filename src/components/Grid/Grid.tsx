@@ -40,6 +40,9 @@ const StyledGrid = styled(Box, {
         )}
 `
 
+/**
+ * @deprecated
+ */
 const Grid = (props: GridProps) => <StyledGrid {...props} />
 
 Grid.propTypes = {

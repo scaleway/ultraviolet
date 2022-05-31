@@ -78,6 +78,9 @@ type BoxType = typeof forwardType & {
   ) => (props: BoxProps) => JSX.Element
 }
 
+/**
+ * @deprecated
+ */
 // @ts-expect-error We add withComponent & propTypes just below
 const Box: BoxType = forwardRef<
   Element | HTMLInputElement | HTMLButtonElement,
