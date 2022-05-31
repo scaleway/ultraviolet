@@ -1,10 +1,27 @@
 import styled from '@emotion/styled'
 import { InputHTMLAttributes, ReactNode } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
-import Icon from '../Icon'
 import Typography from '../Typography'
 
-const StyledIcon = styled(Icon)`
+const RadioboxMarkedIcon = () => (
+  <g>
+    <circle cx="12" cy="12" r="8" strokeWidth="2" />
+    <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
+    <circle cx="12" cy="12" r="4" />
+  </g>
+)
+const RadioboxBlankIcon = () => (
+  <g>
+    <circle cx="12" cy="12" r="8" strokeWidth="2" />
+    <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
+  </g>
+)
+
+const StyledIcon = styled.svg<{ size: number }>`
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
+  min-width: ${({ size }) => size}px;
+  min-height: ${({ size }) => size}px;
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.textWeak};
   .circle-background {
@@ -30,18 +47,12 @@ const StyledRadioContainer = styled(Typography)`
     cursor: pointer;
   }
 
-  ${StyledRadio}[aria-checked="true"] + ${StyledIcon} {
+  ${StyledRadio}[aria-checked="true"][aria-disabled='false'][aria-invalid="false"]+ ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.text};
-    .circle-background {
-      fill: ${({ theme }) => theme.colors.primary.background};
-    }
   }
 
   ${StyledRadio}[aria-invalid="true"] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.danger.text};
-    .circle-background {
-      fill: ${({ theme }) => theme.colors.danger.background};
-    }
   }
 
   ${StyledRadio}:focus + ${StyledIcon} {
@@ -125,6 +136,7 @@ const Radio = ({
       type="radio"
       aria-invalid={!!error}
       aria-checked={checked}
+      aria-disabled={disabled}
       checked={checked}
       id={`${name}-${value}`}
       onChange={onChange}
@@ -136,10 +148,9 @@ const Radio = ({
       name={name}
       autoFocus={autoFocus}
     />
-    <StyledIcon
-      name={checked ? 'radiobox-marked' : 'radiobox-blank'}
-      size={size}
-    />
+    <StyledIcon size={size}>
+      {checked ? <RadioboxMarkedIcon /> : <RadioboxBlankIcon />}
+    </StyledIcon>
     {children}
   </StyledRadioContainer>
 )

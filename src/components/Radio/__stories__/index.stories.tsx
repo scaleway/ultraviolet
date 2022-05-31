@@ -80,11 +80,69 @@ Controlled.decorators = [
 ]
 
 export const Disabled = Template.bind({})
-Disabled.args = {
-  disabled: true,
-}
+
+Disabled.decorators = [
+  () => (
+    <ControlValue value="disabled-label-1">
+      {({ value, onChange }) => (
+        <>
+          <Radio
+            name="disabled-label-1"
+            disabled
+            checked={value === 'disabled-label-1'}
+            value="disabled-label-1"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
+          >
+            Label 1
+          </Radio>
+          <Radio
+            name="disabled-label-2"
+            checked={value === 'disabled-label-2'}
+            value="disabled-label-2"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
+          >
+            Label 2
+          </Radio>
+        </>
+      )}
+    </ControlValue>
+  ),
+]
 
 export const Error = Template.bind({})
-Error.args = {
-  error: 'Invalid value',
-}
+
+Error.decorators = [
+  () => (
+    <ControlValue value="error-label-1">
+      {({ value, onChange }) => (
+        <>
+          <Radio
+            name="error-label-1"
+            error="invalid"
+            checked={value === 'error-label-1'}
+            value="error-label-1"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
+          >
+            Label 1
+          </Radio>
+          <Radio
+            name="error-label-2"
+            checked={value === 'error-label-2'}
+            value="error-label-2"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              onChange(e.currentTarget.value)
+            }
+          >
+            Label 2
+          </Radio>
+        </>
+      )}
+    </ControlValue>
+  ),
+]
