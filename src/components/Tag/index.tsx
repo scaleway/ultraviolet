@@ -23,6 +23,9 @@ const StyledContainer = styled('span', {
       return `
       color: ${theme.colors.neutral.textWeak};
       background: ${theme.colors.neutral.backgroundStrong};
+      border: solid 1px ${theme.colors.neutral.borderDisabled};
+      cursor: not-allowed
+
     `
     if (variant === 'neutral')
       return `
@@ -33,7 +36,8 @@ const StyledContainer = styled('span', {
 
     return `
       color: ${theme.colors[variant].text};
-      background: ${theme.colors[variant].background}
+      background: ${theme.colors[variant].background};
+      border: solid 1px ${theme.colors[variant].borderDisabled};
     `
   }}
 `
