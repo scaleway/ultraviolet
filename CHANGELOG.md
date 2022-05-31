@@ -1,3 +1,15 @@
+## [0.153.0](https://github.com/scaleway/scaleway-ui/compare/v0.152.3...v0.153.0) (2022-05-31)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency lint-staged to v12.4.3 ([#1528](https://github.com/scaleway/scaleway-ui/issues/1528)) ([88e3885](https://github.com/scaleway/scaleway-ui/commit/88e388542a673c98ce5fd1325e1aba5c4ab162ee))
+
+
+### :gear: Features
+
+* explore loki interactions ([#1472](https://github.com/scaleway/scaleway-ui/issues/1472)) ([363ae52](https://github.com/scaleway/scaleway-ui/commit/363ae52a7263273730c1cd80a37cac66ac5d6c85))
+
 ### [0.152.3](https://github.com/scaleway/scaleway-ui/compare/v0.152.2...v0.152.3) (2022-05-31)
 
 
