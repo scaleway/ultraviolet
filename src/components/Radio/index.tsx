@@ -47,11 +47,11 @@ const StyledRadioContainer = styled(Typography)`
     cursor: pointer;
   }
 
-  ${StyledRadio}[aria-checked="true"][aria-disabled='false'][aria-invalid="false"]+ ${StyledIcon} {
+  ${StyledRadio}[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+ ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.text};
   }
 
-  ${StyledRadio}[aria-invalid="true"] + ${StyledIcon} {
+  ${StyledRadio}[aria-invalid='true'] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.danger.text};
   }
 
@@ -63,7 +63,7 @@ const StyledRadioContainer = styled(Typography)`
     }
   }
 
-  ${StyledRadio}[aria-invalid="true"]:focus + ${StyledIcon} {
+  ${StyledRadio}[aria-invalid='true']:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.text};
     .circle-background {
@@ -80,7 +80,7 @@ const StyledRadioContainer = styled(Typography)`
       }
     }
 
-    ${StyledRadio}[aria-invalid="true"]  + ${StyledIcon} {
+    ${StyledRadio}[aria-invalid='true']  + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
       .circle-background {
