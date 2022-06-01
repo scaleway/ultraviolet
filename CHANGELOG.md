@@ -1,3 +1,15 @@
+### [0.153.1](https://github.com/scaleway/scaleway-ui/compare/v0.153.0...v0.153.1) (2022-06-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.30 ([#1529](https://github.com/scaleway/scaleway-ui/issues/1529)) ([c6ee39a](https://github.com/scaleway/scaleway-ui/commit/c6ee39a25e168be6dd05e0f718e062be7e187ce2))
+
+
+### :bug: Bug Fixes
+
+* **list:** checkbox appear only on hover ([#1532](https://github.com/scaleway/scaleway-ui/issues/1532)) ([23644d3](https://github.com/scaleway/scaleway-ui/commit/23644d3396adfbce395aae952cb4b2d6cb0b1761))
+
 ## [0.153.0](https://github.com/scaleway/scaleway-ui/compare/v0.152.3...v0.153.0) (2022-05-31)
 
 
