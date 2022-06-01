@@ -56,8 +56,8 @@ const StyledTouchable = styled(Touchable, {
   svg {
     fill: ${({ theme }) => theme.colors.neutral.textWeak};
   }
-  &:hover,
-  &:focus {
+  &:hover:enabled,
+  &:focus:enabled {
     svg {
       fill: ${({ theme }) => theme.colors.neutral.textHover};
     }
