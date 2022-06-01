@@ -7,6 +7,7 @@ import ColWithBackground from './ColWithBackground'
 export default {
   component: Grid,
   parameters: {
+    deprecated: true,
     docs: {
       description: {
         component:

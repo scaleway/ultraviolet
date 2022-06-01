@@ -7,9 +7,9 @@ import normalize from '../src/utils/normalize'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import { light, dark } from './storybookThemes'
-
 import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
+import Page from './components/Page'
 
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
 
@@ -44,6 +44,7 @@ const ENV_PARAMETERS = {
     },
     docs: {
       container: DocsContainer,
+      page: Page,
     },
   },
   production: {
@@ -62,6 +63,7 @@ const ENV_PARAMETERS = {
     },
     docs: {
       container: DocsContainer,
+      page: Page,
     },
   },
   visual: {},
