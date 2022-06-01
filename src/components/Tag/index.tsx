@@ -23,7 +23,7 @@ const StyledContainer = styled('span', {
       return `
       color: ${theme.colors.neutral.textWeak};
       background: ${theme.colors.neutral.backgroundStrong};
-      border: solid 1px ${theme.colors.neutral.borderDisabled};
+      border: solid 1px ${theme.colors.neutral.borderWeak};
       cursor: not-allowed
 
     `
