@@ -69,10 +69,10 @@ type TagProps = {
   onClose?: MouseEventHandler<HTMLButtonElement>
   textStyle?: JSX.IntrinsicAttributes['css']
   variant?: Color
+  disabled?: boolean
   /**
    * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
    */
-  disabled?: boolean
   icon?: IconName
   className?: string
   children: ReactNode
