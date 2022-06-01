@@ -21,9 +21,9 @@ const StyledContainer = styled('span', {
   ${({ variant, theme }) => {
     if (variant === 'disabled')
       return `
-      color: ${theme.colors.neutral.textWeak};
-      background: ${theme.colors.neutral.backgroundStrong};
-      border: solid 1px ${theme.colors.neutral.borderWeak};
+      color: ${theme.colors.neutral.textDisabled};
+      background: ${theme.colors.neutral.backgroundDisabled};
+      border: solid 1px ${theme.colors.neutral.borderDisabled};
       cursor: not-allowed
 
     `
