@@ -429,6 +429,10 @@ function List<DataType extends Record<string, unknown>>(
     if (dataProp) setData(dataProp)
   }, [dataProp])
 
+  useEffect(() => {
+    if (pageProp) setPage(pageProp)
+  }, [pageProp])
+
   const value = useMemo(() => {
     listRef.current = {
       hasAllSelected,
