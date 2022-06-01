@@ -650,6 +650,113 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Checkbox renders correctly invisible 1`] = `
+<DocumentFragment>
+  .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-checked="true"]+.eu28k4m3 {
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer .eu28k4m2[aria-invalid="true"]:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-132frtl-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 8px;
+  border-radius: 4px;
+  color: #4a4f62;
+}
+
+.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon.cache-67zp2y-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+}
+
+<label
+    aria-disabled="false"
+    class="eu28k4m1 e1g1zfwd0 cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer"
+    data-visibility="true"
+  >
+    <input
+      aria-checked="false"
+      aria-invalid="false"
+      class="cache-132frtl-StyledReakitCheckbox eu28k4m2"
+      name="checkbox-6c756c756c756c756c756c756c756c75"
+      type="checkbox"
+    />
+    <svg
+      class="eu28k4m3 etwatq50 cache-67zp2y-StyledIcon-sizeStyles-StyledIcon"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+      />
+    </svg>
+    Checkbox Label
+  </label>
+</DocumentFragment>
+`;
+
 exports[`Checkbox renders correctly no child 1`] = `
 <DocumentFragment>
   .cache-1baz7su-StyledText-variantStyles-StyledCheckBoxContainer {

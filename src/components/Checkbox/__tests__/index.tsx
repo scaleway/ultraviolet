@@ -65,6 +65,13 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
+  test('renders correctly invisible', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} data-visibility="true">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders correctly with an error', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} error="test error">
