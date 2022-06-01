@@ -103,6 +103,7 @@ type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   disabled?: boolean
   checked?: boolean | 'indeterminate'
   className?: string
+  ['data-visibility']?: string
 } & Required<Pick<ReakitCheckboxProps, 'onChange'>>
 
 const Checkbox = ({
@@ -119,6 +120,7 @@ const Checkbox = ({
   disabled = false,
   autoFocus = false,
   className,
+  'data-visibility': dataVisibility,
 }: CheckboxProps) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
@@ -169,6 +171,7 @@ const Checkbox = ({
         as="label"
         className={className}
         aria-disabled={disabled}
+        data-visibility={dataVisibility}
       >
         <StyledReakitCheckbox
           aria-invalid={!!error}
