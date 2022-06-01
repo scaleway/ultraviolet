@@ -1,3 +1,15 @@
+### [0.153.3](https://github.com/scaleway/scaleway-ui/compare/v0.153.2...v0.153.3) (2022-06-01)
+
+
+### :memo: Documentation
+
+* deprecated parameter and migration documentation ([#1482](https://github.com/scaleway/scaleway-ui/issues/1482)) ([ae76ddb](https://github.com/scaleway/scaleway-ui/commit/ae76ddb192ec89f672b6131c05324d85317bcc15))
+
+
+### :bug: Bug Fixes
+
+* **list:** controlled pagination will not changed internal pagination ([#1534](https://github.com/scaleway/scaleway-ui/issues/1534)) ([4fa73ce](https://github.com/scaleway/scaleway-ui/commit/4fa73ce2d4c9da31144c4f2e305a0861cbf128a8))
+
 ### [0.153.2](https://github.com/scaleway/scaleway-ui/compare/v0.153.1...v0.153.2) (2022-06-01)
 
 
