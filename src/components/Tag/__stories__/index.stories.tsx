@@ -44,17 +44,9 @@ Icons.parameters = {
     },
   },
 }
-Icons.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-      {SENTIMENTS.map(sentiment => (
-        <Tag key={sentiment} variant={sentiment} icon="check">
-          {sentiment}
-        </Tag>
-      ))}
-    </div>
-  ),
-]
+Icons.args = {
+  icon: 'check',
+}
 
 export const onClose = Template.bind({})
 onClose.parameters = {
@@ -65,24 +57,13 @@ onClose.parameters = {
     },
   },
 }
-onClose.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-      {SENTIMENTS.map(sentiment => (
-        <Tag
-          key={sentiment}
-          variant={sentiment}
-          icon="check"
-          onClose={() => {}}
-        >
-          {sentiment}
-        </Tag>
-      ))}
-    </div>
-  ),
-]
+onClose.args = {
+  icon: 'check',
+  onClose: () => {},
+}
 
 export const Loading = Template.bind({})
+
 Loading.parameters = {
   docs: {
     description: {
@@ -91,17 +72,10 @@ Loading.parameters = {
     },
   },
 }
-Loading.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-      {SENTIMENTS.map(sentiment => (
-        <Tag key={sentiment} variant={sentiment} icon="check" isLoading>
-          {sentiment}
-        </Tag>
-      ))}
-    </div>
-  ),
-]
+Loading.args = {
+  icon: 'check',
+  isLoading: true,
+}
 
 export const Disabled = Template.bind({})
 Disabled.args = {
