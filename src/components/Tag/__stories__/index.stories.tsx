@@ -58,7 +58,6 @@ onClose.parameters = {
   },
 }
 onClose.args = {
-  icon: 'check',
   onClose: () => {},
 }
 
@@ -73,7 +72,6 @@ Loading.parameters = {
   },
 }
 Loading.args = {
-  icon: 'check',
   isLoading: true,
 }
 
