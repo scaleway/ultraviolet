@@ -1,3 +1,15 @@
+### [0.153.2](https://github.com/scaleway/scaleway-ui/compare/v0.153.1...v0.153.2) (2022-06-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency lint-staged to v13 ([#1533](https://github.com/scaleway/scaleway-ui/issues/1533)) ([f828b7a](https://github.com/scaleway/scaleway-ui/commit/f828b7af788f005d7d98ff89fb73b61356995443))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.0.3 ([#1530](https://github.com/scaleway/scaleway-ui/issues/1530)) ([88bef00](https://github.com/scaleway/scaleway-ui/commit/88bef005f18f06f98f9f2f492f739ae00a71e221))
+
 ### [0.153.1](https://github.com/scaleway/scaleway-ui/compare/v0.153.0...v0.153.1) (2022-06-01)
 
 
