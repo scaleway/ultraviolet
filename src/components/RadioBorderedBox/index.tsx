@@ -25,10 +25,6 @@ type BorderedBoxTypes = {
   error: string | ReactNode
 }
 
-const StyledRadio = styled(Radio)`
-  margin-right: ${({ theme }) => theme.space['1']};
-`
-
 const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
   display: block;
 
@@ -57,6 +53,7 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
 const StyledRadioContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 0 ${({ theme }) => theme.space['1']};
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
@@ -103,7 +100,7 @@ const RadioBorderedBox = ({
   <>
     <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
       <StyledRadioContainer>
-        <StyledRadio
+        <Radio
           name={name}
           checked={checked}
           onChange={onChange}
@@ -115,7 +112,7 @@ const RadioBorderedBox = ({
           error={error}
         >
           {label}
-        </StyledRadio>
+        </Radio>
         {labelDescription ? (
           <Typography as="span">{labelDescription}</Typography>
         ) : null}

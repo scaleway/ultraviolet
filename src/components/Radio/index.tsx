@@ -3,17 +3,20 @@ import { InputHTMLAttributes, ReactNode } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
 import Typography from '../Typography'
 
+const InnerCircleRing = styled.circle`
+  fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+`
 const RadioboxMarkedIcon = () => (
   <g>
     <circle cx="12" cy="12" r="8" strokeWidth="2" />
-    <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
+    <InnerCircleRing cx="12" cy="12" r="6" />
     <circle cx="12" cy="12" r="4" />
   </g>
 )
 const RadioboxBlankIcon = () => (
   <g>
     <circle cx="12" cy="12" r="8" strokeWidth="2" />
-    <circle cx="12" cy="12" r="6" className="circle-background" fill="#fff" />
+    <InnerCircleRing cx="12" cy="12" r="6" />
   </g>
 )
 
@@ -24,7 +27,7 @@ const StyledIcon = styled.svg<{ size: number }>`
   min-height: ${({ size }) => size}px;
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.textWeak};
-  .circle-background {
+  ${InnerCircleRing} {
     fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
 `
@@ -58,7 +61,7 @@ const StyledRadioContainer = styled(Typography)`
   ${StyledRadio}:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
     fill: ${({ theme }) => theme.colors.primary.text};
-    .circle-background {
+    ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.primary.background};
     }
   }
@@ -66,7 +69,7 @@ const StyledRadioContainer = styled(Typography)`
   ${StyledRadio}[aria-invalid='true']:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.text};
-    .circle-background {
+    ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.danger.background};
     }
   }
@@ -75,7 +78,7 @@ const StyledRadioContainer = styled(Typography)`
     ${StyledRadio} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.text};
-      .circle-background {
+      ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.primary.background};
       }
     }
@@ -83,7 +86,7 @@ const StyledRadioContainer = styled(Typography)`
     ${StyledRadio}[aria-invalid='true']  + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
-      .circle-background {
+      ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.danger.background};
       }
     }
@@ -94,7 +97,7 @@ const StyledRadioContainer = styled(Typography)`
 
     ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.neutral.textDisabled};
-      .circle-background {
+      ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.backgroundStrong};
       }
     }

@@ -362,21 +362,6 @@ const ICONS = {
     <path d="M8 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 10c4.42 0 8 1.79 8 4v2H0v-2c0-2.21 3.58-4 8-4z" />
   ),
 
-  'radiobox-blank': () => (
-    <g>
-      <circle cx="12" cy="12" r="8" strokeWidth="2" />
-      <circle cx="12" cy="12" r="6" fill="#fff" />
-    </g>
-  ),
-
-  'radiobox-marked': () => (
-    <g>
-      <circle cx="12" cy="12" r="8" strokeWidth="2" />
-      <circle cx="12" cy="12" r="6" fill="#fff" />
-      <circle cx="12" cy="12" r="4" />
-    </g>
-  ),
-
   'ray-end-arrow': () => (
     <path d="M1,12L5,16V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9C18.69,9 17.58,9.83 17.17,11H5V8L1,12Z" />
   ),
