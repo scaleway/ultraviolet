@@ -9,8 +9,8 @@ specifiers:
   '@babel/preset-react': 7.17.12
   '@babel/preset-typescript': 7.17.12
   '@babel/runtime': 7.18.3
-  '@commitlint/cli': 17.0.1
-  '@commitlint/config-conventional': 17.0.0
+  '@commitlint/cli': 17.0.2
+  '@commitlint/config-conventional': 17.0.2
   '@emotion/babel-plugin': ^11.9.2
   '@emotion/cache': 11.7.1
   '@emotion/eslint-plugin': 11.7.0
@@ -160,8 +160,8 @@ devDependencies:
   '@babel/preset-react': 7.17.12_@babel+core@7.18.2
   '@babel/preset-typescript': 7.17.12_@babel+core@7.18.2
   '@babel/runtime': 7.18.3
-  '@commitlint/cli': 17.0.1
-  '@commitlint/config-conventional': 17.0.0
+  '@commitlint/cli': 17.0.2
+  '@commitlint/config-conventional': 17.0.2
   '@emotion/babel-plugin': 11.9.2_@babel+core@7.18.2
   '@emotion/cache': 11.7.1
   '@emotion/eslint-plugin': 11.7.0_eslint@8.16.0
@@ -1816,8 +1816,8 @@ packages:
       minimist: 1.2.6
     dev: true
 
-  /@commitlint/cli/17.0.1:
-    resolution: {integrity: sha512-5xT1G5pnynR0tk/ms8Ji7yr9lZCeQs4GLVVtyK/gw20w+enoLTVuRKKY9zg88hy9FoCycc/W8iip2xv3c8payg==}
+  /@commitlint/cli/17.0.2:
+    resolution: {integrity: sha512-Axe89Js0YzGGd4gxo3JLlF7yIdjOVpG1LbOorGc6PfYF+drBh14PvarSDLzyd2TNqdylUCq9wb9/A88ZjIdyhA==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
@@ -1836,11 +1836,11 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional/17.0.0:
-    resolution: {integrity: sha512-jttJXBIq3AuQCvUVwxSctCwKfHxxbALE0IB9OIHYCu/eQdOzPxN72pugeZsWDo1VK/T9iFx+MZoPb6Rb1/ylsw==}
+  /@commitlint/config-conventional/17.0.2:
+    resolution: {integrity: sha512-MfP0I/JbxKkzo+HXWB7B3WstGS4BiniotU3d3xQ9gK8cR0DbeZ4MuyGCWF65YDyrcDTS3WlrJ3ndSPA1pqhoPw==}
     engines: {node: '>=v14'}
     dependencies:
-      conventional-changelog-conventionalcommits: 4.6.3
+      conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
   /@commitlint/config-validator/17.0.0:
@@ -6392,7 +6392,7 @@ packages:
     dev: true
 
   /array-ify/1.0.0:
-    resolution: {integrity: sha1-nlKHYrSpBmrRY6aWKjZEGOlibs4=}
+    resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
     dev: true
 
   /array-includes/3.1.5:
@@ -7842,8 +7842,8 @@ packages:
       q: 1.5.1
     dev: true
 
-  /conventional-changelog-conventionalcommits/4.6.3:
-    resolution: {integrity: sha512-LTTQV4fwOM4oLPad317V/QNQ1FY4Hju5qeBIM1uTHbrnCE+Eg4CdRZ3gO2pUeR+tzWdp80M2j3qFFEDWVqOV4g==}
+  /conventional-changelog-conventionalcommits/5.0.0:
+    resolution: {integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==}
     engines: {node: '>=10'}
     dependencies:
       compare-func: 2.0.0
@@ -8482,7 +8482,7 @@ packages:
       ms: 2.1.2
 
   /decamelize-keys/1.1.0:
-    resolution: {integrity: sha1-0XGoeTMlKAfrPLYdwcFEXQeN8tk=}
+    resolution: {integrity: sha512-ocLWuYzRPoS9bfiSdDd3cxvrzovVMZnRDVEzAs+hWIVXGDbHxWMECij2OBuyB/An0FFW/nLuq6Kv1i/YC5Qfzg==}
     engines: {node: '>=0.10.0'}
     dependencies:
       decamelize: 1.2.0
@@ -8490,7 +8490,7 @@ packages:
     dev: true
 
   /decamelize/1.2.0:
-    resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=}
+    resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -12860,7 +12860,7 @@ packages:
     dev: true
 
   /map-obj/1.0.1:
-    resolution: {integrity: sha1-2TPOuSBdgr3PSIb2dCvcK03qFG0=}
+    resolution: {integrity: sha512-7N/q3lyZ+LVCp7PzuxrJr4KMbBE2hW7BT7YNia330OFxIf4d3r5zVpicP2650l7CPN6RM9zOJRl3NGpqSiw3Eg==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -15386,7 +15386,7 @@ packages:
     dev: true
 
   /q/1.5.1:
-    resolution: {integrity: sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=}
+    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     dev: true
 
