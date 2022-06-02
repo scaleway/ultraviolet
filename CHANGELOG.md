@@ -1,3 +1,25 @@
+## [0.153.4](https://github.com/scaleway/scaleway-ui/compare/v0.153.3...v0.153.4) (2022-06-02)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v17.0.2 ([#1535](https://github.com/scaleway/scaleway-ui/issues/1535)) ([b1a9ae0](https://github.com/scaleway/scaleway-ui/commit/b1a9ae0d4a0a58c00f3fc27fb87104bc0ae78c7b))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.7 ([#1540](https://github.com/scaleway/scaleway-ui/issues/1540)) ([104e4a6](https://github.com/scaleway/scaleway-ui/commit/104e4a67465e137fa8ae2afded7249b80d13c0ab))
+* **devdeps:** update dependency @types/jest to v27.5.2 ([#1537](https://github.com/scaleway/scaleway-ui/issues/1537)) ([c77c02d](https://github.com/scaleway/scaleway-ui/commit/c77c02d9224dba55fe1ee9d5c3ead0685a64d894))
+* **devdeps:** update dependency loki to v0.30.2 ([#1495](https://github.com/scaleway/scaleway-ui/issues/1495)) ([a5ba432](https://github.com/scaleway/scaleway-ui/commit/a5ba4326f8bdae2809abd579949939d15d9a2e9d))
+* **devdeps:** update dependency rollup to v2.75.5 ([#1536](https://github.com/scaleway/scaleway-ui/issues/1536)) ([f4246a6](https://github.com/scaleway/scaleway-ui/commit/f4246a678a4342871db8a7622eb2e2037abdbac0))
+* fix renovate by upgrading @storybook/addon-docs ([#1539](https://github.com/scaleway/scaleway-ui/issues/1539)) ([16763f2](https://github.com/scaleway/scaleway-ui/commit/16763f29e8dee349c8fb721351c6cad6a77bfdbf))
+
+
+### :zap: Refactor
+
+* refactor Radio component ([#1493](https://github.com/scaleway/scaleway-ui/issues/1493)) ([166d811](https://github.com/scaleway/scaleway-ui/commit/166d811121e39e321c1c3f73991d58cff7ba1c85))
+
+
+### :bug: Bug Fixes
+
+* **deps:** pin dependencies ([#1542](https://github.com/scaleway/scaleway-ui/issues/1542)) ([aefae04](https://github.com/scaleway/scaleway-ui/commit/aefae04555fcfbd6c7dbeb76650d8a4d64886b91))
+
 ### [0.153.3](https://github.com/scaleway/scaleway-ui/compare/v0.153.2...v0.153.3) (2022-06-01)
 
 
