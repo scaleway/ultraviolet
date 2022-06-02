@@ -90,6 +90,7 @@ const StyledContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  gap: 0 ${({ theme }) => theme.space['1']};
 
   ${StyledStep} {
     height: ${({ theme }) => theme.space['4']};
@@ -99,16 +100,8 @@ const StyledContainer = styled.div`
   }
 
   ${StyledStepContainer} {
-    margin: 0 ${({ theme }) => theme.space['1']};
     width: ${({ theme }) => theme.space['4']};
     white-space: nowrap;
-  }
-  ${StyledStepContainer}:first-of-type {
-    margin-left: 0px;
-  }
-
-  ${StyledStepContainer}:last-of-type {
-    margin-right: 0px;
   }
 
   ${StyledLine} {
