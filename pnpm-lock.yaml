@@ -65,7 +65,7 @@ specifiers:
   '@testing-library/react': 12.1.5
   '@testing-library/user-event': 13.5.0
   '@types/intl-tel-input': 17.0.4
-  '@types/jest': 27.5.1
+  '@types/jest': 27.5.2
   '@types/jest-axe': 3.5.3
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
@@ -165,7 +165,7 @@ devDependencies:
   '@emotion/babel-plugin': 11.9.2_@babel+core@7.18.2
   '@emotion/cache': 11.7.1
   '@emotion/eslint-plugin': 11.7.0_eslint@8.16.0
-  '@emotion/jest': 11.9.1_@types+jest@27.5.1
+  '@emotion/jest': 11.9.1_@types+jest@27.5.2
   '@emotion/react': 11.9.0_ddpcdz72weezmodm7yk4v5n3v4
   '@emotion/styled': 11.8.1_74quhjy2o5fky35ibrqgdmklba
   '@nivo/tooltip': 0.79.0_tr7qpesmx3wckmenoaha4pdkta
@@ -173,7 +173,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.74.1
   '@rollup/plugin-url': 7.0.0_rollup@2.74.1
   '@scaleway/eslint-config-react': 3.4.30_xztl6dhthcahlo6akmb2bmjmle
-  '@scaleway/jest-helpers': 1.2.6_f6myx75va7tobgmmolvmn6x5fu
+  '@scaleway/jest-helpers': 1.2.6_ktmrn4o5ifkizl4w5bhvcsuv4a
   '@scaleway/use-i18n': 3.3.7_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.2
@@ -207,7 +207,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   '@testing-library/user-event': 13.5.0_tlwynutqiyp5mns3woioasuxnq
-  '@types/jest': 27.5.1
+  '@types/jest': 27.5.2
   '@types/jest-axe': 3.5.3
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
@@ -2040,7 +2040,7 @@ packages:
     dependencies:
       '@emotion/memoize': 0.7.5
 
-  /@emotion/jest/11.9.1_@types+jest@27.5.1:
+  /@emotion/jest/11.9.1_@types+jest@27.5.2:
     resolution: {integrity: sha512-JFf9yBA6a7fKrKCWMmjODGRcgBnjiQsl9AakP1y7oRJ6B147ZKPo8DgzHUZ5qQkI06GKAWwYU1vKROInc7SYVA==}
     peerDependencies:
       '@types/jest': ^26.0.14 || ^27.0.0
@@ -2053,7 +2053,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.3
       '@emotion/css-prettifier': 1.0.1
-      '@types/jest': 27.5.1
+      '@types/jest': 27.5.2
       chalk: 4.1.2
       specificity: 0.4.1
       stylis: 4.0.13
@@ -3310,13 +3310,13 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.6_f6myx75va7tobgmmolvmn6x5fu:
+  /@scaleway/jest-helpers/1.2.6_ktmrn4o5ifkizl4w5bhvcsuv4a:
     resolution: {integrity: sha512-JuGhAyhJAdENbAbxhOWd7BXAJhzb6EDhXJycPSMV8yWyuj1C1p87MjNZ4d9V4j7q8BE4hItO/vMf/SiU4BWpIw==}
     peerDependencies:
       react: ^17.0.1 || 17
     dependencies:
       '@emotion/cache': 11.7.1
-      '@emotion/jest': 11.9.1_@types+jest@27.5.1
+      '@emotion/jest': 11.9.1_@types+jest@27.5.2
       '@emotion/react': 11.9.0_ddpcdz72weezmodm7yk4v5n3v4
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
@@ -5403,12 +5403,12 @@ packages:
   /@types/jest-axe/3.5.3:
     resolution: {integrity: sha512-ad9qI9f+00N8IlOuGh6dnZ6o0BDdV9VhGfTUr1zCejsPvOfZd6eohffe4JYxUoUuRYEftyMcaJ6Ux4+MsOpGHg==}
     dependencies:
-      '@types/jest': 27.5.1
+      '@types/jest': 27.5.2
       axe-core: 3.5.6
     dev: true
 
-  /@types/jest/27.5.1:
-    resolution: {integrity: sha512-fUy7YRpT+rHXto1YlL+J9rs0uLGyiqVt3ZOTQR+4ROc47yNl8WLdVLgUloBRhOxP1PZvguHl44T3H0wAWxahYQ==}
+  /@types/jest/27.5.2:
+    resolution: {integrity: sha512-mpT8LJJ4CMeeahobofYWIjFo0xonRS/HfxnVEPMPFSQdGUt1uHCnoPT7Zhb+sjDU2wz0oKV0OLUR0WzrHNgfeA==}
     dependencies:
       jest-matcher-utils: 27.5.1
       pretty-format: 27.5.1
@@ -5583,7 +5583,7 @@ packages:
   /@types/testing-library__jest-dom/5.14.3:
     resolution: {integrity: sha512-oKZe+Mf4ioWlMuzVBaXQ9WDnEm1+umLx0InILg+yvZVBBDmzV5KfZyLrCvadtWcx8+916jLmHafcmqqffl+iIw==}
     dependencies:
-      '@types/jest': 27.5.1
+      '@types/jest': 27.5.2
     dev: true
 
   /@types/tough-cookie/4.0.2:
