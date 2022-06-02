@@ -61,13 +61,6 @@ const generateStyles = ({
     overflow: hidden;`
         : ''
     }
-
-    [title]:hover::after {
-      content: attr(title);
-      position: absolute;
-      top: -100%;
-      left: 0;
-    }
   `
 }
 
