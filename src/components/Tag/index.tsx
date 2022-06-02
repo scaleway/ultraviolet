@@ -78,7 +78,6 @@ type TagProps = {
   icon?: IconName
   className?: string
   children: ReactNode
-  textStyle: JSX.IntrinsicAttributes['css']
 }
 
 const Tag = ({
@@ -88,7 +87,6 @@ const Tag = ({
   icon,
   disabled = false,
   variant = 'neutral',
-  textStyle,
   className,
 }: TagProps) => (
   <StyledContainer
@@ -96,9 +94,7 @@ const Tag = ({
     className={className}
   >
     {icon ? <Icon name={icon} size={16} /> : null}
-    <StyledTag aria-disabled={disabled} css={textStyle}>
-      {children}
-    </StyledTag>
+    <StyledTag aria-disabled={disabled}>{children}</StyledTag>
 
     {onClose && !isLoading ? (
       <StyledTouchable

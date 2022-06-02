@@ -1,4 +1,4 @@
-import { css as emotionCss, useTheme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import {
@@ -9,13 +9,6 @@ import {
 } from 'reakit/Tooltip'
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
-
-const textStyle = (maxTagWidth: number) => emotionCss`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: ${maxTagWidth}px;
-  white-space: nowrap;
-`
 
 const StyledTooltipReference = styled(TooltipReference)`
   color: ${({ theme }) => theme.colors.primary.text};
@@ -53,7 +46,6 @@ const StyledManyTagsContainer = styled.div`
 
 type TagsPoplistProps = {
   maxLength?: number
-  maxTagWidth?: number
   tags?: string[]
   threshold?: number
   multiline?: boolean
@@ -61,7 +53,6 @@ type TagsPoplistProps = {
 
 const TagsPoplist = ({
   maxLength = 600,
-  maxTagWidth = 115,
   tags = [],
   threshold = 1,
   multiline = false,
@@ -93,7 +84,6 @@ const TagsPoplist = ({
             // useful when two tags are identical `${tag}-${index}`
             // eslint-disable-next-line react/no-array-index-key
             key={`${tag}-${index}`}
-            textStyle={textStyle(maxTagWidth)}
           >
             {tag}
           </Tag>
@@ -135,7 +125,6 @@ TagsPoplist.propTypes = {
   /**
    * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
    */
-  maxTagWidth: PropTypes.number,
   multiline: PropTypes.bool,
   tags: PropTypes.arrayOf(PropTypes.string.isRequired),
   /**
