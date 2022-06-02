@@ -1,6 +1,6 @@
 import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ElementType, ReactNode, useCallback, useState } from 'react'
+import { ElementType, ReactNode, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color, typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -13,6 +13,8 @@ export const PROMINENCES = {
 }
 
 type ProminenceProps = keyof typeof PROMINENCES
+export type TextVariant = keyof typeof typography
+export const textVariants = Object.keys(typography) as TextVariant[]
 
 /**
  * Generate all styles available for text based on prominence and variants
@@ -69,9 +71,6 @@ const generateStyles = ({
   `
 }
 
-export type TextVariant = keyof typeof typography
-export const textVariants = Object.keys(typography) as TextVariant[]
-
 type TextProps = {
   className?: string
   children: ReactNode
@@ -87,28 +86,12 @@ const StyledText = styled('div', {
     !['as', 'variant', 'color', 'prominence', 'oneLine'].includes(
       prop.toString(),
     ),
-})`
-  ${({
-    color,
-    prominence,
-    variant,
-    oneLine,
-    theme,
-  }: {
-    prominence: ProminenceProps
-    theme: Theme
-    variant: TextVariant
-    color: Color
-    oneLine: boolean
-  }) =>
-    generateStyles({
-      color,
-      oneLine,
-      prominence,
-      theme,
-      variant,
-    })};
-`
+})<{
+  color: Color
+  prominence: ProminenceProps
+  variant: TextVariant
+  oneLine: boolean
+}>(generateStyles)
 
 const Text = ({
   variant,
@@ -121,18 +104,15 @@ const Text = ({
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
 
-  const determineTruncated = useCallback(
-    (target = {}) => {
-      // If the text is really truncated
-      const { offsetWidth, scrollWidth } = target as {
-        offsetWidth: number
-        scrollWidth: number
-      }
+  const determineTruncated = (target = {}) => {
+    // If the text is really truncated
+    const { offsetWidth, scrollWidth } = target as {
+      offsetWidth: number
+      scrollWidth: number
+    }
 
-      setIsTruncated(offsetWidth < scrollWidth)
-    },
-    [setIsTruncated],
-  )
+    setIsTruncated(offsetWidth < scrollWidth)
+  }
 
   const finalStringChildren = recursivelyGetChildrenString(children)
 
