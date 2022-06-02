@@ -17,8 +17,6 @@ type RadioProps = Pick<
   | 'value'
   | 'size'
   | 'error'
-  | 'valid'
-  | 'id'
 >
 
 type BorderedBoxTypes = {
@@ -55,6 +53,7 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
 const StyledRadioContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 0 ${({ theme }) => theme.space['1']};
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
@@ -97,7 +96,6 @@ const RadioBorderedBox = ({
   size = 24,
   children,
   error,
-  valid,
 }: RadioBorderedBoxProps) => (
   <>
     <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
@@ -111,10 +109,7 @@ const RadioBorderedBox = ({
           disabled={disabled}
           value={value}
           size={size}
-          mr="4px"
           error={error}
-          valid={valid}
-          showError={false}
         >
           {label}
         </Radio>

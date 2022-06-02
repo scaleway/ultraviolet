@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass {
+  .cache-r43if8-StyledText-variantStyles-StyledRadioContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -12,123 +12,142 @@ exports[`Radio renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 32px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3 {
-  background-color: rgba(215,204,240,0.25);
-  border-radius: 50%;
-}
-
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3>.e1duuirp4,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3>.e1duuirp4 {
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1p2voni-IconContainer {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-right: 8px;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
 }
 
-.cache-5ixesp-StyledIcon-sizeStyles-StyledIcon {
-  fill: #dce1eb;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp3 {
+  fill: #f6f6f8;
+}
+
+.cache-1ihnbva-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-n0re8b-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
 }
 
-.cache-5ixesp-StyledIcon-sizeStyles-StyledIcon.cache-5ixesp-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
+.cache-n0re8b-StyledIcon .e1duuirp3 {
+  fill: #ffffff;
 }
 
-.cache-18s3dma-StyledRadio {
-  position: absolute;
-  opacity: 0.01;
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
 }
 
-.cache-1sztoev-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="e1duuirp0 e1g1zfwd0 cache-r43if8-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
-    <label
-      class="e1duuirp2 e1g1zfwd0 cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass"
-      for="radio-choice"
+    <input
+      aria-checked="false"
+      aria-disabled="false"
+      aria-invalid="false"
+      class="cache-1ihnbva-StyledRadio e1duuirp1"
+      id="radio-choice"
+      name="radio"
+      tabindex="0"
+      type="radio"
+      value="choice"
+    />
+    <svg
+      class="cache-n0re8b-StyledIcon e1duuirp2"
+      size="24"
     >
-      <div
-        class="cache-1p2voni-IconContainer e1duuirp3"
-      >
-        <svg
-          class="e1duuirp4 etwatq50 cache-5ixesp-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
-        </svg>
-      </div>
-      <div>
-        Choice
-      </div>
-      <input
-        aria-checked="false"
-        class="cache-18s3dma-StyledRadio e1duuirp1"
-        id="radio-choice"
-        name="radio"
-        tabindex="0"
-        type="radio"
-        value="choice"
-      />
-    </label>
-    <div
-      class="e14o3tsk0 cache-1sztoev-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError e1duuirp0"
-      />
-    </div>
-  </div>
+      <g>
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke-width="2"
+        />
+        <circle
+          class="cache-p50c5x-InnerCircleRing e1duuirp3"
+          cx="12"
+          cy="12"
+          r="6"
+        />
+      </g>
+    </svg>
+    Choice
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass {
+  .cache-r43if8-StyledText-variantStyles-StyledRadioContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -138,124 +157,148 @@ exports[`Radio renders correctly when checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 32px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3 {
-  background-color: rgba(215,204,240,0.25);
-  border-radius: 50%;
-}
-
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3>.e1duuirp4,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3>.e1duuirp4 {
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1p2voni-IconContainer {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-right: 8px;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
 }
 
-.cache-1auc76i-StyledIcon-sizeStyles-StyledIcon {
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
   fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp3 {
+  fill: #f6f6f8;
+}
+
+.cache-1ihnbva-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-n0re8b-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
 }
 
-.cache-1auc76i-StyledIcon-sizeStyles-StyledIcon.cache-1auc76i-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
+.cache-n0re8b-StyledIcon .e1duuirp3 {
+  fill: #ffffff;
 }
 
-.cache-18s3dma-StyledRadio {
-  position: absolute;
-  opacity: 0.01;
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
 }
 
-.cache-1sztoev-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="e1duuirp0 e1g1zfwd0 cache-r43if8-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
-    <label
-      class="e1duuirp2 e1g1zfwd0 cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass"
-      for="radio-choice"
+    <input
+      aria-checked="true"
+      aria-disabled="false"
+      aria-invalid="false"
+      checked=""
+      class="cache-1ihnbva-StyledRadio e1duuirp1"
+      id="radio-choice"
+      name="radio"
+      tabindex="0"
+      type="radio"
+      value="choice"
+    />
+    <svg
+      class="cache-n0re8b-StyledIcon e1duuirp2"
+      size="24"
     >
-      <div
-        class="cache-1p2voni-IconContainer e1duuirp3"
-      >
-        <svg
-          class="e1duuirp4 etwatq50 cache-1auc76i-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z"
-          />
-        </svg>
-      </div>
-      <div>
-        Choice
-      </div>
-      <input
-        aria-checked="true"
-        checked=""
-        class="cache-18s3dma-StyledRadio e1duuirp1"
-        id="radio-choice"
-        name="radio"
-        tabindex="0"
-        type="radio"
-        value="choice"
-      />
-    </label>
-    <div
-      class="e14o3tsk0 cache-1sztoev-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError e1duuirp0"
-      />
-    </div>
-  </div>
+      <g>
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke-width="2"
+        />
+        <circle
+          class="cache-p50c5x-InnerCircleRing e1duuirp3"
+          cx="12"
+          cy="12"
+          r="6"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+        />
+      </g>
+    </svg>
+    Choice
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-izgtk0-StyledText-variantStyles-StyledRadioContainer-disabledClass {
+  .cache-r43if8-StyledText-variantStyles-StyledRadioContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -265,117 +308,143 @@ exports[`Radio renders correctly when disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 32px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
-  color: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #c4c9d6;
 }
 
-.cache-1p2voni-IconContainer {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-right: 8px;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
 }
 
-.cache-12489do-StyledIcon-sizeStyles-StyledIcon {
-  fill: #f6f5f7;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp3 {
+  fill: #f6f6f8;
+}
+
+.cache-1ihnbva-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-n0re8b-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
 }
 
-.cache-12489do-StyledIcon-sizeStyles-StyledIcon.cache-12489do-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
+.cache-n0re8b-StyledIcon .e1duuirp3 {
+  fill: #ffffff;
 }
 
-.cache-18s3dma-StyledRadio {
-  position: absolute;
-  opacity: 0.01;
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
 }
 
-.cache-1sztoev-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="true"
+    class="e1duuirp0 e1g1zfwd0 cache-r43if8-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
-    <label
-      class="e1duuirp2 e1g1zfwd0 cache-izgtk0-StyledText-variantStyles-StyledRadioContainer-disabledClass"
+    <input
+      aria-checked="false"
+      aria-disabled="true"
+      aria-invalid="false"
+      class="cache-1ihnbva-StyledRadio e1duuirp1"
       disabled=""
-      for="radio-choice"
+      id="radio-choice"
+      name="radio"
+      style="pointer-events: none;"
+      type="radio"
+      value="choice"
+    />
+    <svg
+      class="cache-n0re8b-StyledIcon e1duuirp2"
+      size="24"
     >
-      <div
-        class="cache-1p2voni-IconContainer e1duuirp3"
-      >
-        <svg
-          class="e1duuirp4 etwatq50 cache-12489do-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
-        </svg>
-      </div>
-      <div>
-        Choice
-      </div>
-      <input
-        aria-checked="false"
-        aria-disabled="true"
-        class="cache-18s3dma-StyledRadio e1duuirp1"
-        disabled=""
-        id="radio-choice"
-        name="radio"
-        style="pointer-events: none;"
-        type="radio"
-        value="choice"
-      />
-    </label>
-    <div
-      class="e14o3tsk0 cache-1sztoev-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError e1duuirp0"
-      />
-    </div>
-  </div>
+      <g>
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke-width="2"
+        />
+        <circle
+          class="cache-p50c5x-InnerCircleRing e1duuirp3"
+          cx="12"
+          cy="12"
+          r="6"
+        />
+      </g>
+    </svg>
+    Choice
+  </label>
 </DocumentFragment>
 `;
 
 exports[`Radio renders correctly when error 1`] = `
 <DocumentFragment>
-  .cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass {
+  .cache-r43if8-StyledText-variantStyles-StyledRadioContainer {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -385,249 +454,135 @@ exports[`Radio renders correctly when error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 32px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3 {
-  background-color: rgba(215,204,240,0.25);
-  border-radius: 50%;
-}
-
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3>.e1duuirp4,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3>.e1duuirp4 {
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #390171;
 }
 
-.cache-1p2voni-IconContainer {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-right: 8px;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
 }
 
-.cache-9sn9fn-StyledIcon-sizeStyles-StyledIcon {
-  fill: #cc4e18;
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer .e1duuirp1[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp3 {
+  fill: #eeeeff;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp3 {
+  fill: #ffe1e7;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-r43if8-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp3 {
+  fill: #f6f6f8;
+}
+
+.cache-1ihnbva-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-n0re8b-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
 }
 
-.cache-9sn9fn-StyledIcon-sizeStyles-StyledIcon.cache-9sn9fn-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
+.cache-n0re8b-StyledIcon .e1duuirp3 {
+  fill: #ffffff;
 }
 
-.cache-18s3dma-StyledRadio {
-  position: absolute;
-  opacity: 0.01;
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
 }
 
-.cache-1gfilw2-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  max-height: 5000px;
-  opacity: 1;
-  overflow: visible;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
+<label
+    aria-disabled="false"
+    class="e1duuirp0 e1g1zfwd0 cache-r43if8-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
-    <label
-      class="e1duuirp2 e1g1zfwd0 cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass"
-      for="radio-choice"
+    <input
+      aria-checked="false"
+      aria-disabled="false"
+      aria-invalid="true"
+      class="cache-1ihnbva-StyledRadio e1duuirp1"
+      id="radio-choice"
+      name="radio"
+      tabindex="0"
+      type="radio"
+      value="choice"
+    />
+    <svg
+      class="cache-n0re8b-StyledIcon e1duuirp2"
+      size="24"
     >
-      <div
-        class="cache-1p2voni-IconContainer e1duuirp3"
-      >
-        <svg
-          class="e1duuirp4 etwatq50 cache-9sn9fn-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
-        </svg>
-      </div>
-      <div>
-        Choice
-      </div>
-      <input
-        aria-checked="false"
-        class="cache-18s3dma-StyledRadio e1duuirp1"
-        id="radio-choice"
-        name="radio"
-        tabindex="0"
-        type="radio"
-        value="choice"
-      />
-    </label>
-    <div
-      class="e14o3tsk0 cache-1gfilw2-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError e1duuirp0"
-      >
-        Invalid value
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Radio renders correctly when valid 1`] = `
-<DocumentFragment>
-  .cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 32px;
-  cursor: pointer;
-}
-
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3 {
-  background-color: rgba(215,204,240,0.25);
-  border-radius: 50%;
-}
-
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:hover .e1duuirp3>.e1duuirp4,
-.cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass:focus .e1duuirp3>.e1duuirp4 {
-  fill: #390171;
-}
-
-.cache-1p2voni-IconContainer {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-right: 8px;
-}
-
-.cache-7yuflw-StyledIcon-sizeStyles-StyledIcon {
-  fill: #149a7b;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.cache-7yuflw-StyledIcon-sizeStyles-StyledIcon.cache-7yuflw-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
-}
-
-.cache-18s3dma-StyledRadio {
-  position: absolute;
-  opacity: 0.01;
-}
-
-.cache-1sztoev-StyledExpandable {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  height: auto;
-  margin-top: 0;
-}
-
-.cache-1hzw3uf-StyledError {
-  font-size: 12px;
-  color: #a6102d;
-  padding: 0 4px;
-}
-
-<div
-    class="cache-3svqc9"
-  >
-    <label
-      class="e1duuirp2 e1g1zfwd0 cache-am0vxe-StyledText-variantStyles-StyledRadioContainer-activeFocusClass"
-      for="radio-choice"
-    >
-      <div
-        class="cache-1p2voni-IconContainer e1duuirp3"
-      >
-        <svg
-          class="e1duuirp4 etwatq50 cache-7yuflw-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
-          />
-        </svg>
-      </div>
-      <div>
-        Choice
-      </div>
-      <input
-        aria-checked="false"
-        class="cache-18s3dma-StyledRadio e1duuirp1"
-        id="radio-choice"
-        name="radio"
-        tabindex="0"
-        type="radio"
-        value="choice"
-      />
-    </label>
-    <div
-      class="e14o3tsk0 cache-1sztoev-StyledExpandable"
-    >
-      <div
-        class="cache-1hzw3uf-StyledError e1duuirp0"
-      />
-    </div>
-  </div>
+      <g>
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke-width="2"
+        />
+        <circle
+          class="cache-p50c5x-InnerCircleRing e1duuirp3"
+          cx="12"
+          cy="12"
+          r="6"
+        />
+      </g>
+    </svg>
+    Choice
+  </label>
 </DocumentFragment>
 `;

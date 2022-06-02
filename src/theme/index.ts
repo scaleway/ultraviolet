@@ -8,6 +8,7 @@ const radii = {
   none: '0',
   default: '4px',
   large: '8px',
+  circle: '100%',
 }
 
 const space = {
