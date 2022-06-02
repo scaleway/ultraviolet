@@ -30,7 +30,7 @@ const space = {
 
 export type Spaces = keyof typeof space
 
-const { colors, shadows } = light
+const { colors, shadows, typography } = light
 
 const screens = {
   xsmall: 0,
@@ -55,6 +55,7 @@ const theme = {
   screens,
   shadows,
   space,
+  typography,
 }
 
 type SCWUITheme = typeof theme & {
@@ -104,6 +105,7 @@ export {
   darkTheme,
   extendTheme,
   SENTIMENTS,
+  typography,
 }
 
 export default lightTheme
