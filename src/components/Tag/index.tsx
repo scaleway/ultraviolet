@@ -4,7 +4,6 @@ import { Color } from '../../theme'
 import Icon, { IconName } from '../Icon'
 import Loader from '../Loader'
 import Touchable from '../Touchable'
-import Typography from '../Typography'
 
 const StyledContainer = styled('span', {
   shouldForwardProp: prop => !['variant'].includes(prop.toString()),
@@ -42,10 +41,14 @@ const StyledContainer = styled('span', {
   }}
 `
 
-const StyledTypography = styled(Typography)`
+const StyledTag = styled.span`
   font-size: 12px;
   font-weight: 500;
   color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `
 
 const StyledTouchable = styled(Touchable, {
@@ -67,7 +70,6 @@ const StyledTouchable = styled(Touchable, {
 type TagProps = {
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  textStyle?: JSX.IntrinsicAttributes['css']
   variant?: Color
   disabled?: boolean
   /**
@@ -76,16 +78,17 @@ type TagProps = {
   icon?: IconName
   className?: string
   children: ReactNode
+  textStyle: JSX.IntrinsicAttributes['css']
 }
 
 const Tag = ({
   children,
   isLoading = false,
   onClose,
-  textStyle,
   icon,
   disabled = false,
   variant = 'neutral',
+  textStyle,
   className,
 }: TagProps) => (
   <StyledContainer
@@ -93,24 +96,21 @@ const Tag = ({
     className={className}
   >
     {icon ? <Icon name={icon} size={16} /> : null}
-    <StyledTypography aria-disabled={disabled} css={textStyle}>
+    <StyledTag aria-disabled={disabled} css={textStyle}>
       {children}
-    </StyledTypography>
+    </StyledTag>
 
-    {onClose || isLoading ? (
+    {onClose && !isLoading ? (
       <StyledTouchable
         onClick={!isLoading ? onClose : undefined}
         variant={variant}
         disabled={disabled}
         aria-label="Close tag"
       >
-        {isLoading ? (
-          <Loader active size={16} />
-        ) : (
-          <Icon name="close" size={16} />
-        )}
+        <Icon name="close" size={16} />
       </StyledTouchable>
     ) : null}
+    {isLoading ? <Loader active size={16} /> : null}
   </StyledContainer>
 )
 
