@@ -13,18 +13,41 @@ import {
   useCheckboxState,
 } from 'reakit/Checkbox'
 import { getUUID } from '../../utils'
-import Icon from '../Icon'
 import Loader from '../Loader'
 import Typography from '../Typography'
+
+const InnerCheckbox = styled.rect`
+  fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  stroke: ${({ theme }) => theme.colors.neutral.textWeak};
+`
+
+const CheckMark = styled.rect``
+
+const CheckboxIcon = () => (
+  <g>
+    <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
+    <CheckMark x="8" y="8" rx="1" width="8" height="8" />
+  </g>
+)
+
+const CheckboxMixedIcon = () => (
+  <g>
+    <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
+    <rect x="8" y="11" rx="1" width="8" height="2" />
+  </g>
+)
 
 const StyledError = styled(Typography)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledIcon = styled(Icon)`
+const StyledIcon = styled.svg<{ size: number }>`
   margin-right: ${({ theme }) => theme.space['1']};
   border-radius: ${({ theme }) => theme.radii.default};
-  color: ${({ theme }) => theme.colors.neutral.text};
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
+  min-width: ${({ size }) => size}px;
+  min-height: ${({ size }) => size}px;
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
@@ -35,6 +58,19 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
+  & + svg {
+    ${CheckMark} {
+      transform-origin: center;
+      transition: 120ms transform ease-in-out;
+      transform: scale(0);
+    }
+  }
+
+  &[aria-checked='true'] + svg {
+    ${CheckMark} {
+      transform: scale(1);
+    }
+  }
 `
 
 const StyledCheckBoxContainer = styled(Typography)`
@@ -46,12 +82,22 @@ const StyledCheckBoxContainer = styled(Typography)`
     cursor: pointer;
   }
 
-  ${StyledReakitCheckbox}[aria-checked="true"] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.text};
+  ${StyledReakitCheckbox}[aria-checked="true"] + ${StyledIcon},
+  ${StyledReakitCheckbox}[aria-checked="mixed"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    }
   }
 
-  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.text};
+  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon},
+  ${StyledReakitCheckbox}[aria-invalid="mixed"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+    }
   }
 
   &[aria-disabled='true'] {
@@ -60,28 +106,53 @@ const StyledCheckBoxContainer = styled(Typography)`
 
     ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.neutral.textDisabled};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.neutral.textDisabled};
+        fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+      }
     }
   }
 
   ${StyledReakitCheckbox}:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.text};
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
   }
 
   ${StyledReakitCheckbox}[aria-invalid="true"]:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.text};
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.danger.background};
+    }
   }
 
-  :hover[aria-disabled='false'] {
+  &:hover[aria-disabled='false'] {
     ${StyledReakitCheckbox} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
-      fill: ${({ theme }) => theme.colors.primary.text};
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+        fill: ${({ theme }) => theme.colors.primary.background};
+      }
     }
 
     ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
-      fill: ${({ theme }) => theme.colors.danger.text};
+      fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+        fill: ${({ theme }) => theme.colors.danger.background};
+      }
     }
   }
 `
@@ -124,6 +195,7 @@ const Checkbox = ({
 }: CheckboxProps) => {
   const hasChildren = !!children
   const checkbox = useCheckboxState({ state: checked })
+  const { state, setState } = checkbox
 
   const computedName = useMemo(() => {
     if (!name) return getUUID('checkbox')
@@ -132,13 +204,12 @@ const Checkbox = ({
   }, [name])
 
   const icon = useMemo(() => {
-    if (checkbox.state === 'indeterminate') return 'minus-box-outline'
-    if (checkbox.state) return 'checkbox-marked-outline'
+    if (state === 'indeterminate') return 'minus-box-outline'
+    if (state) return 'checkbox-marked-outline'
 
     return 'checkbox-blank-outline'
-  }, [checkbox?.state])
+  }, [state])
 
-  const { setState } = checkbox
   useEffect(() => {
     setState(checked)
   }, [checked, setState])
@@ -177,15 +248,9 @@ const Checkbox = ({
           aria-invalid={!!error}
           aria-describedby={error ? `${computedName}-hint` : undefined}
           aria-checked={
-            checkbox.state === 'indeterminate'
-              ? 'mixed'
-              : (checkbox.state as boolean)
+            state === 'indeterminate' ? 'mixed' : (state as boolean)
           }
-          checked={
-            checkbox.state === 'indeterminate'
-              ? false
-              : (checkbox.state as boolean)
-          }
+          checked={state === 'indeterminate' ? false : (state as boolean)}
           size={size}
           onChange={onLocalChange}
           onFocus={onFocus}
@@ -197,7 +262,13 @@ const Checkbox = ({
           autoFocus={autoFocus}
         />
         {!progress ? (
-          <StyledIcon name={icon} size={size} disabled={disabled} />
+          <StyledIcon name={icon} size={size} viewBox="0 0 24 24">
+            {state === 'indeterminate' ? (
+              <CheckboxMixedIcon />
+            ) : (
+              <CheckboxIcon />
+            )}
+          </StyledIcon>
         ) : null}
         {children}
       </StyledCheckBoxContainer>

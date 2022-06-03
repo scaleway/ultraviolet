@@ -47,7 +47,7 @@ Sizes.parameters = {
 Sizes.decorators = [
   () => (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      {[10, 20, 30].map(size => (
+      {[16, 26, 32].map(size => (
         <Checkbox size={size} onChange={() => {}}>
           Checkbox size {size}
         </Checkbox>

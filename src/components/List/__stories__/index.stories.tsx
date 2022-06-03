@@ -330,6 +330,7 @@ TableVariant.decorators = [
         { label: 'Department', width: '120px' },
         { justifyContent: 'flex-end' },
       ]}
+      multiselect
     >
       {list => (
         <>
@@ -362,6 +363,7 @@ ExplorerVariant.decorators = [
         { label: 'Description' },
         { label: 'Department' },
       ]}
+      multiselect
     >
       {list => (
         <>

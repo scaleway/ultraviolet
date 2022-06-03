@@ -32,19 +32,19 @@ export const flash = keyframes`
 
 export const zoomIn = keyframes`
     0% {
-      transform:scale(0);
+      transform: scale(0);
     }
     100% {
-      transform:scale(1);
+      transform: scale(1);
     }
 `
 
 export const zoomOut = keyframes`
     0% {
-      transform:scale(0);
+      transform: scale(1);
     }
     100% {
-      transform:scale(1);
+      transform: scale(0);
     }
 `
 

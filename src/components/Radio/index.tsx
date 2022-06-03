@@ -6,17 +6,14 @@ import Typography from '../Typography'
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
-const RadioboxMarkedIcon = () => (
+
+const RadioMark = styled.circle``
+
+const RadioMarkedIcon = () => (
   <g>
     <circle cx="12" cy="12" r="8" strokeWidth="2" />
     <InnerCircleRing cx="12" cy="12" r="6" />
-    <circle cx="12" cy="12" r="4" />
-  </g>
-)
-const RadioboxBlankIcon = () => (
-  <g>
-    <circle cx="12" cy="12" r="8" strokeWidth="2" />
-    <InnerCircleRing cx="12" cy="12" r="6" />
+    <RadioMark cx="12" cy="12" r="4" />
   </g>
 )
 
@@ -38,6 +35,19 @@ const StyledRadio = styled(ReakitRadio)`
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
+  & + svg {
+    ${RadioMark} {
+      transform-origin: center;
+      transition: 120ms transform ease-in-out;
+      transform: scale(0);
+    }
+  }
+
+  &[aria-checked='true'] + svg {
+    ${RadioMark} {
+      transform: scale(1);
+    }
+  }
 `
 
 const StyledRadioContainer = styled(Typography)`
@@ -152,7 +162,7 @@ const Radio = ({
       autoFocus={autoFocus}
     />
     <StyledIcon size={size} viewBox="0 0 24 24">
-      {checked ? <RadioboxMarkedIcon /> : <RadioboxBlankIcon />}
+      <RadioMarkedIcon />
     </StyledIcon>
     {children}
   </StyledRadioContainer>

@@ -256,7 +256,6 @@ export const Header = () => {
                   ? 'indeterminate'
                   : hasAllSelected
               }
-              size={20}
               disabled={isLoading}
               onChange={handleOnChange}
             />
@@ -429,7 +428,6 @@ export const Row = ({
                       data-visibility={hasSelectedItems ? '' : 'hover'}
                       checked={selected}
                       disabled={!isSelectable || disabled}
-                      size={20}
                       name="select-rows"
                       onChange={(e: ChangeEvent<HTMLInputElement>) =>
                         setRowState(id, { selected: e.target.checked })

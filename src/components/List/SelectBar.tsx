@@ -46,7 +46,7 @@ function SelectBar<T extends Record<string, unknown>>({
   // Don't display the pop-in if there aren't an item selected
   return selectedItems.length > 0 ? (
     <ActionBar {...props} role="dialog" aria-modal="true">
-      <StyledCheckbox size={20} checked onChange={unselectAll} autoFocus />
+      <StyledCheckbox checked onChange={unselectAll} autoFocus />
       <StyledItemsCount>{selectedItems.length}</StyledItemsCount>
       <Typography color="primary" fontWeight={500} ml={1}>
         {typeof text === 'function' ? text(selectedItems.length) : text}
