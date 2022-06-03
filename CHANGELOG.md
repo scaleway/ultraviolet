@@ -1,3 +1,10 @@
+## [0.153.5](https://github.com/scaleway/scaleway-ui/compare/v0.153.4...v0.153.5) (2022-06-03)
+
+
+### :bug: Bug Fixes
+
+* update Tag component ([#1504](https://github.com/scaleway/scaleway-ui/issues/1504)) ([5b89421](https://github.com/scaleway/scaleway-ui/commit/5b894219fcb473470195375b44f8be71b189a7b2))
+
 ## [0.153.4](https://github.com/scaleway/scaleway-ui/compare/v0.153.3...v0.153.4) (2022-06-02)
 
 
