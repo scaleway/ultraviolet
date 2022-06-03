@@ -2,129 +2,205 @@
 
 exports[`Tag renders correctly 1`] = `
 <DocumentFragment>
-  .cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+  .cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-<div
-    class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
-      class="cache-1vwmh8m-StyledText e1vt8sjg1"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
     >
       test
     </span>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly bordered 1`] = `
+exports[`Tag renders correctly colored 1`] = `
 <DocumentFragment>
-  .cache-1j04psv-StyledContainer-bordered {
-  border-radius: 4px;
+  .cache-hs7kz3-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px;
-  border: 1px solid #d4dae7;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #390171;
+  background: #eeeeff;
+  border: solid 1px #eeeeff;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-<div
-    class="e1vt8sjg2 cache-1j04psv-StyledContainer-bordered"
+<span
+    class="cache-hs7kz3-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
-      class="cache-1vwmh8m-StyledText e1vt8sjg1"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
     >
       test
     </span>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Tag renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-b7qcxz-StyledContainer-disabledStyles-base {
-  opacity: 0.5;
-  border-radius: 4px;
+  .cache-1xalbyg-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #c4c9d6;
+  background: #e6e9f0;
+  border: solid 1px #f6f6f8;
+  cursor: not-allowed;
 }
 
-.cache-rqod6w-StyledText-disabledStyles {
-  opacity: 0.5;
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-<div
-    class="e1vt8sjg2 cache-b7qcxz-StyledContainer-disabledStyles-base"
+<span
+    class="cache-1xalbyg-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="true"
-      class="cache-rqod6w-StyledText-disabledStyles e1vt8sjg1"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
     >
       test
     </span>
-  </div>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tag renders correctly neutral 1`] = `
+<DocumentFragment>
+  .cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+  >
+    <span
+      aria-disabled="false"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
+    >
+      test
+    </span>
+  </span>
 </DocumentFragment>
 `;

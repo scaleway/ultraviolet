@@ -1,140 +1,113 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { MouseEventHandler, ReactNode } from 'react'
-import Box, { BoxProps } from '../Box'
-import Icon from '../Icon'
+import { Color } from '../../theme'
+import Icon, { IconName } from '../Icon'
 import Loader from '../Loader'
 import Touchable from '../Touchable'
 
-const disabledStyles = css`
-  opacity: 0.5;
-`
-
-export const variantsContainer = {
-  base: ({ theme }: { theme: Theme }) => css`
-    background-color: ${theme.colors.neutral.backgroundStrong};
-    height: 24px;
-    padding-left: 8px;
-    padding-right: 8px;
-  `,
-  bordered: ({ theme }: { theme: Theme }) => css`
-    padding: 8px;
-    border: 1px solid ${theme.colors.neutral.borderWeak};
-  `,
-}
-
-type TagVariant = keyof typeof variantsContainer
-
-const variantStyles = ({
-  variant,
-  ...props
-}: {
-  variant: TagVariant
-  theme: Theme
-}) => variantsContainer[variant]?.(props)
-
-type StyledContainerProps = {
-  disabled: boolean
-  variant: TagVariant
-} & BoxProps
-
-const StyledContainer = styled(Box, {
-  shouldForwardProp: props =>
-    !['disabled', 'variant'].includes(props.toString()),
-})<StyledContainerProps>`
-  ${({ disabled }) => disabled && disabledStyles}
-  border-radius: 4px;
+const StyledContainer = styled('span', {
+  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+})<{ variant: Color | 'disabled' }>`
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  display: flex;
-  ${variantStyles}
+  white-space: nowrap;
+  border-radius: ${({ theme }) => theme.space['0.5']};
+  padding: 0 ${({ theme }) => theme.space['1']};
+  gap: ${({ theme }) => theme.space['1']};
+  width: fit-content;
+  height: ${({ theme }) => theme.space['3']};
+  ${({ variant, theme }) => {
+    if (variant === 'disabled')
+      return `
+      color: ${theme.colors.neutral.textDisabled};
+      background: ${theme.colors.neutral.backgroundDisabled};
+      border: solid 1px ${theme.colors.neutral.borderDisabled};
+      cursor: not-allowed
+
+    `
+    if (variant === 'neutral')
+      return `
+      color: ${theme.colors.neutral.text};
+      background: ${theme.colors.neutral.background};
+      border: solid 1px ${theme.colors.neutral.border};
+    `
+
+    return `
+      color: ${theme.colors[variant].text};
+      background: ${theme.colors[variant].background};
+      border: solid 1px ${theme.colors[variant].borderDisabled};
+    `
+  }}
 `
 
-const StyledText = styled('span')`
-  ${({ 'aria-disabled': disabled }) => disabled && disabledStyles}
-  color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: 14px;
-  align-self: center;
-  max-width: 350px;
+const StyledTag = styled.span`
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 `
 
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: props => !['variant'].includes(props.toString()),
-})<{ variant: TagVariant }>`
-  margin-left: 16px;
+})<{ variant: Color }>`
   display: flex;
   align-items: center;
-  justify-content: center;
-  &:hover,
-  &:focus {
-    background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
+  svg {
+    fill: ${({ theme }) => theme.colors.neutral.textWeak};
+  }
+  &:hover:enabled,
+  &:focus:enabled {
     svg {
-      fill: ${({ theme }) => theme.colors.primary.text};
+      fill: ${({ theme }) => theme.colors.neutral.textHover};
     }
   }
-  ${({ variant, theme }) =>
-    variant === 'bordered' &&
-    `
-  border-radius: 4px;
-  border: 1px solid ${theme.colors.neutral.borderWeak};
-  padding: 4px;
-  width: 32px;
-  height: 32px;
-`}
 `
 
 type TagProps = {
-  children: ReactNode
-  disabled?: boolean
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  textStyle?: JSX.IntrinsicAttributes['css']
-  variant?: TagVariant
-} & BoxProps
+  variant?: Color
+  disabled?: boolean
+  /**
+   * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
+   */
+  icon?: IconName
+  className?: string
+  children: ReactNode
+}
 
 const Tag = ({
   children,
   isLoading = false,
   onClose,
-  textStyle,
+  icon,
   disabled = false,
-  variant = 'base',
-  ...props
+  variant = 'neutral',
+  className,
 }: TagProps) => (
-  <StyledContainer {...props} disabled={disabled} variant={variant}>
-    <StyledText aria-disabled={disabled} css={textStyle}>
-      {children}
-    </StyledText>
+  <StyledContainer
+    variant={disabled ? 'disabled' : variant}
+    className={className}
+  >
+    {icon ? <Icon name={icon} size={16} /> : null}
+    <StyledTag aria-disabled={disabled}>{children}</StyledTag>
 
-    {onClose && (
+    {onClose && !isLoading ? (
       <StyledTouchable
         onClick={!isLoading ? onClose : undefined}
         variant={variant}
         disabled={disabled}
         aria-label="Close tag"
       >
-        {isLoading ? (
-          <Loader active size={16} />
-        ) : (
-          <Icon name="close" size={16} color="gray550" />
-        )}
+        <Icon name="close" size={16} />
       </StyledTouchable>
-    )}
+    ) : null}
+    {isLoading ? <Loader active size={16} /> : null}
   </StyledContainer>
 )
-
-Tag.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  disabled: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  onClose: PropTypes.func,
-  textStyle: PropTypes.shape({}),
-  variant: PropTypes.oneOf<TagVariant>(
-    Object.keys(variantsContainer) as TagVariant[],
-  ),
-}
 
 export default Tag

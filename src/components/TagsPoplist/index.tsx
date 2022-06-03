@@ -1,4 +1,4 @@
-import { css as emotionCss, useTheme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import {
@@ -9,13 +9,6 @@ import {
 } from 'reakit/Tooltip'
 import FlexBox from '../FlexBox'
 import Tag from '../Tag'
-
-const textStyle = (maxTagWidth: number) => emotionCss`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: ${maxTagWidth}px;
-  white-space: nowrap;
-`
 
 const StyledTooltipReference = styled(TooltipReference)`
   color: ${({ theme }) => theme.colors.primary.text};
@@ -35,10 +28,8 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  ${({ multiline, theme }) =>
-    multiline &&
-    `flex-wrap: wrap;
-  > * { margin-bottom: ${theme.space['1']}}`}
+  gap: ${({ theme }) => theme.space['1']};
+  ${({ multiline }) => multiline && `flex-wrap: wrap;`};
 `
 
 const StyledManyTagsContainer = styled.div`
@@ -50,11 +41,11 @@ const StyledManyTagsContainer = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   max-width: 80vw;
   flex-wrap: wrap;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 type TagsPoplistProps = {
   maxLength?: number
-  maxTagWidth?: number
   tags?: string[]
   threshold?: number
   multiline?: boolean
@@ -62,7 +53,6 @@ type TagsPoplistProps = {
 
 const TagsPoplist = ({
   maxLength = 600,
-  maxTagWidth = 115,
   tags = [],
   threshold = 1,
   multiline = false,
@@ -94,8 +84,6 @@ const TagsPoplist = ({
             // useful when two tags are identical `${tag}-${index}`
             // eslint-disable-next-line react/no-array-index-key
             key={`${tag}-${index}`}
-            textStyle={textStyle(maxTagWidth)}
-            mr={index + 1 !== visibleTagsCount ? 1 : 0}
           >
             {tag}
           </Tag>
@@ -115,7 +103,6 @@ const TagsPoplist = ({
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
                 <Tag
-                  m="4px"
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${tag}-${index}`}
                 >
@@ -138,7 +125,6 @@ TagsPoplist.propTypes = {
   /**
    * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
    */
-  maxTagWidth: PropTypes.number,
   multiline: PropTypes.bool,
   tags: PropTypes.arrayOf(PropTypes.string.isRequired),
   /**

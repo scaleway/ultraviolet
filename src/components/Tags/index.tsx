@@ -232,7 +232,7 @@ const Tags = ({
     >
       {tagsState.map(tag => (
         <Tag
-          variant={variant === 'no-border' ? 'base' : variant}
+          variant="neutral"
           disabled={disabled}
           key={tag.index}
           isLoading={status[tag.index] === STATUS.LOADING}

@@ -43,28 +43,6 @@ Threshold.args = {
   threshold: 5,
 }
 
-export const TagWidth = Template.bind({})
-TagWidth.parameters = {
-  docs: {
-    description: {
-      story:
-        '`maxTagWidth` can be used for defining max width of each tags except the ones in tooltip.',
-    },
-  },
-}
-TagWidth.args = {
-  maxTagWidth: 30,
-  tags: [
-    'very',
-    ...Array<string>(50).fill('large'),
-    'tooltip',
-    'scaleway',
-    'paris',
-    'cloud',
-  ],
-  threshold: 5,
-}
-
 export const Multiline = Template.bind({})
 Multiline.parameters = {
   docs: {

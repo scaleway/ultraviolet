@@ -26,35 +26,43 @@ exports[`Tags add tag from input 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -65,7 +73,6 @@ exports[`Tags add tag from input 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,41 +81,36 @@ exports[`Tags add tag from input 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -139,23 +141,23 @@ exports[`Tags add tag from input 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -163,24 +165,24 @@ exports[`Tags add tag from input 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -188,24 +190,24 @@ exports[`Tags add tag from input 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         test
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -213,7 +215,7 @@ exports[`Tags add tag from input 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -253,35 +255,43 @@ exports[`Tags add tag from input with error 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -292,7 +302,6 @@ exports[`Tags add tag from input with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,41 +310,36 @@ exports[`Tags add tag from input with error 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -366,23 +370,23 @@ exports[`Tags add tag from input with error 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -390,24 +394,24 @@ exports[`Tags add tag from input with error 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -415,7 +419,7 @@ exports[`Tags add tag from input with error 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -455,35 +459,43 @@ exports[`Tags add tag on paste 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -494,7 +506,6 @@ exports[`Tags add tag on paste 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -503,41 +514,36 @@ exports[`Tags add tag on paste 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -568,23 +574,23 @@ exports[`Tags add tag on paste 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -592,24 +598,24 @@ exports[`Tags add tag on paste 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -617,24 +623,24 @@ exports[`Tags add tag on paste 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         test
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -642,7 +648,7 @@ exports[`Tags add tag on paste 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -682,35 +688,43 @@ exports[`Tags add tag on paste with error 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -721,7 +735,6 @@ exports[`Tags add tag on paste with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -730,41 +743,36 @@ exports[`Tags add tag on paste with error 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -795,23 +803,23 @@ exports[`Tags add tag on paste with error 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -819,24 +827,24 @@ exports[`Tags add tag on paste with error 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -844,7 +852,7 @@ exports[`Tags add tag on paste with error 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -884,35 +892,43 @@ exports[`Tags delete tag 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -923,7 +939,6 @@ exports[`Tags delete tag 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -932,41 +947,36 @@ exports[`Tags delete tag 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -997,23 +1007,23 @@ exports[`Tags delete tag 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1021,7 +1031,7 @@ exports[`Tags delete tag 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -1061,35 +1071,43 @@ exports[`Tags delete tag with backspace 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1100,7 +1118,6 @@ exports[`Tags delete tag with backspace 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1109,41 +1126,36 @@ exports[`Tags delete tag with backspace 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -1174,23 +1186,23 @@ exports[`Tags delete tag with backspace 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1198,7 +1210,7 @@ exports[`Tags delete tag with backspace 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -1254,35 +1266,43 @@ exports[`Tags delete tag with error 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1293,7 +1313,6 @@ exports[`Tags delete tag with error 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1302,41 +1321,36 @@ exports[`Tags delete tag with error 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -1377,23 +1391,23 @@ exports[`Tags delete tag with error 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         throw
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1401,56 +1415,49 @@ exports[`Tags delete tag with error 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         error
       </span>
-      <button
-        aria-disabled="false"
-        aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
-        type="button"
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-gqzzce-Loader"
+        role="progressbar"
+        style="height: 16px; width: 16px;"
+        viewBox="0 0 100 100"
       >
-        <svg
-          aria-label="Loading"
-          aria-valuemax="100"
-          aria-valuemin="0"
-          aria-valuenow="20"
-          aria-valuetext="20%"
-          class="cache-gqzzce-Loader"
-          role="progressbar"
-          style="height: 16px; width: 16px;"
-          viewBox="0 0 100 100"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#d4dae7"
-            stroke-width="16"
-          />
-          <circle
-            class="cache-11f05l0-Loader"
-            cx="50"
-            cy="50"
-            fill="none"
-            r="42"
-            stroke="#4f0599"
-            stroke-dasharray="263.89378290154264"
-            stroke-dashoffset="211.11502632123413"
-            stroke-linecap="round"
-            stroke-width="16"
-          />
-        </svg>
-      </button>
-    </div>
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#d4dae7"
+          stroke-width="16"
+        />
+        <circle
+          class="cache-11f05l0-Loader"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#4f0599"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -1490,37 +1497,44 @@ exports[`Tags renders correctly when disabled 1`] = `
   margin: 6px;
 }
 
-.cache-b7qcxz-StyledContainer-disabledStyles-base {
-  opacity: 0.5;
-  border-radius: 4px;
+.cache-1xalbyg-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #c4c9d6;
+  background: #e6e9f0;
+  border: solid 1px #f6f6f8;
+  cursor: not-allowed;
 }
 
-.cache-rqod6w-StyledText-disabledStyles {
-  opacity: 0.5;
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1531,7 +1545,6 @@ exports[`Tags renders correctly when disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1540,65 +1553,60 @@ exports[`Tags renders correctly when disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-b7qcxz-StyledContainer-disabledStyles-base"
+    <span
+      class="cache-1xalbyg-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="true"
-        class="cache-rqod6w-StyledText-disabledStyles e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="true"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         disabled=""
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1606,25 +1614,25 @@ exports[`Tags renders correctly when disabled 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-b7qcxz-StyledContainer-disabledStyles-base"
+    </span>
+    <span
+      class="cache-1xalbyg-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="true"
-        class="cache-rqod6w-StyledText-disabledStyles e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="true"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         disabled=""
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1632,7 +1640,7 @@ exports[`Tags renders correctly when disabled 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -1663,35 +1671,43 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1702,7 +1718,6 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1711,64 +1726,59 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1776,24 +1786,24 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1801,7 +1811,7 @@ exports[`Tags renders correctly when manualInput is disabled 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -1832,35 +1842,43 @@ exports[`Tags renders correctly when variant = base 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -1871,7 +1889,6 @@ exports[`Tags renders correctly when variant = base 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1880,41 +1897,36 @@ exports[`Tags renders correctly when variant = base 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -1945,23 +1957,23 @@ exports[`Tags renders correctly when variant = base 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1969,24 +1981,24 @@ exports[`Tags renders correctly when variant = base 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -1994,7 +2006,7 @@ exports[`Tags renders correctly when variant = base 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -2035,33 +2047,43 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   margin-right: 6px;
 }
 
-.cache-1j04psv-StyledContainer-bordered {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px;
-  border: 1px solid #d4dae7;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-vmn5nb-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2072,7 +2094,6 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2081,46 +2102,36 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  padding: 4px;
-  width: 32px;
-  height: 32px;
 }
 
-.cache-vmn5nb-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-vmn5nb-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-vmn5nb-StyledTouchable-StyledTouchable:hover,
-.cache-vmn5nb-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-vmn5nb-StyledTouchable-StyledTouchable:hover svg,
-.cache-vmn5nb-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -2151,23 +2162,23 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
 <div
     class="cache-og6whv"
   >
-    <div
-      class="e1vt8sjg2 cache-1j04psv-StyledContainer-bordered"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-vmn5nb-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2175,24 +2186,24 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-1j04psv-StyledContainer-bordered"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-vmn5nb-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2200,7 +2211,7 @@ exports[`Tags renders correctly when variant = bordered 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -2236,35 +2247,43 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   margin-bottom: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2275,7 +2294,6 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2284,41 +2302,36 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -2349,23 +2362,23 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
 <div
     class="cache-js8t1g"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2373,24 +2386,24 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2398,7 +2411,7 @@ exports[`Tags renders correctly when variant = no-border 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -2502,35 +2515,43 @@ exports[`Tags renders correctly with some tags 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2541,7 +2562,6 @@ exports[`Tags renders correctly with some tags 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2550,41 +2570,36 @@ exports[`Tags renders correctly with some tags 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -2615,23 +2630,23 @@ exports[`Tags renders correctly with some tags 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2639,24 +2654,24 @@ exports[`Tags renders correctly with some tags 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2664,7 +2679,7 @@ exports[`Tags renders correctly with some tags 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -2703,35 +2718,43 @@ exports[`Tags renders correctly with some tags 2`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2742,7 +2765,6 @@ exports[`Tags renders correctly with some tags 2`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2751,41 +2773,36 @@ exports[`Tags renders correctly with some tags 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -2816,23 +2833,23 @@ exports[`Tags renders correctly with some tags 2`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2840,24 +2857,24 @@ exports[`Tags renders correctly with some tags 2`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -2865,7 +2882,7 @@ exports[`Tags renders correctly with some tags 2`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -2904,35 +2921,43 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -2943,7 +2968,6 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2952,41 +2976,36 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -3017,23 +3036,23 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -3041,24 +3060,24 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -3066,7 +3085,7 @@ exports[`Tags renders correctly with some tags as objects 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
@@ -3105,35 +3124,43 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   margin: 6px;
 }
 
-.cache-11aaxx7-StyledContainer-base {
-  border-radius: 4px;
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f6f6f8;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
 }
 
-.cache-1vwmh8m-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 350px;
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
   overflow: hidden;
-  white-space: pre;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable {
+.cache-1nos2vl-StyledTouchable-StyledTouchable {
   border: 0;
   transition-property: opacity;
   transition-duration: 0.15s;
@@ -3144,7 +3171,6 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   background-color: transparent;
   padding: 0;
   margin: 0;
-  margin-left: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3153,41 +3179,36 @@ exports[`Tags renders correctly with some tags objects 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='true'] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+.cache-1nos2vl-StyledTouchable-StyledTouchable[aria-disabled='false'] {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-.cache-79dopx-StyledTouchable-StyledTouchable:hover,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus {
-  background-color: #d7ccf0;
-}
-
-.cache-79dopx-StyledTouchable-StyledTouchable:hover svg,
-.cache-79dopx-StyledTouchable-StyledTouchable:focus svg {
-  fill: #390171;
-}
-
-.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1nos2vl-StyledTouchable-StyledTouchable svg {
   fill: #b2b6c3;
+}
+
+.cache-1nos2vl-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-1nos2vl-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #151a2d;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
 }
 
-.cache-1vsf6gj-StyledIcon-sizeStyles.cache-1vsf6gj-StyledIcon-sizeStyles {
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -3218,23 +3239,23 @@ exports[`Tags renders correctly with some tags objects 1`] = `
 <div
     class="cache-a51a0v"
   >
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         hello
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -3242,24 +3263,24 @@ exports[`Tags renders correctly with some tags objects 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      class="e1vt8sjg2 cache-11aaxx7-StyledContainer-base"
+    </span>
+    <span
+      class="cache-1q42p0o-StyledContainer e1vt8sjg2"
     >
       <span
         aria-disabled="false"
-        class="cache-1vwmh8m-StyledText e1vt8sjg1"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
       >
         world
       </span>
       <button
         aria-disabled="false"
         aria-label="Close tag"
-        class="e1vt8sjg0 e1kgqxfn0 cache-79dopx-StyledTouchable-StyledTouchable"
+        class="e1vt8sjg0 e1kgqxfn0 cache-1nos2vl-StyledTouchable-StyledTouchable"
         type="button"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1vsf6gj-StyledIcon-sizeStyles"
+          class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
           viewBox="0 0 24 24"
         >
           <path
@@ -3267,7 +3288,7 @@ exports[`Tags renders correctly with some tags objects 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
     <input
       aria-label="radio"
       class="cache-11neoz9"
