@@ -6,17 +6,17 @@ import Typography from '../Typography'
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
-const RadioboxMarkedIcon = ({ size }: { size: number }) => (
+const RadioboxMarkedIcon = () => (
   <g>
-    <circle cx={size / 2} cy={size / 2} r={size / 3} strokeWidth="2" />
-    <InnerCircleRing cx={size / 2} cy={size / 2} r={size / 4} />
-    <circle cx={size / 2} cy={size / 2} r={size / 6} />
+    <circle cx="12" cy="12" r="8" strokeWidth="2" />
+    <InnerCircleRing cx="12" cy="12" r="6" />
+    <circle cx="12" cy="12" r="4" />
   </g>
 )
-const RadioboxBlankIcon = ({ size }: { size: number }) => (
+const RadioboxBlankIcon = () => (
   <g>
-    <circle cx={size / 2} cy={size / 2} r={size / 3} strokeWidth="2" />
-    <InnerCircleRing cx={size / 2} cy={size / 2} r={size / 4} />
+    <circle cx="12" cy="12" r="8" strokeWidth="2" />
+    <InnerCircleRing cx="12" cy="12" r="6" />
   </g>
 )
 
@@ -151,12 +151,8 @@ const Radio = ({
       name={name}
       autoFocus={autoFocus}
     />
-    <StyledIcon size={size}>
-      {checked ? (
-        <RadioboxMarkedIcon size={size} />
-      ) : (
-        <RadioboxBlankIcon size={size} />
-      )}
+    <StyledIcon size={size} viewBox="0 0 24 24">
+      {checked ? <RadioboxMarkedIcon /> : <RadioboxBlankIcon />}
     </StyledIcon>
     {children}
   </StyledRadioContainer>
