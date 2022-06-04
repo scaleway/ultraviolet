@@ -52,7 +52,7 @@ Controlled.decorators = [
   () => (
     <ControlValue value="basic-1">
       {({ value, onChange }) => (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <RadioBorderedBox
             name="basic-1"
             checked={value === 'basic-1' ? true : undefined}
@@ -132,7 +132,7 @@ Badge.decorators = [
   () => (
     <ControlValue value="badge-1">
       {({ value, onChange }) => (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <RadioBorderedBox
             name="badge-1"
             checked={value === 'badge-1'}
