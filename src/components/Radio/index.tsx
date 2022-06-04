@@ -151,7 +151,7 @@ const Radio = ({
       name={name}
       autoFocus={autoFocus}
     />
-    <StyledIcon size={size}>
+    <StyledIcon size={size} viewBox="0 0 24 24">
       {checked ? <RadioboxMarkedIcon /> : <RadioboxBlankIcon />}
     </StyledIcon>
     {children}
