@@ -1,3 +1,10 @@
+## [0.153.6](https://github.com/scaleway/scaleway-ui/compare/v0.153.5...v0.153.6) (2022-06-04)
+
+
+### :bug: Bug Fixes
+
+* svg size bug on radio ([#1543](https://github.com/scaleway/scaleway-ui/issues/1543)) ([922a427](https://github.com/scaleway/scaleway-ui/commit/922a42747e98e41da7efb884715c8a3b4dedd207))
+
 ## [0.153.5](https://github.com/scaleway/scaleway-ui/compare/v0.153.4...v0.153.5) (2022-06-03)
 
 
