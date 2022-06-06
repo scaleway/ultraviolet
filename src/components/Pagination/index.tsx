@@ -48,7 +48,6 @@ const StyledPageSwitch = styled(Button)`
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
 `
 
 const PageSwitchContainer = styled.div`
