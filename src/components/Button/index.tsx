@@ -386,13 +386,6 @@ const FwdButton = ({
     return 'button'
   }, [disabled, to, href, download])
 
-  const ariaLabel = useMemo(() => {
-    if (props['aria-label']) return props['aria-label']
-    if (typeof children === 'string') return children
-
-    return ''
-  }, [props, children])
-
   const displayProgressOnly = !children
 
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
@@ -404,7 +397,6 @@ const FwdButton = ({
         {...props}
         href={href}
         to={to}
-        aria-label={ariaLabel}
         download={download}
         ref={innerRef}
         as={as}
