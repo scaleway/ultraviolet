@@ -1,6 +1,6 @@
 import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ElementType, ReactNode, useState } from 'react'
+import { ElementType, ReactNode, useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color, typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -96,24 +96,23 @@ const Text = ({
   className,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
-
-  const determineTruncated = (target = {}) => {
-    // If the text is really truncated
-    const { offsetWidth, scrollWidth } = target as {
-      offsetWidth: number
-      scrollWidth: number
-    }
-
-    setIsTruncated(offsetWidth < scrollWidth)
-  }
+  const elementRef = useRef(null)
 
   const finalStringChildren = recursivelyGetChildrenString(children)
+
+  useEffect(() => {
+    if (elementRef && elementRef.current) {
+      // If the text is really truncated
+      const { offsetWidth, scrollWidth } = elementRef.current
+
+      setIsTruncated(offsetWidth < scrollWidth)
+    }
+  }, [])
 
   return (
     <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
       <StyledText
-        onMouseEnter={event => determineTruncated(event.target)}
-        onFocus={event => determineTruncated(event.target)}
+        ref={elementRef}
         as={as}
         prominence={prominence}
         color={color}
