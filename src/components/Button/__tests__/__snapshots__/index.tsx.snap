@@ -108,7 +108,9 @@ exports[`Button should render correctly loading 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -273,7 +275,9 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -430,8 +434,10 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 <a
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1qc3a0r-StyledButton"
     href="/"
+    role="button"
   >
     <div
       class="cache-m245rk-StyledContent em6gco81"
@@ -521,8 +527,10 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 <button
     aria-disabled="true"
+    aria-label="test"
     class="em6gco80 cache-1xobvbf-StyledButton"
     disabled=""
+    role="button"
     to="/"
     type="button"
   >
@@ -608,8 +616,10 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 <a
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
     href="/"
+    role="button"
   >
     <div
       class="cache-m245rk-StyledContent em6gco81"
@@ -699,8 +709,10 @@ exports[`Button should render correctly when disabled 1`] = `
 
 <button
     aria-disabled="true"
+    aria-label="test"
     class="em6gco80 cache-1xobvbf-StyledButton"
     disabled=""
+    role="button"
     type="button"
   >
     <div
@@ -805,7 +817,9 @@ exports[`Button should render correctly when extendable 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1ao361y-StyledButton-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -931,7 +945,9 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-itpguj-StyledButton-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1020,7 +1036,9 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1120,7 +1138,9 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1ccd12a-StyledButton-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1238,7 +1258,9 @@ exports[`Button should render correctly with a tooltip 1`] = `
     <button
       aria-describedby="test"
       aria-disabled="false"
+      aria-label="test"
       class="em6gco80 cache-uc00d9-StyledButton"
+      role="button"
       type="button"
     >
       <div
@@ -1350,7 +1372,9 @@ exports[`Button should render correctly with an action button 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1p64bz2-StyledButton-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1463,7 +1487,9 @@ exports[`Button should render correctly with an icon on the right 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1544,7 +1570,9 @@ exports[`Button should render correctly without a children 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   />
 </DocumentFragment>
@@ -1627,7 +1655,9 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1719,7 +1749,9 @@ exports[`Button size render large 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1803,7 +1835,9 @@ exports[`Button size render medium 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-65mvt1-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1887,7 +1921,9 @@ exports[`Button size render small 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-f7nmgp-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -1971,7 +2007,9 @@ exports[`Button size render xsmall 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-4qmceh-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2053,7 +2091,9 @@ exports[`Button size render xxsmall 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-6qy56i-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2138,7 +2178,9 @@ exports[`Button variant render info 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1khlqq0-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2235,7 +2277,9 @@ exports[`Button variant render info-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-gmdlxe-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2320,7 +2364,9 @@ exports[`Button variant render link 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-17m6xr9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2405,7 +2451,9 @@ exports[`Button variant render primary 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-uc00d9-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2502,7 +2550,9 @@ exports[`Button variant render primary-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-193295s-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2599,7 +2649,9 @@ exports[`Button variant render primary-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1fupxmd-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2684,7 +2736,9 @@ exports[`Button variant render secondary 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-6ce20m-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2781,7 +2835,9 @@ exports[`Button variant render secondary-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1fupxmd-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2866,7 +2922,9 @@ exports[`Button variant render success 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1ec1kwm-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -2963,7 +3021,9 @@ exports[`Button variant render success-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-ktzlbq-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -3060,7 +3120,9 @@ exports[`Button variant render success-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-epa6lq-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -3135,7 +3197,9 @@ exports[`Button variant render transparent 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1norfxg-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -3220,7 +3284,9 @@ exports[`Button variant render warning 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1kcayaw-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -3317,7 +3383,9 @@ exports[`Button variant render warning-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-1ritj0t-StyledButton"
+    role="button"
     type="button"
   >
     <div
@@ -3414,7 +3482,9 @@ exports[`Button variant render warning-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="test"
     class="em6gco80 cache-147kb1l-StyledButton"
+    role="button"
     type="button"
   >
     <div

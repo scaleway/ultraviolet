@@ -24,7 +24,7 @@ Variants.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
       {buttonVariants.map(variant => (
-        <Button key={variant} variant={variant}>
+        <Button ariaLabel="test" key={variant} variant={variant}>
           {variant}
         </Button>
       ))}
@@ -43,7 +43,9 @@ Sizes.decorators = [
     <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
       {buttonSizes.map(size => (
         <div key={size}>
-          <Button size={size}>{size}</Button>
+          <Button ariaLabel="test" size={size}>
+            {size}
+          </Button>
         </div>
       ))}
     </div>
@@ -56,7 +58,13 @@ Disabled.parameters = {
     storyDescription: 'Set `disabled` using disabled property.',
   },
 }
-Disabled.decorators = [() => <Button disabled>Disabled</Button>]
+Disabled.decorators = [
+  () => (
+    <Button ariaLabel="test" disabled>
+      Disabled
+    </Button>
+  ),
+]
 
 export const Progress = Template.bind({})
 Progress.parameters = {
@@ -68,8 +76,12 @@ Progress.parameters = {
 Progress.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button progress="left">left progress</Button>
-      <Button progress="right">right progress</Button>
+      <Button ariaLabel="test" progress="left">
+        left progress
+      </Button>
+      <Button ariaLabel="test" progress="right">
+        right progress
+      </Button>
     </div>
   ),
 ]
@@ -84,8 +96,10 @@ Icons.parameters = {
 Icons.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button icon="lock" />
-      <Button icon="lock">With text</Button>
+      <Button ariaLabel="test" icon="lock" />
+      <Button ariaLabel="test" icon="lock">
+        With text
+      </Button>
     </div>
   ),
 ]
@@ -101,8 +115,8 @@ IconsSizes.decorators = [
     <div style={{ display: 'flex', gap: 16 }}>
       {[10, 18, 24, 32].map(size => (
         <Fragment key={size}>
-          <Button icon="lock" iconSize={size} />
-          <Button icon="lock" iconSize={size}>
+          <Button ariaLabel="test" icon="lock" iconSize={size} />
+          <Button ariaLabel="test" icon="lock" iconSize={size}>
             With text
           </Button>
         </Fragment>
@@ -121,10 +135,10 @@ IconsPositions.parameters = {
 IconsPositions.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button iconPosition="left" icon="lock">
+      <Button ariaLabel="test" iconPosition="left" icon="lock">
         Left
       </Button>
-      <Button iconPosition="right" icon="lock">
+      <Button ariaLabel="test" iconPosition="right" icon="lock">
         Right
       </Button>
     </div>
@@ -141,13 +155,25 @@ Action.decorators = [
   () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
       {icons.map(icon => (
-        <Button action key={icon} icon={icon} />
+        <Button ariaLabel="test" action key={icon} icon={icon} />
       ))}
       {buttonVariants.map(variant => (
-        <Button action icon="lock" key={variant} variant={variant} />
+        <Button
+          ariaLabel="test"
+          action
+          icon="lock"
+          key={variant}
+          variant={variant}
+        />
       ))}
       {buttonVariants.map(variant => (
-        <Button action="rounded" icon="lock" key={variant} variant={variant} />
+        <Button
+          ariaLabel="test"
+          action="rounded"
+          icon="lock"
+          key={variant}
+          variant={variant}
+        />
       ))}
     </div>
   ),
@@ -162,7 +188,7 @@ Extend.parameters = {
 }
 Extend.decorators = [
   () => (
-    <Button extend icon="plus">
+    <Button ariaLabel="test" extend icon="plus">
       Extend
     </Button>
   ),
@@ -175,7 +201,9 @@ Download.parameters = {
       'Use `download` prop if you want to make it a downloadable button.',
   },
 }
-Download.decorators = [() => <Button download icon="download" />]
+Download.decorators = [
+  () => <Button ariaLabel="test" download icon="download" />,
+]
 
 export const LinkDelegation = Template.bind({})
 LinkDelegation.parameters = {
@@ -186,7 +214,7 @@ LinkDelegation.parameters = {
 }
 LinkDelegation.decorators = [
   () => (
-    <Button to="https://scaleway.com" target="_blank">
+    <Button ariaLabel="test" to="https://scaleway.com" target="_blank">
       Scaleway
     </Button>
   ),
@@ -202,9 +230,25 @@ Tooltip.parameters = {
 Tooltip.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button action icon="lock" variant="primary" tooltip="I am locked" />
-      <Button icon="lock" variant="primary" tooltip="I am locked" />
-      <Button icon="lock" variant="primary" tooltip="I am locked">
+      <Button
+        ariaLabel="test"
+        action
+        icon="lock"
+        variant="primary"
+        tooltip="I am locked"
+      />
+      <Button
+        ariaLabel="test"
+        icon="lock"
+        variant="primary"
+        tooltip="I am locked"
+      />
+      <Button
+        ariaLabel="test"
+        icon="lock"
+        variant="primary"
+        tooltip="I am locked"
+      >
         Hover Me
       </Button>
     </div>

@@ -357,6 +357,7 @@ type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   innerRef: Ref<Element>
   size?: ButtonSize
   download?: boolean | string
+  ariaLabel: string
 }
 
 const FwdButton = ({
@@ -374,6 +375,7 @@ const FwdButton = ({
   to,
   tooltip,
   tooltipBaseId,
+  ariaLabel,
   type: elementType = 'button',
   variant = 'primary',
   ...props
@@ -397,6 +399,8 @@ const FwdButton = ({
         {...props}
         href={href}
         to={to}
+        aria-label={ariaLabel}
+        role="button"
         download={download}
         ref={innerRef}
         as={as}
