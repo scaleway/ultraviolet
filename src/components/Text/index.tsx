@@ -99,13 +99,11 @@ const Text = ({
   const finalStringChildren = recursivelyGetChildrenString(children)
 
   useEffect(() => {
-    if (elementRef && elementRef.current) {
-      // If the text is really truncated
+    if (oneLine && elementRef && elementRef.current) {
       const { offsetWidth, scrollWidth } = elementRef.current
-
       setIsTruncated(offsetWidth < scrollWidth)
     }
-  }, [])
+  }, [oneLine])
 
   return (
     <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
