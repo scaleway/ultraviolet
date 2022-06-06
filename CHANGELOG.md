@@ -1,3 +1,17 @@
+## [0.153.7](https://github.com/scaleway/scaleway-ui/compare/v0.153.6...v0.153.7) (2022-06-06)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.31 ([#1549](https://github.com/scaleway/scaleway-ui/issues/1549)) ([94526a6](https://github.com/scaleway/scaleway-ui/commit/94526a61c0bb39986f57e43457c4d466e13b7ee6))
+* **devdeps:** update dependency typescript to v4.7.3 ([#1547](https://github.com/scaleway/scaleway-ui/issues/1547)) ([614d871](https://github.com/scaleway/scaleway-ui/commit/614d871cc808d09341d3a9416debc3b7a2916a50))
+* **devdeps:** update pnpm to v7.1.9 ([#1548](https://github.com/scaleway/scaleway-ui/issues/1548)) ([385b0ac](https://github.com/scaleway/scaleway-ui/commit/385b0acb1f9ee73faec3f053b55a6e11c0331f4f))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/react-datepicker to v4.4.2 ([#1546](https://github.com/scaleway/scaleway-ui/issues/1546)) ([8946cea](https://github.com/scaleway/scaleway-ui/commit/8946cea5978391fb50671a9e8aa49c4f6a86bf3b))
+
 ## [0.153.6](https://github.com/scaleway/scaleway-ui/compare/v0.153.5...v0.153.6) (2022-06-04)
 
 
