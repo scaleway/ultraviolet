@@ -32,16 +32,6 @@ exports[`ProgressionButton renders correctly with a duration exceeding its creat
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
 .cache-7cyruu-ProgressionContainer {
   position: relative;
   text-align: center;
@@ -92,16 +82,6 @@ exports[`ProgressionButton renders correctly with a duration exceeding its creat
 exports[`ProgressionButton renders correctly with a duration subceeding its creation date 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes animation-0 {
   from {
     width: 0%;
   }
@@ -180,16 +160,6 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
 .cache-7cyruu-ProgressionContainer {
   position: relative;
   text-align: center;
@@ -214,15 +184,15 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
   vertical-align: middle;
 }
 
-.cache-1y8e810-Progression {
+.cache-ap6wka-Progression {
   background-color: #22c8a2;
   position: absolute;
   z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
-  -webkit-animation: animation-0 120s linear -1s forwards;
-  animation: animation-0 120s linear -1s forwards;
+  -webkit-animation: animation-0 120s linear 0s forwards;
+  animation: animation-0 120s linear 0s forwards;
 }
 
 <div
@@ -230,7 +200,7 @@ exports[`ProgressionButton renders correctly with a string as creation date 1`] 
     role="progressbar"
   >
     <div
-      class="cache-1y8e810-Progression e1ojvqyi0"
+      class="cache-ap6wka-Progression e1ojvqyi0"
     />
     Progression
   </div>
