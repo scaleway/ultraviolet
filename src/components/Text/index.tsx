@@ -40,8 +40,6 @@ const generateStyles = ({
   const themeColor = theme.colors[color]
   const text = `text${definedProminence}` as keyof typeof themeColor
 
-  if (!theme) return ''
-
   return `
     color: ${theme.colors[color][text]};
 
