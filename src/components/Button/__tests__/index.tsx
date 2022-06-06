@@ -15,111 +15,84 @@ describe('Button', () => {
   describe('variant', () => {
     buttonVariants.forEach(variant => {
       test(`render ${variant}`, () =>
-        shouldMatchEmotionSnapshot(
-          <Button ariaLabel="test" variant={variant}>
-            Hello
-          </Button>,
-        ))
+        shouldMatchEmotionSnapshot(<Button variant={variant}>Hello</Button>))
     })
   })
 
   describe('size', () => {
     buttonSizes.forEach(size => {
       test(`render ${size}`, () =>
-        shouldMatchEmotionSnapshot(
-          <Button ariaLabel="test" size={size}>
-            Hello
-          </Button>,
-        ))
+        shouldMatchEmotionSnapshot(<Button size={size}>Hello</Button>))
     })
   })
 
   test(`should render correctly when disabled`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" disabled>
-        Hello
-      </Button>,
-    ))
+    shouldMatchEmotionSnapshot(<Button disabled>Hello</Button>))
 
   test(`should render correctly without a children`, () =>
-    shouldMatchEmotionSnapshot(<Button ariaLabel="test" />))
+    shouldMatchEmotionSnapshot(<Button aria-label="no content" />))
 
   test(`should render correctly without a children and an icon`, () =>
-    shouldMatchEmotionSnapshot(<Button ariaLabel="test" icon="check" />))
+    shouldMatchEmotionSnapshot(<Button icon="check" aria-label="check icon" />))
 
   test(`should render correctly with a custom Icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" icon={<SampleIcon />} />,
+      <Button icon={<SampleIcon />} aria-label="icon" />,
     ))
 
   test(`should render correctly when acting as Link`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" to="/">
-        Hello
-      </Button>,
-    ))
+    shouldMatchEmotionSnapshot(<Button to="/">Hello</Button>))
 
   test(`should render correctly when acting as Link with disabled props`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" to="/" disabled>
+      <Button to="/" disabled>
         Hello
       </Button>,
     ))
 
   test(`should render correctly when acting as dom link`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" href="/">
-        Hello
-      </Button>,
-    ))
+    shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>))
 
   test(`should render correctly when extendable`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" extend>
-        Hello
-      </Button>,
-    ))
+    shouldMatchEmotionSnapshot(<Button extend>Hello</Button>))
 
   test(`should render correctly when extendable with an icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" extend icon="check">
+      <Button extend icon="check">
         Hello
       </Button>,
     ))
 
   test(`should render correctly loading`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" progress>
-        Hello
-      </Button>,
-    ))
+    shouldMatchEmotionSnapshot(<Button progress>Hello</Button>))
 
   test(`should render correctly loading with an icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" progress icon="check" iconPosition="right">
+      <Button progress icon="check" iconPosition="right">
         Hello
       </Button>,
     ))
 
   test(`should render correctly with an icon on the right`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" icon="check" iconPosition="right">
+      <Button icon="check" iconPosition="right">
         Hello
       </Button>,
     ))
 
   test(`should render correctly with an action button`, () =>
-    shouldMatchEmotionSnapshot(<Button ariaLabel="test" action icon="check" />))
+    shouldMatchEmotionSnapshot(
+      <Button action icon="check" aria-label="check" />,
+    ))
 
   test(`should render correctly with a rounded action button`, () =>
     shouldMatchEmotionSnapshot(
-      <Button ariaLabel="test" action="rounded" icon="check" />,
+      <Button action="rounded" icon="check" aria-label="check" />,
     ))
 
   test(`should render correctly with a tooltip`, () =>
     shouldMatchEmotionSnapshot(
       <Button
-        ariaLabel="test"
         icon="check"
         tooltipBaseId="test"
         tooltip="world"

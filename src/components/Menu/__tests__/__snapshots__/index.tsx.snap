@@ -94,8 +94,8 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="Borderless Props"
     class="em6gco80 cache-1q5v645-StyledButton-item-borderless-Item"
-    role="button"
     type="button"
   >
     <div
@@ -200,8 +200,8 @@ exports[`Menu Menu.Item render with default props 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="Default Props"
     class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-    role="button"
     type="button"
   >
     <div
@@ -325,9 +325,9 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
 
 <button
     aria-disabled="true"
+    aria-label="Disabled Props"
     class="em6gco80 cache-wgur7r-StyledButton-item-disabled-Item"
     disabled=""
-    role="button"
     type="button"
   >
     <div
@@ -447,8 +447,8 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 
 <button
     aria-disabled="false"
+    aria-label="Danger"
     class="em6gco80 cache-1j6j4sq-StyledButton-item-danger-Item"
-    role="button"
     type="button"
   >
     <div
@@ -566,9 +566,9 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
 
 <a
     aria-disabled="false"
+    aria-label="Nav"
     class="em6gco80 cache-1xr3k58-StyledButton-item-nav-Item"
     href="/test"
-    role="button"
   >
     <div
       class="cache-m245rk-StyledContent em6gco81"
@@ -765,8 +765,8 @@ exports[`Menu placement renders "bottom" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="bottom"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -967,8 +967,8 @@ exports[`Menu placement renders "bottom-end" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="bottom-end"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -1169,8 +1169,8 @@ exports[`Menu placement renders "bottom-start" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="bottom-start"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -1370,8 +1370,8 @@ exports[`Menu placement renders "top" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="top"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -1572,8 +1572,8 @@ exports[`Menu placement renders "top-end" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="top-end"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -1774,8 +1774,8 @@ exports[`Menu placement renders "top-start" 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="top-start"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -1975,8 +1975,8 @@ exports[`Menu renders with Menu.Item 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="Menu.Item"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div
@@ -2195,9 +2195,9 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
     >
       <button
         aria-disabled="true"
+        aria-label="Menu.Item disabled"
         class="em6gco80 cache-wgur7r-StyledButton-item-disabled-Item"
         disabled=""
-        role="button"
         type="button"
       >
         <div
@@ -2208,9 +2208,9 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       </button>
       <button
         aria-disabled="true"
+        aria-label="Menu.Item Link disabled"
         class="em6gco80 cache-wgur7r-StyledButton-item-disabled-Item"
         disabled=""
-        role="button"
         to="/link"
         type="button"
       >
@@ -2222,10 +2222,10 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       </button>
       <button
         aria-disabled="true"
+        aria-label="Menu.Item Link disabled"
         class="em6gco80 cache-wgur7r-StyledButton-item-disabled-Item"
         disabled=""
         href="https://link"
-        role="button"
         type="button"
       >
         <div
@@ -2425,9 +2425,9 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
     >
       <a
         aria-disabled="false"
+        aria-label="Menu.Item as Link"
         class="em6gco80 cache-1jzzjdz-StyledButton-item-Item"
         href="/link"
-        role="button"
       >
         <div
           class="cache-m245rk-StyledContent em6gco81"
@@ -2626,8 +2626,8 @@ exports[`Menu renders with modal={false} 1`] = `
     >
       <button
         aria-disabled="false"
+        aria-label="MenuItem"
         class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
-        role="button"
         type="button"
       >
         <div

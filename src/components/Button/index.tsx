@@ -357,7 +357,6 @@ type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   innerRef: Ref<Element>
   size?: ButtonSize
   download?: boolean | string
-  ariaLabel: string
 }
 
 const FwdButton = ({
@@ -375,7 +374,6 @@ const FwdButton = ({
   to,
   tooltip,
   tooltipBaseId,
-  ariaLabel,
   type: elementType = 'button',
   variant = 'primary',
   ...props
@@ -387,6 +385,13 @@ const FwdButton = ({
 
     return 'button'
   }, [disabled, to, href, download])
+
+  const ariaLabel = useMemo(() => {
+    if (props['aria-label']) return props['aria-label']
+    if (typeof children === 'string') return children
+
+    return ''
+  }, [props, children])
 
   const displayProgressOnly = !children
 
@@ -400,10 +405,10 @@ const FwdButton = ({
         href={href}
         to={to}
         aria-label={ariaLabel}
-        role="button"
         download={download}
         ref={innerRef}
         as={as}
+        role={as === 'a' ? 'button' : undefined}
         disabled={as === 'button' && disabled}
         aria-disabled={disabled}
         variant={variant}
