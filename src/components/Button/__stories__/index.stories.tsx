@@ -187,9 +187,7 @@ Download.parameters = {
       'Use `download` prop if you want to make it a downloadable button.',
   },
 }
-Download.decorators = [
-  () => <Button download icon="download" aria-label="test" />,
-]
+Download.decorators = [() => <Button download icon="download" />]
 
 export const LinkDelegation = Template.bind({})
 LinkDelegation.parameters = {

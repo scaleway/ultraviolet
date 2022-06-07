@@ -400,7 +400,6 @@ const FwdButton = ({
         download={download}
         ref={innerRef}
         as={as}
-        role={as === 'a' ? 'button' : undefined}
         disabled={as === 'button' && disabled}
         aria-disabled={disabled}
         variant={variant}
