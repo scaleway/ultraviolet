@@ -1,4 +1,3 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import {
@@ -69,17 +68,15 @@ const StyledPageButton = styled('button', {
   border: 1px solid transparent;
   border-radius: ${({ theme }) => theme.radii.default};
 
-  &:hover {
+  &[aria-current='true'] {
+    color: ${({ theme }) => theme.colors.primary.text};
+    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
+  }
+
+  &[aria-current='false']:hover {
     color: ${({ theme }) => theme.colors.primary.textWeak};
     border-color: ${({ theme }) => theme.colors.neutral.borderStrong};
   }
-
-  ${({ current, theme }) =>
-    current &&
-    css`
-      color: ${theme.colors.primary.text} !important;
-      border-color: ${theme.colors.primary.borderWeak} !important;
-    `}
 `
 
 export type PaginationComponentProps<T = unknown> = {
@@ -146,7 +143,7 @@ function DefaultMiddleComponent<T>({
             aria-label={`Page ${pageNumber}`}
             key={`pagination-page-${pageNumber}`}
             disabled={isLoadingPage}
-            current={pageNumber === page}
+            aria-current={pageNumber === page}
             onClick={handlePageClick(pageNumber)}
           >
             {pageNumber}
