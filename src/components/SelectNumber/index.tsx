@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ChangeEventHandler,
   FocusEventHandler,
@@ -327,28 +326,6 @@ const SelectNumber = ({
       </Tooltip>
     </StyledContainer>
   )
-}
-
-SelectNumber.propTypes = {
-  disabled: PropTypes.bool,
-  maxValue: PropTypes.number,
-  minValue: PropTypes.number,
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  onMaxCrossed: PropTypes.func,
-  onMinCrossed: PropTypes.func,
-  size: PropTypes.oneOf(containerSizesKeys),
-  /**
-   * Define how much will selectnumber increase / decrease each time you click on + / - button.
-   */
-  step: PropTypes.number,
-  /**
-   * Text displayed into component at the right of number value.
-   */
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  value: PropTypes.number,
 }
 
 export default SelectNumber
