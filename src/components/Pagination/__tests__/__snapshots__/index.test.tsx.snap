@@ -177,27 +177,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -210,7 +190,12 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -377,14 +362,16 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
@@ -645,27 +632,7 @@ exports[`Pagination should render correctly component 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -678,7 +645,12 @@ exports[`Pagination should render correctly component 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -845,32 +817,37 @@ exports[`Pagination should render correctly component 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -1131,27 +1108,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -1164,7 +1121,12 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -1331,20 +1293,23 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
@@ -1614,7 +1579,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -1627,27 +1592,12 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -1733,32 +1683,37 @@ exports[`Pagination should render correctly controlled with page 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 1"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="true"
             aria-label="Page 3"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -2250,27 +2205,7 @@ exports[`Pagination should render correctly function 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -2283,7 +2218,12 @@ exports[`Pagination should render correctly function 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -2450,32 +2390,37 @@ exports[`Pagination should render correctly function 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -2793,7 +2738,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -2804,11 +2749,14 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -2896,8 +2844,9 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             1
@@ -3218,7 +3167,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -3231,7 +3180,12 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -3319,8 +3273,9 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 1"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             1
@@ -3578,7 +3533,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -3591,27 +3546,12 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -3782,32 +3722,37 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             7
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             8
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             9
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             10
           </button>
           <button
+            aria-current="true"
             aria-label="Page 11"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             11
           </button>
@@ -4069,27 +4014,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -4102,7 +4027,12 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -4269,32 +4199,37 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -4555,27 +4490,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -4588,7 +4503,12 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -4755,32 +4675,37 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -5176,7 +5101,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -5187,11 +5112,14 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -5279,8 +5207,9 @@ exports[`Pagination should render correctly perPage 0 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
@@ -5603,27 +5532,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -5636,7 +5545,12 @@ exports[`Pagination should render correctly with controlled 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -5803,14 +5717,16 @@ exports[`Pagination should render correctly with controlled 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
@@ -6071,7 +5987,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -6082,11 +5998,14 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -6174,8 +6093,9 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
@@ -6422,7 +6342,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -6433,11 +6353,14 @@ exports[`Pagination should render correctly with empty data 1`] = `
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -6525,8 +6448,9 @@ exports[`Pagination should render correctly with empty data 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
@@ -6773,7 +6697,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -6784,11 +6708,14 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -6876,8 +6803,9 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
@@ -7134,7 +7062,7 @@ exports[`Pagination should render correctly with initial page greater than max a
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -7147,27 +7075,12 @@ exports[`Pagination should render correctly with initial page greater than max a
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -7338,32 +7251,37 @@ exports[`Pagination should render correctly with initial page greater than max a
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             6
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             7
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             8
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             9
           </button>
           <button
+            aria-current="true"
             aria-label="Page 10"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             10
           </button>
@@ -7626,27 +7544,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -7659,7 +7557,12 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -7826,32 +7729,37 @@ exports[`Pagination should render correctly with initial page less than 1 and no
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
@@ -8106,7 +8014,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -8119,27 +8027,12 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -8225,32 +8118,37 @@ exports[`Pagination should render correctly with pageClick 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="true"
             aria-label="Page 4"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             6
           </button>
@@ -8568,7 +8466,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -8581,7 +8479,12 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -8669,36 +8572,41 @@ exports[`Pagination should render correctly with pageClick and load and empty re
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             6
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             7
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             8
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             9
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             10
@@ -9019,7 +8927,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -9032,7 +8940,12 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -9120,36 +9033,41 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             6
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             7
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             8
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             9
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
             disabled=""
           >
             10
@@ -9391,7 +9309,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -9404,27 +9322,12 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -9595,32 +9498,37 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="false"
             aria-label="Page 46"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             46
           </button>
           <button
+            aria-current="false"
             aria-label="Page 47"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             47
           </button>
           <button
+            aria-current="false"
             aria-label="Page 48"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             48
           </button>
           <button
+            aria-current="false"
             aria-label="Page 49"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             49
           </button>
           <button
+            aria-current="true"
             aria-label="Page 50"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             50
           </button>
@@ -9871,27 +9779,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   margin: 0 16px;
 }
 
-.cache-c3utci-StyledPageButton-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  width: 48px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #390171!important;
-  border-color: #4f0599!important;
-}
-
-.cache-c3utci-StyledPageButton-StyledPageButton:hover {
-  color: #4f0599;
-  border-color: #d4dae7;
-}
-
-.cache-iiffza-StyledPageButton {
+.cache-1iqptvb-StyledPageButton {
   color: #151a2d;
   line-height: 24px;
   width: 48px;
@@ -9904,7 +9792,12 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   border-radius: 4px;
 }
 
-.cache-iiffza-StyledPageButton:hover {
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
   color: #4f0599;
   border-color: #d4dae7;
 }
@@ -10071,32 +9964,37 @@ exports[`Pagination should render correctly with setPageData 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o88"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-c3utci-StyledPageButton-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             1
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             2
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             3
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             4
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-iiffza-StyledPageButton equt9o85"
+            class="cache-1iqptvb-StyledPageButton equt9o85"
           >
             5
           </button>
