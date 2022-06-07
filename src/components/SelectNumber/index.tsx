@@ -46,12 +46,6 @@ const containerSizes = {
   small: 32,
 }
 
-const centerBoxSizes = {
-  large: 32,
-  medium: 32,
-  small: 24,
-}
-
 type ContainerSizesType = keyof typeof containerSizes
 export const containerSizesKeys = Object.keys(
   containerSizes,
@@ -70,8 +64,6 @@ const StyledTouchable = styled(Touchable, {
   align-items: center;
   position: relative;
   border-radius: ${({ theme }) => theme.radii.default};
-  width: ${({ size }) => centerBoxSizes[size]}px;
-  height: ${({ size }) => centerBoxSizes[size]}px;
   color: ${({ theme, disabled }) =>
     disabled
       ? theme.colors.neutral.textWeakDisabled
@@ -90,7 +82,7 @@ const StyledCenterBox = styled('div', {
   display: flex;
   flex: 1;
   flex-direction: row;
-  height: ${({ size }) => centerBoxSizes[size]}px;
+  height: ${({ size }) => (size === 'small' ? '24px' : '32px')};
   align-items: center;
   outline: none;
   justify-content: center;
@@ -103,7 +95,7 @@ const StyledCenterBox = styled('div', {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
-  max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
+  max-width: 100%;
 `
 
 const StyledInput = styled.input`
@@ -164,7 +156,13 @@ type SelectNumberProps = {
   onMaxCrossed?(): void
   onMinCrossed?(): void
   size?: ContainerSizesType
+  /**
+   * Define how much will stepper increase / decrease each time you click on + / - button.
+   */
   step?: number
+  /**
+   * Text displayed into component at the right of number value.
+   */
   text?: string | ReactNode
   value?: number
   disabledTooltip?: string

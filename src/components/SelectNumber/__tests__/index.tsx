@@ -4,6 +4,14 @@ import SelectNumber from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('SelectNumber', () => {
+  beforeAll(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterAll(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectNumber
@@ -226,6 +234,25 @@ describe('SelectNumber', () => {
           userEvent.type(input, '99')
           userEvent.type(input, '{arrowup}')
           await waitFor(() => expect(input.value).toBe('100'))
+        },
+      },
+    ))
+
+  it('should display a tooltip on hover', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectNumber
+        minValue={1}
+        maxValue={100}
+        value={1}
+        disabledTooltip="This is a tooltip"
+      />,
+      {
+        transform: async ({ getByLabelText, getByText }) => {
+          const plus = getByLabelText('Minus')
+          userEvent.hover(plus)
+          await waitFor(() =>
+            expect(getByText('This is a tooltip')).toBeTruthy(),
+          )
         },
       },
     ))
