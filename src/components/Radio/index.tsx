@@ -35,10 +35,10 @@ const StyledRadio = styled(ReakitRadio)`
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
-  & + svg {
+  & + ${StyledIcon} {
     ${RadioMark} {
       transform-origin: center;
-      transition: 120ms transform ease-in-out;
+      transition: 200ms transform ease-in-out;
       transform: scale(0);
     }
   }
@@ -46,6 +46,31 @@ const StyledRadio = styled(ReakitRadio)`
   &[aria-checked='true'] + svg {
     ${RadioMark} {
       transform: scale(1);
+    }
+  }
+
+  &[aria-checked='true'][aria-disabled='false'][aria-invalid='false']
+    + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  &[aria-invalid='true'] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    fill: ${({ theme }) => theme.colors.primary.text};
+    ${InnerCircleRing} {
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
+  }
+
+  &[aria-invalid='true']:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+    fill: ${({ theme }) => theme.colors.danger.text};
+    ${InnerCircleRing} {
+      fill: ${({ theme }) => theme.colors.danger.background};
     }
   }
 `
@@ -58,30 +83,6 @@ const StyledRadioContainer = styled(Typography)`
 
   &[aria-disabled='false'] {
     cursor: pointer;
-  }
-
-  ${StyledRadio}[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+ ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.text};
-  }
-
-  ${StyledRadio}[aria-invalid='true'] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.text};
-  }
-
-  ${StyledRadio}:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.text};
-    ${InnerCircleRing} {
-      fill: ${({ theme }) => theme.colors.primary.background};
-    }
-  }
-
-  ${StyledRadio}[aria-invalid='true']:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.text};
-    ${InnerCircleRing} {
-      fill: ${({ theme }) => theme.colors.danger.background};
-    }
   }
 
   :hover[aria-disabled='false'] {

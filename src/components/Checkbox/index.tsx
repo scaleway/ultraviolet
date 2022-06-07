@@ -58,10 +58,10 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
-  & + svg {
+  & + ${StyledIcon} {
     ${CheckMark} {
       transform-origin: center;
-      transition: 120ms transform ease-in-out;
+      transition: 200ms transform ease-in-out;
       transform: scale(0);
     }
   }
@@ -69,6 +69,48 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   &[aria-checked='true'] + svg {
     ${CheckMark} {
       transform: scale(1);
+    }
+  }
+
+  &[aria-checked='true']
+    + ${StyledIcon},
+    &[aria-checked='mixed']
+    + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    }
+  }
+
+  &[aria-invalid='true']
+    + ${StyledIcon},
+    &[aria-invalid='mixed']
+    + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+    }
+  }
+
+  &:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
+  }
+
+  &[aria-invalid='true']:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.danger.background};
     }
   }
 `
@@ -82,24 +124,6 @@ const StyledCheckBoxContainer = styled(Typography)`
     cursor: pointer;
   }
 
-  ${StyledReakitCheckbox}[aria-checked="true"] + ${StyledIcon},
-  ${StyledReakitCheckbox}[aria-checked="mixed"] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
-
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
-    }
-  }
-
-  ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon},
-  ${StyledReakitCheckbox}[aria-invalid="mixed"] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
-
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
-    }
-  }
-
   &[aria-disabled='true'] {
     cursor: not-allowed;
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
@@ -111,26 +135,6 @@ const StyledCheckBoxContainer = styled(Typography)`
         stroke: ${({ theme }) => theme.colors.neutral.textDisabled};
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
-    }
-  }
-
-  ${StyledReakitCheckbox}:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
-
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
-      fill: ${({ theme }) => theme.colors.primary.background};
-    }
-  }
-
-  ${StyledReakitCheckbox}[aria-invalid="true"]:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
-
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
-      fill: ${({ theme }) => theme.colors.danger.background};
     }
   }
 
