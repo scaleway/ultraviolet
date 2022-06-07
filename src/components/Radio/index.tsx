@@ -6,17 +6,14 @@ import Typography from '../Typography'
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
-const RadioboxMarkedIcon = () => (
+
+const RadioMark = styled.circle``
+
+const RadioMarkedIcon = () => (
   <g>
     <circle cx="12" cy="12" r="8" strokeWidth="2" />
     <InnerCircleRing cx="12" cy="12" r="6" />
-    <circle cx="12" cy="12" r="4" />
-  </g>
-)
-const RadioboxBlankIcon = () => (
-  <g>
-    <circle cx="12" cy="12" r="8" strokeWidth="2" />
-    <InnerCircleRing cx="12" cy="12" r="6" />
+    <RadioMark cx="12" cy="12" r="4" />
   </g>
 )
 
@@ -38,6 +35,44 @@ const StyledRadio = styled(ReakitRadio)`
   height: ${({ size }) => size}px;
   position: absolute;
   cursor: pointer;
+  & + ${StyledIcon} {
+    ${RadioMark} {
+      transform-origin: center;
+      transition: 200ms transform ease-in-out;
+      transform: scale(0);
+    }
+  }
+
+  &[aria-checked='true'] + svg {
+    ${RadioMark} {
+      transform: scale(1);
+    }
+  }
+
+  &[aria-checked='true'][aria-disabled='false'][aria-invalid='false']
+    + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.primary.text};
+  }
+
+  &[aria-invalid='true'] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    fill: ${({ theme }) => theme.colors.primary.text};
+    ${InnerCircleRing} {
+      fill: ${({ theme }) => theme.colors.primary.background};
+    }
+  }
+
+  &[aria-invalid='true']:focus + ${StyledIcon} {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+    fill: ${({ theme }) => theme.colors.danger.text};
+    ${InnerCircleRing} {
+      fill: ${({ theme }) => theme.colors.danger.background};
+    }
+  }
 `
 
 const StyledRadioContainer = styled(Typography)`
@@ -48,30 +83,6 @@ const StyledRadioContainer = styled(Typography)`
 
   &[aria-disabled='false'] {
     cursor: pointer;
-  }
-
-  ${StyledRadio}[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+ ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.text};
-  }
-
-  ${StyledRadio}[aria-invalid='true'] + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.text};
-  }
-
-  ${StyledRadio}:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.text};
-    ${InnerCircleRing} {
-      fill: ${({ theme }) => theme.colors.primary.background};
-    }
-  }
-
-  ${StyledRadio}[aria-invalid='true']:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.text};
-    ${InnerCircleRing} {
-      fill: ${({ theme }) => theme.colors.danger.background};
-    }
   }
 
   :hover[aria-disabled='false'] {
@@ -152,7 +163,7 @@ const Radio = ({
       autoFocus={autoFocus}
     />
     <StyledIcon size={size} viewBox="0 0 24 24">
-      {checked ? <RadioboxMarkedIcon /> : <RadioboxBlankIcon />}
+      <RadioMarkedIcon />
     </StyledIcon>
     {children}
   </StyledRadioContainer>
