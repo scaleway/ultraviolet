@@ -1,8 +1,8 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { useMedia } from '@scaleway/use-media'
 import PropTypes from 'prop-types'
 import { Children, ReactNode, WeakValidationMap, isValidElement } from 'react'
-import useMedia from 'use-media'
 import Icon from '../Icon'
 import Loader from '../Loader'
 
@@ -150,7 +150,7 @@ const NavigationStepper: NavigationStepperType = ({
   step = 1,
 }) => {
   const theme = useTheme()
-  const isMobile = useMedia({ maxWidth: theme.screens.small })
+  const isMobile = useMedia(`screen and (max-width: ${theme.screens.small})`)
 
   const computedCondensed = condensed !== undefined ? condensed : isMobile
   const steps = Children.map<JSX.Element | null, ReactNode>(
