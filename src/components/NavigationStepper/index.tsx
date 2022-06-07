@@ -150,7 +150,7 @@ const NavigationStepper: NavigationStepperType = ({
   step = 1,
 }) => {
   const theme = useTheme()
-  const isMobile = useMedia(`screen and (max-width: ${theme.screens.small})`)
+  const isMobile = useMedia(`(max-width: ${theme.screens.small}px)`)
 
   const computedCondensed = condensed !== undefined ? condensed : isMobile
   const steps = Children.map<JSX.Element | null, ReactNode>(
