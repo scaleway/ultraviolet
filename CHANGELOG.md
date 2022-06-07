@@ -1,3 +1,16 @@
+## [0.154.0](https://github.com/scaleway/scaleway-ui/compare/v0.153.10...v0.154.0) (2022-06-07)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency webpack to v5.73.0 ([#1559](https://github.com/scaleway/scaleway-ui/issues/1559)) ([1d82ac9](https://github.com/scaleway/scaleway-ui/commit/1d82ac903391ba44a3695c673fa19bd06614d97c))
+* **devdeps:** update node.js to v18.3 ([#1554](https://github.com/scaleway/scaleway-ui/issues/1554)) ([1a797e8](https://github.com/scaleway/scaleway-ui/commit/1a797e8c3e4581d5f0b396b7d6691a3e5f0075bb))
+
+
+### :gear: Features
+
+* **checkbox:** refactor checkbox and some animations ([#1544](https://github.com/scaleway/scaleway-ui/issues/1544)) ([1e3084f](https://github.com/scaleway/scaleway-ui/commit/1e3084f331166595a1bcfdcb904244e0df7ffd7d))
+
 ## [0.153.10](https://github.com/scaleway/scaleway-ui/compare/v0.153.9...v0.153.10) (2022-06-07)
 
 
