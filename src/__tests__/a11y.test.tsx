@@ -14,6 +14,8 @@ const testedComponents = [
   'Badge',
   'Bullet',
   'Counter',
+  'Button',
+  'Checkbox',
   'MarkDown',
   'Placeholder',
   'Reminder',
@@ -53,7 +55,6 @@ const searchFileFromDir = (startPath: string, filter: string) => {
     }
   }
 }
-
 // Check if a path was given as input argument, if not we check all stories
 if (process.argv[4]) {
   searchFileFromDir(process.argv[4], '.stories.tsx')

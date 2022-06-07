@@ -84,7 +84,7 @@ Icons.parameters = {
 Icons.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button icon="lock" />
+      <Button icon="lock" aria-label="test" />
       <Button icon="lock">With text</Button>
     </div>
   ),
@@ -101,7 +101,7 @@ IconsSizes.decorators = [
     <div style={{ display: 'flex', gap: 16 }}>
       {[10, 18, 24, 32].map(size => (
         <Fragment key={size}>
-          <Button icon="lock" iconSize={size} />
+          <Button icon="lock" iconSize={size} aria-label="test" />
           <Button icon="lock" iconSize={size}>
             With text
           </Button>
@@ -141,13 +141,25 @@ Action.decorators = [
   () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
       {icons.map(icon => (
-        <Button action key={icon} icon={icon} />
+        <Button action key={icon} icon={icon} aria-label="test" />
       ))}
       {buttonVariants.map(variant => (
-        <Button action icon="lock" key={variant} variant={variant} />
+        <Button
+          action
+          icon="lock"
+          key={variant}
+          variant={variant}
+          aria-label="test"
+        />
       ))}
       {buttonVariants.map(variant => (
-        <Button action="rounded" icon="lock" key={variant} variant={variant} />
+        <Button
+          action="rounded"
+          icon="lock"
+          key={variant}
+          variant={variant}
+          aria-label="test"
+        />
       ))}
     </div>
   ),
@@ -202,8 +214,19 @@ Tooltip.parameters = {
 Tooltip.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button action icon="lock" variant="primary" tooltip="I am locked" />
-      <Button icon="lock" variant="primary" tooltip="I am locked" />
+      <Button
+        action
+        icon="lock"
+        variant="primary"
+        tooltip="I am locked"
+        aria-label="test"
+      />
+      <Button
+        icon="lock"
+        variant="primary"
+        tooltip="I am locked"
+        aria-label="test"
+      />
       <Button icon="lock" variant="primary" tooltip="I am locked">
         Hover Me
       </Button>

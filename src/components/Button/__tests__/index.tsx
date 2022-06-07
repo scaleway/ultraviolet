@@ -30,13 +30,15 @@ describe('Button', () => {
     shouldMatchEmotionSnapshot(<Button disabled>Hello</Button>))
 
   test(`should render correctly without a children`, () =>
-    shouldMatchEmotionSnapshot(<Button />))
+    shouldMatchEmotionSnapshot(<Button aria-label="no content" />))
 
   test(`should render correctly without a children and an icon`, () =>
-    shouldMatchEmotionSnapshot(<Button icon="check" />))
+    shouldMatchEmotionSnapshot(<Button icon="check" aria-label="check icon" />))
 
   test(`should render correctly with a custom Icon`, () =>
-    shouldMatchEmotionSnapshot(<Button icon={<SampleIcon />} />))
+    shouldMatchEmotionSnapshot(
+      <Button icon={<SampleIcon />} aria-label="icon" />,
+    ))
 
   test(`should render correctly when acting as Link`, () =>
     shouldMatchEmotionSnapshot(<Button to="/">Hello</Button>))
@@ -79,10 +81,14 @@ describe('Button', () => {
     ))
 
   test(`should render correctly with an action button`, () =>
-    shouldMatchEmotionSnapshot(<Button action icon="check" />))
+    shouldMatchEmotionSnapshot(
+      <Button action icon="check" aria-label="check" />,
+    ))
 
   test(`should render correctly with a rounded action button`, () =>
-    shouldMatchEmotionSnapshot(<Button action="rounded" icon="check" />))
+    shouldMatchEmotionSnapshot(
+      <Button action="rounded" icon="check" aria-label="check" />,
+    ))
 
   test(`should render correctly with a tooltip`, () =>
     shouldMatchEmotionSnapshot(
