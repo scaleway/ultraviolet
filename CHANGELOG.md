@@ -1,3 +1,16 @@
+## [0.153.9](https://github.com/scaleway/scaleway-ui/compare/v0.153.8...v0.153.9) (2022-06-07)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo to v28.1.1 ([#1557](https://github.com/scaleway/scaleway-ui/issues/1557)) ([3fd8460](https://github.com/scaleway/scaleway-ui/commit/3fd84601f73f5e11a0f39e8c62687e0246cc52e5))
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.4 ([#1556](https://github.com/scaleway/scaleway-ui/issues/1556)) ([10d10bd](https://github.com/scaleway/scaleway-ui/commit/10d10bdae4fea7abc82aebaf0532020fc02b7486))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.32 ([#1553](https://github.com/scaleway/scaleway-ui/issues/1553)) ([5955d5d](https://github.com/scaleway/scaleway-ui/commit/5955d5db1826a6dd356c22f678dad41960c7d706))
+
 ## [0.153.8](https://github.com/scaleway/scaleway-ui/compare/v0.153.7...v0.153.8) (2022-06-07)
 
 
