@@ -1,3 +1,10 @@
+## [0.153.10](https://github.com/scaleway/scaleway-ui/compare/v0.153.9...v0.153.10) (2022-06-07)
+
+
+### :package: Chore
+
+* **deps:** replace use-media by @scaleway/use-media ([#1558](https://github.com/scaleway/scaleway-ui/issues/1558)) ([316617f](https://github.com/scaleway/scaleway-ui/commit/316617f87dd79cb60162063ca621a3b43dae68d1))
+
 ## [0.153.9](https://github.com/scaleway/scaleway-ui/compare/v0.153.8...v0.153.9) (2022-06-07)
 
 
