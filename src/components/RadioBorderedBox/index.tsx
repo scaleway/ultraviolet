@@ -127,9 +127,11 @@ const RadioBorderedBox = ({
       </StyledRadioContainer>
       <Typography>{children}</Typography>
     </StyledBorderedBox>
-    <StyledExpandable opened={!!error}>
-      <StyledError>{error}</StyledError>
-    </StyledExpandable>
+    {error ? (
+      <StyledExpandable opened={!!error}>
+        <StyledError>{error}</StyledError>
+      </StyledExpandable>
+    ) : null}
   </>
 )
 
