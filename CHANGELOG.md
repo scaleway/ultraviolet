@@ -1,3 +1,17 @@
+## [0.153.8](https://github.com/scaleway/scaleway-ui/compare/v0.153.7...v0.153.8) (2022-06-07)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/setup-node action to v3.3.0 ([#1552](https://github.com/scaleway/scaleway-ui/issues/1552)) ([163d1fe](https://github.com/scaleway/scaleway-ui/commit/163d1fe06b0735ce960c087489842e1df1726d05))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.8 ([#1551](https://github.com/scaleway/scaleway-ui/issues/1551)) ([6b032fd](https://github.com/scaleway/scaleway-ui/commit/6b032fd343b79218a9093cb95d4aa81f71e1fee9))
+* **devdeps:** update storybook monorepo to v6.5.7 ([#1555](https://github.com/scaleway/scaleway-ui/issues/1555)) ([cd0c8e8](https://github.com/scaleway/scaleway-ui/commit/cd0c8e8e504882e8226e110f28ba02144df2ae1c))
+
+
+### :bug: Bug Fixes
+
+* radioborderedbox spacing ([#1545](https://github.com/scaleway/scaleway-ui/issues/1545)) ([736f610](https://github.com/scaleway/scaleway-ui/commit/736f6102eb7744ace2ab4e8ae5eeaf6f2ca9d339))
+
 ## [0.153.7](https://github.com/scaleway/scaleway-ui/compare/v0.153.6...v0.153.7) (2022-06-06)
 
 
