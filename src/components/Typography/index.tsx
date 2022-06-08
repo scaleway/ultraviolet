@@ -316,7 +316,7 @@ const TextWithTooltip = ({
 }
 
 /**
- * @deprecated Has been replaced by component Text, please this one instead.
+ * @deprecated Has been replaced by component Text, please use this one instead.
  */
 const Typography = forwardRef((props: TypographyProps, ref): JSX.Element => {
   const Component = props.ellipsis ? TextWithTooltip : Text
