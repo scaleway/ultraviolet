@@ -51,4 +51,11 @@ describe('Text', () => {
         Sit
       </Text>,
     ))
+
+  test(`with prominence stronger on non neutral`, () =>
+    shouldMatchEmotionSnapshot(
+      <Text as="div" variant="body" prominence="stronger" color="danger">
+        Lorem Ipsum
+      </Text>,
+    ))
 })

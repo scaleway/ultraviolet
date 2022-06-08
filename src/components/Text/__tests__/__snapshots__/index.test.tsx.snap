@@ -306,3 +306,26 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Text with prominence stronger on non neutral 1`] = `
+<DocumentFragment>
+  .cache-3b4tc1-StyledText {
+  color: #a6102d;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-3b4tc1-StyledText e1tg3t120"
+  >
+    Lorem Ipsum
+  </div>
+</DocumentFragment>
+`;
