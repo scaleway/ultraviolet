@@ -32,7 +32,7 @@ describe('Text', () => {
   test(`renders correctly with tooltip`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ width: '100px' }}>
-        <Text as="div" variant="Body" oneLine>
+        <Text as="div" variant="body" oneLine>
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -42,10 +42,10 @@ describe('Text', () => {
 
   test(`with multiple nested chidldren renders correctly`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="Body">
+      <Text as="div" variant="body">
         Lorem
         <span>Ipsum</span>
-        <Text variant="Heading" as="span">
+        <Text variant="heading" as="span">
           <span>Dolor</span>
         </Text>
         Sit

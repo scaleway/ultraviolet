@@ -9,6 +9,7 @@ import Tooltip from '../Tooltip'
 export const PROMINENCES = {
   default: '',
   strong: 'strong',
+  stronger: 'stronger',
   weak: 'weak',
 }
 
@@ -35,7 +36,11 @@ const generateStyles = ({
   color: Color
   oneLine: boolean
 }): string => {
-  const definedProminence = capitalize(PROMINENCES[prominence])
+  // stronger is available only for neutral color
+  const definedProminence =
+    color !== 'neutral' && prominence === 'stronger'
+      ? capitalize(PROMINENCES.default)
+      : capitalize(PROMINENCES[prominence])
 
   const themeColor = theme.colors[color]
   const text = `text${definedProminence}` as keyof typeof themeColor
@@ -45,7 +50,7 @@ const generateStyles = ({
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
-    font-weight: ${theme.typography[variant].fontWeight};
+    font-weight: ${theme.typography[variant].weight};
     letter-spacing: ${theme.typography[variant].letterSpacing};
     line-height: ${theme.typography[variant].lineHeight};
     paragraph-spacing: ${theme.typography[variant].paragraphSpacing};

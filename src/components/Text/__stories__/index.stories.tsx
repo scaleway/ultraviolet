@@ -21,7 +21,7 @@ export const Default = Template.bind({})
 Default.args = {
   as: 'div',
   children: 'This is a basic Text',
-  variant: 'Body',
+  variant: 'body',
 }
 
 export const Variants: Story = () => (
@@ -45,7 +45,7 @@ export const Color = Template.bind({})
 Color.args = {
   children: 'This is a colored Text',
   color: 'success',
-  variant: 'Body',
+  variant: 'body',
 }
 Color.parameters = {
   docs: {
@@ -60,7 +60,7 @@ Prominence.args = {
   children: 'This is a colored text with prominence',
   color: 'danger',
   prominence: 'weak',
-  variant: 'Body',
+  variant: 'body',
 }
 Prominence.parameters = {
   docs: {
@@ -74,7 +74,7 @@ export const As = Template.bind({})
 As.args = {
   as: 'p',
   children: 'This is a paragraph text',
-  variant: 'Body',
+  variant: 'body',
 }
 As.parameters = {
   docs: {
@@ -88,7 +88,7 @@ export const OneLine: Story = () => (
   <>
     <strong>Without ellipsis</strong>
     <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-      <Text as="div" variant="Body">
+      <Text as="div" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -96,7 +96,7 @@ export const OneLine: Story = () => (
     </div>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
     <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-      <Text as="div" variant="Body" oneLine>
+      <Text as="div" variant="body" oneLine>
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
