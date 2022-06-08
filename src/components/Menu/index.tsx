@@ -1,9 +1,115 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { ComponentProps, ReactNode, WeakValidationMap } from 'react'
-import Popper from '../Popper'
+import {
+  ComponentProps,
+  ReactElement,
+  ReactNode,
+  RefObject,
+  WeakValidationMap,
+  cloneElement,
+  isValidElement,
+  useEffect,
+  useRef,
+} from 'react'
+import {
+  Popover,
+  PopoverArrow,
+  PopoverDisclosure,
+  PopoverProps,
+  PopoverStateReturn,
+  usePopoverState,
+} from 'reakit/Popover'
 import Item from './Item'
+
+type DisclosureParam =
+  | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
+  | ReactElement
+
+type DisclosureProps = {
+  disclosure: DisclosureParam
+  popover: Partial<PopoverStateReturn>
+}
+
+const PopperDisclosure = ({
+  disclosure,
+  popover,
+}: DisclosureProps): JSX.Element => {
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
+  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
+
+  return (
+    <PopoverDisclosure {...popover} ref={innerRef}>
+      {disclosureProps => cloneElement(target, disclosureProps)}
+    </PopoverDisclosure>
+  )
+}
+
+const StyledPopover = styled(Popover)<{ name?: string }>`
+  border-radius: 4px;
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  color: ${({ theme }) => theme.colors.neutral.text};
+  fill: ${({ theme }) => theme.colors.neutral.text};
+  box-shadow: ${({ theme }) => theme.shadows.dropdown};
+`
+
+type PopperProps = Partial<PopoverProps> &
+  Partial<Pick<PopoverStateReturn, 'placement'>> & {
+    disclosure: DisclosureParam
+    hasArrow?: boolean
+    name?: string
+    children?: ((popover: PopoverStateReturn) => ReactNode) | ReactNode
+  }
+
+const Popper = ({
+  animated = 100,
+  baseId = '',
+  children,
+  disclosure,
+  hasArrow = true,
+  hideOnClickOutside = true,
+  modal = true,
+  name,
+  placement = 'auto',
+  preventBodyScroll = false,
+  visible = false,
+  ...props
+}: PopperProps) => {
+  const popover = usePopoverState({
+    animated,
+    baseId,
+    modal,
+    placement,
+    visible,
+  })
+
+  const { setVisible } = popover
+  useEffect(() => setVisible(visible), [setVisible, visible])
+
+  return (
+    <>
+      {disclosure && (
+        <PopperDisclosure popover={popover} disclosure={disclosure} />
+      )}
+      <StyledPopover
+        name={name}
+        aria-label={name}
+        hideOnClickOutside={hideOnClickOutside}
+        preventBodyScroll={preventBodyScroll}
+        animated={popover.animated}
+        baseId={popover.baseId}
+        modal={popover.modal}
+        placement={placement}
+        visible={popover.visible}
+        {...props}
+      >
+        {hasArrow && <PopoverArrow {...popover} />}
+        {typeof children === 'function' ? children(popover) : children}
+      </StyledPopover>
+    </>
+  )
+}
 
 const bottomStyles = (theme: Theme) => css`
   box-shadow: ${theme.shadows.menu};
