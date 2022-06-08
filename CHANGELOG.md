@@ -1,3 +1,15 @@
+## [0.155.0](https://github.com/scaleway/scaleway-ui/compare/v0.154.1...v0.155.0) (2022-06-08)
+
+
+### :white_check_mark: Test
+
+* accessibility compatibility button & checkbox ([#1550](https://github.com/scaleway/scaleway-ui/issues/1550)) ([da23a25](https://github.com/scaleway/scaleway-ui/commit/da23a25775df263b3acabc6a6af1c5c5a3da7b96))
+
+
+### :gear: Features
+
+* text component ([#1541](https://github.com/scaleway/scaleway-ui/issues/1541)) ([7a1b095](https://github.com/scaleway/scaleway-ui/commit/7a1b0955b159fb7540bb69b10561dd8a86ba6959))
+
 ## [0.154.1](https://github.com/scaleway/scaleway-ui/compare/v0.154.0...v0.154.1) (2022-06-07)
 
 
