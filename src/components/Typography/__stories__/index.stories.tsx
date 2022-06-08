@@ -5,6 +5,9 @@ import Typography, { typographyVariants } from '..'
 export default {
   component: Typography,
   parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please do not use it any more. Use Text component instead.',
     docs: {
       description: {
         component:
