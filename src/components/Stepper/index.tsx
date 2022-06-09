@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { Children, Fragment, ReactNode, WeakValidationMap } from 'react'
+import { Children, Fragment, ReactNode } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
 import Typography from '../Typography'
@@ -142,21 +142,11 @@ const StepperNumbers = ({
 
 type StepperProps = {
   animated?: boolean
-  isStepsNumber?: boolean
   selected?: number
   children: ReactNode[]
 }
 
-type StepperComponent = ((props: StepperProps) => JSX.Element) & {
-  Step: (props: { children: ReactNode }) => JSX.Element
-  propTypes: WeakValidationMap<StepperProps>
-}
-
-const Stepper: StepperComponent = ({
-  children,
-  selected = 0,
-  animated = true,
-}) => {
+const Stepper = ({ children, selected = 0, animated = true }: StepperProps) => {
   const lastStep = Children.count(children) - 1
 
   return (
@@ -189,12 +179,6 @@ const Stepper: StepperComponent = ({
     </StyledContainer>
   )
 }
-
-const Step = ({ children }: { children: ReactNode }) => children as JSX.Element
-
-Step.displayName = 'Stepper.Step'
-
-Stepper.Step = Step
 
 Stepper.propTypes = {
   animated: PropTypes.bool,

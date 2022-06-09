@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Stepper from '..'
+import Typography from '../../Typography'
 
 export default {
   component: Stepper,
@@ -18,9 +19,7 @@ const Template: Story<ComponentProps<typeof Stepper>> = args => (
   <Container>
     {Array.from(Array(5), (_, index) => (
       <Stepper selected={index} {...args}>
-        {Array.from(Array(5), (__, i) => (
-          <Stepper.Step key={i}>{steps(i + 1)}</Stepper.Step>
-        ))}
+        {Array.from(Array(5), (__, i) => steps(i + 1))}
       </Stepper>
     ))}
   </Container>
@@ -38,11 +37,11 @@ WithoutAnimation.parameters = {
 WithoutAnimation.decorators = [
   () => (
     <Stepper selected={1} animated={false}>
-      <Stepper.Step>Step 1</Stepper.Step>
-      <Stepper.Step>Step 2</Stepper.Step>
-      <Stepper.Step>Step 3</Stepper.Step>
-      <Stepper.Step>Step 4</Stepper.Step>
-      <Stepper.Step>Step 5</Stepper.Step>
+      <Typography>Step 1</Typography>
+      <Typography>Step 2</Typography>
+      <Typography>Step 3</Typography>
+      <Typography>Step 4</Typography>
+      <Typography>Step 5</Typography>
     </Stepper>
   ),
 ]
