@@ -193,7 +193,7 @@ export const LinkDelegation = Template.bind({})
 LinkDelegation.parameters = {
   docs: {
     storyDescription:
-      'Using the `to` props, link behavior is delegated to [Link Component](https://react.ui.scaleway.com/docs-components-link).',
+      'Using the `to` props, link behavior is delegated to [Link Component](https://main.ui.scaleway.com/docs-components-link).',
   },
 }
 LinkDelegation.decorators = [

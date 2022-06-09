@@ -50,7 +50,7 @@ const StyledPopover = styled(Popover)<{ name?: string }>`
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   color: ${({ theme }) => theme.colors.neutral.text};
-  fill: ${({ theme }) => theme.colors.neutral.text};
+  /* fill: ${({ theme }) => theme.colors.neutral.text}; */
   box-shadow: ${({ theme }) => theme.shadows.dropdown};
 `
 
@@ -74,7 +74,7 @@ const Popper = ({
   placement = 'auto',
   preventBodyScroll = false,
   visible = false,
-  ...props
+  className,
 }: PopperProps) => {
   const popover = usePopoverState({
     animated,
@@ -97,12 +97,8 @@ const Popper = ({
         aria-label={name}
         hideOnClickOutside={hideOnClickOutside}
         preventBodyScroll={preventBodyScroll}
-        animated={popover.animated}
-        baseId={popover.baseId}
-        modal={popover.modal}
-        placement={placement}
-        visible={popover.visible}
-        {...props}
+        className={className}
+        {...popover}
       >
         {hasArrow && <PopoverArrow {...popover} />}
         {typeof children === 'function' ? children(popover) : children}

@@ -249,7 +249,7 @@ AdvancedWIP.decorators = [
         <Menu.Item to="/?path=/docs/components-navigation-menu--advanced-wip">
           Menu Item with React Router Link
         </Menu.Item>
-        <Menu.Item href="https://react.ui.scaleway.com">
+        <Menu.Item href="https://main.ui.scaleway.com">
           Menu Item with native a
         </Menu.Item>
         <Menu.Item>MenuItem</Menu.Item>
