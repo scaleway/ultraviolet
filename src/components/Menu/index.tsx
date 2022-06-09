@@ -18,7 +18,7 @@ import Item from './Item'
 
 type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
-  | ReactElement
+  | (ReactElement & { ref?: RefObject<HTMLButtonElement> })
 
 const StyledPopover = styled(Popover)<PopoverProps>`
   border-radius: 4px;
@@ -190,9 +190,13 @@ const Menu = ({
       {disclosure && (
         <PopoverDisclosure
           {...popover}
-          ref={disclosure.ref as unknown as RefObject<HTMLButtonElement>}
+          ref={typeof disclosure !== 'function' ? disclosure?.ref : undefined}
         >
-          {disclosureProps => cloneElement(disclosure, disclosureProps)}
+          {disclosureProps =>
+            typeof disclosure === 'function'
+              ? disclosure(popover)
+              : cloneElement(disclosure, disclosureProps)
+          }
         </PopoverDisclosure>
       )}
       <StyledPopover {...popover} aria-label={ariaLabel} className={className}>
