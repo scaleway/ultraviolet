@@ -14,7 +14,6 @@ import {
   useState,
 } from 'react'
 import Button from '../Button'
-import FlexBox from '../FlexBox'
 import Icon from '../Icon'
 import Loader from '../Loader'
 import getPageNumbers from './getPageNumbers'
@@ -114,7 +113,7 @@ function DefaultMiddleComponent<T>({
   )
 
   return (
-    <FlexBox>
+    <div style={{ display: 'flex' }}>
       <PageSwitchContainer>
         <StyledPageSwitch
           aria-label="First"
@@ -172,7 +171,7 @@ function DefaultMiddleComponent<T>({
           </div>
         </StyledPageSwitch>
       </PageSwitchContainer>
-    </FlexBox>
+    </div>
   )
 }
 
