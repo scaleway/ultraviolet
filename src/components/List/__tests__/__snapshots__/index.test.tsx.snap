@@ -30636,7 +30636,15 @@ exports[`List should render correctly with pagination 1`] = `
   justify-content: center;
 }
 
-.cache-177ogp4-StyledButton {
+.cache-14uy6tf-PageSwitchContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30669,33 +30677,55 @@ exports[`List should render correctly with pagination 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
+  border: 1px solid #4f0599;
+  background-color: #ffffff;
+  color: #4f0599;
   cursor: default;
   pointer-events: none;
   color: #d4dae7;
   background-color: #f6f6f8;
   border-color: #fcfcfd;
   box-shadow: none;
+  width: 32px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-177ogp4-StyledButton.cache-177ogp4-StyledButton {
-  margin-right: 8px;
-}
-
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
+.cache-rn1h3h-StyledButton-StyledPageSwitch svg {
+  fill: #4f0599;
+  pointer-events: none;
 }
 
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
+  border: 1px solid #4f0599;
+  color: #ffffff;
+  background-color: #4f0599;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover svg,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus svg {
+  fill: #ffffff;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
@@ -30715,7 +30745,51 @@ exports[`List should render correctly with pagination 1`] = `
   pointer-events: none;
 }
 
-.cache-utetaf-StyledButton-StyledPageButton {
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-2sizh-PageNumbersContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 0 16px;
+}
+
+.cache-1iqptvb-StyledPageButton {
+  color: #151a2d;
+  line-height: 24px;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
+  color: #4f0599;
+  border-color: #d4dae7;
+}
+
+.cache-1k3vuk2-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30748,45 +30822,15 @@ exports[`List should render correctly with pagination 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton.cache-utetaf-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover,
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover,
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1p6jjrv-StyledButton-StyledPageButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
+  border: 1px solid #4f0599;
+  background-color: #ffffff;
+  color: #4f0599;
+  width: 32px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -30795,154 +30839,32 @@ exports[`List should render correctly with pagination 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton.cache-1p6jjrv-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-1p6jjrv-StyledButton-StyledPageButton:hover,
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton:hover,
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch svg {
+  fill: #4f0599;
+  pointer-events: none;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-1p88unn-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
+  border: 1px solid #4f0599;
+  color: #ffffff;
   background-color: #4f0599;
-  color: #ffffff;
 }
 
-.cache-1p88unn-StyledButton.cache-1p88unn-StyledButton {
-  margin-right: 8px;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover svg,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus svg {
+  fill: #ffffff;
 }
 
-.cache-1p88unn-StyledButton:hover,
-.cache-1p88unn-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1p88unn-StyledButton:hover,
-.cache-1p88unn-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
-}
-
-.cache-1p88unn-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
-}
-
-.cache-uc00d9-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-uc00d9-StyledButton:hover,
-.cache-uc00d9-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-uc00d9-StyledButton:hover,
-.cache-uc00d9-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
-}
-
-.cache-uc00d9-StyledButton:focus {
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
@@ -31480,117 +31402,148 @@ exports[`List should render correctly with pagination 1`] = `
       <div
         class="cache-10jajm4-StyledMiddleContainer equt9o81"
       >
-        <div>
-          <button
-            aria-disabled="true"
-            aria-label="First"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
+        <div
+          style="display: flex;"
+        >
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="true"
+              aria-label="First"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              First
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Back"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                    />
+                    <path
+                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="true"
+              aria-label="Back"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              Back
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 1"
-            class="equt9o85 em6gco80 cache-utetaf-StyledButton-StyledPageButton"
-            type="button"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.29289 9.2823C4.90237 8.89178 4.90237 8.25861 5.29289 7.86809L9.29289 3.86809C9.68342 3.47756 10.3166 3.47756 10.7071 3.86809C11.0976 4.25861 11.0976 4.89178 10.7071 5.2823L7.41421 8.5752L10.7071 11.8681C11.0976 12.2586 11.0976 12.8918 10.7071 13.2823C10.3166 13.6728 9.68342 13.6728 9.29289 13.2823L5.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div
+            class="cache-2sizh-PageNumbersContainer equt9o88"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-current="true"
+              aria-label="Page 1"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               1
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 2"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 2"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               2
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 3"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 3"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               3
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 4"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 4"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               4
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 5"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 5"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               5
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Next"
-            class="em6gco80 cache-1p88unn-StyledButton"
-            type="button"
+            </button>
+          </div>
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="false"
+              aria-label="Next"
+              class="equt9o87 em6gco80 cache-1k3vuk2-StyledButton-StyledPageSwitch"
+              type="button"
             >
-              Next
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Last"
-            class="em6gco80 cache-uc00d9-StyledButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10.7071 7.86809C11.0976 8.25861 11.0976 8.89178 10.7071 9.2823L6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823C4.90237 12.8918 4.90237 12.2586 5.29289 11.8681L8.58579 8.57519L5.29289 5.2823C4.90237 4.89178 4.90237 4.25861 5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809L10.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-label="Last"
+              class="equt9o87 em6gco80 cache-1k3vuk2-StyledButton-StyledPageSwitch"
+              type="button"
             >
-              Last
-            </div>
-          </button>
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                    />
+                    <path
+                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <div
@@ -31863,7 +31816,15 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   justify-content: center;
 }
 
-.cache-177ogp4-StyledButton {
+.cache-14uy6tf-PageSwitchContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -31896,33 +31857,55 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
+  border: 1px solid #4f0599;
+  background-color: #ffffff;
+  color: #4f0599;
   cursor: default;
   pointer-events: none;
   color: #d4dae7;
   background-color: #f6f6f8;
   border-color: #fcfcfd;
   box-shadow: none;
+  width: 32px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-177ogp4-StyledButton.cache-177ogp4-StyledButton {
-  margin-right: 8px;
-}
-
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
+.cache-rn1h3h-StyledButton-StyledPageSwitch svg {
+  fill: #4f0599;
+  pointer-events: none;
 }
 
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
+  border: 1px solid #4f0599;
+  color: #ffffff;
+  background-color: #4f0599;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover svg,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus svg {
+  fill: #ffffff;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
@@ -31942,7 +31925,51 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   pointer-events: none;
 }
 
-.cache-utetaf-StyledButton-StyledPageButton {
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-2sizh-PageNumbersContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 0 16px;
+}
+
+.cache-1iqptvb-StyledPageButton {
+  color: #151a2d;
+  line-height: 24px;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
+}
+
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
+  color: #4f0599;
+  border-color: #d4dae7;
+}
+
+.cache-1k3vuk2-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -31975,45 +32002,15 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton.cache-utetaf-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover,
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover,
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-utetaf-StyledButton-StyledPageButton:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1p6jjrv-StyledButton-StyledPageButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
+  border: 1px solid #4f0599;
+  background-color: #ffffff;
+  color: #4f0599;
+  width: 32px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -32022,154 +32019,32 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton.cache-1p6jjrv-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-1p6jjrv-StyledButton-StyledPageButton:hover,
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton:hover,
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch svg {
+  fill: #4f0599;
+  pointer-events: none;
 }
 
-.cache-1p6jjrv-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-1p88unn-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
+  border: 1px solid #4f0599;
+  color: #ffffff;
   background-color: #4f0599;
-  color: #ffffff;
 }
 
-.cache-1p88unn-StyledButton.cache-1p88unn-StyledButton {
-  margin-right: 8px;
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:hover svg,
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus svg {
+  fill: #ffffff;
 }
 
-.cache-1p88unn-StyledButton:hover,
-.cache-1p88unn-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1p88unn-StyledButton:hover,
-.cache-1p88unn-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
-}
-
-.cache-1p88unn-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
-}
-
-.cache-uc00d9-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-uc00d9-StyledButton:hover,
-.cache-uc00d9-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-uc00d9-StyledButton:hover,
-.cache-uc00d9-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
-}
-
-.cache-uc00d9-StyledButton:focus {
+.cache-1k3vuk2-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
@@ -32432,117 +32307,148 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
       <div
         class="cache-10jajm4-StyledMiddleContainer equt9o81"
       >
-        <div>
-          <button
-            aria-disabled="true"
-            aria-label="First"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
+        <div
+          style="display: flex;"
+        >
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="true"
+              aria-label="First"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              First
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Back"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                    />
+                    <path
+                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="true"
+              aria-label="Back"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              Back
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 1"
-            class="equt9o85 em6gco80 cache-utetaf-StyledButton-StyledPageButton"
-            type="button"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.29289 9.2823C4.90237 8.89178 4.90237 8.25861 5.29289 7.86809L9.29289 3.86809C9.68342 3.47756 10.3166 3.47756 10.7071 3.86809C11.0976 4.25861 11.0976 4.89178 10.7071 5.2823L7.41421 8.5752L10.7071 11.8681C11.0976 12.2586 11.0976 12.8918 10.7071 13.2823C10.3166 13.6728 9.68342 13.6728 9.29289 13.2823L5.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div
+            class="cache-2sizh-PageNumbersContainer equt9o88"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-current="true"
+              aria-label="Page 1"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               1
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 2"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 2"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               2
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 3"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 3"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               3
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 4"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 4"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               4
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Page 5"
-            class="equt9o85 em6gco80 cache-1p6jjrv-StyledButton-StyledPageButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 5"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
             >
               5
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Next"
-            class="em6gco80 cache-1p88unn-StyledButton"
-            type="button"
+            </button>
+          </div>
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="false"
+              aria-label="Next"
+              class="equt9o87 em6gco80 cache-1k3vuk2-StyledButton-StyledPageSwitch"
+              type="button"
             >
-              Next
-            </div>
-          </button>
-          <button
-            aria-disabled="false"
-            aria-label="Last"
-            class="em6gco80 cache-uc00d9-StyledButton"
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10.7071 7.86809C11.0976 8.25861 11.0976 8.89178 10.7071 9.2823L6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823C4.90237 12.8918 4.90237 12.2586 5.29289 11.8681L8.58579 8.57519L5.29289 5.2823C4.90237 4.89178 4.90237 4.25861 5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809L10.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="false"
+              aria-label="Last"
+              class="equt9o87 em6gco80 cache-1k3vuk2-StyledButton-StyledPageSwitch"
+              type="button"
             >
-              Last
-            </div>
-          </button>
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                    />
+                    <path
+                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <div
@@ -32721,7 +32627,15 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   justify-content: center;
 }
 
-.cache-177ogp4-StyledButton {
+.cache-14uy6tf-PageSwitchContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -32754,33 +32668,55 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
+  border: 1px solid #4f0599;
+  background-color: #ffffff;
+  color: #4f0599;
   cursor: default;
   pointer-events: none;
   color: #d4dae7;
   background-color: #f6f6f8;
   border-color: #fcfcfd;
   box-shadow: none;
+  width: 32px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-177ogp4-StyledButton.cache-177ogp4-StyledButton {
-  margin-right: 8px;
-}
-
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-177ogp4-StyledButton:hover,
-.cache-177ogp4-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
+.cache-rn1h3h-StyledButton-StyledPageSwitch svg {
+  fill: #4f0599;
+  pointer-events: none;
 }
 
-.cache-177ogp4-StyledButton:focus {
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
+  border: 1px solid #4f0599;
+  color: #ffffff;
+  background-color: #4f0599;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:hover svg,
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus svg {
+  fill: #ffffff;
+}
+
+.cache-rn1h3h-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
 }
 
@@ -32800,196 +32736,48 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   pointer-events: none;
 }
 
-.cache-1fsgl2j-StyledButton-StyledPageButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
   vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+}
+
+.cache-2sizh-PageNumbersContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 0 16px;
+}
+
+.cache-1iqptvb-StyledPageButton {
+  color: #151a2d;
+  line-height: 24px;
+  width: 48px;
+  height: 48px;
   font-size: 16px;
-  line-height: 32px;
   font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  cursor: default;
-  pointer-events: none;
-  color: #d4dae7;
-  background-color: #f6f6f8;
-  border-color: #fcfcfd;
-  box-shadow: none;
-}
-
-.cache-1fsgl2j-StyledButton-StyledPageButton.cache-1fsgl2j-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-1fsgl2j-StyledButton-StyledPageButton:hover,
-.cache-1fsgl2j-StyledButton-StyledPageButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1fsgl2j-StyledButton-StyledPageButton:hover,
-.cache-1fsgl2j-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
-}
-
-.cache-1fsgl2j-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
   cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  cursor: default;
-  pointer-events: none;
-  color: #d4dae7;
-  background-color: #f6f6f8;
-  border-color: #fcfcfd;
-  box-shadow: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton.cache-a3hlc7-StyledButton-StyledPageButton {
-  margin-right: 8px;
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton:hover,
-.cache-a3hlc7-StyledButton-StyledPageButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton:hover,
-.cache-a3hlc7-StyledButton-StyledPageButton:focus {
-  color: #4a4f62;
-  background-color: #e8e8ed;
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton:focus {
-  box-shadow: 0 0 0 2px rgba(246,246,248,0.25);
-}
-
-.cache-a3hlc7-StyledButton-StyledPageButton:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1xobvbf-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  background-color: #ffffff;
+  border: 1px solid transparent;
   border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-  cursor: default;
-  pointer-events: none;
-  color: #d4dae7;
-  background-color: #f6f6f8;
-  border-color: #fcfcfd;
-  box-shadow: none;
 }
 
-.cache-1xobvbf-StyledButton:hover,
-.cache-1xobvbf-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-1iqptvb-StyledPageButton[aria-current='true'] {
+  color: #390171;
+  border-color: #4f0599;
 }
 
-.cache-1xobvbf-StyledButton:hover,
-.cache-1xobvbf-StyledButton:focus {
-  color: #ffffff;
-  background-color: #420480;
-}
-
-.cache-1xobvbf-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
+.cache-1iqptvb-StyledPageButton[aria-current='false']:hover {
+  color: #4f0599;
+  border-color: #d4dae7;
 }
 
 .cache-1vkhpbk-StyledRightContainer {
@@ -33092,124 +32880,155 @@ exports[`List should render correctly with pagination and page loading 1`] = `
       <div
         class="cache-10jajm4-StyledMiddleContainer equt9o81"
       >
-        <div>
-          <button
-            aria-disabled="true"
-            aria-label="First"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
+        <div
+          style="display: flex;"
+        >
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="true"
+              aria-label="First"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              First
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Back"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                    />
+                    <path
+                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="true"
+              aria-label="Back"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              Back
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Page 1"
-            class="equt9o85 em6gco80 cache-1fsgl2j-StyledButton-StyledPageButton"
-            disabled=""
-            type="button"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.29289 9.2823C4.90237 8.89178 4.90237 8.25861 5.29289 7.86809L9.29289 3.86809C9.68342 3.47756 10.3166 3.47756 10.7071 3.86809C11.0976 4.25861 11.0976 4.89178 10.7071 5.2823L7.41421 8.5752L10.7071 11.8681C11.0976 12.2586 11.0976 12.8918 10.7071 13.2823C10.3166 13.6728 9.68342 13.6728 9.29289 13.2823L5.29289 9.2823Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div
+            class="cache-2sizh-PageNumbersContainer equt9o88"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-current="false"
+              aria-label="Page 1"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
+              disabled=""
             >
               1
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Page 2"
-            class="equt9o85 em6gco80 cache-a3hlc7-StyledButton-StyledPageButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="true"
+              aria-label="Page 2"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
+              disabled=""
             >
               2
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Page 3"
-            class="equt9o85 em6gco80 cache-1fsgl2j-StyledButton-StyledPageButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 3"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
+              disabled=""
             >
               3
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Page 4"
-            class="equt9o85 em6gco80 cache-1fsgl2j-StyledButton-StyledPageButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 4"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
+              disabled=""
             >
               4
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Page 5"
-            class="equt9o85 em6gco80 cache-1fsgl2j-StyledButton-StyledPageButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            </button>
+            <button
+              aria-current="false"
+              aria-label="Page 5"
+              class="cache-1iqptvb-StyledPageButton equt9o85"
+              disabled=""
             >
               5
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Next"
-            class="em6gco80 cache-177ogp4-StyledButton"
-            disabled=""
-            type="button"
+            </button>
+          </div>
+          <div
+            class="cache-14uy6tf-PageSwitchContainer equt9o86"
           >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+            <button
+              aria-disabled="true"
+              aria-label="Next"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              Next
-            </div>
-          </button>
-          <button
-            aria-disabled="true"
-            aria-label="Last"
-            class="em6gco80 cache-1xobvbf-StyledButton"
-            disabled=""
-            type="button"
-          >
-            <div
-              class="cache-m245rk-StyledContent em6gco81"
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10.7071 7.86809C11.0976 8.25861 11.0976 8.89178 10.7071 9.2823L6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823C4.90237 12.8918 4.90237 12.2586 5.29289 11.8681L8.58579 8.57519L5.29289 5.2823C4.90237 4.89178 4.90237 4.25861 5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809L10.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <button
+              aria-disabled="true"
+              aria-label="Last"
+              class="equt9o87 em6gco80 cache-rn1h3h-StyledButton-StyledPageSwitch"
+              disabled=""
+              type="button"
             >
-              Last
-            </div>
-          </button>
+              <div
+                class="cache-m245rk-StyledContent em6gco81"
+              >
+                <div>
+                  <svg
+                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                    />
+                    <path
+                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <div
