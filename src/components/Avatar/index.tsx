@@ -1,12 +1,13 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Color } from '../../theme'
+import { XOR } from '../../utils/xor'
 import Icon from '../Icon'
 import Image from '../Image'
-import avatar from './avatar.svg'
 
-const formatTextToAvatar = (text: string): string => {
+const formatTextToAvatar = (text?: string): string => {
+  if (!text) return ''
+
   if (text.length <= 2) {
     return text.toUpperCase()
   }
@@ -50,15 +51,43 @@ const StyledImg = styled(Image)`
   width: 100%;
 `
 
-interface AvatarProps {
-  image?: string
+type AvatarProps = {
+  /**
+   * Size of the component
+   */
   size?: number
-  text?: string
+  /**
+   * Background color when `text` prop is specified
+   */
   textBgColor?: string
+  /**
+   * Text color when `text` prop is specified
+   */
   textColor?: string
+  /**
+   * Text size when `text` prop is specified or size of the lock when `lock` is true
+   */
   textSize?: number
+  /**
+   * Used only when `text` prop is specified
+   */
   lock?: boolean
-}
+} & XOR<
+  [
+    {
+      /**
+       * **`image` or `text` property is required**
+       */
+      image: string
+    },
+    {
+      /**
+       * **`image` or `text` property is required**
+       */
+      text: string
+    },
+  ]
+>
 
 const AvatarContainer = styled.div<{ size: number }>`
   height: ${({ size }) => size}px;
@@ -66,7 +95,7 @@ const AvatarContainer = styled.div<{ size: number }>`
 `
 
 const Avatar = ({
-  image = avatar,
+  image,
   size = 32,
   text,
   textBgColor = 'secondary',
@@ -78,7 +107,7 @@ const Avatar = ({
 
   return (
     <AvatarContainer size={size}>
-      {text ? (
+      {text || (!text && !image) ? (
         <StyledTextAvatar
           lock={lock}
           textBgColor={textBgColor}
@@ -100,31 +129,6 @@ const Avatar = ({
       )}
     </AvatarContainer>
   )
-}
-
-Avatar.propTypes = {
-  image: PropTypes.string,
-  /**
-   * Used only when `text` prop is specified
-   */
-  lock: PropTypes.bool,
-  /**
-   * Size of the component
-   */
-  size: PropTypes.number,
-  text: PropTypes.string,
-  /**
-   * Background color when `text` prop is specified
-   */
-  textBgColor: PropTypes.string,
-  /**
-   * Text color when `text` prop is specified
-   */
-  textColor: PropTypes.string,
-  /**
-   * Text size when `text` prop is specified or size of the lock when `lock` is true
-   */
-  textSize: PropTypes.number,
 }
 
 export default Avatar
