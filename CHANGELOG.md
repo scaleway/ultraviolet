@@ -1,3 +1,10 @@
+## [0.156.0](https://github.com/scaleway/scaleway-ui/compare/v0.155.1...v0.156.0) (2022-06-09)
+
+
+### :gear: Features
+
+* add SelectNumber component to replace Stepper ([#1511](https://github.com/scaleway/scaleway-ui/issues/1511)) ([a110ba4](https://github.com/scaleway/scaleway-ui/commit/a110ba42fb5527379968077b373795fce9c0a38c))
+
 ## [0.155.1](https://github.com/scaleway/scaleway-ui/compare/v0.155.0...v0.155.1) (2022-06-09)
 
 
