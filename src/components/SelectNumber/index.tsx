@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ChangeEventHandler,
   FocusEventHandler,
@@ -14,6 +13,7 @@ import {
 import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
+import Tooltip from '../Tooltip'
 import Touchable from '../Touchable'
 
 const bounded = (value: number, min: number, max: number) =>
@@ -57,25 +57,23 @@ const iconSizes = {
   small: 22,
 }
 
-const StyledIcon = styled(Icon)`
-  color: ${({ theme }) => theme.colors.primary.text};
-`
-
 const StyledTouchable = styled(Touchable, {
   shouldForwardProp: prop => !['position', 'size'].includes(prop.toString()),
 })<{ size: ContainerSizesType }>`
   justify-content: center;
   align-items: center;
-  height: calc(100% - 8px);
   position: relative;
-  border-radius: 4px;
-  width: ${({ size }) => containerSizes[size] - 10}px;
+  border-radius: ${({ theme }) => theme.radii.default};
+  color: ${({ theme, disabled }) =>
+    disabled
+      ? theme.colors.neutral.textWeakDisabled
+      : theme.colors.primary.textWeak};
 
   :hover:not([disabled]) {
     background: ${({ theme }) => theme.colors.primary.background};
   }
 
-  margin: 0 4px;
+  margin: 0 ${({ theme }) => theme.space['1']};
 `
 
 const StyledCenterBox = styled('div', {
@@ -84,11 +82,11 @@ const StyledCenterBox = styled('div', {
   display: flex;
   flex: 1;
   flex-direction: row;
-  height: calc(100% - 8px);
+  height: ${({ size }) => (size === 'small' ? '24px' : '32px')};
   align-items: center;
   outline: none;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid transparent;
   :hover:not([disabled], :focus) {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
@@ -97,7 +95,7 @@ const StyledCenterBox = styled('div', {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
-  max-width: calc(100% - ${({ size }) => containerSizes[size] * 2}px);
+  max-width: 100%;
 `
 
 const StyledInput = styled.input`
@@ -149,7 +147,7 @@ const StyledContainer = styled(Box, {
       : ''}
 `
 
-type StepperProps = {
+type SelectNumberProps = {
   disabled?: boolean
   maxValue?: number
   minValue?: number
@@ -158,16 +156,23 @@ type StepperProps = {
   onMaxCrossed?(): void
   onMinCrossed?(): void
   size?: ContainerSizesType
+  /**
+   * Define how much will stepper increase / decrease each time you click on + / - button.
+   */
   step?: number
+  /**
+   * Text displayed into component at the right of number value.
+   */
   text?: string | ReactNode
   value?: number
+  disabledTooltip?: string
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
-const Stepper = ({
+const SelectNumber = ({
   disabled = false,
   maxValue = 100,
   minValue = 0,
-  name = 'stepper',
+  name = 'selectnumber',
   onChange,
   onFocus,
   onBlur,
@@ -177,8 +182,9 @@ const Stepper = ({
   step = 1,
   text,
   value,
+  disabledTooltip,
   ...props
-}: StepperProps) => {
+}: SelectNumberProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
   const [inputValue, setInputValue] = useState(
@@ -264,14 +270,16 @@ const Stepper = ({
 
   return (
     <StyledContainer disabled={disabled} size={size} {...props}>
-      <StyledTouchable
-        onClick={offsetFn(-1)}
-        size={size}
-        disabled={isMinusDisabled}
-        aria-label="Minus"
-      >
-        <StyledIcon name="minus" size={iconSizes[size]} />
-      </StyledTouchable>
+      <Tooltip text={isMinusDisabled && disabledTooltip}>
+        <StyledTouchable
+          onClick={offsetFn(-1)}
+          size={size}
+          disabled={isMinusDisabled}
+          aria-label="Minus"
+        >
+          <Icon name="minus" size={iconSizes[size]} />
+        </StyledTouchable>
+      </Tooltip>
 
       <StyledCenterBox
         size={size}
@@ -304,38 +312,18 @@ const Stepper = ({
         )}
       </StyledCenterBox>
 
-      <StyledTouchable
-        size={size}
-        onClick={offsetFn(1)}
-        disabled={isPlusDisabled}
-        aria-label="Plus"
-      >
-        <StyledIcon name="plus" size={iconSizes[size]} />
-      </StyledTouchable>
+      <Tooltip text={isPlusDisabled && disabledTooltip}>
+        <StyledTouchable
+          size={size}
+          onClick={offsetFn(1)}
+          disabled={isPlusDisabled}
+          aria-label="Plus"
+        >
+          <Icon name="plus" size={iconSizes[size]} />
+        </StyledTouchable>
+      </Tooltip>
     </StyledContainer>
   )
 }
 
-Stepper.propTypes = {
-  disabled: PropTypes.bool,
-  maxValue: PropTypes.number,
-  minValue: PropTypes.number,
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  onMaxCrossed: PropTypes.func,
-  onMinCrossed: PropTypes.func,
-  size: PropTypes.oneOf(containerSizesKeys),
-  /**
-   * Define how much will stepper increase / decrease each time you click on + / - button.
-   */
-  step: PropTypes.number,
-  /**
-   * Text displayed into component at the right of number value.
-   */
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  value: PropTypes.number,
-}
-
-export default Stepper
+export default SelectNumber

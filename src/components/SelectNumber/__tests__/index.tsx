@@ -1,12 +1,20 @@
 import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import Stepper from '..'
+import SelectNumber from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
-describe('Stepper', () => {
+describe('SelectNumber', () => {
+  beforeAll(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterAll(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper
+      <SelectNumber
         minValue={0}
         maxValue={100}
         text="unit"
@@ -17,22 +25,38 @@ describe('Stepper', () => {
 
   it('should renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} maxValue={100} text="unit" value={10} disabled />,
+      <SelectNumber
+        minValue={0}
+        maxValue={100}
+        text="unit"
+        value={10}
+        disabled
+      />,
+    ))
+
+  it('should renders correctly min value', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectNumber minValue={0} maxValue={100} text="unit" value={0} />,
+    ))
+
+  it('should renders correctly max value', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectNumber minValue={0} maxValue={100} text="unit" value={100} />,
     ))
 
   it('should renders large size', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} maxValue={100} value={10} size="large" />,
+      <SelectNumber minValue={0} maxValue={100} value={10} size="large" />,
     ))
 
   it('should renders small size', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} maxValue={100} value={10} size="small" />,
+      <SelectNumber minValue={0} maxValue={100} value={10} size="small" />,
     ))
 
   it('should click on center button', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} step={1} maxValue={100} value={10} />,
+      <SelectNumber minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const inputButton = getByLabelText('Input')
@@ -46,7 +70,7 @@ describe('Stepper', () => {
 
   it('should click on min button', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} step={1} maxValue={100} value={10} />,
+      <SelectNumber minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const minus = getByLabelText('Minus')
@@ -63,7 +87,7 @@ describe('Stepper', () => {
 
   it('should click on plus button with a step value', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper
+      <SelectNumber
         minValue={0}
         step={10}
         maxValue={100}
@@ -86,7 +110,7 @@ describe('Stepper', () => {
 
   it('should focus input and modify value', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={0} step={10} maxValue={100} value={10} />,
+      <SelectNumber minValue={0} step={10} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const buttonContainer = getByLabelText('Input')
@@ -105,7 +129,7 @@ describe('Stepper', () => {
     ))
   it('should focus input and modify value onMinCrossed', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper
+      <SelectNumber
         minValue={10}
         maxValue={100}
         value={30}
@@ -126,7 +150,7 @@ describe('Stepper', () => {
 
   it('should focus input and modify value onMaxCrossed', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper
+      <SelectNumber
         minValue={10}
         maxValue={100}
         value={30}
@@ -147,7 +171,7 @@ describe('Stepper', () => {
 
   it('should increase and decrease input with arrow up and down', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={10} maxValue={100} value={30} />,
+      <SelectNumber minValue={10} maxValue={100} value={30} />,
       {
         transform: async ({ getByRole }) => {
           const input = getByRole('textbox') as HTMLTextAreaElement
@@ -170,7 +194,7 @@ describe('Stepper', () => {
 
   it('should click on plus button with a step value and an in-between value set', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper
+      <SelectNumber
         minValue={0}
         step={10}
         maxValue={100}
@@ -193,7 +217,7 @@ describe('Stepper', () => {
 
   it('should increase and decrease input with arrow up and down, step and an in-between value set', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper minValue={10} maxValue={100} value={32} step={10} />,
+      <SelectNumber minValue={10} maxValue={100} value={32} step={10} />,
       {
         transform: async ({ getByRole }) => {
           const input = getByRole('textbox') as HTMLTextAreaElement
@@ -210,6 +234,25 @@ describe('Stepper', () => {
           userEvent.type(input, '99')
           userEvent.type(input, '{arrowup}')
           await waitFor(() => expect(input.value).toBe('100'))
+        },
+      },
+    ))
+
+  it('should display a tooltip on hover', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectNumber
+        minValue={1}
+        maxValue={100}
+        value={1}
+        disabledTooltip="This is a tooltip"
+      />,
+      {
+        transform: async ({ getByLabelText, getByText }) => {
+          const plus = getByLabelText('Minus')
+          userEvent.hover(plus)
+          await waitFor(() =>
+            expect(getByText('This is a tooltip')).toBeTruthy(),
+          )
         },
       },
     ))
