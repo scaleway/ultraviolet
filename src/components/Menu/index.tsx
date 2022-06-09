@@ -1,12 +1,10 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ComponentProps,
   ReactElement,
   ReactNode,
   RefObject,
-  WeakValidationMap,
   cloneElement,
 } from 'react'
 import {
@@ -136,11 +134,6 @@ type MenuProps = Omit<ComponentProps<typeof StyledPopover>, 'children'> & {
   hasArrow?: boolean
 }
 
-type MenuType = ((props: MenuProps) => JSX.Element) & {
-  Item: typeof Item
-  propTypes: WeakValidationMap<MenuProps>
-}
-
 const MenuList = styled.div<MenuListProps>`
   &:after,
   &:before {
@@ -175,7 +168,7 @@ const MenuList = styled.div<MenuListProps>`
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
-const Menu: MenuType = ({
+const Menu = ({
   align = { left: '50%', right: 'inherit' },
   ariaLabel = 'Menu',
   baseId = 'menu',
@@ -185,7 +178,7 @@ const Menu: MenuType = ({
   placement = 'bottom',
   visible = false,
   className,
-}) => {
+}: MenuProps) => {
   const popover = usePopoverState({
     baseId,
     placement,
@@ -219,23 +212,6 @@ const Menu: MenuType = ({
       </StyledPopover>
     </>
   )
-}
-
-Menu.propTypes = {
-  align: PropTypes.shape({
-    left: PropTypes.string,
-    right: PropTypes.string,
-  }),
-  ariaLabel: PropTypes.string,
-  baseId: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  className: PropTypes.string,
-  disclosure: PropTypes.func.isRequired,
-  hasArrow: PropTypes.bool,
-  modal: PropTypes.bool,
-  name: PropTypes.string,
-  placement: PropTypes.oneOf<ArrowPlacement>(arrowPlacements),
-  visible: PropTypes.bool,
 }
 
 Menu.Item = Item
