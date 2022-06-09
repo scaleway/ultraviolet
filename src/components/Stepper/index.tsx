@@ -118,13 +118,13 @@ const StyledContainer = styled.div`
 
 type StepperNumbersProps = {
   temporal: Temporal
-  child: ReactNode
+  children: ReactNode
   CurrentStep: number
 }
 
 const StepperNumbers = ({
   temporal,
-  child,
+  children,
   CurrentStep,
 }: StepperNumbersProps) => (
   <StyledStepContainer>
@@ -136,7 +136,7 @@ const StepperNumbers = ({
       )}
     </StyledStep>
 
-    <StyledText>{child}</StyledText>
+    <StyledText>{children}</StyledText>
   </StyledStepContainer>
 )
 
@@ -165,11 +165,9 @@ const Stepper = ({ children, selected = 0, animated = true }: StepperProps) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
           <Fragment key={`creation-progress-${index}`}>
-            <StepperNumbers
-              child={child}
-              CurrentStep={index + 1}
-              temporal={temporal}
-            />
+            <StepperNumbers CurrentStep={index + 1} temporal={temporal}>
+              {child}
+            </StepperNumbers>
             {isNotLast ? (
               <StyledLine temporal={temporal} animated={animated} />
             ) : null}
