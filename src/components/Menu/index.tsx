@@ -8,13 +8,9 @@ import {
   RefObject,
   WeakValidationMap,
   cloneElement,
-  isValidElement,
-  useEffect,
-  useRef,
 } from 'react'
 import {
   Popover,
-  PopoverArrow,
   PopoverDisclosure,
   PopoverProps,
   PopoverStateReturn,
@@ -26,86 +22,12 @@ type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
   | ReactElement
 
-type DisclosureProps = {
-  disclosure: DisclosureParam
-  popover: Partial<PopoverStateReturn>
-}
-
-const PopperDisclosure = ({
-  disclosure,
-  popover,
-}: DisclosureProps): JSX.Element => {
-  // if you need dialog inside your component, use function, otherwise component is fine
-  const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
-  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
-
-  return (
-    <PopoverDisclosure {...popover} ref={innerRef}>
-      {disclosureProps => cloneElement(target, disclosureProps)}
-    </PopoverDisclosure>
-  )
-}
-
-const StyledPopover = styled(Popover)<{ name?: string }>`
+const StyledPopover = styled(Popover)<PopoverProps>`
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   color: ${({ theme }) => theme.colors.neutral.text};
-  /* fill: ${({ theme }) => theme.colors.neutral.text}; */
   box-shadow: ${({ theme }) => theme.shadows.dropdown};
 `
-
-type PopperProps = Partial<PopoverProps> &
-  Partial<Pick<PopoverStateReturn, 'placement'>> & {
-    disclosure: DisclosureParam
-    hasArrow?: boolean
-    name?: string
-    children?: ((popover: PopoverStateReturn) => ReactNode) | ReactNode
-  }
-
-const Popper = ({
-  animated = 100,
-  baseId = '',
-  children,
-  disclosure,
-  hasArrow = true,
-  hideOnClickOutside = true,
-  modal = true,
-  name,
-  placement = 'auto',
-  preventBodyScroll = false,
-  visible = false,
-  className,
-}: PopperProps) => {
-  const popover = usePopoverState({
-    animated,
-    baseId,
-    modal,
-    placement,
-    visible,
-  })
-
-  const { setVisible } = popover
-  useEffect(() => setVisible(visible), [setVisible, visible])
-
-  return (
-    <>
-      {disclosure && (
-        <PopperDisclosure popover={popover} disclosure={disclosure} />
-      )}
-      <StyledPopover
-        name={name}
-        aria-label={name}
-        hideOnClickOutside={hideOnClickOutside}
-        preventBodyScroll={preventBodyScroll}
-        className={className}
-        {...popover}
-      >
-        {hasArrow && <PopoverArrow {...popover} />}
-        {typeof children === 'function' ? children(popover) : children}
-      </StyledPopover>
-    </>
-  )
-}
 
 const bottomStyles = (theme: Theme) => css`
   box-shadow: ${theme.shadows.menu};
@@ -204,18 +126,14 @@ type AlignStyle = {
   right?: string | null
 }
 
-interface ChildrenProps {
-  placement: ComponentProps<typeof Popper>['placement']
-  toggle: () => void
-  visible: boolean
-}
-
-type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
+type MenuProps = Omit<ComponentProps<typeof StyledPopover>, 'children'> & {
   align?: AlignStyle
   ariaLabel?: string
   placement?: ArrowPlacement
-  children?: ((props: ChildrenProps) => ReactNode) | ReactNode
+  children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
   className?: string
+  disclosure: DisclosureParam
+  hasArrow?: boolean
 }
 
 type MenuType = ((props: MenuProps) => JSX.Element) & {
@@ -259,44 +177,49 @@ const MenuList = styled.div<MenuListProps>`
 
 const Menu: MenuType = ({
   align = { left: '50%', right: 'inherit' },
-  ariaLabel = 'menu',
-  baseId = '',
+  ariaLabel = 'Menu',
+  baseId = 'menu',
   children,
   disclosure,
   hasArrow = true,
-  modal = false,
-  name = 'menu',
   placement = 'bottom',
   visible = false,
   className,
-}) => (
-  <Popper
-    aria-label={ariaLabel}
-    baseId={baseId}
-    disclosure={disclosure}
-    hasArrow={false}
-    modal={modal}
-    name={name}
-    placement={placement}
-    visible={visible}
-    className={className}
-  >
-    {({ placement: localPlacement, toggle, visible: isOpen }) =>
-      isOpen ? (
-        <MenuList
-          align={align}
-          hasArrow={hasArrow}
-          placement={localPlacement as ArrowPlacement}
-          role="menu"
+}) => {
+  const popover = usePopoverState({
+    baseId,
+    placement,
+    visible,
+  })
+
+  return (
+    <>
+      {disclosure && (
+        <PopoverDisclosure
+          {...popover}
+          ref={disclosure.ref as unknown as RefObject<HTMLButtonElement>}
         >
-          {typeof children === 'function'
-            ? children({ placement: localPlacement, toggle, visible })
-            : children}
-        </MenuList>
-      ) : null
-    }
-  </Popper>
-)
+          {disclosureProps => cloneElement(disclosure, disclosureProps)}
+        </PopoverDisclosure>
+      )}
+      <StyledPopover {...popover} aria-label={ariaLabel} className={className}>
+        <>
+          {/* Required to avoid loading menu content if not visible */}
+          {popover.visible ? (
+            <MenuList
+              align={align}
+              hasArrow={hasArrow}
+              placement={popover.placement as ArrowPlacement}
+              role="menu"
+            >
+              {typeof children === 'function' ? children(popover) : children}
+            </MenuList>
+          ) : null}
+        </>
+      </StyledPopover>
+    </>
+  )
+}
 
 Menu.propTypes = {
   align: PropTypes.shape({
