@@ -93,7 +93,7 @@ specifiers:
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
   lint-staged: 13.0.0
-  loki: 0.30.2
+  loki: 0.30.3
   polished: 4.2.2
   postcss: 8.4.14
   prettier: 2.6.2
@@ -230,7 +230,7 @@ devDependencies:
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
   lint-staged: 13.0.0
-  loki: 0.30.2_psa2aksgamewcpgatvoy2eja2e
+  loki: 0.30.3_psa2aksgamewcpgatvoy2eja2e
   postcss: 8.4.14
   prettier: 2.6.2
   react: 17.0.2
@@ -2545,8 +2545,8 @@ packages:
       '@loki/browser': 0.30.1
     dev: true
 
-  /@loki/runner/0.30.1_@types+react@17.0.45:
-    resolution: {integrity: sha512-89IH10bqysFwPjh+EMIGToJmZwLtgaINXYVpO4bn5au72koUZRCZjsfA9g498UWKWuzbuGBWTNtLczg+cDwwXg==}
+  /@loki/runner/0.30.3_@types+react@17.0.45:
+    resolution: {integrity: sha512-jYiQLRYUXGypL8NytvJ+2FtBehN4GT8oyDYIxCmEvC3s5Dwb60OQ7QSXGUw3sjZ+YGJzARRXGqdtvJqDGmN0ng==}
     hasBin: true
     dependencies:
       '@loki/core': 0.30.0
@@ -12762,8 +12762,8 @@ packages:
       wrap-ansi: 6.2.0
     dev: true
 
-  /loki/0.30.2_psa2aksgamewcpgatvoy2eja2e:
-    resolution: {integrity: sha512-aI5OfKhXPMeZuBd2k47GN8F74KXbUthMek0BCRpYogdvEwWMIX5+0k1kOR40Rv5F11aV+CF+U+PmQYYqASY0Hw==}
+  /loki/0.30.3_psa2aksgamewcpgatvoy2eja2e:
+    resolution: {integrity: sha512-t4DOg6uB+4GbdU+1eedWYu/jWapG3rE+iKbgyzXHHS7STaT9UInVx9w7OzXBdQPdaIGLzp9ZVV0b+S21Nf5X0g==}
     hasBin: true
     peerDependencies:
       '@storybook/react': ^5 || ^6
@@ -12774,7 +12774,7 @@ packages:
       '@loki/integration-react': 0.30.1_@storybook+react@6.5.8
       '@loki/integration-react-native': 0.30.2_@storybook+addons@6.5.8
       '@loki/integration-vue': 0.30.1
-      '@loki/runner': 0.30.1_@types+react@17.0.45
+      '@loki/runner': 0.30.3_@types+react@17.0.45
       '@loki/target-chrome-app': 0.30.1
       '@loki/target-chrome-docker': 0.30.1
       '@loki/target-native-android-emulator': 0.30.0
@@ -16286,7 +16286,7 @@ packages:
     dev: true
 
   /restore-cursor/2.0.0:
-    resolution: {integrity: sha1-n37ih/gv0ybU/RYpI9YhKe7g368=}
+    resolution: {integrity: sha512-6IzJLuGi4+R14vwagDHX+JrXmPVtPpn4mffDJ1UdR7/Edm87fl6yi8mMBIVvFtJaNTUvjughmW4hwLhRG7gC1Q==}
     engines: {node: '>=4'}
     dependencies:
       onetime: 2.0.1
@@ -16494,7 +16494,7 @@ packages:
     dev: true
 
   /sax/1.2.1:
-    resolution: {integrity: sha1-e45lYZCyKOgaZq6nSEgNgozS03o=}
+    resolution: {integrity: sha512-8I2a3LovHTOpm7NV5yOyO8IHqgVsfK4+UuySrXU8YXkSRX7k6hCV9b3HrkKCr3nMpgj+0bmocaJJWpvp1oc7ZA==}
     dev: true
 
   /saxes/5.0.1:
@@ -17496,7 +17496,7 @@ packages:
     dev: true
 
   /temp-dir/1.0.0:
-    resolution: {integrity: sha1-CnwOom06Oa+n4OvqnB/AvE2qAR0=}
+    resolution: {integrity: sha512-xZFXEGbG7SNC3itwBzI3RYjq/cEhBkx2hJuKGIUOcEULmkQExXiHat2z/qkISYsuR+IKumhEfKKbV5qXmhICFQ==}
     engines: {node: '>=4'}
     dev: true
 
@@ -17506,7 +17506,7 @@ packages:
     dev: true
 
   /tempfile/2.0.0:
-    resolution: {integrity: sha1-awRGhWqbERTRhW/8vlCczLCXcmU=}
+    resolution: {integrity: sha512-ZOn6nJUgvgC09+doCEF3oB+r3ag7kUvlsXEGX069QRD60p+P3uP7XG9N2/at+EyIRGSN//ZY3LyEotA1YpmjuA==}
     engines: {node: '>=4'}
     dependencies:
       temp-dir: 1.0.0
