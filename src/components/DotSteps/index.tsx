@@ -1,11 +1,15 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import Dot from '../Dot'
 import FlexBox from '../FlexBox'
 
 const dotSize = 10
-const DotStep = styled(Dot)`
+
+const DotStep = styled.div`
+  display: inline-block;
+  border-radius: 50%;
+  width: ${dotSize}px;
+  height: ${dotSize}px;
   margin: ${({ theme }) => theme.space[1]};
   cursor: pointer;
   position: relative;
