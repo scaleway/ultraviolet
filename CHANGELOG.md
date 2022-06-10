@@ -1,3 +1,29 @@
+## [0.156.1](https://github.com/scaleway/scaleway-ui/compare/v0.156.0...v0.156.1) (2022-06-10)
+
+
+### :zap: Refactor
+
+* **Pagination:** new design ([#1500](https://github.com/scaleway/scaleway-ui/issues/1500)) ([598d2e9](https://github.com/scaleway/scaleway-ui/commit/598d2e9aa89eb140fadd6b9a0323bad490868040))
+
+
+### :repeat: CI
+
+* correct serve redirect ([42aed5f](https://github.com/scaleway/scaleway-ui/commit/42aed5f213e337c879ff10532bb0f8d9340299e5))
+* use serve instead of http-server ([#1571](https://github.com/scaleway/scaleway-ui/issues/1571)) ([61ca025](https://github.com/scaleway/scaleway-ui/commit/61ca0251f8d02d06a16dee0fe53012ab75e2469e))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.33 ([#1565](https://github.com/scaleway/scaleway-ui/issues/1565)) ([f86bce9](https://github.com/scaleway/scaleway-ui/commit/f86bce96c6f05856839d4c682c43d15de8f29b3c))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.9 ([#1567](https://github.com/scaleway/scaleway-ui/issues/1567)) ([5614eb5](https://github.com/scaleway/scaleway-ui/commit/5614eb51d1bd57c47bed3734fe3b0ddd07a11543))
+* **devdeps:** update dependency semantic-release to v19.0.3 [security] ([#1574](https://github.com/scaleway/scaleway-ui/issues/1574)) ([9066811](https://github.com/scaleway/scaleway-ui/commit/906681107c157bbcec6405255896b61650c5c0e7))
+* **devdeps:** update storybook monorepo to v6.5.8 ([#1573](https://github.com/scaleway/scaleway-ui/issues/1573)) ([03f864f](https://github.com/scaleway/scaleway-ui/commit/03f864f25289b1d05b82857dcca66ebd4ca04258))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/use-media to v1.1.1 ([#1568](https://github.com/scaleway/scaleway-ui/issues/1568)) ([8bae115](https://github.com/scaleway/scaleway-ui/commit/8bae115ffd213232d35fc208034b28074976a81d))
+
 ## [0.156.0](https://github.com/scaleway/scaleway-ui/compare/v0.155.1...v0.156.0) (2022-06-09)
 
 
