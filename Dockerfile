@@ -24,4 +24,4 @@ COPY --from=builder /usr/src/app/storybook-static .
 
 RUN npm add -g serve
 
-CMD serve -s -l 80
+CMD serve -l 80
