@@ -16,7 +16,6 @@ exports[`TooltipIcon renders with default props 1`] = `
 
 <div
     aria-describedby="test"
-    tabindex="0"
   >
     <svg
       aria-label="help-circle-outline"
@@ -27,69 +26,6 @@ exports[`TooltipIcon renders with default props 1`] = `
         d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z"
       />
     </svg>
-  </div>
-  .cache-fe0htd-StyledTooltip-black {
-  border-radius: 4px;
-  opacity: 0;
-  font-size: 0.8rem;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  line-height: 16px;
-  padding: 8px;
-  text-align: center;
-  -webkit-transition: opacity 150ms ease-in-out,-webkit-transform 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out,transform 150ms ease-in-out;
-  transform-origin: top center;
-  -webkit-transform: translate3d(0, -4px, 0);
-  -moz-transform: translate3d(0, -4px, 0);
-  -ms-transform: translate3d(0, -4px, 0);
-  transform: translate3d(0, -4px, 0);
-  background-color: #4a4f62;
-  color: #ffffff;
-  fill: #4a4f62;
-  box-shadow: 0px 4px 32px 8px #D4DAE766;
-}
-
-[data-enter] .cache-fe0htd-StyledTooltip-black {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-<div
-    class="__reakit-portal"
-  >
-    <div
-      hidden=""
-      id="test"
-      role="tooltip"
-      style="display: none; position: fixed; left: 100%; top: 100%; pointer-events: none;"
-    >
-      <div
-        class="ep3agpf0 cache-fe0htd-StyledTooltip-black"
-      >
-        <div
-          style="font-size: 16px; width: 1em; height: 1em; pointer-events: none; top: 100%;"
-        >
-          <svg
-            style="transform: rotateZ(180deg);"
-            viewBox="0 0 30 30"
-          >
-            <path
-              class="stroke"
-              d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z"
-            />
-            <path
-              class="fill"
-              d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z"
-            />
-          </svg>
-        </div>
-        test
-      </div>
-    </div>
   </div>
 </DocumentFragment>
 `;

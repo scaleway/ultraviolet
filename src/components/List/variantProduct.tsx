@@ -420,7 +420,7 @@ export const Row = ({
               {!locked && (
                 <div>
                   <Tooltip
-                    baseId={`list-tooltip-row-${id}`}
+                    id={`list-tooltip-row-${id}`}
                     text={!isSelectable ? notSelectableText : undefined}
                   >
                     <StyledCheckbox

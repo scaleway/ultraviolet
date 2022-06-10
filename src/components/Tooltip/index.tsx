@@ -2,8 +2,6 @@ import styled from '@emotion/styled'
 import {
   ReactNode,
   RefObject,
-  cloneElement,
-  isValidElement,
   useCallback,
   useEffect,
   useMemo,
@@ -54,8 +52,8 @@ const StyledTooltip = styled.div<{
   &::after {
     content: ' ';
     position: absolute;
-    top: ${({ positions }) => positions.arrowTop}%;
-    left: ${({ positions }) => positions.arrowLeft}%;
+    top: ${({ positions }) => positions.arrowTop}px;
+    left: ${({ positions }) => positions.arrowLeft}px;
     transform: ${({ positions }) => positions.translate}
       rotate(${({ positions }) => positions.rotate}deg);
     margin-left: -${ARROW_WIDTH}px;
@@ -91,47 +89,42 @@ const computePositions = ({
     tooltipRef.current as HTMLDivElement
   ).getBoundingClientRect()
 
-  console.log(
-    (childrenRef.current as HTMLDivElement).getBoundingClientRect(),
-    (tooltipRef.current as HTMLDivElement).getBoundingClientRect(),
-  )
-
   switch (placement) {
     case 'bottom':
       return {
-        arrowLeft: 50,
-        arrowTop: -100,
+        arrowLeft: tooltipWidth / 2,
+        arrowTop: -ARROW_WIDTH - 6,
         left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
-        rotate: 135,
+        rotate: 180,
         top: childrenTop + childrenHeight + ARROW_WIDTH + SPACE,
-        translate: 'translate(-50%, 50%)',
+        translate: '',
       }
     case 'left':
       return {
-        arrowLeft: 105,
-        arrowTop: 50,
+        arrowLeft: tooltipWidth + ARROW_WIDTH + 6,
+        arrowTop: tooltipHeight / 2,
         left: childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE,
         rotate: -90,
-        top: childrenTop - tooltipHeight / 2,
+        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
         translate: 'translate(-50%, -50%)',
       }
     case 'right':
       return {
-        arrowLeft: -5,
-        arrowTop: 50,
+        arrowLeft: -ARROW_WIDTH - 6,
+        arrowTop: tooltipHeight / 2,
         left: childrenRight + ARROW_WIDTH + SPACE,
         rotate: 90,
-        top: childrenTop - tooltipHeight / 2,
+        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
         translate: 'translate(50%, -50%)',
       }
     default: // top placement is default value
       return {
-        arrowLeft: 50,
-        arrowTop: 99,
+        arrowLeft: tooltipWidth / 2,
+        arrowTop: tooltipHeight,
         left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
-        rotate: 135,
+        rotate: 0,
         top: childrenTop - tooltipHeight - ARROW_WIDTH - SPACE,
-        translate: 'translate(-50%, -50)',
+        translate: '',
       }
   }
 }
@@ -143,10 +136,6 @@ type TooltipProps = {
   placement?: TooltipPlacement
   text?: ReactNode
   className?: string
-  /**
-   * Defined whether tooltip should be rendered into a portal.
-   */
-  portal?: boolean
 }
 
 const Tooltip = ({
@@ -156,10 +145,10 @@ const Tooltip = ({
   id,
   className,
   maxWidth = 232,
-  portal = true,
 }: TooltipProps): JSX.Element => {
   const childrenRef = useRef<HTMLDivElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
+  const timer = useRef<ReturnType<typeof setInterval>>()
   const [visibleInDom, setVisibleInDom] = useState(false)
   const [positions, setPositions] = useState(DEFAULT_POSITIONS)
 
@@ -170,14 +159,10 @@ const Tooltip = ({
   }, [id])
 
   const getPositions = useCallback(() => {
-    if (childrenRef.current && tooltipRef.current && portal) {
+    if (childrenRef.current && tooltipRef.current) {
       setPositions(computePositions({ childrenRef, placement, tooltipRef }))
     }
-
-    if (!portal) {
-      setPositions(DEFAULT_POSITIONS)
-    }
-  }, [placement, portal])
+  }, [placement])
 
   /**
    * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
@@ -185,10 +170,22 @@ const Tooltip = ({
    */
   const onMouseEvent = useCallback(
     (isVisible: boolean) => () => {
+      // This is when we hide the tooltip, first we set opacity to 0 then we set a timeout based on CSS animation duration
+      // then we remove it from dom
       if (!isVisible && tooltipRef.current) {
         tooltipRef.current.style.opacity = '0'
-        setTimeout(() => setVisibleInDom(isVisible), ANIMATION_DURATION)
+        timer.current = setTimeout(() => {
+          setVisibleInDom(isVisible)
+        }, ANIMATION_DURATION)
       } else {
+        // If a timeout is already set it means tooltip didn't have time to close completely and be removed from dom,
+        // so we clear timeout and set back opacity of tooltip to 1, so it can be visible on screen.
+        if (timer.current) {
+          clearTimeout(timer.current)
+          if (tooltipRef.current) {
+            tooltipRef.current.style.opacity = '1'
+          }
+        }
         setVisibleInDom(isVisible)
       }
     },
@@ -209,57 +206,55 @@ const Tooltip = ({
     }
   }, [getPositions, visibleInDom])
 
-  const renderTooltip = useCallback(
-    () => (
-      <StyledTooltip
-        ref={tooltipRef}
-        positions={positions}
-        maxWidth={maxWidth}
-        role="tooltip"
-        id={computedId}
-      >
-        {text}
-      </StyledTooltip>
-    ),
-    [computedId, maxWidth, positions, text],
-  )
-
   /**
-   * Will render a portal when activated, a span when option is of and null when children tooltip is not hovered.
-   * Render in dom is dynamic, only hovered children tooltip are added into the dom.
+   * WIll render children conditionally
    */
-  const render = useCallback(() => {
-    if (portal && visibleInDom)
-      return createPortal(renderTooltip(), document.body)
-    if (!portal && visibleInDom) return renderTooltip()
+  const renderChildren = useCallback(() => {
+    if (typeof children === 'function')
+      return children({
+        className,
+        onBlur: onMouseEvent(false),
+        onFocus: onMouseEvent(true),
+        onMouseEnter: onMouseEvent(true),
+        onMouseLeave: onMouseEvent(false),
+        ref: childrenRef,
+      }) as JSX.Element
 
-    return null
-  }, [portal, renderTooltip, visibleInDom])
+    return (
+      <div
+        aria-describedby={id}
+        onBlur={onMouseEvent(false)}
+        onFocus={onMouseEvent(true)}
+        onMouseEnter={onMouseEvent(true)}
+        onMouseLeave={onMouseEvent(false)}
+        ref={childrenRef}
+      >
+        {children}
+      </div>
+    )
+  }, [children, className, id, onMouseEvent])
 
   if (!text) {
-    return isValidElement(children)
-      ? cloneElement(children, { className })
-      : (children as JSX.Element)
+    return children as JSX.Element
   }
 
   return (
     <>
-      {isValidElement(children) ? (
-        cloneElement(children, {
-          onMouseEnter: onMouseEvent(true),
-          onMouseLeave: onMouseEvent(false),
-          ref: childrenRef,
-        })
-      ) : (
-        <div
-          onMouseEnter={onMouseEvent(true)}
-          onMouseLeave={onMouseEvent(false)}
-          ref={childrenRef}
-        >
-          {children}
-        </div>
-      )}
-      {render()}
+      {renderChildren()}
+      {visibleInDom
+        ? createPortal(
+            <StyledTooltip
+              ref={tooltipRef}
+              positions={positions}
+              maxWidth={maxWidth}
+              role="tooltip"
+              id={computedId}
+            >
+              {text}
+            </StyledTooltip>,
+            document.body,
+          )
+        : null}
     </>
   )
 }

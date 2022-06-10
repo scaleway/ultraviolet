@@ -154,7 +154,7 @@ export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
   const { selected = false, highlighted = false } = rowsState[id] || {}
 
   return (
-    <Tooltip baseId={`list-tooltip-row-${id}`} text={tooltip}>
+    <Tooltip id={`list-tooltip-row-${id}`} text={tooltip}>
       <StyledRow
         {...props}
         role="listitem"

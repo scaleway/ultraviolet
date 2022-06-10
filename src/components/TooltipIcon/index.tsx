@@ -20,7 +20,7 @@ const TooltipIcon = ({
   tooltip,
   baseId,
 }: TooltipIconProps) => (
-  <Tooltip text={tooltip} baseId={baseId}>
+  <Tooltip text={tooltip} id={baseId}>
     <Icon
       color={color}
       name={name}
