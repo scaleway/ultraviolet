@@ -21,7 +21,7 @@ type DisclosureParam =
   | (ReactElement & { ref?: RefObject<HTMLButtonElement> })
 
 const StyledPopover = styled(Popover)<PopoverProps>`
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   background-color: ${({ theme }) => theme.colors.neutral.background};
   color: ${({ theme }) => theme.colors.neutral.text};
   box-shadow: ${({ theme }) => theme.shadows.dropdown};
@@ -162,7 +162,7 @@ const MenuList = styled.div<MenuListProps>`
   text-align: center;
   justify-content: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   position: relative;
   ${({ placement, theme, hasArrow }) =>
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
