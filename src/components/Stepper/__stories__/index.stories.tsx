@@ -27,16 +27,16 @@ const Template: Story<ComponentProps<typeof Stepper>> = args => (
 
 export const Default = Template.bind({})
 
-export const WithoutAnimation = Template.bind({})
-WithoutAnimation.parameters = {
+export const WithAnimation = Template.bind({})
+WithAnimation.parameters = {
   docs: {
     storyDescription:
-      'Stepper Component without animation (static) by passing `animated={false}` ',
+      'Stepper Component with animation by passing `animated={true}` ',
   },
 }
-WithoutAnimation.decorators = [
+WithAnimation.decorators = [
   () => (
-    <Stepper selected={1} animated={false}>
+    <Stepper selected={1} animated>
       <Typography>Step 1</Typography>
       <Typography>Step 2</Typography>
       <Typography>Step 3</Typography>

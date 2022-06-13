@@ -150,7 +150,7 @@ type StepperProps = {
 const Stepper = ({
   children,
   selected = 0,
-  animated = true,
+  animated = false,
   className,
 }: StepperProps) => {
   const lastStep = Children.count(children) - 1
