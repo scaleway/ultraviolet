@@ -48,12 +48,12 @@ type StyledSwitchProps = VariantProps & {
 
 const SwitchVariantsStyles = {
   primary: (theme: Theme) => css`
-    &[aria-checked='true'] {
+    &[data-checked='true'] {
       color: ${theme.colors.neutral.textStrong};
       background-color: ${theme.colors.primary.backgroundStrong};
     }
 
-    &[aria-checked='true'] {
+    &[data-checked='true'] {
       & > ${StyledInsideLabel} {
         color: ${theme.colors.primary.textStrong};
       }
@@ -73,7 +73,7 @@ const SwitchVariantsStyles = {
       background-color: ${theme.colors.neutral.backgroundWeak};
     }
 
-    &[aria-checked='true'] {
+    &[data-checked='true'] {
       color: ${theme.colors.success.text};
       background-color: ${theme.colors.success.backgroundHover};
 
@@ -135,16 +135,16 @@ const StyledSwitch = styled('div', {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
 
-  &[aria-checked='true'] > ${SwitchBallContainer} {
+  &[data-checked='true'] > ${SwitchBallContainer} {
     transform: translateX(100%);
   }
 
-  &:not([aria-checked='true']) > ${StyledInsideLabel} {
+  &:not([data-checked='true']) > ${StyledInsideLabel} {
     margin-left: ${({ theme }) => theme.space[4]};
     margin-right: ${({ theme }) => theme.space[1]};
   }
 
-  &[aria-checked='true'] ${StyledInsideLabel} {
+  &[data-checked='true'] ${StyledInsideLabel} {
     margin-right: ${({ theme }) => theme.space[4]};
     margin-left: ${({ theme }) => theme.space[1]};
   }
@@ -163,14 +163,14 @@ const StyledSwitch = styled('div', {
       height: ${({ theme }) => theme.space[2]};
     }
 
-    &:not([aria-checked='true']) > ${StyledInsideLabel} {
+    &:not([data-checked='true']) > ${StyledInsideLabel} {
       margin-left: calc(
         ${({ theme }) => theme.space[2]} + ${({ theme }) => theme.space[0.5]}
       );
       margin-right: ${({ theme }) => theme.space[0.5]};
     }
 
-    &[aria-checked='true'] ${StyledInsideLabel} {
+    &[data-checked='true'] ${StyledInsideLabel} {
       margin-right: calc(
         ${({ theme }) => theme.space[2]} + ${({ theme }) => theme.space[0.5]}
       );
@@ -179,7 +179,7 @@ const StyledSwitch = styled('div', {
   }
 
   &[data-variant='success'] {
-    &[aria-checked='true'] {
+    &[data-checked='true'] {
       background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
     }
   }
@@ -208,7 +208,7 @@ const StyledCheckbox = styled.input`
   }
 `
 
-const StyledLabel = styled.label<{ width?: number }>`
+const StyledLabel = styled.div<{ width?: number }>`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -220,7 +220,9 @@ const StyledLabel = styled.label<{ width?: number }>`
   }
 `
 
-const StyledLabelContent = styled.div<{
+const StyledLabelContent = styled('div', {
+  shouldForwardProp: prop => !['labeled', 'value'].includes(prop.toString()),
+})<{
   labeled: boolean | LabelPositions
   value: ReactNode
 }>`
@@ -258,7 +260,6 @@ const Switch = ({
     <Tooltip text={tooltip}>
       <StyledLabel
         width={width}
-        aria-checked={checked}
         aria-disabled={disabled}
         onClick={evt => evt.stopPropagation()}
       >
@@ -273,7 +274,7 @@ const Switch = ({
         ) : null}
         <StyledSwitch
           size={size}
-          aria-checked={checked}
+          data-checked={checked}
           data-variant={variant}
           data-size={size}
         >
@@ -287,6 +288,7 @@ const Switch = ({
           </SwitchBallContainer>
           <StyledCheckbox
             id={id || name}
+            aria-label={`${name}-label`}
             checked={checked}
             disabled={disabled}
             name={name}
