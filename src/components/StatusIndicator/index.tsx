@@ -1,10 +1,24 @@
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
+import { Color } from '../../theme'
+import { ColorDeprecated } from '../../theme/deprecated/colors'
 import { flash } from '../../utils/animations'
-import { XStyledProps } from '../Box'
-import Dot from '../Dot'
+import Box, { XStyledProps } from '../Box'
 import Tooltip from '../Tooltip'
+
+const Dot = styled(Box, {
+  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+})`
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: ${({ theme, color }) =>
+    theme.colors[color as Color]?.backgroundStrong ??
+    theme.colorsDeprecated[color as ColorDeprecated] ??
+    color};
+`
 
 const defaultStatuses = {
   available: 'green',
@@ -47,7 +61,11 @@ const StatusIndicator = ({
 }: StatusIndicatorProps): JSX.Element => (
   <Tooltip text={tooltip}>
     <Dot
-      color={({ ...defaultStatuses, ...statuses }[status] as Color) || 'blue'}
+      color={
+        ({ ...defaultStatuses, ...statuses }[status] as
+          | ColorDeprecated
+          | Color) || 'blue'
+      }
       css={animated && cssAnimation}
       {...props}
     />
