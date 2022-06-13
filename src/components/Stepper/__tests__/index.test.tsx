@@ -5,7 +5,7 @@ import Typography from '../../Typography'
 describe('Stepper', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={0} animated>
+      <Stepper selected={0}>
         <Typography>Step 1</Typography>
         <Typography>Step 2</Typography>
         <Typography>Step 3</Typography>
@@ -14,7 +14,7 @@ describe('Stepper', () => {
 
   test('renders correctly with selected prop', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={1} animated>
+      <Stepper selected={1}>
         {false && (
           <>
             <Typography>Step 0</Typography>
@@ -27,9 +27,9 @@ describe('Stepper', () => {
       </Stepper>,
     ))
 
-  test('renders correctly without animation', () =>
+  test('renders correctly with animation', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={1}>
+      <Stepper selected={1} animated>
         <Typography>Step 1</Typography>
         <Typography>Step 2</Typography>
         <Typography>Step 3</Typography>
@@ -38,7 +38,7 @@ describe('Stepper', () => {
 
   test('renders correctly with all selected', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={2} animated>
+      <Stepper selected={2}>
         <Typography>Step 1</Typography>
         <Typography>Step 2</Typography>
         <Typography>Step 3</Typography>
