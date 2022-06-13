@@ -165,6 +165,15 @@ const Tooltip = ({
   }, [placement])
 
   /**
+   * This function is called when we need to remove tooltip portal from DOM and remove event listener to it.
+   */
+  const unmountTooltip = useCallback(() => {
+    setVisibleInDom(false)
+    window.removeEventListener('resize', getPositions)
+    window.removeEventListener('scroll', getPositions)
+  }, [getPositions])
+
+  /**
    * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
    * end, then remove tooltip from dom.
    */
@@ -174,9 +183,7 @@ const Tooltip = ({
       // then we remove it from dom
       if (!isVisible && tooltipRef.current) {
         tooltipRef.current.style.opacity = '0'
-        timer.current = setTimeout(() => {
-          setVisibleInDom(isVisible)
-        }, ANIMATION_DURATION)
+        timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
       } else {
         // If a timeout is already set it means tooltip didn't have time to close completely and be removed from dom,
         // so we clear timeout and set back opacity of tooltip to 1, so it can be visible on screen.
@@ -189,22 +196,25 @@ const Tooltip = ({
         setVisibleInDom(isVisible)
       }
     },
-    [],
+    [unmountTooltip],
   )
 
   /**
-   * Once tooltip is visible in the dom we can compute positions and then set it visible on screen.
+   * Once tooltip is visible in the dom we can compute positions, then set it visible on screen and add event to
+   * recompute positions on scroll or screen resize.
    */
   useEffect(() => {
-    getPositions()
+    if (visibleInDom) {
+      getPositions()
 
-    window.addEventListener('resize', getPositions)
-    window.addEventListener('scroll', getPositions)
+      window.addEventListener('resize', getPositions)
+      window.addEventListener('scroll', getPositions)
 
-    if (tooltipRef.current) {
-      tooltipRef.current.style.opacity = '1'
+      if (tooltipRef.current) {
+        tooltipRef.current.style.opacity = '1'
+      }
     }
-  }, [getPositions, visibleInDom])
+  }, [getPositions, unmountTooltip, visibleInDom])
 
   /**
    * WIll render children conditionally
