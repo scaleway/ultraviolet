@@ -1,7 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Color } from '../../theme'
-import { XOR } from '../../utils/xor'
 import Icon from '../Icon'
 import Image from '../Image'
 
