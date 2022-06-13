@@ -144,13 +144,19 @@ type StepperProps = {
   animated?: boolean
   selected?: number
   children: ReactNode[]
+  className?: string
 }
 
-const Stepper = ({ children, selected = 0, animated = true }: StepperProps) => {
+const Stepper = ({
+  children,
+  selected = 0,
+  animated = true,
+  className,
+}: StepperProps) => {
   const lastStep = Children.count(children) - 1
 
   return (
-    <StyledContainer>
+    <StyledContainer className={className}>
       {flattenChildren(children).map((child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'previous'
