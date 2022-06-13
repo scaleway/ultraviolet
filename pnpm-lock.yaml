@@ -92,7 +92,7 @@ specifiers:
   jest-environment-jsdom: 28.1.1
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
-  lint-staged: 13.0.0
+  lint-staged: 13.0.1
   loki: 0.30.3
   polished: 4.2.2
   postcss: 8.4.14
@@ -229,7 +229,7 @@ devDependencies:
   jest-environment-jsdom: 28.1.1
   jest-junit: 13.2.0
   jest-mock-random: 1.1.1
-  lint-staged: 13.0.0
+  lint-staged: 13.0.1
   loki: 0.30.3_psa2aksgamewcpgatvoy2eja2e
   postcss: 8.4.14
   prettier: 2.6.2
@@ -7709,8 +7709,8 @@ packages:
     resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==}
     dev: true
 
-  /colorette/2.0.16:
-    resolution: {integrity: sha512-hUewv7oMjCp+wkBv5Rm0v87eJhq4woh5rSR+42YSQJKecCqgIqNkZ6lAlQms/BwHPJA5NKMRlpxPRv0n8HQW6g==}
+  /colorette/2.0.17:
+    resolution: {integrity: sha512-hJo+3Bkn0NCHybn9Tu35fIeoOKGOk5OCC32y4Hz2It+qlCO2Q3DeQ1hRn/tDDMQKRYUEzqsl7jbF6dYKjlE60g==}
     dev: true
 
   /colors/1.4.0:
@@ -12575,13 +12575,13 @@ packages:
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /lint-staged/13.0.0:
-    resolution: {integrity: sha512-vWban5utFt78VZohbosUxNIa46KKJ+KOQTDWTQ8oSl1DLEEVl9zhUtaQbiiydAmx+h2wKJK2d0+iMaRmknuWRQ==}
+  /lint-staged/13.0.1:
+    resolution: {integrity: sha512-Ykaf4QTi0a02BF7cnq7JIPGOJxH4TkNMWhSlJdH9wOekd0X+gog47Jfh/0L31DqZe5AiydLGC7LkPqpaNm+Kvg==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       cli-truncate: 3.1.0
-      colorette: 2.0.16
+      colorette: 2.0.17
       commander: 9.3.0
       debug: 4.3.4
       execa: 6.1.0
@@ -12590,7 +12590,7 @@ packages:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-inspect: 1.12.2
-      pidtree: 0.5.0
+      pidtree: 0.6.0
       string-argv: 0.3.1
       yaml: 2.1.1
     transitivePeerDependencies:
@@ -12608,7 +12608,7 @@ packages:
         optional: true
     dependencies:
       cli-truncate: 2.1.0
-      colorette: 2.0.16
+      colorette: 2.0.17
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
@@ -14644,8 +14644,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pidtree/0.5.0:
-    resolution: {integrity: sha512-9nxspIM7OpZuhBxPg73Zvyq7j1QMPMPsGKTqRc2XOaFQauDvoNz9fM1Wdkjmeo7l9GXOZiRs97sPkuayl39wjA==}
+  /pidtree/0.6.0:
+    resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
     dev: true
@@ -17644,7 +17644,7 @@ packages:
     dev: true
 
   /through/2.3.8:
-    resolution: {integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=}
+    resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
 
   /through2/2.0.5:
