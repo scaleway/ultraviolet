@@ -1,3 +1,17 @@
+## [0.156.2](https://github.com/scaleway/scaleway-ui/compare/v0.156.1...v0.156.2) (2022-06-13)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @storybook/testing-library to v0.0.12 ([#1577](https://github.com/scaleway/scaleway-ui/issues/1577)) ([3a3948f](https://github.com/scaleway/scaleway-ui/commit/3a3948f2d7fa6b9df873226cef3bac9d6fbf3be9))
+* **devdeps:** update dependency lint-staged to v13.0.1 ([#1572](https://github.com/scaleway/scaleway-ui/issues/1572)) ([51e0e1d](https://github.com/scaleway/scaleway-ui/commit/51e0e1d27ac778105b6ba30345e772f796463348))
+* **devdeps:** update dependency loki to v0.30.3 ([#1576](https://github.com/scaleway/scaleway-ui/issues/1576)) ([342206a](https://github.com/scaleway/scaleway-ui/commit/342206a4d8c85b7dac688b5a5de6f9866a8474c3))
+
+
+### :bug: Bug Fixes
+
+* move @nivo/tooltip to dependency ([#1561](https://github.com/scaleway/scaleway-ui/issues/1561)) ([1269fd5](https://github.com/scaleway/scaleway-ui/commit/1269fd5aac640347c799fb3c4a10f4ba46b36e71))
+
 ## [0.156.1](https://github.com/scaleway/scaleway-ui/compare/v0.156.0...v0.156.1) (2022-06-10)
 
 
