@@ -29,7 +29,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.3.0
   '@rollup/plugin-url': 7.0.0
   '@scaleway/eslint-config-react': 3.4.33
-  '@scaleway/jest-helpers': 1.2.6
+  '@scaleway/jest-helpers': 1.2.7
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.3.10
   '@scaleway/use-media': 1.1.1
@@ -173,7 +173,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.75.6
   '@rollup/plugin-url': 7.0.0_rollup@2.75.6
   '@scaleway/eslint-config-react': 3.4.33_ud6rd4xtew5bv4yhvkvu24pzm4
-  '@scaleway/jest-helpers': 1.2.6_ktmrn4o5ifkizl4w5bhvcsuv4a
+  '@scaleway/jest-helpers': 1.2.7_ktmrn4o5ifkizl4w5bhvcsuv4a
   '@scaleway/use-i18n': 3.3.10_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
@@ -1979,6 +1979,16 @@ packages:
       '@emotion/weak-memoize': 0.2.5
       stylis: 4.0.13
 
+  /@emotion/cache/11.9.3:
+    resolution: {integrity: sha512-0dgkI/JKlCXa+lEXviaMtGBL0ynpx4osh7rjOXE71q9bIF8G+XhJgvi+wDu0B0IdCVx37BffiwXlN9I3UuzFvg==}
+    dependencies:
+      '@emotion/memoize': 0.7.5
+      '@emotion/sheet': 1.1.1
+      '@emotion/utils': 1.1.0
+      '@emotion/weak-memoize': 0.2.5
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/css-prettifier/1.0.1:
     resolution: {integrity: sha512-cA9Dtol47mtvWKasPC+8tkh2DS0wBkX0MMHKieXGSkGyx079V7yFY85KC0pPalcIy+vi0LbMR9DNyiJBqYgJ1Q==}
     dependencies:
@@ -2022,6 +2032,25 @@ packages:
       stylis: 4.0.13
     dev: true
 
+  /@emotion/jest/11.9.3_@types+jest@27.5.2:
+    resolution: {integrity: sha512-fDfZc1ydjjJ+2IDAK+rP+rm469I4u5cIkN3zmGYf0CBW9TLrtM9u9kke3s+i5/M2UpcqLDvtal0EyPBR0A8EWg==}
+    peerDependencies:
+      '@types/jest': ^26.0.14 || ^27.0.0
+      enzyme-to-json: ^3.2.1
+    peerDependenciesMeta:
+      '@types/jest':
+        optional: true
+      enzyme-to-json:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.3
+      '@emotion/css-prettifier': 1.0.1
+      '@types/jest': 27.5.2
+      chalk: 4.1.2
+      specificity: 0.4.1
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/memoize/0.7.5:
     resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
 
@@ -2048,6 +2077,30 @@ packages:
       hoist-non-react-statics: 3.3.2
       react: 17.0.2
 
+  /@emotion/react/11.9.3_ddpcdz72weezmodm7yk4v5n3v4:
+    resolution: {integrity: sha512-g9Q1GcTOlzOEjqwuLF/Zd9LC+4FljjPjDfxSM7KmEakm+hsHXk+bYZ2q+/hTJzr0OUNkujo72pXLQvXj6H+GJQ==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      '@types/react': '*'
+      react: '>=16.8.0 || 17'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/core': 7.18.2
+      '@babel/runtime': 7.18.3
+      '@emotion/babel-plugin': 11.9.2_@babel+core@7.18.2
+      '@emotion/cache': 11.9.3
+      '@emotion/serialize': 1.0.4
+      '@emotion/utils': 1.1.0
+      '@emotion/weak-memoize': 0.2.5
+      '@types/react': 17.0.45
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.2
+    dev: true
+
   /@emotion/serialize/1.0.3:
     resolution: {integrity: sha512-2mSSvgLfyV3q+iVh3YWgNlUc2a9ZlDU7DjuP5MjK3AXRR0dYigCrP99aeFtaB2L/hjfEZdSThn5dsZ0ufqbvsA==}
     dependencies:
@@ -2057,8 +2110,22 @@ packages:
       '@emotion/utils': 1.1.0
       csstype: 3.0.10
 
+  /@emotion/serialize/1.0.4:
+    resolution: {integrity: sha512-1JHamSpH8PIfFwAMryO2bNka+y8+KA5yga5Ocf2d7ZEiJjb7xlLW7aknBGZqJLajuLOvJ+72vN+IBSwPlXD1Pg==}
+    dependencies:
+      '@emotion/hash': 0.8.0
+      '@emotion/memoize': 0.7.5
+      '@emotion/unitless': 0.7.5
+      '@emotion/utils': 1.1.0
+      csstype: 3.0.10
+    dev: true
+
   /@emotion/sheet/1.1.0:
     resolution: {integrity: sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==}
+
+  /@emotion/sheet/1.1.1:
+    resolution: {integrity: sha512-J3YPccVRMiTZxYAY0IOq3kd+hUP8idY8Kz6B/Cyo+JuXq52Ek+zbPbSQUrVQp95aJ+lsAW7DPL1P2Z+U1jGkKA==}
+    dev: true
 
   /@emotion/styled/11.8.1_74quhjy2o5fky35ibrqgdmklba:
     resolution: {integrity: sha512-OghEVAYBZMpEquHZwuelXcRjRJQOVayvbmNR0zr174NHdmMgrNkLC6TljKC5h9lZLkN5WGrdUcrKlOJ4phhoTQ==}
@@ -3275,14 +3342,14 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.6_ktmrn4o5ifkizl4w5bhvcsuv4a:
-    resolution: {integrity: sha512-JuGhAyhJAdENbAbxhOWd7BXAJhzb6EDhXJycPSMV8yWyuj1C1p87MjNZ4d9V4j7q8BE4hItO/vMf/SiU4BWpIw==}
+  /@scaleway/jest-helpers/1.2.7_ktmrn4o5ifkizl4w5bhvcsuv4a:
+    resolution: {integrity: sha512-51qNZD3vZRhTuOGhGSTASrNbpR87jzKDHj2FYVNoTbzJsuUalFSHhNUWTd5YQWcl6uBjka+xlLiktb3+P8vywQ==}
     peerDependencies:
       react: ^17.0.1 || 17
     dependencies:
-      '@emotion/cache': 11.7.1
-      '@emotion/jest': 11.9.1_@types+jest@27.5.2
-      '@emotion/react': 11.9.0_ddpcdz72weezmodm7yk4v5n3v4
+      '@emotion/cache': 11.9.3
+      '@emotion/jest': 11.9.3_@types+jest@27.5.2
+      '@emotion/react': 11.9.3_ddpcdz72weezmodm7yk4v5n3v4
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
     transitivePeerDependencies:
