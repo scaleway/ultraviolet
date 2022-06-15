@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Stepper from '..'
-import Typography from '../../Typography'
 
 export default {
   component: Stepper,
@@ -37,11 +36,11 @@ WithAnimation.parameters = {
 WithAnimation.decorators = [
   () => (
     <Stepper selected={1} animated>
-      <Typography>Step 1</Typography>
-      <Typography>Step 2</Typography>
-      <Typography>Step 3</Typography>
-      <Typography>Step 4</Typography>
-      <Typography>Step 5</Typography>
+      <span>Step 1</span>
+      <span>Step 2</span>
+      <span>Step 3</span>
+      <span>Step 4</span>
+      <span>Step 5</span>
     </Stepper>
   ),
 ]

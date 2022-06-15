@@ -1,14 +1,13 @@
 import Stepper from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
-import Typography from '../../Typography'
 
 describe('Stepper', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
       <Stepper selected={0}>
-        <Typography>Step 1</Typography>
-        <Typography>Step 2</Typography>
-        <Typography>Step 3</Typography>
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
       </Stepper>,
     ))
 
@@ -17,31 +16,31 @@ describe('Stepper', () => {
       <Stepper selected={1}>
         {false && (
           <>
-            <Typography>Step 0</Typography>
-            <Typography>Step 0</Typography>
+            <span>Step 0</span>
+            <span>Step 0</span>
           </>
         )}
-        <Typography>Step 1</Typography>
-        <Typography>Step 2</Typography>
-        <Typography>Step 3</Typography>
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
       </Stepper>,
     ))
 
   test('renders correctly with animation', () =>
     shouldMatchEmotionSnapshot(
       <Stepper selected={1} animated>
-        <Typography>Step 1</Typography>
-        <Typography>Step 2</Typography>
-        <Typography>Step 3</Typography>
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
       </Stepper>,
     ))
 
   test('renders correctly with all selected', () =>
     shouldMatchEmotionSnapshot(
       <Stepper selected={2}>
-        <Typography>Step 1</Typography>
-        <Typography>Step 2</Typography>
-        <Typography>Step 3</Typography>
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
       </Stepper>,
     ))
 })

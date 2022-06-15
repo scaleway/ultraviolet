@@ -2,7 +2,7 @@
 
 exports[`Stepper renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .cache-l6m7ol-StyledContainer {
+  .cache-o9b44e-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,27 +21,20 @@ exports[`Stepper renders correctly with all selected 1`] = `
   gap: 0 8px;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m4 {
+.cache-o9b44e-StyledContainer .etyrq8m4 {
   height: 32px;
   width: 32px;
-  font-size: 16px;
-  line-height: 1;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m5 {
+.cache-o9b44e-StyledContainer .etyrq8m5 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m1 {
+.cache-o9b44e-StyledContainer .etyrq8m1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.cache-l6m7ol-StyledContainer .etyrq8m3 {
-  margin-top: 16px;
-  font-size: 16px;
 }
 
 .cache-64yl8v-StyledStepContainer {
@@ -93,21 +86,18 @@ exports[`Stepper renders correctly with all selected 1`] = `
   vertical-align: middle;
 }
 
-.cache-iqnvfc-StyledText {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.cache-i7tymf-StyledText-variantStyles {
+.cache-1n0iqcj-StyledText-StyledText {
   color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
 }
 
 .cache-1onazp5-StyledLine {
@@ -150,8 +140,21 @@ exports[`Stepper renders correctly with all selected 1`] = `
   background-color: #eeeeff;
 }
 
+.cache-m5toqi-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
-    class="cache-l6m7ol-StyledContainer etyrq8m0"
+    class="cache-o9b44e-StyledContainer etyrq8m0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
@@ -168,15 +171,13 @@ exports[`Stepper renders correctly with all selected 1`] = `
           />
         </svg>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 1
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-1onazp5-StyledLine etyrq8m1"
@@ -196,15 +197,13 @@ exports[`Stepper renders correctly with all selected 1`] = `
           />
         </svg>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 2
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-1onazp5-StyledLine etyrq8m1"
@@ -215,21 +214,19 @@ exports[`Stepper renders correctly with all selected 1`] = `
       <div
         class="cache-epigh9-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-m5toqi-StyledText e1tg3t120"
         >
           3
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 3
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -247,7 +244,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   }
 }
 
-.cache-l6m7ol-StyledContainer {
+.cache-o9b44e-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,27 +263,20 @@ exports[`Stepper renders correctly with animation 1`] = `
   gap: 0 8px;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m4 {
+.cache-o9b44e-StyledContainer .etyrq8m4 {
   height: 32px;
   width: 32px;
-  font-size: 16px;
-  line-height: 1;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m5 {
+.cache-o9b44e-StyledContainer .etyrq8m5 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m1 {
+.cache-o9b44e-StyledContainer .etyrq8m1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.cache-l6m7ol-StyledContainer .etyrq8m3 {
-  margin-top: 16px;
-  font-size: 16px;
 }
 
 .cache-64yl8v-StyledStepContainer {
@@ -338,21 +328,18 @@ exports[`Stepper renders correctly with animation 1`] = `
   vertical-align: middle;
 }
 
-.cache-iqnvfc-StyledText {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.cache-i7tymf-StyledText-variantStyles {
+.cache-1n0iqcj-StyledText-StyledText {
   color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
 }
 
 .cache-1onazp5-StyledLine {
@@ -393,6 +380,19 @@ exports[`Stepper renders correctly with animation 1`] = `
   justify-content: center;
   color: #390171;
   background-color: #eeeeff;
+}
+
+.cache-m5toqi-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-prcay6-StyledLine-loadingStyle {
@@ -418,7 +418,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.cache-1li9a2m-StyledStep {
+.cache-td9xqz-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -432,13 +432,40 @@ exports[`Stepper renders correctly with animation 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #4a4f62;
+  color: #b2b6c3;
   background-color: transparent;
   border: 1px solid #d4dae7;
 }
 
+.cache-1922a18-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1d3h3s2-StyledText-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
 <div
-    class="cache-l6m7ol-StyledContainer etyrq8m0"
+    class="cache-o9b44e-StyledContainer etyrq8m0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
@@ -455,15 +482,13 @@ exports[`Stepper renders correctly with animation 1`] = `
           />
         </svg>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 1
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-1onazp5-StyledLine etyrq8m1"
@@ -474,21 +499,19 @@ exports[`Stepper renders correctly with animation 1`] = `
       <div
         class="cache-epigh9-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-m5toqi-StyledText e1tg3t120"
         >
           2
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 2
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-prcay6-StyledLine-loadingStyle etyrq8m1"
@@ -497,23 +520,21 @@ exports[`Stepper renders correctly with animation 1`] = `
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
     >
       <div
-        class="cache-1li9a2m-StyledStep etyrq8m4"
+        class="cache-td9xqz-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-1922a18-StyledText e1tg3t120"
         >
           3
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1d3h3s2-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 3
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -521,7 +542,7 @@ exports[`Stepper renders correctly with animation 1`] = `
 
 exports[`Stepper renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-l6m7ol-StyledContainer {
+  .cache-o9b44e-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,27 +561,20 @@ exports[`Stepper renders correctly with default props 1`] = `
   gap: 0 8px;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m4 {
+.cache-o9b44e-StyledContainer .etyrq8m4 {
   height: 32px;
   width: 32px;
-  font-size: 16px;
-  line-height: 1;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m5 {
+.cache-o9b44e-StyledContainer .etyrq8m5 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m1 {
+.cache-o9b44e-StyledContainer .etyrq8m1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.cache-l6m7ol-StyledContainer .etyrq8m3 {
-  margin-top: 16px;
-  font-size: 16px;
 }
 
 .cache-64yl8v-StyledStepContainer {
@@ -599,21 +613,31 @@ exports[`Stepper renders correctly with default props 1`] = `
   background-color: #eeeeff;
 }
 
-.cache-i7tymf-StyledText-variantStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-iqnvfc-StyledText {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
+.cache-1n0iqcj-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
 }
 
 .cache-rgwnp4-StyledLine {
@@ -637,7 +661,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-1li9a2m-StyledStep {
+.cache-td9xqz-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -651,13 +675,40 @@ exports[`Stepper renders correctly with default props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #4a4f62;
+  color: #b2b6c3;
   background-color: transparent;
   border: 1px solid #d4dae7;
 }
 
+.cache-1922a18-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1d3h3s2-StyledText-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
 <div
-    class="cache-l6m7ol-StyledContainer etyrq8m0"
+    class="cache-o9b44e-StyledContainer etyrq8m0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
@@ -665,21 +716,19 @@ exports[`Stepper renders correctly with default props 1`] = `
       <div
         class="cache-epigh9-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-m5toqi-StyledText e1tg3t120"
         >
           1
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 1
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-rgwnp4-StyledLine etyrq8m1"
@@ -688,23 +737,21 @@ exports[`Stepper renders correctly with default props 1`] = `
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
     >
       <div
-        class="cache-1li9a2m-StyledStep etyrq8m4"
+        class="cache-td9xqz-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-1922a18-StyledText e1tg3t120"
         >
           2
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1d3h3s2-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 2
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-rgwnp4-StyledLine etyrq8m1"
@@ -713,23 +760,21 @@ exports[`Stepper renders correctly with default props 1`] = `
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
     >
       <div
-        class="cache-1li9a2m-StyledStep etyrq8m4"
+        class="cache-td9xqz-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-1922a18-StyledText e1tg3t120"
         >
           3
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1d3h3s2-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 3
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -737,7 +782,7 @@ exports[`Stepper renders correctly with default props 1`] = `
 
 exports[`Stepper renders correctly with selected prop 1`] = `
 <DocumentFragment>
-  .cache-l6m7ol-StyledContainer {
+  .cache-o9b44e-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -756,27 +801,20 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   gap: 0 8px;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m4 {
+.cache-o9b44e-StyledContainer .etyrq8m4 {
   height: 32px;
   width: 32px;
-  font-size: 16px;
-  line-height: 1;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m5 {
+.cache-o9b44e-StyledContainer .etyrq8m5 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-l6m7ol-StyledContainer .etyrq8m1 {
+.cache-o9b44e-StyledContainer .etyrq8m1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.cache-l6m7ol-StyledContainer .etyrq8m3 {
-  margin-top: 16px;
-  font-size: 16px;
 }
 
 .cache-64yl8v-StyledStepContainer {
@@ -828,21 +866,18 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   vertical-align: middle;
 }
 
-.cache-iqnvfc-StyledText {
-  margin-top: 16px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.cache-i7tymf-StyledText-variantStyles {
+.cache-1n0iqcj-StyledText-StyledText {
   color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
 }
 
 .cache-1onazp5-StyledLine {
@@ -885,6 +920,19 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   background-color: #eeeeff;
 }
 
+.cache-m5toqi-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .cache-rgwnp4-StyledLine {
   border-radius: 2px;
   -webkit-box-flex: 1;
@@ -906,7 +954,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-1li9a2m-StyledStep {
+.cache-td9xqz-StyledStep {
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -920,13 +968,40 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #4a4f62;
+  color: #b2b6c3;
   background-color: transparent;
   border: 1px solid #d4dae7;
 }
 
+.cache-1922a18-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1d3h3s2-StyledText-StyledText {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
 <div
-    class="cache-l6m7ol-StyledContainer etyrq8m0"
+    class="cache-o9b44e-StyledContainer etyrq8m0"
   >
     <div
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
@@ -943,15 +1018,13 @@ exports[`Stepper renders correctly with selected prop 1`] = `
           />
         </svg>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 1
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-1onazp5-StyledLine etyrq8m1"
@@ -962,21 +1035,19 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       <div
         class="cache-epigh9-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-m5toqi-StyledText e1tg3t120"
         >
           2
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1n0iqcj-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 2
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-rgwnp4-StyledLine etyrq8m1"
@@ -985,23 +1056,21 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       class="cache-64yl8v-StyledStepContainer etyrq8m5"
     >
       <div
-        class="cache-1li9a2m-StyledStep etyrq8m4"
+        class="cache-td9xqz-StyledStep etyrq8m4"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
+        <span
+          class="cache-1922a18-StyledText e1tg3t120"
         >
           3
-        </div>
+        </span>
       </div>
-      <div
-        class="cache-iqnvfc-StyledText etyrq8m3"
+      <span
+        class="etyrq8m3 cache-1d3h3s2-StyledText-StyledText e1tg3t120"
       >
-        <div
-          class="e1g1zfwd0 cache-i7tymf-StyledText-variantStyles"
-        >
+        <span>
           Step 3
-        </div>
-      </div>
+        </span>
+      </span>
     </div>
     <div
       class="cache-rgwnp4-StyledLine etyrq8m1"

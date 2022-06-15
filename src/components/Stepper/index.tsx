@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Children, Fragment, ReactNode } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
-import Typography from '../Typography'
+import Text from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
 
@@ -34,7 +34,7 @@ const StyledStep = styled('div', {
     if (temporal === 'previous') return theme.colors.success.text
     if (temporal === 'current') return theme.colors.primary.text
 
-    return theme.colors.neutral.text
+    return theme.colors.neutral.textWeak
   }};
   background-color: ${({ temporal, theme }) => {
     if (temporal === 'previous') return theme.colors.success.background
@@ -49,11 +49,8 @@ const StyledStep = styled('div', {
       : null};
 `
 
-const StyledText = styled.div`
-  margin-top: ${({ theme }) => theme.space['2']};
-  font-size: ${({ theme }) => theme.space['2']};
-  display: flex;
-  text-align: center;
+const StyledText = styled(Text)`
+  margin-top: ${({ theme }) => theme.space['1']};
 `
 
 const StyledIcon = styled(Icon)`
@@ -95,8 +92,6 @@ const StyledContainer = styled.div`
   ${StyledStep} {
     height: ${({ theme }) => theme.space['4']};
     width: ${({ theme }) => theme.space['4']};
-    font-size: ${({ theme }) => theme.space['2']};
-    line-height: 1;
   }
 
   ${StyledStepContainer} {
@@ -108,11 +103,6 @@ const StyledContainer = styled.div`
     height: ${({ theme }) => theme.space['0.5']};
     margin-top: ${({ theme }) => theme.space['2']};
     margin-bottom: ${({ theme }) => theme.space['2']};
-  }
-
-  ${StyledText} {
-    margin-top: ${({ theme }) => theme.space['2']};
-    font-size: ${({ theme }) => theme.space['2']};
   }
 `
 
@@ -130,13 +120,26 @@ const StepperNumbers = ({
   <StyledStepContainer>
     <StyledStep temporal={temporal}>
       {temporal !== 'previous' ? (
-        <Typography>{CurrentStep}</Typography>
+        <Text
+          as="span"
+          variant="bodySmallWeak"
+          color="neutral"
+          prominence={temporal === 'next' ? 'weak' : 'default'}
+        >
+          {CurrentStep}
+        </Text>
       ) : (
         <StyledIcon name="check" size={20} />
       )}
     </StyledStep>
 
-    <StyledText>{children}</StyledText>
+    <StyledText
+      as="span"
+      variant="bodySmallWeak"
+      prominence={temporal === 'next' ? 'weak' : 'default'}
+    >
+      {children}
+    </StyledText>
   </StyledStepContainer>
 )
 
