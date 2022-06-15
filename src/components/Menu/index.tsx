@@ -10,11 +10,14 @@ import {
 import {
   Popover,
   PopoverDisclosure,
-  PopoverProps,
+  PopoverHTMLProps,
+  PopoverOptions,
   PopoverStateReturn,
   usePopoverState,
 } from 'reakit/Popover'
 import Item from './Item'
+
+type PopoverProps = PopoverOptions & PopoverHTMLProps
 
 type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
