@@ -60,7 +60,7 @@ const getPlaceholderColor = ({
   error,
   theme,
 }: SelectStyleGetterProps) => {
-  if (state.isDisabled) return theme.colors.neutral.textWeakDisabled
+  if (state.isDisabled) return theme.colors.neutral.textDisabled
   if (error) return theme.colors.danger.textWeak
 
   return theme.colors.neutral.textWeak
@@ -111,7 +111,7 @@ const getSelectStyles = ({
   control: (provided, state) => ({
     ...provided,
     backgroundColor: state.isDisabled
-      ? theme.colors.neutral.backgroundWeakDisabled
+      ? theme.colors.neutral.backgroundDisabled
       : theme.colors.neutral.backgroundWeak,
     borderColor: error
       ? theme.colors.danger.border
@@ -238,7 +238,7 @@ const getSelectStyles = ({
     ...getOptionColor({ state, theme }),
     ':active': {
       backgroundColor: state.isDisabled
-        ? theme.colors.neutral.backgroundWeakDisabled
+        ? theme.colors.neutral.backgroundDisabled
         : theme.colors.primary.background,
       color: state.isDisabled
         ? theme.colors.neutral.textDisabled

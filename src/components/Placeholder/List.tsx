@@ -15,8 +15,7 @@ const StyledList = styled.ul`
   margin: 0;
 
   > ${StyledItem}:nth-of-type(even) {
-    background-color: ${({ theme }) =>
-      theme.colors.neutral.backgroundWeakDisabled};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   }
 `
 

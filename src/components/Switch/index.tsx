@@ -66,7 +66,6 @@ const SwitchVariantsStyles = {
   `,
   success: (theme: Theme) => css`
     color: ${theme.colors.neutral.text};
-    background-color: ${theme.colors.neutral.backgroundHover};
     font-weight: bold;
 
     & ${SwitchBall} {
@@ -108,7 +107,7 @@ const StyledSwitch = styled('div', {
   transition: all 250ms;
   padding: ${({ theme }) => theme.space[0.5]};
   height: ${({ theme }) => theme.space[3]};
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+  background-color: ${({ theme }) => theme.colors.neutral.textDisabled};
   min-width: ${({ theme }) => theme.space[6]};
 
   &:focus-within,

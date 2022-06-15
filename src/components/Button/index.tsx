@@ -306,14 +306,14 @@ const StyledButton = styled(Box, {
     `
     cursor: default;
     pointer-events: none;
-    color: ${theme.colors.neutral.textWeakDisabled};`}
+    color: ${theme.colors.neutral.textDisabled};`}
 
   ${({ variant, disabled, theme }) =>
     variant !== 'link' &&
     disabled &&
     `
-    background-color: ${theme.colors.neutral.backgroundWeakDisabled};
-    border-color: ${theme.colors.neutral.borderWeakDisabled};
+    background-color: ${theme.colors.neutral.backgroundDisabled};
+    border-color: ${theme.colors.neutral.borderDisabled};
     box-shadow: none;
     `}
 

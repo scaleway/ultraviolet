@@ -100,11 +100,11 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme }) => theme.colors.primary.textWeakDisabled};
+      color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
     }
 
     ${PREFIX}__day--disabled: hover {
-      color: ${({ theme }) => theme.colors.primary.textWeakDisabled};
+      color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
       background-color: transparent;
     }
   }

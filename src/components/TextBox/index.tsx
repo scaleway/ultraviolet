@@ -154,7 +154,7 @@ const StyledLabel = styled('label', {
   ${({ disabled, theme: { colors } }) =>
     disabled &&
     css`
-      color: ${colors.neutral.textWeakDisabled};
+      color: ${colors.neutral.textDisabled};
     `}
 
   ${({ readOnly, theme: { colors } }) =>
@@ -259,9 +259,9 @@ const StyledInput = styled('input', {
     disabled &&
     `cursor: default;
     pointer-events: none;
-    background-color: ${colors.neutral.backgroundWeakDisabled};
-    border-color: ${colors.neutral.borderWeakDisabled};
-    color: ${colors.neutral.textWeakDisabled};`}
+    background-color: ${colors.neutral.backgroundDisabled};
+    border-color: ${colors.neutral.borderDisabled};
+    color: ${colors.neutral.textDisabled};`}
 
   ${({ readOnly, theme: { colors } }) =>
     readOnly &&

@@ -131,7 +131,7 @@ const StyledRow = styled('details', {
       ? `
     border: ${BORDER_THICKNESS}px solid
       ${theme.colors.neutral.borderDisabled};
-    background-color: ${theme.colors.neutral.backgroundWeakDisabled};
+    background-color: ${theme.colors.neutral.backgroundDisabled};
     color: ${theme.colors.neutral.textDisabled};
     pointer-events: none;
     `

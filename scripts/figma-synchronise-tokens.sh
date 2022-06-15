@@ -11,9 +11,6 @@ URL=$1
 # Global is an alternative object that contains general values applied in any chosen theme
 GLOBAL="global"
 
-# This file provides missing tokens from design teams that are necessary for the library
-TOKENS_EXTENSION="scripts/tokensExtension.json"
-
 # We declarer all theme from where to generate tokens
 declare -a themes=("light" "dark")
 
@@ -33,7 +30,7 @@ function generateTokens {
         ({}; . + { "\($shade.key)": ($shade.value.value | ascii_downcase) })) })
   ')
   # Match tokens and shades colors
-  GENERATED_TOKENS_COLOR=$(echo "${JSON} $( cat "${TOKENS_EXTENSION}")" | jq -s '.[0] * .[1]' | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
+  GENERATED_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
   .[$global] | with_entries(select(.value | has("backgroundStrong"))) |
     reduce (. | to_entries | .[]) as $sentiment
       ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token
@@ -41,7 +38,7 @@ function generateTokens {
           {"colors": .}
   ')
   # Overload of tokens colors specific to each theme, depending
-  GENERATED_OVERLOADED_COLORS=$(echo "${JSON} $( cat "${TOKENS_EXTENSION}")" | jq -s '.[0] * .[1]' | jq --sort-keys --arg theme "${THEME}" --argjson shades "${PARSED_SHADES}" '
+  GENERATED_OVERLOADED_COLORS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" --argjson shades "${PARSED_SHADES}" '
   .[$theme] | with_entries(select(.value | has("backgroundWeakElevated"))) |
     reduce (. | to_entries | .[]) as $sentiment
       ({}; . + {"\($sentiment.key)": (reduce($sentiment.value | to_entries | .[]) as $token
