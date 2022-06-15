@@ -1,12 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
-  ComponentProps,
-  ReactElement,
-  ReactNode,
-  RefObject,
-  cloneElement,
-} from 'react'
+import { ReactElement, ReactNode, RefObject, cloneElement } from 'react'
 import {
   Popover,
   PopoverDisclosure,
@@ -123,14 +117,16 @@ type AlignStyle = {
   right?: string | null
 }
 
-type MenuProps = Omit<ComponentProps<typeof StyledPopover>, 'children'> & {
+type MenuProps = {
   align?: AlignStyle
   ariaLabel?: string
+  baseId?: string
   placement?: ArrowPlacement
   children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
   className?: string
   disclosure: DisclosureParam
   hasArrow?: boolean
+  visible?: boolean
 }
 
 const MenuList = styled.div<MenuListProps>`
