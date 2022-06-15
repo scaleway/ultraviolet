@@ -288,7 +288,7 @@ const Switch = ({
           </SwitchBallContainer>
           <StyledCheckbox
             id={id || name}
-            aria-label={`${name}-label`}
+            aria-label={name}
             checked={checked}
             disabled={disabled}
             name={name}
