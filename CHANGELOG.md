@@ -1,3 +1,24 @@
+## [0.156.3](https://github.com/scaleway/scaleway-ui/compare/v0.156.2...v0.156.3) (2022-06-15)
+
+
+### :zap: Refactor
+
+* drop dot component ([#1575](https://github.com/scaleway/scaleway-ui/issues/1575)) ([e967524](https://github.com/scaleway/scaleway-ui/commit/e9675244cdb87ea43a9d42bb3abff08846307c53))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.18.5 ([#1582](https://github.com/scaleway/scaleway-ui/issues/1582)) ([a378ad6](https://github.com/scaleway/scaleway-ui/commit/a378ad647882001ca3d366e290d5f4c034f1b4d0))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.10 ([#1581](https://github.com/scaleway/scaleway-ui/issues/1581)) ([4874857](https://github.com/scaleway/scaleway-ui/commit/4874857e495c863779b9ef9e37d5aa1208f34f9e))
+* **devdeps:** update dependency @storybook/testing-library to v0.0.13 ([#1583](https://github.com/scaleway/scaleway-ui/issues/1583)) ([41963ac](https://github.com/scaleway/scaleway-ui/commit/41963ac58ae5d72870833bc97a344eeeb0953844))
+* **devdeps:** update emotion monorepo ([#1578](https://github.com/scaleway/scaleway-ui/issues/1578)) ([3b63563](https://github.com/scaleway/scaleway-ui/commit/3b635634c996ebb452ae67999d5216e0e8a43e48))
+* **devdeps:** update storybook monorepo to v6.5.9 ([#1585](https://github.com/scaleway/scaleway-ui/issues/1585)) ([e53b453](https://github.com/scaleway/scaleway-ui/commit/e53b453ced4c301f3b141b0fb358b329205d0dc7))
+
+
+### :bug: Bug Fixes
+
+* creationProgress and StepLine become Stepper ([#1569](https://github.com/scaleway/scaleway-ui/issues/1569)) ([f120299](https://github.com/scaleway/scaleway-ui/commit/f120299a5bdcf00bf42cc514f70d7a195bb0b17e))
+
 ## [0.156.2](https://github.com/scaleway/scaleway-ui/compare/v0.156.1...v0.156.2) (2022-06-13)
 
 
