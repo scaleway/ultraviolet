@@ -157,4 +157,4 @@ Only the `feat`, `fix` and `perf` types will generate a new package on the `main
 
 ### Documentation
 
-Checkout our [documentation website](https://react.ui.scaleway.com/).
+Checkout our [documentation website](https://main.ui.scaleway.com/).

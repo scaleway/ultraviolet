@@ -1,9 +1,24 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { ComponentProps, ReactNode, WeakValidationMap } from 'react'
-import Popper from '../Popper'
+import { ReactElement, ReactNode, RefObject, cloneElement } from 'react'
+import {
+  Popover,
+  PopoverDisclosure,
+  PopoverStateReturn,
+  usePopoverState,
+} from 'reakit/Popover'
 import Item from './Item'
+
+type DisclosureParam =
+  | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
+  | (ReactElement & { ref?: RefObject<HTMLButtonElement> })
+
+const StyledPopover = styled(Popover)`
+  border-radius: ${({ theme }) => theme.radii.default};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  color: ${({ theme }) => theme.colors.neutral.text};
+  box-shadow: ${({ theme }) => theme.shadows.dropdown};
+`
 
 const bottomStyles = (theme: Theme) => css`
   box-shadow: ${theme.shadows.menu};
@@ -102,23 +117,16 @@ type AlignStyle = {
   right?: string | null
 }
 
-interface ChildrenProps {
-  placement: ComponentProps<typeof Popper>['placement']
-  toggle: () => void
-  visible: boolean
-}
-
-type MenuProps = Omit<ComponentProps<typeof Popper>, 'children'> & {
+type MenuProps = {
   align?: AlignStyle
   ariaLabel?: string
+  baseId?: string
   placement?: ArrowPlacement
-  children?: ((props: ChildrenProps) => ReactNode) | ReactNode
+  children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
   className?: string
-}
-
-type MenuType = ((props: MenuProps) => JSX.Element) & {
-  Item: typeof Item
-  propTypes: WeakValidationMap<MenuProps>
+  disclosure: DisclosureParam
+  hasArrow?: boolean
+  visible?: boolean
 }
 
 const MenuList = styled.div<MenuListProps>`
@@ -149,68 +157,60 @@ const MenuList = styled.div<MenuListProps>`
   text-align: center;
   justify-content: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   position: relative;
   ${({ placement, theme, hasArrow }) =>
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
-const Menu: MenuType = ({
+const Menu = ({
   align = { left: '50%', right: 'inherit' },
-  ariaLabel = 'menu',
-  baseId = '',
+  ariaLabel = 'Menu',
+  baseId = 'menu',
   children,
   disclosure,
   hasArrow = true,
-  modal = false,
-  name = 'menu',
   placement = 'bottom',
   visible = false,
   className,
-}) => (
-  <Popper
-    aria-label={ariaLabel}
-    baseId={baseId}
-    disclosure={disclosure}
-    hasArrow={false}
-    modal={modal}
-    name={name}
-    placement={placement}
-    visible={visible}
-    className={className}
-  >
-    {({ placement: localPlacement, toggle, visible: isOpen }) =>
-      isOpen ? (
-        <MenuList
-          align={align}
-          hasArrow={hasArrow}
-          placement={localPlacement as ArrowPlacement}
-          role="menu"
-        >
-          {typeof children === 'function'
-            ? children({ placement: localPlacement, toggle, visible })
-            : children}
-        </MenuList>
-      ) : null
-    }
-  </Popper>
-)
+}: MenuProps) => {
+  const popover = usePopoverState({
+    baseId,
+    placement,
+    visible,
+  })
 
-Menu.propTypes = {
-  align: PropTypes.shape({
-    left: PropTypes.string,
-    right: PropTypes.string,
-  }),
-  ariaLabel: PropTypes.string,
-  baseId: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  className: PropTypes.string,
-  disclosure: PropTypes.func.isRequired,
-  hasArrow: PropTypes.bool,
-  modal: PropTypes.bool,
-  name: PropTypes.string,
-  placement: PropTypes.oneOf<ArrowPlacement>(arrowPlacements),
-  visible: PropTypes.bool,
+  return (
+    <>
+      {disclosure && (
+        <PopoverDisclosure
+          {...popover}
+          ref={typeof disclosure !== 'function' ? disclosure?.ref : undefined}
+        >
+          {disclosureProps =>
+            typeof disclosure === 'function'
+              ? disclosure(popover)
+              : cloneElement(disclosure, disclosureProps)
+          }
+        </PopoverDisclosure>
+      )}
+      <StyledPopover {...popover} aria-label={ariaLabel} className={className}>
+        <>
+          {/* Required to avoid loading menu content if not visible */}
+          {popover.visible ? (
+            <MenuList
+              align={align}
+              hasArrow={hasArrow}
+              placement={popover.placement as ArrowPlacement}
+              role="menu"
+            >
+              {typeof children === 'function' ? children(popover) : children}
+            </MenuList>
+          ) : null}
+        </>
+      </StyledPopover>
+    </>
+  )
 }
 
 Menu.Item = Item
