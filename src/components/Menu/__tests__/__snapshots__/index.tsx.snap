@@ -582,6 +582,9 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
 exports[`Menu placement renders "bottom" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="bottom"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -778,6 +781,9 @@ exports[`Menu placement renders "bottom" 1`] = `
 exports[`Menu placement renders "bottom-end" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="bottom-end"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -975,6 +981,9 @@ exports[`Menu placement renders "bottom-end" 1`] = `
 exports[`Menu placement renders "bottom-start" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="bottom-start"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -1172,6 +1181,9 @@ exports[`Menu placement renders "bottom-start" 1`] = `
 exports[`Menu placement renders "top" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="top"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -1368,6 +1380,9 @@ exports[`Menu placement renders "top" 1`] = `
 exports[`Menu placement renders "top-end" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="top-end"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -1565,6 +1580,9 @@ exports[`Menu placement renders "top-end" 1`] = `
 exports[`Menu placement renders "top-start" 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="top-start"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -1762,6 +1780,9 @@ exports[`Menu placement renders "top-start" 1`] = `
 exports[`Menu renders with Menu.Item 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="menu"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -1958,6 +1979,9 @@ exports[`Menu renders with Menu.Item 1`] = `
 exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="menu-1"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -2202,6 +2226,9 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 exports[`Menu renders with Menu.ItemLink 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="menu-1"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -2398,6 +2425,9 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
 exports[`Menu renders with modal={false} 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="menu-2"
+    aria-expanded="true"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu
@@ -2594,6 +2624,9 @@ exports[`Menu renders with modal={false} 1`] = `
 exports[`Menu renders with visible=false 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="menu"
+    aria-expanded="false"
+    aria-haspopup="dialog"
     type="button"
   >
     Menu is visible
