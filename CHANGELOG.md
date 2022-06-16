@@ -1,3 +1,10 @@
+## [0.158.0](https://github.com/scaleway/scaleway-ui/compare/v0.157.0...v0.158.0) (2022-06-16)
+
+
+### :gear: Features
+
+* reduce bundle size ([#1570](https://github.com/scaleway/scaleway-ui/issues/1570)) ([cc18eea](https://github.com/scaleway/scaleway-ui/commit/cc18eeab4bbcca07090bdc1fc2e1ef78abbc410d))
+
 ## [0.157.0](https://github.com/scaleway/scaleway-ui/compare/v0.156.3...v0.157.0) (2022-06-16)
 
 
