@@ -273,9 +273,7 @@ type StyledButtonProps = {
 
 const StyledButton = styled(Box, {
   shouldForwardProp: prop =>
-    !['action', 'variant', 'extend', 'icon', 'download'].includes(
-      prop.toString(),
-    ),
+    !['action', 'variant', 'extend', 'icon', 'download'].includes(prop),
 })<StyledButtonProps>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};
