@@ -11,6 +11,7 @@ import {
   useRef,
 } from 'react'
 import 'intl-tel-input/build/js/utils'
+import flags from './flags.png'
 
 const StyledSpan = styled.span`
   position: absolute;
@@ -78,6 +79,10 @@ const StyledLabel = styled.label<PhoneInputLabelProps>`
 
     .iti__selected-dial-code {
       padding-left: 5px;
+    }
+
+    .iti__flag {
+      background-image: url(${flags});
     }
   }
 `
