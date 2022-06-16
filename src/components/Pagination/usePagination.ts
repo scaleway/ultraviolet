@@ -63,7 +63,7 @@ const usePagination = <T>({
             [index + 1]: data.slice(initialIndex, initialIndex + perPage),
           }
         }, {})
-      : { 1: data },
+      : { [page]: data },
   )
 
   const maxPage = useMemo(() => {
@@ -162,9 +162,9 @@ const usePagination = <T>({
               [index + 1]: data.slice(initialIndex, initialIndex + perPage),
             }
           }, {})
-        : { 1: data },
+        : { [page]: data },
     )
-  }, [perPage, data])
+  }, [perPage, data, page])
 
   useEffect(() => {
     onLoadPageRef.current = onLoadPage

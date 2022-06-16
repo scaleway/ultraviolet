@@ -437,6 +437,51 @@ Ref.decorators = [
   },
 ]
 
+export const PaginationData = Template.bind({})
+PaginationData.decorators = [
+  () => {
+    const [data, setData] = useState(generateData(10))
+
+    return (
+      <List
+        multiselect
+        pageCount={2}
+        idKey="id"
+        data={data}
+        onLoadPage={({ page }) =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              const newData = generateData(10, `page-${page}`)
+              setData(newData)
+              resolve(newData)
+            }, 3000)
+          })
+        }
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+          </>
+        )}
+      </List>
+    )
+  },
+]
+
 export const PaginationPrefetchedData = Template.bind({})
 PaginationPrefetchedData.decorators = [
   () => (
