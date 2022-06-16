@@ -448,9 +448,15 @@ PaginationData.decorators = [
         pageCount={2}
         idKey="id"
         data={data}
-        onLoadPage={({ page }) => {
-          setData(generateData(10, `page-${page}`))
-        }}
+        onLoadPage={({ page }) =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              const newData = generateData(10, `page-${page}`)
+              setData(newData)
+              resolve(newData)
+            }, 3000)
+          })
+        }
         columns={[
           { label: 'Name', sort: 'name' },
           { label: 'Description' },
