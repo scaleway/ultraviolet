@@ -12,24 +12,32 @@ import { createPortal } from 'react-dom'
 import { getUUID } from '../../utils'
 
 const ARROW_WIDTH = 6 // in px
-const SPACE = 4 // in px
+const SPACE = 6 // in px
 const ANIMATION_DURATION = 230 // in ms
 const DEFAULT_POSITIONS = {
   arrowLeft: 50,
   arrowTop: 99,
+  arrowTransform: 'translate(-50%, -50)',
   left: 0,
   rotate: 135,
+  tooltipInitialPosition: 'translateX(0%)',
   top: 0,
-  translate: 'translate(-50%, -50)',
+}
+const TOOLTIP_INITIAL_POSITION = {
+  bottom: 'translateY(-40%)',
+  left: 'translateX(15%)',
+  right: 'translateX(-15%)',
+  top: 'translateY(+40%)',
 }
 
 type PositionsType = {
   arrowLeft: number
   arrowTop: number
+  arrowTransform: string
   left: number
   rotate: number
   top: number
-  translate: string
+  tooltipInitialPosition: string
 }
 
 const StyledTooltip = styled.div<{
@@ -46,7 +54,9 @@ const StyledTooltip = styled.div<{
   left: ${({ positions }) => positions.left}px;
   top: ${({ positions }) => positions.top}px;
   opacity: 0;
-  transition: ${ANIMATION_DURATION}ms opacity ease-in-out;
+  transition: ${ANIMATION_DURATION}ms opacity ease-in-out,
+    ${ANIMATION_DURATION}ms transform ease-in-out;
+  transform: ${({ positions }) => positions.tooltipInitialPosition};
   font-size: 0.8rem;
 
   &::after {
@@ -54,7 +64,7 @@ const StyledTooltip = styled.div<{
     position: absolute;
     top: ${({ positions }) => positions.arrowTop}px;
     left: ${({ positions }) => positions.arrowLeft}px;
-    transform: ${({ positions }) => positions.translate}
+    transform: ${({ positions }) => positions.arrowTransform}
       rotate(${({ positions }) => positions.rotate}deg);
     margin-left: -${ARROW_WIDTH}px;
     border-width: ${ARROW_WIDTH}px;
@@ -93,38 +103,42 @@ const computePositions = ({
     case 'bottom':
       return {
         arrowLeft: tooltipWidth / 2,
-        arrowTop: -ARROW_WIDTH - 6,
+        arrowTop: -ARROW_WIDTH - 5,
+        arrowTransform: '',
         left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
         rotate: 180,
+        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.bottom,
         top: childrenTop + childrenHeight + ARROW_WIDTH + SPACE,
-        translate: '',
       }
     case 'left':
       return {
-        arrowLeft: tooltipWidth + ARROW_WIDTH + 6,
+        arrowLeft: tooltipWidth + ARROW_WIDTH + 5,
         arrowTop: tooltipHeight / 2,
-        left: childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE,
+        arrowTransform: 'translate(-50%, -50%)',
+        left: childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2,
         rotate: -90,
+        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.left,
         top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
-        translate: 'translate(-50%, -50%)',
       }
     case 'right':
       return {
-        arrowLeft: -ARROW_WIDTH - 6,
+        arrowLeft: -ARROW_WIDTH - 5,
         arrowTop: tooltipHeight / 2,
-        left: childrenRight + ARROW_WIDTH + SPACE,
+        arrowTransform: 'translate(50%, -50%)',
+        left: childrenRight + ARROW_WIDTH + SPACE * 2,
         rotate: 90,
+        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.right,
         top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
-        translate: 'translate(50%, -50%)',
       }
     default: // top placement is default value
       return {
         arrowLeft: tooltipWidth / 2,
-        arrowTop: tooltipHeight,
+        arrowTop: tooltipHeight - 1,
+        arrowTransform: '',
         left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
         rotate: 0,
+        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.top,
         top: childrenTop - tooltipHeight - ARROW_WIDTH - SPACE,
-        translate: '',
       }
   }
 }
@@ -150,7 +164,10 @@ const Tooltip = ({
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timer = useRef<ReturnType<typeof setInterval>>()
   const [visibleInDom, setVisibleInDom] = useState(false)
-  const [positions, setPositions] = useState(DEFAULT_POSITIONS)
+  const [positions, setPositions] = useState<PositionsType>({
+    ...DEFAULT_POSITIONS,
+    tooltipInitialPosition: TOOLTIP_INITIAL_POSITION[placement],
+  })
 
   const computedId = useMemo(() => {
     if (!id) return getUUID('tooltip')
@@ -183,6 +200,7 @@ const Tooltip = ({
       // then we remove it from dom
       if (!isVisible && tooltipRef.current) {
         tooltipRef.current.style.opacity = '0'
+        tooltipRef.current.style.transform = TOOLTIP_INITIAL_POSITION[placement]
         timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
       } else {
         // If a timeout is already set it means tooltip didn't have time to close completely and be removed from dom,
@@ -191,12 +209,13 @@ const Tooltip = ({
           clearTimeout(timer.current)
           if (tooltipRef.current) {
             tooltipRef.current.style.opacity = '1'
+            tooltipRef.current.style.transform = 'translateY(+0%)'
           }
         }
         setVisibleInDom(isVisible)
       }
     },
-    [unmountTooltip],
+    [placement, unmountTooltip],
   )
 
   /**
@@ -212,9 +231,10 @@ const Tooltip = ({
 
       if (tooltipRef.current) {
         tooltipRef.current.style.opacity = '1'
+        tooltipRef.current.style.transform = 'translateY(+0%)'
       }
     }
-  }, [getPositions, unmountTooltip, visibleInDom])
+  }, [getPositions, placement, unmountTooltip, visibleInDom])
 
   /**
    * WIll render children conditionally
