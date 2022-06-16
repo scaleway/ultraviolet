@@ -1,3 +1,15 @@
+## [0.158.1](https://github.com/scaleway/scaleway-ui/compare/v0.158.0...v0.158.1) (2022-06-16)
+
+
+### :package: Chore
+
+* **devdeps:** update pnpm to v7.2.1 ([#1588](https://github.com/scaleway/scaleway-ui/issues/1588)) ([35bef91](https://github.com/scaleway/scaleway-ui/commit/35bef918e6236e270aa1aef800fcdd49601f8306))
+
+
+### :bug: Bug Fixes
+
+* **phone-input:** rollback on png ([#1592](https://github.com/scaleway/scaleway-ui/issues/1592)) ([4a0387c](https://github.com/scaleway/scaleway-ui/commit/4a0387cc6ac7f4362898bd7ee83b37bf99abea2d))
+
 ## [0.158.0](https://github.com/scaleway/scaleway-ui/compare/v0.157.0...v0.158.0) (2022-06-16)
 
 
