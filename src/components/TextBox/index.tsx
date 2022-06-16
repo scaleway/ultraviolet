@@ -560,7 +560,7 @@ const TextBox = forwardRef<
         <StyledRelativeDiv>
           <StyledInput
             aria-controls={ariaControls}
-            aria-label={label && noTopLabel ? label : name}
+            aria-label={label || undefined}
             aria-labelledby={hasLabel ? ariaControls : undefined}
             as={multiline ? 'textarea' : 'input'}
             autoComplete={autoComplete}
