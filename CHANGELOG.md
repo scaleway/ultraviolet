@@ -1,3 +1,15 @@
+## [0.157.0](https://github.com/scaleway/scaleway-ui/compare/v0.156.3...v0.157.0) (2022-06-16)
+
+
+### :zap: Refactor
+
+* popper component moved to Menu ([#1564](https://github.com/scaleway/scaleway-ui/issues/1564)) ([69ffcdc](https://github.com/scaleway/scaleway-ui/commit/69ffcdc05f9ea456fd04941dee7c230d00496dfb))
+
+
+### :gear: Features
+
+* **Switch, SwitchButton:** fix a11y issues ([#1580](https://github.com/scaleway/scaleway-ui/issues/1580)) ([6585086](https://github.com/scaleway/scaleway-ui/commit/6585086460180d31c3326559664501b942155af3))
+
 ## [0.156.3](https://github.com/scaleway/scaleway-ui/compare/v0.156.2...v0.156.3) (2022-06-15)
 
 
