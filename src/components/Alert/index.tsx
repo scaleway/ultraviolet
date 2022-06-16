@@ -68,7 +68,7 @@ const typesDefaultIcons: Record<
 type ContainerProps = { variant: AlertVariant; type: AlertType }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['type', 'variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['type', 'variant'].includes(prop),
 })<ContainerProps>`
   display: flex;
   flex-direction: row;

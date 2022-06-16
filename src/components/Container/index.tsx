@@ -22,7 +22,7 @@ type ContainerBaseProps = {
 }
 
 const StyledBox = styled(BorderedBox, {
-  shouldForwardProp: props => !['small', 'edition'].includes(props.toString()),
+  shouldForwardProp: prop => !['small', 'edition'].includes(prop),
 })<ContainerBaseProps>`
   background: ${({ theme }) => theme.colors.neutral.background};
   padding-left: 24px;

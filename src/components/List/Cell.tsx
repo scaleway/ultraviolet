@@ -6,8 +6,7 @@ import { useListContext } from './context'
 import { ListColumn } from './types'
 
 const StyledCell = styled(Box, {
-  shouldForwardProp: prop =>
-    !['multiselect', 'columns'].includes(prop.toString()),
+  shouldForwardProp: prop => !['multiselect', 'columns'].includes(prop),
 })`
   display: flex;
   overflow-x: auto;

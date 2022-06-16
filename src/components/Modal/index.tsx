@@ -204,9 +204,9 @@ type StyledDialogProps = {
 }
 
 const StyledDialog = styled(Dialog, {
-  shouldForwardProp: props =>
+  shouldForwardProp: prop =>
     !['animation', 'placement', 'width', 'height', 'bordered'].includes(
-      props.toString(),
+      prop,
     ),
 })<StyledDialogProps>`
   background-color: ${({ theme }) =>

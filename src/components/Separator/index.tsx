@@ -12,7 +12,7 @@ type StyledIconProps = {
 } & BoxProps
 
 const StyledIcon = styled(Box, {
-  shouldForwardProp: prop => !['direction'].includes(prop.toString()),
+  shouldForwardProp: prop => !['direction'].includes(prop),
 })<StyledIconProps>`
   display: flex;
   flex-direction: ${({ direction }) =>
@@ -29,7 +29,7 @@ type HorizontalSeparatorProps = {
 
 const StyledHr = styled(Box.withComponent('hr'), {
   shouldForwardProp: prop =>
-    !['direction', 'thickness', 'color', 'flex'].includes(prop.toString()),
+    !['direction', 'thickness', 'color', 'flex'].includes(prop),
 })<HorizontalSeparatorProps>`
   margin: 0;
   border: 0;

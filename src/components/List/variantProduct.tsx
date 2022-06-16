@@ -43,7 +43,7 @@ const getBorderColor = ({
 export const Cell = styled(BaseCell)``
 
 const StyledExpendableContainer = styled('div', {
-  shouldForwardProp: prop => !['multiselect'].includes(prop.toString()),
+  shouldForwardProp: prop => !['multiselect'].includes(prop),
 })<{ multiselect?: boolean }>`
   flex: 0 0 100%;
 
@@ -75,7 +75,7 @@ const StyledRow = styled('details', {
       'multiselect',
       'id',
       'as',
-    ].includes(prop.toString()),
+    ].includes(prop),
 })<
   Partial<ListRowProps> & {
     openable?: boolean
@@ -162,7 +162,7 @@ const StyledContainerSummary = styled.div`
 `
 
 const StyledHeader = styled('div', {
-  shouldForwardProp: prop => !['multiselect'].includes(prop.toString()),
+  shouldForwardProp: prop => !['multiselect'].includes(prop),
 })<{ multiselect?: boolean }>`
   display: flex;
   align-items: center;

@@ -9,7 +9,7 @@ interface PentagonProps {
 }
 
 const StyledPentagon = styled('div', {
-  shouldForwardProp: prop => !['color', 'size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['color', 'size'].includes(prop),
 })<PentagonProps>`
   display: flex;
   justify-content: center;

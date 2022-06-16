@@ -69,7 +69,7 @@ interface TagsContainersProps {
 }
 
 const TagsContainer = styled('div', {
-  shouldForwardProp: props => !['variant'].includes(props.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<TagsContainersProps>`
   display: flex;
   flex-wrap: wrap;

@@ -54,7 +54,7 @@ const PageSwitchContainer = styled.div`
 `
 
 const StyledPageButton = styled('button', {
-  shouldForwardProp: prop => !['current'].includes(prop.toString()),
+  shouldForwardProp: prop => !['current'].includes(prop),
 })<{ current?: boolean }>`
   color: ${({ theme }) => theme.colors.neutral.textStrong};
   line-height: ${({ theme }) => theme.space['3']};

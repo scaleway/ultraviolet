@@ -21,7 +21,7 @@ type ColProps = {
 
 const StyledCol = styled(Box, {
   shouldForwardProp: prop =>
-    ![...Object.keys(screens), 'gutter'].includes(prop.toString()),
+    ![...Object.keys(screens), 'gutter'].includes(prop),
 })<ColProps>`
   flex-basis: 0;
   flex-grow: 1;

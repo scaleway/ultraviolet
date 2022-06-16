@@ -10,7 +10,7 @@ type RowProps = {
 } & BoxProps
 
 const StyledRow = styled(Box, {
-  shouldForwardProp: prop => !['gutter'].includes(prop.toString()),
+  shouldForwardProp: prop => !['gutter'].includes(prop),
 })<RowProps>`
   flex-grow: 1;
   flex-wrap: wrap;

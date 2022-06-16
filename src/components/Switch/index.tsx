@@ -94,7 +94,7 @@ const SwitchVariantsStyles = {
 }
 
 const StyledSwitch = styled('div', {
-  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<StyledSwitchProps>`
   box-sizing: content-box;
   outline: none;
@@ -220,7 +220,7 @@ const StyledLabel = styled.div<{ width?: number }>`
 `
 
 const StyledLabelContent = styled('div', {
-  shouldForwardProp: prop => !['labeled', 'value'].includes(prop.toString()),
+  shouldForwardProp: prop => !['labeled', 'value'].includes(prop),
 })<{
   labeled: boolean | LabelPositions
   value: ReactNode

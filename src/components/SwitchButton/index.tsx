@@ -60,7 +60,7 @@ const switchButtonVariants = Object.keys(variants) as Variants[]
 type StyledSwitchProps = BoxProps & LabelHTMLAttributes<HTMLLabelElement>
 
 const StyledSwitch = styled(Box, {
-  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<StyledSwitchProps>`
   display: flex;
   flex-direction: row;

@@ -10,7 +10,7 @@ export const Steps = styled.ul`
 `
 
 export const Step = styled('li', {
-  shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
+  shouldForwardProp: prop => !['disabled'].includes(prop),
 })<{ disabled: boolean }>`
   margin-bottom: ${({ theme }) => theme.space['3']};
   display: flex;
@@ -23,7 +23,7 @@ export const Step = styled('li', {
 `
 
 const StyledDiv = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: Sizes }>`
   flex: 1;
   margin-left: 1rem;

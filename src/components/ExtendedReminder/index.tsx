@@ -30,7 +30,7 @@ export const variants = {
 type Variants = keyof typeof variants
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<{ variant: Variants }>`
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ const StyledBadgeContainer = styled.div`
 `
 
 const StyledTitle = styled(Typography, {
-  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+  shouldForwardProp: prop => !['color'].includes(prop),
 })<{ color: Variants }>`
   font-weight: 600;
   font-style: unset;

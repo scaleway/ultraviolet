@@ -29,7 +29,7 @@ const bordersStyles = ({
 }
 
 const StyledSphere = styled('span', {
-  shouldForwardProp: prop => !['size', 'colors'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size', 'colors'].includes(prop),
 })<{ size: number; colors: string[] }>`
   align-items: center;
   display: flex;
@@ -39,7 +39,7 @@ const StyledSphere = styled('span', {
 `
 
 const StyledTextSphere = styled('span', {
-  shouldForwardProp: prop => !['color', 'fontSize'].includes(prop.toString()),
+  shouldForwardProp: prop => !['color', 'fontSize'].includes(prop),
 })<{ color: string; fontSize?: number }>`
   color: ${({ theme, color }) =>
     theme.colors[color as Color]?.textWeak ?? color};

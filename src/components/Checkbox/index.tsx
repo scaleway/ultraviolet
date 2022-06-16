@@ -51,7 +51,7 @@ const StyledIcon = styled.svg<{ size: number }>`
 `
 
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })`
   opacity: 0.01;
   width: ${({ size }) => size}px;
@@ -162,7 +162,7 @@ const StyledCheckBoxContainer = styled(Typography)`
 `
 
 const StyledActivityContainer = styled('div', {
-  shouldForwardProp: prop => !['hasChildren'].includes(prop.toString()),
+  shouldForwardProp: prop => !['hasChildren'].includes(prop),
 })<{ hasChildren: boolean }>`
   display: inline;
   vertical-align: middle;
