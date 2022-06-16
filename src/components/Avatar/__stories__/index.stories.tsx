@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Avatar from '..'
+import avatar from './avatar.svg'
 import support from './support.svg'
 
 export default {
@@ -13,6 +14,9 @@ const Template: Story<ComponentProps<typeof Avatar>> = args => (
 )
 
 export const Default = Template.bind({})
+Default.args = {
+  image: avatar,
+}
 
 export const Image = Template.bind({})
 Image.parameters = {
@@ -21,10 +25,14 @@ Image.parameters = {
       'You can change the default image by using the `image` prop. It work as `src` on a img tag.',
   },
 }
-Image.decorators = [() => <Avatar image={support} />]
+Image.args = {
+  image: support,
+  size: 48,
+}
 
 export const Size = Template.bind({})
 Size.args = {
+  image: avatar,
   size: 48,
 }
 Size.parameters = {
