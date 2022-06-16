@@ -5,6 +5,15 @@ import {
 } from '../../../helpers/jestHelpers'
 
 describe('Menu', () => {
+  test('renders with disclosure not a function', () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Menu
+        baseId="menu"
+        disclosure={<button type="button">Menu is visible</button>}
+      >
+        <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
+      </Menu>,
+    ))
   test('renders with visible=false', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
