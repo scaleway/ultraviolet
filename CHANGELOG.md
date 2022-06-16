@@ -1,3 +1,10 @@
+## [0.158.2](https://github.com/scaleway/scaleway-ui/compare/v0.158.1...v0.158.2) (2022-06-16)
+
+
+### :bug: Bug Fixes
+
+* **pagination:** real pagination index by page number ([#1590](https://github.com/scaleway/scaleway-ui/issues/1590)) ([75d6225](https://github.com/scaleway/scaleway-ui/commit/75d6225b4714e891fb25c4c63102d8593a47a293))
+
 ## [0.158.1](https://github.com/scaleway/scaleway-ui/compare/v0.158.0...v0.158.1) (2022-06-16)
 
 
