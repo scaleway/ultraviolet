@@ -64,7 +64,8 @@
   "pnpm": {
     "peerDependencyRules": {
       "allowedVersions": {
-        "react": "18"
+        "react": "18",
+        "react-dom": "18"
       }
     }
   },
@@ -95,8 +96,8 @@
   "peerDependencies": {
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react": "18.x",
+    "react-dom": "18.x"
   },
   "devDependencies": {
     "@babel/core": "7.18.5",
@@ -119,7 +120,7 @@
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-url": "7.0.0",
     "@scaleway/eslint-config-react": "3.4.39",
-    "@scaleway/jest-helpers": "2.0.0",
+    "@scaleway/jest-helpers": "2.0.6",
     "@scaleway/use-i18n": "3.3.12",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
@@ -157,7 +158,7 @@
     "@types/jest-axe": "3.5.4",
     "@types/node": "17.0.31",
     "@types/prop-types": "15.7.5",
-    "@types/react": "18.0.9",
+    "@types/react": "18.0.13",
     "@types/react-dom": "18.0.5",
     "@types/testing-library__jest-dom": "5.14.5",
     "@types/zxcvbn": "4.4.1",
@@ -170,17 +171,17 @@
     "eslint": "8.18.0",
     "husky": "8.0.1",
     "identity-obj-proxy": "3.0.0",
+    "jest": "28.1.1",
     "jest-axe": "6.0.0",
     "jest-environment-jsdom": "28.1.1",
     "jest-junit": "14.0.0",
     "jest-mock-random": "1.1.1",
-    "jest": "28.1.1",
     "lint-staged": "13.0.3",
     "loki": "0.30.3",
     "postcss": "8.4.14",
     "prettier": "2.7.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-router-dom": "6.3.0",
     "read-pkg": "7.1.0",
     "regenerator-runtime": "0.13.9",
