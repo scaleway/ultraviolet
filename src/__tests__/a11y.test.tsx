@@ -31,6 +31,8 @@ const testedComponents = [
   'Tag',
   'Tags',
   'ExtendedReminder',
+  'TextBox',
+  'Radio',
 ]
 
 const foundFiles: string[] = []
