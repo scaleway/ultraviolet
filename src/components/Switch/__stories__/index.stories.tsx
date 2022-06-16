@@ -119,6 +119,7 @@ const Template: Story<ComponentProps<typeof Switch>> = ({
   return (
     <Switch
       {...args}
+      name="switch"
       checked={value}
       variant="success"
       onChange={event => setValue(event.target.checked)}
@@ -162,7 +163,7 @@ export const CustomLabelRender: Story = () => (
       <ControlValue<boolean> value>
         {({ value, onChange }) => (
           <Switch
-            name="switch-label-left"
+            name="switch-label-left-two"
             labeled="left"
             onLabel={
               <LabelContainer>

@@ -28,7 +28,7 @@ const variants = {
         box-shadow: none;
       }
 
-      &[aria-checked='true'] {
+      &[data-checked='true'] {
         background-color: ${theme.colors.primary.backgroundStrong};
         color: ${theme.colors.primary.textStrong};
       }
@@ -36,13 +36,13 @@ const variants = {
       &[aria-disabled='true'] {
         color: ${theme.colors.neutral.textWeakDisabled};
 
-        &[aria-checked='true'] {
+        &[data-checked='true'] {
           color: ${theme.colors.neutral.textWeakDisabled};
           background-color: ${theme.colors.neutral.backgroundWeakDisabled};
         }
       }
 
-      &:not([aria-checked='true']):not([aria-disabled='true']) {
+      &:not([data-checked='true']):not([aria-disabled='true']) {
         &:hover,
         &:focus {
           border-color: transparent;
@@ -81,7 +81,7 @@ const StyledSwitch = styled(Box, {
   font-weight: 500;
   cursor: pointer;
 
-  &[aria-checked='true'] {
+  &[data-checked='true'] {
     cursor: auto;
     color: ${({ theme }) => theme.colors.primary.text};
     border-color: ${({ theme }) => theme.colors.primary.border};
@@ -95,13 +95,13 @@ const StyledSwitch = styled(Box, {
     border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
     pointer-events: none;
 
-    &[aria-checked='true'] {
+    &[data-checked='true'] {
       color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
       border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
     }
   }
 
-  &:not([aria-checked='true']):not([aria-disabled='true']) {
+  &:not([data-checked='true']):not([aria-disabled='true']) {
     &:hover,
     &:focus {
       border-color: ${({ theme }) => theme.colors.primary.border};
@@ -162,7 +162,7 @@ const SwitchButton = ({
     <StyledSwitch
       as="label"
       htmlFor={`${name}-${value}`}
-      aria-checked={checked}
+      data-checked={checked}
       aria-disabled={disabled}
       data-variant={variant}
       {...props}

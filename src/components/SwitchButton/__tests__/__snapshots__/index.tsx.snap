@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1t6qoky-StyledSwitch-segment {
+  .cache-13sohwl-StyledSwitch-segment {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,13 +38,13 @@ exports[`SwitchButton renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-checked='true'] {
   cursor: auto;
   color: #390171;
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'] {
   cursor: not-allowed;
   color: #d4dae7;
   background-color: #f6f6f8;
@@ -52,25 +52,25 @@ exports[`SwitchButton renders correctly 1`] = `
   pointer-events: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   border-color: #fcfcfd;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'] {
   font-size: 14;
   height: 40px;
   -webkit-transition: none;
@@ -81,28 +81,28 @@ exports[`SwitchButton renders correctly 1`] = `
   color: #4a4f62;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:focus {
   border-color: transparent;
   box-shadow: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][data-checked='true'] {
   background-color: #4f0599;
   color: #ffffff;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
   color: #d4dae7;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   background-color: #f6f6f8;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -113,9 +113,9 @@ exports[`SwitchButton renders correctly 1`] = `
 }
 
 <label
-    aria-checked="false"
     aria-disabled="false"
-    class="e16krxq01 cache-1t6qoky-StyledSwitch-segment"
+    class="e16krxq01 cache-13sohwl-StyledSwitch-segment"
+    data-checked="false"
     for="radio-choice"
   >
     Choice
@@ -134,7 +134,7 @@ exports[`SwitchButton renders correctly 1`] = `
 
 exports[`SwitchButton renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1t6qoky-StyledSwitch-segment {
+  .cache-13sohwl-StyledSwitch-segment {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -170,13 +170,13 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-checked='true'] {
   cursor: auto;
   color: #390171;
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'] {
   cursor: not-allowed;
   color: #d4dae7;
   background-color: #f6f6f8;
@@ -184,25 +184,25 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   border-color: #fcfcfd;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'] {
   font-size: 14;
   height: 40px;
   -webkit-transition: none;
@@ -213,28 +213,28 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
   color: #4a4f62;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:focus {
   border-color: transparent;
   box-shadow: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][data-checked='true'] {
   background-color: #4f0599;
   color: #ffffff;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
   color: #d4dae7;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   background-color: #f6f6f8;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -245,9 +245,9 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 }
 
 <label
-    aria-checked="false"
     aria-disabled="true"
-    class="e16krxq01 cache-1t6qoky-StyledSwitch-segment"
+    class="e16krxq01 cache-13sohwl-StyledSwitch-segment"
+    data-checked="false"
     for="radio-choice"
   >
     Choice
@@ -268,7 +268,7 @@ exports[`SwitchButton renders correctly when disabled 1`] = `
 
 exports[`SwitchButton renders correctly with complex child 1`] = `
 <DocumentFragment>
-  .cache-1t6qoky-StyledSwitch-segment {
+  .cache-13sohwl-StyledSwitch-segment {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -304,13 +304,13 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   cursor: pointer;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-checked='true'] {
   cursor: auto;
   color: #390171;
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'] {
   cursor: not-allowed;
   color: #d4dae7;
   background-color: #f6f6f8;
@@ -318,25 +318,25 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   pointer-events: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   border-color: #fcfcfd;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'] {
   font-size: 14;
   height: 40px;
   -webkit-transition: none;
@@ -347,28 +347,28 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
   color: #4a4f62;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:focus {
   border-color: transparent;
   box-shadow: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][data-checked='true'] {
   background-color: #4f0599;
   color: #ffffff;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
   color: #d4dae7;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   background-color: #f6f6f8;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -379,9 +379,9 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 }
 
 <label
-    aria-checked="true"
     aria-disabled="true"
-    class="e16krxq01 cache-1t6qoky-StyledSwitch-segment"
+    class="e16krxq01 cache-13sohwl-StyledSwitch-segment"
+    data-checked="true"
     for="radio-choice"
   >
     true true
@@ -403,7 +403,7 @@ exports[`SwitchButton renders correctly with complex child 1`] = `
 
 exports[`SwitchButton renders correctly with variant segment 1`] = `
 <DocumentFragment>
-  .cache-1t6qoky-StyledSwitch-segment {
+  .cache-13sohwl-StyledSwitch-segment {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -439,13 +439,13 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   cursor: pointer;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-checked='true'] {
   cursor: auto;
   color: #390171;
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'] {
   cursor: not-allowed;
   color: #d4dae7;
   background-color: #f6f6f8;
@@ -453,25 +453,25 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   pointer-events: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   border-color: #fcfcfd;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: #390171;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):hover {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):hover {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-1t6qoky-StyledSwitch-segment:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment:not([data-checked='true']):not([aria-disabled='true']):focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'] {
   font-size: 14;
   height: 40px;
   -webkit-transition: none;
@@ -482,28 +482,28 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
   color: #4a4f62;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:focus {
   border-color: transparent;
   box-shadow: none;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][data-checked='true'] {
   background-color: #4f0599;
   color: #ffffff;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'] {
   color: #d4dae7;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][aria-checked='true'] {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment'][aria-disabled='true'][data-checked='true'] {
   color: #d4dae7;
   background-color: #f6f6f8;
 }
 
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):hover,
-.cache-1t6qoky-StyledSwitch-segment[data-variant='segment']:not([aria-checked='true']):not([aria-disabled='true']):focus {
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):hover,
+.cache-13sohwl-StyledSwitch-segment[data-variant='segment']:not([data-checked='true']):not([aria-disabled='true']):focus {
   border-color: transparent;
   box-shadow: none;
 }
@@ -514,9 +514,9 @@ exports[`SwitchButton renders correctly with variant segment 1`] = `
 }
 
 <label
-    aria-checked="false"
     aria-disabled="false"
-    class="e16krxq01 cache-1t6qoky-StyledSwitch-segment"
+    class="e16krxq01 cache-13sohwl-StyledSwitch-segment"
+    data-checked="false"
     data-variant="segment"
     for="radio-choice"
   >
