@@ -1,3 +1,22 @@
+## [0.159.0](https://github.com/scaleway/scaleway-ui/compare/v0.158.2...v0.159.0) (2022-06-17)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.34 ([#1593](https://github.com/scaleway/scaleway-ui/issues/1593)) ([d60f780](https://github.com/scaleway/scaleway-ui/commit/d60f7808d0f75aaa3e0d12086d145d89464fd94a))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.11 ([#1594](https://github.com/scaleway/scaleway-ui/issues/1594)) ([9c70509](https://github.com/scaleway/scaleway-ui/commit/9c705093831a41a89435f228a1fa6d6fe148d643))
+* **devdeps:** update node.js to v18.4 ([#1598](https://github.com/scaleway/scaleway-ui/issues/1598)) ([97e8be4](https://github.com/scaleway/scaleway-ui/commit/97e8be48bcb55e3d64ffe77a5d3d3d7375981731))
+
+
+### :white_check_mark: Test
+
+* radio and TextBox accessibility ([#1589](https://github.com/scaleway/scaleway-ui/issues/1589)) ([d471540](https://github.com/scaleway/scaleway-ui/commit/d4715405c66014856a40ad65f21be9440c78ee1f))
+
+
+### :gear: Features
+
+* add some icons ([#1595](https://github.com/scaleway/scaleway-ui/issues/1595)) ([720edcd](https://github.com/scaleway/scaleway-ui/commit/720edcdfb5dbe4141cb1b2bff2cb263465e964ad))
+
 ## [0.158.2](https://github.com/scaleway/scaleway-ui/compare/v0.158.1...v0.158.2) (2022-06-16)
 
 
