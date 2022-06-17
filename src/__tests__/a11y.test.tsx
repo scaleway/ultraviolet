@@ -68,7 +68,7 @@ if (process.argv[4]) {
 
 expect.extend(toHaveNoViolations)
 
-jest.setTimeout(60000)
+jest.setTimeout(90000)
 
 // TODO: Remove this once https://github.com/nickcolley/jest-axe/issues/147 is fixed.
 const { getComputedStyle } = window
