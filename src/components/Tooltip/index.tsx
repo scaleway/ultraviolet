@@ -41,10 +41,12 @@ type PositionsType = {
   tooltipInitialPosition: string
 }
 
-const StyledTooltip = styled.div<{
+type StyledTooltipProps = {
   maxWidth: number
   positions: PositionsType
-}>`
+}
+
+const StyledTooltip = styled.div<StyledTooltipProps>`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   color: ${({ theme }) => theme.colors.neutral.textStronger};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -146,7 +148,16 @@ const computePositions = ({
 
 type TooltipProps = {
   id?: string
-  children: ReactNode
+  children:
+    | ReactNode
+    | ((renderProps: {
+        className?: string
+        onBlur: () => void
+        onFocus: () => void
+        onMouseEnter: () => void
+        onMouseLeave: () => void
+        ref: RefObject<HTMLDivElement>
+      }) => ReactNode)
   maxWidth?: number
   placement?: TooltipPlacement
   text?: ReactNode
