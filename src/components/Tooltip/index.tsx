@@ -169,7 +169,7 @@ const Tooltip = ({
     tooltipInitialPosition: TOOLTIP_INITIAL_POSITION[placement],
   })
 
-  const computedId = useMemo(() => {
+  const generatedId = useMemo(() => {
     if (!id) return getUUID('tooltip')
 
     return id
@@ -252,7 +252,7 @@ const Tooltip = ({
 
     return (
       <div
-        aria-describedby={id}
+        aria-describedby={generatedId}
         onBlur={onMouseEvent(false)}
         onFocus={onMouseEvent(true)}
         onMouseEnter={onMouseEvent(true)}
@@ -262,7 +262,7 @@ const Tooltip = ({
         {children}
       </div>
     )
-  }, [children, className, id, onMouseEvent])
+  }, [children, className, generatedId, onMouseEvent])
 
   if (!text) {
     return children as JSX.Element
@@ -278,7 +278,7 @@ const Tooltip = ({
               positions={positions}
               maxWidth={maxWidth}
               role="tooltip"
-              id={computedId}
+              id={generatedId}
             >
               {text}
             </StyledTooltip>,
