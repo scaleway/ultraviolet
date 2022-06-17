@@ -1,6 +1,13 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ReactElement, ReactNode, RefObject, cloneElement } from 'react'
+import {
+  ReactElement,
+  ReactNode,
+  RefObject,
+  cloneElement,
+  isValidElement,
+  useRef,
+} from 'react'
 import {
   Popover,
   PopoverDisclosure,
@@ -180,18 +187,15 @@ const Menu = ({
     visible,
   })
 
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
+  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
+
   return (
     <>
       {disclosure && (
-        <PopoverDisclosure
-          {...popover}
-          ref={typeof disclosure !== 'function' ? disclosure?.ref : undefined}
-        >
-          {disclosureProps =>
-            typeof disclosure === 'function'
-              ? disclosure(popover)
-              : cloneElement(disclosure, disclosureProps)
-          }
+        <PopoverDisclosure {...popover} ref={innerRef}>
+          {disclosureProps => cloneElement(target, disclosureProps)}
         </PopoverDisclosure>
       )}
       <StyledPopover {...popover} aria-label={ariaLabel} className={className}>

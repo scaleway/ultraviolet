@@ -234,3 +234,31 @@ Modal.play = ({ canvasElement }) => {
     userEvent.click(button)
   }
 }
+
+export const FunctionDisclosure = Template.bind({})
+FunctionDisclosure.parameters = {
+  docs: {
+    storyDescription:
+      'You can specify a function as disclosure and get popover props as argument',
+  },
+}
+FunctionDisclosure.decorators = [
+  () => (
+    <div style={{ height: '300px' }}>
+      <Menu
+        disclosure={popover => (
+          <Touchable title="menu" name="menu">
+            Menu is {popover?.visible ? 'visible' : 'invisible'}
+          </Touchable>
+        )}
+      >
+        <Menu.Item>Menu 1</Menu.Item>
+        <Menu.Item>Menu 2</Menu.Item>
+      </Menu>
+    </div>
+  ),
+]
+FunctionDisclosure.play = ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  userEvent.click(canvas.getByRole('button'))
+}
