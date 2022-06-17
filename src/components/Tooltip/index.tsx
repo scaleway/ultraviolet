@@ -262,7 +262,7 @@ const Tooltip = ({
         onMouseEnter: onMouseEvent(true),
         onMouseLeave: onMouseEvent(false),
         ref: childrenRef,
-      }) as JSX.Element
+      })
 
     return (
       <div

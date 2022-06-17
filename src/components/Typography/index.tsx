@@ -289,12 +289,12 @@ const TextWithTooltip = ({
           {...props}
           onMouseEnter={ev => {
             if (isTruncated(ev.currentTarget) && onMouseEnter) {
-              onMouseEnter(ev)
+              onMouseEnter()
             }
           }}
           onFocus={ev => {
             if (isTruncated(ev.currentTarget) && onFocus) {
-              onFocus(ev)
+              onFocus()
             }
           }}
           tooltipProps={tooltipProps}
