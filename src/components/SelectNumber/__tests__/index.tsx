@@ -237,23 +237,4 @@ describe('SelectNumber', () => {
         },
       },
     ))
-
-  it('should display a tooltip on hover', () =>
-    shouldMatchEmotionSnapshot(
-      <SelectNumber
-        minValue={1}
-        maxValue={100}
-        value={1}
-        disabledTooltip="This is a tooltip"
-      />,
-      {
-        transform: async ({ getByLabelText, getByText }) => {
-          const plus = getByLabelText('Minus')
-          userEvent.hover(plus)
-          await waitFor(() =>
-            expect(getByText('This is a tooltip')).toBeTruthy(),
-          )
-        },
-      },
-    ))
 })

@@ -392,7 +392,7 @@ const FwdButton = ({
   const type = as === 'button' ? elementType : undefined
 
   return (
-    <Tooltip baseId={tooltipBaseId} text={tooltip}>
+    <Tooltip id={tooltipBaseId} text={tooltip}>
       <StyledButton
         {...props}
         href={href}

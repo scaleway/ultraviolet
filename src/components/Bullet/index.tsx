@@ -89,7 +89,7 @@ const Bullet = ({
   tooltip,
   tooltipBaseId,
 }: BulletProps) => (
-  <Tooltip baseId={tooltipBaseId} text={tooltip}>
+  <Tooltip id={tooltipBaseId} text={tooltip}>
     <StyledContainer variant={variant} size={size} className={className}>
       {icon ? <Icon name={icon} size="50%" /> : text}
     </StyledContainer>

@@ -1,67 +1,133 @@
+import userEvent from '@testing-library/user-event'
+import { ComponentProps } from 'react'
 import Tooltip from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 
 describe('Tooltip', () => {
-  test(`renders when tooltip is just a pass through`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip baseId="test">
-        <button type="button" aria-describedby="test">
-          Test
-        </button>
-      </Tooltip>,
-    ))
+  beforeEach(() => {
+    jest.useFakeTimers()
+  })
 
-  test(`renders with visible=false`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip text="test" baseId="test">
-        <button type="button" aria-describedby="test">
-          Test
-        </button>
-      </Tooltip>,
-    ))
+  afterEach(() => {
+    jest.useRealTimers()
+  })
 
-  test(`renders with visible=true`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip visible text="test" baseId="test">
-        <button type="button" aria-describedby="test">
-          Test
-        </button>
-      </Tooltip>,
-    ))
+  test('should render correctly', () =>
+    shouldMatchEmotionSnapshot(<Tooltip text="test">Hover me</Tooltip>))
 
-  test(`renders when child is a function`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip visible text="test" baseId="test">
-        {() => (
-          <button type="button" aria-describedby="test">
-            Test
-          </button>
+  test('should render correctly without text', () =>
+    shouldMatchEmotionSnapshot(<Tooltip>Hover me</Tooltip>))
+
+  test(`should display tooltip on hover`, () => {
+    const node = renderWithTheme(
+      <Tooltip id="test" text="test success!">
+        <p data-testid="children">Hover me</p>
+      </Tooltip>,
+    )
+
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+  })
+
+  test(`should display tooltip on hover with function children`, () => {
+    const node = renderWithTheme(
+      <Tooltip id="test" text="test success!">
+        {({ ...props }) => (
+          <p {...props} data-testid="children">
+            Hover me
+          </p>
         )}
       </Tooltip>,
-    ))
+    )
 
-  test(`renders when child is a string`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip visible text="test" baseId="test">
-        Test
-      </Tooltip>,
-    ))
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+  })
 
-  test(`renders when child has a disabled props`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip visible text="test" baseId="test">
-        <button disabled type="button" aria-describedby="test">
-          Test
-        </button>
+  test(`should display tooltip on hover and hide when exit`, () => {
+    const node = renderWithTheme(
+      <Tooltip id="test" text="test success!">
+        <p data-testid="children">Hover me</p>
       </Tooltip>,
-    ))
+    )
 
-  test(`render variant white`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip variant="white" text="test" baseId="test">
-        <button type="button" aria-describedby="test">
-          Test
-        </button>
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+    userEvent.unhover(input)
+    jest.advanceTimersByTime(230)
+    expect(tooltipPortal).not.toBeVisible()
+  })
+
+  test(`should display tooltip on hover and hide when exit and hover back before animation ends`, () => {
+    const node = renderWithTheme(
+      <Tooltip id="test" text="test success!">
+        <p data-testid="children">Hover me</p>
       </Tooltip>,
-    ))
+    )
+
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+    userEvent.unhover(input)
+    userEvent.hover(input)
+    expect(tooltipPortal).toBeVisible()
+  })
+
+  test(`should create tooltip with random id`, () => {
+    const node = renderWithTheme(
+      <Tooltip text="test success!">
+        <p data-testid="children">Hover me</p>
+      </Tooltip>,
+    )
+
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+  })
+
+  test(`should renders tooltip with maxWidth`, () => {
+    const node = renderWithTheme(
+      <Tooltip text="test success!" maxWidth={100}>
+        <p data-testid="children">Hover me</p>
+      </Tooltip>,
+    )
+
+    const input = node.getByTestId('children') as HTMLInputElement
+    userEvent.hover(input)
+    const tooltipPortal = node.getByText('test success!') as HTMLInputElement
+    expect(tooltipPortal).toBeVisible()
+  })
+
+  describe(`placement`, () => {
+    ;['top', 'left', 'right', 'bottom'].forEach(placement => {
+      test(`should renders tooltip with placement ${placement}`, () => {
+        const node = renderWithTheme(
+          <Tooltip
+            text="test success!"
+            placement={placement as ComponentProps<typeof Tooltip>['placement']}
+          >
+            <p data-testid="children">Hover me</p>
+          </Tooltip>,
+        )
+
+        const input = node.getByTestId('children') as HTMLInputElement
+        userEvent.hover(input)
+        const tooltipPortal = node.getByText(
+          'test success!',
+        ) as HTMLInputElement
+        expect(tooltipPortal).toBeVisible()
+      })
+    })
+  })
 })

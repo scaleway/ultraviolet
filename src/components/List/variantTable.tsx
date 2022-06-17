@@ -228,7 +228,7 @@ export const Row = ({
         {multiselect && (
           <div>
             <Tooltip
-              baseId={`list-tooltip-row-${id}`}
+              id={`list-tooltip-row-${id}`}
               text={!isSelectable ? notSelectableText : undefined}
             >
               <StyledCheckbox

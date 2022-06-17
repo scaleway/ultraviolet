@@ -234,7 +234,7 @@ const BarStack = ({ data, total }: BarStackProps): JSX.Element => {
             key={id}
           >
             {tooltip ? (
-              <Tooltip baseId={`tooltip-${id}`} text={tooltip}>
+              <Tooltip id={`tooltip-${id}`} text={tooltip}>
                 <StyledBar
                   onMouseDown={onMouseDown}
                   onMouseUp={onMouseUp}
