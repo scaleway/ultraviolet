@@ -1,3 +1,10 @@
+## [0.160.0](https://github.com/scaleway/scaleway-ui/compare/v0.159.1...v0.160.0) (2022-06-17)
+
+
+### :gear: Features
+
+* **tooltip:** new tooltip homemade ([#1566](https://github.com/scaleway/scaleway-ui/issues/1566)) ([6c748a0](https://github.com/scaleway/scaleway-ui/commit/6c748a0cf211a0ad30f59ff4e830c12b8d30f44a))
+
 ## [0.159.1](https://github.com/scaleway/scaleway-ui/compare/v0.159.0...v0.159.1) (2022-06-17)
 
 
