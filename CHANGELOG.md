@@ -1,3 +1,15 @@
+## [0.159.1](https://github.com/scaleway/scaleway-ui/compare/v0.159.0...v0.159.1) (2022-06-17)
+
+
+### :bug: Bug Fixes
+
+* popper component working with a function disclosure ([#1596](https://github.com/scaleway/scaleway-ui/issues/1596)) ([bf2dbb3](https://github.com/scaleway/scaleway-ui/commit/bf2dbb36ba565184838c4f068cf477cffd31096c))
+
+
+### :memo: Documentation
+
+* **theme:** updated theme documentation ([#1586](https://github.com/scaleway/scaleway-ui/issues/1586)) ([d0623f7](https://github.com/scaleway/scaleway-ui/commit/d0623f77889e3d6f22d21864cfa16cb7c15032c3))
+
 ## [0.159.0](https://github.com/scaleway/scaleway-ui/compare/v0.158.2...v0.159.0) (2022-06-17)
 
 
