@@ -44,18 +44,14 @@ In this example there are different colors, but they are all having the same sen
 Easy right? Let's now make it a bit more complex adding prominence in our context, let's take another alert as example:
 
 <ThemeWrapper>
-  <Alert variant="filled" type="info">
-    This is a simple alert with info sentiment and strong prominence
-  </Alert>
+  <Alert variant="filled" type="info">This is a simple alert with info sentiment and strong prominence</Alert>
 </ThemeWrapper>
 
 **Text** and **icon** colors will be `theme.colors.info.textStrong`<br/>
 **Background** color will be `theme.colors.info.backgroundStrong`
 
 <ThemeWrapper>
-  <Alert variant="outlined" type="info">
-    This is a simple alert with info sentiment and weak prominence
-  </Alert>
+  <Alert variant="outlined" type="info">This is a simple alert with info sentiment and weak prominence</Alert>
 </ThemeWrapper>
 
 **Text** and **icon** colors will be `theme.colors.info.textWeak`<br/>
@@ -74,26 +70,28 @@ Here are all colors that we use in Scaleway UI. You can customize them in your o
 
 ## Custom theme
 
-To customize theme you will need to use `createTheme` function. This method will generate a well formatted theme to pass
+To customize theme you will need to use `extendTheme` function. This method will generate a well formatted theme to pass
 to your Theme Provider.
 
-By entering different shade of contrast in entry to `createTheme`, it will then generate correct tokens with previously seen pattern.<br/>
+By entering different shade of contrast in entry to `extendTheme`, it will then generate correct tokens with default theme pattern.<br/>
 Keep in mind that it is an extension of existing theme, meaning that it will override the theme with your values.
 
 ```js
 import { ThemeProvider } from '@emotion/react'
-import { Badge, createTheme } from '@scaleway/ui'
+import { Badge, extendTheme } from '@scaleway/ui'
 
 function App() {
   // We generate custom theme here by providing the shade of colors we want to change
   // all others shade will get default theme value
-  const myTheme = createTheme({
-    contrasts: {
-      primary: {
-        100: '#46ff00', // green color
-        800: '#46ff00', // green color
-      },
-    },
+  const myTheme = extendTheme({
+    extendedTheme: {
+        contrasts: {
+            primary: {
+                100: '#46ff00', // green color
+                800: '#46ff00' // green color
+            }
+        }
+    }
   })
 
   return (
@@ -108,9 +106,25 @@ export default App
 
 ## API
 
-#### `createTheme({contrasts, space, screens, radii, fonts})`
+#### `extendTheme({baseTheme, extendedTheme}: {baseTheme: Theme, extendedTheme: Theme})`
 
-##### Parameters
+##### Types
+
+`baseTheme`: Its default value is the default theme.
+
+`extendedTheme`: has to be provided, it defines new theme properties.
+
+##### Theme type
+
+```ts
+type Theme = {
+    contrasts,
+    space,
+    screens,
+    radii,
+    fonts
+}
+```
 
 `contrasts`: object composed of sentiments and their contrasts from 100 to 900 except neutral that goes until 1000. Object should be as follows:
 
