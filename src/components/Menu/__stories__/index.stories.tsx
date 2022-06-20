@@ -246,9 +246,9 @@ FunctionDisclosure.decorators = [
   () => (
     <div style={{ height: '300px' }}>
       <Menu
-        disclosure={popover => (
+        disclosure={() => (
           <Touchable title="menu" name="menu">
-            Menu is {popover?.visible ? 'visible' : 'invisible'}
+            Menu
           </Touchable>
         )}
       >
