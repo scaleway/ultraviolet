@@ -1,3 +1,22 @@
+## [0.160.1](https://github.com/scaleway/scaleway-ui/compare/v0.160.0...v0.160.1) (2022-06-20)
+
+
+### :repeat: CI
+
+* update menu visual testing ([#1606](https://github.com/scaleway/scaleway-ui/issues/1606)) ([e77fe9d](https://github.com/scaleway/scaleway-ui/commit/e77fe9d81ced4c6f89ccb92b9e3b15c2f5ff1f3c))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/jest-axe to v3.5.4 ([#1603](https://github.com/scaleway/scaleway-ui/issues/1603)) ([4eeee1a](https://github.com/scaleway/scaleway-ui/commit/4eeee1a76eb2e246e54472cf01a9f5b94eb6efce))
+* **devdeps:** update dependency @types/react to v17.0.47 ([#1602](https://github.com/scaleway/scaleway-ui/issues/1602)) ([881d2d5](https://github.com/scaleway/scaleway-ui/commit/881d2d5debdf076e3c7aea38ed6bd2ee8258e1a0))
+* **devdeps:** update dependency @types/testing-library__jest-dom to v5.14.4 ([#1604](https://github.com/scaleway/scaleway-ui/issues/1604)) ([9763967](https://github.com/scaleway/scaleway-ui/commit/97639675edd4b603f91ecd2b8f2e70f85fe979df))
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** generatedId into aria-describedby ([#1600](https://github.com/scaleway/scaleway-ui/issues/1600)) ([4ff7a82](https://github.com/scaleway/scaleway-ui/commit/4ff7a8230b1e4c2b5fbeecc0bf2aa1932502d92d))
+
 ## [0.160.0](https://github.com/scaleway/scaleway-ui/compare/v0.159.1...v0.160.0) (2022-06-17)
 
 
