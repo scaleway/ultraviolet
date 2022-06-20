@@ -2,7 +2,6 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { useCallback, useEffect, useState } from 'react'
-import Box from '../Box'
 import Typography from '../Typography'
 
 const StyledTitle = styled(Typography)`
@@ -17,10 +16,12 @@ const StyledStrength = styled(Typography)`
   font-weight: 500;
 `
 
-const StyledWrapper = styled(Box)`
+const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   border-radius: 5px;
   height: 8px;
+  margin-top: ${({ theme }) => theme.space['1']};
+  margin-bottom: ${({ theme }) => theme.space['2']};
 `
 
 const StyledMeter = styled.div`
@@ -100,7 +101,7 @@ const PasswordStrengthMeter = ({
         {strength[score]?.t}
       </StyledStrength>
 
-      <StyledWrapper mt={1} mb={2}>
+      <StyledWrapper>
         <StyledMeter
           style={{
             backgroundColor,
