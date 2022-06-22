@@ -31,7 +31,7 @@ type LoaderProps = {
 }
 
 const Text = styled('text', {
-  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+  shouldForwardProp: prop => !['color'].includes(prop),
 })<{ color: Color | string }>`
   fill: ${({ theme, color }) =>
     theme.colors[color as Color]?.backgroundStrong || color};

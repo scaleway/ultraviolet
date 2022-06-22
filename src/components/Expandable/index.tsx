@@ -19,7 +19,7 @@ type ExpandableProps = {
 } & BoxProps
 
 const StyledExpandable = styled(Box, {
-  shouldForwardProp: prop => !['opened', 'height'].includes(prop.toString()),
+  shouldForwardProp: prop => !['opened', 'height'].includes(prop),
 })<ExpandableProps>`
   transition: max-height 300ms ease-out, opacity 300ms ease-out;
   max-height: 0;

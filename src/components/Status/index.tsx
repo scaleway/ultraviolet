@@ -25,7 +25,7 @@ export const statusVariants = Object.keys(variants) as StatusVariant[]
 
 type StyledCircleProps = Pick<StatusProps, 'variant' | 'animated'>
 const StyledCircle = styled('div', {
-  shouldForwardProp: prop => !['variant', 'animated'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant', 'animated'].includes(prop),
 })<StyledCircleProps>`
   display: inline-block;
   width: 10px;

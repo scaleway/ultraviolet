@@ -11,8 +11,7 @@ import { ListRowProps } from './types'
 
 export const Cell = styled(BaseCell)``
 const StyledRow = styled(Box, {
-  shouldForwardProp: prop =>
-    !['selected', 'highlighted'].includes(prop.toString()),
+  shouldForwardProp: prop => !['selected', 'highlighted'].includes(prop),
 })<{ selected?: boolean; highlighted?: boolean }>`
   display: flex;
   align-items: center;

@@ -59,7 +59,7 @@ const linkRenderer = ({
 }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['inline'].includes(prop.toString()),
+  shouldForwardProp: prop => !['inline'].includes(prop),
 })<{ inline: boolean }>`
   ${({ inline }) =>
     inline &&

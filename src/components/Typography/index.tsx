@@ -196,9 +196,7 @@ type StyledTextProps = {
 
 const StyledText = styled(Box, {
   shouldForwardProp: prop =>
-    !['ellipsis', 'variant', 'maxLines', 'text', 'color'].includes(
-      prop.toString(),
-    ),
+    !['ellipsis', 'variant', 'maxLines', 'text', 'color'].includes(prop),
 })<StyledTextProps>`
   color: ${({ theme }) => theme?.colors.neutral.text};
   font-weight: 400;

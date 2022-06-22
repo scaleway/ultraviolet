@@ -79,9 +79,7 @@ type TextProps = {
 
 const StyledText = styled('div', {
   shouldForwardProp: prop =>
-    !['as', 'variant', 'color', 'prominence', 'oneLine'].includes(
-      prop.toString(),
-    ),
+    !['as', 'variant', 'color', 'prominence', 'oneLine'].includes(prop),
 })<{
   color: Color
   prominence: ProminenceProps

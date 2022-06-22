@@ -591,7 +591,7 @@ const sizeStyles = ({ size }: { size: number | string }) => {
 }
 
 const StyledIcon = styled(Box, {
-  shouldForwardProp: prop => !['size', 'color'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size', 'color'].includes(prop),
 })<
   {
     color: ColorDeprecated | Color | string

@@ -68,8 +68,8 @@ type StyledRightElementProps = {
 }
 
 const StyledRightElement = styled('div', {
-  shouldForwardProp: props =>
-    !['edit', 'touchable', 'unit'].includes(props.toString()),
+  shouldForwardProp: prop =>
+    !['edit', 'touchable', 'unit'].includes(prop),
 })<StyledRightElementProps>`
   ${({ theme: { colors } }) => css`
     pointer-events: none;
@@ -125,8 +125,8 @@ type StyledLabelProps = {
 } & LabelHTMLAttributes<HTMLLabelElement>
 
 const StyledLabel = styled('label', {
-  shouldForwardProp: props =>
-    !['edit', 'error', 'resizable', 'fillAvailable'].includes(props.toString()),
+  shouldForwardProp: prop =>
+    !['edit', 'error', 'resizable', 'fillAvailable'].includes(prop),
 })<StyledLabelProps>`
   display: block;
   position: absolute;
@@ -202,7 +202,7 @@ type InputProps = Omit<
 >
 
 const StyledInput = styled('input', {
-  shouldForwardProp: props =>
+  shouldForwardProp: prop =>
     ![
       'as',
       'error',
@@ -214,7 +214,7 @@ const StyledInput = styled('input', {
       'resizable',
       'inputSize',
       'rightElementPadding',
-    ].includes(props.toString()),
+    ].includes(prop),
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   appearance: none;

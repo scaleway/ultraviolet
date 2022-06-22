@@ -23,7 +23,7 @@ type GridProps = {
 } & BoxProps
 
 const StyledGrid = styled(Box, {
-  shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop.toString()),
+  shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop),
 })<GridProps>`
   width: 100%;
   margin-left: auto;

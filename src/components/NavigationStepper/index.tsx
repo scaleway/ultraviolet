@@ -48,7 +48,7 @@ const StyledStepLoader = styled.span`
 
 const StyledStep = styled('li', {
   shouldForwardProp: prop =>
-    !['isCompleted', 'isLoading', 'condensed'].includes(prop.toString()),
+    !['isCompleted', 'isLoading', 'condensed'].includes(prop),
 })<{ isCompleted: boolean; isLoading: boolean; condensed?: boolean }>`
   display: flex;
   font-weight: 700;
@@ -96,7 +96,7 @@ Step.propTypes = {
 }
 
 const StyledUl = styled('ul', {
-  shouldForwardProp: prop => !['count', 'condensed'].includes(prop.toString()),
+  shouldForwardProp: prop => !['count', 'condensed'].includes(prop),
 })<{ count: number; condensed?: boolean }>`
   list-style: none;
   margin: 0;

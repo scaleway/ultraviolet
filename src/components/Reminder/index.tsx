@@ -23,7 +23,7 @@ type NotificationProps = {
 }
 
 const Notification = styled(Box, {
-  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant', 'bordered'].includes(prop),
 })<NotificationProps>`
   height: 28px;
   width: max-content;

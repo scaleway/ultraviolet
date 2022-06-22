@@ -18,8 +18,7 @@ const Desc = styled(Box.withComponent('dd'))`
 `
 
 const StyledBox = styled(Box, {
-  shouldForwardProp: prop =>
-    !['inline', 'selectable'].includes(prop.toString()),
+  shouldForwardProp: prop => !['inline', 'selectable'].includes(prop),
 })<{ inline: boolean; selectable: boolean }>`
   font-size: 16px;
   line-height: 16px;

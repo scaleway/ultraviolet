@@ -24,7 +24,7 @@ const StyledStepContainer = styled.div`
   justify-content: flex-start;
 `
 const StyledStep = styled('div', {
-  shouldForwardProp: prop => !['temporal'].includes(prop.toString()),
+  shouldForwardProp: prop => !['temporal'].includes(prop),
 })<{ temporal: Temporal }>`
   border-radius: 100%;
   display: flex;

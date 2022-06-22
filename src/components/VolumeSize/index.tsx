@@ -49,7 +49,7 @@ const StyledValue = styled('span', {
 `
 
 const StyledContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size?: Sizes }>`
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@ const StyledContainer = styled('div', {
 `
 
 const StyledVolumeContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<StyleProps>`
   background-color: ${({ theme }) => theme.colors.primary.background};
   border-radius: 3px;
@@ -71,8 +71,7 @@ const StyledVolumeContainer = styled('div', {
 `
 
 const StyledVolume = styled('span', {
-  shouldForwardProp: prop =>
-    !['percentUsed', 'hasError'].includes(prop.toString()),
+  shouldForwardProp: prop => !['percentUsed', 'hasError'].includes(prop),
 })<StyleProps>`
   background-color: ${({ hasError, theme }) =>
     hasError
@@ -93,7 +92,7 @@ const StyledVolume = styled('span', {
 
 const StyledCursor = styled('div', {
   shouldForwardProp: prop =>
-    !['size', 'hasMaxSize', 'isMaxSize'].includes(prop.toString()),
+    !['size', 'hasMaxSize', 'isMaxSize'].includes(prop),
 })<StyleProps>`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   position: absolute;
@@ -109,7 +108,7 @@ const StyledCursor = styled('div', {
 `
 
 const StyledLabelContainer = styled('div', {
-  shouldForwardProp: prop => !['size', 'type'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size', 'type'].includes(prop),
 })<StyleProps>`
   display: flex;
   flex-direction: column;
@@ -123,7 +122,7 @@ const StyledLabelContainer = styled('div', {
 `
 
 const StyledLabel = styled('div', {
-  shouldForwardProp: prop => !['type'].includes(prop.toString()),
+  shouldForwardProp: prop => !['type'].includes(prop),
 })<StyleProps>`
   text-align: ${({ type }) => (type === 'min' ? 'left' : 'right')};
 `

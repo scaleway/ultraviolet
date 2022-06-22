@@ -304,8 +304,7 @@ type StyledContainerProps = {
 }
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop =>
-    !['isDisabled', 'additionalStyles'].includes(prop.toString()),
+  shouldForwardProp: prop => !['isDisabled', 'additionalStyles'].includes(prop),
 })<StyledContainerProps>`
   width: 100%;
   ${({ isDisabled }) => isDisabled && `pointer-events: initial;`};
@@ -419,7 +418,7 @@ type StyledPlaceholderProps = {
 
 const StyledPlaceholder = styled('label', {
   shouldForwardProp: prop =>
-    !['error', 'hasValue', 'isDisabled', 'isMulti'].includes(prop.toString()),
+    !['error', 'hasValue', 'isDisabled', 'isMulti'].includes(prop),
 })<StyledPlaceholderProps>`
   position: absolute;
   left: 0;

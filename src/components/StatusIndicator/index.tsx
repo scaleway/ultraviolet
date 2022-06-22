@@ -8,7 +8,7 @@ import Box, { XStyledProps } from '../Box'
 import Tooltip from '../Tooltip'
 
 const Dot = styled(Box, {
-  shouldForwardProp: prop => !['color'].includes(prop.toString()),
+  shouldForwardProp: prop => !['color'].includes(prop),
 })`
   display: inline-block;
   border-radius: 50%;

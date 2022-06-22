@@ -58,7 +58,7 @@ type LinkProps = {
 } & ComponentProps<typeof UniversalLink>
 
 const StyledLink = styled(UniversalLink, {
-  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<LinkProps>`
   cursor: pointer;
   text-decoration: none;

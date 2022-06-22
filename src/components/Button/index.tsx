@@ -236,7 +236,7 @@ type StyledIcon = {
 }
 
 const StyledIconContainer = styled('div', {
-  shouldForwardProp: prop => !['margin', 'position'].includes(prop.toString()),
+  shouldForwardProp: prop => !['margin', 'position'].includes(prop),
 })<StyledIcon>`
   display: flex;
   ${({ margin, position }) => `
@@ -272,10 +272,8 @@ type StyledButtonProps = {
   ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled(Box, {
-  shouldForwardProp: props =>
-    !['action', 'variant', 'extend', 'icon', 'download'].includes(
-      props.toString(),
-    ),
+  shouldForwardProp: prop =>
+    !['action', 'variant', 'extend', 'icon', 'download'].includes(prop),
 })<StyledButtonProps>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};

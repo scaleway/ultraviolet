@@ -80,7 +80,7 @@ const generateStyles = ({
 }
 
 const StyledBox = styled('div', {
-  shouldForwardProp: prop => !['variant', 'size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
 })<{ size: number; variant: string }>`
   display: inline-flex;
   align-items: center;

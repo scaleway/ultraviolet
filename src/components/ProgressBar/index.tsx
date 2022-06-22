@@ -44,7 +44,7 @@ const StyledProgress = styled.div`
 `
 
 const StyledFilled = styled('div', {
-  shouldForwardProp: prop => !['variant', 'value'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant', 'value'].includes(prop),
 })<{ variant: string; value: number }>`
   border-radius: 2px;
   position: absolute;

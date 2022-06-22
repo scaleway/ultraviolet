@@ -57,7 +57,7 @@ const StyledContainer = styled(Box)`
 `
 
 const StyledBar = styled('div', {
-  shouldForwardProp: prop => !['offsetTop'].includes(prop.toString()),
+  shouldForwardProp: prop => !['offsetTop'].includes(prop),
 })<{ offsetTop: number }>`
   position: absolute;
   height: 4px;
@@ -69,8 +69,7 @@ const StyledBar = styled('div', {
 `
 
 const StyledLimit = styled('div', {
-  shouldForwardProp: prop =>
-    !['offsetTop', 'position'].includes(prop.toString()),
+  shouldForwardProp: prop => !['offsetTop', 'position'].includes(prop),
 })<{ offsetTop: number; position?: 'left' | 'right' }>`
   position: absolute;
   font-size: 12px;
@@ -135,7 +134,7 @@ Limit.propTypes = {
 }
 
 const StyledCursorLink = styled('div', {
-  shouldForwardProp: prop => !['offsetTop'].includes(prop.toString()),
+  shouldForwardProp: prop => !['offsetTop'].includes(prop),
 })<{ offsetTop: number }>`
   position: absolute;
   top: ${({ offsetTop = 0 }) => offsetTop + 0}px;
@@ -147,8 +146,7 @@ const StyledCursorLink = styled('div', {
 `
 
 const StyledCursor = styled(Box, {
-  shouldForwardProp: prop =>
-    !['offsetTop', 'width', 'grabbed'].includes(prop.toString()),
+  shouldForwardProp: prop => !['offsetTop', 'width', 'grabbed'].includes(prop),
 })<{ grabbed: boolean; offsetTop: number; width: string | number }>`
   position: absolute;
   top: ${({ offsetTop }) => offsetTop + -6}px;

@@ -58,7 +58,7 @@ const iconSizes = {
 }
 
 const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: prop => !['position', 'size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['position', 'size'].includes(prop),
 })<{ size: ContainerSizesType }>`
   justify-content: center;
   align-items: center;
@@ -77,7 +77,7 @@ const StyledTouchable = styled(Touchable, {
 `
 
 const StyledCenterBox = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: ContainerSizesType }>`
   display: flex;
   flex: 1;
@@ -113,7 +113,7 @@ const StyledInput = styled.input`
 `
 
 const StyledText = styled('span', {
-  shouldForwardProp: prop => !['disabled'].includes(prop.toString()),
+  shouldForwardProp: prop => !['disabled'].includes(prop),
 })<{ disabled: boolean }>`
   color: ${({ theme, disabled }) =>
     disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
@@ -121,7 +121,7 @@ const StyledText = styled('span', {
 `
 
 const StyledContainer = styled(Box, {
-  shouldForwardProp: prop => !['size'].includes(prop.toString()),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
     disabled

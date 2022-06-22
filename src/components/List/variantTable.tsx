@@ -68,7 +68,7 @@ const StyledRow = styled(Box, {
       'isHoverable',
       'edition',
       'customStyle',
-    ].includes(prop.toString()),
+    ].includes(prop),
 })<StyledRowProps>`
   ${({ animated, animationDuration, animation }) =>
     animated

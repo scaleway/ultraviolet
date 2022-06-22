@@ -6,7 +6,7 @@ import Loader from '../Loader'
 import Touchable from '../Touchable'
 
 const StyledContainer = styled('span', {
-  shouldForwardProp: prop => !['variant'].includes(prop.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<{ variant: Color | 'disabled' }>`
   display: inline-flex;
   align-items: center;
@@ -52,7 +52,7 @@ const StyledTag = styled.span`
 `
 
 const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: props => !['variant'].includes(props.toString()),
+  shouldForwardProp: prop => !['variant'].includes(prop),
 })<{ variant: Color }>`
   display: flex;
   align-items: center;

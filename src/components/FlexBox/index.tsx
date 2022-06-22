@@ -13,9 +13,7 @@ type ChildProps = {
 
 const Child = styled('div', {
   shouldForwardProp: prop =>
-    !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(
-      prop.toString(),
-    ),
+    !['alignSelf', 'basis', 'grow', 'shrink', 'flex', 'order'].includes(prop),
 })<ChildProps>`
   ${({ alignSelf }) => (alignSelf ? `align-self: ${alignSelf};` : '')}
   ${({ basis }) => (basis ? `flex-basis: ${basis};` : '')}
@@ -49,7 +47,7 @@ const StyledFlexBox = styled(Child, {
       'direction',
       'justifyContent',
       'wrap',
-    ].includes(prop.toString()),
+    ].includes(prop),
 })<FlexBoxProps>`
   display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
 
