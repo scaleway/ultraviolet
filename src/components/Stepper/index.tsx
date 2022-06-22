@@ -122,7 +122,7 @@ const StepperNumbers = ({
       {temporal !== 'previous' ? (
         <Text
           as="span"
-          variant="bodySmallWeak"
+          variant="bodySmall"
           color="neutral"
           prominence={temporal === 'next' ? 'weak' : 'default'}
         >
@@ -135,7 +135,7 @@ const StepperNumbers = ({
 
     <StyledText
       as="span"
-      variant="bodySmallWeak"
+      variant="bodySmall"
       prominence={temporal === 'next' ? 'weak' : 'default'}
     >
       {children}

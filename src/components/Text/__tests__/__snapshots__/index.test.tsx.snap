@@ -55,6 +55,29 @@ exports[`Text renders correctly with type="body" 1`] = `
 
 exports[`Text renders correctly with type="bodySmall" 1`] = `
 <DocumentFragment>
+  .cache-m5toqi-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-m5toqi-StyledText e1tg3t120"
+  >
+    bodySmall
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
+<DocumentFragment>
   .cache-8hhzv5-StyledText {
   color: #4a4f62;
   font-size: 14px;
@@ -71,12 +94,12 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 <div
     class="cache-8hhzv5-StyledText e1tg3t120"
   >
-    bodySmall
+    bodySmallStrong
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
+exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 <DocumentFragment>
   .cache-1v6g9ow-StyledText {
   color: #4a4f62;
@@ -94,30 +117,7 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 <div
     class="cache-1v6g9ow-StyledText e1tg3t120"
   >
-    bodySmallStrong
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Text renders correctly with type="bodySmallWeak" 1`] = `
-<DocumentFragment>
-  .cache-m5toqi-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    class="cache-m5toqi-StyledText e1tg3t120"
-  >
-    bodySmallWeak
+    bodySmallStronger
   </div>
 </DocumentFragment>
 `;
@@ -141,6 +141,29 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
     class="cache-koat35-StyledText e1tg3t120"
   >
     bodyStrong
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="bodyStronger" 1`] = `
+<DocumentFragment>
+  .cache-koat35-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-koat35-StyledText e1tg3t120"
+  >
+    bodyStronger
   </div>
 </DocumentFragment>
 `;
