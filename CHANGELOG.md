@@ -1,3 +1,19 @@
+## [0.161.0](https://github.com/scaleway/scaleway-ui/compare/v0.160.1...v0.161.0) (2022-06-22)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.36 ([#1607](https://github.com/scaleway/scaleway-ui/issues/1607)) ([19cebe9](https://github.com/scaleway/scaleway-ui/commit/19cebe9bfc1d3dfb125b693476022f054b911e70))
+* **devdeps:** update dependency lint-staged to v13.0.2 ([#1601](https://github.com/scaleway/scaleway-ui/issues/1601)) ([423a294](https://github.com/scaleway/scaleway-ui/commit/423a294fe793d2e0d8f06a09e121ee64f43ee070))
+* **devdeps:** update dependency prettier to v2.7.1 ([#1612](https://github.com/scaleway/scaleway-ui/issues/1612)) ([a174a06](https://github.com/scaleway/scaleway-ui/commit/a174a0670784fb102aba743e854aaf981a2a4933))
+* **devdeps:** update dependency rollup to v2.75.7 ([#1611](https://github.com/scaleway/scaleway-ui/issues/1611)) ([978c520](https://github.com/scaleway/scaleway-ui/commit/978c520d0fc053e00e55f254af92545bd84900eb))
+* **devdeps:** update dependency typescript to v4.7.4 ([#1605](https://github.com/scaleway/scaleway-ui/issues/1605)) ([c686f86](https://github.com/scaleway/scaleway-ui/commit/c686f8622b5e3a0ad32a224637ccabd38fec1de3))
+
+
+### :gear: Features
+
+* new db icon ([#1614](https://github.com/scaleway/scaleway-ui/issues/1614)) ([45fc0b8](https://github.com/scaleway/scaleway-ui/commit/45fc0b8b3b1ffee11f33059f73bb964f1c44cec4))
+
 ## [0.160.1](https://github.com/scaleway/scaleway-ui/compare/v0.160.0...v0.160.1) (2022-06-20)
 
 
