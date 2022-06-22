@@ -1,3 +1,10 @@
+## [0.161.4](https://github.com/scaleway/scaleway-ui/compare/v0.161.3...v0.161.4) (2022-06-22)
+
+
+### :bug: Bug Fixes
+
+* **theme:** synchronise design tokens ([#1599](https://github.com/scaleway/scaleway-ui/issues/1599)) ([d1868dc](https://github.com/scaleway/scaleway-ui/commit/d1868dca578bd5b5c522ad386d57c543de34db1b))
+
 ## [0.161.3](https://github.com/scaleway/scaleway-ui/compare/v0.161.2...v0.161.3) (2022-06-22)
 
 
