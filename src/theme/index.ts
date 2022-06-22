@@ -92,6 +92,13 @@ const SENTIMENTS = Object.keys(colors).filter(
   sentiment => sentiment !== 'overlay' && sentiment !== 'secondary',
 ) as Array<Color>
 
+const SENTIMENTS_WITHOUT_NEUTRAL = Object.keys(colors).filter(
+  sentiment =>
+    sentiment !== 'overlay' &&
+    sentiment !== 'secondary' &&
+    sentiment !== 'neutral',
+) as Array<Exclude<Color, 'neutral'>>
+
 export type { SCWUITheme, Color }
 
 export {
@@ -105,6 +112,7 @@ export {
   darkTheme,
   extendTheme,
   SENTIMENTS,
+  SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
 }
 

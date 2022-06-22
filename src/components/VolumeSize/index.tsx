@@ -95,8 +95,7 @@ const StyledCursor = styled('div', {
   shouldForwardProp: prop =>
     !['size', 'hasMaxSize', 'isMaxSize'].includes(prop.toString()),
 })<StyleProps>`
-  background-color: ${({ theme }) =>
-    theme.colors.neutral.backgroundStrongHover};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   position: absolute;
   height: ${({ size = 'medium' }) => (sizes[size] || 1) * 15}px;
   width: ${({ size = 'medium' }) => (sizes[size] || 1) * 3}px;

@@ -36,7 +36,7 @@ const StyledContainer = styled('span', {
     return `
       color: ${theme.colors[variant].text};
       background: ${theme.colors[variant].background};
-      border: solid 1px ${theme.colors[variant].borderDisabled};
+      border: solid 1px ${theme.colors[variant].background};
     `
   }}
 `

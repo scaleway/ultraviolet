@@ -1,7 +1,7 @@
 import { Theme, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ReactNode, useMemo } from 'react'
-import { Color, SENTIMENTS } from '../../theme'
+import { Color, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import Icon, { IconName } from '../Icon'
 import Typography from '../Typography'
@@ -44,17 +44,20 @@ const generateStyles = ({
   const definedProminence =
     prominence === PROMINENCES.strong ? capitalize(PROMINENCES.strong) : ''
 
-  const text = `text${definedProminence}` as keyof typeof theme.colors.primary
-  const background =
-    `background${definedProminence}` as keyof typeof theme.colors.primary
+  const text = `text${definedProminence}`
+  const background = `background${definedProminence}`
 
   return {
-    ...SENTIMENTS.reduce(
+    ...SENTIMENTS_WITHOUT_NEUTRAL.reduce(
       (reducer, sentiment) => ({
         ...reducer,
         [sentiment]: `
-      color: ${theme.colors[sentiment][text]};
-      background: ${theme.colors[sentiment][background]}
+      color: ${
+        theme.colors[sentiment][text as keyof typeof theme.colors.primary]
+      };
+      background: ${
+        theme.colors[sentiment][background as keyof typeof theme.colors.primary]
+      }
     `,
       }),
       {},
@@ -66,10 +69,12 @@ const generateStyles = ({
     neutral: `
       color: ${
         prominence === PROMINENCES.strong
-          ? theme.colors.neutral[text]
+          ? theme.colors.neutral[text as keyof typeof theme.colors.neutral]
           : theme.colors.neutral.textWeak
       };
-      background: ${theme.colors.neutral[background]}
+      background: ${
+        theme.colors.neutral[background as keyof typeof theme.colors.neutral]
+      }
     `,
   }
 }
