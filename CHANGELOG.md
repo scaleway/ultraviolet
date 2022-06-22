@@ -1,3 +1,15 @@
+## [0.161.2](https://github.com/scaleway/scaleway-ui/compare/v0.161.1...v0.161.2) (2022-06-22)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.0.5 ([#1608](https://github.com/scaleway/scaleway-ui/issues/1608)) ([75a94e6](https://github.com/scaleway/scaleway-ui/commit/75a94e62db1cd65d90e3a6cfa5d8d8bce7ad80c2))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.37 ([#1613](https://github.com/scaleway/scaleway-ui/issues/1613)) ([5a324bf](https://github.com/scaleway/scaleway-ui/commit/5a324bf2e1b18c3a547e7ce200e6d0e7960abbe2))
+
 ## [0.161.1](https://github.com/scaleway/scaleway-ui/compare/v0.161.0...v0.161.1) (2022-06-22)
 
 
