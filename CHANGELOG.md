@@ -1,3 +1,10 @@
+## [0.161.1](https://github.com/scaleway/scaleway-ui/compare/v0.161.0...v0.161.1) (2022-06-22)
+
+
+### :bug: Bug Fixes
+
+* **tokens:** use hover and disabled from figma ([#1587](https://github.com/scaleway/scaleway-ui/issues/1587)) ([b425abb](https://github.com/scaleway/scaleway-ui/commit/b425abbf77ea70c9a5d1f9317a60a62f21d0e9b9))
+
 ## [0.161.0](https://github.com/scaleway/scaleway-ui/compare/v0.160.1...v0.161.0) (2022-06-22)
 
 
