@@ -1,3 +1,15 @@
+## [0.161.3](https://github.com/scaleway/scaleway-ui/compare/v0.161.2...v0.161.3) (2022-06-22)
+
+
+### :package: Chore
+
+* **devdeps:** update bobheadxi/deployments action to v1.3.0 ([#1615](https://github.com/scaleway/scaleway-ui/issues/1615)) ([5516926](https://github.com/scaleway/scaleway-ui/commit/55169264170a2a7129ffd779dd24fc6f8c6bf84a))
+
+
+### :rocket: Performance
+
+* avoid useless string conversion on shouldForwardProp ([#1597](https://github.com/scaleway/scaleway-ui/issues/1597)) ([72857fd](https://github.com/scaleway/scaleway-ui/commit/72857fd153bccc99ead9e3beb5dd9c55c325e82f))
+
 ## [0.161.2](https://github.com/scaleway/scaleway-ui/compare/v0.161.1...v0.161.2) (2022-06-22)
 
 
