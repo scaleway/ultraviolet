@@ -199,6 +199,17 @@ export default {
     bodySmall: {
       fontFamily: 'Asap',
       fontSize: '14px',
+      fontWeight: 'Regular',
+      letterSpacing: '0',
+      lineHeight: '24px',
+      paragraphSpacing: '0',
+      textCase: 'none',
+      textDecoration: 'none',
+      weight: '400',
+    },
+    bodySmallStrong: {
+      fontFamily: 'Asap',
+      fontSize: '14px',
       fontWeight: 'Medium',
       letterSpacing: '0',
       lineHeight: '24px',
@@ -207,7 +218,7 @@ export default {
       textDecoration: 'none',
       weight: '500',
     },
-    bodySmallStrong: {
+    bodySmallStronger: {
       fontFamily: 'Asap',
       fontSize: '14px',
       fontWeight: 'SemiBold',
@@ -218,21 +229,21 @@ export default {
       textDecoration: 'none',
       weight: '600',
     },
-    bodySmallWeak: {
+    bodyStrong: {
       fontFamily: 'Asap',
-      fontSize: '14px',
-      fontWeight: 'Regular',
+      fontSize: '16px',
+      fontWeight: 'Medium',
       letterSpacing: '0',
       lineHeight: '24px',
       paragraphSpacing: '0',
       textCase: 'none',
       textDecoration: 'none',
-      weight: '400',
+      weight: '500',
     },
-    bodyStrong: {
+    bodyStronger: {
       fontFamily: 'Asap',
       fontSize: '16px',
-      fontWeight: 'Medium',
+      fontWeight: 'SemiBold',
       letterSpacing: '0',
       lineHeight: '24px',
       paragraphSpacing: '0',
