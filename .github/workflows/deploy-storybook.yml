@@ -32,7 +32,7 @@ jobs:
           ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
       - name: Start deployment
-        uses: bobheadxi/deployments@v1.2.0
+        uses: bobheadxi/deployments@v1.3.0
         id: deployment
         with:
           step: start
@@ -72,7 +72,7 @@ jobs:
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Update deployment status
-        uses: bobheadxi/deployments@v1.2.0
+        uses: bobheadxi/deployments@v1.3.0
         if: always()
         with:
           step: finish
