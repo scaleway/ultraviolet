@@ -1,3 +1,10 @@
+## [0.162.0](https://github.com/scaleway/scaleway-ui/compare/v0.161.5...v0.162.0) (2022-06-23)
+
+
+### :gear: Features
+
+* remove Reminder and ExtendedReminder ([#1609](https://github.com/scaleway/scaleway-ui/issues/1609)) ([e46e8df](https://github.com/scaleway/scaleway-ui/commit/e46e8dffa92a41118a19d53d0b16c11ef9d170c0))
+
 ## [0.161.5](https://github.com/scaleway/scaleway-ui/compare/v0.161.4...v0.161.5) (2022-06-23)
 
 
