@@ -1,3 +1,16 @@
+## [0.161.5](https://github.com/scaleway/scaleway-ui/compare/v0.161.4...v0.161.5) (2022-06-23)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/testing-library__jest-dom to v5.14.5 ([#1616](https://github.com/scaleway/scaleway-ui/issues/1616)) ([5e99a95](https://github.com/scaleway/scaleway-ui/commit/5e99a95e18e9406af88548b1408a38af0ee06683))
+* **devdeps:** update dependency eslint to v8.18.0 ([#1617](https://github.com/scaleway/scaleway-ui/issues/1617)) ([03257d8](https://github.com/scaleway/scaleway-ui/commit/03257d837ee0c72738845553d16d75ef5a5292ab))
+
+
+### :bug: Bug Fixes
+
+* **component:** add Text export and sort export name ([#1579](https://github.com/scaleway/scaleway-ui/issues/1579)) ([9ef238a](https://github.com/scaleway/scaleway-ui/commit/9ef238a494140d316877d40929f239f0d97d3172))
+
 ## [0.161.4](https://github.com/scaleway/scaleway-ui/compare/v0.161.3...v0.161.4) (2022-06-22)
 
 
