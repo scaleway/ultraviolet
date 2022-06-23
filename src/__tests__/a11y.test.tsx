@@ -18,7 +18,6 @@ const testedComponents = [
   'Checkbox',
   'MarkDown',
   'Placeholder',
-  'Reminder',
   'Separator',
   'Status',
   'StealthCopiable',
@@ -30,7 +29,6 @@ const testedComponents = [
   'TooltipIcon',
   'Tag',
   'Tags',
-  'ExtendedReminder',
   'TextBox',
   'Radio',
 ]
