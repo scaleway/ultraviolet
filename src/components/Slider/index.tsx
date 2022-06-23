@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { ElementType, ReactNode, useEffect, useRef, useState } from 'react'
-import Box, { BoxProps } from '../Box'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 
-const StyledWrapper = styled(Box)`
+const StyledWrapper = styled.div`
   position: relative;
   margin-left: -100px;
   margin-right: -100px;
@@ -52,7 +51,7 @@ const StyledAfterScroll = styled.span`
   );
 `
 
-const StyledBorderWrapper = styled(Box)`
+const StyledBorderWrapper = styled.div`
   display: inline-block;
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
@@ -77,22 +76,17 @@ const StyledBorderWrapper = styled(Box)`
 `
 
 type SliderItemProps = {
-  as?: string | ElementType<unknown>
   children: ReactNode
 }
-export const SliderItem = ({ as, ...props }: SliderItemProps): JSX.Element => (
-  <StyledBorderWrapper as={as} {...props} draggable="true" />
+export const SliderItem = ({ children }: SliderItemProps): JSX.Element => (
+  <StyledBorderWrapper draggable="true">{children}</StyledBorderWrapper>
 )
-
-SliderItem.propTypes = {
-  as: PropTypes.string,
-}
 
 type SliderProps = {
   children?: ReactNode
-} & BoxProps
+}
 
-const Slider = ({ children, ...props }: SliderProps): JSX.Element => {
+const Slider = ({ children }: SliderProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
@@ -128,7 +122,7 @@ const Slider = ({ children, ...props }: SliderProps): JSX.Element => {
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper {...props}>
+    <StyledWrapper>
       <StyledBeforeScroll
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
