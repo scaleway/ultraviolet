@@ -58,9 +58,11 @@ const borderedVariant = ({
 const plainVariant = ({
   bgColorValue,
   textColorValue,
+  hoverColorValue,
 }: {
   bgColorValue: string
   textColorValue: string
+  hoverColorValue: string
 }) => `
     background-color: ${bgColorValue};
     color: ${textColorValue};
@@ -68,11 +70,11 @@ const plainVariant = ({
     &:hover,
     &:focus {
       color: ${textColorValue};
-      background-color: ${darken(0.05, bgColorValue)};
+      background-color: ${hoverColorValue};
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, bgColorValue)};
+      box-shadow: 0 0 0 2px ${transparentize(0.75, hoverColorValue)};
     }
   `
 
@@ -80,13 +82,14 @@ const variants = {
   info: ({ theme }: { theme: Theme }) =>
     plainVariant({
       bgColorValue: theme.colors.info.background,
+      hoverColorValue: theme.colors.info.backgroundHover,
       textColorValue: theme.colors.info.text,
     }),
   'info-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.info.backgroundWeak,
       colorValue: theme.colors.info.textWeak,
-      hoverColorValue: theme.colors.info.textWeak,
+      hoverColorValue: theme.colors.info.backgroundStrongHover,
     }),
   link: ({ theme: { colors } }: { theme: Theme }) => `
     background-color: ${colors.info.backgroundWeak};
@@ -104,47 +107,50 @@ const variants = {
   primary: ({ theme }: { theme: Theme }) =>
     plainVariant({
       bgColorValue: theme.colors.primary.backgroundStrong,
+      hoverColorValue: theme.colors.primary.backgroundStrongHover,
       textColorValue: theme.colors.primary.textStrong,
     }),
   'primary-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.primary.backgroundWeak,
       colorValue: theme.colors.primary.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundWeakHover,
+      hoverColorValue: theme.colors.primary.backgroundStrongHover,
     }),
   'primary-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.neutral.backgroundWeak,
       colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundWeakHover,
+      hoverColorValue: theme.colors.primary.backgroundStrongHover,
     }),
   secondary: ({ theme }: { theme: Theme }) =>
     plainVariant({
       bgColorValue: theme.colors.neutral.backgroundStrong,
+      hoverColorValue: theme.colors.neutral.backgroundStrongHover,
       textColorValue: theme.colors.neutral.text,
     }),
   'secondary-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.neutral.backgroundWeak,
       colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundWeakHover,
+      hoverColorValue: theme.colors.primary.backgroundStrongHover,
     }),
   success: ({ theme }: { theme: Theme }) =>
     plainVariant({
       bgColorValue: theme.colors.success.backgroundStrong,
+      hoverColorValue: theme.colors.success.backgroundStrongHover,
       textColorValue: theme.colors.success.textStrong,
     }),
   'success-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.success.backgroundWeak,
       colorValue: theme.colors.success.textWeak,
-      hoverColorValue: theme.colors.success.backgroundStrong,
+      hoverColorValue: theme.colors.success.backgroundStrongHover,
     }),
   'success-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.neutral.backgroundWeak,
       colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.success.backgroundWeakHover,
+      hoverColorValue: theme.colors.success.backgroundStrongHover,
     }),
   transparent: ({ theme: { colors } }: { theme: Theme }) => `
     background-color: transparent;
@@ -153,19 +159,20 @@ const variants = {
   warning: ({ theme }: { theme: Theme }) =>
     plainVariant({
       bgColorValue: theme.colors.danger.backgroundStrong,
+      hoverColorValue: theme.colors.danger.backgroundStrongHover,
       textColorValue: theme.colors.danger.textStrong,
     }),
   'warning-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.danger.backgroundWeak,
       colorValue: theme.colors.danger.text,
-      hoverColorValue: theme.colors.danger.backgroundStrong,
+      hoverColorValue: theme.colors.danger.backgroundStrongHover,
     }),
   'warning-soft-bordered': ({ theme }: { theme: Theme }) =>
     borderedVariant({
       bgColorValue: theme.colors.neutral.backgroundWeak,
       colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.danger.backgroundWeakHover,
+      hoverColorValue: theme.colors.danger.backgroundStrongHover,
     }),
 } as const
 

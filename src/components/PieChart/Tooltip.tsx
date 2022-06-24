@@ -1,7 +1,6 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import Typography from '../Typography'
+import Text from '../Text'
 
 const StyledList = styled.ul`
   padding: 0 8px 8px 8px;
@@ -35,40 +34,33 @@ type TooltipProps = {
   }
 }
 
-const Tooltip = ({ data }: TooltipProps) => {
-  const theme = useTheme()
-
-  return (
-    <div tabIndex={-1} role="tooltip">
-      <StyledList>
-        <StyledItem>
-          <Typography color={theme.colors.neutral.textStrong}>
-            {data.name}
-          </Typography>
-          <Space />
-          <Typography color={theme.colors.neutral.textStrong}>
-            {data.value}
-          </Typography>
-        </StyledItem>
-        {data.details &&
-          data.details.map(detail => (
-            <StyledItem key={detail.name}>
-              <Typography variant="bodyB" color={theme.colors.neutral.text}>
-                {detail.name}
-              </Typography>
-              <Space />
-              <Typography
-                variant="bodyB"
-                color={theme.colors.neutral.textStrong}
-              >
-                {detail.value}
-              </Typography>
-            </StyledItem>
-          ))}
-      </StyledList>
-    </div>
-  )
-}
+const Tooltip = ({ data }: TooltipProps) => (
+  <div tabIndex={-1} role="tooltip">
+    <StyledList>
+      <StyledItem>
+        <Text as="p" variant="body" prominence="stronger">
+          {data.name}
+        </Text>
+        <Space />
+        <Text as="p" variant="body" prominence="stronger">
+          {data.value}
+        </Text>
+      </StyledItem>
+      {data.details &&
+        data.details.map(detail => (
+          <StyledItem key={detail.name}>
+            <Text as="p" variant="bodySmall" prominence="stronger">
+              {detail.name}
+            </Text>
+            <Space />
+            <Text as="p" variant="bodySmall" prominence="stronger">
+              {detail.value}
+            </Text>
+          </StyledItem>
+        ))}
+    </StyledList>
+  </div>
+)
 
 Tooltip.propTypes = {
   data: PropTypes.shape({
