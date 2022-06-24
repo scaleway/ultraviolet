@@ -359,6 +359,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
+<<<<<<< HEAD
   .cache-1p1qm9l-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -371,31 +372,58 @@ exports[`Button should render correctly when acting as Link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+=======
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+>>>>>>> feat: new link component
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+<<<<<<< HEAD
 .cache-1p1qm9l-StyledButton:hover,
 .cache-1p1qm9l-StyledButton:focus {
   -webkit-text-decoration: none;
@@ -410,6 +438,33 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 .cache-1p1qm9l-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+=======
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+>>>>>>> feat: new link component
 }
 
 .cache-m245rk-StyledContent {
@@ -430,14 +485,24 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 <a
     aria-disabled="false"
+<<<<<<< HEAD
     class="em6gco80 cache-1p1qm9l-StyledButton"
+=======
+    class="cache-m1xbvb-StyledLink e4bq1r50"
+>>>>>>> feat: new link component
     href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco81"
-    >
-      Hello
-    </div>
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        <div
+          class="cache-m245rk-StyledContent em6gco81"
+        >
+          Hello
+        </div>
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
@@ -537,6 +602,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 exports[`Button should render correctly when acting as dom link 1`] = `
 <DocumentFragment>
+<<<<<<< HEAD
   .cache-a4uads-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -549,31 +615,58 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+=======
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+>>>>>>> feat: new link component
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+<<<<<<< HEAD
 .cache-a4uads-StyledButton:hover,
 .cache-a4uads-StyledButton:focus {
   -webkit-text-decoration: none;
@@ -588,6 +681,33 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 .cache-a4uads-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+=======
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+>>>>>>> feat: new link component
 }
 
 .cache-m245rk-StyledContent {
@@ -608,14 +728,24 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 <a
     aria-disabled="false"
+<<<<<<< HEAD
     class="em6gco80 cache-a4uads-StyledButton"
     href="/"
+=======
+    class="cache-m1xbvb-StyledLink e4bq1r50"
+>>>>>>> feat: new link component
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco81"
-    >
-      Hello
-    </div>
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        <div
+          class="cache-m245rk-StyledContent em6gco81"
+        >
+          Hello
+        </div>
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;

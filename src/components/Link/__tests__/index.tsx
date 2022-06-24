@@ -1,20 +1,17 @@
-import { ComponentProps } from 'react'
-import Link, { linkVariants } from '..'
+import Link from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { Color, SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
   test(`render correctly with no variant`, () =>
-    shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
+    shouldMatchEmotionSnapshot(<Link to="/">Hello</Link>))
 
   describe('variant', () => {
-    test.each(linkVariants.map(variant => [`render ${variant}`, variant]))(
+    test.each(SENTIMENTS.map(variant => [`render ${variant}`, variant]))(
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link
-            to="/"
-            variant={variant as ComponentProps<typeof Link>['variant']}
-          >
+          <Link to="/" variant={variant as Color}>
             Hello
           </Link>,
         ),

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
   ComponentProps,
-  ElementType,
   FocusEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -16,9 +15,9 @@ import {
 } from 'react'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
+import Link from '../Link'
 import Loader from '../Loader'
 import Tooltip from '../Tooltip'
-import UniversalLink from '../UniversalLink'
 
 const borderedVariant = ({
   colorValue,
@@ -385,8 +384,7 @@ const FwdButton = ({
 }: ButtonProps) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
-    if (to) return UniversalLink as ElementType
-    if (href || download) return 'a'
+    if (to || href || download) return Link
 
     return 'button'
   }, [disabled, to, href, download])

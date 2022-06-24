@@ -2,268 +2,870 @@
 
 exports[`Link render correctly with no variant 1`] = `
 <DocumentFragment>
-  .cache-1jppk4e-StyledLink {
-  cursor: pointer;
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1jppk4e-StyledLink:hover,
-.cache-1jppk4e-StyledLink:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1jppk4e-StyledLink"
+    class="cache-m1xbvb-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1vxww7r-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles {
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-  padding-left: 2px;
-  opacity: 0.5;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: top;
+.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+  vertical-align: middle;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-m1xbvb-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Hello
-    <svg
-      class="e4bq1r50 etwatq50 cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-      />
-    </svg>
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+      <span
+        class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+      >
+        <svg
+          class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          />
+        </svg>
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with to props 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-m1xbvb-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render blue 1`] = `
+exports[`Link variant render danger 1`] = `
 <DocumentFragment>
-  .cache-1ixn77i-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-s2pbgd-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #a6102d;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-s2pbgd-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-s2pbgd-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-s2pbgd-StyledLink:hover,
+.cache-s2pbgd-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-s2pbgd-StyledLink:hover::after,
+.cache-s2pbgd-StyledLink:focus::after {
+  background-color: #a6102d;
+}
+
+.cache-s2pbgd-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-s2pbgd-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #fbbac6;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-s2pbgd-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render info 1`] = `
+<DocumentFragment>
+  .cache-8m39js-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   color: #1a4dbf;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-8m39js-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  color: #0e2965;
+.cache-8m39js-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-8m39js-StyledLink:hover,
+.cache-8m39js-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-8m39js-StyledLink:hover::after,
+.cache-8m39js-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-8m39js-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-8m39js-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #a8bff1;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1ixn77i-StyledLink-generateVariant"
+    class="cache-8m39js-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render gray 1`] = `
+exports[`Link variant render neutral 1`] = `
 <DocumentFragment>
-  .cache-1wnfao4-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-2r5iwp-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #b2b6c3;
-}
-
-.cache-1wnfao4-StyledLink-generateVariant:hover,
-.cache-1wnfao4-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1wnfao4-StyledLink-generateVariant:hover,
-.cache-1wnfao4-StyledLink-generateVariant:focus {
-  color: #798096;
-}
-
-<a
-    class="e4bq1r51 cache-1wnfao4-StyledLink-generateVariant"
-    href="/"
-  >
-    Hello
-  </a>
-</DocumentFragment>
-`;
-
-exports[`Link variant render inherit 1`] = `
-<DocumentFragment>
-  .cache-1u6ab8v-StyledLink-inherit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+}
+
+.cache-2r5iwp-StyledLink .e4bq1r51 {
   color: inherit;
 }
 
-.cache-1u6ab8v-StyledLink-inherit:hover,
-.cache-1u6ab8v-StyledLink-inherit:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-2r5iwp-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
 }
 
-.cache-1u6ab8v-StyledLink-inherit:hover,
-.cache-1u6ab8v-StyledLink-inherit:focus {
-  color: inherit;
+.cache-2r5iwp-StyledLink:hover,
+.cache-2r5iwp-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-2r5iwp-StyledLink:hover::after,
+.cache-2r5iwp-StyledLink:focus::after {
+  background-color: #4a4f62;
+}
+
+.cache-2r5iwp-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-2r5iwp-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #c4c9d6;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1u6ab8v-StyledLink-inherit"
+    class="cache-2r5iwp-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render primary 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-m1xbvb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m1xbvb-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-m1xbvb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m1xbvb-StyledLink:hover,
+.cache-m1xbvb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m1xbvb-StyledLink:hover::after,
+.cache-m1xbvb-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-m1xbvb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-m1xbvb-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #bda5df;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-m1xbvb-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render white 1`] = `
+exports[`Link variant render success 1`] = `
 <DocumentFragment>
-  .cache-1nk5tmw-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-1h0wswp-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #149a7b;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #151a2d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1nk5tmw-StyledLink-generateVariant:hover,
-.cache-1nk5tmw-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-1h0wswp-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1nk5tmw-StyledLink-generateVariant:hover,
-.cache-1nk5tmw-StyledLink-generateVariant:focus {
-  color: #000;
+.cache-1h0wswp-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1h0wswp-StyledLink:hover,
+.cache-1h0wswp-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-1h0wswp-StyledLink:hover::after,
+.cache-1h0wswp-StyledLink:focus::after {
+  background-color: #149a7b;
+}
+
+.cache-1h0wswp-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-1h0wswp-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #9fefdd;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1nk5tmw-StyledLink-generateVariant"
+    class="cache-1h0wswp-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render warning 1`] = `
+<DocumentFragment>
+  .cache-zttd7l-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #cc4e18;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-zttd7l-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-zttd7l-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-zttd7l-StyledLink:hover,
+.cache-zttd7l-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-zttd7l-StyledLink:hover::after,
+.cache-zttd7l-StyledLink:focus::after {
+  background-color: #cc4e18;
+}
+
+.cache-zttd7l-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-zttd7l-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #ffc8a9;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-zttd7l-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span>
+      <span
+        class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+      >
+        Hello
+      </span>
+    </span>
   </a>
 </DocumentFragment>
 `;

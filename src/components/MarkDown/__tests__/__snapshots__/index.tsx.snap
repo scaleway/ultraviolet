@@ -60,24 +60,80 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant {
-  cursor: pointer;
+.cache-2r5iwp-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #1a4dbf;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-2r5iwp-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  color: #0e2965;
+.cache-2r5iwp-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-2r5iwp-StyledLink:hover,
+.cache-2r5iwp-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-2r5iwp-StyledLink:hover::after,
+.cache-2r5iwp-StyledLink:focus::after {
+  background-color: #4a4f62;
+}
+
+.cache-2r5iwp-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-2r5iwp-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #c4c9d6;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-11ifx6m-StyledText-command-variantStyles {
@@ -135,11 +191,17 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="e4bq1r51 cache-1ixn77i-StyledLink-generateVariant"
+        class="cache-2r5iwp-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
       >
         <span>
-          here
+          <span
+            class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+          >
+            <span>
+              here
+            </span>
+          </span>
         </span>
       </a>
     </p>
@@ -188,38 +250,99 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 0;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant {
-  cursor: pointer;
+.cache-2r5iwp-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #1a4dbf;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-2r5iwp-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  color: #0e2965;
+.cache-2r5iwp-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
+.cache-2r5iwp-StyledLink:hover,
+.cache-2r5iwp-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-2r5iwp-StyledLink:hover::after,
+.cache-2r5iwp-StyledLink:focus::after {
+  background-color: #4a4f62;
+}
+
+.cache-2r5iwp-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-2r5iwp-StyledLink[aria-disabled='true'] {
+  pointer-events: none;
+  color: #c4c9d6;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1vxww7r-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles {
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-  padding-left: 2px;
-  opacity: 0.5;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: top;
+.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+  vertical-align: middle;
 }
 
 .cache-11ifx6m-StyledText-command-variantStyles {
@@ -277,22 +400,32 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="e4bq1r51 cache-1ixn77i-StyledLink-generateVariant"
+        class="cache-2r5iwp-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
       >
         <span>
-          here
+          <span
+            class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+          >
+            <span>
+              here
+            </span>
+          </span>
+          <span
+            class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+          >
+            <svg
+              class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+              />
+            </svg>
+          </span>
         </span>
-        <svg
-          class="e4bq1r50 etwatq50 cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-          />
-        </svg>
       </a>
     </p>
     <p>
