@@ -15,6 +15,7 @@ export default {
         excludeDecorators: true,
       },
     },
+    loki: { skip: true },
   },
   title: 'Components/Feedback/Tooltip',
 } as Meta
@@ -26,11 +27,6 @@ const Template: Story<ComponentProps<typeof Tooltip>> = args => (
 )
 
 export const Default = Template.bind({})
-Default.story = {
-  parameters: {
-    loki: { skip: true },
-  },
-}
 Default.args = {
   text: 'Hello there',
 }

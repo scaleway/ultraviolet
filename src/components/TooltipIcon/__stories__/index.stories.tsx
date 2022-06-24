@@ -15,6 +15,7 @@ export default {
         excludeDecorators: true,
       },
     },
+    loki: { skip: true },
   },
   title: 'Components/Feedback/TooltipIcon',
 } as Meta
@@ -31,11 +32,6 @@ Default.decorators = [
     </FlexBox>
   ),
 ]
-Default.story = {
-  parameters: {
-    loki: { skip: true },
-  },
-}
 Default.args = {
   tooltip: 'Hello there',
 }
