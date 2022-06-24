@@ -1,3 +1,15 @@
+## [0.163.0](https://github.com/scaleway/scaleway-ui/compare/v0.162.0...v0.163.0) (2022-06-24)
+
+
+### :package: Chore
+
+* **devdeps:** update pnpm to v7.3.0 ([#1621](https://github.com/scaleway/scaleway-ui/issues/1621)) ([6bd1db1](https://github.com/scaleway/scaleway-ui/commit/6bd1db11e750f6eb37f879735b9e6226e1eb57bd))
+
+
+### :gear: Features
+
+* remove unused Box on Slider ([#1620](https://github.com/scaleway/scaleway-ui/issues/1620)) ([07b40da](https://github.com/scaleway/scaleway-ui/commit/07b40daae19dc65302e850b3db4c61233d054f3a))
+
 ## [0.162.0](https://github.com/scaleway/scaleway-ui/compare/v0.161.5...v0.162.0) (2022-06-23)
 
 
