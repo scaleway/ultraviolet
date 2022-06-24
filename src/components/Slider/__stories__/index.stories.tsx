@@ -16,8 +16,8 @@ export default {
   title: 'Components/Data Display/Slider',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Slider>> = args => (
-  <Slider {...args}>
+const Template: Story<ComponentProps<typeof Slider>> = () => (
+  <Slider>
     <Slider.Item>Item 1</Slider.Item>
     <Slider.Item>Item 2</Slider.Item>
     <Slider.Item>Item 3</Slider.Item>
@@ -28,7 +28,3 @@ const Template: Story<ComponentProps<typeof Slider>> = args => (
 )
 
 export const Default = Template.bind({})
-
-Default.args = {
-  m: 1,
-}
