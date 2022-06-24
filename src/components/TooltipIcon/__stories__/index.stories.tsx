@@ -31,6 +31,11 @@ Default.decorators = [
     </FlexBox>
   ),
 ]
+Default.story = {
+  parameters: {
+    loki: { skip: true },
+  },
+}
 Default.args = {
   tooltip: 'Hello there',
 }

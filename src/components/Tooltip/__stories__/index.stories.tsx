@@ -26,6 +26,11 @@ const Template: Story<ComponentProps<typeof Tooltip>> = args => (
 )
 
 export const Default = Template.bind({})
+Default.story = {
+  parameters: {
+    loki: { skip: true },
+  },
+}
 Default.args = {
   text: 'Hello there',
 }
