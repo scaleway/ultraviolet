@@ -454,6 +454,9 @@ const FwdButton = ({
   )
 }
 
+/**
+ * @deprecated Has been replaced by component ButtonV2, please this one instead.
+ */
 const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
   (props, ref) => <FwdButton {...props} innerRef={ref} />,
 )

@@ -13,6 +13,7 @@ const testedComponents = [
   'Loader',
   'Badge',
   'Bullet',
+  'ButtonV2',
   'Button',
   'Checkbox',
   'MarkDown',

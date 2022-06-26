@@ -1,0 +1,1365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonV2 should render correctly loading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-qhmn96-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #bda5df;
+  color: #f9f9ff;
+  border: none;
+  cursor: not-allowed;
+  color: #f9f9ff;
+  border: none;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-qhmn96-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 1em; width: 1em;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="transparent"
+        stroke-width="16"
+      />
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="currentColor"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 should render correctly when disabled 1`] = `
+<DocumentFragment>
+  .cache-qhmn96-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #bda5df;
+  color: #f9f9ff;
+  border: none;
+  cursor: not-allowed;
+  color: #f9f9ff;
+  border: none;
+}
+
+.cache-qlnk1k-StyledText {
+  color: #f9f9ff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="true"
+    aria-label="Hello"
+    class="cache-qhmn96-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-qlnk1k-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 should render correctly when extendable 1`] = `
+<DocumentFragment>
+  .cache-kpf85i-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  max-width: 48px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.cache-kpf85i-StyledButton:hover,
+.cache-kpf85i-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-kpf85i-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-kpf85i-StyledButton .button-text {
+  -webkit-transition: max-width 0.5s linear;
+  transition: max-width 0.5s linear;
+  overflow: hidden;
+  max-width: 0;
+  visibility: hidden;
+}
+
+.cache-kpf85i-StyledButton:hover,
+.cache-kpf85i-StyledButton:focus {
+  max-width: none;
+}
+
+.cache-kpf85i-StyledButton:hover .button-text,
+.cache-kpf85i-StyledButton:focus .button-text {
+  visibility: visible;
+  max-width: 250px;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-kpf85i-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+      />
+    </svg>
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 should render correctly with a tooltip 1`] = `
+<DocumentFragment>
+  .cache-1dj1lqy-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1dj1lqy-StyledButton:hover,
+.cache-1dj1lqy-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1dj1lqy-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    aria-describedby="test"
+  >
+    <button
+      aria-disabled="false"
+      aria-label="Hello"
+      class="cache-1dj1lqy-StyledButton e1su13oj0"
+      iconposition="left"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+        />
+      </svg>
+      <div
+        class="button-text cache-1ky83rs-StyledText e1tg3t120"
+      >
+        Hello
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 should render correctly without a text 1`] = `
+<DocumentFragment>
+  .cache-1dj1lqy-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1dj1lqy-StyledButton:hover,
+.cache-1dj1lqy-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1dj1lqy-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+<button
+    aria-disabled="false"
+    class="cache-1dj1lqy-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  />
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 should render correctly without a text and an icon 1`] = `
+<DocumentFragment>
+  .cache-1dj1lqy-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1dj1lqy-StyledButton:hover,
+.cache-1dj1lqy-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1dj1lqy-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+<button
+    aria-disabled="false"
+    class="cache-1dj1lqy-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  />
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 size render large 1`] = `
+<DocumentFragment>
+  .cache-1dj1lqy-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1dj1lqy-StyledButton:hover,
+.cache-1dj1lqy-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1dj1lqy-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-1dj1lqy-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 size render small 1`] = `
+<DocumentFragment>
+  .cache-1sbaggk-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 32px;
+  padding: 0 8px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1sbaggk-StyledButton:hover,
+.cache-1sbaggk-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1sbaggk-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-1sbaggk-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render danger with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-q69jar-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #dd3252;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-q69jar-StyledButton:hover,
+.cache-q69jar-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #a6102d;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-q69jar-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-q69jar-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render info with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-1w5r4pp-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #3f6ed8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1w5r4pp-StyledButton:hover,
+.cache-1w5r4pp-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #1a4dbf;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1w5r4pp-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-1w5r4pp-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render neutral with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-d006l7-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #4a4f62;
+  border: 1px solid #d4dae7;
+  cursor: pointer;
+}
+
+.cache-d006l7-StyledButton:hover,
+.cache-d006l7-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #e6e9f0;
+  color: #4a4f62;
+  border: 1px solid #d4dae7;
+}
+
+.cache-d006l7-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-bcb32-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-d006l7-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-bcb32-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render primary with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-1dj1lqy-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #4f0599;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1dj1lqy-StyledButton:hover,
+.cache-1dj1lqy-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #390171;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1dj1lqy-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-1dj1lqy-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render success with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-8y8zzc-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #22c8a2;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-8y8zzc-StyledButton:hover,
+.cache-8y8zzc-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #149a7b;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-8y8zzc-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-8y8zzc-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence strong render warning with prominence strong 1`] = `
+<DocumentFragment>
+  .cache-1mhytye-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ff8c69;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.cache-1mhytye-StyledButton:hover,
+.cache-1mhytye-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #cc4e18;
+  color: #ffffff;
+  border: none;
+}
+
+.cache-1mhytye-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-1ky83rs-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-1mhytye-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-1ky83rs-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render danger with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-6n967o-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #dd3252;
+  border: 1px solid #dd3252;
+  cursor: pointer;
+}
+
+.cache-6n967o-StyledButton:hover,
+.cache-6n967o-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #ffe1e7;
+  color: #a6102d;
+  border: 1px solid #a6102d;
+}
+
+.cache-6n967o-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-129f6jr-StyledText {
+  color: #dd3252;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-6n967o-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-129f6jr-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render info with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-u923mc-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #3f6ed8;
+  border: 1px solid #3f6ed8;
+  cursor: pointer;
+}
+
+.cache-u923mc-StyledButton:hover,
+.cache-u923mc-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #e1ebff;
+  color: #1a4dbf;
+  border: 1px solid #1a4dbf;
+}
+
+.cache-u923mc-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-3kpexp-StyledText {
+  color: #3f6ed8;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-u923mc-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-3kpexp-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render neutral with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-d006l7-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #4a4f62;
+  border: 1px solid #d4dae7;
+  cursor: pointer;
+}
+
+.cache-d006l7-StyledButton:hover,
+.cache-d006l7-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #e6e9f0;
+  color: #4a4f62;
+  border: 1px solid #d4dae7;
+}
+
+.cache-d006l7-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-bcb32-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-d006l7-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-bcb32-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render primary with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-84s2wn-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+  cursor: pointer;
+}
+
+.cache-84s2wn-StyledButton:hover,
+.cache-84s2wn-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+}
+
+.cache-84s2wn-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-abrnb4-StyledText {
+  color: #4f0599;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-84s2wn-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-abrnb4-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render success with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-k9zd2r-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #22c8a2;
+  border: 1px solid #22c8a2;
+  cursor: pointer;
+}
+
+.cache-k9zd2r-StyledButton:hover,
+.cache-k9zd2r-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #eafffb;
+  color: #149a7b;
+  border: 1px solid #149a7b;
+}
+
+.cache-k9zd2r-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-5tfgjt-StyledText {
+  color: #22c8a2;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-k9zd2r-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-5tfgjt-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 variant & prominence weak render warning with prominence weak 1`] = `
+<DocumentFragment>
+  .cache-dvzws4-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+  background: #ffffff;
+  color: #ff8c69;
+  border: 1px solid #ff8c69;
+  cursor: pointer;
+}
+
+.cache-dvzws4-StyledButton:hover,
+.cache-dvzws4-StyledButton:focus-visible {
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  outline: 0;
+  background: #ffefe6;
+  color: #cc4e18;
+  border: 1px solid #cc4e18;
+}
+
+.cache-dvzws4-StyledButton:active {
+  outline: 3px solid #4F059940;
+}
+
+.cache-ejiyg4-StyledText {
+  color: #ff8c69;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-label="Hello"
+    class="cache-dvzws4-StyledButton e1su13oj0"
+    iconposition="left"
+    type="button"
+  >
+    <div
+      class="button-text cache-ejiyg4-StyledText e1tg3t120"
+    >
+      Hello
+    </div>
+  </button>
+</DocumentFragment>
+`;

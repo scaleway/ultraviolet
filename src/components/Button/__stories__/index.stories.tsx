@@ -5,6 +5,11 @@ import { icons } from '../../Icon'
 
 export default {
   component: Button,
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please use ButtonV2 instead',
+  },
   title: 'Components/Button/Button',
 } as Meta
 
