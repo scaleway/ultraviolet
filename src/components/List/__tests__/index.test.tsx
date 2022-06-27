@@ -1151,7 +1151,7 @@ describe('List', () => {
           act(() => {
             userEvent.click(secondRow.firstElementChild as Element)
           })
-          await waitFor(() => expect(firstRow.open).toBeFalsy())
+          await waitFor(() => expect(firstRow.open).toBeTruthy())
           expect(secondRow.open).toBeTruthy()
         },
       },

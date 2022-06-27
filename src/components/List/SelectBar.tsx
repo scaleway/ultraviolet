@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { ReactElement, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
@@ -26,7 +26,7 @@ const StyledItemsCount = styled.div`
 type ListSelectBarProps<T> = {
   text?: ReactNode | ((length: number) => string)
   children?:
-    | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactElement)
+    | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactNode)
     | ReactNode
 }
 function SelectBar<T extends Record<string, unknown>>({

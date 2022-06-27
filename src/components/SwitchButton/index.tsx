@@ -123,7 +123,7 @@ const StyledRadio = styled(Radio)`
   opacity: 0.01;
 `
 
-type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
+type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange' | 'children'> & {
   children:
     | ReactNode
     | (({
@@ -132,7 +132,7 @@ type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange'> & {
       }: {
         checked: boolean
         disabled: boolean
-      }) => JSX.Element)
+      }) => ReactNode)
   name: string
   onBlur?: FocusEventHandler
   onChange: ChangeEventHandler
