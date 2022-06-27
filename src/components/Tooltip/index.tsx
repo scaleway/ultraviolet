@@ -13,6 +13,7 @@ import { getUUID } from '../../utils'
 
 const ARROW_WIDTH = 6 // in px
 const SPACE = 6 // in px
+const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
 const ANIMATION_DURATION = 230 // in ms
 const DEFAULT_POSITIONS = {
   arrowLeft: 50,
@@ -24,10 +25,10 @@ const DEFAULT_POSITIONS = {
   top: 0,
 }
 const TOOLTIP_INITIAL_POSITION = {
-  bottom: 'translateY(-40%)',
-  left: 'translateX(15%)',
-  right: 'translateX(-15%)',
-  top: 'translateY(+40%)',
+  bottom: `translateY(-${TOTAL_USED_SPACE}px)`,
+  left: `translateX(${TOTAL_USED_SPACE}px)`,
+  right: `translateX(-${TOTAL_USED_SPACE}px)`,
+  top: `translateY(${TOTAL_USED_SPACE}px)`,
 }
 
 type PositionsType = {
@@ -150,6 +151,7 @@ type TooltipProps = {
   placement?: TooltipPlacement
   text?: ReactNode
   className?: string
+  visible?: boolean
 }
 
 const Tooltip = ({
@@ -159,11 +161,12 @@ const Tooltip = ({
   id,
   className,
   maxWidth = 232,
+  visible = false,
 }: TooltipProps): JSX.Element => {
   const childrenRef = useRef<HTMLDivElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timer = useRef<ReturnType<typeof setInterval>>()
-  const [visibleInDom, setVisibleInDom] = useState(false)
+  const [visibleInDom, setVisibleInDom] = useState(visible)
   const [positions, setPositions] = useState<PositionsType>({
     ...DEFAULT_POSITIONS,
     tooltipInitialPosition: TOOLTIP_INITIAL_POSITION[placement],

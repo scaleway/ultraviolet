@@ -124,8 +124,7 @@ const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
         <Tooltip
           key={item.id}
           visible={isSegmentFocused}
-          variant="white"
-          baseId={id}
+          id={id}
           text={<TooltipContainer data={item} />}
         >
           <ListItem isFocused={isSegmentFocused}>
