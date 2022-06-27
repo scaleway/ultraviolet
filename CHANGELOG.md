@@ -1,3 +1,27 @@
+## [0.163.1](https://github.com/scaleway/scaleway-ui/compare/v0.163.0...v0.163.1) (2022-06-27)
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo to v17.0.3 ([#1630](https://github.com/scaleway/scaleway-ui/issues/1630)) ([4729a06](https://github.com/scaleway/scaleway-ui/commit/4729a066b974e00e0047d920055f6e46f203933f))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.38 ([#1624](https://github.com/scaleway/scaleway-ui/issues/1624)) ([8707b77](https://github.com/scaleway/scaleway-ui/commit/8707b778eb3ee7edad34729ba4825670b81c1e7b))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.39 ([#1628](https://github.com/scaleway/scaleway-ui/issues/1628)) ([2cd05fa](https://github.com/scaleway/scaleway-ui/commit/2cd05fa5d7ef0c2b2df294ee78718cfe48a8d5db))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.12 ([#1625](https://github.com/scaleway/scaleway-ui/issues/1625)) ([87c08be](https://github.com/scaleway/scaleway-ui/commit/87c08bea1b5558668f7ea67149f59323e46d82dd))
+* **devdeps:** update dependency @testing-library/dom to v8.14.0 ([#1627](https://github.com/scaleway/scaleway-ui/issues/1627)) ([04a7969](https://github.com/scaleway/scaleway-ui/commit/04a7969cb14375ce3032f976002b6cc4a9be6e5a))
+* **devdeps:** update dependency jest-junit to v14 ([#1626](https://github.com/scaleway/scaleway-ui/issues/1626)) ([e9b6c29](https://github.com/scaleway/scaleway-ui/commit/e9b6c2957ed079064615402eb2aea1e2dd7b287b))
+* **devdeps:** update dependency lint-staged to v13.0.3 ([#1629](https://github.com/scaleway/scaleway-ui/issues/1629)) ([d9fcf56](https://github.com/scaleway/scaleway-ui/commit/d9fcf56ed41b445527835bea6c48ed7120e856bc))
+
+
+### :zap: Refactor
+
+* remove some colorsDeprecated ([#1618](https://github.com/scaleway/scaleway-ui/issues/1618)) ([e4a6120](https://github.com/scaleway/scaleway-ui/commit/e4a6120060dc49e50cab44b46b5f02fd5bd67d4e))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-countup to v6.3.0 ([#1610](https://github.com/scaleway/scaleway-ui/issues/1610)) ([d312c44](https://github.com/scaleway/scaleway-ui/commit/d312c44ef8a6d69a2d3e4a3da8d32fefed4254cc))
+* **theme:** synchronise design tokens ([#1619](https://github.com/scaleway/scaleway-ui/issues/1619)) ([f24885a](https://github.com/scaleway/scaleway-ui/commit/f24885a5d1d25860a7863851a32222d017dc83da))
+
 ## [0.163.0](https://github.com/scaleway/scaleway-ui/compare/v0.162.0...v0.163.0) (2022-06-24)
 
 
