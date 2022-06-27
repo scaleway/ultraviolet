@@ -74,6 +74,9 @@ const StatusIndicator = ({
 
 export const statuses = Object.keys(defaultStatuses)
 
+/**
+ * @deprecated use Status component instead
+ */
 StatusIndicator.propTypes = {
   animated: PropTypes.bool,
   status: (

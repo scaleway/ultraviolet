@@ -5,6 +5,9 @@ import StatusIndicator from '..'
 export default {
   component: StatusIndicator,
   parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated, please use Status component instead.',
     docs: {
       description: {
         component: 'Colorful circle that can be used to indicated state.',
