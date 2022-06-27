@@ -10,18 +10,16 @@ describe('Counter', () => {
   test('renders and execute onEnd', async () => {
     const end = 10
     const mockOnEnd = jest.fn()
-    await act(async () => {
-      await shouldMatchEmotionSnapshot(
-        <Counter end={end} onEnd={mockOnEnd} />,
-        {
-          transform: async () => {
-            await new Promise(resolve => {
-              setTimeout(() => resolve([]), 2000)
-            })
-            expect(mockOnEnd).toHaveBeenCalledTimes(1)
-          },
-        },
-      )
+
+    return shouldMatchEmotionSnapshot(<Counter end={end} onEnd={mockOnEnd} />, {
+      transform: async () => {
+        await act(async () => {
+          await new Promise(resolve => {
+            setTimeout(() => resolve([]), 2000)
+          })
+        })
+        expect(mockOnEnd).toHaveBeenCalledTimes(1)
+      },
     })
   })
 })
