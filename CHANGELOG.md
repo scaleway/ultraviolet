@@ -1,3 +1,10 @@
+## [0.163.2](https://github.com/scaleway/scaleway-ui/compare/v0.163.1...v0.163.2) (2022-06-27)
+
+
+### :bug: Bug Fixes
+
+* fixed tooltip and button ([#1623](https://github.com/scaleway/scaleway-ui/issues/1623)) ([4f36df7](https://github.com/scaleway/scaleway-ui/commit/4f36df714c9362baf3ec059a0767cc8f1e29010d))
+
 ## [0.163.1](https://github.com/scaleway/scaleway-ui/compare/v0.163.0...v0.163.1) (2022-06-27)
 
 
