@@ -46,8 +46,7 @@ const Tooltip = ({ data }: TooltipProps) => (
           {data.value}
         </Text>
       </StyledItem>
-      {data.details &&
-        data.details.map(detail => (
+      {data.details?.map(detail => (
           <StyledItem key={detail.name}>
             <Text as="p" variant="bodySmall" prominence="stronger">
               {detail.name}
