@@ -249,7 +249,7 @@ export default {
       paragraphSpacing: '0',
       textCase: 'none',
       textDecoration: 'none',
-      weight: '500',
+      weight: '600',
     },
     caption: {
       fontFamily: 'Asap',
