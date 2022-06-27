@@ -1,3 +1,15 @@
+## [0.163.3](https://github.com/scaleway/scaleway-ui/compare/v0.163.2...v0.163.3) (2022-06-27)
+
+
+### :bug: Bug Fixes
+
+* status indicator deprecated ([#1635](https://github.com/scaleway/scaleway-ui/issues/1635)) ([05b8b48](https://github.com/scaleway/scaleway-ui/commit/05b8b48b2e127bc8beb1e3e3e63ba5ba58af2ea5))
+
+
+### :package: Chore
+
+* **deps:** update react monorepo to v18 (major) ([#1314](https://github.com/scaleway/scaleway-ui/issues/1314)) ([0baca9c](https://github.com/scaleway/scaleway-ui/commit/0baca9c37729a7274fc2b3eb104c42a239c947cb))
+
 ## [0.163.2](https://github.com/scaleway/scaleway-ui/compare/v0.163.1...v0.163.2) (2022-06-27)
 
 
