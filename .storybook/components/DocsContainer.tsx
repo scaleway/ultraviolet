@@ -33,6 +33,7 @@ const DocsContainer: typeof BaseContainer = ({ context, children }) => {
           ? cloneElement(children, {
               deprecated: context.parameters?.deprecated,
               deprecatedReason: context.parameters?.deprecatedReason,
+              migrationLink: context.parameters?.migrationLink,
             })
           : children}
       </BaseContainer>
