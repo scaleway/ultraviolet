@@ -250,7 +250,7 @@ type ModalProps = Partial<Omit<DialogProps, 'children'>> &
     isClosable?: boolean
     modal?: boolean
     onClose?: () => void
-    onBeforeClose?: () => Promise<unknown> | void
+    onBeforeClose?: () => Promise<void> | void
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
