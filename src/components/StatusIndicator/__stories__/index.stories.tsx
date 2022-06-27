@@ -7,7 +7,7 @@ export default {
   parameters: {
     deprecated: true,
     deprecatedReason:
-      'This component is deprecated, please use Text component instead.',
+      'This component is deprecated, please use Status component instead.',
     docs: {
       description: {
         component: 'Colorful circle that can be used to indicated state.',
