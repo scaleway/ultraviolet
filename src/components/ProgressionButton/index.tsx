@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
@@ -24,10 +23,10 @@ const ProgressionContainer = styled(Box)`
   ${({ theme }) => `
   background: repeating-linear-gradient(
     45deg,
-    ${theme.colorsDeprecated.gray550},
-    ${theme.colorsDeprecated.gray550} 10px,
-    ${transparentize(0.25, theme.colorsDeprecated.gray550)} 10px,
-    ${transparentize(0.25, theme.colorsDeprecated.gray550)} 30px
+    ${theme.colors.neutral.textWeak},
+    ${theme.colors.neutral.textWeak} 10px,
+    ${theme.colors.neutral.textDisabled} 10px,
+    ${theme.colors.neutral.textDisabled} 30px
   );`}
 
   overflow: hidden;
