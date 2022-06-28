@@ -72,6 +72,7 @@ const StyledTooltip = styled.div<{
     border-style: solid;
     border-color: ${({ theme }) => theme.colors.neutral.backgroundStronger}
       transparent transparent transparent;
+    pointer-events: none;
   }
 `
 
