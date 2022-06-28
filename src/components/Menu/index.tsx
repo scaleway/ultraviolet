@@ -194,7 +194,6 @@ const Menu = ({
   return (
     <>
       {disclosure && (
-        // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
         <PopoverDisclosure {...popover} ref={innerRef}>
           {disclosureProps => cloneElement(target, disclosureProps)}
         </PopoverDisclosure>
