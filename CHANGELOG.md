@@ -1,3 +1,10 @@
+## [0.164.0](https://github.com/scaleway/scaleway-ui/compare/v0.163.6...v0.164.0) (2022-06-28)
+
+
+### :gear: Features
+
+* **deps:** update react monorepo to v18 (major) ([#1642](https://github.com/scaleway/scaleway-ui/issues/1642)) ([c4527c2](https://github.com/scaleway/scaleway-ui/commit/c4527c2e47188f467bdc5c4c7dac8e20954662f9))
+
 ## [0.163.6](https://github.com/scaleway/scaleway-ui/compare/v0.163.5...v0.163.6) (2022-06-28)
 
 
