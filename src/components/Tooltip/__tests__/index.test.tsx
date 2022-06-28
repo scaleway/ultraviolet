@@ -45,7 +45,7 @@ describe('Tooltip', () => {
   test(`should display tooltip on hover with function children`, () => {
     const node = renderWithTheme(
       <Tooltip id="test" text="test success!">
-        {props => (
+        {({ ...props }) => (
           <p {...props} data-testid="children">
             Hover me
           </p>

@@ -78,7 +78,7 @@ const StyledPageButton = styled('button', {
   }
 `
 
-export type PaginationComponentProps<T> = {
+export type PaginationComponentProps<T = unknown> = {
   // eslint-disable-next-line react/no-unused-prop-types
   pageTabCount?: number
   paginationState: PaginationState<T>
@@ -215,7 +215,7 @@ const StyledRightContainer = styled.div`
   justify-content: flex-end;
 `
 
-type PaginationContainerProps<T> = PaginationComponentProps<T> & {
+type PaginationContainerProps<T = unknown> = PaginationComponentProps<T> & {
   RightComponent?:
     | ((props: PaginationComponentProps<T>) => JSX.Element | null)
     | (() => JSX.Element | null)
@@ -233,7 +233,7 @@ const PaginationContainer = ({
   RightComponent = DefaultRightComponent,
   paginationState,
   pageTabCount = 5,
-}: PaginationContainerProps<unknown>) => (
+}: PaginationContainerProps) => (
   <StyledMainContainer role="navigation">
     <StyledLeftContainer>
       <LeftComponent
@@ -258,7 +258,7 @@ const PaginationContainer = ({
 
 // END - Default Components
 
-export type PaginationProps<T> = {
+export type PaginationProps<T = unknown> = {
   onLoadPage?: (params: {
     page: number
     perPage?: number
@@ -274,7 +274,7 @@ export type PaginationProps<T> = {
   LeftComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
   MiddleComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
   LoaderComponent?: (props: PaginationComponentProps<T>) => JSX.Element | null
-  children: ReactNode | ((props: PaginationState<T>) => ReactNode)
+  children: ReactNode
   /**
    * Number of page buttons you want for the default MiddleComponent
    */

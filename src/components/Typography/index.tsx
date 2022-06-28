@@ -284,17 +284,24 @@ const TextWithTooltip = ({
 
   return (
     <Tooltip text={finalStringChildren}>
-      {({ onMouseEnter, onFocus, ...tooltipProps }) => (
+      {({
+        onMouseEnter = () => {},
+        onFocus = () => {},
+        ...tooltipProps
+      }: {
+        onMouseEnter: MouseEventHandler<Element>
+        onFocus: FocusEventHandler<Element>
+      }) => (
         <Text
           {...props}
           onMouseEnter={ev => {
-            if (isTruncated(ev.currentTarget) && onMouseEnter) {
-              onMouseEnter()
+            if (isTruncated(ev.currentTarget)) {
+              onMouseEnter(ev)
             }
           }}
           onFocus={ev => {
-            if (isTruncated(ev.currentTarget) && onFocus) {
-              onFocus()
+            if (isTruncated(ev.currentTarget)) {
+              onFocus(ev)
             }
           }}
           tooltipProps={tooltipProps}
