@@ -1,3 +1,10 @@
+## [0.163.6](https://github.com/scaleway/scaleway-ui/compare/v0.163.5...v0.163.6) (2022-06-28)
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** pointer event on tooltip arrow ([#1641](https://github.com/scaleway/scaleway-ui/issues/1641)) ([1c4a8da](https://github.com/scaleway/scaleway-ui/commit/1c4a8da50514fdd008f1fa6206e73190c4441e2a))
+
 ## [0.163.5](https://github.com/scaleway/scaleway-ui/compare/v0.163.4...v0.163.5) (2022-06-28)
 
 ## [0.163.4](https://github.com/scaleway/scaleway-ui/compare/v0.163.3...v0.163.4) (2022-06-28)
