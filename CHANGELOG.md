@@ -1,3 +1,15 @@
+## [0.164.1](https://github.com/scaleway/scaleway-ui/compare/v0.164.0...v0.164.1) (2022-06-28)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.13 ([#1639](https://github.com/scaleway/scaleway-ui/issues/1639)) ([9497fb6](https://github.com/scaleway/scaleway-ui/commit/9497fb69d19dfaef689cd1987a2cd282596c2827))
+
+
+### :bug: Bug Fixes
+
+* **modal:** type of onBeforeClose ([#1636](https://github.com/scaleway/scaleway-ui/issues/1636)) ([0dfb8bb](https://github.com/scaleway/scaleway-ui/commit/0dfb8bbff34a9d98ac90b49c1c0aa5c8c7c65081))
+
 ## [0.164.0](https://github.com/scaleway/scaleway-ui/compare/v0.163.6...v0.164.0) (2022-06-28)
 
 
