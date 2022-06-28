@@ -62,18 +62,6 @@ describe('Menu', () => {
       </Menu>,
     ))
 
-  test(`renders with modal={false}`, () =>
-    shouldMatchEmotionSnapshot(
-      <Menu
-        visible
-        modal={false}
-        baseId="menu-2"
-        disclosure={() => <button type="button">Menu</button>}
-      >
-        <Menu.Item>MenuItem</Menu.Item>
-      </Menu>,
-    ))
-
   describe('placement', () => {
     test.each(arrowPlacements)('renders "%s"', placement =>
       shouldMatchEmotionSnapshot(
