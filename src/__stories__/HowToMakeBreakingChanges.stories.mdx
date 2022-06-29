@@ -23,7 +23,9 @@ This is the last solution to choose. Your breaking is so big that it couldn't be
 
 In this scenario both old and new components will coexist until the end of migration. Here are the step of the migration:
 
-1. Step one, write a migration documentation. You should find a template into `src/__stories__/Migration` fill it according to new component specification and how to migrate old one.
+1. Step one, write a migration documentation. You should write the documentation into the same folder of the component.
+For example if you migrate Button component, documentation should be in: `src/components/Button/__stories__/migration.stories.mdx`.
+You can find a template of migration documentation into `src/__stories__/MigrationTemplate.mdx.example`
 This documentation is **REQUIRED** in order to merge your component.
 
 2. Step two, the old component should be marked as deprecated in story.
