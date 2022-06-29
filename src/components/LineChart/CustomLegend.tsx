@@ -57,7 +57,7 @@ const Cell = ({ value, variant }: CellProps) => (
     color="gray700"
     css={styles.cell}
   >
-    {value?.toString()}
+    {value}
   </Typography>
 )
 

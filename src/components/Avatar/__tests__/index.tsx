@@ -3,11 +3,14 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import support from '../__stories__/support.svg'
 
 describe('Avatar', () => {
+  it('renders correctly with default props', () =>
+    shouldMatchEmotionSnapshot(<Avatar />))
+
   it('renders correctly with image', () =>
     shouldMatchEmotionSnapshot(<Avatar image={support} />))
 
   it('renders correctly with size', () =>
-    shouldMatchEmotionSnapshot(<Avatar image={support} size={48} />))
+    shouldMatchEmotionSnapshot(<Avatar size={48} />))
 
   it('renders correctly with sentence', () =>
     shouldMatchEmotionSnapshot(<Avatar text="Hello World" />))
