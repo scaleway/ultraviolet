@@ -578,18 +578,16 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     <div
       class="cache-16xmv7g-StyledDialogBackdrop e1x6rvve2"
       data-dialog-ref="modal-test"
-      hidden=""
-      style="display: none;"
+      style=""
     >
       <div
         aria-label="modal-test"
         aria-modal="true"
         class="cache-jrsrh7-StyledDialog-Modal e1x6rvve1"
         data-dialog="true"
-        hidden=""
         id="modal-test"
         role="dialog"
-        style="display: none;"
+        style=""
         tabindex="-1"
       >
         <div
@@ -610,6 +608,9 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
               />
             </svg>
           </button>
+        </div>
+        <div>
+          modal
         </div>
       </div>
     </div>

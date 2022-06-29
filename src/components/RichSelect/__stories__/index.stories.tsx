@@ -82,7 +82,7 @@ CustomOptions.decorators = [
             justifyContent: 'space-between',
           }}
         >
-          Option B<Badge size="small">Awesome badge</Badge>
+          Option B<Badge size="rounded">Awesome badge</Badge>
         </div>
       </RichSelect.Option>
     </RichSelect>

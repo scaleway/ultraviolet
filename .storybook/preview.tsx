@@ -105,7 +105,7 @@ export const decorators = [
     const mode = useDarkMode() ? 'dark' : 'light'
 
     const generatedTheme = useCallback(
-      (ancestorTheme: Theme) =>
+      ancestorTheme =>
         adjustedTheme(ancestorTheme, mode === 'light' ? lightTheme : darkTheme),
       [mode, adjustedTheme, lightTheme, darkTheme],
     )

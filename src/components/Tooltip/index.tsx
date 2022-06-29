@@ -41,12 +41,10 @@ type PositionsType = {
   tooltipInitialPosition: string
 }
 
-type StyledTooltipProps = {
+const StyledTooltip = styled.div<{
   maxWidth: number
   positions: PositionsType
-}
-
-const StyledTooltip = styled.div<StyledTooltipProps>`
+}>`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   color: ${({ theme }) => theme.colors.neutral.textStronger};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -149,16 +147,7 @@ const computePositions = ({
 
 type TooltipProps = {
   id?: string
-  children:
-    | ReactNode
-    | ((renderProps: {
-        className?: string
-        onBlur: () => void
-        onFocus: () => void
-        onMouseEnter: () => void
-        onMouseLeave: () => void
-        ref: RefObject<HTMLDivElement>
-      }) => ReactNode)
+  children: ReactNode
   maxWidth?: number
   placement?: TooltipPlacement
   text?: ReactNode
@@ -174,7 +163,7 @@ const Tooltip = ({
   className,
   maxWidth = 232,
   visible = false,
-}: TooltipProps) => {
+}: TooltipProps): JSX.Element => {
   const childrenRef = useRef<HTMLDivElement>(null)
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timer = useRef<ReturnType<typeof setInterval>>()
@@ -263,7 +252,7 @@ const Tooltip = ({
         onMouseEnter: onMouseEvent(true),
         onMouseLeave: onMouseEvent(false),
         ref: childrenRef,
-      })
+      }) as JSX.Element
 
     return (
       <div
@@ -280,11 +269,7 @@ const Tooltip = ({
   }, [children, className, generatedId, onMouseEvent])
 
   if (!text) {
-    if (typeof children === 'function') {
-      return null
-    }
-
-    return <>{children}</>
+    return children as JSX.Element
   }
 
   return (

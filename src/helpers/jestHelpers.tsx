@@ -1,15 +1,14 @@
 import { ThemeProvider } from '@emotion/react'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import makeHelpers from '@scaleway/jest-helpers'
-import { ReactNode } from 'react'
+import { FC } from 'react'
 import defaultTheme from '../theme'
 
 interface WrapperProps {
   theme?: typeof defaultTheme
-  children: ReactNode
 }
 
-const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
+const Wrapper: FC<WrapperProps> = ({ theme = defaultTheme, children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
