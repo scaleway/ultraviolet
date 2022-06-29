@@ -1,6 +1,7 @@
 import { create } from '@storybook/theming'
 import lightBrandImage from './assets/scaleway-text-light.png'
-import darkBrandImage from './assets/scaleway-text-dark.png'
+import logoLight from './assets/logo-light.svg'
+import logoDark from './assets/logo-dark.svg'
 import lightTheme, { darkTheme } from '../src/theme'
 
 enum Base {
@@ -56,12 +57,12 @@ export const light = generateStorybookTheme({
   base: Base.LIGHT,
   theme: lightTheme,
   brandUrl: 'https://github.com/scaleway/scaleway-ui',
-  brandImage: lightBrandImage,
+  brandImage: logoLight,
 })
 
 export const dark = generateStorybookTheme({
   base: Base.DARK,
   theme: darkTheme,
   brandUrl: 'https://github.com/scaleway/scaleway-ui',
-  brandImage: darkBrandImage,
+  brandImage: logoDark,
 })

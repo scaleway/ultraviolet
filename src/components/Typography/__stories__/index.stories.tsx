@@ -14,7 +14,7 @@ export default {
           'Typography allows you to style your texts using some existing standards.',
       },
     },
-    migrationLink: '/?path=/docs/migration-typography-to-text--page',
+    migrationLink: 'Migrations/Typography to Text',
   },
   title: 'Components/Fondation/Typography',
 } as Meta

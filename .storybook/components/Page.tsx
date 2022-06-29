@@ -10,6 +10,7 @@ import {
 } from '@storybook/addon-docs'
 import { Badge, Link } from '../../src'
 import styled from '@emotion/styled'
+import { linkTo } from '@storybook/addon-links'
 
 const StyledText = styled.p`
   color: ${({ theme }) => theme.colors.warning.text};
@@ -62,7 +63,7 @@ const Page = ({ deprecated, deprecatedReason, migrationLink }: PageProps) => (
         </StyledText>
         {migrationLink ? (
           <p>
-            <Link href={migrationLink} target="_blank">
+            <Link onClick={linkTo(migrationLink)} variant="primary">
               How to migrate?
             </Link>
           </p>

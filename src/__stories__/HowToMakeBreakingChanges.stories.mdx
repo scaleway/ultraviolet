@@ -24,6 +24,7 @@ This is the last solution to choose. Your breaking is so big that it couldn't be
 In this scenario both old and new components will coexist until the end of migration. Here are the step of the migration:
 
 1. Step one, write a migration documentation. You should find a template into `src/__stories__/Migration` fill it according to new component specification and how to migrate old one.
+This documentation is **REQUIRED** in order to merge your component.
 
 2. Step two, the old component should be marked as deprecated in story.
 
@@ -47,7 +48,7 @@ In this scenario both old and new components will coexist until the end of migra
 
 3. Third step is to mark component deprecated trough JSDoc comments with a beautiful description on what to replace usage by. This should be shown in typescript hints. It should look as follows:
 
-    ```typescript
+    ```tsx
       /**
        * @deprecated Has been replaced by component BetterButton, please this one instead.
        */
