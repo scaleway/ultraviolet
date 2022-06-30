@@ -71,8 +71,8 @@ specifiers:
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
   '@types/react': 17.0.47
-  '@types/react-datepicker': 4.4.2
-  '@types/react-dom': 18.0.5
+  '@types/react-datepicker': ^4.4.2
+  '@types/react-dom': 17.0.17
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   '@xstyled/emotion': 2.5.0
@@ -137,7 +137,6 @@ dependencies:
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-media': 1.1.1_react@17.0.2
   '@types/intl-tel-input': 17.0.4
-  '@types/react-datepicker': 4.4.2_react@17.0.2
   '@xstyled/emotion': 2.5.0_d6menda4vqwq6peqnkbe7mkj4i
   deepmerge: 4.2.2
   intl-tel-input: 17.0.16
@@ -212,7 +211,8 @@ devDependencies:
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
   '@types/react': 17.0.47
-  '@types/react-dom': 18.0.5
+  '@types/react-datepicker': 4.4.2_react@17.0.2
+  '@types/react-dom': 17.0.17
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   babel-loader: 8.2.5_te6ollfzjcco6mbxjl755ucqke
@@ -3153,7 +3153,6 @@ packages:
 
   /@popperjs/core/2.11.2:
     resolution: {integrity: sha512-92FRmppjjqz29VMJ2dn+xdyXZBrMlE42AV6Kq6BwjWV7CNUW1hs2FtxSNLQE+gJhaZ6AAmYuO9y8dshhcBl7vA==}
-    dev: false
 
   /@react-spring/animated/9.3.2_react@17.0.2:
     resolution: {integrity: sha512-pBvKydRHbTzuyaeHtxGIOvnskZxGo/S5/YK1rtYm88b9NQZuZa95Rgd3O0muFL+99nvBMBL8cvQGD0UJmsqQsg==}
@@ -5611,12 +5610,12 @@ packages:
     resolution: {integrity: sha512-g8DhWvYmaIMLzVrIEVLXncylyImyBaoPsEUr3yR13JDaaHoebhDorqnVv4tLkNGa8SjBB8SAOQvxD5jaPNBX8A==}
     dependencies:
       '@popperjs/core': 2.11.2
-      '@types/react': 18.0.14
+      '@types/react': 17.0.47
       date-fns: 2.28.0
       react-popper: 2.2.5_jvejhdhmibhthrzxlktliu4udq
     transitivePeerDependencies:
       - react
-    dev: false
+    dev: true
 
   /@types/react-dom/17.0.17:
     resolution: {integrity: sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==}
@@ -5624,22 +5623,16 @@ packages:
       '@types/react': 17.0.47
     dev: true
 
-  /@types/react-dom/18.0.5:
-    resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
-    dependencies:
-      '@types/react': 18.0.14
-    dev: true
-
   /@types/react-syntax-highlighter/11.0.5:
     resolution: {integrity: sha512-VIOi9i2Oj5XsmWWoB72p3KlZoEbdRAcechJa8Ztebw7bDl2YmR+odxIqhtJGp1q2EozHs02US+gzxJ9nuf56qg==}
     dependencies:
-      '@types/react': 18.0.14
+      '@types/react': 17.0.47
     dev: true
 
   /@types/react-transition-group/4.4.4:
     resolution: {integrity: sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug==}
     dependencies:
-      '@types/react': 18.0.14
+      '@types/react': 17.0.47
     dev: false
 
   /@types/react/17.0.47:
@@ -15749,7 +15742,6 @@ packages:
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
-    dev: false
 
   /react-flatten-children/1.1.2:
     resolution: {integrity: sha512-9pnG/uw2Wa0n97s+yBZg/WgfMPE8RC4qNcr6iYbyb19sacCk3gRJCmCzAhTuANSWesFsK9v/yTKW42pkenaAfw==}
@@ -15823,7 +15815,6 @@ packages:
       react: 17.0.2
       react-fast-compare: 3.2.0
       warning: 4.0.3
-    dev: false
 
   /react-reconciler/0.26.2_react@17.0.2:
     resolution: {integrity: sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==}
@@ -18601,7 +18592,6 @@ packages:
     resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /watchpack-chokidar2/2.0.1:
     resolution: {integrity: sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww==}
