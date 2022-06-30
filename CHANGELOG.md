@@ -1,3 +1,11 @@
+## [0.164.2](https://github.com/scaleway/scaleway-ui/compare/v0.164.1...v0.164.2) (2022-06-30)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.40 ([#1638](https://github.com/scaleway/scaleway-ui/issues/1638)) ([677fba2](https://github.com/scaleway/scaleway-ui/commit/677fba24a4e765661296cc7ff21ec6413ce769ec))
+* revert @types/react to 17 ([4ee1698](https://github.com/scaleway/scaleway-ui/commit/4ee1698b6a339caf8e34f2d888fb9ec3319869fc))
+
 ## [0.164.1](https://github.com/scaleway/scaleway-ui/compare/v0.164.0...v0.164.1) (2022-06-28)
 
 
