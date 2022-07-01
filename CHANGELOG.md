@@ -1,3 +1,10 @@
+## [0.165.0](https://github.com/scaleway/scaleway-ui/compare/v0.164.3...v0.165.0) (2022-07-01)
+
+
+### :gear: Features
+
+* remove Counter component ([#1646](https://github.com/scaleway/scaleway-ui/issues/1646)) ([198d201](https://github.com/scaleway/scaleway-ui/commit/198d201377077de93dd6c34724e411ae4942560d))
+
 ## [0.164.3](https://github.com/scaleway/scaleway-ui/compare/v0.164.2...v0.164.3) (2022-07-01)
 
 
