@@ -1,3 +1,10 @@
+## [0.164.3](https://github.com/scaleway/scaleway-ui/compare/v0.164.2...v0.164.3) (2022-07-01)
+
+
+### :bug: Bug Fixes
+
+* **Charts:** correct color generation ([#1644](https://github.com/scaleway/scaleway-ui/issues/1644)) ([3235712](https://github.com/scaleway/scaleway-ui/commit/3235712ad9765bcaf85d40777d56498c6675814f))
+
 ## [0.164.2](https://github.com/scaleway/scaleway-ui/compare/v0.164.1...v0.164.2) (2022-06-30)
 
 
