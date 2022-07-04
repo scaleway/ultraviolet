@@ -1,0 +1,89 @@
+import {Meta} from '@storybook/addon-docs'
+import { linkTo } from '@storybook/addon-links'
+
+<Meta title="Migrations/Typography to Text"/>
+
+# Migrate Typography to Text
+
+Welcome to the migration of Typography into Text, here we will see how to easily migrate to Text component.
+
+## No more xstyled props
+
+We removed Box (and so xstyled props) from text so it means you shouldn't use those props anymore. It includes `mr`, `ml`, `my`, etc. instead uses styled components.
+
+Example:
+
+```tsx
+import { Typography } from '@scaleway/ui'
+
+const MyComponent = () => (
+  <Typography my={2} mx={3}>
+      My text
+  </Typography />
+)
+```
+
+Becomes:
+
+```tsx
+import { Text } from '@scaleway/ui'
+import styled from '@emotion/styled'
+
+const StyledText = styled(Text)`
+    margin: ${({ theme }) => theme.space['2']} ${({ theme }) => theme.space['3']}
+`
+
+const MyComponent = () => (
+  <Text as="p" variant="body">
+      My text
+  </Text />
+)
+```
+
+## Old and new props matching
+
+- `children` &rarr; `children`: No changes
+
+---
+
+- `as` &rarr; `as`*: Become required
+
+---
+
+- `variant` &rarr; `variant`*: Become required, here are the matching changes:
+
+  - `bodyA` &rarr; `body`
+  - `bodyB` &rarr; `bodySmall`
+  - `bodyC` &rarr; `bodySmall`
+  - `bodyD` &rarr; `bodySmall`
+  - `command` &rarr; *No equivalent*
+  - `default` &rarr; `body`
+  - `description` &rarr; `bodySmallStronger`
+  - `hero` &rarr; `headingLarge`
+  - `lead` &rarr; `heading`
+  - `lead-block` &rarr; `heading`
+  - `lead-text` &rarr; `heading`
+  - `link` &rarr; should not be used anymore, please use [Link](/docs/components-foundation-link--default) component instead.
+  - `samplecode` &rarr; *No equivalent*
+  - `tiny` &rarr; `caption`
+  - `title` &rarr; `headingSmall`
+
+---
+
+- `ellipsis` &rarr; `oneLine`: Only name change
+
+---
+
+- *New* `color`: defined by `primary`, `secondary`, etc.
+
+---
+
+- *New* `prominence`: defined by `strong`, `stronger`, `weak`
+
+---
+
+Removed props:
+
+<del>fontWeight</del>, <del>lineHeight</del>, <del>maxLine</del>, <del>onFocus</del>, <del>onMouseEnter</del>, <del>tooltipProps</del>
+
+

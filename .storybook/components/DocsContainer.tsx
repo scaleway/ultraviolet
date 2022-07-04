@@ -1,18 +1,30 @@
-import { isValidElement, cloneElement } from 'react'
-import { DocsContainer as BaseContainer } from '@storybook/addon-docs'
+import {
+  isValidElement,
+  cloneElement,
+  FunctionComponent,
+  ReactNode,
+} from 'react'
+import {
+  DocsContainer as BaseContainer,
+  DocsContainerProps,
+} from '@storybook/addon-docs'
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
 import { darkTheme } from '../../src'
 import { ThemeProvider } from '@emotion/react'
 import lightTheme from '../../src/theme'
 
-const DocsContainer: typeof BaseContainer = ({ context, children }) => {
+const CustomBaseContainer = BaseContainer as unknown as FunctionComponent<
+  DocsContainerProps & { children: ReactNode }
+>
+
+const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
   const isDarkTheme = useDarkMode()
   const currentTheme = isDarkTheme ? darkTheme : lightTheme
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <BaseContainer
+      <CustomBaseContainer
         context={{
           ...context,
           storyById: (id: any) => {
@@ -33,9 +45,10 @@ const DocsContainer: typeof BaseContainer = ({ context, children }) => {
           ? cloneElement(children, {
               deprecated: context.parameters?.deprecated,
               deprecatedReason: context.parameters?.deprecatedReason,
+              migrationLink: context.parameters?.migrationLink,
             })
           : children}
-      </BaseContainer>
+      </CustomBaseContainer>
     </ThemeProvider>
   )
 }

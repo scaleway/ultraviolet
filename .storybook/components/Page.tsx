@@ -8,42 +8,67 @@ import {
   Stories,
   PRIMARY_STORY,
 } from '@storybook/addon-docs'
-import { Badge } from '../../src'
+import { Badge, Link } from '../../src'
 import styled from '@emotion/styled'
+import { linkTo } from '@storybook/addon-links'
 
 const StyledText = styled.p`
   color: ${({ theme }) => theme.colors.warning.text};
 `
 
-const StyledDiv = styled.div`
+const StyledHeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
+const StyledTitle = styled.div`
+  &[data-deprecated='true'] h1 {
+    text-decoration: line-through;
+    text-decoration-color: ${({ theme }) => theme.colors.warning.text};
+  }
+`
+
+const FlexDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 type PageProps = {
   deprecated?: boolean
   deprecatedReason?: string
+  migrationLink?: string
 }
 
-const Page = ({ deprecated, deprecatedReason }: PageProps) => (
+const Page = ({ deprecated, deprecatedReason, migrationLink }: PageProps) => (
   <>
-    <StyledDiv>
-      <Title />
+    <StyledHeaderContainer>
+      <StyledTitle data-deprecated={deprecated}>
+        <Title />
+      </StyledTitle>
       {deprecated ? (
         <Badge variant="warning" size="large">
           <b>Deprecated</b>
         </Badge>
       ) : null}
-    </StyledDiv>
+    </StyledHeaderContainer>
     {deprecated ? (
-      <StyledText>
-        <b>
-          {deprecatedReason
-            ? deprecatedReason
-            : 'This component is deprecated please do not use it any more.'}
-        </b>
-      </StyledText>
+      <FlexDiv>
+        <StyledText>
+          <b>
+            {deprecatedReason
+              ? deprecatedReason
+              : 'This component is deprecated please do not use it any more.'}
+          </b>
+        </StyledText>
+        {migrationLink ? (
+          <p>
+            <Link onClick={linkTo(migrationLink)} variant="primary">
+              How to migrate?
+            </Link>
+          </p>
+        ) : null}
+      </FlexDiv>
     ) : (
       <Subtitle />
     )}
