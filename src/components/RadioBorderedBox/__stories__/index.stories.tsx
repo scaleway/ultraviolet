@@ -63,6 +63,7 @@ Controlled.decorators = [
             label="Choice 1"
             labelDescription="(choice details)"
             badgeText="Badge"
+            sideText="0.99€"
           >
             Description content
           </RadioBorderedBox>
@@ -74,6 +75,7 @@ Controlled.decorators = [
               onChange(e.currentTarget.value)
             }
             label="Choice 2"
+            sideText="Free"
           >
             Description content choice 2
           </RadioBorderedBox>
@@ -85,7 +87,9 @@ Controlled.decorators = [
 
 export const Disabled = Template.bind({})
 Disabled.args = {
+  children: 'Description content',
   disabled: true,
+  labelDescription: '(choice details)',
 }
 
 export const Error = Template.bind({})
