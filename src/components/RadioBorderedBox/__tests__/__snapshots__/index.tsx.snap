@@ -2,11 +2,29 @@
 
 exports[`RadioBorderedBox renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1dm7ubo-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-16q2dbd-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .cache-1gb5zbl-StyledSpaceContainer {
@@ -19,7 +37,7 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +47,6 @@ exports[`RadioBorderedBox renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -166,76 +183,98 @@ exports[`RadioBorderedBox renders correctly 1`] = `
 }
 
 <div
-    class="cache-1dm7ubo-BorderedBox-StyledBorderedBox e13z6rra4"
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      class="cache-16q2dbd-BorderedBox-StyledBorderedBox e13z6rra4"
     >
       <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
       >
-        <label
-          aria-disabled="false"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radio-choice"
+        <div
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
         >
-          <input
-            aria-checked="false"
+          <label
             aria-disabled="false"
-            aria-invalid="false"
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            id="radio-choice"
-            name="radio"
-            tabindex="0"
-            type="radio"
-            value="choice"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radio-choice"
           >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice
-        </label>
+            <input
+              aria-checked="false"
+              aria-disabled="false"
+              aria-invalid="false"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="radio-choice"
+              name="radio"
+              tabindex="0"
+              type="radio"
+              value="choice"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice
+          </label>
+        </div>
       </div>
+      <p
+        class="cache-bcb32-StyledText e1tg3t120"
+      >
+        Choice description
+      </p>
     </div>
-    <p
-      class="cache-bcb32-StyledText e1tg3t120"
-    >
-      Choice description
-    </p>
   </div>
 </DocumentFragment>
 `;
 
 exports[`RadioBorderedBox renders correctly and triggers change on borderedbox click 1`] = `
 <DocumentFragment>
-  .cache-1dm7ubo-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-16q2dbd-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .cache-1gb5zbl-StyledSpaceContainer {
@@ -248,7 +287,7 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,7 +297,6 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -395,76 +433,98 @@ exports[`RadioBorderedBox renders correctly and triggers change on borderedbox c
 }
 
 <div
-    class="cache-1dm7ubo-BorderedBox-StyledBorderedBox e13z6rra4"
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      class="cache-16q2dbd-BorderedBox-StyledBorderedBox e13z6rra4"
     >
       <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
       >
-        <label
-          aria-disabled="false"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radioborderedbox-choice1"
+        <div
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
         >
-          <input
-            aria-checked="false"
+          <label
             aria-disabled="false"
-            aria-invalid="false"
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            id="radioborderedbox-choice1"
-            name="radioborderedbox"
-            tabindex="0"
-            type="radio"
-            value="choice1"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radioborderedbox-choice1"
           >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice 1
-        </label>
+            <input
+              aria-checked="false"
+              aria-disabled="false"
+              aria-invalid="false"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="radioborderedbox-choice1"
+              name="radioborderedbox"
+              tabindex="0"
+              type="radio"
+              value="choice1"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice 1
+          </label>
+        </div>
       </div>
+      <p
+        class="cache-bcb32-StyledText e1tg3t120"
+      >
+        Choice 1 description
+      </p>
     </div>
-    <p
-      class="cache-bcb32-StyledText e1tg3t120"
-    >
-      Choice 1 description
-    </p>
   </div>
 </DocumentFragment>
 `;
 
 exports[`RadioBorderedBox renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-1o75o4c-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-1oyoo3k-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
   border: 1px solid #4f0599!important;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
@@ -479,7 +539,7 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -489,7 +549,6 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -626,77 +685,99 @@ exports[`RadioBorderedBox renders correctly when checked 1`] = `
 }
 
 <div
-    class="cache-1o75o4c-BorderedBox-StyledBorderedBox e13z6rra4"
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      class="cache-1oyoo3k-BorderedBox-StyledBorderedBox e13z6rra4"
     >
       <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
       >
-        <label
-          aria-disabled="false"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radio-choice"
+        <div
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
         >
-          <input
-            aria-checked="true"
+          <label
             aria-disabled="false"
-            aria-invalid="false"
-            checked=""
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            id="radio-choice"
-            name="radio"
-            tabindex="0"
-            type="radio"
-            value="choice"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radio-choice"
           >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice
-        </label>
+            <input
+              aria-checked="true"
+              aria-disabled="false"
+              aria-invalid="false"
+              checked=""
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="radio-choice"
+              name="radio"
+              tabindex="0"
+              type="radio"
+              value="choice"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice
+          </label>
+        </div>
       </div>
+      <p
+        class="cache-bcb32-StyledText e1tg3t120"
+      >
+        Choice description
+      </p>
     </div>
-    <p
-      class="cache-bcb32-StyledText e1tg3t120"
-    >
-      Choice description
-    </p>
   </div>
 </DocumentFragment>
 `;
 
 exports[`RadioBorderedBox renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-mro85z-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-1xzgj0z-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
   cursor: not-allowed!important;
   color: #c4c9d6;
 }
@@ -711,7 +792,7 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -721,7 +802,6 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -858,78 +938,100 @@ exports[`RadioBorderedBox renders correctly when disabled 1`] = `
 }
 
 <div
-    class="cache-mro85z-BorderedBox-StyledBorderedBox e13z6rra4"
-    disabled=""
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      class="cache-1xzgj0z-BorderedBox-StyledBorderedBox e13z6rra4"
+      disabled=""
     >
       <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
       >
-        <label
-          aria-disabled="true"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radio-choice"
+        <div
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
         >
-          <input
-            aria-checked="false"
+          <label
             aria-disabled="true"
-            aria-invalid="false"
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            disabled=""
-            id="radio-choice"
-            name="radio"
-            style="pointer-events: none;"
-            type="radio"
-            value="choice"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radio-choice"
           >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice
-        </label>
+            <input
+              aria-checked="false"
+              aria-disabled="true"
+              aria-invalid="false"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              disabled=""
+              id="radio-choice"
+              name="radio"
+              style="pointer-events: none;"
+              type="radio"
+              value="choice"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice
+          </label>
+        </div>
       </div>
+      <p
+        class="cache-2ep7ns-StyledText e1tg3t120"
+      >
+        Choice description
+      </p>
     </div>
-    <p
-      class="cache-2ep7ns-StyledText e1tg3t120"
-    >
-      Choice description
-    </p>
   </div>
 </DocumentFragment>
 `;
 
 exports[`RadioBorderedBox renders correctly when error 1`] = `
 <DocumentFragment>
-  .cache-1lgob3g-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-p6n1kc-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
   border: 1px solid #dd3252!important;
   box-shadow: 0px 0px 0px 3px #DD325240;
 }
@@ -944,7 +1046,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -954,7 +1056,6 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -1090,68 +1191,7 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   text-decoration: none;
 }
 
-<div
-    class="cache-1lgob3g-BorderedBox-StyledBorderedBox e13z6rra4"
-  >
-    <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
-    >
-      <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
-      >
-        <label
-          aria-disabled="false"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radio-choice"
-        >
-          <input
-            aria-checked="false"
-            aria-disabled="false"
-            aria-invalid="true"
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            id="radio-choice"
-            name="radio"
-            tabindex="0"
-            type="radio"
-            value="choice"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
-          >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice
-        </label>
-      </div>
-    </div>
-    <p
-      class="cache-bcb32-StyledText e1tg3t120"
-    >
-      Choice description
-    </p>
-  </div>
-  .cache-o1jcxj-StyledExpandable-StyledExpandable {
+.cache-1gfilw2-StyledExpandable {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1164,23 +1204,85 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
   max-height: 5000px;
   opacity: 1;
   overflow: visible;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
-.cache-1hzw3uf-StyledError {
+.cache-17quy02-StyledError {
   font-size: 12px;
   color: #a6102d;
-  padding: 0 4px;
 }
 
 <div
-    class="e13z6rra0 e14o3tsk0 cache-o1jcxj-StyledExpandable-StyledExpandable"
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1hzw3uf-StyledError e13z6rra1"
+      class="cache-p6n1kc-BorderedBox-StyledBorderedBox e13z6rra4"
     >
-      Invalid value
+      <div
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      >
+        <div
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
+        >
+          <label
+            aria-disabled="false"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radio-choice"
+          >
+            <input
+              aria-checked="false"
+              aria-disabled="false"
+              aria-invalid="true"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="radio-choice"
+              name="radio"
+              tabindex="0"
+              type="radio"
+              value="choice"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice
+          </label>
+        </div>
+      </div>
+      <p
+        class="cache-bcb32-StyledText e1tg3t120"
+      >
+        Choice description
+      </p>
+    </div>
+    <div
+      class="e14o3tsk0 cache-1gfilw2-StyledExpandable"
+    >
+      <div
+        class="cache-17quy02-StyledError e13z6rra1"
+      >
+        Invalid value
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1188,11 +1290,29 @@ exports[`RadioBorderedBox renders correctly when error 1`] = `
 
 exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
 <DocumentFragment>
-  .cache-mro85z-BorderedBox-StyledBorderedBox {
+  .cache-1f84wzl-StyledMainContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cache-1xzgj0z-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
   cursor: not-allowed!important;
   color: #c4c9d6;
 }
@@ -1207,7 +1327,7 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   justify-content: space-between;
 }
 
-.cache-160wxok-StyledRadioContainer {
+.cache-6c4n1-StyledRadioContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1217,7 +1337,6 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0 8px;
-  margin-bottom: 8px;
 }
 
 .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
@@ -1394,85 +1513,89 @@ exports[`RadioBorderedBox renders correctly with label desc and badge 1`] = `
 }
 
 <div
-    class="cache-mro85z-BorderedBox-StyledBorderedBox e13z6rra4"
-    disabled=""
+    class="cache-1f84wzl-StyledMainContainer e13z6rra0"
   >
     <div
-      class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
+      class="cache-1xzgj0z-BorderedBox-StyledBorderedBox e13z6rra4"
+      disabled=""
     >
       <div
-        class="cache-160wxok-StyledRadioContainer e13z6rra3"
+        class="cache-1gb5zbl-StyledSpaceContainer e13z6rra2"
       >
-        <label
-          aria-disabled="true"
-          class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
-          for="radio-choice"
-        >
-          <input
-            aria-checked="false"
-            aria-disabled="true"
-            aria-invalid="false"
-            class="cache-h7u1sr-StyledRadio e1duuirp1"
-            disabled=""
-            id="radio-choice"
-            name="radio"
-            style="pointer-events: none;"
-            type="radio"
-            value="choice"
-          />
-          <svg
-            class="cache-gjpbat-StyledIcon e1duuirp2"
-            size="24"
-            viewBox="0 0 24 24"
-          >
-            <g>
-              <circle
-                cx="12"
-                cy="12"
-                r="8"
-                stroke-width="2"
-              />
-              <circle
-                class="cache-p50c5x-InnerCircleRing e1duuirp4"
-                cx="12"
-                cy="12"
-                r="6"
-              />
-              <circle
-                class="cache-ivayk3-RadioMark e1duuirp3"
-                cx="12"
-                cy="12"
-                r="4"
-              />
-            </g>
-          </svg>
-          Choice
-        </label>
-        <span
-          class="cache-2ep7ns-StyledText e1tg3t120"
-        >
-          (something)
-        </span>
-         
         <div
-          aria-label="warning"
-          as="span"
-          class="cache-2h6qic-StyledBox egvl2gp0"
-          role="status"
+          class="cache-6c4n1-StyledRadioContainer e13z6rra3"
         >
-          <div
-            class="egvl2gp1 e1g1zfwd0 cache-1syu3d2-StyledText-variantStyles-colorStyles-StyledTypography"
+          <label
+            aria-disabled="true"
+            class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+            for="radio-choice"
           >
-            Badge
+            <input
+              aria-checked="false"
+              aria-disabled="true"
+              aria-invalid="false"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              disabled=""
+              id="radio-choice"
+              name="radio"
+              style="pointer-events: none;"
+              type="radio"
+              value="choice"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Choice
+          </label>
+          <span
+            class="cache-2ep7ns-StyledText e1tg3t120"
+          >
+            (something)
+          </span>
+           
+          <div
+            aria-label="warning"
+            as="span"
+            class="cache-2h6qic-StyledBox egvl2gp0"
+            role="status"
+          >
+            <div
+              class="egvl2gp1 e1g1zfwd0 cache-1syu3d2-StyledText-variantStyles-colorStyles-StyledTypography"
+            >
+              Badge
+            </div>
           </div>
         </div>
       </div>
+      <p
+        class="cache-2ep7ns-StyledText e1tg3t120"
+      >
+        Choice description
+      </p>
     </div>
-    <p
-      class="cache-2ep7ns-StyledText e1tg3t120"
-    >
-      Choice description
-    </p>
   </div>
 </DocumentFragment>
 `;

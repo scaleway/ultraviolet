@@ -26,7 +26,9 @@ type BorderedBoxTypes = {
 }
 
 const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['1']};
 
   ${({ disabled, checked, error, theme: { colors, shadows } }) => {
     if (disabled)
@@ -47,14 +49,13 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
       `
 
     return null
-  }}
+  }};
 `
 
 const StyledRadioContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0 ${({ theme }) => theme.space['1']};
-  margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
 const StyledSpaceContainer = styled.div`
@@ -65,12 +66,12 @@ const StyledSpaceContainer = styled.div`
 const StyledError = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.danger.text};
-  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledExpandable = styled(Expandable)`
-  margin-top: ${({ theme }) => theme.space['1']};
-  margin-bottom: ${({ theme }) => theme.space['1']};
+const StyledMainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 type RadioBorderedBoxProps = RadioProps & {
@@ -106,7 +107,7 @@ const RadioBorderedBox = ({
   children,
   error,
 }: RadioBorderedBoxProps) => (
-  <>
+  <StyledMainContainer>
     <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
       <StyledSpaceContainer>
         <StyledRadioContainer>
@@ -153,16 +154,18 @@ const RadioBorderedBox = ({
           </Text>
         ) : null}
       </StyledSpaceContainer>
-      <Text as="p" variant="body" disabled={disabled}>
-        {children}
-      </Text>
+      {children ? (
+        <Text as="p" variant="body" disabled={disabled}>
+          {children}
+        </Text>
+      ) : null}
     </StyledBorderedBox>
     {error ? (
-      <StyledExpandable opened={!!error}>
+      <Expandable opened={!!error}>
         <StyledError>{error}</StyledError>
-      </StyledExpandable>
+      </Expandable>
     ) : null}
-  </>
+  </StyledMainContainer>
 )
 
 export default RadioBorderedBox
