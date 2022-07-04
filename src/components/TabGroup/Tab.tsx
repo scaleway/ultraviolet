@@ -55,7 +55,6 @@ type TabProps = {
   as?: ElementType | string
   children?: ReactNode
   disabled?: boolean
-  hasEndedCount?: boolean
   index?: number
   isSelected?: boolean
   isTabsWidthSet?: boolean
@@ -77,7 +76,6 @@ const Tab = ({
   onClick,
   onChangeTab,
   onKeyDown,
-  hasEndedCount = false,
   as,
   ...props
 }: TabProps) => {
@@ -85,7 +83,7 @@ const Tab = ({
 
   useEffect(() => {
     setInternTabsWidth?.(ref?.current?.offsetWidth || 0, index)
-  }, [index, hasEndedCount, isTabsWidthSet, setInternTabsWidth, name, children])
+  }, [index, isTabsWidthSet, setInternTabsWidth, name, children])
 
   return (
     <StyledTab
@@ -117,7 +115,6 @@ Tab.propTypes = {
   as: PropTypes.elementType,
   children: PropTypes.node,
   disabled: PropTypes.bool,
-  hasEndedCount: PropTypes.bool,
   index: PropTypes.number,
   isSelected: PropTypes.bool,
   isTabsWidthSet: PropTypes.bool,
