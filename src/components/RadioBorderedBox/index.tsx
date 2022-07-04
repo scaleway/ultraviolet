@@ -30,7 +30,7 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
   flex-direction: column;
   gap: ${({ theme }) => theme.space['1']};
 
-  ${({ disabled, checked, error, theme: { colors, shadows } }) => {
+  ${({ disabled, checked, error, theme: { colors } }) => {
     if (disabled)
       return `
         cursor: not-allowed !important;
@@ -39,13 +39,11 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
     if (error)
       return `
         border: 1px solid ${colors.danger.borderWeak} !important;
-        box-shadow: ${shadows.focusDanger};
       `
 
     if (checked)
       return `
         border: 1px solid ${colors.primary.borderWeak} !important;
-        box-shadow: ${shadows.focusPrimary};
       `
 
     return null
