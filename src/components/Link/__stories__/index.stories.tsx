@@ -61,51 +61,26 @@ Target.parameters = {
 }
 Target.decorators = [
   () => (
-    <>
-      <Link to="localhost:6006" target="_blank">
-        Link opens in a new tab
-      </Link>
-      <Link to="localhost:6006" iconPosition="left" target="_blank">
-        Link opens in a new tab
-      </Link>
-      <Link to="localhost:6006" iconPosition="right" target="_blank">
-        Link opens in a new tab
-      </Link>
-    </>
-  ),
-]
-
-export const Disabled = Template.bind({})
-Disabled.parameters = {
-  docs: {
-    storyDescription: 'You can disable the link with the `disabled` prop',
-  },
-}
-Disabled.decorators = [
-  () => (
-    <Link to="/localhost:6006" disabled>
-      Disabled URL
+    <Link to="localhost:6006" target="_blank">
+      Link opens in a new tab
     </Link>
   ),
 ]
 
-export const LinkComponent = Template.bind({})
-LinkComponent.parameters = {
+export const Size = Template.bind({})
+Size.parameters = {
   docs: {
-    storyDescription:
-      'By default link is an achor component `a`. If you dont put to prop but onClick it will change for a `button`. You can also specify the component you want to use by using the `as` prop.',
+    storyDescription: 'Using `size` prop you can change the size of the text',
   },
 }
-
-LinkComponent.decorators = [
+Size.decorators = [
   () => (
     <>
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <Link onClick={() => console.log('Hello world')}>
-        Use custom component
+      <Link size="large" to="localhost:6006">
+        Link opens in a new tab
       </Link>
-      <Link to="./" as="span">
-        Use custom component
+      <Link size="small" to="localhost:6006">
+        Link opens in a new tab
       </Link>
     </>
   ),

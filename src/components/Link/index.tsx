@@ -4,10 +4,8 @@ import React, {
   ElementType,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
-  MouseEventHandler,
   ReactNode,
   forwardRef,
-  useMemo,
 } from 'react'
 import { Color } from '../../theme'
 import { getTextDisabled } from '../../theme/helper'
@@ -23,10 +21,10 @@ type LinkProps = {
   variant?: Color
   size?: LinkSizes
   iconPosition?: LinkIconPosition
-  disabled?: boolean
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   as?: ElementType
-} & XOR<[{ onClick: MouseEventHandler<HTMLAnchorElement> }, { to: string }]>
+  to: string
+}
 
 const ICON_SIZE = 16
 const BLANK_TARGET_ICON_SIZE = 14
@@ -38,8 +36,7 @@ const StyledExternalIconContainer = styled.span`
 const StyledText = styled(Text)``
 
 const StyledLink = styled('a', {
-  shouldForwardProp: prop =>
-    !['variant', 'size', 'iconPosition', 'as'].includes(prop),
+  shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
 })<
   AnchorHTMLAttributes<HTMLAnchorElement> & {
     variant: Color
@@ -98,7 +95,6 @@ const StyledLink = styled('a', {
 const Link = forwardRef(
   (
     {
-      onClick,
       children,
       to,
       target,
@@ -106,7 +102,6 @@ const Link = forwardRef(
       variant = 'primary',
       size = 'large',
       iconPosition,
-      disabled,
       rel,
       as,
     }: LinkProps,
@@ -115,22 +110,14 @@ const Link = forwardRef(
     const isBlank = target === '_blank'
     const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
 
-    const asComponent = useMemo(() => {
-      if (as) return as
-
-      return !to && onClick ? 'button' : 'a'
-    }, [to, onClick, as])
-
     return (
       <StyledLink
-        as={asComponent}
-        onClick={onClick}
+        as={as}
         href={to}
         target={target}
         download={download}
         ref={ref}
         variant={variant}
-        aria-disabled={disabled}
         rel={computedRel}
       >
         {iconPosition === 'left' ? (
