@@ -147,7 +147,7 @@ Badge.decorators = [
             label="Choice 1"
             labelDescription="(details)"
             badgeText="Badge"
-            badgeVariant="warning"
+            badgeVariant="primary"
             badgeSize="medium"
           >
             All Badge props
@@ -163,6 +163,7 @@ Badge.decorators = [
             labelDescription="(details)"
             badgeText="Badge"
             badgeSize="medium"
+            badgeProminence="strong"
           >
             Badge Text and Size
           </RadioBorderedBox>
@@ -177,6 +178,7 @@ Badge.decorators = [
             labelDescription="(details)"
             badgeText="Badge"
             badgeVariant="success"
+            badgeProminence="strong"
           >
             Badge Text and Variant
           </RadioBorderedBox>

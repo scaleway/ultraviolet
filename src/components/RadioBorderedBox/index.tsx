@@ -29,6 +29,7 @@ const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space['1']};
+  padding: ${({ theme }) => theme.space['2']};
 
   ${({ disabled, checked, error, theme: { colors } }) => {
     if (disabled)
@@ -79,9 +80,8 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeVariant?: ComponentProps<typeof Badge>['variant']
   children: ReactNode
   label: string
-  labelDescription?: ReactNode
+  labelDescription?: string
   name: string
-  size?: number
   sideText?: string
   value: string | number
 }
@@ -93,7 +93,7 @@ const RadioBorderedBox = ({
   badgeText,
   badgeSize = 'small',
   badgeVariant = 'info',
-  badgeProminence = 'strong',
+  badgeProminence,
   checked = false,
   onChange,
   onFocus,
@@ -101,7 +101,6 @@ const RadioBorderedBox = ({
   disabled = false,
   name,
   value,
-  size = 24,
   children,
   error,
 }: RadioBorderedBoxProps) => (
@@ -117,7 +116,6 @@ const RadioBorderedBox = ({
             onBlur={onBlur}
             disabled={disabled}
             value={value}
-            size={size}
             error={error}
           >
             {label}
