@@ -45,7 +45,6 @@ export const Direction: Story<ComponentProps<typeof Separator>> = args => (
 
 Direction.args = {
   direction: 'vertical',
-  mx: 1,
 }
 
 Direction.parameters = {

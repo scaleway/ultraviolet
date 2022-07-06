@@ -2,7 +2,7 @@
 
 exports[`Separator renders correctly horizontally 1`] = `
 <DocumentFragment>
-  .cache-1944blf-StyledHr {
+  .cache-178dmjg-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -15,7 +15,7 @@ exports[`Separator renders correctly horizontally 1`] = `
 
 <hr
     aria-orientation="horizontal"
-    class="eoti1h20 cache-1944blf-StyledHr"
+    class="cache-178dmjg-StyledHr eoti1h20"
     role="separator"
   />
 </DocumentFragment>
@@ -23,7 +23,7 @@ exports[`Separator renders correctly horizontally 1`] = `
 
 exports[`Separator renders correctly vertically 1`] = `
 <DocumentFragment>
-  .cache-x3g1dw-StyledHr {
+  .cache-36yo3x-StyledHr {
   margin: 0;
   border: 0;
   width: 1px;
@@ -36,7 +36,7 @@ exports[`Separator renders correctly vertically 1`] = `
 
 <hr
     aria-orientation="vertical"
-    class="eoti1h20 cache-x3g1dw-StyledHr"
+    class="cache-36yo3x-StyledHr eoti1h20"
     role="separator"
   />
 </DocumentFragment>
@@ -44,7 +44,7 @@ exports[`Separator renders correctly vertically 1`] = `
 
 exports[`Separator renders correctly with custom color 1`] = `
 <DocumentFragment>
-  .cache-1uh368b-StyledHr {
+  .cache-6vxxak-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -52,12 +52,12 @@ exports[`Separator renders correctly with custom color 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #4f0599;
+  background-color: #390171;
 }
 
 <hr
     aria-orientation="horizontal"
-    class="eoti1h20 cache-1uh368b-StyledHr"
+    class="cache-6vxxak-StyledHr eoti1h20"
     role="separator"
   />
 </DocumentFragment>
@@ -65,7 +65,7 @@ exports[`Separator renders correctly with custom color 1`] = `
 
 exports[`Separator renders correctly with custom icon 1`] = `
 <DocumentFragment>
-  .cache-1wmhier-StyledIcon {
+  .cache-1gpqkcp-StyledIconWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,7 +79,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
   align-items: center;
 }
 
-.cache-2zljfb-StyledHr {
+.cache-1du1e5o-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -93,30 +93,31 @@ exports[`Separator renders correctly with custom icon 1`] = `
   flex: 1;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles {
-  fill: #d4dae7;
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
+  fill: #4a4f62;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  fill: #e6e9f0;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles.cache-1wrsyoi-StyledIcon-sizeStyles {
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
 <div
     aria-orientation="horizontal"
-    class="eoti1h21 cache-1wmhier-StyledIcon"
+    class="cache-1gpqkcp-StyledIconWrapper eoti1h22"
     role="separator"
   >
     <hr
-      class="eoti1h20 cache-2zljfb-StyledHr"
+      class="cache-1du1e5o-StyledHr eoti1h20"
     />
     <svg
-      class="sc-ui-icon etwatq50 cache-1wrsyoi-StyledIcon-sizeStyles"
+      class="eoti1h21 etwatq50 cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon"
       viewBox="0 0 24 24"
     >
       <path
@@ -125,7 +126,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
       />
     </svg>
     <hr
-      class="eoti1h20 cache-2zljfb-StyledHr"
+      class="cache-1du1e5o-StyledHr eoti1h20"
     />
   </div>
 </DocumentFragment>
@@ -133,7 +134,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
 
 exports[`Separator renders correctly with custom icon horizontally 1`] = `
 <DocumentFragment>
-  .cache-1wmhier-StyledIcon {
+  .cache-1gpqkcp-StyledIconWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -147,7 +148,7 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
   align-items: center;
 }
 
-.cache-2zljfb-StyledHr {
+.cache-1du1e5o-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -161,30 +162,31 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
   flex: 1;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles {
-  fill: #d4dae7;
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
+  fill: #4a4f62;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  fill: #e6e9f0;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles.cache-1wrsyoi-StyledIcon-sizeStyles {
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
 <div
     aria-orientation="horizontal"
-    class="eoti1h21 cache-1wmhier-StyledIcon"
+    class="cache-1gpqkcp-StyledIconWrapper eoti1h22"
     role="separator"
   >
     <hr
-      class="eoti1h20 cache-2zljfb-StyledHr"
+      class="cache-1du1e5o-StyledHr eoti1h20"
     />
     <svg
-      class="sc-ui-icon etwatq50 cache-1wrsyoi-StyledIcon-sizeStyles"
+      class="eoti1h21 etwatq50 cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon"
       viewBox="0 0 24 24"
     >
       <path
@@ -193,7 +195,7 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
       />
     </svg>
     <hr
-      class="eoti1h20 cache-2zljfb-StyledHr"
+      class="cache-1du1e5o-StyledHr eoti1h20"
     />
   </div>
 </DocumentFragment>
@@ -201,7 +203,7 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
 
 exports[`Separator renders correctly with custom icon vertically 1`] = `
 <DocumentFragment>
-  .cache-1rsc2u0-StyledIcon {
+  .cache-15vpxe5-StyledIconWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -215,7 +217,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   align-items: center;
 }
 
-.cache-1h73ptp-StyledHr {
+.cache-3xv3x8-StyledHr {
   margin: 0;
   border: 0;
   width: 1px;
@@ -229,30 +231,31 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   flex: 1;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles {
-  fill: #d4dae7;
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
+  fill: #4a4f62;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  fill: #e6e9f0;
 }
 
-.cache-1wrsyoi-StyledIcon-sizeStyles.cache-1wrsyoi-StyledIcon-sizeStyles {
+.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon.cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
 <div
     aria-orientation="vertical"
-    class="eoti1h21 cache-1rsc2u0-StyledIcon"
+    class="cache-15vpxe5-StyledIconWrapper eoti1h22"
     role="separator"
   >
     <hr
-      class="eoti1h20 cache-1h73ptp-StyledHr"
+      class="cache-3xv3x8-StyledHr eoti1h20"
     />
     <svg
-      class="sc-ui-icon etwatq50 cache-1wrsyoi-StyledIcon-sizeStyles"
+      class="eoti1h21 etwatq50 cache-1xqsx4z-StyledIcon-sizeStyles-StyledIcon"
       viewBox="0 0 24 24"
     >
       <path
@@ -261,7 +264,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
       />
     </svg>
     <hr
-      class="eoti1h20 cache-1h73ptp-StyledHr"
+      class="cache-3xv3x8-StyledHr eoti1h20"
     />
   </div>
 </DocumentFragment>
@@ -269,7 +272,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
 
 exports[`Separator renders correctly with custom thickness 1`] = `
 <DocumentFragment>
-  .cache-o9gaed-StyledHr {
+  .cache-2jhrdy-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -282,7 +285,7 @@ exports[`Separator renders correctly with custom thickness 1`] = `
 
 <hr
     aria-orientation="horizontal"
-    class="eoti1h20 cache-o9gaed-StyledHr"
+    class="cache-2jhrdy-StyledHr eoti1h20"
     role="separator"
   />
 </DocumentFragment>
@@ -290,7 +293,7 @@ exports[`Separator renders correctly with custom thickness 1`] = `
 
 exports[`Separator renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1944blf-StyledHr {
+  .cache-178dmjg-StyledHr {
   margin: 0;
   border: 0;
   width: auto;
@@ -303,28 +306,7 @@ exports[`Separator renders correctly with default props 1`] = `
 
 <hr
     aria-orientation="horizontal"
-    class="eoti1h20 cache-1944blf-StyledHr"
-    role="separator"
-  />
-</DocumentFragment>
-`;
-
-exports[`Separator renders correctly with raw color 1`] = `
-<DocumentFragment>
-  .cache-8f8z62-StyledHr {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #121212;
-}
-
-<hr
-    aria-orientation="horizontal"
-    class="eoti1h20 cache-8f8z62-StyledHr"
+    class="cache-178dmjg-StyledHr eoti1h20"
     role="separator"
   />
 </DocumentFragment>

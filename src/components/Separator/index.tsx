@@ -1,17 +1,16 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { ComponentProps, ReactNode } from 'react'
-import { ColorDeprecated as Color } from '../../theme/deprecated/colors'
-import Box, { BoxProps } from '../Box'
+import { ComponentProps } from 'react'
+import { Color } from '../../theme'
 import Icon, { icons } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
 type StyledIconProps = {
   direction: Direction
-} & BoxProps
+}
 
-const StyledIcon = styled(Box, {
+const StyledIconWrapper = styled('div', {
   shouldForwardProp: prop => !['direction'].includes(prop),
 })<StyledIconProps>`
   display: flex;
@@ -20,16 +19,19 @@ const StyledIcon = styled(Box, {
   align-items: center;
 `
 
-type HorizontalSeparatorProps = {
-  direction?: Direction
-  thickness?: number
-  color?: Color | string
-  flex?: string
-} & BoxProps
+const StyledIcon = styled(Icon)`
+  margin-bottom: ${({ theme }) => theme.space['1']};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
+  fill: ${({ theme }) => theme.colors.neutral.border};
+`
 
-const StyledHr = styled(Box.withComponent('hr'), {
+type HorizontalSeparatorProps = SeparatorProps & {
+  hasIcon?: boolean
+}
+
+const StyledHr = styled('hr', {
   shouldForwardProp: prop =>
-    !['direction', 'thickness', 'color', 'flex'].includes(prop),
+    !['direction', 'thickness', 'color', 'hasIcon'].includes(prop),
 })<HorizontalSeparatorProps>`
   margin: 0;
   border: 0;
@@ -39,44 +41,46 @@ const StyledHr = styled(Box.withComponent('hr'), {
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
   background-color: ${({ theme, color }) =>
-    color
-      ? theme.colorsDeprecated[color as Color] || color
-      : theme.colors.neutral.border};
-  ${({ flex }) => flex && `flex: ${flex};`}
+    theme.colors[color as Color].border};
+  ${({ hasIcon }) => hasIcon && `flex: 1;`}
 `
 
-type SeparatorProps = HorizontalSeparatorProps & {
+type SeparatorProps = {
   icon?: ComponentProps<typeof Icon>['name']
-  children?: ReactNode
+  direction?: Direction
+  thickness?: number
+  color?: Color
+  className?: string
 }
+
 const Separator = ({
   direction = 'horizontal',
   thickness = 1,
-  color,
+  color = 'neutral',
   icon,
-  ...props
+  className,
 }: SeparatorProps): JSX.Element =>
   icon ? (
-    <StyledIcon
+    <StyledIconWrapper
       role="separator"
       aria-orientation={direction}
       direction={direction}
-      {...props}
+      className={className}
     >
       <StyledHr
         direction={direction}
         thickness={thickness}
         color={color}
-        flex="1"
+        hasIcon
       />
-      <Icon name={icon} size={24} my={1} color="gray350" />
+      <StyledIcon name={icon} size={24} color="neutral" />
       <StyledHr
         direction={direction}
         thickness={thickness}
         color={color}
-        flex="1"
+        hasIcon
       />
-    </StyledIcon>
+    </StyledIconWrapper>
   ) : (
     <StyledHr
       role="separator"
@@ -84,7 +88,7 @@ const Separator = ({
       direction={direction}
       thickness={thickness}
       color={color}
-      {...props}
+      className={className}
     />
   )
 
