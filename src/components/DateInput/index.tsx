@@ -15,8 +15,7 @@ import Typography from '../Typography'
 const PREFIX = '.react-datepicker'
 
 const StyledSeparator = styled(Separator)`
-  margin-left: ${({ theme }) => theme.space['1']};
-  margin-right: ${({ theme }) => theme.space['1']};
+  margin: 0 ${({ theme }) => theme.space['1']};
   height: 100%;
 `
 
