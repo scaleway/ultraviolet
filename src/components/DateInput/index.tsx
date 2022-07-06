@@ -14,6 +14,12 @@ import Typography from '../Typography'
 
 const PREFIX = '.react-datepicker'
 
+const StyledSeparator = styled(Separator)`
+  margin-left: ${({ theme }) => theme.space['1']};
+  margin-right: ${({ theme }) => theme.space['1']};
+  height: 100%;
+`
+
 const StyledWrapper = styled.div`
   width: 100%;
 
@@ -206,7 +212,7 @@ const DateInput = ({
                     size={8}
                   />
                 )}
-                <Separator direction="vertical" mx={1} height="100%" />
+                <StyledSeparator direction="vertical" />
                 <Icon
                   name="calendar-range"
                   color={

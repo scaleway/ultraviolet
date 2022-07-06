@@ -1,8 +1,7 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ComponentProps } from 'react'
 import { Color } from '../../theme'
-import Icon, { icons } from '../Icon'
+import Icon from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 
@@ -91,12 +90,5 @@ const Separator = ({
       className={className}
     />
   )
-
-Separator.propTypes = {
-  color: PropTypes.string,
-  direction: PropTypes.oneOf<Direction>(['horizontal', 'vertical']),
-  icon: PropTypes.oneOf(icons),
-  thickness: PropTypes.number,
-}
 
 export default Separator
