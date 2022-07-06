@@ -15,7 +15,6 @@ type RadioProps = Pick<
   | 'onBlur'
   | 'disabled'
   | 'value'
-  | 'size'
   | 'error'
 >
 
@@ -126,9 +125,7 @@ const RadioBorderedBox = ({
             </Text>
           ) : null}
           {badgeText && (
-            <>
-              &nbsp;
-              <Badge
+            <Badge
                 size={badgeSize}
                 variant={badgeVariant}
                 prominence={badgeProminence}
@@ -136,7 +133,6 @@ const RadioBorderedBox = ({
               >
                 {badgeText}
               </Badge>
-            </>
           )}
         </StyledRadioContainer>
         {sideText ? (
