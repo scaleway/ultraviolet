@@ -77,6 +77,9 @@ const StyledCol = styled(Box, {
       })}
 `
 
+/**
+ * @deprecated
+ */
 const Col = (props: ComponentProps<typeof StyledCol>) => (
   <StyledCol {...props} />
 )

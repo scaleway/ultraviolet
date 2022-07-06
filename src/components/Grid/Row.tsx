@@ -19,6 +19,9 @@ const StyledRow = styled(Box, {
   margin-right: ${({ gutter = 1 }) => `-${space[gutter]}`};
 `
 
+/**
+ * @deprecated
+ */
 const Row = (props: RowProps) => <StyledRow {...props} />
 
 Row.propTypes = {
