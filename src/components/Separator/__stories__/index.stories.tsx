@@ -37,9 +37,9 @@ Thickness.parameters = {
 
 export const Direction: Story<ComponentProps<typeof Separator>> = args => (
   <FlexBox inline>
-    <div>left part</div>
+    <div style={{ marginRight: 8 }}>left part</div>
     <Separator {...args} />
-    <div>right part</div>
+    <div style={{ marginLeft: 8 }}>right part</div>
   </FlexBox>
 )
 
