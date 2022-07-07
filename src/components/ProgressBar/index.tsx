@@ -16,6 +16,7 @@ const shineAnimation = keyframes`
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
 const StyledProgressContainer = styled.div`
+  overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;

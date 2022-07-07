@@ -1,43 +1,43 @@
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { ReactNode, useMemo } from 'react'
 import ProgressBar from '../ProgressBar'
-import Typography from '../Typography'
+import Text from '../Text'
 
 interface StateBarStateProps {
   children?: ReactNode
   label?: string
 }
 
+const StyledText = styled(Text)`
+  display: flex;
+  flex-direction: row;
+  gap: ${({ theme }) => theme.space['1']};
+`
+
 export const StateBarState = ({
   label = '',
   children,
 }: StateBarStateProps): JSX.Element => (
-  <Typography
-    as="div"
-    variant="bodyA"
-    fontWeight={500}
-    color="gray950"
-    display="flex"
-  >
+  <StyledText variant="bodyStrong" prominence="strong" as="div" color="neutral">
     <strong>{`${label}${children ? ': ' : ''}`}</strong>
     {children && (
-      <Typography as="span" variant="bodyA" ml={1}>
+      <Text as="span" variant="body" color="neutral">
         {children}
-      </Typography>
+      </Text>
     )}
-  </Typography>
+  </StyledText>
 )
-
-const line = css`
-  flex: 1;
-  margin-top: 12px;
-`
 
 interface StateBarBarProps {
   unlimited?: boolean
   value?: number
   progress?: boolean
 }
+
+const StyledProgressBar = styled(ProgressBar)`
+  flex: 1;
+  margin-top: 12px;
+`
 
 export const StateBarBar = ({
   unlimited = false,
@@ -53,8 +53,7 @@ export const StateBarBar = ({
   }, [unlimited, value])
 
   return (
-    <ProgressBar
-      css={line}
+    <StyledProgressBar
       variant={variant}
       value={unlimited ? 100 : value}
       progress={progress}
