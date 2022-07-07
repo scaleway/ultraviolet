@@ -1,10 +1,15 @@
 import { useTheme } from '@emotion/react'
+import styled from '@emotion/styled'
 import { readableColor } from 'polished'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
 import Typography from '../../components/Typography'
 import lightTheme, { Color } from '../../theme'
 import ThemeWrapper from './ThemeWrapper'
+
+const StyledSeparator = styled(Separator)`
+  margin: ${({ theme }) => `${theme.space['3']} 0`};
+`
 
 type AvailableContexts = keyof typeof lightTheme['colors'][Color]
 
@@ -118,7 +123,7 @@ const Colors = () => {
                   ))}
               </div>
             </div>
-            <Separator style={{ margin: `24px 0` }} />
+            <StyledSeparator />
           </>
         )
       })}
