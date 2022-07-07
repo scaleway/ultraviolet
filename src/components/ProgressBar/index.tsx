@@ -2,7 +2,6 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { Color } from '../../theme'
-import Box, { BoxProps } from '../Box'
 
 const shineAnimation = keyframes`
   from {
@@ -16,7 +15,7 @@ const shineAnimation = keyframes`
 
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
-const StyledBox = styled(Box)`
+const StyledBox = styled.div`
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -61,20 +60,18 @@ type ProgressBarProps = {
   variant?: string
   value?: number
   progress?: boolean
-} & BoxProps
+}
 
 const ProgressBar = ({
   progress = false,
   value = 0,
   variant = 'primary',
-  ...props
 }: ProgressBarProps) => (
   <StyledBox
     role="progressbar"
     aria-valuenow={value}
     aria-valuemin={0}
     aria-valuemax={100}
-    {...props}
   >
     {progress ? (
       <StyledProgress />
