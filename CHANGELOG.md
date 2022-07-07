@@ -1,3 +1,20 @@
+## [0.165.1](https://github.com/scaleway/scaleway-ui/compare/v0.165.0...v0.165.1) (2022-07-07)
+
+
+### :memo: Documentation
+
+* **migration:** documentation for component migration ([#1643](https://github.com/scaleway/scaleway-ui/issues/1643)) ([3bcd539](https://github.com/scaleway/scaleway-ui/commit/3bcd5399f047191335b2250b959de13be2b5c4b7))
+
+
+### :package: Chore
+
+* **TabGroup:** remove now useless prop ([#1648](https://github.com/scaleway/scaleway-ui/issues/1648)) ([0b16dfb](https://github.com/scaleway/scaleway-ui/commit/0b16dfb454c5fb6f2e2e1025876eacf1343edfc1))
+
+
+### :bug: Bug Fixes
+
+* remove dep colors separator ([#1649](https://github.com/scaleway/scaleway-ui/issues/1649)) ([f5457cb](https://github.com/scaleway/scaleway-ui/commit/f5457cb86be8e25cb20b282bc845066344576577))
+
 ## [0.165.0](https://github.com/scaleway/scaleway-ui/compare/v0.164.3...v0.165.0) (2022-07-01)
 
 
