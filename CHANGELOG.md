@@ -1,3 +1,10 @@
+## [0.165.2](https://github.com/scaleway/scaleway-ui/compare/v0.165.1...v0.165.2) (2022-07-07)
+
+
+### :bug: Bug Fixes
+
+* make row and col deprecated ([#1650](https://github.com/scaleway/scaleway-ui/issues/1650)) ([6317cfc](https://github.com/scaleway/scaleway-ui/commit/6317cfcb9efc58f943b862126602516a47cae6f0))
+
 ## [0.165.1](https://github.com/scaleway/scaleway-ui/compare/v0.165.0...v0.165.1) (2022-07-07)
 
 
