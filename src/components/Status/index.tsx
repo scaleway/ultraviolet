@@ -54,7 +54,12 @@ const Status = ({
   variant,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
-    <StyledCircle className={className} animated={animated} variant={variant} />
+    <StyledCircle
+      data-testid="status"
+      className={className}
+      animated={animated}
+      variant={variant}
+    />
   </Tooltip>
 )
 
