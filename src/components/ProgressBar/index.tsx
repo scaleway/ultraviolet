@@ -15,7 +15,7 @@ const shineAnimation = keyframes`
 
 export const progressBarVariants = ['primary', 'success', 'warning', 'info']
 
-const StyledBox = styled.div`
+const StyledProgressContainer = styled.div`
   position: relative;
   height: 4px;
   margin-left: 0;
@@ -60,25 +60,28 @@ type ProgressBarProps = {
   variant?: string
   value?: number
   progress?: boolean
+  className?: string
 }
 
 const ProgressBar = ({
   progress = false,
   value = 0,
   variant = 'primary',
+  className,
 }: ProgressBarProps) => (
-  <StyledBox
+  <StyledProgressContainer
     role="progressbar"
     aria-valuenow={value}
     aria-valuemin={0}
     aria-valuemax={100}
+    className={className}
   >
     {progress ? (
       <StyledProgress />
     ) : (
       <StyledFilled variant={variant} value={value} />
     )}
-  </StyledBox>
+  </StyledProgressContainer>
 )
 
 ProgressBar.propTypes = {
