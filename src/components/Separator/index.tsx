@@ -19,7 +19,6 @@ const StyledIconWrapper = styled('div', {
 `
 
 const StyledIcon = styled(Icon)`
-  margin-bottom: ${({ theme }) => theme.space['1']};
   background-color: ${({ theme }) => theme.colors.neutral.background};
   fill: ${({ theme }) => theme.colors.neutral.border};
 `
