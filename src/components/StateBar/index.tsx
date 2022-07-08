@@ -1,46 +1,32 @@
-import { css } from '@emotion/react'
-import PropTypes from 'prop-types'
+import styled from '@emotion/styled'
 import { ReactNode, useMemo } from 'react'
-import Box from '../Box'
 import ProgressBar from '../ProgressBar'
-import Typography from '../Typography'
+import Text from '../Text'
 
 interface StateBarStateProps {
   children?: ReactNode
   label?: string
 }
 
+const StyledText = styled(Text)`
+  display: flex;
+  flex-direction: row;
+  gap: ${({ theme }) => theme.space['1']};
+`
+
 export const StateBarState = ({
   label = '',
   children,
-  ...props
 }: StateBarStateProps): JSX.Element => (
-  <Typography
-    as="div"
-    variant="bodyA"
-    fontWeight={500}
-    color="gray950"
-    display="flex"
-    {...props}
-  >
+  <StyledText variant="bodyStrong" prominence="strong" as="div" color="neutral">
     <strong>{`${label}${children ? ': ' : ''}`}</strong>
     {children && (
-      <Typography as="span" variant="bodyA" ml={1}>
+      <Text as="span" variant="body" color="neutral">
         {children}
-      </Typography>
+      </Text>
     )}
-  </Typography>
+  </StyledText>
 )
-
-StateBarState.propTypes = {
-  children: PropTypes.node,
-  label: PropTypes.string,
-}
-
-const line = css`
-  flex: 1;
-  margin-top: 12px;
-`
 
 interface StateBarBarProps {
   unlimited?: boolean
@@ -48,10 +34,15 @@ interface StateBarBarProps {
   progress?: boolean
 }
 
+const StyledProgressBar = styled(ProgressBar)`
+  flex: 1;
+  margin-top: 12px;
+`
+
 export const StateBarBar = ({
   unlimited = false,
   value = 0,
-  ...props
+  progress = false,
 }: StateBarBarProps): JSX.Element => {
   const variant = useMemo(() => {
     if (unlimited) return 'success'
@@ -62,26 +53,26 @@ export const StateBarBar = ({
   }, [unlimited, value])
 
   return (
-    <ProgressBar
-      css={line}
+    <StyledProgressBar
       variant={variant}
       value={unlimited ? 100 : value}
-      {...props}
+      progress={progress}
     />
   )
 }
 
-StateBarBar.propTypes = {
-  unlimited: PropTypes.bool,
-  value: PropTypes.number,
-}
-
-type StateBarType = typeof Box & {
+type StateBarType = ((props: {
+  children: ReactNode
+  className?: string
+}) => JSX.Element) & {
   Bar: (props: StateBarBarProps) => JSX.Element
   State: (props: StateBarStateProps) => JSX.Element
 }
 
-const StateBar: StateBarType = Box as StateBarType
+// eslint-disable-next-line react/prop-types
+const StateBar: StateBarType = ({ children, className }) => (
+  <div className={className}>{children}</div>
+)
 
 StateBar.Bar = StateBarBar
 StateBar.State = StateBarState
