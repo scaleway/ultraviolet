@@ -47,6 +47,7 @@ const generateStyles = ({
   }` as keyof typeof themeColor
 
   return `
+    margin: 0;
     color: ${theme.colors[color][text]};
 
     font-size: ${theme.typography[variant].fontSize};
