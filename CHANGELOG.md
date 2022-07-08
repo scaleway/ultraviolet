@@ -1,3 +1,10 @@
+## [0.166.0](https://github.com/scaleway/scaleway-ui/compare/v0.165.2...v0.166.0) (2022-07-08)
+
+
+### :gear: Features
+
+* radioborderedbox complementary text and disabled ([#1647](https://github.com/scaleway/scaleway-ui/issues/1647)) ([2a929fc](https://github.com/scaleway/scaleway-ui/commit/2a929fce0387ea74aa7a5bf55a49e20658c3dcc3))
+
 ## [0.165.2](https://github.com/scaleway/scaleway-ui/compare/v0.165.1...v0.165.2) (2022-07-07)
 
 
