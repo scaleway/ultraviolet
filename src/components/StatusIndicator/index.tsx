@@ -1,6 +1,5 @@
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Color } from '../../theme'
 import { ColorDeprecated } from '../../theme/deprecated/colors'
 import { flash } from '../../utils/animations'
@@ -14,32 +13,8 @@ const Dot = styled(Box, {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: ${({ theme, color }) =>
-    theme.colors[color as Color]?.backgroundStrong ??
-    theme.colorsDeprecated[color as ColorDeprecated] ??
-    color};
+  background-color: ${({ color }) => color};
 `
-
-const defaultStatuses = {
-  available: 'green',
-  creating: 'blue',
-  deleting: 'blue',
-  deployed: 'green',
-  disk_full: 'red',
-  error: 'red',
-  locked: 'red',
-  pending: 'blue',
-  ready: 'green',
-  running: 'green',
-  snapshotting: 'blue',
-  starting: 'blue',
-  stopped: 'gray550',
-  stopped_in_place: 'orange',
-  stopping: 'blue',
-  unavailable: 'red',
-  updating: 'blue',
-  warning: 'blue',
-}
 
 const cssAnimation = css`
   animation: ${flash} linear 1s infinite;
@@ -52,57 +27,52 @@ type StatusIndicatorProps = XStyledProps & {
   tooltip?: string
 }
 
-const StatusIndicator = ({
-  tooltip,
-  status = 'unavailable',
-  statuses = defaultStatuses,
-  animated = false,
-  ...props
-}: StatusIndicatorProps): JSX.Element => (
-  <Tooltip text={tooltip}>
-    <Dot
-      color={
-        ({ ...defaultStatuses, ...statuses }[status] as
-          | ColorDeprecated
-          | Color) || 'blue'
-      }
-      css={animated && cssAnimation}
-      {...props}
-    />
-  </Tooltip>
-)
-
-export const statuses = Object.keys(defaultStatuses)
-
 /**
  * @deprecated use Status component instead
  */
-StatusIndicator.propTypes = {
-  animated: PropTypes.bool,
-  status: (
-    { statuses: propsStatuses, ...props }: { [key: string]: string },
-    propName: string,
-    componentName: string,
-  ) => {
-    const { [propName]: propsPropName } = props
+const StatusIndicator = ({
+  tooltip,
+  status = 'unavailable',
+  statuses,
+  animated = false,
+  ...props
+}: StatusIndicatorProps): JSX.Element => {
+  const theme = useTheme()
 
-    const availableStatuses = [
-      ...statuses,
-      ...(propsStatuses ? Object.keys(propsStatuses) : []),
-    ]
+  const defaultStatuses = {
+    available: theme.colors.success.backgroundStrong,
+    creating: theme.colors.info.backgroundStrong,
+    deleting: theme.colors.info.backgroundStrong,
+    deployed: theme.colors.success.backgroundStrong,
+    disk_full: theme.colors.danger.backgroundStrong,
+    error: theme.colors.danger.backgroundStrong,
+    locked: theme.colors.danger.backgroundStrong,
+    pending: theme.colors.info.backgroundStrong,
+    ready: theme.colors.success.backgroundStrong,
+    running: theme.colors.success.backgroundStrong,
+    snapshotting: theme.colors.info.backgroundStrong,
+    starting: theme.colors.info.backgroundStrong,
+    stopped: theme.colors.neutral.backgroundStrong,
+    stopped_in_place: theme.colors.warning.backgroundStrong,
+    stopping: theme.colors.info.backgroundStrong,
+    unavailable: theme.colors.danger.backgroundStrong,
+    updating: theme.colors.info.backgroundStrong,
+    warning: theme.colors.info.backgroundStrong,
+  }
 
-    if (!availableStatuses.includes(propsPropName)) {
-      return new Error(
-        `Invalid prop \`${propName}\` supplied to \`'${componentName}\`. Must be one of \`${JSON.stringify(
-          availableStatuses,
-        )}\` Validation failed.`,
-      )
-    }
-
-    return null
-  },
-  statuses: PropTypes.shape({}),
-  tooltip: PropTypes.string,
+  return (
+    <Tooltip text={tooltip}>
+      <Dot
+        color={
+          ({ ...defaultStatuses, ...statuses }[status] as
+            | ColorDeprecated
+            | Color) || theme.colors.info.backgroundStrong
+        }
+        css={animated && cssAnimation}
+        {...props}
+      />
+    </Tooltip>
+  )
 }
 
 export default StatusIndicator

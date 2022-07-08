@@ -3,10 +3,11 @@ import styled from '@emotion/styled'
 import { DatumValue } from '@nivo/core'
 import { Serie } from '@nivo/line'
 import PropTypes from 'prop-types'
+import { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import Checkbox from '../Checkbox'
 import FlexBox from '../FlexBox'
-import Typography from '../Typography'
+import Text from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 
 const styles = {
@@ -14,11 +15,6 @@ const styles = {
     > :not(:last-child) {
       border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
     }
-  `,
-  cell: css`
-    flex: 1;
-    min-width: 72px;
-    align-self: center;
   `,
   head: (theme: Theme) => css`
     display: flex;
@@ -47,18 +43,20 @@ const styles = {
 
 type CellProps = {
   value?: DatumValue
-  variant?: string
+  variant: ComponentProps<typeof Text>['variant']
 }
 
+const StyledText = styled(Text)`
+  text-align: right;
+  flex: 1;
+  min-width: 72px;
+  align-self: center;
+`
+
 const Cell = ({ value, variant }: CellProps) => (
-  <Typography
-    variant={variant}
-    textAlign="right"
-    color="gray700"
-    css={styles.cell}
-  >
+  <StyledText variant={variant} color="neutral" as="span">
     {value}
-  </Typography>
+  </StyledText>
 )
 
 Cell.propTypes = {
@@ -90,10 +88,10 @@ const CustomLegend = ({
   <StyledContainer>
     <div css={styles.head}>
       <FlexBox.Child flex="6">Legend</FlexBox.Child>
-      <Cell variant="bodyA" value="Minimum" />
-      <Cell variant="bodyA" value="Maximum" />
-      <Cell variant="bodyA" value="Average" />
-      <Cell variant="bodyA" value="Current" />
+      <Cell variant="body" value="Minimum" />
+      <Cell variant="body" value="Maximum" />
+      <Cell variant="body" value="Average" />
+      <Cell variant="body" value="Current" />
     </div>
     <div css={styles.body}>
       {data?.map((row, index) => {
@@ -112,21 +110,23 @@ const CustomLegend = ({
                 }
               >
                 <FlexBox direction="row" alignItems="center">
-                  <Typography
-                    variant="bodyB"
-                    color="gray700"
-                    data-testid={`label-${id}`}
-                  >
+                  <Text as="span" variant="bodySmall" color="neutral">
                     {row.label}
-                  </Typography>
-                  <div css={styles.legend(index)} />
+                  </Text>
+                  <div data-testid={`label-${id}`} css={styles.legend(index)} />
                 </FlexBox>
               </Checkbox>
             </FlexBox.Child>
-            <Cell variant="bodyB" value={axisTransformer(getMin(values))} />
-            <Cell variant="bodyB" value={axisTransformer(getMax(values))} />
-            <Cell variant="bodyB" value={axisTransformer(getAverage(values))} />
-            <Cell variant="bodyB" value={axisTransformer(getCurrent(values))} />
+            <Cell variant="bodySmall" value={axisTransformer(getMin(values))} />
+            <Cell variant="bodySmall" value={axisTransformer(getMax(values))} />
+            <Cell
+              variant="bodySmall"
+              value={axisTransformer(getAverage(values))}
+            />
+            <Cell
+              variant="bodySmall"
+              value={axisTransformer(getCurrent(values))}
+            />
           </div>
         )
       })}

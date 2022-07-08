@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
@@ -30,6 +31,8 @@ const SortIcon = ({
   active?: boolean
   order?: ListOrder
 }) => {
+  const theme = useTheme()
+
   let ariaSort: AriaSortType = 'none'
   if (active) {
     ariaSort = order === 'desc' ? 'descending' : 'ascending'
@@ -39,13 +42,17 @@ const SortIcon = ({
     <StyledContainer aria-sort={ariaSort}>
       <UpIcon
         title="ascending"
-        color={active && order === 'asc' ? 'primary' : 'gray550'}
+        color={
+          active && order === 'asc' ? 'primary' : theme.colors.neutral.textWeak
+        }
         size={10}
         name="arrow-up"
       />
       <DownIcon
         title="descending"
-        color={active && order === 'desc' ? 'primary' : 'gray550'}
+        color={
+          active && order === 'desc' ? 'primary' : theme.colors.neutral.textWeak
+        }
         size={10}
         name="arrow-down"
       />

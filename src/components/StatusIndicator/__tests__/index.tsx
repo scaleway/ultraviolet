@@ -1,5 +1,26 @@
-import StatusIndicator, { statuses } from '..'
+import StatusIndicator from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+
+const statuses = [
+  'available',
+  'creating',
+  'deleting',
+  'deployed',
+  'disk_full',
+  'error',
+  'locked',
+  'pending',
+  'ready',
+  'running',
+  'snapshotting',
+  'starting',
+  'stopped',
+  'stopped_in_place',
+  'stopping',
+  'unavailable',
+  'updating',
+  'warning',
+]
 
 describe('StatusIndicator', () => {
   statuses.forEach(status => {
@@ -7,13 +28,8 @@ describe('StatusIndicator', () => {
       shouldMatchEmotionSnapshot(<StatusIndicator status={status} />))
   })
 
-  test(`render unknow`, async () => {
-    const spy = jest.spyOn(console, 'error').mockImplementation()
-
-    await shouldMatchEmotionSnapshot(<StatusIndicator status="unknow" />)
-    expect(console.error).toHaveBeenCalledTimes(1)
-    spy.mockRestore()
-  })
+  test(`render unknow`, async () =>
+    shouldMatchEmotionSnapshot(<StatusIndicator status="unknow" />))
 
   test(`render animated`, () =>
     shouldMatchEmotionSnapshot(

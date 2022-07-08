@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import {
@@ -278,6 +278,7 @@ const Modal = ({
   preventBodyScroll = true,
   width = 'small',
 }: ModalProps) => {
+  const theme = useTheme()
   const dialog = useDialogState({
     animated,
     baseId,
@@ -321,7 +322,11 @@ const Modal = ({
                   title="close"
                   mb={0}
                 >
-                  <Icon name="close" size={20} color="gray550" />
+                  <Icon
+                    name="close"
+                    size={20}
+                    color={theme.colors.neutral.textWeak}
+                  />
                 </Touchable>
               )}
             </StyledContainer>
