@@ -1,3 +1,10 @@
+## [0.167.0](https://github.com/scaleway/scaleway-ui/compare/v0.166.0...v0.167.0) (2022-07-08)
+
+
+### :gear: Features
+
+* remove Box on Progress/StateBar + correct dark mode ([#1652](https://github.com/scaleway/scaleway-ui/issues/1652)) ([35aba5c](https://github.com/scaleway/scaleway-ui/commit/35aba5ced29481c956d9597fc8152b23ec7ceb44))
+
 ## [0.166.0](https://github.com/scaleway/scaleway-ui/compare/v0.165.2...v0.166.0) (2022-07-08)
 
 
