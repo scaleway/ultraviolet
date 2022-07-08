@@ -19,9 +19,6 @@ export const textVariants = Object.keys(typography) as TextVariant[]
 
 /**
  * Generate all styles available for text based on prominence and variants
- * @param prominence
- * @param variant
- * @param theme
  */
 const generateStyles = ({
   prominence,
@@ -29,12 +26,14 @@ const generateStyles = ({
   variant,
   theme,
   oneLine,
+  disabled,
 }: {
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
   color: Color
   oneLine: boolean
+  disabled: boolean
 }): string => {
   // stronger is available only for neutral color
   const definedProminence =
@@ -43,7 +42,9 @@ const generateStyles = ({
       : capitalize(PROMINENCES[prominence])
 
   const themeColor = theme.colors[color]
-  const text = `text${definedProminence}` as keyof typeof themeColor
+  const text = `text${definedProminence}${
+    disabled ? 'Disabled' : ''
+  }` as keyof typeof themeColor
 
   return `
     color: ${theme.colors[color][text]};
@@ -75,16 +76,20 @@ type TextProps = {
   prominence?: ProminenceProps
   as: ElementType
   oneLine?: boolean
+  disabled?: boolean
 }
 
 const StyledText = styled('div', {
   shouldForwardProp: prop =>
-    !['as', 'variant', 'color', 'prominence', 'oneLine'].includes(prop),
+    !['as', 'variant', 'color', 'prominence', 'oneLine', 'disabled'].includes(
+      prop,
+    ),
 })<{
   color: Color
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean
+  disabled: boolean
 }>(generateStyles)
 
 const Text = ({
@@ -95,6 +100,7 @@ const Text = ({
   oneLine = false,
   prominence = 'default',
   className,
+  disabled = false,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -118,6 +124,7 @@ const Text = ({
         variant={variant}
         oneLine={oneLine}
         className={className}
+        disabled={disabled}
       >
         {children}
       </StyledText>
