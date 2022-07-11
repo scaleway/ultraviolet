@@ -1,3 +1,18 @@
+## [0.167.2](https://github.com/scaleway/scaleway-ui/compare/v0.167.1...v0.167.2) (2022-07-11)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency eslint to v8.19.0 ([#1661](https://github.com/scaleway/scaleway-ui/issues/1661)) ([a5ff858](https://github.com/scaleway/scaleway-ui/commit/a5ff858ec30569cf2603bf76c76a6c29d8c330a0))
+* **devdeps:** update jest monorepo to v28.1.2 ([#1660](https://github.com/scaleway/scaleway-ui/issues/1660)) ([fd6452c](https://github.com/scaleway/scaleway-ui/commit/fd6452c3487675801c2f83d29ac8434a2fb4eeb0))
+* **devdeps:** update node.js to v18.5 ([#1662](https://github.com/scaleway/scaleway-ui/issues/1662)) ([312591d](https://github.com/scaleway/scaleway-ui/commit/312591dc165cd11bca218f1a9d2957f25434a6ec))
+* **devdeps:** update pnpm to v7.5.0 ([#1658](https://github.com/scaleway/scaleway-ui/issues/1658)) ([8c4e304](https://github.com/scaleway/scaleway-ui/commit/8c4e304e6392d12f1eee142b9170f66238e64e02))
+
+
+### :bug: Bug Fixes
+
+* remove gray usage ([#1654](https://github.com/scaleway/scaleway-ui/issues/1654)) ([eafee08](https://github.com/scaleway/scaleway-ui/commit/eafee0896517d8bb4aa2708ba5a2acdedeafe34f))
+
 ## [0.167.1](https://github.com/scaleway/scaleway-ui/compare/v0.167.0...v0.167.1) (2022-07-11)
 
 
