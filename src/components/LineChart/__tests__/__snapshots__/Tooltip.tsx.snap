@@ -2,12 +2,12 @@
 
 exports[`LineChart Tooltip renders correctly  1`] = `
 <DocumentFragment>
-  .cache-1eddanj-Child-StyledFlexBox-LineTooltipContainer {
+  .cache-23nyl2-Child-StyledFlexBox-LineTooltipContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: white;
+  background: #4a4f62;
   border-radius: 2px;
   box-shadow: 0px 4px 32px 8px #D4DAE766;
   padding: 5px 9px;
@@ -25,34 +25,34 @@ exports[`LineChart Tooltip renders correctly  1`] = `
   margin-right: 12px;
 }
 
-.cache-1sjqeqz-StyledText-bodyA-variantStyles-colorStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #4a4f62;
+.cache-18w6j81-StyledText {
+  color: #ffffff;
   font-size: 16px;
-  line-height: 24px;
-  color: #390171;
-}
-
-.cache-1sjqeqz-StyledText-bodyA-variantStyles-colorStyles.cache-1sjqeqz-StyledText-bodyA-variantStyles-colorStyles {
+  font-family: Asap;
   font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
+.cache-1m32ihx-StyledText {
+  color: #ffffff;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
-    class="e1a28zy1 cache-1eddanj-Child-StyledFlexBox-LineTooltipContainer e1l6meh00"
+    class="e1a28zy1 cache-23nyl2-Child-StyledFlexBox-LineTooltipContainer e1l6meh00"
   >
     <div>
       <span
@@ -61,16 +61,16 @@ exports[`LineChart Tooltip renders correctly  1`] = `
       />
     </div>
     <div>
-      <p
-        class="e1g1zfwd0 cache-1sjqeqz-StyledText-bodyA-variantStyles-colorStyles"
+      <div
+        class="cache-18w6j81-StyledText e1tg3t120"
       >
         15 kb
-      </p>
-      <p
-        class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
+      </div>
+      <div
+        class="cache-1m32ihx-StyledText e1tg3t120"
       >
         05-05-2022
-      </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -3,10 +3,10 @@ import { Point } from '@nivo/line'
 import PropTypes from 'prop-types'
 import { Validator } from 'react'
 import FlexBox from '../FlexBox'
-import Typography from '../Typography'
+import Text from '../Text'
 
 const LineTooltipContainer = styled(FlexBox)`
-  background: white;
+  background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   border-radius: 2px;
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: 5px 9px;
@@ -27,12 +27,17 @@ const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
       <LineColorSquare color={point.serieColor} />
     </div>
     <div>
-      <Typography variant="bodyA" fontWeight={600} color="primary">
+      <Text
+        variant="bodyStronger"
+        color="neutral"
+        prominence="stronger"
+        as="div"
+      >
         {point.data.yFormatted}
-      </Typography>
-      <Typography variant="bodyB" color="gray700">
+      </Text>
+      <Text variant="bodySmall" color="neutral" prominence="stronger" as="div">
         {point.data.xFormatted}
-      </Typography>
+      </Text>
     </div>
   </LineTooltipContainer>
 )

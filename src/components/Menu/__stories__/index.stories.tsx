@@ -27,7 +27,7 @@ export default {
 
 const DefaultDisclosure = (
   <Touchable title="menu" name="menu">
-    <Icon name="dots-horizontal" color="gray550" size={24} />
+    <Icon name="dots-horizontal" color="neutral" size={24} />
   </Touchable>
 )
 

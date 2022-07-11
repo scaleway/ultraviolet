@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import PropTypes from 'prop-types'
 import { ComponentProps, ReactNode } from 'react'
 import Icon, { icons } from '../Icon'
@@ -13,23 +14,27 @@ type TooltipIconProps = {
 }
 
 const TooltipIcon = ({
-  color = 'gray550',
+  color,
   name = 'help-circle-outline',
   size = 20,
   verticalAlign = 'middle',
   tooltip,
   baseId,
-}: TooltipIconProps) => (
-  <Tooltip text={tooltip} id={baseId}>
-    <Icon
-      color={color}
-      name={name}
-      size={size}
-      verticalAlign={verticalAlign}
-      aria-label={name}
-    />
-  </Tooltip>
-)
+}: TooltipIconProps) => {
+  const theme = useTheme()
+
+  return (
+    <Tooltip text={tooltip} id={baseId}>
+      <Icon
+        color={color || theme.colors.neutral.textWeak}
+        name={name}
+        size={size}
+        verticalAlign={verticalAlign}
+        aria-label={name}
+      />
+    </Tooltip>
+  )
+}
 
 TooltipIcon.propTypes = {
   baseId: PropTypes.string,

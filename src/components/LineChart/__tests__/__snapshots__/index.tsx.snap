@@ -705,15 +705,18 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   flex: 6;
 }
 
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+.cache-1752ks8-StyledText-StyledText {
   color: #4a4f62;
   font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 24px;
-  color: #4a4f62;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -721,10 +724,6 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-i8f77n-body>:not(:last-child) {
@@ -890,15 +889,17 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   flex-direction: row;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-1agnpp2-legend {
@@ -908,15 +909,18 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
+.cache-1yekoxu-StyledText-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -924,10 +928,6 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 <div
@@ -941,26 +941,26 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
       >
         Legend
       </div>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Minimum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Maximum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Average
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Current
-      </p>
+      </span>
     </div>
     <div
       class="cache-i8f77n-body"
@@ -1012,38 +1012,38 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartSerie"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 line chart values
-              </p>
+              </span>
               <div
                 class="cache-1agnpp2-legend"
+                data-testid="label-lineChartSerie"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0.2
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
+        </span>
       </div>
     </div>
   </div>
@@ -1688,15 +1688,18 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   flex: 6;
 }
 
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+.cache-1752ks8-StyledText-StyledText {
   color: #4a4f62;
   font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 24px;
-  color: #4a4f62;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1704,10 +1707,6 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-i8f77n-body>:not(:last-child) {
@@ -1873,15 +1872,17 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   flex-direction: row;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-1agnpp2-legend {
@@ -1891,15 +1892,18 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
+.cache-1yekoxu-StyledText-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1907,10 +1911,6 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 <div
@@ -1924,26 +1924,26 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
       >
         Legend
       </div>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Minimum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Maximum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Average
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Current
-      </p>
+      </span>
     </div>
     <div
       class="cache-i8f77n-body"
@@ -1995,38 +1995,38 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartSerie"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 line chart values
-              </p>
+              </span>
               <div
                 class="cache-1agnpp2-legend"
+                data-testid="label-lineChartSerie"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0.2
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
+        </span>
       </div>
     </div>
   </div>
@@ -4108,15 +4108,18 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   flex: 6;
 }
 
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+.cache-1752ks8-StyledText-StyledText {
   color: #4a4f62;
   font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 24px;
-  color: #4a4f62;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4124,10 +4127,6 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-i8f77n-body>:not(:last-child) {
@@ -4293,15 +4292,17 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   flex-direction: row;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-1agnpp2-legend {
@@ -4311,15 +4312,18 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
+.cache-1yekoxu-StyledText-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4327,10 +4331,6 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 <div
@@ -4344,26 +4344,26 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
       >
         Legend
       </div>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Minimum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Maximum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Average
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Current
-      </p>
+      </span>
     </div>
     <div
       class="cache-i8f77n-body"
@@ -4415,38 +4415,38 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartSerie"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 line chart values
-              </p>
+              </span>
               <div
                 class="cache-1agnpp2-legend"
+                data-testid="label-lineChartSerie"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0.2
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7
-        </p>
+        </span>
       </div>
     </div>
   </div>
@@ -5824,15 +5824,18 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   flex: 6;
 }
 
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+.cache-1752ks8-StyledText-StyledText {
   color: #4a4f62;
   font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 24px;
-  color: #4a4f62;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5840,10 +5843,6 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-i8f77n-body>:not(:last-child) {
@@ -6009,15 +6008,17 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   flex-direction: row;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-1agnpp2-legend {
@@ -6027,15 +6028,18 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
+.cache-1yekoxu-StyledText-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -6043,10 +6047,6 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-ja0hz5-legend {
@@ -6074,26 +6074,26 @@ exports[`LineChart renders correctly with multiple series 1`] = `
       >
         Legend
       </div>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Minimum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Maximum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Average
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Current
-      </p>
+      </span>
     </div>
     <div
       class="cache-i8f77n-body"
@@ -6145,38 +6145,38 @@ exports[`LineChart renders correctly with multiple series 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartMultiple1"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 Serie 1
-              </p>
+              </span>
               <div
                 class="cache-1agnpp2-legend"
+                data-testid="label-lineChartMultiple1"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -9
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           55
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           9.27
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0
-        </p>
+        </span>
       </div>
       <div
         class="cache-achh5b-row"
@@ -6225,38 +6225,38 @@ exports[`LineChart renders correctly with multiple series 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartMultiple2"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 Serie 2
-              </p>
+              </span>
               <div
                 class="cache-ja0hz5-legend"
+                data-testid="label-lineChartMultiple2"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -14
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           76
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7.73
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0
-        </p>
+        </span>
       </div>
       <div
         class="cache-achh5b-row"
@@ -6305,38 +6305,38 @@ exports[`LineChart renders correctly with multiple series 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartMultiple3"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 Serie 3
-              </p>
+              </span>
               <div
                 class="cache-xgdiqy-legend"
+                data-testid="label-lineChartMultiple3"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -38
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           93
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           21.53
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           34
-        </p>
+        </span>
       </div>
     </div>
   </div>
@@ -7911,15 +7911,18 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   flex: 6;
 }
 
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+.cache-1752ks8-StyledText-StyledText {
   color: #4a4f62;
   font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 24px;
-  color: #4a4f62;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -7927,10 +7930,6 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell.cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 .cache-i8f77n-body>:not(:last-child) {
@@ -8096,15 +8095,17 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   flex-direction: row;
 }
 
-.cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles {
+.cache-m5toqi-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-1agnpp2-legend {
@@ -8114,15 +8115,18 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   background-color: #22c8a2;
 }
 
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
+.cache-1yekoxu-StyledText-StyledText {
   color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: #b2b6c3;
   font-size: 14px;
-  line-height: 18px;
-  color: #4a4f62;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -8130,10 +8134,6 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell.cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell {
-  text-align: right;
 }
 
 <div
@@ -8147,26 +8147,26 @@ exports[`LineChart renders correctly with timeline data 1`] = `
       >
         Legend
       </div>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Minimum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Maximum
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Average
-      </p>
-      <p
-        class="e1g1zfwd0 cache-pkwd8b-StyledText-bodyA-variantStyles-colorStyles-cell"
+      </span>
+      <span
+        class="eaefwd71 cache-1752ks8-StyledText-StyledText e1tg3t120"
       >
         Current
-      </p>
+      </span>
     </div>
     <div
       class="cache-i8f77n-body"
@@ -8218,38 +8218,38 @@ exports[`LineChart renders correctly with timeline data 1`] = `
             <div
               class="cache-185d03p-Child-StyledFlexBox e1l6meh00"
             >
-              <p
-                class="e1g1zfwd0 cache-9yox5o-StyledText-bodyB-variantStyles-colorStyles"
-                data-testid="label-lineChartHours"
+              <span
+                class="cache-m5toqi-StyledText e1tg3t120"
               >
                 line chart hours values
-              </p>
+              </span>
               <div
                 class="cache-1agnpp2-legend"
+                data-testid="label-lineChartHours"
               />
             </div>
           </label>
         </div>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           -14
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           76
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           7.73
-        </p>
-        <p
-          class="e1g1zfwd0 cache-gu8xvi-StyledText-bodyB-variantStyles-colorStyles-cell"
+        </span>
+        <span
+          class="eaefwd71 cache-1yekoxu-StyledText-StyledText e1tg3t120"
         >
           0
-        </p>
+        </span>
       </div>
     </div>
   </div>
