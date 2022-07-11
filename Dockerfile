@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:18.4-alpine as builder
+FROM node:18.5-alpine as builder
 WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
@@ -16,7 +16,7 @@ RUN pnpm run build:storybook
 ######################################################################
 # This stage download a simple http server and serve the application #
 ######################################################################
-FROM node:18.4-alpine
+FROM node:18.5-alpine
 
 WORKDIR /workspace
 
