@@ -1,3 +1,12 @@
+## [0.167.1](https://github.com/scaleway/scaleway-ui/compare/v0.167.0...v0.167.1) (2022-07-11)
+
+
+### :package: Chore
+
+* **deps:** pin dependency @types/react-datepicker to 4.4.2 ([#1655](https://github.com/scaleway/scaleway-ui/issues/1655)) ([0be279f](https://github.com/scaleway/scaleway-ui/commit/0be279f236e2b59d69e762762209a30aa0ff9fc1))
+* **devdeps:** update babel monorepo to v7.18.6 ([#1656](https://github.com/scaleway/scaleway-ui/issues/1656)) ([7ca8327](https://github.com/scaleway/scaleway-ui/commit/7ca832757abf17dca68fcf6b8f8bcdc81c47f57c))
+* **devdeps:** update dependency @semantic-release/github to v8.0.5 ([#1659](https://github.com/scaleway/scaleway-ui/issues/1659)) ([002703b](https://github.com/scaleway/scaleway-ui/commit/002703bd7e40666bcb4ad75c7fd643333194402d))
+
 ## [0.167.0](https://github.com/scaleway/scaleway-ui/compare/v0.166.0...v0.167.0) (2022-07-08)
 
 
