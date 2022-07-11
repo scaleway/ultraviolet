@@ -87,9 +87,9 @@ specifiers:
   husky: 8.0.1
   identity-obj-proxy: 3.0.0
   intl-tel-input: 17.0.16
-  jest: 28.1.1
+  jest: 28.1.2
   jest-axe: 6.0.0
-  jest-environment-jsdom: 28.1.1
+  jest-environment-jsdom: 28.1.2
   jest-junit: 14.0.0
   jest-mock-random: 1.1.1
   lint-staged: 13.0.3
@@ -224,9 +224,9 @@ devDependencies:
   eslint: 8.18.0
   husky: 8.0.1
   identity-obj-proxy: 3.0.0
-  jest: 28.1.1_@types+node@17.0.31
+  jest: 28.1.2_@types+node@17.0.31
   jest-axe: 6.0.0
-  jest-environment-jsdom: 28.1.1
+  jest-environment-jsdom: 28.1.2
   jest-junit: 14.0.0
   jest-mock-random: 1.1.1
   lint-staged: 13.0.3
@@ -7317,7 +7317,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -12079,8 +12079,8 @@ packages:
       pretty-format: 28.1.1
     dev: true
 
-  /jest-environment-jsdom/28.1.1:
-    resolution: {integrity: sha512-41ZvgSoPNcKG5q3LuuOcAczdBxRq9DbZkPe24okN6ZCmiZdAfFtPg3z+lOtsT1fM6OAERApKT+3m0MRDQH2zIA==}
+  /jest-environment-jsdom/28.1.2:
+    resolution: {integrity: sha512-Ujhx/xFZGVPuxAVpseQ7KqdBErenuWH3Io2HujkGOKMS2VWmpnTGYHzv+73p21QJ9yYQlJkeg06rTe1svV+u0g==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     dependencies:
       '@jest/environment': 28.1.2
@@ -12459,8 +12459,8 @@ packages:
       supports-color: 8.1.1
     dev: true
 
-  /jest/28.1.1_@types+node@17.0.31:
-    resolution: {integrity: sha512-qw9YHBnjt6TCbIDMPMpJZqf9E12rh6869iZaN08/vpOGgHJSAaLLUn6H8W3IAEuy34Ls3rct064mZLETkxJ2XA==}
+  /jest/28.1.2_@types+node@17.0.31:
+    resolution: {integrity: sha512-Tuf05DwLeCh2cfWCQbcz9UxldoDyiR1E9Igaei5khjonKncYdc6LDfynKCEWozK0oLE3GD+xKAo2u8x/0s6GOg==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -15452,6 +15452,17 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
+
+  /promise-inflight/1.0.1_bluebird@3.7.2:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.2
     dev: true
 
   /promise.allsettled/1.0.5:
