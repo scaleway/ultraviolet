@@ -52,9 +52,6 @@ const StyledButton = styled('button', {
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.space[1]};
-
-  font-weight: 500;
-  font-size: 16px;
   border-radius: 4px;
 
   ${({ size }) => sizes[size]};
