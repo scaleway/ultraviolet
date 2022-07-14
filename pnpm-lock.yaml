@@ -14,7 +14,7 @@ specifiers:
   '@emotion/babel-plugin': 11.9.2
   '@emotion/cache': 11.9.3
   '@emotion/eslint-plugin': 11.7.0
-  '@emotion/jest': 11.9.3
+  '@emotion/jest': 11.9.4
   '@emotion/react': 11.9.3
   '@emotion/serialize': 1.0.4
   '@emotion/styled': 11.9.3
@@ -165,7 +165,7 @@ devDependencies:
   '@emotion/babel-plugin': 11.9.2_@babel+core@7.18.6
   '@emotion/cache': 11.9.3
   '@emotion/eslint-plugin': 11.7.0_eslint@8.19.0
-  '@emotion/jest': 11.9.3_@types+jest@27.5.2
+  '@emotion/jest': 11.9.4_@types+jest@27.5.2
   '@emotion/react': 11.9.3_7xvhny4l7yi42slhiqkpgmpofm
   '@emotion/styled': 11.9.3_i64ertekxmxppn657xiekwuutq
   '@rollup/plugin-babel': 5.3.1_ayiqorrx7dutx4scyxuyyyvhga
@@ -2058,6 +2058,25 @@ packages:
     resolution: {integrity: sha512-fDfZc1ydjjJ+2IDAK+rP+rm469I4u5cIkN3zmGYf0CBW9TLrtM9u9kke3s+i5/M2UpcqLDvtal0EyPBR0A8EWg==}
     peerDependencies:
       '@types/jest': ^26.0.14 || ^27.0.0
+      enzyme-to-json: ^3.2.1
+    peerDependenciesMeta:
+      '@types/jest':
+        optional: true
+      enzyme-to-json:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.6
+      '@emotion/css-prettifier': 1.0.1
+      '@types/jest': 27.5.2
+      chalk: 4.1.2
+      specificity: 0.4.1
+      stylis: 4.0.13
+    dev: true
+
+  /@emotion/jest/11.9.4_@types+jest@27.5.2:
+    resolution: {integrity: sha512-dbV8gAOHyRTsPeARs4hEruHZ1eSgfOsYnShPRM2c+QoUxtKWrFN7toNDq9uwFrTV2lSul5G1HtgxAIQcWKyM/g==}
+    peerDependencies:
+      '@types/jest': ^26.0.14 || ^27.0.0 || ^28.0.0
       enzyme-to-json: ^3.2.1
     peerDependenciesMeta:
       '@types/jest':
@@ -7317,7 +7336,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -15453,6 +15472,17 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
+
+  /promise-inflight/1.0.1_bluebird@3.7.2:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.2
     dev: true
 
   /promise.allsettled/1.0.5:
