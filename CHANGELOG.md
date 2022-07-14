@@ -1,3 +1,21 @@
+## [0.167.3](https://github.com/scaleway/scaleway-ui/compare/v0.167.2...v0.167.3) (2022-07-14)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.5 ([#1669](https://github.com/scaleway/scaleway-ui/issues/1669)) ([ea35a7e](https://github.com/scaleway/scaleway-ui/commit/ea35a7e1c45cc8f0aa9087d7032ea4e3d2c77548))
+* **devdeps:** update actions/setup-node action to v3.4.0 ([#1666](https://github.com/scaleway/scaleway-ui/issues/1666)) ([d73ab90](https://github.com/scaleway/scaleway-ui/commit/d73ab9099c3aa99d00d18e8f1e4961bbf0392914))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.42 ([#1664](https://github.com/scaleway/scaleway-ui/issues/1664)) ([f214cb9](https://github.com/scaleway/scaleway-ui/commit/f214cb9961589018be3338cdb25e8808d6fff77a))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.43 ([#1667](https://github.com/scaleway/scaleway-ui/issues/1667)) ([f56ee50](https://github.com/scaleway/scaleway-ui/commit/f56ee50573635145ba8013a2a873bbf86068b929))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.14 ([#1665](https://github.com/scaleway/scaleway-ui/issues/1665)) ([8d51bd2](https://github.com/scaleway/scaleway-ui/commit/8d51bd228f07e2d250e278989ef51cfc5a43f980))
+* **devdeps:** update dependency rollup to v2.76.0 ([#1670](https://github.com/scaleway/scaleway-ui/issues/1670)) ([6a5b806](https://github.com/scaleway/scaleway-ui/commit/6a5b806091b788e168fd903e5e4ba6821b23ccc2))
+* **devdeps:** update pnpm to v7.5.1 ([#1668](https://github.com/scaleway/scaleway-ui/issues/1668)) ([4e39524](https://github.com/scaleway/scaleway-ui/commit/4e39524aa318d3db4144cd4d6cc1387fa44e89d0))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo to v28.1.3 ([#1671](https://github.com/scaleway/scaleway-ui/issues/1671)) ([0b13a1f](https://github.com/scaleway/scaleway-ui/commit/0b13a1fd6ce3f366f7293574f9f9b6b97cd2e284))
+
 ## [0.167.2](https://github.com/scaleway/scaleway-ui/compare/v0.167.1...v0.167.2) (2022-07-11)
 
 
