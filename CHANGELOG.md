@@ -1,3 +1,19 @@
+## [0.167.4](https://github.com/scaleway/scaleway-ui/compare/v0.167.3...v0.167.4) (2022-07-18)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/setup-node action to v3.4.1 ([#1672](https://github.com/scaleway/scaleway-ui/issues/1672)) ([3353b7c](https://github.com/scaleway/scaleway-ui/commit/3353b7cc169c5b149f1614d02b7d4fda8322ae1e))
+* **devdeps:** update dependency @emotion/jest to v11.9.4 ([#1674](https://github.com/scaleway/scaleway-ui/issues/1674)) ([be32a86](https://github.com/scaleway/scaleway-ui/commit/be32a86bad43f49062c1107f58793fcf72819d4d))
+* **devdeps:** update dependency @testing-library/dom to v8.16.0 ([#1676](https://github.com/scaleway/scaleway-ui/issues/1676)) ([1916993](https://github.com/scaleway/scaleway-ui/commit/1916993e356d4f796bb33aa70d97669c058d398f))
+* **devdeps:** update node.js to v18.6 ([#1673](https://github.com/scaleway/scaleway-ui/issues/1673)) ([4f9edb7](https://github.com/scaleway/scaleway-ui/commit/4f9edb7971e9fb03e5f027e2030ae1b8117d6e0e))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency intl-tel-input to v17.0.18 ([#1675](https://github.com/scaleway/scaleway-ui/issues/1675)) ([a24b9ba](https://github.com/scaleway/scaleway-ui/commit/a24b9ba271e43f182bf2769116c4871a3782e9b9))
+* **deps:** update dependency react-select to v5.4.0 ([#1663](https://github.com/scaleway/scaleway-ui/issues/1663)) ([6bc5e77](https://github.com/scaleway/scaleway-ui/commit/6bc5e775ac545c7ea00d4ac3c9e821e63af78dd0))
+
 ## [0.167.3](https://github.com/scaleway/scaleway-ui/compare/v0.167.2...v0.167.3) (2022-07-14)
 
 
