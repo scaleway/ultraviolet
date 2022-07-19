@@ -120,23 +120,24 @@ const Link = forwardRef(
         variant={variant}
         rel={computedRel}
       >
-        {iconPosition === 'left' ? (
+        {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
         ) : null}
-        <span>
-          <StyledText
-            as="span"
-            variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}
-          >
-            {children}
-          </StyledText>
-          {isBlank ? (
-            <StyledExternalIconContainer>
-              <Icon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
-            </StyledExternalIconContainer>
-          ) : null}
-        </span>
-        {iconPosition === 'right' ? (
+
+        <StyledText
+          as="span"
+          variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}
+        >
+          {children}
+        </StyledText>
+
+        {isBlank ? (
+          <StyledExternalIconContainer>
+            <Icon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+          </StyledExternalIconContainer>
+        ) : null}
+
+        {!isBlank && iconPosition === 'right' ? (
           <Icon name="arrow-right" size={ICON_SIZE} />
         ) : null}
       </StyledLink>

@@ -52,7 +52,7 @@ const linkRenderer = ({
   }
 
   return (
-    <Link variant="blue" to={props.href} {...props}>
+    <Link variant="info" to={props.href} {...props}>
       {children}
     </Link>
   )
