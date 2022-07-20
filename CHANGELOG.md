@@ -1,3 +1,18 @@
+## [0.167.5](https://github.com/scaleway/scaleway-ui/compare/v0.167.4...v0.167.5) (2022-07-20)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.18.9 ([#1681](https://github.com/scaleway/scaleway-ui/issues/1681)) ([c91c862](https://github.com/scaleway/scaleway-ui/commit/c91c8626d86cda99313b26c79b6b94faaba7fff6))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.44 ([#1679](https://github.com/scaleway/scaleway-ui/issues/1679)) ([403e2cd](https://github.com/scaleway/scaleway-ui/commit/403e2cd6946ace5a94bd2a576f4d25a22ede4ff1))
+* **devdeps:** update docker/build-push-action action to v3.1.0 ([#1682](https://github.com/scaleway/scaleway-ui/issues/1682)) ([cc71fd9](https://github.com/scaleway/scaleway-ui/commit/cc71fd9562a41b8db673a295f9cc17355af7398f))
+* **devdeps:** update pnpm to v7.5.2 ([#1678](https://github.com/scaleway/scaleway-ui/issues/1678)) ([2615e65](https://github.com/scaleway/scaleway-ui/commit/2615e6582313154f396832661621eb052138bf31))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.0.7 ([#1677](https://github.com/scaleway/scaleway-ui/issues/1677)) ([8e35a8e](https://github.com/scaleway/scaleway-ui/commit/8e35a8e7edafb6c32d4bca158d8cfadc7de300df))
+
 ## [0.167.4](https://github.com/scaleway/scaleway-ui/compare/v0.167.3...v0.167.4) (2022-07-18)
 
 
