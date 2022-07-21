@@ -115,7 +115,7 @@ specifiers:
   rollup: 2.77.0
   rollup-plugin-dts: 4.2.2
   rollup-plugin-postcss: 4.0.2
-  rollup-plugin-visualizer: 5.6.0
+  rollup-plugin-visualizer: 5.7.1
   semantic-release: 19.0.3
   shx: 0.3.4
   size-limit: 7.0.8
@@ -242,7 +242,7 @@ devDependencies:
   rollup: 2.77.0
   rollup-plugin-dts: 4.2.2_55kiftncucr43pz4hskma6yi2q
   rollup-plugin-postcss: 4.0.2_postcss@8.4.14
-  rollup-plugin-visualizer: 5.6.0_rollup@2.77.0
+  rollup-plugin-visualizer: 5.7.1_rollup@2.77.0
   semantic-release: 19.0.3
   shx: 0.3.4
   size-limit: 7.0.8
@@ -12115,7 +12115,7 @@ packages:
       jest-util: 28.1.3
       jest-validate: 28.1.3
       prompts: 2.4.2
-      yargs: 17.4.1
+      yargs: 17.5.1
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -14108,12 +14108,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /nanoid/3.3.1:
-    resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: true
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
@@ -16713,18 +16707,18 @@ packages:
       - ts-node
     dev: true
 
-  /rollup-plugin-visualizer/5.6.0_rollup@2.77.0:
-    resolution: {integrity: sha512-CKcc8GTUZjC+LsMytU8ocRr/cGZIfMR7+mdy4YnlyetlmIl/dM8BMnOEpD4JPIGt+ZVW7Db9ZtSsbgyeBH3uTA==}
-    engines: {node: '>=12'}
+  /rollup-plugin-visualizer/5.7.1_rollup@2.77.0:
+    resolution: {integrity: sha512-E/IgOMnmXKlc6ICyf53ok1b6DxPeNVUs3R0kYYPuDpGfofT4bkiG+KtSMlGjMACFmfwbbqTVDZBIF7sMZVKJbA==}
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
       rollup: ^2.0.0
     dependencies:
-      nanoid: 3.3.1
+      nanoid: 3.3.4
       open: 8.4.0
       rollup: 2.77.0
       source-map: 0.7.3
-      yargs: 17.3.1
+      yargs: 17.5.1
     dev: true
 
   /rollup-pluginutils/2.8.2:
@@ -19256,8 +19250,8 @@ packages:
       yargs-parser: 20.2.9
     dev: true
 
-  /yargs/17.3.1:
-    resolution: {integrity: sha512-WUANQeVgjLbNsEmGk20f+nlHgOqzRFpiGWVaBrYGYIGANIIu3lWjoyi0fNlFmJkvfhCZ6BXINe7/W2O2bV4iaA==}
+  /yargs/17.4.1:
+    resolution: {integrity: sha512-WSZD9jgobAg3ZKuCQZSa3g9QOJeCCqLoLAykiWgmXnDo9EPnn4RPf5qVTtzgOx66o6/oqhcA5tHtJXpG8pMt3g==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
@@ -19269,8 +19263,8 @@ packages:
       yargs-parser: 21.0.1
     dev: true
 
-  /yargs/17.4.1:
-    resolution: {integrity: sha512-WSZD9jgobAg3ZKuCQZSa3g9QOJeCCqLoLAykiWgmXnDo9EPnn4RPf5qVTtzgOx66o6/oqhcA5tHtJXpG8pMt3g==}
+  /yargs/17.5.1:
+    resolution: {integrity: sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
