@@ -8,7 +8,6 @@ import React, {
   forwardRef,
 } from 'react'
 import { Color } from '../../theme'
-import { getTextDisabled } from '../../theme/helper'
 import Icon from '../Icon'
 import Text from '../Text'
 
@@ -86,10 +85,6 @@ const StyledLink = styled('a', {
   &:active::after {
     height: 2px;
   }
-
-  &[aria-disabled='true'] {
-    pointer-events: none;
-    color: ${({ theme, variant }) => getTextDisabled(theme, variant)};
 `
 
 const Link = forwardRef(
