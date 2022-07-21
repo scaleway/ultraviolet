@@ -31,4 +31,44 @@ describe('Link', () => {
         Hello
       </Link>,
     ))
+
+  test(`render correctly with to props`, () =>
+    shouldMatchEmotionSnapshot(
+      <>
+        <Link variant="primary" to="/" iconPosition="left">
+          Hello
+        </Link>
+        <Link variant="primary" to="/" iconPosition="right">
+          Hello
+        </Link>
+        <Link variant="primary" to="/" iconPosition="right" target="_blank">
+          Hello
+        </Link>
+        <Link variant="primary" to="/" iconPosition="left" target="_blank">
+          Hello
+        </Link>
+      </>,
+    ))
+
+  test(`render correctly with bad variant`, () =>
+    shouldMatchEmotionSnapshot(
+      // @ts-expect-error Use a wrong variant
+      <Link variant="wrong" to="/">
+        Hello
+      </Link>,
+    ))
+
+  test(`render correctly with sizes`, () =>
+    shouldMatchEmotionSnapshot(
+      <>
+        <Link size="large" to="/">
+          Hello
+        </Link>
+        ,
+        <Link size="small" to="/">
+          Hello
+        </Link>
+        ,
+      </>,
+    ))
 })
