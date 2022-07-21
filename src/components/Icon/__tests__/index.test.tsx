@@ -7,6 +7,16 @@ describe('Icon', () => {
       shouldMatchEmotionSnapshot(<Icon name={icon} />))
   })
 
+  test(`render Icon with color and prominence default`, () =>
+    shouldMatchEmotionSnapshot(
+      <Icon name="circle" color="neutral" prominence="default" />,
+    ))
+
+  test(`render Icon with color and prominence weak`, () =>
+    shouldMatchEmotionSnapshot(
+      <Icon name="circle" color="neutral" prominence="weak" />,
+    ))
+
   test(`render unknow`, async () => {
     const spy = jest.spyOn(console, 'error').mockImplementation()
 
