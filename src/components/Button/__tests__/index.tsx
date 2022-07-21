@@ -101,4 +101,18 @@ describe('Button', () => {
         Hello
       </Button>,
     ))
+
+  test('should render correctly with progress left and icon right', () =>
+    shouldMatchEmotionSnapshot(
+      <Button progress="left" icon="lock" iconPosition="right">
+        Hello
+      </Button>,
+    ))
+
+  test('should render correctly with progress right and icon left', () =>
+    shouldMatchEmotionSnapshot(
+      <Button progress="right" icon="lock" iconPosition="left">
+        Hello
+      </Button>,
+    ))
 })
