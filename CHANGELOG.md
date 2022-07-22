@@ -1,3 +1,19 @@
+## [0.168.0](https://github.com/scaleway/scaleway-ui/compare/v0.167.5...v0.168.0) (2022-07-22)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.45 ([#1683](https://github.com/scaleway/scaleway-ui/issues/1683)) ([ee006e0](https://github.com/scaleway/scaleway-ui/commit/ee006e0e4081bf10c02092b7fe9068d2c6af8b77))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.46 ([#1689](https://github.com/scaleway/scaleway-ui/issues/1689)) ([30f15a6](https://github.com/scaleway/scaleway-ui/commit/30f15a6c7be4488792b268ca1e3d3843e30161fc))
+* **devdeps:** update dependency eslint to v8.20.0 ([#1688](https://github.com/scaleway/scaleway-ui/issues/1688)) ([821e3bc](https://github.com/scaleway/scaleway-ui/commit/821e3bc5173f3131cf263f9428522a1f52a4af11))
+* **devdeps:** update dependency rollup to v2.77.0 ([#1684](https://github.com/scaleway/scaleway-ui/issues/1684)) ([a962c22](https://github.com/scaleway/scaleway-ui/commit/a962c2295a9a21ba96b47e351467d4e8b89be59e))
+* **devdeps:** update dependency rollup-plugin-visualizer to v5.7.1 ([#1685](https://github.com/scaleway/scaleway-ui/issues/1685)) ([3c92f5c](https://github.com/scaleway/scaleway-ui/commit/3c92f5c5e4e29047a61cfdaedfc293a4e3ea7e43))
+
+
+### :gear: Features
+
+* new link component ([#1622](https://github.com/scaleway/scaleway-ui/issues/1622)) ([ef1c51b](https://github.com/scaleway/scaleway-ui/commit/ef1c51ba4f48d74f4de24eae1e66c844d2a61412))
+
 ## [0.167.5](https://github.com/scaleway/scaleway-ui/compare/v0.167.4...v0.167.5) (2022-07-20)
 
 
