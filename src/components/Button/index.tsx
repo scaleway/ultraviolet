@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
   ComponentProps,
+  ElementType,
   FocusEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -374,6 +375,7 @@ type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   innerRef: Ref<Element>
   size?: ButtonSize
   download?: boolean | string
+  as?: ElementType
 }
 
 const FwdButton = ({
@@ -393,14 +395,16 @@ const FwdButton = ({
   tooltipBaseId,
   type: elementType = 'button',
   variant = 'primary',
+  as: asProp,
   ...props
 }: ButtonProps) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
+    if (asProp) return asProp
     if (to || href || download) return Link
 
     return 'button'
-  }, [disabled, to, href, download])
+  }, [disabled, to, href, download, asProp])
 
   const displayProgressOnly = !children
 
@@ -411,8 +415,7 @@ const FwdButton = ({
     <Tooltip id={tooltipBaseId} text={tooltip}>
       <StyledButton
         {...props}
-        href={href}
-        to={to}
+        href={to ?? href}
         download={download}
         ref={innerRef}
         as={as}
