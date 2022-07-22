@@ -621,8 +621,6 @@ const StyledIcon = styled(Box, {
     const themeColor = theme.colors[color as Color]
     const text = `text${definedProminence}` as keyof typeof themeColor
 
-    console.log(text)
-
     return (
       theme.colors?.[color as Color]?.[text] ||
       theme.colorsDeprecated[color as ColorDeprecated] ||
