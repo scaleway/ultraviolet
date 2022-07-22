@@ -90,6 +90,20 @@ Icons.decorators = [
   ),
 ]
 
+export const ProgressAndIcon = Template.bind({})
+ProgressAndIcon.decorators = [
+  () => (
+    <div style={{ display: 'flex', gap: 16 }}>
+      <Button progress="left" icon="lock" iconPosition="right">
+        left progress
+      </Button>
+      <Button progress="right" icon="lock" iconPosition="left">
+        right progress
+      </Button>
+    </div>
+  ),
+]
+
 export const IconsSizes = Template.bind({})
 IconsSizes.parameters = {
   docs: {

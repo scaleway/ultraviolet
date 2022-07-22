@@ -431,7 +431,7 @@ const FwdButton = ({
             margin={iconMargin}
             position={children ? 'left' : undefined}
           >
-            {progress ? (
+            {progress === true || progress === 'left' ? (
               <Loader
                 active
                 trailColor="transparent"
@@ -448,7 +448,7 @@ const FwdButton = ({
         )}
         {progress === 'right' || (icon && iconPosition === 'right') ? (
           <StyledIconContainer margin={iconMargin} position="right">
-            {progress ? (
+            {progress === 'right' ? (
               <Loader
                 active
                 trailColor="transparent"
