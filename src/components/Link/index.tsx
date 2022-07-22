@@ -1,93 +1,140 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { darken } from 'polished'
-import PropTypes from 'prop-types'
-import { ComponentProps, ReactNode } from 'react'
+import React, {
+  AnchorHTMLAttributes,
+  ForwardedRef,
+  HTMLAttributeAnchorTarget,
+  ReactNode,
+  forwardRef,
+} from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
-import UniversalLink from '../UniversalLink'
+import Text from '../Text'
 
-const generateVariant =
-  (color: Color | string) =>
-  ({ theme }: { theme: Theme }) =>
-    css`
-      color: ${theme.colors[color as Color]?.text ?? color};
-      &:hover,
-      &:focus {
-        color: ${darken(0.2, theme.colors[color as Color]?.text ?? color)};
-      }
-    `
-
-const neutral = ({ theme }: { theme: Theme }) =>
-  generateVariant(theme.colors.neutral.textWeak)
-
-const variants = {
-  blue: generateVariant('info'),
-  gray: neutral,
-  inherit: () => css`
-    color: inherit;
-    &:hover,
-    &:focus {
-      color: inherit;
-      text-decoration: none;
-    }
-  `,
-  primary: ({ theme }: { theme: Theme }) => css`
-    color: ${theme.colors.primary.text};
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary.text};
-    }
-  `,
-  white: ({ theme }: { theme: Theme }) =>
-    generateVariant(theme.colors.neutral.textStrong),
-}
-
-type Variant = keyof typeof variants
-export const linkVariants = Object.keys(variants) as Variant[]
-
-const variantStyles = ({ variant }: { variant?: Variant }) =>
-  variant && Object.keys(variants).includes(variant)
-    ? variants[variant]
-    : undefined
-
+type LinkSizes = 'large' | 'small'
+type LinkIconPosition = 'left' | 'right'
 type LinkProps = {
   children: ReactNode
-  variant?: Variant
-  target?: string
-} & ComponentProps<typeof UniversalLink>
+  target?: HTMLAttributeAnchorTarget
+  download?: string | boolean
+  variant?: Color
+  size?: LinkSizes
+  iconPosition?: LinkIconPosition
+  rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
+  className?: string
+} & XOR<[{ href: string }, { to: string }]>
 
-const StyledLink = styled(UniversalLink, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})<LinkProps>`
-  cursor: pointer;
+const ICON_SIZE = 16
+const BLANK_TARGET_ICON_SIZE = 14
+const TRANSITION_DURATION = 250
+
+const StyledExternalIconContainer = styled.span`
+  display: inline-flex;
+`
+const StyledText = styled(Text)``
+
+export const StyledLink = styled('a', {
+  shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
+})<{
+  variant: Color
+}>`
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: ${({ theme, variant }) =>
+    theme.colors[variant]?.text ?? theme.colors.neutral.text};
   text-decoration: none;
-  transition: color 200ms ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: gap ${TRANSITION_DURATION}ms ease-out;
+  gap: ${({ theme }) => theme.space['1']};
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+
+  ${StyledText} {
+    color: inherit;
+  }
+
+  &::after {
+    transition: background ${TRANSITION_DURATION}ms ease-out;
+    content: '';
+    position: absolute;
+    top: calc(100% - 1px);
+    height: 1px;
+    left: 0;
+    right: 0;
+  }
+
   &:hover,
   &:focus {
-    text-decoration: underline;
+    gap: ${({ theme }) => theme.space['0.5']};
+    outline: none;
   }
-  ${variantStyles}
+
+  &:hover::after,
+  &:focus::after {
+    background-color: ${({ theme, variant }) =>
+      theme.colors[variant]?.text ?? theme.colors.neutral.text};
+  }
+
+  &:active::after {
+    height: 2px;
+  }
 `
 
-const StyledIcon = styled(Icon)`
-  padding-left: 2px;
-  opacity: 0.5;
-`
+const Link = forwardRef(
+  (
+    {
+      children,
+      to,
+      href,
+      target,
+      download,
+      variant = 'primary',
+      size = 'large',
+      iconPosition,
+      rel,
+      className,
+    }: LinkProps,
+    ref: ForwardedRef<HTMLAnchorElement>,
+  ) => {
+    const isBlank = target === '_blank'
+    const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
 
-const Link = ({ variant, children, target, ...props }: LinkProps) => (
-  <StyledLink variant={variant} target={target} {...props}>
-    {children}
-    {target === '_blank' && (
-      <StyledIcon name="open-in-new" verticalAlign="top" />
-    )}
-  </StyledLink>
+    return (
+      <StyledLink
+        href={href ?? to}
+        target={target}
+        download={download}
+        ref={ref}
+        variant={variant}
+        rel={computedRel}
+        className={className}
+      >
+        {!isBlank && iconPosition === 'left' ? (
+          <Icon name="arrow-left" size={ICON_SIZE} />
+        ) : null}
+
+        <StyledText
+          as="span"
+          variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}
+        >
+          {children}
+        </StyledText>
+
+        {isBlank ? (
+          <StyledExternalIconContainer>
+            <Icon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+          </StyledExternalIconContainer>
+        ) : null}
+
+        {!isBlank && iconPosition === 'right' ? (
+          <Icon name="arrow-right" size={ICON_SIZE} />
+        ) : null}
+      </StyledLink>
+    )
+  },
 )
-
-Link.propTypes = {
-  children: PropTypes.node.isRequired,
-  target: PropTypes.string,
-  variant: PropTypes.oneOf<Variant>(linkVariants),
-}
 
 export default Link

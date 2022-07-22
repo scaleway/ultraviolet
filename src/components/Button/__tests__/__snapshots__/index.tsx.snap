@@ -112,7 +112,7 @@ exports[`Button should render correctly loading 1`] = `
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco82"
+      class="cache-i4evwh-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -148,7 +148,7 @@ exports[`Button should render correctly loading 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -277,7 +277,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco82"
+      class="cache-i4evwh-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -313,12 +313,12 @@ exports[`Button should render correctly loading with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco82"
+      class="cache-n16c8f-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -359,7 +359,32 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-1p1qm9l-StyledButton {
+  .cache-1mjk5sq-StyledLink-StyledButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -396,20 +421,63 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-1p1qm9l-StyledButton:hover,
-.cache-1p1qm9l-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover::after,
+.cache-1mjk5sq-StyledLink-StyledButton:focus::after {
+  background-color: #390171;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:active::after {
+  height: 2px;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p1qm9l-StyledButton:hover,
-.cache-1p1qm9l-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1p1qm9l-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -429,15 +497,18 @@ exports[`Button should render correctly when acting as Link 1`] = `
 }
 
 <a
-    aria-disabled="false"
-    class="em6gco80 cache-1p1qm9l-StyledButton"
+    class="em6gco80 cache-1mjk5sq-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco81"
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
     >
-      Hello
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco82"
+      >
+        Hello
+      </div>
+    </span>
   </a>
 </DocumentFragment>
 `;
@@ -527,7 +598,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -537,7 +608,32 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 exports[`Button should render correctly when acting as dom link 1`] = `
 <DocumentFragment>
-  .cache-a4uads-StyledButton {
+  .cache-1mjk5sq-StyledLink-StyledButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -574,20 +670,63 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   color: #ffffff;
 }
 
-.cache-a4uads-StyledButton:hover,
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover::after,
+.cache-1mjk5sq-StyledLink-StyledButton:focus::after {
+  background-color: #390171;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:active::after {
+  height: 2px;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-a4uads-StyledButton:hover,
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -607,15 +746,18 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 }
 
 <a
-    aria-disabled="false"
-    class="em6gco80 cache-a4uads-StyledButton"
+    class="em6gco80 cache-1mjk5sq-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco81"
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
     >
-      Hello
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco82"
+      >
+        Hello
+      </div>
+    </span>
   </a>
 </DocumentFragment>
 `;
@@ -704,7 +846,7 @@ exports[`Button should render correctly when disabled 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -714,7 +856,7 @@ exports[`Button should render correctly when disabled 1`] = `
 
 exports[`Button should render correctly when extendable 1`] = `
 <DocumentFragment>
-  .cache-1iai93r-StyledButton-StyledButton {
+  .cache-1bgrqd1-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -755,23 +897,23 @@ exports[`Button should render correctly when extendable 1`] = `
   display: inline-flex;
 }
 
-.cache-1iai93r-StyledButton-StyledButton:hover,
-.cache-1iai93r-StyledButton-StyledButton:focus {
+.cache-1bgrqd1-StyledButton-StyledButton:hover,
+.cache-1bgrqd1-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1iai93r-StyledButton-StyledButton:hover,
-.cache-1iai93r-StyledButton-StyledButton:focus {
+.cache-1bgrqd1-StyledButton-StyledButton:hover,
+.cache-1bgrqd1-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1iai93r-StyledButton-StyledButton:focus {
+.cache-1bgrqd1-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-1iai93r-StyledButton-StyledButton .em6gco81 {
+.cache-1bgrqd1-StyledButton-StyledButton .em6gco82 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -780,8 +922,8 @@ exports[`Button should render correctly when extendable 1`] = `
   overflow: hidden;
 }
 
-.cache-1iai93r-StyledButton-StyledButton:focus .em6gco81,
-.cache-1iai93r-StyledButton-StyledButton:hover .em6gco81 {
+.cache-1bgrqd1-StyledButton-StyledButton:focus .em6gco82,
+.cache-1bgrqd1-StyledButton-StyledButton:hover .em6gco82 {
   max-width: 275px;
   margin-right: 8px;
   padding-left: 8px;
@@ -805,11 +947,11 @@ exports[`Button should render correctly when extendable 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1iai93r-StyledButton-StyledButton"
+    class="em6gco80 cache-1bgrqd1-StyledButton-StyledButton"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -819,7 +961,7 @@ exports[`Button should render correctly when extendable 1`] = `
 
 exports[`Button should render correctly when extendable with an icon 1`] = `
 <DocumentFragment>
-  .cache-1sq8no5-StyledButton-StyledButton {
+  .cache-147h60a-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -860,23 +1002,23 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   display: inline-flex;
 }
 
-.cache-1sq8no5-StyledButton-StyledButton:hover,
-.cache-1sq8no5-StyledButton-StyledButton:focus {
+.cache-147h60a-StyledButton-StyledButton:hover,
+.cache-147h60a-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1sq8no5-StyledButton-StyledButton:hover,
-.cache-1sq8no5-StyledButton-StyledButton:focus {
+.cache-147h60a-StyledButton-StyledButton:hover,
+.cache-147h60a-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1sq8no5-StyledButton-StyledButton:focus {
+.cache-147h60a-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-1sq8no5-StyledButton-StyledButton .em6gco81 {
+.cache-147h60a-StyledButton-StyledButton .em6gco82 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -885,8 +1027,8 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   overflow: hidden;
 }
 
-.cache-1sq8no5-StyledButton-StyledButton:focus .em6gco81,
-.cache-1sq8no5-StyledButton-StyledButton:hover .em6gco81 {
+.cache-147h60a-StyledButton-StyledButton:focus .em6gco82,
+.cache-147h60a-StyledButton-StyledButton:hover .em6gco82 {
   max-width: 275px;
   margin-right: 8px;
   padding-right: 8x;
@@ -931,11 +1073,11 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1sq8no5-StyledButton-StyledButton"
+    class="em6gco80 cache-147h60a-StyledButton-StyledButton"
     type="button"
   >
     <div
-      class="cache-vpgnqw-StyledIconContainer em6gco82"
+      class="cache-vpgnqw-StyledIconContainer em6gco81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -947,7 +1089,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -1025,7 +1167,7 @@ exports[`Button should render correctly with a custom Icon 1`] = `
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco82"
+      class="cache-1sybl11-StyledIconContainer em6gco81"
     >
       IconMock
     </div>
@@ -1126,7 +1268,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco82"
+      class="cache-1sybl11-StyledIconContainer em6gco81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -1243,7 +1385,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
       type="button"
     >
       <div
-        class="cache-i4evwh-StyledIconContainer em6gco82"
+        class="cache-i4evwh-StyledIconContainer em6gco81"
       >
         <svg
           class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -1255,7 +1397,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
         </svg>
       </div>
       <div
-        class="cache-m245rk-StyledContent em6gco81"
+        class="cache-m245rk-StyledContent em6gco82"
       >
         Hello
       </div>
@@ -1356,7 +1498,7 @@ exports[`Button should render correctly with an action button 1`] = `
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco82"
+      class="cache-1sybl11-StyledIconContainer em6gco81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -1469,12 +1611,12 @@ exports[`Button should render correctly with an icon on the right 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco82"
+      class="cache-n16c8f-StyledIconContainer em6gco81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -1635,7 +1777,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco82"
+      class="cache-1sybl11-StyledIconContainer em6gco81"
     >
       <svg
         class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
@@ -1727,7 +1869,7 @@ exports[`Button size render large 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -1811,7 +1953,7 @@ exports[`Button size render medium 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -1895,7 +2037,7 @@ exports[`Button size render small 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -1979,7 +2121,7 @@ exports[`Button size render xsmall 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2061,7 +2203,7 @@ exports[`Button size render xxsmall 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2146,7 +2288,7 @@ exports[`Button variant render info 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2243,7 +2385,7 @@ exports[`Button variant render info-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2253,7 +2395,7 @@ exports[`Button variant render info-bordered 1`] = `
 
 exports[`Button variant render link 1`] = `
 <DocumentFragment>
-  .cache-17m6xr9-StyledButton {
+  .cache-ng6gxi-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2286,24 +2428,35 @@ exports[`Button variant render link 1`] = `
   line-height: 32px;
   font-weight: 500;
   padding: 8px 16px;
-  background-color: #ffffff;
-  color: #3f6ed8;
-  vertical-align: baseline;
-  font-weight: 400;
+  background-color: transparent;
+  border: none;
   padding: 0;
+  color: #1a4dbf;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-poisition: under;
+  text-decoration-thickness: 1px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
 }
 
-.cache-17m6xr9-StyledButton:hover,
-.cache-17m6xr9-StyledButton:focus {
+.cache-ng6gxi-StyledButton:hover,
+.cache-ng6gxi-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-17m6xr9-StyledButton:hover,
-.cache-17m6xr9-StyledButton:focus {
-  color: #1e4293;
+.cache-ng6gxi-StyledButton:hover,
+.cache-ng6gxi-StyledButton:focus {
+  text-decoration-thickness: 1px;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-ng6gxi-StyledButton:active {
+  text-decoration-thickness: 2px;
 }
 
 .cache-m245rk-StyledContent {
@@ -2324,11 +2477,11 @@ exports[`Button variant render link 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-17m6xr9-StyledButton"
+    class="em6gco80 cache-ng6gxi-StyledButton"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2413,7 +2566,7 @@ exports[`Button variant render primary 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2510,7 +2663,7 @@ exports[`Button variant render primary-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2607,7 +2760,7 @@ exports[`Button variant render primary-soft-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2692,7 +2845,7 @@ exports[`Button variant render secondary 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2789,7 +2942,7 @@ exports[`Button variant render secondary-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2874,7 +3027,7 @@ exports[`Button variant render success 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -2971,7 +3124,7 @@ exports[`Button variant render success-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -3068,7 +3221,7 @@ exports[`Button variant render success-soft-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -3143,7 +3296,7 @@ exports[`Button variant render transparent 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -3228,7 +3381,7 @@ exports[`Button variant render warning 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -3325,7 +3478,7 @@ exports[`Button variant render warning-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>
@@ -3422,7 +3575,7 @@ exports[`Button variant render warning-soft-bordered 1`] = `
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco81"
+      class="cache-m245rk-StyledContent em6gco82"
     >
       Hello
     </div>

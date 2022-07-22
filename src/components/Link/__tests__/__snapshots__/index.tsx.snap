@@ -1,269 +1,1498 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link render correctly with no variant 1`] = `
+exports[`Link render correctly with bad variant 1`] = `
 <DocumentFragment>
-  .cache-1jppk4e-StyledLink {
-  cursor: pointer;
+  .cache-m96yk5-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1jppk4e-StyledLink:hover,
-.cache-1jppk4e-StyledLink:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m96yk5-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-m96yk5-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-m96yk5-StyledLink:hover,
+.cache-m96yk5-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m96yk5-StyledLink:hover::after,
+.cache-m96yk5-StyledLink:focus::after {
+  background-color: #4a4f62;
+}
+
+.cache-m96yk5-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1jppk4e-StyledLink"
+    class="cache-m96yk5-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
+</DocumentFragment>
+`;
+
+exports[`Link render correctly with no variant 1`] = `
+<DocumentFragment>
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link render correctly with sizes 1`] = `
+<DocumentFragment>
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+  ,
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-b1bqd8-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-b1bqd8-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+  ,
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1vxww7r-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles {
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-  padding-left: 2px;
-  opacity: 0.5;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
 }
 
-.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon.cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: top;
+.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+  vertical-align: middle;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-17lc80u-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Hello
-    <svg
-      class="e4bq1r50 etwatq50 cache-xkhaqm-StyledIcon-sizeStyles-StyledIcon"
-      viewBox="0 0 24 24"
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
     >
-      <path
-        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-      />
-    </svg>
+      Hello
+    </span>
+    <span
+      class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+        />
+      </svg>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with to props 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-17lc80u-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render blue 1`] = `
+exports[`Link render correctly with to props 2`] = `
 <DocumentFragment>
-  .cache-1ixn77i-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
+      />
+    </svg>
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+    <svg
+      class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+      />
+    </svg>
+  </a>
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1vxww7r-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+    <span
+      class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+        />
+      </svg>
+    </span>
+  </a>
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1vxww7r-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+<a
+    class="cache-17lc80u-StyledLink e4bq1r50"
+    href="/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+    <span
+      class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+        />
+      </svg>
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render danger 1`] = `
+<DocumentFragment>
+  .cache-gpwhbu-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #a6102d;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-gpwhbu-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-gpwhbu-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-gpwhbu-StyledLink:hover,
+.cache-gpwhbu-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-gpwhbu-StyledLink:hover::after,
+.cache-gpwhbu-StyledLink:focus::after {
+  background-color: #a6102d;
+}
+
+.cache-gpwhbu-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-gpwhbu-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render info 1`] = `
+<DocumentFragment>
+  .cache-ps2o3q-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   color: #1a4dbf;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-ps2o3q-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1ixn77i-StyledLink-generateVariant:hover,
-.cache-1ixn77i-StyledLink-generateVariant:focus {
-  color: #0e2965;
+.cache-ps2o3q-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-ps2o3q-StyledLink:hover,
+.cache-ps2o3q-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-ps2o3q-StyledLink:hover::after,
+.cache-ps2o3q-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-ps2o3q-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1ixn77i-StyledLink-generateVariant"
+    class="cache-ps2o3q-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render gray 1`] = `
+exports[`Link variant render neutral 1`] = `
 <DocumentFragment>
-  .cache-1wnfao4-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-m96yk5-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #b2b6c3;
-}
-
-.cache-1wnfao4-StyledLink-generateVariant:hover,
-.cache-1wnfao4-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1wnfao4-StyledLink-generateVariant:hover,
-.cache-1wnfao4-StyledLink-generateVariant:focus {
-  color: #798096;
-}
-
-<a
-    class="e4bq1r51 cache-1wnfao4-StyledLink-generateVariant"
-    href="/"
-  >
-    Hello
-  </a>
-</DocumentFragment>
-`;
-
-exports[`Link variant render inherit 1`] = `
-<DocumentFragment>
-  .cache-1u6ab8v-StyledLink-inherit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
+}
+
+.cache-m96yk5-StyledLink .e4bq1r51 {
   color: inherit;
 }
 
-.cache-1u6ab8v-StyledLink-inherit:hover,
-.cache-1u6ab8v-StyledLink-inherit:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-m96yk5-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
 }
 
-.cache-1u6ab8v-StyledLink-inherit:hover,
-.cache-1u6ab8v-StyledLink-inherit:focus {
-  color: inherit;
+.cache-m96yk5-StyledLink:hover,
+.cache-m96yk5-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-m96yk5-StyledLink:hover::after,
+.cache-m96yk5-StyledLink:focus::after {
+  background-color: #4a4f62;
+}
+
+.cache-m96yk5-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1u6ab8v-StyledLink-inherit"
+    class="cache-m96yk5-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render primary 1`] = `
 <DocumentFragment>
-  .cache-ow94xv-StyledLink-primary {
-  cursor: pointer;
+  .cache-17lc80u-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #390171;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-17lc80u-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-ow94xv-StyledLink-primary:hover,
-.cache-ow94xv-StyledLink-primary:focus {
-  color: #390171;
+.cache-17lc80u-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-17lc80u-StyledLink:hover,
+.cache-17lc80u-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-17lc80u-StyledLink:hover::after,
+.cache-17lc80u-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-17lc80u-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-ow94xv-StyledLink-primary"
+    class="cache-17lc80u-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
-exports[`Link variant render white 1`] = `
+exports[`Link variant render success 1`] = `
 <DocumentFragment>
-  .cache-1nk5tmw-StyledLink-generateVariant {
-  cursor: pointer;
+  .cache-1lls4vb-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #149a7b;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 200ms ease;
-  transition: color 200ms ease;
-  color: #151a2d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 
-.cache-1nk5tmw-StyledLink-generateVariant:hover,
-.cache-1nk5tmw-StyledLink-generateVariant:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.cache-1lls4vb-StyledLink .e4bq1r51 {
+  color: inherit;
 }
 
-.cache-1nk5tmw-StyledLink-generateVariant:hover,
-.cache-1nk5tmw-StyledLink-generateVariant:focus {
-  color: #000;
+.cache-1lls4vb-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1lls4vb-StyledLink:hover,
+.cache-1lls4vb-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-1lls4vb-StyledLink:hover::after,
+.cache-1lls4vb-StyledLink:focus::after {
+  background-color: #149a7b;
+}
+
+.cache-1lls4vb-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <a
-    class="e4bq1r51 cache-1nk5tmw-StyledLink-generateVariant"
+    class="cache-1lls4vb-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link variant render warning 1`] = `
+<DocumentFragment>
+  .cache-9ku8cg-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #cc4e18;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-9ku8cg-StyledLink .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-9ku8cg-StyledLink::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-9ku8cg-StyledLink:hover,
+.cache-9ku8cg-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-9ku8cg-StyledLink:hover::after,
+.cache-9ku8cg-StyledLink:focus::after {
+  background-color: #cc4e18;
+}
+
+.cache-9ku8cg-StyledLink:active::after {
+  height: 2px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    class="cache-9ku8cg-StyledLink e4bq1r50"
+    href="/"
+  >
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    >
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
