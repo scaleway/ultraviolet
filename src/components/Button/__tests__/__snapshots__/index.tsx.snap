@@ -2,7 +2,23 @@
 
 exports[`Button should render correctly loading 1`] = `
 <DocumentFragment>
-  .cache-a4uads-StyledButton {
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-a4uads-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -64,16 +80,14 @@ exports[`Button should render correctly loading 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
 }
 
 .cache-m245rk-StyledContent {
@@ -101,11 +115,35 @@ exports[`Button should render correctly loading 1`] = `
       class="cache-i4evwh-StyledIconContainer em6gco82"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-        viewBox="0 0 24 24"
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-gqzzce-Loader"
+        role="progressbar"
+        style="height: 1em; width: 1em;"
+        viewBox="0 0 100 100"
       >
-        <path
-          d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="transparent"
+          stroke-width="16"
+        />
+        <circle
+          class="cache-11f05l0-Loader"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="currentColor"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
         />
       </svg>
     </div>
@@ -120,7 +158,23 @@ exports[`Button should render correctly loading 1`] = `
 
 exports[`Button should render correctly loading with an icon 1`] = `
 <DocumentFragment>
-  .cache-a4uads-StyledButton {
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-a4uads-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -182,16 +236,14 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
 }
 
 .cache-m245rk-StyledContent {
@@ -219,6 +271,18 @@ exports[`Button should render correctly loading with an icon 1`] = `
   pointer-events: none;
 }
 
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
 <button
     aria-disabled="false"
     class="em6gco80 cache-a4uads-StyledButton"
@@ -228,11 +292,35 @@ exports[`Button should render correctly loading with an icon 1`] = `
       class="cache-i4evwh-StyledIconContainer em6gco82"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-        viewBox="0 0 24 24"
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-gqzzce-Loader"
+        role="progressbar"
+        style="height: 1em; width: 1em;"
+        viewBox="0 0 100 100"
       >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="transparent"
+          stroke-width="16"
+        />
+        <circle
+          class="cache-11f05l0-Loader"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="currentColor"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
         />
       </svg>
     </div>

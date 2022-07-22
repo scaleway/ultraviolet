@@ -420,7 +420,7 @@ const FwdButton = ({
             margin={iconMargin}
             position={children ? 'left' : undefined}
           >
-            {progress === 'left' ? (
+            {progress === true || progress === 'left' ? (
               <Loader
                 active
                 trailColor="transparent"
