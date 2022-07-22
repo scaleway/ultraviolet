@@ -5,6 +5,7 @@ import { forwardRef, useMemo } from 'react'
 import * as React from 'react'
 import { Color } from '../../theme'
 import { ColorDeprecated } from '../../theme/deprecated/colors'
+import capitalize from '../../utils/capitalize'
 import Box, { BoxProps } from '../Box'
 
 // Non Material Design icons: 'send',
@@ -592,20 +593,43 @@ const sizeStyles = ({ size }: { size: number | string }) => {
   `
 }
 
+export const PROMINENCES = {
+  default: '',
+  strong: 'strong',
+  stronger: 'stronger',
+  weak: 'weak',
+}
+
+type ProminenceProps = keyof typeof PROMINENCES
+
 const StyledIcon = styled(Box, {
-  shouldForwardProp: prop => !['size', 'color'].includes(prop),
+  shouldForwardProp: prop => !['size', 'color', 'prominence'].includes(prop),
 })<
   {
     color: ColorDeprecated | Color | string
     size: number | string
     className: string
     viewBox: string
+    prominence: ProminenceProps
   } & BoxProps
 >`
-  fill: ${({ theme, color }) =>
-    theme.colors[color as Color]?.text ||
-    theme.colorsDeprecated[color as ColorDeprecated] ||
-    color};
+  fill: ${({ theme, color, prominence }) => {
+    // stronger is available only for neutral color
+    const definedProminence =
+      color !== 'neutral' && prominence === 'stronger'
+        ? capitalize(PROMINENCES.default)
+        : capitalize(PROMINENCES[prominence])
+
+    const themeColor = theme.colors[color as Color]
+    const text = `text${definedProminence}` as keyof typeof themeColor
+
+    return (
+      theme.colors?.[color as Color]?.[text] ||
+      theme.colorsDeprecated[color as ColorDeprecated] ||
+      color
+    )
+  }};
+
   ${sizeStyles}
 `
 
@@ -615,6 +639,8 @@ type IconProps = {
   size?: number | string
   name?: IconName
   title?: string
+  prominence?: ProminenceProps
+  color?: Color | string
 } & BoxProps &
   React.SVGAttributes<HTMLOrSVGElement>
 
@@ -625,6 +651,7 @@ const Icon = forwardRef<SVGElement, IconProps>(
       color = 'currentColor',
       size = '1em',
       verticalAlign = 'middle',
+      prominence = 'default',
       ...props
     },
     ref,
@@ -644,6 +671,7 @@ const Icon = forwardRef<SVGElement, IconProps>(
         ref={ref}
         className="sc-ui-icon"
         color={color}
+        prominence={prominence}
         size={size}
         verticalAlign={verticalAlign}
         viewBox={defaultViewBox}
@@ -658,6 +686,7 @@ const Icon = forwardRef<SVGElement, IconProps>(
 Icon.propTypes = {
   color: PropTypes.string,
   name: PropTypes.oneOf(icons),
+  prominence: PropTypes.oneOf(['default', 'strong', 'stronger', 'weak']),
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
