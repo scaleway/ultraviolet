@@ -1,6 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { darken, transparentize } from 'polished'
+import { transparentize } from 'polished'
 import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
@@ -18,6 +18,15 @@ import Icon from '../Icon'
 import Link from '../Link'
 import Loader from '../Loader'
 import Tooltip from '../Tooltip'
+
+const TRANSITION_DURATION = 250
+
+const StyledContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+`
 
 const borderedVariant = ({
   colorValue,
@@ -90,18 +99,29 @@ const variants = {
       colorValue: theme.colors.info.textWeak,
       hoverColorValue: theme.colors.info.backgroundStrongHover,
     }),
-  link: ({ theme: { colors } }: { theme: Theme }) => `
-    background-color: ${colors.info.backgroundWeak};
-    color: ${colors.info.textWeak};
-    vertical-align: baseline;
-    font-weight: 400;
+  link: ({ theme }: { theme: Theme }) => `
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: ${theme.colors.info.text};
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-poisition: under;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
+
 
     &:hover,
     &:focus {
-      color: ${darken(0.2, colors.info.textWeak)};
+      text-decoration-thickness: 1px;
       text-decoration: underline;
+      text-decoration-color: ${theme.colors.info.text};
     }
-    padding: 0;
+
+    &:active {
+      text-decoration-thickness: 2px;
+    }
   `,
   primary: ({ theme }: { theme: Theme }) =>
     plainVariant({
@@ -249,13 +269,6 @@ const StyledIconContainer = styled('div', {
     ${position === 'left' ? `margin-right: ${margin}px;` : ``}
     ${position === 'right' ? `margin-left: ${margin}px;` : ``}
     pointer-events: none;`}
-`
-
-const StyledContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
 `
 type StyledButtonProps = {
   action?: boolean | 'rounded'

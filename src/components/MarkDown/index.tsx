@@ -41,18 +41,19 @@ const paragraphRenderer = ({ children }: { children: ReactNode }) => (
 const linkRenderer = ({
   node,
   children,
+  href,
   ...props
 }: {
   node: unknown
   href: string
   children: ReactNode
 }) => {
-  if (!props.href) {
+  if (!href) {
     return null
   }
 
   return (
-    <Link variant="info" to={props.href} {...props}>
+    <Link variant="info" href={href} {...props}>
       {children}
     </Link>
   )

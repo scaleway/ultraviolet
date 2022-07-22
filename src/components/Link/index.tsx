@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import React, {
   AnchorHTMLAttributes,
-  ElementType,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
   ReactNode,
@@ -21,9 +20,8 @@ type LinkProps = {
   size?: LinkSizes
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
-  as?: ElementType
-  to: string
-}
+  className?: string
+} & XOR<[{ href: string }, { to: string }]>
 
 const ICON_SIZE = 16
 const BLANK_TARGET_ICON_SIZE = 14
@@ -34,13 +32,11 @@ const StyledExternalIconContainer = styled.span`
 `
 const StyledText = styled(Text)``
 
-const StyledLink = styled('a', {
+export const StyledLink = styled('a', {
   shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
-})<
-  AnchorHTMLAttributes<HTMLAnchorElement> & {
-    variant: Color
-  }
->`
+})<{
+  variant: Color
+}>`
   background-color: transparent;
   border: none;
   padding: 0;
@@ -92,13 +88,14 @@ const Link = forwardRef(
     {
       children,
       to,
+      href,
       target,
       download,
       variant = 'primary',
       size = 'large',
       iconPosition,
       rel,
-      as,
+      className,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -107,13 +104,13 @@ const Link = forwardRef(
 
     return (
       <StyledLink
-        as={as}
-        href={to}
+        href={href ?? to}
         target={target}
         download={download}
         ref={ref}
         variant={variant}
         rel={computedRel}
+        className={className}
       >
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
