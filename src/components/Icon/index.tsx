@@ -618,8 +618,6 @@ const StyledIcon = styled(Box, {
         ? capitalize(PROMINENCES.default)
         : capitalize(PROMINENCES[prominence])
 
-    console.log(definedProminence)
-
     const themeColor = theme.colors[color as Color]
     const text = `text${definedProminence}` as keyof typeof themeColor
 
