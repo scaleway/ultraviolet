@@ -347,32 +347,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-1mjk5sq-StyledLink-StyledButton {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #390171;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: gap 250ms ease-out;
-  transition: gap 250ms ease-out;
-  gap: 8px;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
+  .cache-a4uads-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -409,63 +384,20 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-1mjk5sq-StyledLink-StyledButton .e4bq1r51 {
-  color: inherit;
-}
-
-.cache-1mjk5sq-StyledLink-StyledButton::after {
-  -webkit-transition: background 250ms ease-out;
-  transition: background 250ms ease-out;
-  content: '';
-  position: absolute;
-  top: calc(100% - 1px);
-  height: 1px;
-  left: 0;
-  right: 0;
-}
-
-.cache-1mjk5sq-StyledLink-StyledButton:hover,
-.cache-1mjk5sq-StyledLink-StyledButton:focus {
-  gap: 4px;
-  outline: none;
-}
-
-.cache-1mjk5sq-StyledLink-StyledButton:hover::after,
-.cache-1mjk5sq-StyledLink-StyledButton:focus::after {
-  background-color: #390171;
-}
-
-.cache-1mjk5sq-StyledLink-StyledButton:active::after {
-  height: 2px;
-}
-
-.cache-1mjk5sq-StyledLink-StyledButton:hover,
-.cache-1mjk5sq-StyledLink-StyledButton:focus {
+.cache-a4uads-StyledButton:hover,
+.cache-a4uads-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1mjk5sq-StyledLink-StyledButton:hover,
-.cache-1mjk5sq-StyledLink-StyledButton:focus {
+.cache-a4uads-StyledButton:hover,
+.cache-a4uads-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1mjk5sq-StyledLink-StyledButton:focus {
+.cache-a4uads-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
-}
-
-.cache-12sgwsl-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -484,20 +416,18 @@ exports[`Button should render correctly when acting as Link 1`] = `
   pointer-events: none;
 }
 
-<a
-    class="em6gco80 cache-1mjk5sq-StyledLink-StyledButton e4bq1r50"
-    href="/"
+<button
+    aria-disabled="false"
+    class="em6gco80 cache-a4uads-StyledButton"
+    to="/"
+    type="button"
   >
-    <span
-      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    <div
+      class="cache-m245rk-StyledContent em6gco82"
     >
-      <div
-        class="cache-m245rk-StyledContent em6gco82"
-      >
-        Hello
-      </div>
-    </span>
-  </a>
+      Hello
+    </div>
+  </button>
 </DocumentFragment>
 `;
 
@@ -582,7 +512,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
     aria-disabled="true"
     class="em6gco80 cache-1t1ifkf-StyledButton"
     disabled=""
-    href="/"
+    to="/"
     type="button"
   >
     <div
@@ -1612,6 +1542,195 @@ exports[`Button should render correctly with an icon on the right 1`] = `
       >
         <path
           d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+        />
+      </svg>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button should render correctly with as 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-a4uads-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #4f0599;
+  color: #ffffff;
+}
+
+.cache-a4uads-StyledButton:hover,
+.cache-a4uads-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-a4uads-StyledButton:hover,
+.cache-a4uads-StyledButton:focus {
+  color: #ffffff;
+  background-color: #390171;
+}
+
+.cache-a4uads-StyledButton:focus {
+  box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-i4evwh-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+  pointer-events: none;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-m245rk-StyledContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cache-n16c8f-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 8px;
+  pointer-events: none;
+}
+
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<button
+    aria-disabled="false"
+    class="em6gco80 cache-a4uads-StyledButton"
+    type="button"
+  >
+    <div
+      class="cache-i4evwh-StyledIconContainer em6gco81"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+        />
+      </svg>
+    </div>
+    <div
+      class="cache-m245rk-StyledContent em6gco82"
+    >
+      Hello
+    </div>
+    <div
+      class="cache-n16c8f-StyledIconContainer em6gco81"
+    >
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="cache-gqzzce-Loader"
+        role="progressbar"
+        style="height: 1em; width: 1em;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="transparent"
+          stroke-width="16"
+        />
+        <circle
+          class="cache-11f05l0-Loader"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="currentColor"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
         />
       </svg>
     </div>

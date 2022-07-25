@@ -281,7 +281,6 @@ type StyledButtonProps = {
   progress?: boolean | 'left' | 'right'
   iconSize?: number
   size: ButtonSize
-  to?: string
   tooltip?: string
   tooltipBaseId?: string
   type?: 'button' | 'reset' | 'submit'
@@ -390,7 +389,6 @@ const FwdButton = ({
   innerRef,
   progress,
   size = 'large',
-  to,
   tooltip,
   tooltipBaseId,
   type: elementType = 'button',
@@ -401,10 +399,10 @@ const FwdButton = ({
   const as = useMemo(() => {
     if (disabled) return 'button'
     if (asProp) return asProp
-    if (to || href || download) return Link
+    if (href || download) return Link
 
     return 'button'
-  }, [disabled, to, href, download, asProp])
+  }, [disabled, href, download, asProp])
 
   const displayProgressOnly = !children
 
@@ -415,7 +413,7 @@ const FwdButton = ({
     <Tooltip id={tooltipBaseId} text={tooltip}>
       <StyledButton
         {...props}
-        href={to ?? href}
+        href={href}
         download={download}
         ref={innerRef}
         as={as}
@@ -495,7 +493,6 @@ Button.propTypes = {
    */
   progress: PropTypes.oneOf([true, false, 'left', 'right']),
   size: PropTypes.oneOf<ButtonSize>(buttonSizes),
-  to: PropTypes.string,
   tooltip: PropTypes.string,
   tooltipBaseId: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),

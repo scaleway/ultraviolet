@@ -115,4 +115,11 @@ describe('Button', () => {
         Hello
       </Button>,
     ))
+
+  test('should render correctly with as', () =>
+    shouldMatchEmotionSnapshot(
+      <Button progress="right" icon="lock" as="button" iconPosition="left">
+        Hello
+      </Button>,
+    ))
 })
