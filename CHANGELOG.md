@@ -1,3 +1,21 @@
+## [0.169.0](https://github.com/scaleway/scaleway-ui/compare/v0.168.0...v0.169.0) (2022-07-25)
+
+
+### :bug: Bug Fixes
+
+* **button:** progress with icon ([#1686](https://github.com/scaleway/scaleway-ui/issues/1686)) ([95aa851](https://github.com/scaleway/scaleway-ui/commit/95aa85138e1e0d41a9ee6b52ce0ea263f88b0fb5))
+
+
+### :package: Chore
+
+* **devdeps:** update philibea/scaleway-containers-deploy action to v1.0.8 ([#1657](https://github.com/scaleway/scaleway-ui/issues/1657)) ([910a898](https://github.com/scaleway/scaleway-ui/commit/910a898dca576eae8abdbc1adc07d43f8eb23b0d))
+
+
+### :gear: Features
+
+* drop to prop on link component ([#1690](https://github.com/scaleway/scaleway-ui/issues/1690)) ([a791a90](https://github.com/scaleway/scaleway-ui/commit/a791a90496067d53d3b9d581767b90726f979dbd))
+* **Icon:** add prominence support ([#1687](https://github.com/scaleway/scaleway-ui/issues/1687)) ([7246844](https://github.com/scaleway/scaleway-ui/commit/72468445b48a2b174e29e692b5730381f0803531))
+
 ## [0.168.0](https://github.com/scaleway/scaleway-ui/compare/v0.167.5...v0.168.0) (2022-07-22)
 
 
