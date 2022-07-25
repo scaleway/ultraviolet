@@ -31,7 +31,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.4.46
   '@scaleway/jest-helpers': 1.2.7
   '@scaleway/random-name': 3.0.2
-  '@scaleway/use-i18n': 3.3.14
+  '@scaleway/use-i18n': 3.3.15
   '@scaleway/use-media': 1.1.1
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
@@ -173,7 +173,7 @@ devDependencies:
   '@rollup/plugin-url': 7.0.0_rollup@2.77.0
   '@scaleway/eslint-config-react': 3.4.46_he2ccbldppg44uulnyq4rwocfa
   '@scaleway/jest-helpers': 1.2.7_abm6fqd7tcgc5o2fbyniegush4
-  '@scaleway/use-i18n': 3.3.14_sfoxds7t5ydpegc3knd667wn6m
+  '@scaleway/use-i18n': 3.3.15_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
   '@semantic-release/git': 10.0.1_semantic-release@19.0.3
@@ -3533,15 +3533,15 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-i18n/3.3.14_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-DxpPJ3wIPphAgArvfHcnM8R37QwX+FCQOwar4+nZQxKABBrZjSuUQyJDrv+BPLBes2ohYXmtoKR9GhgDRvDfjg==}
+  /@scaleway/use-i18n/3.3.15_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-MrH2ju6AqZMhDtVTLdVCexYo7UnHnIqNeS2Gstj1YxH5KI/dlNfeBe/z8yKBlKDTWKrRrIfneqH/4flq34pssA==}
     peerDependencies:
       react: 17.x || 18.x || 17
       react-dom: 17.x || 18.x
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.8
       '@formatjs/fast-memoize': 1.2.4
-      date-fns: 2.28.0
+      date-fns: 2.29.1
       filesize: 9.0.11
       intl-messageformat: 10.1.1
       prop-types: 15.8.1
@@ -7475,7 +7475,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -8768,6 +8768,11 @@ packages:
   /date-fns/2.28.0:
     resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
     engines: {node: '>=0.11'}
+
+  /date-fns/2.29.1:
+    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+    engines: {node: '>=0.11'}
+    dev: true
 
   /dateformat/3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
@@ -15605,17 +15610,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-    dev: true
-
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
     dev: true
 
   /promise.allsettled/1.0.5:
