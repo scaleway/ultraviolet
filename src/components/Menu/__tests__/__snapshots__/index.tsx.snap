@@ -462,32 +462,7 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 
 exports[`Menu Menu.Item render with variant nav 1`] = `
 <DocumentFragment>
-  .cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #390171;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: gap 250ms ease-out;
-  transition: gap 250ms ease-out;
-  gap: 8px;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
+  .cache-195dw03-StyledButton-item-nav-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -540,80 +515,37 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item .e4bq1r51 {
-  color: inherit;
-}
-
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item::after {
-  -webkit-transition: background 250ms ease-out;
-  transition: background 250ms ease-out;
-  content: '';
-  position: absolute;
-  top: calc(100% - 1px);
-  height: 1px;
-  left: 0;
-  right: 0;
-}
-
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus {
-  gap: 4px;
-  outline: none;
-}
-
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover::after,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus::after {
-  background-color: #390171;
-}
-
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:active::after {
-  height: 2px;
-}
-
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus {
+.cache-195dw03-StyledButton-item-nav-Item:hover,
+.cache-195dw03-StyledButton-item-nav-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus {
+.cache-195dw03-StyledButton-item-nav-Item:hover,
+.cache-195dw03-StyledButton-item-nav-Item:focus {
   color: #390171;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover svg,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus svg {
+.cache-195dw03-StyledButton-item-nav-Item:hover svg,
+.cache-195dw03-StyledButton-item-nav-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:last-child {
+.cache-195dw03-StyledButton-item-nav-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus {
+.cache-195dw03-StyledButton-item-nav-Item:hover,
+.cache-195dw03-StyledButton-item-nav-Item:focus {
   color: #390171;
 }
 
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:hover svg,
-.cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item:focus svg {
+.cache-195dw03-StyledButton-item-nav-Item:hover svg,
+.cache-195dw03-StyledButton-item-nav-Item:focus svg {
   fill: #390171;
-}
-
-.cache-12sgwsl-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -632,20 +564,19 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   pointer-events: none;
 }
 
-<a
-    class="em6gco80 cache-1ezr1xl-StyledLink-StyledButton-item-nav-Item e4bq1r50"
-    href="/test"
+<button
+    aria-disabled="false"
+    class="em6gco80 cache-195dw03-StyledButton-item-nav-Item"
+    role="menuitem"
+    to="/test"
+    type="button"
   >
-    <span
-      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+    <div
+      class="cache-m245rk-StyledContent em6gco82"
     >
-      <div
-        class="cache-m245rk-StyledContent em6gco82"
-      >
-        Nav
-      </div>
-    </span>
-  </a>
+      Nav
+    </div>
+  </button>
 </DocumentFragment>
 `;
 
@@ -2373,32 +2304,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-qjqxj0-StyledLink-StyledButton-item-Item {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #390171;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: gap 250ms ease-out;
-  transition: gap 250ms ease-out;
-  gap: 8px;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
+.cache-1fbex2w-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2448,70 +2354,27 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   background-color: transparent;
 }
 
-.cache-qjqxj0-StyledLink-StyledButton-item-Item .e4bq1r51 {
-  color: inherit;
-}
-
-.cache-qjqxj0-StyledLink-StyledButton-item-Item::after {
-  -webkit-transition: background 250ms ease-out;
-  transition: background 250ms ease-out;
-  content: '';
-  position: absolute;
-  top: calc(100% - 1px);
-  height: 1px;
-  left: 0;
-  right: 0;
-}
-
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:hover,
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:focus {
-  gap: 4px;
-  outline: none;
-}
-
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:hover::after,
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:focus::after {
-  background-color: #390171;
-}
-
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:active::after {
-  height: 2px;
-}
-
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:hover,
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:focus {
+.cache-1fbex2w-StyledButton-item-Item:hover,
+.cache-1fbex2w-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:hover,
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:focus {
+.cache-1fbex2w-StyledButton-item-Item:hover,
+.cache-1fbex2w-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:hover svg,
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:focus svg {
+.cache-1fbex2w-StyledButton-item-Item:hover svg,
+.cache-1fbex2w-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-qjqxj0-StyledLink-StyledButton-item-Item:last-child {
+.cache-1fbex2w-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
-}
-
-.cache-12sgwsl-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -2543,20 +2406,19 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
       class="cache-1u5ri25-MenuList-centerStyles-bottomStyles-bottom epli4kt0"
       role="menu"
     >
-      <a
-        class="em6gco80 cache-qjqxj0-StyledLink-StyledButton-item-Item e4bq1r50"
-        href="/link"
+      <button
+        aria-disabled="false"
+        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        role="menuitem"
+        to="/link"
+        type="button"
       >
-        <span
-          class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
+        <div
+          class="cache-m245rk-StyledContent em6gco82"
         >
-          <div
-            class="cache-m245rk-StyledContent em6gco82"
-          >
-            Menu.Item as Link
-          </div>
-        </span>
-      </a>
+          Menu.Item as Link
+        </div>
+      </button>
     </div>
   </div>
 </DocumentFragment>

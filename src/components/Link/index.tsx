@@ -21,7 +21,8 @@ type LinkProps = {
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
-} & XOR<[{ href: string }, { to: string }]>
+  href: string
+}
 
 const ICON_SIZE = 16
 const BLANK_TARGET_ICON_SIZE = 14
@@ -87,7 +88,6 @@ const Link = forwardRef(
   (
     {
       children,
-      to,
       href,
       target,
       download,
@@ -104,7 +104,7 @@ const Link = forwardRef(
 
     return (
       <StyledLink
-        href={href ?? to}
+        href={href}
         target={target}
         download={download}
         ref={ref}

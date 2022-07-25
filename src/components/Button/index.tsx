@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
   ComponentProps,
+  ElementType,
   FocusEventHandler,
   MouseEventHandler,
   ReactNode,
@@ -280,7 +281,6 @@ type StyledButtonProps = {
   progress?: boolean | 'left' | 'right'
   iconSize?: number
   size: ButtonSize
-  to?: string
   tooltip?: string
   tooltipBaseId?: string
   type?: 'button' | 'reset' | 'submit'
@@ -374,6 +374,7 @@ type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
   innerRef: Ref<Element>
   size?: ButtonSize
   download?: boolean | string
+  as?: ElementType
 }
 
 const FwdButton = ({
@@ -388,19 +389,20 @@ const FwdButton = ({
   innerRef,
   progress,
   size = 'large',
-  to,
   tooltip,
   tooltipBaseId,
   type: elementType = 'button',
   variant = 'primary',
+  as: asProp,
   ...props
 }: ButtonProps) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
-    if (to || href || download) return Link
+    if (asProp) return asProp
+    if (href || download) return Link
 
     return 'button'
-  }, [disabled, to, href, download])
+  }, [disabled, href, download, asProp])
 
   const displayProgressOnly = !children
 
@@ -412,7 +414,6 @@ const FwdButton = ({
       <StyledButton
         {...props}
         href={href}
-        to={to}
         download={download}
         ref={innerRef}
         as={as}
@@ -492,7 +493,6 @@ Button.propTypes = {
    */
   progress: PropTypes.oneOf([true, false, 'left', 'right']),
   size: PropTypes.oneOf<ButtonSize>(buttonSizes),
-  to: PropTypes.string,
   tooltip: PropTypes.string,
   tooltipBaseId: PropTypes.string,
   variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),

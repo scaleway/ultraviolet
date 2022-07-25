@@ -4,14 +4,14 @@ import { Color, SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
   test(`render correctly with no variant`, () =>
-    shouldMatchEmotionSnapshot(<Link to="/">Hello</Link>))
+    shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
 
   describe('variant', () => {
     test.each(SENTIMENTS.map(variant => [`render ${variant}`, variant]))(
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link to="/" variant={variant as Color}>
+          <Link href="/" variant={variant as Color}>
             Hello
           </Link>,
         ),
@@ -20,31 +20,31 @@ describe('Link', () => {
 
   test(`render correctly with target blank`, () =>
     shouldMatchEmotionSnapshot(
-      <Link to="/" variant="primary" target="_blank">
+      <Link href="/" variant="primary" target="_blank">
         Hello
       </Link>,
     ))
 
-  test(`render correctly with to props`, () =>
+  test(`render correctly with href props`, () =>
     shouldMatchEmotionSnapshot(
-      <Link variant="primary" to="/">
+      <Link variant="primary" href="/">
         Hello
       </Link>,
     ))
 
-  test(`render correctly with to props`, () =>
+  test(`render correctly with href props`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Link variant="primary" to="/" iconPosition="left">
+        <Link variant="primary" href="/" iconPosition="left">
           Hello
         </Link>
-        <Link variant="primary" to="/" iconPosition="right">
+        <Link variant="primary" href="/" iconPosition="right">
           Hello
         </Link>
-        <Link variant="primary" to="/" iconPosition="right" target="_blank">
+        <Link variant="primary" href="/" iconPosition="right" target="_blank">
           Hello
         </Link>
-        <Link variant="primary" to="/" iconPosition="left" target="_blank">
+        <Link variant="primary" href="/" iconPosition="left" target="_blank">
           Hello
         </Link>
       </>,
@@ -53,7 +53,7 @@ describe('Link', () => {
   test(`render correctly with bad variant`, () =>
     shouldMatchEmotionSnapshot(
       // @ts-expect-error Use a wrong variant
-      <Link variant="wrong" to="/">
+      <Link variant="wrong" href="/">
         Hello
       </Link>,
     ))
@@ -61,11 +61,11 @@ describe('Link', () => {
   test(`render correctly with sizes`, () =>
     shouldMatchEmotionSnapshot(
       <>
-        <Link size="large" to="/">
+        <Link size="large" href="/">
           Hello
         </Link>
         ,
-        <Link size="small" to="/">
+        <Link size="small" href="/">
           Hello
         </Link>
         ,

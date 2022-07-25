@@ -41,11 +41,11 @@ describe('Button', () => {
     ))
 
   test(`should render correctly when acting as Link`, () =>
-    shouldMatchEmotionSnapshot(<Button to="/">Hello</Button>))
+    shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>))
 
   test(`should render correctly when acting as Link with disabled props`, () =>
     shouldMatchEmotionSnapshot(
-      <Button to="/" disabled>
+      <Button href="/" disabled>
         Hello
       </Button>,
     ))
@@ -112,6 +112,13 @@ describe('Button', () => {
   test('should render correctly with progress right and icon left', () =>
     shouldMatchEmotionSnapshot(
       <Button progress="right" icon="lock" iconPosition="left">
+        Hello
+      </Button>,
+    ))
+
+  test('should render correctly with as', () =>
+    shouldMatchEmotionSnapshot(
+      <Button progress="right" icon="lock" as="button" iconPosition="left">
         Hello
       </Button>,
     ))
