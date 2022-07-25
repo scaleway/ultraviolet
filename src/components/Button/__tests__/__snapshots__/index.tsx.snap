@@ -347,7 +347,32 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-a4uads-StyledButton {
+  .cache-1mjk5sq-StyledLink-StyledButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -384,20 +409,63 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-a4uads-StyledButton:hover,
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton .e4bq1r51 {
+  color: inherit;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
+  gap: 4px;
+  outline: none;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover::after,
+.cache-1mjk5sq-StyledLink-StyledButton:focus::after {
+  background-color: #390171;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:active::after {
+  height: 2px;
+}
+
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-a4uads-StyledButton:hover,
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:hover,
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-a4uads-StyledButton:focus {
+.cache-1mjk5sq-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-m245rk-StyledContent {
@@ -416,18 +484,20 @@ exports[`Button should render correctly when acting as Link 1`] = `
   pointer-events: none;
 }
 
-<button
-    aria-disabled="false"
-    class="em6gco80 cache-a4uads-StyledButton"
-    to="/"
-    type="button"
+<a
+    class="em6gco80 cache-1mjk5sq-StyledLink-StyledButton e4bq1r50"
+    href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
     >
-      Hello
-    </div>
-  </button>
+      <div
+        class="cache-m245rk-StyledContent em6gco82"
+      >
+        Hello
+      </div>
+    </span>
+  </a>
 </DocumentFragment>
 `;
 
@@ -512,7 +582,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
     aria-disabled="true"
     class="em6gco80 cache-1t1ifkf-StyledButton"
     disabled=""
-    to="/"
+    href="/"
     type="button"
   >
     <div
