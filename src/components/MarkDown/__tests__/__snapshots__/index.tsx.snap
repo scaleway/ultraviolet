@@ -60,7 +60,7 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.cache-ps2o3q-StyledLink {
+.cache-fpuvje-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -88,11 +88,11 @@ exports[`MarkDown render simple string 1`] = `
   cursor: pointer;
 }
 
-.cache-ps2o3q-StyledLink .e4bq1r51 {
+.cache-fpuvje-StyledLink .e4bq1r51 {
   color: inherit;
 }
 
-.cache-ps2o3q-StyledLink::after {
+.cache-fpuvje-StyledLink::after {
   -webkit-transition: background 250ms ease-out;
   transition: background 250ms ease-out;
   content: '';
@@ -103,18 +103,21 @@ exports[`MarkDown render simple string 1`] = `
   right: 0;
 }
 
-.cache-ps2o3q-StyledLink:hover,
-.cache-ps2o3q-StyledLink:focus {
+.cache-fpuvje-StyledLink:hover,
+.cache-fpuvje-StyledLink:focus {
   gap: 4px;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #1a4dbf;
 }
 
-.cache-ps2o3q-StyledLink:hover::after,
-.cache-ps2o3q-StyledLink:focus::after {
+.cache-fpuvje-StyledLink:hover::after,
+.cache-fpuvje-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-ps2o3q-StyledLink:active::after {
+.cache-fpuvje-StyledLink:active::after {
   height: 2px;
 }
 
@@ -186,7 +189,7 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-ps2o3q-StyledLink e4bq1r50"
+        class="cache-fpuvje-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
       >
         <span
@@ -243,7 +246,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 0;
 }
 
-.cache-ps2o3q-StyledLink {
+.cache-fpuvje-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -271,11 +274,11 @@ exports[`MarkDown render simple string with target blank 1`] = `
   cursor: pointer;
 }
 
-.cache-ps2o3q-StyledLink .e4bq1r51 {
+.cache-fpuvje-StyledLink .e4bq1r51 {
   color: inherit;
 }
 
-.cache-ps2o3q-StyledLink::after {
+.cache-fpuvje-StyledLink::after {
   -webkit-transition: background 250ms ease-out;
   transition: background 250ms ease-out;
   content: '';
@@ -286,18 +289,21 @@ exports[`MarkDown render simple string with target blank 1`] = `
   right: 0;
 }
 
-.cache-ps2o3q-StyledLink:hover,
-.cache-ps2o3q-StyledLink:focus {
+.cache-fpuvje-StyledLink:hover,
+.cache-fpuvje-StyledLink:focus {
   gap: 4px;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #1a4dbf;
 }
 
-.cache-ps2o3q-StyledLink:hover::after,
-.cache-ps2o3q-StyledLink:focus::after {
+.cache-fpuvje-StyledLink:hover::after,
+.cache-fpuvje-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-ps2o3q-StyledLink:active::after {
+.cache-fpuvje-StyledLink:active::after {
   height: 2px;
 }
 
@@ -388,7 +394,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-ps2o3q-StyledLink e4bq1r50"
+        class="cache-fpuvje-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
