@@ -71,6 +71,9 @@ export const StyledLink = styled('a', {
   &:focus {
     gap: ${({ theme }) => theme.space['0.5']};
     outline: none;
+    text-decoration: none;
+    color: ${({ theme, variant }) =>
+      theme.colors[variant]?.text ?? theme.colors.neutral.text};
   }
 
   &:hover::after,
