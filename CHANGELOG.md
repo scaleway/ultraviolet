@@ -1,3 +1,10 @@
+## [0.169.2](https://github.com/scaleway/scaleway-ui/compare/v0.169.1...v0.169.2) (2022-07-26)
+
+
+### :bug: Bug Fixes
+
+* force link styles on hover ([#1695](https://github.com/scaleway/scaleway-ui/issues/1695)) ([c36479c](https://github.com/scaleway/scaleway-ui/commit/c36479c962e79f9d85d88b5e2f040f1ed2d37e03))
+
 ## [0.169.1](https://github.com/scaleway/scaleway-ui/compare/v0.169.0...v0.169.1) (2022-07-26)
 
 
