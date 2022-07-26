@@ -42,7 +42,7 @@ Variants.decorators = [
         <Link
           key={variant}
           iconPosition="left"
-          to="localhost:6006"
+          href="https://scaleway.com"
           variant={variant}
         >
           {variant}
@@ -61,7 +61,7 @@ Target.parameters = {
 }
 Target.decorators = [
   () => (
-    <Link to="localhost:6006" target="_blank">
+    <Link href="https://scaleway.com" target="_blank">
       Link opens in a new tab
     </Link>
   ),
@@ -76,10 +76,10 @@ Size.parameters = {
 Size.decorators = [
   () => (
     <>
-      <Link size="large" to="localhost:6006">
+      <Link size="large" href="https://scaleway.com">
         Link opens in a new tab
       </Link>
-      <Link size="small" to="localhost:6006">
+      <Link size="small" href="https://scaleway.com">
         Link opens in a new tab
       </Link>
     </>

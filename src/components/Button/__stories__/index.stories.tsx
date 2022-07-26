@@ -212,7 +212,7 @@ LinkDelegation.parameters = {
 }
 LinkDelegation.decorators = [
   () => (
-    <Button to="https://scaleway.com" target="_blank">
+    <Button href="https://scaleway.com" target="_blank">
       Scaleway
     </Button>
   ),

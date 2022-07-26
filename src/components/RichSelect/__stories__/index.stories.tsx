@@ -82,7 +82,7 @@ CustomOptions.decorators = [
             justifyContent: 'space-between',
           }}
         >
-          Option B<Badge size="rounded">Awesome badge</Badge>
+          Option B<Badge size="small">Awesome badge</Badge>
         </div>
       </RichSelect.Option>
     </RichSelect>
@@ -270,7 +270,7 @@ TimeNormal.decorators = [
 export const TimeError = Template.bind({})
 TimeError.decorators = [
   () => (
-    <RichSelect name="time-error" time error>
+    <RichSelect name="time-error" time error="this is an error">
       <RichSelect.Option value="11">11:00</RichSelect.Option>
       <RichSelect.Option value="12">12:00</RichSelect.Option>
     </RichSelect>

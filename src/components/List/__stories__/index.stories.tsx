@@ -659,7 +659,7 @@ Animated.decorators = [
                         <list.Row
                           id={rowData.id}
                           animated
-                          animation={value.value}
+                          animation={value.value as keyof typeof animations}
                         >
                           <list.Cell>{rowData.name}</list.Cell>
                           <list.Cell>{rowData.description}</list.Cell>

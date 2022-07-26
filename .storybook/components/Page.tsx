@@ -8,7 +8,7 @@ import {
   Stories,
   PRIMARY_STORY,
 } from '@storybook/addon-docs'
-import { Badge, Link } from '../../src'
+import { Badge, Button } from '../../src'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 
@@ -63,9 +63,9 @@ const Page = ({ deprecated, deprecatedReason, migrationLink }: PageProps) => (
         </StyledText>
         {migrationLink ? (
           <p>
-            <Link onClick={linkTo(migrationLink)} variant="primary">
+            <Button onClick={linkTo(migrationLink)} variant="link">
               How to migrate?
-            </Link>
+            </Button>
           </p>
         ) : null}
       </FlexDiv>
