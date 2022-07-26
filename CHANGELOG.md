@@ -1,3 +1,10 @@
+## [0.169.3](https://github.com/scaleway/scaleway-ui/compare/v0.169.2...v0.169.3) (2022-07-26)
+
+
+### :bug: Bug Fixes
+
+* errors and menu link not working ([#1694](https://github.com/scaleway/scaleway-ui/issues/1694)) ([6fb536e](https://github.com/scaleway/scaleway-ui/commit/6fb536ea83be300dd78682a667b83f8982fbeff5))
+
 ## [0.169.2](https://github.com/scaleway/scaleway-ui/compare/v0.169.1...v0.169.2) (2022-07-26)
 
 
