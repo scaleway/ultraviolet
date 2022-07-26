@@ -1,3 +1,10 @@
+## [0.169.1](https://github.com/scaleway/scaleway-ui/compare/v0.169.0...v0.169.1) (2022-07-26)
+
+
+### :bug: Bug Fixes
+
+* **text:** remove margin set by headers and paragraphs ([#1653](https://github.com/scaleway/scaleway-ui/issues/1653)) ([212aa62](https://github.com/scaleway/scaleway-ui/commit/212aa62624afebb43ab8d51153f8e32104bab047))
+
 ## [0.169.0](https://github.com/scaleway/scaleway-ui/compare/v0.168.0...v0.169.0) (2022-07-25)
 
 
