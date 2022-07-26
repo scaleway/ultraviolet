@@ -89,6 +89,7 @@ const Item = ({
   disabled = false,
   onClick,
   variant,
+  href,
   ...props
 }: ItemProps) => (
   <Button
@@ -96,6 +97,8 @@ const Item = ({
     role="menuitem"
     disabled={disabled}
     onClick={onClick}
+    href={href}
+    as={href ? 'a' : undefined}
     {...props}
     css={[
       styles.item,

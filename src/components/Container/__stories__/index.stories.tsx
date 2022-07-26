@@ -27,7 +27,11 @@ Title.decorators = [
 
 export const RightTitle = Template.bind({})
 RightTitle.decorators = [
-  () => <Container rightTitle="Hello there">General Kenobi</Container>,
+  () => (
+    <Container title="hello there" rightTitle="(bis)">
+      General Kenobi
+    </Container>
+  ),
 ]
 
 export const SubTitle = Template.bind({})

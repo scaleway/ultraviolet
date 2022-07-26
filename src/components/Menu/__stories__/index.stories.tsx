@@ -38,7 +38,7 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
   <div style={{ height: '80px' }}>
     <Menu disclosure={disclosure} {...props}>
       <Menu.Item>MenuItem</Menu.Item>
-      <Menu.Item to="/?path=/docs/components-navigation-menu--default">
+      <Menu.Item href="/?path=/docs/components-navigation-menu--default">
         MenuItemLink
       </Menu.Item>
     </Menu>
@@ -66,31 +66,31 @@ Variants.decorators = [
         <Menu.Item variant="danger">Danger</Menu.Item>
         <Menu.Item variant="nav">Nav</Menu.Item>
         <Menu.Item>default</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-navigation-menu--default">
+        <Menu.Item href="/?path=/docs/components-navigation-menu--default">
           Link
         </Menu.Item>
         <Menu.Item
           variant="danger"
-          to="/?path=/docs/components-navigation-menu--default"
+          href="/?path=/docs/components-navigation-menu--default"
         >
           Link Danger
         </Menu.Item>
         <Menu.Item
           variant="danger"
-          to="/?path=/docs/components-navigation-menu--default"
+          href="/?path=/docs/components-navigation-menu--default"
           disabled
         >
           Link Danger Disabled
         </Menu.Item>
         <Menu.Item
           variant="nav"
-          to="/?path=/docs/components-navigation-menu--default"
+          href="/?path=/docs/components-navigation-menu--default"
         >
           Link Nav
         </Menu.Item>
         <Menu.Item
           variant="nav"
-          to="/?path=/docs/components-navigation-menu--default"
+          href="/?path=/docs/components-navigation-menu--default"
           disabled
         >
           Link Nav disabled
@@ -126,21 +126,21 @@ Borderless.decorators = [
         </Menu.Item>
         <Menu.Item borderless>default</Menu.Item>
         <Menu.Item
-          to="/?path=/docs/components-navigation-menu--borderless"
+          href="/?path=/docs/components-navigation-menu--borderless"
           borderless
         >
           Link
         </Menu.Item>
         <Menu.Item
           variant="danger"
-          to="/?path=/docs/components-navigation-menu--borderless"
+          href="/?path=/docs/components-navigation-menu--borderless"
           borderless
         >
           Link Danger
         </Menu.Item>
         <Menu.Item
           variant="nav"
-          to="/?path=/docs/components-navigation-menu--borderless"
+          href="/?path=/docs/components-navigation-menu--borderless"
           borderless
         >
           Link Nav
@@ -181,7 +181,7 @@ ChildrenProps.decorators = [
               Nav disabled borderless
             </Menu.Item>
             <Menu.Item
-              to="/?path=/docs/components-navigation-menu--children-props"
+              href="/?path=/docs/components-navigation-menu--children-props"
               onClick={toggle}
             >
               Menu Item Link
@@ -208,7 +208,7 @@ Modal.decorators = [
     <div style={{ height: '100px' }}>
       <Menu disclosure={DefaultDisclosure}>
         <Menu.Item>Menu Item</Menu.Item>
-        <Menu.Item to="/?path=/docs/components-navigation-menu--modal">
+        <Menu.Item href="/?path=/docs/components-navigation-menu--modal">
           Menu Item Link
         </Menu.Item>
         <SWUIModal
