@@ -1,3 +1,16 @@
+## [0.170.0](https://github.com/scaleway/scaleway-ui/compare/v0.169.3...v0.170.0) (2022-07-26)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.47 ([#1692](https://github.com/scaleway/scaleway-ui/issues/1692)) ([9dec465](https://github.com/scaleway/scaleway-ui/commit/9dec4653a692fd2d61d39d59b6eb0f42b9255d6f))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.15 ([#1693](https://github.com/scaleway/scaleway-ui/issues/1693)) ([f1abdf7](https://github.com/scaleway/scaleway-ui/commit/f1abdf76c07a899485d054269cbe91d45f67928c))
+
+
+### :gear: Features
+
+* remove StatusIndicator ([#1691](https://github.com/scaleway/scaleway-ui/issues/1691)) ([37ed351](https://github.com/scaleway/scaleway-ui/commit/37ed35116ab68a4e373b68fef6a62b42b8357eb3))
+
 ## [0.169.3](https://github.com/scaleway/scaleway-ui/compare/v0.169.2...v0.169.3) (2022-07-26)
 
 
