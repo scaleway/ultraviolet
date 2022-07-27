@@ -1,4 +1,5 @@
 import deepmerge from 'deepmerge'
+import { ComponentClass } from 'react'
 import colorsDeprecated from './deprecated/colors'
 import dark from './tokens/dark'
 import light from './tokens/light'
@@ -59,7 +60,7 @@ const theme = {
 }
 
 type SCWUITheme = typeof theme & {
-  linkComponent?: unknown
+  linkComponent?: ComponentClass<any, HTMLAnchorElement>
 }
 
 type RecursivePartial<T> = {

@@ -2,7 +2,7 @@
 
 exports[`Menu Menu.Item render with borderless props 1`] = `
 <DocumentFragment>
-  .cache-1q5v645-StyledButton-item-borderless-Item {
+  .cache-f3t1pr-StyledButton-item-borderless-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -53,27 +53,38 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
   border: 0;
 }
 
-.cache-1q5v645-StyledButton-item-borderless-Item:hover,
-.cache-1q5v645-StyledButton-item-borderless-Item:focus {
+.cache-f3t1pr-StyledButton-item-borderless-Item:hover,
+.cache-f3t1pr-StyledButton-item-borderless-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1q5v645-StyledButton-item-borderless-Item:hover,
-.cache-1q5v645-StyledButton-item-borderless-Item:focus {
+.cache-f3t1pr-StyledButton-item-borderless-Item::after {
+  display: none;
+}
+
+.cache-f3t1pr-StyledButton-item-borderless-Item:hover,
+.cache-f3t1pr-StyledButton-item-borderless-Item:focus {
   color: #390171;
 }
 
-.cache-1q5v645-StyledButton-item-borderless-Item:hover svg,
-.cache-1q5v645-StyledButton-item-borderless-Item:focus svg {
+.cache-f3t1pr-StyledButton-item-borderless-Item:hover svg,
+.cache-f3t1pr-StyledButton-item-borderless-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1q5v645-StyledButton-item-borderless-Item:last-child {
+.cache-f3t1pr-StyledButton-item-borderless-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -94,22 +105,26 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1q5v645-StyledButton-item-borderless-Item"
+    class="em6gco80 cache-f3t1pr-StyledButton-item-borderless-Item"
     role="menuitem"
     type="button"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="cache-ivfmnf-ButtonContentContainer em6gco82"
     >
-      Borderless Props
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco83"
+      >
+        Borderless Props
+      </div>
+    </span>
   </button>
 </DocumentFragment>
 `;
 
 exports[`Menu Menu.Item render with default props 1`] = `
 <DocumentFragment>
-  .cache-1fbex2w-StyledButton-item-Item {
+  .cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -159,27 +174,38 @@ exports[`Menu Menu.Item render with default props 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -200,22 +226,26 @@ exports[`Menu Menu.Item render with default props 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+    class="em6gco80 cache-r09hro-StyledButton-item-Item"
     role="menuitem"
     type="button"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="cache-ivfmnf-ButtonContentContainer em6gco82"
     >
-      Default Props
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco83"
+      >
+        Default Props
+      </div>
+    </span>
   </button>
 </DocumentFragment>
 `;
 
 exports[`Menu Menu.Item render with disabled props 1`] = `
 <DocumentFragment>
-  .cache-b0j5iu-StyledButton-item-disabled-Item {
+  .cache-se2jlu-StyledButton-item-disabled-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -273,38 +303,49 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   color: #c4c9d6;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item::after {
+  display: none;
+}
+
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   color: #390171;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover svg,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus svg {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover svg,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:last-child {
+.cache-se2jlu-StyledButton-item-disabled-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover svg,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus svg {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover svg,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus svg {
   fill: #4a4f62;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -325,23 +366,27 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
 
 <button
     aria-disabled="true"
-    class="em6gco80 cache-b0j5iu-StyledButton-item-disabled-Item"
+    class="em6gco80 cache-se2jlu-StyledButton-item-disabled-Item"
     disabled=""
     role="menuitem"
     type="button"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="cache-ivfmnf-ButtonContentContainer em6gco82"
     >
-      Disabled Props
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco83"
+      >
+        Disabled Props
+      </div>
+    </span>
   </button>
 </DocumentFragment>
 `;
 
 exports[`Menu Menu.Item render with variant danger 1`] = `
 <DocumentFragment>
-  .cache-1j6j4sq-StyledButton-item-danger-Item {
+  .cache-1xvryt2-StyledButton-item-danger-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -392,41 +437,52 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
   color: #a6102d;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:hover,
-.cache-1j6j4sq-StyledButton-item-danger-Item:focus {
+.cache-1xvryt2-StyledButton-item-danger-Item:hover,
+.cache-1xvryt2-StyledButton-item-danger-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:hover,
-.cache-1j6j4sq-StyledButton-item-danger-Item:focus {
+.cache-1xvryt2-StyledButton-item-danger-Item::after {
+  display: none;
+}
+
+.cache-1xvryt2-StyledButton-item-danger-Item:hover,
+.cache-1xvryt2-StyledButton-item-danger-Item:focus {
   color: #390171;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:hover svg,
-.cache-1j6j4sq-StyledButton-item-danger-Item:focus svg {
+.cache-1xvryt2-StyledButton-item-danger-Item:hover svg,
+.cache-1xvryt2-StyledButton-item-danger-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:last-child {
+.cache-1xvryt2-StyledButton-item-danger-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:hover,
-.cache-1j6j4sq-StyledButton-item-danger-Item:focus {
+.cache-1xvryt2-StyledButton-item-danger-Item:hover,
+.cache-1xvryt2-StyledButton-item-danger-Item:focus {
   color: #a6102d;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item:hover svg,
-.cache-1j6j4sq-StyledButton-item-danger-Item:focus svg {
+.cache-1xvryt2-StyledButton-item-danger-Item:hover svg,
+.cache-1xvryt2-StyledButton-item-danger-Item:focus svg {
   fill: #a6102d;
 }
 
-.cache-1j6j4sq-StyledButton-item-danger-Item svg {
+.cache-1xvryt2-StyledButton-item-danger-Item svg {
   fill: #a6102d;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -447,22 +503,51 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1j6j4sq-StyledButton-item-danger-Item"
+    class="em6gco80 cache-1xvryt2-StyledButton-item-danger-Item"
     role="menuitem"
     type="button"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="cache-ivfmnf-ButtonContentContainer em6gco82"
     >
-      Danger
-    </div>
+      <div
+        class="cache-m245rk-StyledContent em6gco83"
+      >
+        Danger
+      </div>
+    </span>
   </button>
 </DocumentFragment>
 `;
 
 exports[`Menu Menu.Item render with variant nav 1`] = `
 <DocumentFragment>
-  .cache-195dw03-StyledButton-item-nav-Item {
+  .cache-1n1yl99-StyledLink-StyledButton-item-nav-Item {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -515,37 +600,98 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   color: #b2b6c3;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:hover,
-.cache-195dw03-StyledButton-item-nav-Item:focus {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item .e4bq1r51 {
+  color: inherit;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus {
+  gap: 4px;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #390171;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover::after,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus::after {
+  background-color: #390171;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:active::after {
+  height: 2px;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:hover,
-.cache-195dw03-StyledButton-item-nav-Item:focus {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item::after {
+  display: none;
+}
+
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus {
   color: #390171;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:hover svg,
-.cache-195dw03-StyledButton-item-nav-Item:focus svg {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover svg,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:last-child {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:hover,
-.cache-195dw03-StyledButton-item-nav-Item:focus {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus {
   color: #390171;
 }
 
-.cache-195dw03-StyledButton-item-nav-Item:hover svg,
-.cache-195dw03-StyledButton-item-nav-Item:focus svg {
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:hover svg,
+.cache-1n1yl99-StyledLink-StyledButton-item-nav-Item:focus svg {
   fill: #390171;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -564,19 +710,25 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   pointer-events: none;
 }
 
-<button
+<a
     aria-disabled="false"
-    class="em6gco80 cache-195dw03-StyledButton-item-nav-Item"
+    class="em6gco80 cache-1n1yl99-StyledLink-StyledButton-item-nav-Item e4bq1r50"
     role="menuitem"
-    to="/test"
-    type="button"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
+    <span
+      class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
     >
-      Nav
-    </div>
-  </button>
+      <span
+        class="cache-ivfmnf-ButtonContentContainer em6gco82"
+      >
+        <div
+          class="cache-m245rk-StyledContent em6gco83"
+        >
+          Nav
+        </div>
+      </span>
+    </span>
+  </a>
 </DocumentFragment>
 `;
 
@@ -660,7 +812,7 @@ exports[`Menu placement renders "bottom" 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -710,27 +862,38 @@ exports[`Menu placement renders "bottom" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -764,15 +927,19 @@ exports[`Menu placement renders "bottom" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          bottom
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            bottom
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -860,7 +1027,7 @@ exports[`Menu placement renders "bottom-end" 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -910,27 +1077,38 @@ exports[`Menu placement renders "bottom-end" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -964,15 +1142,19 @@ exports[`Menu placement renders "bottom-end" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          bottom-end
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            bottom-end
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -1060,7 +1242,7 @@ exports[`Menu placement renders "bottom-start" 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1110,27 +1292,38 @@ exports[`Menu placement renders "bottom-start" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -1164,15 +1357,19 @@ exports[`Menu placement renders "bottom-start" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          bottom-start
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            bottom-start
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -1259,7 +1456,7 @@ exports[`Menu placement renders "top" 1`] = `
   border-top-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1309,27 +1506,38 @@ exports[`Menu placement renders "top" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -1363,15 +1571,19 @@ exports[`Menu placement renders "top" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          top
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            top
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -1459,7 +1671,7 @@ exports[`Menu placement renders "top-end" 1`] = `
   border-top-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1509,27 +1721,38 @@ exports[`Menu placement renders "top-end" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -1563,15 +1786,19 @@ exports[`Menu placement renders "top-end" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          top-end
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            top-end
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -1659,7 +1886,7 @@ exports[`Menu placement renders "top-start" 1`] = `
   border-top-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1709,27 +1936,38 @@ exports[`Menu placement renders "top-start" 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -1763,15 +2001,19 @@ exports[`Menu placement renders "top-start" 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          top-start
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            top-start
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -1858,7 +2100,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1908,27 +2150,38 @@ exports[`Menu renders with Menu.Item 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -1962,15 +2215,19 @@ exports[`Menu renders with Menu.Item 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          Menu.Item
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            Menu.Item
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -2057,7 +2314,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item {
+.cache-se2jlu-StyledButton-item-disabled-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2115,38 +2372,49 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   color: #c4c9d6;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item::after {
+  display: none;
+}
+
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   color: #390171;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover svg,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus svg {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover svg,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:last-child {
+.cache-se2jlu-StyledButton-item-disabled-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-b0j5iu-StyledButton-item-disabled-Item:hover svg,
-.cache-b0j5iu-StyledButton-item-disabled-Item:focus svg {
+.cache-se2jlu-StyledButton-item-disabled-Item:hover svg,
+.cache-se2jlu-StyledButton-item-disabled-Item:focus svg {
   fill: #4a4f62;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -2180,44 +2448,56 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
     >
       <button
         aria-disabled="true"
-        class="em6gco80 cache-b0j5iu-StyledButton-item-disabled-Item"
+        class="em6gco80 cache-se2jlu-StyledButton-item-disabled-Item"
         disabled=""
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          Menu.Item disabled
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            Menu.Item disabled
+          </div>
+        </span>
       </button>
       <button
         aria-disabled="true"
-        class="em6gco80 cache-b0j5iu-StyledButton-item-disabled-Item"
+        class="em6gco80 cache-se2jlu-StyledButton-item-disabled-Item"
         disabled=""
         role="menuitem"
         to="/link"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          Menu.Item Link disabled
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            Menu.Item Link disabled
+          </div>
+        </span>
       </button>
       <button
         aria-disabled="true"
-        class="em6gco80 cache-b0j5iu-StyledButton-item-disabled-Item"
+        class="em6gco80 cache-se2jlu-StyledButton-item-disabled-Item"
         disabled=""
         href="https://link"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          Menu.Item Link disabled
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            Menu.Item Link disabled
+          </div>
+        </span>
       </button>
     </div>
   </div>
@@ -2304,7 +2584,32 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-92gvfi-StyledLink-StyledButton-item-Item {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: gap 250ms ease-out;
+  transition: gap 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2354,27 +2659,88 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-92gvfi-StyledLink-StyledButton-item-Item .e4bq1r51 {
+  color: inherit;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item::after {
+  -webkit-transition: background 250ms ease-out;
+  transition: background 250ms ease-out;
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  height: 1px;
+  left: 0;
+  right: 0;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item:hover,
+.cache-92gvfi-StyledLink-StyledButton-item-Item:focus {
+  gap: 4px;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #390171;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item:hover::after,
+.cache-92gvfi-StyledLink-StyledButton-item-Item:focus::after {
+  background-color: #390171;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item:active::after {
+  height: 2px;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item:hover,
+.cache-92gvfi-StyledLink-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-92gvfi-StyledLink-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-92gvfi-StyledLink-StyledButton-item-Item:hover,
+.cache-92gvfi-StyledLink-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-92gvfi-StyledLink-StyledButton-item-Item:hover svg,
+.cache-92gvfi-StyledLink-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-92gvfi-StyledLink-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-12sgwsl-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -2406,19 +2772,25 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
       class="cache-1u5ri25-MenuList-centerStyles-bottomStyles-bottom epli4kt0"
       role="menu"
     >
-      <button
+      <a
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-92gvfi-StyledLink-StyledButton-item-Item e4bq1r50"
         role="menuitem"
-        to="/link"
-        type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
         >
-          Menu.Item as Link
-        </div>
-      </button>
+          <span
+            class="cache-ivfmnf-ButtonContentContainer em6gco82"
+          >
+            <div
+              class="cache-m245rk-StyledContent em6gco83"
+            >
+              Menu.Item as Link
+            </div>
+          </span>
+        </span>
+      </a>
     </div>
   </div>
 </DocumentFragment>
@@ -2534,7 +2906,7 @@ exports[`Menu renders with modal={false} 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1fbex2w-StyledButton-item-Item {
+.cache-r09hro-StyledButton-item-Item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2584,27 +2956,38 @@ exports[`Menu renders with modal={false} 1`] = `
   background-color: transparent;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover,
-.cache-1fbex2w-StyledButton-item-Item:focus {
+.cache-r09hro-StyledButton-item-Item::after {
+  display: none;
+}
+
+.cache-r09hro-StyledButton-item-Item:hover,
+.cache-r09hro-StyledButton-item-Item:focus {
   color: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:hover svg,
-.cache-1fbex2w-StyledButton-item-Item:focus svg {
+.cache-r09hro-StyledButton-item-Item:hover svg,
+.cache-r09hro-StyledButton-item-Item:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1fbex2w-StyledButton-item-Item:last-child {
+.cache-r09hro-StyledButton-item-Item:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -2638,15 +3021,19 @@ exports[`Menu renders with modal={false} 1`] = `
     >
       <button
         aria-disabled="false"
-        class="em6gco80 cache-1fbex2w-StyledButton-item-Item"
+        class="em6gco80 cache-r09hro-StyledButton-item-Item"
         role="menuitem"
         type="button"
       >
-        <div
-          class="cache-m245rk-StyledContent em6gco82"
+        <span
+          class="cache-ivfmnf-ButtonContentContainer em6gco82"
         >
-          MenuItem
-        </div>
+          <div
+            class="cache-m245rk-StyledContent em6gco83"
+          >
+            MenuItem
+          </div>
+        </span>
       </button>
     </div>
   </div>

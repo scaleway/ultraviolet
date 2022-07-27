@@ -30631,7 +30631,7 @@ exports[`List should render correctly with pagination 1`] = `
   gap: 8px;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch {
+.cache-11tjs57-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30689,31 +30689,42 @@ exports[`List should render correctly with pagination 1`] = `
   align-items: center;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch::after {
+  display: none;
+}
+
+.cache-11tjs57-StyledButton-StyledPageSwitch svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover svg,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover svg,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus svg {
   fill: #ffffff;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -30776,7 +30787,7 @@ exports[`List should render correctly with pagination 1`] = `
   border-color: #d4dae7;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch {
+.cache-dve703-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -30828,30 +30839,34 @@ exports[`List should render correctly with pagination 1`] = `
   align-items: center;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:hover,
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch svg {
+.cache-dve703-StyledButton-StyledPageSwitch::after {
+  display: none;
+}
+
+.cache-dve703-StyledButton-StyledPageSwitch svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:hover,
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover svg,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus svg {
+.cache-dve703-StyledButton-StyledPageSwitch:hover svg,
+.cache-dve703-StyledButton-StyledPageSwitch:focus svg {
   fill: #ffffff;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -31398,49 +31413,57 @@ exports[`List should render correctly with pagination 1`] = `
             <button
               aria-disabled="true"
               aria-label="First"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-                    />
-                    <path
-                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                      />
+                      <path
+                        d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="true"
               aria-label="Back"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
           <div
@@ -31488,47 +31511,55 @@ exports[`List should render correctly with pagination 1`] = `
             <button
               aria-disabled="false"
               aria-label="Next"
-              class="equt9o87 em6gco80 cache-1vzoe8y-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-dve703-StyledButton-StyledPageSwitch"
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="false"
               aria-label="Last"
-              class="equt9o87 em6gco80 cache-1vzoe8y-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-dve703-StyledButton-StyledPageSwitch"
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-                    />
-                    <path
-                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                      />
+                      <path
+                        d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -31811,7 +31842,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   gap: 8px;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch {
+.cache-11tjs57-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -31869,31 +31900,42 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   align-items: center;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch::after {
+  display: none;
+}
+
+.cache-11tjs57-StyledButton-StyledPageSwitch svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover svg,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover svg,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus svg {
   fill: #ffffff;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -31956,7 +31998,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   border-color: #d4dae7;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch {
+.cache-dve703-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -32008,30 +32050,34 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   align-items: center;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:hover,
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch svg {
+.cache-dve703-StyledButton-StyledPageSwitch::after {
+  display: none;
+}
+
+.cache-dve703-StyledButton-StyledPageSwitch svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:hover,
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:hover svg,
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus svg {
+.cache-dve703-StyledButton-StyledPageSwitch:hover svg,
+.cache-dve703-StyledButton-StyledPageSwitch:focus svg {
   fill: #ffffff;
 }
 
-.cache-1vzoe8y-StyledButton-StyledPageSwitch:focus {
+.cache-dve703-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -32303,49 +32349,57 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
             <button
               aria-disabled="true"
               aria-label="First"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-                    />
-                    <path
-                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                      />
+                      <path
+                        d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="true"
               aria-label="Back"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
           <div
@@ -32393,47 +32447,55 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
             <button
               aria-disabled="false"
               aria-label="Next"
-              class="equt9o87 em6gco80 cache-1vzoe8y-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-dve703-StyledButton-StyledPageSwitch"
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="false"
               aria-label="Last"
-              class="equt9o87 em6gco80 cache-1vzoe8y-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-dve703-StyledButton-StyledPageSwitch"
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-                    />
-                    <path
-                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                      />
+                      <path
+                        d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
         </div>
@@ -32622,7 +32684,7 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   gap: 8px;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch {
+.cache-11tjs57-StyledButton-StyledPageSwitch {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -32680,31 +32742,42 @@ exports[`List should render correctly with pagination and page loading 1`] = `
   align-items: center;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch::after {
+  display: none;
+}
+
+.cache-11tjs57-StyledButton-StyledPageSwitch svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:hover svg,
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus svg {
+.cache-11tjs57-StyledButton-StyledPageSwitch:hover svg,
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus svg {
   fill: #ffffff;
 }
 
-.cache-1p8o1as-StyledButton-StyledPageSwitch:focus {
+.cache-11tjs57-StyledButton-StyledPageSwitch:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-ivfmnf-ButtonContentContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m245rk-StyledContent {
@@ -32876,49 +32949,57 @@ exports[`List should render correctly with pagination and page loading 1`] = `
             <button
               aria-disabled="true"
               aria-label="First"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-                    />
-                    <path
-                      d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+                      />
+                      <path
+                        d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="true"
               aria-label="Back"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
           <div
@@ -32971,49 +33052,57 @@ exports[`List should render correctly with pagination and page loading 1`] = `
             <button
               aria-disabled="true"
               aria-label="Next"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
             <button
               aria-disabled="true"
               aria-label="Last"
-              class="equt9o87 em6gco80 cache-1p8o1as-StyledButton-StyledPageSwitch"
+              class="equt9o87 em6gco80 cache-11tjs57-StyledButton-StyledPageSwitch"
               disabled=""
               type="button"
             >
-              <div
-                class="cache-m245rk-StyledContent em6gco82"
+              <span
+                class="cache-ivfmnf-ButtonContentContainer em6gco82"
               >
-                <div>
-                  <svg
-                    class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-                    />
-                    <path
-                      d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-                    />
-                  </svg>
+                <div
+                  class="cache-m245rk-StyledContent em6gco83"
+                >
+                  <div>
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+                      />
+                      <path
+                        d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </span>
             </button>
           </div>
         </div>

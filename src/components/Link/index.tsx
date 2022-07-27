@@ -1,8 +1,8 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import React, {
   AnchorHTMLAttributes,
   ForwardedRef,
-  HTMLAttributeAnchorTarget,
   ReactNode,
   forwardRef,
 } from 'react'
@@ -14,15 +14,11 @@ type LinkSizes = 'large' | 'small'
 type LinkIconPosition = 'left' | 'right'
 type LinkProps = {
   children: ReactNode
-  target?: HTMLAttributeAnchorTarget
-  download?: string | boolean
   variant?: Color
   size?: LinkSizes
   iconPosition?: LinkIconPosition
-  rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
-  className?: string
-  href: string
-}
+  to?: string
+} & AnchorHTMLAttributes<HTMLAnchorElement>
 
 const ICON_SIZE = 16
 const BLANK_TARGET_ICON_SIZE = 14
@@ -37,6 +33,7 @@ export const StyledLink = styled('a', {
   shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
 })<{
   variant: Color
+  to?: string
 }>`
   background-color: transparent;
   border: none;
@@ -55,6 +52,7 @@ export const StyledLink = styled('a', {
 
   ${StyledText} {
     color: inherit;
+    align-items: center;
   }
 
   &::after {
@@ -91,29 +89,30 @@ const Link = forwardRef(
   (
     {
       children,
-      href,
+      to,
       target,
-      download,
       variant = 'primary',
       size = 'large',
       iconPosition,
       rel,
-      className,
+      ...props
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const isBlank = target === '_blank'
     const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
 
+    const { linkComponent } = useTheme()
+
     return (
       <StyledLink
-        href={href}
+        as={to && linkComponent ? linkComponent : 'a'}
         target={target}
-        download={download}
         ref={ref}
         variant={variant}
         rel={computedRel}
-        className={className}
+        to={linkComponent ? to : undefined}
+        {...props}
       >
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />

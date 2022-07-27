@@ -9,7 +9,7 @@ export default {
     docs: {
       description: {
         component:
-          'An Expandable is a container that can hide or show its content',
+          'A Link is a component that can render links. You can use `href` prop to render an `a` tag or `to` prop with a `linkComponent` configured in the theme to render another component (We forward all props to the linkComponent).',
       },
     },
   },

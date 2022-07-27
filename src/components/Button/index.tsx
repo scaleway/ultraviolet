@@ -29,6 +29,10 @@ const StyledContent = styled.div`
   pointer-events: none;
 `
 
+const ButtonContentContainer = styled.span`
+  display: flex;
+`
+
 const borderedVariant = ({
   colorValue,
   bgColorValue,
@@ -276,6 +280,7 @@ type StyledButtonProps = {
   disabled?: boolean
   extend?: boolean
   href?: string
+  to?: string
   icon?: string | JSX.Element
   iconPosition?: 'left' | 'right'
   progress?: boolean | 'left' | 'right'
@@ -314,6 +319,10 @@ const StyledButton = styled(Box, {
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  &::after {
+    display: none;
   }
 
   ${sizeStyles}
@@ -383,6 +392,7 @@ const FwdButton = ({
   download,
   extend,
   href,
+  to,
   icon,
   iconPosition = 'left',
   iconSize,
@@ -399,10 +409,10 @@ const FwdButton = ({
   const as = useMemo(() => {
     if (disabled) return 'button'
     if (asProp) return asProp
-    if (href || download) return Link
+    if (href || to || download) return Link
 
     return 'button'
-  }, [disabled, href, download, asProp])
+  }, [disabled, href, download, asProp, to])
 
   const displayProgressOnly = !children
 
@@ -414,6 +424,7 @@ const FwdButton = ({
       <StyledButton
         {...props}
         href={href}
+        to={to}
         download={download}
         ref={innerRef}
         as={as}
@@ -425,42 +436,44 @@ const FwdButton = ({
         icon={icon}
         type={type}
       >
-        {progress === true ||
-        progress === 'left' ||
-        (icon && iconPosition === 'left') ? (
-          <StyledIconContainer
-            margin={iconMargin}
-            position={children ? 'left' : undefined}
-          >
-            {progress === true || progress === 'left' ? (
-              <Loader
-                active
-                trailColor="transparent"
-                color="currentColor"
-                size="1em"
-              />
-            ) : (
-              <SmartIcon icon={icon} iconSize={iconSize} />
-            )}
-          </StyledIconContainer>
-        ) : null}
-        {(!progress || !displayProgressOnly) && children && (
-          <StyledContent>{children}</StyledContent>
-        )}
-        {progress === 'right' || (icon && iconPosition === 'right') ? (
-          <StyledIconContainer margin={iconMargin} position="right">
-            {progress === 'right' ? (
-              <Loader
-                active
-                trailColor="transparent"
-                color="currentColor"
-                size="1em"
-              />
-            ) : (
-              <SmartIcon icon={icon} iconSize={iconSize} />
-            )}
-          </StyledIconContainer>
-        ) : null}
+        <ButtonContentContainer>
+          {progress === true ||
+          progress === 'left' ||
+          (icon && iconPosition === 'left') ? (
+            <StyledIconContainer
+              margin={iconMargin}
+              position={children ? 'left' : undefined}
+            >
+              {progress === true || progress === 'left' ? (
+                <Loader
+                  active
+                  trailColor="transparent"
+                  color="currentColor"
+                  size="1em"
+                />
+              ) : (
+                <SmartIcon icon={icon} iconSize={iconSize} />
+              )}
+            </StyledIconContainer>
+          ) : null}
+          {(!progress || !displayProgressOnly) && children && (
+            <StyledContent>{children}</StyledContent>
+          )}
+          {progress === 'right' || (icon && iconPosition === 'right') ? (
+            <StyledIconContainer margin={iconMargin} position="right">
+              {progress === 'right' ? (
+                <Loader
+                  active
+                  trailColor="transparent"
+                  color="currentColor"
+                  size="1em"
+                />
+              ) : (
+                <SmartIcon icon={icon} iconSize={iconSize} />
+              )}
+            </StyledIconContainer>
+          ) : null}
+        </ButtonContentContainer>
       </StyledButton>
     </Tooltip>
   )
