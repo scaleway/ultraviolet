@@ -1,3 +1,10 @@
+## [0.170.1](https://github.com/scaleway/scaleway-ui/compare/v0.170.0...v0.170.1) (2022-07-27)
+
+
+### :bug: Bug Fixes
+
+* display link with inline flex ([#1698](https://github.com/scaleway/scaleway-ui/issues/1698)) ([0aea0a0](https://github.com/scaleway/scaleway-ui/commit/0aea0a0cb9933e36c050667f9eb9f4b5177bdd86))
+
 ## [0.170.0](https://github.com/scaleway/scaleway-ui/compare/v0.169.3...v0.170.0) (2022-07-26)
 
 
