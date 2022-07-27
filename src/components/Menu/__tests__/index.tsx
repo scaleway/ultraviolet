@@ -41,7 +41,7 @@ describe('Menu', () => {
         baseId="menu-1"
         disclosure={() => <button type="button">Menu</button>}
       >
-        <Menu.Item to="/link">Menu.Item as Link</Menu.Item>
+        <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
       </Menu>,
     ))
 
@@ -53,24 +53,12 @@ describe('Menu', () => {
         disclosure={() => <button type="button">Menu</button>}
       >
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
-        <Menu.Item to="/link" disabled>
+        <Menu.Item href="/link" disabled>
           Menu.Item Link disabled
         </Menu.Item>
         <Menu.Item href="https://link" disabled>
           Menu.Item Link disabled
         </Menu.Item>
-      </Menu>,
-    ))
-
-  test(`renders with modal={false}`, () =>
-    shouldMatchEmotionSnapshot(
-      <Menu
-        visible
-        modal={false}
-        baseId="menu-2"
-        disclosure={() => <button type="button">Menu</button>}
-      >
-        <Menu.Item>MenuItem</Menu.Item>
       </Menu>,
     ))
 
@@ -100,7 +88,7 @@ describe('Menu', () => {
 
     test(`render with variant nav`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu.Item variant="nav" to="/test">
+        <Menu.Item variant="nav" href="/test">
           Nav
         </Menu.Item>,
       ))

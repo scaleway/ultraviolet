@@ -6,7 +6,7 @@ import { generateData } from '../../../mocks/list'
 import * as animations from '../../../utils/animations'
 import { getUUID } from '../../../utils/ids'
 import Button from '../../Button'
-import RichSelect from '../../RichSelect'
+import RichSelect, { SelectOption } from '../../RichSelect'
 
 export default {
   component: List,
@@ -609,7 +609,7 @@ PaginationLoadingPageCount.decorators = [
 export const Animated = Template.bind({})
 Animated.decorators = [
   () => (
-    <ControlValue value={{ label: 'fadeIn', value: 'fadeIn' }}>
+    <ControlValue<SelectOption> value={{ label: 'fadeIn', value: 'fadeIn' }}>
       {({ value, onChange }) => {
         const [options] = useState(
           Object.keys(animations).map(animation => ({

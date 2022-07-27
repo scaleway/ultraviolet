@@ -19,7 +19,7 @@ jobs:
         node-version: 18
         cache: 'pnpm'
     - run: pnpm install
-    - run: pnpm tsc --noEmit || true
+    - run: pnpm tsc --noEmit
   lint:
     runs-on: ubuntu-20.04
     steps:

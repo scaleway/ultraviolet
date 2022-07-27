@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps, useEffect, useState } from 'react'
-import RichSelect from '..'
+import RichSelect, { SelectOption } from '..'
 import { Badge, Button, Loader } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
@@ -52,7 +52,7 @@ Uncontrolled.decorators = [
 export const Controlled = Template.bind({})
 Controlled.decorators = [
   () => (
-    <ControlValue value="">
+    <ControlValue<SelectOption> value={{ label: '', value: '' }}>
       {({ value, onChange }) => (
         <RichSelect name="controlled" value={value} onChange={onChange}>
           <RichSelect.Option value="a">Option A</RichSelect.Option>
@@ -183,7 +183,7 @@ ${Object.keys(animations)
 Animated.decorators = [
   () => (
     <div style={{ margin: '16px 64px' }}>
-      <ControlValue value={{ label: '', value: '' }}>
+      <ControlValue<SelectOption> value={{ label: '', value: '' }}>
         {({ value, onChange }) => {
           const [options] = useState(
             Object.keys(animations).map(animation => ({

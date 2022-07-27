@@ -79,7 +79,6 @@ describe('RadioBorderedBox', () => {
     return shouldMatchEmotionSnapshot(
       <RadioBorderedBox
         checked={choice === 'choice1'}
-        id="radiotest"
         label="Choice 1"
         name="radioborderedbox"
         value="choice1"

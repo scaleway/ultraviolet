@@ -2,6 +2,7 @@ import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import TimeInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
+import { SelectOption } from '../../RichSelect'
 
 export default {
   component: TimeInput,
@@ -61,7 +62,7 @@ Uncontrolled.parameters = {
 export const Controlled: Story = () => (
   <>
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ label: '03:30', value: '03:30' }}>
+      <ControlValue<SelectOption> value={{ label: '03:30', value: '03:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-4"
@@ -73,7 +74,7 @@ export const Controlled: Story = () => (
       </ControlValue>
     </div>
     <div style={{ height: '300px' }}>
-      <ControlValue value={{ label: '04:30', value: '04:30' }}>
+      <ControlValue<SelectOption> value={{ label: '04:30', value: '04:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-5"
@@ -99,7 +100,7 @@ Controlled.parameters = {
 export const Schedule: Story = () => (
   <>
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ label: '10:15', value: '10:15' }}>
+      <ControlValue<SelectOption> value={{ label: '10:15', value: '10:15' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-6"
@@ -112,7 +113,7 @@ export const Schedule: Story = () => (
       </ControlValue>
     </div>
     <div style={{ marginBottom: '16px' }}>
-      <ControlValue value={{ label: '10:30', value: '10:30' }}>
+      <ControlValue<SelectOption> value={{ label: '10:30', value: '10:30' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-7"
@@ -125,7 +126,7 @@ export const Schedule: Story = () => (
       </ControlValue>
     </div>
     <div style={{ height: '300px' }}>
-      <ControlValue value={{ label: '10:00', value: '10:00' }}>
+      <ControlValue<SelectOption> value={{ label: '10:00', value: '10:00' }}>
         {({ value, onChange }) => (
           <TimeInput
             name="timeinput-test-8"

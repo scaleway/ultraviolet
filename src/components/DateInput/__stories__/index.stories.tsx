@@ -4,7 +4,7 @@ import { es, fr, ru } from 'date-fns/locale'
 import { ComponentProps } from 'react'
 import DateInput from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
-import RichSelect from '../../RichSelect'
+import RichSelect, { SelectOption } from '../../RichSelect'
 
 export default {
   component: DateInput,
@@ -125,7 +125,9 @@ I18n.decorators = [
             label: currentLocale,
             value: currentLocale,
           }}
-          onChange={({ value }: { value: string }) => switchLocale(value)}
+          onChange={value => {
+            switchLocale((value as SelectOption).value)
+          }}
           noTopLabel
         >
           {locales.map(locale => (

@@ -10,7 +10,13 @@ const isEvent = <T>(
 ): valueOrEvent is ChangeEvent<HTMLInputElement> =>
   !!(valueOrEvent as ChangeEvent)?.currentTarget
 
-const getNewValue = <T>(valueOrEvent: ChangeEvent<HTMLInputElement> | T): T => {
+const getNewValue = <T>(
+  valueOrEvent:
+    | ChangeEvent<HTMLInputElement>
+    | T
+    | SingleValue<T>
+    | MultiValue<T>,
+): T => {
   if (isEvent<T>(valueOrEvent)) {
     if (
       valueOrEvent.currentTarget.type === 'checkbox' ||
@@ -21,7 +27,7 @@ const getNewValue = <T>(valueOrEvent: ChangeEvent<HTMLInputElement> | T): T => {
     return valueOrEvent.currentTarget.value as unknown as T
   }
 
-  return valueOrEvent
+  return valueOrEvent as T
 }
 
 interface ControlProps<T> {
@@ -30,7 +36,13 @@ interface ControlProps<T> {
     onChange,
     value,
   }: {
-    onChange: (valueOrEvent: ChangeEvent<HTMLInputElement> | T) => void
+    onChange: (
+      valueOrEvent:
+        | ChangeEvent<HTMLInputElement>
+        | T
+        | SingleValue<T>
+        | MultiValue<T>,
+    ) => void
     value: T
   }) => JSX.Element
 }
@@ -38,7 +50,13 @@ interface ControlProps<T> {
 const ControlValue = <T>({ value, children }: ControlProps<T>): JSX.Element => {
   const [state, setState] = useState<T>(value)
 
-  const onChange = (valueOrEvent: ChangeEvent<HTMLInputElement> | T) => {
+  const onChange = (
+    valueOrEvent:
+      | ChangeEvent<HTMLInputElement>
+      | T
+      | SingleValue<T>
+      | MultiValue<T>,
+  ) => {
     setState(getNewValue<T>(valueOrEvent))
   }
 
