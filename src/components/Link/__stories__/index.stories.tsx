@@ -75,13 +75,19 @@ Size.parameters = {
 }
 Size.decorators = [
   () => (
-    <>
+    <div
+      style={{
+        alignItems: 'start',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <Link size="large" href="https://scaleway.com">
         Link opens in a new tab
       </Link>
       <Link size="small" href="https://scaleway.com">
         Link opens in a new tab
       </Link>
-    </>
+    </div>
   ),
 ]

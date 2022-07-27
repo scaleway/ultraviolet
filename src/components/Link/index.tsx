@@ -44,7 +44,7 @@ export const StyledLink = styled('a', {
   color: ${({ theme, variant }) =>
     theme.colors[variant]?.text ?? theme.colors.neutral.text};
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   transition: gap ${TRANSITION_DURATION}ms ease-out;
