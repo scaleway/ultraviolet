@@ -1,3 +1,18 @@
+## [0.170.2](https://github.com/scaleway/scaleway-ui/compare/v0.170.1...v0.170.2) (2022-07-28)
+
+
+### :bug: Bug Fixes
+
+* remove all errors and enable typecheck ([#1697](https://github.com/scaleway/scaleway-ui/issues/1697)) ([325968a](https://github.com/scaleway/scaleway-ui/commit/325968a3ef7e029fc8f12af426c8baebc6bfc13f))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @svgr/rollup to v6.3.1 ([#1701](https://github.com/scaleway/scaleway-ui/issues/1701)) ([b557ab3](https://github.com/scaleway/scaleway-ui/commit/b557ab38821e6ac2ae00b888337e20bc7db1be0f))
+* **devdeps:** update dependency date-fns to v2.29.1 ([#1699](https://github.com/scaleway/scaleway-ui/issues/1699)) ([4fb4042](https://github.com/scaleway/scaleway-ui/commit/4fb40420cb042d6874a745d489d46494a4316265))
+* **devdeps:** update node.js to v18.7 ([#1702](https://github.com/scaleway/scaleway-ui/issues/1702)) ([58fe95a](https://github.com/scaleway/scaleway-ui/commit/58fe95a4da8bffbcd68a1aca8564d432b9ecbea4))
+* **devdeps:** update pnpm to v7.6.0 ([#1696](https://github.com/scaleway/scaleway-ui/issues/1696)) ([e873d37](https://github.com/scaleway/scaleway-ui/commit/e873d3708f95686402a2085859edb28677c27cc4))
+
 ## [0.170.1](https://github.com/scaleway/scaleway-ui/compare/v0.170.0...v0.170.1) (2022-07-27)
 
 
