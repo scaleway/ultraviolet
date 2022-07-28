@@ -6,7 +6,7 @@ describe('Bullet', () => {
     shouldMatchEmotionSnapshot(<Bullet text="1" />))
 
   test('renders correctly with an icon', () =>
-    shouldMatchEmotionSnapshot(<Bullet icon="ai" />))
+    shouldMatchEmotionSnapshot(<Bullet icon="moon" />))
 
   describe('variant', () => {
     bulletVariants.forEach(variant => {
