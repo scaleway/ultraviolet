@@ -314,6 +314,7 @@ const StyledButton = styled(Box, {
   &:hover,
   &:focus {
     text-decoration: none;
+    gap: ${({ theme }) => theme.space['1']};
   }
 
   ${sizeStyles}

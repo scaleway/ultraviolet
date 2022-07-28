@@ -60,13 +60,16 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.cache-jilail-StyledLink {
+.cache-160jxco-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
   color: #1a4dbf;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -78,51 +81,14 @@ exports[`MarkDown render simple string 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out;
-  transition: gap 250ms ease-out;
+  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-}
-
-.cache-jilail-StyledLink .e4bq1r51 {
-  color: inherit;
-}
-
-.cache-jilail-StyledLink::after {
-  -webkit-transition: background 250ms ease-out;
-  transition: background 250ms ease-out;
-  content: '';
-  position: absolute;
-  top: calc(100% - 1px);
-  height: 1px;
-  left: 0;
-  right: 0;
-}
-
-.cache-jilail-StyledLink:hover,
-.cache-jilail-StyledLink:focus {
-  gap: 4px;
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #1a4dbf;
-}
-
-.cache-jilail-StyledLink:hover::after,
-.cache-jilail-StyledLink:focus::after {
-  background-color: #1a4dbf;
-}
-
-.cache-jilail-StyledLink:active::after {
-  height: 2px;
-}
-
-.cache-12sgwsl-StyledText-StyledText {
-  color: #4a4f62;
   font-size: 16px;
   font-family: Asap;
   font-weight: 500;
@@ -130,8 +96,26 @@ exports[`MarkDown render simple string 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+}
+
+.cache-160jxco-StyledLink:hover,
+.cache-160jxco-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #1a4dbf;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-160jxco-StyledLink:hover::after,
+.cache-160jxco-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-160jxco-StyledLink:active {
+  text-decoration-thickness: 2px;
 }
 
 .cache-11ifx6m-StyledText-command-variantStyles {
@@ -189,15 +173,11 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-jilail-StyledLink e4bq1r50"
+        class="cache-160jxco-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
       >
-        <span
-          class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
-        >
-          <span>
-            here
-          </span>
+        <span>
+          here
         </span>
       </a>
     </p>
@@ -246,13 +226,16 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 0;
 }
 
-.cache-jilail-StyledLink {
+.cache-160jxco-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
   color: #1a4dbf;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -264,51 +247,14 @@ exports[`MarkDown render simple string with target blank 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out;
-  transition: gap 250ms ease-out;
+  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-}
-
-.cache-jilail-StyledLink .e4bq1r51 {
-  color: inherit;
-}
-
-.cache-jilail-StyledLink::after {
-  -webkit-transition: background 250ms ease-out;
-  transition: background 250ms ease-out;
-  content: '';
-  position: absolute;
-  top: calc(100% - 1px);
-  height: 1px;
-  left: 0;
-  right: 0;
-}
-
-.cache-jilail-StyledLink:hover,
-.cache-jilail-StyledLink:focus {
-  gap: 4px;
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #1a4dbf;
-}
-
-.cache-jilail-StyledLink:hover::after,
-.cache-jilail-StyledLink:focus::after {
-  background-color: #1a4dbf;
-}
-
-.cache-jilail-StyledLink:active::after {
-  height: 2px;
-}
-
-.cache-12sgwsl-StyledText-StyledText {
-  color: #4a4f62;
   font-size: 16px;
   font-family: Asap;
   font-weight: 500;
@@ -316,15 +262,34 @@ exports[`MarkDown render simple string with target blank 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
-.cache-1vxww7r-StyledExternalIconContainer {
+.cache-160jxco-StyledLink:hover,
+.cache-160jxco-StyledLink:focus {
+  gap: 4px;
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #1a4dbf;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-160jxco-StyledLink:hover::after,
+.cache-160jxco-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-160jxco-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+.cache-1tang38-StyledExternalIconContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  padding-bottom: 4px;
 }
 
 .cache-14vhymm-StyledIcon-sizeStyles {
@@ -394,20 +359,16 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-jilail-StyledLink e4bq1r50"
+        class="cache-160jxco-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span
-          class="e4bq1r51 cache-12sgwsl-StyledText-StyledText e1tg3t120"
-        >
-          <span>
-            here
-          </span>
+        <span>
+          here
         </span>
         <span
-          class="cache-1vxww7r-StyledExternalIconContainer e4bq1r52"
+          class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
         >
           <svg
             class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"

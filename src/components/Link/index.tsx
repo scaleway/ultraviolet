@@ -8,7 +8,6 @@ import React, {
 } from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
-import Text from '../Text'
 
 type LinkSizes = 'large' | 'small'
 type LinkIconPosition = 'left' | 'right'
@@ -30,49 +29,57 @@ const TRANSITION_DURATION = 250
 
 const StyledExternalIconContainer = styled.span`
   display: inline-flex;
+  padding-bottom: ${({ theme }) => theme.space['0.5']};
 `
-const StyledText = styled(Text)``
 
 export const StyledLink = styled('a', {
   shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
 })<{
   variant: Color
+  size: LinkSizes
 }>`
   background-color: transparent;
   border: none;
   padding: 0;
   color: ${({ theme, variant }) =>
     theme.colors[variant]?.text ?? theme.colors.neutral.text};
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  transition: gap ${TRANSITION_DURATION}ms ease-out;
+  transition: gap ${TRANSITION_DURATION}ms ease-out,
+    text-decoration-color ${TRANSITION_DURATION}ms ease-out;
   gap: ${({ theme }) => theme.space['1']};
   position: relative;
   width: fit-content;
   cursor: pointer;
 
-  ${StyledText} {
-    color: inherit;
-  }
+  ${({ size, theme }) => {
+    const variant = size === 'small' ? 'bodySmallStrong' : 'bodyStrong'
 
-  &::after {
-    transition: background ${TRANSITION_DURATION}ms ease-out;
-    content: '';
-    position: absolute;
-    top: calc(100% - 1px);
-    height: 1px;
-    left: 0;
-    right: 0;
-  }
+    return `
+      font-size: ${theme.typography[variant].fontSize};
+      font-family: ${theme.typography[variant].fontFamily};
+      font-weight: ${theme.typography[variant].weight};
+      letter-spacing: ${theme.typography[variant].letterSpacing};
+      line-height: ${theme.typography[variant].lineHeight};
+      paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
+      text-case: ${theme.typography[variant].textCase};
+    `
+  }}
 
   &:hover,
   &:focus {
     gap: ${({ theme }) => theme.space['0.5']};
     outline: none;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
     color: ${({ theme, variant }) =>
+      theme.colors[variant]?.text ?? theme.colors.neutral.text};
+    text-decoration-color: ${({ theme, variant }) =>
       theme.colors[variant]?.text ?? theme.colors.neutral.text};
   }
 
@@ -82,8 +89,8 @@ export const StyledLink = styled('a', {
       theme.colors[variant]?.text ?? theme.colors.neutral.text};
   }
 
-  &:active::after {
-    height: 2px;
+  &:active {
+    text-decoration-thickness: 2px;
   }
 `
 
@@ -114,17 +121,13 @@ const Link = forwardRef(
         variant={variant}
         rel={computedRel}
         className={className}
+        size={size}
       >
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
         ) : null}
 
-        <StyledText
-          as="span"
-          variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}
-        >
-          {children}
-        </StyledText>
+        {children}
 
         {isBlank ? (
           <StyledExternalIconContainer>
