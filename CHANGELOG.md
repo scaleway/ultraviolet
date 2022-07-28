@@ -1,3 +1,10 @@
+## [0.170.3](https://github.com/scaleway/scaleway-ui/compare/v0.170.2...v0.170.3) (2022-07-28)
+
+
+### :bug: Bug Fixes
+
+* button link alignement ([#1708](https://github.com/scaleway/scaleway-ui/issues/1708)) ([41cd4d2](https://github.com/scaleway/scaleway-ui/commit/41cd4d28a6e3041e6af6d3d6116eedd5d0e2ef35))
+
 ## [0.170.2](https://github.com/scaleway/scaleway-ui/compare/v0.170.1...v0.170.2) (2022-07-28)
 
 
