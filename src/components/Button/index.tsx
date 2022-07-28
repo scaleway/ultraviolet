@@ -111,7 +111,7 @@ const variants = {
     text-decoration-poisition: under;
     text-decoration-thickness: 1px;
     transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
-
+    vertical-align: baseline;
 
     &:hover,
     &:focus {
