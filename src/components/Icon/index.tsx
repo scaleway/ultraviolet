@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { forwardRef, useMemo } from 'react'
 import * as React from 'react'
 import { Color } from '../../theme'
-import { ColorDeprecated } from '../../theme/deprecated/colors'
 import capitalize from '../../utils/capitalize'
 import Box, { BoxProps } from '../Box'
 
@@ -606,7 +605,7 @@ const StyledIcon = styled(Box, {
   shouldForwardProp: prop => !['size', 'color', 'prominence'].includes(prop),
 })<
   {
-    color: ColorDeprecated | Color | string
+    color: Color | string
     size: number | string
     className: string
     viewBox: string
@@ -623,11 +622,7 @@ const StyledIcon = styled(Box, {
     const themeColor = theme.colors[color as Color]
     const text = `text${definedProminence}` as keyof typeof themeColor
 
-    return (
-      theme.colors?.[color as Color]?.[text] ||
-      theme.colorsDeprecated[color as ColorDeprecated] ||
-      color
-    )
+    return theme.colors?.[color as Color]?.[text] || color
   }};
 
   ${sizeStyles}
