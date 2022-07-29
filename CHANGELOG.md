@@ -1,3 +1,16 @@
+## [0.171.0](https://github.com/scaleway/scaleway-ui/compare/v0.170.3...v0.171.0) (2022-07-29)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @emotion/babel-plugin to v11.9.5 ([#1707](https://github.com/scaleway/scaleway-ui/issues/1707)) ([10c4f42](https://github.com/scaleway/scaleway-ui/commit/10c4f420ec765a009496424af8c322d9f4822c63))
+* **devdeps:** update dependency @types/react to v17.0.48 ([#1710](https://github.com/scaleway/scaleway-ui/issues/1710)) ([0578147](https://github.com/scaleway/scaleway-ui/commit/0578147275fae3abb454f655284282e887a535b1))
+
+
+### :gear: Features
+
+* use text-decoration in link ([#1709](https://github.com/scaleway/scaleway-ui/issues/1709)) ([5cdc800](https://github.com/scaleway/scaleway-ui/commit/5cdc8009b875cee838582668c0ed6e05d42e45e0))
+
 ## [0.170.3](https://github.com/scaleway/scaleway-ui/compare/v0.170.2...v0.170.3) (2022-07-28)
 
 
