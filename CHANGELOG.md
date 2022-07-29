@@ -1,3 +1,10 @@
+## [0.171.1](https://github.com/scaleway/scaleway-ui/compare/v0.171.0...v0.171.1) (2022-07-29)
+
+
+### :bug: Bug Fixes
+
+* weird gaps in link ([#1711](https://github.com/scaleway/scaleway-ui/issues/1711)) ([8653bb1](https://github.com/scaleway/scaleway-ui/commit/8653bb1b5933991725f75ba09322e8e7e9200914))
+
 ## [0.171.0](https://github.com/scaleway/scaleway-ui/compare/v0.170.3...v0.171.0) (2022-07-29)
 
 
