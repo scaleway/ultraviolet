@@ -2,7 +2,7 @@
 
 exports[`Link render correctly with bad variant 1`] = `
 <DocumentFragment>
-  .cache-kpn25w-StyledLink {
+  .cache-1rfggew-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -40,8 +40,12 @@ exports[`Link render correctly with bad variant 1`] = `
   text-case: none;
 }
 
-.cache-kpn25w-StyledLink:hover,
-.cache-kpn25w-StyledLink:focus {
+.cache-1rfggew-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1rfggew-StyledLink:hover,
+.cache-1rfggew-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -51,27 +55,29 @@ exports[`Link render correctly with bad variant 1`] = `
   text-decoration-color: #4a4f62;
 }
 
-.cache-kpn25w-StyledLink:hover::after,
-.cache-kpn25w-StyledLink:focus::after {
+.cache-1rfggew-StyledLink:hover::after,
+.cache-1rfggew-StyledLink:focus::after {
   background-color: #4a4f62;
 }
 
-.cache-kpn25w-StyledLink:active {
+.cache-1rfggew-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-kpn25w-StyledLink e4bq1r50"
+    class="cache-1rfggew-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with href props 1`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -109,8 +115,12 @@ exports[`Link render correctly with href props 1`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -120,27 +130,29 @@ exports[`Link render correctly with href props 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with href props 2`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -178,8 +190,12 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -189,12 +205,12 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -211,7 +227,7 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
     <svg
@@ -222,9 +238,11 @@ exports[`Link render correctly with href props 2`] = `
         d="M5.29289 8.70735C4.90237 8.31683 4.90237 7.68366 5.29289 7.29314L9.29289 3.29314C9.68342 2.90261 10.3166 2.90261 10.7071 3.29314C11.0976 3.68366 11.0976 4.31683 10.7071 4.70735L7.41421 8.00024L10.7071 11.2931C11.0976 11.6837 11.0976 12.3168 10.7071 12.7074C10.3166 13.0979 9.68342 13.0979 9.29289 12.7074L5.29289 8.70735Z"
       />
     </svg>
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -262,8 +280,12 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -273,12 +295,12 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -295,10 +317,12 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
     <svg
       class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
       viewBox="0 0 16 16"
@@ -308,7 +332,7 @@ exports[`Link render correctly with href props 2`] = `
       />
     </svg>
   </a>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -346,8 +370,12 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -357,12 +385,12 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -387,12 +415,14 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Hello
+    <span>
+      Hello
+    </span>
     <span
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
@@ -406,7 +436,7 @@ exports[`Link render correctly with href props 2`] = `
       </svg>
     </span>
   </a>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -444,8 +474,12 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -455,12 +489,12 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -485,12 +519,14 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Hello
+    <span>
+      Hello
+    </span>
     <span
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
@@ -509,7 +545,7 @@ exports[`Link render correctly with href props 2`] = `
 
 exports[`Link render correctly with no variant 1`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -547,8 +583,12 @@ exports[`Link render correctly with no variant 1`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -558,27 +598,29 @@ exports[`Link render correctly with no variant 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link render correctly with sizes 1`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -616,8 +658,12 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -627,23 +673,25 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
   ,
-  .cache-1h9r87g-StyledLink {
+  .cache-u5thex-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -681,8 +729,12 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-1h9r87g-StyledLink:hover,
-.cache-1h9r87g-StyledLink:focus {
+.cache-u5thex-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-u5thex-StyledLink:hover,
+.cache-u5thex-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -692,20 +744,22 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1h9r87g-StyledLink:hover::after,
-.cache-1h9r87g-StyledLink:focus::after {
+.cache-u5thex-StyledLink:hover::after,
+.cache-u5thex-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-1h9r87g-StyledLink:active {
+.cache-u5thex-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1h9r87g-StyledLink e4bq1r50"
+    class="cache-u5thex-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
   ,
 </DocumentFragment>
@@ -713,7 +767,7 @@ exports[`Link render correctly with sizes 1`] = `
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -751,8 +805,12 @@ exports[`Link render correctly with target blank 1`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -762,12 +820,12 @@ exports[`Link render correctly with target blank 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -792,12 +850,14 @@ exports[`Link render correctly with target blank 1`] = `
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Hello
+    <span>
+      Hello
+    </span>
     <span
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
@@ -816,7 +876,7 @@ exports[`Link render correctly with target blank 1`] = `
 
 exports[`Link variant render danger 1`] = `
 <DocumentFragment>
-  .cache-68xxp5-StyledLink {
+  .cache-1kn1wsd-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -854,8 +914,12 @@ exports[`Link variant render danger 1`] = `
   text-case: none;
 }
 
-.cache-68xxp5-StyledLink:hover,
-.cache-68xxp5-StyledLink:focus {
+.cache-1kn1wsd-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1kn1wsd-StyledLink:hover,
+.cache-1kn1wsd-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -865,27 +929,29 @@ exports[`Link variant render danger 1`] = `
   text-decoration-color: #a6102d;
 }
 
-.cache-68xxp5-StyledLink:hover::after,
-.cache-68xxp5-StyledLink:focus::after {
+.cache-1kn1wsd-StyledLink:hover::after,
+.cache-1kn1wsd-StyledLink:focus::after {
   background-color: #a6102d;
 }
 
-.cache-68xxp5-StyledLink:active {
+.cache-1kn1wsd-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-68xxp5-StyledLink e4bq1r50"
+    class="cache-1kn1wsd-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render info 1`] = `
 <DocumentFragment>
-  .cache-160jxco-StyledLink {
+  .cache-17qgxc4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -923,8 +989,12 @@ exports[`Link variant render info 1`] = `
   text-case: none;
 }
 
-.cache-160jxco-StyledLink:hover,
-.cache-160jxco-StyledLink:focus {
+.cache-17qgxc4-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-17qgxc4-StyledLink:hover,
+.cache-17qgxc4-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -934,27 +1004,29 @@ exports[`Link variant render info 1`] = `
   text-decoration-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:hover::after,
-.cache-160jxco-StyledLink:focus::after {
+.cache-17qgxc4-StyledLink:hover::after,
+.cache-17qgxc4-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:active {
+.cache-17qgxc4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-160jxco-StyledLink e4bq1r50"
+    class="cache-17qgxc4-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render neutral 1`] = `
 <DocumentFragment>
-  .cache-kpn25w-StyledLink {
+  .cache-1rfggew-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -992,8 +1064,12 @@ exports[`Link variant render neutral 1`] = `
   text-case: none;
 }
 
-.cache-kpn25w-StyledLink:hover,
-.cache-kpn25w-StyledLink:focus {
+.cache-1rfggew-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1rfggew-StyledLink:hover,
+.cache-1rfggew-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -1003,27 +1079,29 @@ exports[`Link variant render neutral 1`] = `
   text-decoration-color: #4a4f62;
 }
 
-.cache-kpn25w-StyledLink:hover::after,
-.cache-kpn25w-StyledLink:focus::after {
+.cache-1rfggew-StyledLink:hover::after,
+.cache-1rfggew-StyledLink:focus::after {
   background-color: #4a4f62;
 }
 
-.cache-kpn25w-StyledLink:active {
+.cache-1rfggew-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-kpn25w-StyledLink e4bq1r50"
+    class="cache-1rfggew-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render primary 1`] = `
 <DocumentFragment>
-  .cache-skysj2-StyledLink {
+  .cache-mlmgzv-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1061,8 +1139,12 @@ exports[`Link variant render primary 1`] = `
   text-case: none;
 }
 
-.cache-skysj2-StyledLink:hover,
-.cache-skysj2-StyledLink:focus {
+.cache-mlmgzv-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-mlmgzv-StyledLink:hover,
+.cache-mlmgzv-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -1072,27 +1154,29 @@ exports[`Link variant render primary 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-skysj2-StyledLink:hover::after,
-.cache-skysj2-StyledLink:focus::after {
+.cache-mlmgzv-StyledLink:hover::after,
+.cache-mlmgzv-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-skysj2-StyledLink:active {
+.cache-mlmgzv-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-skysj2-StyledLink e4bq1r50"
+    class="cache-mlmgzv-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render success 1`] = `
 <DocumentFragment>
-  .cache-eyfpv7-StyledLink {
+  .cache-x7ygkl-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1130,8 +1214,12 @@ exports[`Link variant render success 1`] = `
   text-case: none;
 }
 
-.cache-eyfpv7-StyledLink:hover,
-.cache-eyfpv7-StyledLink:focus {
+.cache-x7ygkl-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-x7ygkl-StyledLink:hover,
+.cache-x7ygkl-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -1141,27 +1229,29 @@ exports[`Link variant render success 1`] = `
   text-decoration-color: #149a7b;
 }
 
-.cache-eyfpv7-StyledLink:hover::after,
-.cache-eyfpv7-StyledLink:focus::after {
+.cache-x7ygkl-StyledLink:hover::after,
+.cache-x7ygkl-StyledLink:focus::after {
   background-color: #149a7b;
 }
 
-.cache-eyfpv7-StyledLink:active {
+.cache-x7ygkl-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-eyfpv7-StyledLink e4bq1r50"
+    class="cache-x7ygkl-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Link variant render warning 1`] = `
 <DocumentFragment>
-  .cache-2yk0cj-StyledLink {
+  .cache-120nmsi-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1199,8 +1289,12 @@ exports[`Link variant render warning 1`] = `
   text-case: none;
 }
 
-.cache-2yk0cj-StyledLink:hover,
-.cache-2yk0cj-StyledLink:focus {
+.cache-120nmsi-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-120nmsi-StyledLink:hover,
+.cache-120nmsi-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -1210,20 +1304,22 @@ exports[`Link variant render warning 1`] = `
   text-decoration-color: #cc4e18;
 }
 
-.cache-2yk0cj-StyledLink:hover::after,
-.cache-2yk0cj-StyledLink:focus::after {
+.cache-120nmsi-StyledLink:hover::after,
+.cache-120nmsi-StyledLink:focus::after {
   background-color: #cc4e18;
 }
 
-.cache-2yk0cj-StyledLink:active {
+.cache-120nmsi-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-2yk0cj-StyledLink e4bq1r50"
+    class="cache-120nmsi-StyledLink e4bq1r50"
     href="/"
   >
-    Hello
+    <span>
+      Hello
+    </span>
   </a>
 </DocumentFragment>
 `;

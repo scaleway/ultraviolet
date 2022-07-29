@@ -57,6 +57,11 @@ export const StyledLink = styled('a', {
   width: fit-content;
   cursor: pointer;
 
+  > * {
+    // Safari issue when something is inside an anchor
+    pointer-events: none;
+  }
+
   ${({ size, theme }) => {
     const variant = size === 'small' ? 'bodySmallStrong' : 'bodyStrong'
 
@@ -126,8 +131,7 @@ const Link = forwardRef(
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
         ) : null}
-
-        {children}
+        <span>{children}</span>
 
         {isBlank ? (
           <StyledExternalIconContainer>
