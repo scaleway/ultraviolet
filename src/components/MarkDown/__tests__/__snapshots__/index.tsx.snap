@@ -60,7 +60,7 @@ exports[`MarkDown render simple string 1`] = `
   margin-top: 0;
 }
 
-.cache-160jxco-StyledLink {
+.cache-17qgxc4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -98,8 +98,12 @@ exports[`MarkDown render simple string 1`] = `
   text-case: none;
 }
 
-.cache-160jxco-StyledLink:hover,
-.cache-160jxco-StyledLink:focus {
+.cache-17qgxc4-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-17qgxc4-StyledLink:hover,
+.cache-17qgxc4-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -109,12 +113,12 @@ exports[`MarkDown render simple string 1`] = `
   text-decoration-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:hover::after,
-.cache-160jxco-StyledLink:focus::after {
+.cache-17qgxc4-StyledLink:hover::after,
+.cache-17qgxc4-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:active {
+.cache-17qgxc4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -173,11 +177,13 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-160jxco-StyledLink e4bq1r50"
+        class="cache-17qgxc4-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
       >
         <span>
-          here
+          <span>
+            here
+          </span>
         </span>
       </a>
     </p>
@@ -226,7 +232,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
   margin-top: 0;
 }
 
-.cache-160jxco-StyledLink {
+.cache-17qgxc4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -264,8 +270,12 @@ exports[`MarkDown render simple string with target blank 1`] = `
   text-case: none;
 }
 
-.cache-160jxco-StyledLink:hover,
-.cache-160jxco-StyledLink:focus {
+.cache-17qgxc4-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-17qgxc4-StyledLink:hover,
+.cache-17qgxc4-StyledLink:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -275,12 +285,12 @@ exports[`MarkDown render simple string with target blank 1`] = `
   text-decoration-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:hover::after,
-.cache-160jxco-StyledLink:focus::after {
+.cache-17qgxc4-StyledLink:hover::after,
+.cache-17qgxc4-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-160jxco-StyledLink:active {
+.cache-17qgxc4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -359,13 +369,15 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="cache-160jxco-StyledLink e4bq1r50"
+        class="cache-17qgxc4-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
       >
         <span>
-          here
+          <span>
+            here
+          </span>
         </span>
         <span
           class="cache-1tang38-StyledExternalIconContainer e4bq1r51"

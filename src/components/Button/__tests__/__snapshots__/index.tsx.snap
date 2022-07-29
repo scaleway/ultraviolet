@@ -18,7 +18,7 @@ exports[`Button should render correctly loading 1`] = `
   }
 }
 
-.cache-lzpb8o-StyledButton {
+.cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -55,20 +55,19 @@ exports[`Button should render correctly loading 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -109,7 +108,7 @@ exports[`Button should render correctly loading 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -175,7 +174,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
   }
 }
 
-.cache-lzpb8o-StyledButton {
+.cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -212,20 +211,19 @@ exports[`Button should render correctly loading with an icon 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -287,7 +285,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -349,7 +347,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-rzbu99-StyledLink-StyledButton {
+  .cache-h512rj-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -421,8 +419,12 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton>* {
+  pointer-events: none;
+}
+
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -432,29 +434,28 @@ exports[`Button should render correctly when acting as Link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover::after,
-.cache-rzbu99-StyledLink-StyledButton:focus::after {
+.cache-h512rj-StyledLink-StyledButton:hover::after,
+.cache-h512rj-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:active {
+.cache-h512rj-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -475,21 +476,23 @@ exports[`Button should render correctly when acting as Link 1`] = `
 }
 
 <a
-    class="em6gco80 cache-rzbu99-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 cache-h512rj-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
-    >
-      Hello
-    </div>
+    <span>
+      <div
+        class="cache-m245rk-StyledContent em6gco82"
+      >
+        Hello
+      </div>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Button should render correctly when acting as Link with disabled props 1`] = `
 <DocumentFragment>
-  .cache-e79ytz-StyledButton {
+  .cache-1sfn84z-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -532,20 +535,19 @@ exports[`Button should render correctly when acting as Link with disabled props 
   box-shadow: none;
 }
 
-.cache-e79ytz-StyledButton:hover,
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:hover,
+.cache-1sfn84z-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-e79ytz-StyledButton:hover,
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:hover,
+.cache-1sfn84z-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -567,7 +569,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 <button
     aria-disabled="true"
-    class="em6gco80 cache-e79ytz-StyledButton"
+    class="em6gco80 cache-1sfn84z-StyledButton"
     disabled=""
     href="/"
     type="button"
@@ -583,7 +585,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 exports[`Button should render correctly when acting as dom link 1`] = `
 <DocumentFragment>
-  .cache-rzbu99-StyledLink-StyledButton {
+  .cache-h512rj-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -655,8 +657,12 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   color: #ffffff;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton>* {
+  pointer-events: none;
+}
+
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   gap: 4px;
   outline: none;
   -webkit-text-decoration: underline;
@@ -666,29 +672,28 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover::after,
-.cache-rzbu99-StyledLink-StyledButton:focus::after {
+.cache-h512rj-StyledLink-StyledButton:hover::after,
+.cache-h512rj-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:active {
+.cache-h512rj-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:hover,
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:hover,
+.cache-h512rj-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-rzbu99-StyledLink-StyledButton:focus {
+.cache-h512rj-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -709,21 +714,23 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 }
 
 <a
-    class="em6gco80 cache-rzbu99-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 cache-h512rj-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
-    <div
-      class="cache-m245rk-StyledContent em6gco82"
-    >
-      Hello
-    </div>
+    <span>
+      <div
+        class="cache-m245rk-StyledContent em6gco82"
+      >
+        Hello
+      </div>
+    </span>
   </a>
 </DocumentFragment>
 `;
 
 exports[`Button should render correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-e79ytz-StyledButton {
+  .cache-1sfn84z-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -766,20 +773,19 @@ exports[`Button should render correctly when disabled 1`] = `
   box-shadow: none;
 }
 
-.cache-e79ytz-StyledButton:hover,
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:hover,
+.cache-1sfn84z-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-e79ytz-StyledButton:hover,
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:hover,
+.cache-1sfn84z-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-e79ytz-StyledButton:focus {
+.cache-1sfn84z-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -801,7 +807,7 @@ exports[`Button should render correctly when disabled 1`] = `
 
 <button
     aria-disabled="true"
-    class="em6gco80 cache-e79ytz-StyledButton"
+    class="em6gco80 cache-1sfn84z-StyledButton"
     disabled=""
     type="button"
   >
@@ -816,7 +822,7 @@ exports[`Button should render correctly when disabled 1`] = `
 
 exports[`Button should render correctly when extendable 1`] = `
 <DocumentFragment>
-  .cache-rc3mvg-StyledButton-StyledButton {
+  .cache-1485t75-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -857,24 +863,23 @@ exports[`Button should render correctly when extendable 1`] = `
   display: inline-flex;
 }
 
-.cache-rc3mvg-StyledButton-StyledButton:hover,
-.cache-rc3mvg-StyledButton-StyledButton:focus {
+.cache-1485t75-StyledButton-StyledButton:hover,
+.cache-1485t75-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-rc3mvg-StyledButton-StyledButton:hover,
-.cache-rc3mvg-StyledButton-StyledButton:focus {
+.cache-1485t75-StyledButton-StyledButton:hover,
+.cache-1485t75-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-rc3mvg-StyledButton-StyledButton:focus {
+.cache-1485t75-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-rc3mvg-StyledButton-StyledButton .em6gco82 {
+.cache-1485t75-StyledButton-StyledButton .em6gco82 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -883,8 +888,8 @@ exports[`Button should render correctly when extendable 1`] = `
   overflow: hidden;
 }
 
-.cache-rc3mvg-StyledButton-StyledButton:focus .em6gco82,
-.cache-rc3mvg-StyledButton-StyledButton:hover .em6gco82 {
+.cache-1485t75-StyledButton-StyledButton:focus .em6gco82,
+.cache-1485t75-StyledButton-StyledButton:hover .em6gco82 {
   max-width: 275px;
   margin-right: 8px;
   padding-left: 8px;
@@ -908,7 +913,7 @@ exports[`Button should render correctly when extendable 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-rc3mvg-StyledButton-StyledButton"
+    class="em6gco80 cache-1485t75-StyledButton-StyledButton"
     type="button"
   >
     <div
@@ -922,7 +927,7 @@ exports[`Button should render correctly when extendable 1`] = `
 
 exports[`Button should render correctly when extendable with an icon 1`] = `
 <DocumentFragment>
-  .cache-oll4ne-StyledButton-StyledButton {
+  .cache-10bxndj-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -963,24 +968,23 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   display: inline-flex;
 }
 
-.cache-oll4ne-StyledButton-StyledButton:hover,
-.cache-oll4ne-StyledButton-StyledButton:focus {
+.cache-10bxndj-StyledButton-StyledButton:hover,
+.cache-10bxndj-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-oll4ne-StyledButton-StyledButton:hover,
-.cache-oll4ne-StyledButton-StyledButton:focus {
+.cache-10bxndj-StyledButton-StyledButton:hover,
+.cache-10bxndj-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-oll4ne-StyledButton-StyledButton:focus {
+.cache-10bxndj-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-oll4ne-StyledButton-StyledButton .em6gco82 {
+.cache-10bxndj-StyledButton-StyledButton .em6gco82 {
   -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
   max-width: 0;
@@ -989,8 +993,8 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   overflow: hidden;
 }
 
-.cache-oll4ne-StyledButton-StyledButton:focus .em6gco82,
-.cache-oll4ne-StyledButton-StyledButton:hover .em6gco82 {
+.cache-10bxndj-StyledButton-StyledButton:focus .em6gco82,
+.cache-10bxndj-StyledButton-StyledButton:hover .em6gco82 {
   max-width: 275px;
   margin-right: 8px;
   padding-right: 8x;
@@ -1035,7 +1039,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-oll4ne-StyledButton-StyledButton"
+    class="em6gco80 cache-10bxndj-StyledButton-StyledButton"
     type="button"
   >
     <div
@@ -1061,7 +1065,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 exports[`Button should render correctly with a custom Icon 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1098,20 +1102,19 @@ exports[`Button should render correctly with a custom Icon 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -1126,7 +1129,7 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 <button
     aria-disabled="false"
     aria-label="icon"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -1140,7 +1143,7 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 
 exports[`Button should render correctly with a rounded action button 1`] = `
 <DocumentFragment>
-  .cache-1ui3g73-StyledButton-StyledButton {
+  .cache-1149lma-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1184,24 +1187,23 @@ exports[`Button should render correctly with a rounded action button 1`] = `
   border-radius: 16px;
 }
 
-.cache-1ui3g73-StyledButton-StyledButton:hover,
-.cache-1ui3g73-StyledButton-StyledButton:focus {
+.cache-1149lma-StyledButton-StyledButton:hover,
+.cache-1149lma-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1ui3g73-StyledButton-StyledButton:hover,
-.cache-1ui3g73-StyledButton-StyledButton:focus {
+.cache-1149lma-StyledButton-StyledButton:hover,
+.cache-1149lma-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1ui3g73-StyledButton-StyledButton:focus {
+.cache-1149lma-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-1ui3g73-StyledButton-StyledButton>svg {
+.cache-1149lma-StyledButton-StyledButton>svg {
   pointer-events: none;
 }
 
@@ -1228,7 +1230,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 <button
     aria-disabled="false"
     aria-label="check"
-    class="em6gco80 cache-1ui3g73-StyledButton-StyledButton"
+    class="em6gco80 cache-1149lma-StyledButton-StyledButton"
     type="button"
   >
     <div
@@ -1249,7 +1251,7 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 
 exports[`Button should render correctly with a tooltip 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1286,20 +1288,19 @@ exports[`Button should render correctly with a tooltip 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -1346,7 +1347,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
     <button
       aria-describedby="test"
       aria-disabled="false"
-      class="em6gco80 cache-lzpb8o-StyledButton"
+      class="em6gco80 cache-gbzw7p-StyledButton"
       type="button"
     >
       <div
@@ -1373,7 +1374,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
 
 exports[`Button should render correctly with an action button 1`] = `
 <DocumentFragment>
-  .cache-1q4wrk4-StyledButton-StyledButton {
+  .cache-nzbauk-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1416,24 +1417,23 @@ exports[`Button should render correctly with an action button 1`] = `
   flex-shrink: 0;
 }
 
-.cache-1q4wrk4-StyledButton-StyledButton:hover,
-.cache-1q4wrk4-StyledButton-StyledButton:focus {
+.cache-nzbauk-StyledButton-StyledButton:hover,
+.cache-nzbauk-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1q4wrk4-StyledButton-StyledButton:hover,
-.cache-1q4wrk4-StyledButton-StyledButton:focus {
+.cache-nzbauk-StyledButton-StyledButton:hover,
+.cache-nzbauk-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1q4wrk4-StyledButton-StyledButton:focus {
+.cache-nzbauk-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
-.cache-1q4wrk4-StyledButton-StyledButton>svg {
+.cache-nzbauk-StyledButton-StyledButton>svg {
   pointer-events: none;
 }
 
@@ -1460,7 +1460,7 @@ exports[`Button should render correctly with an action button 1`] = `
 <button
     aria-disabled="false"
     aria-label="check"
-    class="em6gco80 cache-1q4wrk4-StyledButton-StyledButton"
+    class="em6gco80 cache-nzbauk-StyledButton-StyledButton"
     type="button"
   >
     <div
@@ -1481,7 +1481,7 @@ exports[`Button should render correctly with an action button 1`] = `
 
 exports[`Button should render correctly with an icon on the right 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1518,20 +1518,19 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -1574,7 +1573,7 @@ exports[`Button should render correctly with an icon on the right 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -1616,7 +1615,7 @@ exports[`Button should render correctly with as 1`] = `
   }
 }
 
-.cache-lzpb8o-StyledButton {
+.cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1653,20 +1652,19 @@ exports[`Button should render correctly with as 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -1728,7 +1726,7 @@ exports[`Button should render correctly with as 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -1806,7 +1804,7 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   }
 }
 
-.cache-lzpb8o-StyledButton {
+.cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1843,20 +1841,19 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -1918,7 +1915,7 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -1996,7 +1993,7 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   }
 }
 
-.cache-lzpb8o-StyledButton {
+.cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2033,20 +2030,19 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2108,7 +2104,7 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -2170,7 +2166,7 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
 
 exports[`Button should render correctly without a children 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2207,27 +2203,26 @@ exports[`Button should render correctly without a children 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
 <button
     aria-disabled="false"
     aria-label="no content"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   />
 </DocumentFragment>
@@ -2235,7 +2230,7 @@ exports[`Button should render correctly without a children 1`] = `
 
 exports[`Button should render correctly without a children and an icon 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2272,20 +2267,19 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2312,7 +2306,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 <button
     aria-disabled="false"
     aria-label="check icon"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -2333,7 +2327,7 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 
 exports[`Button size render large 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2370,20 +2364,19 @@ exports[`Button size render large 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2405,7 +2398,7 @@ exports[`Button size render large 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -2419,7 +2412,7 @@ exports[`Button size render large 1`] = `
 
 exports[`Button size render medium 1`] = `
 <DocumentFragment>
-  .cache-x6j819-StyledButton {
+  .cache-1aow387-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2455,20 +2448,19 @@ exports[`Button size render medium 1`] = `
   color: #ffffff;
 }
 
-.cache-x6j819-StyledButton:hover,
-.cache-x6j819-StyledButton:focus {
+.cache-1aow387-StyledButton:hover,
+.cache-1aow387-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-x6j819-StyledButton:hover,
-.cache-x6j819-StyledButton:focus {
+.cache-1aow387-StyledButton:hover,
+.cache-1aow387-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-x6j819-StyledButton:focus {
+.cache-1aow387-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2490,7 +2482,7 @@ exports[`Button size render medium 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-x6j819-StyledButton"
+    class="em6gco80 cache-1aow387-StyledButton"
     type="button"
   >
     <div
@@ -2504,7 +2496,7 @@ exports[`Button size render medium 1`] = `
 
 exports[`Button size render small 1`] = `
 <DocumentFragment>
-  .cache-rz8ku7-StyledButton {
+  .cache-wl98n4-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2540,20 +2532,19 @@ exports[`Button size render small 1`] = `
   color: #ffffff;
 }
 
-.cache-rz8ku7-StyledButton:hover,
-.cache-rz8ku7-StyledButton:focus {
+.cache-wl98n4-StyledButton:hover,
+.cache-wl98n4-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-rz8ku7-StyledButton:hover,
-.cache-rz8ku7-StyledButton:focus {
+.cache-wl98n4-StyledButton:hover,
+.cache-wl98n4-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-rz8ku7-StyledButton:focus {
+.cache-wl98n4-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2575,7 +2566,7 @@ exports[`Button size render small 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-rz8ku7-StyledButton"
+    class="em6gco80 cache-wl98n4-StyledButton"
     type="button"
   >
     <div
@@ -2589,7 +2580,7 @@ exports[`Button size render small 1`] = `
 
 exports[`Button size render xsmall 1`] = `
 <DocumentFragment>
-  .cache-2g5fjy-StyledButton {
+  .cache-1vv7yr4-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2625,20 +2616,19 @@ exports[`Button size render xsmall 1`] = `
   color: #ffffff;
 }
 
-.cache-2g5fjy-StyledButton:hover,
-.cache-2g5fjy-StyledButton:focus {
+.cache-1vv7yr4-StyledButton:hover,
+.cache-1vv7yr4-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-2g5fjy-StyledButton:hover,
-.cache-2g5fjy-StyledButton:focus {
+.cache-1vv7yr4-StyledButton:hover,
+.cache-1vv7yr4-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-2g5fjy-StyledButton:focus {
+.cache-1vv7yr4-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2660,7 +2650,7 @@ exports[`Button size render xsmall 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-2g5fjy-StyledButton"
+    class="em6gco80 cache-1vv7yr4-StyledButton"
     type="button"
   >
     <div
@@ -2674,7 +2664,7 @@ exports[`Button size render xsmall 1`] = `
 
 exports[`Button size render xxsmall 1`] = `
 <DocumentFragment>
-  .cache-199en70-StyledButton {
+  .cache-1yb4xwe-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2708,20 +2698,19 @@ exports[`Button size render xxsmall 1`] = `
   color: #ffffff;
 }
 
-.cache-199en70-StyledButton:hover,
-.cache-199en70-StyledButton:focus {
+.cache-1yb4xwe-StyledButton:hover,
+.cache-1yb4xwe-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-199en70-StyledButton:hover,
-.cache-199en70-StyledButton:focus {
+.cache-1yb4xwe-StyledButton:hover,
+.cache-1yb4xwe-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-199en70-StyledButton:focus {
+.cache-1yb4xwe-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -2743,7 +2732,7 @@ exports[`Button size render xxsmall 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-199en70-StyledButton"
+    class="em6gco80 cache-1yb4xwe-StyledButton"
     type="button"
   >
     <div
@@ -2757,7 +2746,7 @@ exports[`Button size render xxsmall 1`] = `
 
 exports[`Button variant render info 1`] = `
 <DocumentFragment>
-  .cache-1g4usa1-StyledButton {
+  .cache-rm4q4u-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2794,20 +2783,19 @@ exports[`Button variant render info 1`] = `
   color: #1a4dbf;
 }
 
-.cache-1g4usa1-StyledButton:hover,
-.cache-1g4usa1-StyledButton:focus {
+.cache-rm4q4u-StyledButton:hover,
+.cache-rm4q4u-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1g4usa1-StyledButton:hover,
-.cache-1g4usa1-StyledButton:focus {
+.cache-rm4q4u-StyledButton:hover,
+.cache-rm4q4u-StyledButton:focus {
   color: #1a4dbf;
   background-color: #c4d5f8;
 }
 
-.cache-1g4usa1-StyledButton:focus {
+.cache-rm4q4u-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(196,213,248,0.25);
 }
 
@@ -2829,7 +2817,7 @@ exports[`Button variant render info 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1g4usa1-StyledButton"
+    class="em6gco80 cache-rm4q4u-StyledButton"
     type="button"
   >
     <div
@@ -2843,7 +2831,7 @@ exports[`Button variant render info 1`] = `
 
 exports[`Button variant render info-bordered 1`] = `
 <DocumentFragment>
-  .cache-1hfr3se-StyledButton {
+  .cache-10uv3v8-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2881,31 +2869,30 @@ exports[`Button variant render info-bordered 1`] = `
   color: #3f6ed8;
 }
 
-.cache-1hfr3se-StyledButton:hover,
-.cache-1hfr3se-StyledButton:focus {
+.cache-10uv3v8-StyledButton:hover,
+.cache-10uv3v8-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1hfr3se-StyledButton svg {
+.cache-10uv3v8-StyledButton svg {
   fill: #3f6ed8;
   pointer-events: none;
 }
 
-.cache-1hfr3se-StyledButton:hover,
-.cache-1hfr3se-StyledButton:focus {
+.cache-10uv3v8-StyledButton:hover,
+.cache-10uv3v8-StyledButton:focus {
   border: 1px solid #1a4dbf;
   color: #ffffff;
   background-color: #1a4dbf;
 }
 
-.cache-1hfr3se-StyledButton:hover svg,
-.cache-1hfr3se-StyledButton:focus svg {
+.cache-10uv3v8-StyledButton:hover svg,
+.cache-10uv3v8-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-1hfr3se-StyledButton:focus {
+.cache-10uv3v8-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(26,77,191,0.25);
 }
 
@@ -2927,7 +2914,7 @@ exports[`Button variant render info-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1hfr3se-StyledButton"
+    class="em6gco80 cache-10uv3v8-StyledButton"
     type="button"
   >
     <div
@@ -2941,7 +2928,7 @@ exports[`Button variant render info-bordered 1`] = `
 
 exports[`Button variant render link 1`] = `
 <DocumentFragment>
-  .cache-1okwd4e-StyledButton {
+  .cache-9ov49e-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2988,22 +2975,21 @@ exports[`Button variant render link 1`] = `
   vertical-align: baseline;
 }
 
-.cache-1okwd4e-StyledButton:hover,
-.cache-1okwd4e-StyledButton:focus {
+.cache-9ov49e-StyledButton:hover,
+.cache-9ov49e-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1okwd4e-StyledButton:hover,
-.cache-1okwd4e-StyledButton:focus {
+.cache-9ov49e-StyledButton:hover,
+.cache-9ov49e-StyledButton:focus {
   text-decoration-thickness: 1px;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #1a4dbf;
 }
 
-.cache-1okwd4e-StyledButton:active {
+.cache-9ov49e-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
@@ -3025,7 +3011,7 @@ exports[`Button variant render link 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1okwd4e-StyledButton"
+    class="em6gco80 cache-9ov49e-StyledButton"
     type="button"
   >
     <div
@@ -3039,7 +3025,7 @@ exports[`Button variant render link 1`] = `
 
 exports[`Button variant render primary 1`] = `
 <DocumentFragment>
-  .cache-lzpb8o-StyledButton {
+  .cache-gbzw7p-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3076,20 +3062,19 @@ exports[`Button variant render primary 1`] = `
   color: #ffffff;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-lzpb8o-StyledButton:hover,
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:hover,
+.cache-gbzw7p-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-lzpb8o-StyledButton:focus {
+.cache-gbzw7p-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -3111,7 +3096,7 @@ exports[`Button variant render primary 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-lzpb8o-StyledButton"
+    class="em6gco80 cache-gbzw7p-StyledButton"
     type="button"
   >
     <div
@@ -3125,7 +3110,7 @@ exports[`Button variant render primary 1`] = `
 
 exports[`Button variant render primary-bordered 1`] = `
 <DocumentFragment>
-  .cache-6unzl-StyledButton {
+  .cache-139jxbj-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3163,31 +3148,30 @@ exports[`Button variant render primary-bordered 1`] = `
   color: #4f0599;
 }
 
-.cache-6unzl-StyledButton:hover,
-.cache-6unzl-StyledButton:focus {
+.cache-139jxbj-StyledButton:hover,
+.cache-139jxbj-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-6unzl-StyledButton svg {
+.cache-139jxbj-StyledButton svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-6unzl-StyledButton:hover,
-.cache-6unzl-StyledButton:focus {
+.cache-139jxbj-StyledButton:hover,
+.cache-139jxbj-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-6unzl-StyledButton:hover svg,
-.cache-6unzl-StyledButton:focus svg {
+.cache-139jxbj-StyledButton:hover svg,
+.cache-139jxbj-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-6unzl-StyledButton:focus {
+.cache-139jxbj-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -3209,7 +3193,7 @@ exports[`Button variant render primary-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-6unzl-StyledButton"
+    class="em6gco80 cache-139jxbj-StyledButton"
     type="button"
   >
     <div
@@ -3223,7 +3207,7 @@ exports[`Button variant render primary-bordered 1`] = `
 
 exports[`Button variant render primary-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-1cuxvr0-StyledButton {
+  .cache-h9swrs-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3261,31 +3245,30 @@ exports[`Button variant render primary-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1cuxvr0-StyledButton:hover,
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:hover,
+.cache-h9swrs-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1cuxvr0-StyledButton svg {
+.cache-h9swrs-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-1cuxvr0-StyledButton:hover,
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:hover,
+.cache-h9swrs-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1cuxvr0-StyledButton:hover svg,
-.cache-1cuxvr0-StyledButton:focus svg {
+.cache-h9swrs-StyledButton:hover svg,
+.cache-h9swrs-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -3307,7 +3290,7 @@ exports[`Button variant render primary-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1cuxvr0-StyledButton"
+    class="em6gco80 cache-h9swrs-StyledButton"
     type="button"
   >
     <div
@@ -3321,7 +3304,7 @@ exports[`Button variant render primary-soft-bordered 1`] = `
 
 exports[`Button variant render secondary 1`] = `
 <DocumentFragment>
-  .cache-195nroi-StyledButton {
+  .cache-1p3kb5l-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3358,20 +3341,19 @@ exports[`Button variant render secondary 1`] = `
   color: #4a4f62;
 }
 
-.cache-195nroi-StyledButton:hover,
-.cache-195nroi-StyledButton:focus {
+.cache-1p3kb5l-StyledButton:hover,
+.cache-1p3kb5l-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-195nroi-StyledButton:hover,
-.cache-195nroi-StyledButton:focus {
+.cache-1p3kb5l-StyledButton:hover,
+.cache-1p3kb5l-StyledButton:focus {
   color: #4a4f62;
   background-color: #d4dae7;
 }
 
-.cache-195nroi-StyledButton:focus {
+.cache-1p3kb5l-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
 }
 
@@ -3393,7 +3375,7 @@ exports[`Button variant render secondary 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-195nroi-StyledButton"
+    class="em6gco80 cache-1p3kb5l-StyledButton"
     type="button"
   >
     <div
@@ -3407,7 +3389,7 @@ exports[`Button variant render secondary 1`] = `
 
 exports[`Button variant render secondary-bordered 1`] = `
 <DocumentFragment>
-  .cache-1cuxvr0-StyledButton {
+  .cache-h9swrs-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3445,31 +3427,30 @@ exports[`Button variant render secondary-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1cuxvr0-StyledButton:hover,
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:hover,
+.cache-h9swrs-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1cuxvr0-StyledButton svg {
+.cache-h9swrs-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-1cuxvr0-StyledButton:hover,
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:hover,
+.cache-h9swrs-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1cuxvr0-StyledButton:hover svg,
-.cache-1cuxvr0-StyledButton:focus svg {
+.cache-h9swrs-StyledButton:hover svg,
+.cache-h9swrs-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-1cuxvr0-StyledButton:focus {
+.cache-h9swrs-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -3491,7 +3472,7 @@ exports[`Button variant render secondary-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1cuxvr0-StyledButton"
+    class="em6gco80 cache-h9swrs-StyledButton"
     type="button"
   >
     <div
@@ -3505,7 +3486,7 @@ exports[`Button variant render secondary-bordered 1`] = `
 
 exports[`Button variant render success 1`] = `
 <DocumentFragment>
-  .cache-12n625k-StyledButton {
+  .cache-auq1a0-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3542,20 +3523,19 @@ exports[`Button variant render success 1`] = `
   color: #ffffff;
 }
 
-.cache-12n625k-StyledButton:hover,
-.cache-12n625k-StyledButton:focus {
+.cache-auq1a0-StyledButton:hover,
+.cache-auq1a0-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-12n625k-StyledButton:hover,
-.cache-12n625k-StyledButton:focus {
+.cache-auq1a0-StyledButton:hover,
+.cache-auq1a0-StyledButton:focus {
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-12n625k-StyledButton:focus {
+.cache-auq1a0-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(20,154,123,0.25);
 }
 
@@ -3577,7 +3557,7 @@ exports[`Button variant render success 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-12n625k-StyledButton"
+    class="em6gco80 cache-auq1a0-StyledButton"
     type="button"
   >
     <div
@@ -3591,7 +3571,7 @@ exports[`Button variant render success 1`] = `
 
 exports[`Button variant render success-bordered 1`] = `
 <DocumentFragment>
-  .cache-n2on9b-StyledButton {
+  .cache-1biwxg9-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3629,31 +3609,30 @@ exports[`Button variant render success-bordered 1`] = `
   color: #22c8a2;
 }
 
-.cache-n2on9b-StyledButton:hover,
-.cache-n2on9b-StyledButton:focus {
+.cache-1biwxg9-StyledButton:hover,
+.cache-1biwxg9-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-n2on9b-StyledButton svg {
+.cache-1biwxg9-StyledButton svg {
   fill: #22c8a2;
   pointer-events: none;
 }
 
-.cache-n2on9b-StyledButton:hover,
-.cache-n2on9b-StyledButton:focus {
+.cache-1biwxg9-StyledButton:hover,
+.cache-1biwxg9-StyledButton:focus {
   border: 1px solid #149a7b;
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-n2on9b-StyledButton:hover svg,
-.cache-n2on9b-StyledButton:focus svg {
+.cache-1biwxg9-StyledButton:hover svg,
+.cache-1biwxg9-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-n2on9b-StyledButton:focus {
+.cache-1biwxg9-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(20,154,123,0.25);
 }
 
@@ -3675,7 +3654,7 @@ exports[`Button variant render success-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-n2on9b-StyledButton"
+    class="em6gco80 cache-1biwxg9-StyledButton"
     type="button"
   >
     <div
@@ -3689,7 +3668,7 @@ exports[`Button variant render success-bordered 1`] = `
 
 exports[`Button variant render success-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-1lyo871-StyledButton {
+  .cache-1hf09rl-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3727,31 +3706,30 @@ exports[`Button variant render success-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1lyo871-StyledButton:hover,
-.cache-1lyo871-StyledButton:focus {
+.cache-1hf09rl-StyledButton:hover,
+.cache-1hf09rl-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1lyo871-StyledButton svg {
+.cache-1hf09rl-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-1lyo871-StyledButton:hover,
-.cache-1lyo871-StyledButton:focus {
+.cache-1hf09rl-StyledButton:hover,
+.cache-1hf09rl-StyledButton:focus {
   border: 1px solid #149a7b;
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-1lyo871-StyledButton:hover svg,
-.cache-1lyo871-StyledButton:focus svg {
+.cache-1hf09rl-StyledButton:hover svg,
+.cache-1hf09rl-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-1lyo871-StyledButton:focus {
+.cache-1hf09rl-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(20,154,123,0.25);
 }
 
@@ -3773,7 +3751,7 @@ exports[`Button variant render success-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-1lyo871-StyledButton"
+    class="em6gco80 cache-1hf09rl-StyledButton"
     type="button"
   >
     <div
@@ -3787,7 +3765,7 @@ exports[`Button variant render success-soft-bordered 1`] = `
 
 exports[`Button variant render transparent 1`] = `
 <DocumentFragment>
-  .cache-wab2to-StyledButton {
+  .cache-2j0rhu-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3824,11 +3802,10 @@ exports[`Button variant render transparent 1`] = `
   color: #4a4f62;
 }
 
-.cache-wab2to-StyledButton:hover,
-.cache-wab2to-StyledButton:focus {
+.cache-2j0rhu-StyledButton:hover,
+.cache-2j0rhu-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
 .cache-m245rk-StyledContent {
@@ -3849,7 +3826,7 @@ exports[`Button variant render transparent 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-wab2to-StyledButton"
+    class="em6gco80 cache-2j0rhu-StyledButton"
     type="button"
   >
     <div
@@ -3863,7 +3840,7 @@ exports[`Button variant render transparent 1`] = `
 
 exports[`Button variant render warning 1`] = `
 <DocumentFragment>
-  .cache-fr3lqt-StyledButton {
+  .cache-h8x1oq-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3900,20 +3877,19 @@ exports[`Button variant render warning 1`] = `
   color: #ffffff;
 }
 
-.cache-fr3lqt-StyledButton:hover,
-.cache-fr3lqt-StyledButton:focus {
+.cache-h8x1oq-StyledButton:hover,
+.cache-h8x1oq-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-fr3lqt-StyledButton:hover,
-.cache-fr3lqt-StyledButton:focus {
+.cache-h8x1oq-StyledButton:hover,
+.cache-h8x1oq-StyledButton:focus {
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-fr3lqt-StyledButton:focus {
+.cache-h8x1oq-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(166,16,45,0.25);
 }
 
@@ -3935,7 +3911,7 @@ exports[`Button variant render warning 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-fr3lqt-StyledButton"
+    class="em6gco80 cache-h8x1oq-StyledButton"
     type="button"
   >
     <div
@@ -3949,7 +3925,7 @@ exports[`Button variant render warning 1`] = `
 
 exports[`Button variant render warning-bordered 1`] = `
 <DocumentFragment>
-  .cache-ryhe8h-StyledButton {
+  .cache-1px2mg8-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3987,31 +3963,30 @@ exports[`Button variant render warning-bordered 1`] = `
   color: #a6102d;
 }
 
-.cache-ryhe8h-StyledButton:hover,
-.cache-ryhe8h-StyledButton:focus {
+.cache-1px2mg8-StyledButton:hover,
+.cache-1px2mg8-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-ryhe8h-StyledButton svg {
+.cache-1px2mg8-StyledButton svg {
   fill: #a6102d;
   pointer-events: none;
 }
 
-.cache-ryhe8h-StyledButton:hover,
-.cache-ryhe8h-StyledButton:focus {
+.cache-1px2mg8-StyledButton:hover,
+.cache-1px2mg8-StyledButton:focus {
   border: 1px solid #a6102d;
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-ryhe8h-StyledButton:hover svg,
-.cache-ryhe8h-StyledButton:focus svg {
+.cache-1px2mg8-StyledButton:hover svg,
+.cache-1px2mg8-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-ryhe8h-StyledButton:focus {
+.cache-1px2mg8-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(166,16,45,0.25);
 }
 
@@ -4033,7 +4008,7 @@ exports[`Button variant render warning-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-ryhe8h-StyledButton"
+    class="em6gco80 cache-1px2mg8-StyledButton"
     type="button"
   >
     <div
@@ -4047,7 +4022,7 @@ exports[`Button variant render warning-bordered 1`] = `
 
 exports[`Button variant render warning-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-8omita-StyledButton {
+  .cache-1l4k429-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4085,31 +4060,30 @@ exports[`Button variant render warning-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-8omita-StyledButton:hover,
-.cache-8omita-StyledButton:focus {
+.cache-1l4k429-StyledButton:hover,
+.cache-1l4k429-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-8omita-StyledButton svg {
+.cache-1l4k429-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-8omita-StyledButton:hover,
-.cache-8omita-StyledButton:focus {
+.cache-1l4k429-StyledButton:hover,
+.cache-1l4k429-StyledButton:focus {
   border: 1px solid #a6102d;
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-8omita-StyledButton:hover svg,
-.cache-8omita-StyledButton:focus svg {
+.cache-1l4k429-StyledButton:hover svg,
+.cache-1l4k429-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-8omita-StyledButton:focus {
+.cache-1l4k429-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(166,16,45,0.25);
 }
 
@@ -4131,7 +4105,7 @@ exports[`Button variant render warning-soft-bordered 1`] = `
 
 <button
     aria-disabled="false"
-    class="em6gco80 cache-8omita-StyledButton"
+    class="em6gco80 cache-1l4k429-StyledButton"
     type="button"
   >
     <div
