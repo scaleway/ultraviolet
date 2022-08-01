@@ -29,7 +29,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.3.0
   '@rollup/plugin-url': 7.0.0
   '@scaleway/eslint-config-react': 3.4.47
-  '@scaleway/jest-helpers': 1.2.7
+  '@scaleway/jest-helpers': 1.2.8
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.3.15
   '@scaleway/use-media': 1.1.1
@@ -172,7 +172,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
   '@rollup/plugin-url': 7.0.0_rollup@2.77.2
   '@scaleway/eslint-config-react': 3.4.47_he2ccbldppg44uulnyq4rwocfa
-  '@scaleway/jest-helpers': 1.2.7_wi3pqks3q27fa7n2ecdzfr2ytm
+  '@scaleway/jest-helpers': 1.2.8_wi3pqks3q27fa7n2ecdzfr2ytm
   '@scaleway/use-i18n': 3.3.15_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
@@ -2132,6 +2132,26 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  /@emotion/babel-plugin/11.10.0_@babel+core@7.18.9:
+    resolution: {integrity: sha512-xVnpDAAbtxL1dsuSelU5A7BnY/lftws0wUexNJZTPsvX/1tM4GZJbclgODhvW4E+NH7E5VFcH0bBn30NvniPJA==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.9
+      '@babel/helper-module-imports': 7.18.6
+      '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.18.9
+      '@babel/runtime': 7.18.9
+      '@emotion/hash': 0.9.0
+      '@emotion/memoize': 0.8.0
+      '@emotion/serialize': 1.1.0
+      babel-plugin-macros: 3.1.0
+      convert-source-map: 1.8.0
+      escape-string-regexp: 4.0.0
+      find-root: 1.1.0
+      source-map: 0.5.7
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/babel-plugin/11.9.5_@babel+core@7.18.9:
     resolution: {integrity: sha512-n+9y6TSsvAsOc0hXmdVtqgU6B+ils+zrzTZGg1aV2BkZtBbL7DiasLSpu3fUFwXOkYm63j7+649yb+HhyZxYSA==}
     peerDependencies:
@@ -2151,6 +2171,16 @@ packages:
       source-map: 0.5.7
       stylis: 4.0.13
 
+  /@emotion/cache/11.10.0:
+    resolution: {integrity: sha512-3FoUWnDbHWg/pXGCvL46jvpOSJP0xvRZLY8khUcUHGOBcp0S/MCIk+osp84/dby2Ctahw/Ev4KTHWkY3i0g39g==}
+    dependencies:
+      '@emotion/memoize': 0.8.0
+      '@emotion/sheet': 1.2.0
+      '@emotion/utils': 1.2.0
+      '@emotion/weak-memoize': 0.3.0
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/cache/11.9.3:
     resolution: {integrity: sha512-0dgkI/JKlCXa+lEXviaMtGBL0ynpx4osh7rjOXE71q9bIF8G+XhJgvi+wDu0B0IdCVx37BffiwXlN9I3UuzFvg==}
     dependencies:
@@ -2167,6 +2197,13 @@ packages:
       stylis: 4.0.13
     dev: true
 
+  /@emotion/css-prettifier/1.1.0:
+    resolution: {integrity: sha512-ALZCKBcpC9FeA0D6HLc4Et3bwY06fOG63CqLtWwk4W/u7+bWjorRxS9yikcJ2aTmlKur/ST9eWm5ohzBmWlTOQ==}
+    dependencies:
+      '@emotion/memoize': 0.8.0
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/eslint-plugin/11.7.0_eslint@8.20.0:
     resolution: {integrity: sha512-k6H0OxBgkPDVG5M16AWnu3z15OmmKNvGmJiYTcamoOIDhiGE5+no+BiVAiHPOwJf/NOsDei2S9i015cMwlO5sA==}
     engines: {node: '>=6'}
@@ -2179,15 +2216,19 @@ packages:
   /@emotion/hash/0.8.0:
     resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
 
+  /@emotion/hash/0.9.0:
+    resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
+    dev: true
+
   /@emotion/is-prop-valid/1.1.3:
     resolution: {integrity: sha512-RFg04p6C+1uO19uG8N+vqanzKqiM9eeV1LDOG3bmkYmuOj7NbKNlFC/4EZq5gnwAIlcC/jOT24f8Td0iax2SXA==}
     dependencies:
       '@emotion/memoize': 0.7.5
 
-  /@emotion/jest/11.9.3_@types+jest@27.5.2:
-    resolution: {integrity: sha512-fDfZc1ydjjJ+2IDAK+rP+rm469I4u5cIkN3zmGYf0CBW9TLrtM9u9kke3s+i5/M2UpcqLDvtal0EyPBR0A8EWg==}
+  /@emotion/jest/11.10.0_@types+jest@27.5.2:
+    resolution: {integrity: sha512-jeevEzauWrjDPWt9BGITjKzgLd31Q6kZ35gmH77f+LSaU/Ie1bFfxroum0nQNPEHS+kUxh6unv9DQIw+DEr5Ug==}
     peerDependencies:
-      '@types/jest': ^26.0.14 || ^27.0.0
+      '@types/jest': ^26.0.14 || ^27.0.0 || ^28.0.0
       enzyme-to-json: ^3.2.1
     peerDependenciesMeta:
       '@types/jest':
@@ -2196,7 +2237,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.18.9
-      '@emotion/css-prettifier': 1.0.1
+      '@emotion/css-prettifier': 1.1.0
       '@types/jest': 27.5.2
       chalk: 4.1.2
       specificity: 0.4.1
@@ -2224,6 +2265,34 @@ packages:
 
   /@emotion/memoize/0.7.5:
     resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
+
+  /@emotion/memoize/0.8.0:
+    resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
+    dev: true
+
+  /@emotion/react/11.10.0_lezx5lhs6suvlmsjohaunh4xlm:
+    resolution: {integrity: sha512-K6z9zlHxxBXwN8TcpwBKcEsBsOw4JWCCmR+BeeOWgqp8GIU1yA2Odd41bwdAAr0ssbQrbJbVnndvv7oiv1bZeQ==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      '@types/react': '*'
+      react: '>=16.8.0 || 17'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/core': 7.18.9
+      '@babel/runtime': 7.18.9
+      '@emotion/babel-plugin': 11.10.0_@babel+core@7.18.9
+      '@emotion/cache': 11.10.0
+      '@emotion/serialize': 1.1.0
+      '@emotion/utils': 1.2.0
+      '@emotion/weak-memoize': 0.3.0
+      '@types/react': 17.0.48
+      hoist-non-react-statics: 3.3.2
+      react: 17.0.2
+    dev: true
 
   /@emotion/react/11.9.3_lezx5lhs6suvlmsjohaunh4xlm:
     resolution: {integrity: sha512-g9Q1GcTOlzOEjqwuLF/Zd9LC+4FljjPjDfxSM7KmEakm+hsHXk+bYZ2q+/hTJzr0OUNkujo72pXLQvXj6H+GJQ==}
@@ -2257,8 +2326,22 @@ packages:
       '@emotion/utils': 1.1.0
       csstype: 3.0.10
 
+  /@emotion/serialize/1.1.0:
+    resolution: {integrity: sha512-F1ZZZW51T/fx+wKbVlwsfchr5q97iW8brAnXmsskz4d0hVB4O3M/SiA3SaeH06x02lSNzkkQv+n3AX3kCXKSFA==}
+    dependencies:
+      '@emotion/hash': 0.9.0
+      '@emotion/memoize': 0.8.0
+      '@emotion/unitless': 0.8.0
+      '@emotion/utils': 1.2.0
+      csstype: 3.1.0
+    dev: true
+
   /@emotion/sheet/1.1.1:
     resolution: {integrity: sha512-J3YPccVRMiTZxYAY0IOq3kd+hUP8idY8Kz6B/Cyo+JuXq52Ek+zbPbSQUrVQp95aJ+lsAW7DPL1P2Z+U1jGkKA==}
+
+  /@emotion/sheet/1.2.0:
+    resolution: {integrity: sha512-OiTkRgpxescko+M51tZsMq7Puu/KP55wMT8BgpcXVG2hqXc0Vo0mfymJ/Uj24Hp0i083ji/o0aLddh08UEjq8w==}
+    dev: true
 
   /@emotion/styled/11.9.3_ddo55dcmh5cqldga3apejnrxdm:
     resolution: {integrity: sha512-o3sBNwbtoVz9v7WB1/Y/AmXl69YHmei2mrVnK7JgyBJ//Rst5yqPZCecEJlMlJrFeWHp+ki/54uN265V2pEcXA==}
@@ -2286,11 +2369,23 @@ packages:
   /@emotion/unitless/0.7.5:
     resolution: {integrity: sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==}
 
+  /@emotion/unitless/0.8.0:
+    resolution: {integrity: sha512-VINS5vEYAscRl2ZUDiT3uMPlrFQupiKgHz5AA4bCH1miKBg4qtwkim1qPmJj/4WG6TreYMY111rEFsjupcOKHw==}
+    dev: true
+
   /@emotion/utils/1.1.0:
     resolution: {integrity: sha512-iRLa/Y4Rs5H/f2nimczYmS5kFJEbpiVvgN3XVfZ022IYhuNA1IRSHEizcof88LtCTXtl9S2Cxt32KgaXEu72JQ==}
 
+  /@emotion/utils/1.2.0:
+    resolution: {integrity: sha512-sn3WH53Kzpw8oQ5mgMmIzzyAaH2ZqFEbozVVBSYp538E06OSE6ytOp7pRAjNQR+Q/orwqdQYJSe2m3hCOeznkw==}
+    dev: true
+
   /@emotion/weak-memoize/0.2.5:
     resolution: {integrity: sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==}
+
+  /@emotion/weak-memoize/0.3.0:
+    resolution: {integrity: sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==}
+    dev: true
 
   /@eslint/eslintrc/1.3.0:
     resolution: {integrity: sha512-UWW0TMTmk2d7hLcWD1/e2g5HDM/HQ3csaLSqXCfqwh4uNDuNqlaKWXmEsL4Cs41Z0KnILNvwbHAah3C2yt06kw==}
@@ -3502,14 +3597,14 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.7_wi3pqks3q27fa7n2ecdzfr2ytm:
-    resolution: {integrity: sha512-51qNZD3vZRhTuOGhGSTASrNbpR87jzKDHj2FYVNoTbzJsuUalFSHhNUWTd5YQWcl6uBjka+xlLiktb3+P8vywQ==}
+  /@scaleway/jest-helpers/1.2.8_wi3pqks3q27fa7n2ecdzfr2ytm:
+    resolution: {integrity: sha512-rnn3lp5PDIj8ASYfv2NaKL0BaSBTDxOSkyXZ6k3skpum85WnWKCC1MSr4FTsq3JhdEOiaGw4eXokdHX2wu5DqQ==}
     peerDependencies:
       react: ^17.0.1 || 17
     dependencies:
-      '@emotion/cache': 11.9.3
-      '@emotion/jest': 11.9.3_@types+jest@27.5.2
-      '@emotion/react': 11.9.3_lezx5lhs6suvlmsjohaunh4xlm
+      '@emotion/cache': 11.10.0
+      '@emotion/jest': 11.10.0_@types+jest@27.5.2
+      '@emotion/react': 11.10.0_lezx5lhs6suvlmsjohaunh4xlm
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
     transitivePeerDependencies:
@@ -7458,7 +7553,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -15609,6 +15704,17 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
+
+  /promise-inflight/1.0.1_bluebird@3.7.2:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.2
     dev: true
 
   /promise.allsettled/1.0.5:
