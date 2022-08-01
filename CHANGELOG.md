@@ -1,3 +1,18 @@
+## [0.171.2](https://github.com/scaleway/scaleway-ui/compare/v0.171.1...v0.171.2) (2022-08-01)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency rollup to v2.77.2 ([#1703](https://github.com/scaleway/scaleway-ui/issues/1703)) ([184369c](https://github.com/scaleway/scaleway-ui/commit/184369c6bdd6b0437b0f64f4b0c0d3ce97d2b39d))
+* **devdeps:** update dependency size-limit to v8 ([#1715](https://github.com/scaleway/scaleway-ui/issues/1715)) ([20b2d12](https://github.com/scaleway/scaleway-ui/commit/20b2d121486318e5dc8309ad7ee73a671ee2aed2))
+* **devdeps:** update dependency webpack to v5.74.0 ([#1712](https://github.com/scaleway/scaleway-ui/issues/1712)) ([b98c4f4](https://github.com/scaleway/scaleway-ui/commit/b98c4f4b24f18fe717165c85b4ce259973a33d98))
+* **devdeps:** update emotion monorepo ([#1716](https://github.com/scaleway/scaleway-ui/issues/1716)) ([5023141](https://github.com/scaleway/scaleway-ui/commit/50231416c19e906f162feed03567beca5987a0c8))
+
+
+### :bug: Bug Fixes
+
+* **link:** add on click for react router ([#1719](https://github.com/scaleway/scaleway-ui/issues/1719)) ([927331e](https://github.com/scaleway/scaleway-ui/commit/927331e2863db2da476e84d33f3501c270821245))
+
 ## [0.171.1](https://github.com/scaleway/scaleway-ui/compare/v0.171.0...v0.171.1) (2022-07-29)
 
 
