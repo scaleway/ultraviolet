@@ -3,6 +3,7 @@ import React, {
   AnchorHTMLAttributes,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
+  MouseEventHandler,
   ReactNode,
   forwardRef,
 } from 'react'
@@ -21,6 +22,8 @@ type LinkProps = {
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
   href: string
+  // For react router shouldn't be used directly
+  onClick?: MouseEventHandler<HTMLAnchorElement>
 }
 
 const ICON_SIZE = 16
@@ -111,6 +114,7 @@ const Link = forwardRef(
       iconPosition,
       rel,
       className,
+      onClick,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -127,6 +131,7 @@ const Link = forwardRef(
         rel={computedRel}
         className={className}
         size={size}
+        onClick={onClick}
       >
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
