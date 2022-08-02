@@ -6,6 +6,8 @@ export default {
   component: Box,
   parameters: {
     deprecated: true,
+    deprecatedReason:
+      'Please use div/styled/whatever. Box is still here for internal usage while we gradually migrate to another solution and should not be used',
   },
   title: 'Components/Container/Box',
 } as Meta
@@ -26,14 +28,3 @@ Default.parameters = {
     `,
   },
 }
-
-export const OtherElement = Template.bind({})
-OtherElement.parameters = {
-  docs: {
-    storyDescription:
-      'Using prop `as` you can specify another html or React element instead of the default div.',
-  },
-}
-OtherElement.decorators = [
-  () => <Box as="span">This is a Box as a span tag</Box>,
-]
