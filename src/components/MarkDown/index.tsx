@@ -7,6 +7,10 @@ import Box, { BoxProps } from '../Box'
 import Link from '../Link'
 import Typography from '../Typography'
 
+const StyledLink = styled(Link)`
+  font-size: inherit;
+`
+
 const headingRenderer = ({
   node,
   children,
@@ -53,9 +57,9 @@ const linkRenderer = ({
   }
 
   return (
-    <Link variant="info" href={href} {...props}>
+    <StyledLink variant="info" href={href} {...props}>
       {children}
-    </Link>
+    </StyledLink>
   )
 }
 
