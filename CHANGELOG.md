@@ -1,3 +1,15 @@
+## [0.172.1](https://github.com/scaleway/scaleway-ui/compare/v0.172.0...v0.172.1) (2022-08-02)
+
+
+### :memo: Documentation
+
+* fixed description to bodyStrong migration ([#1721](https://github.com/scaleway/scaleway-ui/issues/1721)) ([b21d9a9](https://github.com/scaleway/scaleway-ui/commit/b21d9a9512a87bdc4fb0955d7c947a930e106ef8))
+
+
+### :bug: Bug Fixes
+
+* **icons:** removed product icons ([#1704](https://github.com/scaleway/scaleway-ui/issues/1704)) ([63bdcd1](https://github.com/scaleway/scaleway-ui/commit/63bdcd1bb467be74f68e276ce283605dc58ba77b))
+
 ## [0.172.0](https://github.com/scaleway/scaleway-ui/compare/v0.171.2...v0.172.0) (2022-08-02)
 
 
