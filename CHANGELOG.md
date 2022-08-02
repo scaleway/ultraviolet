@@ -1,3 +1,15 @@
+## [0.172.0](https://github.com/scaleway/scaleway-ui/compare/v0.171.2...v0.172.0) (2022-08-02)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.3.16 ([#1720](https://github.com/scaleway/scaleway-ui/issues/1720)) ([1dfe198](https://github.com/scaleway/scaleway-ui/commit/1dfe198e62e19ac387a07c068f1dbf460e95885e))
+
+
+### :gear: Features
+
+* remove Box export ([#1705](https://github.com/scaleway/scaleway-ui/issues/1705)) ([5c12636](https://github.com/scaleway/scaleway-ui/commit/5c126362c62c9f234f0008fc1bc45c0de69331b4))
+
 ## [0.171.2](https://github.com/scaleway/scaleway-ui/compare/v0.171.1...v0.171.2) (2022-08-01)
 
 
