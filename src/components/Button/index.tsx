@@ -29,6 +29,14 @@ const StyledContent = styled.div`
   pointer-events: none;
 `
 
+// It will remove animation between Link and left icon that is implemented into Link component
+const StyledLink = styled(Link)`
+  &:hover,
+  &:focus {
+    gap: ${({ theme }) => theme.space['1']};
+  }
+`
+
 const borderedVariant = ({
   colorValue,
   bgColorValue,
@@ -401,7 +409,7 @@ const FwdButton = ({
   const as = useMemo(() => {
     if (disabled) return 'button'
     if (asProp) return asProp
-    if (href || download) return Link
+    if (href || download) return StyledLink
 
     return 'button'
   }, [disabled, href, download, asProp])

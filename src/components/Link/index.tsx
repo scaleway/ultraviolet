@@ -136,7 +136,7 @@ const Link = forwardRef(
         {!isBlank && iconPosition === 'left' ? (
           <Icon name="arrow-left" size={ICON_SIZE} />
         ) : null}
-        <span>{children}</span>
+        {children}
 
         {isBlank ? (
           <StyledExternalIconContainer>
