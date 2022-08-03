@@ -1,3 +1,10 @@
+## [0.173.1](https://github.com/scaleway/scaleway-ui/compare/v0.173.0...v0.173.1) (2022-08-03)
+
+
+### :bug: Bug Fixes
+
+* **link:** correct wrong behavior ([#1723](https://github.com/scaleway/scaleway-ui/issues/1723)) ([31b6b47](https://github.com/scaleway/scaleway-ui/commit/31b6b47a67c2ad17e70ee6fa41548965e5893185))
+
 ## [0.173.0](https://github.com/scaleway/scaleway-ui/compare/v0.172.1...v0.173.0) (2022-08-02)
 
 
