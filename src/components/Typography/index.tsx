@@ -13,7 +13,6 @@ import {
 } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Color } from '../../theme'
-import { ColorDeprecated } from '../../theme/deprecated/colors'
 import Box, { BoxProps } from '../Box'
 import Tooltip from '../Tooltip'
 
@@ -163,9 +162,7 @@ const variantTags = {
 const colorStyles = ({ theme, color }: { theme: Theme; color?: string }) =>
   color
     ? css`
-        color: ${theme.colors[color as Color]?.text ??
-        theme.colorsDeprecated[color as ColorDeprecated] ??
-        color};
+        color: ${theme.colors[color as Color]?.text ?? color};
       `
     : undefined
 

@@ -1,5 +1,4 @@
 import deepmerge from 'deepmerge'
-import colorsDeprecated from './deprecated/colors'
 import dark from './tokens/dark'
 import light from './tokens/light'
 
@@ -49,7 +48,6 @@ const fonts = {
 
 const theme = {
   colors,
-  colorsDeprecated,
   fonts,
   radii,
   screens,
@@ -103,7 +101,6 @@ export type { SCWUITheme, Color }
 
 export {
   colors,
-  colorsDeprecated,
   shadows,
   space,
   radii,

@@ -2,7 +2,7 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
-import Typography from '../Typography'
+import Text from '../Text'
 
 const sizes = {
   large: 1.3,
@@ -45,7 +45,7 @@ const StyledValue = styled('span', {
 })<{ hasError?: boolean }>`
   font-weight: 800;
   color: ${({ hasError, theme }) =>
-    hasError ? theme.colors.warning.textWeak : theme.colors.neutral.text};
+    hasError ? theme.colors.warning.text : theme.colors.neutral.text};
 `
 
 const StyledContainer = styled('div', {
@@ -131,6 +131,7 @@ const StyledBox = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.space['1']};
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 const StyledComponentContainer = styled.div`
@@ -229,22 +230,21 @@ const VolumeSize = ({
   return (
     <StyledComponentContainer>
       <StyledBox role="status" aria-live="polite">
-        <Typography variant="bodyA" mr={2} fontWeight={500}>
-          <StyledTitle>{title}</StyledTitle>
+        <Text as="span" variant="bodyStrong">
+          {title ? <StyledTitle>{title}</StyledTitle> : null}
           <StyledValue hasError={hasError}>
             {value} {unit}
           </StyledValue>
-        </Typography>
+        </Text>
         <Icon
-          color={hasError ? 'orange' : 'green'}
-          mr={1}
+          color={hasError ? 'warning' : 'success'}
           name={hasError ? 'alert' : 'checkbox-marked-circle-outline'}
         />
-        {hasError && (
-          <Typography variant="bodyA" color="orange">
+        {hasError ? (
+          <Text as="span" variant="body" color="warning">
             {isTooBig ? tooBigMessage : tooSmallMessage}
-          </Typography>
-        )}
+          </Text>
+        ) : null}
       </StyledBox>
       <StyledContainer size={size}>
         <StyledVolumeContainer size={size}>
@@ -264,9 +264,9 @@ const VolumeSize = ({
             <StyledLabel type="min">
               {minSize} {unit}
             </StyledLabel>
-            <Typography variant="bodyC">
+            <Text as="span" variant="bodySmall">
               {maxSize ? minLabel : requiredLabel}
-            </Typography>
+            </Text>
           </StyledLabelContainer>
         </StyledCursor>
         {maxSize && (
@@ -275,7 +275,9 @@ const VolumeSize = ({
               <StyledLabel type="max">
                 {maxSize} {unit}
               </StyledLabel>
-              <Typography variant="bodyC">{maxLabel}</Typography>
+              <Text as="span" variant="bodySmall">
+                {maxLabel}
+              </Text>
             </StyledLabelContainer>
           </StyledCursor>
         )}

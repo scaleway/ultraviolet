@@ -79,9 +79,9 @@ UnknownOrUndefined.parameters = {
 UnknownOrUndefined.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Icon name={undefined} color="red" />
+      <Icon name={undefined} color="danger" />
       {/* @ts-expect-error we test an unknown icon name */}
-      <Icon name="unknown" color="orange" />
+      <Icon name="unknown" color="warning" />
     </div>
   ),
 ]
