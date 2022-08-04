@@ -1,3 +1,16 @@
+## [0.173.2](https://github.com/scaleway/scaleway-ui/compare/v0.173.1...v0.173.2) (2022-08-04)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo to v7.18.10 ([#1724](https://github.com/scaleway/scaleway-ui/issues/1724)) ([5cd463f](https://github.com/scaleway/scaleway-ui/commit/5cd463fcf4b8fd713790f18351a2f7078a8ae3e8))
+* **devdeps:** update dependency @emotion/cache to v11.10.1 ([#1725](https://github.com/scaleway/scaleway-ui/issues/1725)) ([e14f5b0](https://github.com/scaleway/scaleway-ui/commit/e14f5b07a30cd5afdcd74f4edf49d360d451f6dc))
+
+
+### :bug: Bug Fixes
+
+* **colors:** remove colors deprecated ([#1706](https://github.com/scaleway/scaleway-ui/issues/1706)) ([5c97839](https://github.com/scaleway/scaleway-ui/commit/5c97839d0e239d0981b7574b40c57c0d5314b817))
+
 ## [0.173.1](https://github.com/scaleway/scaleway-ui/compare/v0.173.0...v0.173.1) (2022-08-03)
 
 
