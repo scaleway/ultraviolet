@@ -12,7 +12,7 @@ specifiers:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
   '@emotion/babel-plugin': 11.10.0
-  '@emotion/cache': 11.10.0
+  '@emotion/cache': 11.10.1
   '@emotion/eslint-plugin': 11.10.0
   '@emotion/jest': 11.10.0
   '@emotion/react': 11.10.0
@@ -163,7 +163,7 @@ devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
   '@emotion/babel-plugin': 11.10.0_@babel+core@7.18.10
-  '@emotion/cache': 11.10.0
+  '@emotion/cache': 11.10.1
   '@emotion/eslint-plugin': 11.10.0_eslint@8.20.0
   '@emotion/jest': 11.10.0_@types+jest@27.5.2
   '@emotion/react': 11.10.0_dix7ey6gbjrwvo6teqhxmfkyn4
@@ -2086,6 +2086,16 @@ packages:
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
       stylis: 4.0.13
+    dev: true
+
+  /@emotion/cache/11.10.1:
+    resolution: {integrity: sha512-uZTj3Yz5D69GE25iFZcIQtibnVCFsc/6+XIozyL3ycgWvEdif2uEw9wlUt6umjLr4Keg9K6xRPHmD8LGi+6p1A==}
+    dependencies:
+      '@emotion/memoize': 0.8.0
+      '@emotion/sheet': 1.2.0
+      '@emotion/utils': 1.2.0
+      '@emotion/weak-memoize': 0.3.0
+      stylis: 4.0.13
 
   /@emotion/css-prettifier/1.1.0:
     resolution: {integrity: sha512-ALZCKBcpC9FeA0D6HLc4Et3bwY06fOG63CqLtWwk4W/u7+bWjorRxS9yikcJ2aTmlKur/ST9eWm5ohzBmWlTOQ==}
@@ -2148,7 +2158,7 @@ packages:
       '@babel/core': 7.18.10
       '@babel/runtime': 7.18.9
       '@emotion/babel-plugin': 11.10.0_@babel+core@7.18.10
-      '@emotion/cache': 11.10.0
+      '@emotion/cache': 11.10.1
       '@emotion/serialize': 1.1.0
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
@@ -7357,7 +7367,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -15507,17 +15517,6 @@ packages:
         optional: true
     dev: true
 
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: true
-
   /promise.allsettled/1.0.5:
     resolution: {integrity: sha512-tVDqeZPoBC0SlzJHzWGZ2NKAguVq2oiYj7gbggbiTvH2itHohijTp7njOUA0aQ/nl+0lr/r6egmhoYu63UZ/pQ==}
     engines: {node: '>= 0.4'}
@@ -15972,7 +15971,7 @@ packages:
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.18.9
-      '@emotion/cache': 11.10.0
+      '@emotion/cache': 11.10.1
       '@emotion/react': 11.10.0_dix7ey6gbjrwvo6teqhxmfkyn4
       '@types/react-transition-group': 4.4.4
       memoize-one: 5.2.1
