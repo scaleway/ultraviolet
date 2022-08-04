@@ -73,6 +73,36 @@ describe('RadioBorderedBox', () => {
       </RadioBorderedBox>,
     ))
 
+  test('renders correctly with sideText', () =>
+    shouldMatchEmotionSnapshot(
+      <RadioBorderedBox
+        label="Choice"
+        labelDescription="(something)"
+        sideText="This is a side text"
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        disabled
+      >
+        Choice description
+      </RadioBorderedBox>,
+    ))
+
+  test('renders correctly without children', () =>
+    shouldMatchEmotionSnapshot(
+      <RadioBorderedBox
+        label="Choice"
+        labelDescription="(something)"
+        sideText="This is a side text"
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        disabled
+      >
+        Choice description
+      </RadioBorderedBox>,
+    ))
+
   test('renders correctly and triggers change on borderedbox click', () => {
     let choice = ''
 

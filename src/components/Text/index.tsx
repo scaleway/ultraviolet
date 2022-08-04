@@ -110,7 +110,7 @@ const Text = ({
   useEffect(() => {
     if (oneLine && elementRef && elementRef.current) {
       const { offsetWidth, scrollWidth } = elementRef.current
-      setIsTruncated(offsetWidth < scrollWidth)
+      setIsTruncated(offsetWidth <= scrollWidth)
     }
   }, [oneLine])
 

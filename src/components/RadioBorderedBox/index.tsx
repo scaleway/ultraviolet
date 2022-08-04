@@ -126,13 +126,13 @@ const RadioBorderedBox = ({
           ) : null}
           {badgeText && (
             <Badge
-                size={badgeSize}
-                variant={badgeVariant}
-                prominence={badgeProminence}
-                disabled={disabled}
-              >
-                {badgeText}
-              </Badge>
+              size={badgeSize}
+              variant={badgeVariant}
+              prominence={badgeProminence}
+              disabled={disabled}
+            >
+              {badgeText}
+            </Badge>
           )}
         </StyledRadioContainer>
         {sideText ? (
@@ -146,11 +146,9 @@ const RadioBorderedBox = ({
           </Text>
         ) : null}
       </StyledSpaceContainer>
-      {children ? (
-        <Text as="p" variant="body" disabled={disabled}>
-          {children}
-        </Text>
-      ) : null}
+      <Text as="p" variant="body" disabled={disabled}>
+        {children}
+      </Text>
     </StyledBorderedBox>
     {error ? (
       <Expandable opened={!!error}>

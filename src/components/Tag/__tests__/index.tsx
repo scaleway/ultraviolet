@@ -12,4 +12,13 @@ describe('Tag', () => {
 
   test('renders correctly colored', () =>
     shouldMatchEmotionSnapshot(<Tag variant="primary">test</Tag>))
+
+  test('renders correctly with icon', () =>
+    shouldMatchEmotionSnapshot(<Tag icon="lock">test</Tag>))
+
+  test('renders correctly with isLoading', () =>
+    shouldMatchEmotionSnapshot(<Tag isLoading>test</Tag>))
+
+  test('renders correctly with onClose', () =>
+    shouldMatchEmotionSnapshot(<Tag onClose={() => {}}>test</Tag>))
 })

@@ -19,7 +19,7 @@ exports[`Text renders correctly with tooltip 1`] = `
 }
 
 <div
-    style="width: 100px;"
+    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
       class="cache-mj2iuj-StyledText e1tg3t120"
@@ -279,6 +279,29 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
     class="cache-8zae8i-StyledText e1tg3t120"
   >
     headingSmall
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text with disabled 1`] = `
+<DocumentFragment>
+  .cache-2ep7ns-StyledText {
+  color: #c4c9d6;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-2ep7ns-StyledText e1tg3t120"
+  >
+    Lorem Ipsum
   </div>
 </DocumentFragment>
 `;
