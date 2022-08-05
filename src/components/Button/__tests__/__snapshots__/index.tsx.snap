@@ -347,7 +347,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-1dcnir3-StyledLink-StyledLink-StyledButton {
+  .cache-10ywvju-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -368,8 +368,8 @@ exports[`Button should render correctly when acting as Link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -419,13 +419,17 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton>* {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-10ywvju-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
-  gap: 4px;
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -434,33 +438,41 @@ exports[`Button should render correctly when acting as Link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:active {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   gap: 8px;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -481,7 +493,7 @@ exports[`Button should render correctly when acting as Link 1`] = `
 }
 
 <a
-    class="em6gco80 em6gco82 cache-1dcnir3-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-10ywvju-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
     <div
@@ -495,7 +507,7 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 exports[`Button should render correctly when acting as Link 2`] = `
 <DocumentFragment>
-  .cache-qcmowc-StyledLink-StyledLink-StyledButton {
+  .cache-93t981-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -516,8 +528,8 @@ exports[`Button should render correctly when acting as Link 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -567,13 +579,17 @@ exports[`Button should render correctly when acting as Link 2`] = `
   color: #ffffff;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton>* {
+.cache-93t981-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-93t981-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:hover,
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus {
-  gap: 4px;
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -582,34 +598,42 @@ exports[`Button should render correctly when acting as Link 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:active {
+.cache-93t981-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:hover,
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus {
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus {
   gap: 8px;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:hover,
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus {
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   gap: 8px;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:hover,
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus {
+.cache-93t981-StyledLink-StyledLink-StyledButton:hover,
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-qcmowc-StyledLink-StyledLink-StyledButton:focus {
+.cache-93t981-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -637,7 +661,7 @@ exports[`Button should render correctly when acting as Link 2`] = `
   padding-bottom: 4px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 14px;
   width: 14px;
@@ -645,12 +669,12 @@ exports[`Button should render correctly when acting as Link 2`] = `
   min-height: 14px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="em6gco80 em6gco82 cache-qcmowc-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-93t981-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -664,7 +688,7 @@ exports[`Button should render correctly when acting as Link 2`] = `
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        class="e4bq1r52 etwatq50 cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon"
         viewBox="0 0 24 24"
       >
         <path
@@ -771,7 +795,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 exports[`Button should render correctly when acting as dom link 1`] = `
 <DocumentFragment>
-  .cache-1dcnir3-StyledLink-StyledLink-StyledButton {
+  .cache-10ywvju-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -792,8 +816,8 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -843,13 +867,17 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   color: #ffffff;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton>* {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-10ywvju-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
-  gap: 4px;
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -858,33 +886,41 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:active {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   gap: 8px;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:hover,
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:hover,
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1dcnir3-StyledLink-StyledLink-StyledButton:focus {
+.cache-10ywvju-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
 }
 
@@ -905,7 +941,7 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 }
 
 <a
-    class="em6gco80 em6gco82 cache-1dcnir3-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-10ywvju-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
     <div

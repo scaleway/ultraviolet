@@ -25,7 +25,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   margin: 0 8px;
 }
 
-.cache-mlmgzv-StyledLink {
+.cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -46,8 +46,8 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -63,13 +63,17 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -78,12 +82,20 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -98,7 +110,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -109,7 +121,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -176,7 +188,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   margin: 0 8px;
 }
 
-.cache-mlmgzv-StyledLink {
+.cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -197,8 +209,8 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -214,13 +226,17 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -229,12 +245,20 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -267,7 +291,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -278,7 +302,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -401,7 +425,7 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
   z-index: 1;
 }
 
-.cache-mlmgzv-StyledLink {
+.cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -422,8 +446,8 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -439,13 +463,17 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -454,12 +482,20 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -572,7 +608,7 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
         class="cache-oaz3hk-BubbleVariant e1081fv11"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -583,7 +619,7 @@ exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
         class="cache-oaz3hk-BubbleVariant e1081fv11"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -626,7 +662,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   margin: 0 8px;
 }
 
-.cache-mlmgzv-StyledLink {
+.cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -647,8 +683,8 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -664,13 +700,17 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -679,12 +719,20 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -699,7 +747,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -711,7 +759,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
         class="cache-b4pk9x-LinkVariant e1081fv10"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -833,7 +881,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   z-index: 1;
 }
 
-.cache-mlmgzv-StyledLink {
+.cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -854,8 +902,8 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -871,13 +919,17 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -886,12 +938,20 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -906,7 +966,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
         class="cache-oaz3hk-BubbleVariant e1081fv11"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -917,7 +977,7 @@ exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
         class="cache-oaz3hk-BubbleVariant e1081fv11"
       >
         <a
-          class="cache-mlmgzv-StyledLink e4bq1r50"
+          class="cache-qjioss-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
