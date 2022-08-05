@@ -1,3 +1,15 @@
+## [0.173.4](https://github.com/scaleway/scaleway-ui/compare/v0.173.3...v0.173.4) (2022-08-05)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.6 ([#1731](https://github.com/scaleway/scaleway-ui/issues/1731)) ([544040e](https://github.com/scaleway/scaleway-ui/commit/544040e2f0b1a46468a7b8ee0454a79bcf5670fb))
+
+
+### :bug: Bug Fixes
+
+* **link:** animation is broken when text follow ([#1730](https://github.com/scaleway/scaleway-ui/issues/1730)) ([a8ed797](https://github.com/scaleway/scaleway-ui/commit/a8ed79732b2c088a68efb828e41c3eb9531b862e))
+
 ## [0.173.3](https://github.com/scaleway/scaleway-ui/compare/v0.173.2...v0.173.3) (2022-08-05)
 
 
