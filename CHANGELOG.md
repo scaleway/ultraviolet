@@ -1,3 +1,16 @@
+## [0.173.3](https://github.com/scaleway/scaleway-ui/compare/v0.173.2...v0.173.3) (2022-08-05)
+
+
+### :package: Chore
+
+* **devdeps:** update pnpm to v7.8.0 ([#1732](https://github.com/scaleway/scaleway-ui/issues/1732)) ([09553a5](https://github.com/scaleway/scaleway-ui/commit/09553a53d86a9df483a9af2d23232b68d538c400))
+* **devdeps:** update storybook monorepo to v6.5.10 ([#1729](https://github.com/scaleway/scaleway-ui/issues/1729)) ([9c6bae2](https://github.com/scaleway/scaleway-ui/commit/9c6bae22012af332f50eb01b7542854a36437425))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @types/intl-tel-input to v17.0.5 ([#1726](https://github.com/scaleway/scaleway-ui/issues/1726)) ([0fda303](https://github.com/scaleway/scaleway-ui/commit/0fda3038f31d290ba2c781956c39c671916afe22))
+
 ## [0.173.2](https://github.com/scaleway/scaleway-ui/compare/v0.173.1...v0.173.2) (2022-08-04)
 
 
