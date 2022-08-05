@@ -46,6 +46,7 @@ type SelectableCardProps = {
   type?: 'radio' | 'checkbox'
   disabled?: boolean
   checked?: boolean
+  className?: string
 }
 
 const SelectableCard = ({
@@ -57,6 +58,7 @@ const SelectableCard = ({
   checked = false,
   disabled = false,
   children,
+  className,
 }: SelectableCardProps) => {
   const Element = StyledElement(type === 'radio' ? Radio : Checkbox)
 
@@ -68,6 +70,7 @@ const SelectableCard = ({
       showTick={showTick}
       checked={checked}
       disabled={disabled}
+      className={className}
     >
       {typeof children === 'function'
         ? children({ checked, disabled })
